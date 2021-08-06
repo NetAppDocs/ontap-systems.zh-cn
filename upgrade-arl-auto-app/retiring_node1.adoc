@@ -1,0 +1,29 @@
+---
+sidebar: upgrade-arl-auto-app_sidebar 
+permalink: upgrade-arl-auto-app/retiring_node1.html 
+keywords: retiring, node 
+summary: 要停用 node1 ，您需要恢复自动操作，以便使用 node2 禁用 HA 对并正确关闭 Lonode1 。 
+---
+= 停用 node1
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+要停用 node1 ，您需要恢复自动操作，以便使用 node2 禁用 HA 对并正确关闭 node1 。您必须稍后从机架或机箱中删除 node1 。
+
+.步骤
+. 使用以下命令恢复操作：
++
+`s系统控制器更换恢复`
+
+. 使用以下命令验证 node1 是否已暂停：
++
+`s系统控制器更换 show-details`
+
+
+
+升级完成后，您可以停用 node1 。请参见 link:decommissioning_the_old_system.html["停用旧系统"]。

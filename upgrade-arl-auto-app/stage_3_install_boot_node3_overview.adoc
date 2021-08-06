@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/stage_3_install_boot_node3_overview.html 
+keywords: installing, booting, node3, install, cluster 
+summary: 在阶段 3 中，您将安装并启动 node3 。 
+---
+= 第 3 阶段。安装并启动 node3
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在第 3 阶段，您安装并启动 node3 ，检查 node1 中的集群和节点管理端口是否在 node3 上联机，并验证 node3 安装。属于 node1 的非 SAN 数据 LIF 和非根聚合将从 node2 移动到 node3 。
+
+.步骤
+. link:install_boot_node3.html["安装并启动 node3"]
+. link:set_fc_or_uta_uta2_config_on_node3.html["在 node3 上设置 FC 或 UTA/UTA2 配置"]
+. link:verify_node3_installation.html["验证 node3 安装"]
+. link:restore_key-manager_configuration_node3.html["还原 node3 上的 key-manager 配置"]
+. link:move_non-root_aggr_and_nas_data_lifs_node1_from_node2_to_node3.html["将 node1 拥有的非根聚合和 NAS 数据 LIF 从 node2 移动到 node3"]
+

@@ -1,0 +1,136 @@
+---
+sidebar: sidebar 
+permalink: switch-cisco-9336c-shared/9336c_migrate_from_a_switchless_configuration_with_sat_storage_by_reusing_the_storage_switches.html 
+keywords:  
+summary:  
+---
+= 通过重复使用存储交换机从具有 SAT 存储的无交换机配置进行迁移
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+
+==== 迁移存储交换机
+
+通过重复使用存储交换机， HA 对 1 的存储交换机将成为共享交换机。* 交换机连接的布线图 *image:9336c_image1.jpg["交换机连接"]
+
+
+
+===== 步骤
+
+. 验证 HA 对 1 （和 HA 对 2 ）的存储配置是否正确且无错误： `ssystem switch Ethernet show`
+
+
+[listing]
+----
+storage::*> system switch ethernet show
+Switch                    Type                  Address          Model
+------------------------- --------------------- ---------------- ----------
+sh1
+                          storage-network       172.17.227.5     C9336C
+
+    Serial Number: FOC221206C2
+     Is Monitored: true
+           Reason: none
+ Software Version: Cisco Nexus Operating System (NX-OS) Software, Version
+                   9.3(5)
+   Version Source: CDP
+sh2
+                        storage-network        172.17.227.6      C9336C
+    Serial Number: FOC220443LZ
+     Is Monitored: true
+           Reason: None
+ Software Version: Cisco Nexus Operating System (NX-OS) Software, Version
+                   9.3(5)
+   Version Source: CDP
+2 entries were displayed.
+storage::*>
+----
+. 【第 2 步】验证节点端口是否运行正常： `storage port show -port-type ENET`
+
+
+[listing]
+----
+storage::*> storage port show -port-type ENET
+                                   Speed                          VLAN
+Node    Port    Type    Mode       (Gb/s)    State     Status       ID
+------- ------- ------- ---------- --------- --------- --------- -----
+node1
+        e0c     ENET    storage          100 enabled   online       30
+        e0d     ENET    storage          100 enabled   online       30
+        e5a     ENET    storage          100 enabled   online       30
+        e5b     ENET    storage          100 enabled   online       30
+
+node2
+        e0c     ENET    storage          100 enabled   online       30
+        e0d     ENET    storage          100 enabled   online       30
+        e5a     ENET    storage          100 enabled   online       30
+        e5b     ENET    storage          100 enabled   online       30
+----
+. 【第 3 步】将 HA 对 1 的 NSM224 路径 A 缆线从存储交换机 A 移至存储交换机 A 上 HA 对 1 的路径 A 的共享 NS224 存储端口
+. 将缆线从 HA 对 1 节点 A 的路径 A 移至存储交换机 A 上 HA 对 1 节点 A 的共享存储端口
+. 将缆线从 HA 对 1 节点 B 的路径 A 移至存储交换机 A 上 HA 对 1 节点 B 的共享存储端口
+. 确认连接到 HA 对 1 存储交换机 A 的存储运行状况良好： `ssystem health alert show -instance`
+
+
+[listing]
+----
+storage::*> system health alert show -instance
+There are no entries matching your query.
+----
+. 【第 7 步】将共享交换机 A 上的存储 RCF 替换为共享 RCF 文件。请参见 http://9336c_install_nx-os_software_and_reference_configuration_files_@rcfs@.html#install-the-rcf-on-a-cisco-nexus-9336c-fx2-shared-switch["在 Cisco Nexus 9336C-x2 共享交换机上安装 RCF"] 了解更多详细信息。
+. 确认连接到 HA 对 1 存储交换机 B 的存储运行状况良好： `ssystem health alert show -instance`
+
+
+[listing]
+----
+storage::*> system health alert show -instance
+There are no entries matching your query.
+----
+. 【第 9 步】将 HA 对 1 的 NSM224 路径 B 缆线从存储交换机 B 移至 HA 对 1 的共享 NS224 存储端口，路径 B 移至存储交换机 B
+. 将缆线从 HA 对 1 的节点 A 路径 B 移至存储交换机 B 上 HA 对 1 的共享存储端口，节点 A 的路径 B
+. 将缆线从 HA 对 1 的节点 B 路径 B 移至存储交换机 B 上 HA 对 1 的共享存储端口，节点 B 的路径 B
+. 确认连接到 HA 对 1 存储交换机 B 的存储运行状况良好： `ssystem health alert show -instance`
+
+
+[listing]
+----
+storage::*> system health alert show -instance
+There are no entries matching your query.
+----
+. 【第 13 步】将共享交换机 B 上的存储 RCF 文件替换为共享 RCF 文件。请参见 link:9336c_install_nx-os_software_and_reference_configuration_files_@rcfs@.html#install-the-rcf-on-a-cisco-nexus-9336c-fx2-shared-switch["在 Cisco Nexus 9336C-x2 共享交换机上安装 RCF"] 了解更多详细信息。
+. 确认连接到 HA 对 1 存储交换机 B 的存储运行状况良好： `ssystem health alert show -instance`
+
+
+[listing]
+----
+storage::*> system health alert show -instance
+There are no entries matching your query.
+----
+. 【第 15 步】在共享交换机 A 和共享交换机 B 之间安装 ISL ：
+
+
+[listing]
+----
+sh1# configure
+Enter configuration commands, one per line. End with CNTL/Z.
+sh1 (config)# interface e1/35-36
+sh1 (config-if-range)# no lldp transmit
+sh1 (config-if-range)# no lldp receive
+sh1 (config-if-range)# switchport mode trunk
+sh1 (config-if-range)# no spanning-tree bpduguard enable
+sh1 (config-if-range)# channel-group 101 mode active
+sh1 (config-if-range)# exit
+sh1 (config)# interface port-channel 101
+sh1 (config-if)# switchport mode trunk
+sh1 (config-if)# spanning-tree port type network
+sh1 (config-if)# exit
+sh1 (config)# exit
+----
+. 【第 16 步】将 HA 对 1 从无交换机集群转换为有交换机集群。使用共享 RCF 定义的集群端口分配。请参见 link:9336c_install_nx-os_software_and_reference_configuration_files_@rcfs@.html["安装 NX-OS 软件和参考配置文件（ Reference Configuration Files ， RCF ）"]了解更多详细信息。
+. 验证交换网络配置是否有效： `network port show`
+

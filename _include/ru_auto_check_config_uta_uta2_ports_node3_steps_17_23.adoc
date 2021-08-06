@@ -1,0 +1,95 @@
+= 
+
+
+. 在自动启动期间按 `Ctrl-C` 在 `LOADER>` 提示符处停止节点。
+. 在 LOADER 提示符处，进入维护模式：
++
+`boot_ontap maint`
+
+. 在维护模式下，显示先前设置的所有启动程序端口，这些端口现在均处于目标模式：
++
+`ucadmin show`
+
++
+将端口改回启动程序模式：
+
++
+`ucadmin modify -m fc -t initiator -f < 适配器名称 >`
+
+. 【第 20 步】验证端口是否已更改为启动程序模式：
++
+`ucadmin show`
+
+. 【第 21 步】退出维护模式：
++
+`halt`
+
+. 在 LOADER 提示符处启动：
++
+`boot_ontap`
+
++
+现在，在启动时，节点可以检测到先前分配给它的所有磁盘，并可按预期启动。
+
+. 【 ｛ auto_check3_step23]] 如果要从具有外部磁盘的系统升级到支持内部和外部磁盘的系统（例如， AFF A800 系统），请将 node1 聚合设置为根聚合，以确保 node3 从 node1 的根聚合启动。要设置根聚合，请转到启动菜单并选择选项 `5` 以进入维护模式。
++
+
+CAUTION: * 您必须按所示的确切顺序执行以下子步骤；否则可能发生原因会导致中断甚至数据丢失。 *
+
++
+以下操作步骤会将 node3 设置为从 node1 的根聚合启动：
+
++
+.. 进入维护模式。
++
+`boot_ontap maint`
+
+.. 检查 node1 聚合的 RAID ，丛和校验和信息：
++
+`aggr status -r`
+
+.. 检查 node1 聚合的状态：
++
+`聚合状态`
+
+.. 如有必要，将 node1 聚合置于联机状态：
++
+`aggr_online root_aggr_from_<node1>`
+
+.. 阻止 node3 从其原始根聚合启动：
++
+`aggr offline <root_aggr_on_node3>`
+
+.. 将 node1 根聚合设置为 node3 的新根聚合：
++
+`aggr options aggr_from_<node1> root`
+
+.. 验证 node3 的根聚合是否脱机，从 node1 接管的磁盘的根聚合是否联机并设置为 root ：
++
+`聚合状态`
+
++
+
+NOTE: 如果不执行上一个子步骤，发生原因 node3 可能会从内部根聚合启动，或者它可能会发生原因系统以假定存在新的集群配置或提示您确定一个集群配置。
+
++
+下面显示了命令输出的示例：
+
++
+[listing]
+----
+ -----------------------------------------------------------------
+ Aggr                 State    Status             Options
+
+ aggr0_nst_fas8080_15 online   raid_dp, aggr      root, nosnap=on
+                               fast zeroed
+                               64-bit
+
+ aggr0                offline  raid_dp, aggr      diskroot
+                               fast zeroed
+                               64-bit
+ -----------------------------------------------------------------
+----
+
+
+

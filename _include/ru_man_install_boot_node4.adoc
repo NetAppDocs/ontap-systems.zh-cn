@@ -1,0 +1,456 @@
+= 
+
+
+您需要在机架中安装 node4 ，将 node2 连接传输到 node4 以及启动 node4 。此外，还必须重新分配任何 node2 备用磁盘，属于 root 的任何磁盘以及先前未重新定位到 node3 的任何非根聚合。
+
+如果 node4 的 ONTAP 9 版本与 node2 上安装的版本不同，则需要对其进行网络启动。安装 node4 后，从 Web 服务器上存储的 ONTAP 9 映像启动它。然后，您可以按照中的说明将正确的文件下载到启动介质设备，以供后续系统启动 link:prepare_for_netboot.html["准备网络启动"]
+
+但是，如果 node4 安装的 Data ONTAP 9 版本与 node2 上安装的版本相同或更高，则不需要对其执行网络启动。
+
+* 重要 * ：
+
+* 如果要升级连接到存储阵列的 V 系列系统或使用 FlexArray 虚拟化软件的系统，则需要完成 <<man_install4_Step1,第 1 步>> 到 <<man_install4_Step7,第 7 步>>，请将此部分保留在 <<man_install4_Step8,第 8 步>> 并按照中的说明进行操作 link:set_fc_uta_uta2_config_node4.html["在 node4 上设置 FC 或 UTA/UTA2 配置"] 根据需要在维护模式下输入命令。然后，您需要返回到此部分并通过恢复操作步骤 <<man_install4_Step9,第 9 步>>。
+* 但是，如果要升级具有存储磁盘的系统，则需要完成整个部分，然后继续执行部分 link:set_fc_uta_uta2_config_node4.html["在 node4 上设置 FC 或 UTA/UTA2 配置"]，在集群提示符处输入命令。
+
+
+.步骤
+. [[man_install4_Step1]] 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果 node4 将位于 ... | 那么 ... 
+
+
+| 与 node3 不同的机箱 | 转至 <<man_install4_Step2,第 2 步>>。 
+
+
+| 具有 node3 的同一机箱 | 跳过步骤 2 和 3 ，然后转到 <<man_install4_Step4,第 4 步>>。 
+|===
+. [[man_install4_Step2]] 确保 node4 具有足够的机架空间。
++
+如果 node4 与 node3 位于不同的机箱中，则可以将 node4 与 node2 放在同一位置。如果 node3 和 node4 位于同一机箱中，则 node4 已位于其相应的机架位置。
+
+. 按照节点型号的 _Installation and Setup Instructions_中 的说明，在机架中安装 node4 。
+. 【 man_install4_Step4]] 为节点 4 布线，将连接从节点 2 移动到节点 4 。
++
+以下参考资料可帮助您正确进行缆线连接。转至 link:other_references.html["参考资料"] 以链接到它们。
+
++
+** node4 平台的 _Installation and Setup Instructions_or _FlexArray 虚拟化安装要求和参考 _ 。
+** 相应的磁盘架指南。
+** ONTAP 9 高可用性配置指南 _
++
+使用缆线连接以下连接：
+
+** 控制台（远程管理端口）
+** 集群端口
+** 数据端口
+** 集群和节点管理端口
+** 存储
+** SAN 配置： iSCSI 以太网和 FC 交换机端口
+
+
++
+
+NOTE: 您无需将互连卡 /FC_VI 卡或互连 /FC_VI 缆线连接从 node2 移至 node4 ，因为大多数平台型号都具有唯一的互连卡型号。
+
+. 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果 node4 位于 ... | 那么 ... 
+
+
+| 与 node3 相同的机箱 | 转至 <<man_install4_Step8,第 8 步>>。 
+
+
+| 与 node3 不同的机箱 | 转至 <<man_install4_Step6,第 6 步>>。 
+|===
+. 【 man_install4_Step6]] 打开 node4 的电源，然后按 `Ctrl-C` 以访问启动环境提示符来中断启动。
++
+
+NOTE: 启动 node4 时，您可能会看到以下消息：
+
++
+[listing]
+----
+WARNING: The battery is unfit to retain data during a power
+         outage. This is likely because the battery is
+         discharged but could be due to other temporary
+         conditions.
+         When the battery is ready, the boot process will
+         complete and services will be engaged.
+         To override this delay, press 'c' followed by 'Enter'
+----
+. 【 ｛ man_install4_Step7]] 如果您在步骤 6 中看到警告消息，请执行以下操作：
++
+.. 检查是否存在任何可能指示 NVRAM 电池电量低以外问题的控制台消息，如有必要，请采取任何必要的更正措施。
+.. 让电池充电并完成启动过程。
++
+
+WARNING: * 警告：不要覆盖此延迟。如果不允许电池充电，可能会导致数据丢失。 *
+
+
+
+. [[man_install4_Step8]] 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果您的系统 ... | 那么 ... 
+
+
+| 具有磁盘，无后端存储 | 跳过第 9 步到第 14 步，然后转到 <<man_install4_Step15,第 15 步>>。 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列  a| 
+.. 转至 _set the FC or UTA/UTA2 configuration on node4_ 一节并完成各节 link:set_fc_uta_uta2_config_node4.html#configure-fc-ports-on-node4["在节点 4 上配置 FC 端口"] 和 ，根据您的系统情况而定。
+.. 返回到此部分，完成从开始的其余步骤 <<man_install4_Step9,第 9 步>>。
+
+
+* 重要信息 * ：在 V 系列系统上启动 Data ONTAP 之前，您必须重新配置 FC 板载端口， UTA/UTA2 板载端口和 UTA/UTA2 卡。
+
+|===
+. 【 man_install4_Step9]] 将新节点的 FC 启动程序端口添加到交换机分区。
++
+有关说明，请参见存储阵列和分区文档。
+
+. 将 FC 启动程序端口作为新主机添加到存储阵列，从而将阵列 LUN 映射到新主机。
++
+有关说明，请参见存储阵列和分区文档。
+
+. 修改与存储阵列上的阵列 LUN 关联的主机或卷组中的全球通用端口名称（ WWPN ）值。
++
+安装新控制器模块会更改与每个板载 FC 端口关联的 WWPN 值。
+
+. 如果您的配置使用基于交换机的分区，请调整分区以反映新的 WWPN 值。
+. 输入以下命令并检查其输出，以验证阵列 LUN 现在是否对 node4 可见：
++
+`ssysconfig -v`
+
++
+系统将显示每个 FC 启动程序端口可见的所有阵列 LUN 。如果阵列 LUN 不可见，则您不能在本节稍后将磁盘从 node2 重新分配到 node4 。
+
+. 按 `Ctrl-C` 以显示启动菜单，然后选择维护模式。
+. 在维护模式提示符处，输入以下命令：
++
+`halt`
+
++
+系统将在启动环境提示符处停止。
+
+. 为 ONTAP 配置 node4 ：
++
+`set-defaults`
+
+. 如果在此配置中使用 FDE ，则必须将 `setenv bootarg.storageencryption.support` 变量设置为 `true` ，并将 `kmip.init.maxwait` 变量设置为 `off` ，以避免在加载 node2 配置后出现启动环路：
++
+`setenv bootarg.storageencryption.support true`
+
++
+`setenv kmip.init.maxwait off`
+
+. 如果 node4 上安装的 ONTAP 版本与 node2 上安装的 ONTAP 9 版本相同或更高，请输入以下命令：
++
+`boot_ontap 菜单`
+
+. 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果要升级的系统 ... | 那么 ... 
+
+
+| node4 上的 ONTAP 版本不正确或当前不正确 | 转至 <<man_install4_Step20,第 20 步>>。 
+
+
+| node4 上的 ONTAP 版本正确或最新 | 转至 <<man_install4_Step25,第 25 步>>。 
+|===
+. 【 man_install4_Step20]] 通过选择以下操作之一来配置网络启动连接。
++
+
+NOTE: 您应使用管理端口和 IP 地址作为网络启动连接。请勿使用数据 LIF IP 地址，否则在执行升级期间可能会发生数据中断。
+
++
+[cols="30,70"]
+|===
+| 动态主机配置协议（ DHCP ） | 那么 ... 
+
+
+| 正在运行 | 在启动环境提示符处输入以下命令，以自动配置连接： `ifconfig e0M -auto` 
+
+
+| 未运行 | 在启动环境提示符处输入以下命令以手动配置连接： `ifconfig e0M -addr=<filer_addr> mask=<netmask> -gw=<gateway> dns=<dns_addr> domain=<dns_domain>` ` <filer_addr>` 是存储系统的 IP 地址。` < 网络掩码 >` 是存储系统的网络掩码。` < 网关 >` 是存储系统的网关。` <dns_addr>` 是网络上名称服务器的 IP 地址。` <dns_domain>` 是域名服务（ DNS ）域名。如果使用此可选参数，则无需在网络启动服务器 URL 中使用完全限定域名；您只需要服务器的主机名。* 注 * ：接口可能需要其他参数。有关详细信息，请在固件提示符处输入 `help ifconfig` 。 
+|===
+. 对 node4 执行网络启动：
++
+[cols="30,70"]
+|===
+| 针对 ... | 那么 ... 
+
+
+| FAS/AFF8000 系列系统 | `netboot \http://<web_server_ip/path_to_webaccessible_directory>/netboot/kernel` 
+
+
+| 所有其他系统 | `netboot \http://<web_server_ip/path_to_webaccessible_directory/ontap_version>_image.tgz` 
+|===
++
+` <path_to_the_web-accessible_directory>` 应指向您在中下载 ` <ontap_version>_image.tgz` 的位置 link:prepare_for_netboot.html#man_netboot_Step1["第 1 步"] 在 _prepare for netboot_ 一节中。
+
++
+
+NOTE: 请勿中断启动。
+
+. 从启动菜单中，选择 `option （ 7 ） Install new software first` 。
++
+此菜单选项可下载新的 Data ONTAP 映像并将其安装到启动设备中。
+
++
+请忽略以下消息：
+
++
+` " 此操作步骤不支持在 HA 对上进行无中断升级 "`
+
++
+注意适用场景可无中断升级 Data ONTAP ，而不是升级控制器。
+
+. 【 ｛ man_install4_step23]] 如果系统提示您继续运行操作步骤，请输入 y ，当系统提示您输入软件包时，请输入 URL ：
++
+` http://<web_server_ip/path_to_web-accessible_directory/ontap_version>_image.tgz`
+
+. 完成以下子步骤：
++
+.. 出现以下提示时，输入 `n` 以跳过备份恢复：
++
+[listing]
+----
+Do you want to restore the backup configuration now? {y|n}
+----
+.. 出现以下提示时，输入 `y` 以重新启动：
++
+[listing]
+----
+The node must be rebooted to start using the newly installed software. Do you want to reboot now? {y|n}
+----
++
+控制器模块重新启动，但停留在启动菜单处，因为启动设备已重新格式化，需要还原配置数据。
+
+
+
+. 【 man_install4_Step25]] 从启动菜单中选择维护模式 `5` ，并在系统提示您继续启动时输入 `y` 。
+. 在继续操作之前，请转到 link:set_fc_uta_uta2_config_node4.html["在 node4 上设置 FC 或 UTA/UTA2 配置"] 对节点上的 FC 或 UTA/UTA2 端口进行任何必要的更改。执行这些部分中建议的更改，重新启动节点并进入维护模式。
+. 输入以下命令并检查输出以查找 node4 的系统 ID ：
++
+`d` 展示 -A
+
++
+系统将显示节点的系统 ID 及其磁盘信息，如以下示例所示：
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 536881109
+DISK         OWNER                       POOL   SERIAL NUMBER   HOME
+------------ -------------               -----  -------------   -------------
+0b.02.23     nst-fas2520-2(536880939)    Pool0  KPG2RK6F        nst-fas2520-2(536880939)
+0b.02.13     nst-fas2520-2(536880939)    Pool0  KPG3DE4F        nst-fas2520-2(536880939)
+0b.01.13     nst-fas2520-2(536880939)    Pool0  PPG4KLAA        nst-fas2520-2(536880939)
+......
+0a.00.0                   (536881109)    Pool0  YFKSX6JG                     (536881109)
+......
+----
+. 重新分配 node2 的备用磁盘，属于根的磁盘以及第节前面未重新定位到 node3 的任何非根聚合 link:relocate_non_root_aggr_node2_node3.html["将非根聚合从 node2 重新定位到 node3"]：
++
+[cols="35,65"]
+|===
+| Disk type | 运行命令 ... 
+
+
+| 共享磁盘 | `dreassign -s` ` <node2_sysid> -d <node4_sysid> -p <node3_sysid>` 
+
+
+| 无共享 | `disks disk reassign -s` ` <node2_sysid> -d <node4_sysid>` 
+|===
++
+对于 ` <node2_sysid>` 值，请使用中捕获的信息 link:record_node2_information.html#man_node2_info_step10["第 10 步"] 记录 node2 信息 _ 部分的。对于 ` <node4_sysid>` ，请使用中捕获的信息 <<man_install4_step23,第 23 步>>。
+
++
+
+NOTE: 只有当存在共享磁盘时，才需要在维护模式下使用 ` -p` 选项。
+
++
+使用 `ddisk reassign` 命令将仅重新分配 ` <node2_sysid>` 为当前所有者的磁盘。
+
++
+系统将显示以下消息：
+
++
+[listing]
+----
+Partner node must not be in Takeover mode during disk reassignment from maintenance mode.
+Serious problems could result!!
+Do not proceed with reassignment if the partner is in takeover mode. Abort reassignment (y/n)? n
+----
++
+当系统要求中止磁盘重新分配时，输入 `n` 。
+
++
+当系统要求您中止磁盘重新分配时，您必须按照以下步骤所示问题解答一系列提示：
+
++
+.. 系统将显示以下消息：
++
+[listing]
+----
+After the node becomes operational, you must perform a takeover and giveback of the HA partner node to ensure disk reassignment is successful.
+Do you want to continue (y/n)? y
+----
+.. 输入 `y` 以继续。
++
+系统将显示以下消息：
+
++
+[listing]
+----
+Disk ownership will be updated on all disks previously belonging to Filer with sysid <sysid>.
+Do you want to continue (y/n)? y
+----
+.. 输入 `y` 以允许更新磁盘所有权。
+
+
+. 如果要从具有外部磁盘的系统升级到支持内部和外部磁盘的系统（例如， A800 系统），请将 node4 设置为 root ，以确保它从 node2 的根聚合启动。
++
+
+WARNING: * 警告：必须按所示的确切顺序执行以下子步骤；否则可能发生原因会导致中断甚至数据丢失。 *
+
++
+以下操作步骤会将 node4 设置为从 node2 的根聚合启动：
+
++
+.. 检查 node2 聚合的 RAID ，丛和校验和信息：
++
+`aggr status -r`
+
+.. 检查 node2 聚合的整体状态：
++
+`聚合状态`
+
+.. 如有必要，将 node2 聚合置于联机状态：
++
+`aggr_online root_aggr_from_<node2>`
+
+.. 阻止 node4 从其原始根聚合启动：
++
+`aggr offline <root_aggr_on_node4>`
+
+.. 将 node2 根聚合设置为 node4 的新根聚合：
++
+`aggr options aggr_from_<node2>root`
+
+
+
+. 输入以下命令并观察输出，以验证控制器和机箱是否配置为 `ha` ：
++
+`ha-config show`
+
++
+以下示例显示了 `ha-config show` 命令的输出：
+
++
+[listing]
+----
+*> ha-config show
+   Chassis HA configuration: ha
+   Controller HA configuration: ha
+----
++
+系统会在 PROM 中记录它们是采用 HA 对还是独立配置。独立系统或 HA 对中的所有组件的状态都必须相同。
+
++
+如果控制器和机箱未配置为 `ha` ，请使用以下命令更正配置：
+
++
+`ha-config modify controller ha`
+
++
+`ha-config modify chassis ha` 。
+
++
+如果您使用的是 MetroCluster 配置，请使用以下命令更正此配置：
+
++
+`ha-config modify controller mcc`
+
++
+`ha-config modify chassis mcc`
+
+. 销毁 node4 上的邮箱：
++
+`m邮箱销毁本地`
+
+. 退出维护模式：
++
+`halt`
+
++
+系统将在启动环境提示符处停止。
+
+. 在 node3 上，检查系统日期，时间和时区：
++
+`dATE`
+
+. 在 node4 上，在启动环境提示符处检查日期：
++
+`s如何选择日期`
+
+. 如有必要，请在 node4 上设置日期：
++
+`set date <MM/dd/yyy>`
+
+. 在 node4 上，在启动环境提示符处检查时间：
++
+`s时间`
+
+. 如有必要，请在 node4 上设置时间：
++
+`set time <hh ： mm ： ss>`
+
+. 验证配对系统 ID 是否设置正确，如中所述 <<man_install4_Step26,第 26 步>> 在选项下。
++
+`printenv partner-sysid`
+
+. 如有必要，请在 node4 上设置配对系统 ID ：
++
+`setenv partner-sysid <node3_sysid>`
+
++
+.. 保存设置：
++
+`saveenv`
+
+
+
+. 在启动环境提示符处输入启动菜单：
++
+`boot_ontap 菜单`
+
+. 在启动菜单中，在提示符处输入 `6` ，选择选项 * （ 6 ） Update flash from backup config* 。
++
+系统将显示以下消息：
+
++
+[listing]
+----
+This will replace all flash-based configuration with the last backup to disks. Are you sure you want to continue?:
+----
+. 在提示符处输入 `y` 。
++
+启动正常进行，系统会提示您确认系统 ID 不匹配。
+
++
+
+NOTE: 系统可能会重新启动两次，然后才会显示不匹配警告。
+
+. 确认不匹配。节点可能会在正常启动之前完成一轮重新启动。
+. 登录到 node4 。
+

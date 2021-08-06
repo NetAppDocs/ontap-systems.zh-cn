@@ -1,0 +1,9 @@
+= 
+
+
+. 【 auto_check3_step13]] 退出维护模式：
++
+`halt`
+
+. 【第 14 步】运行 `boot_ontap menu` 将节点启动到启动菜单。如果要升级到 A800 ，请转至 <<auto_check3_step23,第 23 步>>。
+

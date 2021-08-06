@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/lif_migration_failure.html 
+keywords: lif, migration, failure, ndac, mtu 
+summary: 迁移 LIF 后，它们可能无法在迁移到阶段 2 ，阶段 3 或阶段 5 后联机。 
+---
+= LIF 迁移失败
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+迁移 LIF 后，它们可能无法在迁移到阶段 2 ，阶段 3 或阶段 5 后联机。
+
+.步骤
+. 验证端口 MTU 大小是否与源节点的端口 MTU 大小相同。
++
+例如，如果源节点上的集群端口 MTU 大小为 9000 ，则目标节点上的 MTU 大小应为 9000 。
+
+. 如果端口的物理状态为 `down` ，请检查网络缆线的物理连接。
+

@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: upgrade/index.html 
+keywords: aggregate, relocation, moving, manual, upgrade, relocate, hardware 
+summary: 使用聚合重新定位升级控制器硬件 
+---
+= 使用聚合重新定位升级控制器硬件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+本指南介绍如何通过聚合重新定位在不中断的情况下升级控制器硬件。
+
+有关升级控制器硬件的其他方法，请参见 link:http://docs.netapp.com/platstor/topic/com.netapp.doc.hw-upgrade-controller/home.html["《控制器硬件升级快速指南》"]。
+
+通过将非根聚合从原始节点迁移到同一集群中的新节点，您可以无中断地升级一对运行 ONTAP 的节点上的控制器硬件。升级期间，可以访问要升级的节点上托管的数据。
+
+此操作步骤使用一种称为聚合重新定位（ Aggregate Relocation ， ARL ）的方法，该方法利用 HA 配置，可以将非根聚合的所有权从一个节点移动到另一个节点，前提是它们在同一集群中共享存储。
+
+您可以通过两种 ARL 方法升级控制器硬件：使用系统命令或执行手动升级。开始之前，您必须确认为控制器硬件升级选择了正确的指南。
+
+如果您要使用系统命令执行升级，请参见下表：
+
+[cols="30,70"]
+|===
+| 如果您运行的是此 ONTAP 版本… | 要使用 system 命令进行升级，请使用… 
+
+
+| 9.8 或更高版本 | link:http://docs.netapp.com/us-en/ontap-systems/upgrade-arl-auto-app/index.html["使用 " 系统控制器更换 " 命令升级运行 ONTAP 9.8 或更高版本的控制器硬件"] 
+
+
+| 9.5 到 9.7 | link:http://docs.netapp.com/us-en/ontap-systems/upgrade-arl-auto/index.html["使用 " 系统控制器更换 " 命令将运行 ONTAP 9.5 的控制器硬件升级到 ONTAP 9.7"] 
+|===
+如果要执行手动升级，请参见下表：
+
+[cols="30,70"]
+|===
+| 如果您运行的是此 ONTAP 版本… | 要手动升级，请使用… 
+
+
+| 9.8 或更高版本 | link:http://docs.netapp.com/us-en/ontap-systems/upgrade-arl-manual-app/index.html["使用聚合重新定位手动升级运行 ONTAP 9.8 或更高版本的控制器硬件"] 
+
+
+| 9.0 到 9.7 | link:http://docs.netapp.com/us-en/ontap-systems/upgrade-arl-manual/index.html["使用聚合重新定位手动升级运行 ONTAP 9.7 或更早版本的控制器硬件"] 
+|===

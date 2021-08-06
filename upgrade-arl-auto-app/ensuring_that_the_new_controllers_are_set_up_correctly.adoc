@@ -1,0 +1,159 @@
+---
+sidebar: upgrade-arl-auto-app_sidebar 
+permalink: upgrade-arl-auto-app/ensuring_that_the_new_controllers_are_set_up_correctly.html 
+keywords: ensure, controllers, set up, ha, node3, node4, node2, lif, cluster, high, availability 
+summary: 要确保设置正确，必须启用 HA 对。 
+---
+= 确保新控制器设置正确
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+要确保设置正确，必须启用 HA 对。此外，还必须验证 node3 和 node4 是否可以访问彼此的存储，并且它们都不拥有属于集群上其他节点的数据 LIF 。此外，您必须确保 node3 拥有 node1 的聚合， node4 拥有 node2 的聚合，并且两个节点的卷均联机。
+
+.步骤
+. 在对 node2 执行后检之后，将为 node2 集群启用存储故障转移和集群 HA 对。操作完成后，两个节点均显示为已完成，系统将执行一些清理操作。
+. 使用以下命令输入以验证是否已启用存储故障转移：
++
+`s存储故障转移显示`
+
++
+以下示例显示了启用存储故障转移时命令的输出：
+
++
+....
+cluster::> storage failover show
+                  Takeover
+Node     Partner  Possible   State Description
+-------- -----    -------    ------------------
+node3    node4    true       Connected to node4
+node4    node3    true       Connected to node3
+....
+. 使用以下命令并检查输出，验证 node3 和 node4 是否属于同一集群：
++
+`cluster show`
+
+. 使用以下命令并检查输出，验证 node3 和 node4 是否可以访问彼此的存储：
++
+`storage failover show -fields local-missing- disks ， partner-missing-disks`
+
+. 使用以下命令并检查输出，验证 node3 和 node4 均不拥有集群中其他节点拥有的主数据 LIF ：
++
+`network interface show`
+
++
+如果 node3 或 node4 都不拥有集群中其他节点拥有的主数据 LIF ，请使用以下命令将数据 LIF 还原到其主所有者：
+
++
+`网络接口还原`
+
+. 使用以下命令验证 node3 是否拥有 node1 中的聚合以及 node4 是否拥有 node2 中的聚合：
++
+`storage aggregate show -owner-name <node3>`
+
++
+`storage aggregate show -owner-name <node4>`
+
+. 使用以下命令确定是否有任何卷脱机：
++
+`volume show -node <node3> -state offline`
+
++
+`volume show -node <node4> -state offline`
+
+. 如果任何卷处于脱机状态，请将其与您在部分中捕获的脱机卷列表进行比较 link:preparing_the_nodes_for_upgrade.html["准备要升级的节点"]，并根据需要使用以下命令使每个卷的任何脱机卷联机一次：
++
+`volume online -vserver <vserver-name> -volume <volume_name>`
+
+. 对每个节点使用以下命令，为新节点安装新许可证：
++
+`ssystem license add - license-code < 许可证代码，许可证代码，许可证代码 ...>`
+
++
+license-code 参数接受一个包含 28 个大写字母字符密钥的列表。您可以一次添加一个许可证，也可以一次添加多个许可证，并以逗号分隔每个许可证密钥。
+
+. 使用以下命令之一从原始节点中删除所有旧许可证：
++
+`ssystem license clean-up -unused -expired`
+
++
+`ssystem license delete -serial number <node_serial number> -package <licensable_package>`
+
++
+** 使用以下命令删除所有已过期的许可证：
++
+`ssystem license clean-up -expired`
+
+** 使用以下命令删除所有未使用的许可证：
++
+`ssystem license clean-up -unused`
+
+** 在节点上使用以下命令从集群中删除特定许可证：
++
+`ssystem license delete -serial number <node1 serial number> -package *`
+
++
+`ssystem license delete -serial number <node2 serial number> -package *`
+
++
+此时将显示以下输出：
+
++
+....
+Warning: The following licenses will be removed:
+<list of each installed package>
+Do you want to continue? {y|n}: y
+....
++
+输入 `y` 删除所有软件包。
+
+
+
+. 使用以下命令并检查其输出，以验证是否已正确安装许可证：
++
+`s系统许可证显示`
+
++
+您可能需要将输出与中捕获的输出进行比较 link:preparing_the_nodes_for_upgrade.html["准备要升级的节点"]。
+
+. 如果在配置中使用了 NetApp 存储加密（ NSE ），并且您将 `setenv bootarg.storageencryption.support` 命令设置为 `true` 并使用 ` <kmip.init.maxwait>` 变量 `off` （步骤 27 中），则需要使用以下命令重置此变量：
++
+`set diag ； systemshell -node <nodename> -command sudo kenv -u -p kmip.init.maxwait`
+
+. 在两个节点上使用以下命令配置 SP ：
++
+`ssystem service-processor network modify -node <node_name>`
+
++
+请参见 link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《系统管理参考》"] 有关 SP 和的信息  有关 `ssystem service-processor network modify` 命令的详细信息。
+
+. 对其中一个新节点执行以下操作：
++
+.. 使用以下命令输入高级权限级别：
++
+`set -privilege advanced`
+
+.. 输入以下命令：
++
+`storage failover modify -node <node_name> - cifs- no-duration default_medium_low`
+
++
+*** 如果系统的工作负载的 50% 到 75% 的操作小于 4 KB ，请输入 `medium` 。
+*** 如果系统的工作负载的 75% 到 100% 的操作小于或小于 4 KB ，请输入 `low` 。
+
+
+.. 使用以下命令返回到管理员级别：
++
+`set -privilege admin`
+
+.. 重新启动系统以确保更改生效。
+
+
+. 如果要在新节点上设置无交换机集群，请按照 NetApp 支持站点上的 * 过渡到双节点无交换机集群 * 中的说明进行操作。
+
+
+如果在 node3 和 node4 上启用了存储加密，请完成此部分 link:setting_up_storage_encryption_on_the_new_controller_module.html["在新控制器模块上设置存储加密"]。否则，请完成部分 。

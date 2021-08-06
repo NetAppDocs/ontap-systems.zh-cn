@@ -1,0 +1,18 @@
+---
+sidebar: upgrade-arl-auto-app_sidebar 
+permalink: upgrade-arl-auto-app/troubleshooting_overview.html 
+keywords: troubleshooting, node, aggregate, lif, migrate, failure 
+summary: 升级节点对时可能会遇到故障。 
+---
+= 故障排除
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+升级节点对时可能会遇到故障。节点可能会崩溃，聚合可能无法重新定位或 LIF 可能无法迁移。故障的发生原因及其解决方案取决于升级操作步骤期间发生故障的时间。
+
+请参见一节中描述操作步骤不同阶段的表 link:overview_of_the_arl_upgrade.html["ARL 升级概述"]。有关可能发生的故障的信息按操作步骤的阶段列出。

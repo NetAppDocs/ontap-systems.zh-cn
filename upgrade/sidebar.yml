@@ -1,0 +1,13 @@
+---
+section: upgrade
+title: 使用聚合重新定位升级控制器硬件
+url: index.html
+entries:
+- title: 使用 system controller replace 命令升级运行 ONTAP 9.8 或更高版本的控制器硬件
+  url: http://docs.netapp.com/us-en/ontap-systems/upgrade-arl-auto-app/index.html
+- title: 使用 system controller replace 命令将运行 ONTAP 9.5 的控制器硬件升级到 9.7
+  url: http://docs.netapp.com/us-en/ontap-systems/upgrade-arl-auto/index.html
+- title: 使用聚合重新定位手动升级运行 ONTAP 9.8 或更高版本的控制器硬件
+  url: http://docs.netapp.com/us-en/ontap-systems/upgrade-arl-manual-app/index.html
+- title: 使用聚合重新定位手动升级运行 ONTAP 9.7 或更早版本的控制器硬件
+  url: http://docs.netapp.com/us-en/ontap-systems/upgrade-arl-manual/index.html

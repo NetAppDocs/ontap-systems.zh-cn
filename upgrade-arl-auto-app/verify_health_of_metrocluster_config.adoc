@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/verify_health_of_metrocluster_config.html 
+keywords: verifying, health, metrocluster, configuration, fabric, mcc 
+summary: 开始升级 Fabric MetroCluster 配置之前。 
+---
+= 验证 MetroCluster 配置的运行状况。
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在开始对光纤 MetroCluster 配置进行升级之前，您必须检查 MetroCluster 配置的运行状况以验证是否正常运行。
+
+.步骤
+. 验证 MetroCluster 组件是否运行正常：
++
+`MetroCluster check run`
+
++
+....
+metrocluster_siteA::*> metrocluster check run
+....
++
+此操作将在后台运行。
+
+
+
+在 <stdin> 中未解析的指令 - 包括： .//_include/ru_auto_verify_health_metrocluster_configuration.adoc]]

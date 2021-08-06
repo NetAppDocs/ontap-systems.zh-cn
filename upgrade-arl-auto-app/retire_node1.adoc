@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/retire_node1.html 
+keywords: retiring, node 
+summary: 要停用 node1 ，您需要恢复自动操作，以便使用 node2 禁用 HA 对并正确关闭 Lonode1 。 
+---
+= 停用 node1
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 <stdin> 中未解析的指令 - 包括： ../_include/ru_auto_retif_node1.adoc]]

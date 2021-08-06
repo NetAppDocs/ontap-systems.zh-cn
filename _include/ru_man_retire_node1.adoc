@@ -1,0 +1,190 @@
+= 
+
+
+要停用 node1 ，您需要禁用 node2 的 HA 对，正确关闭 node1 并将其从机架或机箱中卸下。
+
+.步骤
+. 验证集群中的节点数：
++
+`cluster show`
+
++
+系统将显示集群中的节点，如以下示例所示：
+
++
+[listing]
+----
+cluster::> cluster show
+Node                  Health  Eligibility
+--------------------- ------- ------------
+node1                 true    true
+node2                 true    true
+2 entries were displayed.
+----
+. 【 man_REALET_1_step2]] 根据需要禁用存储故障转移：
++
+[cols="35,65"]
+|===
+| 如果集群 ... | 那么 ... 
+
+
+| 双节点集群  a| 
+.. 在任一节点上输入以下命令，以禁用集群高可用性：
+
+
+`cluster ha modify -configured false`
+
+.. 禁用存储故障转移：
+
+
+`storage failover modify -node <node1> -enabled false`
+
+
+
+| 包含两个以上节点的集群 | 禁用存储故障转移： `storage failover modify -node <node1> -enabled false` 
+|===
+. 验证是否已禁用存储故障转移：
++
+`s存储故障转移显示`
+
++
+以下示例显示了在为节点禁用存储故障转移后， `storage failover show` 命令的输出：
+
++
+[listing]
+----
+ cluster::> storage failover show
+                               Takeover
+ Node           Partner        Possible State Description
+ -------------- -------------- -------- -------------------------------------
+ node1          node2          false    Connected to node2, Takeover
+                                        is not possible: Storage failover is
+                                        disabled
+
+ node2          node1          false    Node owns partner's aggregates as part
+                                        of the nondisruptive controller upgrade
+                                        procedure. Takeover is not possible:
+                                        Storage failover is disabled
+ 2 entries were displayed.
+----
+. 验证数据 LIF 状态：
++
+`network interface show -role data -curr-node <node2>-home-node <node1>`
+
++
+查看 * 状态管理 /Oper* 列，查看是否有任何 LIF 已关闭。如果有任何 LIF 发生故障，请参见 link:troubleshoot.html["故障排除"] 部分。
+
+. 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果集群 ... | 那么 ... 
+
+
+| 双节点集群 | 转至 <<man_retire_1_step6,第 6 步>>。 
+
+
+| 包含两个以上节点的集群 | 转至 <<man_retire_1_step8,第 8 步>>。 
+|===
+. 【 man_REALET_1_step6]] 访问任一节点上的高级权限级别：
++
+`set -privilege advanced`
+
+. 【第 7 步】验证集群 HA 是否已禁用：
++
+`cluster ha show`
+
++
+系统将显示以下消息：
+
++
+[listing]
+----
+High Availability Configured: false
+----
++
+如果尚未禁用集群 HA ，请重复此操作 <<man_retire_1_step2,第 2 步>>。
+
+. 【 ｛ man_REALET_1_step8]] 检查 node1 当前是否持有 epsilon ：
++
+`cluster show`
+
++
+由于集群中的节点数可能为偶数，因此一个节点的表决权重会增加一个百分比，称为 epsilon 。请参见 link:other_references.html["参考资料"] 可链接到系统管理参考 _ 以了解详细信息。
+
++
+
+NOTE: 如果您使用的是四节点集群，则 Epsilon 可能位于集群中不同 HA 对中的节点上。
+
++
+以下示例显示 node1 持有 epsilon ：
+
++
+[listing]
+----
+ cluster::*> cluster show
+
+ Node                 Health  Eligibility  Epsilon
+ -------------------- ------- ------------ ------------
+ node1                true    true         true
+ node2                true    true         false
+----
+. 如果 node1 持有 epsilon ，则在节点上标记 epsilon `false` ，以便将其传输到 node2 ：
++
+`cluster modify -node <node1> -epsilon false`
+
+. 将 epsilon `true` 标记为 node2 ，将 epsilon 传输到 node2 ：
++
+`cluster modify -node <node2> -epsilon true`
+
+. 验证是否已对 node2 进行更改：
++
+`cluster show`
+
++
+[listing]
+----
+ cluster::*> cluster show
+ Node                 Health  Eligibility  Epsilon
+ -------------------- ------- ------------ ------------
+ node1                true    true         false
+ node2                true    true         true
+----
++
+node2 的 epsilon 现在应为 true ， node1 的 epsilon 现在应为 false 。
+
+. 验证设置是否为双节点无交换机集群：
++
+`network options switchless-cluster show`
+
++
+[listing]
+----
+ cluster::*> network options switchless-cluster show
+
+ Enable Switchless Cluster: false/true
+----
++
+此命令的值必须与系统的物理状态匹配。
+
+. 返回到管理员级别：
++
+`set -privilege admin`
+
+. 从 node1 提示符处暂停 node1 ：
++
+`ssystem node halt -node <node1>`
+
++
+
+WARNING: * 注意 * ：如果 node1 与 node2 位于同一机箱中，请勿使用电源开关或拔下电源线来关闭机箱。如果这样做，正在提供数据的 node2 将关闭。
+
+. 当系统提示您确认是否要暂停系统时，输入 `y` 。
++
+节点将停留在启动环境提示符处。
+
+. 当 node1 显示启动环境提示符时，将其从机箱或机架中取出。
++
+升级完成后，您可以停用 node1 。请参见 link:decommission_old_system.html["停用旧系统"]。
+
+

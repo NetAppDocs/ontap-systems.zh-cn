@@ -1,0 +1,137 @@
+= 
+
+
+将聚合从 node2 重新定位到 node3 后，您需要将 node2 拥有的 NAS 数据 LIF 移动到 node3 。
+
+在升级操作步骤期间，远程 LIF 处理 SAN LUN 的流量。升级期间，集群或服务运行状况无需移动 SAN LIF 。除非需要将 SAN LIF 映射到新端口，否则不会移动这些 LIF 。将 LIF 从 node3 移动到 node4 并使 node4 联机后，必须验证 LIF 是否运行正常并位于相应的端口上。
+
+.步骤
+. 【第 1 步】通过在任一节点上输入以下命令并捕获输出，列出 node2 拥有的所有 NAS 数据 LIF ：
++
+`network interface show -data-protocol nfs|cifs -home-node <node2>`
+
++
+以下示例显示了 node2 的命令输出：
+
++
+[listing]
+----
+cluster::> network interface show -data-protocol nfs|cifs -home-node node2
+              Logical     Status      Network             Current  Current  Is
+ Vserver      Interface   Admin/Oper  Address/Mask        Node     Port     Home
+ -----------  ----------  ----------  ------------------  -------  -------  ----
+ vs0
+              a0a         up/down     10.63.0.53/24       node2    a0a      true
+              data1       up/up       10.63.0.50/18       node2    e0c      true
+              rads1       up/up       10.63.0.51/18       node2    e1a      true
+              rads2       up/down     10.63.0.52/24       node2    e1b      true
+ vs1
+              lif1        up/up       172.17.176.120/24   node2    e0c      true
+              lif2        up/up       172.17.176.121/24   node2    e1a      true
+----
+. 【第 2 步】执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果 node2... | 那么 ... 
+
+
+| 已配置接口组或 VLAN | 转至 <<man_move_lif_2_3_step3,第 3 步>>。 
+
+
+| 未配置接口组或 VLAN | 跳过步骤 3 ，然后转到 <<man_move_lif_2_3_step4,第 4 步>>。 
+|===
+. [[man_move_lif_2_3_step3]] 执行以下步骤以迁移节点 2 上接口组和 VLAN 上托管的 NAS 数据 LIF ：
++
+.. [[man_move_lif_2_3_substepa]] 通过为每个 LIF 输入以下命令，将 node2 上接口组上托管的任何数据 LIF 迁移到 node3 上能够在同一网络上托管 LIF 的端口：
++
+`network interface migrate -vserver <vserver_name> -lif <LIF_name> -destination-node <node3> – destination-port <netport_ifgrp>`
+
+.. 在中修改 LIF 的主端口和主节点 <<man_move_lif_2_3_substepa,子步骤 A>> 通过输入以下命令将 LIF 连接到当前托管 LIF 的端口和节点，每个节点输入一次：
++
+`network interface modify -vserver <vserver_name> -lif <LIF_name> -home-node <node3> -homport <netport_ifgrp>`
+
+.. 【 man_move_lif_2_3_substepc]] 通过为每个 LIF 输入以下命令，将节点 2 上 VLAN 上托管的任何 LIF 迁移到节点 3 上能够在与 VLAN 相同的网络上托管 LIF 的端口：
++
+`network interface migrate -vserver <vserver_name> -lif <LIF_name> -destination-node <node3> – destination-port <netport_ifgrp>`
+
+.. 在中修改 LIF 的主端口和主节点 <<man_move_lif_2_3_substepc,子步骤 c>> 输入以下命令，将 LIF 设置为当前托管 LIF 的端口和节点，每个 LIF 设置为一次：
++
+`network interface modify -vserver <vserver_name> -lif <LIF_name> -home-node <node3> -homport <netport_ifgrp>`
+
+
+
+. [[man_move_lif_2_3_step4]] 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果集群配置为 ... | 那么 ... 
+
+
+| NAS | 完成 <<man_move_lif_2_3_step5,第 5 步>> 到 <<man_move_lif_2_3_step8,第 8 步>>。 
+
+
+| SAN | 跳过步骤 5 到步骤 8 ，然后完成 <<man_move_lif_2_3_step9,第 9 步>>。 
+
+
+| NAS 和 SAN | 完成 <<man_move_lif_2_3_step5,第 5 步>> 到 <<man_move_lif_2_3_step9,第 9 步>>。 
+|===
+. [[man_move_lif_2_3_step5]] 如果平台上的数据端口不同，请将这些端口添加到广播域：
++
+`network port broadcast-domain add-ports -ipspace <ipspace_name> -broadcast-domain mgmt -ports <node ： port>`
+
++
+以下示例将节点 "6280-1 " 上的端口 "e0a" 和节点 "8060-1 " 上的端口 "e0i" 添加到 IP 空间 "Default" 中的广播域 "mgmt" ：
+
++
+[listing]
+----
+cluster::> network port broadcast-domain add-ports -ipspace Default
+           -broadcast-domain mgmt -ports 6280-1:e0a, 8060-1:e0i
+----
+. 【第 6 步】输入以下命令，将每个 NAS 数据 LIF 迁移到 node3 ，每个 LIF 一次：
++
+`network interface migrate -vserver <vserver_name> -lif <LIF_name> -destination-node <node3> -destination-port <netport_ifgrp>`
+
+. 【第 7 步】在任一节点上输入以下命令并检查输出，以验证 NAS LIF 是否已移至正确的端口以及 LIF 的状态是否为 up ：
++
+`network interface show -curr-node <node3>-data-protocol cifs|nfs`
+
+. [[man_move_lif_2_3_step8]] 如果任何 LIF 已关闭，请通过输入以下命令将 LIF 的管理状态设置为 "up" ，每个 LIF 一次：
++
+`network interface modify -vserver <vserver_name> -lif <LIF_name> -status-admin up`
+
+. [[man_move_lif_2_3_step9]] 如果您配置了接口组或 VLAN ，请完成以下子步骤：
++
+.. 从接口组中删除 VLAN ：
++
+`network port vlan delete -node <node_name> -port <ifgrp> -vlan-id <vlan_ID>`
+
+.. 输入以下命令并检查其输出，以确定节点上是否配置了任何接口组：
++
+`network port ifgrp show -node <node_name> -ifgrp <ifgrp_name> -instance`
+
++
+系统将显示节点的接口组信息，如以下示例所示：
+
++
+[listing]
+----
+cluster::> network port ifgrp show -node node2 -ifgrp a0a -instance
+                 Node: node2
+ Interface Group Name: a0a
+Distribution Function: ip
+        Create Policy: multimode_lacp
+          MAC Address: MAC_address
+    ort Participation: partial
+        Network Ports: e2c, e2d
+             Up Ports: e2c
+           Down Ports: e2d
+----
+.. 如果节点上配置了任何接口组，请记录接口组的名称以及分配给这些接口组的端口，然后输入以下命令删除这些端口，每个端口输入一次：
++
+`network port ifgrp remove-port -node <node_name> -ifgrp <ifgrp_name> -port <port_name>`
+
+
+
+

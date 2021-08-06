@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/move_non_root_aggr_and_nas_data_lifs_node2_from_node3_to_node4.html 
+keywords: move, non-root, aggregates, nas, lif, node2, node3, node4 
+summary: 在 node4 上验证网络配置之后，以及在将聚合从 node3 重新定位到 node4 之前。 
+---
+= 将 node2 拥有的非根聚合和 NAS 数据 LIF 从 node3 移动到 node4
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在验证 node4 上的网络配置以及将聚合从 node3 重新定位到 node4 之前，您必须验证当前位于 node3 上的 node2 所属的 NAS 数据 LIF 是否已从 node3 重新定位到 node4 。您还必须验证 node4 上是否存在 SAN LIF 。
+
+在升级操作步骤期间，远程 LIF 处理 SAN LUN 的流量。升级期间，集群或服务运行状况无需移动 SAN LIF 。除非需要将 SAN LIF 映射到新端口，否则不会移动这些 LIF 。使 node4 联机后，您将验证 LIF 是否运行正常并位于相应的端口上。
+
+.步骤
+. 使用以下命令恢复重新定位操作：
++
+`s系统控制器更换恢复`
+
++
+系统将执行以下任务：
+
++
+** 集群仲裁检查
+** 系统 ID 检查
+** 映像版本检查
+** 目标平台检查
+** 网络可访问性检查
+
+
++
+此操作将在网络可访问性检查的此阶段暂停。
+
+. 使用以下命令恢复重新定位操作：
++
+`s系统控制器更换恢复`
+
+. 系统将执行以下检查：
++
+** 集群运行状况检查
+** 集群 LIF 状态检查
+
+
++
+执行这些检查后，系统会将 node2 拥有的非根聚合和 NAS 数据 LIF 重新定位到新控制器 node4 。资源重新定位完成后，控制器更换操作将暂停。
+
+. 使用以下命令检查聚合重新定位和 NAS 数据 LIF 移动操作的状态：
++
+`s系统控制器更换 show-details`
+
++
+如果控制器更换操作步骤已暂停，请检查并更正错误（如果有），然后选择问题描述 `reume` 继续操作。
+
+. 如有必要，还原和还原任何已替换的 LIF 。使用以下命令列出所有已替换的 LIF ：
++
+`cluster controller-replacement network placed-interface show`
+
++
+如果已替换任何 LIF ，请使用以下命令将主节点还原回 node4 ：
+
++
+`cluster controller-replacement network placed-interface restore-home-node`
+
+. 使用以下命令恢复此操作，以提示系统执行所需的后检查：
++
+`s系统控制器更换恢复`
+
++
+系统将执行以下后检查：
+
++
+** 集群仲裁检查
+** 集群运行状况检查
+** 聚合重建检查
+** 聚合状态检查
+** 磁盘状态检查
+** 集群 LIF 状态检查
+** 卷检查
+
+
+

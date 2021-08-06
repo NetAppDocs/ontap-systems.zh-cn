@@ -1,0 +1,170 @@
+= 检查并配置 node3 上的 UTA/UTA2 端口
+
+
+
+
+== 检查并配置 node3 上的 UTA/UTA2 端口
+
+如果 node3 具有板载 UTA/UTA2 端口或 UTA/UTA2 卡，则必须检查这些端口的配置，并可能对其进行重新配置，具体取决于您希望如何使用升级后的系统。
+
+您必须为 UTA/UTA2 端口配备正确的 SFP+ 模块。
+
+如果要对 FC 使用统一目标适配器（ UTA/UTA2 ）端口，则必须先验证此端口的配置方式。
+
+
+NOTE: NetApp 营销材料可能会使用术语 UTA2 来指代 CNA 适配器和端口。但是，命令行界面使用术语 CNA 。
+
+您可以使用 `ucadmin show` 命令验证当前端口配置：
+
+....
+*> ucadmin show
+         Current  Current    Pending   Pending      Admin
+Adapter  Mode     Type       Mode      Type         Status
+-------  -------  -------    --------  ----------   --------
+0e      fc        target     -         initiator    offline
+0f      fc        target     -         initiator    offline
+0g      fc        target     -         initiator    offline
+0h      fc        target     -         initiator    offline
+1a      fc        target     -         -            online
+1b      fc        target     -         -            online
+6 entries were displayed.
+....
+UTA/UTA2 端口可以配置为原生 FC 模式或 UTA/UTA2 模式。FC 模式支持 FC 启动程序和 FC 目标； UTA/UTA2 模式允许并发 NIC 和 FCoE 流量共享相同的 10 GbE SFP+ 接口并支持 FC 目标。
+
+UTA/UTA2 端口可能位于适配器或控制器上，并且具有以下配置，但您应检查 node3 上的 UTA/UTA2 端口的配置，并根据需要进行更改：
+
+* 订购控制器时订购的 UTA/UTA2 卡会在发货前配置为具有您请求的个性化设置。
+* 与控制器分开订购的 UTA/UTA2 卡附带了默认的 FC 目标特性。
+* 新控制器上的板载 UTA/UTA2 端口会在发货前配置为具有您请求的个性化设置。
++
+
+WARNING: * 注意 * ：如果您的系统具有存储磁盘，除非指示您进入维护模式，否则您可以在集群提示符处输入本节中的命令。如果您使用的是 V 系列系统或 FlexArray 虚拟化软件并连接到存储阵列，则可以在维护模式提示符处在此部分中输入命令。要配置 UTA/UTA2 端口，您必须处于维护模式。
+
+
+
+.步骤
+. 【第 1 步】在 node3 上输入以下命令，以检查端口当前的配置方式：
++
+[cols="30,70"]
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | 无需执行任何操作。 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | `ucadmin show` 
+|===
++
+系统将显示类似于以下示例的输出：
+
++
+....
+*> ucadmin show
+         Current  Current     Pending   Pending    Admin
+Adapter  Mode     Type        Mode      Type       Status
+-------  -------  ---------   -------   --------   ---------
+0e      fc        initiator   -         -          online
+0f      fc        initiator   -         -          online
+0g      cna       target      -         -          online
+0h      cna       target      -         -          online
+0e      fc        initiator   -         -          online
+0f      fc        initiator   -         -          online
+0g      cna       target      -         -          online
+0h      cna       target      -         -          online
+*>
+....
+. 【第 2 步】如果当前 SFP+ 模块与所需用途不匹配，请将其更换为正确的 SFP+ 模块。
++
+请联系您的 NetApp 代表以获取正确的 SFP+ 模块。
+
+. `步骤 3]] 查看` ucadmin show 命令的输出，并确定 UTA/UTA2 端口是否具有所需的个性化设置。
+. 【第 4 步】执行以下操作之一：
++
+[cols="30,70"]
+|===
+| 如果 UTA/UTA2 端口 ... | 然后选择… 
+
+
+| 没有所需的个性化设置 | 转至 <<auto_check3_step5,第 5 步>>。 
+
+
+| 拥有所需的个性化特性 | 跳过步骤 5 到步骤 12 ，然后转到 <<auto_check3_step13,第 13 步>>。 
+|===
+. 【 auto_check3_step5]] 执行以下操作之一：
++
+[cols="30,70"]
+|===
+| 如果要配置 | 然后选择… 
+
+
+| UTA/UTA2 卡上的端口 | 转至 <<auto_check3_step7,第 7 步>> 
+
+
+| 板载 UTA/UTA2 端口 | 跳过第 7 步，转到 <<auto_check3_step8,第 8 步>>。 
+|===
+. 【第 6 步】如果适配器处于启动程序模式，并且 UTA/UTA2 端口处于联机状态，请使 UTA/UTA2 端口脱机：
++
+`storage disable adapter <adapter_name>`
+
++
+目标模式下的适配器会在维护模式下自动脱机。
+
+. 【 auto_check3_step7]] 如果当前配置与所需用途不匹配，请根据需要更改配置：
++
+`ucadmin modify -m fc|cna -t initiators|target <adapter_name>`
+
++
+** ` -m` 是特性模式， `fc` 或 `CNA` 。
+** ` -t` 是 FC4 类型， `target` 或 `initiator` 。
++
+
+NOTE: 您必须对磁带驱动器， FlexArray 虚拟化系统和 MetroCluster 配置使用 FC 启动程序。您必须对 SAN 客户端使用 FC 目标。
+
+
+
+. 【 auto_check3_step8]] 验证设置：
++
+`ucadmin show`
+
+. 【第 9 步】验证设置：
++
+[cols="30,70"]
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | `ucadmin show` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | `ucadmin show` 
+|===
++
+以下示例中的输出显示， FC4 类型的适配器 "1b" 更改为 `initiator` ，适配器 "2a" 和 "2b" 的模式更改为 `CNA` ：
+
++
+....
+*> ucadmin show
+         Current    Current     Pending  Pending     Admin
+Adapter  Mode       Type        Mode     Type        Status
+-------  --------   ----------  -------  --------    --------
+1a       fc         initiator   -        -           online
+1b       fc         target      -        initiator   online
+2a       fc         target      cna      -           online
+2b       fc         target      cna      -           online
+*>
+....
+. 【第 10 步】输入以下命令之一，使所有目标端口联机，每个端口输入一次：
++
+[cols="30,70"]
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | `network fcp adapter modify -node <node_name> -adapter <adapter_name> -state up` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | `FCP 配置 <adapter_name> up` 
+|===
+. 【第 11 步】为端口布线。
+

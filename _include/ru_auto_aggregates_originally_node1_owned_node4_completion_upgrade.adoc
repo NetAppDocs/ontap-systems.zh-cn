@@ -1,0 +1,44 @@
+= 升级完成后， node1 上的聚合属于 node4
+
+
+
+
+== 升级完成后， node1 上的聚合属于 node4
+
+升级操作步骤结束时， node3 应为聚合的新主节点，而这些聚合最初将 node1 作为主节点。您可以在升级后重新定位它们。
+
+在以下情况下，聚合可能无法正确重新定位，将 node1 作为其主节点，而不是 node3 ：
+
+* 在第 3 阶段，聚合从 node2 重新定位到 node3 。要重新定位的某些聚合的主节点为 node1 。例如，此类聚合可以称为 aggr_node_1 。如果 aggr_node_1 的重新定位在第 3 阶段失败，并且无法强制重新定位，则聚合将留在 node2 上。
+* 在第 4 阶段之后，将 node2 替换为 node4 。更换 node2 后， aggr_node_1 将联机，并将 node4 作为其主节点，而不是 node3 。
+
+
+启用存储故障转移后，您可以通过完成以下步骤在第 6 阶段后修复不正确的所有权问题：
+
+.步骤
+. 输入以下命令以获取聚合列表：
++
+`storage aggregate show -nodes <node4>-is-home true`
+
++
+要确定未正确重新定位的聚合，请参阅在一节中获取的主所有者为 node1 的聚合列表 link:prepare_nodes_for_upgrade.html["准备要升级的节点"] 并将其与上述命令的输出进行比较。
+
+. 将步骤 1 的输出与您在一节中为 node1 捕获的输出进行比较 link:prepare_nodes_for_upgrade.html["准备要升级的节点"] 并记下未正确重新定位的所有聚合。
+. 【 auto_aggr_relocate_fail_Step3]] 重新定位节点 4 上遗留的聚合：
++
+`storage aggregate relocation start -node <node4>-aggr <aggr_node_1> -destination <node3>`
+
++
+在此重新定位期间，请勿使用 ` -nt-controller-upgrade` 参数。
+
+. 验证 node3 现在是否为聚合的主所有者：
++
+`storage aggregate show -aggregate <aggr1 ， aggr2 ， aggr3...> -fields home-name`
+
++
+` <aggr1 ， aggr2 ， aggr3...>` 是将 node1 作为原始主所有者的聚合列表。
+
++
+如果聚合的主所有者不是 node3 ，则可以在中使用相同的重新定位命令将其重新定位到 node3 <<auto_aggr_relocate_fail_Step3,第 3 步>>。
+
+

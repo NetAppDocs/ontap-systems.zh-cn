@@ -1,0 +1,72 @@
+= 检查聚合重新定位失败
+
+
+在升级期间，聚合重新定位（ ARL ）可能会在不同点失败。
+
+
+
+== 检查聚合重新定位失败
+
+在操作步骤期间， ARL 可能会在第 2 阶段，第 3 阶段或第 5 阶段失败。
+
+.步骤
+. 输入以下命令并检查输出：
++
+`s存储聚合重新定位显示`
+
++
+`storage aggregate relocation show` 命令可显示哪些聚合已成功重新定位，哪些聚合未成功重新定位以及故障原因。
+
+. 检查控制台是否存在任何 EMS 消息。
+. 执行以下操作之一：
++
+** 根据 `storage aggregate relocation show` 命令的输出以及 EMS 消息的输出，采取适当的更正操作。
+** 使用 `storage aggregate relocation start` 命令的 `override-vetoes` 选项或 `override-destination-checks` 选项强制重新定位聚合。
+
+
++
+有关 `storage aggregate relocation start` ， `override-vetoes` 和 `override-destination-checks` 选项的详细信息，请参见 link:other_references.html["参考资料"] 链接到 _Microsoft ONTAP 9 命令：手册页参考 _ 。
+
+
+
+
+
+== 升级完成后， node1 上的聚合属于 node4
+
+升级操作步骤结束时， node3 应为聚合的新主节点，而这些聚合最初将 node1 作为主节点。您可以在升级后重新定位它们。
+
+在以下情况下，聚合可能无法正确重新定位，将 node1 作为其主节点，而不是 node3 ：
+
+* 在第 3 阶段，聚合从 node2 重新定位到 node3 。要重新定位的某些聚合的主节点为 node1 。例如，此类聚合可以称为 aggr_node_1 。如果 aggr_node_1 的重新定位在第 3 阶段失败，并且无法强制重新定位，则聚合将留在 node2 上。
+* 在第 4 阶段之后，将 node2 替换为 node4 。更换 node2 后， aggr_node_1 将联机，并将 node4 作为其主节点，而不是 node3 。
+
+
+启用存储故障转移后，您可以通过完成以下步骤在第 6 阶段后修复不正确的所有权问题：
+
+.步骤
+. 【 man_aggr_fail_step1]] 输入以下命令以获取聚合列表：
++
+`storage aggregate show -nodes <node4>-is-home true`
+
++
+要确定未正确重新定位的聚合，请参阅在一节中获取的主所有者为 node1 的聚合列表 link:prepare_nodes_for_upgrade.html["准备要升级的节点"] 并将其与上述命令的输出进行比较。
+
+. 【第 2 步】比较的输出 <<man_aggr_fail_step1,第 1 步>> 以及您在部分中为 node1 捕获的输出 link:prepare_nodes_for_upgrade.html["准备要升级的节点"] 并记下未正确重新定位的所有聚合。
+. 【 man_aggr_fail_Step3]] 重新定位 node4 上遗留的聚合：
++
+`storage aggregate relocation start -node <node4>-aggr <aggr_node_1> -destination <node3>`
+
++
+在此重新定位期间，请勿使用 ` -nt-controller-upgrade` 参数。
+
+. 输入以下命令以验证 node3 现在是否为聚合的主所有者：
++
+`storage aggregate show -aggregate <aggr1 ， aggr2 ， aggr3...> -fields home-name`
+
++
+` <aggr1 ， aggr2 ， aggr3...>` 是将 node1 作为原始主所有者的聚合列表。
+
++
+如果聚合的主所有者不是 node3 ，则可以在中使用相同的重新定位命令将其重新定位到 node3 <<man_aggr_fail_Step3,第 3 步>>。
+
+

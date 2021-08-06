@@ -1,0 +1,136 @@
+= 
+
+
+在将 node2 替换为 node4 之前，您必须为 node2 发送 AutoSupport 消息，然后将 node2 所拥有的非根聚合重新定位到 node3 。
+
+.步骤
+. 【第 1 步】向 NetApp 发送 node2 的 AutoSupport 消息：
++
+`ssystem node AutoSupport invoke -node <node2> -type all -message "upgrading <node2> from <platform_old> to <platform_new>"`
+
+. 验证是否已发送 AutoSupport 消息：
++
+`ssystem node AutoSupport show -node <node2>-instance`
+
++
+字段 " 上次发送主题： " 和 " 上次发送时间： " 包含上次发送消息的消息标题以及消息发送时间。
+
+. 【第 3 步】重新定位非根聚合：
++
+.. 将权限级别设置为高级：
++
+`set -privilege advanced`
+
+.. 列出 Node2 所拥有的聚合：
++
+`storage aggregate show -owner-name <node2>`
+
+.. 启动聚合重新定位：
++
+`storage aggregate relocation start -node <node2>-destination <node3>-aggregate-list * -no-controller-upgrade true`
+
++
+
+NOTE: 此命令仅查找非根聚合。
+
+.. 出现提示时，输入 `y` 。
++
+重新定位在后台进行。重新定位聚合可能需要几秒到几分钟的时间。此时间既包括客户端中断，也包括非中断部分。此命令不会重新定位任何脱机或受限聚合。
+
+.. 返回到管理权限级别：
++
+`set -privilege admin`
+
+
+
+. 验证 node2 的重新定位状态：
++
+`storage aggregate relocation show -node <node2>`
+
++
+重新定位聚合后，输出将显示 "done" 。
+
++
+
+NOTE: 您必须等待 node2 所拥有的所有聚合都重新定位到 node3 ，然后再继续下一步。
+
+. 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果重新定位 ... | 那么 ... 
+
+
+| 所有聚合均已成功 | 转至 <<man_relocate_2_3_step6,第 6 步>>。 
+
+
+| 任何聚合失败或被否决  a| 
+.. 显示详细的状态消息：
++
+`storage aggregate show -instance`
+
++
+您还可以检查 EMS 日志以查看所需的更正操作。
+
++
+* 注释 * ： `event log show` 命令可列出发生的任何错误。
+
+.. 执行更正操作。
+.. 将权限级别设置为高级：
++
+`set -privilege advanced`
+
+.. 重新定位任何出现故障或被否决的聚合：
++
+`storage aggregate relocation start -node <node2>-destination <node3>-aggregate-list * -no-controllerupgrade true`
+
+.. 出现提示时，输入 `y` 。
+.. 返回到管理权限级别：
++
+`set -privilege admin`
+
+
+
+如有必要，您可以使用以下方法之一强制执行重新定位：
+
+** 通过覆盖否决检查：
++
+`s存储聚合重新定位 start -override-vetoes true -no-controller-upgrade`
+
+** 通过覆盖目标检查：
++
+`storage aggregate relocation start -override-destination-checks true -ndocontroller-upgrade`
+
+
+
+有关 storage aggregate relocation 命令的详细信息，请转至 link:other_references.html["参考资料"] 链接到 _Microsoft ONTAP 9 磁盘和聚合高级指南 _ 和 _ONTAP 9 命令：手册页参考 _ 。
+
+|===
+. 【 man_relocate_2_3_step6]] 验证 node3 上的所有非根聚合是否联机：
++
+`storage aggregate show -node <node3> -state offline -root false`
+
++
+如果任何聚合已脱机或变为外部聚合，则必须使其联机，每个聚合一次：
+
++
+`storage aggregate online -aggregate <aggr_name>`
+
+. 验证 node3 上的所有卷是否均已联机：
++
+`volume show -node <node3> -state offline`
+
++
+如果 node3 上的任何卷脱机，则必须使其联机，每个卷一次：
+
++
+`volume online -vserver <vserver-name> -volume <volume-name>`
+
+. 验证 node2 不拥有任何联机非根聚合：
++
+`storage aggregate show -owner-name <node2>-ha-policy sfo -state online`
+
++
+命令输出不应显示联机非根聚合，因为所有非根联机聚合都已重新定位到 node3 。
+
+

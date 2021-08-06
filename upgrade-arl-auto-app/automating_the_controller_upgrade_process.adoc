@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/automate_the_controller_upgrade_process.html 
+keywords: automating, controller, upgrade, process, network, port, ha 
+summary: 在控制器升级期间，此控制器将更换为另一个控制器。 
+---
+= 自动执行控制器升级过程
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在控制器升级期间，此控制器将被替换为另一个运行更新或功能更强大的平台的控制器。本指南的早期版本包含无中断控制器更新过程的说明，该过程由完全手动的步骤组成。本指南介绍了新的自动化操作步骤的步骤，该 利用自动网络端口可访问性检查进一步简化了控制器升级体验。
+
+手动过程耗时冗长且复杂，但在此简化的操作步骤中，您可以通过聚合重新定位来实施控制器更新，从而为 HA 对实现更高效的无中断升级。手动步骤明显减少，尤其是在验证，收集信息和 POST 检查方面。

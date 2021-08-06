@@ -1,0 +1,483 @@
+---
+sidebar: upgrade-arl-auto-app_sidebar 
+permalink: upgrade-arl-auto-app/setting_the_fc_or_uta_uta2_configuration_on_node4.html 
+keywords: fc configuration, uta configuration, UTA2 configuration, configure FC ports, UTA/UTA2 card, node4, target, adapter, ports 
+summary:  
+---
+= 在 node4 上设置 FC 或 UTA/UTA2 配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果 node4 具有板载 FC 端口，板载统一目标适配器（ UTA/UTA2 ）端口或 UTA/UTA2 卡，则必须先配置这些设置，然后才能完成其余操作步骤。
+
+您可能需要完成 link:setting_the_fc_or_uta_uta2_configuration_on_node4.html#configure-fc-ports-on-node4["在节点 4 上配置 FC 端口"]， 或这两个部分。
+
+
+NOTE: 如果 node4 没有板载 FC 端口，板载 UTA/UTA2 端口或 UTA/UTA2 卡，并且您要升级具有存储磁盘的系统，则可以跳至 link:verifying_the_node4_installation.html["验证 node4 安装"]。但是，如果您使用的是 V 系列系统或 FlexArray 虚拟化软件并连接到存储阵列，并且 node4 没有板载 FC 端口，板载 UTA/UTA2 端口或 UTA/UTA2 卡，则必须返回到  第节，然后继续执行第 22 步。确保 node4 具有足够的机架空间。如果 node4 与 node2 位于不同的机箱中，则可以将 node4 与 node3 放在同一位置。如果 node2 和 node4 位于同一机箱中，则 node4 已位于其相应的机架位置。
+
+.选项
+* link:setting_the_fc_or_uta_uta2_configuration_on_node4.html#configure-fc-ports-on-node4["在节点 4 上配置 FC 端口"]
+* link:setting_the_fc_or_uta_uta2_configuration_on_node4.html#check-and-configure-utauta2-ports-on-node4["检查并配置 node4 上的 UTA/UTA2 端口"]
+
+
+
+
+== 在节点 4 上配置 FC 端口
+
+如果 node4 具有板载或 FC 适配器上的 FC 端口，则必须先在节点上设置端口配置，然后再将其投入使用，因为这些端口未经过预配置。如果未配置端口，则可能会发生服务中断。
+
+您必须具有在部分中保存的 node2 中的 FC 端口设置值 link:preparing_the_nodes_for_upgrade.html["准备要升级的节点"]。
+
+如果您的系统没有 FC 配置，则可以跳过此部分。如果您的系统具有板载 UTA/UTA2 端口或 UTA/UTA2 适配器，则可以在中对其进行配置 link:setting_the_fc_or_uta_uta2_configuration_on_node4.html#check-and-configure-utauta2-ports-on-node4["检查并配置 node4 上的 UTA/UTA2 端口"]。
+
+* 重要说明 * ：如果系统具有存储磁盘，则必须在集群提示符处输入本节中的命令。如果您的 V 系列系统或系统已将 FlexArray 虚拟化软件连接到存储阵列，则可以在维护模式下在此部分中输入命令。
+
+.步骤
+. 执行以下操作之一：
++
+|===
+| 如果要升级的系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | 使用以下命令： `ssystem node hardware unified-connect show` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | 使用以下命令： `ucadmin show` 
+|===
++
+系统将显示有关系统上所有 FC 和融合网络适配器的信息。
+
+. 将 node4 上的 FC 设置与先前从 node1 中捕获的设置进行比较。
+. 执行以下操作之一：
++
+|===
+| 如果要升级的系统 ... | 然后选择… 
+
+
+| 具有存储磁盘  a| 
+使用以下命令之一根据需要修改 node4 上的 FC 端口：
+
+** 要对目标端口进行编程： `ucadmin modify -m fc -t target <adapter>`
+** 要对启动程序端口进行编程： `ucadmin modify -m fc -t initiator <adapter>`
+
+
+` -t` 是 FC4 类型： target 或 initiator 。
+
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | 根据需要使用以下命令之一修改 node4 上的 FC 端口： `ucadmin modify -m fc -t initiator -f <adapter_port_name>` ` -t` 是 FC4 类型，目标或启动程序。* 注 * ：必须将 FC 端口编程为启动程序。 
+|===
+. 使用以下命令退出维护模式：
++
+`halt`
+
+. 使用以下命令从 LOADER 提示符启动系统：
++
+`boot_ontap 菜单`
+
+. 输入命令后，请等待，直到系统停留在启动环境提示符处。
+. 从维护模式的启动菜单中选择选项 `5` 。
+. 执行以下操作之一：
++
+|===
+| 如果要升级的系统 ... | 然后选择… 
+
+
+| 具有存储磁盘  a| 
+** 跳过此部分并转到 link:verifying_the_node4_installation.html["验证 node4 安装"] 如果 node4 没有 UTA/UTA2 卡或 UTA/UTA2 板载端口。
+
+
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列  a| 
+** 转至 link:setting_the_fc_or_uta_uta2_configuration_on_node4.html#check-and-configure-utauta2-ports-on-node4["检查并配置 node4 上的 UTA/UTA2 端口"] 如果 node4 具有 UTA/UTA2 卡或 UTA/UTA2 板载端口。
+** 如果 node4 没有 UTA/UTA2 卡或 UTA/UTA2 板载端口，请跳过 _Check and configure UTA/UTA2 ports on node4_ 一节，返回 _Install and boot node4_ 一节，然后继续执行 link:installing_and_booting_node4.html#step23["第 23 步"]。
+
+
+|===
+
+
+
+
+== 检查并配置 node4 上的 UTA/UTA2 端口
+
+如果 node4 具有板载 UTA/UTA2 端口或 UTA/UTA2 卡，则必须检查这些端口的配置并进行配置，具体取决于您希望如何使用升级后的系统。
+
+您必须为 UTA/UTA2 端口配备正确的 SFP+ 模块。
+
+UTA/UTA2 端口可以配置为原生 FC 模式或 UTA/UTA2 模式。FC 模式支持 FC 启动程序和 FC 目标； UTA/UTA2 模式允许并发 NIC 和 FCoE 流量共享相同的 10 GbE SFP+ 接口并支持 FC 目标。
+
+
+NOTE: NetApp 营销材料可能会使用术语 UTA2 来指代 CNA 适配器和端口。但是，命令行界面使用术语 CNA 。
+
+UTA/UTA2 端口可能位于具有以下配置的适配器或控制器上：
+
+* 与控制器同时订购的 UTA/UTA2 卡会在发货前配置为具有您请求的个性化设置。
+* 与控制器分开订购的 UTA/UTA2 卡附带了默认的 FC 目标特性。
+* 新控制器上的板载 UTA/UTA2 端口（发货前）已配置为具有您请求的个性化设置。
+
+
+但是，您应检查 node4 上的 UTA/UTA2 端口的配置，并根据需要进行更改。
+
+* 注意 * ：如果您的系统具有存储磁盘，除非指示您进入维护模式，否则您可以在集群提示符处输入本节中的命令。如果您的 MetroCluster FC 系统， V 系列系统或安装了 FlexArray 虚拟化软件的系统连接到存储阵列，则必须处于维护模式才能配置 UTA/UTA2 端口。
+
+.步骤
+. 在 node4 上使用以下命令之一检查端口的当前配置方式：
++
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | `ssystem node hardware unified-connect show` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | `ucadmin show` 
+|===
++
+系统将显示类似于以下示例的输出：
+
++
+....
+*> ucadmin show
+                Current  Current    Pending   Pending   Admin
+Node   Adapter  Mode     Type       Mode      Type      Status
+----   -------  ---      ---------  -------   --------  -------
+f-a    0e       fc       initiator  -          -        online
+f-a    0f       fc       initiator  -          -        online
+f-a    0g       cna      target     -          -        online
+f-a    0h       cna      target     -          -        online
+f-a    0e       fc       initiator  -          -        online
+f-a    0f       fc       initiator  -          -        online
+f-a    0g       cna      target     -          -        online
+f-a    0h       cna      target     -          -        online
+*>
+....
+. 如果当前 SFP+ 模块与所需用途不匹配，请将其更换为正确的 SFP+ 模块。
++
+请联系您的 NetApp 代表以获取正确的 SFP+ 模块。
+
+. 检查 `ucadmin show` 命令的输出，并确定 UTA/UTA2 端口是否具有所需的个性化设置。
+. 执行以下操作之一：
++
+|===
+| 如果 CNA 端口 ... | 然后选择… 
+
+
+| 没有所需的个性化设置 | 转至 <<Step5,第 5 步>>。 
+
+
+| 拥有所需的个性化特性 | 跳过步骤 5 到步骤 12 ，然后转到 <<Step13,第 13 步>>。 
+|===
+. 【第 5 步】执行以下操作之一：
++
+|===
+| 如果要配置 | 然后选择… 
+
+
+| UTA/UTA2 卡上的端口 | 转至 <<Step7,第 7 步>> 
+
+
+| 板载 UTA/UTA2 端口 | 跳过第 7 步，转到 <<Step8,第 8 步>>。 
+|===
+. 如果适配器处于启动程序模式，并且 UTA/UTA2 端口处于联机状态，请使用以下命令使 UTA/UTA2 端口脱机：
++
+`storage disable adapter <adapter_name>`
+
++
+目标模式下的适配器会在维护模式下自动脱机。
+
+. 【第 7 步】如果当前配置与所需用途不匹配，请使用以下命令根据需要更改配置：
++
+`ucadmin modify -m fc|cna -t initiators|target <adapter_name>`
+
++
+** ` -m` 是特性模式 FC 或 10 GbE UTA 。
+** ` -t` 是 FC4 类型， `target` 或 `initiator` 。
++
+
+NOTE: 您必须对磁带驱动器， FlexArray 虚拟化系统和 MetroCluster 配置使用 FC 启动程序。您必须对 SAN 客户端使用 FC 目标。
+
+
+
+. 【第 8 步】使用以下命令验证设置：
++
+`ucadmin show`
+
+. 使用以下命令之一验证设置：
++
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | `ucadmin show` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | `ucadmin show` 
+|===
++
+以下示例中的输出显示， FC4 类型的适配器 1b 正在更改为 `initiator` ，适配器 2a 和 2b 的模式正在更改为 `CNA` ：
+
++
+....
+*> ucadmin show
+Node  Adapter  Current Mode  Current Type  Pending Mode  Pending Type  Admin Status
+----  -------  ------------  ------------  ------------  ------------  ------------
+f-a   1a       fc             initiator    -             -             online
+f-a   1b       fc             target       -             initiator     online
+f-a   2a       fc             target       cna           -             online
+f-a   2b       fc             target       cna           -             online
+4 entries were displayed.
+*>
+....
+. 输入以下命令之一，使所有目标端口联机，每个端口输入一次：
++
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | `network fcp adapter modify -node <node_name> -adapter<adapter_name> -state up` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | `FCP 配置 <adapter_name> up` 
+|===
+. 为端口布线。
+. 执行以下操作之一：
++
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | 转至 link:verifying_the_node4_installation.html["验证 node4 安装"]。 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | 返回到 link:installing_and_booting_node3.html["安装并启动 node3"] 并恢复步骤 23 中的部分。 
+|===
+. 【第 13 步，第 13 步 ]] 使用以下命令退出维护模式：
++
+`halt`
+
+. 使用以下命令将节点启动至启动菜单：
++
+`boot_ontap 菜单`
+
++
+如果要升级到 A800 ，请转至 <<Step23,第 23 步>>
+
+. 在 node4 上，使用 22/7 转到启动菜单并选择隐藏选项 `boot_after_controller_replacement` 。在提示符处，输入 node2 以将 node2 的磁盘重新分配给 node4 ，如以下示例所示。
++
+[listing]
+----
+LOADER-A> boot_ontap menu
+.
+.
+<output truncated>
+.
+All rights reserved.
+*******************************
+*                             *
+* Press Ctrl-C for Boot Menu. *
+*                             *
+*******************************
+.
+<output truncated>
+.
+Please choose one of the following:
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? 22/7
+(22/7)                          Print this secret List
+(25/6)                          Force boot with multiple filesystem disks missing.
+(25/7)                          Boot w/ disk labels forced to clean.
+(29/7)                          Bypass media errors.
+(44/4a)                         Zero disks if needed and create new flexible root volume.
+(44/7)                          Assign all disks, Initialize all disks as SPARE, write DDR labels
+.
+.
+<output truncated>
+.
+.
+(wipeconfig)                        Clean all configuration on boot device
+(boot_after_controller_replacement) Boot after controller upgrade
+(boot_after_mcc_transition)         Boot after MCC transition
+(9a)                                Unpartition all disks and remove their ownership information.
+(9b)                                Clean configuration and initialize node with partitioned disks.
+(9c)                                Clean configuration and initialize node with whole disks.
+(9d)                                Reboot the node.
+(9e)                                Return to main boot menu.
+The boot device has changed. System configuration information could be lost. Use option (6) to
+restore the system configuration, or option (4) to initialize all disks and setup a new system.
+Normal Boot is prohibited.
+Please choose one of the following:
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? boot_after_controller_replacement
+This will replace all flash-based configuration with the last backup to disks. Are you sure
+you want to continue?: yes
+.
+.
+<output truncated>
+.
+.
+Controller Replacement: Provide name of the node you would like to replace:
+<nodename of the node being replaced>
+Changing sysid of node node2 disks.
+Fetched sanown old_owner_sysid = 536940063 and calculated old sys id = 536940063
+Partner sysid = 4294967295, owner sysid = 536940063
+.
+.
+<output truncated>
+.
+.
+varfs_backup_restore: restore using /mroot/etc/varfs.tgz
+varfs_backup_restore: attempting to restore /var/kmip to the boot device
+varfs_backup_restore: failed to restore /var/kmip to the boot device
+varfs_backup_restore: attempting to restore env file to the boot device
+varfs_backup_restore: successfully restored env file to the boot device wrote
+    key file "/tmp/rndc.key"
+varfs_backup_restore: timeout waiting for login
+varfs_backup_restore: Rebooting to load the new varfs
+Terminated
+<node reboots>
+System rebooting...
+.
+.
+Restoring env file from boot media...
+copy_env_file:scenario = head upgrade
+Successfully restored env file from boot media...
+Rebooting to load the restored env file...
+.
+System rebooting...
+.
+.
+.
+<output truncated>
+.
+.
+.
+.
+WARNING: System ID mismatch. This usually occurs when replacing a
+boot device or NVRAM cards!
+Override system ID? {y|n} y
+.
+.
+.
+.
+Login:
+----
++
+
+NOTE: 在上述控制台输出示例中，如果系统使用高级磁盘分区（ ADP ）磁盘， ONTAP 将提示您输入配对节点名称。
+
+. 如果系统进入重新启动循环并显示消息 `no disks found` ，则表示系统已将 FC 或 UTA/UTA2 端口重置回目标模式，因此无法看到任何磁盘。要解决此问题，请继续 <<Step17,第 17 步>> to <<Step22,第 22 步>> 或者转到第节 link:verifying_the_node4_installation.html["验证 node4 安装"]。
+. 在自动启动期间按 Ctrl-C 可在 `LOADER>` 提示符处停止节点。
+. 在 LOADER 提示符处，使用以下命令进入维护模式：
++
+`boot_ontap maint`
+
+. 在维护模式下，使用以下命令显示先前设置的所有启动程序端口，这些端口现在处于目标模式：
++
+`ucadmin show`
+
++
+使用以下命令将端口重新更改为启动程序模式：
+
++
+`ucadmin modify -m fc -t initiator -f < 适配器名称 >`
+
+. 使用以下命令验证端口是否已更改为启动程序模式：
++
+`ucadmin show`
+
+. 使用以下命令退出维护模式：
++
+`halt`
+
+. 在 LOADER 提示符处，使用以下命令启动：
++
+`boot_ontap`
+
++
+现在，在启动时，节点可以检测到先前分配给它的所有磁盘，并可按预期启动。
+
+. 【第 23 步】如果要从具有外部磁盘的系统升级到支持内部和外部磁盘的系统（例如， AFF A800 系统），请将 node2 聚合设置为根聚合，以确保 node4 从 node2 的根聚合启动。要设置根聚合，请转到启动菜单并选择选项 `5` 以进入维护模式。
++
+
+WARNING: 您必须按所示的确切顺序执行以下子步骤；否则可能发生原因会导致中断甚至数据丢失。
+
++
+以下操作步骤会将 node4 设置为从 node2 的根聚合启动：
+
++
+.. 使用以下命令进入维护模式：
++
+`boot_ontap maint`
+
+.. 使用以下命令检查 node2 聚合的 RAID ，丛和校验和信息：
++
+`aggr status -r`
+
+.. 使用以下命令检查 node2 聚合的状态：
++
+`聚合状态`
+
+.. 如有必要，使用以下命令使 node2 聚合联机：
++
+`aggr_online root_aggr_from_<node2>`
+
+.. 使用以下命令防止 node4 从其原始根聚合启动：
++
+`aggr offline <root_aggr_on_node4>`
+
+.. 使用以下命令将 node2 根聚合设置为 node4 的新根聚合：
++
+`aggr options aggr_from_<node2>root`
+
+.. 使用以下命令验证 node4 的根聚合是否已脱机，从 node2 接管的磁盘的根聚合是否已联机并设置为 root ：
++
+`聚合状态`
+
++
+
+NOTE: 如果不执行上一个子步骤，发生原因 node4 可能会从内部根聚合启动，或者它可能会发生原因系统以假定存在新的集群配置或提示您确定一个集群配置。
+
++
+下面显示了命令输出的示例：
+
+
+
++
+....
+---------------------------------------------------------------------
+Aggr State                       Status               Options
+aggr 0_nst_fas8080_15 online     raid_dp, aggr        root, nosnap=on
+                                 fast zeroed
+                                 64-bit
+aggr0 offline                    raid_dp, aggr        diskroot
+                                 fast zeroed`
+                                 64-bit
+---------------------------------------------------------------------
+....
+

@@ -1,0 +1,73 @@
+= 
+
+
+您必须在机架中安装 node3 ，将 node1 的连接传输到 node3 ，启动 node3 并安装 ONTAP 。然后，您必须重新分配 node1 的任何备用磁盘，属于根卷的任何磁盘以及此过程先前未重新定位到 node2 的任何非根聚合，如本节所述。
+
+重新定位操作在此阶段开始时暂停。此过程大部分是自动化的；操作将暂停，以便您可以检查其状态。您必须手动恢复此操作。此外，您还必须验证 SAN LIF 是否已成功移至 node3 。
+
+如果 node3 与 node1 上安装的 ONTAP 9 版本不同，则需要对其进行网络启动。安装 node3 后，从 Web 服务器上存储的 ONTAP 9 映像启动它。然后，您可以按照中的说明将正确的文件下载到启动介质设备，以供后续系统启动 link:prepare_for_netboot.html["准备网络启动"]。
+
+.重要
+* 如果要升级连接到存储阵列的 V 系列系统或安装了 FlexArray 虚拟化软件并连接到存储阵列的系统，则需要完成升级 <<auto_install3_step1,第 1 步>> 到 <<auto_install3_step21,第 21 步>>，然后退出本节并按照中的说明进行操作 link:set_fc_or_uta_uta2_config_on_node3.html#configure-fc-ports-on-node3["在 node3 上配置 FC 端口"] 和  根据需要输入相应部分，在维护模式下输入命令。然后，您必须返回到此部分并继续使用 <<auto_install3_step23,第 23 步>>。
+* 如果要升级具有存储磁盘的系统，则需要完成整个部分，然后转到 link:set_fc_or_uta_uta2_config_on_node3.html#configure-fc-ports-on-node3["在 node3 上配置 FC 端口"] 和  部分，在集群提示符处输入命令。
+
+
+.步骤
+. 【 auto_install3_step1]] 请确保为 node3 预留机架空间。
++
+如果 node1 和 node2 位于不同的机箱中，则可以将 node3 与 node1 放在同一机架位置。但是，如果 node1 与 node2 位于同一机箱中，则需要将 node3 置于其自身的机架空间中，最好靠近 node1 的位置。
+
+. 【 auto_install3_step2]] 按照适用于您的节点型号的 _Installation and Setup Instructions_ 在机架中安装 node3 。
++
+
+NOTE: 如果要升级到两个节点位于同一机箱中的系统，请在机箱中安装 node4 以及 node3 。否则，在启动 node3 时，该节点的行为将如同处于双机箱配置中，而在启动 node4 时，节点之间的互连将不会启动。
+
+. 【 auto_install3_step3]] 为节点 3 布线，将连接从节点 1 移动到节点 3 。
++
+使用适用于 node3 平台的 _Installation and Setup Instructions_or the _FlexArray Virtualization Installation Requirements and Refertion_ ，相应的磁盘架指南和 _ONTAP 9 高可用性配置指南为以下连接布线。
+
++
+请参见 link:other_references.html["参考资料"] 链接到 _Microsoft FlexArray 虚拟化安装要求和参考 _ 和 _ONTAP 9 高可用性配置指南 _ 。
+
++
+** 控制台（远程管理端口）
+** 集群端口
+** 数据端口
+** 集群和节点管理端口
+** 存储
+** SAN 配置： iSCSI 以太网和 FC 交换机端口
++
+
+NOTE: 您可能不需要将互连卡或集群互连缆线连接从 node1 移至 node3 ，因为大多数平台型号都具有唯一的互连卡型号。对于 MetroCluster 配置，您需要将 FC-VI 缆线连接从 node1 移至 node3 。如果新主机没有 FC-VI 卡，则可能需要移动 FC-VI 卡。
+
+
+
+. 【 auto_install3_step4]] 打开 node3 的电源，然后在控制台终端按 Ctrl-C 访问启动环境提示符，以中断启动过程。
++
+如果要升级到两个节点位于同一机箱中的系统， node4 也会重新启动。但是，您可以忽略 node4 启动，直到稍后再启动。
+
++
+
+NOTE: 启动 node3 时，您可能会看到以下警告消息：
+
++
+....
+WARNING: The battery is unfit to retain data during a power outage. This is likely because the battery is discharged but could be due to other temporary conditions.
+When the battery is ready, the boot process will complete and services will be engaged.
+To override this delay, press 'c' followed by 'Enter'
+....
+. 如果您在中看到警告消息，则需要执行以下操作 <<auto_install3_step4,第 4 步>>，执行以下操作：
++
+.. 检查是否存在任何可能指示 NVRAM 电池电量低以外问题的控制台消息，如有必要，请采取任何必要的更正措施。
+.. 让电池充电并完成启动过程。
++
+
+WARNING: * 注意：请勿覆盖延迟；如果不允许电池充电，可能会导致数据丢失。 *
+
++
+
+NOTE: 请参见 link:prepare_for_netboot.html["准备网络启动"]。
+
+
+
+

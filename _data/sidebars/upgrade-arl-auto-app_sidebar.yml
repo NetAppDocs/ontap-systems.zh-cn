@@ -1,0 +1,113 @@
+---
+prefix: upgrade-arl-auto-app
+entries:
+- title: 使用聚合重新定位升级控制器硬件
+  entries:
+  - title: 概述
+    url: "/using_aggregate_relocation_to_upgrade_controller_hardware_overview.html"
+  - title: 自动执行控制器升级过程
+    url: "/automating_the_controller_upgrade_process.html"
+- title: 确定是否使用聚合重新定位指南
+  url: "/deciding_whether_to_use_the_aggregate_relocation_guide.html"
+- title: 所需的工具和文档
+  url: "/required_tools_and_documentation.html"
+- title: 使用 ARL 升级控制器的准则
+  url: "/guidelines_for_upgrading_controllers_with_arl.html"
+- title: 验证 MetroCluster 配置的运行状况。
+  url: "/verifying_the_health_of_the_metrocluster_configuration.html"
+- title: 检查 MetroCluster 配置错误
+  url: "/checking_for_metrocluster_configuration_errors.html"
+- title: 验证切换，修复和切回
+  url: "/verifying_switchover,_healing,_and_switchback.html"
+- title: ARL 升级概述
+  url: "/overview_of_the_arl_upgrade.html"
+- title: 升级节点对
+  url: "/upgrading_the_node_pair.html"
+- title: 第 1 阶段准备升级
+  entries:
+  - title: 概述
+    url: "/stage_1_preparing_for_upgrade_overview.html"
+  - title: 准备要升级的节点
+    url: "/preparing_the_nodes_for_upgrade.html"
+  - title: 获取用于存储加密的外部密钥管理服务器的 IP 地址
+    url: "/getting_an_ip_address_of_an_external_key_management_server_for_storage_encryption.html"
+- title: 第 2 阶段重新定位和停用节点 1
+  entries:
+  - title: 概述
+    url: "/stage_2_relocating_and_retiring_node1_overview.html"
+  - title: 将节点 1 拥有的非根聚合和 NAS 数据 LIF 重新定位到节点 2
+    url: "/relocating_non-root_aggregates_and_nas_data_lifs_owned_by_node1_to_node2.html"
+  - title: 重新定位失败或被否决的聚合
+    url: "/relocating_failed_or_vetoed_aggregates.html"
+  - title: 停用 node1
+    url: "/retiring_node1.html"
+  - title: 准备网络启动
+    url: "/preparing_for_netboot.html"
+- title: 第 3 阶段安装和启动节点 3.
+  entries:
+  - title: 概述
+    url: "/stage_3_installing_and_booting_node3_overview.html"
+  - title: 安装并启动 node3
+    url: "/installing_and_booting_node3.html"
+  - title: 在 node3 上设置 FC 或 UTA/UTA2 配置
+    url: "/setting_the_fc_or_uta_uta2_configuration_on_node3.html"
+  - title: 验证 node3 安装
+    url: "/verifying_the_node3_installation.html"
+  - title: 还原 node3 上的 key-manager 配置
+    url: "/restoring_key-manager_configuration_on_node3.html"
+  - title: 将 node1 拥有的非根聚合和 NAS 数据 LIF 从 node2 移动到 node3
+    url: "/moving_non-root_aggregates_and_nas_data_lifs_owned_by_node1_from_node2_to_node3.html"
+- title: 第 4 阶段重新定位和停用节点 2.
+  entries:
+  - title: 概述
+    url: "/stage_4_relocating_and_retiring_node2_overview.html"
+  - title: 将非根聚合和 NAS 数据 LIF 从 node2 重新定位到 node3
+    url: "/relocating_non-root_aggregates_and_nas_data_lifs_from_node2_to_node3.html"
+  - title: 停用 node2
+    url: "/retiring_node2.html"
+- title: 第 5 阶段安装和启动节点 4.
+  entries:
+  - title: 概述
+    url: "/stage_5_installing_and_booting_node4_overview.html"
+  - title: 安装并启动节点 4.
+    url: "/installing_and_booting_node4.html"
+  - title: 在 node4 上设置 FC 或 UTA/UTA2 配置
+    url: "/setting_the_fc_or_uta_uta2_configuration_on_node4.html"
+  - title: 验证 node4 安装
+    url: "/verifying_the_node4_installation.html"
+  - title: 还原 node4 上的 key-manager 配置
+    url: "/restoring_key-manager_configuration_on_node4.html"
+  - title: 将 node2 拥有的非根聚合和 NAS 数据 LIF 从 node3 移动到 node4
+    url: "/moving_non-root_aggregates_and_nas_data_lifs_owned_by_node2_from_node3_to_node4.html"
+- title: 第 6 阶段完成升级
+  entries:
+  - title: 概述
+    url: "/stage_6_completing_the_upgrade_overview.html"
+  - title: 完成 MetroCluster FC 配置的升级
+    url: "/completing_the_upgrade_for_metrocluster_fc_configuration.html"
+  - title: 确保新控制器设置正确
+    url: "/ensuring_that_the_new_controllers_are_set_up_correctly.html"
+  - title: 在新控制器模块上设置存储加密
+    url: "/setting_up_storage_encryption_on_the_new_controller_module.html"
+  - title: 在新控制器模块上设置 NetApp 卷加密
+    url: "/setting_up_netapp_volume_encryption_on_the_new_controller_module.html"
+  - title: 停用旧系统
+    url: "/decommissioning_the_old_system.html"
+  - title: 恢复 SnapMirror 操作
+    url: "/resuming_snapmirror_operations.html"
+- title: 故障排除
+  entries:
+  - title: 概述
+    url: "/troubleshooting_overview.html"
+  - title: 聚合重新定位失败
+    url: "/aggregate_relocation_failures.html"
+  - title: 检查聚合重新定位失败
+    url: "/checking_for_aggregate_relocation_failure.html"
+  - title: 升级完成后， node1 上的聚合属于 node4
+    url: "/aggregates_originally_on_node1_are_owned_by_node4_after_completion_of_the_upgrade.html"
+  - title: 重新启动，崩溃或重新启动
+    url: "/reboots_panics_or_power_cycles.html"
+  - title: 操作步骤的多个阶段可能会出现的问题
+    url: "/issues_that_can_arise_in_multiple_stages_of_the_procedure.html"
+  - title: LIF 迁移失败
+    url: "/lif_migration_failure.html"

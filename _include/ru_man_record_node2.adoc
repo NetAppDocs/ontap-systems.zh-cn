@@ -1,0 +1,130 @@
+= 
+
+
+在关闭并停用 node2 之前，您需要记录有关其集群网络，管理和 FC 端口以及 NVRAM 系统 ID 的信息。稍后将 node2 映射到 node4 并重新分配磁盘时，您需要在操作步骤中提供此信息。
+
+.步骤
+. 在 node2 上查找集群网络，节点管理，集群间和集群管理端口：
++
+`network interface show -curr-node <node_name> -role cluster ， intercluster ， nodemgmt ， cluster-mgmt`
+
++
+系统将显示该节点以及集群中其他节点的 LIF ，如以下示例所示：
+
++
+[listing]
+----
+cluster::> network interface show -curr-node node2 -role
+cluster,intercluster,node-mgmt,cluster-mgmt
+         Logical     Status     Network            Current     Current Is
+Vserver  Interface   Admin/Oper Address/Mask       Node        Port    Home
+-------- ----------  ---------- ------------------ ----------  ------- ----
+node2
+         intercluster up/up     192.168.1.202/24   node2       e0e     true
+         clus1        up/up     169.254.xx.xx/24   node2       e0a     true
+         clus2        up/up     169.254.xx.xx/24   node2       e0b     true
+         mgmt1        up/up     192.168.0.xxx/24   node2       e0c     true
+4 entries were displayed.
+----
++
+
+NOTE: 您的系统可能没有集群间 LIF 。您只能在一个节点对的一个节点上使用集群管理 LIF 。的示例输出显示了集群管理 LIF link:record_node1_information.html#step["第 1 步"] 在 _Record node1 port information_.
+
+. 捕获输出中的信息以在部分中使用 link:map_ports_node2_node4.html["将端口从 node2 映射到 node4"]。
++
+要将新控制器端口映射到旧控制器端口，需要提供输出信息。
+
+. 确定节点 2 上的物理端口：
++
+`network port show -node <node_name> -type physical` +
+
++
+`node_name` 是要迁移的节点。
+
++
+系统将显示 node2 上的物理端口，如以下示例所示：
+
++
+[listing]
+----
+cluster::> network port show -node node2 -type physical
+
+                                                             Speed (Mbps)
+Node   Port      IPspace      Broadcast Domain Link   MTU    Admin/Oper
+------ --------- ------------ ---------------- ----- ------- -----------
+node2
+       e0M       Default      IP_address       up       1500  auto/100
+       e0a       Default      -                up       1500  auto/1000
+       e0b       Default      -                up       1500  auto/1000
+       e1a       Cluster      Cluster          up       9000  auto/10000
+       e1b       Cluster      Cluster          up       9000  auto/10000
+5 entries were displayed.
+----
+. 记录端口及其广播域。
++
+稍后，需要在操作步骤中将广播域映射到新控制器上的端口。
+
+. 确定 node2 上的 FC 端口：
++
+`network fcp adapter show`
+
++
+系统将显示 node2 上的 FC 端口，如以下示例所示：
+
++
+[listing]
+----
+cluster::> network fcp adapter show -node node2
+                     Connection  Host
+Node         Adapter Established Port Address
+------------ ------- ----------- ------------
+node2
+             0a      ptp         11400
+node2
+             0c      ptp         11700
+node2
+             6a      loop        0
+node2
+             6b      loop        0
+4 entries were displayed.
+----
+. 记录端口。
++
+稍后在操作步骤中映射新控制器上的新 FC 端口需要输出信息。
+
+. 如果您之前没有这样做，请检查 node2 上是否配置了接口组或 VLAN ：
++
+`ifgrp show`
+
++
+`VLAN show`
+
++
+您将使用部分中的信息 link:map_ports_node2_node4.html["将端口从 node2 映射到 node4"]。
+
+. 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果您 ... | 那么 ... 
+
+
+| 已在中记录 NVRAM 系统 ID 编号 link:prepare_nodes_for_upgrade.html["准备要升级的节点"] | 转至 link:retire_node2.html["停用 node2"]。 
+
+
+| 未在中记录 NVRAM 系统 ID 编号 link:prepare_nodes_for_upgrade.html["准备要升级的节点"] | 完成 <<man_record_2_step9,第 9 步>> 和 <<man_record_2_step10,第 10 步>> 然后转到下一节， link:retire_node2.html["停用 node2"]。 
+|===
+. 【 man_record_2_step9]] 显示节点 2 的属性：
++
+`ssystem node show -instance -node node2`
+
++
+[listing]
+----
+cluster::> system node show -instance -node node2
+                            ...
+                 NVRAM System ID: system_ID
+                           ...
+----
+. 【 man_record_2_step10]] 记录要在部分中使用的 NVRAM 系统 ID link:install_boot_node4.html["安装并启动节点 4."]。
+

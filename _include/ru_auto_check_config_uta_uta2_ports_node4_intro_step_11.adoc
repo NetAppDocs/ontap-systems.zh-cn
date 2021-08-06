@@ -1,0 +1,154 @@
+= 检查并配置 node4 上的 UTA/UTA2 端口
+
+
+
+
+== 检查并配置 node4 上的 UTA/UTA2 端口
+
+如果 node4 具有板载 UTA/UTA2 端口或 UTA/UTA2 卡，则必须检查这些端口的配置并进行配置，具体取决于您希望如何使用升级后的系统。
+
+您必须为 UTA/UTA2 端口配备正确的 SFP+ 模块。
+
+UTA/UTA2 端口可以配置为原生 FC 模式或 UTA/UTA2 模式。FC 模式支持 FC 启动程序和 FC 目标； UTA/UTA2 模式允许并发 NIC 和 FCoE 流量共享相同的 10 GbE SFP+ 接口并支持 FC 目标。
+
+
+NOTE: NetApp 营销材料可能会使用术语 UTA2 来指代 CNA 适配器和端口。但是，命令行界面使用术语 CNA 。
+
+UTA/UTA2 端口可能位于具有以下配置的适配器或控制器上：
+
+* 与控制器同时订购的 UTA/UTA2 卡会在发货前配置为具有您请求的个性化设置。
+* 与控制器分开订购的 UTA/UTA2 卡附带了默认的 FC 目标特性。
+* 新控制器上的板载 UTA/UTA2 端口（发货前）已配置为具有您请求的个性化设置。
+
+
+但是，您应检查 node4 上的 UTA/UTA2 端口的配置，并根据需要进行更改。
+
+
+WARNING: * 注意 * ：如果您的系统具有存储磁盘，除非指示您进入维护模式，否则您可以在集群提示符处输入本节中的命令。如果您的 MetroCluster FC 系统， V 系列系统或安装了 FlexArray 虚拟化软件的系统连接到存储阵列，则必须处于维护模式才能配置 UTA/UTA2 端口。
+
+.步骤
+. 在 node4 上使用以下命令之一检查端口的当前配置方式：
++
+[cols="30,70"]
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | `ssystem node hardware unified-connect show` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | `ucadmin show` 
+|===
++
+系统将显示类似于以下示例的输出：
+
++
+....
+*> ucadmin show
+                Current  Current    Pending   Pending   Admin
+Node   Adapter  Mode     Type       Mode      Type      Status
+----   -------  ---      ---------  -------   --------  -------
+f-a    0e       fc       initiator  -          -        online
+f-a    0f       fc       initiator  -          -        online
+f-a    0g       cna      target     -          -        online
+f-a    0h       cna      target     -          -        online
+f-a    0e       fc       initiator  -          -        online
+f-a    0f       fc       initiator  -          -        online
+f-a    0g       cna      target     -          -        online
+f-a    0h       cna      target     -          -        online
+*>
+....
+. 如果当前 SFP+ 模块与所需用途不匹配，请将其更换为正确的 SFP+ 模块。
++
+请联系您的 NetApp 代表以获取正确的 SFP+ 模块。
+
+. 检查 `ucadmin show` 命令的输出，并确定 UTA/UTA2 端口是否具有所需的个性化设置。
+. 执行以下操作之一：
++
+[cols="30,70"]
+|===
+| 如果 CNA 端口 ... | 然后选择… 
+
+
+| 没有所需的个性化设置 | 转至 <<auto_check_4_step5,第 5 步>>。 
+
+
+| 拥有所需的个性化特性 | 跳过步骤 5 到步骤 12 ，然后转到 <<auto_check_4_step13,第 13 步>>。 
+|===
+. 【 auto_check_4_step5]] 执行以下操作之一：
++
+[cols="30,70"]
+|===
+| 如果要配置 | 然后选择… 
+
+
+| UTA/UTA2 卡上的端口 | 转至 <<auto_check_4_step7,第 7 步>> 
+
+
+| 板载 UTA/UTA2 端口 | 跳过第 7 步，转到 <<auto_check_4_step8,第 8 步>>。 
+|===
+. 如果适配器处于启动程序模式，并且 UTA/UTA2 端口处于联机状态，请使 UTA/UTA2 端口脱机：
++
+`storage disable adapter <adapter_name>`
+
++
+目标模式下的适配器会在维护模式下自动脱机。
+
+. 【 auto_check_4_step7]] 如果当前配置与所需用途不匹配，请根据需要更改配置：
++
+`ucadmin modify -m fc|cna -t initiators|target <adapter_name>`
+
++
+** ` -m` 是特性模式 FC 或 10 GbE UTA 。
+** ` -t` 是 FC4 类型， `target` 或 `initiator` 。
++
+
+NOTE: 您必须对磁带驱动器， FlexArray 虚拟化系统和 MetroCluster 配置使用 FC 启动程序。您必须对 SAN 客户端使用 FC 目标。
+
+
+
+. 【 auto_check_4_step8]] 使用以下命令并检查其输出，以验证设置：
++
+`ucadmin show`
+
+. 验证设置：
++
+[cols="40,60"]
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | `ucadmin show` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | `ucadmin show` 
+|===
++
+以下示例中的输出显示， FC4 类型的适配器 "1b" 更改为 `initiator` ，适配器 "2a" 和 "2b" 的模式更改为 `CNA` ：
+
++
+....
+*> ucadmin show
+Node  Adapter  Current Mode  Current Type  Pending Mode  Pending Type  Admin Status
+----  -------  ------------  ------------  ------------  ------------  ------------
+f-a   1a       fc             initiator    -             -             online
+f-a   1b       fc             target       -             initiator     online
+f-a   2a       fc             target       cna           -             online
+f-a   2b       fc             target       cna           -             online
+4 entries were displayed.
+*>
+....
+. 输入以下命令之一，使所有目标端口联机，每个端口输入一次：
++
+[cols="30,70"]
+|===
+| 如果系统 ... | 然后选择… 
+
+
+| 具有存储磁盘 | `network fcp adapter modify -node <node_name> -adapter <adapter_name> -state up` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | `FCP 配置 <adapter_name> up` 
+|===
+. 为端口布线。
+

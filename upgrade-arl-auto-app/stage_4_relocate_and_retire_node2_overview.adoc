@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/stage_4_relocate_and_retire_node2_overview.html 
+keywords: relocate, retire, node2, LIF, node3, non-root aggregates 
+summary: 在阶段 4 中，所有非根聚合都会从 node2 重新定位到 node3 。 
+---
+= 第 4 阶段。重新定位和停用节点 2
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 <stdin> 中未解析的指令 - 包括： ../_include/ru_auto_stage4_overview.adoc]]

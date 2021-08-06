@@ -1,0 +1,145 @@
+= 
+
+
+. 对 node4 执行网络启动：
++
+[cols="30,70"]
+|===
+| 针对 ... | 那么 ... 
+
+
+| FAS/AFF8000 系列系统 | `netboot \http://<web_server_ip/path_to_web-accessible_directory>/netboot/kernel` 
+
+
+| 所有其他系统 | `netboot \http://<web_server_ip/path_to_web-accessible_directory>/<ontap_version>_image.tgz` 
+|===
++
+` <path_to_the_web-accessible_directory>` 应指向您在本节第 1 步中下载 ` <ontap_version>_image.tgz` 的位置 link:prepare_for_netboot.html["准备网络启动"]。
+
++
+
+NOTE: 请勿中断启动。
+
+. 从启动菜单中，选择选项 ` （ 7 ） Install new software first` 。
++
+此菜单选项可下载新的 ONTAP 映像并将其安装到启动设备中。
+
++
+
+NOTE: 请忽略以下消息： `HA 对上的无中断升级不支持此操作步骤` 请注意适用场景无中断升级 ONTAP ，而不是升级控制器。请始终使用 netboot 将新节点更新为所需映像。如果使用其他方法在新控制器上安装映像，则可能安装了错误的映像。此问题描述适用场景所有 ONTAP 版本。
+
+. 如果系统提示您继续运行操作步骤，请输入 `y` ，并在系统提示您输入软件包时，输入 URL ：
++
+` http://<web_server_ip/path_to_web-accessible_directory>/<ontap_version>_image.tgz`
+
+. 完成以下子步骤以重新启动控制器模块：
++
+.. 出现以下提示时，输入 `n` 以跳过备份恢复：
++
+....
+Do you want to restore the backup configuration now? {y|n}
+....
+.. 出现以下提示时，输入 `y` 以重新启动：
++
+....
+The node must be rebooted to start using the newly installed software. Do you want to reboot now? {y|n}
+....
++
+控制器模块重新启动，但停留在启动菜单处，因为启动设备已重新格式化，并且需要还原配置数据。
+
+
+
+. 从启动菜单中选择维护模式 `5` ，并在系统提示您继续启动时输入 `y` 。
+. 验证控制器和机箱是否已配置为 HA ：
++
+`ha-config show`
+
++
+以下示例显示了 `ha-config show` 命令的输出：
+
++
+....
+Chassis HA configuration: ha
+Controller HA configuration: ha
+....
++
+
+NOTE: 系统会在 PROM 中记录它们是采用 HA 对还是独立配置。独立系统或 HA 对中的所有组件的状态都必须相同。
+
+. 如果控制器和机箱未配置为 HA ，请使用以下命令更正配置：
++
+`ha-config modify controller ha`
+
++
+`ha-config modify chassis ha`
+
++
+如果您使用的是 MetroCluster 配置，请使用以下命令修改控制器和机箱：
+
++
+`ha-config modify controller mcc`
+
++
+`ha-config modify chassis mcc`
+
+. 退出维护模式：
++
+`halt`
+
++
+在启动环境提示符处按 Ctrl-C 中断自动启动。
+
+. 在 node3 上，检查系统日期，时间和时区：
++
+`dATE`
+
+. 在 node4 上，在启动环境提示符处使用以下命令检查日期：
++
+`s如何选择日期`
+
+. 如有必要，请在 node4 上设置日期：
++
+`set date <MM/dd/yyy>`
+
+. 在 node4 上，在启动环境提示符处使用以下命令检查时间：
++
+`s时间`
+
+. 如有必要，请在 node4 上设置时间：
++
+`set time <hh ： mm ： ss>`
+
+. 如有必要，请在 node4 上设置配对系统 ID ：
++
+`setenv partner- sysid <node2_sysid>`
+
++
+.. 保存设置：
++
+`saveenv`
+
+
+
+. 在新节点的启动加载程序中，必须设置 `partner- sysid` 参数。对于 node4 ， `partn- sysid` 必须为 node3 。验证 node3 的 `partn- sysid` ：
++
+`printenv partn- sysid`
+
+. 【第 22 步】执行以下操作之一：
++
+[cols="30,70"]
+|===
+| 如果您的系统 ... | 那么 ... 
+
+
+| 具有磁盘，无后端存储 | 转至 <<auto_install4_step23,第 23 步>>。 
+
+
+| 是 V 系列系统或已将 FlexArray 虚拟化软件连接到存储阵列的系统  a| 
+.. 转至第节 link:set_fc_or_uta_uta2_config_node4.html["在 node4 上设置 FC 或 UTA/UTA2 配置"] 并完成本节中的各小节。
+.. 返回到此部分，完成从开始的其余步骤 <<auto_install4_step23,第 23 步>>。
+
+
+* 重要信息 * ：在使用 FlexArray 虚拟化软件的 V 系列或系统上启动 ONTAP 之前，必须重新配置 FC 板载端口， CNA 板载端口和 CNA 卡。
+
+|===
+

@@ -1,0 +1,25 @@
+---
+sidebar: upgrade-arl-auto-app_sidebar 
+permalink: upgrade-arl-auto-app/stage_6_completing_the_upgrade_overview.html 
+keywords: complete upgrade, node, unified, target, storage, encryption 
+summary: 在第 6 阶段，确认新节点设置正确。 
+---
+= 第 6 阶段。完成升级
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在第 6 阶段，确认新节点设置正确。如果其中一个新节点具有统一目标适配器，则必须还原任何端口配置，并且可能需要更改此适配器的使用。如果新节点已启用加密，则还应设置存储加密。
+
+.步骤
+. link:completing_the_upgrade_for_metrocluster_fc_configuration.html["完成 MetroCluster FC 配置的升级"]
+. link:ensuring_that_the_new_controllers_are_set_up_correctly.html["确保新控制器设置正确"]
+. link:setting_up_storage_encryption_on_the_new_controller_module.html["在新控制器模块上设置存储加密"]
+. link:setting_up_netapp_volume_encryption_on_the_new_controller_module.html["在新控制器模块上设置 NetApp 卷加密"]
+. link:decommissioning_the_old_system.html["停用旧系统"]
+. link:resuming_snapmirror_operations.html["恢复 SnapMirror 操作"]
+

@@ -1,0 +1,27 @@
+= 
+
+
+. 将 FC 启动程序端口作为新主机添加到存储阵列，从而将阵列 LUN 映射到新主机。
++
+有关说明，请参见存储阵列和分区文档。
+
+. 修改与存储阵列上的阵列 LUN 关联的主机或卷组中的全球通用端口名称（ WWPN ）值。
++
+安装新控制器模块会更改与每个板载 FC 端口关联的 WWPN 值。
+
+. 如果您的配置使用基于交换机的分区，请调整分区以反映新的 WWPN 值。
+. `s步骤 27]] 如果在此配置上使用 NetApp 存储加密（ NSE ），则必须将` etenv bootarg.storageencryption.support `命令设置为` true `，并将 kmip.init.maxwait` `变量设置为` off ，以避免在加载 node2 配置后出现启动环路：
++
+`setenv bootarg.storageencryption.support true`
+
++
+`setenv kmip.init.maxwait off`
+
+. 启动节点进入启动菜单：
++
+`boot_ontap 菜单`
+
++
+如果您没有 FC 或 UTA/UTA2 配置，请执行 link:set_fc_or_uta_uta2_config_node4.html#auto_check_node4_step15["检查并配置 node4 上的 UTA/UTA2 端口，步骤 15"] 以便 node4 可以识别 node2 的磁盘。
+
+

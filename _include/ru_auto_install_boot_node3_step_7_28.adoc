@@ -1,0 +1,170 @@
+= 
+
+
+. 【第 7 步】对 node3 执行网络启动：
++
+[cols="30,70"]
+|===
+| 针对 ... | 那么 ... 
+
+
+| FAS/AFF8000 系列系统 | `netboot \http://<web_server_ip/path_to_web-accessible_directory>/netboot/kernel` 
+
+
+| 所有其他系统 | `netboot \http://<web_server_ip/path_to_web-accessible_directory>/<ontap_version>_image.tgz` 
+|===
++
+` <path_to_the_web-accessible_directory>` 应指向您在部分中下载 ` <ontap_version>_image.tgz` 的位置 link:prepare_for_netboot.html["准备网络启动"]。
+
++
+
+NOTE: 请勿中断启动。
+
+. 【第 8 步】从启动菜单中选择选项 ` （ 7 ）首先安装新软件` 。
++
+此菜单选项可下载新的 ONTAP 映像并将其安装到启动设备中。
+
++
+
+NOTE: 请忽略以下消息： `HA 对上的无中断升级不支持此操作步骤` 。注意适用场景可无中断升级 ONTAP ，而不是升级控制器。请始终使用 netboot 将新节点更新为所需映像。如果使用其他方法在新控制器上安装映像，则可能安装了错误的映像。此问题描述适用场景所有 ONTAP 版本。
+
+. 【第 9 步】如果系统提示您继续运行操作步骤，请输入 `y` ，当系统提示您输入软件包时，请输入 URL ：
++
+` http://<web_server_ip/path_to_web-accessible_directory>/<ontap_version>_image.tgz`
+
+. 【第 10 步】完成以下子步骤以重新启动控制器模块：
++
+.. 出现以下提示时，输入 `n` 以跳过备份恢复：
++
+`d要立即还原备份配置？｛ y|n ｝`
+
+.. 出现以下提示时，输入 `y` 以重新启动：
++
+`要开始使用新安装的软件，必须重新启动节点。是否要立即重新启动？｛ y|n ｝`
+
++
+控制器模块重新启动，但停留在启动菜单处，因为启动设备已重新格式化，并且需要还原配置数据。
+
+
+
+. 【第 11 步】从启动菜单中选择维护模式 `5` ，并在系统提示您继续启动时输入 `y` 。
+. 【第 12 步】验证控制器和机箱是否配置为 ha ：
++
+`ha-config show`
+
++
+以下示例显示了 `ha-config show` 命令的输出：
+
++
+....
+Chassis HA configuration: ha
+Controller HA configuration: ha
+....
++
+
+NOTE: 系统会在 PROM 中记录它们是采用 HA 对还是独立配置。独立系统或 HA 对中的所有组件的状态都必须相同。
+
+. 【第 13 步】如果控制器和机箱未配置为 ha ，请使用以下命令更正配置：
++
+`ha-config modify controller ha`
+
++
+`ha-config modify chassis ha`
+
++
+如果您使用的是 MetroCluster 配置，请使用以下命令修改控制器和机箱：
+
++
+`ha-config modify controller mcc`
+
++
+`ha-config modify chassis mcc`
+
+. 【第 14 步】退出维护模式：
++
+`halt`
+
++
+在启动环境提示符处按 `Ctrl-C` 以中断自动启动。
+
+. 在 node2 上，检查系统日期，时间和时区：
++
+`dATE`
+
+. 在 node3 上，在启动环境提示符处使用以下命令检查日期：
++
+`s如何选择日期`
+
+. 【第 17 步】如有必要，请在 node3 上设置日期：
++
+`set date <MM/dd/yyy>`
+
+. 在 node3 上，在启动环境提示符处使用以下命令检查时间：
++
+`s时间`
+
+. 【第 19 步】如有必要，请在 node3 上设置时间：
++
+`set time <hh ： mm ： ss>`
+
+. 【第 20 步】如有必要，请在 node3 上设置配对系统 ID ：
++
+`setenv partner-sysid <node2_sysid>`
+
++
+.. 保存设置：
++
+`saveenv`
+
+
+
+. 在新节点的启动加载程序中，需要设置 `partner-sysid` 参数。对于 node3 ， `partner-sysid` 必须为 node2 。验证 node3 的 `partner-sysid` ：
++
+`printenv partner-sysid`
+
+. 【第 22 步】执行以下操作之一：
++
+[cols="30,70"]
+|===
+| 如果您的系统 ... | Description 
+
+
+| 具有磁盘，无后端存储 | 转至 <<auto_install3_step23,第 23 步>> 
+
+
+| 是 V 系列系统或已将 FlexArray 虚拟化软件连接到存储阵列的系统  a| 
+.. 转至第节 link:set_fc_or_uta_uta2_config_on_node3.html["在 node3 上设置 FC 或 UTA/UTA2 配置"] 并完成本节中的各小节。
+.. 返回到此部分，完成从开始的其余步骤 <<auto_install3_step23,第 23 步>>。
+
+
+* 重要信息 * ：在使用 FlexArray 虚拟化软件的 V 系列或系统上启动 ONTAP 之前，必须重新配置 FC 板载端口， CNA 板载端口和 CNA 卡。
+
+|===
+. 【 auto_install3_step23]] 将新节点的 FC 启动程序端口添加到交换机分区。
++
+如果您的系统具有磁带 SAN ，则需要对启动程序进行分区。如果需要，请参考将板载端口修改为启动程序 link:set_fc_or_uta_uta2_config_on_node3.html#configure-fc-ports-on-node3["在节点 3 上配置 FC 端口"]。有关分区的详细说明，请参见存储阵列和分区文档。
+
+. 【第 24 步】将 FC 启动程序端口作为新主机添加到存储阵列，将阵列 LUN 映射到新主机。
++
+有关说明，请参见存储阵列和分区文档。
+
+. 【第 25 步】修改与存储阵列上的阵列 LUN 关联的主机或卷组中的全球通用端口名称（ WWPN ）值。
++
+安装新控制器模块会更改与每个板载 FC 端口关联的 WWPN 值。
+
+. 【第 26 步】如果您的配置使用基于交换机的分区，请调整分区以反映新的 WWPN 值。
+. `s步骤 27]] 如果在此配置上使用 NetApp 存储加密（ NSE ），则必须将` etenv bootarg.storageencryption.support `命令设置为` true `，并将 kmip.init.maxwait` `变量设置为` off ，以避免在加载 node1 配置后出现启动环路：
++
+`setenv bootarg.storageencryption.support true`
+
++
+`setenv kmip.init.maxwait off`
+
+. 【第 28 步】启动节点进入启动菜单：
++
+`boot_ontap 菜单`
+
++
+如果您没有 FC 或 UTA/UTA2 配置，请执行 link:set_fc_or_uta_uta2_config_on_node3.html#auto9597_check_node3_step15["检查并配置节点 3 上的 UTA/UTA2 端口，步骤 15"] 以便 node3 可以识别 node1 的磁盘。
+
+

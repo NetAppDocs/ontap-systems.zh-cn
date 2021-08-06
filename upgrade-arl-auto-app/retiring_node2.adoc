@@ -1,0 +1,28 @@
+---
+sidebar: upgrade-arl-auto-app_sidebar 
+permalink: upgrade-arl-auto-app/retiring_node2.html 
+keywords: retire, node2 
+summary: 要停用 node2 ，您需要正确关闭 node2 并将其从机架或机箱中卸下。 
+---
+= 停用 node2
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+要停用 node2 ，您需要正确关闭 node2 并将其从机架或机箱中卸下。
+
+.步骤
+. 使用以下命令恢复操作：
++
+`s系统控制器更换恢复`
+
++
+节点会自动暂停。
+
+
+
+升级完成后，您可以停用 node2 。请参见 link:decommissioning_the_old_system.html["停用旧系统"]。

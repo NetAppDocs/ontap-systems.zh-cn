@@ -1,0 +1,16 @@
+---
+sidebar: upgrade-arl-auto-app_sidebar 
+permalink: upgrade-arl-auto-app/completing_the_upgrade_for_metrocluster_fc_configuration.html 
+keywords: complete upgrade, metrocluster, fc, configuration, mismatch, controller, models 
+summary: 对于 MetroCluster FC 配置，您必须更换灾难恢复 / 故障转移站点节点。 
+---
+= 完成 MetroCluster FC 配置的升级
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+对于 MetroCluster FC 配置，您必须尽快更换灾难恢复 / 故障转移站点节点。不支持 MetroCluster 配置中的控制器型号不匹配，因为控制器型号不匹配会导致灾难恢复镜像脱机。在更换第二个站点上的节点时，使用命令 ` skip- metrocluster-check true` option 可绕过 MetroCluster 检查。

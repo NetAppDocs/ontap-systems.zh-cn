@@ -1,0 +1,131 @@
+= 在 node3 上配置 FC 端口
+
+
+
+
+== 在 node3 上配置 FC 端口
+
+如果 node3 具有板载或 FC 适配器上的 FC 端口，则必须先在节点上设置端口配置，然后再将其投入使用，因为这些端口未经过预配置。如果未配置端口，则可能会发生服务中断。
+
+您必须具有保存在中的 node1 中的 FC 端口设置值 link:prepare_nodes_for_upgrade.html["准备要升级的节点"]。
+
+如果您的系统没有 FC 配置，则可以跳过此部分。如果您的系统具有板载 UTA/UTA2 端口或 UTA/UTA2 卡，则可以在中对其进行配置 <<Check and configure UTA/UTA2 ports on node3>>。
+
+
+NOTE: * 重要信息 * ：如果您的系统具有存储磁盘，请在集群提示符处输入本节中的命令。如果您使用的是 V 系列系统或 FlexArray 虚拟化软件并连接到存储阵列，请在维护模式下在此部分中输入命令。
+
+.步骤
+. 【第 1 步】执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果要升级的系统 ... | 那么 ... 
+
+
+| 具有存储磁盘 | 转至 <<man_config_3_step5,第 5 步>> 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | 转至 <<man_config_3_step2,第 2 步>> 
+|===
+. 【 man_config_3_step2]] 启动 node3 和访问维护模式：
++
+`boot_ontap maint`
+
+. 【第 3 步】执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果要升级的系统 ... | 那么 ... 
+
+
+| 具有存储磁盘 | 输入以下命令： `ssystem node hardware unified-connect show` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列。 | 输入以下命令 `ucadmin show` 
+|===
++
+系统将显示有关系统上所有 FC 和融合网络适配器的信息。
+
+. 【第 4 步】将 node3 的 FC 设置与先前从 node1 捕获的设置进行比较。
+. [[man_config_3_step5]] 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 新节点上的默认 FC 设置 | 那么 ... 
+
+
+| 与您在 node1 上捕获的相同 | 转至 <<man_config_3_step11,第 11 步>>。 
+
+
+| 与您在 node1 上捕获的不同 | 转至 <<man_config_3_step6,第 6 步>>。 
+|===
+. 【 man_config_3_step6]] 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果要升级的系统 ... | 那么 ... 
+
+
+| 具有存储磁盘  a| 
+根据需要输入以下命令之一，修改 node3 上的 FC 端口：
+
+** 要对目标端口进行编程： `ssystem node hardware unified-connect modify -type | -t target -adapter <port_name>`
+** 要对启动程序端口进行编程： `ssystem node hardware unified-connect modify -type | -t initiator -adapter <port_name>`
+
+
+` -t` 是 FC4 类型： target 或 initiator 。
+
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | 根据需要输入以下命令，修改 node3 上的 FC 端口： `ucadmin modify -m fc -t initiator -f <adapter_port_name>` ` -t` 是 FC4 类型，目标或启动程序。* 注 * ：必须将 FC 端口编程为启动程序。 
+|===
+. 【第 7 步】执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果要升级的系统 ... | 那么 ... 
+
+
+| 具有存储磁盘 | 输入以下命令并检查输出，以验证新设置： `ssystem node hardware unified-connect show` 
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列 | 输入以下命令并检查输出，以验证新设置： `ucadmin show` 
+|===
+. 【第 8 步】输入以下命令退出维护模式：
++
+`halt`
+
+. 【第 9 步】输入命令后，请等待系统在启动环境提示符处停止。
+. 【第 10 步】执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果要升级的系统 ... | 那么 ... 
+
+
+| 是 V 系列系统或具有运行集群模式 Data ONTAP 8.3 的 FlexArray 虚拟化软件 | 在启动环境提示符处启动 node3 并访问维护： `boot_ontap maint` 
+
+
+| 不是 V 系列系统或没有 FlexArray 虚拟化软件 | 在启动环境提示符处启动 node3 ： `boot_ontap` 
+|===
+. 【 man_config_3_step11]] 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果要升级的系统 ... | 那么 ... 
+
+
+| 具有存储磁盘  a| 
+** 如果 node3 具有 UTA/UTA2 卡或 UTA/UTA2 板载端口，请转至 <<Check and configure UTA/UTA2 ports on node3>>。
+** 如果 node3 没有 UTA/UTA2 卡或 UTA/UTA2 板载端口，请跳过 <<Check and configure UTA/UTA2 ports on node3>> 然后转到 link:map_ports_node1_node3.html["将端口从 node1 映射到 node3"]。
+
+
+
+
+| 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列  a| 
+** 如果 node3 具有卡或板载端口，请转至 <<Check and configure UTA/UTA2 ports on node3>>。
+** 如果 node3 没有卡或板载端口，请跳过 <<Check and configure UTA/UTA2 ports on node3>>，并返回到 _Install 和 boot node3_ ，然后在继续 link:install_boot_node3.html#step7["第 7 步"]。
+
+
+|===
+

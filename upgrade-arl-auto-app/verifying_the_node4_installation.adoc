@@ -1,0 +1,316 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/verify_node4_installation.html 
+keywords: verify, node4, installation, physical ports, node2, node, LIF, MetroCluster 
+summary: 验证 node4 安装 
+---
+= 验证 node4 安装
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必须验证 node2 中的物理端口是否正确映射到 node4 上的物理端口。这样， node4 便可在升级后与集群中的其他节点以及网络进行通信。
+
+捕获有关新节点上端口的信息 link:https://hwu.netapp.com["Hardware Universe"]。您将在本节稍后部分使用此信息。
+
+物理端口布局可能因节点型号而异。当新节点启动时， ONTAP 将尝试确定应托管集群 LIF 的端口，以便自动达到仲裁。
+
+如果 node2 上的物理端口未直接映射到 node4 上的物理端口，请执行下一节 <<Restore network configuration on node4>> 必须用于修复网络连接。
+
+安装并启动 node4 后，您必须验证是否已正确安装它。您必须等待 node4 加入仲裁，然后恢复重新定位操作。
+
+此时，在操作步骤中，操作将暂停，因为 node4 加入仲裁。
+
+.步骤
+. 使用以下命令验证 node4 是否已加入仲裁：
++
+`cluster show -node node4 -fields health`
+
++
+`health` 字段的输出应为 `true` 。
+
+. 使用以下命令验证 node4 是否与 node3 属于同一集群，以及是否运行正常：
++
+`cluster show`
+
+. 使用以下命令切换到高级权限模式：
++
+`set advanced`
+
+. 使用以下命令检查控制器更换操作的状态，并验证它是否处于暂停状态以及 node2 暂停之前的相同状态，以便执行安装新控制器和移动缆线的物理任务：
++
+`ssystem controller replace show`
+
++
+`s系统控制器更换 show-details`
+
+. 如果您正在处理 MetroCluster 系统，请验证是否已为 MetroCluster 配置正确配置更换的控制器； MetroCluster 配置应处于运行状况良好的状态。请参见 link:verifying_the_health_of_the_metrocluster_configuration.html["验证 MetroCluster 配置的运行状况。"]。
++
+在 MetroCluster 节点 node4 上重新配置集群间 LIF ，并检查集群对等关系以恢复 MetroCluster 节点之间的通信，然后再继续 <<auto_verify_4_Step6,第 6 步>>。
+
++
+使用以下命令检查 MetroCluster 节点状态：
+
++
+`MetroCluster node show`
+
+. 【 auto_verify_4_Step6]] 恢复控制器更换操作：
++
+`s系统控制器更换恢复`
+
+. 控制器更换将暂停以进行干预，并显示以下消息：
++
+....
+Cluster::*> system controller replace show
+Node             Status                       Error-Action
+---------------- ------------------------     ------------------------------------
+Node2(now node4) Paused-for-intervention      Follow the instructions given in
+                                              Step Details
+Node2
+
+Step Details:
+--------------------------------------------
+To complete the Network Reachability task, the ONTAP network configuration must be
+manually adjusted to match the new physical network configuration of the hardware.
+This includes:
+1. Re-create the interface group, if needed, before restoring VLANs. For detailed
+commands and instructions, refer to the "Re-creating VLANs, ifgrps, and broadcast
+domains" section of the upgrade controller hardware guide for the ONTAP version
+running on the new controllers.
+2. Run the command "cluster controller-replacement network displaced-vlans show"
+to check if any VLAN is displaced.
+3. If any VLAN is displaced, run the command "cluster controller-replacement
+network displaced-vlans restore" to restore the VLAN on the desired port.
+2 entries were displayed.
+....
++
+
+NOTE: 在本指南中， _re-creating VLAN ， ifgrp 和 broadcast domain_ 一节已重命名为 _restoring network configuration on node4_ 。
+
+. 在控制器更换处于暂停状态的情况下，继续执行本文档的下一节以还原节点上的网络配置。
+
+
+
+
+== 还原 node4 上的网络配置
+
+确认 node4 处于仲裁状态并可与 node3 通信后，请确认 node4 上显示了 node2 的 VLAN ，接口组和广播域。此外，验证所有 node4 网络端口是否均已配置在其正确的广播域中。
+
+有关创建和重新创建 VLAN ，接口组和广播域的详细信息，请参见 link:other_references.html["参考资料"] 链接到 _Microsoft ONTAP 9 网络管理指南 _ 。
+
+.步骤
+. 使用以下命令列出已升级的 node2 （称为 node4 ）上的所有物理端口：
++
+`network port show -node node4`
+
++
+此时将显示节点上的所有物理网络端口， VLAN 端口和接口组端口。在此输出中，您可以看到 ONTAP 已将任何物理端口移至 `集群` 广播域。您可以使用此输出来帮助确定应将哪些端口用作接口组成员端口， VLAN 基本端口或独立物理端口来托管 LIF 。
+
+. 使用以下命令列出集群上的广播域：
++
+`broadcast-domain show`
+
+. 使用以下命令列出 node4 上所有端口的网络端口可访问性：
++
+`网络端口可访问性显示`
+
++
+命令的输出类似于以下示例：
+
++
+....
+clusterA::*> reachability show -node node2_node4
+  (network port reachability show)
+Node         Port       Expected Reachability       Reachability Status
+---------    --------  ---------------------------  ---------------------
+node2_node4
+             a0a        Default:Default             no-reachability
+             a0a-822    Default:822                 no-reachability
+             a0a-823    Default:823                 no-reachability
+             e0M        Default:Mgmt                ok
+             e0a        Cluster:Cluster             misconfigured-reachability
+             e0b        Cluster:Cluster             no-reachability
+             e0c        Cluster:Cluster             no-reachability
+             e0d        Cluster:Cluster             no-reachability
+             e0e        Cluster:Cluster             ok
+             e0e-822    -                           no-reachability
+             e0e-823    -                           no-reachability
+             e0f        Default:Default             no-reachability
+             e0f-822    Default:822                 no-reachability
+             e0f-823    Default:823                 no-reachability
+             e0g        Default:Default             misconfigured-reachability
+             e0h        Default:Default             ok
+             e0h-822    Default:822                 ok
+             e0h-823    Default:823                 ok
+18 entries were displayed.
+....
++
+在上面的示例中， node2_node4 是在更换控制器后刚刚启动的。它具有多个不可访问的端口，并且正在等待可访问性扫描。
+
+. 【 auto_restore_4_Step4]] 修复 node4 上每个端口的可访问性状态不是 `ok` 的可访问性。首先对任何物理端口运行以下命令，然后对任何 VLAN 端口运行以下命令，一次运行一个：
++
+`network port reachability repair -node <node_name> -port <port_name>`
+
++
+输出如下所示：
+
++
+....
+Cluster ::> reachability repair -node node2_node4 -port e0h
+....
++
+....
+Warning: Repairing port "node2_node4: e0h" may cause it to move into a different broadcast domain, which can cause LIFs to be re-homed away from the port. Are you sure you want to continue? {y|n}:
+....
++
+对于可访问性状态可能与当前所在广播域的可访问性状态不同的端口，应显示一条警告消息，如上所示。
+
++
+根据需要查看端口和问题解答 `y` 或 `n` 的连接。
+
++
+使用以下命令验证所有物理端口是否具有预期可访问性：
+
++
+`网络端口可访问性显示`
+
++
+在执行可访问性修复时， ONTAP 会尝试将端口放置在正确的广播域中。但是，如果无法确定某个端口的可访问性，并且该端口不属于任何现有广播域，则 ONTAP 将为这些端口创建新的广播域。
+
+. 如果接口组配置与新控制器物理端口布局不匹配，请按照以下步骤进行修改。
++
+.. 您必须先从其广播域成员资格中删除接口组成员端口的物理端口。您可以使用以下命令执行此操作：
++
+`network port broadcast-domain remove-ports -broadcast-domain <broadcast_domain_name> -ports <node_name ： port_name>`
+
+.. 使用以下命令将成员端口添加到接口组：
++
+`network port ifgrp add-port -node <node_name> - ifgrp <ifgrp> -port <port_name>`
+
+.. 在添加第一个成员端口后大约一分钟，接口组会自动添加到广播域中。
+.. 使用以下命令验证接口组是否已添加到相应的广播域：
++
+`network port reachability show -node <node_name> -port <ifgrp>`
+
++
+如果接口组的可访问性状态不是 `ok` ，请使用以下命令将其分配给相应的广播域：
+
++
+`network port broadcast-domain add-ports -broadcast-domain <broadcast_domain_name> -ports <node ： port>`
+
+
+
+. 按照以下步骤为 `集群` 广播域分配适当的物理端口：
++
+.. 使用以下命令确定哪些端口可访问 `集群` 广播域：
++
+`network port reachability show -reachable-broadcast-domains cluster ：集群`
+
+.. 使用以下命令修复可访问 `集群` 广播域的任何端口，如果其可访问性状态为 NOT `ok` ：
++
+`network port reachability repair -node <node_name> -port <port_name>`
+
+
+
+. 使用以下命令之一将其余物理端口移动到其正确的广播域中：
++
+`network port reachability repair -node <node_name> -port <port_name>`
+
++
+`network port broadcast-domain remove-port`
+
++
+`网络端口 broadcast-domain add-port`
+
++
+确认不存在不可访问或意外的端口。使用以下命令检查所有物理端口的可访问性状态，并检查输出以确保状态为 `ok` ：
+
++
+`网络端口可访问性 show -detail`
+
+. 使用以下步骤还原可能已被替换的任何 VLAN ：
++
+.. 使用以下命令列出已替换的 VLAN ：
++
+`displaced VLAN show`
+
++
+此时应显示如下输出：
+
++
+....
+Cluster::*> displaced-vlans show
+(cluster controller-replacement network displaced-vlans show)
+            Original
+Node        Base Port     VLANs
+---------   ---------     ------------------------------------------------------
+Node1       a0a           822, 823
+            e0e           822, 823
+....
+.. 使用以下命令还原从先前的基础端口中替换的 VLAN ：
++
+`displaced VLAN restore`
+
++
+以下示例显示了将已从接口组 a0a 中移出的 VLAN 还原到同一接口组的过程：
+
++
+....
+Cluster::*> displaced-vlans restore -node node2_node4 -port a0a -destination-port a0a
+....
++
+以下是将端口 e0e 上的已替换 VLAN 还原到 e0h 的示例：
+
++
+....
+Cluster::*> displaced-vlans restore -node node2_node4 -port e0e -destination-port e0h
+....
++
+成功还原 VLAN 后，将在指定的目标端口上创建已替换的 VLAN 。如果目标端口是接口组的成员或目标端口已关闭，则 VLAN 还原将失败。
+
++
+等待大约一分钟，以便将新还原的 VLAN 放置到其相应的广播域中。
+
+.. 根据需要为不在 `displaced - vlan show` 输出中，但应在其他物理端口上配置的 VLAN 端口创建新的 VLAN 端口。
+
+
+. 在完成所有端口修复后，使用以下命令删除任何空广播域。
++
+`broadcast-domain delete -broadcast-domain <broadcast_domain_name>`
+
+. 使用以下命令验证端口可访问性：
++
+`网络端口可访问性显示`
+
++
+如果所有端口均已正确配置并添加到正确的广播域中，则 `network port reachability show` 命令应将所有已连接端口的可访问性状态报告为 `ok` ，对于无物理连接的端口，此状态报告为 `no-reachability` 。如果任何端口报告的状态不是这两个端口，请按照中的说明执行可访问性修复并在其广播域中添加或删除端口 <<auto_restore_4_Step4,第 4 步>>。
+
+. 使用以下命令验证是否已将所有端口置于广播域中：
++
+`network port show`
+
+. 使用以下命令验证广播域中的所有端口是否配置了正确的最大传输单元（ MTU ）：
++
+`network port broadcast-domain show`
+
+. 使用以下命令还原 LIF 主端口，指定需要还原的 Vserver 和 LIF 主端口（如果有）：
++
+.. 使用以下命令列出已替换的任何 LIF ：
++
+`displaced interface show`
+
+.. 使用以下命令还原 LIF 主端口：
++
+`displaced interface restore-home-node -node <node_name> -vserver <vserver_name > - lif-name <LIF_name>`
+
+
+
+. 使用以下命令验证所有 LIF 是否都具有主端口且已由管理员启动：
++
+`network interface show -fields home-port ， status-admin`
+
+

@@ -1,0 +1,195 @@
+= 
+
+
+在升级操作步骤期间，远程 LIF 处理 SAN LUN 的流量。升级期间，集群或服务运行状况无需移动 SAN LIF 。除非需要将 SAN LIF 映射到新端口，否则不会移动这些 LIF 。使 node4 联机后，您需要验证 LIF 是否运行正常并位于相应的端口上。
+
+.步骤
+. 通过在任一节点上输入以下命令并捕获输出，列出不属于 node3 的所有 NAS 数据 LIF ：
++
+`network interface show -role data -curr-node node3 -is-home false`
+
+. 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果 node2... | Description 
+
+
+| 已配置接口组或 VLAN | 转至 <<man_lif_verify_4_Step3,第 3 步>>。 
+
+
+| 未配置接口组或 VLAN | 跳过步骤 3 ，然后转到 <<man_lif_verify_4_Step4,第 4 步>>。 
+|===
+. [[man_lif_verif_4_Step3]] 执行以下步骤，将最初位于 node2 上的接口组和 VLAN 上托管的任何 NAS 数据 LIF 从 node3 迁移到 node4 。
++
+.. 【 man_lif_verif_4_substepa 】通过为每个 LIF 输入以下命令，将先前属于接口组上 node2 的 node3 上托管的任何 LIF 迁移到 node4 上能够在同一网络上托管 LIF 的端口：
++
+`network interface migrate -vserver <vserver_name> -lif <lif_name> -destination-node node4 – destination-port <netport_ifgrp>`
+
+.. 在中修改 LIF 的主端口和主节点 <<man_lif_verify_4_substepa,子步骤 A>> 输入以下命令，将 LIF 设置为当前托管 LIF 的端口和节点，每个 LIF 设置为一次：
++
+`network interface modify -vserver <vserver_name> -lif <datalif_name> -home-node node4 home-port <netport_ifgrp>`
+
+.. 【 man_lif_verif_4_substepc]] 通过为每个 LIF 输入以下命令，将先前属于 VLAN 端口上 node2 的 node3 上托管的任何 LIF 迁移到 node4 上能够在同一网络上托管 LIF 的端口：
++
+`network interface migrate -vserver <vserver_name> -lif <datalif_name> -destination-node node4 – destination-port <netport_ifgrp>`
+
+.. 在中修改 LIF 的主端口和主节点 <<man_lif_verify_4_substepc,子步骤 c>> 输入以下命令，将 LIF 设置为当前托管 LIF 的端口和节点，每个 LIF 设置为一次：
++
+`network interface modify -vserver <vserver_name> -lif <datalif_name> -home-node <node4> home-port <netport_ifgrp>`
+
+
+
+. 【 man_lif_verif_4_Step4]] 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果集群配置为 ... | 那么 ... 
+
+
+| NAS | 完成 <<man_lif_verify_4_Step5,第 5 步>> 到 <<man_lif_verify_4_Step8,第 8 步>>，跳过步骤 9 并完成 <<man_lif_verify_4_Step10,第 10 步>> 到 <<man_lif_verify_4_Step13,第 13 步>>。 
+
+
+| SAN | 跳过步骤 5 到步骤 8 并完成 <<man_lif_verify_4_Step9,第 9 步>> 到 <<man_lif_verify_4_Step13,第 13 步>>。 
+
+
+| NAS 和 SAN | 完成 <<man_lif_verify_4_Step5,第 5 步>> 到 <<man_lif_verify_4_Step13,第 13 步>>。 
+|===
+. 【 man_lif_verif_4_Step5]] 如果您的平台上的数据端口不同，请输入以下命令将这些端口添加到广播域：
++
+`network port broadcast-domain add-ports -ipspace <ipspace_name> -broadcast-domain mgmt ports <node ： port>`
+
++
+以下示例将节点 "6280-1 " 上的端口 "e0a" 和节点 "8060-1 " 上的端口 "e0i" 添加到 IP 空间默认值中的广播域管理中：
+
++
+[listing]
+----
+cluster::> network port broadcast-domain add-ports -ipspace Default  -broadcast-domain mgmt -ports 6280-1:e0a, 8060-1:e0i
+----
+. 输入以下命令，将每个 NAS 数据 LIF 迁移到 node4 ，每个 LIF 一次：
++
+`network interface migrate -vserver <vserver-name> -lif <datalif-name> -destination-node <node4> -destination-port <netport_ifgrp> -home-node <node4>`
+
+. 确保数据迁移持久：
++
+`network interface modify -vserver <vserver_name> -lif <datalif_name> -home-port <netport_ifgrp>`
+
+. 【 man_lif_verif_4_Step8]] 输入以下命令列出所有网络端口并检查其输出，以验证所有链路的状态是否为 `up` ：
++
+`network port show`
+
++
+以下示例显示了 `network port show` 命令的输出，其中一些 LIF 已启动，另一些 LIF 已关闭：
+
++
+[listing]
+----
+cluster::> network port show
+                                                             Speed (Mbps)
+Node   Port      IPspace      Broadcast Domain Link   MTU    Admin/Oper
+------ --------- ------------ ---------------- ----- ------- -----------
+node3
+       a0a       Default      -                up       1500  auto/1000
+       e0M       Default      172.17.178.19/24 up       1500  auto/100
+       e0a       Default      -                up       1500  auto/1000
+       e0a-1     Default      172.17.178.19/24 up       1500  auto/1000
+       e0b       Default      -                up       1500  auto/1000
+       e1a       Cluster      Cluster          up       9000  auto/10000
+       e1b       Cluster      Cluster          up       9000  auto/10000
+node4
+       e0M       Default      172.17.178.19/24 up       1500  auto/100
+       e0a       Default      172.17.178.19/24 up       1500  auto/1000
+       e0b       Default      -                up       1500  auto/1000
+       e1a       Cluster      Cluster          up       9000  auto/10000
+       e1b       Cluster      Cluster          up       9000  auto/10000
+12 entries were displayed.
+----
+. 【 man_lif_verif_4_Step9]] 如果 `network port show` 命令的输出显示了新节点中不可用且旧节点中存在的网络端口，请通过完成以下子步骤删除旧网络端口：
++
+.. 输入以下命令，输入高级权限级别：
++
+`set -privilege advanced`
+
+.. 为每个旧网络端口输入以下命令一次：
++
+`network port delete -node <node_name> -port <port_name>`
+
+.. 输入以下命令，返回到管理员级别：
++
+`set -privilege admin`
+
+
+
+. [[man_lif_verif_4_Step10]] 通过完成以下子步骤，确保 SAN LIF 位于 node4 上的正确端口上：
++
+.. 输入以下命令：
++
+`network interface show -data-protocol iscsi_FCP -home-node node4`
+
++
+系统将返回类似于以下示例的输出：
+
++
+[listing]
+----
+cluster::> network interface show -data-protocol iscsi|fcp -home-node node4
+            Logical    Status     Network            Current       Current Is
+Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
+----------- ---------- ---------- ------------------ ------------- ------- ----
+vs0
+            a0a          up/down  10.63.0.53/24      node3         a0a     true
+            data1        up/up    10.63.0.50/18      node3         e0c     true
+            rads1        up/up    10.63.0.51/18      node3         e1a     true
+            rads2        up/down  10.63.0.52/24      node3         e1b     true
+vs1
+            lif1         up/up    172.17.176.120/24  node3         e0c     true
+            lif2         up/up    172.17.176.121/24  node3
+----
+.. 如果 node4 中的任何 SAN LIF 或 SAN LIF 组位于 node2 上不存在的端口上，请输入以下命令之一将其移动到 node4 上的相应端口：
++
+... 将 LIF 状态设置为 down ：
++
+`network interface modify -vserver <vserver_name> -lif <lif_name> -status-admin down`
+
+... 从端口集中删除 LIF ：
++
+`portset remove -vserver <vserver_name> -portset <portset_name> -port-name <port_name>`
+
+... 输入以下命令之一：
++
+**** 移动单个 LIF ：
++
+`network interface modify -lif <lif_name> -home-port <new_home_port>`
+
+**** 将一个不存在或不正确的端口上的所有 LIF 移动到新端口：
++
+`network interface modify ｛ -home-port <port_on_node2 > -home-node <node2 > -role data ｝ -home-port <new_home_port_on_node4 >`
+
+**** 将 LIF 重新添加到端口集：
++
+`portset add -vserver <vserver_name> -portset <portset_name> -port-name <port_name>`
+
+
+
+
+
+
+
++
+
+NOTE: 您需要确保将 SAN LIF 移动到与原始端口具有相同链路速度的端口。
+
+. 输入以下命令，将所有 LIF 的状态修改为 `up` ，以便 LIF 可以在节点上接受和发送流量：
++
+`network interface modify -vserver <vserver_name> -home-port <port_name> -home-node <node4> lif <lif_name> -status-admin up`
+
+. 在任一节点上输入以下命令并检查输出，以验证是否已将任何 SAN LIF 移动到正确的端口，以及 LIF 的状态是否为 `up` ：
++
+`network interface show -home-node <node4> -role data`
+
+. [[man_lif_verif_4_Step13]] 如果任何 LIF 已关闭，请通过输入以下命令将 LIF 的管理状态设置为 `up` ，每个 LIF 一次：
++
+`network interface modify -vserver <vserver_name> -lif <lif_name> -status-admin up`
+
+

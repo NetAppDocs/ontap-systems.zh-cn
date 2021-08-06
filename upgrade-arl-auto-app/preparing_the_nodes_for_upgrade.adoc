@@ -1,0 +1,181 @@
+---
+sidebar: upgrade-arl-auto-app_sidebar 
+permalink: upgrade-arl-auto-app/preparing_the_nodes_for_upgrade.html 
+keywords: preparing, nodes, upgrade 
+summary: 在 ONTAP 命令行中输入以下命令，开始控制器更换过程。 
+---
+= 准备要升级的节点
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您必须执行以下步骤来准备要升级的节点。
+
+.步骤
+. 在 ONTAP 命令行中输入以下命令，开始控制器更换过程：
++
+`ssystem controller replace start -nodes <node_name>`
+
++
+
+NOTE: 此命令只能在高级权限级别执行： `set -privilege advanced`
+
++
+您将看到以下输出：
+
++
+....
+Warning:
+1. Current ONTAP version is 9.8
+Before starting controller replacement operation, ensure that the new controllers are running the version 9.8
+
+2. Verify that NVMEM or NVRAM batteries of the new nodes are charged, and charge them if they are not. You need to physically check the new nodes to see if the NVMEM or NVRAM  batteries are charged. You can check the battery status either by connecting to a serial console or using SSH, logging into the Service Processor (SP) or Baseboard Management Controller (BMC) for your system, and use the system sensors to see if the battery has a sufficient charge.
+
+Attention: Do not try to clear the NVRAM contents. If there is a need to clear the contents of NVRAM, contact NetApp technical support.
+
+3. If a controller was previously part of a different cluster, run wipeconfig before using it as the replacement controller.
+
+Do you want to continue? {y|n}: y
+....
+. 按 `y` ，您将看到以下输出：
++
+....
+Controller replacement operation: Prechecks in progress.
+Controller replacement operation has been paused for user intervention.
+....
++
+系统将运行以下预检；记下每个预检的输出，以便稍后在操作步骤中使用：
+
++
+[cols="35,65"]
+|===
+| 预检查 | Description 
+
+
+| 集群运行状况检查 | 检查集群中的所有节点以确认其运行状况良好。 
+
+
+| MCC 集群检查 | 检查系统是否为 MetroCluster 配置。该操作会自动检测是否为 MetroCluster 配置，并执行特定的预检和验证检查。仅支持 4 节点 MetroCluster FC 配置。对于双节点 MetroCluster 配置和四节点 MetroCluster IP 配置，检查将失败。如果 MetroCluster 配置处于切换状态，则检查将失败。 
+
+
+| 聚合重新定位状态检查 | 检查聚合重新定位是否已在进行中。如果正在进行另一个聚合重新定位，则检查将失败。 
+
+
+| 型号名称检查 | 检查此操作步骤是否支持这些控制器型号。如果不支持这些型号，则此任务将失败。 
+
+
+| 集群仲裁检查 | 检查要更换的节点是否处于仲裁状态。如果节点未处于仲裁状态，则此任务将失败。 
+
+
+| 映像版本检查 | 检查要更换的节点是否运行相同版本的 ONTAP 。如果 ONTAP 映像版本不同，则此任务将失败。新节点上安装的 ONTAP 9.8 版本必须与原始节点上安装的版本相同。如果新节点安装的 ONTAP 版本不同，则在安装新控制器后，需要通过网络启动这些控制器。请参见 link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ug-rdg/home.html["《 ONTAP 9 升级和还原 / 降级指南》"] 有关升级 ONTAP 的说明。 
+
+
+| HA 状态检查 | 检查要更换的两个节点是否采用高可用性（ HA ）对配置。如果未为控制器启用存储故障转移，则任务将失败。 
+
+
+| 聚合状态检查 | 如果要更换的节点自身的聚合不是主所有者，则此任务将失败。节点不应拥有任何非本地聚合。 
+
+
+| 磁盘状态检查 | 如果要更换的任何节点缺少磁盘或磁盘出现故障，则此任务将失败。如果缺少任何磁盘，请参见 link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-psmg/home.html["《 ONTAP 9 磁盘和聚合高级指南》"]， 和  在中  为 HA 对配置存储。 
+
+
+| 数据 LIF 状态检查 | 检查要更换的任何节点是否具有非本地数据 LIF 。节点不应包含其不是主所有者的任何数据 LIF 。如果其中一个节点包含非本地数据 LIF ，则任务将失败。 
+
+
+| 集群 LIF 状态 | 检查两个节点的集群 LIF 是否均已启动。如果集群 LIF 已关闭，则此任务将失败。 
+
+
+| ASUP 状态检查 | 如果未配置 ASUP 通知，则任务将失败。在开始更换控制器操作步骤之前，必须启用 ASUP 。 
+
+
+| CPU 利用率检查 | 检查要更换的任何节点的 CPU 利用率是否超过 50% 。如果 CPU 使用率在相当长的一段时间内超过 50% ，则此任务将失败。 
+
+
+| 聚合重建检查 | 检查是否正在任何数据聚合上进行重建。如果正在进行聚合重建，则此任务将失败。 
+
+
+| 节点关联性作业检查 | 检查是否正在运行任何节点关联作业。如果节点关联性作业正在运行，则检查将失败。 
+|===
+. 在启动控制器更换操作并完成预检后，此操作将暂停，以便您稍后在配置 node3 时收集可能需要的输出信息。
+. 按照系统控制台上控制器更换操作步骤的指示运行以下一组命令。
++
+您必须分别运行和保存以下命令的输出：
+
++
+** vserver services name-service dns show
+** network interface show -curr-node <nodename> -role <cluster ， intercluster ， node-mgmt ， cluster-mgmt ， data>
+** network port show -node <node_name> -type physical
+** service-processor show -node * -instance
+** network fcp adapter show -node <node_name>
+** network port ifgrp show
+** system node show -instance -node <node_name>
+** 运行 -node <node_name> sysconfig
+** storage aggregate show -node <node_name>
+** volume show -node <node_name>
+** storage array config show -switch <switch_name>
+** system license show -owner <node_name>
+** storage encryption disk show
+** security key-manager backup show
+** security key-manager external show
+** security key-manager external show-status
+** 可访问性 show -detail
+
+
+
+
+
+NOTE: 如果使用板载密钥管理器（ OKM ）进行 NetApp 卷加密，请准备好密钥管理器密码短语，以便稍后在操作步骤中完成密钥管理器重新同步。
+
+
+
+=== 如果 ARL 预检失败，请更正聚合所有权
+
+如果聚合状态检查失败，您必须将配对节点拥有的聚合返回到主所有者节点，然后重新启动预检过程。
+
+.步骤
+. 使用以下命令将配对节点当前拥有的聚合返回到主所有者节点：
++
+`storage aggregate relocation start -node <source_node> -destination <destination-node> - aggregate-list *`
+
+. 使用以下命令验证 node1 和 node2 是否仍拥有其当前所有者（而不是主所有者）的聚合：
++
+`storage aggregate show -nodes <node_name> -is-home false -fields owner-<name> ， home-name ， state`
+
++
+以下示例显示了当节点同时是聚合的当前所有者和主所有者时命令的输出：
+
++
+....
+cluster::> storage aggregate show -nodes node1 -is-home true -fields owner-name,home-name,state
+aggregate   home-name  owner-name  state
+aggr1       node1      node1       online
+aggr2       node1      node1       online
+aggr3       node1      node1       online
+aggr4       node1      node1       online
+4 entries were displayed.
+....
+
+
+
+
+==== 完成后
+
+您必须使用以下命令重新启动控制器更换过程：
+
+`ssystem controller replace start -nodes <node_name>`
+
+
+
+=== 许可证
+
+设置集群时，设置向导会提示您输入集群基础许可证密钥。但是，某些功能需要额外的许可证，这些许可证会作为包含一个或多个功能的软件包发布。集群中的每个节点都必须有自己的密钥，才能在集群中使用每个功能。
+
+如果没有新的许可证密钥，则新控制器可以使用集群中当前已获得许可的功能。但是，在控制器上使用未经许可的功能可能会使您不符合您的许可协议，因此，您应在升级完成后为新控制器安装新的许可证密钥。
+
+您可以在上为 ONTAP 9.8 获取新的 2 字符许可证密钥 link:https://mysupport.netapp.com["NetApp 支持站点"]。这些密钥位于 _Software licenses_ 下的 _My Support_ 部分中。如果此站点没有所需的许可证密钥，您可以联系您的 NetApp 销售代表。
+
+有关许可的详细信息，请参见 link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《系统管理参考》"] 在中 。

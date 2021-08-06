@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/restore_key-manager_configuration_node3.html 
+keywords: restoring, key-manager, configuration, node3, nve, arl, encryption, netapp, volume 
+summary: 如果使用 NetApp 卷加密（ NVE ）对要升级的系统上的卷进行加密。 
+---
+= 还原 node3 上的 key-manager 配置
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果使用 NetApp 卷加密（ NVE ）对要升级的系统上的卷进行加密，则加密配置必须与新节点同步。从 node2 到 node3 的 node1 聚合的 ARL 完成后，加密卷将脱机。
+
+执行以下步骤，将加密配置同步到新节点：
+
+.步骤
+. 在集群提示符处使用以下命令同步 OKM 的加密配置：
++
+`sSecurity key-manager 板载同步`
+
+. 输入 OKM 的集群范围密码短语。
+

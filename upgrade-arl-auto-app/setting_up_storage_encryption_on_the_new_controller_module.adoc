@@ -1,0 +1,57 @@
+---
+sidebar: upgrade-arl-auto-app_sidebar 
+permalink: upgrade-arl-auto-app/setting_up_storage_encryption_on_the_new_controller_module.html 
+keywords: set up storage, encryption, controller, module, node 
+summary: 如果更换的控制器或新控制器的 HA 配对项使用存储加密。 
+---
+= 在新控制器模块上设置存储加密
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+如果更换的控制器或新控制器的 HA 配对项使用存储加密，则必须为新控制器模块配置存储加密，包括安装 SSL 证书和设置密钥管理服务器。
+
+此操作步骤包含对新控制器模块执行的步骤。您必须在正确的节点上输入命令。
+
+.步骤
+. 使用以下命令验证密钥管理服务器是否仍可用，其状态及其身份验证密钥信息：
++
+`security key-manager show -status`
+
++
+`s安全密钥管理器查询`
+
+. 将上一步中列出的密钥管理服务器添加到新控制器的密钥管理服务器列表中。
++
+.. 使用以下命令添加密钥管理服务器：
++
+`security key-manager -add <key_management_server_ip_address>`
+
+.. 对列出的每个密钥管理服务器重复上述步骤。您最多可以链接四个密钥管理服务器。
+.. 使用以下命令验证是否已成功添加密钥管理服务器：
++
+`sSecurity key-manager show`
+
+
+
+. 在新控制器模块上，运行密钥管理设置向导以设置和安装密钥管理服务器。
++
+您必须安装与现有控制器模块上安装的密钥管理服务器相同的密钥管理服务器。
+
++
+.. 使用以下命令在新节点上启动密钥管理服务器设置向导：
++
+`security key-manager setup -node <new_controller_name>`
+
+.. 完成向导中的步骤以配置密钥管理服务器。
+
+
+. 使用以下命令将所有链接的密钥管理服务器中的身份验证密钥还原到新节点：
++
+`security key-manager restore -node <new_controller_name>`
+
+

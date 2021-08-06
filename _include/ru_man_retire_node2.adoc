@@ -1,0 +1,95 @@
+= 
+
+
+要停用 node2 ，您需要正确关闭 node2 并将其从机架或机箱中卸下。如果集群位于 SAN 环境中，则还需要删除 SAN LIF 。
+
+.步骤
+. 执行以下操作之一：
++
+[cols="35,65"]
+|===
+| 如果集群 ... | 那么 ... 
+
+
+| 双节点集群 | 转至 <<man_retire_2_Step2,第 2 步>>。 
+
+
+| 包含两个以上节点的集群 | 转至 <<man_retire_2_Step9,第 9 步>>。 
+|===
+. 【 man_REALET_2_Step2]] 在任一节点上输入以下命令，以访问高级权限级别：
++
+`set -privilege advanced`
+
+. 输入以下命令并检查其输出，以验证是否已禁用集群 HA ：
++
+`cluster ha show`
+
++
+系统将显示以下消息：
+
++
+[listing]
+----
+High Availability Configured: false
+----
+. 输入以下命令并检查其输出，以检查 node2 当前是否持有 epsilon ：
++
+`cluster show`
+
++
+以下示例显示 node2 持有 epsilon ：
+
++
+[listing]
+----
+cluster*::> cluster show
+Node                 Health  Eligibility   Epsilon
+-------------------- ------- ------------  -----------
+node1                true    true          false
+node2                true    true          true
+
+Warning: Cluster HA has not been configured. Cluster HA must be configured on a two-node cluster to ensure data access availability in the event of storage failover. Use the "cluster ha modify -configured true" command to configure cluster HA.
+
+2 entries were displayed.
+----
+. 如果 node2 持有 epsilon ，请在节点上将 epsilon 标记为 `false` ，以便可以将其传输到 node3 ：
++
+`cluster modify -node <node2> -epsilon false`
+
+. 将 epsilon `true` 标记为 node3 ，将 epsilon 传输到 node3 ：
++
+`cluster modify -node <node3> -epsilon true`
+
+. 验证设置是否为双节点无交换机集群：
++
+`network options switchless-cluster show`
+
++
+[listing]
+----
+cluster::*> network options switchless-cluster show
+Enable Switchless Cluster: false/true
+----
++
+此命令的值必须与系统的物理状态匹配。
+
+. 验证设置是否为双节点无交换机集群：
++
+`network options switchless-cluster show`
+
++
+[listing]
+----
+cluster::*> network options switchless-cluster show
+Enable Switchless Cluster: false/true
+----
++
+此命令的值必须与系统的物理状态匹配。
+
+. [[man_REALET_2_Step9]] 返回到管理员级别：
++
+`set -privilege admin`
+
+. 在任一控制器上输入以下命令以暂停 node2 ： `ssystem node halt -node <node2>`
+. node2 完全关闭后，将其从机箱或机架中卸下。升级完成后，您可以停用 node2 。请参见 link:decommission_old_system.html["停用旧系统"]。
+

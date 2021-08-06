@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: upgrade-arl-auto-app/stage_5_install_and_boot_node4_overview.html 
+keywords: install, boot, node4, node2, node-management 
+summary: 在第 5 阶段，您安装并启动 node4 ，将集群和节点管理端口从 node2 映射到 node4 。 
+---
+= 第 5 阶段。安装并启动节点 4.
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+在第 5 阶段，您将安装并启动 node4 ，将集群和节点管理端口从 node2 映射到 node4 ，并验证 node4 安装。您还可以将 node2 拥有的 NAS 数据 LIF 从 node3 移动到 node4 ，并将 node2 的聚合从 node3 重新定位到 node4 。
+
+.步骤
+. link:installing_and_booting_node4.html["安装并启动节点 4."]
+. link:setting_the_fc_or_uta_uta2_configuration_on_node4.html["在 node4 上设置 FC 或 UTA/UTA2 配置"]
+. link:verifying_the_node4_installation.html["验证 node4 安装"]
+. link:restoring_key-manager_configuration_on_node4.html["还原 node4 上的 key-manager 配置"]
+. link:moving_non-root_aggregates_and_nas_data_lifs_owned_by_node2_from_node3_to_node4.html["节点 2 拥有的 MOE 非根聚合和 NAS 数据 LIF 从节点 3 到节点 4"]
+
