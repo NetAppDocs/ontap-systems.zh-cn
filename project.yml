@@ -1,4 +1,9 @@
 ---
+settings:
+  name: ONTAP Systems
+  pdf_enabled: true
+  langs: zh-cn,us-en,ja-jp
+  harmony_enabled: true
 sidebar:
   entries:
   - title: ONTAP 9.8 系统文档
