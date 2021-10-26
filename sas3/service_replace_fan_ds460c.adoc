@@ -1,0 +1,79 @@
+---
+permalink: sas3/service-replace-fan-ds460c.html 
+sidebar: sidebar 
+keywords: ds460c, drive, shelf, fan, module, cooling, disk, replace, replace a fan module in a ds460c disk shelf 
+summary: 每个 DS460C 驱动器架都包含两个风扇模块。如果某个风扇模块发生故障，您必须尽快更换该模块，以确保磁盘架具有足够的散热效果。卸下发生故障的风扇模块后，您无需关闭磁盘架的电源。 
+---
+= 将 DS460C 磁盘架中的风扇模块更换为 IOM12 模块
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+每个 DS460C 驱动器架都包含两个风扇模块。如果某个风扇模块发生故障，您必须尽快更换该模块，以确保磁盘架具有足够的散热效果。卸下发生故障的风扇模块后，您无需关闭磁盘架的电源。
+
+您必须确保在 30 分钟内卸下并更换风扇模块，以防止系统过热。
+
+.步骤
+. 启用防静电保护。
+. 拆开新风扇模块的包装，并将其放在磁盘架附近的水平表面上。
++
+请保存所有包装材料，以便在退回故障风扇时使用。
+
+. 从磁盘架背面，查看警示 LED 以找到需要卸下的风扇模块。
++
+您必须更换警示 LED 亮起的风扇模块。
+
++
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout.gif[28 dwg e2860 de460c 单风扇箱，带 LED 标注]
+
++
+|===
+
+
+| 项目 | LED name | State | Description 
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 注意  a| 
+稳定琥珀色
+ a| 
+风扇出现故障
+
+|===
+. 按下橙色卡舌以释放风扇模块手柄。
++
+image::../media/28_dwg_e2860_de460c_single_fan_canister_with_orange_tab_callout.gif[28 dwg e2860 de460c 单风扇箱，带有橙色凸耳标注]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 按下此卡舌可释放风扇模块手柄 
+|===
+. 使用风扇模块把手将风扇模块拉出磁盘架。
++
+image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout.gif[28 dwg e2860 de460c 风扇箱手柄，带标注]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 将风扇模块拉出的手柄 
+|===
+. 将更换用的风扇模块完全滑入磁盘架中，将风扇模块手柄移至侧面，直到其与橙色卡舌锁定为止。
+. 检查新风扇模块上的琥珀色警示 LED 。
++
+
+NOTE: 更换风扇模块后，警示 LED 将保持亮起（稳定琥珀色），而固件将检查风扇模块是否安装正确。此过程完成后，此 LED 将熄灭。
+
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。
++
+请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果需要 RMA 编号）。
+
+

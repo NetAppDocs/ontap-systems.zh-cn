@@ -1,0 +1,73 @@
+---
+permalink: a320/chassis-replace-complete-system-restore-rma.html 
+sidebar: sidebar 
+keywords: aff a320, verify and set HA state, run diagnostics, complete the replacement process 
+summary: 您必须验证机箱的 HA 状态，运行诊断并将故障部件退回给 NetApp ，如套件随附的 RMA 说明中所述。 
+---
+= 完成还原和更换过程— AFF A320
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 第 1 步：验证并设置机箱的 HA 状态
+
+[role="lead"]
+您必须验证机箱的 HA 状态，并在必要时更新此状态以匹配您的系统配置。
+
+. 在维护模式下，从任一控制器模块显示本地控制器模块和机箱的 HA 状态： `ha-config show`
++
+所有组件的 HA 状态都应相同。
+
+. 如果为机箱显示的系统状态与您的系统配置不匹配：
++
+.. 设置机箱的 HA 状态： `ha-config modify chassis _ha-state_`
++
+ha-state 的值可以是以下值之一：
+
++
+*** `ha`
+*** `non-ha`
+
+
+.. 确认设置已更改： `ha-config show`
+
+
+. 如果尚未执行此操作，请重新对系统的其余部分进行布线。
+. 重新安装系统正面的挡板。
+
+
+
+
+== 第 2 步：运行诊断
+
+[role="lead"]
+更换系统中的某个组件后，您应对该组件运行诊断测试。
+
+您的系统必须处于 LOADER 提示符处，才能启动诊断。
+
+诊断过程中的所有命令都是从要更换组件的节点发出的。
+
+. 如果要服务的节点不在 LOADER 提示符处，请重新启动节点： `ssystem node halt -node node_name`
++
+问题描述命令后，您应等待系统停留在 LOADER 提示符处。
+
+. 在 LOADER 提示符处，访问专为系统级诊断而设计的特殊驱动程序以正常运行： `boot_diags`
+. 从显示的菜单中选择 * 扫描系统 * 以启用运行诊断测试。
+. 从显示的菜单中选择 * 测试系统 * 以运行诊断测试。
+. 从各种子菜单中选择一个或多个测试。
+. 根据上一步的结果继续操作：
++
+** 如果测试失败，请更正此故障，然后重新运行此测试。
+** 如果测试未报告任何故障，请从菜单中选择重新启动以重新启动系统。
+
+
+
+
+
+
+== 第 2 步：将故障部件退回 NetApp
+
+[role="lead"]
+更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

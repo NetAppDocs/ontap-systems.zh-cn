@@ -1,0 +1,560 @@
+---
+permalink: a320/install-detailed-guide.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, guide, detail, step-by-step, instruction, install, typical, netapp, system installation, prepare, hardware, cable, network, drive, shelves, shelf, complete, setup, configuration, detailed guide, prepare for installation, install the hardware, cable controllers to your network, cable controllers to drive shelves, complete system setup and configuration 
+summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本指南。 
+---
+= 详细指南— AFF A320
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本指南详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本指南。
+
+
+
+== 准备安装
+
+[role="lead"]
+要安装 AFF A320 系统，您需要创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
+
+您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。
+
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的发行说明"]
+
+您需要在站点上提供以下内容：
+
+* 存储系统的机架空间
+* 2 号十字螺丝刀
+* 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
+* 具有 RJ-45 连接并可访问 Web 浏览器的笔记本电脑或控制台
++
+.. 打开所有框内容的包装。
+.. 记录控制器的系统序列号。
++
+image::../media/drw_ssn_label.png[DRW SSN 标签]
+
+.. 设置您的帐户：
++
+... 登录到现有帐户或创建帐户。
+... 注册您的系统。
++
+https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"]
+
+
+
+.. 清点并记下收到的缆线数量和类型。
++
+下表列出了您可能收到的电缆类型。如果您收到的电缆未在表中列出，请参见 Hardware Universe 以找到该电缆并确定其用途。
+
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
++
+[cols="1,2,1,2"]
+|===
+| 缆线类型 ... | 部件号和长度 | 连接器类型 | 针对 ... 
+
+
+ a| 
+100 GbE 缆线（ QSF （ 28 ）
+ a| 
+X6621A-05 （ 112-00595 ）， 0.5 米
+
+X6621A-1 （ 112-00573 ）， 1 米
+
+X6621A-2 （ 112-00574 ）， 2 米
+
+X6621A-5 （ 112-00574 ）， 5 米
+ a| 
+image:../media/oie_cable100_gbe_qsfp28.png[""]
+ a| 
+存储，集群互连 /HA 和以太网数据（取决于订单）
+
+
+
+ a| 
+40 GbE 缆线
+ a| 
+X6621A-1 （ 112-00573 ）， 1 米；
+
+X6621A-3 （ 112-00543 ）， 3 米；
+
+X6621A-5 （ 112-00576 ）， 5 米
+ a| 
+image:../media/oie_cable_sfp_gbe_copper.png[""]
+ a| 
+存储，集群互连 /HA 和以太网数据（取决于订单）
+
+
+
+ a| 
+以太网缆线— MPO
+ a| 
+X66200-2 （ 112-00326 ）， 2 米
+
+X66250-5 （ 112-00328 ）， 5 米
+
+X66250-30 （ 112-00331 ）， 30 米
+ a| 
+image:../media/oie_cable_etherned_mpo.png[""]
+ a| 
+以太网缆线（取决于订单）
+
+
+
+ a| 
+光缆
+ a| 
+SR ：
+
+X6553-R6 （ 112-00188 ）， 2 米
+
+X6554-R6 （ 112-00189 ）， 15 米
+
+X6537-R6 （ 112-00091 ）， 30 米
+
+LR ：
+
+X66250-3 （ 112-00342 ）， 2 米
+
+X66260-5 （ 112-00344 ）， 5 米
+
+X66260-30 （ 112-00354 ）， 30 米
+ a| 
+image:../media/oie_cable_fiber_lc_connector.png[""]
+ a| 
+FC 配置（取决于订单）
+
+
+
+ a| 
+RJ-45 （取决于订单）
+ a| 
+X6555-R6 （ 112-00291 ）， 3 米
+
+X6562-R6 （ 112-00196 ）， 5 米
+ a| 
+image:../media/oie_cable_rj45.png[""]
+ a| 
+管理网络
+
+
+
+ a| 
+微型 USB 控制台缆线
+ a| 
+不适用
+ a| 
+image:../media/oie_cable_micro_usb.png[""]
+ a| 
+如果笔记本电脑或控制台不支持网络发现，则在软件设置期间使用控制台连接。
+
+
+
+ a| 
+电源线
+ a| 
+不适用
+ a| 
+image:../media/oie_cable_power.png[""]
+ a| 
+启动系统
+
+|===
+.. 下载并完成 _Cluster 配置工作表 _ 。
++
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工作表"]
+
+
+
+
+
+
+
+== 安装硬件
+
+[role="lead"]
+您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
+
+. 根据需要安装导轨套件。
+. 按照导轨套件附带的说明安装并固定系统。
++
+
+NOTE: 您需要了解与系统重量相关的安全问题。
+
++
+image::../media/drw_a320_weight_label.png[DRW A320 重量标签]
+
+. 连接缆线管理设备（如图所示）。
++
+image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
+
+. 将挡板放在系统正面。
+
+
+
+
+== 使用缆线将控制器连接到网络
+
+[role="lead"]
+您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
+
+
+
+=== 选项 1 ：为双节点无交换机集群布线
+
+[role="lead"]
+控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。集群互连 /HA 端口通过缆线连接到两个控制器模块上。
+
+您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
+
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+. 您可以使用图形或分步说明完成控制器与交换机之间的布线：
++
+image::../media/drw_a320_tnsc_network_cabling_composite_animated_gif.png[DRW A320 tnsc 网络布线复合动画 gif]
+
++
+[cols="1,2"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+image:../media/oie_legend_icon_1_lg.png[""]
+ a| 
+使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口彼此相连：
+
+** e0a 到 e0a
+** e0d 到 e0dimage:../media/drw_a320_tnsc_cluster_ha_connection_step1a.png[""]
+
+
+
+
+ a| 
+image:../media/oie_legend_icon_2_o.png[""]
+ a| 
+如果您使用板载端口进行数据网络连接，请将 100GbE 或 40GbE 缆线连接到相应的数据网络交换机：
+
+** e0g 和 e0himage:../media/drw_a320_onboard_data_connection_step2.png[""]
+
+
+
+
+ a| 
+image:../media/oie_legend_icon_3_dr.png[""]
+ a| 
+如果要使用 NIC 卡进行以太网或 FC 连接，请将 NIC 卡连接到相应的交换机：
+
+image::../media/drw_a320_nic_connections_step3.png[DRW A320 NIC 连接步骤 3]
+
+
+
+ a| 
+image:../media/oie_legend_icon_4_lp.png[""]
+ a| 
+使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
+
+image:../media/drw_a320_management_port_connection_step4.png[""]
+
+
+
+ a| 
+image:../media/oie_legend_icon_attn_symbol.png[""]
+ a| 
+此时请勿插入电源线。
+
+|===
+. 为存储布线： link:install_detailed_guide.md#["使用缆线将控制器连接到驱动器架"]
+
+
+
+
+=== 选项 2 ：为有交换机集群布线
+
+[role="lead"]
+控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。集群互连 /HA 端口通过缆线连接到集群 /HA 交换机。
+
+您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
+
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+. 您可以使用图形或分步说明完成控制器与交换机之间的布线：
++
+image::../media/drw_a320_switched_network_cabling_composite_animated_gif.png[DRW A320 交换网络布线复合动画 gif]
+
++
+[cols="1,3"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+image:../media/oie_legend_icon_1_lg.png[""]
+ a| 
+使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口连接到集群 /HA 交换机：
+
+** 两个控制器上的 e0a 连接到集群 /HA 交换机
+** 两个控制器上的 e0d 连接到集群 /HA 交换机image:../media/drw_a320_switched_cluster_ha_connection_step1b.png[""]
+
+
+
+
+ a| 
+image:../media/oie_legend_icon_2_o.png[""]
+ a| 
+如果您使用板载端口进行数据网络连接，请将 100GbE 或 40GbE 缆线连接到相应的数据网络交换机：
+
+** e0g 和 e0himage:../media/drw_a320_onboard_data_connection_step2.png[""]
+
+
+
+
+ a| 
+image:../media/oie_legend_icon_3_dr.png[""]
+ a| 
+如果要使用 NIC 卡进行以太网或 FC 连接，请将 NIC 卡连接到相应的交换机：
+
+image::../media/drw_a320_nic_connections_step3.png[DRW A320 NIC 连接步骤 3]
+
+
+
+ a| 
+image:../media/oie_legend_icon_4_lp.png[""]
+ a| 
+使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
+
+image:../media/drw_a320_management_port_connection_step4.png[""]
+
+
+
+ a| 
+image:../media/oie_legend_icon_attn_symbol.png[""]
+ a| 
+此时请勿插入电源线。
+
+|===
+. 为存储布线： link:install_detailed_guide.md#["使用缆线将控制器连接到驱动器架"]
+
+
+
+
+== 使用缆线将控制器连接到驱动器架
+
+[role="lead"]
+您必须使用板载存储端口将控制器连接到磁盘架。
+
+
+
+=== 选项 1 ：使用缆线将控制器连接到一个驱动器架
+
+[role="lead"]
+您必须使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。
+
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+. 您可以使用图形或分步说明将控制器连接到一个磁盘架。
++
+image::../media/drw_a320_single_shelf_connections_animated_gif.png[DRW A320 单磁盘架连接动画 gif]
+
++
+[cols="1,3"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+image:../media/oie_legend_icon_1_mb.png[""]
+ a| 
+使用缆线将控制器 A 连接到磁盘架 image:../media/drw_a320_storage_cabling_controller_a_single_shelf.png[""]
+
+
+
+ a| 
+image:../media/oie_legend_icon_2_lo.png[""]
+ a| 
+使用缆线将控制器 B 连接到磁盘架： image:../media/drw_a320_storage_cabling_controller_b_single_shelf.png[""]
+
+|===
+. 要完成系统设置，请参见 link:install_detailed_guide.md#["正在完成系统设置和配置"]。
+
+
+
+
+=== 选项 2 ：使用缆线将控制器连接到两个驱动器架
+
+[role="lead"]
+您必须使用缆线将每个控制器连接到两个 NS224 驱动器架上的 NSM 模块。
+
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+. 您可以使用下图或写入的步骤将控制器连接到两个驱动器架。
++
+image::../media/drw_a320_2_shevles_cabling_animated_gif.png[DRW A320 2 可通过动画 gif 显示布线]
+
++
+[cols="1-3"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+image:../media/oie_legend_icon_1_mb.png[""]
+ a| 
+使用缆线将控制器 A 连接到磁盘架： image:../media/drw_a320_2_shelves_cabling_controller_a.png[""]
+
+
+
+ a| 
+image:../media/oie_legend_icon_2_lo.png[""]
+ a| 
+使用缆线将控制器 B 连接到磁盘架： image:../media/drw_a320_2_shelves_cabling_controller_b.png[""]
+
+|===
+. 要完成系统设置，请参见 link:install_detailed_guide.md#["正在完成系统设置和配置"]。
+
+
+
+
+== 完成系统设置和配置
+
+[role="lead"]
+您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
+
+
+
+=== 选项 1 ：如果启用了网络发现，则完成系统设置和配置
+
+[role="lead"]
+如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
+
+. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
++
+系统开始启动。初始启动可能需要长达八分钟的时间
+
+. 确保您的笔记本电脑已启用网络发现。
++
+有关详细信息，请参见笔记本电脑的联机帮助。
+
+. 使用下图将笔记本电脑连接到管理交换机。
++
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"]
+
+. 选择列出的 ONTAP 图标以发现：
++
+image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
+
++
+.. 打开文件资源管理器。
+.. 单击左窗格中的 network 。
+.. 右键单击并选择刷新。
+.. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
++
+
+NOTE: XXXXX 是目标节点的系统序列号。
+
++
+此时将打开 System Manager 。
+
+
+
+. 使用 System Manager 引导式设置，使用在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。
++
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]
+
+. 运行 Config Advisor 以验证系统的运行状况。
+. 完成初始配置后，转到 https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+
+
+
+
+=== 选项 2 ：如果未启用网络发现，则完成系统设置和配置
+
+[role="lead"]
+如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。
+
+. 为笔记本电脑或控制台布线并进行配置：
++
+.. 使用 N-8-1 将笔记本电脑或控制台上的控制台端口设置为 115200 波特。
++
+
+NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或控制台的联机帮助。
+
+.. 使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台，然后将此笔记本电脑连接到管理子网上的管理交换机。
++
+image::../media/drw_a320_laptop_to_switch_and_controller.png[从 DRW A320 笔记本电脑连接到交换机和控制器]
+
+.. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
+
+
+. 使用下图设置一个或多个驱动器架 ID ：
+. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
++
+系统开始启动。初始启动可能需要长达八分钟的时间
+
+. 将初始节点管理 IP 地址分配给其中一个节点。
++
+[cols="1,3"]
+|===
+| 如果管理网络具有 DHCP... | 那么 ... 
+
+
+ a| 
+已配置
+ a| 
+记录分配给新控制器的 IP 地址。
+
+
+
+ a| 
+未配置
+ a| 
+.. 使用 PuTTY ，终端服务器或环境中的等效项打开控制台会话。
++
+
+NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制台的联机帮助。
+
+.. 在脚本提示时输入管理 IP 地址。
+
+
+|===
+. 使用笔记本电脑或控制台上的 System Manager 配置集群：
++
+.. 将浏览器指向节点管理 IP 地址。
++
+
+NOTE: 此地址的格式为 +https://x.x.x.x+ 。
+
+.. 使用您在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。
++
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]
+
+
+
+. 运行 Config Advisor 以验证系统的运行状况。
+. 完成初始配置后，转到 https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+

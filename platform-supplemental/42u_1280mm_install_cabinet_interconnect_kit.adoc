@@ -1,0 +1,154 @@
+---
+permalink: platform-supplemental/42u-1280mm-install-cabinet-interconnect-kit.html 
+sidebar: sidebar 
+keywords: connect, system, cabinet, optional, interconnect, kit, install, prevent, damaging, damage, install the cabinet interconnect kit 
+summary: 您可以使用可选的机柜互连套件将系统机柜连接在一起。建议您安装此套件，以防止机柜拉出并损坏系统缆线。 
+---
+= 安装机柜互连套件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用可选的机柜互连套件将系统机柜连接在一起。建议您安装此套件，以防止机柜拉出并损坏系统缆线。
+
+. 将系统机柜放在一起。
++
+机柜的布局应与下图类似，其中控制器模块位于机柜中间，而磁盘架位于两侧。机柜两侧应关闭，但不需要彼此接触。
+
++
+image::../media/drw_fcc_cabinet_ordering.png[周围的文字介绍了此图。]
+
+. 如果您要按照建议安装互连套件并安装侧面板，请重新安装在开箱期间卸下的侧面板：
++
+.. 提起侧面板，将其从系统机柜底部倾斜大约 15 度，然后将其悬停在系统机柜框架顶部的边缘上。
+.. 将侧面板轻轻推向机柜框架，然后使用键将其锁定到位。
+.. 对其余侧面板重复这些子步骤。
+
+
+. 如果在安装互连套件时已卸下侧面板，请卸下前挡盖，其转轴位于机柜的边缘：
++
+.. 解锁并打开要卸下的前挡盖。
+.. 请参考下图，拔下照明挡板的电源插头：
++
+image::../media/drw_sys_cab_remove_brimstone_back_banel.png[DRW 系统驾驶室拆卸桥石背面板]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+
+
+
+ a| 
+照明挡板电路板和缆线
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+
+
+
+ a| 
+后面板和翼形螺钉
+
+|===
+.. 请参考下图卸下前挡盖：
++
+image::../media/drw_sys_cab_front_door_daiginjo.png[DRW 系统驾驶室前车门 daiginjo]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+
+
+
+ a| 
+门接地缆线
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+
+
+
+ a| 
+车门顶部转轴
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+
+
+
+ a| 
+转轴销
+
+|===
++
+请确保将拆下的门设置在安全的位置，以免意外损坏。
+
+
+
+. 卸下后盖，其转轴位于机柜相配的边缘：
++
+.. 解锁并打开要移除的后盖。
+.. 提起顶部转轴销，直到其脱离转轴底部。
+.. 轻轻地将门顶部从系统机柜框架中移出，然后释放转轴销。
+.. 将门从底部转轴上提起，然后将其放在一旁。
+
+
+. 将系统机柜完全移动在一起，然后通过调整系统机柜底部的四个水平垫对齐和水平。
+. 安装互连支架。
++
+** 如果您要按照建议安装互连支架，并在上安装系统机柜侧面板，请参考下图：image:../media/drw_syscab_interconnect_bracket_side_panels_on.gif[""]
+
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+
+
+
+ a| 
+系统机柜顶部的塑料推入式抽芯
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+
+
+
+ a| 
+顶部互连支架
+
+
+
+ a| 
+image:../media/legend_icon_03.png[""]
+
+
+
+ a| 
+底部互连支架
+
+|===
++
+** 如果在系统机柜侧面板关闭的情况下安装互连支架，请参考下图：image:../media/drw_syscab_interconnect_bracket_side_panels_off.gif[""]
+
+
+. 对其余所有系统机柜重复此过程。
+. 拧紧所有互连支架螺钉。
+

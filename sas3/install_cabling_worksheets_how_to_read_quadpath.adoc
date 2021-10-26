@@ -1,0 +1,73 @@
+---
+permalink: sas3/install-cabling-worksheets-how-to-read-quadpath.html 
+sidebar: sidebar 
+keywords: example, guide, read, apply, complete, worksheet, stack, disk, shelves, shelf, iom12, quad-pathed, connectivity, how to read a worksheet to cable controller-to-stack connections for quad-pathed connectivity 
+summary: 您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便使用 IOM12 模块为磁盘架堆栈布线，从而实现四路径连接。 
+---
+= 如何阅读使用缆线连接控制器到堆栈连接以实现四路径连接的工作表—具有 IOM12 模块的磁盘架
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便使用 IOM12 模块为磁盘架堆栈布线，从而实现四路径连接。
+
+.关于此任务
+* 此操作步骤引用以下工作表和布线示例，用于演示如何阅读工作表，以便为控制器到堆栈连接布线。
++
+本示例中使用的配置是四路径 HA 配置，其中每个控制器上有两个四端口 SAS HBA ，并有两个磁盘架堆栈和 IOM12 模块。
+
+* 如果您使用的是单控制器配置，请跳过子步骤 b 和 d ，以便通过缆线连接到另一个控制器。
+* 如果需要，可以参考 link:install-cabling-rules.html["SAS 布线规则"] 有关控制器插槽编号约定，磁盘架到磁盘架连接和控制器到磁盘架连接（包括端口对的使用）的信息。
+
+
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[DRW 工作表 qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 NAU]
+
+image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[DRW qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 NAU]
+
+.步骤
+. 使用缆线将每个控制器上的端口对 11/2b 连接到堆栈 1 ：
++
+这是堆栈 1 的多路径布线。
+
++
+.. 使用缆线将控制器 1 端口 1a 连接到堆栈 1 ，第一个磁盘架 IOM A 端口 1 。
+.. 使用缆线将控制器 2 端口 1a 连接到堆栈 1 ，第一个磁盘架 IOM B 端口 1 。
+.. 使用缆线将控制器 1 端口 2b 连接到堆栈 1 ，最后一个磁盘架 IOM B 端口 3 。
+.. 使用缆线将控制器 2 端口 2b 连接到堆栈 1 ，最后一个磁盘架 IOM A 端口 3 。
+
+
+. 使用缆线将每个控制器上的端口对 2a/1D 连接到堆栈 1 ：
++
+这是堆栈 1 的四路径布线。完成后，堆栈 1 会通过四路径连接到每个控制器。
+
++
+.. 使用缆线将控制器 1 端口 2a 连接到堆栈 1 ，第一个磁盘架 IOM A 端口 2 。
+.. 使用缆线将控制器 2 端口 2a 连接到堆栈 1 ，第一个磁盘架 IOM B 端口 2 。
+.. 使用缆线将控制器 1 端口 1D 连接到堆栈 1 ，最后一个磁盘架 IOM B 端口 4 。
+.. 使用缆线将控制器 2 端口 1D 连接到堆栈 1 ，最后一个磁盘架 IOM A 端口 4 。
+
+
+. 使用缆线将每个控制器上的端口对 1c/2D 连接到堆栈 2 ：
++
+这是堆栈 2 的多路径布线。
+
++
+.. 使用缆线将控制器 1 端口 1c 连接到堆栈 2 ，第一个磁盘架 IOM A 端口 1 。
+.. 使用缆线将控制器 2 端口 1c 连接到堆栈 2 ，第一个磁盘架 IOM B 端口 1 。
+.. 使用缆线将控制器 1 端口 2D 连接到堆栈 2 ，最后一个磁盘架 IOM B 端口 3 。
+.. 使用缆线将控制器 2 端口 2D 连接到堆栈 2 ，最后一个磁盘架 IOM A 端口 3 。
+
+
+. 使用缆线将每个控制器上的端口对 2c/1b 连接到堆栈 2 ：
++
+这是堆栈 2 的四路径布线。完成后，堆栈 2 会通过四路径连接到每个控制器。
+
++
+.. 使用缆线将控制器 1 端口 2c 连接到堆栈 2 ，第一个磁盘架 IOM A 端口 2 。
+.. 使用缆线将控制器 2 端口 2c 连接到堆栈 2 ，第一个磁盘架 IOM B 端口 2 。
+.. 使用缆线将控制器 1 端口 1b 连接到堆栈 2 ，最后一个磁盘架 IOM B 端口 4 。
+.. 使用缆线将控制器 2 端口 1b 连接到堆栈 2 ，最后一个磁盘架 IOM A 端口 4 。
+
+
+

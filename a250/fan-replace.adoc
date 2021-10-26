@@ -1,0 +1,206 @@
+---
+permalink: a250/fan-replace.html 
+sidebar: sidebar 
+keywords: aff a250, replace a fan 
+summary: 要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。 
+---
+= 更换风扇 &#8201 ； &#8212 ； &#8201 ； AFF A250
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。
+
+
+
+== 第 1 步：关闭受损节点
+
+[role="lead"]
+要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
+
+如果集群包含两个以上的节点，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述。
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"]
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的节点的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损节点显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损节点显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+接管或暂停受损节点：
+
+** 对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode _impaired_node_name_`
++
+当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+
+
+|===
+
+
+
+
+== 第 2 步：卸下控制器模块
+
+[role="lead"]
+更换控制器模块内部的组件时，必须从机箱中卸下控制器模块。
+
+请确保为这些缆线贴上标签，以便您知道这些缆线来自何处。
+
+. 如果您尚未接地，请正确接地。
+. 从源拔下控制器模块电源。
+. 释放电源线固定器，然后从电源中拔下缆线。
+. 将前掌插入控制器模块两侧的锁定装置中，用拇指按下控制杆，然后将控制器轻轻拉出机箱几英寸。
++
+
+NOTE: 如果在卸下控制器模块时遇到困难，请将索引指针从内部穿过指孔（通过跨越臂）
+
++
+image::../media/drw_a250_pcm_remove_install.png[DRW A250 PCM 拆卸安装]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+*
+| 控制杆 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+锁定机制
+
+|===
+. 用双手抓住控制器模块两侧，将其轻轻拉出机箱，并将其放在平稳的表面上。
+. 逆时针转动控制器模块正面的翼形螺钉，然后打开控制器模块盖板。
++
+image::../media/drw_a250_open_controller_module_cover.png[DRW A250 打开控制器模块盖板]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 翼形螺钉 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+控制器模块盖板。
+
+|===
+
+
+
+
+== 第 3 步：更换风扇
+
+[role="lead"]
+要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。
+
+使用以下视频或表格中的步骤更换风扇：
+
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=ccfa6665-2c2b-4571-ae79-ac5b015c19fc["更换风扇"]
+
+. 通过检查控制台错误消息或找到主板上风扇模块的亮起 LED 来确定必须更换的风扇模块。
+. 通过挤压风扇模块的侧面，然后将风扇模块竖直提出控制器模块来卸下风扇模块。
++
+image::../media/drw_a250_replace_fan.png[DRW A250 更换风扇]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 风扇模块 
+|===
+. 将更换用风扇模块的边缘与控制器模块中的开口对齐，然后将更换用的风扇模块滑入控制器模块。
+
+
+
+
+== 第 4 步：重新安装控制器模块
+
+[role="lead"]
+更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块并启动它。
+
+. 合上控制器模块盖并拧紧翼形螺钉。
++
+image::../media/drw_a250_close_controller_module_cover.png[DRW A250 合上控制器模块盖]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 控制器模块盖板 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+翼形螺钉
+
+|===
+. 将控制器模块插入机箱：
++
+.. 确保锁定机制臂锁定在完全展开的位置。
+.. 用双手将控制器模块对齐并轻轻滑入锁定装置臂，直到其停止。
+.. 将食指从锁定装置内侧的指孔中穿过。
+.. 用拇指向下按压闩锁装置顶部的橙色卡舌，然后将控制器模块轻轻推至停止位置上方。
+.. 从锁定机制顶部释放拇指，然后继续推动，直到锁定机制卡入到位。
++
+控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。
+
+
+
++
+控制器模块应完全插入，并与机箱边缘平齐。
+
+. 根据需要重新对系统进行布线。
+. 交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== 第 5 步：将故障部件退回 NetApp
+
+[role="lead"]
+更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

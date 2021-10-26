@@ -1,0 +1,72 @@
+---
+section: a200
+title: AFF A200 系统
+url: "/a200/index.html"
+entries:
+- title: 安装和设置
+  pdf-filename: AFF A200 安装和设置
+  entries:
+  - title: 集群配置工作表
+    url: "/a200/install-worksheet-linkout.html"
+  - title: 快速步骤
+    url: "/a200/install-setup-linkout.html"
+  - title: 视频步骤
+    url: "/a200/install-video-linkout.html"
+- title: 维护
+  pdf-filename: AFF A200 维护
+  entries:
+  - title: 启动介质
+    pdf-filename: AFF A200 启动介质
+    entries:
+    - title: 概述
+      url: "/a200/bootmedia-replace-overview.html"
+    - title: 检查板载加密密钥
+      url: "/a200/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭受损控制器
+      url: "/a200/bootmedia-shutdown.html"
+    - title: 更换启动介质
+      url: "/a200/bootmedia-replace.html"
+    - title: 启动恢复映像
+      url: "/a200/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: 还原 OKM ， NSE 和 NVE
+      url: "/a200/bootmedia-encryption-restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/a200/bootmedia-complete-rma.html"
+  - title: 机箱
+    pdf-filename: AFF A200 机箱
+    entries:
+    - title: 概述
+      url: "/a200/chassis-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/a200/chassis-replace-shutdown.html"
+    - title: 更换硬件
+      url: "/a200/chassis-replace-move-hardware.html"
+    - title: 还原配置
+      url: "/a200/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器模块
+    pdf-filename: AFF A200 控制器模块
+    entries:
+    - title: 概述
+      url: "/a200/controller-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/a200/controller-replace-shutdown.html"
+    - title: 更换硬件
+      url: "/a200/controller-replace-move-hardware.html"
+    - title: 还原配置
+      url: "/a200/controller-replace-system-config-restore-and-verify.html"
+    - title: 可重新连接的系统
+      url: "/a200/controller-replace-recable-reassign-disks.html"
+    - title: 完成系统还原
+      url: "/a200/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: AFF A200 DIMM
+    url: "/a200/dimm-replace.html"
+  - title: NVMEM 电池
+    pdf-filename: AFF A200 NVMEM 电池
+    url: "/a200/nvmem-nvram-battery-replace.html"
+  - title: 电源
+    pdf-filename: AFF A200 电源
+    url: "/a200/power-supply-swap-out.html"
+  - title: 实时时钟电池
+    pdf-filename: AFF A200 实时时钟电池
+    url: "/a200/rtc-battery-replace.html"

@@ -1,0 +1,47 @@
+---
+permalink: a200/bootmedia-shutdown.html 
+sidebar: sidebar 
+keywords: aff, a200, aff a200, complete, nve, nse, task, shutdown, impair, node, shut down the node 
+summary: 完成 NVE 或 NSE 任务后，您需要关闭受损节点。 
+---
+= 关闭节点— AFF A200
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成 NVE 或 NSE 任务后，您需要关闭受损节点。
+
+.步骤
+. 如果受损节点不在 LOADER 提示符处：
++
+[cols="1,2"]
+|===
+| * 如果受损节点显示 ... | 然后 ...* 
+
+
+ a| 
+` + 正在等待交还 ...+`
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+接管或暂停受损节点：
+
+** 对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode `impaired_node_name``
++
+当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+
+
+|===
+. 在 LOADER 提示符处，输入 `printenv` 以捕获所有启动环境变量。将输出保存到日志文件中。
++
+
+NOTE: 如果启动设备损坏或无法正常运行，则此命令可能不起作用。
+
+

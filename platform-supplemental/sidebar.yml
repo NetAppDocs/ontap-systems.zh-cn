@@ -1,0 +1,90 @@
+---
+section: platform-supplemental
+title: 其他平台过程
+entries:
+- title: 系统级诊断
+  entries:
+  - title: 简介
+    url: "/platform-supplemental/sldiag-introduction.html"
+  - title: 要求
+    url: "/platform-supplemental/sldiag-requirements.html"
+  - title: 如何使用命令行帮助
+    url: "/platform-supplemental/sldiag-use-cli-help.html"
+  - title: 运行系统安装诊断
+    url: "/platform-supplemental/sldiag-system-installation-diagnostics.html"
+  - title: 运行系统崩溃诊断
+    url: "/platform-supplemental/sldiag-system-panic-diagnostics.html"
+  - title: 运行系统响应缓慢诊断
+    url: "/platform-supplemental/sldiag-slow-system-diagnostics.html"
+  - title: 运行硬件安装诊断
+    url: "/platform-supplemental/sldiag-hardware-installation-diagnostics.html"
+  - title: 运行设备故障诊断
+    url: "/platform-supplemental/sldiag-device-failure-diagnostics.html"
+- title: SuperRail 套件
+  url: "/platform-supplemental/superrail-install.html"
+- title: AFF A700/FAS9000 双柱导轨套件
+  url: "/platform-supplemental/telco-installation-instructions.html"
+- title: 42U 1280 毫米系统机柜
+  entries:
+  - title: 准备安装机柜
+    entries:
+    - title: 机柜功能
+      url: "/platform-supplemental/42u-1280mm-features.html"
+    - title: 所需工具 / 设备
+      url: "/platform-supplemental/42u-1280mm-required-tools.html"
+    - title: 空间要求和机柜尺寸
+      url: "/platform-supplemental/42u-1280mm-space-and-dimensions.html"
+    - title: 支持的 PDU 类型和规格
+      url: "/platform-supplemental/42u-1280mm-supported-pdu-types-and-specifications.html"
+  - title: 打开系统机柜的包装
+    url: "/platform-supplemental/42u-1280mm-unpack.html"
+  - title: 安装机柜
+    entries:
+    - title: 概述
+      url: "/platform-supplemental/42u-1280mm-install.html"
+    - title: 安装机柜互连套件
+      url: "/platform-supplemental/42u-1280mm-install-cabinet-interconnect-kit.html"
+    - title: 安装固定套件
+      url: "/platform-supplemental/42u-1280mm-install-bolt-down-kit.html"
+    - title: 安装支持导轨
+      url: "/platform-supplemental/42u-1280mm-install-additional-rails.html"
+    - title: 安装设备
+      url: "/platform-supplemental/42u-1280mm-install-equipment.html"
+    - title: 打开机柜电源
+      url: "/platform-supplemental/42u-1280mm-power-on.html"
+  - title: 更换 PDU
+    url: "/platform-supplemental/42u-1280mm-replace-pdus.html"
+  - title: 反转机柜前盖
+    entries:
+    - title: 您需要的内容
+      url: "/platform-supplemental/42u-1280mm-reverse-front-door.html"
+    - title: 拆下照明标志
+      url: "/platform-supplemental/42u-1280mm-remove-illuminated-badge.html"
+    - title: 卸下机柜门
+      url: "/platform-supplemental/42u-1280mm-remove-door.html"
+    - title: 移动标志电源和布线
+      url: "/platform-supplemental/42u-1280mm-move-badge-ps-and-cabling.html"
+    - title: 反向车门转轴和锁扣
+      url: "/platform-supplemental/42u-1280mm-reverse-hinge-and-lock.html"
+    - title: 重新安装车门和照明标志
+      url: "/platform-supplemental/42u-1280mm-reinstall-door-and-badge.html"
+- title: 交换内部磁盘驱动器
+  entries:
+  - title: 视频概述
+    url: "/platform-supplemental/drive-video.html"
+  - title: 热插拔嵌入式驱动器
+    entries:
+    - title: 要使用的操作步骤
+      url: "/platform-supplemental/drive-hotswap.html"
+    - title: 热插拔 SSD
+      url: "/platform-supplemental/drive-hotswap-drive.html"
+    - title: 热插拔 HDD
+      url: "/platform-supplemental/drive-hotswap-sas.html"
+- title: 所有 SAN 阵列系统
+  entries:
+  - title: 设置和维护
+    url: "/platform-supplemental/all-san-array.html"
+- title: 硬件升级
+  entries:
+  - title: 升级过程
+    url: "/platform-supplemental/upgrade-linkout.html"

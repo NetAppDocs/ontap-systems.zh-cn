@@ -1,0 +1,29 @@
+---
+permalink: c190/install-videos.html 
+sidebar: sidebar 
+keywords: aff c190, hardware installation and cabling video, perform end-to-end software configuration video 
+summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
+---
+= 视频— AFF C190
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。
+
+
+
+== 视频：硬件安装和布线，共两个视频之一
+
+以下视频显示了如何安装新系统并为其布线。
+
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fe034f33-a4bf-4834-9004-ab1f014a2787["安装和设置 AFF C190"]
+
+
+
+== 视频二：执行端到端软件配置
+
+以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
+
+https://www.youtube.com/embed/WAE0afWhj1c?rel=0["NetApp 视频：为运行 ONTAP 9.2 的 FAS/AFF 系统的 vSphere NAS 数据存储库配置软件"]

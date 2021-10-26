@@ -1,0 +1,16 @@
+= 
+
+
+运行诊断程序后，您必须重新对控制器模块的存储和网络连接进行布线。
+
+.步骤
+. 重新对系统进行布线。
+. 使用验证布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
++
+.. 下载并安装 Config Advisor 。
+.. 输入目标系统的信息，然后单击收集数据。
+.. 单击布线选项卡，然后检查输出。确保显示所有磁盘架且所有磁盘均显示在输出中，以更正您发现的任何布线问题。
+.. 单击相应的选项卡，然后检查 Config Advisor 的输出，以检查其他布线。
+
+
+

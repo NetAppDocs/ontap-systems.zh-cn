@@ -1,0 +1,268 @@
+---
+permalink: c190/controller-replace-system-config-restore-and-verify.html 
+sidebar: sidebar 
+keywords: aff c190estore and verify the system configuration, verify and set the ha state of the controller module, run system-level diagnostics 
+summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
+---
+= 还原并验证系统配置— AFF C190
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。
+
+
+
+== 第 1 步：在更换控制器后设置并验证系统时间
+
+[role="lead"]
+您应对照 HA 对中运行状况良好的控制器模块或独立配置中可靠的时间服务器检查更换用的控制器模块上的时间和日期。如果时间和日期不匹配，则必须在更换控制器模块上重置这些值，以防止客户端可能因时间差异而中断。
+
+请务必在正确的系统上应用步骤中的命令：
+
+* _replacement_ 节点是此操作步骤中更换受损节点的新节点。
+* _health_ 节点是 _replacement_ 节点的 HA 配对节点
+
+
+.步骤
+. 如果 _replacement_ 节点不在 LOADER 提示符处，请将系统暂停到 LOADER 提示符处。
+. 在运行状况良好的节点上，检查系统时间： `show date`
++
+日期和时间以 GMT 表示。
+
+. 在 LOADER 提示符处，检查 _replacement_ 节点上的日期和时间： `show date`
++
+日期和时间以 GMT 表示。
+
+. 如有必要，请在替代节点上以 GMT 格式设置日期： `set date _MM/dd/yyy_`
+. 如有必要，请在替代节点上设置 GMT 时间： `set time _hh ： mm ： ss_`
+. 在 LOADER 提示符处，确认 _replacement_ 节点上的日期和时间： `show date`
++
+日期和时间以 GMT 表示。
+
+
+
+
+
+== 第 2 步：验证并设置控制器模块的 HA 状态
+
+[role="lead"]
+您必须验证控制器模块的 `HA` 状态，并在必要时更新此状态以匹配您的系统配置。
+
+. 在维护模式下，从新控制器模块验证所有组件是否显示相同的 `HA` 状态： `ha-config show`
++
+所有组件的 HA 状态都应相同。
+
+. 如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller ha-state`
++
+ha-state 的值可以是以下值之一：
+
++
+** ha
+** MCC
+** MCC-2n
+** mccip
+** 非 ha
+
+
+. 如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller ha-state`
+. 确认设置已更改： `ha-config show`
+
+
+
+
+== 第 3 步：运行系统级诊断
+
+[role="lead"]
+更换控制器时，您应针对特定组件和子系统运行全面或有针对性的诊断测试。
+
+诊断过程中的所有命令都是从要更换组件的节点发出的。
+
+. 如果要服务的节点不在 LOADER 提示符处，请重新启动此节点：
++
+` * 暂停 *`
+
++
+问题描述命令后，您应等待系统停留在 LOADER 提示符处。
+
+. 在 LOADER 提示符处，访问专为系统级诊断而设计的专用驱动程序，以便正常运行：
++
+` * boot_diags*`
+
++
+在启动过程中，您可以安全地对提示做出 ` * y*` 响应，直到显示维护模式提示符（ * > ）为止。
+
+. 显示并记下控制器模块上的可用设备：
++
+` * sldiag device show -dev MB*`
+
++
+显示的控制器模块设备和端口可以是以下任一项或多项：
+
++
+** `bootmedia` 是系统启动设备。
+** `CNA` 是未连接到网络或存储设备的融合网络适配器或接口。
+** `FCAL` 是未连接到光纤通道网络的光纤通道仲裁环路设备。
+** `env` 是主板环境。
+** `mem` 是系统内存。
+** `NIC` 是一种网络接口卡。
+** `NVRAM` 是非易失性 RAM 。
+** `nvmem` 是 NVRAM 和系统内存的混合。
+** `sas` 是未连接到磁盘架的串行连接 SCSI 设备。
+
+
+. 根据需要运行诊断。
++
+[cols="1,2"]
+|===
+| 如果要运行诊断测试 ... | 那么 ... 
+
+
+ a| 
+各个组件
+ a| 
+.. 清除状态日志：
++
+` * sldiag device clearstatus*`
+
+.. 显示选定设备的可用测试：
++
+` * sldiag device show -dev _dev_name_*`
+
++
+` dev_name_` 可以是上一步中标识的任何一个端口和设备。
+
+.. 检查输出，如果适用，仅选择要运行的测试：
++
+` * sldiag device modify -dev _dev_name_ -Selection only*`
+
++
+-Selection 仅会禁用不希望对设备运行的所有其他测试。
+
+.. 运行选定测试：
++
+` * sldiag device run -dev _dev_name_*`
+
++
+测试完成后，将显示以下消息：
+
++
+[listing]
+----
+*> <SLDIAG:_ALL_TESTS_COMPLETED>
+----
+.. 验证测试是否未失败：
++
+` * sldiag device status -dev _dev_name_ -long -state failed*`
+
++
+如果没有测试失败，则系统级诊断会返回到提示符，或者会列出因测试组件而导致的失败的完整状态。
+
+
+
+
+
+ a| 
+同时包含多个组件
+ a| 
+.. 查看上述操作步骤输出中已启用和已禁用的设备，并确定要同时运行的设备。
+.. 列出设备的各个测试：
++
+` * sldiag device show -dev _dev_name_*`
+
+.. 检查输出，如果适用，仅选择要运行的测试：
++
+` * sldiag device modify -dev _dev_name_ -Selection only*`
+
++
+-Selection 仅会禁用不希望对设备运行的所有其他测试。
+
+.. 验证测试是否已修改：
++
+` * sldiag device show*`
+
+.. 对要同时运行的每个设备重复这些子步骤。
+.. 对所有设备运行诊断：
++
+` * sldiag 设备运行`
+
++
+
+NOTE: 开始运行诊断程序后，请勿添加或修改条目。
+
++
+测试完成后，将显示以下消息：
+
++
+[listing]
+----
+*> <SLDIAG:_ALL_TESTS_COMPLETED>
+----
+.. 验证节点上是否没有硬件问题：
++
+` * sldiag device status -long -state failed*`
+
++
+如果没有测试失败，则系统级诊断会返回到提示符，或者会列出因测试组件而导致的失败的完整状态。
+
+
+
+|===
+. 根据上一步的结果继续操作。
++
+[cols="1,2"]
+|===
+| 如果系统级诊断测试 ... | 那么 ... 
+
+
+ a| 
+已完成，无任何故障
+ a| 
+.. 清除状态日志：
++
+` * sldiag device clearstatus*`
+
+.. 验证是否已清除日志：
++
+` * sldiag device status*`
+
++
+此时将显示以下默认响应：
+
++
+[listing]
+----
+SLDIAG: No log messages are present.
+----
+.. 退出维护模式：
++
+` * 暂停 *`
+
++
+系统将显示 LOADER 提示符。
+
++
+您已完成系统级诊断。
+
+
+
+
+
+ a| 
+导致某些测试失败
+ a| 
+确定问题的发生原因。
+
+.. 退出维护模式：
++
+` * 暂停 *`
+
+.. 执行完全关闭，然后断开电源。
+.. 验证您是否已遵循在运行系统级诊断时确定的所有注意事项，缆线是否已牢固连接以及硬件组件是否已正确安装在存储系统中。
+.. 重新连接电源，然后打开存储系统的电源。
+.. 重新运行系统级诊断测试。
+
+
+|===
+

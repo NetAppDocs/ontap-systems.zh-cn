@@ -1,0 +1,271 @@
+---
+permalink: fas9000/bootmedia-encryption-restore.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, post, boot, media, replacement, steps, okm, nse, nve 
+summary: 检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM ）， NetApp 存储加密（ NSE ）或 NetApp 卷加密（ NVE ）的系统的步骤。 
+---
+= 根据需要还原 OKM ， NSE 和 NVE — AFF A700 和 FAS9000
+:icons: font
+:imagesdir: ../media/
+
+
+检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM ）， NetApp 存储加密（ NSE ）或 NetApp 卷加密（ NVE ）的系统的步骤。
+
+确定应使用哪个部分还原 OKM ， NSE 或 NVE 配置：
+
+如果随板载密钥管理器一起启用了 NSE 或 NVE ，则必须还原在此操作步骤开头捕获的设置。
+
+* 如果启用了 NSE 或 NVE ，并且启用了板载密钥管理器，请转至 <<Option 1: Restore NVE or NSE when Onboard Key Manager is enabled>>。
+* 如果为 ONATP 9.5 启用了 NSE 或 NVE ，请转至 <<Option 2: Restore NSE/NVE on systems running ONTAP 9.5 and earlier>>。
+* 如果为 ONTAP 9.6 启用了 NSE 或 NVE ，请转至 <<Option 3: Restore NSE/NVE on systems running ONTAP 9.6 and later>>。
+
+
+
+
+== 选项 1 ：启用板载密钥管理器后还原 NVE 或 NSE
+
+.步骤
+. 将控制台缆线连接到目标节点。
+. 在 LOADER 提示符处使用 `boot_ontap` 命令启动节点。
+. 检查控制台输出：
++
+[cols="1,3"]
+|===
+| * 如果控制台显示 ...* | * 然后 ...* 
+
+
+ a| 
+LOADER 提示符
+ a| 
+将节点启动至启动菜单： `boot_ontap menu`
+
+
+
+ a| 
+正在等待交还
+ a| 
+.. 在提示符处输入 `Ctrl-C`
+.. 出现消息： Do you donde halt this node rather than wait [y/n] ？，输入： `y`
+.. 在 LOADER 提示符处，输入 `boot_ontap menu` 命令。
+
+
+|===
+. 在启动菜单中，输入隐藏的命令 `re封装板载密钥管理器` ，然后在提示符处回答 `y`
+. 输入您在此操作步骤开头从客户处获取的板载密钥管理器的密码短语。
+. 当系统提示您输入备份数据时，请根据要求粘贴您在此操作步骤开头捕获的备份数据。粘贴 `security key-manager backup show` 或 `security key-manager on板 载 show-backup` 命令的输出
++
+
+NOTE: 数据是从 `security key-manager backup show` 或 `security key-manager on板 载 show-backup` 命令输出的。
+
++
+备份数据示例：
+
++
+====
+--------------- 开始备份——————— QABWIETLESBCbG9iAAAAAAAAAAAAAAAAAAEAAAACADID+bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvOlH0AAAMH7qDLIWAH1DBZ12piVOT9ATSFMT0C0TlYAFASS4ADAAAAAAQAAAAAAAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAQAAAQAA。。。H4nPQM0nrDRYRA9Scv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAA
+
+--------------- 结束备份———————
+
+====
+. 在启动菜单中，选择正常启动选项。
++
+系统将启动至 `Waiting for giveback...` 提示符。
+
+. 将控制台缆线移动到配对节点并以管理员身份登录。
+. 使用 `storage failover show` 命令确认目标节点已准备好进行交还。
+. 仅使用 storage failover giveback ` -fromnode local -only-cfo-aggregates true` 命令交还 CFO 聚合。
++
+** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘的连接，但将磁盘保留在插槽中，直到收到更换磁盘为止。
+** 如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。
++
+
+NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
+
+** 如果命令因配对节点 " 未就绪 " 而失败，请等待 5 分钟，使 NVMEM 同步。
+** 如果命令因 NDMP ， SnapMirror 或 SnapVault 进程而失败，请禁用此进程。有关详细信息，请参见相应的文档中心。
+
+
+. 交还完成后，使用 `storage failover show` 和 `storage failover show-giveback` 命令检查故障转移和交还状态。
++
+仅显示 CFO 聚合（根聚合和 CFO 模式的数据聚合）。
+
+. 将控制台缆线移至目标节点。
+. 如果您运行的是 ONTAP 9.5 及更早版本，请运行 key-manager 设置向导：
++
+.. 使用 `security key-manager setup -nodename` 命令启动向导，然后在出现提示时输入板载密钥管理的密码短语。
+.. 输入 `key-manager key show -detail` 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes` 。
++
+
+NOTE: 如果 `Restored` 列 = `yes` 以外的任何内容，请联系客户支持。
+
+.. 等待 10 分钟，使密钥在整个集群中同步。
+
+
+. 如果您运行的是 ONTAP 9.6 或更高版本，请运行 security key-manager 板载同步：
++
+.. 运行 `security key-manager on板 载 sync` 命令，然后在出现提示时输入密码短语。
+.. 输入 `security key-manager key query` 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes/true` 。
++
+
+NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户支持。
+
+.. 等待 10 分钟，使密钥在整个集群中同步。
+
+
+. 将控制台缆线移至配对节点。
+. 使用 `storage failover giveback -fromnode local` 命令交还目标节点。
+. 使用 `storage failover show` 命令在交还报告完成 3 分钟后检查交还状态。
++
+如果 20 分钟后交还未完成，请联系客户支持。
+
+. 在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主节点和端口上的逻辑接口。
++
+如果任何接口列为 `false` ，请使用 `net int revert` 命令将这些接口还原回其主端口。
+
+. 将控制台缆线移至目标节点，然后运行 `version -v` 命令以检查 ONTAP 版本。
+. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+
+
+
+
+== 选项 2 ：在运行 ONTAP 9.5 及更早版本的系统上还原 NSE/NVE
+
+.步骤
+. 将控制台缆线连接到目标节点。
+. 在 LOADER 提示符处使用 `boot_ontap` 命令启动节点。
+. 检查控制台输出：
++
+[cols="1,3"]
+|===
+| * 如果控制台显示 ...* | * 然后 ...* 
+
+
+ a| 
+登录提示符
+ a| 
+转至步骤 7 。
+
+
+
+ a| 
+正在等待交还
+ a| 
+.. 登录到配对节点。
+.. 使用 `storage failover show` 命令确认目标节点已准备好进行交还。
+
+
+|===
+. 使用 `storage failover giveback -fromnode local -only-cfo-aggregates true local` 命令将控制台缆线移至配对节点并交还目标节点存储。
++
+** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘的连接，但将磁盘保留在插槽中，直到收到更换磁盘为止。
+** 如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。
++
+
+NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
+
+** 如果命令因配对节点 " 未就绪 " 而失败，请等待 5 分钟，使 NVMEM 同步。
+** 如果命令因 NDMP ， SnapMirror 或 SnapVault 进程而失败，请禁用此进程。有关详细信息，请参见相应的文档中心。
+
+
+. 请等待 3 分钟，然后使用 `storage failover show` 命令检查故障转移状态。
+. 在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主节点和端口上的逻辑接口。
++
+如果任何接口列为 `false` ，请使用 `net int revert` 命令将这些接口还原回其主端口。
+
+. 将控制台缆线移至目标节点，然后运行 version ` -v 命令` 以检查 ONTAP 版本。
+. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+. 在 clustershell 提示符处使用 `storage encryption disk show` 查看输出。
++
+
+NOTE: 如果配置了 NVE （ NetApp 卷加密），则此命令不起作用
+
+. 使用 security key-manager 查询可显示密钥管理服务器上存储的身份验证密钥的密钥 ID 。
++
+** 如果 `restored` column = `yes` 且所有密钥管理器均报告为可用状态，请转至 _complete the replacement process_ 。
+** 如果 `restored` column = 除 `yes` 以外的任何其他内容，和 / 或一个或多个密钥管理器不可用，请使用 `security key-manager restore -address` 命令从所有可用密钥管理服务器中检索和还原与所有节点关联的所有身份验证密钥（ AK ）和密钥 ID 。
++
+再次检查 security key-manager 查询的输出，以确保 `restored` column = `yes` and all key managers report in an available state
+
+
+
+. 如果启用了板载密钥管理：
++
+.. 使用 `security key-manager key show -detail` 查看板载密钥管理器中存储的所有密钥的详细视图。
+.. 使用 `security key-manager key show -detail` 命令验证所有身份验证密钥是否均为 `restored` column = `yes` 。
++
+如果 `restored` column = `yes` 以外的任何其他内容，请使用 `security key-manager setup -node _repaed_（ Target ） _node_` 命令还原板载密钥管理设置。重新运行 `security key-manager key show -detail` 命令以验证所有身份验证密钥的 `restored` column = `yes` 。
+
+
+
+. 将控制台缆线连接到配对节点。
+. 使用 `storage failover giveback -fromnode local` 命令交还节点。
+. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+
+
+
+
+== 选项 3 ：在运行 ONTAP 9.6 及更高版本的系统上还原 NSE/NVE
+
+.步骤
+. 将控制台缆线连接到目标节点。
+. 在 LOADER 提示符处使用 `boot_ontap` 命令启动节点。
+. 检查控制台输出：
++
+[cols="1,3"]
+|===
+| 如果控制台显示 ... | 那么 ... 
+
+
+ a| 
+登录提示符
+ a| 
+转至步骤 7 。
+
+
+
+ a| 
+正在等待交还
+ a| 
+.. 登录到配对节点。
+.. 使用 `storage failover show` 命令确认目标节点已准备好进行交还。
+
+
+|===
+. 使用 `storage failover giveback -fromnode local -only-cfo-aggregates true local` 命令将控制台缆线移至配对节点并交还目标节点存储。
++
+** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘的连接，但将磁盘保留在插槽中，直到收到更换磁盘为止。
+** 如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。
++
+
+NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
+
+** 如果命令因配对节点 " 未就绪 " 而失败，请等待 5 分钟，使 NVMEM 同步。
+** 如果命令因 NDMP ， SnapMirror 或 SnapVault 进程而失败，请禁用此进程。有关详细信息，请参见相应的文档中心。
+
+
+. 请等待 3 分钟，然后使用 `storage failover show` 命令检查故障转移状态。
+. 在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主节点和端口上的逻辑接口。
++
+如果任何接口列为 `false` ，请使用 `net int revert` 命令将这些接口还原回其主端口。
+
+. 将控制台缆线移至目标节点，然后运行 `version -v` 命令以检查 ONTAP 版本。
+. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+. 在 clustershell 提示符处使用 `storage encryption disk show` 查看输出。
+. 使用 `security key-manager key query` 命令显示存储在密钥管理服务器上的身份验证密钥的密钥 ID 。
++
+** 如果 `restored` column = `yes/true` ，则表示您已完成更换过程，并可继续完成更换过程。
+** 如果 `Key Manager type` = `external` and the `restored` column = anything other than `yes/true` ，请使用 `security key-manager external restore` 命令还原身份验证密钥的密钥 ID 。
++
+
+NOTE: 如果命令失败，请联系客户支持。
+
+** 如果 `密钥管理器类型` = `板载` 和 `还原` 列 = 除 `yes/true` 以外的任何其他内容，请使用 `security key-manager on板 载同步` 命令重新同步密钥管理器类型。
++
+使用 security key-manager key query 验证所有身份验证密钥的 `restored` column = `yes/true` 。
+
+
+
+. 将控制台缆线连接到配对节点。
+. 使用 `storage failover giveback -fromnode local` 命令交还节点。
+. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+

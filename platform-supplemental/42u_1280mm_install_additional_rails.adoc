@@ -1,0 +1,31 @@
+---
+permalink: platform-supplemental/42u-1280mm-install-additional-rails.html 
+sidebar: sidebar 
+keywords: system cabinets, system, cabinet, support, rail, install, component, install additional support rail 
+summary: 您的系统机柜中已安装一些支持导轨。如果您的系统需要其他支持导轨，则必须先安装它们，然后再安装系统组件。 
+---
+= 安装额外的支持导轨
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您的系统机柜中已安装一些支持导轨。如果您的系统需要其他支持导轨，则必须先安装它们，然后再安装系统组件。
+
+此任务将对除 DS212C 和 DE212C 磁盘架之外的所有控制器和磁盘架执行适用场景。按照适用于这两个磁盘架的导轨套件宣传单中的说明进行操作。
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2484194["在两柱或四柱机架中安装 DE212C 或 DS212C 磁盘架"]
+
+. 确定设备需要多少空间。
++
+根据设备高度计算设备所需的 U 空间量（每 U 1.75 英寸），然后根据可用空间确定设备将安装在系统机柜中的位置。
+
+. 找到需要安装支撑导轨的位置，然后使用下图进行安装以供参考：
++
+image::../media/drw_syscab_ozeki_support_rail_installation.gif[DRW syscab ozeki 支持导轨安装]
+
+. 如果您的设备安装法兰超出支撑导轨中的螺孔，请根据需要在支撑导轨上方安装锁紧螺母。
++
+image::../media/drw_clip_nut_install.gif[DRW 卡夹螺母安装]
+
+

@@ -1,0 +1,177 @@
+---
+permalink: platform-supplemental/sldiag-device-failure-diagnostics.html 
+sidebar: sidebar 
+keywords: run, diagnostic, help, access, device, intermittent, device, unavailable, storage, system, failure, run device failure diagnostic 
+summary: 运行诊断可以帮助您确定访问特定设备的时间间隔为何或该设备在存储系统中变得不可用的原因。 
+---
+= 运行设备故障诊断
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+运行诊断可以帮助您确定访问特定设备的时间间隔为何或该设备在存储系统中变得不可用的原因。
+
+. 在存储系统提示符处，切换到 LOADER 提示符： `halt`
+. 在 LOADER 提示符处输入以下命令： `boot_diags`
++
+
+NOTE: 您必须从 LOADER 提示符处运行此命令，系统级诊断才能正常运行。boot_diags 命令会启动专为系统级诊断而设计的特殊驱动程序。
+
+. 输入以下命令，对导致问题的设备运行诊断： `sldiag device run （ -dev devtype|MB_slotnum] （ -name 设备）`
++
+** -dev _devtype_ 指定要测试的设备类型。
++
+*** `ata` 是一种高级技术附件设备。
+*** `bootmedia` 是系统启动设备。
+*** `CNA` 是未连接到网络或存储设备的融合网络适配器。
+*** `env` 是主板环境。
+*** `fcache` 是 Flash Cache 适配器，也称为性能加速模块 2 。
+*** `FCAL` 是未连接到存储设备或光纤通道网络的光纤通道仲裁环路设备。
+*** `fcvi` 是未连接到光纤通道网络的光纤通道虚拟接口。
+*** `interconnect` 或 `nvram-ib` 是高可用性接口。
+*** `mem` 是系统内存。
+*** `NIC` 是未连接到网络的网络接口卡。
+*** `NVRAM` 是非易失性 RAM 。
+*** `nvmem` 是 NVRAM 和系统内存的混合。
+*** `sas` 是未连接到磁盘架的串行连接 SCSI 设备。
+*** `serviceproc` 是服务处理器。
+*** `storage` 是已连接磁盘架的 ATA ， FC-AL 或 SAS 接口。
+*** `toe` 是一种 TCP 卸载引擎，一种 NIC 。
+
+
+** `mb` 指定要测试所有主板设备。
+** `slot` slotnum_ 指定要测试特定插槽编号中的设备。
+** ` -name _device_` 指定给定的设备类和类型。
+
+
+. 输入以下命令以查看测试状态： `sldiag device status`
++
+在测试仍在运行时，存储系统会提供以下输出：
+
++
+[listing]
+----
+There are still test(s) being processed.
+----
++
+完成所有测试后，默认情况下会显示以下响应：
+
++
+[listing]
+----
+*> <SLDIAG:_ALL_TESTS_COMPLETED>
+----
+. 输入以下命令以确定任何硬件问题： `sldiag device status "-dev devtype"MB_slotnum] "-name _device_] -long -state failed`
++
+以下示例显示了如何显示测试 FC-AL 适配器导致的故障的完整状态：
+
++
+[listing]
+----
+
+*> **sldiag device status fcal -long -state failed**
+
+TEST START ------------------------------------------
+DEVTYPE: fcal
+NAME: Fcal Loopback Test
+START DATE: Sat Jan  3 23:10:56 GMT 2009
+
+STATUS: Completed
+Starting test on Fcal Adapter: 0b
+Started gathering adapter info.
+Adapter get adapter info OK
+Adapter fc_data_link_rate: 1Gib
+Adapter name: QLogic 2532
+Adapter firmware rev: 4.5.2
+Adapter hardware rev: 2
+
+Started adapter get WWN string test.
+Adapter get WWN string OK wwn_str: 5:00a:098300:035309
+
+Started adapter interrupt test
+Adapter interrupt test OK
+
+Started adapter reset test.
+Adapter reset OK
+
+Started Adapter Get Connection State Test.
+Connection State: 5
+Loop on FC Adapter 0b is OPEN
+
+Started adapter Retry LIP test
+Adapter Retry LIP OK
+
+ERROR: failed to init adaptor port for IOCTL call
+
+ioctl_status.class_type = 0x1
+
+ioctl_status.subclass = 0x3
+
+ioctl_status.info = 0x0
+ Started INTERNAL LOOPBACK:
+INTERNAL LOOPBACK   OK
+Error Count: 2  Run Time: 70 secs
+>>>>> ERROR, please ensure the port has a shelf or plug.
+END DATE: Sat Jan  3 23:12:07 GMT 2009
+
+LOOP: 1/1
+TEST END --------------------------------------------
+----
++
+[cols="1,2"]
+|===
+| 如果系统级诊断测试 ... | 那么 ... 
+
+
+ a| 
+导致某些测试失败
+ a| 
+确定问题的发生原因。
+
+.. 输入以下命令退出维护模式： `halt`
+.. 执行完全关闭并断开电源。
+.. 验证您是否已遵循在运行系统级诊断时确定的所有注意事项，缆线是否已牢固连接以及硬件组件是否已正确安装在存储系统中。
+.. 重新连接电源并打开存储系统的电源。
+.. 重复 _running device failure diagnostic_ 的步骤 1 到 5 。
+
+
+
+
+ a| 
+导致相同的测试失败
+ a| 
+技术支持可能会建议修改某些测试的默认设置，以帮助确定问题。
+
+.. 输入以下命令，修改存储系统上特定设备或设备类型的选择状态： `sldiag device modify （ -dev _devtype_|MB_slot_slotnum_] ）（ -name device] ）（ -Selection _enable_disable_default_only_）` + `sSelection _enable_disable_default_only_` 允许您启用，禁用，接受指定设备类型或指定设备的默认选择，或者只能先禁用指定设备或指定设备。
+.. 输入以下命令以验证是否已修改测试： `sldiag option show`
+.. 重复 _running device failure diagnostic_ 的步骤 3 到 5 。
+.. `d并解决问题后，通过重复子步骤 1 和 2 将测试重置为其默认` 状态。
+.. 重复 _running device failure diagnostic_ 的步骤 1 到 5 。
+
+
+
+
+ a| 
+已完成，无任何故障
+ a| 
+没有硬件问题，存储系统将返回到提示符。
+
+.. 输入以下命令以清除状态日志： `sldiag device clearstatus [-dev _devtype_|MB_slot_slotnum_]`
+.. 输入以下命令以验证是否已清除日志： `sldiag device status [-dev _devtype_|MB_slot_slotnum_]`
++
+此时将显示以下默认响应：
+
++
+[listing]
+----
+SLDIAG: No log messages are present.
+----
+.. 输入以下命令退出维护模式： `halt`
+.. 在 Loader 提示符处输入以下命令以启动存储系统： `boot_ontap` 您已完成系统级诊断。
+
+
+|===
+
+
+如果重复上述步骤后故障仍然存在，则需要更换硬件。

@@ -1,0 +1,205 @@
+---
+permalink: a320/pci-cards-and-risers-replace.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, replace, pcie, card, disconnect, cable, card, sfp, qsfp, module, riser, reinstall, shut, down, controller, operation, diagnostic, complete, process, replace a pcie card, shut down the impaired controller, remove the controller module, replace a pcie card, install the controller module, restore the controller module to operation after running diagnostics, complete the replacement process 
+summary: 要更换 PCIe 卡，您必须断开卡的缆线连接，从卡中卸下 SFP 和 QSFP 模块，然后再卸下提升板，重新安装提升板，最后重新安装 SFP 和 QSFP 模块，最后再为卡布线。 
+---
+= 更换 PCIe 卡— AFF A320
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换 PCIe 卡，您必须断开卡的缆线连接，从卡中卸下 SFP 和 QSFP 模块，然后再卸下提升板，重新安装提升板，最后重新安装 SFP 和 QSFP 模块，最后再为卡布线。
+
+* 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用
+* 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+
+
+
+== 关闭受损节点
+
+[role="lead"]
+要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
+
+如果集群包含两个以上的节点，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述。
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"]
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的节点的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损节点显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损节点显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+接管或暂停受损节点：
+
+** 对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode _impaired_node_name_`
++
+当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+
+
+|===
+
+
+
+
+== 卸下控制器模块
+
+[role="lead"]
+要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
+
+. 如果您尚未接地，请正确接地。
+. 从电源拔下控制器模块电源。
+. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
++
+image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
+
++
+将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
+
+. 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
+. 从机箱中卸下控制器模块：
++
+image::../media/drw_a320_controller_remove_animated_gif.png[DRW A320 控制器删除动画 gif]
+
++
+.. 将前掌插入控制器模块两侧的锁定装置。
+.. 向下按压闩锁装置顶部的橙色卡舌，直到其脱离机箱上的闩锁销。
+
+
++
+闩锁机制挂钩应接近垂直，并且应远离机箱销。
+
++
+.. 将控制器模块轻轻向您的方向拉几英寸，以便抓住控制器模块两侧。
+.. 用双手将控制器模块轻轻拉出机箱，并将其放在平稳的表面上。
+
+
+
+
+
+
+== 更换 PCIe 卡
+
+[role="lead"]
+您必须从控制器模块中卸下包含故障 PCIe 卡的 PCIe 提升板，从提升板中卸下故障 PCIe 卡，在提升板中安装替代 PCIe 卡，然后将此提升板重新安装到控制器模块中。
+
+image::../media/drw_a320_pci_card_replace_animated_gif.png[DRW A320 PCI 卡更换动画 gif]
+
+. 拧下 PCIe 提升板上的蓝色翼形螺钉，将盖板滑向您的方向，向上旋转盖板，将其从控制器模块上取下，然后将其放在一旁。
+. 卸下具有故障 PCIe 卡的提升板：
++
+.. 卸下 PCIe 卡中可能存在的所有 SFP 或 QSFP 模块。
+.. 将前掌放在竖板模块左侧的孔中，然后用拇指抓住竖板。
+.. 将竖板竖直提出插槽并放在一旁。
+
+
+. 更换提升板中的卡：
++
+.. 将此竖板放在平稳的表面上，然后转动此竖板，以便可以访问 PCIe 卡。
+.. 拇指放在插槽两侧 PCIe 卡底边缘下方，然后轻轻向上推，将卡从插槽中释放。
+.. 将卡滑出竖板并放在一旁。
+.. 将更换用的卡挡板与提升板的边缘和卡的外边缘与提升板左侧的对齐导轨对齐。
+.. 轻轻滑动卡，直到卡连接器与提升板插槽对齐，然后将卡向下轻推入插槽。
+
+
+. 在控制器模块中重新安装此提升板：
++
+.. 将提升板对齐到开口上，使提升板的前边缘直接位于提升板托架上的开口上方。
+.. 对齐提升板的后边缘，使提升板下侧的插脚位于后提升板托架的金属板上的孔上方。
+.. 均匀向下施加压力，将提升板竖直向下插入控制器模块上的插槽。
+.. 在控制器模块上重新安装 PCIe 提升板盖板。
+
+
+
+
+
+
+== 安装控制器模块
+
+[role="lead"]
+更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
+
+. 如果尚未关闭控制器模块后部的通风管，请将盖板重新安装到 PCIe 卡上。
+. 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
++
+image::../media/drw_a320_controller_install_animated_gif.png[DRW A320 控制器安装动画 gif]
+
++
+
+NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+
+. 仅为管理和控制台端口布线，以便您可以访问系统以执行以下各节中的任务。
++
+
+NOTE: 您将在此操作步骤中稍后将其余缆线连接到控制器模块。
+
+. 完成控制器模块的重新安装：
++
+.. 确保闩锁臂锁定在扩展位置。
+.. 使用闩锁臂将控制器模块推入机箱托架，直到其停止。
+.. 按住锁定机制顶部的橙色卡舌。
+.. 将控制器模块轻轻推入机箱托架，直至其与机箱边缘平齐。
++
+
+NOTE: 锁定机制臂滑入机箱。
+
++
+控制器模块一旦完全固定在机箱中，就会开始启动。
+
+.. 释放闩锁，将控制器模块锁定到位。
+.. 已重新连接电源。
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+.. 按 `Ctrl-C` 以中断正常启动过程。
+
+
+
+
+
+
+== 将控制器模块还原为正常运行
+
+[role="lead"]
+完成诊断后，您必须重新对系统进行配置，交还控制器模块，然后重新启用自动交还。
+
+. 根据需要重新对系统进行布线。
++
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
+
+. 交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== 将故障部件退回 NetApp
+
+[role="lead"]
+更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

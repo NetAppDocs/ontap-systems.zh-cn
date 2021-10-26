@@ -1,0 +1,169 @@
+---
+permalink: ns224/service-replace-dimm.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, replace, nondisruptive, dimm, i/o, replace a dimm 
+summary: 您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换故障 DIMM 。 
+---
+= 更换 DIMM - NS224 磁盘架
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换故障 DIMM 。
+
+.开始之前
+* 磁盘架的配对 NSM 模块必须已启动且正在运行，并且已正确布线，以便在卸下出现故障的 FRU （目标 NSM 模块）的 NSM 模块时，磁盘架可以保持连接。
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+
+* 系统中的所有其他组件，包括其他三个 DIMM ，必须正常运行。
+
+
+.关于此任务
+* 在拆卸和安装 NVMe 磁盘架模块（ NSM ）之间至少留出 70 秒。
++
+这样， ONTAP 就有足够的时间来处理 NSM 删除事件。
+
+* * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
++
+[NOTE]
+====
+请勿将固件还原到不支持您的磁盘架及其组件的版本。
+
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+
+====
+* 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+如果您不知道受影响磁盘架的 ` _shelf_name_` ，请运行 `storage shelf show` 命令。
+
++
+一个磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 NSM 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令，但使用 `off` 选项将其关闭。
+
+* 拆开备用 DIMM 的包装时，请保存所有包装材料，以便在退回发生故障的 DIMM 时使用。
++
+如果您需要 RMA 编号或有关更换操作步骤的其他帮助，请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）。
+
+* 您可以使用以下视频或写入的步骤更换 DIMM 。
++
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=eef28b10-ed93-4aa7-bfce-aa86002f20a2["更换 NS224 驱动器架中的 DIMM"]
+
+
+
+.步骤
+. 正确接地。
+. 从包含要更换的 FRU 的 NSM 模块断开布线：
++
+.. 打开电源线固定器，断开电源线与电源的连接，然后从电源中拔下电源线。
++
+电源没有电源开关。
+
+.. 断开存储布线与 NSM 模块端口的连接。
++
+记下每个缆线连接到的 NSM 模块端口。稍后在此操作步骤中重新插入 NSM 模块时，您需要将缆线重新连接到相同的端口。
+
+
+
+. 从磁盘架中卸下 NSM 模块：
++
+.. 将索引指针绕过 NSM 模块两侧的锁定机制的指孔。
++
+
+NOTE: 如果您要卸下底部 NSM 模块，并且底部导轨阻碍了对锁定机制的访问，请将索引指针从内部穿过指针孔（通过跨越臂）。
+
+.. 用拇指按住锁定机制顶部的橙色卡舌。
++
+闩锁机制将抬起，以清除磁盘架上的闩锁销。
+
+.. 轻轻地将 NSM 模块拉出磁盘架，直到大约三分之一的位置，用双手抓住 NSM 模块的两侧以支撑其重量，然后将其放在平稳的表面上。
++
+开始拉动时，锁定装置臂从 NSM 模块伸出并锁定在完全展开的位置。
+
+
+
+. 松开 NSM 模块外盖翼形螺钉并打开外盖。
++
+NSM 模块外盖上的 FRU 标签显示了四个 DIMM 的位置，其中两个 DIMM 位于散热片的任意一侧，位于 NSM 模块的中心。
+
+. 物理确定故障 DIMM 。
++
+当 DIMM 出现故障时，系统会向系统控制台记录一条警告消息，指示哪个 DIMM 出现故障。此外，位于主板上 DIMM 插槽旁边的 DIMM 警示（琥珀色） LED 会亮起。
+
++
+
+NOTE: 从磁盘架中卸下 NSM 模块后，故障 DIMM 的 LED 将保持亮起 10 分钟。
+
+. 更换出现故障的 DIMM ：
++
+.. 记下插槽中 DIMM 的方向，以便可以按相同的方向插入更换用的 DIMM 。
+.. 缓慢推动 DIMM 插槽两端的弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 从插槽中提出。
++
+
+NOTE: 小心握住 DIMM 的边角或边缘，以避免对 DIMM 电路板组件施加压力。
+
++
+弹出器凸耳保持打开位置。
+
+.. 从防静电包装袋中取出更换用的 DIMM 。
+.. 拿住 DIMM 的边角，然后将 DIMM 垂直插入插槽。
++
+DIMM 底部插脚之间的槽口应与插槽中的卡舌对齐。
+
++
+正确插入后， DIMM 应轻松插入，但应紧紧插入插槽中。如果没有，请重新插入 DIMM 。
+
+.. 小心而稳固地向下推 DIMM 的上边缘，直到弹出器卡舌卡入到位，卡入到位于 DIMM 两端的缺口上。
+
+
+. 合上 NSM 模块外盖，然后拧紧翼形螺钉。
+. 将 NSM 模块重新插入磁盘架：
++
+.. 确保锁定装置臂锁定在完全展开的位置。
+.. 用双手将 NSM 模块轻轻滑入磁盘架，直到磁盘架完全支撑 NSM 模块的重量为止。
+.. 将 NSM 模块推入磁盘架，直到其停止（距离磁盘架背面大约半英寸）。
++
+您可以将拇指放在每个（锁定装置臂的）指环正面的橙色卡舌上，以推入 NSM 模块。
+
+.. 将索引指针绕过 NSM 模块两侧的锁定机制的指孔。
++
+
+NOTE: 如果您要插入底部 NSM 模块，并且底部导轨阻碍了对锁定机制的访问，请将索引指针从内部穿过指针孔（通过跨越臂）。
+
+.. 用拇指按住锁定机制顶部的橙色卡舌。
+.. 轻轻向前推，使闩锁超过停止位置。
+.. 从锁定机制的顶部释放拇指，然后继续推动，直到锁定机制卡入到位。
++
+NSM 模块应完全插入磁盘架并与磁盘架边缘平齐。
+
+
+
+. 重新连接到 NSM 模块的布线：
++
+.. 将存储布线重新连接到同一两个 NSM 模块端口。
++
+插入缆线时，连接器拉片朝上。正确插入缆线后，它会卡入到位。
+
+.. 将电源线重新连接到电源，然后使用电源线固定器固定电源线。
++
+正常运行时，电源的双色 LED 将呈绿色亮起。
+
++
+此外，两个 NSM 模块端口 LNK （绿色） LED 均会亮起。如果 LNK LED 不亮，请重新拔插缆线。
+
+
+
+. 验证包含故障 DIMM 的 NSM 模块和磁盘架操作员显示面板上的警示（琥珀色） LED 是否不再亮起。
++
+NSM 模块重新启动后， NSM 模块警示 LED 将熄灭，并且不再检测到 DIMM 问题描述。这可能需要三到五分钟。
+
+. 运行 Active IQ Config Advisor ，验证 NSM 模块的布线是否正确。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+
+

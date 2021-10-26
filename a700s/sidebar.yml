@@ -1,0 +1,95 @@
+---
+section: a700s
+title: AFF A700s 系统
+url: "/a700s/index.html"
+entries:
+- title: 安装和设置
+  pdf-filename: AFF A700s 安装和设置
+  entries:
+  - title: 集群配置工作表
+    url: "/a700s/install-worksheet-linkout.html"
+  - title: 快速步骤
+    url: "/a700s/install-setup-linkout.html"
+  - title: 视频步骤
+    url: "/a700s/install-video-linkout.html"
+- title: 维护
+  pdf-filename: AFF A700s 维护
+  entries:
+  - title: 启动介质
+    pdf-filename: AFF A700s 启动介质
+    entries:
+    - title: 概述
+      url: "/a700s/bootmedia-replace-overview.html"
+    - title: 检查板载加密
+      url: "/a700s/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭节点
+      url: "/a700s/bootmedia-shutdown.html"
+    - title: 更换启动介质
+      url: "/a700s/bootmedia-replace.html"
+    - title: 传输启动映像
+      url: "/a700s/bootmedia-transfer-boot-image.html"
+    - title: 启动恢复映像
+      url: "/a700s/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: 还原 OKM ， NSE 和 NVE
+      url: "/a700s/bootmedia-encryption-restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/a700s/bootmedia-complete-rma.html"
+  - title: 机箱
+    pdf-filename: AFF A700s 机箱
+    entries:
+    - title: 概述
+      url: "/a700s/chassis-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/a700s/chassis-replace-shutdown.html"
+    - title: 更换硬件
+      url: "/a700s/chassis-replace-move-hardware.html"
+    - title: 完成更换
+      url: "/a700s/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器
+    pdf-filename: AFF A700s 控制器
+    entries:
+    - title: 概述
+      url: "/a700s/controller-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/a700s/controller-replace-shutdown.html"
+    - title: 更换控制器模块
+      url: "/a700s/controller-replace-move-hardware.html"
+    - title: 还原系统配置
+      url: "/a700s/controller-replace-system-config-restore-and-verify.html"
+    - title: 可重新连接的系统
+      url: "/a700s/controller-replace-recable-reassign-disks.html"
+    - title: 完成更换过程
+      url: "/a700s/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: AFF A700s DIMM
+    url: "/a700s/dimm-replace.html"
+  - title: 风扇
+    entries:
+    - title: 关闭受损节点
+      url: "/a700s/fan-impaired-controller-shutdown.html"
+    - title: 卸下控制器模块
+      url: "/a700s/fan-controller-remove.html"
+    - title: 风扇
+      pdf-filename: AFF A700s 风扇
+      url: "/a700s/fan-replace.html"
+    - title: 重新安装控制器模块
+      url: "/a700s/fan-controller-reinstall-pcie-rtc.html"
+    - title: 将故障部件退回 NetApp
+      url: "/a700s/fan-complete-rma.html"
+  - title: NVRAM 电池
+    pdf-filename: AFF A700s NVRAM 电池
+    url: "/a700s/nvmem-nvram-battery-replace.html"
+  - title: NVRAM
+    pdf-filename: AFF A700s NVRAM
+    url: "/a700s/nvram-or-nvram-dimm-replacement.html"
+  - title: PCIe 卡
+    pdf-filename: AFF A700s PCIe 卡
+    url: "/a700s/pci-cards-and-risers-replace.html"
+  - title: 电源
+    pdf-filename: AFF A700s 电源
+    url: "/a700s/power-supply-swap-out.html"
+  - title: 实时时钟电池
+    pdf-filename: AFF A700s 实时时钟电池
+    url: "/a700s/rtc-battery-replace.html"
+  - title: 系统级诊断
+    url: "/a700s/system-level-diags-linkout.html"

@@ -1,0 +1,81 @@
+---
+permalink: ns224/service-replace-power-supply.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, replace, fail, power, supply, nondisruptive, drive, i/o, progress, hot-swap, hot-swap a power supply 
+summary: 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 驱动器架中的故障电源。 
+---
+= 热插拔电源— NS224 磁盘架
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 I/O 正在进行时无中断地更换已启动的 NS224 驱动器架中的故障电源。
+
+.关于此任务
+* 如果要更换多个电源，则必须一次更换一个，以便磁盘架保持供电。
+* * 最佳实践： * 最佳实践是在从 NSM 模块卸下电源后两分钟内更换电源。
++
+如果超过这两分钟，磁盘架将继续运行，但 ONTAP 会向控制台发送有关电源降级的消息，直到更换电源为止。
+
+* * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
++
+[NOTE]
+====
+请勿将固件还原到不支持您的磁盘架及其组件的版本。
+
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+
+====
+* 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+如果您不知道受影响磁盘架的 `shelf_name` ，请运行 `storage shelf show` 命令。
+
++
+一个磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 NSM 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令并使用 off 选项来将其关闭。
+
+* 拆开备用电源的包装时，请保存所有包装材料，以便在退回故障电源时使用。
++
+如果您需要 RMA 编号或有关更换操作步骤的其他帮助，请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）。
+
+* 您可以使用以下视频或写入的步骤更换电源。
++
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=5794da63-99aa-425a-825f-aa86002f154d["热插拔 NS224 驱动器架中的电源"]
+
+
+
+.步骤
+. 正确接地。
+. 以物理方式确定故障电源。
++
+系统会向系统控制台记录一条警告消息，指示哪个电源出现故障。此外，磁盘架操作员显示面板上的警示（琥珀色） LED 会亮起，故障电源上的双色 LED 会呈红色亮起。
+
+. 打开电源线固定器，断开电源线与电源的连接，然后从电源中拔下电源线。
++
+电源没有电源开关。
+
+. 卸下故障电源：
++
+.. 将凸轮把手旋转到其打开（水平）位置，然后抓住它。
+.. 用拇指按下蓝色卡舌以释放锁定机制。
+.. 将电源从 NSM 模块中拉出，同时用另一只手支撑其重量。
+
+
+. 插入替代电源：
++
+.. 用双手支撑电源边缘并将其与 NSM 模块中的开口对齐。
+.. 将电源轻轻推入 NSM 模块，直到锁定机制卡入到位。
++
+
+NOTE: 请勿用力过大，否则可能会损坏内部连接器。
+
+.. 将凸轮把手旋转到关闭位置。
+
+
+. 将电源线连接到电源，并使用电源线固定器固定电源线。
++
+正常运行时，电源的双色 LED 将呈绿色亮起。
+
+

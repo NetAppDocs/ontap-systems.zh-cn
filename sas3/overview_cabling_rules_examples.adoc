@@ -1,0 +1,37 @@
+---
+permalink: sas3/overview-cabling-rules-examples.html 
+sidebar: sidebar 
+keywords: disk, shelves, shelf, iom12, module, single-controller, configuration, support, platform, sas, cabling, cable, rule, controller, shelf-to-shelf, connection, rule, controller-to-stack, mini-sas, hd, optical, cable, rule, sas cabling rules 
+summary: 您可以通过以下 SAS 布线规则，示例和工作表将带有 IOM12 模块的 SAS 驱动器架连接到存储系统。 
+---
+= SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+为了帮助您将带有 IOM12 模块的 SAS 驱动器架连接到存储系统，您可以根据需要使用任何可用的 SAS 布线规则，工作表和示例内容。
+
+* SAS 布线规则 *
+
+* link:install-cabling-rules.html#configuration-rules["配置"]
+* link:install-cabling-rules.html#controller-slot-numbering-rules["控制器插槽编号"]
+* link:install-cabling-rules.html#shelf-to-shelf-connection-rules["磁盘架到磁盘架连接"]
+* link:install-cabling-rules.html#controller-to-stack-connection-rules["控制器到堆栈连接"]
+* link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["迷你 SAS HD SAS 光缆"]
+
+
+* 布线工作表和示例 *
+
+* link:install-cabling-worksheets-examples-multipath.html["常见多路径 HA 配置"]
+* link:install-cabling-worksheets-examples-fas2600.html["常见的 AFF A200 ， AFF A220 ， FAS2600 和 FAS2700 配置"]
+* link:install-worksheets-examples-quadpath.html["四路径 HA 配置"]
+
+
+* 布线工作表模板 *
+
+* link:install-cabling-worksheet-template-multipath.html["多路径连接"]
+* link:install-cabling-worksheet-template-quadpath.html["四路径连接"]
+* link:install-cabling-worksheets-how-to-read-multipath.html["如何阅读多路径连接工作表"]
+* link:install-cabling-worksheets-how-to-read-quadpath.html["如何阅读四路径连接工作表"]
+

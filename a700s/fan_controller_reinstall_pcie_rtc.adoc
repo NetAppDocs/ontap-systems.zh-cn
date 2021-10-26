@@ -1,0 +1,77 @@
+---
+permalink: a700s/fan-controller-reinstall-pcie-rtc.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, replace, component, controller, module, reinstall, system, chassis, boot, reinstall the controller module 
+summary: 更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块并启动它。 
+---
+= 重新安装控制器模块 - AFF A700s
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块并启动它。
+
+. 如果您尚未接地，请正确接地。
+. 如果尚未关闭通风管：
++
+.. 将通风管一直旋转到控制器模块。
+.. 向提升板滑动通风管，直到锁定卡舌卡入到位。
+.. 检查通风管，确保其正确就位并锁定到位。
++
+image::../media/drw_a700s_close_air_duct.png[DRW a700s 封闭通风管]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+锁定卡舌
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+滑动柱塞
+
+|===
+
+
+. 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
++
+
+NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+
+. 根据需要重新对系统进行布线。
++
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
+
+. 将电源线插入电源，重新安装电源线锁定环，然后将电源连接到电源。
+. 完成控制器模块的重新安装：
++
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+.. 将控制器模块牢牢推入机箱，直到它与中板相距并完全就位。
++
+控制器模块完全就位后，锁定闩锁会上升。
+
++
+
+NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+
++
+控制器模块一旦完全固定在机箱中，就会开始启动。
+
+.. 向上旋转锁定闩锁，使其倾斜，以清除锁定销，然后将其降低到锁定位置。
+
+
+. 如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 nicadmin convert 命令将这些端口转换为 10 GbE 连接。
++
+
+NOTE: 请务必在完成转换后退出维护模式。
+
+. 交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
+

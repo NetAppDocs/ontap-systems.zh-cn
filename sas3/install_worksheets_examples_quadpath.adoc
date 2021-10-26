@@ -1,0 +1,46 @@
+---
+permalink: sas3/install-worksheets-examples-quadpath.html 
+sidebar: sidebar 
+keywords: complete, controller-to-stack, cabling, cable, worksheet, quad-path, ha, configuration, ha, configuration, sas, hba, controller-to-stack cabling worksheet and cabling example for a quad-path ha configuration with two quad-port sas hbas 
+summary: 您可以使用完整的控制器到堆栈布线工作表和布线示例为具有两个四端口 SAS HBA 的四路径 HA 配置布线。 
+---
+= 具有两个四端口 SAS HBA 的四路径 HA 配置的控制器到堆栈布线工作表和布线示例—磁盘架带有 IOM12 模块
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用完整的控制器到堆栈布线工作表和布线示例为具有两个四端口 SAS HBA 的四路径 HA 配置布线。
+
+* 如果需要，可以参考 link:install-cabling-rules.html["SAS 布线规则"] 有关支持的配置，控制器插槽编号约定，磁盘架到磁盘架连接以及控制器到磁盘架连接（包括端口对的使用）的信息。
+* 如果需要，可以参考 link:install-cabling-worksheets-how-to-read-quadpath.html["如何阅读使用缆线连接控制器到堆栈连接以实现四路径连接的工作表"]。
+* 布线示例显示控制器到堆栈的缆线为实线或虚线，以区分控制器 A 和 C 端口连接与控制器 B 和 D 端口连接。
++
+image::../media/drw_controller_to_stack_cable_type_key.gif[DRW 控制器到堆栈缆线类型密钥]
+
+* 布线示例中的缆线及其工作表中对应的端口对采用颜色编码，以区分与 HA 对中每个堆栈的连接。
++
+image::../media/drw_controller_to_stack_cable_color_key_non2600.gif[DRW 控制器到堆栈的缆线颜色密钥，非 2600]
+
+* 布线示例直观地区分了为每个控制器与 HA 对或单控制器配置中的每个堆栈实现四路径连接所需的两组多路径布线。
++
+第一组多路径布线称为 " `m多路径` " 。第二组多路径布线称为 "`quad pathed` " 。第二组布线称为 "`四路径` " ，因为完成这组布线将为您提供四路径连接。
+
++
+image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[将 DRW 控制器堆栈为四路径连接密钥]
+
+* 此工作表示例显示了指定用于在适用堆栈中进行多路径布线或四路径布线的端口对。
++
+为多路径布线指定的每个端口对都由一个与所连接的堆栈关联的椭圆所环绕。为四路径布线指定的每个端口对都由一个与所连接的堆栈相关的颜色的方框所环绕。
+
+
+
+
+
+== 具有两个四端口 SAS HBA 和两个多架堆栈的四路径 HA
+
+以下工作表和布线示例对堆栈 1 使用端口对 11/2b （多路径）和 2a/1D （四路径），对 stack2 使用端口对 1c/2D （多路径）和 2c/1b （四路径）。
+
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[DRW 工作表 qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 NAU]
+
+image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[DRW qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 NAU]

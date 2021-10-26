@@ -1,0 +1,434 @@
+---
+permalink: fas8300/caching-module-replace.html 
+sidebar: sidebar 
+keywords: fas8300, fas8700, fas8200, replace, caching, module, shut, down, impaired, controller, fru, metrocluster, add, aggregates, switch, reinstall 
+summary: 如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控制器模块已脱机，则必须更换此缓存模块；否则会导致性能下降。 
+---
+= 更换缓存模块— FAS8300 和 FAS8700
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控制器模块已脱机，则必须更换此缓存模块；否则会导致性能下降。
+
+* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+
+
+
+
+== 第 1 步：关闭受损控制器
+
+[role="lead"]
+根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。
+
+
+
+=== 选项 1 ：大多数配置
+
+[role="lead"]
+要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
+
+如果集群包含两个以上的节点，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述。
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"]
+
+您可能希望在更换缓存模块之前擦除其内容。
+
+.步骤
+. 尽管缓存模块上的数据已加密，但您可能希望擦除受损缓存模块中的所有数据，并验证缓存模块是否没有数据：
++
+.. 擦除缓存模块上的数据： `ssystem controller flash-cache secure -erase run -node _node_name_ -device-id _device_id_`
+.. 验证是否已从缓存模块中擦除数据： `ssystem controller flash-cache secure -erase show -node _node_name_`
++
+输出应将缓存模块状态显示为已擦除。
+
+
+
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAIN=_number_of_hours_down_h`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的节点的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损节点显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| * 如果受损节点显示 ... | 然后 ...* 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_` 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+
+
+=== 选项 2 ：关闭双节点 MetroCluster 配置中的节点
+
+[role="lead"]
+要关闭受损节点，您必须确定此节点的状态，并在必要时切换此节点，以便运行正常的节点继续从受损节点存储提供数据。
+
+.关于此任务
+* 如果您使用的是 NetApp 存储加密，则必须按照 _ONTAP 9 NetApp 加密高级指南 _ 的 " 将 SED 恢复到未受保护的模式 " 一节中的说明重置 MSID 。
++
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTAP 9 NetApp 加密高级指南》"]
+
+* 您必须在此操作步骤末尾保持电源处于打开状态，以便为运行正常的节点供电。
+
+
+.步骤
+. 检查 MetroCluster 状态以确定受损节点是否已自动切换到运行正常的节点： `MetroCluster show`
+. 根据是否发生了自动切换，按照下表继续操作：
++
+[cols="1,2"]
+|===
+| * 如果受损节点 ... | 然后 ...* 
+
+
+ a| 
+已自动切换
+ a| 
+继续执行下一步。
+
+
+
+ a| 
+未自动切换
+ a| 
+从运行正常的节点执行计划内切换操作： `MetroCluster switchover`
+
+
+
+ a| 
+未自动切换，您尝试使用 `MetroCluster switchover` 命令进行切换，并且切换已被否决
+ a| 
+查看否决消息，如果可能，请解决问题描述并重试。如果无法解决问题描述问题，请联系技术支持。
+
+|===
+. 在运行正常的集群中运行 `MetroCluster heal -phase aggregates` 命令，以重新同步数据聚合。
++
+[listing]
+----
+controller_A_1::> metrocluster heal -phase aggregates
+[Job 130] Job succeeded: Heal Aggregates is successful.
+----
++
+如果修复被否决，您可以使用 -override-vetoes 参数重新发出 `MetroCluster heal` 命令。如果使用此可选参数，则系统将覆盖任何阻止修复操作的软否决。
+
+. 使用 MetroCluster operation show 命令验证操作是否已完成。
++
+[listing]
+----
+controller_A_1::> metrocluster operation show
+    Operation: heal-aggregates
+      State: successful
+Start Time: 7/25/2016 18:45:55
+   End Time: 7/25/2016 18:45:56
+     Errors: -
+----
+. 使用 `storage aggregate show` 命令检查聚合的状态。
++
+[listing]
+----
+controller_A_1::> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+...
+aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirrored, normal...
+----
+. 使用 `MetroCluster heal -phase root-aggregates` 命令修复根聚合。
++
+[listing]
+----
+mcc1A::> metrocluster heal -phase root-aggregates
+[Job 137] Job succeeded: Heal Root Aggregates is successful
+----
++
+如果修复被否决，您可以使用 -override-vetoes 参数重新发出 `MetroCluster heal` 命令。如果使用此可选参数，则系统将覆盖任何阻止修复操作的软否决。
+
+. 在目标集群上使用 `MetroCluster operation show` 命令验证修复操作是否已完成：
++
+[listing]
+----
+
+mcc1A::> metrocluster operation show
+  Operation: heal-root-aggregates
+      State: successful
+ Start Time: 7/29/2016 20:54:41
+   End Time: 7/29/2016 20:54:42
+     Errors: -
+----
+. 在受损控制器模块上，断开电源。
+
+
+
+
+== 第 2 步：卸下控制器模块
+
+[role="lead"]
+要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
+
+您可以使用以下动画或写入的步骤从机箱中删除控制器模块。
+
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=75b6fa91-96b9-4323-b156-aae10007c9a5["卸下控制器模块"]
+
+image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 释放电源线固定器，然后从电源中拔下缆线。
+. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
++
+将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
+
+. 将缆线管理设备从控制器模块中取出并放在一旁。
+. 向下按两个锁定闩锁，然后同时向下旋转两个闩锁。
++
+此控制器模块会从机箱中略微移出。
+
+. 将控制器模块滑出机箱。
++
+将控制器模块滑出机箱时，请确保您支持控制器模块的底部。
+
+. 将控制器模块放在平稳的表面上。
+
+
+
+
+== 第 3 步：更换缓存模块
+
+[role="lead"]
+要更换控制器标签上的缓存模块（称为 Flash Cache ），请找到控制器中的插槽并按照特定步骤顺序进行操作。有关 Flash Cache 的位置，请参见控制器模块上的 FRU 映射。
+
+您的存储系统必须满足特定条件，具体取决于您的情况：
+
+* 它必须具有与要安装的缓存模块对应的操作系统。
+* 它必须支持缓存容量。
+* 尽管缓存模块的内容已加密，但最好在更换模块之前擦除该模块的内容。有关详细信息，请参见 https://mysupport.netapp.com/info/web/ECMP1132988.html["易失性声明"] NetApp 支持站点上适用于您的系统的。
++
+
+NOTE: 您必须登录到 NetApp 支持站点，才能显示系统的 _statement of volatil性 _ 。
+
+* 存储系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+
+您可以使用以下动画或写入的步骤来更换缓存模块。
+
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d5f75ac5-b4f3-4b49-984b-aad9012f0c8e["更换缓存模块"]
+
+image::../media/drw_8300_Replace-flashcache.png[DRW 8300 更换闪存]
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 打开通风管：
++
+.. 将通风管两侧的锁定片朝控制器模块中间按压。
+.. 将通风管滑向控制器模块的背面，然后将其向上旋转到完全打开的位置。
+
+
+. 使用控制器模块上的 FRU 映射，找到故障缓存模块并将其卸下：
++
+根据您的配置，控制器模块中可能有零个，一个或两个缓存模块。发生故障的缓存模块的 LED 亮起。
+
++
+.. 按蓝色释放卡舌。
++
+缓存模块端部不会从释放选项卡中升起。
+
+.. 向上旋转缓存模块并将其滑出插槽。
+
+
+. 安装替代缓存模块：
++
+.. 将替代缓存模块的边缘与插槽对齐，然后将其轻轻插入插槽。
+.. 将缓存模块向下旋转到主板。
+.. 用蓝色按钮将手指放在缓存模块的末端，用力向下推缓存模块的一端，然后提起锁定按钮以将缓存模块锁定到位。
+
+
+. 关闭通风管：
++
+.. 向下转动控制器模块的通风管。
+.. 将通风管滑向提升板，将其锁定到位。
+
+
+
+
+
+
+== 第 4 步：安装控制器模块
+
+[role="lead"]
+更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
+
+您可以使用以下动画或写入的步骤在机箱中安装控制器模块。
+
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=9249fdb8-1522-437d-9280-aae10007c97b["安装控制器模块"]
+
+image::../media/drw_A400_Install_controller.png[DRW A400 安装控制器]
+
+.步骤
+. 如果尚未关闭此通风管，请关闭此通风管。
+. 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
++
+
+NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+
+. 仅为管理和控制台端口布线，以便您可以访问系统以执行以下各节中的任务。
++
+
+NOTE: 您将在此操作步骤中稍后将其余缆线连接到控制器模块。
+
+. 完成控制器模块的安装：
++
+.. 将电源线插入电源，重新安装电源线锁定环，然后将电源连接到电源。
+.. 使用锁定闩锁将控制器模块牢牢推入机箱，直到锁定闩锁开始上升。
++
+
+NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+
+.. 将锁定闩锁向上旋转，使其倾斜以清除锁定销，将控制器模块完全推入机箱中，然后将锁定闩锁降至锁定位置。
++
+控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。
+
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+.. 按 `Ctrl-C` 中断正常启动过程并启动到 LOADER 。
++
+
+NOTE: 如果系统停留在启动菜单处，请选择启动到 LOADER 选项。
+
+.. 在 LOADER 提示符处，输入 `bye` 以重新初始化 PCIe 卡和其他组件。
+.. 按 `Ctrl-C` 中断启动过程并启动到加载程序提示符。
++
+如果系统停留在启动菜单处，请选择启动到 LOADER 选项。
+
+
+
+
+
+
+
+== 第 5 步：运行诊断
+
+[role="lead"]
+更换系统中的某个组件后，您应对该组件运行诊断测试。
+
+您的系统必须处于 LOADER 提示符处，才能启动诊断。
+
+诊断过程中的所有命令都是从要更换组件的节点发出的。
+
+.步骤
+. 如果要服务的节点不在 LOADER 提示符处，请重新启动节点： `ssystem node halt -node _node_name_`
++
+问题描述命令后，您应等待系统停留在 LOADER 提示符处。
+
+. 在 LOADER 提示符处，访问专为系统级诊断而设计的特殊驱动程序以正常运行： `boot_diags`
+. 从显示的菜单中选择 * 扫描系统 * 以启用运行诊断测试。
+. 从显示的菜单中选择 * 压力测试系统 * 。
+. 从显示的菜单中选择 "* 。 2. NVMe 驱动器压力 "* 。
+. 根据上一步的结果继续操作：
++
+** 如果测试失败，请更正此故障，然后重新运行此测试。
+** 如果测试未报告任何故障，请从菜单中选择重新启动以重新启动系统。
+
+
+
+
+
+
+== 第 6 步：运行诊断后，将控制器模块还原为正常运行
+
+[role="lead"]
+完成诊断后，您必须重新对系统进行配置，交还控制器模块，然后重新启用自动交还。
+
+.步骤
+. 根据需要重新对系统进行布线。
++
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
+
+. 交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== 第 7 步：切回双节点 MetroCluster 配置中的聚合
+
+[role="lead"]
+在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine （ SVM ）现在处于活动状态，并从本地磁盘池提供数据。
+
+此任务仅限适用场景双节点 MetroCluster 配置。
+
+.步骤
+. 验证所有节点是否处于 `enabled` 状态： `MetroCluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. 验证所有 SVM 上的重新同步是否已完成： `MetroCluster SVM show`
+. 验证修复操作正在执行的任何自动 LIF 迁移是否已成功完成： `MetroCluster check lif show`
+. 在运行正常的集群中的任何节点上使用 `MetroCluster switchback` 命令执行切回。
+. 验证切回操作是否已完成： `MetroCluster show`
++
+当集群处于 `waiting for-switchback` 状态时，切回操作仍在运行：
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+当集群处于 `normal` 状态时，切回操作完成。：
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+如果切回需要很长时间才能完成，您可以使用 `MetroCluster config-replication resync-status show` 命令检查正在进行的基线的状态。
+
+. 重新建立任何 SnapMirror 或 SnapVault 配置。
+
+
+
+
+== 第 8 步：完成更换过程
+
+[role="lead"]
+更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

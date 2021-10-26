@@ -1,0 +1,25 @@
+---
+permalink: a700s/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, primary, boot, media, store, ontap, image, system, restore, primary, media, secondary, usb, flash, drive, replace, replace the boot media 
+summary: 主启动介质用于存储系统在启动时使用的 ONTAP 启动映像。您可以使用二级启动介质上的 ONTAP 映像还原主启动介质映像，也可以在必要时使用 USB 闪存驱动器还原主启动介质映像。 
+---
+= 更换启动介质— AFF A700s
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+主启动介质用于存储系统在启动时使用的 ONTAP 启动映像。您可以使用二级启动介质上的 ONTAP 映像还原主启动介质映像，也可以在必要时使用 USB 闪存驱动器还原主启动介质映像。
+
+如果二级启动介质出现故障或缺少 image.tgz 文件，则必须使用 USB 闪存驱动器还原主启动介质。驱动器必须格式化为 fat32 ，并且必须具有适当的存储容量来存放 image_xxx.tgz 文件。
+
+* 替换过程会将 var 文件系统从二级启动介质或 USB 闪存驱动器还原到主启动介质。
+* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+* 请务必在正确的节点上应用以下步骤中的命令：
++
+** 受损节点是指要在其中执行维护的节点。
+** _health_ 节点是受损节点的 HA 配对节点。
+
+
+

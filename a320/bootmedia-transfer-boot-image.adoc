@@ -1,0 +1,178 @@
+---
+permalink: a320/bootmedia-transfer-boot-image.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, replacement, boot, media, install, image, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive 
+summary: 您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。 
+---
+= 使用 U 盘将启动映像传输到启动介质— AFF A320
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。
+
+* 您必须具有一个 USB 闪存驱动器，该驱动器已格式化为 MBR/FAT32 ，并且容量至少为 4 GB
+* 与受损控制器运行的 ONTAP 映像版本相同的副本。您可以从 NetApp 支持站点上的 "Downloads" 部分下载相应的映像
++
+** 如果启用了 NVE ，请按照下载按钮中的指示，使用 NetApp 卷加密下载映像。
+** 如果未启用 NVE ，请按照下载按钮中的指示，在不使用 NetApp 卷加密的情况下下载映像。
+
+
+* 如果您的系统是 HA 对，则必须具有网络连接。
+* 如果您的系统是独立系统，则不需要网络连接，但在还原 var 文件系统时，您必须执行额外的重新启动。
++
+.. 将相应的服务映像从 NetApp 支持站点下载并复制到 USB 闪存驱动器。
++
+... 将服务映像下载到笔记本电脑上的工作空间。
+... 解压缩服务映像。
++
+
+NOTE: 如果要使用 Windows 提取内容，请勿使用 WinZip 提取网络启动映像。使用其他提取工具，例如 7-Zip 或 WinRAR 。
+
++
+解压缩的服务映像文件中有两个文件夹：
+
++
+**** /boot
+**** EFI
+
+
+... 将 EFI 文件夹复制到 USB 闪存驱动器上的顶部目录。
++
+USB 闪存驱动器应具有 EFI 文件夹，并且与受损控制器运行的服务映像（ BIOS ）版本相同。
+
+... 从笔记本电脑中取出 USB 闪存驱动器。
+
+
+.. 如果尚未关闭此通风管，请关闭此通风管。
+.. 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
+.. 重新安装缆线管理设备，并根据需要重新对系统进行布线。
++
+重新布线时，如果已卸下介质转换器（ SFP 或 QSFP ），请务必重新安装它们。
+
+.. 将电源线插入电源，然后重新安装电源线固定器。
+.. 将 USB 闪存驱动器插入控制器模块上的 USB 插槽。
++
+确保将 USB 闪存驱动器安装在标有 USB 设备的插槽中，而不是 USB 控制台端口中。
+
+.. 完成控制器模块的重新安装：
++
+image::../media/drw_a320_controller_install_animated_gif.png[DRW A320 控制器安装动画 gif]
+
++
+... 确保闩锁臂锁定在扩展位置。
+... 使用闩锁臂将控制器模块推入机箱托架，直到其停止。
++
+
+NOTE: 请勿向下推闩锁臂顶部的闩锁装置。通过提升锁定机制并禁止将控制器模块滑入机箱来执行此操作。
+
+... 按住锁定机制顶部的橙色卡舌。
+... 将控制器模块轻轻推入机箱托架，直至其与机箱边缘平齐。
++
+
+NOTE: 锁定机制臂滑入机箱。
+
++
+控制器模块一旦完全固定在机箱中，就会开始启动。
+
+... 释放闩锁，将控制器模块锁定到位。
+... 如果尚未重新安装缆线管理设备，请重新安装该设备。
+
+
+.. 按 Ctrl-C 在 LOADER 提示符处停止，以中断启动过程。
++
+如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停节点以启动到加载程序。
+
+.. 尽管环境变量和 bootarg 已保留，但您应使用 `printenv bootarg name` 命令检查是否已为您的系统类型和配置正确设置所有必需的启动环境变量和 bootarg ，并使用 `setenv variable-name <value>` 命令更正任何错误。
++
+... 检查启动环境变量：
++
+**** `bootarg.init.boot_clustered`
+**** `partner-sysid`
+**** `bootarg.init.flash_optimized` ，适用于 AFF C190/AFF A220 （全闪存 FAS ）
+**** `bootarg.init.san_optimized` ，适用于 AFF A220 和全 SAN 阵列
+**** `bootarg.init.switchless_cluster.enable`
+
+
+... 如果已启用外部密钥管理器，请检查 `kenv` ASUP 输出中列出的 bootarg 值：
++
+**** `bootarg.storageencryption.support <value>`
+**** `bootarg.keymanager.support <value>`
+**** `kmip.init.interface <value>`
+**** `kmip.init.ipaddr <value>`
+**** `kmip.init.netmask <value>`
+**** `kmip.init.gateway <value>`
+
+
+... 如果启用了板载密钥管理器，请检查 `kenv` ASUP 输出中列出的 bootarg 值：
++
+**** `bootarg.storageencryption.support <value>`
+**** `bootarg.keymanager.support <value>`
+**** `bootarg.bontery_keymanager <value>`
+
+
+... 保存使用 `savenv` 命令更改的环境变量
+... 使用 `printenv _variable-name_` 命令确认所做的更改。
+
+
+.. 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`
++
+此映像将从 USB 闪存驱动器下载。
+
+.. 出现提示时，请输入映像名称或接受屏幕上括号内显示的默认映像。
+.. 安装映像后，启动还原过程：
++
+... 记录屏幕上显示的受损节点的 IP 地址。
+... 当系统提示您还原备份配置时，按 `y` 。
+... 当系统提示您覆盖 /etc/ssh/ssh_host_dsa_key 时，按 `y` 。
+
+
+.. 在高级权限级别的配对节点中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`
+.. 如果还原成功，请在系统提示您使用还原的副本时按受损节点上的 `y` 。
+.. 当您看到确认备份操作步骤成功时，按 `y` ，然后在系统提示您重新启动节点时按 `y` 。
+.. 验证环境变量是否按预期设置。
++
+... 使节点显示 LOADER 提示符。
++
+在 ONTAP 提示符处，您可以对命令 system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true 执行问题描述操作。
+
+... 使用 `printenv` 命令检查环境变量设置。
+... 如果环境变量未按预期设置，请使用 `setenv _environment-variable-name____changed-value_` 命令对其进行修改。
+... 使用 `savenev` 命令保存所做的更改。
+... 重新启动节点。
+
+
+.. 当重新启动的受损节点显示 `waiting for giveback...` 消息时，从运行正常的节点执行交还：
++
+[cols="1,2"]
+|===
+| 如果您的系统位于 ... | 那么 ... 
+
+
+ a| 
+HA 对
+ a| 
+受损节点显示 `waiting for giveback...` 消息后，从运行正常的节点执行交还：
+
+... 从运行状况良好的节点： `storage failover giveback -ofnode partner_node_name`
++
+受损节点将收回其存储，完成启动，然后重新启动，并再次由运行正常的节点接管。
+
++
+
+NOTE: 如果交还被否决，您可以考虑覆盖此否决。
+
++
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["《 ONTAP 9 高可用性配置指南》"]
+
+... 使用 storage failover show-giveback 命令监控交还操作的进度。
+... 交还操作完成后，使用 `storage failover show` 命令确认 HA 对运行状况良好，并且可以进行接管。
+... 如果您使用 storage failover modify 命令禁用了自动交还，请将其还原。
+
+
+|===
+.. 在运行正常的节点上退出高级权限级别。
+
+
+

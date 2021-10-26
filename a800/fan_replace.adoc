@@ -1,0 +1,183 @@
+---
+permalink: a800/fan-replace.html 
+sidebar: sidebar 
+keywords: aff a800, replace a fan 
+summary: 如果更换发生故障的风扇模块并将其更换为新的风扇模块，则必须从机箱中卸下控制器模块。 
+---
+= 更换风扇— AFF A800
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。
+
+
+
+== 第 1 步：关闭受损节点
+
+[role="lead"]
+关闭或接管受损的控制器。
+
+要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
+
+如果集群包含两个以上的节点，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述。
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"]
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的节点的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损节点显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损节点显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+接管或暂停受损节点：
+
+** 对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode _impaired_node_name_`
++
+当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+
+
+|===
+
+
+
+
+== 第 2 步：卸下控制器模块
+
+[role="lead"]
+更换风扇模块时，必须从机箱中卸下控制器模块。
+
+. 如果您尚未接地，请正确接地。
+. 从源拔下控制器模块电源。
+. 释放电源线固定器，然后从电源中拔下缆线。
+. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线，跟踪缆线的连接位置。
++
+将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
+
+. 将缆线管理设备从控制器模块中取出并放在一旁。
+. 向下按两个锁定闩锁，然后同时向下旋转两个闩锁。
++
+此控制器模块会从机箱中略微移出。
+
++
+image::../media/drw_a800_pcm_remove.png[卸下 DRW a800 PCM]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 锁定闩锁 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+锁定销
+
+|===
+. 将控制器模块滑出机箱。
++
+将控制器模块滑出机箱时，请确保您支持控制器模块的底部。
+
+. 将控制器模块放在一旁安全的地方。
+
+
+
+
+== 第 3 步：更换风扇
+
+[role="lead"]
+要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。
+
+. 通过检查控制台错误消息或找到主板上风扇模块的亮起 LED 来确定必须更换的风扇模块。
+. 通过挤压风扇模块侧面的锁定卡舌，然后将风扇模块直接从控制器模块中提出来卸下风扇模块。
++
+image::../media/drw_a800_replace_fan.png[DRW a800 更换风扇]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 风扇锁定卡舌 
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+风扇模块
+
+|===
+. 将更换用风扇模块的边缘与控制器模块的开口对齐，然后将更换用的风扇模块滑入控制器模块，直到锁定闩锁卡入到位。
+
+
+
+
+== 第 4 步：重新安装控制器模块
+
+[role="lead"]
+更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块并启动它。
+
+. 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
++
+
+NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+
+. 根据需要重新对系统进行布线。
+. 将电源线插入电源，然后重新安装电源线固定器。
+. 完成控制器模块的重新安装：
++
+.. 将控制器模块牢牢推入机箱，直到它与中板相距并完全就位。
++
+控制器模块完全就位后，锁定闩锁会上升。
+
++
+
+NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+
++
+控制器模块一旦完全固定在机箱中，就会开始启动。
+
+.. 向上旋转锁定闩锁，使其倾斜，以清除锁定销，然后将其降低到锁定位置。
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+
+
+. 交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== 第 5 步：将故障部件退回 NetApp
+
+[role="lead"]
+更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

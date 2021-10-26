@@ -1,0 +1,19 @@
+---
+permalink: a800/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a800, aff, a800, replace, fail, component, replacement, fru, receive, provider, boot, media, replace the boot media 
+summary: 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。 
+---
+= 更换启动介质— AFF A800
+:icons: font
+:imagesdir: ../media/
+
+
+* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+* 请务必在正确的节点上应用以下步骤中的命令：
++
+** 受损节点是指要在其中执行维护的节点。
+** 运行状况良好的节点 _ 是受损节点的 HA 配对节点。
+
+
+

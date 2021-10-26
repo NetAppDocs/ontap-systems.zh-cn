@@ -1,0 +1,35 @@
+---
+permalink: fas8300/controller-replace-overview.html 
+sidebar: sidebar 
+keywords: fas8300, fas8700, prerequisite, replace the controller module 
+summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。 
+---
+= 更换控制器模块— FAS8300 和 FAS8700
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。
+
+* 所有驱动器架都必须正常工作。
+* 如果您的系统采用 MetroCluster 配置，则必须查看一节 https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["选择正确的恢复操作步骤"] 以确定是否应使用此操作步骤。
++
+如果这是您应使用的操作步骤，请注意，四节点或八节点 MetroCluster 配置中节点的控制器替代操作步骤与 HA 对中的控制器替代 相同。无需执行 MetroCluster 专用步骤，因为故障仅限于 HA 对，可以使用存储故障转移命令在更换期间实现无中断运行。
+
+* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+* 您必须将控制器模块更换为相同型号类型的控制器模块。您不能只更换控制器模块来升级系统。
+* 您不能在此操作步骤中更改任何驱动器或驱动器架。
+* 在此操作步骤中，启动设备将从受损节点移至 _replacement_ 节点，以便 _replacement_ 节点在与旧控制器模块相同版本的 ONTAP 中启动。
+* 请务必在正确的系统上应用以下步骤中的命令：
++
+** 受损节点是要更换的节点。
+** _replacement nodge_ 是指更换受损节点的新节点。
+** _health_ 节点是正常运行的节点。
+
+
+* 您必须始终将节点的控制台输出捕获到文本文件中。
++
+此操作将为您提供操作步骤的记录，以便您可以对更换过程中可能遇到的任何问题进行故障排除。
+
+

@@ -1,0 +1,387 @@
+---
+permalink: sas3/install-new-system.html 
+sidebar: sidebar 
+keywords: install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation 
+summary: 如果新系统 HA 对或单控制器配置未安装在机柜中，则必须在机架中安装磁盘架并为其布线。 
+---
+= 安装新系统安装的磁盘架并为其布线—带有 IOM12 模块的磁盘架
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果新系统 HA 对或单控制器配置未安装在机柜中，则可以在机架中安装磁盘架并为其布线。
+
+
+
+== 在新系统安装中安装带有 IOM12 模块的磁盘架并为其布线的要求
+
+[role="lead"]
+在安装磁盘架并为其布线之前，您必须满足特定要求。
+
+* 您必须了解适用于您的平台型号的安装和设置说明。
++
+安装和设置说明介绍了适用于您的系统安装，设置和配置的完整操作步骤。只有在需要有关将磁盘架安装或布线到存储系统的详细信息时，才可以将此操作步骤（ _Install and Cable SHELVES_ for a new system installation_） 与平台安装和设置说明结合使用。
+
++
+有关安装和设置说明，请导航到您的平台型号文档。
+
++
+link:../index.html["AFF 和 FAS 系统文档"]
+
+* 此时不能打开磁盘架和控制器的电源。
+* 如果您使用的是迷你 SAS HD SAS 光缆，则必须符合中的规则 link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["迷你 SAS HD SAS 光缆规则"]。
+
+
+
+
+== 在新系统安装中安装具有 IOM12 模块的磁盘架并为其布线的注意事项
+
+[role="lead"]
+在安装磁盘架并为其布线之前，您应熟悉此操作步骤的各个方面和最佳实践。
+
+
+
+=== 一般注意事项
+
+* 带有 IOM12 模块的磁盘架在出厂时已将磁盘架 ID 预设为 00 。
++
+
+NOTE: 如果 HA 对至少包含两个堆栈，则包含第二个堆栈根聚合的磁盘架的磁盘架 ID 将预设为 10 。
+
++
+您必须设置磁盘架 ID ，使其在 HA 对或单控制器配置中是唯一的。您可以在维护模式下使用命令手动设置 HA 对或单控制器配置中的所有磁盘架的磁盘架 ID 或自动为其分配磁盘架 ID 。本节将介绍这两种方法。
+
+* 包含根聚合的磁盘架可通过磁盘架箱和磁盘架机箱上的标签来标识。
++
+这些标签将显示堆栈编号；例如， "`Loop 或 Stack # ： 1 ` " 和 "`Loop 或 Stack # ： 2 ` " 。不包含根聚合的磁盘架仅会在标签上显示磁盘架序列号。
+
+* 如果在系统设置和配置时未将系统配置为使用自动磁盘所有权分配，则需要手动分配磁盘所有权。
+* 系统会自动启用带内备用控制路径（ In-band Alternate Control Path ， ACP ）。
++
+单路径 HA 或单路径配置不支持带内 ACP 。
+
+
+
+
+
+=== 最佳实践注意事项
+
+* 最佳实践是安装最新版本的磁盘认证包（ DQP ）。
++
+安装当前版本的 DQP 后，您的系统便可识别和使用新认证的磁盘驱动器；因此，可以避免出现有关磁盘驱动器信息不是最新的系统事件消息。此外，您还可以避免由于无法识别磁盘驱动器而可能阻止磁盘分区。DQP 还会通知您磁盘驱动器固件不是最新的。
+
++
+https://mysupport.netapp.com/NOW/download/tools/diskqual/["NetApp 下载：磁盘认证包"]
+
+* 最佳做法是，在安装新系统后下载并运行 Config Advisor 。
++
+在安装新系统后运行 Config Advisor 可以验证 SAS 连接是否已正确布线，以及磁盘架 ID 在 HA 对或单控制器配置中是否唯一。
+
++
+如果生成任何 SAS 布线错误或重复的磁盘架 ID 错误，请按照提供的更正操作进行操作。
+
++
+要下载 Config Advisor ，您需要网络访问权限。
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+
+
+
+
+
+=== SAS 缆线处理注意事项
+
+* 在将 SAS 端口插入之前，请目视检查该端口以验证其方向是否正确。
++
+SAS 缆线连接器具有键控。正确连接到 SAS 端口后，连接器会卡入到位，如果此时磁盘架电源已打开，则磁盘架 SAS 端口 LNK LED 会呈绿色亮起。对于磁盘架，您可以插入 SAS 缆线连接器，拉片朝下（位于连接器的下侧）。
+
++
+对于控制器， SAS 端口的方向可能因平台型号而异；因此，正确的 SAS 缆线连接器方向会有所不同。
+
+* 为防止性能下降，请勿扭曲，折叠，挤压或踩踏缆线。
++
+缆线具有最小弯曲半径。电缆制造商规格定义了最小弯曲半径；但是，最小弯曲半径的一般准则是电缆直径的 10 倍。
+
+* 使用 Velcro 缆线束而不是捆扎带捆绑和固定系统缆线，可以更轻松地调整缆线。
+
+
+
+
+== 安装带有 IOM12 模块的磁盘架，以便安装新的系统
+
+[role="lead"]
+您可以使用磁盘架随附的机架安装套件在机架中安装磁盘架。
+
+. 使用磁盘架随附的安装宣传单安装磁盘架随附的机架安装套件（适用于两柱或四柱机架安装）。
++
+
+NOTE: 如果要安装多个磁盘架，则应从机架的底部到顶部安装这些磁盘架，以获得最佳稳定性。
+
++
+
+NOTE: 请勿通过法兰将磁盘架安装到电信型机架中；磁盘架的重量可以发生原因使其在机架中自行折叠。
+
+. 使用套件随附的安装宣传单将磁盘架安装并固定到支架和机架上。
++
+为了减轻磁盘架重量并便于操作，请卸下电源和 I/O 模块（ IOM ）。
+
++
+对于 DS460C 磁盘架，您还可以使用磁盘架随附的四个可拆卸手柄。手柄（机箱每侧两个）可通过向上推直至卡入到位来安装。将磁盘架滑入导轨时，请使用拇指闩锁分离手柄。
+
++
+如果要移动满载的 DS460C 磁盘架，建议使用机械升降机或升降机。
+
++
+
+NOTE: 满载的 DS460C 磁盘架的重量约为 247 磅（ 112 千克）。
+
++
+image::../media/drw_ds460c_handles.gif[DRW ds460c 句柄]
+
+. 如果要安装 DS460C 磁盘架，请将组件安装到机架式磁盘架中；否则，请转至下一步。
++
+如果您购买的磁盘架已部分填充，但每个驱动器插槽中没有驱动器，则必须确保：
+
++
+** 每个抽盒中的前四个插槽（ 0 ， 3 ， 6 和 9 ）已被占用。
++
+这样可确保磁盘架通风良好。
+
+** 在包含 30 个驱动器的磁盘架中，其余 10 个驱动器均匀分布在每个抽盒的插槽 1 和 10 中的整个磁盘架中。下图显示了如何在磁盘架中的每个驱动器抽盒中将驱动器编号为 0 到 11 。插槽 0 ， 3 ， 6 ， 9 和， 在包含 30 个驱动器的磁盘架中，每个抽盒中的插槽 1 和 10 必须包含驱动器。
+
+
++
+image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[带有 HDD 标注的 Dwg Trafford 抽屉]
+
++
+.. 重新安装在将磁盘架安装到机架之前卸下的所有电源和 IOM 。
+.. 打开磁盘架的顶部抽盒。
+.. 将驱动器上的凸轮把手提起至垂直位置。
+.. 将驱动器托架两侧的两个凸起按钮与驱动器抽屉上驱动器通道中的匹配间隙对齐。
++
+image::../media/28_dwg_e2860_de460c_drive_cru.gif[28 dwg e2860 de460c 驱动器 cru]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 驱动器托架右侧的凸起按钮 
+|===
+.. 竖直向下放下驱动器，然后向下旋转凸轮把手，直到驱动器在橙色释放闩锁下卡入到位。
+.. 对抽盒中的每个驱动器重复上述子步骤。
++
+您必须确保每个抽盒中的插槽 0 ， 3 ， 6 和 9 包含驱动器。
+
+.. 小心地将驱动器抽盒推回机箱。
++
+|===
+
+
+ a| 
+image:../media/2860_dwg_e2860_de460c_gentle_close.gif[""]
+
+
+
+ a| 
+
+CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒，以避免抽盒震动并损坏存储阵列。
+
+|===
+.. 将两个拉杆推向中央，关闭驱动器抽屉。
+.. 对磁盘架中的每个抽盒重复上述步骤。
+
+
+. 如果要添加多个磁盘架，请对要安装的每个磁盘架重复此操作步骤。
++
+
+NOTE: 此时请勿打开磁盘架的电源。
+
+
+
+
+
+== 使用缆线连接具有 IOM12 模块的磁盘架，以进行新的系统安装
+
+[role="lead"]
+使用缆线连接磁盘架 SAS 连接（磁盘架到磁盘架（如果适用）和控制器到磁盘架），以便为系统建立存储连接。
+
+您必须已满足中的要求 <<Requirements for installing and cabling disk shelves with IOM12 modules for a new system installation>> 并将磁盘架安装在机架中。
+
+在为磁盘架布线后，您可以打开其电源，设置磁盘架 ID 并完成系统设置和配置。
+
+.步骤
+. 如果每个堆栈包含多个磁盘架，请使用缆线连接每个堆栈中的磁盘架到磁盘架连接；否则，请转至下一步：
++
+有关磁盘架到磁盘架 " `standard` " 布线和磁盘架到磁盘架 " `d两宽` " 布线的详细说明和示例，请参见 link:install-cabling-rules.html#shelf-to-shelf-connection-rules["磁盘架到磁盘架连接规则"]。
+
++
+[cols="2*"]
+|===
+| 条件 | 那么 ... 
+
+
+ a| 
+您正在为多路径 HA ，多路径，单路径 HA 或单路径配置布线
+ a| 
+使用缆线将磁盘架到磁盘架的连接设置为 `standard` 连接（使用 IOM 端口 3 和 1 ）：
+
+.. 从堆栈中的第一个逻辑磁盘架开始，将 IOM A 端口 3 连接到下一个磁盘架的 IOM A 端口 1 ，直到堆栈中的每个 IOM A 均已连接。
+.. 对 IOM B 重复子步骤 a
+.. 对每个堆栈重复子步骤 a 和 b 。
+
+
+
+
+ a| 
+您正在为四路径 HA 或四路径配置布线
+ a| 
+将磁盘架到磁盘架的连接布线为 `d两宽` 连接：您可以使用 IOM 端口 3 和 1 连接标准连接，然后使用 IOM 端口 4 和 2 连接双宽连接。
+
+.. 从堆栈中的第一个逻辑磁盘架开始，将 IOM A 端口 3 连接到下一个磁盘架的 IOM A 端口 1 ，直到堆栈中的每个 IOM A 均已连接。
+.. 从堆栈中的第一个逻辑磁盘架开始，将 IOM A 端口 4 连接到下一个磁盘架的 IOM A 端口 2 ，直到堆栈中的每个 IOM A 均已连接。
+.. 对 IOM B 重复子步骤 a 和 b
+.. 对每个堆栈重复子步骤 a 到 c 。
+
+
+|===
+. 确定可用于为控制器到堆栈连接布线的控制器 SAS 端口对。
++
+.. 查看控制器到堆栈的布线工作表和布线示例，了解是否存在适用于您的配置的完整工作表。
++
+link:install-cabling-worksheets-examples-fas2600.html["常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例"]
+
++
+link:install-cabling-worksheets-examples-multipath.html["常见多路径 HA 配置的控制器到堆栈布线工作表和布线示例"]
+
++
+link:install-worksheets-examples-quadpath.html["具有两个四端口 SAS HBA 的四路径 HA 配置的控制器到堆栈布线工作表和布线示例"]
+
+.. 下一步取决于您的配置是否存在已完成的工作表：
++
+[cols="2*"]
+|===
+| 条件 | 那么 ... 
+
+
+ a| 
+您的配置有一个完整的工作表
+ a| 
+转至下一步。
+
+您可以使用已完成的现有工作表。
+
+
+
+ a| 
+您的配置没有完整的工作表
+ a| 
+填写相应的控制器到堆栈布线工作表模板：
+
+link:install-cabling-worksheet-template-multipath.html["用于多路径连接的控制器到堆栈布线工作表模板"]
+
+link:install-cabling-worksheet-template-quadpath.html["用于四路径连接的控制器到堆栈布线工作表模板"]
+
+|===
+
+
+. 使用已完成的工作表为控制器到堆栈的连接布线。
++
+如果需要，可提供有关如何阅读工作表以连接控制器到堆栈连接的说明：
+
++
+link:install-cabling-worksheets-how-to-read-multipath.html["如何阅读使用缆线连接控制器到堆栈连接以实现多路径连接的工作表"]
+
++
+link:install-cabling-worksheets-how-to-read-quadpath.html["如何阅读使用缆线连接控制器到堆栈连接以实现四路径连接的工作表"]
+
+. 连接每个磁盘架的电源：
++
+.. 首先将电源线连接到磁盘架，使用电源线固定器将其固定到位，然后将电源线连接到不同的电源以提高故障恢复能力。
+.. 打开每个磁盘架的电源，等待磁盘驱动器旋转。
+
+
+. 设置磁盘架 ID 并完成系统设置：
++
+您必须设置磁盘架 ID ，使其在 HA 对或单控制器配置中是唯一的，包括适用系统中的内部磁盘架。
+
++
+[cols="2*"]
+|===
+| 条件 | 那么 ... 
+
+
+ a| 
+您正在手动设置磁盘架 ID
+ a| 
+.. 访问左端盖后面的磁盘架 ID 按钮。
+.. 将磁盘架 ID 更改为唯一 ID （ 00 到 99 ）。
+.. 重新启动磁盘架以使磁盘架 ID 生效。
++
+请至少等待 10 秒，然后再重新启动以完成重新启动。磁盘架 ID 将闪烁，操作员显示面板琥珀色 LED 将闪烁，直到重新启动磁盘架。
+
+.. 按照适用于您的平台型号的安装和设置说明，打开控制器电源并完成系统设置和配置。
+
+
+
+
+ a| 
+您正在自动分配 HA 对或单控制器配置中的所有磁盘架 ID
+
+[NOTE]
+====
+磁盘架 ID 从 00-99 按顺序分配。对于具有内部磁盘架的系统，磁盘架 ID 分配从内部磁盘架开始。
+
+==== a| 
+.. 打开控制器的电源。
+.. 在控制器开始启动时，如果您看到消息 `Starboot Press Ctrl-C to abort` ，请按 `Ctrl-C` 中止自动启动过程。
++
+
+NOTE: 如果您错过了此提示，并且控制器启动到 ONTAP ，请暂停两个控制器，然后在其 LOADER 提示符处输入 `boot_ontap menu` ，将两个控制器启动到启动菜单。
+
+.. 将一个控制器启动至维护模式：``boot_ontap menu``
++
+您只需要在一个控制器上分配磁盘架 ID 。
+
+.. 从启动菜单中，选择维护模式选项 5 。
+.. 自动分配磁盘架 ID ： `sasadmin expander_set_shelf_id -a`
+.. 退出维护模式：``halt``
+.. 在两个控制器的 LOADER 提示符处输入以下命令以启动系统：``boot_ontap``
++
+磁盘架 ID 显示在磁盘架数字显示窗口中。
+
++
+
+NOTE: 在启动系统之前，最佳实践是借此机会验证布线是否正确，是否存在根聚合，并运行系统级诊断以确定任何故障组件。
+
+.. 按照适用于您的平台型号的安装和设置说明中的说明完成系统设置和配置。
+
+
+|===
+. 如果在系统设置和配置过程中未启用磁盘所有权自动分配，请手动分配磁盘所有权；否则，请转至下一步：
++
+.. 显示所有未分配的磁盘：``storage disk show -container-type unassigned``
+.. 分配每个磁盘：``s存储磁盘 assign -disk _disk_name_ -owner _owner_name_``
++
+您可以使用通配符一次分配多个磁盘。
+
+
+
+. 按照适用于您的平台型号的安装和设置说明中的说明下载并运行 Config Advisor ，以验证 SAS 连接是否已正确布线且系统中没有重复的磁盘架 ID 。
++
+如果生成任何 SAS 布线错误或重复的磁盘架 ID 错误，请按照提供的更正操作进行操作。
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+
++
+您也可以运行 `storage shelf show -fields shelf-id` 命令来查看系统中已在使用的磁盘架 ID 列表（如果存在重复项）。
+
+. 验证是否已自动启用带内 ACP 。`s存储架 ACP 显示`
++
+在输出中，每个节点的 "`带内` " 列为 "`活动` " 。
+
+

@@ -1,0 +1,160 @@
+---
+permalink: a200/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: aff a200, how to recable the system, how to reassign disks 
+summary: 您必须重新配置存储并确认磁盘重新分配。 
+---
+= 重新配置系统并重新分配磁盘— AFF A200
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过重新为存储布线并确认磁盘重新分配来继续更换操作步骤。
+
+
+
+== 第 1 步：为系统重新布线
+
+[role="lead"]
+运行诊断程序后，您必须重新对控制器模块的存储和网络连接进行布线。
+
+.步骤
+. 重新对系统进行布线。
+. 使用验证布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
++
+.. 下载并安装 Config Advisor 。
+.. 输入目标系统的信息，然后单击收集数据。
+.. 单击布线选项卡，然后检查输出。确保显示所有磁盘架且所有磁盘均显示在输出中，以更正您发现的任何布线问题。
+.. 单击相应的选项卡，然后检查 Config Advisor 的输出，以检查其他布线。
+
+
+
+
+
+
+== 第 2 步：重新分配磁盘
+
+[role="lead"]
+如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。在独立系统中，必须手动将 ID 重新分配给磁盘。您必须为您的配置使用正确的操作步骤。
+
+
+
+=== 选项 1 ：验证 HA 系统上的系统 ID 更改
+
+[role="lead"]
+您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
+
+此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
+
+.步骤
+. 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
+. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``
+. 请等待` Waiting for giveback... `消息显示在 _replacement_ 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show`
++
+在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。
+
++
+[listing]
+----
+node1> storage failover show
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        System ID changed on partner (Old:
+                                                  151759755, New: 151759706), In takeover
+node2             node1             -            Waiting for giveback (HA mailboxes)
+----
+. 从运行状况良好的节点中，验证是否已保存任何核心转储：
++
+.. 更改为高级权限级别： `set -privilege advanced`
++
+系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
+
+.. 保存任何核心转储： `ssystem node run -node _local-node-name_ partner savecore`
+.. 等待 savecore 命令完成，然后再发出交还。
++
+您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`
+
+.. 返回到管理权限级别： `set -privilege admin`
+
+
+. 交还节点：
++
+.. 从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode _replacement_node_name_`
++
+replacement_ 节点将收回其存储并完成启动。
+
++
+如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 `y` 。
+
++
+
+NOTE: 如果交还被否决，您可以考虑覆盖此否决。
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的《高可用性配置指南》"]
+
+.. 交还完成后，确认 HA 对运行状况良好且可以接管： `storage failover show`
++
+`storage failover show` 命令的输出。不应包含 System ID changed on partner 消息。
+
+
+
+. 验证是否已正确分配磁盘： `storage disk show -ownership`
++
+属于 _replacement_ 节点的磁盘应显示新的系统 ID 。在以下示例中， node1 拥有的磁盘现在显示新的系统 ID 1873775277 ：
+
++
+[listing]
+----
+node1> storage disk show -ownership
+
+Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
+----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
+1.0.0  aggr0_1  node1 node1  -        1873775277 1873775277  -       1873775277 Pool0
+1.0.1  aggr0_1  node1 node1           1873775277 1873775277  -       1873775277 Pool0
+.
+.
+.
+----
+. 验证每个节点是否存在所需的卷： `vol show -node node-name`
+. 如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它： `storage failover modify -node _replacement-node-name_ -onreboot true`
+
+
+
+
+=== 选项 2 ：在 ONTAP 中的独立系统上手动重新分配系统 ID
+
+[role="lead"]
+在独立系统中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。
+
+.关于此任务
+
+NOTE: 此操作步骤仅适用于采用独立配置的系统。
+
+.步骤
+. 如果您尚未重新启动 _replacement_ 节点，按 Ctrl-C 中断启动过程，然后从显示的菜单中选择启动到维护模式的选项。
+. 如果系统 ID 不匹配，系统提示您覆盖系统 ID ，则必须输入 Y 。
+. 查看系统 ID ： disk show -a
+. 您应记下旧的系统 ID ，此 ID 显示为磁盘所有者列的一部分。
++
+以下示例显示了旧系统 ID 118073209 ：
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK      OWNER                  POOL   SERIAL NUMBER  HOME
+--------    -------------          -----  -------------  -------------
+disk_name    system-1  (118073209)  Pool0  J8XJE9LC       system-1  (118073209)
+disk_name    system-1  (118073209)  Pool0  J8Y478RC       system-1  (118073209)
+.
+.
+.
+
+----
+. 启动节点： `boot_ontap`
+

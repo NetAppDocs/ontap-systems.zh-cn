@@ -1,0 +1,106 @@
+---
+permalink: a400/controller-replace-system-config-restore-and-verify.html 
+sidebar: sidebar 
+keywords: aff a400, restore and verify the system configuration, verify and set the ha state of the controller module, run system-level diagnostics 
+summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
+---
+= 还原并验证系统配置— AFF A400
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。
+
+
+
+== 第 1 步：在更换控制器后设置并验证系统时间
+
+[role="lead"]
+您应对照 HA 对中运行状况良好的控制器模块或独立配置中可靠的时间服务器检查更换用的控制器模块上的时间和日期。如果时间和日期不匹配，则必须在更换控制器模块上重置这些值，以防止客户端可能因时间差异而中断。
+
+请务必在正确的系统上应用步骤中的命令：
+
+* _replacement_ 节点是此操作步骤中更换受损节点的新节点。
+* _health_ 节点是 _replacement_ 节点的 HA 配对节点
+
+
+.步骤
+. 如果 _replacement_ 节点不在 LOADER 提示符处，请将系统暂停到 LOADER 提示符处。
+. 在运行状况良好的节点上，检查系统时间： `show date`
++
+日期和时间以 GMT 表示。
+
+. 在 LOADER 提示符处，检查 _replacement_ 节点上的日期和时间： `show date`
++
+日期和时间以 GMT 表示。
+
+. 如有必要，请在替代节点上以 GMT 格式设置日期： `set date _MM/dd/yyy_`
+. 如有必要，请在替代节点上设置 GMT 时间： `set time _hh ： mm ： ss_`
+. 在 LOADER 提示符处，确认 _replacement_ 节点上的日期和时间： `show date`
++
+日期和时间以 GMT 表示。
+
+
+
+
+
+== 第 2 步：验证并设置控制器模块的 HA 状态
+
+[role="lead"]
+您必须验证控制器模块的 `HA` 状态，并在必要时更新此状态以匹配您的系统配置。
+
+. 在维护模式下，从新控制器模块验证所有组件是否显示相同的 `HA` 状态： `ha-config show`
++
+所有组件的 HA 状态都应相同。
+
+. 如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller ha-state`
++
+ha-state 的值可以是以下值之一：
+
++
+** ha
+** MCC
+** MCC-2n
+** 非 ha
+
+
+. 如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller ha-state`
+. 确认设置已更改： `ha-config show`
+
+
+
+
+== 第 3 步：运行诊断
+
+[role="lead"]
+更换系统中的某个组件后，您应对该组件运行诊断测试。
+
+您的系统必须处于 LOADER 提示符处，才能启动诊断。
+
+诊断过程中的所有命令都是从要更换组件的节点发出的。
+
+. 如果要服务的节点不在 LOADER 提示符处，请重新启动节点： `ssystem node halt -node node_name`
++
+问题描述命令后，您应等待系统停留在 LOADER 提示符处。
+
+. 在 LOADER 提示符处，访问专为系统级诊断而设计的特殊驱动程序以正常运行： `boot_diags`
+. 从显示的菜单中选择 * 扫描系统 * 以启用运行诊断测试。
+. 从显示的菜单中选择 * 测试系统 * 以运行诊断测试。
+. 从各种子菜单中选择一个或多个测试。
+. 根据上一步的结果继续操作：
++
+** 如果测试失败，请更正此故障，然后重新运行此测试。
+** 如果测试未报告任何故障，请从菜单中选择重新启动以重新启动系统。
++
+
+NOTE: 在启动过程中，您可能会看到以下提示：
+
++
+*** 系统 ID 不匹配的提示警告，并要求覆盖系统 ID 。
+*** 一条提示，警告您在 HA 配置中进入维护模式时必须确保运行正常的节点保持关闭状态。您可以安全地对这些提示回答 `y` 。
+
+
+
+
+

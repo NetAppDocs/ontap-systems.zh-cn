@@ -1,0 +1,55 @@
+---
+permalink: sas3/install-cabling-worksheets-how-to-read-multipath.html 
+sidebar: sidebar 
+keywords: example, guide, read, apply, complete, worksheet, cable, controller-to-stack, connection, disk, shelves, shelf, iom12, multipathed, connectivity, hot to read a worksheet to cable controller-to-stack connections for multipathed connectivity 
+summary: 您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便为具有 IOM12 模块的磁盘架使用缆线连接控制器到堆栈连接，从而实现多路径连接。 
+---
+= 如何阅读使用缆线连接控制器到堆栈连接以实现多路径连接的工作表—具有 IOM12 模块的磁盘架
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便为具有 IOM12 模块的磁盘架使用缆线连接控制器到堆栈连接，从而实现多路径连接。
+
+HA 对或单控制器配置不能是 AFF A200 ， AFF A220 ， FAS2600 系列或 FAS2700 系统。这些系统使用唯一的工作表：
+
+link:install-cabling-worksheets-examples-fas2600.html["常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例"]
+
+.关于此任务
+* 此操作步骤引用以下工作表和布线示例，用于演示如何阅读工作表，以便为控制器到堆栈连接布线。
++
+本示例中使用的配置是一种多路径 HA 配置，其中每个控制器上有两个四端口 SAS HBA （八个 SAS 端口），并有两个磁盘架堆栈与 IOM12 模块。跳过工作表中的其他每个端口对，可以为端口对布线。
+
++
+
+NOTE: 如果您的端口对数量超过了为系统中的堆栈布线所需的数量，则最佳做法是跳过端口对以优化系统上的 SAS 端口。通过优化 SAS 端口，您可以优化系统的性能。
+
+* 如果您使用的是单控制器配置，请跳过子步骤 b 和 d ，以便通过缆线连接到另一个控制器。
+* 如果需要，可以参考 link:install-cabling-rules.html["SAS 布线规则"] 有关控制器插槽编号约定，磁盘架到磁盘架连接和控制器到磁盘架连接（包括端口对的使用）的信息。
+
+
+这些端口对使用工作表中的每一个其他端口对进行布线： 1A/2b 和 11/2D 。
+
+image::../media/drw_worksheet_mpha_skipped_template.gif[DRW 工作表 mpha 已跳过模板]
+
+image::../media/drw_mpha_slots_1_and_2_two_4porthbas_two_stacks_skipped.gif[已跳过 DRW mpha 插槽 1 和 2 中的两个 4 孔 bas 两个堆栈]
+
+.步骤
+. 使用缆线将每个控制器上的端口对 11/2b 连接到堆栈 1 ：
++
+.. 使用缆线将控制器 1 端口 1a 连接到堆栈 1 ，第一个磁盘架 IOM A 端口 1 。
+.. 使用缆线将控制器 2 端口 1a 连接到堆栈 1 ，第一个磁盘架 IOM B 端口 1 。
+.. 使用缆线将控制器 1 端口 2b 连接到堆栈 1 ，最后一个磁盘架 IOM B 端口 3 。
+.. 使用缆线将控制器 2 端口 2b 连接到堆栈 1 ，最后一个磁盘架 IOM A 端口 3 。
+
+
+. 使用缆线将每个控制器上的端口对 1c/2D 连接到堆栈 2 ：
++
+.. 使用缆线将控制器 1 端口 1c 连接到堆栈 2 ，第一个磁盘架 IOM A 端口 1 。
+.. 使用缆线将控制器 2 端口 1c 连接到堆栈 2 ，第一个磁盘架 IOM B 端口 1 。
+.. 使用缆线将控制器 1 端口 2D 连接到堆栈 2 ，最后一个磁盘架 IOM B 端口 3 。
+.. 使用缆线将控制器 2 端口 2D 连接到堆栈 2 ，最后一个磁盘架 IOM A 端口 3 。
+
+
+

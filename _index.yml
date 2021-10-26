@@ -1,0 +1,81 @@
+---
+indexpage:
+  lead: NetApp 的 AFF 和 FAS 存储系统提供领先的企业级横向扩展全闪存或混合存储，并提供行业最先进的数据管理功能。使用此站点上的文档安装，扩展，升级和维护
+    AFF 或 FAS 系统。
+  tiles:
+  - title: 入门
+    links:
+    - title: "《 ONTAP 发行说明》"
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
+  - title: AFF 系统
+    links:
+    - title: AFF C190
+      url: "/c190/index.html"
+    - title: AFF A200
+      url: "/a200/index.html"
+    - title: AFF A220
+      url: "/fas2700/index.html"
+    - title: AFF A250
+      url: "/a250/index.html"
+    - title: AFF A300
+      url: "/a300/index.html"
+    - title: AFF A320
+      url: "/a320/index.html"
+    - title: AFF A400
+      url: "/a400/index.html"
+    - title: AFF A700
+      url: "/fas9000/index.html"
+    - title: AFF A700s
+      url: "/a700s/index.html"
+    - title: AFF A800
+      url: "/a800/index.html"
+  - title: FAS 系统
+    links:
+    - title: FAS500f
+      url: "/fas500f/index.html"
+    - title: FAS2600
+      url: "/fas2600/index.html"
+    - title: FAS2700
+      url: "/fas2700/index.html"
+    - title: FAS8200
+      url: "/fas8200/index.html"
+    - title: FAS8300
+      url: "/fas8300/index.html"
+    - title: FAS8700
+      url: "/fas8700/index.html"
+    - title: FAS9000
+      url: "/fas9000/index.htm"
+  - title: 驱动器架
+    links:
+    - title: NS224
+      url: "/ns224/index.html"
+    - title: 采用 IOM12 的 SAS
+      url: "/sas3/index.html"
+  - title: 集群和存储交换机
+    links:
+    - title: Broadcom 支持的 BES-53248 交换机
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/overview_bes53248.html
+    - title: Nexus 9336C-x2 集群交换机
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336/9336-overview.html
+    - title: Nexus 9336C-x2 共享交换机
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336-shared/index.html
+    - title: Cisco Nexus 92300YC 集群交换机
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-92300/92300-overview.html
+  - title: 平台升级
+    links:
+    - title: 升级大多数系统
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/index.html
+    - title: 升级 MetroCluster 配置中的系统
+      url: https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/index.html
+  - title: 更多资源
+    links:
+    - title: ONTAP 文档
+      url: https://docs.netapp.com/us-en/ontap/index.html
+    - title: NetApp Hardware Universe
+      url: https://hwu.netapp.com/
+    - title: NetApp Active IQ Config Advisor
+      url: https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor
+    - title: NetApp 互操作性表
+      url: https://mysupport.netapp.com/matrix/#welcome
+    - title: NetApp 社区
+      url: https://community.netapp.com/t5/ONTAP-and-FAS/ct-p/fas-ontap-oncommand-and-related-plug-ins

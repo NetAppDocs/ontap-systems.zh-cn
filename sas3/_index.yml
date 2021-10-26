@@ -1,0 +1,55 @@
+---
+indexpage:
+  tiles:
+  - title: 入门 
+    links:
+    - title: "《 ONTAP 发行说明》"
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
+    - title: 存储数据表
+      url: https://www.netapp.com/data-storage/disk-shelves-storage-media/
+  - title: 安装和设置
+    links:
+    - title: 在新存储系统中安装磁盘架
+      url: "/install-new-system.html"
+    - title: 热添加磁盘架
+      url: "/install-hot-add-shelf.html"
+    - title: 更改磁盘架 ID
+      url: "/install-change-shelf-id.html"
+    - title: 将磁盘架热添加到 IOM6 磁盘架堆栈（混合堆栈）
+      url: "/iom12-hot-add-mix.html"
+    - title: SAS 布线规则，工作表和示例
+      url: "/overview-cabling-rules-examples.html"
+  - title: 维护
+    links:
+    - title: DS224C 或 DS212C 磁盘架中的磁盘驱动器
+      url: "/service-hot-swap-drive-ds224c-ds212c.html"
+    - title: DS460C 磁盘架中的磁盘驱动器
+      url: "/service-hot-swap-drive-ds460c.html"
+    - title: DS460C 磁盘架中的驱动器抽盒
+      url: "/service-replace-drawer-ds460c.html"
+    - title: DS460C 磁盘架中的风扇
+      url: "/service-replace-fan-ds460c.html"
+    - title: 热移除磁盘架
+      url: "/hot-remove-shelf.html"
+    - title: IOM12 模块
+      url: "/service-hot-swap-iom.html"
+    - title: 电源
+      url: "/service-hot-swap-power-supply.html"
+    - title: 磁盘架 LED 状态条件
+      url: "/sas3/service-replace-power-supply.html"
+    - title: RTC 电池
+      url: "/sas3/service-replace-rtc-battery.html"
+  - title: 更多资源
+    links:
+    - title: ONTAP 文档
+      url: https://docs.netapp.com/us-en/ontap/
+    - title: NetApp Hardware Universe
+      url: https://hwu.netapp.com/home/index
+    - title: NetApp Active IQ Config Advisor
+      url: https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor
+    - title: NetApp 互操作性表工具
+      url: https://mysupport.netapp.com/matrix/#welcome
+    - title: NetApp 支持知识库
+      url: https://kb.netapp.com/
+    - title: NetApp 社区
+      url: https://community.netapp.com/

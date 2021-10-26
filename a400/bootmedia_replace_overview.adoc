@@ -1,0 +1,32 @@
+---
+permalink: a400/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: aff a400, aff, a400, boot, media, store, primary, secondary, set, system, boot, image, file, replace, replace the boot media 
+summary: 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。 
+---
+= 更换启动介质— AFF A400
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。
+
+您必须使用格式化为 fat32 的 USB 闪存驱动器，并具有适当的存储容量来容纳 `image_xxx.tgz` 。
+
+您还必须将 `image_xxx.tgz` 文件复制到 USB 闪存驱动器，以供日后在此操作步骤中使用。
+
+* 更换启动介质的无中断和中断方法都要求您还原 `var` 文件系统：
++
+** 要进行无中断更换，必须将 HA 对连接到网络以还原 `var` 文件系统。
+** 要进行中断更换，您不需要网络连接即可还原 `var` 文件系统，但此过程需要重新启动两次。
+
+
+* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+* 请务必在正确的节点上应用以下步骤中的命令：
++
+** 受损节点是指要在其中执行维护的节点。
+** 运行状况良好的节点 _ 是受损节点的 HA 配对节点。
+
+
+

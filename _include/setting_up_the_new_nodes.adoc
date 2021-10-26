@@ -1,0 +1,127 @@
+= 
+
+
+在通过移动存储进行升级的过程中，打开 node3 和 node4 的电源，启动软件映像并配置节点。原始节点和新节点之间的物理端口布局可能有所不同。应在原始节点和替代节点之间映射端口，以确定端口和连接的正确布局。
+
+如果新节点上运行的 ONTAP 版本与原始节点上的版本不同，则必须已从 NetApp 支持站点将正确的 <ontap_version>_image.tgz 文件下载到可通过 Web 访问的目录中（请参见步骤 4 ）。要对系统执行网络启动，您需要 <ontap_version>_image.tgz 文件。
+
+.步骤
+. 打开 node3 的电源，然后立即在控制台终端上按 Ctrl-C 以访问 LOADER 提示符。
++
+如果 node3 和 node4 位于同一机箱中，请转至步骤 2 。如果没有，请转至步骤 3 。
+
+. 如果 node3 和 node4 采用单机箱配置（控制器位于同一机箱中）：
++
+.. 将串行控制台连接到 node4 。
+.. 打开 node4 的电源（如果尚未打开），然后在控制台终端按 Ctrl-C 以访问加载程序提示符，从而中断启动过程。
++
+如果两个控制器位于同一机箱中，则应已打开电源。
+
++
+在 LOADER 提示符处保留 node4 ；返回到此操作步骤，并在安装 node3 后重复这些步骤。
+
+
+
+. 在 LOADER 提示符处，输入以下命令： `set-defaults`
+. 在 LOADER 提示符处，为管理 LIF 配置网络启动连接：
++
+[cols="1,2"]
+|===
+| IP 地址 | 那么 ... 
+
+
+ a| 
+DHCP
+ a| 
+ Configure the automatic connection:
+`ifconfig e0M -auto`
+
+
+
+ a| 
+ Static a| 
+ Configure the manual connection:
+`ifconfig e0M -addr=ip_addr -mask=netmask` ` gw=gateway`
+
+|===
+. 在 LOADER 提示符处，对 node3 执行 netboot ：
++
+[cols="1,2"]
+|===
+| 针对 ... | 那么 ... 
+
+
+ a| 
+* FAS2200 ， FAS2500 ， FAS3200 ， FAS6200 ， FAS/AFF8000 系列系统 *
+ a| 
+` + 网络启动 http://web_server_ip/path_to_web-accessible_directory/netboot/kernel+`[]
+
+
+
+ a| 
+* 所有其他系统 *
+ a| 
+` + 网络启动 http://web_server_ip/path_to_web-accessible_directory/<ontap_version>_image.tgz+`[]
+
+|===
++
+path_to_the_web-accessible_directory 是下载的 <ontap_version>_image.tgz 文件的位置。
+
++
+
+NOTE: 如果无法通过网络启动新控制器，请联系技术支持。
+
+. 从启动菜单中，选择选项 * （ 7 ） Install new software first* ，将新软件映像下载并安装到启动设备。
++
+请忽略以下消息： "HA 对上的无中断升级不支持此操作步骤 " 。IT 适用场景软件无中断升级，而不是控制器升级。
+
+. 如果系统提示您继续运行操作步骤，请输入 `y` ，然后在系统提示您输入软件包时，输入映像文件的 URL ： ` +http://web_server_ip/path_to_web-accessible_directory/<ontap_version>_image.tgz+` 。
++
+如果适用，请输入用户名 / 密码，或者按 Enter 继续操作。
+
+. 当您看到类似以下内容的提示时，输入 `n` 以跳过备份恢复：
++
+[listing]
+----
+Do you want to restore the backup configuration now? {y|n}
+----
+. 当您看到类似以下内容的提示时，输入 `y` 以重新启动：
++
+[listing]
+----
+The node must be rebooted to start using the newly installed software. Do you want to reboot now? {y|n}
+----
+. 在系统提示时按 Ctrl-C 显示启动菜单，以中断重新启动过程。
+. 从启动菜单中，选择 * （ 5 ） Maintenance mode boot* 以访问维护模式。
+. 如有必要，更改节点上的 FC 或 CNA 端口，然后将节点重新启动至维护模式。
++
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《 ONTAP 9 SAN 管理指南》"]
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30092["查找适用于您的 Data ONTAP 8 版本的 SAN 管理指南"]
+
+. 您应验证命令输出是否显示 ha ：
++
+[listing]
+----
+*> ha-config show
+   Chassis HA configuration: ha
+   Controller HA configuration: ha
+----
++
+系统会在 PROM 中记录它们是采用 HA 对还是独立配置。独立系统或 HA 对中的所有组件的状态都必须相同。
+
++
+ha-config modify controller ha 命令用于为控制器设置配置 ha 。ha-config modify chassis ha 命令可为机箱设置配置 ha 。
+
++
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["《 ONTAP 9 高可用性配置指南》"]
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30092["查找适用于您的 Data ONTAP 8 版本的《高可用性配置指南》"]
+
+. 退出维护模式： `halt`
++
+系统将停留在 LOADER 提示符处。
+
+

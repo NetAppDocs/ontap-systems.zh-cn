@@ -1,0 +1,20 @@
+---
+permalink: a320/chassis-replace-overview.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, replace, chassis, fan, controller, module, impair, model, shut, down, replacing, remove, move, equipment, rack, diagnostic, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, run diagnostics, complete the replacement process 
+summary: 您可以将受损机箱更换为与受损机箱型号相同的新机箱。 
+---
+= 更换机箱 - AFF A320
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换机箱，必须将风扇和控制器模块从受损机箱移至与受损机箱型号相同的新机箱。
+
+系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+* 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。
+* 编写此操作步骤时，假设您要将控制器模块移至新机箱，并且此机箱是 NetApp 的新组件。
+* 此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。
+

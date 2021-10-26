@@ -1,0 +1,17 @@
+---
+permalink: fas8300/chassis-replace-overview.html 
+sidebar: sidebar 
+keywords: fas8300, fas8700, shut, chassis, controller, replace, remove, swap, verify, install, power, supply, metrocluster, aggregates, replacement, process, equipment, rack, ha, state, system 
+summary: 您可以将受损机箱更换为与受损机箱型号相同的新机箱。 
+---
+= 更换机箱 - FAS8300 和 FAS8700
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+* 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。
+* 此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。
+

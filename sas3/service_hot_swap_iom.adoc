@@ -1,0 +1,151 @@
+---
+permalink: sas3/service-hot-swap-iom.html 
+sidebar: sidebar 
+keywords: system, configuration, whether, perform, nondisruptive, iom12, module, hot-swap, disruptive, replacement, hot-swap or replace an iom12 module 
+summary: 您的系统配置可确定在 IOM12 模块发生故障时是否可以执行无中断 IOM12 模块热插拔或中断 IOM12 模块更换。 
+---
+= 热插拔或更换 IOM12 模块—使用 IOM12 模块的磁盘架
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您的系统配置可确定在 IOM12 模块发生故障时是否可以执行无中断 IOM12 模块热插拔或中断 IOM12 模块更换。
+
+系统中的所有其他组件（包括另一个 IOM12 模块）必须正常运行。
+
+.关于此任务
+* 对于多路径（多路径 HA 或多路径）和四路径（四路径 HA 或四路径）配置，您可以热插拔 IOM12 模块（无中断更换已启动并提供数据的系统中的 IOM12 模块— I/O 正在进行中）。
+* 对于 FAS2600 系列和 FAS2700 单路径 HA 配置，您必须执行接管和交还操作，以更换已启动并正在提供数据的系统中的 IOM12 模块。
+* 对于 FAS2600 系列单路径配置，您必须暂停系统以更换 IOM12 模块。
++
+
+NOTE: 如果您尝试使用单路径连接热插拔磁盘架上的 IOM12 模块，则将无法访问磁盘架上的磁盘驱动器以及下面的任何磁盘架。您还可以关闭整个系统。
+
+* 最佳实践是，在添加新磁盘架，磁盘架 FRU 组件或 SAS 缆线之前，应在系统上安装最新版本的磁盘架（ IOM ）固件和磁盘驱动器固件。
++
+可以在 NetApp 支持站点上找到最新版本的固件。
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+
+* 在使用非最新固件版本的新 IOM12 模块上，磁盘架（ IOM ）固件会自动更新（无中断）。
++
+IOM 固件每十分钟检查一次。IOM 固件更新最多可能需要 30 分钟。
+
+* 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 IOM12 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令并使用 off 选项来将其关闭。
+
+* 如果需要，您可以参阅 " 监控磁盘架 LED " 一节，了解有关操作员显示面板和 FRU 组件上磁盘架 LED 的含义和位置的信息。
+
+
+.步骤
+. 正确接地。
+. 拆开新 IOM12 模块的包装，并将其放在磁盘架附近的水平表面上。
++
+保存所有包装材料，以便在退回出现故障的 IOM12 模块时使用。
+
+. 通过系统控制台警告消息以物理方式识别出现故障的 IOM12 模块以及出现故障的 IOM12 模块上亮起的警示（琥珀色） LED 。
+. 根据您的配置类型执行以下操作之一：
++
+[cols="2*"]
+|===
+| 如果您有 ... | 那么 ... 
+
+
+ a| 
+多路径 HA ，多路径，四路径 HA 或四路径配置
+ a| 
+转至下一步。
+
+
+
+ a| 
+FAS2600 系列和 FAS2700 单路径 HA 配置
+ a| 
+.. 确定目标节点（故障 IOM12 模块所属的节点）。
++
+IOM A 属于控制器 1 。IOM B 属于控制器 2 。
+
+.. 接管目标节点： `storage failover takeover -bynode _partner HA nod_`
+
+
+
+
+ a| 
+FAS2600 系列单路径配置
+ a| 
+.. 从系统控制台关闭系统： `halt`
+.. 通过检查存储系统控制台验证系统是否已暂停。
+
+
+|===
+. 从要卸下的 IOM12 模块断开布线。
++
+记下每个缆线连接到的 IOM12 模块端口。
+
+. 按下 IOM12 模块凸轮把手上的橙色闩锁，直到其释放为止，然后完全打开凸轮把手，以将 IOM12 模块从中板释放。
++
+image::../media/drw_iom_latch.png[DRW IOM 闩锁]
+
++
+image::../media/drw_iom_open.png[已打开 DRW IOM]
+
+. 使用凸轮把手将 IOM12 模块滑出磁盘架。
++
+处理 IOM12 模块时，请始终用双手支撑其重量。
+
+. 在卸下 IOM12 模块后，请至少等待 70 秒，然后再安装新的 IOM12 模块。
++
+等待至少 70 秒可使驱动程序正确注册磁盘架 ID 。
+
+. 用两只手，在新 IOM12 模块的凸轮把手处于打开位置时，支撑新 IOM12 模块的边缘并将其与磁盘架中的开口对齐，然后用力推动新的 IOM12 模块，直到它与中板相吻合。
++
+
+NOTE: 将 IOM12 模块滑入磁盘架时，请勿用力过大；否则可能会损坏连接器。
+
+. 合上凸轮把手，使闩锁卡入到锁定位置，并且 IOM12 模块完全就位。
+. 重新连接布线。
++
+SAS 缆线连接器具有方向性；正确连接到 IOM 端口时，连接器会卡入到位， IOM 端口 LNK LED 会呈绿色亮起。将 SAS 缆线连接器插入 IOM 端口，拉片朝下（位于连接器的下侧）。
+
+. 根据您的配置类型执行以下操作之一：
++
+[cols="2*"]
+|===
+| 如果您有 ... | 那么 ... 
+
+
+ a| 
+多路径 HA ，多路径，四路径 HA 或四路径配置
+ a| 
+转至下一步。
+
+
+
+ a| 
+FAS2600 系列和 FAS2700 单路径 HA 配置
+ a| 
+交还目标节点： `storage failover giveback -fromnode partner_ha_node`
+
+
+
+ a| 
+FAS2600 系列单路径配置
+ a| 
+重新启动系统。
+
+|===
+. 验证是否已建立 IOM12 模块端口链路。
++
+对于已布线的每个模块端口，如果四个 SAS 通道中的一个或多个与适配器或另一个磁盘架建立了链路，则 LNK （绿色） LED 将亮起。
+
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。
++
+请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。
+
+

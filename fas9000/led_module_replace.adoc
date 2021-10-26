@@ -1,0 +1,46 @@
+---
+permalink: fas9000/led-module-replace.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, led, usb, module, replace, hot-swap, non-disruptive, replacement, return, failed, part 
+summary: 您可以在不中断服务的情况下更换 LED USB 模块。 
+---
+= 更换 LED USB 模块 - AFF A700 和 FAS9000
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在不中断服务的情况下更换 LED USB 模块。
+
+通过 FAS9000 或 AFF A700 LED USB 模块，可以连接到控制台端口和系统状态。更换此模块不需要工具。
+
+.步骤
+. 卸下旧的 LED USB 模块：
++
+image::../media/led_3.png[LED 3.]
+
++
+.. 卸下挡板后，找到机箱正面左下方的 LED USB 模块。
+.. 滑动闩锁以部分弹出模块。
+.. 将模块从托架中拉出，以断开其与中板的连接。请勿将插槽留空。
+
+
+. 安装新的 LED USB 模块：
++
+image::../media/led_4.png[LED 4.]
+
++
+.. 将模块与托架对齐，使其与模块边角的缺口靠近机箱上的滑块闩锁。此托架将阻止您将模块安装到正面。
+.. 将模块推入托架，直至其与机箱完全就位。
++
+如果模块已固定并连接到中板，则会听到卡嗒声。
+
+
+
+
+
+
+
+== 将故障部件退回 NetApp
+
+更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

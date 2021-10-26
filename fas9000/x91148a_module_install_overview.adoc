@@ -1,0 +1,19 @@
+---
+permalink: fas9000/x91148a-module-install-overview.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, add, x91148a, storage, module, NIC, no open, slots, open slots, system 
+summary: 您可以通过在已完全填充的系统中将 NIC 或存储适配器更换为新的 NIC 或存储适配器，或者将新的 NIC 或存储适配器添加到系统中的空机箱插槽中来向系统添加 I/O 模块。 
+---
+= 添加 X91148A 模块 - AFF A9000
+:icons: font
+:imagesdir: ../media/
+
+
+您可以通过在已完全填充的系统中将 NIC 或存储适配器更换为新的 NIC 或存储适配器，或者将新的 NIC 或存储适配器添加到系统中的空机箱插槽中来向系统添加 I/O 模块。
+
+.开始之前
+* 检查 https://hwu.netapp.com/["NetApp Hardware Universe"] 确保新 I/O 模块与您正在运行的系统和 ONTAP 版本兼容。
+* 如果有多个可用插槽，请在中检查插槽优先级 https://hwu.netapp.com/["NetApp Hardware Universe"] 并使用适用于您的 I/O 模块的最佳配置。
+* 要无中断地添加 I/O 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖或卸下现有 I/O 模块，添加新的或更换的 I/O 模块，然后交还目标控制器。
+* 确保所有其他组件均正常运行。
+

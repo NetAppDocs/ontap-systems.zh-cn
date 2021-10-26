@@ -1,0 +1,39 @@
+---
+permalink: a700s/fan-replace.html 
+sidebar: sidebar 
+keywords: aff a700s, aff, a700s, replace, fan, remove, fail, module, module, replace a fan 
+summary: 要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。 
+---
+= 更换风扇— AFF A700s
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。
+
+. 如果您尚未接地，请正确接地。
+. 通过检查控制台错误消息或找到主板上风扇模块的亮起 LED 来确定必须更换的风扇模块。
+. 通过挤压风扇模块侧面的锁定卡舌，然后将风扇模块直接从控制器模块中提出来卸下风扇模块。
++
+image::../media/drw_a700s_replace_fan.png[DRW a700s 更换风扇]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+风扇锁定卡舌
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+风扇模块
+
+|===
+. 将更换用风扇模块的边缘与控制器模块的开口对齐，然后将更换用的风扇模块滑入控制器模块，直到锁定闩锁卡入到位。
+

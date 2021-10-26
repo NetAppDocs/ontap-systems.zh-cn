@@ -1,0 +1,33 @@
+---
+section: ns224
+title: NS224 磁盘架
+url: "/ns224/index.html"
+entries:
+- title: 安装并布线
+  pdf-filename: NS224 磁盘架安装和布线
+  entries:
+  - title: 热添加磁盘架
+    url: "/ns224/hot-add-shelf.html"
+  - title: 更改磁盘架 ID
+    url: "/ns224/change-shelf-id.html"
+  - title: 将磁盘架作为交换机连接的存储进行布线
+    url: "/ns224/cable-as-switch-attached.html"
+- title: 维护
+  pdf-filename: NS224 磁盘架维护
+  entries:
+  - title: 启动介质
+    url: "/ns224/service-replace-boot-media.html"
+  - title: DIMM
+    url: "/ns224/service-replace-dimm.html"
+  - title: 驱动器
+    url: "/ns224/service-replace-drive.html"
+  - title: 风扇
+    url: "/ns224/service-replace-fan.html"
+  - title: 热移除磁盘架
+    url: "/ns224/hot-remove-shelf.html"
+  - title: NSM 模块
+    url: "/ns224/service-replace-nsm100.html"
+  - title: 电源
+    url: "/ns224/service-replace-power-supply.html"
+  - title: 实时时钟电池
+    url: "/ns224/service-replace-rtc-battery.html"

@@ -1,0 +1,43 @@
+= 
+
+
+您必须将配置信息从根卷还原到启动设备。
+
+您需要在 node3 和 node4 上执行这些步骤，在一个节点上依次完成每个步骤和另一个节点上的步骤，然后再继续执行下一步。
+
+.步骤
+. 从 LOADER 提示符访问启动菜单： `boot_ontap menu`
+. 从启动菜单中，选择（ 6 ） Update flash from backup config ，并在系统提示您继续时输入``y`` 。
++
+[listing]
+----
+Please choose one of the following:
+
+(1) Normal Boot.
+(2) Boot without /etc/rc.
+(3) Change password.
+(4) Clean configuration and initialize all disks.
+(5) Maintenance mode boot.
+(6) Update flash from backup config.
+(7) Install new software first.
+(8) Reboot node.
+(9) Configure Advanced Drive Partitioning.
+Selection (1-9)? 6
+
+This will replace all flash-based configuration with the last backup to
+disks. Are you sure you want to continue?: y
+----
++
+更新闪存过程运行几分钟，然后系统重新启动。
+
+. 当系统提示您确认系统 ID 不匹配时，输入 `y` 。
++
+[listing]
+----
+WARNING: System id mismatch. This usually occurs when replacing CF or NVRAM cards!
+Override system id? {y|n} [n] y
+----
++
+启动顺序正常进行。
+
+

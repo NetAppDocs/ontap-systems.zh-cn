@@ -1,0 +1,163 @@
+---
+permalink: a320/bootmedia-encryption-preshutdown-checks.html 
+sidebar: sidebar 
+keywords: aff, a320, aff a320, shut, down, impair, node, check, status, onboard, encryption, kets, status, impair, node, disable, automatic, giveback, ontap, run, pre-shutdown, pre-shutdown checks for onboard encryption keys 
+summary: 在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
+---
+= 根据需要检查板载加密密钥— AFF A320
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。
+
+如果集群包含两个以上的节点，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述。
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"]
+
+.步骤
+. 检查受损节点的状态：
++
+** 如果受损节点处于登录提示符处，请以 `admin` 身份登录。
+** 如果受损节点位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的节点上。
+** 如果受损节点采用独立配置并出现 LOADER 提示符，请联系 NetApp 支持部门。 http://mysupport.netapp.com/["mysupport.netapp.com"]
+
+
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 使用 `version -v` 命令检查受损节点（如果已启动）或配对节点（如果受损节点已关闭）上运行的 ONTAP 的版本：
++
+** 如果命令输出中显示 <lno-dur> ，则表示系统不支持 NVE ，请继续关闭控制器。
+** 如果命令输出中未显示 <lno-dur> ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至下一节。
+
+
+
+
+
+
+== 在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE
+
+[role="lead"]
+在关闭受损节点之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。如果是，则需要验证配置。
+
+. 验证是否为集群中的任何卷配置了 NVE ： `volume show -is-encrypted true`
++
+如果输出中列出了任何卷，则会配置 NVE ，您需要验证 NVE 配置。如果未列出任何卷，请检查是否已配置 NSE 。
+
+. 验证是否已配置 NSE ： `storage encryption disk show`
++
+** 如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置。
+** 如果未显示任何磁盘，则表示未配置 NSE 。
+** 如果未配置 NVE 和 NSE ，则可以安全地关闭受损节点。
+
+
+
+
+
+
+=== 验证 NVE 配置
+
+. 显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager query`
++
+** 如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损节点。
+** 如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示 `是` ，则需要完成一些额外步骤。
+** 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。
+** 如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示除 `是` 以外的任何内容，则需要完成一些额外步骤。
+
+
+. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示 `yes` ，请手动备份 OKM 信息：
++
+.. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
+.. 输入命令以显示密钥管理信息： `security key-manager on板 载 show-backup`
+.. 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
+.. 返回到管理模式： `set -priv admin`
+.. 关闭受损节点。
+
+
+. 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容：
++
+.. 将外部密钥管理身份验证密钥还原到集群中的所有节点： `security key-manager external restore`
++
+如果命令失败，请联系 NetApp 支持部门。
+
++
+http://mysupport.netapp.com/["mysupport.netapp.com"]
+
+.. 验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key query`
+.. 关闭受损节点。
+
+
+. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示除 `yes` 以外的任何内容：
++
+.. 输入板载 security key-manager sync 命令： `ssecurity key-manager on板 载同步`
++
+
+NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。 http://mysupport.netapp.com/["mysupport.netapp.com"]
+
+.. 验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key query`
+.. 验证 `Key Manager` type 是否显示 `板载` ，手动备份 OKM 信息。
+.. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
+.. 输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`
+.. 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
+.. 返回到管理模式： `set -priv admin`
+.. 您可以安全地关闭节点。
+
+
+
+
+
+
+=== 验证 NSE 配置
+
+. 显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager query`
++
+** 如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损节点。
+** 如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示 `是` ，则需要完成一些额外步骤。
+** 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。
+** 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。
+
+
+. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示 `yes` ，请手动备份 OKM 信息：
++
+.. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
+.. 输入命令以显示密钥管理信息： `security key-manager on板 载 show-backup`
+.. 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
+.. 返回到管理模式： `set -priv admin`
+.. 您可以安全地关闭节点。
+
+
+. 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容：
++
+.. 输入板载 security key-manager sync 命令： `ssecurity key-manager external sync`
++
+如果命令失败，请联系 NetApp 支持部门。
+
++
+http://mysupport.netapp.com/["mysupport.netapp.com"]
+
+.. 验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key query`
+.. 您可以安全地关闭节点。
+
+
+. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示除 `yes` 以外的任何内容：
++
+.. 输入板载 security key-manager sync 命令： `ssecurity key-manager on板 载同步`
++
+在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。
+
++
+http://mysupport.netapp.com/["mysupport.netapp.com"]
+
+.. 验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key query`
+.. 验证 `Key Manager` type 是否显示 `板载` ，手动备份 OKM 信息。
+.. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
+.. 输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`
+.. 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
+.. 返回到管理模式： `set -priv admin`
+.. 您可以安全地关闭节点。
+
+
+

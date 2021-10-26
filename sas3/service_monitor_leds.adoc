@@ -1,0 +1,338 @@
+---
+permalink: sas3/service-monitor-leds.html 
+sidebar: sidebar 
+keywords: monitor, health, disk, shelf, location, status, condition, led, component, operator, display, panel, iom12, power, supply, fan, ds460c, shelves, drive, monitor disk shelf leds, operator display panel leds, iom12 module leds, power supply leds, fan leds on ds460c disk shelves, disk drive leds 
+summary: 您可以通过了解磁盘架组件上 LED 的位置和状态条件来监控磁盘架的运行状况。 
+---
+= 监控磁盘架 LED —带有 IOM12 模块的磁盘架
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过了解磁盘架组件上 LED 的位置和状态条件来监控磁盘架的运行状况。
+
+
+
+== 操作员显示面板 LED
+
+[role="lead"]
+磁盘架前操作员显示面板上的 LED 指示磁盘架运行正常还是硬件出现问题。
+
+下表介绍了 DS460C ， DS224C 和 DS212C 磁盘架中使用的操作员显示面板上的三个 LED ：
+
+[cols="4*"]
+|===
+| LED 图标 | LED name | State | Description 
+
+
+ a| 
+image:../media/drw_sas_power_icon.png[""]
+ a| 
+电源
+ a| 
+呈绿色稳定亮起
+ a| 
+一个或多个电源为磁盘架供电。
+
+
+
+.2+| image:../media/drw_sas_fault_icon.png[""] .2+| 注意  a| 
+稳定琥珀色
+ a| 
+多个 FRU 的功能发生错误：磁盘架，磁盘驱动器， IOM12 模块或电源。
+
+检查事件消息以确定要采取的更正操作。
+
+
+
+ a| 
+呈琥珀色闪烁
+ a| 
+磁盘架 ID 处于待定状态。
+
+重新启动磁盘架，以使磁盘架 ID 生效。
+
+
+
+ a| 
+image:../media/drw_sas3_location_icon.gif[""]
+ a| 
+位置
+ a| 
+呈蓝色稳定亮起
+ a| 
+系统管理员已激活此 LED 功能，以帮助以物理方式查找需要维修的磁盘架。
+
+激活此 LED 功能后，操作员显示面板和两个 IOM12 模块上的位置 LED 将亮起。位置 LED 会在 30 分钟后自动关闭。
+
+|===
+根据您的磁盘架型号，操作员显示面板看起来不同；但是，三个 LED 的排列方式相同。
+
+下图显示了一个端盖位于上的 DS224C 磁盘架操作员显示面板：
+
+image::../media/drw_opd.gif[DRW 选项]
+
+
+
+== IOM12 模块 LED
+
+[role="lead"]
+IOM12 模块上的 LED 指示此模块是否正常运行，是否已为 I/O 流量做好准备，以及硬件是否存在任何问题。
+
+下表介绍了与模块功能以及模块上每个 SAS 端口的功能相关的 IOM12 模块 LED 。
+
+IOM12 模块用于 DS460C ， DS224C 和 DS212C 磁盘架。
+
+[cols="4*"]
+|===
+| LED 图标 | LED name | State | Description 
+
+
+ a| 
+image:../media/drw_sas_fault_icon.png[""]
+ a| 
+注意
+ a| 
+稳定琥珀色
+ a| 
+IOM12 模块功能： IOM12 模块的功能发生错误。
+
+SAS 端口功能：少于所有四个 SAS 通道建立链路（与适配器或其他磁盘架）的数量。
+
+检查事件消息以确定要采取的更正操作。
+
+
+
+ a| 
+LNK
+ a| 
+端口链路
+ a| 
+呈绿色稳定亮起
+ a| 
+四个 SAS 通道中的一个或多个用于建立链路（与适配器或另一个磁盘架）。
+
+
+
+ a| 
+image:../media/drw_sas3_location_icon.gif[""]
+ a| 
+位置
+ a| 
+呈蓝色稳定亮起
+ a| 
+系统管理员已激活此 LED 功能，以帮助以物理方式查找出现故障的 IOM12 模块的磁盘架。
+
+激活此 LED 功能后，操作员显示面板和两个 IOM12 模块上的位置 LED 将亮起。位置 LED 会在 30 分钟后自动关闭。
+
+|===
+下图显示了 IOM12 模块：
+
+image::../media/drw_iom12.gif[DRW iom12]
+
+
+
+== 电源 LED
+
+[role="lead"]
+电源上的 LED 指示电源运行正常还是存在硬件问题。
+
+下表介绍了 DS460C ， DS224C 和 DS212C 磁盘架中使用的电源上的两个 LED ：
+
+[cols="4*"]
+|===
+| LED 图标 | LED name | State | Description 
+
+
+.2+| image:../media/drw_sas_power_icon.png[""] .2+| 电源  a| 
+呈绿色稳定亮起
+ a| 
+电源运行正常。
+
+
+
+ a| 
+关闭
+ a| 
+电源出现故障，交流开关关闭，交流电源线安装不正确或电源供电不正确。
+
+检查事件消息以确定要采取的更正操作。
+
+
+
+ a| 
+image:../media/drw_sas_fault_icon.png[""]
+ a| 
+注意
+ a| 
+稳定琥珀色
+ a| 
+电源功能出现错误。
+
+检查事件消息以确定要采取的更正操作。
+
+|===
+根据您的磁盘架型号，电源可能会有所不同，这会规定两个 LED 的位置。
+
+下图显示了 DS460C 磁盘架中使用的电源。
+
+两个 LED 图标充当标签和 LED ，这意味着图标本身会亮起，没有相邻的 LED 。
+
+image::../media/28_dwg_e2860_de460c_psu.gif[28 dwg e2860 de460c PSU]
+
+下图显示了 DS224C 或 DS212C 磁盘架中使用的电源：
+
+image::../media/drw_powersupply_913w_vsd.gif[DRW 电源 913w VSD]
+
+
+
+== DS460C 磁盘架上的风扇 LED
+
+[role="lead"]
+DS460C 风扇上的 LED 指示风扇是运行正常还是存在硬件问题。
+
+下表介绍了 DS460C 磁盘架中使用的风扇上的 LED ：
+
+[cols="4*"]
+|===
+| 项目 | LED name | State | Description 
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+注意
+ a| 
+稳定琥珀色
+ a| 
+风扇功能出现错误。
+
+检查事件消息以确定要采取的更正操作。
+
+|===
+image:../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout.gif[""]
+
+
+
+== 磁盘驱动器 LED
+
+[role="lead"]
+磁盘驱动器上的 LED 指示其运行正常还是硬件出现问题。
+
+
+
+=== DS224C 和 DS212C 磁盘架的磁盘驱动器 LED
+
+下表介绍了 DS224C 和 DS212C 磁盘架中使用的磁盘驱动器上的两个 LED ：
+
+[cols="4*"]
+|===
+| 标注 | LED name | State | Description 
+
+
+.2+| image:../media/legend_icon_01.png[""] .2+| 活动  a| 
+呈绿色稳定亮起
+ a| 
+磁盘驱动器已通电。
+
+
+
+ a| 
+呈绿色闪烁
+ a| 
+磁盘驱动器已通电，并且正在执行 I/O 操作。
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+注意
+ a| 
+稳定琥珀色
+ a| 
+磁盘驱动器的功能发生错误。
+
+检查事件消息以确定要采取的更正操作。
+
+|===
+根据您的磁盘架型号，磁盘驱动器会在磁盘架中垂直或水平排列，从而指定两个 LED 的位置。
+
+下图显示了 DS224C 磁盘架中使用的磁盘驱动器。
+
+DS224C 磁盘架使用垂直放置在磁盘架中的 2.5 英寸磁盘驱动器。
+
+image::../media/drw_diskdrive_ds224c.gif[DRW 磁盘驱动器 ds224c]
+
+下图显示了 DS212C 磁盘架中使用的磁盘驱动器。
+
+DS212C 磁盘架在磁盘架中水平排列的托架中使用 3.5 英寸磁盘驱动器或 2.5 英寸磁盘驱动器。
+
+image::../media/drw_diskdrive_ds212c.gif[DRW 磁盘驱动器 ds212c]
+
+
+
+=== DS460C 磁盘架的磁盘驱动器 LED
+
+下图和表介绍了驱动器抽盒上的驱动器活动 LED 及其运行状态：
+
+image::../media/2860_dwg_drive_drawer_leds.gif[2860 个 dwg 驱动器抽盒 LED]
+
+[cols="4*"]
+|===
+| 位置 | LED | 状态指示符 | Description 
+
+
+.3+| 1. .3+| 注意：每个抽盒的抽盒注意事项  a| 
+稳定琥珀色
+ a| 
+驱动器抽盒中的组件需要操作员注意。
+
+
+
+ a| 
+关闭
+ a| 
+抽盒中的任何驱动器或其他组件都不需要引起注意，并且抽盒中的任何驱动器都没有活动的定位操作。
+
+
+
+ a| 
+呈琥珀色闪烁
+ a| 
+对于抽盒中的任何驱动器，定位驱动器操作均处于活动状态。
+
+
+
+.3+| 2-13 .3+| 活动：驱动器抽盒中驱动器 0 到 11 的驱动器活动  a| 
+绿色
+ a| 
+电源已打开，驱动器运行正常。
+
+
+
+ a| 
+呈绿色闪烁
+ a| 
+驱动器已通电，并且正在执行 I/O 操作。
+
+
+
+ a| 
+关闭
+ a| 
+电源已关闭。
+
+|===
+打开驱动器抽盒后，每个驱动器前面都会显示警示 LED 。
+
+image::../media/2860_dwg_amber_on_drive.gif[驱动器上为 2860 dwg 琥珀色]
+
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+| 警示 LED 亮起 
+|===
