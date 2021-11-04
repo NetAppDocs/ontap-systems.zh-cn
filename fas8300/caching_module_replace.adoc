@@ -54,7 +54,7 @@ http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ON
 +
 [cols="1,2"]
 |===
-| * 如果受损节点显示 ... | 然后 ...* 
+| 如果受损节点显示 ... | 那么 ... 
 
 
  a| 
@@ -100,7 +100,7 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTA
 +
 [cols="1,2"]
 |===
-| * 如果受损节点 ... | 然后 ...* 
+| 如果受损节点 ... | 那么 ... 
 
 
  a| 
@@ -186,7 +186,7 @@ mcc1A::> metrocluster operation show
 [role="lead"]
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
-您可以使用以下动画或写入的步骤从机箱中删除控制器模块。
+您可以使用以下动画，插图或写入的步骤从机箱中卸下控制器模块。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=75b6fa91-96b9-4323-b156-aae10007c9a5["卸下控制器模块"]
 
@@ -230,7 +230,7 @@ NOTE: 您必须登录到 NetApp 支持站点，才能显示系统的 _statement 
 * 存储系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 
 
-您可以使用以下动画或写入的步骤来更换缓存模块。
+您可以使用以下动画，插图或写入的步骤来更换缓存模块。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d5f75ac5-b4f3-4b49-984b-aad9012f0c8e["更换缓存模块"]
 
@@ -278,11 +278,11 @@ image::../media/drw_8300_Replace-flashcache.png[DRW 8300 更换闪存]
 [role="lead"]
 更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
 
-您可以使用以下动画或写入的步骤在机箱中安装控制器模块。
+您可以使用以下动画，插图或写入的步骤在机箱中安装控制器模块。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=9249fdb8-1522-437d-9280-aae10007c97b["安装控制器模块"]
 
-image::../media/drw_A400_Install_controller.png[DRW A400 安装控制器]
+image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
 
 .步骤
 . 如果尚未关闭此通风管，请关闭此通风管。

@@ -130,7 +130,7 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTA
 +
 [cols="1,2"]
 |===
-| * 如果受损节点 ... | 然后 ...* 
+| 如果受损节点 ... | 那么 ... 
 
 
  a| 
@@ -266,7 +266,7 @@ NOTE: 在暂停系统时， NVRAM LED 会闪烁，同时将内容存入闪存。
 
 . 在控制器模块中找到 NVMEM 电池。
 +
-image::../media/drw_2600_nvmem_batt_replace_animated_gif.png[DRW 2600 nvmem batt 替换动画 gif]
+image::../media/drw_2600_nvmem_batt_repl_animated_gif.png[DRW 2600 nvmem batt rel 动画 gif]
 
 . 找到电池插头，然后挤压电池插头正面的夹子，将插头从插槽中释放，然后从插槽中拔下电池缆线。
 . 从控制器模块中取出电池并将其放在一旁。

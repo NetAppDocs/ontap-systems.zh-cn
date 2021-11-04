@@ -228,7 +228,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或图形完成控制器与交换机之间的布线：
+. 使用动画或插图完成控制器与交换机之间的布线：
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=7a55b98a-e8b8-41d5-821f-ac5b0032ead0["为双节点无交换机集群布线"]
 
@@ -256,7 +256,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或图形完成控制器与交换机之间的布线：
+. 使用动画或插图完成控制器与交换机之间的布线：
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=6381b3f1-4ce5-4805-bd0a-ac5b0032f51d["有交换机集群布线"]
 
@@ -288,7 +288,7 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 .步骤
-. 使用以下动画将驱动器架连接到控制器。
+. 使用以下动画或插图将驱动器架连接到控制器。
 +
 
 NOTE: 这些示例使用 DS224C 磁盘架。布线与其他受支持的 SAS 驱动器架类似。
@@ -334,7 +334,7 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png[""]
 必须使用缆线将每个控制器连接到运行系统 ONTAP 9.8 或更高版本的 AFF A700 或 ASA AFF A700 上 NS224 驱动器架上的 NSM 模块。
 
 * 此任务仅限运行 ONTAP 9.8 或更高版本的适用场景 AFF A700 和 ASA AFF A700 。
-* 系统必须在插槽 3 和 / 或 7 中为每个控制器至少安装一个 X91148A 模块。此动画显示了此模块同时安装在插槽 3 和插槽 7 中。
+* The systems must have at least one X91148A module installed in slots 3 and/or 7 for each controller.动画或插图显示了此模块同时安装在插槽 3 和 7 中。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 +
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
@@ -349,7 +349,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 
 .步骤
-. 使用以下动画将具有两个 X91148A 存储模块的控制器连接到一个 NS224 驱动器架，或者使用此图将具有一个 X91148A 存储模块的控制器连接到一个 NS224 驱动器架。
+. 使用以下动画或图将具有两个 X91148A 存储模块的控制器连接到一个 NS224 驱动器架，或者使用此图将具有一个 X91148A 存储模块的控制器连接到一个 NS224 驱动器架。
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=6520eb01-87b3-4520-9109-ac5b0032ea4e["为单个 NS224 磁盘架布线— ONTAP 9.8 及更高版本"]
 
@@ -385,7 +385,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 
 .步骤
-. 使用以下动画或示意图将控制器连接到两个 NS224 驱动器架。
+. 使用以下动画或图将控制器连接到两个 NS224 驱动器架。
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=34098e39-73ad-45de-9af7-ac5b0032ea9a["为两个 NS224 磁盘架布线— ONTAP 9.8 及更高版本"]
 

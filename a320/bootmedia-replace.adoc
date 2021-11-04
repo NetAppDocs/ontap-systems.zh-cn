@@ -22,7 +22,7 @@ summary: 启动介质存储系统在启动时使用的一组主文件和二级�
 . 从电源拔下控制器模块电源。
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
 +
-image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
+image::../media/drw_a320_controller_cable_unplug_animated_gif.png[DRW A320 控制器缆线拔下动画 gif]
 
 +
 将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。

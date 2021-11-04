@@ -94,7 +94,7 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTA
 +
 [cols="1,2"]
 |===
-| * 如果受损节点 ... | 然后 ...* 
+| 如果受损节点 ... | 那么 ... 
 
 
  a| 
@@ -180,7 +180,7 @@ mcc1A::> metrocluster operation show
 [role="lead"]
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
-您可以使用以下动画或写入的步骤从机箱中删除控制器模块。
+您可以使用以下动画，插图或写入的步骤从机箱中卸下控制器模块。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=75b6fa91-96b9-4323-b156-aae10007c9a5["卸下控制器模块"]
 
@@ -214,7 +214,7 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 在暂停系统后，在转存内容时， NVDIMM LED 会闪烁。目标值完成后，此 LED 将熄灭。
 
-您可以使用以下动画，图或写入步骤来更换 NVDIMM 电池。
+您可以使用以下动画，插图或写入的步骤更换 NVDIMM 电池。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=1f1425a8-5a91-4810-82da-aad9012efa4f["更换 NVDIMM 电池"]
 
@@ -242,7 +242,7 @@ image::../media/drw_A400_nvdimm-batt.png[DRW A400 NVDIMM 电池]
 [role="lead"]
 更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
 
-您可以使用以下动画，图或写入步骤在机箱中安装控制器模块。
+您可以使用以下动画，插图或写入的步骤在机箱中安装控制器模块。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=9249fdb8-1522-437d-9280-aae10007c97b["安装控制器模块"]
 

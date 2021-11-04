@@ -96,7 +96,7 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTA
 +
 [cols="1,2"]
 |===
-| * 如果受损节点 ... | 然后 ...* 
+| 如果受损节点 ... | 那么 ... 
 
 
  a| 
@@ -182,7 +182,7 @@ mcc1A::> metrocluster operation show
 [role="lead"]
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
-您可以使用以下动画或写入的步骤从机箱中删除控制器模块。
+您可以使用以下，插图或写入的步骤从机箱中卸下控制器模块。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=75b6fa91-96b9-4323-b156-aae10007c9a5["卸下控制器模块"]
 
@@ -222,10 +222,10 @@ NOTE: 您必须登录到 NetApp 支持站点，才能显示系统的 _statement 
 
 
 
-您可以使用以下动画，绘图或写入步骤来更换 NVDIMM 。
+您可以使用以下动画，插图或写入的步骤来更换 NVDIMM 。
 
 
-NOTE: 此动画显示了没有 DIMM 的插槽中的空插槽。这些空插槽中填有空格。
+NOTE: 动画和图中显示了不带 DIMM 的插槽的空插槽。These empty sockets are populated with blanks.
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=e0afec49-0953-4dcc-b9d0-aadb01578e1b["更换 NVDIMM"]
 
@@ -266,7 +266,7 @@ NOTE: 目视检查 NVDIMM ，确认其已均匀对齐并完全插入插槽。
 [role="lead"]
 更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
 
-您可以使用以下动画，图或写入步骤在机箱中安装控制器模块。
+您可以使用以下动画，插图或写入的步骤在机箱中安装控制器模块。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=9249fdb8-1522-437d-9280-aae10007c97b["安装控制器模块"]
 

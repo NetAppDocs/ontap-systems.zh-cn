@@ -1,7 +1,8 @@
 ---
 indexpage:
-  lead: NetApp 的 AFF 和 FAS 存储系统提供领先的企业级横向扩展全闪存或混合存储，并提供行业最先进的数据管理功能。使用此站点上的文档安装，扩展，升级和维护
-    AFF 或 FAS 系统。
+  lead: NetApp's AFF and FAS storage systems provide leading-edge, enterprise-class,
+    scale-out all flash or hybrid storage with the industry's most advanced data management.使用此站点上的文档安装，扩展，升级和维护
+    AFF ， FAS 或所有 SAN 阵列系统。
   tiles:
   - title: 入门
     links:
@@ -53,13 +54,13 @@ indexpage:
       url: "/sas3/index.html"
   - title: 集群和存储交换机
     links:
-    - title: Broadcom 支持的 BES-53248 交换机
-      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/overview_bes53248.html
-    - title: Nexus 9336C-x2 集群交换机
+    - title: Broadcom 支持的 BES-53248
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/overview-bes53248.html
+    - title: Cisco 9336
       url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336/9336-overview.html
-    - title: Nexus 9336C-x2 共享交换机
-      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336-shared/index.html
-    - title: Cisco Nexus 92300YC 集群交换机
+    - title: 共享配置中的 Cisco 9336
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-shared/9336c_setup_and_configuration_guide_for_cisco_shared_switches.html
+    - title: Cisco 92300YC
       url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-92300/92300-overview.html
   - title: 平台升级
     links:

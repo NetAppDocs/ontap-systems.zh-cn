@@ -67,28 +67,27 @@ entries:
     - title: 完成系统还原
       url: "/fas9000/controller-replace-complete-system-restoration.html"
   - title: DCPM
-    pdf-filename: AFF A700 和 FAS9000 DCPM 模块
     url: "/fas9000/dcpm-nvram10-battery-replace.html"
   - title: DIMM
     url: "/fas9000/dimm-replace.html"
   - title: 风扇
     url: "/fas9000/fan-swap-out.html"
-- title: I/O 模块
-  url: "/fas9000/pci-cards-and-risers-replace.html"
-- title: LED USB 模块
-  url: "/fas9000/led-module-replace.html"
-- title: NVRAM
-  url: "/fas9000/nvram-module-or-nvram-dimm-replacement.html"
-- title: 电源
-  url: "/fas9000/power-supply-swap-out.html"
-- title: RTC 电池
-  url: "/fas9000/rtc-battery-replace.html"
-- title: X91148A 模块
-  pdf-filename: AFF A700 和 FAS9000 X91148A 模块
-  entries:
-  - title: 概述
-    url: "/fas9000/x91148a-module-install-overview.html"
-  - title: AFF A700 系统，具有开放插槽
-    url: "/fas9000/x91148a-modules-with-open-slots-add.html"
-  - title: AFF A700 系统没有打开的插槽
-    url: "/fas9000/x91148a-modules-with-no-open-slots-add.html"
+  - title: I/O 模块
+    url: "/fas9000/pci-cards-and-risers-replace.html"
+  - title: LED USB 模块
+    url: "/fas9000/led-module-replace.html"
+  - title: NVRAM
+    url: "/fas9000/nvram-module-or-nvram-dimm-replacement.html"
+  - title: 电源
+    url: "/fas9000/power-supply-swap-out.html"
+  - title: RTC 电池
+    url: "/fas9000/rtc-battery-replace.html"
+  - title: X91148A 模块
+    pdf-filename: AFF A700 和 FAS9000 X91148A 模块
+    entries:
+    - title: 概述
+      url: "/fas9000/x91148a-module-install-overview.html"
+    - title: AFF A700 系统，具有开放插槽
+      url: "/fas9000/x91148a-modules-with-open-slots-add.html"
+    - title: AFF A700 系统没有打开的插槽
+      url: "/fas9000/x91148a-modules-with-no-open-slots-add.html"

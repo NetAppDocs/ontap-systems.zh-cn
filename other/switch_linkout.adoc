@@ -1,21 +1,23 @@
 ---
 permalink: other/switch-linkout.html 
 sidebar: sidebar 
-keywords: cisco, Nexus 5596, Nexus 3232C, Nexus 3132Q-V, CN1610, CN1601 
+keywords: cisco, Nexus 5596, Nexus 3232C, Nexus 3132Q-V, CN1610, CN1601, Nexus 9336-FX2, Nexus 92300YC, BES-53248 
 summary: 您可以将这些链接用于其他交换机型号。 
 ---
-= 其他 Cisco 集群，存储和管理交换机
+= Cisco 和 Broadcom 支持的集群，存储和管理交换机
 :icons: font
 :imagesdir: ../media/
 
 
-您可以使用以下链接访问以下交换机的文档：
+您可以使用这些链接查找交换机文档。
 
-* Nexus 5596
-* Nexus 3232C
-* Nexus 3132Q-V
-* CN1610
-* CN1601
+* link:https://docs.netapp.com/us-en/ontap-systems-switches["Broadcom 支持的 BES-53248 交换机"]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches["Nexus 9336C-x2 集群交换机"]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches["9336C-x2 共享交换机"]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches["Nexus 92300YC 集群交换机"]
+* link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62371["Nexus 5596"]
+* link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62371["Nexus 3232C"]
+* link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62371["Nexus 3132Q-V"]
+* link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62371["CN1610"]
+* link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62371["CN1601"]
 
-
-link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62371["其他 Cisco 集群，存储和管理交换机的文档"]

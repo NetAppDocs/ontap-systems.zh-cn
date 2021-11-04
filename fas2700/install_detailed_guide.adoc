@@ -525,7 +525,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] 迷你 SAS HD 到迷
 
 
  a| 
-image:../media/oie_legend_icon_2_mb.gif[""]
+image:../media/oie_legend_icon_2_mb.png[""]
  a| 
 将每个节点连接到堆栈中的 IOM A 。
 
@@ -572,7 +572,10 @@ link:../com.netapp.doc.hw-ds-sas3-icg/home.html["安装和布线"]
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
 .步骤
-. 使用以下动画设置一个或多个驱动器架 ID ：
+. Use the following animation to set one or more drive shelf IDs:
++
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a-89d9-ab1b0066589b["设置驱动器架 ID"]
+
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 打开两个节点的电源开关。
 +
@@ -643,6 +646,9 @@ image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[从 DRW 客户端�
 
 
 . 使用以下动画设置一个或多个驱动器架 ID ：
++
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a-89d9-ab1b0066589b["设置驱动器架 ID"]
+
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 打开两个节点的电源开关。
 +

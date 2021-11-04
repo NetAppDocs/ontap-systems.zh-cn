@@ -214,13 +214,12 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或图形完成控制器与交换机之间的布线：
+. 使用动画或插图完成控制器与交换机之间的布线：
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=80c4701e-8e4a-408e-96e6-ab1b00666d3f["双节点无交换机集群布线"]
 
-
-
-image::../media/drw_A400_TNSC_network_cabling.png[DRW A400 TNSC 网络布线]
++
+image::../media/drw_A400_TNSC-network-cabling.png[DRW A400 TNSC 网络布线]
 
 . 转至 <<Step 4: Cable controllers to drive shelves>> 有关驱动器架布线说明。
 
@@ -244,7 +243,7 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或图形完成控制器与交换机之间的布线：
+. 使用动画或插图完成控制器与交换机之间的布线：
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=5893b7d4-6f67-4a64-ad89-ab1b006658d1["有交换机集群布线"]
 
@@ -273,7 +272,7 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用以下动画或图形将控制器连接到两个驱动器架。
+. 使用以下动画或插图将控制器连接到两个驱动器架。
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=46c0da0b-6842-449f-b28c-ab1b0066584b["使用缆线将控制器连接到 SAS 驱动器架"]
 
@@ -298,7 +297,7 @@ image::../media/drw_a400_three_ds224c_shelves.png[DRW a400 三个 ds224c 磁盘�
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
 .步骤
-. 使用以下动画或图形设置一个或多个驱动器架 ID ：
+. 使用以下动画设置一个或多个驱动器架 ID ：
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a-89d9-ab1b0066589b["设置驱动器架 ID"]
 
@@ -307,7 +306,7 @@ https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用以下动画或图形将笔记本电脑连接到管理交换机。
+. 使用以下动画将您的笔记本电脑连接到管理交换机。
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"]
 
@@ -372,7 +371,7 @@ NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或�
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 
 
-. 使用以下动画或图形设置一个或多个驱动器架 ID ：
+. 使用以下动画设置一个或多个驱动器架 ID ：
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a-89d9-ab1b0066589b["设置驱动器架 ID"]
 

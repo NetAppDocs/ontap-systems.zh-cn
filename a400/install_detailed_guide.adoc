@@ -213,7 +213,7 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或图形完成控制器与交换机之间的布线：
+. 使用动画或插图完成控制器与交换机之间的布线：
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=48552ddf-0925-4f88-8e93-ab1b00666489["双节点无交换机集群布线"]
 
@@ -242,7 +242,7 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或图形完成控制器与交换机之间的布线：
+. 使用动画或插图完成控制器与交换机之间的布线：
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=8fefba75-f395-4cf2-ba3c-ab1b00665870["有交换机集群布线"]
 
@@ -274,7 +274,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用以下动画或图形将控制器连接到一个驱动器架。
+. 使用以下动画或插图将控制器连接到一个驱动器架。
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=48d68897-c91d-47dc-b4b0-ab1b0066808a["使用缆线将控制器连接到一个 NS224 驱动器架"]
 
@@ -299,7 +299,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用以下动画或图形将控制器连接到两个驱动器架。
+. 使用以下动画或插图将控制器连接到两个驱动器架。
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=5501c7bf-8b74-49e8-8067-ab1b00668804["使用缆线将控制器连接到两个 NS224 驱动器架"]
 
@@ -424,12 +424,15 @@ NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或�
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 
 
-. 使用下图设置一个或多个驱动器架 ID ：
-+
-如果您的系统具有 NS224 驱动器架，则磁盘架会预先设置为磁盘架 ID 00 和 01 。如果要更改磁盘架 ID ，则必须创建一个工具，将其插入按钮所在的孔中。
-
+. 使用以下动画设置一个或多个驱动器架 ID ：
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a-89d9-ab1b0066589b["设置驱动器架 ID"]
+
+
+
+如果您的系统具有 NS224 驱动器架，则磁盘架会预先设置为磁盘架 ID 00 和 01 。如果要更改磁盘架 ID ，则必须创建一个工具，将其插入按钮所在的孔中。
+
++https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a-89d9-ab1b0066589b["设置驱动器架 ID"]
 
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 +

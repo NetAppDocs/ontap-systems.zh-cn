@@ -219,7 +219,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 您可以使用图形或分步说明完成控制器与交换机之间的布线：
+. 您可以使用插图或分步说明完成控制器与交换机之间的布线：
 +
 image::../media/drw_a320_tnsc_network_cabling_composite_animated_gif.png[DRW A320 tnsc 网络布线复合动画 gif]
 
@@ -293,7 +293,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 您可以使用图形或分步说明完成控制器与交换机之间的布线：
+. 您可以使用插图或分步说明完成控制器与交换机之间的布线：
 +
 image::../media/drw_a320_switched_network_cabling_composite_animated_gif.png[DRW A320 交换网络布线复合动画 gif]
 
@@ -372,7 +372,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 您可以使用图形或分步说明将控制器连接到一个磁盘架。
+. 您可以使用插图或分步说明将控制器连接到一个磁盘架。
 +
 image::../media/drw_a320_single_shelf_connections_animated_gif.png[DRW A320 单磁盘架连接动画 gif]
 
@@ -460,7 +460,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用下图将笔记本电脑连接到管理交换机。
+. 使用以下动画将您的笔记本电脑连接到管理交换机。
 +
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"]
 
@@ -511,7 +511,10 @@ image::../media/drw_a320_laptop_to_switch_and_controller.png[从 DRW A320 笔记
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 
 
-. 使用下图设置一个或多个驱动器架 ID ：
+. 使用以下动画设置一个或多个驱动器架 ID ：
++
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a-89d9-ab1b0066589b["设置驱动器架 ID"]
+
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 +
 系统开始启动。初始启动可能需要长达八分钟的时间

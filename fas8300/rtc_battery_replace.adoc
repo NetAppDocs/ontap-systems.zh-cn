@@ -94,7 +94,7 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTA
 +
 [cols="1,2"]
 |===
-| * 如果受损节点 ... | 然后 ...* 
+| 如果受损节点 ... | 那么 ... 
 
 
  a| 
@@ -180,7 +180,7 @@ mcc1A::> metrocluster operation show
 [role="lead"]
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
-您可以使用以下动画，图或写入步骤从机箱中删除控制器模块。
+您可以使用以下动画，插图或写入的步骤从机箱中卸下控制器模块。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=75b6fa91-96b9-4323-b156-aae10007c9a5["卸下控制器模块"]
 
@@ -212,7 +212,7 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 [role="lead"]
 您需要找到控制器模块中的 RTC 电池，然后按照特定步骤顺序进行操作。有关 RTC 电池的位置，请参见控制器模块内部的 FRU 示意图。
 
-您可以使用以下动画，绘图或写入步骤来更换 RTC 电池。
+您可以使用以下动画，插图或写入步骤更换 RTC 电池。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=80fe7a9b-de6f-46e0-a18b-aadb0157263d["更换 RTC 电池"]
 
@@ -249,7 +249,7 @@ NOTE: 从电池架中取出电池时，请注意电池的极性。电池标有�
 [role="lead"]
 更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块，重置控制器上的时间和日期，然后启动它。
 
-您可以使用以下动画，图或写入步骤在机箱中安装控制器模块。
+您可以使用以下动画，插图或写入的步骤在机箱中安装控制器模块。
 
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=9249fdb8-1522-437d-9280-aae10007c97b["安装控制器模块"]
 
