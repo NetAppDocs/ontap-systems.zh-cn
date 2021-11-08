@@ -3311,7 +3311,6 @@
   <block id="0c778d4562d4433df431e74565c47304" category="doc">更换缓存模块— FAS8200</block>
   <block id="e73517d6692e90195d517a3a4e2e02b7" category="paragraph">您可能希望在更换缓存模块之前擦除其内容。。尽管缓存模块上的数据已加密，但您可能希望擦除受损缓存模块中的所有数据，并验证缓存模块是否没有数据： .擦除缓存模块上的数据： `ssystem controller flash-cache secure -erase run` .验证是否已从缓存模块中擦除数据： `ssystem controller flash-cache secure -erase show -node node_name`</block>
   <block id="31bdb22c85f9617cc41f8e895aae25c5" category="paragraph">+ 输出应将缓存模块状态显示为已擦除。</block>
-  <block id="5056561b108ae65b50efbc07b90ca107" category="section-title">选项 2 ：双节点 MetroCluster 配置</block>
   <block id="9b81891ee2ba844aa5a5e1cc3074e3ab" category="section-title">第 3 步：更换或添加缓存模块</block>
   <block id="af9414dfb18199fb868ab960c545cc21" category="paragraph">要更换或添加控制器标签上称为 M.2 PCIe 卡的缓存模块，请找到控制器中的插槽并按照特定步骤顺序进行操作。</block>
   <block id="5b4711acf4c2d0b25a2539612d1166aa" category="paragraph">您的存储系统必须满足特定条件，具体取决于您的情况：</block>
@@ -3670,7 +3669,6 @@
   <block id="80257ad9b8e102e01f1a08f309c3eed0" category="doc">将启动映像传输到启动介质— AFF A800</block>
   <block id="fd1cff0abcf1ef0e075b330e2ee360fe" category="doc">完成还原和更换过程— AFF A800</block>
   <block id="2bb6eb6e274e403747742b20b6b76f1a" category="doc">更换实时时钟电池 - AFF A800</block>
-  <block id="563ef42f5f9fd49615f8e22803bd5ccc" category="paragraph">关闭或接管受损的控制器。</block>
   <block id="63b8891414a2163d2135a858ac9d8576" category="section-title">第 3 步：卸下 PCIe 提升板</block>
   <block id="0e402ea83f9434d19cbb58c56a2db717" category="paragraph">在更换控制器模块中的特定硬件组件时，必须卸下一个或多个 PCIe 提升板。</block>
   <block id="92a1e44c6fd05cd1ba8ab2abf944200f" category="paragraph">提升板 2 （中间提升板）锁定闩锁</block>
@@ -3898,11 +3896,6 @@
   <block id="05c119840c0702d753743c08941c9b5f" category="section-title">第 3 步：将驱动器移至新机箱</block>
   <block id="41fc2e794f85d8118c2ed7ccc20c671a" category="section-title">第 5 步：安装控制器</block>
   <block id="7ece4dc1de81ff4f6a6d373a61c7fd86" category="doc">还原并验证系统配置— AFF A220 和 FAS2700</block>
-  <block id="e4d75425009bc77525096ccae70bd9ac" category="cell">所有组件的 HA 状态应为 ...</block>
-  <block id="14d3c29aecf5054de86c0d913b978541" category="paragraph">具有四个或更多节点的 MetroCluster FC 配置</block>
-  <block id="da329d3c0ca50d681d11b87fd64bba70" category="paragraph">双节点 MetroCluster FC 配置</block>
-  <block id="a81b41b0ce60920d308c876b3e9b38f1" category="paragraph">MetroCluster IP 配置</block>
-  <block id="3c96fadab89c04ce6eeded6c21db7151" category="list-text">如果显示的机箱系统状态与您的系统配置不匹配，请为机箱设置 `HA` state ： `ha-config modify chassis _ha-state_`</block>
   <block id="1849818d0241de213ff605d4ee0f2ee4" category="section-title">第 3 步：运行系统级诊断</block>
   <block id="225990e93efbda40e50290405349df37" category="doc">还原和验证配置— AFF A220 和 FAS2700</block>
   <block id="df6822f659c151f8e258eb209eb61168" category="paragraph">您在这项特定任务中没有其他步骤。</block>
@@ -6107,17 +6100,13 @@
   <block id="a6eeb39ae43e2e8a39fd17df76bf38bf" category="list-text"><block ref="a6eeb39ae43e2e8a39fd17df76bf38bf" category="inline-link-macro-rx"></block></block>
   <block id="22d17da6d44d1c72d2415ed45b62cc6e" category="list-text"><block ref="22d17da6d44d1c72d2415ed45b62cc6e" category="inline-link-macro-rx"></block></block>
   <block id="f18d3ce1458eacbbf20206e503ce6dcf" category="doc">更换 DIMM - AFF A320</block>
-  <block id="009bbb9849429b7fa10a4685215d6585" category="section-title">关闭节点</block>
   <block id="952c945c9a5a59d3bdaefb09fa3c158c" category="list-text">从电源拔下控制器模块电源。</block>
   <block id="58917ff5c68eb6bf1640a45420077a55" category="image-alt">DRW A320 控制器删除动画 gif</block>
-  <block id="4e91fd783ed42a681c81cac09587c428" category="section-title">更换系统 DIMM</block>
   <block id="314e31cf4cbebcf3a827e9ba64a1e005" category="list-text">将通风管旋转到打开位置。</block>
   <block id="05e409ce8812fcbb841a7e4fffcaacac" category="image-alt">DRW A320 DIMM 映射</block>
   <block id="81991fce0a133e64dc7f5bd7f590afbd" category="list-text">系统 DIMM 插槽： 2 ， 4 ， 7 ， 9 ， 13 ， 15 ， 18 和 20</block>
   <block id="42fedd56824cc1ddf6aa00c30e53255e" category="list-text">NVDIMM 插槽： 11</block>
-  <block id="a7b2214a170507e43e239d129ff056bd" category="section-title">安装控制器模块</block>
   <block id="b5625ff9a6be11130311547598e19f4d" category="list-text">如果尚未关闭控制器模块后部的通风管，请将盖板重新安装到 PCIe 卡上。</block>
-  <block id="42208aac05597003d1ae26446c9582e6" category="section-title">运行诊断程序后，将控制器模块还原为正常运行</block>
   <block id="c694147ee40e260d30d4121d2213ee14" category="doc">视频— AFF A320</block>
   <block id="807593caf956f9dfe122fe9d50597706" category="inline-link">NetApp 视频： AFF A320 安装和设置</block>
   <block id="cb42bc4f99665b82eb5a3959a28d81ef" category="paragraph"><block ref="cb42bc4f99665b82eb5a3959a28d81ef" category="inline-link-rx"></block></block>
@@ -6126,7 +6115,6 @@
   <block id="6b59b1ed1da90d67a9669493c83f5dbe" category="paragraph"><block ref="6b59b1ed1da90d67a9669493c83f5dbe" category="inline-link-rx"></block></block>
   <block id="8041c469e6d9bb1d2588be103ea09ab6" category="doc">更换 NVDIMM 电池— AFF A320</block>
   <block id="8b9cda3c71cd6650aa009c7fadfc8b01" category="image-alt">DRW A320 控制器缆线拔下动画 gif</block>
-  <block id="4a2ad2d8aa201019cb0bc513fe5f7826" category="section-title">更换 NVDIMM 电池</block>
   <block id="7a7bd9d285c26c52e7363905c161c15e" category="image-alt">DRW A320 nvbat move 动画 gif</block>
   <block id="ddd5abc1f11eb7170e1eeacbd5acc236" category="list-text">打开通风管并找到 NVDIMM 电池。</block>
   <block id="4a911cf3dad818b3c0821fe7d7fbb266" category="doc">完成更换流程— AFF A320</block>
@@ -6175,9 +6163,7 @@
   <block id="f7e5e26e04024b88b0b54d4d5ca734ea" category="list-text">拆下外盖并放在一旁。</block>
   <block id="769dd15b613407ea536dd2fbf791bb69" category="list-text">在控制器模块上重新安装 PCIe 盖板。</block>
   <block id="eca300a6c6eda57ea2fabc4bee898f5f" category="doc">重新配置系统并重新分配磁盘— AFF A320</block>
-  <block id="2faa4d79f5610ac8c552fb5074765d06" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。``bye``</block>
   <block id="f1483589a16ee2a87f4946990ed1464b" category="doc">更换 PCIe 卡— AFF A320</block>
-  <block id="1471ac39cb9785883e4f8e0156141768" category="section-title">更换 PCIe 卡</block>
   <block id="c6835c4571228046430ed6bbb1f8c06a" category="paragraph">您必须从控制器模块中卸下包含故障 PCIe 卡的 PCIe 提升板，从提升板中卸下故障 PCIe 卡，在提升板中安装替代 PCIe 卡，然后将此提升板重新安装到控制器模块中。</block>
   <block id="d53dfbdb1355f3674e5de636f87c5be0" category="image-alt">DRW A320 PCI 卡更换动画 gif</block>
   <block id="618712f4c03b5acbe994f7deb8579ad4" category="list-text">卸下具有故障 PCIe 卡的提升板：</block>
@@ -6193,7 +6179,6 @@
   <block id="9781bf77c04b678ac5c9dc88b2be24a6" category="list-text">对齐提升板的后边缘，使提升板下侧的插脚位于后提升板托架的金属板上的孔上方。</block>
   <block id="d6d898ed15de3d84a34291488a6019f0" category="list-text">均匀向下施加压力，将提升板竖直向下插入控制器模块上的插槽。</block>
   <block id="9ca4b670d4633f7250c5d0254500dd7b" category="list-text">在控制器模块上重新安装 PCIe 提升板盖板。</block>
-  <block id="f819dea18b15e0953c6d62959ab7dd37" category="section-title">将控制器模块还原为正常运行</block>
   <block id="51e518953de4f3b345d4b65e647bdfc5" category="summary">您可以通过 AFF A320 系统文档安装，设置和维护系统。</block>
   <block id="aa0d733a680f2acafa9b34d28a6d95fd" category="doc">AFF A320 系统文档</block>
   <block id="bf9092f2ef7eb615a69f90a85ffa3cae" category="doc">启动恢复映像— AFF A320</block>
@@ -6201,8 +6186,6 @@
   <block id="d2f83f17d591f35e8d5d48e486cff011" category="inline-xref-macro">OKM ， NSE 和 NVE 的启动后介质更换步骤</block>
   <block id="59e7bbfb26b1aae893409c7595a54f49" category="list-text">如果您的系统配置了板载密钥管理器， NSE 或 NVE ，请转至 <block ref="f25b9cd2e6d3a23c42a52b7461eadaf7" category="inline-xref-macro-rx"></block></block>
   <block id="72e762fb9ea8e85f3b69ae72fd4dc171" category="doc">更换 NVDIMM - AFF A320</block>
-  <block id="4991af82e8fdfcd13eef2c656f16d4c4" category="section-title">关闭受损控制器</block>
-  <block id="8dd9b5acff09c1cf11545aba64dc805d" category="section-title">更换 NVDIMM</block>
   <block id="a28d1d59ce7973c59f7c8fb5eb3f42b3" category="image-alt">DRW A320 NVDIMM 更换动画 gif</block>
   <block id="611cf47f3569074932e1d1554c9dcfdd" category="doc">将故障部件退回给 NetApp - AFF A320</block>
   <block id="770d6678fb5416b05c67128a9e4fed01" category="doc">完成还原和更换过程— AFF A320</block>
@@ -7858,4 +7841,17 @@
   <block id="937d0c70d7e423315a950793d262cee4" category="sidebar">Cisco 9336</block>
   <block id="72c0fe6bd065c65c37725e2e14ab307a" category="sidebar">共享配置中的 Cisco 9336</block>
   <block id="1bc92df4184e6d4338aed95b6891adc1" category="sidebar">Cisco 92300YC</block>
+  <block id="4b415c21d483b2c59b97efc134f13a2f" category="section-title">选项 2 ：系统位于 MetroCluster 中</block>
+  <block id="442396e207d697f3466573acd63cdeb7" category="section-title">选项 2 ：系统位于 MetroCluster 中</block>
+  <block id="bd8eb6c12d8928906b264ff9daf7b9e7" category="section-title">选项 2 ：控制器位于 MetroCluster 中</block>
+  <block id="686631a3f808d481cbff656f883e6657" category="section-title">Option 3: Controller is in a two-node MetroCluster</block>
+  <block id="8fb7c0d18e37c8de5e116edeb31b30b1" category="section-title">选项 2 ：控制器采用 MetroCluster 配置</block>
+  <block id="f6706fbf02796cde0f95e3aa80e2a592" category="section-title">选项 3 ：控制器位于双节点 MetroCluster 中</block>
+  <block id="ad0e39682bcd1cd18eb8f815706bdc7d" category="paragraph">HA 状态的值可以是以下值之一： `ha` *** `mcc` *** `mcc-2n` *** `mCCIP` *** `non-ha`</block>
+  <block id="37567fb6b8c5af5beeabf61a11cdb257" category="paragraph">After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.注意：如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。</block>
+  <block id="ce7f39a5b75c204d01ca7d8fab45334e" category="section-title">第 1 步：关闭节点</block>
+  <block id="99028e2ad3b8cc332ccf01555ed73338" category="section-title">Step 2: Replace the RTC battery</block>
+  <block id="3433227d36a185f8d1ec626e50a32a55" category="section-title">Step 5: Reinstall the controller module and setting time/date after RTC battery replacement</block>
+  <block id="7bf65a3b0b2623ee81c0deee6045bfbb" category="section-title">9 月 4 日：安装控制器模块</block>
+  <block id="452597ed0d2caf44305c43798979c265" category="section-title">Step 5: Restore the controller module to operation</block>
 </blocks>

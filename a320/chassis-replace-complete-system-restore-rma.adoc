@@ -28,6 +28,8 @@ ha-state 的值可以是以下值之一：
 
 +
 *** `ha`
+*** `mcc`
+*** `mCCIP`
 *** `non-ha`
 
 

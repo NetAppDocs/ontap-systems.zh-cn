@@ -59,10 +59,11 @@ summary: 完成硬件更换并启动至维护模式后，您可以验证更换�
 ha-state 的值可以是以下值之一：
 
 +
-** ha
-** MCC
-** MCC-2n
-** 非 ha
+** `ha`
+** `mcc`
+** `mcc-2n`
+** `mCCIP`
+** `non-ha`
 
 
 . 如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller ha-state`

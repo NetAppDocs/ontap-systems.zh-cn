@@ -52,47 +52,25 @@ summary: 完成硬件更换并启动至维护模式后，您可以验证更换�
 
 . 在维护模式下，从新控制器模块验证所有组件是否显示相同的 `HA` 状态： `ha-config show`
 +
-[cols="1,2"]
-|===
-| 如果您的系统位于 ... | 所有组件的 HA 状态应为 ... 
+所有组件的 HA 状态都应相同。
+
+. 如果为机箱显示的系统状态与您的系统配置不匹配：
++
+.. 设置机箱的 HA 状态： `ha-config modify chassis _ha-state_`
++
+ha-state 的值可以是以下值之一：
+
++
+*** `ha`
+*** `mcc`
+*** `mcc-2n`
+*** `mCCIP`
+*** `non-ha`
 
 
- a| 
-HA 对
- a| 
-ha
+.. 确认设置已更改： `ha-config show`
 
 
-
- a| 
-具有四个或更多节点的 MetroCluster FC 配置
- a| 
-MCC
-
-
-
- a| 
-双节点 MetroCluster FC 配置
- a| 
-MCC-2n
-
-
-
- a| 
-MetroCluster IP 配置
- a| 
-mccip
-
-
-
- a| 
-一种独立配置
- a| 
-非 ha
-
-|===
-. 如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller ha-state`
-. 如果显示的机箱系统状态与您的系统配置不匹配，请为机箱设置 `HA` state ： `ha-config modify chassis _ha-state_`
 
 
 

@@ -24,14 +24,7 @@ summary: 您必须验证机箱的 HA 状态，并运行系统级诊断，切回�
 +
 .. 设置机箱的 HA 状态： `ha-config modify chassis _ha-state_`
 +
-ha-state 的值可以是以下值之一：
-
-+
-*** `ha`
-*** `mcc`
-*** `mcc-2n`
-*** `non-ha`
-
+HA 状态的值可以是以下值之一： `ha` *** `mcc` *** `mcc-2n` *** `mCCIP` *** `non-ha`
 
 .. 确认设置已更改： `ha-config show`
 

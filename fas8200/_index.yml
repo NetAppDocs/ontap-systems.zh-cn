@@ -17,6 +17,8 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html
     - title: 延伸型 MetroCluster 配置
       url: https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html
+    - title: MetroCluster IP 配置
+      url: https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html
   - title: 维护
     links:
     - title: 启动介质
