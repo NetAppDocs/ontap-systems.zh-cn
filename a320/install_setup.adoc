@@ -10,7 +10,7 @@ summary: 安装和设置系统。
 
 
 [role="lead"]
-您可以从不同的内容格式中进行选择，以指导您完成新存储系统的安装和设置。
+对于大多数配置，您可以从不同的内容格式中进行选择。
 
 * link:../a320/install-quick-guide.html["快速步骤"]
 +
@@ -25,3 +25,5 @@ summary: 安装和设置系统。
 联机分步说明，其中包含指向其他内容的实时链接。
 
 
+
+如果您的系统采用 MetroCluster IP 配置，请参见 https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html["安装 MetroCluster IP 配置"] 说明。

@@ -1692,7 +1692,6 @@
   <block id="d099df7ce339c15abb7692668d035fea" category="section-title">第 6 步：将故障部件退回 NetApp</block>
   <block id="33d6eb89aeb8e2ba671f43912a716deb" category="summary">安装和设置系统。</block>
   <block id="32df575971fcea9e12bea94b59ef2afa" category="doc">从此处开始：选择您的安装和设置体验</block>
-  <block id="744c2da9fd7d33d3b17d6dd12566da91" category="paragraph">您可以从不同的内容格式中进行选择，以指导您完成新存储系统的安装和设置。这些说明也适用于 ASA 配置。</block>
   <block id="8ea62d632a69911dcf193e9803b1195a" category="inline-link-macro">快速步骤</block>
   <block id="9c352024a81fccd1d1663e4b4f18ac5b" category="list-text"><block ref="9c352024a81fccd1d1663e4b4f18ac5b" category="inline-link-macro-rx"></block></block>
   <block id="74d5da85ba7d8689117200b9e72fda0c" category="paragraph">一份可打印的 PDF 分步说明，其中包含指向其他内容的实时链接。</block>
@@ -4598,9 +4597,6 @@
   <block id="c7fd7663fb6f5f581b8d9113c1c3c814" category="list-text">确定并解决问题后，重复子步骤 1 和 2 ，将测试重置为其默认状态。</block>
   <block id="9839b9efeb4f2cb59f36a02a747b73cb" category="doc">完成系统还原— FAS8300 和 FAS8700</block>
   <block id="3a08488c499949ce994ce7beebe666ee" category="doc">更换电源— FAS8300 和 FAS8700</block>
-  <block id="ddfc4d0370ed0419728bcc28e47cdd5a" category="list-text"><block ref="ddfc4d0370ed0419728bcc28e47cdd5a" category="inline-link-macro-rx"></block></block>
-  <block id="54962b942ddb18ca84a44c2c7c2d554a" category="list-text"><block ref="54962b942ddb18ca84a44c2c7c2d554a" category="inline-link-macro-rx"></block></block>
-  <block id="22d0bf80ca8ac910762cc9b15d7bd3db" category="list-text"><block ref="22d0bf80ca8ac910762cc9b15d7bd3db" category="inline-link-macro-rx"></block></block>
   <block id="0d6447bac57d1b04d83d308e8b723682" category="doc">更换 DIMM - FAS8300 和 FAS8700</block>
   <block id="a4a712ecb70395225e417c836e09e7b4" category="paragraph"><block ref="a4a712ecb70395225e417c836e09e7b4" category="inline-link-rx"></block></block>
   <block id="bf60b41d71bc04857d76c73eb0a0ab19" category="paragraph">系统中 DIMM 的数量和位置取决于系统的型号。有关详细信息，请参见通风管上的 FRU 示意图。</block>
@@ -7854,4 +7850,21 @@
   <block id="3433227d36a185f8d1ec626e50a32a55" category="section-title">Step 5: Reinstall the controller module and setting time/date after RTC battery replacement</block>
   <block id="7bf65a3b0b2623ee81c0deee6045bfbb" category="section-title">9 月 4 日：安装控制器模块</block>
   <block id="452597ed0d2caf44305c43798979c265" category="section-title">Step 5: Restore the controller module to operation</block>
+  <block id="a6564b317b2fa8fa64dd18d856e38b82" category="paragraph">对于大多数配置，您可以从不同的内容格式中进行选择。</block>
+  <block id="00a787350c10dda9fec8ed799a0a0d41" category="inline-link">安装 MetroCluster IP 配置</block>
+  <block id="dd97e64f3163f239256639a3f4314e89" category="paragraph">如果您的系统采用 MetroCluster IP 配置，请参见<block ref="373f2390d7121eb9c57821ab147cf1e7" category="inline-link-rx"></block> 说明。</block>
+  <block id="320003b122e9ced04801080d4fca8abd" category="list-text"><block ref="320003b122e9ced04801080d4fca8abd" category="inline-link-macro-rx"></block></block>
+  <block id="604b91e7007f6b52b608d188580ff582" category="list-text"><block ref="604b91e7007f6b52b608d188580ff582" category="inline-link-macro-rx"></block></block>
+  <block id="cfe676549c53e52dc611f1610a8ef495" category="paragraph">有关 MetroCluster 配置，请参见：</block>
+  <block id="b232e9ef89b4f98b36e1c295adeb4a63" category="inline-link">安装 MetroCluster IP 配置</block>
+  <block id="d495410a7f7a2c72ad8aa73f5cdb0372" category="list-text"><block ref="d495410a7f7a2c72ad8aa73f5cdb0372" category="inline-link-rx"></block></block>
+  <block id="7d8078ddedc71e65975b2f48e0a08873" category="inline-link">安装 MetroCluster 光纤连接配置</block>
+  <block id="8711dbf45eeb8f6f1664a1d0fb9dd217" category="list-text"><block ref="8711dbf45eeb8f6f1664a1d0fb9dd217" category="inline-link-rx"></block></block>
+  <block id="20addf17550ae6e814bef2a079f3f96a" category="list-text"><block ref="20addf17550ae6e814bef2a079f3f96a" category="inline-link-macro-rx"></block></block>
+  <block id="4b03e4a08b555f0fcfb41ec98179267c" category="paragraph">对于大多数配置（包括 ASA 配置），您可以从不同的内容格式中进行选择。</block>
+  <block id="976b50556e35cc2ef44062a69fc6b2fc" category="list-text"><block ref="976b50556e35cc2ef44062a69fc6b2fc" category="inline-link-macro-rx"></block></block>
+  <block id="1fc23df34c1ef373bc238879bf1082e5" category="list-text"><block ref="1fc23df34c1ef373bc238879bf1082e5" category="inline-link-macro-rx"></block></block>
+  <block id="b8a901030a76c92bf9e4426d81439fa5" category="list-text"><block ref="b8a901030a76c92bf9e4426d81439fa5" category="inline-link-macro-rx"></block></block>
+  <block id="3f98fa9dd0068de7a3158d3cefe04024" category="list-text"><block ref="3f98fa9dd0068de7a3158d3cefe04024" category="inline-link-macro-rx"></block></block>
+  <block id="aa366b5fc2f01c678bba52692905f43c" category="list-text"><block ref="aa366b5fc2f01c678bba52692905f43c" category="inline-link-macro-rx"></block></block>
 </blocks>
