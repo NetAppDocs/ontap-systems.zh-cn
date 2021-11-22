@@ -22,7 +22,7 @@ https://hwu.netapp.com["NetApp Hardware Universe"]
 ONTAP 文档中的说明介绍了在更换 SED 之前和之后必须执行的其他步骤。
 
 +
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTAP 9 NetApp 加密高级指南》"]
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"]
 
 * 系统中的所有其他组件必须正常运行；否则，请联系技术支持。
 * 验证要删除的驱动器是否出现故障。

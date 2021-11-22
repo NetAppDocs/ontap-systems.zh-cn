@@ -47,7 +47,7 @@ https://hwu.netapp.com["NetApp Hardware Universe"]
 ====
 * 如果您有 AFF A700 或 ASA A700HA 对，并且要热添加初始 NS224 驱动器架（ HA 对中不存在 NS224 驱动器架），则必须在每个控制器中安装一个核心转储模块（ X9170A ， NVMe 1 TB SSD ），以支持核心转储（存储核心文件）。
 +
-https://docs.netapp.com/platstor/topic/com.netapp.doc.hw-9000-nvmeflashcacherep/GUID-90B4E3EF-FBEF-4A97-9144-42B6400C16AA.html["更换缓存模块或添加 / 更换核心转储模块"]
+link:../fas9000/caching-module-and-core-dump-module-replace.html["更换缓存模块或添加 / 更换核心转储模块 - AFF A700 和 FAS9000"]
 
 * HA 对中的磁盘架数量必须小于支持的最大磁盘架数量，至少等于您计划热添加的磁盘架数量。
 +

@@ -4,10 +4,7 @@
 要关闭受损节点，您必须确定此节点的状态，并在必要时切换此节点，以便运行正常的节点继续从受损节点存储提供数据。
 
 .关于此任务
-* 如果您使用的是 NetApp 存储加密，则必须按照 _ONTAP 9 NetApp 加密高级指南 _ 的 " 将 SED 恢复到未受保护的模式 " 一节中的说明重置 MSID 。
-+
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTAP 9 NetApp 加密高级指南》"]
-
+* 如果您使用的是 NetApp 存储加密，则必须按照的 " 将 SED 恢复到未受保护的模式 " 一节中的说明重置 MSID https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"]。
 * 您必须在此操作步骤末尾保持电源处于打开状态，以便为运行正常的节点供电。
 
 

@@ -32,7 +32,10 @@ NOTE: 如果尝试使用要删除的磁盘架上的聚合执行此操作步骤�
 通过从备用驱动器中删除所有权信息，可以根据需要将该驱动器正确集成到另一个节点中。
 
 +
-可在中找到用于从驱动器中删除所有权的操作步骤 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-psmg/home.html["《 ONTAP 9 磁盘和聚合高级指南》"]。
+可从磁盘和聚合内容中找到用于从驱动器中删除所有权的操作步骤：
+
++
+https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["磁盘和聚合概述"]
 
 
 

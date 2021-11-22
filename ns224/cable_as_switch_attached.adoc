@@ -12,15 +12,15 @@ summary: 如果您的系统需要将 NS224 驱动器架作为交换机连接存�
 [role="lead"]
 如果您的系统需要将 NS224 驱动器架作为交换机连接存储（而不是直连存储）进行布线，请使用提供的信息。
 
-* 用于通过存储交换机为 NS224 驱动器架布线的文档：
+* 使用缆线将 NS224 驱动器架连接到存储交换机：
 +
 https://library.netapp.com/ecm/ecm_download_file/ECMLP2876580["交换机连接的 NS224 驱动器架布线信息"]
 
-* 有关安装存储交换机的文档：
+* 安装存储交换机：
 +
 https://docs.netapp.com/us-en/ontap-systems-switches/index.html["AFF 和 FAS 交换机文档"]
 
-* 有关您的平台型号支持的硬件的信息，例如存储交换机和缆线：
+* 确认您的平台型号支持的硬件，例如存储交换机和缆线：
 +
 https://hwu.netapp.com["NetApp Hardware Universe"]
 

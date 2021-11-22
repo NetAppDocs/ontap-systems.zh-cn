@@ -1568,7 +1568,6 @@
   <block id="ff3a1a304de699b15bd2a5a39798c5a8" category="section-title">第 2 步：还原存储和卷加密功能</block>
   <block id="37b0fb827bbc179115abc1768c9c5f12" category="paragraph">在更换先前配置为使用存储或卷加密的存储系统的控制器模块或 NVRAM 模块后，您必须执行其他步骤以提供无中断加密功能。对于未启用存储或卷加密的存储系统，您可以跳过此任务。</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">步骤</block>
-  <block id="8b152ee5b6f8ceb8aff6ea329ef4e66a" category="list-text">使用 _NetApp 加密高级指南 _ 中的相应操作步骤还原存储或卷加密功能。</block>
   <block id="a2ae6c720a8a0fbf3918f44a33be6b30" category="inline-link">《 ONTAP 9 NetApp 加密高级指南》</block>
   <block id="ba8122bba290a3351611db1b66c99386" category="paragraph"><block ref="ba8122bba290a3351611db1b66c99386" category="inline-link-rx"></block></block>
   <block id="e68c8836280fba147b04a2b14b196600" category="paragraph">根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：</block>
@@ -1601,9 +1600,6 @@
   <block id="596bcca65aca56bacb3df39265f83dfb" category="summary">要更换机箱，必须关闭控制器。</block>
   <block id="b0a5349e52bfc1b486c0f4bb7f8c6b18" category="doc">关闭控制器— AFF A250</block>
   <block id="45bd0f10632b3d357d0e53299710ca0c" category="paragraph">您必须先关闭机箱中的一个或多个节点，然后才能将其移至新机箱。</block>
-  <block id="3893848bb7e8e3f5ec6b547e5281f1f8" category="list-text">如果集群包含两个以上的节点，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 `false` ，则必须在关闭受损节点之前更正问题描述。</block>
-  <block id="4ace8a3cd99d06318b85eaa42ffd9786" category="inline-link">_ONTAP 9 系统管理参考 _</block>
-  <block id="0194385554b18b3f5ce7dc105495885e" category="paragraph"><block ref="0194385554b18b3f5ce7dc105495885e" category="inline-link-rx"></block></block>
   <block id="19285c8cf559d5176d09036ecccfca21" category="list-text">如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`</block>
   <block id="f80af4e39d67de6feaae8747f603e24b" category="paragraph">以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * &gt; system node AutoSupport invoke -node * -type all -message MAINT=2h`</block>
   <block id="880c0610027a11af7086ae7e380e12e5" category="list-text">如果您的系统有两个控制器模块，请禁用 HA 对。</block>
@@ -2782,7 +2778,6 @@
   <block id="c7e602fe7db61b23799d51454d70f0cd" category="section-title">选项 1 ：大多数配置</block>
   <block id="c055245c084600ec7129f0f3c0692170" category="section-title">选项 2 ：控制器采用双节点 MetroCluster 配置</block>
   <block id="4d279a0ab2cc0186322c5c93efdc2057" category="paragraph">要关闭受损节点，您必须确定此节点的状态，并在必要时切换此节点，以便运行正常的节点继续从受损节点存储提供数据。</block>
-  <block id="37918ff20850c0b7451e85462aa67d9e" category="list-text">如果您使用的是 NetApp 存储加密，则必须按照 _ONTAP 9 NetApp 加密高级指南 _ 的 " 将 SED 恢复到未受保护的模式 " 一节中的说明重置 MSID 。</block>
   <block id="4b0734b8f2c30a70467894b0f3e7baf2" category="list-text">您必须在此操作步骤末尾保持电源处于打开状态，以便为运行正常的节点供电。</block>
   <block id="a504e6d60b77acc66d4d4e9b46f8893a" category="list-text">检查 MetroCluster 状态以确定受损节点是否已自动切换到运行正常的节点： `MetroCluster show`</block>
   <block id="a4d3e0e884bda08238ebcf294cd22173" category="list-text">根据是否发生了自动切换，按照下表继续操作：</block>
@@ -5038,7 +5033,6 @@
   <block id="1f7371aa942c4283ea30c22a58cc04ce" category="list-text">如果要热移除多个磁盘架，请一次移除一个磁盘架。</block>
   <block id="59f9587f33c984d618a805599e44d348" category="list-text">* 最佳实践： * 最佳实践是，从要移除的磁盘架中的驱动器中删除聚合后，删除驱动器所有权。</block>
   <block id="cc2a062e9e855b891ccc93c7e243d4b2" category="paragraph">通过从备用驱动器中删除所有权信息，可以根据需要将该驱动器正确集成到另一个节点中。</block>
-  <block id="8dc2e0feec584cc5baeb329c2160e26f" category="paragraph">可在中找到用于从驱动器中删除所有权的操作步骤<block ref="65506bb78a518f1d43ba0bc6e424b592" category="inline-link-rx"></block>。</block>
   <block id="3de623a3aa991fbef6703f0aaea95f22" category="admonition">操作步骤要求您禁用自动驱动器分配。您可以在此操作步骤末尾重新启用自动驱动器分配（在热移除磁盘架后）。</block>
   <block id="7b9174f4f1064a80bf560b83cf899bd9" category="paragraph">一个磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 NSM 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令并使用 off 选项来将其关闭。</block>
   <block id="f073e535fcad3c1c55b135be9af49b12" category="list-text">从不支持 RoCE 的专用端口（板载控制器，支持 RoCE 的 PCIe 卡，两者的组合或 I/O 模块）上断开磁盘架连接后，您可以选择重新配置这些端口以供网络使用。</block>
@@ -5125,13 +5119,10 @@
   <block id="883c91c37ee151a81d34d6105afae5ea" category="summary">如果您的系统需要将 NS224 驱动器架作为交换机连接存储进行布线 \ （非直连存储），请使用提供的信息。</block>
   <block id="e8f8b2e7fe84a76416bedc8340d89ea1" category="doc">将磁盘架作为交换机连接的存储进行布线— NS224 磁盘架</block>
   <block id="a94de468f363b57c8cc1ea1b7a532a9e" category="paragraph">如果您的系统需要将 NS224 驱动器架作为交换机连接存储（而不是直连存储）进行布线，请使用提供的信息。</block>
-  <block id="24fb6b13906f7d982159ad8b63e062a4" category="list-text">用于通过存储交换机为 NS224 驱动器架布线的文档：</block>
   <block id="afb935b1a48a04ad288c97c7899d840d" category="inline-link">交换机连接的 NS224 驱动器架布线信息</block>
   <block id="1785747204ca11822dd42ba32951843b" category="paragraph"><block ref="1785747204ca11822dd42ba32951843b" category="inline-link-rx"></block></block>
-  <block id="1b186d1cf3f104289a2145d4e385176a" category="list-text">有关安装存储交换机的文档：</block>
   <block id="97a30f090fd38397124788f1f0376eda" category="inline-link">AFF 和 FAS 交换机文档</block>
   <block id="95cee0ee869d11fbc57e30dade468820" category="paragraph"><block ref="95cee0ee869d11fbc57e30dade468820" category="inline-link-rx"></block></block>
-  <block id="629c8f0a5e3d52bf5423b4df9ef02bee" category="list-text">有关您的平台型号支持的硬件的信息，例如存储交换机和缆线：</block>
   <block id="acdfef9c5579ff3ba02ba954b42b0b9d" category="summary">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换发生故障的风扇。</block>
   <block id="d7be6d5f22ae136261c4f972f836c784" category="doc">更换风扇— NS224 磁盘架</block>
   <block id="ad469db4a94f773cb57ea851a2258c7d" category="list-text">系统中的所有其他组件，包括其他四个风扇，必须正常运行。</block>
@@ -5237,8 +5228,6 @@
   <block id="1732f42cb90c2f75f01fe91247e128c3" category="paragraph">必须配置不支持 RoCE 的专用端口以供存储使用（而不是用于网络连接）。</block>
   <block id="0addf6844bafe9c41ea7de1b0facf307" category="paragraph"><block ref="2110c63cffe5fc725c4243d7595d7a36" category="inline-xref-macro-rx"></block></block>
   <block id="952d0ab2aada5c0bcc6640b363de44a1" category="list-text">如果您有 AFF A700 或 ASA A700HA 对，并且要热添加初始 NS224 驱动器架（ HA 对中不存在 NS224 驱动器架），则必须在每个控制器中安装一个核心转储模块（ X9170A ， NVMe 1 TB SSD ），以支持核心转储（存储核心文件）。</block>
-  <block id="44d15bb6bb42e1dbee76a547e295a5be" category="inline-link">更换缓存模块或添加 / 更换核心转储模块</block>
-  <block id="dedb7b901639fac67806190e30f3e6a3" category="paragraph"><block ref="dedb7b901639fac67806190e30f3e6a3" category="inline-link-rx"></block></block>
   <block id="40b9aa2a1398aaa422dac35a64ae5873" category="list-text">HA 对中的磁盘架数量必须小于支持的最大磁盘架数量，至少等于您计划热添加的磁盘架数量。</block>
   <block id="ad77a3083357fd77bd7e8fdbdf159740" category="paragraph">热添加磁盘架后，不能超过 HA 对支持的最大磁盘架数。</block>
   <block id="0cba540a6f27fb2ed5b8694332213f9d" category="list-text">如果要将磁盘架热添加到已具有 NS224 磁盘架的 HA 对，则 HA 对不能显示任何存储布线错误消息，并且必须将其作为多路径 HA 进行布线。</block>
@@ -6326,7 +6315,6 @@
   <block id="00124b65b0475ef5a1ef8812a9a5aa02" category="list-text">* 最佳实践： * 最佳实践是，从要删除的磁盘架中的磁盘驱动器中删除聚合后，删除磁盘驱动器所有权。</block>
   <block id="d861952ae543b7ab12c97b76ba5a6d22" category="paragraph">通过从备用磁盘驱动器中删除所有权信息，可以根据需要将该磁盘驱动器正确集成到另一个节点中。</block>
   <block id="82a0e673933c66d13ebe9ac1bf565aa9" category="paragraph">用于从磁盘驱动器中删除所有权的操作步骤要求您禁用磁盘所有权自动分配。您可以在此操作步骤末尾重新启用磁盘所有权自动分配。</block>
-  <block id="7858451050766dac30885eb560158270" category="paragraph"><block ref="7858451050766dac30885eb560158270" category="inline-link-rx"></block></block>
   <block id="6d262abed5885a9a0e7edfe9d9df36e8" category="list-text">对于双节点以上的集群模式 ONTAP 系统，最佳实践是将 epsilon 重新分配给正在进行计划内维护的 HA 对以外的 HA 对。</block>
   <block id="a2f32a275433435e433112c02164dbfd" category="paragraph">重新分配 epsilon 可最大程度地降低意外错误影响集群模式 ONTAP 系统中所有节点的风险。有关仲裁角色和 epsilon 以及用于将 epsilon 重新分配给集群中其他节点的操作步骤的信息，请参见 _System Administration Referus_ 。</block>
   <block id="543e45cc2fb7b698b77d3c6b0a3ca386" category="inline-link">查找适用于您的 ONTAP 9 版本的《系统管理指南》</block>
@@ -7867,4 +7855,20 @@
   <block id="b8a901030a76c92bf9e4426d81439fa5" category="list-text"><block ref="b8a901030a76c92bf9e4426d81439fa5" category="inline-link-macro-rx"></block></block>
   <block id="3f98fa9dd0068de7a3158d3cefe04024" category="list-text"><block ref="3f98fa9dd0068de7a3158d3cefe04024" category="inline-link-macro-rx"></block></block>
   <block id="aa366b5fc2f01c678bba52692905f43c" category="list-text"><block ref="aa366b5fc2f01c678bba52692905f43c" category="inline-link-macro-rx"></block></block>
+  <block id="a2960939186ae78b824d694e2cbba800" category="inline-link">CLI 管理概述</block>
+  <block id="7ef4f9cbea79ce55b05d13fd4d4c880d" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见<block ref="b6c3385b7fdb69cc66015a30ca89eb46" category="inline-link-rx"></block>。</block>
+  <block id="518d2076bf387a28038f7558530bb987" category="inline-link">使用命令行界面概述 NetApp 加密</block>
+  <block id="a0ad8f5b8d13f1cd5ef039b68ed21700" category="list-text">使用中的相应操作步骤还原存储或卷加密功能<block ref="48a668c3219947c390bb7b4ff0fcb822" category="inline-link-rx"></block>。</block>
+  <block id="0e1eef439b73568e7a348e3559e18284" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见<block ref="9ce22438324028a90c90ac456cc8dc62" category="inline-link-rx"></block>。</block>
+  <block id="cd1ac451f56a61cd6eee3fed14eb8119" category="list-text">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 `false` ，则必须在关闭受损节点之前更正问题描述；请参见<block ref="b6c3385b7fdb69cc66015a30ca89eb46" category="inline-link-rx"></block>。</block>
+  <block id="673f7a1f10ce14ef29b06ba53cf1e5d7" category="inline-link">使用命令行界面概述 NetApp 加密</block>
+  <block id="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="paragraph"><block ref="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="inline-link-rx"></block></block>
+  <block id="459527cf1ec141d19f1b0f88f8c19905" category="inline-link">磁盘和聚合概述</block>
+  <block id="c917987d5d8844333d3271b88c9ef8ec" category="paragraph"><block ref="c917987d5d8844333d3271b88c9ef8ec" category="inline-link-rx"></block></block>
+  <block id="8476dfce11f0cbc3ca6b362cdd158c8f" category="list-text">如果您使用的是 NetApp 存储加密，则必须按照的 " 将 SED 恢复到未受保护的模式 " 一节中的说明重置 MSID<block ref="b6c3385b7fdb69cc66015a30ca89eb46" category="inline-link-rx"></block>。</block>
+  <block id="e336b31ee5508850cb2188072c64f036" category="paragraph"><block ref="e336b31ee5508850cb2188072c64f036" category="inline-link-macro-rx"></block></block>
+  <block id="0ab54354ff641ba8f3492f71c03aa435" category="list-text">使用缆线将 NS224 驱动器架连接到存储交换机：</block>
+  <block id="d1f671afbf5d4ca47b95e86f70c6bcc1" category="list-text">安装存储交换机：</block>
+  <block id="4aaebba2a5287c74eb41bf080e6d1fe4" category="list-text">确认您的平台型号支持的硬件，例如存储交换机和缆线：</block>
+  <block id="f1832f4de88037c446f0b7e9c0163aaa" category="paragraph">可从磁盘和聚合内容中找到用于从驱动器中删除所有权的操作步骤：</block>
 </blocks>
