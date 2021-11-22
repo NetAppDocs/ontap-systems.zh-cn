@@ -5779,7 +5779,6 @@
   <block id="60f0e4a73edf1a4e40be1d8fff5656f6" category="paragraph">更换 PCIe 模块后，必须重新启动控制器模块。</block>
   <block id="2f77598cc1406917571281533b6a7290" category="list-text">如果节点处于 LOADER 提示符处，请启动节点，如果您看到系统 ID 不匹配的提示警告并要求覆盖系统 ID `bye` ，请回答 `y`</block>
   <block id="074956b98e6ab62b7ae2bf9b8699df64" category="list-text">如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 `nicadmin convert` 命令将这些端口转换为 10 GbE 连接。</block>
-  <block id="4c3cf5e78e6dc7a5f6353e3ff29d3ed8" category="doc">AFF A700 和 FAS900 系统文档</block>
   <block id="a807e98301721a3033173dc23ac9fd93" category="summary">要热插拔包含 NVRAM10 电池的降级控制器电源模块（ DCPM ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。</block>
   <block id="641f349f2152b2dcf9ef8ebb8e931ac1" category="doc">更换包含 NVRAM10 电池的降级控制器电源模块 - AFF A700 和 FAS9000</block>
   <block id="9b9f090ead8603008076b06ff01712ce" category="paragraph">在从机箱中卸下故障模块之前，您必须准备好一个替代 DCPM 模块，并且必须在卸下此模块后五分钟内更换此模块。从机箱中删除 DCPM 模块后，拥有 DCPM 模块的控制器模块除了故障转移到另一个控制器模块之外，不存在关闭保护。</block>
@@ -7871,4 +7870,5 @@
   <block id="d1f671afbf5d4ca47b95e86f70c6bcc1" category="list-text">安装存储交换机：</block>
   <block id="4aaebba2a5287c74eb41bf080e6d1fe4" category="list-text">确认您的平台型号支持的硬件，例如存储交换机和缆线：</block>
   <block id="f1832f4de88037c446f0b7e9c0163aaa" category="paragraph">可从磁盘和聚合内容中找到用于从驱动器中删除所有权的操作步骤：</block>
+  <block id="7882fbe8d6edf8d5b486832cb819249c" category="doc">AFF 和 FAS9000 系统文档中心</block>
 </blocks>
