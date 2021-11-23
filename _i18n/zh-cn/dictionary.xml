@@ -5828,16 +5828,11 @@
   <block id="f08fa3f1d8bff6dfbc18be0fdca6444e" category="paragraph">每个 DIMM 旁边都有一个 LED ，当 DIMM 发生故障时，此 LED 会闪烁。</block>
   <block id="418a022f56c1e24ab49e10afac569c94" category="list-text">安装更换用的 DIMM ，方法是将 DIMM 与插槽对齐，然后将 DIMM 轻轻推入插槽，直到锁定卡舌锁定到位。</block>
   <block id="680d8cf9003e2f0c6c16768d83979722" category="section-title">第 5 步：重新分配磁盘</block>
-  <block id="ab9287926b20e01ebebfb520325cd8d8" category="paragraph">根据您的配置，您必须验证是否已将磁盘重新分配给新控制器模块，或者手动重新分配磁盘。如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。在独立系统中，必须手动将 ID 重新分配给磁盘。</block>
-  <block id="8a9cd776bdb7ec1fd6a2824a3b085fbb" category="cell">控制器模块冗余</block>
-  <block id="981611961ba6e02c24085bdc5f41e078" category="paragraph"><block ref="8592b02d130587c071ec54a80efd249c" category="inline-xref-macro-rx"></block></block>
-  <block id="ff1ae6511ecabe370ba88d6905922336" category="paragraph"><block ref="57d49c34af9296ba868f9fad15c57ee6" category="inline-xref-macro-rx"></block></block>
   <block id="f48da66fac9628892734da282b687412" category="list-text">如果替代节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： `halt`</block>
   <block id="ef5194f67c4591b47b23fc50aaadfc8b" category="list-text">在替代节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：</block>
   <block id="4f72f46e41b488e589d00c457c136571" category="paragraph">``boot_ontap bye``</block>
   <block id="0a777e4b645d66ac575356b85c16ed55" category="paragraph">如果设置了自动启动，则节点将重新启动。</block>
   <block id="554a23fbeb893ba3c6cb31c09b0d481f" category="paragraph">在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个节点将显示已配置状态，并启用 DR 镜像并显示正常模式。`MetroCluster node show -fields node-SystemID` 命令输出将显示旧系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
-  <block id="6d87b8f31094329220213822dc00fbe7" category="section-title">在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID</block>
   <block id="3bf4c288b20a882f54f61cd8cb0618a7" category="section-title">第 6 步：还原存储和卷加密功能</block>
   <block id="20ea32c4685480f3b2ec6bf4a7c6ce0b" category="doc">更换 DCPM 模块— AFF A700 和 FAS9000</block>
   <block id="546213aeb2cbd4cabb4e9e5099416edd" category="summary">您可以在不中断服务的情况下更换 LED USB 模块。</block>
@@ -7871,4 +7866,12 @@
   <block id="4aaebba2a5287c74eb41bf080e6d1fe4" category="list-text">确认您的平台型号支持的硬件，例如存储交换机和缆线：</block>
   <block id="f1832f4de88037c446f0b7e9c0163aaa" category="paragraph">可从磁盘和聚合内容中找到用于从驱动器中删除所有权的操作步骤：</block>
   <block id="7882fbe8d6edf8d5b486832cb819249c" category="doc">AFF 和 FAS9000 系统文档中心</block>
+  <block id="71e38f927e8a1c6f9bc875e8ab8112eb" category="open-title">选项 1 ：大多数配置</block>
+  <block id="0b6c08751d3c9a2a0d92384f10b9d168" category="open-title">选项 2 ： MetroCluster 配置</block>
+  <block id="6a925f3765a4dc795f4b5a0732579780" category="admonition-title">控制器位于 MetroCluster 中</block>
+  <block id="56064382d522717971cdb206043bc575" category="open-title">选项 3 ：双节点 MetroCluster</block>
+  <block id="b2fdb7d98e0aecd7d98c266cea50e1e4" category="paragraph">根据您使用的是 HA 对还是双节点 MetroCluster 配置，您必须验证是否已将磁盘重新分配给新控制器模块，或者手动重新分配磁盘。</block>
+  <block id="934d0bdda7a0d1a8822fd442720c5972" category="paragraph">有关如何将磁盘重新分配给新控制器的说明，请选择以下选项之一。</block>
+  <block id="32f251bc81f643cafcff8ad711b81b00" category="open-title">选项 1 ：验证 ID （ HA 对）</block>
+  <block id="a5d68caf62cce2afa4e8ca12ce07943a" category="open-title">选项 2 ：重新分配 ID （ MetroCluster 配置）</block>
 </blocks>

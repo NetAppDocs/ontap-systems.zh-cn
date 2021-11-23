@@ -12,7 +12,7 @@ indexpage:
   - title: 安装和设置
     links:
     - title: 大多数配置
-      url: "/install-setup-linkout.html"
+      url: "/install-setup.html"
     - title: 光纤连接的 MetroCluster 配置
       url: https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html
     - title: 延伸型 MetroCluster 配置
