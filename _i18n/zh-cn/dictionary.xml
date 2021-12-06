@@ -1608,10 +1608,8 @@
   <block id="8d6f30824233e0351fc71f18fbb5c436" category="paragraph">`cluster ha modify -configured false` `storage failover modify -node node0 -enabled false`</block>
   <block id="4252cc22782c7895d045823c51f6d877" category="paragraph">集群中的两个以上节点</block>
   <block id="b2aa61dcee4d7b77fcd001973469ddde" category="paragraph">`storage failover modify -node node0 -enabled false`</block>
-  <block id="daa68b2935afad927933ccd5d0f6f182" category="list-text">暂停节点，在系统提示您确认 halt 时按 `y` ： `ssystem node halt -node node_name`</block>
   <block id="481250f3e8ec41b0e994305d8fc52b4a" category="paragraph">确认消息如下所示：</block>
   <block id="acb6df6704b040c68684e454411f2742" category="admonition">在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM ）中未写入的数据。如果 NVMEM LED 闪烁，则表示 NVMEM 中有尚未保存到磁盘的内容。您需要重新启动节点并从此操作步骤开始。如果重复尝试完全关闭节点失败，请注意，未保存到磁盘的任何数据可能会丢失。</block>
-  <block id="79b0702a76728bde4eaf7ed7010cdc7e" category="list-text">如果适用，请暂停第二个节点以避免在 HA 对配置中出现可能的仲裁错误消息： `ssystem node halt -node second_node_name -ignore-quorum-warnings true`</block>
   <block id="cf55af4b4668a579d36bfd91785ecbec" category="summary">完成 NVE 或 NSE 任务后，您需要关闭受损节点。</block>
   <block id="db4547d0ddae50a76aa47cf54e9d15ae" category="doc">关闭节点— AFF A250</block>
   <block id="130b18edff1b7e2377d35d657b1f8a53" category="list-text">如果受损节点不在 LOADER 提示符处：</block>
@@ -5227,7 +5225,6 @@
   <block id="7d9916a1994158d9bcb9173341fcd47c" category="paragraph">如果 HA 对没有足够的可用 RoCE 端口，并且您的平台型号支持使用支持 RoCE 的 PCIe 卡或 I/O 模块，则必须已将额外的卡或 I/O 模块安装到您的平台型号支持的正确控制器插槽中。</block>
   <block id="1732f42cb90c2f75f01fe91247e128c3" category="paragraph">必须配置不支持 RoCE 的专用端口以供存储使用（而不是用于网络连接）。</block>
   <block id="0addf6844bafe9c41ea7de1b0facf307" category="paragraph"><block ref="2110c63cffe5fc725c4243d7595d7a36" category="inline-xref-macro-rx"></block></block>
-  <block id="952d0ab2aada5c0bcc6640b363de44a1" category="list-text">如果您有 AFF A700 或 ASA A700HA 对，并且要热添加初始 NS224 驱动器架（ HA 对中不存在 NS224 驱动器架），则必须在每个控制器中安装一个核心转储模块（ X9170A ， NVMe 1 TB SSD ），以支持核心转储（存储核心文件）。</block>
   <block id="40b9aa2a1398aaa422dac35a64ae5873" category="list-text">HA 对中的磁盘架数量必须小于支持的最大磁盘架数量，至少等于您计划热添加的磁盘架数量。</block>
   <block id="ad77a3083357fd77bd7e8fdbdf159740" category="paragraph">热添加磁盘架后，不能超过 HA 对支持的最大磁盘架数。</block>
   <block id="0cba540a6f27fb2ed5b8694332213f9d" category="list-text">如果要将磁盘架热添加到已具有 NS224 磁盘架的 HA 对，则 HA 对不能显示任何存储布线错误消息，并且必须将其作为多路径 HA 进行布线。</block>
@@ -5274,8 +5271,6 @@
   <block id="b5b0f2dff5bdcc9e85cf639a6245b998" category="list-text">重复步骤 3 和 4 。</block>
   <block id="97e5b69d6a085b09c71789a6b191bdbd" category="admonition">第一个控制器必须已完成重新启动。</block>
   <block id="b4c2dd2542e47ff1364abd95f6610ff8" category="list-text">验证是否已为两个控制器模块上的非专用端口配置用于存储： `storage port show`</block>
-  <block id="b94b6781be776e63efd0961838259dd1" category="section-title">准备 AFF A700 ， ASA A700 ， ASA A800 ， AFF A800 ， AFF A400 ， 或 ASA A400HA 对以热添加第二个磁盘架</block>
-  <block id="8e9bedb9a49dd2e9965ca4e4e66e1794" category="paragraph">如果您使用的是 AFF A700 ， ASA A700 ， AFF A800 ， ASA A800 ， AFF A400 ， 或者 ASA A400HA 对，其中一个 NS224 驱动器架通过缆线连接到每个控制器上一组支持 RoCE 的端口，您必须在每个控制器上的两组端口之间重新对该架进行布线（安装额外支持 RoCE 的 PCIe 卡或 I/O 模块后）。 热添加第二个磁盘架之前。</block>
   <block id="952ea6916ecd5cb89449477521dab5cb" category="list-text">您必须已启用您安装的支持 RoCE 的 PCIe 卡或 I/O 模块上的端口。</block>
   <block id="5f73e21cfc57f9099894052fde4bfc56" category="list-text">如果您的磁盘架具有多路径 HA 连接，则为端口连接重新布线是一种无中断操作步骤。</block>
   <block id="00fb5d894e369d181617f17a9dec8a1b" category="paragraph">您可以在每个控制器上的两组端口之间重新对第一个磁盘架进行布线，以便在热添加第二个磁盘架时，这两个磁盘架的连接弹性都更高。</block>
@@ -5283,18 +5278,12 @@
   <block id="0077637f8f5fcac1587cab5699dba4dc" category="list-text">根据您的平台型号，在每个控制器上的两组端口之间重新连接现有磁盘架的连接。</block>
   <block id="7e273a22e6f4b495323284cd54002213" category="admonition">移动缆线无需等待从一个端口拔下缆线与将缆线插入另一个端口之间的时间。</block>
   <block id="7e4c7e7366de7251794bd2cee31785b8" category="cell">如果您有 ...</block>
-  <block id="91fe85bf2aad836a87a981b776864ac3" category="paragraph">AFF A700 或 ASA A700 HA 对</block>
   <block id="13a2b5da1f4aef417cf381ed955f6b1e" category="admonition">这些子步骤假定已将现有磁盘架连接到每个控制器上插槽 3 中支持 RoCE 的 I/O 模块。</block>
   <block id="ce2468b66455462f68b8eef51607d931" category="paragraph">如果需要，您可以参考两个磁盘架配置中显示现有单个磁盘架和已重新布线的磁盘架的布线图。</block>
-  <block id="65c7d114429709c3019026ef7998fe7e" category="paragraph"><block ref="821721df32d20cbee340d68236a84244" category="inline-xref-macro-rx"></block></block>
   <block id="ca874efe99329d51be90677d6dba226f" category="list-text">在控制器 A 上，将缆线从插槽 3 端口 b 移至插槽 7 端口 b</block>
   <block id="7fade3ed4792ef4e89e2ae6000199479" category="list-text">对控制器 B 重复相同的缆线移动操作</block>
-  <block id="5ed60aed90e75a0ecd75f48f693a2336" category="paragraph">AFF A800 或 ASA A800 HA 对</block>
   <block id="b4e736e39f8ce14e195a6dd85eadfa52" category="admonition">这些子步骤假定已将现有磁盘架连接到每个控制器上插槽 5 中支持 RoCE 的 PCIe 卡。</block>
-  <block id="c1c17da4033211c4e98fca2f4ccc3afe" category="paragraph"><block ref="da265c6d5037f7df79f83bc7417c9f0c" category="inline-xref-macro-rx"></block></block>
   <block id="d3027cd90f40482fe406a3bf213577a2" category="list-text">在控制器 A 上，将缆线从插槽 5 端口 2 （ e5b ）移至插槽 3 端口 2 （ e3b ）。</block>
-  <block id="51dafa8f3b7a6eaa983c8f0558b34de8" category="paragraph">AFF A400 或 ASA A400 HA 对</block>
-  <block id="10ee1f510ac40554ffc295f5dd81ff05" category="paragraph"><block ref="60816734d11467be1eef08a4c3f79614" category="inline-xref-macro-rx"></block></block>
   <block id="1709a2561f0145b5df496e6917a4f72b" category="list-text">在控制器 A 上，将缆线从端口 e0d 移至插槽 5 端口 2 （ e5b ）。</block>
   <block id="d39331f2882996e7bd91bd33be8e8eda" category="list-text">验证重新连接的磁盘架是否已正确布线。</block>
   <block id="f585cc2236674d2428b635421c54ecfc" category="section-title">准备手动分配驱动器所有权以进行热添加</block>
@@ -5330,8 +5319,6 @@
   <block id="36dad54a495121233a847704d6bf5a6b" category="paragraph">连接缆线的两端后，磁盘架和控制器端口 LNK （绿色） LED 将亮起。如果端口 LNK LED 不亮，请重新拔插缆线。</block>
   <block id="d337e0e180d9a5b8e29fe40b9935de95" category="list-text">您可以使用下图帮助您以物理方式识别磁盘架 NSM 端口 e0a 和 e0b ：</block>
   <block id="a73fdad937d5d9186c5991210a3247b5" category="image-alt">DRW nss224 后端端口</block>
-  <block id="37041eb02ef3eff1f59ee4aef615fb56" category="section-title">为 FAS500f ， AFF A250 或 ASA A250HA 对的热添加磁盘架布线</block>
-  <block id="d74708a3f99678e68a371c67f4784875" category="paragraph">如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f ， AFF A250 或 ASA A250HA 对中。</block>
   <block id="6c4ae44d1114274bf4744f7a456ce07c" category="list-text">您必须已安装磁盘架，打开其电源并设置磁盘架 ID 。</block>
   <block id="373a35978efc6b28d1b1d225b662f5db" category="paragraph"><block ref="4688946b74942e3697fd11a0bd3e0972" category="inline-xref-macro-rx"></block></block>
   <block id="badce03c5c81a64063848e31681c2b29" category="paragraph">从平台机箱背面看，左侧支持 RoCE 的卡端口为端口 "A" （ e1a ），右侧端口为端口 "b" （ e1b ）。</block>
@@ -5344,8 +5331,6 @@
   <block id="7383703619146a59a96c04d7ca7f4542" category="list-text">验证热添加磁盘架的布线是否正确。</block>
   <block id="0c9aa1b8a23b895dc34c3de2f2a905b7" category="list-text">如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。</block>
   <block id="e408fe4a40b4e2b5b430bb1a2e4b56a1" category="paragraph"><block ref="054067282f59c2ea6008fdf8f0b78dea" category="inline-xref-macro-rx"></block></block>
-  <block id="ed27e90283f2a4643c92a8eee3c82df8" category="section-title">为 AFF A700 或 ASA A700HA 对的热添加磁盘架布线</block>
-  <block id="27d7faa1130d4259367b60a2008e56bf" category="paragraph">如何为 AFF A700 或 ASA A700HA 对中的 NS224 驱动器架布线，取决于要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="b6af7589a2e931c176cc7b717fbf652e" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（一个支持 RoCE 的 I/O 模块）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
   <block id="6707f4de652ae190deb895e02ccfa38c" category="admonition">此步骤假定您在每个控制器模块上的插槽 3 中安装了支持 RoCE 的 I/O 模块，而不是插槽 7 。</block>
   <block id="63efd7f12bfa615588bf813fbcf494a5" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 3 端口 a</block>
@@ -5373,8 +5358,6 @@
   <block id="0dcadfb972a7b539c769d330f7ccc286" category="list-text">转至步骤 3 。</block>
   <block id="44602264e094d019e88a336cd27d0156" category="paragraph">下图显示了第一个和第二个热添加磁盘架的布线：</block>
   <block id="bda29c65071b0b49cc9a79c7f3ba0ceb" category="image-alt">DRW nss224 a700 2 个磁盘架</block>
-  <block id="2e2d0101182cba42ae08504ecdad184f" category="section-title">为 AFF A800 或 ASA A800HA 对的热添加磁盘架布线</block>
-  <block id="b8cfa9af8ada463c1b7c233764f91c3b" category="paragraph">如何为 AFF A800 或 ASA A800HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="179bfd1f3e4cce16b8f820fa18b540ae" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（一个支持 RoCE 的 PCIe 卡）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
   <block id="a7f9eb9f8d6afdd5bc315ff6184f353b" category="admonition">此步骤假定您已在插槽 5 中安装支持 RoCE 的 PCIe 卡。</block>
   <block id="7c45e35cf1f1269da7f239bbce34287a" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 5 端口 a</block>
@@ -5393,8 +5376,6 @@
   <block id="a8d608f77f3fbb4c1156978cc97e2ec4" category="list-text">使用缆线将 NSM B 端口 e0b 连接到控制器 A 插槽 5 端口 b</block>
   <block id="75a57e4a236226bc25c09e120aeab4c5" category="paragraph">下图显示了两个热添加磁盘架的布线：</block>
   <block id="9613ef0ded970898834cffbf203f3c72" category="image-alt">DRW nss224 a800 2 个磁盘架</block>
-  <block id="bf9edd99bcf1eebeb014b9ecf77a0dac" category="section-title">为 AFF A400 或 ASA A400HA 对的热添加磁盘架布线</block>
-  <block id="e2c9311df978d14e858ad7c413ff7a14" category="paragraph">如何为 AFF A400 或 ASA A400HA 对中的 NS224 驱动器架布线，取决于要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="357240bb37125b5a8d9c9fe59aa684e9" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（板载支持 RoCE 的端口）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
   <block id="22f0e629287a1d1f90741ddf77caa944" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 端口 e0c 。</block>
   <block id="8c937d6d94aae90362b1dc41da2b9988" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 端口 e0d 。</block>
@@ -5409,9 +5390,7 @@
   <block id="f192386ba82b03da6277a09d4a2c63ac" category="list-text">使用缆线将 NSM B 端口 e0b 连接到控制器 A 端口 e0d 。</block>
   <block id="aa976c2217ca2de5e9d1001418c7b09a" category="image-alt">DRW nss224 a400 2 个磁盘架</block>
   <block id="f38b00317e342e10d9cf44073d00e94e" category="list-text">如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。</block>
-  <block id="4c2f58fc2dbb49eb7a30c49639c52748" category="section-title">为 AFF A320HA 对的热添加磁盘架布线</block>
   <block id="e708da297b918a1363bc58facb9105b4" category="paragraph">需要额外存储时，可以使用缆线将另一个 NS224 驱动器架连接到现有 HA 对。</block>
-  <block id="8c2d77fe53c7b0651494ab28a403f3bf" category="paragraph">此操作步骤假定您的 AFF A320HA 对具有现有 NS224 磁盘架，并且您要热添加第二个磁盘架。</block>
   <block id="41165b98d83f72cbb439ce5bdb9e71da" category="list-text">用缆线将磁盘架连接到控制器模块。</block>
   <block id="b4cef19f20771aa5828eb17c8503f9b4" category="list-text">使用缆线将 NSM A 端口 e0a 连接到控制器 A 端口 e0e 。</block>
   <block id="e3602d852a9feaea5973c0c3f70de818" category="list-text">使用缆线将 NSM A 端口 e0b 连接到控制器 B 端口 e0b 。</block>
@@ -7854,7 +7833,6 @@
   <block id="518d2076bf387a28038f7558530bb987" category="inline-link">使用命令行界面概述 NetApp 加密</block>
   <block id="a0ad8f5b8d13f1cd5ef039b68ed21700" category="list-text">使用中的相应操作步骤还原存储或卷加密功能<block ref="48a668c3219947c390bb7b4ff0fcb822" category="inline-link-rx"></block>。</block>
   <block id="0e1eef439b73568e7a348e3559e18284" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见<block ref="9ce22438324028a90c90ac456cc8dc62" category="inline-link-rx"></block>。</block>
-  <block id="cd1ac451f56a61cd6eee3fed14eb8119" category="list-text">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 `false` ，则必须在关闭受损节点之前更正问题描述；请参见<block ref="b6c3385b7fdb69cc66015a30ca89eb46" category="inline-link-rx"></block>。</block>
   <block id="673f7a1f10ce14ef29b06ba53cf1e5d7" category="inline-link">使用命令行界面概述 NetApp 加密</block>
   <block id="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="paragraph"><block ref="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="inline-link-rx"></block></block>
   <block id="459527cf1ec141d19f1b0f88f8c19905" category="inline-link">磁盘和聚合概述</block>
@@ -7874,4 +7852,30 @@
   <block id="934d0bdda7a0d1a8822fd442720c5972" category="paragraph">有关如何将磁盘重新分配给新控制器的说明，请选择以下选项之一。</block>
   <block id="32f251bc81f643cafcff8ad711b81b00" category="open-title">选项 1 ：验证 ID （ HA 对）</block>
   <block id="a5d68caf62cce2afa4e8ca12ce07943a" category="open-title">选项 2 ：重新分配 ID （ MetroCluster 配置）</block>
+  <block id="3893848bb7e8e3f5ec6b547e5281f1f8" category="list-text">If you have a cluster with more than two nodes, it must be in quorum.If the cluster is not in quorum or a healthy node shows `false` for eligibility and health, you must correct the issue before shutting down the impaired node.</block>
+  <block id="4ace8a3cd99d06318b85eaa42ffd9786" category="inline-link">_ONTAP 9 System Administration Reference_</block>
+  <block id="0194385554b18b3f5ce7dc105495885e" category="paragraph"><block ref="0194385554b18b3f5ce7dc105495885e" category="inline-link-rx"></block></block>
+  <block id="8cb7716be47a4efa4afe82c12815cb79" category="list-text">暂停节点，在系统提示您确认暂停时按 `y` ： `ssystem node halt -node _node_name_`</block>
+  <block id="842cdd4dec84e54705b2d07255fbd559" category="list-text">如果适用，请暂停第二个节点以避免在 HA 对配置中出现可能的仲裁错误消息： `ssystem node halt -node _second_node_name_ -ignore-quorum-warnings true -skip-lif-migration-before-shutdown true`</block>
+  <block id="7da65b5a10b69b45b490009ac07696ff" category="paragraph">出现提示时，请选择问题解答 `y` 。</block>
+  <block id="c86ca2ad8b18f1b66eec5105c703ce0a" category="list-text">如果您有 AFF A700 HA 对，并且要热添加初始 NS224 驱动器架（ HA 对中不存在 NS224 驱动器架），则必须在每个控制器中安装核心转储模块（ X9170A ， NVMe 1 TB SSD ）以支持核心转储（存储核心文件）。</block>
+  <block id="b979e87e6bde70f013c6af59e1fa73aa" category="list-text">如果您的 ASA HA 对支持 NS224 磁盘架，则可以使用此操作步骤。</block>
+  <block id="4bf41d007ddcf618082b8ef148ac2700" category="section-title">准备 AFF A700 ， AFF A800 或 AFF A400 HA 对以热添加第二个磁盘架</block>
+  <block id="60b5c0b6d97d35bee9d9ee0e548ca4d4" category="paragraph">如果您有一个 AFF A700 ， AFF A800 或 AFF A400 HA 对，其中一个 NS224 驱动器架通过缆线连接到每个控制器上一组支持 RoCE 的端口，则必须重新对该架进行布线（在安装了其他支持 RoCE 的 PCIe 卡或 I/O 模块之后） 在热添加第二个磁盘架之前，请在每个控制器上的两组端口之间执行此操作。</block>
+  <block id="7e874a7e7fce6d08319e452556499a17" category="paragraph">AFF A700 HA 对</block>
+  <block id="863ee9a0c8ca40928975158c8441cb3e" category="paragraph"><block ref="8b0dd5f6450b331119d433eade9d39d0" category="inline-xref-macro-rx"></block></block>
+  <block id="d191ea6e7cb4a619eb566229aa99b285" category="paragraph">AFF A800 HA 对</block>
+  <block id="faca4b5bb9a5da5b47d1425ef2489bdf" category="paragraph"><block ref="8417f927f631db9ff6dcfc207992ae5a" category="inline-xref-macro-rx"></block></block>
+  <block id="299be2017fe243bf0cb27752cb61cba4" category="paragraph">AFF A400 HA 对</block>
+  <block id="35abee2b20175ae748c82f6ba4453ac1" category="paragraph"><block ref="2d20d554d868477c9c895109bac068ae" category="inline-xref-macro-rx"></block></block>
+  <block id="f1f8b8def80b9337373513998dd13c3e" category="section-title">为 FAS500f 或 AFF A250 HA 对的热添加磁盘架布线</block>
+  <block id="f0fad2647eb722df1f95d7cea636dfac" category="paragraph">如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f 或 AFF A250 HA 对中。</block>
+  <block id="075ac783ee242c66ec7ef26475fd212b" category="section-title">为 AFF A700 HA 对的热添加磁盘架布线</block>
+  <block id="4360e8fa5648650972135e4f29ffa1bf" category="paragraph">如何为 AFF A700 HA 对中的 NS224 驱动器架布线，取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
+  <block id="5c817f2686998b5a889ca66df6194716" category="section-title">为 AFF A800 HA 对的热添加磁盘架布线</block>
+  <block id="660dcbef3f501768ac090c6921226dbc" category="paragraph">如何为 AFF A800 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
+  <block id="873efd8427437501798d979ea439809c" category="section-title">为 AFF A400 HA 对的热添加磁盘架布线</block>
+  <block id="c3c5b5066f403337e9cba1d236288bb5" category="paragraph">如何为 AFF A400 HA 对中的 NS224 驱动器架布线，取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
+  <block id="b994ebf3b12ef21aee27b63036342d83" category="section-title">为 AFF A320 HA 对的热添加磁盘架布线</block>
+  <block id="0d0422686a7d332d6a719d1fb6e38772" category="paragraph">此操作步骤假定您的 AFF A320 HA 对具有现有 NS224 磁盘架，并且您要热添加第二个磁盘架。</block>
 </blocks>
