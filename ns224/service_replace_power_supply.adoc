@@ -24,9 +24,9 @@ summary: 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 �
 ====
 请勿将固件还原到不支持您的磁盘架及其组件的版本。
 
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
 
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 ====
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
@@ -38,11 +38,11 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp
 
 * 拆开备用电源的包装时，请保存所有包装材料，以便在退回故障电源时使用。
 +
-如果您需要 RMA 编号或有关更换操作步骤的其他帮助，请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）。
+If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
 * 您可以使用以下视频或写入的步骤更换电源。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=5794da63-99aa-425a-825f-aa86002f154d["热插拔 NS224 驱动器架中的电源"]
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=5794da63-99aa-425a-825f-aa86002f154d["热插拔 NS224 驱动器架中的电源"^]
 
 
 

@@ -3913,8 +3913,6 @@
   <block id="a68a35a43540dd794ad04d22e6017f00" category="paragraph">在独立系统中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。</block>
   <block id="149765daf2bb4f317cf4bf88eeba26d8" category="admonition">此操作步骤仅适用于采用独立配置的系统。</block>
   <block id="d2022b24f11e03f2795bf79d17ee74ea" category="list-text">如果您尚未重新启动 _replacement_ 节点，按 Ctrl-C 中断启动过程，然后从显示的菜单中选择启动到维护模式的选项。</block>
-  <block id="66795c2f03cea7e4de64bc8b018c1009" category="list-text">如果系统 ID 不匹配，系统提示您覆盖系统 ID ，则必须输入 Y 。</block>
-  <block id="d1bb49ecfb4b800ca513e50405928721" category="list-text">查看系统 ID ： disk show -a</block>
   <block id="75310fe7f008a53b411e5d3ca1a800fd" category="list-text">您应记下旧的系统 ID ，此 ID 显示为磁盘所有者列的一部分。</block>
   <block id="e354b35d5f9fcd99d43ba27d1b483c10" category="paragraph">以下示例显示了旧系统 ID 118073209 ：</block>
   <block id="ed5045a701ec927a89cecd13b59f2648" category="list-text">启动节点： `boot_ontap`</block>
@@ -4952,10 +4950,8 @@
   <block id="e9caf8970c9cbd8e7d1c5427d3a20cf1" category="paragraph">如果您不知道受影响磁盘架的 ` _shelf_name_` ，请运行 `storage shelf show` 命令。</block>
   <block id="3afc4b70c9c05bf5b1aceb2da0636da1" category="paragraph">一个磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 NSM 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令，但使用 `off` 选项将其关闭。</block>
   <block id="ee5bf2cd4b43105d31343a884728a3d4" category="list-text">拆开备用 DIMM 的包装时，请保存所有包装材料，以便在退回发生故障的 DIMM 时使用。</block>
-  <block id="19e012dd5ab6c884883584c00f5e050b" category="paragraph">如果您需要 RMA 编号或有关更换操作步骤的其他帮助，请通过联系技术支持<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）。</block>
   <block id="36d40c496b02dc7324aae319cf2fac47" category="list-text">您可以使用以下视频或写入的步骤更换 DIMM 。</block>
   <block id="146c4b0d3d0462ab3c65b156bd5b6f53" category="inline-link">更换 NS224 驱动器架中的 DIMM</block>
-  <block id="1145df079eb59f999844566d343e1bf9" category="paragraph"><block ref="1145df079eb59f999844566d343e1bf9" category="inline-link-rx"></block></block>
   <block id="f7f603a242c5acee1fd68cd2a7202563" category="list-text">从包含要更换的 FRU 的 NSM 模块断开布线：</block>
   <block id="68b63efc11b1cc1408b8f55095718557" category="list-text">打开电源线固定器，断开电源线与电源的连接，然后从电源中拔下电源线。</block>
   <block id="e0a29acbd9bdcb48c7307027b6c4dd53" category="paragraph">电源没有电源开关。</block>
@@ -5014,7 +5010,6 @@
   <block id="d5b3850d37eca03c3be10401093f24dc" category="admonition">驱动器固件检查每两分钟进行一次。</block>
   <block id="2d45373c9232e88942b868669cd8511a" category="list-text">以下视频简要介绍了驱动器热插拔操作步骤的物理拆卸和插入部分。</block>
   <block id="4d22e44dd713955ef08491e08f976e95" category="inline-link">热插拔 NS224 驱动器架中的驱动器</block>
-  <block id="b978428fbc3003a8b7da4f6e80dbaabd" category="paragraph"><block ref="b978428fbc3003a8b7da4f6e80dbaabd" category="inline-link-rx"></block></block>
   <block id="01d36c3de356a203f6380095e17d5483" category="list-text">如果要手动为替代驱动器分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。</block>
   <block id="427dffc49ca6a83001ca0caadf14d0ed" category="admonition">如果磁盘架中的驱动器由 HA 对中的两个控制器模块拥有，则需要手动分配驱动器所有权。</block>
   <block id="ba85497a31a9938c9ee8b64479f5eb73" category="paragraph">如果启用了自动驱动器分配，则输出会在 `Auto Assign` 列中显示 `on` （对于每个控制器模块）。</block>
@@ -5118,16 +5113,13 @@
   <block id="e8f8b2e7fe84a76416bedc8340d89ea1" category="doc">将磁盘架作为交换机连接的存储进行布线— NS224 磁盘架</block>
   <block id="a94de468f363b57c8cc1ea1b7a532a9e" category="paragraph">如果您的系统需要将 NS224 驱动器架作为交换机连接存储（而不是直连存储）进行布线，请使用提供的信息。</block>
   <block id="afb935b1a48a04ad288c97c7899d840d" category="inline-link">交换机连接的 NS224 驱动器架布线信息</block>
-  <block id="1785747204ca11822dd42ba32951843b" category="paragraph"><block ref="1785747204ca11822dd42ba32951843b" category="inline-link-rx"></block></block>
   <block id="97a30f090fd38397124788f1f0376eda" category="inline-link">AFF 和 FAS 交换机文档</block>
-  <block id="95cee0ee869d11fbc57e30dade468820" category="paragraph"><block ref="95cee0ee869d11fbc57e30dade468820" category="inline-link-rx"></block></block>
   <block id="acdfef9c5579ff3ba02ba954b42b0b9d" category="summary">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换发生故障的风扇。</block>
   <block id="d7be6d5f22ae136261c4f972f836c784" category="doc">更换风扇— NS224 磁盘架</block>
   <block id="ad469db4a94f773cb57ea851a2258c7d" category="list-text">系统中的所有其他组件，包括其他四个风扇，必须正常运行。</block>
   <block id="19ca7e08bce4c0e124faa15fe7b1d419" category="list-text">拆开备用风扇的包装时，请保存所有包装材料，以便在退回故障风扇时使用。</block>
   <block id="f35ad689c95d772c71204022636dabe5" category="list-text">您可以使用以下视频或写入的步骤更换风扇。</block>
   <block id="00d1159dd7a0f5c351fdbd547850495d" category="inline-link">更换 NS224 驱动器架中的风扇</block>
-  <block id="eedef3666327a035150816f874eeab79" category="paragraph"><block ref="eedef3666327a035150816f874eeab79" category="inline-link-rx"></block></block>
   <block id="4fe5c70371cacd7543cf54df75bedd0a" category="admonition">NSM 模块盖上的 FRU 标签显示了五个风扇在 NSM 模块后墙上的位置。</block>
   <block id="5605f4aa461ce479ba2b6762822acf2b" category="list-text">以物理方式确定故障风扇。</block>
   <block id="574b0c09ebc1f816ee7722cc2b16597c" category="paragraph">当风扇发生故障时，系统会向系统控制台记录一条警告消息，指示哪个风扇发生故障。此外，位于靠近风扇插槽的板上的风扇警示（琥珀色） LED 也会亮起。</block>
@@ -5146,7 +5138,6 @@
   <block id="74f49f6f28d9fd5e7df6f1800c601a73" category="paragraph">您可以在任一控制器的控制台中输入 `storage shelf show -module` 命令，以验证磁盘架上的 NSM 固件版本。</block>
   <block id="553dc0c59541aeaac9552fd0e9932c27" category="paragraph">如果您的磁盘架未运行 NSM 固件版本 1.1x 或更高版本，则无法更换启动介质，您必须更换 NSM 模块。</block>
   <block id="ab72df24859b52c3af8d40d64d3c4050" category="inline-link-macro">更换 NSM 模块— NS224 磁盘架</block>
-  <block id="9cf6dc1fdff832b22185f3b448dca789" category="paragraph"><block ref="9cf6dc1fdff832b22185f3b448dca789" category="inline-link-macro-rx"></block></block>
   <block id="daeece39bd904e83241a90c8b8570c0a" category="list-text">您需要一把 1 号十字螺丝刀。</block>
   <block id="d6d6b039d46a324ed8ec81e6ba9ff295" category="paragraph">用于将启动介质固定到主板的螺钉需要 1 号十字螺丝刀；使用其他类型的螺丝刀可能会使螺钉脱开。</block>
   <block id="74e02b1a8147eff24fccd5044e563889" category="list-text">系统中的所有其他组件必须正常运行。</block>
@@ -5155,7 +5146,6 @@
   <block id="9d0a00a5aff4ec18c5c781787962378b" category="list-text">更换启动介质后，您可以按照套件随附的 RMA 说明中所述将故障部件退回 NetApp 。</block>
   <block id="d7fc7b8a28737104902684f03a8279e6" category="list-text">您可以使用以下视频或写入的步骤更换启动介质。</block>
   <block id="61b48a1e566d389d578d5feb4f95d32f" category="inline-link">更换 NS224 驱动器架中的启动介质</block>
-  <block id="f58704688857a12dcc199c1e305cbb36" category="paragraph"><block ref="f58704688857a12dcc199c1e305cbb36" category="inline-link-rx"></block></block>
   <block id="41d0446a43bf0ca4e32d8aa74acfb9dc" category="list-text">以物理方式找到故障启动介质。</block>
   <block id="2ac77c1f53d2acaf74354a442d9484d9" category="paragraph">启动介质位于电源对面的机架机箱墙上。位于启动介质插槽旁边的主板上的启动介质警示（琥珀色） LED 将亮起。</block>
   <block id="926c6df0fdfeee94a62afab70e1f9cb3" category="admonition">从磁盘架中卸下 NSM 模块后，此 LED 将保持亮起 10 分钟。</block>
@@ -5183,7 +5173,6 @@
   <block id="278aef8b4e228833692f9747f4ae7475" category="list-text">拆开备用 NSM 模块的包装时，请保存所有包装材料，以便在退回发生故障的 NSM 模块时使用。</block>
   <block id="46e09979a3172c8b9285556fdf5ec2d2" category="list-text">您可以使用以下视频或写入的步骤更换 NSM 模块。</block>
   <block id="4a2c735251458c16ab34a2e3177386a8" category="inline-link">更换 NS224 驱动器架中的 NSM 模块</block>
-  <block id="bc574cfd53880ef481569633c07d1b98" category="paragraph"><block ref="bc574cfd53880ef481569633c07d1b98" category="inline-link-rx"></block></block>
   <block id="6b7a231127b7a2acbb4edd9d89b96b8c" category="list-text">以物理方式识别受损的 NSM 模块。</block>
   <block id="9b731dce42bd65dfa675cd0e5bd470a1" category="paragraph">系统会向系统控制台记录一条警告消息，指示哪个模块受损。此外，驱动器架操作员显示面板和受损模块上的警示（琥珀色） LED 也会亮起。</block>
   <block id="45d29d834250186d99645df43e4c6ae8" category="list-text">断开受损 NSM 模块的布线：</block>
@@ -5300,7 +5289,6 @@
   <block id="378b62d2964ec0a6c4ac6ec95662dee4" category="paragraph">连接到电源时，磁盘架将通电；它没有电源开关。正常运行时，电源的双色 LED 将呈绿色亮起。</block>
   <block id="7468ac9b50ce2792c160ba5ee26808fe" category="list-text">将磁盘架 ID 设置为 HA 对中唯一的数字：</block>
   <block id="34ed719c558f180e6a8425d176730344" category="paragraph">有关更多详细说明，请参见：</block>
-  <block id="41479fc65c01476f20be9405a27daf49" category="paragraph"><block ref="41479fc65c01476f20be9405a27daf49" category="inline-link-macro-rx"></block></block>
   <block id="43672219196a0275d0fe8b439ccd44f9" category="list-text">拆下左端盖，找到 LED 右侧的小孔。</block>
   <block id="e1f557b7e67a27c5135ebdc776739a0e" category="list-text">将回形针或类似工具的一端插入小孔中，以到达磁盘架 ID 按钮。</block>
   <block id="82980b60b01c4e791ae1d8e73f193a85" category="list-text">按住按钮（最长 15 秒），直到数字显示屏上的第一个数字闪烁，然后释放按钮。</block>
@@ -5410,7 +5398,6 @@
   <block id="48d0ab80f7b5ca9cf8dc1ac2c8c7123a" category="list-text">拆开备用电源的包装时，请保存所有包装材料，以便在退回故障电源时使用。</block>
   <block id="34e3a163643415343661f5f7f2392785" category="list-text">您可以使用以下视频或写入的步骤更换电源。</block>
   <block id="2ffea74b2d81d01ab3d19d31aceef580" category="inline-link">热插拔 NS224 驱动器架中的电源</block>
-  <block id="e3b150588628777f4f52f38e1b848e09" category="paragraph"><block ref="e3b150588628777f4f52f38e1b848e09" category="inline-link-rx"></block></block>
   <block id="a919f0ee05d363883138207b3294f80c" category="list-text">以物理方式确定故障电源。</block>
   <block id="11c70933cb832a926e6ebf2229ee8058" category="paragraph">系统会向系统控制台记录一条警告消息，指示哪个电源出现故障。此外，磁盘架操作员显示面板上的警示（琥珀色） LED 会亮起，故障电源上的双色 LED 会呈红色亮起。</block>
   <block id="992b40e8cd1ce5e2e70ad710bea6f3c5" category="list-text">卸下故障电源：</block>
@@ -5423,7 +5410,6 @@
   <block id="d8a4ade402c2a58964f76f76d5e40639" category="list-text">拆开备用 RTC 电池的包装时，请保存所有包装材料，以便在退回发生故障的 RTC 电池时使用。</block>
   <block id="69346a8711cdec1c863cab85cc16d548" category="list-text">您可以使用以下视频或写入的步骤更换 RTC 电池。</block>
   <block id="34712a52e9b6680839bb8925061f01ca" category="inline-link">更换 NS224 驱动器架中的 RTC 电池</block>
-  <block id="15406156604c13ad90b177cd9be0cf4a" category="paragraph"><block ref="15406156604c13ad90b177cd9be0cf4a" category="inline-link-rx"></block></block>
   <block id="4666aab744a5064fa4082c8fac681c8b" category="paragraph">NSM 模块外盖上的 FRU 标签显示了 RTC 电池的位置，靠近 NSM 模块前部和电源右侧。</block>
   <block id="8e3521698724daea37d72f82d00b93c9" category="list-text">以物理方式确定发生故障的 RTC 电池。</block>
   <block id="803b47b0e40e190124f45c4a9e49deaf" category="paragraph">位于主板上电池插槽旁边的 RTC 电池警示（琥珀色） LED 将亮起。</block>
@@ -7788,7 +7774,6 @@
   <block id="af959703d2cf03d6f0ec54feb06a483a" category="paragraph">您可以使用下图或写入的步骤将启动介质从受损的控制器模块移至替代控制器模块。</block>
   <block id="8704a1a5bea5c63a077fa4f8a91fa4a6" category="paragraph">您可以使用以下插图或写入的步骤将 DIMM 从受损的控制器模块移至更换用的控制器模块。</block>
   <block id="7b54866b2a0d6e6e75dbd1588a1d2832" category="paragraph">您可以使用下图或写入的步骤将 PCIe 提升板从受损控制器模块移至更换控制器模块。</block>
-  <block id="81212d8d54eb046dc7e7c9c987a08b0d" category="image-alt">DRW A320 风扇更换动画 gif</block>
   <block id="5e71f7cd3736dc18c619e22ab69496b8" category="list-text">您可以使用插图或分步说明完成控制器与交换机之间的布线：</block>
   <block id="23d2444a35f8c3c8957c78070a834d0c" category="list-text">您可以使用插图或分步说明将控制器连接到一个磁盘架。</block>
   <block id="6bd176ab7852b1804bc6113808615ff6" category="list-text">您可以使用下图或写入的步骤将控制器连接到两个驱动器架。</block>
@@ -7838,7 +7823,6 @@
   <block id="459527cf1ec141d19f1b0f88f8c19905" category="inline-link">磁盘和聚合概述</block>
   <block id="c917987d5d8844333d3271b88c9ef8ec" category="paragraph"><block ref="c917987d5d8844333d3271b88c9ef8ec" category="inline-link-rx"></block></block>
   <block id="8476dfce11f0cbc3ca6b362cdd158c8f" category="list-text">如果您使用的是 NetApp 存储加密，则必须按照的 " 将 SED 恢复到未受保护的模式 " 一节中的说明重置 MSID<block ref="b6c3385b7fdb69cc66015a30ca89eb46" category="inline-link-rx"></block>。</block>
-  <block id="e336b31ee5508850cb2188072c64f036" category="paragraph"><block ref="e336b31ee5508850cb2188072c64f036" category="inline-link-macro-rx"></block></block>
   <block id="0ab54354ff641ba8f3492f71c03aa435" category="list-text">使用缆线将 NS224 驱动器架连接到存储交换机：</block>
   <block id="d1f671afbf5d4ca47b95e86f70c6bcc1" category="list-text">安装存储交换机：</block>
   <block id="4aaebba2a5287c74eb41bf080e6d1fe4" category="list-text">确认您的平台型号支持的硬件，例如存储交换机和缆线：</block>
@@ -7860,8 +7844,6 @@
   <block id="7da65b5a10b69b45b490009ac07696ff" category="paragraph">出现提示时，请选择问题解答 `y` 。</block>
   <block id="c86ca2ad8b18f1b66eec5105c703ce0a" category="list-text">如果您有 AFF A700 HA 对，并且要热添加初始 NS224 驱动器架（ HA 对中不存在 NS224 驱动器架），则必须在每个控制器中安装核心转储模块（ X9170A ， NVMe 1 TB SSD ）以支持核心转储（存储核心文件）。</block>
   <block id="b979e87e6bde70f013c6af59e1fa73aa" category="list-text">如果您的 ASA HA 对支持 NS224 磁盘架，则可以使用此操作步骤。</block>
-  <block id="4bf41d007ddcf618082b8ef148ac2700" category="section-title">准备 AFF A700 ， AFF A800 或 AFF A400 HA 对以热添加第二个磁盘架</block>
-  <block id="60b5c0b6d97d35bee9d9ee0e548ca4d4" category="paragraph">如果您有一个 AFF A700 ， AFF A800 或 AFF A400 HA 对，其中一个 NS224 驱动器架通过缆线连接到每个控制器上一组支持 RoCE 的端口，则必须重新对该架进行布线（在安装了其他支持 RoCE 的 PCIe 卡或 I/O 模块之后） 在热添加第二个磁盘架之前，请在每个控制器上的两组端口之间执行此操作。</block>
   <block id="7e874a7e7fce6d08319e452556499a17" category="paragraph">AFF A700 HA 对</block>
   <block id="863ee9a0c8ca40928975158c8441cb3e" category="paragraph"><block ref="8b0dd5f6450b331119d433eade9d39d0" category="inline-xref-macro-rx"></block></block>
   <block id="d191ea6e7cb4a619eb566229aa99b285" category="paragraph">AFF A800 HA 对</block>
@@ -7878,4 +7860,31 @@
   <block id="c3c5b5066f403337e9cba1d236288bb5" category="paragraph">如何为 AFF A400 HA 对中的 NS224 驱动器架布线，取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="b994ebf3b12ef21aee27b63036342d83" category="section-title">为 AFF A320 HA 对的热添加磁盘架布线</block>
   <block id="0d0422686a7d332d6a719d1fb6e38772" category="paragraph">此操作步骤假定您的 AFF A320 HA 对具有现有 NS224 磁盘架，并且您要热添加第二个磁盘架。</block>
+  <block id="18537f27e3c57fa7095de2a3bbea83b2" category="image-alt">drw A320 Replace fan</block>
+  <block id="75ce955e15fef4cd5f15ecc0c7c15370" category="list-text">查看系统 ID ： `disk show -a`</block>
+  <block id="0feb65e4d7bce1a53eb4047a827c8e55" category="list-text">使用从 disk show 命令获取的系统 ID 信息重新分配磁盘所有权： `disk reassign -s old system ID disk reassign -s 118073209`</block>
+  <block id="8c66ad63be6016fb310ce930e9943285" category="list-text">验证是否已正确分配磁盘： `disk show -a`</block>
+  <block id="d23a9067ce9ab0452898d620ad7aa84d" category="paragraph">属于替代节点的磁盘应显示新的系统 ID 。现在，以下示例将显示 system-1 所拥有的磁盘以及新的系统 ID 118065481 ：</block>
+  <block id="7c5ee56a01b06b00d2d910cc295d8c56" category="paragraph"><block ref="7c5ee56a01b06b00d2d910cc295d8c56" category="inline-link-rx"></block></block>
+  <block id="63950e6254e665584c6e0a02f9b4388b" category="paragraph"><block ref="63950e6254e665584c6e0a02f9b4388b" category="inline-link-rx"></block></block>
+  <block id="14baf7cbaa5e214a8313f9ae6e6b8214" category="paragraph"><block ref="14baf7cbaa5e214a8313f9ae6e6b8214" category="inline-link-rx"></block></block>
+  <block id="585e085c167dffb4091a9c937b46294a" category="paragraph"><block ref="585e085c167dffb4091a9c937b46294a" category="inline-link-rx"></block></block>
+  <block id="10df5509416416659fe58fd40c64d2ec" category="paragraph"><block ref="10df5509416416659fe58fd40c64d2ec" category="inline-link-rx"></block></block>
+  <block id="4ccbda321ca169104f4e4cac42fd679f" category="paragraph">If you need the RMA number or additional help with the replacement procedure, contact technical support at<block ref="9a6f401ca1e7e89d8a0c29fb0cbe81b7" category="inline-link-rx"></block>, 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).</block>
+  <block id="993f60fa2b2b04ff649009b32da3dac6" category="paragraph"><block ref="993f60fa2b2b04ff649009b32da3dac6" category="inline-link-rx"></block></block>
+  <block id="3868a54921a81264bddb64b574765582" category="paragraph"><block ref="3868a54921a81264bddb64b574765582" category="inline-link-rx"></block></block>
+  <block id="b5c70f57bf6ba389e9412bbcc142d96a" category="paragraph"><block ref="b5c70f57bf6ba389e9412bbcc142d96a" category="inline-link-rx"></block></block>
+  <block id="c834e34af9791ae6f10d11ee9190daea" category="paragraph"><block ref="c834e34af9791ae6f10d11ee9190daea" category="inline-link-macro-rx"></block></block>
+  <block id="dade207912e2765bacca35b7125bdffa" category="section-title">准备 AFF A700 ， AFF A800 或 AFF A400 HA 对以热添加第二个磁盘架</block>
+  <block id="2fc46fba25f64ee62dbc39713d768a36" category="paragraph">如果您的 AFF A700 ， AFF A800 或 AFF A400 HA 对具有一个 NS224 驱动器架，并通过缆线连接到每个控制器上的一组支持 RoCE 的端口，则必须对该磁盘架重新布线（在安装了其他支持 RoCE 的 PCIe 卡或 I/O 模块之后） 在热添加第二个磁盘架之前，请在每个控制器上的两组端口之间执行此操作。</block>
+  <block id="c69a1009359358cbb1f3e5d6483736fb" category="paragraph"><block ref="c69a1009359358cbb1f3e5d6483736fb" category="inline-link-macro-rx"></block></block>
+  <block id="9824994e3f8651cf2b6d695555bdc011" category="paragraph"><block ref="9824994e3f8651cf2b6d695555bdc011" category="inline-link-rx"></block></block>
+  <block id="008b8867712161228bd794977fcd0d4b" category="paragraph"><block ref="008b8867712161228bd794977fcd0d4b" category="inline-link-rx"></block></block>
+  <block id="17d8690f280ed171f8f8c0a25eb7ddff" category="paragraph"><block ref="17d8690f280ed171f8f8c0a25eb7ddff" category="inline-link-rx"></block></block>
+  <block id="76fac88bf17062dd76e985fd260e28bf" category="paragraph"><block ref="76fac88bf17062dd76e985fd260e28bf" category="inline-link-rx"></block></block>
+  <block id="a508cee96e9c7c91095ec8fdbc4e2283" category="paragraph"><block ref="a508cee96e9c7c91095ec8fdbc4e2283" category="inline-link-rx"></block></block>
+  <block id="35b669738c6a7d586d192e07cf910533" category="paragraph"><block ref="35b669738c6a7d586d192e07cf910533" category="inline-link-rx"></block></block>
+  <block id="1e8e53350c58f867632cf77da6114e12" category="paragraph"><block ref="1e8e53350c58f867632cf77da6114e12" category="inline-link-rx"></block></block>
+  <block id="d444e316e4fbe4a790c7592f4ea0e4d7" category="paragraph"><block ref="d444e316e4fbe4a790c7592f4ea0e4d7" category="inline-link-macro-rx"></block></block>
+  <block id="6bf27ed99f30b92f98cbb6923f3db316" category="paragraph"><block ref="6bf27ed99f30b92f98cbb6923f3db316" category="inline-link-rx"></block></block>
 </blocks>

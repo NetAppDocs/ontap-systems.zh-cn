@@ -22,7 +22,7 @@ summary: 如果运行 ONTAP 9.7 或更高版本的 HA 对中的 NS224 驱动器�
 ====
 如果您的磁盘架未运行 NSM 固件版本 1.1x 或更高版本，则无法更换启动介质，您必须更换 NSM 模块。
 
-link:service-replace-nsm100.html["更换 NSM 模块— NS224 磁盘架"]
+link:service-replace-nsm100.html["更换 NSM 模块— NS224 磁盘架"^]
 
 ====
 * 您需要一把 1 号十字螺丝刀。
@@ -31,7 +31,7 @@ link:service-replace-nsm100.html["更换 NSM 模块— NS224 磁盘架"]
 
 * 磁盘架的配对 NSM 模块必须已启动且正在运行，并且已正确布线，以便在卸下出现故障的 FRU （目标 NSM 模块）的 NSM 模块时，磁盘架可以保持连接。
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 * 系统中的所有其他组件必须正常运行。
 
@@ -51,9 +51,9 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 ====
 请勿将固件还原到不支持您的磁盘架及其组件的版本。
 
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
 
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 ====
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
@@ -65,11 +65,11 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp
 
 * 更换启动介质后，您可以按照套件随附的 RMA 说明中所述将故障部件退回 NetApp 。
 +
-如果您需要 RMA 编号或有关更换操作步骤的其他帮助，请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）。
+If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
 * 您可以使用以下视频或写入的步骤更换启动介质。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=20ed85f9-1f80-4e0e-9219-ab4600070d8a["更换 NS224 驱动器架中的启动介质"]
+https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=20ed85f9-1f80-4e0e-9219-ab4600070d8a["更换 NS224 驱动器架中的启动介质"^]
 
 
 
@@ -184,6 +184,6 @@ NSM 模块应完全插入磁盘架并与磁盘架边缘平齐。
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 

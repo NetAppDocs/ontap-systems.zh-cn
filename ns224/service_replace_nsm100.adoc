@@ -15,7 +15,7 @@ summary: 您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无�
 .开始之前
 * 磁盘架的配对 NSM 模块必须已启动且正在运行，并且已正确布线，以便在卸下故障 NSM 模块时，磁盘架可以保持连接。
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 * 系统中的所有其他组件必须正常运行。
 
@@ -35,9 +35,9 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 ====
 请勿将固件还原到不支持您的磁盘架及其组件的版本。
 
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
 
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 ====
 * 在固件版本不是最新的新 NSM 模块上，磁盘架（ NSM ）固件会自动更新（无中断）。
@@ -53,11 +53,11 @@ NSM 模块固件每 10 分钟检查一次。NSM 模块固件更新最多可能�
 
 * 拆开备用 NSM 模块的包装时，请保存所有包装材料，以便在退回发生故障的 NSM 模块时使用。
 +
-如果您需要 RMA 编号或有关更换操作步骤的其他帮助，请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）。
+If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
 * 您可以使用以下视频或写入的步骤更换 NSM 模块。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=f57693b3-b164-4014-a827-aa86002f4b34["更换 NS224 驱动器架中的 NSM 模块"]
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=f57693b3-b164-4014-a827-aa86002f4b34["更换 NS224 驱动器架中的 NSM 模块"^]
 
 
 
@@ -191,6 +191,6 @@ NSM 模块重新启动后，操作员显示面板警示 LED 将熄灭。这可�
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 

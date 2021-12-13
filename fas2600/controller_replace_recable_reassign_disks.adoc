@@ -134,8 +134,8 @@ NOTE: 此操作步骤仅适用于采用独立配置的系统。
 
 .步骤
 . 如果您尚未重新启动 _replacement_ 节点，按 Ctrl-C 中断启动过程，然后从显示的菜单中选择启动到维护模式的选项。
-. 如果系统 ID 不匹配，系统提示您覆盖系统 ID ，则必须输入 Y 。
-. 查看系统 ID ： disk show -a
+. 由于系统 ID 不匹配，系统提示您覆盖系统 ID 时，您必须输入 `Y` 。
+. 查看系统 ID ： `disk show -a`
 . 您应记下旧的系统 ID ，此 ID 显示为磁盘所有者列的一部分。
 +
 以下示例显示了旧系统 ID 118073209 ：
@@ -150,6 +150,26 @@ Local System ID: 118065481
 --------    -------------          -----  -------------  -------------
 disk_name    system-1  (118073209)  Pool0  J8XJE9LC       system-1  (118073209)
 disk_name    system-1  (118073209)  Pool0  J8Y478RC       system-1  (118073209)
+.
+.
+.
+
+----
+. 使用从 disk show 命令获取的系统 ID 信息重新分配磁盘所有权： `disk reassign -s old system ID disk reassign -s 118073209`
+. 验证是否已正确分配磁盘： `disk show -a`
++
+属于替代节点的磁盘应显示新的系统 ID 。现在，以下示例将显示 system-1 所拥有的磁盘以及新的系统 ID 118065481 ：
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK      OWNER                  POOL   SERIAL NUMBER  HOME
+--------    -------------          -----  -------------  -------------
+disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
+disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
 .
 .
 .
