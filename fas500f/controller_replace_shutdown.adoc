@@ -11,7 +11,7 @@ summary: 要关闭受损控制器模块，您必须确定节点的状态，并�
 
 * 如果您使用的是 NetApp 存储加密，则必须按照 _ONTAP 9 NetApp 加密高级指南 _ 的 "`将 SED 返回到未受保护的模式` " 一节中的说明重置 MSID 。
 +
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTAP 9 NetApp 加密高级指南》"]
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["ONTAP 9 NetApp 加密高级内容"^]
 
 * 如果您使用的是 SAN 系统，则必须已检查受损节点 SCSI 刀片式服务器的事件消息（事件日志显示）。
 +

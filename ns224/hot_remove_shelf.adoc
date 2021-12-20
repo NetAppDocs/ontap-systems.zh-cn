@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ns224, shelves, shelf, ns224 shelves, drive, aggregate, ha, pair, serving, data, i/o, hot-remove an ns224 
 summary: 您可以在已启动并提供数据的 HA 对中热删除已从驱动器中删除聚合的 NS224 驱动器架（ I/O 正在进行中）。 
 ---
-= 热移除磁盘架— NS224 磁盘架
+= 热移除磁盘架。 #8201 ； &#8212 ； &#8201 ； NS224 磁盘架
 :icons: font
 :imagesdir: ../media/
 
@@ -134,7 +134,7 @@ NOTE: 如果您的系统是在机柜中发货的，则必须先拧下将磁盘�
 
 +
 
-NOTE: 为存储使用配置的非专用端口会在输出中显示如下：如果 HA 对运行的是 ONTAP 9.8 或更高版本，则非专用端口会在 `Mode` 列中显示 `storage` 。如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？`` 中显示 `false` 列中，也会在 `State` 列中显示 `enabled` 。
+NOTE: The non-dedicated ports configured for storage use are displayed in the output as follows: If your HA pair is running ONTAP 9.8 or later, the non-dedicated ports display `storage` in the `Mode` column.If your HA pair is running ONTAP 9.7 or 9.6, the non-dedicated ports, which display `false` in the `Is Dedicated?` column, also display `enabled` in the `State` column.
 
 .. 完成适用于 HA 对所运行的 ONTAP 版本的一组步骤：
 +
@@ -184,8 +184,8 @@ ONTAP 9.6 版
 
 NOTE: 必须完成重新启动，然后才能继续执行下一步。重新启动可能需要长达 15 分钟。
 
-... 重复第一步，重新配置第二个控制器模块上的端口。
-... 重复第二步，重新启动第二个控制器以使端口更改生效。
+... 重复第一步（ A ），重新配置第二个控制器模块上的端口。
+... 重复第二步（ b ），重新启动第二个控制器以使端口更改生效。
 ... 转至子步骤 8c 以验证所有端口更改。
 
 
@@ -198,7 +198,7 @@ NOTE: 必须完成重新启动，然后才能继续执行下一步。重新启�
 如果 HA 对运行的是 ONTAP 9.8 或更高版本，则非专用端口会在 `Mode` 列中显示 `network` 。
 
 +
-如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？`` 中显示 `false` 列中，也会在 `State` 列中显示 `d已标记` 。
+如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？` 中显示 `false` 列中，也会在 `State` 列中显示 `d已标记` 。
 
 
 

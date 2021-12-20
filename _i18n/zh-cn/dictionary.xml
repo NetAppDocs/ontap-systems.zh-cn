@@ -2029,13 +2029,9 @@
   <block id="e1a9c4ffc30ecf4d0171f66e784d5799" category="doc">移动硬件— AFF A250</block>
   <block id="7c323e2eb49745018682c538529f7337" category="paragraph">您可以使用以下视频或表格中的步骤更换机箱；它假定已卸下并更换挡板：</block>
   <block id="a5f08fde11dbf730684ed691fc182e15" category="summary">本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。如果您熟悉 NetApp 系统的安装，请使用本指南。</block>
-  <block id="6e075bbef1d5f13594013aae5d70513b" category="doc">快速指南— AFF A250</block>
   <block id="350cd17d7031de85301f98a531f45f4c" category="paragraph">访问 _Installation and Setup Instructions_PDF 海报：</block>
   <block id="687423a0d05ad428110ae922c0e5d086" category="inline-link">《 AFF A250 安装和设置说明》</block>
-  <block id="b03538d447f18b61bcbd445c28e03402" category="list-text">英语<block ref="a6876146dbdbf51e0fb4757052c35be7" category="inline-link-rx"></block></block>
   <block id="50071fa4dffba54414cb029edf92fda7" category="inline-link">《 AFF A250 系统安装和设置说明》</block>
-  <block id="4a19b10ab73353a1ea3a975a1e6b0632" category="list-text">日语：<block ref="c4be31393701bb6c02474ca7743be964" category="inline-link-rx"></block></block>
-  <block id="8bacd400a6ac1affcd65b2595804793d" category="list-text">中文：<block ref="ca801a2c26483880e7e10ef83636664a" category="inline-link-rx"></block></block>
   <block id="be6de1f798c9c3b8d44917a0380db2a8" category="summary">您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。</block>
   <block id="89df533077d1f80c319c0c00d4c58ed1" category="doc">更换实时时钟电池 - AFF A250</block>
   <block id="cd8fc17dc540949d4a2220442f92f1e4" category="image-alt">图例图标 02</block>
@@ -2132,8 +2128,6 @@
   <block id="381526217dead66932ed7e3b4d0903a5" category="list-text">如果您的系统采用 MetroCluster 配置，请验证是否已配置每个节点： `MetroCluster node show - fields configuration-state`</block>
   <block id="6deb52ed65be42ac8913dcb77b7974b2" category="list-text">验证每个节点是否存在所需的卷： `vol show -node node-name`</block>
   <block id="169b97f74ce63e1551e2942f0c276b35" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它： `storage failover modify -node replacement-node-name -onreboot true`</block>
-  <block id="aae1993f9adf73717ff5309304f8138f" category="summary">本指南详细介绍了安装 AFF A250 系统的分步说明。</block>
-  <block id="7c6502762663b85cf2b40a07fa84aeb0" category="doc">详细指南— AFF A250</block>
   <block id="a244d5252d50aa9b9cb10de76b91dcf2" category="section-title">第 1 步：准备安装</block>
   <block id="bf34833ec8e983c1342c0fbebc12c347" category="paragraph">要安装 AFF A250 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="aba9cd834dbc9324d89f22de76fad5e9" category="paragraph">您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。</block>
@@ -2209,7 +2203,6 @@
   <block id="1ec9fa42251d8d9889cd15b2ab11e819" category="admonition">插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。</block>
   <block id="6a8358304afcea34675f3d718aaf90e4" category="list-text">使用动画或分步说明完成控制器与交换机之间的布线：</block>
   <block id="68fec8a15bb05bcae8c25db3b314e5be" category="inline-link">为双节点无交换机集群布线</block>
-  <block id="dce959783cf15b736610aed736e26b7a" category="paragraph"><block ref="dce959783cf15b736610aed736e26b7a" category="inline-link-rx"></block></block>
   <block id="3f4a7771ab61ac16b156190d458da251" category="cell">在每个控制器上执行</block>
   <block id="e738e65f735fc9089f253b3fe571f559" category="paragraph"><block ref="e738e65f735fc9089f253b3fe571f559" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f2633075828362900ca73919da819a29" category="paragraph">使用 25GbE 集群互连缆线将集群互连端口彼此相连<block ref="6b6a40b68f5814cad1750bfff7e3b927" category="inline-image-macro-rx" type="image"></block>：</block>
@@ -2225,7 +2218,6 @@
   <block id="6c0e530aa28d8009701169ec145c45b2" category="section-title">选项 2 ：为有交换机的集群布线</block>
   <block id="611c6be02af4f5847e3d1df02f0dd5cd" category="paragraph">控制器上的所有端口都连接到交换机；集群互连，管理，光纤通道以及数据或主机网络交换机。</block>
   <block id="37aaa0d7d666e28c8819aac432ac13a0" category="inline-link">为交换集群布线</block>
-  <block id="ee37986934ecec92cd1e21c0e2b7c3a3" category="paragraph"><block ref="ee37986934ecec92cd1e21c0e2b7c3a3" category="inline-link-rx"></block></block>
   <block id="09401fd662d47d1159b97106f3c2c4b4" category="paragraph">使用缆线将集群互连端口连接到 25 GbE 集群互连交换机。</block>
   <block id="96640993dd2592a16c29226daf83b860" category="list-text">e0c</block>
   <block id="076b1ed5eae37af50f50d5b0e6d87908" category="list-text">e0d<block ref="ee3f9d0ec20204c7d48b52d859e31c4d" category="inline-image-macro-rx" type="image"></block></block>
@@ -2250,7 +2242,6 @@
   <block id="0e103ad5ee434b2faca19141061cbe51" category="paragraph">使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。</block>
   <block id="cf1985ecf07e77cb119a58876e988a76" category="list-text">使用动画或分步说明将控制器模块连接到一个磁盘架。</block>
   <block id="3fc9c5d53b75cb7be856556daaf1676f" category="inline-link">使用缆线将控制器连接到一个 NS224</block>
-  <block id="9fddc70ce27056d4ce1ec35a94dfcf55" category="paragraph"><block ref="9fddc70ce27056d4ce1ec35a94dfcf55" category="inline-link-rx"></block></block>
   <block id="dcbdf1c0d1b9f68d0faeb146daed7433" category="paragraph"><block ref="dcbdf1c0d1b9f68d0faeb146daed7433" category="inline-image-macro-rx" type="image"></block></block>
   <block id="707499b643fd8fca89818013be74c38e" category="paragraph">使用缆线将控制器 A 连接到磁盘架 <block ref="18f599f35e14d88c5e3fb9f75197e3c8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5089e1d089fd198b7fe04eae5c1ed6b8" category="paragraph"><block ref="5089e1d089fd198b7fe04eae5c1ed6b8" category="inline-image-macro-rx" type="image"></block></block>
@@ -3588,9 +3579,7 @@
   <block id="f3a01cef2d9918b3669edb9ee2a1c2b8" category="doc">视频— AFF A800</block>
   <block id="37027e6557c74eaec3477b0744cba237" category="inline-link">安装和设置 AFF A800</block>
   <block id="569fd6d51d60138379122c5d14f1a2aa" category="paragraph"><block ref="569fd6d51d60138379122c5d14f1a2aa" category="inline-link-rx"></block></block>
-  <block id="2e2eda99468395972ab537febbbbf83c" category="doc">快速指南— AFF A800</block>
   <block id="85d1ffd9f4e349440b69cef9b8b49607" category="inline-link">《 AFF A800 系统安装和设置说明》</block>
-  <block id="91259df249c0ad76c17e12be53a16d27" category="paragraph"><block ref="91259df249c0ad76c17e12be53a16d27" category="inline-link-rx"></block></block>
   <block id="2ee0c03cb33be156e12b5b33dbf8e422" category="doc">更换 NVDIMM 电池— AFF A800</block>
   <block id="a2a7f6c4d01f5224a71aaaa23dd37c83" category="list-text">松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线以及 SFP 和 QSFP 模块（如果需要），并跟踪缆线的连接位置。松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线，跟踪缆线的连接位置。</block>
   <block id="23303fd786407709fac1485d347f7aa2" category="paragraph">要更换 NVDIMM 电池，您必须从控制器模块中取出故障电池，然后将更换电池安装到控制器模块中。</block>
@@ -3716,8 +3705,6 @@
   <block id="81e46cc93d394efa5f52a46a0927e127" category="doc">关闭节点— AFF A800</block>
   <block id="b8984f02e6cfd8c017d9d0f4737d0ac7" category="doc">更换机箱 - AFF A800</block>
   <block id="58eb7c7475c6fdc8a1136e6958568701" category="doc">关闭受损节点 - AFF A800</block>
-  <block id="18427c9dfe1f3b46acaa41d818cf25a6" category="summary">本指南详细介绍了安装 AFF A800 系统的分步说明。</block>
-  <block id="420226d7551df04dff226d59e01d5402" category="doc">详细指南— AFF A800</block>
   <block id="13f3f5d40904a4c5b68e6c877e0c9bbd" category="paragraph">要安装 AFF A800 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="b772890c716d468c4b26510d897c0276" category="paragraph">HA 互连</block>
   <block id="3d8315ff7403b2d22ef55f5c6720369f" category="paragraph">X6621A-05 （ 112-00595 ）， 0.5 米；</block>
@@ -3730,12 +3717,10 @@
   <block id="5dce1d6a0952709f0d3753b80a1cfdfb" category="list-text">下载并完成 _Cluster 配置工作表 _ 。</block>
   <block id="9245f306913d78c734376f866af93a01" category="paragraph"><block ref="9245f306913d78c734376f866af93a01" category="inline-link-rx"></block></block>
   <block id="1a24d62ae37ede800baaffb6a6a891c2" category="inline-link-macro">将 SuperRail 安装到四柱机架中</block>
-  <block id="12fd51e18c3089237abdf5dbde3fb8e0" category="paragraph"><block ref="12fd51e18c3089237abdf5dbde3fb8e0" category="inline-link-macro-rx"></block></block>
   <block id="a0c86487fec36ce37cba5bd44aad6322" category="image-alt">DRW affa800 重量注意事项</block>
   <block id="820d203fae081b8e985e10f5ba7a6241" category="image-alt">DRW affa800 安装缆线管理</block>
   <block id="2e3f75d41267a27ec00f8d348665700d" category="paragraph">控制器上的管理网络端口连接到交换机。HA 互连端口和集群互连端口都连接在两个控制器上。</block>
   <block id="526b85298cc3076a61b3d12cd45e1909" category="inline-link">为双节点无交换机集群布线</block>
-  <block id="1f493af99df7c49df0f0e8222a66a300" category="paragraph"><block ref="1f493af99df7c49df0f0e8222a66a300" category="inline-link-rx"></block></block>
   <block id="f8793589b1deeb1a1641ea1f77deadeb" category="paragraph"><block ref="f8793589b1deeb1a1641ea1f77deadeb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="34cd57c6976f4d17a4a24783a05e9e43" category="paragraph">为 HA 互连端口布线：</block>
   <block id="3b8092245bf9f73ee2eb61bb4346915b" category="list-text">e0b 到 e0b</block>
@@ -3752,20 +3737,17 @@
   <block id="0f156d5bceb3a6e3966f04370c598d85" category="list-text"><block ref="0119b77f0ae462187ef1cbf452a5656b" category="inline-xref-macro-rx"></block></block>
   <block id="f0571b16e45cfcf3e75dcf1e773c291c" category="list-text"><block ref="bdb41f1e9db6683cf1f3c73d0285f818" category="inline-xref-macro-rx"></block></block>
   <block id="f9e35b540e44cb04a6bd15708b14606e" category="paragraph">控制器上的集群互连和管理网络端口连接到交换机，而 HA 互连端口则连接到两个控制器上。</block>
-  <block id="2045d02280dc3b49b471cd69323741df" category="paragraph"><block ref="2045d02280dc3b49b471cd69323741df" category="inline-link-rx"></block></block>
   <block id="efc9b170c93cc5c3475dff9a11057add" category="paragraph">使用缆线将集群互连端口连接到 100 GbE 集群互连交换机。* e0a * e1a<block ref="153c9110464651fb1eae9cc4405e1fba" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f2b3fa371a81e53ad6486e565b845d6e" category="paragraph">使用缆线将端口 2a 至 2D 连接到 FC 主机交换机。<block ref="81f0d6877ff05391413cad4fd461fa9d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ed6aa14dcddd8960a96a377341c9d252" category="section-title">选项 2 ：使用缆线连接到 10GbE 主机网络</block>
   <block id="7f41e7efae96b1a03620ad35c03b48c9" category="paragraph">控制器上的 10GbE 端口连接到 10GbE 主机网络交换机。</block>
   <block id="cbafe2caf6dcedc097aead608523640d" category="paragraph">使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。<block ref="d58e771670be1cdb48adcf90823af25d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d65855733eac3bc510036608a1a7ee6c" category="inline-link">使用缆线将控制器连接到单个驱动器架</block>
-  <block id="57905b72560b8f2320e80c7548f99ccf" category="paragraph"><block ref="57905b72560b8f2320e80c7548f99ccf" category="inline-link-rx"></block></block>
   <block id="bd0585b7b34097175ddbc891bfea357b" category="paragraph">使用缆线将控制器 A 连接到磁盘架 <block ref="5a7e82fa4b93fb16c2c5bc44a8522f5a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e6dd0f6c8da4411248f9566cf343b96a" category="paragraph">使用缆线将控制器 B 连接到磁盘架： <block ref="cac8a5d3fb17ab489df054a6d41ea9bd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="67f8e001ff11a5ea0b9591fadb082aee" category="section-title">选项 4 ：使用缆线将控制器连接到两个驱动器架</block>
   <block id="a24fb212b5b00b0c81da896ef0f4169e" category="list-text">使用以下动画或写入的步骤将控制器连接到两个驱动器架。</block>
   <block id="4f1364bfa73a2858b17ecfc509954fb5" category="inline-link">使用缆线将控制器连接到两个驱动器架</block>
-  <block id="304c2dca86c4d333c4b970ac01342edb" category="paragraph"><block ref="304c2dca86c4d333c4b970ac01342edb" category="inline-link-rx"></block></block>
   <block id="d79c126fd4481ac23425d8456f7afe5b" category="paragraph">使用缆线将控制器 A 连接到磁盘架： <block ref="33e04cf68a3af49b0ee4d01ad0d7ef57" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3054630c0e5edbd6da4f93a401050c21" category="paragraph">使用缆线将控制器 B 连接到磁盘架： <block ref="4ea96729fae2f1ab6cad14d31d1c7ccf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7260ebf97e775ac420f626e20bb3bf2d" category="list-text">将控制台缆线连接到笔记本电脑或控制台，并使用系统随附的控制台缆线连接控制器上的控制台端口。</block>
@@ -4690,13 +4672,8 @@
   <block id="77dde4ad7c98f99f807ec139e659b972" category="doc">视频— FAS500f</block>
   <block id="a913fe47ae8dd3f50e4c2659f0aafe28" category="inline-link">安装和设置 FAS500f</block>
   <block id="f9b761b89fd5e566fa1bfe6b5c4feb81" category="paragraph"><block ref="f9b761b89fd5e566fa1bfe6b5c4feb81" category="inline-link-rx"></block></block>
-  <block id="04aba316fe4066dbec526a68509a3346" category="summary">本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。</block>
-  <block id="5c89d1572d56ddc6b9c0c8fa4605c0f9" category="doc">快速指南— FAS500f</block>
   <block id="139b85a2da5c2f7968fae24f14c3ed09" category="inline-link">《 FAS500f 安装和设置说明》</block>
-  <block id="da4501c43d464bd1aacb3fd03623ecf2" category="list-text">英语<block ref="1882ef8e29e23f7ebafcce15f18f116f" category="inline-link-rx"></block></block>
   <block id="dae1434e283524bee3110823c8eb7212" category="inline-link">《 FAS500f 系统安装和设置说明》</block>
-  <block id="5b0d710a924287e1b7fd370b0d235ae7" category="list-text">日语：<block ref="29c03de57f5db475b576797cca82a2a1" category="inline-link-rx"></block></block>
-  <block id="bc31f3bba370200195451345eb7427a8" category="list-text">中文：<block ref="154964421103f31a8a92a1f2ef5947fe" category="inline-link-rx"></block></block>
   <block id="acc2bccea0dfeb04591667aa706aad91" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— FAS500f</block>
   <block id="0ce2a0e29499223b29490143e42e0e0e" category="list-text">与受损控制器运行的 ONTAP 映像版本相同的副本。您可以从 NetApp 支持站点上的 * 下载 * 部分下载相应的映像</block>
   <block id="63bf196da0a71b579342a8c36b458ea1" category="list-text">保存使用 ` * savenv*` 命令更改的环境变量</block>
@@ -4737,9 +4714,6 @@
   <block id="9cba1bd90da040950cfda65ba6af50aa" category="doc">更换 NVMEM 电池— FAS500f</block>
   <block id="74384aef792e0e84d445bfde0eab13c6" category="paragraph">您可以使用以下视频或表格中的步骤更换 NVMEM 电池：</block>
   <block id="b3e8eef19f55c74c863b75988d188522" category="doc">关闭受损控制器模块— FAS500f</block>
-  <block id="d0e5253e8eb036059e8a4f83790b3dbf" category="summary">本指南详细介绍了如何安装 FAS500f 系统。</block>
-  <block id="0532f37b4ade4a5f873c864a9172532a" category="doc">详细指南— FAS500f</block>
-  <block id="bf4b685448d96d847d273223dbb1418e" category="paragraph">本指南详细介绍了如何安装 FAS500f 系统。</block>
   <block id="3b92fecaa3772b0492ba3935a96dedea" category="paragraph">要安装 FAS500f 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="3ea38b3923e0e690201e332cebb4b94d" category="paragraph">使用 25GbE 集群互连缆线将集群互连端口彼此相连</block>
   <block id="b5bee911f1169a180dca19eacfac565a" category="paragraph"><block ref="6b6a40b68f5814cad1750bfff7e3b927" category="inline-image-macro-rx" type="image"></block>：</block>
@@ -4766,9 +4740,7 @@
   <block id="e66322388322d8b74707e920c5738c23" category="doc">视频— AFF C190</block>
   <block id="9491e0966039e152b8ce7d1388d96014" category="inline-link">安装和设置 AFF C190</block>
   <block id="4979e4d990261a99e14eeaef3c5cdd8c" category="paragraph"><block ref="4979e4d990261a99e14eeaef3c5cdd8c" category="inline-link-rx"></block></block>
-  <block id="7ecd784275a14d2faaf0af398a30e54d" category="doc">快速指南— AFF C190</block>
   <block id="0e976cfcc1b2e9eac14c2a85a2af912b" category="inline-link">《 AFF C190 系统安装和设置说明》</block>
-  <block id="b9d8fd1123237b635b2c6913bc1bba6f" category="paragraph"><block ref="b9d8fd1123237b635b2c6913bc1bba6f" category="inline-link-rx"></block></block>
   <block id="b351b18aabb1167eb5b0851a7dfde759" category="doc">更换电源— AFF C190</block>
   <block id="48cb3ada49a99389f0b8a03abf466ec8" category="summary">您必须验证机箱的 HA 状态并运行系统级诊断。</block>
   <block id="ae66ff9f4454403fc4560484ed0e7cec" category="doc">还原和验证配置— AFF C190</block>
@@ -4906,10 +4878,8 @@
   <block id="18108ac2d1d4890bfa267d1c329e82cc" category="doc">更换控制器模块 - AFF C190</block>
   <block id="d88c7eb1c7ef4b32e4cdba82c917bfae" category="doc">关闭节点— AFF C190</block>
   <block id="9eb6861003219a994b9c41cc634af5a2" category="doc">更换机箱 - AFF C190</block>
-  <block id="5d22242998775a9fd003aeb96a4af902" category="summary">本指南详细介绍了安装 AFF C190 系统的分步说明。</block>
   <block id="1e5f8516ec6ebc15ffae79de58467aeb" category="doc">详细指南— AFF C190</block>
   <block id="537180ccf440446ad8816ed356c6cee9" category="paragraph">要安装 AFF C190 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
-  <block id="8b5638ec590eec6c27c355d4a9d30369" category="paragraph"><block ref="8b5638ec590eec6c27c355d4a9d30369" category="inline-link-macro-rx"></block></block>
   <block id="3fdd87b9e91d1f4dbea3152a3a2b8d0b" category="paragraph">X6566B-3-R6 （ 112-00300 ）， 3 米</block>
   <block id="9fdd1c8e4d28b02ef6dde477e81eb678" category="paragraph"><block ref="caaa8a847335f7164117894cfe79e731" category="inline-image-macro-rx" type="image"></block> +</block>
   <block id="2dbee959c43fd0b0e9eab0968ff31b96" category="image-alt">OIE 缆线光纤 LC 连接器</block>
@@ -4933,9 +4903,7 @@
   <block id="ac3d560a40b4d6d28fac097677ecaa8d" category="image-alt">DRW C190 交换式以太网网络布线动画</block>
   <block id="c148c3a234659fa32cba3b91e58f84d2" category="admonition">统一配置系统的默认端口配置为 CNA 模式；如果连接到 FC 主机网络，则必须修改 FC 模式的端口。</block>
   <block id="9b55e2ed42fd49c141aa176cbeb25ba6" category="inline-link-macro">《 NetApp ONTAP 配置指南》</block>
-  <block id="9c0fb70f91650e026cc232f4ff977292" category="list-text">使用中收集的数据配置系统 <block ref="37d715c7f2baa58dce2bf411c4a5c534" category="inline-link-macro-rx"></block>。</block>
   <block id="7ac22c07a9dcb85e963d9fbf1f27178a" category="summary">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换故障 DIMM 。</block>
-  <block id="1be54ea4e140628405dd1f92cbb65f8e" category="doc">更换 DIMM - NS224 磁盘架</block>
   <block id="da58b6d3bd8d2396e076938c32c0ab3c" category="list-text">磁盘架的配对 NSM 模块必须已启动且正在运行，并且已正确布线，以便在卸下出现故障的 FRU （目标 NSM 模块）的 NSM 模块时，磁盘架可以保持连接。</block>
   <block id="6c1921d7df069dd1505980207b7ea2f4" category="list-text">系统中的所有其他组件，包括其他三个 DIMM ，必须正常运行。</block>
   <block id="c35835b502576486e1080d2641bad00f" category="list-text">在拆卸和安装 NVMe 磁盘架模块（ NSM ）之间至少留出 70 秒。</block>
@@ -5000,7 +4968,6 @@
   <block id="696c27bbbca57b41c523fb9200483a25" category="list-text">运行 Active IQ Config Advisor ，验证 NSM 模块的布线是否正确。</block>
   <block id="be18329abc2d39cf668517f7b74c32c6" category="paragraph">如果生成任何布线错误，请按照提供的更正操作进行操作。</block>
   <block id="66c55f70fc7014da19c97d66f75b43e0" category="summary">您可以在 I/O 正在进行时无中断地更换已启动的 NS224 驱动器架中的故障驱动器。</block>
-  <block id="100cf583f6cdd16852a08df77146f368" category="doc">热插拔驱动器— NS224 磁盘架</block>
   <block id="9e09af22b61dcdd808a9a927f88b99ed" category="list-text">NS224 磁盘架必须支持您要安装的驱动器。</block>
   <block id="d984cda888fb7cc147f7992831f859b5" category="list-text">验证要删除的驱动器是否出现故障。</block>
   <block id="4b0f11237c7fb298046b87e4e5edf9a0" category="paragraph">您可以运行 `storage disk show -broken` 命令来验证驱动器是否出现故障。故障驱动器将显示在故障驱动器列表中。如果不是，则应等待，然后重新运行命令。</block>
@@ -5016,7 +4983,6 @@
   <block id="b1fed0a03aae9e2c00ae3f49b6c9b739" category="list-text">如果要更换另一个驱动器，请重复步骤 3 到步骤 7 。</block>
   <block id="231236e14086359b3d54dea9955a700b" category="list-text">如果您在步骤 1 中禁用了自动驱动器分配，请手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配：</block>
   <block id="d6d8a1a3b9a54c543134bb59ad36c7ef" category="summary">您可以在已启动并提供数据的 HA 对中热删除已从驱动器中删除聚合的 NS224 驱动器架（ I/O 正在进行中）。</block>
-  <block id="10535f3c95548bd83d9b23d6567b98e4" category="doc">热移除磁盘架— NS224 磁盘架</block>
   <block id="547789886fcdaf2aca4537e1693b3b9e" category="paragraph">您可以在已启动且正在提供数据（ I/O 正在进行）的 HA 对中热删除已从驱动器中删除聚合的 NS224 驱动器架。</block>
   <block id="f0efa51e8edbba6e292cee6e81da292c" category="list-text">HA 对不能处于接管状态。</block>
   <block id="b19f857c715b45e6cb3690dc35ce2bcc" category="list-text">您必须已从要移除的磁盘架中的驱动器（驱动器必须为备用驱动器）中删除所有聚合。</block>
@@ -5051,7 +5017,6 @@
   <block id="233c6d894e812ba3b977c90fd860429a" category="list-text">您可以通过完成以下子步骤来重新配置不支持专用 RoCE 的端口以供网络使用。</block>
   <block id="9f828d34e3b637190e1077658926821a" category="paragraph">否则，您将使用此操作步骤。</block>
   <block id="e51f4a966b3b35e8279bd6056a17d73d" category="list-text">验证当前为存储配置的非专用端口的名称： `storage port show`</block>
-  <block id="2df8306e923a478f674624a49c122743" category="admonition">为存储使用配置的非专用端口会在输出中显示如下：如果 HA 对运行的是 ONTAP 9.8 或更高版本，则非专用端口会在 `Mode` 列中显示 `storage` 。如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？`` 中显示 `false` 列中，也会在 `State` 列中显示 `enabled` 。</block>
   <block id="09717857bd238c15d9fcc102d5404886" category="list-text">完成适用于 HA 对所运行的 ONTAP 版本的一组步骤：</block>
   <block id="08991d0bdf685c94c284280aafed49b0" category="cell">如果 HA 对正在运行 ...</block>
   <block id="c3ce6809be6bdc67ae978395484d0585" category="paragraph">ONTAP 9.8 或更高版本</block>
@@ -5066,8 +5031,6 @@
   <block id="d72fa5a12e76358fd8b68f7caa0ff437" category="list-text">重新启动控制器模块以使端口更改生效：</block>
   <block id="e42342ad0796d8943473e121a9dc1dbe" category="paragraph">`ssystem node reboot -node _node name_ -reason _reason_ for the reboot`</block>
   <block id="353ddccb67f943b94223bd1ca797d961" category="admonition">必须完成重新启动，然后才能继续执行下一步。重新启动可能需要长达 15 分钟。</block>
-  <block id="0d155f4db44e8b40ddc4f37a8419f7ff" category="list-text">重复第一步，重新配置第二个控制器模块上的端口。</block>
-  <block id="f15bd3fe49db25388c3c7add044503a9" category="list-text">重复第二步，重新启动第二个控制器以使端口更改生效。</block>
   <block id="d133f9489f82e1094aeabb56f67bbcb9" category="list-text">验证是否已重新配置两个控制器模块的非专用端口以供网络使用： `storage port show`</block>
   <block id="ea26f0c009e33e86f172f22d6e190d0a" category="paragraph">如果 HA 对运行的是 ONTAP 9.8 或更高版本，则非专用端口会在 `Mode` 列中显示 `network` 。</block>
   <block id="73124fcd33e14baccdc22e05ad18e381" category="paragraph">如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？`` 中显示 `false` 列中，也会在 `State` 列中显示 `d已标记` 。</block>
@@ -5076,7 +5039,6 @@
   <block id="7bb2de11f19c9aab4053bb448f6f6712" category="paragraph">当 ONTAP 尚未运行或在将磁盘架连接到系统之前热添加磁盘架时，您可以更改系统中的磁盘架 ID 。您还可以在 ONTAP 启动并运行（控制器模块可用于提供数据）且磁盘架中的所有驱动器均为无主聚合，备用聚合或脱机聚合的一部分时更改磁盘架 ID 。</block>
   <block id="d1433048cd9c5a1ba76a8df5300f9864" category="list-text">如果 ONTAP 已启动且正在运行（控制器模块可用于提供数据），则必须已验证磁盘架中的所有驱动器是否为无主聚合，备用聚合或脱机聚合的一部分。</block>
   <block id="ddc3cfefb19fcaaa13d8979c5016a9e0" category="paragraph">您可以使用 `storage disk show -shelf _shelf_number_` 命令验证驱动器的状态。如果驱动器出现故障， `Container Type` 列中的输出应显示 `spare` 或 `broken` 。此外， `Container Name` 和 `owner` 列应包含一个短划线。</block>
-  <block id="f3f976636eb6d1582674dcbf3699c6df" category="list-text">您需要一个带一端直发的回形针或一个窄尖圆头笔。</block>
   <block id="0cec52d1b96e39b0b14f274fd8bba3d9" category="paragraph">您可以使用回形针或笔形笔通过操作显示面板（ OperatorDisplay Panel ， ODp ）中 LED 右侧的小孔访问磁盘架 ID 按钮。</block>
   <block id="ca6592648e24fc75321ba685ce760213" category="list-text">有效磁盘架 ID 为 00 到 99 。</block>
   <block id="3c00e3d3e889f1fab0a1164e25d22368" category="list-text">HA 对中的磁盘架 ID 必须是唯一的。</block>
@@ -5110,12 +5072,10 @@
   <block id="93343660fe0c9586be193e558eb4f745" category="paragraph">此时， ONTAP 可以正确删除旧磁盘架地址并更新新磁盘架地址的副本。</block>
   <block id="5a6ec3ac63a7fb05de2686f31f690298" category="list-text">更换左端盖。</block>
   <block id="883c91c37ee151a81d34d6105afae5ea" category="summary">如果您的系统需要将 NS224 驱动器架作为交换机连接存储进行布线 \ （非直连存储），请使用提供的信息。</block>
-  <block id="e8f8b2e7fe84a76416bedc8340d89ea1" category="doc">将磁盘架作为交换机连接的存储进行布线— NS224 磁盘架</block>
   <block id="a94de468f363b57c8cc1ea1b7a532a9e" category="paragraph">如果您的系统需要将 NS224 驱动器架作为交换机连接存储（而不是直连存储）进行布线，请使用提供的信息。</block>
   <block id="afb935b1a48a04ad288c97c7899d840d" category="inline-link">交换机连接的 NS224 驱动器架布线信息</block>
   <block id="97a30f090fd38397124788f1f0376eda" category="inline-link">AFF 和 FAS 交换机文档</block>
   <block id="acdfef9c5579ff3ba02ba954b42b0b9d" category="summary">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换发生故障的风扇。</block>
-  <block id="d7be6d5f22ae136261c4f972f836c784" category="doc">更换风扇— NS224 磁盘架</block>
   <block id="ad469db4a94f773cb57ea851a2258c7d" category="list-text">系统中的所有其他组件，包括其他四个风扇，必须正常运行。</block>
   <block id="19ca7e08bce4c0e124faa15fe7b1d419" category="list-text">拆开备用风扇的包装时，请保存所有包装材料，以便在退回故障风扇时使用。</block>
   <block id="f35ad689c95d772c71204022636dabe5" category="list-text">您可以使用以下视频或写入的步骤更换风扇。</block>
@@ -5132,9 +5092,7 @@
   <block id="5cc3ac161d068bd18a26a529762bedc8" category="summary">您可以通过存储架文档安装，设置和维护系统。</block>
   <block id="04d800fa50ce1545b4418475b40e3ed5" category="doc">NS224 磁盘架</block>
   <block id="ee902d4594abf28b5457ac82defd33ec" category="summary">如果运行 ONTAP 9.7 或更高版本的 HA 对中的 NS224 驱动器架上的启动介质出现故障，或者磁盘架运行的是 NVMe 磁盘架模块（ NSM\ ）固件版本 1.1x 或更高版本，则可以更换启动介质。在驱动器架通电且 I/O 正在进行的情况下，可以无中断地更换启动介质。</block>
-  <block id="89d4335ef7ebbfe1db510925f09d4702" category="doc">更换启动介质— NS224 磁盘架</block>
   <block id="fe4889c3c14829f659038af092c58c0f" category="paragraph">如果运行 ONTAP 9.7 或更高版本的 HA 对中的 NS224 驱动器架上的启动介质出现故障，或者磁盘架运行的是 NVMe 磁盘架模块（ NSM ）固件版本 1.1x 或更高版本，则可以更换启动介质。在驱动器架通电且 I/O 正在进行的情况下，可以无中断地更换启动介质。</block>
-  <block id="3208b9eaaf11e5efaab00226190c4886" category="list-text">您的 HA 对必须已运行 ONTAP 9.7 或更高版本，并且此版本至少支持 NSM 固件版本，或者您的 HA 对必须已运行 ONTAP 9.6 版本且 NSM 固件版本为 1.1x 或更高版本。</block>
   <block id="74f49f6f28d9fd5e7df6f1800c601a73" category="paragraph">您可以在任一控制器的控制台中输入 `storage shelf show -module` 命令，以验证磁盘架上的 NSM 固件版本。</block>
   <block id="553dc0c59541aeaac9552fd0e9932c27" category="paragraph">如果您的磁盘架未运行 NSM 固件版本 1.1x 或更高版本，则无法更换启动介质，您必须更换 NSM 模块。</block>
   <block id="ab72df24859b52c3af8d40d64d3c4050" category="inline-link-macro">更换 NSM 模块— NS224 磁盘架</block>
@@ -5209,11 +5167,6 @@
   <block id="eeb59433d501968b152fd713cddd2e47" category="paragraph">热添加 NS224 驱动器架之前， HA 对必须满足特定要求。</block>
   <block id="9e3a02c5b7d1bbea0a425314be87f94c" category="list-text">您的平台型号和 ONTAP 版本必须支持您要热添加的 NS224 磁盘架和驱动器。</block>
   <block id="b3f61222fb51c826335ea05f957189ce" category="list-text">要连接磁盘架，必须具有正确数量和类型的缆线。</block>
-  <block id="3caf0df6798c75f9c8d2c602c2cf3a5b" category="list-text">HA 对必须具有足够的可用 RoCE 端口，以支持您要热添加的磁盘架数量。</block>
-  <block id="4ce3387f08d211213f03b2d3301d2371" category="paragraph">对于要热添加的每个磁盘架，每个控制器上至少需要两个支持 RoCE 的端口。这些端口可以位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合，也可以位于支持 RoCE 的 I/O 模块上，这一点由您的平台型号提供支持。</block>
-  <block id="7d9916a1994158d9bcb9173341fcd47c" category="paragraph">如果 HA 对没有足够的可用 RoCE 端口，并且您的平台型号支持使用支持 RoCE 的 PCIe 卡或 I/O 模块，则必须已将额外的卡或 I/O 模块安装到您的平台型号支持的正确控制器插槽中。</block>
-  <block id="1732f42cb90c2f75f01fe91247e128c3" category="paragraph">必须配置不支持 RoCE 的专用端口以供存储使用（而不是用于网络连接）。</block>
-  <block id="0addf6844bafe9c41ea7de1b0facf307" category="paragraph"><block ref="2110c63cffe5fc725c4243d7595d7a36" category="inline-xref-macro-rx"></block></block>
   <block id="40b9aa2a1398aaa422dac35a64ae5873" category="list-text">HA 对中的磁盘架数量必须小于支持的最大磁盘架数量，至少等于您计划热添加的磁盘架数量。</block>
   <block id="ad77a3083357fd77bd7e8fdbdf159740" category="paragraph">热添加磁盘架后，不能超过 HA 对支持的最大磁盘架数。</block>
   <block id="0cba540a6f27fb2ed5b8694332213f9d" category="list-text">如果要将磁盘架热添加到已具有 NS224 磁盘架的 HA 对，则 HA 对不能显示任何存储布线错误消息，并且必须将其作为多路径 HA 进行布线。</block>
@@ -5231,15 +5184,10 @@
   <block id="3de1e52644cd0e31c01bd38eb7e3cd32" category="admonition">固件更新可能需要长达 30 分钟。</block>
   <block id="4cf3f390446c26252aab038e17c0643f" category="section-title">准备热添加</block>
   <block id="c0f11900de778c0c7dbc4dcc23284ed9" category="paragraph">在热添加 NS224 驱动器架之前，您必须完成适用于 HA 对的准备任务。</block>
-  <block id="a443940fbe2fb5423668ed98c38a7b0d" category="section-title">准备支持 RoCE 的非专用端口以进行热添加</block>
-  <block id="e351108bd5da95ffee5ea6cb621ce300" category="paragraph">如果您的 HA 对具有不支持 RoCE 的专用端口，而您要使用这些端口热添加 NS224 驱动器架，则必须确保这些端口已配置为用于存储（而不是用于网络连接）。根据您的平台型号，支持 RoCE 的端口位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上。</block>
   <block id="1292d9da9c097d598fa72a64d548e359" category="paragraph">您必须已满足系统要求。</block>
   <block id="17d14abf2103752e4149b92b2294370e" category="paragraph"><block ref="1a0d84af954c02706175aa571a3829ff" category="inline-xref-macro-rx"></block></block>
-  <block id="4cf0401915e87afdf25c04caa14aec15" category="list-text">对于某些平台型号，如果在控制器上受支持的插槽中安装了支持 RoCE 的 PCIe 卡或 I/O 模块，则端口会自动默认为存储使用（而不是网络连接）； 但是，建议您完成此操作步骤，以验证是否已将支持 RoCE 的端口配置为存储使用。</block>
-  <block id="a659946037069f5abc0622ea3c21c863" category="list-text">如果您确定 HA 对中不支持 RoCE 的专用端口未配置为存储使用，则配置这些端口是无中断操作步骤。</block>
   <block id="f13cb5d2becdef8b8ebea94e8b537d9f" category="admonition">如果 HA 对运行的是 ONTAP 9.6 版，则需要重新启动控制器，一次重新启动一个控制器。</block>
   <block id="f02a3810a88faed2075af7fdeef6cc0d" category="admonition">如果 HA 对运行的是 ONTAP 9.7 或更高版本，则无需重新启动控制器，除非一个或两个控制器均处于维护模式。此操作步骤假定两个控制器均未处于维护模式。</block>
-  <block id="dae369442d7a2eeb57061b9756819556" category="list-text">验证 HA 对中的非专用端口是否已配置为用于存储。`s存储端口显示`</block>
   <block id="9c421700c0f93ff32ed586c9cde9ac20" category="paragraph">如果 HA 对运行的是 ONTAP 9.8 或更高版本，则非专用端口在 `Mode` 列中显示 `storage` 。</block>
   <block id="1a0894ce06ca64ffb7715de304b85900" category="paragraph">如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？` 中显示 `false` 列中，也会在 `State` 列中显示 `enabled` 。</block>
   <block id="d0d1f0809de877f29fd0a846c8876708" category="list-text">如果配置了非专用端口以供存储使用，则可以使用此操作步骤。</block>
@@ -5260,20 +5208,14 @@
   <block id="b5b0f2dff5bdcc9e85cf639a6245b998" category="list-text">重复步骤 3 和 4 。</block>
   <block id="97e5b69d6a085b09c71789a6b191bdbd" category="admonition">第一个控制器必须已完成重新启动。</block>
   <block id="b4c2dd2542e47ff1364abd95f6610ff8" category="list-text">验证是否已为两个控制器模块上的非专用端口配置用于存储： `storage port show`</block>
-  <block id="952ea6916ecd5cb89449477521dab5cb" category="list-text">您必须已启用您安装的支持 RoCE 的 PCIe 卡或 I/O 模块上的端口。</block>
   <block id="5f73e21cfc57f9099894052fde4bfc56" category="list-text">如果您的磁盘架具有多路径 HA 连接，则为端口连接重新布线是一种无中断操作步骤。</block>
   <block id="00fb5d894e369d181617f17a9dec8a1b" category="paragraph">您可以在每个控制器上的两组端口之间重新对第一个磁盘架进行布线，以便在热添加第二个磁盘架时，这两个磁盘架的连接弹性都更高。</block>
   <block id="4a681792f044e81503a327f4c48db609" category="list-text">在此操作步骤期间，一次移动一根缆线，以始终保持与磁盘架的连接。</block>
   <block id="0077637f8f5fcac1587cab5699dba4dc" category="list-text">根据您的平台型号，在每个控制器上的两组端口之间重新连接现有磁盘架的连接。</block>
   <block id="7e273a22e6f4b495323284cd54002213" category="admonition">移动缆线无需等待从一个端口拔下缆线与将缆线插入另一个端口之间的时间。</block>
   <block id="7e4c7e7366de7251794bd2cee31785b8" category="cell">如果您有 ...</block>
-  <block id="13a2b5da1f4aef417cf381ed955f6b1e" category="admonition">这些子步骤假定已将现有磁盘架连接到每个控制器上插槽 3 中支持 RoCE 的 I/O 模块。</block>
   <block id="ce2468b66455462f68b8eef51607d931" category="paragraph">如果需要，您可以参考两个磁盘架配置中显示现有单个磁盘架和已重新布线的磁盘架的布线图。</block>
-  <block id="ca874efe99329d51be90677d6dba226f" category="list-text">在控制器 A 上，将缆线从插槽 3 端口 b 移至插槽 7 端口 b</block>
   <block id="7fade3ed4792ef4e89e2ae6000199479" category="list-text">对控制器 B 重复相同的缆线移动操作</block>
-  <block id="b4e736e39f8ce14e195a6dd85eadfa52" category="admonition">这些子步骤假定已将现有磁盘架连接到每个控制器上插槽 5 中支持 RoCE 的 PCIe 卡。</block>
-  <block id="d3027cd90f40482fe406a3bf213577a2" category="list-text">在控制器 A 上，将缆线从插槽 5 端口 2 （ e5b ）移至插槽 3 端口 2 （ e3b ）。</block>
-  <block id="1709a2561f0145b5df496e6917a4f72b" category="list-text">在控制器 A 上，将缆线从端口 e0d 移至插槽 5 端口 2 （ e5b ）。</block>
   <block id="d39331f2882996e7bd91bd33be8e8eda" category="list-text">验证重新连接的磁盘架是否已正确布线。</block>
   <block id="f585cc2236674d2428b635421c54ecfc" category="section-title">准备手动分配驱动器所有权以进行热添加</block>
   <block id="b72b3c2205cb08a656771ba6697f52d1" category="paragraph">如果要为要热添加的 NS224 驱动器架手动分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。</block>
@@ -5282,7 +5224,6 @@
   <block id="26f90712b783e9cc3ac80d0bd0ba6246" category="paragraph">安装新的 NS224 驱动器架涉及到将磁盘架安装到机架或机柜中，连接电源线（自动打开磁盘架电源），然后设置磁盘架 ID 。</block>
   <block id="98a23f93a2146d0c96053cc9158120a2" category="list-text">您必须已完成适用的准备过程。</block>
   <block id="4dc0b17b937c12129ebe893f11113096" category="paragraph"><block ref="b033791636e3890ff7903341ce0a7906" category="inline-xref-macro-rx"></block></block>
-  <block id="68a5bc2904a301826d28812323e617f3" category="list-text">使用随磁盘架提供的安装宣传单安装磁盘架随附的导轨安装套件。</block>
   <block id="738a7d32562c5557c170a7a1bacec3f1" category="admonition">请勿使用法兰安装磁盘架。</block>
   <block id="70dc4293ceb1c0525c9a51737c5667b8" category="list-text">使用安装宣传单将磁盘架安装并固定到支架以及机架或机柜上。</block>
   <block id="032241d3ad139656f292a55835e7d7b8" category="list-text">将电源线连接到磁盘架，使用电源线固定器将其固定，然后将电源线连接到不同的电源以提高故障恢复能力。</block>
@@ -5299,7 +5240,6 @@
   <block id="7cd532a90215f8cff1bce2eea092415d" category="paragraph">您必须从磁盘架上拔下两根电源线，等待 10 秒，然后重新插入。</block>
   <block id="24e10780f209a577c697057f12f64f10" category="paragraph">电源恢复供电后，其双色 LED 将呈绿色亮起。</block>
   <block id="be355dee9f72986f0aafd260106ee987" category="section-title">为驱动器架布线以进行热添加</block>
-  <block id="9f09fccfa079d80298cbd7be6e0a23d4" category="paragraph">您可以为要热添加的每个 NS224 驱动器架布线，以便每个磁盘架与 HA 对中的每个控制器模块有两个连接。根据您要热添加的磁盘架数量以及您的平台型号，您可以在控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上使用支持 RoCE 的端口。</block>
   <block id="d84d97bfca6c6a7d47f929c1b0ee1fb3" category="section-title">为热添加布线时的注意事项</block>
   <block id="00d2619e88b97f1c37f53ab4557be753" category="paragraph">在为热添加的磁盘架布线之前，熟悉正确的缆线连接器方向以及 NS224 NSM 驱动器磁盘架模块上端口的位置和标记会很有帮助。</block>
   <block id="52aad3ff52241a2e329ba14ca2b495ec" category="list-text">插入缆线时，连接器拉片朝上。</block>
@@ -5309,7 +5249,6 @@
   <block id="a73fdad937d5d9186c5991210a3247b5" category="image-alt">DRW nss224 后端端口</block>
   <block id="6c4ae44d1114274bf4744f7a456ce07c" category="list-text">您必须已安装磁盘架，打开其电源并设置磁盘架 ID 。</block>
   <block id="373a35978efc6b28d1b1d225b662f5db" category="paragraph"><block ref="4688946b74942e3697fd11a0bd3e0972" category="inline-xref-macro-rx"></block></block>
-  <block id="badce03c5c81a64063848e31681c2b29" category="paragraph">从平台机箱背面看，左侧支持 RoCE 的卡端口为端口 "A" （ e1a ），右侧端口为端口 "b" （ e1b ）。</block>
   <block id="6636323e0aff4f454f3b81527e703c2b" category="list-text">为磁盘架连接布线：</block>
   <block id="7684dbbd76ade935a226af6dfe897289" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 1 端口 A （ e1a ）。</block>
   <block id="dd76ecf50f41da091f6d857178f31123" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 1 端口 b （ e1b ）。</block>
@@ -5319,26 +5258,20 @@
   <block id="7383703619146a59a96c04d7ca7f4542" category="list-text">验证热添加磁盘架的布线是否正确。</block>
   <block id="0c9aa1b8a23b895dc34c3de2f2a905b7" category="list-text">如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。</block>
   <block id="e408fe4a40b4e2b5b430bb1a2e4b56a1" category="paragraph"><block ref="054067282f59c2ea6008fdf8f0b78dea" category="inline-xref-macro-rx"></block></block>
-  <block id="b6af7589a2e931c176cc7b717fbf652e" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（一个支持 RoCE 的 I/O 模块）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
-  <block id="6707f4de652ae190deb895e02ccfa38c" category="admonition">此步骤假定您在每个控制器模块上的插槽 3 中安装了支持 RoCE 的 I/O 模块，而不是插槽 7 。</block>
   <block id="63efd7f12bfa615588bf813fbcf494a5" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 3 端口 a</block>
   <block id="20609b8391343d9357715cf71f95b8ef" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 3 端口 b</block>
   <block id="acd47cf4eb7a4076ffdc07861a0e849b" category="list-text">使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 3 端口 a</block>
   <block id="7be00b9b3d477b7e3040cb833bd9164b" category="list-text">使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 3 端口 b</block>
-  <block id="956a8c5111ea7ad7493d417985011c8b" category="paragraph">下图显示了在每个控制器模块中使用一个支持 RoCE 的 I/O 模块为一个热添加磁盘架布线：</block>
   <block id="8938c580277fb7fffe7bfaa223b07cc6" category="image-alt">DRW nss224 a700 1 个磁盘架</block>
-  <block id="1f0f392ba30fde596e480da871aff5aa" category="list-text">如果要在每个控制器模块中使用两组支持 RoCE 的端口（两个支持 RoCE 的 I/O 模块）热添加一个或两个磁盘架，请完成相应的子步骤。</block>
   <block id="bb53c62475a4f28295dfd71302a53a3d" category="cell">磁盘架</block>
   <block id="d223aabe6d0751ac7fb17d3493f3c6c7" category="cell">布线</block>
   <block id="65bee04716a9a584a592b5c5ac95e30a" category="paragraph">磁盘架 1</block>
-  <block id="2c80a3dd6ef037feaef237684b7bc857" category="admonition">这些子步骤假定您开始布线时使用的是将磁盘架端口 e0a 连接到插槽 3 中支持 RoCE 的 I/O 模块，而不是插槽 7 。</block>
   <block id="28b38dd6f72777821e6860388626bd86" category="list-text">使用缆线将 NSM A 端口 e0a 连接到控制器 A 插槽 3 端口 a</block>
   <block id="08285761db2e8c5630e9cd2b950779e4" category="list-text">使用缆线将 NSM A 端口 e0b 连接到控制器 B 插槽 7 端口 b</block>
   <block id="201cca5254621335487b601c90501130" category="list-text">使用缆线将 NSM B 端口 e0a 连接到控制器 B 插槽 3 端口 a</block>
   <block id="107cc1b513bc08cd1a86f749d88fc763" category="list-text">使用缆线将 NSM B 端口 e0b 连接到控制器 A 插槽 7 端口 b</block>
   <block id="3992e90365cd83d200a23714fd7144bd" category="list-text">如果要热添加第二个磁盘架，请完成 `Shelf 2` 子步骤；否则，请转至步骤 3 。</block>
   <block id="a740221e4a860e8ea31ec9d725dfdeec" category="paragraph">磁盘架 2</block>
-  <block id="bd20175d22abe39358a7c26005e06210" category="admonition">这些子步骤假定您开始布线时使用的是将磁盘架端口 e0a 连接到插槽 7 中支持 RoCE 的 I/O 模块，而不是插槽 3 （与磁盘架 1 的布线子步骤相关）。</block>
   <block id="db9e9985ce3384ccc7437da17ab1b6d1" category="list-text">使用缆线将 NSM A 端口 e0a 连接到控制器 A 插槽 7 端口 a</block>
   <block id="debc8e5f2759d5538f54f284b45dbc57" category="list-text">使用缆线将 NSM A 端口 e0b 连接到控制器 B 插槽 3 端口 b</block>
   <block id="cccebc538728b3b256a38000d9f82966" category="list-text">使用缆线将 NSM B 端口 e0a 连接到控制器 B 插槽 7 端口 a</block>
@@ -5346,32 +5279,22 @@
   <block id="0dcadfb972a7b539c769d330f7ccc286" category="list-text">转至步骤 3 。</block>
   <block id="44602264e094d019e88a336cd27d0156" category="paragraph">下图显示了第一个和第二个热添加磁盘架的布线：</block>
   <block id="bda29c65071b0b49cc9a79c7f3ba0ceb" category="image-alt">DRW nss224 a700 2 个磁盘架</block>
-  <block id="179bfd1f3e4cce16b8f820fa18b540ae" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（一个支持 RoCE 的 PCIe 卡）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
-  <block id="a7f9eb9f8d6afdd5bc315ff6184f353b" category="admonition">此步骤假定您已在插槽 5 中安装支持 RoCE 的 PCIe 卡。</block>
   <block id="7c45e35cf1f1269da7f239bbce34287a" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 5 端口 a</block>
   <block id="a59162c8f8af57e9933c57cbc8fc2e2e" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 5 端口 b</block>
   <block id="a668cb1c0a82083d498d62fdcc9b88db" category="list-text">使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 5 端口 a</block>
   <block id="4ceaacb52a9b0ba21b42397d82e9c9b8" category="list-text">使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 5 端口 b</block>
-  <block id="8d4b151386edd5127c6a2410565af5a4" category="paragraph">下图显示了在每个控制器模块上使用一个支持 RoCE 的 PCIe 卡为一个热添加磁盘架布线：</block>
   <block id="373e018c4ca509f2172931f931def7e2" category="image-alt">DRW nss224 a800 1 个磁盘架</block>
-  <block id="be264823339102f0656f5867ce82185e" category="list-text">如果要在每个控制器模块上使用两组支持 RoCE 的端口（两个支持 RoCE 的 PCIe 卡）热添加一个或两个磁盘架，请完成相应的子步骤。</block>
-  <block id="ea7ca99391106657219cebc80ee2d245" category="admonition">此步骤假定您已在插槽 5 和插槽 3 中安装了支持 RoCE 的 PCIe 卡。</block>
-  <block id="29ac2d82b61f02b36ed97fb17939c109" category="admonition">这些子步骤假定您正在通过将磁盘架端口 e0a 连接到插槽 5 中支持 RoCE 的 PCIe 卡（而不是插槽 3 ）来开始布线。</block>
   <block id="18a1ee71f8dba0400c7d631c554f89bb" category="list-text">使用缆线将 NSM A 端口 e0a 连接到控制器 A 插槽 5 端口 a</block>
   <block id="70e6d1487e4df35e27ad77b5a5dc8bb2" category="list-text">使用缆线将 NSM B 端口 e0a 连接到控制器 B 插槽 5 端口 a</block>
-  <block id="d18466a1738ae0ac2ab4817d135af1e4" category="admonition">这些子步骤假定您开始使用缆线将磁盘架端口 e0a 连接到插槽 3 中支持 RoCE 的 PCIe 卡，而不是插槽 5 （与磁盘架 1 的布线子步骤相关）。</block>
   <block id="905417014d69df94145e05d6c152deec" category="list-text">使用缆线将 NSM A 端口 e0b 连接到控制器 B 插槽 5 端口 b</block>
   <block id="a8d608f77f3fbb4c1156978cc97e2ec4" category="list-text">使用缆线将 NSM B 端口 e0b 连接到控制器 A 插槽 5 端口 b</block>
   <block id="75a57e4a236226bc25c09e120aeab4c5" category="paragraph">下图显示了两个热添加磁盘架的布线：</block>
   <block id="9613ef0ded970898834cffbf203f3c72" category="image-alt">DRW nss224 a800 2 个磁盘架</block>
-  <block id="357240bb37125b5a8d9c9fe59aa684e9" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（板载支持 RoCE 的端口）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
   <block id="22f0e629287a1d1f90741ddf77caa944" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 端口 e0c 。</block>
   <block id="8c937d6d94aae90362b1dc41da2b9988" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 端口 e0d 。</block>
   <block id="1338474ed1400f2decaa8fd4832a842d" category="list-text">使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 端口 e0c 。</block>
   <block id="0e756c90485de908977a44f0d58d0222" category="list-text">使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 端口 e0d 。</block>
-  <block id="b301a527507082053cebf739c90f2ac0" category="paragraph">下图显示了在每个控制器模块上使用一组支持 RoCE 的端口为一个热添加磁盘架布线：</block>
   <block id="c445ec69267514b825de2f1f527b6d69" category="image-alt">DRW nss224 a400 1 个磁盘架</block>
-  <block id="ccc7fe1ce21831d4d2d2f27bd15ab0f2" category="list-text">如果要在每个控制器模块上使用两组支持 RoCE 的端口（板载端口和 PCIe 卡支持 RoCE 的端口）热添加一个或两个磁盘架，请完成以下子步骤。</block>
   <block id="c30f945bbdd11d29e0f5cde326554182" category="list-text">使用缆线将 NSM A 端口 e0a 连接到控制器 A 端口 e0c 。</block>
   <block id="dfaa68fc610c2b43abf32ee0c2eff4d7" category="list-text">使用缆线将 NSM B 端口 e0a 连接到控制器 B 端口 e0c 。</block>
   <block id="9d77f869ed166aeb4c27e1b6054d86bb" category="list-text">使用缆线将 NSM A 端口 e0b 连接到控制器 B 端口 e0d 。</block>
@@ -5391,7 +5314,6 @@
   <block id="95fef4a83236d5e3f2ecc10020bc8967" category="paragraph"><block ref="cd2a16cde64eed80b7a03f7f34240bcb" category="inline-xref-macro-rx"></block></block>
   <block id="52e2f58fc39d834074ac8badf66c9b06" category="paragraph">您可以使用通配符一次分配多个驱动器。</block>
   <block id="d60624f33844c521f18921a4a9b49842" category="summary">您可以在 I/O 正在进行时无中断地更换已启动的 NS224 驱动器架中的故障电源。</block>
-  <block id="ce58a339ef0b5aa08e1351185f66a2ec" category="doc">热插拔电源— NS224 磁盘架</block>
   <block id="e1ad4e3599275cd19a2d7fdf242bd624" category="list-text">如果要更换多个电源，则必须一次更换一个，以便磁盘架保持供电。</block>
   <block id="830b9acdce8babc4152c94321f48a584" category="list-text">* 最佳实践： * 最佳实践是在从 NSM 模块卸下电源后两分钟内更换电源。</block>
   <block id="9933eb186a5ed678263e25a456659d04" category="paragraph">如果超过这两分钟，磁盘架将继续运行，但 ONTAP 会向控制台发送有关电源降级的消息，直到更换电源为止。</block>
@@ -5405,7 +5327,6 @@
   <block id="4db9a696c509e28c74bddbffbc5d8cd3" category="list-text">用双手支撑电源边缘并将其与 NSM 模块中的开口对齐。</block>
   <block id="12cdfd44047ba85a8d6c05ef152143d9" category="list-text">将电源线连接到电源，并使用电源线固定器固定电源线。</block>
   <block id="eca4ecc78ec43fe459fcc0715dc2d5db" category="summary">您可以在已打开电源且正在执行 I/O 的 NS224 驱动器架中无中断更换发生故障的实时时钟 \ （ RTC\ ）电池。</block>
-  <block id="2cc84b3be9e849adc2789fc0cd994e1b" category="doc">更换实时时钟电池— NS224 磁盘架</block>
   <block id="e4882b21497de6fedaf4c9c3b8016faa" category="paragraph">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换发生故障的实时时钟（ Real-Time Clock ， RTC ）电池。</block>
   <block id="d8a4ade402c2a58964f76f76d5e40639" category="list-text">拆开备用 RTC 电池的包装时，请保存所有包装材料，以便在退回发生故障的 RTC 电池时使用。</block>
   <block id="69346a8711cdec1c863cab85cc16d548" category="list-text">您可以使用以下视频或写入的步骤更换 RTC 电池。</block>
@@ -6275,9 +6196,6 @@
   <block id="d861952ae543b7ab12c97b76ba5a6d22" category="paragraph">通过从备用磁盘驱动器中删除所有权信息，可以根据需要将该磁盘驱动器正确集成到另一个节点中。</block>
   <block id="82a0e673933c66d13ebe9ac1bf565aa9" category="paragraph">用于从磁盘驱动器中删除所有权的操作步骤要求您禁用磁盘所有权自动分配。您可以在此操作步骤末尾重新启用磁盘所有权自动分配。</block>
   <block id="6d262abed5885a9a0e7edfe9d9df36e8" category="list-text">对于双节点以上的集群模式 ONTAP 系统，最佳实践是将 epsilon 重新分配给正在进行计划内维护的 HA 对以外的 HA 对。</block>
-  <block id="a2f32a275433435e433112c02164dbfd" category="paragraph">重新分配 epsilon 可最大程度地降低意外错误影响集群模式 ONTAP 系统中所有节点的风险。有关仲裁角色和 epsilon 以及用于将 epsilon 重新分配给集群中其他节点的操作步骤的信息，请参见 _System Administration Referus_ 。</block>
-  <block id="543e45cc2fb7b698b77d3c6b0a3ca386" category="inline-link">查找适用于您的 ONTAP 9 版本的《系统管理指南》</block>
-  <block id="4108ebe332aa0fe88fa33c9b0499c77e" category="paragraph"><block ref="4108ebe332aa0fe88fa33c9b0499c77e" category="inline-link-rx"></block></block>
   <block id="1319d9c9945c8d2b36ffa9c0945c9db6" category="list-text">如果要从堆栈热移除磁盘架（但保留堆栈），则一次可重新布线并验证一个路径（路径 A ，路径 B ），以绕过要移除的磁盘架，从而始终保持控制器与堆栈的单路径连接。</block>
   <block id="be52806c806fdd72f6b18960841d7459" category="admonition">如果在为堆栈重新布线以绕过要移除的磁盘架时，不保持从控制器到堆栈的单路径连接，则可能会导致系统出现多磁盘崩溃。</block>
   <block id="bb4fc12c448337a0baf229180b8301a3" category="list-text">验证您的系统配置是否为 `Multi-Path HA` ， `Multi-Path` ， `四路径 HA` 或 `Quad-path` ： `ssysconfig`</block>
@@ -7812,7 +7730,6 @@
   <block id="1fc23df34c1ef373bc238879bf1082e5" category="list-text"><block ref="1fc23df34c1ef373bc238879bf1082e5" category="inline-link-macro-rx"></block></block>
   <block id="b8a901030a76c92bf9e4426d81439fa5" category="list-text"><block ref="b8a901030a76c92bf9e4426d81439fa5" category="inline-link-macro-rx"></block></block>
   <block id="3f98fa9dd0068de7a3158d3cefe04024" category="list-text"><block ref="3f98fa9dd0068de7a3158d3cefe04024" category="inline-link-macro-rx"></block></block>
-  <block id="aa366b5fc2f01c678bba52692905f43c" category="list-text"><block ref="aa366b5fc2f01c678bba52692905f43c" category="inline-link-macro-rx"></block></block>
   <block id="a2960939186ae78b824d694e2cbba800" category="inline-link">CLI 管理概述</block>
   <block id="7ef4f9cbea79ce55b05d13fd4d4c880d" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见<block ref="b6c3385b7fdb69cc66015a30ca89eb46" category="inline-link-rx"></block>。</block>
   <block id="518d2076bf387a28038f7558530bb987" category="inline-link">使用命令行界面概述 NetApp 加密</block>
@@ -7853,11 +7770,8 @@
   <block id="f1f8b8def80b9337373513998dd13c3e" category="section-title">为 FAS500f 或 AFF A250 HA 对的热添加磁盘架布线</block>
   <block id="f0fad2647eb722df1f95d7cea636dfac" category="paragraph">如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f 或 AFF A250 HA 对中。</block>
   <block id="075ac783ee242c66ec7ef26475fd212b" category="section-title">为 AFF A700 HA 对的热添加磁盘架布线</block>
-  <block id="4360e8fa5648650972135e4f29ffa1bf" category="paragraph">如何为 AFF A700 HA 对中的 NS224 驱动器架布线，取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="5c817f2686998b5a889ca66df6194716" category="section-title">为 AFF A800 HA 对的热添加磁盘架布线</block>
-  <block id="660dcbef3f501768ac090c6921226dbc" category="paragraph">如何为 AFF A800 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="873efd8427437501798d979ea439809c" category="section-title">为 AFF A400 HA 对的热添加磁盘架布线</block>
-  <block id="c3c5b5066f403337e9cba1d236288bb5" category="paragraph">如何为 AFF A400 HA 对中的 NS224 驱动器架布线，取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="b994ebf3b12ef21aee27b63036342d83" category="section-title">为 AFF A320 HA 对的热添加磁盘架布线</block>
   <block id="0d0422686a7d332d6a719d1fb6e38772" category="paragraph">此操作步骤假定您的 AFF A320 HA 对具有现有 NS224 磁盘架，并且您要热添加第二个磁盘架。</block>
   <block id="18537f27e3c57fa7095de2a3bbea83b2" category="image-alt">drw A320 Replace fan</block>
@@ -7874,9 +7788,7 @@
   <block id="993f60fa2b2b04ff649009b32da3dac6" category="paragraph"><block ref="993f60fa2b2b04ff649009b32da3dac6" category="inline-link-rx"></block></block>
   <block id="3868a54921a81264bddb64b574765582" category="paragraph"><block ref="3868a54921a81264bddb64b574765582" category="inline-link-rx"></block></block>
   <block id="b5c70f57bf6ba389e9412bbcc142d96a" category="paragraph"><block ref="b5c70f57bf6ba389e9412bbcc142d96a" category="inline-link-rx"></block></block>
-  <block id="c834e34af9791ae6f10d11ee9190daea" category="paragraph"><block ref="c834e34af9791ae6f10d11ee9190daea" category="inline-link-macro-rx"></block></block>
   <block id="dade207912e2765bacca35b7125bdffa" category="section-title">准备 AFF A700 ， AFF A800 或 AFF A400 HA 对以热添加第二个磁盘架</block>
-  <block id="2fc46fba25f64ee62dbc39713d768a36" category="paragraph">如果您的 AFF A700 ， AFF A800 或 AFF A400 HA 对具有一个 NS224 驱动器架，并通过缆线连接到每个控制器上的一组支持 RoCE 的端口，则必须对该磁盘架重新布线（在安装了其他支持 RoCE 的 PCIe 卡或 I/O 模块之后） 在热添加第二个磁盘架之前，请在每个控制器上的两组端口之间执行此操作。</block>
   <block id="c69a1009359358cbb1f3e5d6483736fb" category="paragraph"><block ref="c69a1009359358cbb1f3e5d6483736fb" category="inline-link-macro-rx"></block></block>
   <block id="9824994e3f8651cf2b6d695555bdc011" category="paragraph"><block ref="9824994e3f8651cf2b6d695555bdc011" category="inline-link-rx"></block></block>
   <block id="008b8867712161228bd794977fcd0d4b" category="paragraph"><block ref="008b8867712161228bd794977fcd0d4b" category="inline-link-rx"></block></block>
@@ -7887,4 +7799,122 @@
   <block id="1e8e53350c58f867632cf77da6114e12" category="paragraph"><block ref="1e8e53350c58f867632cf77da6114e12" category="inline-link-rx"></block></block>
   <block id="d444e316e4fbe4a790c7592f4ea0e4d7" category="paragraph"><block ref="d444e316e4fbe4a790c7592f4ea0e4d7" category="inline-link-macro-rx"></block></block>
   <block id="6bf27ed99f30b92f98cbb6923f3db316" category="paragraph"><block ref="6bf27ed99f30b92f98cbb6923f3db316" category="inline-link-rx"></block></block>
+  <block id="676ef1e0e4de2a0b0b6677b7a365b976" category="inline-link">查找适用于您的 ONTAP 9 版本的高可用性配置内容</block>
+  <block id="d238d807ebe1f1809c0c6a9e4cb8c1bf" category="paragraph"><block ref="d238d807ebe1f1809c0c6a9e4cb8c1bf" category="inline-link-rx"></block></block>
+  <block id="4ee2fc05d2faa1f333113817a90809f4" category="summary">本节详细介绍了安装 AFF C190 系统的分步说明。</block>
+  <block id="1f583998630e94806bf5b9e059227dd4" category="paragraph"><block ref="1f583998630e94806bf5b9e059227dd4" category="inline-link-rx"></block></block>
+  <block id="96a0bd16b987641ec2b32f7e5d143220" category="paragraph"><block ref="96a0bd16b987641ec2b32f7e5d143220" category="inline-link-macro-rx"></block></block>
+  <block id="acd7b72db18d0ae87815c2b9586bcc35" category="paragraph"><block ref="acd7b72db18d0ae87815c2b9586bcc35" category="inline-link-rx"></block></block>
+  <block id="a0703e44cd98c0a37004e49087308a34" category="paragraph"><block ref="a0703e44cd98c0a37004e49087308a34" category="inline-link-rx"></block></block>
+  <block id="28053bc45e5e4ab96af6571ec188939f" category="paragraph"><block ref="28053bc45e5e4ab96af6571ec188939f" category="inline-link-rx"></block></block>
+  <block id="8ae09ac23688cabe251e3f1a42295c08" category="inline-link">ONTAP 配置内容</block>
+  <block id="ef8d6e430159c4f23f7a8cf0b4849877" category="paragraph"><block ref="ef8d6e430159c4f23f7a8cf0b4849877" category="inline-link-rx"></block></block>
+  <block id="5ee8cd6a87d8b25f71b533639902587c" category="list-text">After you have completed the initial configuration, go to the<block ref="3cd2da01c2a4ba58d102a6abe7a05e1f" category="inline-link-rx"></block> page for information about configuring additional features in ONTAP.</block>
+  <block id="9f38cc98e61d3008f9b0e6a5d7b7581f" category="list-text">Configure the system using the data you collected in the <block ref="d4bc444cb313ccfc9af6447e71cdb6de" category="inline-link-macro-rx"></block>。</block>
+  <block id="be75aac5b8cedc7215a6c41dc8c69bfb" category="summary">此内容提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。</block>
+  <block id="8a20c268704bf24640a88346ca257e3e" category="doc">快速步骤— AFF C190</block>
+  <block id="c95e5d7525f4ed86bb65603271b8fda7" category="paragraph">此内容提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。如果您熟悉安装 NetApp 系统，请使用此内容。</block>
+  <block id="907ca16c03a02ee12b2dc45ab768aaf4" category="paragraph"><block ref="907ca16c03a02ee12b2dc45ab768aaf4" category="inline-link-rx"></block></block>
+  <block id="aae869bb20c68bfa1b78ddb6bdd06a3d" category="paragraph">Reassigning epsilon minimizes the risk of unforeseen errors impacting all nodes in a clustered ONTAP system.您可以使用以下步骤确定持有 epsilon 的节点，并根据需要重新分配 epsilon ：</block>
+  <block id="75a7fdc720f737b1c4798195fa81dd5a" category="list-text">将权限级别设置为 advanced ： `set -privilege advanced`</block>
+  <block id="ede460bda437d3a26f618b7a02e41399" category="list-text">确定哪个节点持有 epsilon ： `cluster show`</block>
+  <block id="445889aadccee95b561fef4808f42374" category="paragraph">持有 epsilon 的节点在 `epsilon` 列中显示 `true` 。（不持有 epsilon 的节点会显示 `false` 。）</block>
+  <block id="447072f7ce3f18e54dbea54be9810116" category="list-text">如果 HA 对中正在进行维护的节点显示 `true` （持有 epsilon ），则从节点中删除 epsilon ： `cluster modify -node _node_name_ -epsilon false`</block>
+  <block id="859b2518ddc407ed154103ca5d61902f" category="list-text">将 epsilon 分配给另一个 HA 对中的节点： `cluster modify -node _node_name_ -epsilon true`</block>
+  <block id="49ba302fbc53429009e579494e0457be" category="list-text"><block ref="49ba302fbc53429009e579494e0457be" category="inline-link-macro-rx"></block></block>
+  <block id="ddd1a9511bc4cec117e8b939fbe7f2cc" category="list-text"><block ref="ddd1a9511bc4cec117e8b939fbe7f2cc" category="inline-link-macro-rx"></block></block>
+  <block id="5ffba9ed2c673f5145fe25996fc2b0dc" category="summary">本节详细介绍了安装 AFF A800 系统的分步说明。</block>
+  <block id="823b36f7fa4cb798d78af7be2bf8aca7" category="doc">详细步骤— AFF A800</block>
+  <block id="09e80812def315f5cdd1c01dcdfeecd6" category="paragraph"><block ref="09e80812def315f5cdd1c01dcdfeecd6" category="inline-link-macro-rx"></block></block>
+  <block id="019d924ea4f89958ef25a30a7bcdfad6" category="paragraph"><block ref="019d924ea4f89958ef25a30a7bcdfad6" category="inline-link-rx"></block></block>
+  <block id="753da25269c23599ff9b8e50bce9a3f2" category="paragraph"><block ref="753da25269c23599ff9b8e50bce9a3f2" category="inline-link-rx"></block></block>
+  <block id="56eff7525606a192b2a68655f34a5e31" category="paragraph"><block ref="56eff7525606a192b2a68655f34a5e31" category="inline-link-rx"></block></block>
+  <block id="0e26ac69ba7610fcb5a6ed4eb9beef60" category="paragraph"><block ref="0e26ac69ba7610fcb5a6ed4eb9beef60" category="inline-link-rx"></block></block>
+  <block id="52b6c121b8d42823d2c44b2f03abe56a" category="paragraph"><block ref="52b6c121b8d42823d2c44b2f03abe56a" category="inline-link-rx"></block></block>
+  <block id="03bb679dd7622c655d64c9059dd2656b" category="summary">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。如果您熟悉安装 NetApp 系统，请使用本节。</block>
+  <block id="b0e69a1b113b20966641e48d3d36e788" category="doc">快速步骤— AFF A800</block>
+  <block id="a96f4d64e0b98b2505872c32a2606fd7" category="paragraph"><block ref="a96f4d64e0b98b2505872c32a2606fd7" category="inline-link-rx"></block></block>
+  <block id="91a6324d4b829f5094febe4585477532" category="paragraph">如果您的系统采用 MetroCluster IP 配置，请参见<block ref="5cf80fcf55f6ce2ad8515082eb643f93" category="inline-link-rx"></block> 说明。</block>
+  <block id="86f44362d6c66d2da3785180e12a0bd3" category="doc">快速步骤— AFF A250</block>
+  <block id="812ead2c74df2f4cc3f4360dde12caf0" category="list-text">英语<block ref="26c0c434f792bc3a07fd368408578c89" category="inline-link-rx"></block></block>
+  <block id="b6f7b04f44a105e63a953d8fbcf4fc54" category="list-text">Japanese:<block ref="cf50f5c8ace58e0f860ef43dfc5fe5aa" category="inline-link-rx"></block></block>
+  <block id="f7e356c673218d549865ad38a211dfb2" category="list-text">Chinese:<block ref="380dfc11004fa7aa9af7b73b57d7721f" category="inline-link-rx"></block></block>
+  <block id="aa180b05de0eee653f89c2d190680947" category="summary">本节详细介绍了安装 AFF A250 系统的分步说明。</block>
+  <block id="ecdf5c8847c01f217fee685736ae0644" category="doc">详细步骤— AFF A250</block>
+  <block id="ef7c12c0956b29941b9d3edc613efe4d" category="list-text">查看 _NetApp ONTAP 配置指南 _ 并收集该节中列出的所需信息。</block>
+  <block id="2598d26376c31b20a91f7afed8849706" category="paragraph"><block ref="2598d26376c31b20a91f7afed8849706" category="inline-link-rx"></block></block>
+  <block id="fd0d217f0e77946ae20095b365c14659" category="paragraph"><block ref="fd0d217f0e77946ae20095b365c14659" category="inline-link-rx"></block></block>
+  <block id="8ad4814e6b3a74f6c5f3a269ac3dbe8d" category="paragraph"><block ref="8ad4814e6b3a74f6c5f3a269ac3dbe8d" category="inline-link-rx"></block></block>
+  <block id="86dc7cd20630b2e611de506fafba9463" category="summary">本节详细介绍了如何安装 FAS500f 系统。</block>
+  <block id="591619e8839fdfc064f5e99d963dd15b" category="doc">详细步骤— FAS500f</block>
+  <block id="af67741a4146da04e0d962fb954a7430" category="paragraph">本节详细介绍了如何安装 FAS500f 系统。</block>
+  <block id="bb0210ac9561e033fc7d726a6ac134e8" category="paragraph"><block ref="bb0210ac9561e033fc7d726a6ac134e8" category="inline-link-rx"></block></block>
+  <block id="bee4c56b42643842f4964906e7825545" category="summary">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。</block>
+  <block id="a376b44668bb35ec353a3b762ae375c6" category="doc">快速步骤— FAS500f</block>
+  <block id="7d9036d60bbca8f733402060d735f7ba" category="paragraph">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。Use this guide if you are familiar with installing NetApp systems.</block>
+  <block id="401703f1a6e6c4174ecfa75cf476aeec" category="list-text">英语<block ref="3b271abd5f4b9b54a3379e0450431921" category="inline-link-rx"></block></block>
+  <block id="c98535a3efcc3902c442def855aa8fcd" category="list-text">Japanese:<block ref="74a4002c724f044d7e6834f3506cd16d" category="inline-link-rx"></block></block>
+  <block id="c9d9e9c98bea821ee3130955cb98a54c" category="list-text">Chinese:<block ref="d495a553b62dffb464c7810acf543358" category="inline-link-rx"></block></block>
+  <block id="6407763c1d2de6600133ab1f5d7bc94f" category="inline-link">ONTAP 9 NetApp 加密高级内容</block>
+  <block id="b70ce74f678772eec8ed950c996578d8" category="paragraph"><block ref="b70ce74f678772eec8ed950c996578d8" category="inline-link-rx"></block></block>
+  <block id="3507cf5c7dded65ffdd5ade0f2366605" category="list-text"><block ref="3507cf5c7dded65ffdd5ade0f2366605" category="inline-link-macro-rx"></block></block>
+  <block id="7f9698282ebff237fcb8b23f64344f74" category="doc">更改磁盘架 ID ： &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="839439b189cfb3960dee96d5900594f7" category="list-text">您需要一个带一端直发的回形针或一个窄尖圆头笔。</block>
+  <block id="6e5fd7060e070e3ede032f911cd847a8" category="doc">热插拔驱动器和 #8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="6de535d32c5294ec13b8cdaefbdfcd96" category="list-text">在固件版本不是最新的新驱动器上，驱动器固件会自动更新（无中断）。</block>
+  <block id="dfffcb0d8a1668fb5cd9e30208261191" category="doc">更换 DIMM&amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="9164ee8993e7358886613e9f73567af0" category="doc">热添加型和 #8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="700841889ff35bf8741ce3731cbe8278" category="list-text">HA 对必须具有足够的可用 RoCE 端口，以支持您要热添加的磁盘架数量。</block>
+  <block id="3130d58fd4980df36a53d47d41873fc3" category="paragraph">For each shelf you are hot-adding, you need a minimum of two RoCE capable ports on each controller.这些端口可以位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合，也可以位于支持 RoCE 的 I/O 模块上，这一点受您的平台型号支持。</block>
+  <block id="149bd884ff7361ec4900f148e94264c1" category="paragraph">如果 HA 对没有足够的可用 RoCE 端口，并且您的平台型号支持使用支持 RoCE 的 PCIe 卡或 I/O 模块，则必须已将额外的卡或 I/O 模块安装到您的平台型号支持的正确控制器插槽中。</block>
+  <block id="bf9e404e3724ecf929670f95275b884e" category="paragraph">必须配置不支持 RoCE 的专用端口以供存储使用（而不是用于网络连接）。</block>
+  <block id="3a0537bc074963c8c7b8afdfa7851872" category="paragraph"><block ref="cd0ec4d1059266e2eb6b1658ce353e50" category="inline-xref-macro-rx"></block></block>
+  <block id="2a8cd3ca573de9451e94751347275dc3" category="inline-link-macro">更换缓存模块或添加 / 更换核心转储模块— AFF A700 和 FAS9000</block>
+  <block id="475cacc4c4d3f4ca67cc021d7e76f4ce" category="paragraph"><block ref="475cacc4c4d3f4ca67cc021d7e76f4ce" category="inline-link-macro-rx"></block></block>
+  <block id="6e74f4b097338a6fbcb3d84b0a803fde" category="section-title">准备不支持 RoCE 的专用端口以进行热添加</block>
+  <block id="cd7573270f8cd38c56d1bb74eb86d8c6" category="paragraph">如果您的 HA 对具有不支持 RoCE 的专用端口，而您要使用这些端口热添加 NS224 驱动器架，则必须确保这些端口已配置为用于存储（而不是用于网络连接）。根据您的平台型号，支持 RoCE 的端口位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上。</block>
+  <block id="204c25542c5d660c031ae735415785bc" category="list-text">对于某些平台型号，如果在控制器上受支持的插槽中安装了支持 RoCE 的 PCIe 卡或 I/O 模块，则这些端口会自动默认为存储使用（而不是网络连接）；但是，建议您完成此操作步骤以验证是否已将支持 RoCE 的端口配置为存储使用。</block>
+  <block id="2cd678bb1387e05d5c4dd3461278cff2" category="list-text">如果您确定 HA 对中不支持 RoCE 的专用端口未配置为存储使用，则配置这些端口是无中断操作步骤。</block>
+  <block id="622e2c1e48cbf4234cb8c28434a52588" category="list-text">验证 HA 对中的非专用端口是否已配置为存储使用： `storage port show`</block>
+  <block id="cca15cb895a64dd0f4b45e86009749fb" category="paragraph">如果您的 AFF A700 ， AFF A800 或 AFF A400 HA 对具有一个 NS224 驱动器架，并通过缆线连接到每个控制器上一组支持 RoCE 的端口，则必须重新对该磁盘架进行布线（在安装了其他支持 RoCE 的 PCIe 卡或 I/O 模块之后） 在热添加第二个磁盘架之前，请在每个控制器上的两组端口之间执行此操作。</block>
+  <block id="9dd4670d3c797341bf0b1649ee18743f" category="list-text">您必须已启用您安装的支持 RoCE 的 PCIe 卡或 I/O 模块上的端口。</block>
+  <block id="2f37a5aa23cfb87abad4097db5d8b5ee" category="admonition">这些子步骤假定已将现有磁盘架连接到每个控制器上插槽 3 中支持 RoCE 的 I/O 模块。</block>
+  <block id="336f4ce595af8dfded4dff3e6c2d2dbe" category="list-text">在控制器 A 上，将缆线从插槽 3 端口 b （ e3b ）移至插槽 7 端口 b （ e7b ）。</block>
+  <block id="97db9d4f6a8cf0456ad92952a384cb79" category="admonition">这些子步骤假定已将现有磁盘架连接到每个控制器上插槽 5 中支持 RoCE 的 PCIe 卡。</block>
+  <block id="f6eccf676a12f3899de1b6cd792b9d6f" category="list-text">在控制器 A 上，将缆线从插槽 5 端口 b （ e5b ）移至插槽 3 端口 b （ e3b ）。</block>
+  <block id="077cb21f670cc68aea4bf00f1abd4745" category="list-text">在控制器 A 上，将缆线从端口 e0d 移至插槽 5 端口 b （ e5b ）。</block>
+  <block id="0d42cbc8b21edd5f33f740bf5b14d10d" category="list-text">使用磁盘架随附的安装宣传单安装磁盘架随附的导轨安装套件。</block>
+  <block id="52f4904b9873d65908b7d22ca910291e" category="paragraph">You cable each NS224 drive shelf you are hot-adding so that each shelf has two connections to each controller module in the HA pair.根据您要热添加的磁盘架数量以及您的平台型号，您可以在控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上使用支持 RoCE 的端口。</block>
+  <block id="fa9763a154ca61da241ba542f9d894f7" category="paragraph">从平台机箱背面看，左侧支持 RoCE 的卡端口为端口 "A" （ e1a ），右侧端口为端口 "b" （ e1b ）。</block>
+  <block id="f921a19c559c3b6b0be95e07c25e9232" category="paragraph">如何为 AFF A700 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
+  <block id="544773fca9e8ae07d62dcf4db5a7cb78" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（一个支持 RoCE 的 I/O 模块）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
+  <block id="fec7dbe822daa329031be7af970538e7" category="admonition">此步骤假定您在每个控制器模块上的插槽 3 中安装了支持 RoCE 的 I/O 模块，而不是插槽 7 。</block>
+  <block id="6e06431b37da6d52783c06ed54eb0e42" category="paragraph">下图显示了在每个控制器模块中使用一个支持 RoCE 的 I/O 模块为一个热添加磁盘架布线：</block>
+  <block id="387fb751376fe75512f4de0a3be8f22e" category="list-text">如果要在每个控制器模块中使用两组支持 RoCE 的端口（两个支持 RoCE 的 I/O 模块）热添加一个或两个磁盘架，请完成相应的子步骤。</block>
+  <block id="bab3236ac19e59e47d2daf1e2f19a0e1" category="admonition">这些子步骤假定您开始布线时使用的是将磁盘架端口 e0a 连接到插槽 3 中支持 RoCE 的 I/O 模块，而不是插槽 7 。</block>
+  <block id="2e3b7d6e769a48d4603c0ca4b6b9d83f" category="admonition">这些子步骤假定您开始布线时使用的是将磁盘架端口 e0a 连接到插槽 7 中支持 RoCE 的 I/O 模块，而不是插槽 3 （与磁盘架 1 的布线子步骤相关）。</block>
+  <block id="88bb98efede2cd38aaaa041e45a5a456" category="paragraph">如何为 AFF A800 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
+  <block id="100c5224303bd4ddbc570f323ec3b601" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（一个支持 RoCE 的 PCIe 卡）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
+  <block id="7f52c439783621a5d09c0e1eb50d4319" category="admonition">此步骤假定您已在插槽 5 中安装支持 RoCE 的 PCIe 卡。</block>
+  <block id="6f1539c78a094ce3c97746e4f05a0642" category="paragraph">下图显示了在每个控制器模块上使用一个支持 RoCE 的 PCIe 卡为一个热添加磁盘架布线：</block>
+  <block id="e9aab26305dbeeca307e3f574bc6f620" category="list-text">如果要在每个控制器模块上使用两组支持 RoCE 的端口（两个支持 RoCE 的 PCIe 卡）热添加一个或两个磁盘架，请完成相应的子步骤。</block>
+  <block id="47f5ff4e183a793933d1f47d1d5d5b04" category="admonition">此步骤假定您已在插槽 5 和插槽 3 中安装了支持 RoCE 的 PCIe 卡。</block>
+  <block id="928e9f3198873a99cc05c02ab5403b7b" category="admonition">这些子步骤假定您正在通过将磁盘架端口 e0a 连接到插槽 5 中支持 RoCE 的 PCIe 卡（而不是插槽 3 ）来开始布线。</block>
+  <block id="6ced4955dcb25812c5e43101235629b9" category="admonition">这些子步骤假定您开始使用缆线将磁盘架端口 e0a 连接到插槽 3 中支持 RoCE 的 PCIe 卡，而不是插槽 5 （与磁盘架 1 的布线子步骤相关）。</block>
+  <block id="14daff6613d1ba920cb759163ce8e7da" category="paragraph">如何为 AFF A400 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
+  <block id="853f2f58eaae6f81846d73d68ec58fc7" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（板载支持 RoCE 的端口）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
+  <block id="46678aedb5de8e96e18124083a8925ee" category="paragraph">下图显示了在每个控制器模块上使用一组支持 RoCE 的端口为一个热添加磁盘架布线：</block>
+  <block id="8391296c9ad39c787ad4300c47db3f73" category="list-text">如果要在每个控制器模块上使用两组支持 RoCE 的端口（板载端口和 PCIe 卡支持 RoCE 的端口）热添加一个或两个磁盘架，请完成以下子步骤。</block>
+  <block id="982fb5d6c3cfff35b75ffce103e16e9e" category="doc">将磁盘架作为交换机连接的存储进行布线。 ##8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="c545b77caa4aa944cbb56e6ba4043e1c" category="doc">更换 NSM 模块 &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="5420482c583fd0144bef59be3297ecb2" category="doc">热插拔电源。 #8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="63eada491e794bafed5615da29ae9894" category="doc">更换风扇 &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="f9963316e96e61f20b6272198bc5ffe0" category="doc">热移除磁盘架。 #8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="eb7122b6f64c6de77c3ce0aed5e75616" category="admonition">The non-dedicated ports configured for storage use are displayed in the output as follows: If your HA pair is running ONTAP 9.8 or later, the non-dedicated ports display `storage` in the `Mode` column.If your HA pair is running ONTAP 9.7 or 9.6, the non-dedicated ports, which display `false` in the `Is Dedicated?` column, also display `enabled` in the `State` column.</block>
+  <block id="d92397f405b46035383db7778e4795f5" category="list-text">重复第一步（ A ），重新配置第二个控制器模块上的端口。</block>
+  <block id="ed44ef953e4348bf2bf852e9813bdc5d" category="list-text">重复第二步（ b ），重新启动第二个控制器以使端口更改生效。</block>
+  <block id="744b6c476a210a04195ef528c6730bc7" category="paragraph">如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？` 中显示 `false` 列中，也会在 `State` 列中显示 `d已标记` 。</block>
+  <block id="beb61fb93486a22416339bcdc89ed55a" category="doc">更换实时时钟电池。 ##8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="2cf3f2133bbb1e6513b473d4aabca60b" category="doc">更换启动介质 &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
+  <block id="24ce88dcb36e4e61a4334746ee0dc49a" category="list-text">您的 HA 对必须已运行 ONTAP 9.7 或更高版本，并且此版本至少支持 NSM 固件版本，或者您的 HA 对必须已运行 ONTAP 9.6 版本且 NSM 固件版本为 1.1x 或更高版本。</block>
 </blocks>

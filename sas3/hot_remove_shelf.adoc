@@ -56,10 +56,18 @@ https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["磁盘和聚合
 ====
 * 对于双节点以上的集群模式 ONTAP 系统，最佳实践是将 epsilon 重新分配给正在进行计划内维护的 HA 对以外的 HA 对。
 +
-重新分配 epsilon 可最大程度地降低意外错误影响集群模式 ONTAP 系统中所有节点的风险。有关仲裁角色和 epsilon 以及用于将 epsilon 重新分配给集群中其他节点的操作步骤的信息，请参见 _System Administration Referus_ 。
+Reassigning epsilon minimizes the risk of unforeseen errors impacting all nodes in a clustered ONTAP system.您可以使用以下步骤确定持有 epsilon 的节点，并根据需要重新分配 epsilon ：
 
 +
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的《系统管理指南》"]
+.. 将权限级别设置为 advanced ： `set -privilege advanced`
+.. 确定哪个节点持有 epsilon ： `cluster show`
++
+持有 epsilon 的节点在 `epsilon` 列中显示 `true` 。（不持有 epsilon 的节点会显示 `false` 。）
+
+.. 如果 HA 对中正在进行维护的节点显示 `true` （持有 epsilon ），则从节点中删除 epsilon ： `cluster modify -node _node_name_ -epsilon false`
+.. 将 epsilon 分配给另一个 HA 对中的节点： `cluster modify -node _node_name_ -epsilon true`
+.. 返回到管理权限级别： `set -privilege admin`
+
 
 * 如果要从堆栈热移除磁盘架（但保留堆栈），则一次可重新布线并验证一个路径（路径 A ，路径 B ），以绕过要移除的磁盘架，从而始终保持控制器与堆栈的单路径连接。
 +

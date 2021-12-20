@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ns224, shelves, shelf, ns224 shelves, boot, media, run, ontap, nvme, module, nsm, firmware, version, nondisruptive, i/o 
 summary: 如果运行 ONTAP 9.7 或更高版本的 HA 对中的 NS224 驱动器架上的启动介质出现故障，或者磁盘架运行的是 NVMe 磁盘架模块（ NSM\ ）固件版本 1.1x 或更高版本，则可以更换启动介质。在驱动器架通电且 I/O 正在进行的情况下，可以无中断地更换启动介质。 
 ---
-= 更换启动介质— NS224 磁盘架
+= 更换启动介质 &#8201 ； &#8212 ； &#8201 ； NS224 磁盘架
 :icons: font
 :imagesdir: ../media/
 

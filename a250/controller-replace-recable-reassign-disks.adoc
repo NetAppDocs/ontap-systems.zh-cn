@@ -16,7 +16,6 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 == 第 1 步：重新对系统进行布线
 
-[role="lead"]
 运行诊断程序后，您必须重新对控制器模块的存储和网络连接进行布线。
 
 .步骤
@@ -35,7 +34,6 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 == 第 2 步：重新分配磁盘
 
-[role="lead"]
 如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
 
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
@@ -85,7 +83,7 @@ replacement_ 节点将收回其存储并完成启动。
 NOTE: 如果交还被否决，您可以考虑覆盖此否决。
 
 +
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的《高可用性配置指南》"]
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的高可用性配置内容"]
 
 .. 交还完成后，确认 HA 对运行状况良好且可以进行接管： storage failover show
 +

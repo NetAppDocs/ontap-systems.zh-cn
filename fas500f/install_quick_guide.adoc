@@ -1,20 +1,20 @@
 ---
 permalink: fas500f/install-quick-guide.html 
 sidebar: sidebar 
-keywords: fas500f, quick guide 
-summary: 本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。 
+keywords: fas500f, quick steps 
+summary: 本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。 
 ---
-= 快速指南— FAS500f
+= 快速步骤— FAS500f
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。如果您熟悉 NetApp 系统的安装，请使用本指南。
+本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。Use this guide if you are familiar with installing NetApp systems.
 
 访问 _Installation and Setup Instructions_PDF 海报：
 
-* 英语 https://library.netapp.com/ecm/ecm_download_file/ECMLP2872833["《 FAS500f 安装和设置说明》"]
-* 日语： https://library.netapp.com/ecm/ecm_download_file/ECMLP2874807["《 FAS500f 系统安装和设置说明》"]
-* 中文： https://library.netapp.com/ecm/ecm_download_file/ECMLP2874808["《 FAS500f 系统安装和设置说明》"]
+* 英语 https://library.netapp.com/ecm/ecm_download_file/ECMLP2872833["《 FAS500f 安装和设置说明》"^]
+* Japanese: https://library.netapp.com/ecm/ecm_download_file/ECMLP2874807["《 FAS500f 系统安装和设置说明》"^]
+* Chinese: https://library.netapp.com/ecm/ecm_download_file/ECMLP2874808["《 FAS500f 系统安装和设置说明》"^]
 

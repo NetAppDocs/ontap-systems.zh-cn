@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, requirement, preparation, applicable, complete, drive, hot-add an ns224 drive shelf 
 summary: 您可以在 HA 对满足特定要求后以及完成适用于 HA 对的准备任务后热添加 NS224 驱动器架。 
 ---
-= 热添加— NS224 磁盘架
+= 热添加型和 #8201 ； &#8212 ； &#8201 ； NS224 磁盘架
 :icons: font
 :imagesdir: ../media/
 
@@ -29,7 +29,7 @@ https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 * HA 对必须具有足够的可用 RoCE 端口，以支持您要热添加的磁盘架数量。
 +
-对于要热添加的每个磁盘架，每个控制器上至少需要两个支持 RoCE 的端口。这些端口可以位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合，也可以位于支持 RoCE 的 I/O 模块上，这一点由您的平台型号提供支持。
+For each shelf you are hot-adding, you need a minimum of two RoCE capable ports on each controller.这些端口可以位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合，也可以位于支持 RoCE 的 I/O 模块上，这一点受您的平台型号支持。
 
 +
 如果 HA 对没有足够的可用 RoCE 端口，并且您的平台型号支持使用支持 RoCE 的 PCIe 卡或 I/O 模块，则必须已将额外的卡或 I/O 模块安装到您的平台型号支持的正确控制器插槽中。
@@ -42,12 +42,12 @@ https://hwu.netapp.com["NetApp Hardware Universe"^]
 ====
 必须配置不支持 RoCE 的专用端口以供存储使用（而不是用于网络连接）。
 
-<<Prepare non-dedicated RoCE capable ports for a hot-add>>
+<<Prepare non-dedicated RoCE-capable ports for a hot-add>>
 
 ====
 * 如果您有 AFF A700 HA 对，并且要热添加初始 NS224 驱动器架（ HA 对中不存在 NS224 驱动器架），则必须在每个控制器中安装核心转储模块（ X9170A ， NVMe 1 TB SSD ）以支持核心转储（存储核心文件）。
 +
-link:../fas9000/caching-module-and-core-dump-module-replace.html["更换缓存模块或添加 / 更换核心转储模块 - AFF A700 和 FAS9000"^]
+link:../fas9000/caching-module-and-core-dump-module-replace.html["更换缓存模块或添加 / 更换核心转储模块— AFF A700 和 FAS9000"^]
 
 * HA 对中的磁盘架数量必须小于支持的最大磁盘架数量，至少等于您计划热添加的磁盘架数量。
 +
@@ -123,9 +123,8 @@ NOTE: 固件更新可能需要长达 30 分钟。
 
 
 
-=== 准备支持 RoCE 的非专用端口以进行热添加
+=== 准备不支持 RoCE 的专用端口以进行热添加
 
-[role="lead"]
 如果您的 HA 对具有不支持 RoCE 的专用端口，而您要使用这些端口热添加 NS224 驱动器架，则必须确保这些端口已配置为用于存储（而不是用于网络连接）。根据您的平台型号，支持 RoCE 的端口位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上。
 
 您必须已满足系统要求。
@@ -133,7 +132,7 @@ NOTE: 固件更新可能需要长达 30 分钟。
 <<Requirements for a hot-add>>
 
 .关于此任务
-* 对于某些平台型号，如果在控制器上受支持的插槽中安装了支持 RoCE 的 PCIe 卡或 I/O 模块，则端口会自动默认为存储使用（而不是网络连接）； 但是，建议您完成此操作步骤，以验证是否已将支持 RoCE 的端口配置为存储使用。
+* 对于某些平台型号，如果在控制器上受支持的插槽中安装了支持 RoCE 的 PCIe 卡或 I/O 模块，则这些端口会自动默认为存储使用（而不是网络连接）；但是，建议您完成此操作步骤以验证是否已将支持 RoCE 的端口配置为存储使用。
 * 如果您确定 HA 对中不支持 RoCE 的专用端口未配置为存储使用，则配置这些端口是无中断操作步骤。
 +
 
@@ -146,7 +145,7 @@ NOTE: 如果 HA 对运行的是 ONTAP 9.7 或更高版本，则无需重新启�
 
 
 .步骤
-. 验证 HA 对中的非专用端口是否已配置为用于存储。`s存储端口显示`
+. 验证 HA 对中的非专用端口是否已配置为存储使用： `storage port show`
 +
 您可以在任一控制器模块上输入命令。
 
@@ -245,8 +244,7 @@ NOTE: 第一个控制器必须已完成重新启动。
 
 === 准备 AFF A700 ， AFF A800 或 AFF A400 HA 对以热添加第二个磁盘架
 
-[role="lead"]
-如果您的 AFF A700 ， AFF A800 或 AFF A400 HA 对具有一个 NS224 驱动器架，并通过缆线连接到每个控制器上的一组支持 RoCE 的端口，则必须对该磁盘架重新布线（在安装了其他支持 RoCE 的 PCIe 卡或 I/O 模块之后） 在热添加第二个磁盘架之前，请在每个控制器上的两组端口之间执行此操作。
+如果您的 AFF A700 ， AFF A800 或 AFF A400 HA 对具有一个 NS224 驱动器架，并通过缆线连接到每个控制器上一组支持 RoCE 的端口，则必须重新对该磁盘架进行布线（在安装了其他支持 RoCE 的 PCIe 卡或 I/O 模块之后） 在热添加第二个磁盘架之前，请在每个控制器上的两组端口之间执行此操作。
 
 .开始之前
 * 您必须已满足系统要求。
@@ -255,7 +253,7 @@ NOTE: 第一个控制器必须已完成重新启动。
 
 * 您必须已启用您安装的支持 RoCE 的 PCIe 卡或 I/O 模块上的端口。
 +
-<<Prepare non-dedicated RoCE capable ports for a hot-add>>
+<<Prepare non-dedicated RoCE-capable ports for a hot-add>>
 
 
 
@@ -292,7 +290,7 @@ NOTE: 这些子步骤假定已将现有磁盘架连接到每个控制器上插�
 <<Cable a hot-add shelf for an AFF A700 HA pair>>
 
 ====
-.. 在控制器 A 上，将缆线从插槽 3 端口 b 移至插槽 7 端口 b
+.. 在控制器 A 上，将缆线从插槽 3 端口 b （ e3b ）移至插槽 7 端口 b （ e7b ）。
 .. 对控制器 B 重复相同的缆线移动操作
 
 
@@ -311,7 +309,7 @@ NOTE: 这些子步骤假定已将现有磁盘架连接到每个控制器上插�
 <<Cable a hot-add shelf for an AFF A800 HA pair>>
 
 ====
-.. 在控制器 A 上，将缆线从插槽 5 端口 2 （ e5b ）移至插槽 3 端口 2 （ e3b ）。
+.. 在控制器 A 上，将缆线从插槽 5 端口 b （ e5b ）移至插槽 3 端口 b （ e3b ）。
 .. 对控制器 B 重复相同的缆线移动操作
 
 
@@ -327,7 +325,7 @@ AFF A400 HA 对
 <<Cable a hot-add shelf for an AFF A400 HA pair>>
 
 ====
-.. 在控制器 A 上，将缆线从端口 e0d 移至插槽 5 端口 2 （ e5b ）。
+.. 在控制器 A 上，将缆线从端口 e0d 移至插槽 5 端口 b （ e5b ）。
 .. 对控制器 B 重复相同的缆线移动操作
 
 
@@ -345,7 +343,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 === 准备手动分配驱动器所有权以进行热添加
 
-[role="lead"]
 如果要为要热添加的 NS224 驱动器架手动分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。
 
 您必须已满足系统要求。
@@ -387,7 +384,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 .步骤
-. 使用随磁盘架提供的安装宣传单安装磁盘架随附的导轨安装套件。
+. 使用磁盘架随附的安装宣传单安装磁盘架随附的导轨安装套件。
 +
 
 NOTE: 请勿使用法兰安装磁盘架。
@@ -441,13 +438,12 @@ NOTE: 如果此 ID 闪烁所需时间超过 15 秒，请再次按住此按钮，
 == 为驱动器架布线以进行热添加
 
 [role="lead"]
-您可以为要热添加的每个 NS224 驱动器架布线，以便每个磁盘架与 HA 对中的每个控制器模块有两个连接。根据您要热添加的磁盘架数量以及您的平台型号，您可以在控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上使用支持 RoCE 的端口。
+You cable each NS224 drive shelf you are hot-adding so that each shelf has two connections to each controller module in the HA pair.根据您要热添加的磁盘架数量以及您的平台型号，您可以在控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上使用支持 RoCE 的端口。
 
 
 
 === 为热添加布线时的注意事项
 
-[role="lead"]
 在为热添加的磁盘架布线之前，熟悉正确的缆线连接器方向以及 NS224 NSM 驱动器磁盘架模块上端口的位置和标记会很有帮助。
 
 * 插入缆线时，连接器拉片朝上。
@@ -470,7 +466,6 @@ image::../media/drw_ns224_back_ports.png[DRW nss224 后端端口]
 
 === 为 FAS500f 或 AFF A250 HA 对的热添加磁盘架布线
 
-[role="lead"]
 如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f 或 AFF A250 HA 对中。
 
 .开始之前
@@ -522,8 +517,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 === 为 AFF A700 HA 对的热添加磁盘架布线
 
-[role="lead"]
-如何为 AFF A700 HA 对中的 NS224 驱动器架布线，取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。
+如何为 AFF A700 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。
 
 .开始之前
 * 您必须已满足系统要求。
@@ -624,7 +618,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 === 为 AFF A800 HA 对的热添加磁盘架布线
 
-[role="lead"]
 如何为 AFF A800 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。
 
 .开始之前
@@ -730,8 +723,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 === 为 AFF A400 HA 对的热添加磁盘架布线
 
-[role="lead"]
-如何为 AFF A400 HA 对中的 NS224 驱动器架布线，取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。
+如何为 AFF A400 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。
 
 .开始之前
 * 您必须已满足系统要求。
@@ -822,7 +814,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 === 为 AFF A320 HA 对的热添加磁盘架布线
 
-[role="lead"]
 需要额外存储时，可以使用缆线将另一个 NS224 驱动器架连接到现有 HA 对。
 
 .开始之前

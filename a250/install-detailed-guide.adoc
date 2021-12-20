@@ -1,32 +1,31 @@
 ---
 permalink: a250/install-detailed-guide.html 
 sidebar: sidebar 
-keywords: aff a250, detailed installation guide 
-summary: 本指南详细介绍了安装 AFF A250 系统的分步说明。 
+keywords: aff a250, detailed installation 
+summary: 本节详细介绍了安装 AFF A250 系统的分步说明。 
 ---
-= 详细指南— AFF A250
+= 详细步骤— AFF A250
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本指南详细介绍了安装 AFF A250 系统的分步说明。
+本节详细介绍了安装 AFF A250 系统的分步说明。
 
 
 
 == 第 1 步：准备安装
 
-[role="lead"]
 要安装 AFF A250 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
 
 您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。
 
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 
 NOTE: 具有特定电源要求的客户必须检查 HWU 以了解其配置选项。
 
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的发行说明"]
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的发行说明"^]
 
 您需要在站点上提供以下内容：
 
@@ -44,7 +43,7 @@ image::../media/drw_ssn_label.png[DRW SSN 标签]
 ... 登录到现有帐户或创建帐户。
 ... 注册您的系统。
 +
-https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"]
+https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]
 
 
 
@@ -53,7 +52,7 @@ https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMy
 下表列出了您可能收到的电缆类型。如果您收到的电缆未在表中列出，请参见 Hardware Universe 以找到该电缆并确定其用途。
 
 +
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 +
 [cols="1,2,1,2"]
@@ -142,9 +141,9 @@ image:../media/oie_cable_power.png[""]
 启动系统
 
 |===
-.. 查看 _NetApp ONTAP 配置指南 _ 并收集该指南中列出的所需信息。
+.. 查看 _NetApp ONTAP 配置指南 _ 并收集该节中列出的所需信息。
 +
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["ONTAP 配置内容"^]
 
 
 
@@ -154,7 +153,6 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置�
 
 == 第 2 步：安装硬件
 
-[role="lead"]
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
 
 . 根据需要安装导轨套件。
@@ -174,21 +172,18 @@ image::../media/drw_affa250_weight_caution.png[DRW affa250 重量注意事项]
 
 == 第 3 步：为控制器布线
 
-[role="lead"]
 需要使用双节点无交换机集群方法或集群互连网络方法为平台的集群布线。您可以选择使用缆线连接到光纤通道或 iSCSI 主机网络或直连存储。此布线并非独占的；您可以使用缆线连接到主机网络和存储。
 
 
 
 === 所需布线：使用缆线将控制器连接到集群
 
-[role="lead"]
 使用双节点无交换机集群方法或集群互连网络将控制器连接到集群。
 
 
 
 ==== 选项 1 ：为双节点无交换机集群布线
 
-[role="lead"]
 控制器模块上的管理，光纤通道和数据或主机网络端口连接到交换机。两个控制器模块上的集群互连端口均已布线。
 
 有关将系统连接到交换机的信息，请与网络管理员联系。
@@ -202,7 +197,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 使用动画或分步说明完成控制器与交换机之间的布线：
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=beec3966-0a01-473c-a5de-ac68017fbf29["为双节点无交换机集群布线"]
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=beec3966-0a01-473c-a5de-ac68017fbf29["为双节点无交换机集群布线"^]
 
 +
 [cols="1,2"]
@@ -243,7 +238,6 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 
 ==== 选项 2 ：为有交换机的集群布线
 
-[role="lead"]
 控制器上的所有端口都连接到交换机；集群互连，管理，光纤通道以及数据或主机网络交换机。
 
 有关将系统连接到交换机的信息，请与网络管理员联系。
@@ -257,7 +251,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 使用动画或分步说明完成控制器与交换机之间的布线：
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=bf6759dc-4cbf-488e-982e-ac68017fbef8["为交换集群布线"]
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=bf6759dc-4cbf-488e-982e-ac68017fbef8["为交换集群布线"^]
 
 +
 [cols="1,2"]
@@ -298,14 +292,12 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 
 === 可选布线：电缆配置相关选项
 
-[role="lead"]
 您可以通过与配置相关的可选布线方式连接到光纤通道或 iSCSI 主机网络或直连存储。此布线并非独占的；您可以使用缆线连接到主机网络和存储。
 
 
 
 ==== 选项 1 ：使用缆线连接到光纤通道主机网络
 
-[role="lead"]
 控制器上的光纤通道端口连接到光纤通道主机网络交换机。
 
 有关将系统连接到交换机的信息，请与网络管理员联系。
@@ -350,7 +342,6 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 ==== 选项 2 ：使用缆线连接到 25GbE 数据或主机网络
 
-[role="lead"]
 控制器上的 25GbE 端口连接到 25GbE 数据或主机网络交换机。
 
 有关将系统连接到交换机的信息，请与网络管理员联系。
@@ -395,7 +386,6 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 ==== 选项 3 ：使用缆线将控制器连接到一个驱动器架
 
-[role="lead"]
 使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -407,7 +397,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 使用动画或分步说明将控制器模块连接到一个磁盘架。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=3f92e625-a19c-4d10-9028-ac68017fbf57["使用缆线将控制器连接到一个 NS224"]
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=3f92e625-a19c-4d10-9028-ac68017fbf57["使用缆线将控制器连接到一个 NS224"^]
 
 +
 [cols="1,2"]
@@ -435,14 +425,12 @@ image:../media/oie_legend_icon_2_lo.png[""]
 
 == 第 4 步：完成系统设置和配置
 
-[role="lead"]
 使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，或者直接连接到系统中的控制器，然后连接到管理交换机。
 
 
 
 === 选项 1 ：如果启用了网络发现，则完成系统设置和配置
 
-[role="lead"]
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
@@ -455,7 +443,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 
 . 使用以下动画将您的笔记本电脑连接到管理交换机。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"]
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]
 
 . 选择列出的 ONTAP 图标以发现：
 +
@@ -477,17 +465,16 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 . 使用 System Manager 引导式设置，使用在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。
 +
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["ONTAP 配置内容"^]
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后，转到 https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+. After you have completed the initial configuration, go to the https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
 
 
 
 
 === 选项 2 ：如果未启用网络发现，则完成系统设置和配置
 
-[role="lead"]
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。
 
 . 为笔记本电脑或控制台布线并进行配置：
@@ -543,10 +530,10 @@ NOTE: 此地址的格式为 +https://x.x.x.x+ 。
 
 .. 使用您在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。
 +
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["ONTAP 配置内容"^]
 
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后，转到 https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+. After you have completed the initial configuration, go to the https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
 
