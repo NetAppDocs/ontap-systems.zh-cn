@@ -2,7 +2,7 @@
 permalink: c190/install-quick-guide.html 
 sidebar: sidebar 
 keywords: aff c190, quick steps 
-summary: 此内容提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。 
+summary: 本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。 
 ---
 = 快速步骤— AFF C190
 :icons: font
@@ -10,8 +10,4 @@ summary: 此内容提供了从机架安装和布线到初始系统启动等典�
 
 
 [role="lead"]
-此内容提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。如果您熟悉安装 NetApp 系统，请使用此内容。
-
-访问 _Installation and Setup Instructions_PDF 海报：
-
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2850392["《 AFF C190 系统安装和设置说明》"^]
+本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。使用 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2850392["《 AFF C190 系统安装和设置说明》"^] 如果您熟悉 NetApp 系统的安装。

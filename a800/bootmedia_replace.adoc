@@ -1,7 +1,7 @@
 ---
 permalink: a800/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a800, aff, a800, locate, fail, boot, media, controller, module, removing, remove, riser, replace the boot media 
+keywords: aff a800, replace the boot media 
 summary: 在更换启动介质之前，您可以通过删除控制器模块上的提升板 3 来找到控制器模块中发生故障的启动介质。 
 ---
 = 卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A800
@@ -9,13 +9,13 @@ summary: 在更换启动介质之前，您可以通过删除控制器模块上�
 :imagesdir: ../media/
 
 
+[role="lead"]
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
 
 
 
 == 第 1 步：卸下控制器模块
 
-[role="lead"]
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
 
 . 如果您尚未接地，请正确接地。
@@ -93,7 +93,6 @@ image:../media/legend_icon_03.png[""]
 
 == 第 2 步：更换启动介质
 
-[role="lead"]
 在更换启动介质之前，您可以通过删除控制器模块上的提升板 3 来找到控制器模块中发生故障的启动介质。
 
 要卸下用于固定启动介质的螺钉，您需要使用十字头螺钉驱动程序。
@@ -170,7 +169,6 @@ image:../media/legend_icon_05.png[""]
 
 == 第 3 步：将启动映像传输到启动介质
 
-[role="lead"]
 您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。
 
 .开始之前

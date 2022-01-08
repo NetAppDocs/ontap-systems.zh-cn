@@ -20,14 +20,12 @@ summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断
 
 == 第 1 步：关闭受损控制器
 
-[role="lead"]
 根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。
 
 
 
 === 选项 1 ：大多数配置
 
-[role="lead"]
 要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
 
 If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"]。
@@ -131,7 +129,6 @@ LOADER 提示符
 
 == 第 2 步：卸下控制器模块
 
-[role="lead"]
 更换控制器模块内部的组件时，必须从机箱中卸下控制器模块。
 
 请确保为这些缆线贴上标签，以便您知道这些缆线来自何处。
@@ -194,12 +191,11 @@ image::../media/drw_a250_remove_airduct_cover.png[DRW A250 拆下通风管盖]
 
 == 第 3 步：更换 DIMM
 
-[role="lead"]
 要更换 DIMM ，您必须使用通风管顶部的 DIMM 映射标签在控制器模块中找到该 DIMM ，或者使用 DIMM 旁边的 LED 找到该 DIMM ，然后按照特定步骤顺序进行更换。
 
 使用以下视频或表格中的步骤更换 DIMM ：
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fa6b8107-86fb-4332-aa57-ac5b01605e52["更换 DIMM"]
+link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fa6b8107-86fb-4332-aa57-ac5b01605e52["更换 DIMM"^]
 
 . 更换控制器模块上损坏的 DIMM 。
 +
@@ -234,7 +230,6 @@ DIMM 紧紧固定在插槽中。如果没有，请重新插入 DIMM ，使其与
 
 == 第 4 步：安装控制器模块
 
-[role="lead"]
 更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
 
 您可以使用下图或写入的步骤在机箱中安装替代控制器模块。
@@ -289,7 +284,6 @@ NOTE: 您将在此操作步骤中稍后将其余缆线连接到控制器模块�
 
 == 第 5 步：运行诊断
 
-[role="lead"]
 更换系统中的某个组件后，您应对该组件运行诊断测试。
 
 您的系统必须处于 LOADER 提示符处，才能启动诊断。
@@ -315,5 +309,4 @@ NOTE: 您将在此操作步骤中稍后将其余缆线连接到控制器模块�
 
 == 第 6 步：将故障部件退回 NetApp
 
-[role="lead"]
 更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

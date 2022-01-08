@@ -1,7 +1,7 @@
 ---
 permalink: fas8200/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: fas8200, replace, boot, media, controller, module, fru map 
+keywords: fas8200, replace the boot media 
 summary: 您必须在控制器中找到启动介质并按照说明进行更换。 
 ---
 = 卸下控制器模块，更换启动介质并将启动映像传输到启动介质— FAS8200
@@ -9,13 +9,13 @@ summary: 您必须在控制器中找到启动介质并按照说明进行更换�
 :imagesdir: ../media/
 
 
+[role="lead"]
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
 
 
 
 == 第 1 步：卸下控制器
 
-[role="lead"]
 要访问控制器内部的组件，您必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。
 
 . 如果您尚未接地，请正确接地。
@@ -64,7 +64,6 @@ image:../media/legend_icon_02.png[""]
 
 == 第 2 步：更换启动介质
 
-[role="lead"]
 您必须在控制器中找到启动介质并按照说明进行更换。
 
 . 如果您尚未接地，请正确接地。
@@ -90,7 +89,6 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 
 == 第 3 步：将启动映像传输到启动介质
 
-[role="lead"]
 您可以使用已安装映像的 USB 闪存驱动器将系统映像安装到替代启动介质。但是，您必须在此操作步骤期间还原 var 文件系统。
 
 * 您必须具有一个已格式化为 32 位的 USB 闪存驱动器，并且容量至少为 4 GB 。

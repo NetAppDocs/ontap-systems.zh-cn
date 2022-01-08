@@ -2,7 +2,7 @@
 permalink: a800/install-quick-guide.html 
 sidebar: sidebar 
 keywords: aff a800, quick steps 
-summary: 本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。如果您熟悉安装 NetApp 系统，请使用本节。 
+summary: 本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。Use this guide if you are familiar with installing NetApp systems. 
 ---
 = 快速步骤— AFF A800
 :icons: font
@@ -10,8 +10,4 @@ summary: 本节以图形方式说明了从机架安装和布线到系统初始�
 
 
 [role="lead"]
-本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。如果您熟悉安装 NetApp 系统，请使用本节。
-
-访问 _Installation and Setup Instructions_PDF 海报：
-
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2842668["《 AFF A800 系统安装和设置说明》"^]
+This guide gives graphic instructions for a typical installation of your system from racking and cabling, through initial system bring-up.使用 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2842668["《 AFF A800 系统安装和设置说明》"^] 如果您熟悉 NetApp 系统的安装。

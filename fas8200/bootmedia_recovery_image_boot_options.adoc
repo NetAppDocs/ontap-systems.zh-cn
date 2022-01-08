@@ -1,7 +1,7 @@
 ---
 permalink: fas8200/bootmedia-recovery-image-boot-options.html 
 sidebar: sidebar 
-keywords: fas8200, boot, recovery, imagery, image, procedure, two, node, metrocluster, configuration 
+keywords: fas8200, boot the recovery image 
 summary: 用于从恢复映像启动受损节点的操作步骤取决于系统是否采用双节点 MetroCluster 配置。 
 ---
 = 启动恢复映像— FAS8200
@@ -16,8 +16,7 @@ summary: 用于从恢复映像启动受损节点的操作步骤取决于系统�
 
 == 选项 1 ：大多数系统
 
-[role="lead"]
-您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
+：您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
 
 此操作步骤适用场景系统不采用双节点 MetroCluster 配置。
 
@@ -109,7 +108,6 @@ summary: 用于从恢复映像启动受损节点的操作步骤取决于系统�
 
 == 选项 2 ：控制器位于双节点 MetroCluster 中
 
-[role="lead"]
 您必须从 USB 驱动器启动 ONTAP 映像并验证环境变量。
 
 此操作步骤适用场景系统采用双节点 MetroCluster 配置。

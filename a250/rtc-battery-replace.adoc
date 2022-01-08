@@ -20,14 +20,12 @@ summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ，
 
 == 第 1 步：关闭受损控制器
 
-[role="lead"]
 根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。
 
 
 
 === 选项 1 ：大多数配置
 
-[role="lead"]
 要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
 
 If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"]。
@@ -131,7 +129,6 @@ LOADER 提示符
 
 == 第 2 步：卸下控制器模块
 
-[role="lead"]
 更换控制器模块内部的组件时，必须从机箱中卸下控制器模块。
 
 请确保为这些缆线贴上标签，以便您知道这些缆线来自何处。
@@ -192,12 +189,11 @@ image::../media/drw_a250_remove_airduct_cover.png[DRW A250 拆下通风管盖]
 
 == 第 3 步：更换 RTC 电池
 
-[role="lead"]
 要更换 RTC 电池，请在控制器中找到该电池，然后按照特定步骤顺序进行操作。
 
 使用以下视频或表格中的步骤更换 RTC 电池：
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=6ed27f71-d3a7-4cee-8d9f-ac5b016c982d["更换 RTC 电池"]
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=6ed27f71-d3a7-4cee-8d9f-ac5b016c982d["更换 RTC 电池"^]
 
 . 找到散热器和中板之间的 RTC 电池，然后完全按照图中所示取出。
 +
@@ -209,13 +205,13 @@ image::../media/drw_a250_remove_rtc_batt.png[DRW A250 删除 RTC 电池]
 
  a| 
 image:../media/legend_icon_01.png[""]
-| 将卡舌轻轻拉出电池外壳。* 注意： * 主动将其拉出可能会取代选项卡。 
+| Gently pull tab away from the battery housing.*Attention:* Pulling it away aggressively might displace the tab. 
 
 
  a| 
 image:../media/legend_icon_02.png[""]
  a| 
-抬起电池。* 注： * 记下电池的极性。
+Lift the battery up.*Note:* Make a note of the polarity of the battery.
 
 
 
@@ -257,7 +253,6 @@ image:../media/legend_icon_02.png[""]
 
 == 第 4 步：重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期
 
-[role="lead"]
 更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块，重置控制器上的时间和日期，然后启动它。
 
 . 如果尚未关闭通风管或控制器模块盖板，请将其关闭。
@@ -304,5 +299,4 @@ image:../media/legend_icon_02.png[""]
 
 == 第 5 步：将故障部件退回 NetApp
 
-[role="lead"]
 更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

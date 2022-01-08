@@ -23,11 +23,11 @@
  a| 
 接管或暂停受损节点：
 
-** 对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode `impaired_node_name``
+对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode impaired_node_name`
+
++ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
 +
-当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
-
-
 
 |===
 . 在 LOADER 提示符处，输入 `printenv` 以捕获所有启动环境变量。将输出保存到日志文件中。

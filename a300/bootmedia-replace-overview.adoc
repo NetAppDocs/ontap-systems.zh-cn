@@ -1,7 +1,7 @@
 ---
 permalink: a300/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: aff a300, aff, a300, boot, media, store, primary, secondary, set, system, image, boot, network, configuration, perform, nondisruptive, disruptive, replacement, replace, replace the boot media 
+keywords: aff a300, replace the boot media 
 summary: 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。 
 ---
 = 更换启动介质— AFF A300
@@ -12,7 +12,7 @@ summary: 启动介质存储系统在启动时使用的一组主文件和二级�
 [role="lead"]
 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。
 
-您必须使用格式化为 fat32 的 USB 闪存驱动器，并具有适当的存储容量来容纳 `image_xxx.tgz` 。
+您必须使用格式化为 fat32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。
 
 您还必须将 `image_xxx.tgz` 文件复制到 USB 闪存驱动器，以供日后在此操作步骤中使用。
 

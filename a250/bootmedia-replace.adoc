@@ -1,7 +1,7 @@
 ---
 permalink: a250/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a250, aff, a250, locate, fail, boot, media, controller, module, remove, removing, replace, replace the boot media 
+keywords: aff a250, replace the boot media 
 summary: 您可以先卸下控制器模块上的通风管，然后再更换启动介质，从而在控制器模块中找到发生故障的启动介质。 
 ---
 = 卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A250
@@ -9,13 +9,13 @@ summary: 您可以先卸下控制器模块上的通风管，然后再更换启�
 :imagesdir: ../media/
 
 
+[role="lead"]
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
 
 
 
 == 第 1 步：卸下控制器模块 - AFF A250
 
-[role="lead"]
 要访问控制器模块中的组件，必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。
 
 .步骤
@@ -79,10 +79,9 @@ image::../media/drw_a250_remove_airduct_cover.png[DRW A250 拆下通风管盖]
 
 == 第 2 步：更换启动介质
 
-[role="lead"]
 您可以先卸下控制器模块上的通风管，然后再更换启动介质，从而在控制器模块中找到发生故障的启动介质。
 
-要卸下用于将启动介质固定到位的螺钉，您需要一个 #1 磁性十字头螺钉驱动程序。由于控制器模块中的空间限制，您还应配备一个磁铁将螺钉传输到，以防止其松动。
+您需要使用 1 号磁性十字螺丝刀卸下用于将启动介质固定到位的螺钉。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not lose it.
 
 您可以使用以下视频或表格步骤更换启动介质：
 
@@ -110,11 +109,10 @@ image:../media/legend_icon_02.png[""]
 将启动介质从控制器模块中提出。
 
 |===
-+
-.. 使用 1 号磁性螺钉驱动器从受损启动介质中卸下螺钉，并将其安全放在磁铁上。
-.. 将受损启动介质直接从插槽中轻轻提起并放在一旁。
-.. 从防静电运输袋中取出更换启动介质，并将其在控制器模块上对齐到位。
-.. 使用 1 号磁性螺丝起子插入并拧紧启动介质上的螺钉。
+. 使用 1 号磁性螺丝刀从受损的启动介质上卸下螺钉，并将其安全地放在磁铁上。
+. 将受损启动介质直接从插槽中轻轻提起并放在一旁。
+. 从防静电运输袋中取出更换启动介质，并将其在控制器模块上对齐到位。
+. 使用 1 号磁性螺丝刀插入并拧紧启动介质上的螺钉。
 +
 
 NOTE: 拧紧启动介质上的螺钉时请勿用力，否则可能会使其发生裂纹。
@@ -123,11 +121,8 @@ NOTE: 拧紧启动介质上的螺钉时请勿用力，否则可能会使其发�
 
 
 
-
-
 == 第 3 步：将启动映像传输到启动介质
 
-[role="lead"]
 您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。
 
 * 您必须具有一个 USB 闪存驱动器，该驱动器已格式化为 MBR/FAT32 ，并且容量至少为 4 GB

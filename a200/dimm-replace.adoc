@@ -21,7 +21,6 @@ summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断
 
 == 第 1 步：关闭受损控制器
 
-[role="lead"]
 要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
 
 If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"]。
@@ -72,7 +71,6 @@ LOADER 提示符
 
 == 第 2 步：打开系统
 
-[role="lead"]
 要访问控制器内部的组件，您必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。
 
 . 如果您尚未接地，请正确接地。
@@ -99,7 +97,6 @@ image::../media/drw_2600_opening_pcm_cover.png[DRW 2600 打开 PCM 盖板]
 
 == 第 3 步：更换 DIMM
 
-[role="lead"]
 要更换 DIMM ，请在控制器中找到它们，然后按照特定步骤顺序进行操作。
 
 如果要更换 DIMM ，则需要在从控制器模块中拔下 NVMEM 电池后将其卸下。
@@ -169,7 +166,6 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 == 第 4 步：重新安装控制器模块
 
-[role="lead"]
 更换控制器模块中的组件后，将其重新安装到机箱中。
 
 . 如果您尚未接地，请正确接地。
@@ -239,7 +235,6 @@ NOTE: 如果您未看到此提示，而控制器模块启动到 ONTAP ，请输�
 
 == 第 5 步：运行系统级诊断
 
-[role="lead"]
 安装新 DIMM 后，您应运行诊断。
 
 您的系统必须处于 LOADER 提示符处，才能启动系统级诊断。
@@ -429,5 +424,4 @@ NOTE: 如果禁用了自动交还，请使用 `storage failover modify` 命令�
 
 == 第 6 步：将故障部件退回 NetApp
 
-[role="lead"]
 更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

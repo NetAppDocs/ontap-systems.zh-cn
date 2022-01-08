@@ -1,7 +1,7 @@
 ---
 permalink: a800/install-detailed-guide.html 
 sidebar: sidebar 
-keywords: aff a800, detailed installation content 
+keywords: aff a800, detailed installation 
 summary: 本节详细介绍了安装 AFF A800 系统的分步说明。 
 ---
 = 详细步骤— AFF A800
@@ -18,11 +18,7 @@ summary: 本节详细介绍了安装 AFF A800 系统的分步说明。
 
 要安装 AFF A800 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
 
-您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。
-
-https://hwu.netapp.com["NetApp Hardware Universe"^]
-
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的发行说明"^]
+您需要有权访问 link:https://hwu.netapp.com["NetApp Hardware Universe"^] （ HWU ），了解有关站点要求以及已配置系统上的追加信息的信息。您可能还希望有权访问  有关此系统的详细信息，请参见。
 
 您需要在站点上提供以下内容：
 
@@ -40,16 +36,13 @@ image::../media/drw_ssn_label.png[DRW SSN 标签]
 ... 登录到现有帐户或创建帐户。
 ... 注册您的系统。
 +
-https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]
+link:https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]
 
 
 
 .. 清点并记下收到的缆线数量和类型。
 +
-下表列出了您可能收到的电缆类型。如果您收到的电缆未在表中列出，请参见 Hardware Universe 以找到该电缆并确定其用途。
-
-+
-https://hwu.netapp.com["NetApp Hardware Universe"^]
+The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 以找到缆线并确定其用途。
 
 +
 [cols="1,2,1,2"]
@@ -156,10 +149,7 @@ image:../media/oie_cable_power.png[""]
 启动系统
 
 |===
-.. 下载并完成 _Cluster 配置工作表 _ 。
-+
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工作表"^]
-
+.. 下载并完成 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工作表"^]。
 
 
 
@@ -218,7 +208,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 使用动画或分步说明完成控制器与交换机之间的布线：
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=edc42447-f721-4cbe-b080-ab0c0123a139["为双节点无交换机集群布线"^]
+link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=edc42447-f721-4cbe-b080-ab0c0123a139["为双节点无交换机集群布线"^]
 
 +
 [cols="1,2"]
@@ -269,7 +259,7 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 ** <<Option 4: Connect to two direct-attached NS224 drive shelves>>
 
 
-. 要完成系统设置，请参见 link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+. To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
 
 
 
@@ -289,7 +279,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 使用动画或分步说明完成控制器与交换机之间的布线：
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=49e48140-4c5a-4395-a7d7-ab0c0123a10e["为交换集群布线"^]
+link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=49e48140-4c5a-4395-a7d7-ab0c0123a10e["为交换集群布线"^]
 
 +
 [cols="1,2"]
@@ -336,7 +326,7 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 ** <<Option 4: Connect to two direct-attached NS224 drive shelves>>
 
 
-. 要完成系统设置，请参见 link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+. To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
 
 
 
@@ -386,7 +376,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 3.
  a| 
-要完成系统设置，请参见 link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
 
 |===
 
@@ -430,7 +420,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 3.
  a| 
-要完成系统设置，请参见 link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
 
 |===
 
@@ -448,7 +438,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 使用动画或分步说明将控制器模块连接到一个磁盘架。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=09dade4f-00bd-4d41-97d7-ab0c0123a0b4["使用缆线将控制器连接到单个驱动器架"^]
+link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=09dade4f-00bd-4d41-97d7-ab0c0123a0b4["使用缆线将控制器连接到单个驱动器架"^]
 
 +
 [cols="1,2"]
@@ -459,7 +449,7 @@ https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=09dade4f-00bd-4d41
  a| 
 image:../media/oie_legend_icon_1_mb.png[""]
  a| 
-使用缆线将控制器 A 连接到磁盘架 image:../media/drw_affa800_1shelf_cabling_a.png[""]
+使用缆线将控制器 A 连接到磁盘架： image:../media/drw_affa800_1shelf_cabling_a.png[""]
 
 
 
@@ -469,7 +459,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_1shelf_cabling_b.png[""]
 
 |===
-. 要完成系统设置，请参见 link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+. To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
 
 
 
@@ -487,7 +477,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 使用以下动画或写入的步骤将控制器连接到两个驱动器架。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fe50ac38-9375-4e6b-85af-ab0c0123a0e0["使用缆线将控制器连接到两个驱动器架"^]
+link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fe50ac38-9375-4e6b-85af-ab0c0123a0e0["使用缆线将控制器连接到两个驱动器架"^]
 
 +
 [cols="1,2"]
@@ -508,7 +498,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_2shelf_cabling_b.png[""]
 
 |===
-. 要完成系统设置，请参见 link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+. To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
 
 
 
@@ -525,7 +515,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 +
-系统开始启动。初始启动可能需要长达八分钟的时间
+允许系统启动。Initial booting may take up to eight minutes.
 
 . 确保您的笔记本电脑已启用网络发现。
 +
@@ -533,7 +523,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 
 . 使用以下动画将您的笔记本电脑连接到管理交换机。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]
+link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]
 
 . 选择列出的 ONTAP 图标以发现：
 +
@@ -541,8 +531,8 @@ image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的 network 。
-.. 右键单击并选择刷新。
+.. 单击左窗格中的 * 网络 * 。
+.. 右键单击并选择 * 刷新 * 。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 
@@ -553,12 +543,9 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 
 
-. 使用 System Manager 引导式设置，使用在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。
-+
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["ONTAP 配置内容"^]
-
+. 使用 System Manager 引导式设置使用中收集的数据配置系统 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^]。
 . 运行 Config Advisor 以验证系统的运行状况。
-. After you have completed the initial configuration, go to the https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
+. After you have completed the initial configuration, go to the link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
 
 
 
@@ -587,7 +574,7 @@ image::../media/drw_client_mgmt_subnet_affa800.png[DRW 客户端管理子网 aff
 
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 +
-系统开始启动。初始启动可能需要长达八分钟的时间
+允许系统启动。Initial booting may take up to eight minutes.
 
 . 将初始节点管理 IP 地址分配给其中一个节点。
 +
@@ -622,12 +609,9 @@ NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制�
 
 NOTE: 此地址的格式为 +https://x.x.x.x+ 。
 
-.. 使用您在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。
-+
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["ONTAP 配置内容"^]
-
+.. Configure the system using the data you collected in the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^]。
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. After you have completed the initial configuration, go to the https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
+. After you have completed the initial configuration, go to the link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
 

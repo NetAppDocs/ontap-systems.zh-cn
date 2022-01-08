@@ -1,7 +1,7 @@
 ---
 permalink: fas500f/bootmedia-encryption-restore.html 
 sidebar: sidebar 
-keywords: fas500f, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption 
+keywords: fas500f, post boot media replacement steps for okm, nse, and nve 
 summary: 检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM\ ）， NetApp 存储加密 \ （ NSE\ ）或 NetApp 卷加密 \ （ NVE\ ）的系统的步骤。 
 ---
 = 根据需要还原 OKM ， NSE 和 NVE — FAS500f
@@ -75,7 +75,7 @@ NOTE: 数据是从 `security key-manager backup show` 或 `security key-manager 
 . 使用 `storage failover show` 命令确认目标节点已准备好进行交还。
 . 仅使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令交还 CFO 聚合。
 +
-** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘的连接，但将磁盘保留在插槽中，直到收到更换磁盘为止。
+** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。
 ** 如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。
 +
 
@@ -147,7 +147,7 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 |===
 . 使用 `storage failover giveback -fromnode local -only-cfo-aggregates true local` 命令将控制台缆线移至配对节点并交还目标节点存储。
 +
-** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘的连接，但将磁盘保留在插槽中，直到收到更换磁盘为止。
+** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。
 ** 如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。
 +
 

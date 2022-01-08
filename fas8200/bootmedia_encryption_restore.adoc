@@ -1,7 +1,7 @@
 ---
 permalink: fas8200/bootmedia-encryption-restore.html 
 sidebar: sidebar 
-keywords: fas8200, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption 
+keywords: fas8200, post boot media replacement steps for okm, nse, and nve 
 summary: 检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM\ ）， NetApp 存储加密 \ （ NSE\ ）或 NetApp 卷加密 \ （ NVE\ ）的系统的步骤。 
 ---
 = 根据需要还原 OKM ， NSE 和 NVE — FAS8200
@@ -51,9 +51,9 @@ LOADER 提示符
 
 
 |===
-. 在启动菜单中，输入隐藏的命令 `re封装板载密钥管理器` ，然后在提示符处回答 `y`
+. 在启动菜单中，输入隐藏的命令 `re封装板载密钥管理器` ，然后在提示符处回答 `y` 。
 . 输入您在此操作步骤开头从客户处获取的板载密钥管理器的密码短语。
-. 当系统提示您输入备份数据时，请根据要求粘贴您在此操作步骤开头捕获的备份数据。粘贴 `security key-manager backup show` 或 `security key-manager on板 载 show-backup` 命令的输出
+. When prompted to enter the backup data, paste the backup data you captured at the beginning of this procedure, when asked.粘贴 `security key-manager backup show` 或 `security key-manager on板 载 show-backup` 命令的输出。
 +
 
 NOTE: 数据是从 `security key-manager backup show` 或 `security key-manager on板 载 show-backup` 命令输出的。
@@ -74,9 +74,9 @@ NOTE: 数据是从 `security key-manager backup show` 或 `security key-manager 
 
 . 将控制台缆线移动到配对节点并以管理员身份登录。
 . 使用 `storage failover show` 命令确认目标节点已准备好进行交还。
-. 仅使用 storage failover giveback ` -fromnode local -only-cfo-aggregates true` 命令交还 CFO 聚合。
+. 使用 storage failover giveback ` -fromnode local -only-cfo-aggregates true` 命令仅交还 CFO 聚合。
 +
-** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘的连接，但将磁盘保留在插槽中，直到收到更换磁盘为止。
+** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。
 ** 如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。
 +
 
@@ -102,7 +102,7 @@ NOTE: 如果 `Restored` 列 = `yes` 以外的任何内容，请联系客户支�
 .. 等待 10 分钟，使密钥在整个集群中同步。
 
 
-. 如果您运行的是 ONTAP 9.6 或更高版本，请运行 security key-manager 板载同步：
+. 如果您运行的是 ONTAP 9.6 或更高版本：
 +
 .. 运行 `security key-manager on板 载 sync` 命令，然后在出现提示时输入密码短语。
 .. 输入 `security key-manager key query` 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes/true` 。
@@ -158,7 +158,7 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 |===
 . 使用 `storage failover giveback -fromnode local -only-cfo-aggregates true local` 命令将控制台缆线移至配对节点并交还目标节点存储。
 +
-** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘的连接，但将磁盘保留在插槽中，直到收到更换磁盘为止。
+** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。
 ** 如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。
 +
 
@@ -234,7 +234,7 @@ NOTE: 如果配置了 NVE （ NetApp 卷加密），则此命令不起作用
 |===
 . 使用 `storage failover giveback -fromnode local -only-cfo-aggregates true local` 命令将控制台缆线移至配对节点并交还目标节点存储。
 +
-** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘的连接，但将磁盘保留在插槽中，直到收到更换磁盘为止。
+** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。
 ** 如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。
 +
 
