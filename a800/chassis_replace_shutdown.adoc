@@ -57,7 +57,7 @@ Do you want to continue? {y|n}:
 ----
 +
 
-NOTE: 在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM ）中未写入的数据。如果 NVMEM LED 闪烁，则表示 NVMEM 中有尚未保存到磁盘的内容。您需要重新启动节点并从此操作步骤开始。如果重复尝试完全关闭节点失败，请注意，未保存到磁盘的任何数据可能会丢失。
+NOTE: 在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM/NVRAM ）中未写入的数据。根据您的系统，如果 NVMEM/NVRAM LED 闪烁，则 NVMEM/NVRAM 中有尚未保存到磁盘的内容。You need to reboot the node and start from the beginning of this procedure.If repeated attempts to cleanly shut down the node fail, be aware that you might lose any data that was not saved to disk.
 
 . 如果适用，请暂停第二个节点以避免在 HA 对配置中出现可能的仲裁错误消息： `ssystem node halt -node _second_node_name_ -ignore-quorum-warnings true -skip-lif-migration-before-shutdown true`
 +

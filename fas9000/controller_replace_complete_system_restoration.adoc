@@ -66,6 +66,7 @@ NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文�
 
 在将 _replacement_ 节点恢复使用之前，您应验证 LIF 是否位于其主端口上，如果启用了 AutoSupport ，则注册 _replacement_ 节点的序列号，并重置自动交还。
 
+.步骤
 . 验证逻辑接口是否正在向其主服务器和端口报告： `network interface show -is-home false`
 +
 如果任何 LIF 列为 false ，请将其还原到其主端口： `network interface revert`

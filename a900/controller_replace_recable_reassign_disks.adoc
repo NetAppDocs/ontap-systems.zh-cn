@@ -1,0 +1,149 @@
+---
+permalink: a900/controller_replace_recable_reassign_disks.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 已重新对系统进行布线— AFF A900
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过重新为存储和网络连接布线，继续更换用的操作步骤。
+
+
+
+== 第 1 步：重新对系统进行布线
+
+运行诊断程序后，您必须重新对控制器模块的存储和网络连接进行布线。
+
+.步骤
+. 重新对系统进行布线。
+. Verify that the cabling is correct by using https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
++
+.. 下载并安装 Config Advisor 。
+.. 输入目标系统的信息，然后单击收集数据。
+.. 单击布线选项卡，然后检查输出。确保显示所有磁盘架且所有磁盘均显示在输出中，以更正您发现的任何布线问题。
+.. 单击相应的选项卡，然后检查 Config Advisor 的输出，以检查其他布线。
+
+
+
+
+
+NOTE: 系统 ID 和磁盘分配信息位于 NVRAM 模块中，该模块位于与控制器模块不同的模块中，不受控制器模块更换的影响。
+
+
+
+== 第 2 步：重新分配磁盘
+
+[role="lead"]
+如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
+
+[role="lead"]
+此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
+
+. 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
+. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``
+. 等待 _replacement_ 节点控制台上显示 `waiting for giveback...` 消息，然后从运行状况良好的节点上，验证是否已自动分配新的配对系统 ID ： storage failover show
++
+在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。
+
++
+[listing]
+----
+node1> storage failover show
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        System ID changed on partner (Old:
+                                                  151759755, New: 151759706), In takeover
+node2             node1             -            Waiting for giveback (HA mailboxes)
+----
+. 从运行状况良好的节点中，验证是否已保存任何核心转储：
++
+.. 更改为高级权限级别： `set -privilege advanced`
++
+系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
+
+.. 保存任何核心转储： `ssystem node run -node _local-node-name_ partner savecore`
+.. 等待 savecore 命令完成，然后再发出交还。
++
+您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`
+
+.. 返回到管理权限级别： `set -privilege admin`
+
+
+. 交还节点：
++
+.. 从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode _replacement_node_name_`
++
+replacement_ 节点将收回其存储并完成启动。
+
++
+如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 `y` 。
+
++
+
+NOTE: 如果交还被否决，您可以考虑覆盖此否决。
+
++
+有关详细信息，请参见 https://docs.netapp.com/us-en/ontap/high-availability/ha_manual_giveback.html#if-giveback-is-interrupted["手动交还命令"^] 主题以覆盖否决。
+
+.. 交还完成后，确认 HA 对运行状况良好且可以进行接管： storage failover show
++
+`storage failover show` 命令的输出不应包含 System ID changed on partner 消息。
+
+
+
+. 验证是否已正确分配磁盘： `storage disk show -ownership`
++
+属于 _replacement_ 节点的磁盘应显示新的系统 ID 。在以下示例中， node1 拥有的磁盘现在显示新的系统 ID 1873775277 ：
+
++
+[listing]
+----
+node1> storage disk show -ownership
+
+Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
+----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
+1.0.0  aggr0_1  node1 node1  -        1873775277 1873775277  -       1873775277 Pool0
+1.0.1  aggr0_1  node1 node1           1873775277 1873775277  -       1873775277 Pool0
+.
+.
+.
+----
+. 如果系统采用 MetroCluster 配置，请监控节点的状态： `MetroCluster node show`
++
+The MetroCluster configuration takes a few minutes after the replacement to return to a normal state, at which time each node will show a configured state, with DR Mirroring enabled and a mode of normal.MetroCluster node show -fields node-SystemID 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。
+
+. 如果节点采用 MetroCluster 配置，则根据 MetroCluster 状态，如果原始所有者是灾难站点上的节点，请验证 DR 主 ID 字段是否显示磁盘的原始所有者。
++
+如果同时满足以下条件，则必须执行此操作：
+
++
+** MetroCluster 配置处于切换状态。
+** _replacement_ 节点是灾难站点上磁盘的当前所有者。
++
+有关详细信息，请参见 https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html#disk-ownership-changes-during-ha-takeover-and-metrocluster-switchover-in-a-four-node-metrocluster-configuration["在四节点 MetroCluster 配置中，磁盘所有权会在 HA 接管和 MetroCluster 切换期间发生更改"^] 主题。
+
+
+
+. 如果您的系统采用 MetroCluster 配置，请验证是否已配置每个节点： `MetroCluster node show - fields configuration-state`
++
+[listing]
+----
+node1_siteA::> metrocluster node show -fields configuration-state
+
+dr-group-id            cluster node           configuration-state
+-----------            ---------------------- -------------- -------------------
+1 node1_siteA          node1mcc-001           configured
+1 node1_siteA          node1mcc-002           configured
+1 node1_siteB          node1mcc-003           configured
+1 node1_siteB          node1mcc-004           configured
+
+4 entries were displayed.
+----
+. 验证每个节点是否存在所需的卷： `vol show -node node-name`
+. 如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它： `storage failover modify -node replacement-node-name -onreboot true`
+

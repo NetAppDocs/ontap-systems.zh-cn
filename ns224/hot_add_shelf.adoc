@@ -464,9 +464,104 @@ image::../media/drw_ns224_back_ports.png[DRW nss224 后端端口]
 
 
 
-=== 为 FAS500f 或 AFF A250 HA 对的热添加磁盘架布线
+=== 为 AFF A900 HA 对的热添加磁盘架布线
 
-如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f 或 AFF A250 HA 对中。
+如果需要更多存储，您可以将最多三个额外的 NS224 驱动器架（总共四个磁盘架）热添加到一个 AFF A900 HA 对中。
+
+.开始之前
+* 您必须已满足系统要求。
++
+<<Requirements for a hot-add>>
+
+* 您必须已完成适用的准备过程。
++
+<<Prepare for a hot-add>>
+
+* 您必须已安装磁盘架，打开其电源并设置磁盘架 ID 。
++
+<<Install a drive shelf for a hot-add>>
+
+
+
+.关于此任务
+* 此操作步骤假定您的 HA 对至少具有一个现有 NS224 磁盘架，并且您要热添加最多三个额外的磁盘架。
+* 如果您的 HA 对只有一个现有 NS224 磁盘架，则此操作步骤会假定该磁盘架已通过缆线连接到每个控制器上两个支持 RoCE 的 100GbE I/O 模块。
+
+
+.步骤
+. 如果要热添加的 NS224 磁盘架是 HA 对中的第二个 NS224 磁盘架，请完成以下子步骤。
++
+否则，请转至下一步。
+
++
+.. 使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 10 端口 A （ E10A ）。
+.. 使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 2 端口 b （ e2b ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 10 端口 A （ E10A ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 2 端口 b （ e2b ）。
+
+
++
+下图显示了第二个磁盘架的布线（以及第一个磁盘架）。
+
++
+image::../media/drw_ns224_a900_2shelves.png[DRW nss224 a900 2 个磁盘架]
+
+. 如果要热添加的 NS224 磁盘架是 HA 对中的第三个 NS224 磁盘架，请完成以下子步骤。
++
+否则，请转至下一步。
+
++
+.. 使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 1 端口 A （ e1a ）。
+.. 使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 11 端口 b （ e11b ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 1 端口 A （ e1a ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 11 端口 b （ e11b ）。
++
+下图显示了第三个磁盘架的布线。
+
++
+image::../media/drw_ns224_a900_3shelves.png[DRW nss224 a900 3 个磁盘架]
+
+
+
+. 如果要热添加的 NS224 磁盘架是 HA 对中的第四个 NS224 磁盘架，请完成以下子步骤。
++
+否则，请转至下一步。
+
++
+.. 使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 11 端口 A （ e11a ）。
+.. 使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 1 端口 b （ e1b ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 11 端口 A （ e11a ）。
+.. Cable shelf NSM B port e0b to controller A slot 1 port b (e1b).
++
+下图显示了第四个磁盘架的布线。
+
++
+image::../media/drw_ns224_a900_4shelves.png[DRW nss224 a900 4 个磁盘架]
+
+
+
+. 验证热添加磁盘架的布线是否正确。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+
+. 如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
++
+否则，您将使用此操作步骤。
+
++
+<<Complete the hot-add>>
+
+
+
+
+
+=== 为 FAS500f ， AFF A250 或 ASA A250HA 对的热添加磁盘架布线
+
+[role="lead"]
+如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f ， AFF A250 或 ASA A250HA 对中。
 
 .开始之前
 * 您必须已满足系统要求。

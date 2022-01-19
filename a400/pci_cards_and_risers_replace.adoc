@@ -176,7 +176,7 @@ controller_A_1::> metrocluster heal -phase aggregates
 [Job 130] Job succeeded: Heal Aggregates is successful.
 ----
 +
-如果修复被否决，您可以使用 -override-vetoes 参数重新发出 `MetroCluster heal` 命令。如果使用此可选参数，则系统将覆盖任何阻止修复操作的软否决。
+如果修复被否决，您可以使用 ` override-vetoes` 参数重新发出 `MetroCluster heal` 命令。如果使用此可选参数，则系统将覆盖任何阻止修复操作的软否决。
 
 . 使用 MetroCluster operation show 命令验证操作是否已完成。
 +

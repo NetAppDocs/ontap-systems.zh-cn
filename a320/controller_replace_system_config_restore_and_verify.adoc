@@ -21,12 +21,12 @@ summary: 完成硬件更换并启动至维护模式后，您可以验证更换�
 请务必在正确的系统上应用步骤中的命令：
 
 * _replacement_ 节点是此操作步骤中更换受损节点的新节点。
-* _health_ 节点是 _replacement_ 节点的 HA 配对节点
+* _health_ 节点是 _replacement_ 节点的 HA 配对节点。
 
 
 .步骤
 . 如果 _replacement_ 节点不在 LOADER 提示符处，请将系统暂停到 LOADER 提示符处。
-. 在运行状况良好的节点上，检查系统时间： `show date`
+. 在 _health_ 节点上，检查系统时间： `show date`
 +
 日期和时间以 GMT 表示。
 

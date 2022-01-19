@@ -1608,7 +1608,6 @@
   <block id="4252cc22782c7895d045823c51f6d877" category="paragraph">集群中的两个以上节点</block>
   <block id="b2aa61dcee4d7b77fcd001973469ddde" category="paragraph">`storage failover modify -node node0 -enabled false`</block>
   <block id="481250f3e8ec41b0e994305d8fc52b4a" category="paragraph">确认消息如下所示：</block>
-  <block id="acb6df6704b040c68684e454411f2742" category="admonition">在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM ）中未写入的数据。如果 NVMEM LED 闪烁，则表示 NVMEM 中有尚未保存到磁盘的内容。您需要重新启动节点并从此操作步骤开始。如果重复尝试完全关闭节点失败，请注意，未保存到磁盘的任何数据可能会丢失。</block>
   <block id="cf55af4b4668a579d36bfd91785ecbec" category="summary">完成 NVE 或 NSE 任务后，您需要关闭受损节点。</block>
   <block id="db4547d0ddae50a76aa47cf54e9d15ae" category="doc">关闭节点— AFF A250</block>
   <block id="130b18edff1b7e2377d35d657b1f8a53" category="list-text">如果受损节点不在 LOADER 提示符处：</block>
@@ -1844,9 +1843,7 @@
   <block id="8fe193e2b54d387ed2fed605221a5c28" category="paragraph">您应对照 HA 对中运行状况良好的控制器模块或独立配置中可靠的时间服务器检查更换用的控制器模块上的时间和日期。如果时间和日期不匹配，则必须在更换控制器模块上重置这些值，以防止客户端可能因时间差异而中断。</block>
   <block id="cdb851485439024512881c41e7de982a" category="paragraph">请务必在正确的系统上应用步骤中的命令：</block>
   <block id="993e592d598f2ac9b6cdd13862d70d0a" category="list-text">_replacement_ 节点是此操作步骤中更换受损节点的新节点。</block>
-  <block id="f50a1f5c83e1c0a5e50fd93c7245868d" category="list-text">_health_ 节点是 _replacement_ 节点的 HA 配对节点</block>
   <block id="58532634ca04e50b018c22652941f0e2" category="list-text">如果 _replacement_ 节点不在 LOADER 提示符处，请将系统暂停到 LOADER 提示符处。</block>
-  <block id="1c923c62367fe19d9197babb4209c85b" category="list-text">在运行状况良好的节点上，检查系统时间： `show date`</block>
   <block id="610bb0d24c586904b13f6cb09aca2599" category="paragraph">日期和时间以 GMT 表示。</block>
   <block id="7d605a9dbf45a466003e126065e1bc68" category="list-text">在 LOADER 提示符处，检查 _replacement_ 节点上的日期和时间： `show date`</block>
   <block id="fba5bbeb3ff706c0a6a0f6aa48ca6830" category="list-text">如有必要，请在替代节点上以 GMT 格式设置日期： `set date _MM/dd/yyy_`</block>
@@ -2304,7 +2301,6 @@
   <block id="ea9a06f5fb2cd5470a0c0c25b039a03c" category="list-text">如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示 `是` ，则需要完成一些额外步骤。</block>
   <block id="c6d9b949fc815c7d1290e5acb1f3ade9" category="list-text">如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。</block>
   <block id="b43c8f6b2fe8e4b5d1d2f97c83c7c6ca" category="list-text">如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示除 `是` 以外的任何内容，则需要完成一些额外步骤。</block>
-  <block id="1c44cb279f9c39d276d36558edaed2d8" category="list-text">如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示 `yes` ，请手动备份 OKM 信息：</block>
   <block id="edf0839ebd25c40cc1ef62105e3a5d8f" category="list-text">转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`</block>
   <block id="1b3e3ec3fd07bf53abc8401f17b2a7b5" category="list-text">输入命令以显示密钥管理信息： `security key-manager on板 载 show-backup`</block>
   <block id="78a22d38c1530a757fec402c5079de18" category="list-text">将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</block>
@@ -2447,7 +2443,6 @@
   <block id="624bedc07a82079383ebddb8e1d17e03" category="list-text">将控制台缆线连接到受损节点。</block>
   <block id="b227d8958eb504b6da0a08172b4222db" category="list-text">检查是否为集群中的任何卷配置了 NVE ： `volume show -is-encrypted true`</block>
   <block id="68e27ac90c8755079206639397a6abfe" category="list-text">检查是否已配置 NSE ： `storage encryption disk show`</block>
-  <block id="d483bc1527afe69382dcafeae8759af5" category="section-title">验证 NVE 配置</block>
   <block id="2c3101fc6b218cfb1515e6df7981ff27" category="list-text">如果 `Restored` 列显示 `yes` 且所有密钥管理器显示 `Available` ，则可以安全地关闭受损节点。</block>
   <block id="6c2aeadd2a92753dd1f137a6c7068dc8" category="list-text">如果 `Restored` 列显示 `yes` 以外的任何内容，或者任何密钥管理器显示 `不可用` ，则需要完成一些额外步骤。</block>
   <block id="ff31b8e8c86ed558e88ec6430564b19a" category="list-text">如果在启用板载密钥管理时看到消息 this command is not supported ，则需要完成其他一些步骤。</block>
@@ -2455,16 +2450,13 @@
   <block id="ec36c7cfd75ef20d8b0ef51a16507a88" category="list-text">检索并还原所有身份验证密钥和关联密钥 ID ： `security key-manager restore -address *`</block>
   <block id="af4d1d3ffadafe2bf36d2f97e0624f27" category="list-text">验证所有身份验证密钥的 `Restored` 列是否显示 `yes` ，以及所有密钥管理器是否显示 `Available` ： `sSecurity key-manager query`</block>
   <block id="289ff53a98abf4d0113c963cb872935c" category="list-text">如果在启用板载密钥管理后看到消息 this command is not supported when on板 载密钥管理器，请显示存储在板载密钥管理器中的密钥： `security key-manager key show -detail`</block>
-  <block id="64b5850437a6c5ede6e9cff83bdaf98e" category="list-text">输入命令以显示 OKM 备份信息： `security key-manager backup show`</block>
   <block id="eacc67b97d93f923ad42c8176ba8faa9" category="list-text">如果 `Restored` 列显示除 `yes` 以外的任何内容：</block>
   <block id="24220f32b44e782b90a7317dc26ed7aa" category="list-text">运行 key-manager 设置向导： `security key-manager setup -node target/impaired node name`</block>
   <block id="eaa3e7284bb9122bca13b95d6cc59ef1" category="admonition">在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系<block ref="7bc6752d2076d2c755eaebbdfeb91d23" category="inline-link-rx"></block></block>
   <block id="e09a2f79fa1a4d59c75a72c0eaf5b34c" category="list-text">验证所有身份验证密钥 `ssecuritykey-manager key show -detail` 的 `restored` 列是否显示 `yes`</block>
-  <block id="b6681297e941eb56dc38970b85386ab2" category="section-title">验证 NSE 配置</block>
   <block id="1adea8aec2ec00910dfbe0bb9bffce8e" category="list-text">如果在启用板载密钥管理时看到消息 this command is not supported ，则需要完成其他一些步骤</block>
   <block id="dd987c60871b23529ac187b4b51deed6" category="admonition">在提示符处输入客户的 OKM 密码短语。如果无法提供密码短语，请联系<block ref="7bc6752d2076d2c755eaebbdfeb91d23" category="inline-link-rx"></block></block>
   <block id="9a771de258008e976b0c48e9801a4c8c" category="list-text">验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key show -detail`</block>
-  <block id="30d0cde8b2f7857d1f7566ebcf3b7ef7" category="admonition">确保 OKM 信息保存在日志文件中。在可能需要手动恢复 OKM 的灾难情形下，需要使用此信息。</block>
   <block id="f715a6054e8d53c0d1e16dc1d6abcac0" category="list-text">将备份信息的内容复制到单独的文件或日志中。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</block>
   <block id="eb924216b30cedba77ddd9a35ecc861e" category="section-title">选项 2 ：在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE</block>
   <block id="feb6e7b3091c7242849233efd75d8a7e" category="doc">将故障部件退回给 NetApp - AFF A700s</block>
@@ -7717,8 +7709,6 @@
   <block id="faca4b5bb9a5da5b47d1425ef2489bdf" category="paragraph"><block ref="8417f927f631db9ff6dcfc207992ae5a" category="inline-xref-macro-rx"></block></block>
   <block id="299be2017fe243bf0cb27752cb61cba4" category="paragraph">AFF A400 HA 对</block>
   <block id="35abee2b20175ae748c82f6ba4453ac1" category="paragraph"><block ref="2d20d554d868477c9c895109bac068ae" category="inline-xref-macro-rx"></block></block>
-  <block id="f1f8b8def80b9337373513998dd13c3e" category="section-title">为 FAS500f 或 AFF A250 HA 对的热添加磁盘架布线</block>
-  <block id="f0fad2647eb722df1f95d7cea636dfac" category="paragraph">如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f 或 AFF A250 HA 对中。</block>
   <block id="075ac783ee242c66ec7ef26475fd212b" category="section-title">为 AFF A700 HA 对的热添加磁盘架布线</block>
   <block id="5c817f2686998b5a889ca66df6194716" category="section-title">为 AFF A800 HA 对的热添加磁盘架布线</block>
   <block id="873efd8427437501798d979ea439809c" category="section-title">为 AFF A400 HA 对的热添加磁盘架布线</block>
@@ -7884,9 +7874,7 @@
   <block id="b8657f72d8b4e1ef5c7e2c082690279e" category="list-text"><block ref="b8657f72d8b4e1ef5c7e2c082690279e" category="inline-link-rx"></block></block>
   <block id="4d2e328d055378ef43067726132a9c56" category="list-text"><block ref="4d2e328d055378ef43067726132a9c56" category="inline-link-rx"></block></block>
   <block id="6675c229d440b5fa295266d2c66af8cb" category="list-text">如果 `Restored` 列显示 `yes` manually back up the on板 载密钥管理信息：</block>
-  <block id="112a82bd2bb72082aa06b632a6df869a" category="list-text">输入命令以显示 OKM 备份信息： `security key-manager backup show`</block>
   <block id="4111f4985df04f9002129e591bafb45f" category="list-text">如果 `Restored` 列显示 `yes` ，请手动备份板载密钥管理信息：</block>
-  <block id="722721e96c3d68d660aa1ee6553d7561" category="list-text">输入命令备份 OKM 信息： `security key-manager backup show`</block>
   <block id="47172f1226f9908865e044955d2f091b" category="paragraph">您可以使用 <block ref="cb0390cbe2f3cf678134885ff143b6ba" category="inline-link-macro-rx"></block> 收集并记录配置 ONTAP 集群时所需的站点专用 IP 地址和其他信息。</block>
   <block id="29698929d201e3c2b1138892d941cbfb" category="paragraph"><block ref="29698929d201e3c2b1138892d941cbfb" category="inline-link-macro-rx"></block></block>
   <block id="78f75f00d9872e8e3abcdad7ee860f3e" category="list-text">在启动菜单中，输入隐藏的命令 `re封装板载密钥管理器` ，然后在提示符处回答 `y` 。</block>
@@ -7940,4 +7928,460 @@
   <block id="4ab41e9db35b429ef17dc75c3671d5a3" category="paragraph">您可以使用 <block ref="29bd1f640adeeec5f2bc6e197d0840c4" category="inline-link-macro-rx"></block> 收集并记录配置 ONTAP 集群时所需的站点专用 IP 地址和其他信息。</block>
   <block id="e4e83a2c82324a2a6d5448b03909ecfa" category="paragraph">您可以使用 <block ref="b22470d24dd615c99a09a118a80f7353" category="inline-link-macro-rx"></block> 用于安装和设置新系统的海报。The PDF poster provides step-by-step instructions with live links to additional content.</block>
   <block id="9eb9c148662d69c22bab62cf12a75812" category="paragraph">。 <block ref="36ed39ac78f542a04e83212067a271f3" category="inline-link-macro-rx"></block> 显示了运行 ONTAP 9.2 的系统的端到端软件配置。</block>
+  <block id="ad569dbab7bcafe6ae2a28cd4d832fd1" category="list-text">如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示 `yes` ，请手动备份 OKM 信息：</block>
+  <block id="152f3adf69bffe0bb0658bb05364f89b" category="admonition">在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM/NVRAM ）中未写入的数据。根据您的系统，如果 NVMEM/NVRAM LED 闪烁，则 NVMEM/NVRAM 中有尚未保存到磁盘的内容。You need to reboot the node and start from the beginning of this procedure.If repeated attempts to cleanly shut down the node fail, be aware that you might lose any data that was not saved to disk.</block>
+  <block id="d6cd7784b4e7b607424fb3f31dc53b2d" category="list-text">_health_ 节点是 _replacement_ 节点的 HA 配对节点。</block>
+  <block id="7676556d14b3f7dfc7ddc885b585b132" category="list-text">在 _health_ 节点上，检查系统时间： `show date`</block>
+  <block id="704ce524afb02bcf845b03e8ae369f8b" category="paragraph">如果修复被否决，您可以使用 ` override-vetoes` 参数重新发出 `MetroCluster heal` 命令。如果使用此可选参数，则系统将覆盖任何阻止修复操作的软否决。</block>
+  <block id="c4761cfb1761b743925b9f1be16248cb" category="list-text">Enter the command to display the OKM backup information: `security key-manager backup show`</block>
+  <block id="a3410f705ab8a22cd8e4955b03ee2420" category="list-text">输入命令以显示 OKM 备份信息： ``security key-manager backup show``</block>
+  <block id="9829800481ae88069f363ca18226b993" category="list-text">输入命令以备份 OKM 信息： ``security key-manager backup show``</block>
+  <block id="dfeb46620d45b8d49ed48c1634840b5c" category="admonition">Make sure that OKM information is saved in your log file.在可能需要手动恢复 OKM 的灾难情形下，需要此信息。</block>
+  <block id="52ca5a52198c80398dfe6a706737b20e" category="paragraph">You must have a USB flash drive, formatted to FAT32, with the appropriate amount of storage to hold the `image_xxx.tgz`.</block>
+  <block id="f7738a24d9355b95820a5116baee7814" category="list-text">要进行无中断更换， HA 对不需要连接到网络即可还原 `var` 文件系统。一个机箱中的 HA 对具有一个内部 e0S 连接，用于在它们之间传输 `var` config 。</block>
+  <block id="13c4db3516e2bb246a5834f3d7814d4f" category="doc">更换风扇— AFF A900</block>
+  <block id="cf4805b12d3714cb1c102043670019d7" category="list-text">按下风扇模块上的 Terra cotta 按钮，然后将风扇模块竖直拉出机箱，确保用您的空闲手托住该模块。</block>
+  <block id="4895dae39c541adad3dc1d9f31c2b28a" category="inline-link">动画—拆卸 / 安装风扇</block>
+  <block id="257892c51ef5c682eda8a947355b2d9d" category="paragraph"><block ref="257892c51ef5c682eda8a947355b2d9d" category="inline-link-rx"></block></block>
+  <block id="9a673f4738f255def47cc1d92dbc0cf6" category="image-alt">DRW a900 卸下安装风扇</block>
+  <block id="4693df7fc44203724111e55493c1f236" category="paragraph">Terra cotta 释放按钮</block>
+  <block id="a6b7b1f6b451582b4f3e4ee818b0b022" category="paragraph">将风扇滑入 / 滑出机箱</block>
+  <block id="b9f8bf80fa7fab32aca8c28430b0b999" category="doc">更换实时时钟电池— AFF A900</block>
+  <block id="34de7ae9bee05647de754a7bdd5b00d5" category="section-title">第 2 步：打开控制器</block>
+  <block id="4cc95bf9d5b32fe7d0352f48b0791827" category="list-text">向下滑动凸轮把手上的 Terra cotta 按钮，直到其解锁为止。</block>
+  <block id="157fddeae41486bcaef21356a0ec5bb1" category="inline-link">动画—删除控制器</block>
+  <block id="1e6a22a0167a906d5d500778e514adce" category="paragraph"><block ref="1e6a22a0167a906d5d500778e514adce" category="inline-link-rx"></block></block>
+  <block id="5d6fb494ffd2ad4919bfe7a89dca376f" category="image-alt">DRW a900 删除 PCM</block>
+  <block id="12fa42e0a81aa9a47bca5bce92d6ae38" category="image-alt">DRW a900 PCM 已打开</block>
+  <block id="eec518c6ed9cf64a0b51294fa8f06692" category="inline-link">动画—更换 RTC 电池</block>
+  <block id="f58146f61f30db6d5df364a7751fc65a" category="paragraph"><block ref="f58146f61f30db6d5df364a7751fc65a" category="inline-link-rx"></block></block>
+  <block id="70f590ae3de022f014ffe169e236da55" category="image-alt">DRW a900 取出 RTC 电池</block>
+  <block id="7ac0a68ff3a0c6b3beb7f03b58c8496d" category="paragraph">更换 RTC 电池后，您必须重新安装控制器模块。如果将 RTC 电池从控制器模块中取出超过 10 分钟，您可能需要重置时间和日期。</block>
+  <block id="4714e8423619d9cc43be300b5a406117" category="list-text">交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
+  <block id="f019032ca5e4ee1339ef0bcd485f9c8d" category="summary">您必须卸下并打开控制器模块，找到并更换控制器中的启动介质，然后将映像传输到替代启动介质。</block>
+  <block id="f42f050dc5269ad7b9f62abb5be6f335" category="doc">卸下控制器，更换启动介质并传输启动映像— AFF A900</block>
+  <block id="2124dcd5f889b56f5d21d376ccfe034a" category="inline-link">动画—删除控制器</block>
+  <block id="e15c2c7cc6d83abc6f3519ec47247b5c" category="paragraph"><block ref="e15c2c7cc6d83abc6f3519ec47247b5c" category="inline-link-rx"></block></block>
+  <block id="c8b713ea700fb2decc6696deb87e6679" category="inline-link">"Animation - 更换启动介质 "</block>
+  <block id="76e0b6a67c1d0d3ae7fd16124243cd0e" category="paragraph"><block ref="76e0b6a67c1d0d3ae7fd16124243cd0e" category="inline-link-rx"></block></block>
+  <block id="89c421ecee17b213d1a0c7b9a2dd8106" category="image-alt">DRW a900 删除启动开发</block>
+  <block id="defa99ee750d2ca6a8f52cf79e8eb713" category="list-text">bootarg.init.boot_clustered</block>
+  <block id="d18fd3db938a26ebbd3f74de41f0b73f" category="list-text">合作伙伴 - 系统</block>
+  <block id="bac349cdf99ddd20206c9b20eb9e6d22" category="list-text">bootarg.init.flash_optimized ，用于 AFF</block>
+  <block id="f3b31cc7028e1885fb21b81b0fdbee37" category="list-text">bootarg.init.san_optimized ，用于 AFF</block>
+  <block id="cbcb656967b507992a4a640a604c47e0" category="list-text">bootarg.init.switchless_cluster.enable</block>
+  <block id="8e66622dd5a924bd59ee4f46318a13a9" category="list-text">bootarg.storageencryption.support &lt;value&gt;</block>
+  <block id="bdafe896118bc000c3a68090808112cd" category="list-text">bootarg.keymanager.support &lt;value&gt;</block>
+  <block id="8f4ea3656910a928382f8c75368c3c2a" category="list-text">kmip.init.interface &lt;value&gt;</block>
+  <block id="b2adbab4ce96430a3475db235c4be8c3" category="list-text">kmip.init.ipaddr &lt;value&gt;</block>
+  <block id="70e8273bd6b058c89bc23bad2de4c396" category="list-text">kmip.init.netmask &lt;value&gt;</block>
+  <block id="4d10af14d34e5e468c4aee19207329d3" category="list-text">kmip.init.gateway &lt;value&gt;</block>
+  <block id="a1781eecf18376feb2f740b6a3d7781d" category="list-text">bootarg.bontery_keymanager &lt;value&gt;</block>
+  <block id="8ed13fe688162a9d4d89829700344e8f" category="list-text">使用 `printenv variable-name` 命令确认所做的更改。</block>
+  <block id="61fb64589c53cb1543b86398c0f9bf5f" category="admonition">您的接口可能需要其他参数。有关详细信息，您可以在固件提示符处输入 help ifconfig 。</block>
+  <block id="92119567969a6dfb8d14b4d139115118" category="list-text">将 MetroCluster 端口设置为启动程序： `ucadmin modify -m fc -t ininitiator adapter_name`</block>
+  <block id="13437270a7a5bb30024bcf51e56b9645" category="doc">将故障部件退回给 NetApp - AFF A900</block>
+  <block id="9f1173b4d650a610b122024bb5216ca1" category="doc">已重新对系统进行布线— AFF A900</block>
+  <block id="f57131a371345f28120c2c1540cdc3dd" category="paragraph">通过重新为存储和网络连接布线，继续更换用的操作步骤。</block>
+  <block id="2f966eb8b55c870ae5de4a1ce0bc89cb" category="list-text">Verify that the cabling is correct by using<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block>。</block>
+  <block id="0163a3b42f42d43e15610ad575decda8" category="admonition">系统 ID 和磁盘分配信息位于 NVRAM 模块中，该模块位于与控制器模块不同的模块中，不受控制器模块更换的影响。</block>
+  <block id="580fe6e7e310b3db810754c7c7927744" category="list-text">如果 _replacement_ 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： `halt`</block>
+  <block id="1f8a127e3837fb66c1f3c8c02d8392cd" category="list-text">等待 savecore 命令完成，然后再发出交还。</block>
+  <block id="c45c9fc04ba9ebcfc2085fb4d27cb308" category="paragraph">replacement_ 节点将收回其存储并完成启动。</block>
+  <block id="e52d65661673e0d8112057f135b30a91" category="inline-link">手动交还命令</block>
+  <block id="85bdc20f7292dbafd4caa42c19f7b123" category="paragraph">有关详细信息，请参见<block ref="fea6157c393b81b627aed2aca6311576" category="inline-link-rx"></block> 主题以覆盖否决。</block>
+  <block id="c56c4e68e67a43bbcea54bcb10a45c50" category="paragraph">The MetroCluster configuration takes a few minutes after the replacement to return to a normal state, at which time each node will show a configured state, with DR Mirroring enabled and a mode of normal.MetroCluster node show -fields node-SystemID 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
+  <block id="c081ffc5acf576c85556813974927192" category="list-text">_replacement_ 节点是灾难站点上磁盘的当前所有者。</block>
+  <block id="7be085f8f1dc91cbac9f773985faef24" category="paragraph">有关详细信息，请参见<block ref="4b1c17d30e94cc8d68adcd4265a76547" category="inline-link-rx"></block> 主题。</block>
+  <block id="a3ac7e9d8980de7907636c8bba9ce65b" category="summary">NVMe SSD FlashCache 模块（ FlashCache 或缓存模块）仅位于 FAS9000 系统插槽 6 中 NVRAM10 模块的正面。Beginning with ONTAP 9.4, you can hot-swap the caching module of the same capacity from the same or different supported vendor.</block>
+  <block id="fb796745f1b93e7c27af0a928be9d5ae" category="doc">热插拔缓存模块— FAS9500</block>
+  <block id="500dc5c4c3fabaf17658fcf1457f4d0a" category="list-text">在管理员权限级别中，准备要更换的目标 NVMe 插槽，并在系统提示是否继续时回答 `y` ： `ssystem controller slot module replace -node node_name -slot slot_number` 以下命令会准备 node1 上的插槽 6-2 以进行更换，并显示一条消息，指出可以安全更换：</block>
+  <block id="542b8ada0f753c9ce009ed6d7d1f2bc7" category="paragraph">NVMe 插槽状态会在需要更换的缓存模块的屏幕输出中显示 power-off 。</block>
+  <block id="948a2b625585740c830fda62dae13d97" category="list-text">按下缓存模块正面的 Terra cotta 释放按钮。</block>
+  <block id="885f16adbb6d40be3fd7f28e30f3dbf2" category="list-text">使用 system controller slot module insert 命令使替代缓存模块联机，如下所示：</block>
+  <block id="01749eec96259584a0543cfb51c7496d" category="list-text">使用 system controller slot module show 命令验证插槽状态。</block>
+  <block id="4b75f27177276fe0e6f2c240be46a30d" category="paragraph">确保命令输出将插槽 6-1 或 6-2 的状态报告为已启动并可运行。</block>
+  <block id="14322a1f6cf98e92283f796431b8f072" category="list-text">包括： ./_include/complete_rma_step.adoc]]</block>
+  <block id="d35fd8965949830b92555b33686beb19" category="doc">更换电源— AFF A900</block>
+  <block id="12ccb6284dde6c218f4afb3d3857d96e" category="list-text">按住电源手柄上的 Terra cotta 按钮，然后将电源从机箱中拉出。</block>
+  <block id="5fd8a0b2e3d84890a789982e8b627534" category="inline-link">动画—删除 / 安装 PSU</block>
+  <block id="cdc92f06e66fe046feea7a94d006df33" category="paragraph"><block ref="cdc92f06e66fe046feea7a94d006df33" category="inline-link-rx"></block></block>
+  <block id="055140d300b472c3cf197b316fc1a111" category="doc">完成系统还原— AFF A900</block>
+  <block id="d43c376026dc1771be0ad5086e3b8cb7" category="summary">有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。</block>
+  <block id="8f73eb9fb7acfd413cf2778aacee51b6" category="doc">视频步骤— AFF A900</block>
+  <block id="de53c956f453a59805eb5d446d1bdefd" category="inline-link">动画— AFF A900 安装和设置说明</block>
+  <block id="e748385ee8edf54a48a2aa3505be3b13" category="paragraph"><block ref="e748385ee8edf54a48a2aa3505be3b13" category="inline-link-rx"></block></block>
+  <block id="3bc737994532b61e4fad9c84d6dccfc0" category="summary">此提供了有关安装典型 NetApp 系统的详细分步说明。</block>
+  <block id="b37eeea92bef8e254a5c7650e7002788" category="doc">详细步骤— AFF 900</block>
+  <block id="fa3056f29df183b75e177c2b6ee65b45" category="paragraph">本文详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本文。</block>
+  <block id="8666406295c84e68942a4f6fc1b2cb4e" category="paragraph">您需要有权访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 有关站点要求以及已配置系统上的追加信息的信息。</block>
+  <block id="efe451bd1c5b374a05e7d5178bb06987" category="inline-link">《 ONTAP 9 发行说明》</block>
+  <block id="40fe00708235ad923736149094645e33" category="paragraph">您可能还希望有权访问<block ref="0f8d0515fc69b1cc082b3a1a824a0f7b" category="inline-link-rx"></block> 有关此系统的详细信息，请参见您的 ONTAP 版本。</block>
+  <block id="fdd16b4c17cdffdb8347031ffbb94b8a" category="paragraph">25 GbE 数据缆线</block>
+  <block id="27028f92656bbdf910064ae3e02df4e4" category="paragraph">X66240A-05 （ 112-00639 ）， 0.5 米</block>
+  <block id="76e54077fa867932c272cec07283b8b4" category="paragraph">X66240A-2 （ 112-00598 ）， 2 米</block>
+  <block id="a6e3ca310cb8a5b01ca48d785525d1a0" category="paragraph">FC 光纤网络缆线</block>
+  <block id="4eb869f675887c7c4563b8f589fd425e" category="paragraph">X66100-1 （ 112-00542 ）， 1 米</block>
+  <block id="22818e3aa151ab65763aabffdaa3bfb3" category="paragraph">X66100-3 （ 112-00543 ）， 3 米</block>
+  <block id="28a7744e9ff504a093d19d5924bdd286" category="paragraph">X66100-5 （ 112-00544 ）， 5 米</block>
+  <block id="1fde8b940fe7522a4b514afcee8fc307" category="paragraph">以太网数据，集群网络</block>
+  <block id="005e2f19b5bdfcf9c50e5395df2fc80a" category="paragraph">X6621B-1 （ 112-00573 ）， 1 米</block>
+  <block id="bf87f5b23bb37f6364be788b79c1a73a" category="paragraph">X6621B-2 （ 112-00574 ）， 2 米</block>
+  <block id="eae9a7714c47bba5996cfde20d16feb5" category="paragraph">X6621B-5 （ 112-00576 ）， 5 米</block>
+  <block id="7c940cd75d895902a2a1ca1414a2a95e" category="paragraph">网络，</block>
+  <block id="c85d51015376017bfac06d7a393d65a8" category="paragraph">NVMe 存储，</block>
+  <block id="12f433cfca5ad984274ffdaf0fc4902b" category="paragraph">以太网数据，</block>
+  <block id="09fd8552ab48c65ddc70dbeb1978b198" category="paragraph">集群网络</block>
+  <block id="9e970bc474972d15dfb05462a6fa4595" category="paragraph">FC 光纤网络</block>
+  <block id="28746f946d763ce537494ffe0d6c6727" category="list-text">查看<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block> 并收集该指南中列出的所需信息。</block>
+  <block id="858ecf173bc4407a9f9f712e4f1e74f6" category="inline-link">动画—为双节点无交换机集群布线</block>
+  <block id="af47e885d132c2d4147635c418bd829e" category="paragraph"><block ref="af47e885d132c2d4147635c418bd829e" category="inline-link-rx"></block></block>
+  <block id="1fb0ebfbc5b5595571d6d5f9b6042526" category="image-alt">DRW a900 tnsc 网络布线</block>
+  <block id="d718ffb6aaa936306ccf33aefa9f9462" category="paragraph">使用缆线连接集群互连端口：</block>
+  <block id="832e6447f3f0b4b7127bf98e691dabe2" category="list-text">插槽 A4 和 B4 （ E4A ）</block>
+  <block id="afb27063fb1efe124e2c7a172cae259c" category="list-text">插槽 -A8 和 B8 （ E8a ）</block>
+  <block id="e5d93b7dd741454087516c062b2039a9" category="paragraph"><block ref="e5d93b7dd741454087516c062b2039a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d929445fb22edc648f8a3c2ad66dbbc" category="paragraph">使用缆线连接控制器管理（扳手）端口。</block>
+  <block id="e77136c5bb4120b57e8fb14ff5bfc9e5" category="image-alt">OIE 缆线 RJ45</block>
+  <block id="5d86adeae4cafa6e9bc7b67a443ec6e0" category="image-alt">OIE 图例图标 3 o</block>
+  <block id="1450e01f2144c582867e61a2ce391ade" category="paragraph">使用缆线连接 25 GbE 网络交换机：</block>
+  <block id="562006e5bc5a05872c89072601752baa" category="paragraph">插槽 A3 和 B3 （ E3A 和 E3C ）以及插槽 A9 和 B9 （ e9a 和 e9c ）中的端口连接到 25 GbE 网络交换机。</block>
+  <block id="aad1d3558c9563a901df636025add55b" category="image-alt">OIE 使用缆线连接 SFP GbE 铜缆</block>
+  <block id="01085cf5b9f45152fc01d555522c3aef" category="paragraph">40GbE 主机网络交换机：</block>
+  <block id="e8eaee0a475f33b542e1373550bc8b20" category="paragraph">使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。</block>
+  <block id="018580c2da3ddca7f76b71c3c8e16b9e" category="image-alt">OIE 图例图标 4 驱动器</block>
+  <block id="8b891f41fe066d01d04ca12a9bd0033f" category="paragraph">使用缆线连接 32 Gb FC 连接：</block>
+  <block id="c368da6f34e41cf660fe742d1776c0c1" category="paragraph">使用缆线将插槽 5 和 B5 （ 5a ， 5b ， 5c 和 5d ）以及插槽 A7 和 B7 （ 7a ， 7b ， 7c 和 7d ）中的端口连接到 32 Gb FC 网络交换机。</block>
+  <block id="dea6830a53392dc3b1f30fb0a37fb5e4" category="list-text">To cable your storage, see <block ref="4261ea2b75c295a1978f7924667f1c11" category="inline-xref-macro-rx"></block>。</block>
+  <block id="348f6f77e12fb455fe84b253caa52b7d" category="inline-link">动画—为交换集群布线</block>
+  <block id="73cd8472d89e7129eb796bfe9d57a3f9" category="paragraph"><block ref="73cd8472d89e7129eb796bfe9d57a3f9" category="inline-link-rx"></block></block>
+  <block id="4ee80bb938c529fd8e585ff1663b9324" category="image-alt">DRW a900 交换网络布线</block>
+  <block id="5f4965084173e3c414637c35200b73a8" category="paragraph">使用缆线连接集群互连 A 端口：</block>
+  <block id="765c3c3f314b105120b116fa72fa83ec" category="list-text">插槽 A4 和 B4 （ E4A ）连接到集群网络交换机。</block>
+  <block id="370ef18034bcd8124be9ef4b4b76a551" category="list-text">插槽 "A8 和 B8 （ E8a ）连接到集群网络交换机。</block>
+  <block id="57f2f6ee86a9d40ab8a7837d0d864830" category="image-alt">OIE 图例图标 2 LP</block>
+  <block id="3b632bef76bf01e7a7e2e0c7d8200b68" category="paragraph">使用缆线连接 25GbE 网络交换机：</block>
+  <block id="e61525b2473886e554ed01ddeed52e1d" category="paragraph">使用缆线连接 32 Gb FC 连接：</block>
+  <block id="7a98f654f31b3263341788faed4ecbdd" category="section-title">选项 1 ：使用缆线将控制器连接到 AFF A900 中的一个 NS224 驱动器架</block>
+  <block id="c60dbcf19edff60839d3c0fbf6f60f2a" category="paragraph">您必须使用缆线将每个控制器连接到 AFF A900 系统上 NS224 驱动器架上的 NSM 模块。</block>
+  <block id="5ec6942c74c6a8edac1d2288d383731d" category="list-text">使用以下动画或图形将控制器连接到一个 NS224 驱动器架。</block>
+  <block id="a41485b1bfa139de3c9e00c411862bcb" category="inline-link">动画—为一个 NS224 磁盘架布线</block>
+  <block id="d83b51eca5a04259ce39f283814e9546" category="paragraph"><block ref="d83b51eca5a04259ce39f283814e9546" category="inline-link-rx"></block></block>
+  <block id="3edbc67f0fd2ebb274aeb6ee9dd581fe" category="image-alt">DRW a900 NS224 一个磁盘架布线</block>
+  <block id="3a58f6912b98caf7435fd9f6896ba4c6" category="list-text">将控制器 A 端口 E2A 连接到磁盘架上 NSM A 上的端口 e0a 。</block>
+  <block id="e4e47b4780428e178a9b09390f2362b3" category="list-text">将控制器 A 端口 e10b 连接到磁盘架上 NSM B 上的端口 e0b 。</block>
+  <block id="393f89fb63e48229ad961dd1e405b53e" category="list-text">将控制器 B 端口 E2A 连接到磁盘架上 NSM B 上的端口 e0a 。</block>
+  <block id="db6b75fb665e0f2ab8be21099367b97a" category="list-text">将控制器 B 端口 e10b 连接到磁盘架上 NSM A 上的端口 e0b 。</block>
+  <block id="938cc7aca11f8ea0a909bcfbd5b224bc" category="list-text">To complete setting up your system, see <block ref="53346fef0c147b551f530d05bbad2e41" category="inline-xref-macro-rx"></block>。</block>
+  <block id="5cc4f695591ccf54e2c20c08c7e44281" category="section-title">选项 2 ：使用缆线将控制器连接到 AFF A900 中的两个 NS224 驱动器架</block>
+  <block id="46c91124d100547c9507fea50ae0639b" category="paragraph">您必须使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。</block>
+  <block id="26fe6dbccc48fc5e3f27bb01af6740e6" category="list-text">Use the following animation or diagram to cable your controllers to two NS224 drive shelves.</block>
+  <block id="dde5a736f579ce12e46a65283dd7f9fd" category="inline-link">动画—使用缆线连接两个 NS224 磁盘架</block>
+  <block id="abcaebf953c1f0605b8e57bf3bff39ee" category="paragraph"><block ref="abcaebf953c1f0605b8e57bf3bff39ee" category="inline-link-rx"></block></block>
+  <block id="2b31343b857fe67d64a1a976e200e971" category="paragraph"><block ref="2b31343b857fe67d64a1a976e200e971" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3cf9ca19fe84380073a6046bd956f972" category="image-alt">DRW a900 NS224 两个磁盘架布线</block>
+  <block id="1d4442969281e166b667219af7e7fe7b" category="list-text">将控制器 A 端口 E2A 连接到磁盘架 1 上的 NSM A e0a 。</block>
+  <block id="952e197be70605a4933f1fa544e89cf3" category="list-text">将控制器 A 端口 e10b 连接到磁盘架 1 上的 NSM B e0b 。</block>
+  <block id="92d9c39d99b3b14f8b5b4b785e697404" category="list-text">将控制器 A 端口 e2b 连接到磁盘架 2 上的 NSM B e0b 。</block>
+  <block id="595dcefcfa25d30e1d9c642906611e9b" category="list-text">将控制器 A 端口 E10A 连接到磁盘架 2 上的 NSM A e0a 。</block>
+  <block id="26c720aa02061cfc13b683d16417d6f6" category="list-text">将控制器 B 端口 E2A 连接到磁盘架 1 上的 NSM B e0a 。</block>
+  <block id="b96eaffe433fe3b487cd82b4f61be219" category="list-text">将控制器 B 端口 e10b 连接到磁盘架 1 上的 NSM A e0b 。</block>
+  <block id="8c6d7187872b78ef08222578448b1731" category="list-text">将控制器 B 端口 e2b 连接到磁盘架 2 上的 NSM A e0b 。</block>
+  <block id="c3ecc9b1be38b712a8f61f8b27c41352" category="list-text">将控制器 B 端口 E10A 连接到磁盘架 2 上的 NSM B e0a 。</block>
+  <block id="1d069ff54ee29cbfaafd7650132e6cd5" category="list-text">To complete setting up your system, see <block ref="53346fef0c147b551f530d05bbad2e41" category="inline-xref-macro-rx"></block>。</block>
+  <block id="1a012ae90c41b7530ce0df40b8053d54" category="section-title">选项 1 ：如果启用了网络发现</block>
+  <block id="5eadc00e7d9146c2fd474e7d8d5f5137" category="list-text">使用以下动画或图形设置一个或多个驱动器架 ID ：</block>
+  <block id="f551b341dd5555b5471ea63f7fad8db8" category="paragraph">NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.</block>
+  <block id="d7da020d7e50d0f7695418b7d1c5a475" category="inline-link">动画—设置 SAS 或 NVMe 驱动器架 ID</block>
+  <block id="1b5864515cce712fde93df30916b89f6" category="paragraph"><block ref="1b5864515cce712fde93df30916b89f6" category="inline-link-rx"></block></block>
+  <block id="6b39390f8836ac9ddcaf033f6ec9d535" category="image-alt">已设置 DRW 电源打开设置磁盘架 ID</block>
+  <block id="543ab7831f0589c951278e6073647eb0" category="paragraph">拆下端盖。</block>
+  <block id="77b9275f6fd711644f4214aa9c1fd216" category="paragraph">按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。</block>
+  <block id="5463cd717cd1248bc167a0577c0d17a5" category="paragraph">注意：第一位数字将继续闪烁</block>
+  <block id="f5e9a997371da544ff3b8bba352ef6e5" category="paragraph">按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。注意：第一个数字停止闪烁，第二个数字继续闪烁。</block>
+  <block id="72e911c52ba51e970a39b1b30b1c8424" category="paragraph">更换端盖。</block>
+  <block id="241b3d2acad120dfd8decf92e173cd23" category="paragraph">等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。</block>
+  <block id="16b2e9a8942086f848807a9d29018abe" category="inline-link">Animation —打开控制器的电源</block>
+  <block id="ef265a7ab9120588f2c16122bad396d8" category="paragraph"><block ref="ef265a7ab9120588f2c16122bad396d8" category="inline-link-rx"></block></block>
+  <block id="b12c60055be138bf7526b1769365b47e" category="image-alt">已启动 DRW a900</block>
+  <block id="0c3908b5686109928912c8adf1bd0fe0" category="inline-link">动画—将笔记本电脑连接到管理交换机</block>
+  <block id="c7436b1d23a41c41bc18a0a9ee542efb" category="paragraph"><block ref="c7436b1d23a41c41bc18a0a9ee542efb" category="inline-link-rx"></block></block>
+  <block id="bd21e6ec29256eee4c7a9b34dd71c9ba" category="image-alt">DWR 笔记本电脑仅连接到交换机</block>
+  <block id="382f497663af8b0b026d3c66f6a2bfce" category="list-text">使用 System Manager 引导式设置使用中收集的数据配置系统<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block>。</block>
+  <block id="c866cf78ea22fe8b8a7122b28202ae22" category="paragraph"><block ref="c866cf78ea22fe8b8a7122b28202ae22" category="inline-link-rx"></block></block>
+  <block id="5ee8cd6a87d8b25f71b533639902587c" category="list-text">After you have completed the initial configuration, go to the<block ref="3cd2da01c2a4ba58d102a6abe7a05e1f" category="inline-link-rx"></block> page for information about configuring additional features in ONTAP.</block>
+  <block id="208ee0864fe983f53622b3619eef5932" category="section-title">选项 2 ：如果未启用网络发现</block>
+  <block id="b3364f412d1466e4f6e340836fff9abb" category="paragraph">如果您使用的不是基于 Windows 或 Mac 的笔记本电脑或控制台，或者未启用自动发现，则必须使用此任务完成配置和设置。</block>
+  <block id="d59c634da2b4c994ac1f5e484f6f9ada" category="paragraph"><block ref="d59c634da2b4c994ac1f5e484f6f9ada" category="inline-link-rx"></block></block>
+  <block id="11991b3479fcd322fec352f130b7b364" category="admonition">The format for the address is +https://x.x.x.x+.</block>
+  <block id="bb0210ac9561e033fc7d726a6ac134e8" category="paragraph"><block ref="bb0210ac9561e033fc7d726a6ac134e8" category="inline-link-rx"></block></block>
+  <block id="3c941071b26a1822e1cb4494c2fd71da" category="doc">关闭受损控制器 - AFF A900</block>
+  <block id="68908cbb53a7b71659933af600697a19" category="summary">要热插拔包含 NVRAM11 电池的降级控制器电源模块（ DCPM\ ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。</block>
+  <block id="d04f6248062fc9d16de8588d61c28d1e" category="doc">更换包含 NVRAM11 电池的目标控制电源模块 - AFF A900</block>
+  <block id="b36f3c4187cae8553973b284879e1c97" category="paragraph">要热插拔包含 NVRAM11 电池的降级控制器电源模块（ DCPM ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。</block>
+  <block id="90eb2af5a768fd638c695d0394817a0e" category="section-title">第 1 步：更换 DCPM 模块</block>
+  <block id="6acd2520bad86e2719b0a66d04f59f28" category="list-text">按下模块把手上的 Terra cotta 锁定按钮，然后将 DCPM 模块滑出机箱。</block>
+  <block id="14224e5d4c9f70ec064ae7d6bdc25f89" category="inline-link">动画—删除 / 安装 DCPM</block>
+  <block id="114cb8c532f77c80ac4cc64733a20697" category="paragraph"><block ref="114cb8c532f77c80ac4cc64733a20697" category="inline-link-rx"></block></block>
+  <block id="dd70305ea5f8fef426dbcb35b56b5a51" category="paragraph">DCPM 模块的 Terra cotta 锁定按钮</block>
+  <block id="d4c0255d1ced9eb52d3f7fe1f481530a" category="paragraph">插入电池后，琥珀色 LED 会闪烁四次，如果电池提供电压，绿色 LED 也会闪烁。如果不闪存，则可能需要更换。</block>
+  <block id="68912cac581299e947ce3696c1a369cb" category="section-title">第 2 步：处置电池</block>
+  <block id="a6426e3554ef4761ece421786e4d1cbc" category="inline-link">安全信息和法规通知</block>
+  <block id="a3d6b87a3696ea4158d81bf432d3724e" category="paragraph"><block ref="a3d6b87a3696ea4158d81bf432d3724e" category="inline-link-rx"></block></block>
+  <block id="097b77e85acb6a3710edc7929eb72d93" category="doc">启动恢复映像— AFF A900</block>
+  <block id="6ce5f7147d284a7d41c1fc93d3072d57" category="list-text">当系统提示您覆盖 ` /etc/ssh/ssh_host_ecdsa_key` 时，按 `y` 。</block>
+  <block id="1396dacdf561903f32c605f06d2cf5d8" category="list-text">当系统提示您确认还原备份是否成功时，按 `y` 。</block>
+  <block id="c9ed271ea801891a1b5c1e6e048813b6" category="list-text">当系统提示您创建已还原的配置副本时，按 `Y` 。</block>
+  <block id="2ddd54a208744ec5e2ccb1b7ac83aa05" category="list-text">使用 printenv 命令检查环境变量设置。</block>
+  <block id="edb5a1f64879356169f323de78b718be" category="list-text">如果环境变量未按预期设置，请使用 setenvenenvironment_variable_name changed_value 命令对其进行修改。</block>
+  <block id="eeacd9b31ab0c2f60f1d13e5632f7f13" category="list-text">使用 saveenv 命令保存所做的更改。</block>
+  <block id="29d4dec218aeaffabfed6dcc8fd1ad45" category="list-text">If your system has onboard keymanager, NSE or NVE configured, go to <block ref="39910b5f3ea1ee39d8059faae857cc98" category="inline-xref-macro-rx"></block></block>
+  <block id="b52d8d1d987722da12d16df8a0a63541" category="list-text">在 LOADER 提示符处，输入 boot_ontap 命令。</block>
+  <block id="feb2aab91c5a609dcbc8409f96404671" category="list-text">使用 storage failover show 命令确认目标节点已准备好进行交还。</block>
+  <block id="6c6d5b112e5f57cd557a4ce3f7e29059" category="list-text">使用 storage failover giveback -fromnode local 命令交还节点。</block>
+  <block id="13b6e1ea33838db60037aa0b1c5c884b" category="list-text">在集群提示符处，使用 net int -is-home false 命令检查逻辑接口。</block>
+  <block id="5e5ce8025b11752aab339bd61df121bc" category="paragraph">如果任何接口列为 "false" ，请使用 net int revert 命令将这些接口还原回其主端口。</block>
+  <block id="fdfb5a2b2c62652b047bacddf92e9188" category="list-text">将控制台缆线移至修复的节点，然后运行 version -v 命令以检查 ONTAP 版本。</block>
+  <block id="21771aeeca9194c9c6cc4646a2230c93" category="list-text">如果您使用 storage failover modify -node local -auto-giveback true 命令禁用了自动交还，则还原自动交还。</block>
+  <block id="eec41346a265cfb88abb54f51ec33fe7" category="summary">您可以通过 AFF A900 系统文档安装，设置和维护系统。</block>
+  <block id="b35a00e75330322eefd710713ca83b02" category="doc">AFF A900 系统</block>
+  <block id="23b82013e68c4445eaa3ec355ca09fb4" category="summary">NVRAM 模块由 NVRAM11 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。</block>
+  <block id="b422a6f4d3945c00efbef5a1554df972" category="doc">更换 NVRAM 模块和 / 或 NVRAM DIMM — AFF A900</block>
+  <block id="4d365227a3a5ccf9886fa9c35ba6a99d" category="paragraph">NVRAM 模块由 NVRAM11 和 DIMM 组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.要更换发生故障的 NVRAM 模块，您必须将其从机箱中卸下，将 DIMM 移至更换模块，然后将更换的 NVRAM 模块安装到机箱中。</block>
+  <block id="50b70636b9b845e1cca7db72fbdeec68" category="paragraph">要更换和 NVRAM DIMM ，您必须从机箱中卸下 NVRAM 模块，更换模块中发生故障的 DIMM ，然后重新安装 NVRAM 模块。</block>
+  <block id="356bb2eaf8fe1f9955f9f22e00ddcb54" category="paragraph">由于系统 ID 源自 NVRAM 模块，因此，如果更换此模块，则属于此系统的磁盘将重新分配给新的系统 ID 。</block>
+  <block id="566dc57c04b76274e7168e53e1eea041" category="list-text">受损节点是指要在其中执行维护的节点。</block>
+  <block id="350cecd9af7d98cbf31c22fbd46e60fe" category="list-text">运行状况良好的节点是受损节点的 HA 配对节点。</block>
+  <block id="e0ffee47cf76076ed4c6531bb6ebf63f" category="inline-link">动画—更换 NVRAM 模块</block>
+  <block id="1877796130af55388822e2758225131e" category="paragraph"><block ref="1877796130af55388822e2758225131e" category="inline-link-rx"></block></block>
+  <block id="dad23827b140b55a3121c86e5b861fad" category="image-alt">DRW a900 移动删除 NVRAM 模块</block>
+  <block id="df3566616f23116dab812ba8e95510cb" category="image-alt">DRW a900 删除 NVRAM 模块内容</block>
+  <block id="940d4ab787e1716a1836f922062d7367" category="inline-link">动画—更换 NVRAM DIMM</block>
+  <block id="187f33e2fc4be81b69b6cf81754a9f00" category="paragraph"><block ref="187f33e2fc4be81b69b6cf81754a9f00" category="inline-link-rx"></block></block>
+  <block id="0133a8841f8d283d3a060042f4904613" category="list-text">将 NVRAM 模块安装到机箱中：</block>
+  <block id="d2afd23f9efb1f5de6cadd26fcce1cf5" category="section-title">第 5 步：验证并设置控制器模块的 HA 状态</block>
+  <block id="2afb3c10441f511142ed51efdd86c073" category="list-text">在维护模式下，从更换用的控制器模块验证所有组件是否显示相同 `HA` state ： `ha-config show`</block>
+  <block id="e4d75425009bc77525096ccae70bd9ac" category="cell">所有组件的 HA 状态均应为 "mccip" 。</block>
+  <block id="14d3c29aecf5054de86c0d913b978541" category="paragraph">A MetroCluster FC configuration with four or more nodes</block>
+  <block id="a81b41b0ce60920d308c876b3e9b38f1" category="paragraph">安装 MetroCluster IP 配置</block>
+  <block id="8d8e1d2c17edc6fe8262408b12b73390" category="list-text">如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller _ha-state_`</block>
+  <block id="c36d25abc9dfdbc31228c74f7e654d0c" category="list-text">如果显示的机箱系统状态与您的系统配置不匹配，请为机箱设置 `HA` state ： `ha-config modify chassis _ha-state_`</block>
+  <block id="f95e8e8b229c3aee97b205509f91df66" category="section-title">第 6 步：重新分配磁盘</block>
+  <block id="0855873e0fa5bed2d0067d6acae6c0df" category="paragraph">您必须在启动替代节点时确认系统 ID 更改，然后确认更改是否已实施。</block>
+  <block id="1a97de4b7c87981ce7420f6c88c32df0" category="list-text">等待更换节点控制台上显示 Waiting for giveback... 消息，然后从运行状况良好的节点上，验证是否已自动分配新的配对系统 ID ： `storage failover show`</block>
+  <block id="8672de10e3d8295abd1be60e2569c4c6" category="list-text">保存任何核心转储： `ssystem node run -node local-node-name partner savecore`</block>
+  <block id="544b7fcf1fe2aaedd577ba107a7f6a56" category="paragraph">您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node local-node-name partner savecore -s`</block>
+  <block id="7a18402f95cb86527db24f56d6baec40" category="list-text">从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode replacement_node_name`</block>
+  <block id="3217c14b22c3695ed301b94539bd2dbb" category="paragraph">替代节点将收回其存储并完成启动。</block>
+  <block id="8a6fbf23d593cc1be4de4068cb3eeee1" category="paragraph">storage failover show 命令的输出不应包含 System ID changed on partner 消息。</block>
+  <block id="18963b05f9f3bc779f544c26aae06ab9" category="paragraph">属于替代节点的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</block>
+  <block id="cfe787a999b8c200091f805ad9426e24" category="list-text">替代节点是灾难站点上磁盘的当前所有者。</block>
+  <block id="7285c4012d903a86f08da4d4eb643a35" category="paragraph">请参见<block ref="1c9dcde47ee822b3ac120aae2f296f05" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="2a1253e1eb3f5fea69107948ef4c203d" category="summary">本主题以图形方式说明了从机架安装和布线到初始系统启动的典型系统安装。</block>
+  <block id="cb0bd9965128fe9d9c7dc5fe35ba00fa" category="doc">快速步骤— AFF A900</block>
+  <block id="86b058636c934f73a262e3a5469f088e" category="paragraph">本主题以图形方式说明了从机架安装和布线到初始系统启动的典型系统安装。如果您熟悉安装 NetApp 系统，请使用此内容。</block>
+  <block id="cd9130a2736bae3213b0c2da4de3435e" category="inline-link-macro">《 AFF A900 安装和设置说明》</block>
+  <block id="4409045029375618296b6ed24e35aec6" category="paragraph"><block ref="4409045029375618296b6ed24e35aec6" category="inline-link-macro-rx"></block></block>
+  <block id="6551c0f6e6caf0566c6eae152ecd7b38" category="doc">更换启动介质— AFF A900</block>
+  <block id="10446d8e0f9e8e6b297995ce7dafe03c" category="doc">完成更换流程— AFF A900</block>
+  <block id="fcc9aa8940599a2c3be38723a65e9e21" category="doc">更换 DIMM - AFF A900</block>
+  <block id="a2996937d1a0f2d39e753cdc891f28a1" category="image-alt">DRW a900 DIMM 映射</block>
+  <block id="41a8264f5aebedaeded2321836d67dc1" category="inline-link">动画—更换 DIMM</block>
+  <block id="2ee1b528c65d4a78f3882ecb1b55435c" category="paragraph"><block ref="2ee1b528c65d4a78f3882ecb1b55435c" category="inline-link-rx"></block></block>
+  <block id="cd9ecdfdf99f4eff04ef39f0689a54be" category="image-alt">DRW a900 可更换 PCM DIMM</block>
+  <block id="6a78a7c330bf06386d61e85aa30325eb" category="inline-link">动画—安装控制器</block>
+  <block id="8b786c8ea77512c3dbdaa8bd1b973696" category="paragraph"><block ref="8b786c8ea77512c3dbdaa8bd1b973696" category="inline-link-rx"></block></block>
+  <block id="ad4cfe6fc2b7cb05bf19c4a07bb3ec19" category="list-text">出现 Press Ctrl-C for Boot Menu 时，按 `Ctrl-C` 以中断启动过程。</block>
+  <block id="c63722af0556df99585d9c4de88eb02d" category="admonition">在启动过程中，您可以安全地响应 `y` 提示。</block>
+  <block id="86319021cdc9cc33274101862a78bb0d" category="list-text">如果显示一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的节点保持关闭状态。</block>
+  <block id="beae2577508dff32956933c72e8af78a" category="paragraph">执行交还： `storage failover giveback -ofnode replacement_node_name` * 注意： * 如果禁用了自动交还，请使用 storage failover modify 命令重新启用它。</block>
+  <block id="ef27904ffe8486e4c45f99e2284dcde0" category="doc">关闭受损节点— AFF A900</block>
+  <block id="4a11061a1e6cf88a01ac0a8a2d4682c6" category="doc">更换控制器模块硬件— AFF A900</block>
+  <block id="a1828edb3cde53f0ba3419e2ebe71f61" category="paragraph">以下动画显示了将组件从受损控制器移至更换控制器的整个过程。</block>
+  <block id="9af409fe069f89e48cd941abd1907054" category="inline-link">动画—将组件移至更换控制器</block>
+  <block id="35f06ea8455a11ff2160fac4c66dbe3e" category="paragraph"><block ref="35f06ea8455a11ff2160fac4c66dbe3e" category="inline-link-rx"></block></block>
+  <block id="663cf84575ea94d5357677274272109e" category="paragraph">将组件安装到更换用的控制器模块中后，您必须将更换用的控制器模块安装到系统机箱中并启动操作系统。</block>
+  <block id="6901174dda5711cd51c6d9390b9a338b" category="inline-link">动画—安装控制器</block>
+  <block id="8993ac62bef9fb1b92c805a31bfcf3a3" category="paragraph"><block ref="8993ac62bef9fb1b92c805a31bfcf3a3" category="inline-link-rx"></block></block>
+  <block id="0927521d277e31ef032f3c9f7cd60215" category="list-text">将控制器模块凸轮把手旋转到锁定位置。</block>
+  <block id="800c8750475f7f7221a9b7946bec8d10" category="list-text">选择选项以启动到 LOADER 。</block>
+  <block id="eee1a85c64e17c1ca9ed30c1f544d35d" category="doc">更换控制器模块 - AFF A900</block>
+  <block id="8b20a20371bd26b5083507f395cf24ab" category="paragraph">要更换受损的控制器模块，您必须关闭受损控制器，将内部组件移至更换用的控制器模块，安装更换用的控制器模块，然后重新启动更换用的控制器。</block>
+  <block id="c60c00789a015e4c8edc176d68ea53c2" category="list-text">在此操作步骤中，启动设备将从受损节点移至更换节点，以便更换节点在与旧控制器模块相同版本的 ONTAP 中启动。</block>
+  <block id="fd6012123eb1d03462c1cd48d50c92e6" category="list-text">受损节点是指要更换的节点。</block>
+  <block id="9e51ab12d26faade2a31d70da71c74f5" category="list-text">替代节点是指正在更换受损节点的新节点。</block>
+  <block id="537af5095a4992ae7e9026bd3ff008a6" category="list-text">运行正常的节点是运行正常的节点。</block>
+  <block id="4e4fca0318eac6dc1315f4bad56eb1c6" category="summary">您可以将 I/O 模块添加到系统中，方法是在已完全填充的系统中将现有 I/O 模块更换为新的 I/O 模块，或者将新的 I/O 模块添加到机箱中的空插槽中。</block>
+  <block id="a164244a6913c60772e9b9fbbbc17a4a" category="doc">添加 I/O 模块— AFF A900</block>
+  <block id="e01b6c84aaebe2321eef7b7a933b171f" category="list-text">要无中断地添加 I/O 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖或卸下现有 I/O 模块，添加新的或更换的 I/O 模块，然后交还目标控制器。</block>
+  <block id="329fe7c89a525def535e03c6dbc6f98f" category="section-title">选项 1 ：将 I/O 模块添加到插槽已打开的系统中</block>
+  <block id="12f686a2d13fd4b93c3ef7fbc915cdcd" category="paragraph">您可以将 I/O 模块作为 NIC 或 NS224 存储架的存储模块添加到系统中的空模块插槽中。</block>
+  <block id="ff231ca484e594004f4ca93ecfa6683e" category="paragraph">控制台连接显示，接管完成后，节点将进入 LOADER 提示符。</block>
+  <block id="c45c3f1f9d099575b7abd851e7ef8b33" category="list-text">向下旋转凸轮闩锁，直到其处于打开位置。</block>
+  <block id="9a08e35bf8850515585d9bd11e96351b" category="list-text">安装 I/O 模块：</block>
+  <block id="66efd9c2b6ae55ef5c1ff3be01c1fe65" category="list-text">将 I/O 模块与插槽边缘对齐。</block>
+  <block id="35d6c9040844123446e81fce55da1548" category="list-text">将 I/O 模块滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销接合。</block>
+  <block id="7ca78c6d47f27487175e23a00c576196" category="list-text">如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</block>
+  <block id="3267c15e351fe1dd15721e79b072fedc" category="admonition">确保所有未使用的 I/O 插槽都安装了空格，以防止可能出现散热问题。</block>
+  <block id="2a5cd1f850ee79601be57448f10d9595" category="list-text">从加载程序提示符 _bybye 重新启动节点</block>
+  <block id="4d3b1425bbd62943a546a9f98dc3b7ef" category="list-text">从配对节点交还节点。`storage failover giveback -ofnode target_node_name`</block>
+  <block id="05648a23fc430a3dcc4fb4c1fbb040cd" category="list-text">如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _&lt;node name&gt;_ -port _&lt;port name&gt;__ -mode network` 命令转换插槽以供网络连接使用。</block>
+  <block id="2d881a27ee894664c2e7cc8d1795b104" category="list-text">如果您安装了存储 I/O 模块，请按照中所述安装 NS224 磁盘架并为其布线<block ref="8b1d41e5fd14f554e8b3490e0dfd47ae" category="inline-link-rx"></block>。</block>
+  <block id="3e0887648c519f4a3c16a1c61b2e8ec3" category="section-title">选项 2 ：在没有打开插槽的系统中添加 I/O 模块</block>
+  <block id="3a94a10e2dbe887d30ec12c0e2d2170d" category="paragraph">您必须删除系统中的一个或多个现有 NIC 或存储模块，才能将一个或多个 I/O 模块安装到已完全填充的系统中。</block>
+  <block id="cebb0168d5bfd94a91f0da51501ba6b8" category="list-text">如果您是：</block>
+  <block id="e818b574f8a890f6c21405d9164bb6ef" category="cell">替换 ...</block>
+  <block id="d6737fd4fc838900efec68220d9b62d5" category="paragraph">具有相同端口数的 NIC I/O 模块</block>
+  <block id="c5cb03fb8ac84e8ed0867902373368c5" category="paragraph">LIF 将在其控制器模块关闭时自动迁移。</block>
+  <block id="5b4da5fe899903c4fb7ea38cdcd59059" category="paragraph">NIC I/O 模块，端口更少</block>
+  <block id="92fa459a77121184c537af9ee2b58dff" category="paragraph">将受影响的 LIF 永久重新分配到其他主端口。请参见<block ref="85291e79b86f275650bb0fb4e90a39e9" category="inline-link-rx"></block> 有关使用 System Manager 永久移动 LIF 的信息，请参见。</block>
+  <block id="f83c48dd124994c4062d124a835da954" category="paragraph">带有存储 I/O 模块的 NIC I/O 模块</block>
+  <block id="2640f01f139d87de119d4e0ddc369433" category="paragraph">使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述<block ref="85291e79b86f275650bb0fb4e90a39e9" category="inline-link-rx"></block>。</block>
+  <block id="8e648aad53aea9ad413490f5a04b11f4" category="inline-link">卸下或更换 I/O 模块</block>
+  <block id="3850b2c54cfdfa08b9878c1a0cd9251f" category="paragraph"><block ref="3850b2c54cfdfa08b9878c1a0cd9251f" category="inline-link-rx"></block></block>
+  <block id="d401d7f8340a560f025bd48c41cf9fd1" category="paragraph"><block ref="d401d7f8340a560f025bd48c41cf9fd1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9e64f9f7a827c26fc2d5c89975330a4c" category="image-alt">图例图标 01</block>
+  <block id="658f167c4900ed24167db8a2c8ec0dae" category="list-text">将 I/O 模块安装到目标插槽中：</block>
+  <block id="af7e67afbae0d677789152f59d9ac82d" category="list-text">如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</block>
+  <block id="65c5b494e6d3420e2beeee5028389f58" category="list-text">如果您添加了：</block>
+  <block id="7589522c1c45d0b3dfdf43c267a456bc" category="cell">如果 I/O 模块为 ...</block>
+  <block id="85fd23f64df6d6e4c54bd55af7b58c44" category="paragraph">插槽 3 或 7 中的 NIC 模块，</block>
+  <block id="86cf1151f6e6623b20e6f28b8eb846ea" category="paragraph">对每个端口使用 `storage port modify -node *_&lt; 节点名称 &gt;_ -port *_&lt; 端口名称 &gt;__ -mode network` 命令。</block>
+  <block id="3cb2d50b71ca167f282d29cc4a2f763f" category="paragraph">存储模块</block>
+  <block id="907b4c195a2387f3ef35df10e9b1a0eb" category="paragraph">Install and cable your NS224 shelves, as described in<block ref="71b38ceec90716734f26b1c06463d904" category="inline-link-rx"></block>。</block>
+  <block id="ee509c1ffca70e9f258ad73c3116cf37" category="doc">板载加密密钥的预关闭检查— AFF A900</block>
+  <block id="127cae73d2b4d7758b4c0a0e3f49ba5f" category="section-title">ONTAP 9.6 及更高版本</block>
+  <block id="d994e1a1688cb6d7b8e264a209d763d6" category="doc">更换机箱 - AFF A900</block>
+  <block id="e10b0a89639d4224f22325c89418ef31" category="paragraph">要更换机箱，您必须卸下电源，风扇，控制器模块， I/O 模块， DCPM 模块， 和 USB LED 模块从受损机箱中取出受损机箱，从设备机架或系统机柜中取出受损机箱，将更换机箱安装到位，然后将组件安装到更换机箱中。</block>
+  <block id="6190b44ff7781327c201ca8dcd27535f" category="doc">还原和验证配置— AFF A900</block>
+  <block id="3f5fa7ca9a9d6129ce081b64cc104ab6" category="paragraph">要完成机箱更换，您必须完成特定任务。</block>
+  <block id="32574a63619099277d431cfd465fea0b" category="list-text">设置机箱的 HA 状态： `ha-config modify chassis _ha-state_`</block>
+  <block id="3f91c59c59a1243cb3f176daf3c9c054" category="list-text">使节点恢复正常运行。</block>
+  <block id="e81993a1d153ae6594cc7e0070093d6a" category="doc">移动并更换硬件— AFF A900</block>
+  <block id="a30a15e944afabde046385685fec252c" category="paragraph">要更换机箱，您必须从旧机箱中卸下组件，然后将其安装到更换机箱中。</block>
+  <block id="69c3b8cc95d3690f8df22cd6f70a3b78" category="inline-link">动画—删除 / 安装 PSU</block>
+  <block id="ad71a251f1090787b51bd219c02d379d" category="paragraph"><block ref="ad71a251f1090787b51bd219c02d379d" category="inline-link-rx"></block></block>
+  <block id="ba60b428b4c093e111c8f00b60fc4a80" category="image-alt">DRW a900 卸下安装 PSU 模块</block>
+  <block id="f8bbfa91b8a4b93032702c5a71aa7e32" category="inline-link">动画—拆卸 / 安装风扇</block>
+  <block id="39ebb81ec4bc3481b327f0b2bad60779" category="paragraph"><block ref="39ebb81ec4bc3481b327f0b2bad60779" category="inline-link-rx"></block></block>
+  <block id="21f8e15996afff8db254da85ba3f4ea7" category="paragraph">To remove I/O modules from the old chassis, including the NVRAM modules, follow the specific sequence of steps.将 FlashCache 模块移至新机箱时，无需从 NVRAM 模块中卸下该模块（如果存在）。</block>
+  <block id="395837aab4ef3dc67a1a036ea36a4ab6" category="inline-link">动画—删除 / 安装 I/O 模块</block>
+  <block id="1e629626e4f50a07ffe66481fa10f8c1" category="paragraph"><block ref="1e629626e4f50a07ffe66481fa10f8c1" category="inline-link-rx"></block></block>
+  <block id="83ad35310193d29fe92750532a0d17a9" category="inline-link">动画—删除 / 安装 DCPM</block>
+  <block id="5757c4fa293d78859e3241eec38842ba" category="paragraph"><block ref="5757c4fa293d78859e3241eec38842ba" category="inline-link-rx"></block></block>
+  <block id="ba076cc47bbe54dead2d30165db372b5" category="image-alt">DRW a900 取出 NV 电池</block>
+  <block id="fca2db06968a2c5b098ea99b564b6922" category="inline-link">动画—删除 / 安装 USB</block>
+  <block id="4c01ab46774b96e91172ab27402aeb69" category="paragraph"><block ref="4c01ab46774b96e91172ab27402aeb69" category="inline-link-rx"></block></block>
+  <block id="8da7df8c5a74dcac7b5b9a5067e72313" category="image-alt">DRW a900 卸下更换 LED 模块</block>
+  <block id="6b058f6aab05ab39cfb929fd3a13e5ad" category="paragraph">弹出模块。</block>
+  <block id="fdbcf566dc8794b2a2c635f286edfa2b" category="paragraph">滑出机箱。</block>
+  <block id="6e7d5178a758393b97e367ca3da27d68" category="list-text">在每个节点开始启动时，如果您看到 Press Ctrl-C for Boot Menu 消息，请按 `Ctrl-C` 以中断启动过程。</block>
+  <block id="9cc3abf99d341ddf4468a9377444f16d" category="doc">关闭受损控制器 - AFF A900</block>
+  <block id="2aba05ee9a4093e5315b48903c27d988" category="doc">更换 I/O 模块 - AFF A900</block>
+  <block id="915d49d9990f69f4d3152ddfea76d324" category="inline-link">动画—删除 / 安装 I/O 模块</block>
+  <block id="a3dc30a4e54f26f8f954a7d4351ac551" category="paragraph"><block ref="a3dc30a4e54f26f8f954a7d4351ac551" category="inline-link-rx"></block></block>
+  <block id="a8869e142255ff80f45be4817f469087" category="section-title">第 3 步：更换 I/O 模块后重新启动控制器</block>
+  <block id="bbee62c98bf71c87d77b3d48e5cacaff" category="paragraph">更换 I/O 模块后，必须重新启动控制器模块。</block>
+  <block id="8c2fb795497456b969ba9307ef6f84c8" category="list-text">在 LOADER 提示符处，重新启动节点： _bybye</block>
+  <block id="b40d85db7a9de91cff53c5663c76daaf" category="list-text">使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
+  <block id="65dc2e566ca79200d7c70bef0b947464" category="doc">OKM ， NSE 和 NVE 的启动后介质更换步骤— AFF A900</block>
+  <block id="732e0dcc80e3feaced44d9e5a666c2bc" category="list-text">确定应使用哪个部分还原 OKM ， NSE 或 NVE 配置：如果已与板载密钥管理器一起启用 NSE 或 NVE ，则必须还原在此操作步骤开头捕获的设置。</block>
+  <block id="a18eb452b8ba972a5f3a705a455fac35" category="list-text">在 LOADER 提示符处使用 boot_ontap 命令启动节点。</block>
+  <block id="fda0c6642b160b8cfe389e0b2a5d9c56" category="list-text">在 LOADER 提示符处，输入 boot_ontap menu 命令。</block>
+  <block id="9a35117ce5f367da3a3ca5116d861d73" category="list-text">在启动菜单中，输入隐藏的命令 `re封装板载密钥管理器` ，然后在提示符处回答 `y` 。</block>
+  <block id="817f0c2c0731cc57f0fb5c0088d66a84" category="list-text">When prompted to enter the backup data, paste the backup data you captured at the beginning of this procedure, when asked.粘贴 security key-manager backup show 或 security key-manager on板 载 show-backup 命令的输出。</block>
+  <block id="bd925fbdb9cf654c2d3eb13ad0bf2458" category="admonition">数据是从 security key-manager backup show 或 security key-manager on板 载 show-backup 命令输出的。</block>
+  <block id="1491d378fbbc2d9a6048e5b9b67a396a" category="paragraph">输入备份数据：</block>
+  <block id="da0c8baa25fcee791ffa412ec90044ca" category="list-text">将控制台缆线移动到配对节点并以管理员身份登录。</block>
+  <block id="d56eff580ae48ab39a09d9a52b4e0012" category="list-text">使用 storage failover giveback -fromnode local -only-cfo-aggregates true 命令仅交还 CFO 聚合。</block>
+  <block id="56b9aa57eb07c87d93d8f36e42537891" category="list-text">如果命令因 CIFS 会话打开而失败，请与客户确认如何关闭 CIFS 会话。</block>
+  <block id="99cf22e04f567c5375349f8aa14becd4" category="list-text">如果命令因配对节点 " 未就绪 " 而失败，请等待 5 分钟，使 NVRAM 同步。</block>
+  <block id="4d2b3834d59169dcbb17afc3c699e3ac" category="list-text">If the command fails because of an NDMP, SnapMirror, or SnapVault process, disable the process.有关详细信息，请参见相应的内容。</block>
+  <block id="4f4dc469cf90094fa617cfc9fbd54127" category="list-text">交还完成后，使用 storage failover show 和 storage failover show-giveback 命令检查故障转移和交还状态。</block>
+  <block id="0ca120792c1da0e7f9613ff316afb1bf" category="list-text">运行 security key-manager 板载同步命令，然后在出现提示时输入密码短语。</block>
+  <block id="c58ae875af45a4be51e14080108983b6" category="list-text">输入 security key-manager key query 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes/true` 。</block>
+  <block id="4cbb5f62935a5a6181b7351f6ebea2b8" category="list-text">使用 storage failover giveback -fromnode local 命令交还目标节点。</block>
+  <block id="54c7d0a15d0b9d4865bb65094824a369" category="list-text">使用 storage failover show 命令在交还报告完成 3 分钟后检查交还状态。</block>
+  <block id="a69e3df3fc089f72b8d4244ee2e280dc" category="list-text">在 clustershell 提示符处，输入 net int show -is-home false 命令以列出不在其主节点和端口上的逻辑接口。</block>
+  <block id="01644ff2aec9678b64ae01d076703f1a" category="paragraph">如果任何接口列为 `false` ，请使用 net int revert 命令将这些接口还原回其主端口。</block>
+  <block id="db7ef1cc9d8937ba84d376a5424078cb" category="list-text">将控制台缆线移至目标节点，然后运行 version -v 命令以检查 ONTAP 版本。</block>
+  <block id="681ec8b91432585ef548a814edeadbb6" category="paragraph">转至第 7 步。</block>
+  <block id="894c5814238c15162364a7dd224a5a59" category="list-text">使用 storage failover giveback -fromnode local -only-cfo-aggregates true local 命令将控制台缆线移至配对节点并交还目标节点存储。</block>
+  <block id="b17e311ccd8e21ff73506e54f24b6cfd" category="list-text">等待 3 分钟，然后使用 storage failover show 命令检查故障转移状态。</block>
+  <block id="bdd54bf36fdd86edc52e8ade7cb11376" category="list-text">在 clustershell 提示符处使用 storage encryption disk show 查看输出。</block>
+  <block id="255583ddc95e873b21d34d9f4e8d7e3b" category="list-text">使用 security key-manager key query 命令显示存储在密钥管理服务器上的身份验证密钥的密钥 ID 。</block>
+  <block id="5af23d53e03e2919ad84a3f9112823ac" category="list-text">如果 `密钥管理器类型` = `external` 和 `restored` 列 = 除 `yes/true` 以外的任何其他内容，请使用 security key-manager external restore 命令还原身份验证密钥的密钥 ID 。</block>
+  <block id="3796dde1eb4771fdc94b7b6dd6b04cbf" category="list-text">如果 `密钥管理器类型` = `板载` 和 `还原` 列 = `是 / 真` 以外的任何内容，请使用 security key-manager 板载同步命令重新同步密钥管理器类型。</block>
+  <block id="6012de004f4bd50d98163ac921889523" category="doc">更换 LED USB 模块 - AFF A900</block>
+  <block id="6f2af58da87b0cd7d98ca72ff52c9044" category="paragraph">LED USB 模块可连接到控制台端口和系统状态。更换此模块不需要工具，也不会中断服务。</block>
+  <block id="807c4e7b40aa97c700fd63bd5a5477a6" category="section-title">第 1 步：更换 LED USB 模块</block>
+  <block id="bb1cec932e287b2c9902d440275cc2db" category="inline-link">动画—删除 / 安装 LED/USB 模块</block>
+  <block id="3273f7903ae0e65905d97177e51aa3c5" category="paragraph"><block ref="3273f7903ae0e65905d97177e51aa3c5" category="inline-link-rx"></block></block>
+  <block id="f0bf4654c0d8dcfe407c27af203be1d1" category="paragraph">USB LED 模块</block>
+  <block id="9bfe8c74a54e0b8aed08814ba2231085" category="section-title">第 2 步：返回故障组件</block>
+  <block id="3d583022c2a0e3f44141400e25a3113d" category="list-text"><block ref="3d583022c2a0e3f44141400e25a3113d" category="inline-link-macro-rx"></block></block>
+  <block id="e95c782f97493fda4a0794b55f88c5be" category="list-text"><block ref="e95c782f97493fda4a0794b55f88c5be" category="inline-link-macro-rx"></block></block>
+  <block id="280316afc56c30d6861e875ee64f9d8b" category="list-text"><block ref="280316afc56c30d6861e875ee64f9d8b" category="inline-link-macro-rx"></block></block>
+  <block id="949aee381e5f51f7a320f50e84a45f8b" category="summary">完成硬件更换并启动到维护模式后，您可以验证更换控制器的低级别系统配置，根据需要重新配置系统设置，然后运行系统级诊断。</block>
+  <block id="d00782da692bd9ebe9130b9b13318aa8" category="doc">还原并验证系统配置— AFF A900</block>
+  <block id="112780161ef5a50135cbf06334ba89f7" category="paragraph">完成硬件更换后，您需要验证更换控制器的低级系统配置，根据需要重新配置系统设置，然后运行系统级诊断。</block>
+  <block id="0bc5eabc4d9a2653aeb37e28dbc88023" category="list-text">bootmedia 是系统启动设备。</block>
+  <block id="f99099d921a94e615e81372078728ceb" category="list-text">env 是主板环境。</block>
+  <block id="8d74bf843a4e925d832b6c65ddb0d9f4" category="list-text">NVRAM 是非易失性 RAM 。</block>
+  <block id="be456090fcc449175c4c76b6d62f9d00" category="list-text">nvmem 是 NVRAM 和系统内存的混合。</block>
+  <block id="a515f32aa015655942ca1581302ab37b" category="list-text">SAS 是未连接到磁盘架的串行连接 SCSI 设备。</block>
+  <block id="17a7e2d09b147ccf384d93f2c83b9fb8" category="list-text">显示选定设备的可用测试： `sldiag device show -dev dev_name`</block>
+  <block id="31070c8cf1e388bd21db5f2c2af292f2" category="paragraph">dev_name 可以是上一步中标识的任何一个端口和设备。</block>
+  <block id="55baf4300535c79a4f5b9ac41dae6201" category="list-text">检查输出，如果适用，仅选择要运行的测试： `sldiag device modify -dev dev_name -Selection only`</block>
+  <block id="f90119b77ddaca169e1354ec7fd99777" category="list-text">运行选定测试： `sldiag device run -dev dev_name`</block>
+  <block id="ea47bdc6f929f84f5f88b61f7fa170d2" category="list-text">验证测试是否未失败： `sldiag device status -dev dev_name -long -state failed`</block>
+  <block id="23b8b7f4acfc70b88b8d4648fc002f73" category="list-text">列出设备的各个测试： `sldiag device show -dev dev_name`</block>
+  <block id="1aebafba3153f541511efccc3f81ec62" category="list-text">根据机箱中的控制器模块数量，关闭或保持电源打开状态。+ 保持电源处于打开状态，以便为另一个控制器模块供电。</block>
+  <block id="f0c5bf1231304ef8daefc44f7c8c3c2c" category="list-text">启动您正在维护的控制器模块，在系统提示您进入启动菜单时按 `Ctrl-C` 以中断启动。+ 控制器模块在完全就位后启动。</block>
+  <block id="f8ef0c4875d120fc216f0515acf0076d" category="doc">更换缓存模块或添加 / 更换核心转储模块 - FAS9500</block>
+  <block id="790fb1451f2bc27a03777b1339883a05" category="list-text">For instructions about hot swapping the caching module, see <block ref="8914e84bf3c4081b62e360b2117530ab" category="inline-link-macro-rx"></block>。</block>
+  <block id="8d818b7912f2cdd88457272a27b2e1ed" category="paragraph">在 &lt;stdin&gt; 中未解析的指令 - 包括：： .//_include/shutdown_any_mcc_supported 。</block>
+  <block id="38e46d734f6cf3d9cd7ff8074eb7a98b" category="section-title">添加或更换 X9170A 核心转储模块</block>
+  <block id="1c69f6fe4055b6da922172199148a620" category="list-text">按下核心转储模块正面的 Terra cotta 释放按钮。</block>
+  <block id="6a0d150a4b5e517de144f7ef6bc66258" category="section-title">更换 FRU 后重新启动控制器</block>
+  <block id="eb6b929319fcd4b0bfa86e1b41c4a0aa" category="section-title">在双节点 MetroCluster 配置中切回聚合</block>
+  <block id="02c2cc4184073e3a32ac2cad0adca3ad" category="section-title">为 AFF A900 HA 对的热添加磁盘架布线</block>
+  <block id="e859983e28521134b4429e2ad40d035f" category="paragraph">如果需要更多存储，您可以将最多三个额外的 NS224 驱动器架（总共四个磁盘架）热添加到一个 AFF A900 HA 对中。</block>
+  <block id="e1f00a018e7f4f086a0bcbc7eccb98fb" category="list-text">此操作步骤假定您的 HA 对至少具有一个现有 NS224 磁盘架，并且您要热添加最多三个额外的磁盘架。</block>
+  <block id="6df1d9010eb2d59922ff15832ca8a435" category="list-text">如果您的 HA 对只有一个现有 NS224 磁盘架，则此操作步骤会假定该磁盘架已通过缆线连接到每个控制器上两个支持 RoCE 的 100GbE I/O 模块。</block>
+  <block id="71c9cd1d9d6cb72f550738fcffdcb856" category="list-text">如果要热添加的 NS224 磁盘架是 HA 对中的第二个 NS224 磁盘架，请完成以下子步骤。</block>
+  <block id="19d712485bae914b4efa24b39f6eba7a" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 10 端口 A （ E10A ）。</block>
+  <block id="ec7d41675ec0ec1148aff27f4e766941" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 2 端口 b （ e2b ）。</block>
+  <block id="d9547d2852203d7c517230eb1c874611" category="list-text">使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 10 端口 A （ E10A ）。</block>
+  <block id="58848607da5220d46a743527d7c9fb0b" category="list-text">使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 2 端口 b （ e2b ）。</block>
+  <block id="3be444e253b66e84c2a7ac44cc632d2f" category="paragraph">下图显示了第二个磁盘架的布线（以及第一个磁盘架）。</block>
+  <block id="c01b7e73b5184f9332f2b3847a1e8a46" category="image-alt">DRW nss224 a900 2 个磁盘架</block>
+  <block id="63a52597f01feafa7bac4f564671ef46" category="list-text">如果要热添加的 NS224 磁盘架是 HA 对中的第三个 NS224 磁盘架，请完成以下子步骤。</block>
+  <block id="2ee333f6f9a00c250ae9813502d4fb07" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 11 端口 b （ e11b ）。</block>
+  <block id="3eb8ce414e6e8d5e19024a3779a87e42" category="list-text">使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 11 端口 b （ e11b ）。</block>
+  <block id="e3c4294c5b88b3a64211de084bc7bd2b" category="paragraph">下图显示了第三个磁盘架的布线。</block>
+  <block id="1cc4d52d52b1d439dc272f9193de4eee" category="image-alt">DRW nss224 a900 3 个磁盘架</block>
+  <block id="ab4ee3b5165983371f54b55e9efd77af" category="list-text">如果要热添加的 NS224 磁盘架是 HA 对中的第四个 NS224 磁盘架，请完成以下子步骤。</block>
+  <block id="855fdf1352556d56634d839385addb1b" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 11 端口 A （ e11a ）。</block>
+  <block id="ee0a734e2f0193a65c1da9b82e1749c4" category="list-text">使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 11 端口 A （ e11a ）。</block>
+  <block id="d49e45adf2352258d2679cda6d7594c5" category="list-text">Cable shelf NSM B port e0b to controller A slot 1 port b (e1b).</block>
+  <block id="b434465fa52d0f783c7fd0f8d4ce72b7" category="paragraph">下图显示了第四个磁盘架的布线。</block>
+  <block id="123ecdcab7b962064d8bc5e084e22a78" category="image-alt">DRW nss224 a900 4 个磁盘架</block>
+  <block id="f75034e47d21dd1b20dc99cece2805a1" category="section-title">为 FAS500f ， AFF A250 或 ASA A250HA 对的热添加磁盘架布线</block>
+  <block id="99b507afb1c0c42dce501be1e3c24428" category="paragraph">如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f ， AFF A250 或 ASA A250HA 对中。</block>
+  <block id="ec5e81cea4c5ee83d635778e86350e80" category="sidebar">AFF A900</block>
+  <block id="2839991accead15964b7c2bab07a5796" category="sidebar">MetroCluster 光纤通道配置</block>
+  <block id="4dfce048960b478e43e915d68b452801" category="sidebar">添加 I/O 模块</block>
+  <block id="e908ea7f834bb4a51a3435068459558e" category="sidebar">目标电源控制器模块</block>
+  <block id="836b0691797fbb6c52f16e5f3f673be6" category="sidebar">LED USB 模块</block>
+  <block id="005350cc942b102938a15599d0a214e5" category="sidebar">NVRAM 模块和 NVRAM DIMM</block>
+  <block id="4b4ef0c79b0398f75f85815a11b15104" category="sidebar">预关闭检查板载加密密钥</block>
+  <block id="4991af82e8fdfcd13eef2c656f16d4c4" category="sidebar">Shut down the impaired controller</block>
+  <block id="023ccb0c069a257d58d5cbad4ec6fbf9" category="sidebar">传输启动映像并更换出现故障的启动介质</block>
+  <block id="d5e04348de632d7c88520b90cf79f1fa" category="sidebar">启动恢复映像</block>
+  <block id="2e8840df8a206cd4e5aa7e0fa02b1cf7" category="sidebar">更换硬件</block>
+  <block id="fa526b254f42bdec5706995cc5868952" category="sidebar">还原和验证配置</block>
+  <block id="043f87552b799b527c2dd72b0313e404" category="sidebar">更换控制器模块硬件</block>
+  <block id="718b8a88a314d56b344c3895d896ab2a" category="sidebar">还原并验证系统配置</block>
+  <block id="3182807165615fb651163be98cb522b4" category="sidebar">目标控制电源模块</block>
 </blocks>
