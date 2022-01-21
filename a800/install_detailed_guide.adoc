@@ -31,16 +31,19 @@ summary: 本节详细介绍了安装 AFF A800 系统的分步说明。
 +
 image::../media/drw_ssn_label.png[DRW SSN 标签]
 
-.. 设置您的帐户：
+
+
+
+
+.步骤
+. 设置您的帐户：
 +
-... 登录到现有帐户或创建帐户。
-... 注册您的系统。
-+
-link:https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]
+.. 登录到现有帐户或创建帐户。
+.. 注册（link:https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]）您的系统。
 
 
-
-.. 清点并记下收到的缆线数量和类型。
+. 下载并安装 link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^] 在您的笔记本电脑上。
+. 清点并记下收到的缆线数量和类型。
 +
 The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 以找到缆线并确定其用途。
 
@@ -149,9 +152,7 @@ image:../media/oie_cable_power.png[""]
 启动系统
 
 |===
-.. 下载并完成 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工作表"^]。
-
-
+. 下载并完成 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工作表"^]。
 
 
 
@@ -160,6 +161,7 @@ image:../media/oie_cable_power.png[""]
 
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
 
+.步骤
 . 根据需要安装导轨套件。
 +
 link:../com.netapp.doc.hw-rail-superrail/home.html["将 SuperRail 安装到四柱机架中"^]
@@ -206,12 +208,11 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 使用动画或分步说明完成控制器与交换机之间的布线：
-+
-link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=edc42447-f721-4cbe-b080-ab0c0123a139["为双节点无交换机集群布线"^]
+.步骤
+. 使用动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=edc42447-f721-4cbe-b080-ab0c0123a139["为双节点无交换机集群布线"^]）或完成控制器与交换机之间布线的分步说明：
 
-+
-[cols="1,2"]
+
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -221,8 +222,8 @@ image:../media/oie_legend_icon_1_dp.png[""]
  a| 
 为 HA 互连端口布线：
 
-** e0b 到 e0b
-** e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
+* e0b 到 e0b
+* e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
 
 
 
@@ -232,8 +233,8 @@ image:../media/oie_legend_icon_2_lg.png[""]
  a| 
 为集群互连端口布线：
 
-** e0a 到 e0a
-** e1a 到 e1aimage:../media/drw_affa800_tnsc_clust_cabling.png[""]
+* e0a 到 e0a
+* e1a 到 e1aimage:../media/drw_affa800_tnsc_clust_cabling.png[""]
 
 
 
@@ -277,12 +278,11 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 使用动画或分步说明完成控制器与交换机之间的布线：
-+
-link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=49e48140-4c5a-4395-a7d7-ab0c0123a10e["为交换集群布线"^]
+.步骤
+. 使用动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=49e48140-4c5a-4395-a7d7-ab0c0123a10e["为交换集群布线"^]）或完成控制器与交换机之间布线的分步说明：
 
-+
-[cols="1,2"]
+
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -292,8 +292,8 @@ image:../media/oie_legend_icon_1_dp.png[""]
  a| 
 为 HA 互连端口布线：
 
-** e0b 到 e0b
-** e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
+* e0b 到 e0b
+* e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
 
 
 
@@ -350,7 +350,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -394,7 +394,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -436,12 +436,11 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 使用动画或分步说明将控制器模块连接到一个磁盘架。
-+
-link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=09dade4f-00bd-4d41-97d7-ab0c0123a0b4["使用缆线将控制器连接到单个驱动器架"^]
+.步骤
+. 使用动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=09dade4f-00bd-4d41-97d7-ab0c0123a0b4["使用缆线将控制器连接到单个驱动器架"^] 或使用分步说明将控制器模块连接到单个磁盘架。
 
-+
-[cols="1,2"]
+
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -475,12 +474,11 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 使用以下动画或写入的步骤将控制器连接到两个驱动器架。
-+
-link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fe50ac38-9375-4e6b-85af-ab0c0123a0e0["使用缆线将控制器连接到两个驱动器架"^]
+.步骤
+. 使用以下动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fe50ac38-9375-4e6b-85af-ab0c0123a0e0["使用缆线将控制器连接到两个驱动器架"^]）或使用缆线将控制器连接到两个驱动器架的步骤。
 
-+
-[cols="1,2"]
+
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -513,6 +511,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
+.步骤
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 +
 允许系统启动。Initial booting may take up to eight minutes.
@@ -521,10 +520,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用以下动画将您的笔记本电脑连接到管理交换机。
-+
-link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]
-
+. 使用以下动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]）将笔记本电脑连接到管理交换机。
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
@@ -554,6 +550,7 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。
 
+.步骤
 . 为笔记本电脑或控制台布线并进行配置：
 +
 .. 使用 N-8-1 将笔记本电脑或控制台上的控制台端口设置为 115200 波特。

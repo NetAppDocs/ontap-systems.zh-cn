@@ -36,12 +36,10 @@ image::../media/drw_ssn_label.png[DRW SSN 标签]
 . 设置您的帐户：
 +
 .. 登录到现有帐户或创建帐户。
-.. 注册您的系统。
-+
-https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]
+.. 注册（link:https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]）您的系统。
 
 
-
+. 下载并安装 link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^] 在您的笔记本电脑上。
 . 清点并记下收到的缆线数量和类型。
 +
 The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 以找到缆线并确定其用途。
@@ -144,6 +142,7 @@ image:../media/oie_cable_power.png[""]
 
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
 
+.步骤
 . 根据需要安装导轨套件。
 . 按照导轨套件附带的说明安装并固定系统。
 +
@@ -184,12 +183,10 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 使用动画或分步说明完成控制器与交换机之间的布线：
+.步骤
+. 使用动画 (https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=beec3966-0a01-473c-a5de-ac68017fbf29["为双节点无交换机集群布线"^]）或完成控制器与交换机之间布线的分步说明：
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=beec3966-0a01-473c-a5de-ac68017fbf29["为双节点无交换机集群布线"^]
-
-+
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 在每个控制器上执行 
 
@@ -240,12 +237,10 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 使用动画或分步说明完成控制器与交换机之间的布线：
+.步骤
+. 使用动画 (https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=bf6759dc-4cbf-488e-982e-ac68017fbef8["为交换集群布线"^]）或完成控制器与交换机之间布线的分步说明：
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=bf6759dc-4cbf-488e-982e-ac68017fbef8["为交换集群布线"^]
-
-+
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 在每个控制器上执行 
 
@@ -302,7 +297,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 +
 
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -348,9 +343,8 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
+[cols="10,90"]
 |===
-
-
 | 步骤 | 对每个控制器模块执行 
 
 
@@ -393,12 +387,10 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-. 使用动画或分步说明将控制器模块连接到一个磁盘架。
+.步骤
+. 使用动画 (https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=3f92e625-a19c-4d10-9028-ac68017fbf57["使用缆线将控制器连接到一个 NS224"^]）或将控制器模块连接到单个磁盘架的分步说明。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=3f92e625-a19c-4d10-9028-ac68017fbf57["使用缆线将控制器连接到一个 NS224"^]
-
-+
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -431,15 +423,13 @@ image:../media/oie_legend_icon_2_lo.png[""]
 
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
+.步骤
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 确保您的笔记本电脑已启用网络发现。
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用以下动画将您的笔记本电脑连接到管理交换机。
-+
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]
-
+. 使用动画 (https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]）将笔记本电脑连接到管理交换机。
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
@@ -469,6 +459,7 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。
 
+.步骤
 . 为笔记本电脑或控制台布线并进行配置：
 +
 .. 使用 N-8-1 将笔记本电脑或控制台上的控制台端口设置为 115200 波特。

@@ -37,10 +37,7 @@ image::../media/drw_ssn_label.png[DRW SSN 标签]
 . 设置您的帐户：
 +
 .. 登录到现有帐户或创建帐户。
-.. 注册您的系统。
-+
-link:https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"]
-
+.. 注册（link:https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]）您的系统。
 
 
 . 下载并安装 link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^] 在您的笔记本电脑上。
@@ -138,6 +135,7 @@ image:../media/oie_cable_power.png[""]
 
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
 
+.步骤
 . 根据需要安装导轨套件。
 . 按照导轨套件附带的说明安装并固定系统。
 +
@@ -178,12 +176,13 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 NOTE: 如果要连接到光纤交换机，请先将 SFP 插入控制器端口，然后再使用缆线连接到该端口。
 
+.步骤
 . 按照图或分步说明完成控制器与交换机之间的布线：
 +
 image::../media/drw_c190_tnsc_unified_network_cabling_animated_gif.png[DRW C190 tnsc 统一网络布线动画 gif]
 
 +
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 在每个控制器上执行 
 
@@ -244,12 +243,13 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 NOTE: 如果要连接到光纤交换机，请先将 SFP 插入控制器端口，然后再使用缆线连接到该端口。
 
+.步骤
 . 按照图或分步说明完成控制器和交换机之间的布线：
 +
 image::../media/drw_c190_switched_unified_network_cabling_animated_gif.png[DRW C190 交换式统一网络布线动画 gif]
 
 +
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -305,12 +305,13 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
+.步骤
 . 按照图或分步说明完成控制器与交换机之间的布线：
 +
 image::../media/drw_c190_tnsc_ethernet_network_cabling_animated_gif.png[DRW C190 tnsc 以太网网络布线动画 gif]
 
 +
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 在每个控制器上执行 
 
@@ -368,12 +369,13 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
+.步骤
 . 按照图或分步说明完成控制器和交换机之间的布线：
 +
 image::../media/drw_c190_switched_ethernet_network_cabling_animated.png[DRW C190 交换式以太网网络布线动画]
 
 +
-[cols="1,2"]
+[cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
 
@@ -426,6 +428,7 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
+.步骤
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 打开两个节点的电源开关。
 +
@@ -439,10 +442,7 @@ NOTE: 初始启动可能需要长达八分钟的时间。
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用以下动画将您的笔记本电脑连接到管理交换机。
-+
-link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]
-
+. 使用动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]）将笔记本电脑连接到管理交换机。
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]

@@ -9,11 +9,13 @@ summary: 您必须验证机箱的 HA 状态，运行诊断并将故障部件退�
 :imagesdir: ../media/
 
 
+[role="lead"]
+您必须验证机箱的 HA 状态，运行诊断并将故障部件退回给 NetApp ，如套件随附的 RMA 说明中所述。
+
 
 
 == 第 1 步：验证并设置机箱的 HA 状态
 
-[role="lead"]
 您必须验证机箱的 HA 状态，并在必要时更新此状态以匹配您的系统配置。
 
 .步骤
@@ -45,7 +47,6 @@ ha-state 的值可以是以下值之一：
 
 == 第 2 步：运行诊断
 
-[role="lead"]
 更换系统中的某个组件后，您应对该组件运行诊断测试。
 
 您的系统必须处于 LOADER 提示符处，才能启动诊断。
@@ -73,7 +74,6 @@ ha-state 的值可以是以下值之一：
 
 == 第 3 步：切回双节点 MetroCluster 配置中的聚合
 
-[role="lead"]
 在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine （ SVM ）现在处于活动状态，并从本地磁盘池提供数据。
 
 此任务仅限适用场景双节点 MetroCluster 配置。
@@ -132,5 +132,4 @@ Remote: cluster_A configured      		normal
 
 == 第 4 步：完成更换过程
 
-[role="lead"]
 更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。
