@@ -5195,7 +5195,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-19 13:45:25 +0000">01/19/2022</time>
+    <time datetime="2022-01-21 15:03:53 +0000">01/21/2022</time>
     
   
 
@@ -5234,7 +5234,7 @@
 <h2 id="选项-1-大多数系统">选项 1 ：大多数系统</h2>
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>完成 NVE 或 NSE 任务后，您需要关闭受损节点。</p>
+<p>After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.</p>
 </div>
 <div class="olist arabic">
 <div class="title">步骤</div>
@@ -5303,9 +5303,6 @@
 <div class="sect1">
 <h2 id="选项-2-控制器采用-metrocluster-配置">选项 2 ：控制器采用 MetroCluster 配置</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>完成 NVE 或 NSE 任务后，您需要关闭受损节点。</p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5324,7 +5321,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 <a href="https://docs.netapp.com/us-en/ontap/system-admin/index.html">"CLI 管理概述"</a>。</p>
+<p>If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 <a href="https://docs.netapp.com/us-en/ontap/system-admin/index.html" target="_blank" rel="noopener">"CLI 管理概述"</a>。</p>
 </li>
 <li>
 <p>如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（<code>MetroCluster node show</code> ）。</p>
@@ -5362,7 +5359,7 @@
 <p>LOADER 提示符</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>转至下一步。</p>
+<p>转至 "Remove controller module" 。</p>
 </div></div></td>
 </tr>
 <tr>
@@ -5402,16 +5399,13 @@
 <h2 id="选项-3-控制器位于双节点-metrocluster-中">选项 3 ：控制器位于双节点 MetroCluster 中</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>完成 NVE 或 NSE 任务后，您需要关闭受损节点。</p>
-</div>
-<div class="paragraph">
 <p>要关闭受损节点，您必须确定此节点的状态，并在必要时切换此节点，以便运行正常的节点继续从受损节点存储提供数据。</p>
 </div>
 <div class="ulist">
 <div class="title">关于此任务</div>
 <ul>
 <li>
-<p>如果您使用的是 NetApp 存储加密，则必须按照的 " 将 SED 恢复到未受保护的模式 " 一节中的说明重置 MSID <a href="https://docs.netapp.com/us-en/ontap/system-admin/index.html">"CLI 管理概述"</a>。</p>
+<p>如果您使用的是 NetApp 存储加密，则必须按照的 " 将 FIPS 驱动器或 SED 返回到未受保护的模式 " 一节中的说明重置 MSID <a href="https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html" target="_blank" rel="noopener">"使用命令行界面概述 NetApp 加密"</a>。</p>
 </li>
 <li>
 <p>您必须在此操作步骤末尾保持电源处于打开状态，以便为运行正常的节点供电。</p>
