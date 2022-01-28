@@ -331,7 +331,7 @@
 <div class="ie-main">
   <!-- Sidebar Column -->
   
-  <div class="col-md-3" >
+  <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
@@ -5140,6 +5140,13 @@
         法律声明
       </a></li></ul>
 </div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -5195,7 +5202,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-21 15:03:53 +0000">01/21/2022</time>
+    <time datetime="2022-01-28 20:22:31 +0000">01/28/2022</time>
     
   
 
@@ -5232,7 +5239,7 @@
 <div class="sect1">
 <h2 id="第-1-步重新对系统进行布线">第 1 步：重新对系统进行布线</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>运行诊断程序后，您必须重新对控制器模块的存储和网络连接进行布线。</p>
 </div>
 <div class="olist arabic">
@@ -5267,7 +5274,7 @@
 <div class="sect1">
 <h2 id="第-2-步重新分配磁盘">第 2 步：重新分配磁盘</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。在独立系统中，必须手动将 ID 重新分配给磁盘。</p>
 </div>
 <div class="paragraph">
@@ -5313,7 +5320,7 @@
 </table>
 <div class="sect2">
 <h3 id="选项-1-验证-ha-系统上的系统-id-更改">选项 1 ：验证 HA 系统上的系统 ID 更改</h3>
-<div class="paragraph lead">
+<div class="paragraph">
 <p>您必须在启动 <em>replacement</em> 节点时确认系统 ID 更改，然后确认更改是否已实施。</p>
 </div>
 <div class="paragraph">
@@ -5325,7 +5332,7 @@
 <p>如果 <em>replacement</em> 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： <code>halt</code></p>
 </li>
 <li>
-<p>在 <em>replacement</em> 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 <code>y</code> ：<code>boot_ontap</code></p>
+<p>在 <em>replacement</em> 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 <code>y</code> 。<code>boot_ontap</code></p>
 </li>
 <li>
 <p>等待 <em>replacement</em> 节点控制台上显示 <code>waiting for giveback&#8230;&#8203;</code> 消息，然后从运行状况良好的节点上，验证是否已自动分配新的配对系统 ID ： storage failover show</p>
@@ -5358,7 +5365,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 <p>保存任何核心转储： <code>ssystem node run -node <em>local-node-name</em> partner savecore</code></p>
 </li>
 <li>
-<p>等待 savecore 命令完成，然后再发出交还。</p>
+<p>等待 `savecore`命令完成，然后再发出交还。</p>
 <div class="paragraph">
 <p>您可以输入以下命令来监控 savecore 命令的进度： <code>ssystem node run -node <em>local-node-name</em> partner savecore -s</code></p>
 </div>
@@ -5404,14 +5411,14 @@ node2             node1             -            Waiting for giveback (HA mailbo
 <li>
 <p>交还完成后，确认 HA 对运行状况良好且可以进行接管： storage failover show</p>
 <div class="paragraph">
-<p><code>storage failover show</code> 命令的输出。不应包含 System ID changed on partner 消息。</p>
+<p><code>storage failover show</code> 命令的输出不应包含 System ID changed on partner 消息。</p>
 </div>
 </li>
 </ol>
 </div>
 </li>
 <li>
-<p>验证是否已正确分配磁盘： storage disk show -ownership</p>
+<p>验证是否已正确分配磁盘： <code>storage disk show -ownership</code></p>
 <div class="paragraph">
 <p>属于 <em>replacement</em> 节点的磁盘应显示新的系统 ID 。在以下示例中， node1 拥有的磁盘现在显示新的系统 ID 1873775277 ：</p>
 </div>
@@ -5434,7 +5441,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 </div>
 <div class="sect2">
 <h3 id="选项-2-在-ontap-中的独立系统上手动重新分配系统-id">选项 2 ：在 ONTAP 中的独立系统上手动重新分配系统 ID</h3>
-<div class="paragraph lead">
+<div class="paragraph">
 <p>在独立系统中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。</p>
 </div>
 <div class="admonitionblock note">
@@ -5513,7 +5520,7 @@ disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
 </div>
 <div class="sect2">
 <h3 id="选项-3-在双节点-metrocluster-配置中的系统上手动重新分配系统-id">选项 3 ：在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID</h3>
-<div class="paragraph lead">
+<div class="paragraph">
 <p>在运行 ONTAP 的双节点 MetroCluster 配置中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。</p>
 </div>
 <div class="paragraph">

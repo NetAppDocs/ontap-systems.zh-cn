@@ -331,7 +331,7 @@
 <div class="ie-main">
   <!-- Sidebar Column -->
   
-  <div class="col-md-3" >
+  <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
@@ -5140,6 +5140,13 @@
         法律声明
       </a></li></ul>
 </div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -5195,24 +5202,24 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-21 15:03:53 +0000">01/21/2022</time>
+    <time datetime="2022-01-28 20:22:31 +0000">01/28/2022</time>
     
   
 
 <span>提供者
-  <a target="_blank" href="https://github.com/dougthomp">
-    <img  class="avatar avatar-small"
-          alt="dougthomp"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/76076341?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" href="https://github.com/thrisun">
     <img  class="avatar avatar-small"
           alt="thrisun"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/30325635?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/dougthomp">
+    <img  class="avatar avatar-small"
+          alt="dougthomp"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/76076341?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -5243,7 +5250,7 @@
 <div class="sect1">
 <h2 id="第-1-步卸下控制器模块">第 1 步：卸下控制器模块</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>要更换控制器模块，必须先从机箱中卸下旧控制器模块。</p>
 </div>
 <div class="olist arabic">
@@ -5295,7 +5302,7 @@
 <div class="sect1">
 <h2 id="第-2-步移动启动介质">第 2 步：移动启动介质</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>您必须找到启动介质并按照说明将其从旧控制器模块中取出并将其插入新控制器模块中。</p>
 </div>
 <div class="olist arabic">
@@ -5343,7 +5350,7 @@
 <div class="sect1">
 <h2 id="第-3-步移动-nvmem-电池">第 3 步：移动 NVMEM 电池</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>要将 NVMEM 电池从旧控制器模块移至新控制器模块，您必须执行一系列特定步骤。</p>
 </div>
 <div class="olist arabic">
@@ -5425,7 +5432,7 @@
 <div class="sect1">
 <h2 id="第-4-步移动-dimm">第 4 步：移动 DIMM</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>要移动 DIMM ，您必须按照说明找到 DIMM ，并将其从旧控制器模块移至更换用的控制器模块。</p>
 </div>
 <div class="paragraph">
@@ -5509,7 +5516,7 @@
 <div class="sect1">
 <h2 id="第-5-步移动缓存模块">第 5 步：移动缓存模块</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>要移动控制器标签上的 M.2 PCIe 卡缓存模块，请找到旧控制器并将其移至更换控制器，然后按照特定步骤顺序进行操作。</p>
 </div>
 <div class="paragraph">
@@ -5561,7 +5568,7 @@
 <div class="sect1">
 <h2 id="第-6-步安装控制器">第 6 步：安装控制器</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>将旧控制器模块中的组件安装到新控制器模块中后，必须将新控制器模块安装到系统机箱中并启动操作系统。</p>
 </div>
 <div class="paragraph">

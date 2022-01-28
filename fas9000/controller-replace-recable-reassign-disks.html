@@ -331,7 +331,7 @@
 <div class="ie-main">
   <!-- Sidebar Column -->
   
-  <div class="col-md-3" >
+  <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
@@ -5140,6 +5140,13 @@
         法律声明
       </a></li></ul>
 </div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -5195,7 +5202,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-21 15:03:53 +0000">01/21/2022</time>
+    <time datetime="2022-01-28 20:22:31 +0000">01/28/2022</time>
     
   
 
@@ -5287,7 +5294,7 @@
 <p>如果 <em>replacement</em> 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： <code>halt</code></p>
 </li>
 <li>
-<p>在 <em>replacement</em> 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 <code>y</code> ：<code>boot_ontap</code></p>
+<p>在 <em>replacement</em> 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 <code>y</code> 。<code>boot_ontap</code></p>
 </li>
 <li>
 <p>请等待` Waiting for giveback&#8230;&#8203; <code>消息显示在 <em>replacement</em> 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show</code></p>
@@ -5320,7 +5327,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 <p>保存任何核心转储： <code>ssystem node run -node <em>local-node-name</em> partner savecore</code></p>
 </li>
 <li>
-<p>等待 savecore 命令完成，然后再发出交还。</p>
+<p>等待 `savecore`命令完成，然后再发出交还。</p>
 <div class="paragraph">
 <p>您可以输入以下命令来监控 savecore 命令的进度： <code>ssystem node run -node <em>local-node-name</em> partner savecore -s</code></p>
 </div>
@@ -5366,7 +5373,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 <li>
 <p>交还完成后，确认 HA 对运行状况良好且可以接管： <code>storage failover show</code></p>
 <div class="paragraph">
-<p><code>storage failover show</code> 命令的输出。不应包含 System ID changed on partner 消息。</p>
+<p><code>storage failover show</code> 命令的输出不应包含 System ID changed on partner 消息。</p>
 </div>
 </li>
 </ol>

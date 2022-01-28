@@ -331,7 +331,7 @@
 <div class="ie-main">
   <!-- Sidebar Column -->
   
-  <div class="col-md-3" >
+  <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
@@ -5140,6 +5140,13 @@
         法律声明
       </a></li></ul>
 </div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -5195,7 +5202,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-21 15:03:53 +0000">01/21/2022</time>
+    <time datetime="2022-01-28 20:22:31 +0000">01/28/2022</time>
     
   
 
@@ -5308,17 +5315,13 @@
 <p>系统提示符或密码提示符（输入系统密码）</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>接管或暂停受损节点：</p>
+<p>从运行正常的节点接管或暂停受损节点： <code>storage failover takeover -ofnode <em>impaired_node_name</em></code></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>对于 HA 对，从运行状况良好的节点接管受损节点： <code>storage failover takeover -ofnode <em>impaired_node_name</em></code></p>
 <div class="paragraph">
-<p>当受损节点显示 Waiting for giveback&#8230;&#8203; 时，按 Ctrl-C ，然后回答 <code>y</code> 。</p>
+<p>+ 当受损节点显示 Waiting for giveback&#8230;&#8203; 时，按 Ctrl-C ，然后回答 <code>y</code> 。</p>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>+</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -5401,17 +5404,13 @@
 <p>系统提示符或密码提示符（输入系统密码）</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>接管或暂停受损节点：</p>
+<p>从运行正常的节点接管或暂停受损节点： <code>storage failover takeover -ofnode <em>impaired_node_name</em></code></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>对于 HA 对，从运行状况良好的节点接管受损节点： <code>storage failover takeover -ofnode <em>impaired_node_name</em></code></p>
 <div class="paragraph">
-<p>当受损节点显示 Waiting for giveback&#8230;&#8203; 时，按 Ctrl-C ，然后回答 <code>y</code> 。</p>
+<p>+ 当受损节点显示 Waiting for giveback&#8230;&#8203; 时，按 Ctrl-C ，然后回答 <code>y</code> 。</p>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p>+</p>
 </div></div></td>
 </tr>
 </tbody>

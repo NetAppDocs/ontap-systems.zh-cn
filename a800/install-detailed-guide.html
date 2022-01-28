@@ -331,7 +331,7 @@
 <div class="ie-main">
   <!-- Sidebar Column -->
   
-  <div class="col-md-3" >
+  <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
@@ -5140,6 +5140,13 @@
         法律声明
       </a></li></ul>
 </div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -5195,7 +5202,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-21 15:03:53 +0000">01/21/2022</time>
+    <time datetime="2022-01-28 20:22:31 +0000">01/28/2022</time>
     
   
 
@@ -5538,9 +5545,6 @@
 <ol class="arabic">
 <li>
 <p>使用动画（<a href="https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=edc42447-f721-4cbe-b080-ab0c0123a139" target="_blank" rel="noopener">"为双节点无交换机集群布线"</a>）或完成控制器与交换机之间布线的分步说明：</p>
-</li>
-</ol>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -5607,8 +5611,7 @@
 </tr>
 </tbody>
 </table>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>要执行可选布线，请参见：</p>
 <div class="ulist">
@@ -5667,9 +5670,6 @@
 <ol class="arabic">
 <li>
 <p>使用动画（<a href="https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=49e48140-4c5a-4395-a7d7-ab0c0123a10e" target="_blank" rel="noopener">"为交换集群布线"</a>）或完成控制器与交换机之间布线的分步说明：</p>
-</li>
-</ol>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -5726,8 +5726,7 @@
 </tr>
 </tbody>
 </table>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>要执行可选布线，请参见：</p>
 <div class="ulist">
@@ -5943,9 +5942,6 @@
 <ol class="arabic">
 <li>
 <p>使用动画（<a href="https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=09dade4f-00bd-4d41-97d7-ab0c0123a0b4" target="_blank" rel="noopener">"使用缆线将控制器连接到单个驱动器架"</a> 或使用分步说明将控制器模块连接到单个磁盘架。</p>
-</li>
-</ol>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -5976,8 +5972,7 @@
 </tr>
 </tbody>
 </table>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>To complete setting up your system, see <a href="install-detailed-guide.html#step-4-complete-system-setup-and-configuration">"第 4 步：完成系统设置和配置"</a>。</p>
 </li>
@@ -6014,9 +6009,6 @@
 <ol class="arabic">
 <li>
 <p>使用以下动画（<a href="https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fe50ac38-9375-4e6b-85af-ab0c0123a0e0" target="_blank" rel="noopener">"使用缆线将控制器连接到两个驱动器架"</a>）或使用缆线将控制器连接到两个驱动器架的步骤。</p>
-</li>
-</ol>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -6047,8 +6039,7 @@
 </tr>
 </tbody>
 </table>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>To complete setting up your system, see <a href="install-detailed-guide.html#step-4-complete-system-setup-and-configuration">"第 4 步：完成系统设置和配置"</a>。</p>
 </li>

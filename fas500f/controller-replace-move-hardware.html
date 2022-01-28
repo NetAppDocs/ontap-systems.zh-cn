@@ -331,7 +331,7 @@
 <div class="ie-main">
   <!-- Sidebar Column -->
   
-  <div class="col-md-3" >
+  <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
     <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
@@ -5140,6 +5140,13 @@
         法律声明
       </a></li></ul>
 </div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -5195,7 +5202,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-21 15:03:53 +0000">01/21/2022</time>
+    <time datetime="2022-01-28 20:22:31 +0000">01/28/2022</time>
     
   
 
@@ -5365,34 +5372,32 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>断开电源：</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<p>断开电源。</p>
+</li>
 <li>
 <p>打开电源线固定器，然后从电源拔下电源线。</p>
 </li>
 <li>
 <p>从电源拔下电源线。</p>
 </li>
-</ol>
-</div>
-</li>
 <li>
 <p>旋转凸轮把手，以便在按下锁定卡舌的同时，可以将电源从控制器模块中拉出。</p>
-<div class="ulist">
-<ul>
-<li>
-<p>小心： *</p>
-<div class="paragraph">
-<p>电源不足。从控制器模块中取出时，请始终用双手托住它，以免它突然从控制器模块中自由转动并给您造成损害。</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/caution.svg" alt="注意">
+</td>
+<td class="content">
+将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+</td>
+</tr>
+</table>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="../media/drw_a250_replace_psu.png" alt="DRW A250 更换 PSU">
 </div>
-</div>
-</li>
-</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -5493,7 +5498,7 @@
 <p>AFF A250 中控制器模块的通风管下方有一个启动介质设备。您必须将其从受损的控制器模块移至更换用的控制器模块。</p>
 </div>
 <div class="paragraph">
-<p>要卸下用于将启动介质固定到位的螺钉，您需要一个 #1 磁性十字头螺钉驱动程序。由于控制器模块中的空间限制，您还应配备一个磁铁将螺钉传输到，以防止螺钉丢失。</p>
+<p>要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not lose it.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -5529,16 +5534,15 @@
 </tr>
 </tbody>
 </table>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+</li>
 <li>
-<p>使用 1 号磁性螺丝起子从启动介质中卸下螺钉，并将其安全放在磁铁上。</p>
+<p>使用 1 号磁性螺丝刀，从启动介质中卸下螺钉，并将其安全放在磁铁上。</p>
 </li>
 <li>
 <p>将启动介质直接从插槽中轻轻提起，然后将其在更换用的控制器模块中对齐到位。</p>
 </li>
 <li>
-<p>使用 1 号磁性螺丝起子插入并拧紧启动介质上的螺钉。</p>
+<p>使用 1 号磁性螺丝刀插入并拧紧启动介质上的螺钉。</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5554,9 +5558,6 @@
 </li>
 </ol>
 </div>
-</li>
-</ol>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -5565,29 +5566,14 @@
 <div class="paragraph lead">
 <p>要移动 DIMM ，请找到 DIMM 并将其从受损控制器移至更换控制器，然后按照特定步骤顺序进行操作。</p>
 </div>
+<div class="paragraph">
+<p>+ 图像：： ./media/drw_A250_DIMM_replace.png]]</p>
+</div>
+<div class="paragraph">
+<p>+ 重要信息：将每个 DIMM 安装到受损控制器模块中占用的同一插槽中。</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
-<li>
-<p>将受损控制器模块中的 DIMM 移至替代控制器模块：</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_a250_dimm_replace.png" alt="更换 DRW A250 DIMM">
-</div>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/important.svg" alt="重要">
-</td>
-<td class="content">
-将每个 DIMM 安装到其在受损控制器模块中占用的同一插槽中。
-</td>
-</tr>
-</table>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
 <li>
 <p>缓慢地将 DIMM 两侧的 DIMM 弹出卡舌分开，然后将 DIMM 滑出插槽。</p>
 <div class="admonitionblock important">
@@ -5616,10 +5602,7 @@
 <p>目视检查 DIMM ，确认其均匀对齐并完全插入插槽。</p>
 </li>
 <li>
-<p>对其余 DIMM 重复这些子步骤。</p>
-</li>
-</ol>
-</div>
+<p>对其余 DIMM 重复上述步骤。</p>
 </li>
 </ol>
 </div>
@@ -5675,8 +5658,7 @@
 </tr>
 </tbody>
 </table>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+</li>
 <li>
 <p>拔下与夹层卡关联的所有布线。</p>
 <div class="paragraph">
@@ -5687,7 +5669,7 @@
 <p>卸下夹层卡中可能存在的所有 SFP 或 QSFP 模块并将其放在一旁。</p>
 </li>
 <li>
-<p>使用 1 号磁性螺丝起子从受损控制器模块的正面和夹层卡上卸下螺钉，并将其安全地放在磁铁上。</p>
+<p>使用 1 号磁性螺丝刀，从受损控制器模块正面和夹层卡上卸下螺钉，并将其安全地放在磁铁上。</p>
 </li>
 <li>
 <p>轻轻将夹层卡从插槽中提出，然后将其移至替代控制器中的相同位置。</p>
@@ -5696,7 +5678,7 @@
 <p>将夹层卡轻轻对齐到更换用的控制器中的适当位置。</p>
 </li>
 <li>
-<p>使用 #1 磁性螺丝起子插入并拧紧替代控制器模块正面和夹层卡上的螺钉。</p>
+<p>使用 1 号磁性螺丝刀插入并拧紧替代控制器模块正面和夹层卡上的螺钉。</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5711,13 +5693,10 @@
 </div>
 </li>
 <li>
-<p>如果受损的控制器模块中存在另一个夹层卡，请重复这些子步骤。</p>
+<p>如果受损的控制器模块中存在另一个夹层卡，请重复上述步骤。</p>
 </li>
 <li>
 <p>将已卸下的 SFP 或 QSFP 模块插入夹层卡。</p>
-</li>
-</ol>
-</div>
 </li>
 </ol>
 </div>
@@ -5727,7 +5706,7 @@
 <h2 id="第-7-步移动-nv-电池">第 7 步：移动 NV 电池</h2>
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>更换控制器模块时，必须将 NV 电池从受损控制器模块移至更换控制器模块</p>
+<p>更换控制器模块时，必须将 NV 电池从受损控制器模块移至更换控制器模块。</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -5783,8 +5762,7 @@
 </tr>
 </tbody>
 </table>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+</li>
 <li>
 <p>找到电池插头，然后挤压电池插头正面的夹子，将插头从插槽中释放。</p>
 </li>
@@ -5802,9 +5780,6 @@
 </li>
 <li>
 <p>用力向下按电池组，确保其锁定到位。</p>
-</li>
-</ol>
-</div>
 </li>
 </ol>
 </div>
@@ -5893,9 +5868,8 @@
 </div>
 </li>
 <li>
-<p>将控制器模块插入机箱：</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<p>将控制器模块插入机箱。</p>
+</li>
 <li>
 <p>确保锁定机制臂锁定在完全展开的位置。</p>
 </li>
@@ -5912,9 +5886,6 @@
 <p>从锁定机制顶部释放拇指，然后继续推动，直到锁定机制卡入到位。</p>
 <div class="paragraph">
 <p>控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。</p>
-</div>
-</li>
-</ol>
 </div>
 <div class="paragraph">
 <p>控制器模块应完全插入，并与机箱边缘平齐。</p>
