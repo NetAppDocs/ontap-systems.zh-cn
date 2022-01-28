@@ -44,7 +44,7 @@ NOTE: 系统 ID 和磁盘分配信息位于 NVRAM 模块中，该模块位于与
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
 . 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
-. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``
+. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。``boot_ontap``
 . 等待 _replacement_ 节点控制台上显示 `waiting for giveback...` 消息，然后从运行状况良好的节点上，验证是否已自动分配新的配对系统 ID ： storage failover show
 +
 在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。

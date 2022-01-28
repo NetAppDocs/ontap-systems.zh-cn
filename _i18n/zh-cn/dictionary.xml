@@ -1528,7 +1528,6 @@
   <block id="2c21bbc4fedbc89cf2641efbdb7149ec" category="list-text">打开电源线固定器，然后从电源拔下电源线。</block>
   <block id="2a7ce9c8119e6f6a28ebcd55a7fc3098" category="list-text">从电源拔下电源线。</block>
   <block id="1bdc46934af8b9f35655b38de6850eea" category="list-text">旋转凸轮把手，以便在按下锁定卡舌的同时，可以将电源从控制器模块中拉出。</block>
-  <block id="9c03d0963b089ae70659698f39325954" category="paragraph">* 小心： *</block>
   <block id="4526cb831bd4192817bdc8a7d21be70e" category="paragraph">电源不足。从控制器模块中取出时，请始终用双手托住它，以免它突然从控制器模块中自由转动并给您造成损害。</block>
   <block id="59b278fa95360efca7786da48e036f4d" category="image-alt">DRW A250 更换 PSU</block>
   <block id="1b2219e72635f17b115bf4b878fa99f2" category="cell">蓝色电源锁定卡舌</block>
@@ -1711,7 +1710,6 @@
   <block id="9c4e18c684a6b54fb00bd7eef15cba95" category="paragraph"><block ref="9c4e18c684a6b54fb00bd7eef15cba95" category="inline-link-rx"></block></block>
   <block id="46dc7a6019d827f81ffce7b535eb038e" category="section-title">第 2 步：移动电源</block>
   <block id="309cd2af9d204470ca807bef5f4f1fa9" category="paragraph">更换控制器模块时，必须将受损控制器模块中的电源移至更换控制器模块。</block>
-  <block id="e6f1713e90643163fb1b0317897addce" category="paragraph">* 警告： *</block>
   <block id="b0399a57cd6e3c4c8baf26d76e9353f9" category="list-text">将电源移至新控制器模块，然后安装它。</block>
   <block id="489f4d822f036e8983d65332d7a37f54" category="section-title">第 3 步：移动风扇</block>
   <block id="6e84c6f5de78e87ef68b12592b7a3451" category="paragraph">在更换发生故障的控制器模块时，您必须将受损控制器模块中的风扇移至更换模块。</block>
@@ -1722,22 +1720,17 @@
   <block id="48305d46318ca8d808105dab6b4407c9" category="list-text">对其余风扇模块重复上述步骤。</block>
   <block id="1229beab8577341c3e1295090613296f" category="section-title">第 4 步：移动启动介质</block>
   <block id="631d48b6a978901aa9dd527f9e0c0de1" category="paragraph">AFF A250 中控制器模块的通风管下方有一个启动介质设备。您必须将其从受损的控制器模块移至更换用的控制器模块。</block>
-  <block id="f8ecc0af9834a24861c69f2116dfba84" category="paragraph">要卸下用于将启动介质固定到位的螺钉，您需要一个 #1 磁性十字头螺钉驱动程序。由于控制器模块中的空间限制，您还应配备一个磁铁将螺钉传输到，以防止螺钉丢失。</block>
   <block id="208327117af481bf4a428ddcd144a3d8" category="list-text">找到受损控制器模块中的启动介质并将其移至替代控制器模块。</block>
   <block id="e09e6d2db19a96426f8b4d9fa4401743" category="image-alt">DRW A250 更换启动介质</block>
   <block id="378896073d06c35c7666ecc139650bf3" category="cell">卸下用于将启动介质固定到受损控制器模块中的主板的螺钉。</block>
   <block id="42f1d337fd4fa932f99275b46ae051e9" category="paragraph">将启动介质从受损的控制器模块中提出。</block>
-  <block id="d0b3ba11e0366aa9c45318890a6e4e06" category="list-text">使用 1 号磁性螺丝起子从启动介质中卸下螺钉，并将其安全放在磁铁上。</block>
   <block id="127d279adcbd74de15692d5956600cec" category="list-text">将启动介质直接从插槽中轻轻提起，然后将其在更换用的控制器模块中对齐到位。</block>
-  <block id="40d18ec9fdf666cb2bab625df6116d78" category="list-text">使用 1 号磁性螺丝起子插入并拧紧启动介质上的螺钉。</block>
   <block id="b87725fc2bdeda91a5fd85aed6e3e365" category="admonition">拧紧启动介质上的螺钉时请勿用力，否则可能会使其发生裂纹。</block>
   <block id="3a03dd2c91e538d3e67a42cab9b8cce1" category="section-title">第 5 步：移动 DIMM</block>
   <block id="981355f252d77b57262594c30633c45b" category="paragraph">要移动 DIMM ，请找到 DIMM 并将其从受损控制器移至更换控制器，然后按照特定步骤顺序进行操作。</block>
   <block id="96a0b9a4e5b5cb607315b40a8b1ab180" category="list-text">将受损控制器模块中的 DIMM 移至替代控制器模块：</block>
-  <block id="b01ebf76def2c231f4cfd6494e6308b3" category="admonition">将每个 DIMM 安装到其在受损控制器模块中占用的同一插槽中。</block>
   <block id="d3eea109bda6ee1479d43eadef9ba2e5" category="list-text">在更换用的控制器模块上找到相应的 DIMM 插槽。</block>
   <block id="3d0cde66503bd652bf1cc2b5212da61d" category="list-text">确保 DIMM 插槽上的 DIMM 弹出卡舌处于打开位置，然后将 DIMM 垂直插入插槽。</block>
-  <block id="131a49cdadc5e0d3e10cbb9d2cdb06f4" category="list-text">对其余 DIMM 重复这些子步骤。</block>
   <block id="056e32e05ee357b7b5810599adfe19d7" category="section-title">第 6 步：移动夹层卡</block>
   <block id="c5bf586441a563a1c5456f0a84d2e336" category="paragraph">要移动夹层卡，您必须从端口中拔下布线以及任何 QSFP 和 SFP ，将夹层卡移至更换用的控制器，将所有 QSFP 和 SFP 重新安装到端口上，并为端口布线。</block>
   <block id="f01e12831b76cf482945cbdc2c226aab" category="list-text">找到受损控制器模块中的夹层卡并将其移动。</block>
@@ -1748,15 +1741,11 @@
   <block id="52d353425f8ccedacb04b93cba007d8c" category="paragraph">移动夹层卡。</block>
   <block id="07908a8ed136fe75294dee34a1478fff" category="list-text">拔下与夹层卡关联的所有布线。</block>
   <block id="d4854e7a4329e705d371be59c5147642" category="list-text">卸下夹层卡中可能存在的所有 SFP 或 QSFP 模块并将其放在一旁。</block>
-  <block id="5b1fa4d0bd186bd71f9346757c33bec3" category="list-text">使用 1 号磁性螺丝起子从受损控制器模块的正面和夹层卡上卸下螺钉，并将其安全地放在磁铁上。</block>
   <block id="4247520fcd039df38a72ea760056b2fe" category="list-text">轻轻将夹层卡从插槽中提出，然后将其移至替代控制器中的相同位置。</block>
   <block id="4ef22d26cd64dbdf3c02afa8b5a2801f" category="list-text">将夹层卡轻轻对齐到更换用的控制器中的适当位置。</block>
-  <block id="24282b43652b7e16f28cc0c563d45f89" category="list-text">使用 #1 磁性螺丝起子插入并拧紧替代控制器模块正面和夹层卡上的螺钉。</block>
   <block id="d0c09aa73e378d998c2a6a47432cf89b" category="admonition">拧紧夹层卡上的螺钉时请勿用力，否则可能会使其发生裂开。</block>
-  <block id="39ff4e0cb154641744ad5032357da004" category="list-text">如果受损的控制器模块中存在另一个夹层卡，请重复这些子步骤。</block>
   <block id="18e4071e64f8958d9e5eeeca0130f19d" category="list-text">将已卸下的 SFP 或 QSFP 模块插入夹层卡。</block>
   <block id="1c4b9eb7937f4450f0a872f4d796f7aa" category="section-title">第 7 步：移动 NV 电池</block>
-  <block id="8dd2768af2606f3c8a4e98843b696b5a" category="paragraph">更换控制器模块时，必须将 NV 电池从受损控制器模块移至更换控制器模块</block>
   <block id="35e9bb6518844a891762cc28aa4821b8" category="list-text">找到 NVMEM 电池并将其从受损控制器模块移至更换用的控制器模块。</block>
   <block id="81c13bdfc94c175b0cb0830513c72fa7" category="image-alt">DRW A250 更换 nvmem 电池</block>
   <block id="bcb72abac7a1b4e5d62301236d2af4ff" category="cell">挤压电池插头正面的夹子。</block>
@@ -1880,14 +1869,12 @@
   <block id="3135971a1a6b077c3715b12bc5012909" category="section-title">第 1 步：卸下控制器模块 - AFF A250</block>
   <block id="8beaeea3973b517e3c11448d6de4ac1d" category="paragraph">要访问控制器模块中的组件，必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。</block>
   <block id="d67487df6ee13914e99a3efddf90ac53" category="section-title">第 2 步：更换启动介质</block>
-  <block id="a83ec72be9a5ece49e2a361748e59b2f" category="paragraph">要卸下用于将启动介质固定到位的螺钉，您需要一个 #1 磁性十字头螺钉驱动程序。由于控制器模块中的空间限制，您还应配备一个磁铁将螺钉传输到，以防止其松动。</block>
   <block id="e768bbd7b60efb998832a5ed6ea67094" category="paragraph">您可以使用以下视频或表格步骤更换启动介质：</block>
   <block id="4e6bb88f4f022c54e39743f60f40ba31" category="inline-link">更换启动介质</block>
   <block id="309692e2e6422b29d61bf94a5fadf996" category="paragraph"><block ref="309692e2e6422b29d61bf94a5fadf996" category="inline-link-rx"></block></block>
   <block id="d6d4491715edf2124be2de2bfa82d7fc" category="list-text">找到并更换控制器模块中受损的启动介质。</block>
   <block id="16399bec33f4a102d5e3a28654820c5c" category="paragraph">卸下将启动介质固定到控制器模块主板的螺钉。</block>
   <block id="572b2c4e1ee565030f3cfc4d0b81e94a" category="paragraph">将启动介质从控制器模块中提出。</block>
-  <block id="2406f28b320f4189e328f238cc41ca7e" category="list-text">使用 1 号磁性螺钉驱动器从受损启动介质中卸下螺钉，并将其安全放在磁铁上。</block>
   <block id="bb350a33e7d50a40c4fa37bfbe41f7f0" category="list-text">将受损启动介质直接从插槽中轻轻提起并放在一旁。</block>
   <block id="1f92c66f78b6103eb17febd6a0a5f8f3" category="list-text">从防静电运输袋中取出更换启动介质，并将其在控制器模块上对齐到位。</block>
   <block id="0e76e990df2967dffc59ccd2aa5f6178" category="section-title">第 3 步：将启动映像传输到启动介质</block>
@@ -1942,16 +1929,12 @@
   <block id="1d5e6759e2bef51b7fae2c4ab7ce482f" category="paragraph">卸下夹层卡。</block>
   <block id="ec1caaca33d3a05b021847729aa40cf3" category="list-text">拔下与受损夹层卡相关的所有布线。</block>
   <block id="88d1403b9ff7da0e02580013be227aef" category="list-text">卸下受损夹层卡中的所有 SFP 或 QSFP 模块并将其放在一旁。</block>
-  <block id="25a90be66c83838c4e863e80d2882a44" category="list-text">使用 1 号磁性螺丝起子，从控制器模块表面上拆下螺钉，并将其安全地放在磁铁上。</block>
-  <block id="e73d3ff1dc3a87579058fd96c5be9141" category="list-text">使用 1 号磁性螺丝起子松开受损夹层卡上的螺钉。</block>
   <block id="9f358638435d8a9ef3fe0f035621dcfb" category="list-text">将受损夹层卡直接从插槽中轻轻提起并放在一旁</block>
   <block id="f961927adda34318d2db703a92bee152" category="list-text">从防静电运输袋中取出更换用的夹层卡，并将其与控制器模块的内表面对齐。</block>
   <block id="87328040ae6a340ecbcba7b7a87619d1" category="list-text">将更换用的夹层卡轻轻对齐到位。</block>
-  <block id="c9fef0f45d0eeb44c6ccbade1ac5a763" category="list-text">使用 1 号磁性螺丝起子插入并拧紧控制器模块正面和夹层卡上的螺钉。</block>
   <block id="8e2a462d22bb430aa436ced4c203cc72" category="list-text">将从受损夹层卡中卸下的任何 SFP 或 QSFP 模块插入更换用的夹层卡。</block>
   <block id="59f3bf9d5372fa36fc6660aca56f7667" category="list-text">安装夹层卡：</block>
   <block id="0099a9bb52112e36b72a4ca407fea7c5" category="list-text">如果您的系统没有新的夹层卡，请安装一个。</block>
-  <block id="949662c48a5b82d7f60cbe2e108f571e" category="list-text">使用 1 号磁性螺钉驱动器，从控制器模块表面以及覆盖夹层卡插槽的面板上卸下螺钉，并将其安全地放在磁铁上。</block>
   <block id="29bc0206e3def43146c2b0cef54fc220" category="list-text">从防静电运输袋中取出夹层卡，并将其与控制器模块的内表面对齐。</block>
   <block id="e93ef5bd6bf13f3e4a28ed9516ec26aa" category="list-text">将夹层卡轻轻对齐到位。</block>
   <block id="02b15a117fae0033195ecb7d4d766e3c" category="section-title">第 4 步：重新安装控制器模块</block>
@@ -2080,33 +2063,27 @@
   <block id="117a00785fdf02074d05fddbc86f7975" category="paragraph">如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。</block>
   <block id="fa5ccc1fbe9017cdfc585a7ca2f2637a" category="paragraph">此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。</block>
   <block id="ade99ddf24ee766d0846b6173160e37f" category="list-text">如果 _replacement_ 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： `halt`</block>
-  <block id="188f2d33c82265d54696d7fb9143f330" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：</block>
   <block id="fbe06d7223609c920831e2dffe0e0a96" category="list-text">等待 _replacement_ 节点控制台上显示 `waiting for giveback...` 消息，然后从运行状况良好的节点上，验证是否已自动分配新的配对系统 ID ： storage failover show</block>
   <block id="3e06d4583220bf6e3116f03fc794dab1" category="paragraph">在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。</block>
   <block id="23b40d7aca05dd545bc77221d79f3fbe" category="list-text">从运行状况良好的节点中，验证是否已保存任何核心转储：</block>
   <block id="0024dc783d0c8562c1fc277cc83c5743" category="list-text">更改为高级权限级别： `set -privilege advanced`</block>
   <block id="29adb61bb9bfa040df540cdb2a8f55b8" category="paragraph">系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * &gt; ）。</block>
   <block id="24f4ab41f6dece9a1c57f1c61b020b5e" category="list-text">保存任何核心转储： `ssystem node run -node _local-node-name_ partner savecore`</block>
-  <block id="fade8851f4ec10ecbc3dd39f6c05a0a1" category="list-text">等待 savecore 命令完成，然后再发出交还。</block>
   <block id="2881d85992269eeb47fa4c6d0a50cbb1" category="paragraph">您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`</block>
   <block id="b13199f709e74272c57e556731e1d9d1" category="list-text">返回到管理权限级别： `set -privilege admin`</block>
   <block id="dc480d49888be9665881255050d6e3fd" category="list-text">交还节点：</block>
   <block id="fd9cb5bd192d51c123b3ac2ec23324eb" category="list-text">从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode _replacement_node_name_`</block>
-  <block id="03e79e765171f29a2a5d453c8fadb6a8" category="paragraph">replacement_ 节点将收回其存储并完成启动。</block>
   <block id="28da5bb072dbf0747d23fbed65cffcc0" category="paragraph">如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 `y` 。</block>
   <block id="25df42cd5ae2e7223d293aeda0c623ed" category="admonition">如果交还被否决，您可以考虑覆盖此否决。</block>
   <block id="1e2a0fcc2986a119062540d6a8a9681f" category="inline-link">查找适用于您的 ONTAP 9 版本的《高可用性配置指南》</block>
   <block id="8761710e49b8b20d4b6cc2adb064a0b2" category="paragraph"><block ref="8761710e49b8b20d4b6cc2adb064a0b2" category="inline-link-rx"></block></block>
   <block id="a138242d674238dc6089a602c6c8909b" category="list-text">交还完成后，确认 HA 对运行状况良好且可以进行接管： storage failover show</block>
-  <block id="354190e7801971c5ecbacd4e6e046a0d" category="paragraph">`storage failover show` 命令的输出。不应包含 System ID changed on partner 消息。</block>
-  <block id="a07f9d7e22fb874df6c0f87aa7e8b627" category="list-text">验证是否已正确分配磁盘： storage disk show -ownership</block>
   <block id="4ba4f1aaf81ebb9600884198e939b4a2" category="paragraph">属于 _replacement_ 节点的磁盘应显示新的系统 ID 。在以下示例中， node1 拥有的磁盘现在显示新的系统 ID 1873775277 ：</block>
   <block id="ee6adef69d8b8786ea9c8ed7878b0970" category="list-text">如果系统采用 MetroCluster 配置，请监控节点的状态： `MetroCluster node show`</block>
   <block id="96f33e8ca303de63172f7e23cbb961c5" category="paragraph">在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个节点将显示已配置状态，并启用 DR 镜像并显示正常模式。MetroCluster node show -fields node-SystemID 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
   <block id="e73102dae0c8597be4416dbc7fd1d930" category="list-text">如果节点采用 MetroCluster 配置，则根据 MetroCluster 状态，如果原始所有者是灾难站点上的节点，请验证 DR 主 ID 字段是否显示磁盘的原始所有者。</block>
   <block id="04c5eb35419cf0bd4d5c48c1e597c8d5" category="paragraph">如果同时满足以下条件，则必须执行此操作：</block>
   <block id="6a7d6dc8ed992a6e2e0f4bae8d5e7c87" category="list-text">MetroCluster 配置处于切换状态。</block>
-  <block id="d095d1deb4d147fcc8070337a5a4ab10" category="list-text">_replacement_ 节点是灾难站点上磁盘的当前所有者。</block>
   <block id="c4fa5cbc6fffac990762dc388e4ce15d" category="inline-link">在四节点 MetroCluster 配置中，磁盘所有权会在 HA 接管和 MetroCluster 切换期间发生更改</block>
   <block id="0a5ead00345fce4227fecb1825aad142" category="paragraph"><block ref="0a5ead00345fce4227fecb1825aad142" category="inline-link-rx"></block></block>
   <block id="381526217dead66932ed7e3b4d0903a5" category="list-text">如果您的系统采用 MetroCluster 配置，请验证是否已配置每个节点： `MetroCluster node show - fields configuration-state`</block>
@@ -2409,7 +2386,6 @@
   <block id="ec221492ab283fe7bbfd27ad39bbda82" category="doc">卸下控制器模块并更换启动介质— AFF A700s</block>
   <block id="e9e66c1bd59e20ff8acce6fb41f94461" category="paragraph">您必须从机箱中卸下控制器模块并将其打开，然后更换出现故障的启动介质。</block>
   <block id="e88eebc1797d32d10ed4abe331b3ecb6" category="section-title">第 2 步：更换启动介质— AFF A700s</block>
-  <block id="6eaf42cd6c3dc0491c26da7774b5a740" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用十字头螺钉驱动程序。</block>
   <block id="d49fe2e5280db996ef1801aa2312cf51" category="list-text">找到启动介质：</block>
   <block id="ea47f8c3d75d0ae8c63333493732e287" category="list-text">如果需要，打开通风管。</block>
   <block id="95b0ed2bf52614c4803a52c7bfbc4da6" category="list-text">如果需要，请解锁锁定闩锁，然后从控制器模块中卸下提升板，以卸下中间 PCIe 模块提升板 2 。</block>
@@ -2606,7 +2582,6 @@
   <block id="9829cc73f1aa57fe4c8f650070116d1b" category="list-text">从运行状况良好的节点： `storage failover giveback -ofnode partner_node_name`</block>
   <block id="6ccdc0e53e02a4d771ffb485d5c0df6c" category="paragraph">受损节点将收回其存储，完成启动，然后重新启动，并再次由运行正常的节点接管。</block>
   <block id="08ca2eade8768d4ee7e1752168f719ac" category="paragraph"><block ref="08ca2eade8768d4ee7e1752168f719ac" category="inline-link-rx"></block></block>
-  <block id="c6798d066434a48b34b6ccdf46d8102d" category="list-text">使用 storage failover show-giveback 命令监控交还操作的进度。</block>
   <block id="2e2dd412417cfab75b0340fc82c0c08b" category="list-text">交还操作完成后，使用 `storage failover show` 命令确认 HA 对运行状况良好，并且可以进行接管。</block>
   <block id="d2438a9a8b88afff0b59df6c125b3884" category="list-text">如果您使用 storage failover modify 命令禁用了自动交还，请将其还原。</block>
   <block id="d574c271d37aff5dfc97b6ecd338458f" category="doc">完成还原和更换过程— AFF A700s</block>
@@ -2621,7 +2596,6 @@
   <block id="5ac2ce23b602bd690adf87a4ddadc899" category="section-title">重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期</block>
   <block id="864c38e2026ab798db96e7d96459d9e2" category="doc">重新配置系统并重新分配磁盘— AFF A700s</block>
   <block id="a0d8eae32c5a472f83afef8b93706ea5" category="paragraph">要完成替换操作步骤并将系统还原为完全正常运行，您必须重新配置存储，还原 NetApp 存储加密配置（如果需要）并为新控制器安装许可证。您必须先完成一系列任务，然后才能将系统还原为完全正常运行。</block>
-  <block id="7762733471d5b473835d903a5329768b" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``</block>
   <block id="38681c139b912b74e9f2c478df5e20c0" category="summary">要更换系统中的 NVRAM 电池，您必须从系统中卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。</block>
   <block id="ddb14ada2ef97be8ad7f40139160426e" category="doc">更换 NVRAM 电池— AFF A700s</block>
   <block id="b4528c91634508bf10f34e21233169c0" category="list-text">将控制器模块放在一旁安全的地方。</block>
@@ -3337,7 +3311,6 @@
   <block id="cffb18da589dc8eb39d4f5a7cbaa5a2e" category="doc">移动并更换硬件— FAS8200</block>
   <block id="5a05c6605a020e1a2163f79eb10968be" category="section-title">第 1 步：移动电源</block>
   <block id="038dcab758c4b41667b9b5f59032a880" category="paragraph">更换机箱时，要取出电源，需要关闭旧机箱中的电源，断开电源并将其卸下，然后将其安装到更换机箱上并进行连接。</block>
-  <block id="441dfb16c24713e7af70526edb4affe8" category="paragraph">* 小心： * 卸下电源时，请始终用双手支撑其重量。</block>
   <block id="2d7dc0640073f973b9652b985a0a8fd0" category="list-text">重新连接电源线，并使用电源线锁定机制将其固定到电源。</block>
   <block id="88eec411dfba0693644591d63a044cce" category="admonition">仅将电源线连接到电源。此时请勿将电源线连接到电源。</block>
   <block id="ef04965c46c97b1b98ea3ea5fde7b27c" category="section-title">第 2 步：移动风扇</block>
@@ -3345,7 +3318,6 @@
   <block id="26f3e4c2d12be621415f2684a8c8d8d2" category="list-text">向下按风扇模块凸轮把手上的释放闩锁，然后向下拉凸轮把手。</block>
   <block id="873ff90864f62182ca0ed7a91a266e52" category="image-alt">DRW fas32xx 风扇</block>
   <block id="8c8c98956870ffea5e2297a73a1972a1" category="paragraph">风扇模块警示 LED</block>
-  <block id="43aff7142bbe30a772a8534bbde74073" category="paragraph">* 小心： * 风扇模块很短。请始终用您的空闲手托住风扇模块的底部，以免其突然从机箱中脱离并造成您的人身伤害。</block>
   <block id="12aec4fbc7647a1e52c203364239e9ee" category="section-title">第 3 步：卸下控制器模块</block>
   <block id="7bb3e2efcb7169f8ff52d523079a8978" category="paragraph">要更换机箱，您必须从旧机箱中卸下控制器模块。</block>
   <block id="e380cd5a7cddfc790ff74ea752c39cf9" category="list-text">将控制器模块放在安全的位置，如果机箱中有其他控制器模块，请重复上述步骤。</block>
@@ -3438,7 +3410,6 @@
   <block id="70fa93bebd0670b231da3d1406a94a24" category="doc">重新配置系统并重新分配磁盘— FAS8200</block>
   <block id="db4ac51eac732409ebf4cfe43b3fb873" category="paragraph">如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。您必须为您的配置使用正确的操作步骤。</block>
   <block id="f17087a04e743f4a2bf4548df3debabf" category="section-title">选项 1 ：验证 HA 系统上的系统 ID 更改</block>
-  <block id="f099c3d90bd5d885da1ab6eb776cdc1d" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ： `boot_ontap`</block>
   <block id="3e341b5bacaf258a486ce052e47d9540" category="list-text">请等待` Waiting for giveback... `消息显示在 _replacement_ 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show`</block>
   <block id="f3d373f54eb86985beb0d9cfa19a08a0" category="list-text">等待 `savecore` 命令完成，然后再发出交还。</block>
   <block id="01c7f5871dd965cb03f77372fa85988e" category="paragraph">您可以输入以下命令来监控 `savecore` 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`</block>
@@ -3726,7 +3697,6 @@
   <block id="6fac6f4e16017f2b4bc0f9591a002153" category="summary">您可以将这些链接用于其他 AFF 和 FAS 型号。</block>
   <block id="7d6a5a71ff18c3c788750313d0a4e7e0" category="doc">其他平台型号</block>
   <block id="f453086a36d64a5193cd4183c14bcd72" category="inline-link-macro">AFF 8000 系列文档</block>
-  <block id="a5a70d6211cf9ac5dd107f2510c9aa85" category="paragraph"><block ref="a5a70d6211cf9ac5dd107f2510c9aa85" category="inline-link-macro-rx"></block></block>
   <block id="71bdc94f19d5947bd1cb6d437f119ba2" category="inline-link-macro">FAS8000 系列文档</block>
   <block id="2b3a51bca746a221bf4a0af6d3098ccf" category="paragraph"><block ref="2b3a51bca746a221bf4a0af6d3098ccf" category="inline-link-macro-rx"></block></block>
   <block id="f739ddc76de0a287d2c0b563d814e953" category="inline-link-macro">FAS6200 系列文档</block>
@@ -4792,7 +4762,6 @@
   <block id="d9a7a09d2734ecc763c0c5a8586a61a3" category="doc">重新配置系统并重新分配磁盘— AFF C190</block>
   <block id="b279b6600d5af224d26ab7bab80082c7" category="section-title">第 2 步：验证 HA 系统上的系统 ID 更改</block>
   <block id="1a654e01c14bfd5cd4699372c3ef6bf9" category="list-text">如果 _replacement_ 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符：</block>
-  <block id="0f6cfabce8012e5ed4945a3f6b1ae1f1" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 ` * y*` 启动此节点：</block>
   <block id="5df49253d4e35c978d098ad728de36b5" category="list-text">等待 _replacement_ 节点控制台上显示 `waiting for giveback...` 消息，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ：</block>
   <block id="7bbd6982e43cdc0293fb6f27cb2ba130" category="paragraph">` * 存储故障转移显示 *`</block>
   <block id="109773e48c8731216edae51d1686c8bc" category="list-text">更改为高级权限级别：</block>
@@ -5652,7 +5621,6 @@
   <block id="418a022f56c1e24ab49e10afac569c94" category="list-text">安装更换用的 DIMM ，方法是将 DIMM 与插槽对齐，然后将 DIMM 轻轻推入插槽，直到锁定卡舌锁定到位。</block>
   <block id="680d8cf9003e2f0c6c16768d83979722" category="section-title">第 5 步：重新分配磁盘</block>
   <block id="f48da66fac9628892734da282b687412" category="list-text">如果替代节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： `halt`</block>
-  <block id="ef5194f67c4591b47b23fc50aaadfc8b" category="list-text">在替代节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：</block>
   <block id="4f72f46e41b488e589d00c457c136571" category="paragraph">``boot_ontap bye``</block>
   <block id="0a777e4b645d66ac575356b85c16ed55" category="paragraph">如果设置了自动启动，则节点将重新启动。</block>
   <block id="554a23fbeb893ba3c6cb31c09b0d481f" category="paragraph">在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个节点将显示已配置状态，并启用 DR 镜像并显示正常模式。`MetroCluster node show -fields node-SystemID` 命令输出将显示旧系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
@@ -7837,7 +7805,6 @@
   <block id="f5275334d8eb3b5cf9ea9368de40cedc" category="list-text">如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置。</block>
   <block id="b1dfba2b33907e87a5254267b34a3e32" category="list-text">验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。</block>
   <block id="46c9d33b77f9064bc8fbe1743c6118eb" category="list-text">您可以安全地关闭节点。</block>
-  <block id="dbbad696dee4d20bd1cd54cf27764455" category="paragraph">对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode impaired_node_name`</block>
   <block id="54d84b238a1f0e6e83e06b2788451c8f" category="paragraph">+ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
   <block id="8179ceedf2aad3a2fafb48feb6a32bdb" category="list-text">如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。</block>
   <block id="b6c33850022ae87ff1d2d111469a0da5" category="paragraph">：您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。</block>
@@ -7873,8 +7840,6 @@
   <block id="d61a84f0b033dd225ff9a1af9b0f08a5" category="paragraph">Lift the battery up.*Note:* Make a note of the polarity of the battery.</block>
   <block id="9bc926f854c0657b4a72a1008c1e9b68" category="paragraph"><block ref="9bc926f854c0657b4a72a1008c1e9b68" category="inline-link-macro-rx"></block></block>
   <block id="78929efae941c9a4e2fc6993c4c10c4e" category="paragraph">您必须具有一个格式化为 MBR/FAT32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。</block>
-  <block id="5ac2b95b4f745d4433376fcb49059b9b" category="paragraph">您需要使用 1 号磁性十字螺丝刀卸下用于将启动介质固定到位的螺钉。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not lose it.</block>
-  <block id="8e396831cde0d768a154c4fc8b4d19a2" category="list-text">使用 1 号磁性螺丝刀从受损的启动介质上卸下螺钉，并将其安全地放在磁铁上。</block>
   <block id="f8030e72e320113cd38b31fd4e52b741" category="list-text">使用 1 号磁性螺丝刀插入并拧紧启动介质上的螺钉。</block>
   <block id="f7b32babba20f290222a62a499496335" category="section-title">选项 2 ： MetroCluster 中的系统</block>
   <block id="62d2a69a13772574552f6d8e154bf2c0" category="paragraph"><block ref="62d2a69a13772574552f6d8e154bf2c0" category="inline-link-macro-rx"></block></block>
@@ -8254,15 +8219,11 @@
   <block id="bd925fbdb9cf654c2d3eb13ad0bf2458" category="admonition">数据是从 security key-manager backup show 或 security key-manager on板 载 show-backup 命令输出的。</block>
   <block id="1491d378fbbc2d9a6048e5b9b67a396a" category="paragraph">输入备份数据：</block>
   <block id="da0c8baa25fcee791ffa412ec90044ca" category="list-text">将控制台缆线移动到配对节点并以管理员身份登录。</block>
-  <block id="d56eff580ae48ab39a09d9a52b4e0012" category="list-text">使用 storage failover giveback -fromnode local -only-cfo-aggregates true 命令仅交还 CFO 聚合。</block>
   <block id="56b9aa57eb07c87d93d8f36e42537891" category="list-text">如果命令因 CIFS 会话打开而失败，请与客户确认如何关闭 CIFS 会话。</block>
   <block id="99cf22e04f567c5375349f8aa14becd4" category="list-text">如果命令因配对节点 " 未就绪 " 而失败，请等待 5 分钟，使 NVRAM 同步。</block>
   <block id="4d2b3834d59169dcbb17afc3c699e3ac" category="list-text">If the command fails because of an NDMP, SnapMirror, or SnapVault process, disable the process.有关详细信息，请参见相应的内容。</block>
-  <block id="4f4dc469cf90094fa617cfc9fbd54127" category="list-text">交还完成后，使用 storage failover show 和 storage failover show-giveback 命令检查故障转移和交还状态。</block>
   <block id="0ca120792c1da0e7f9613ff316afb1bf" category="list-text">运行 security key-manager 板载同步命令，然后在出现提示时输入密码短语。</block>
   <block id="c58ae875af45a4be51e14080108983b6" category="list-text">输入 security key-manager key query 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes/true` 。</block>
-  <block id="4cbb5f62935a5a6181b7351f6ebea2b8" category="list-text">使用 storage failover giveback -fromnode local 命令交还目标节点。</block>
-  <block id="54c7d0a15d0b9d4865bb65094824a369" category="list-text">使用 storage failover show 命令在交还报告完成 3 分钟后检查交还状态。</block>
   <block id="a69e3df3fc089f72b8d4244ee2e280dc" category="list-text">在 clustershell 提示符处，输入 net int show -is-home false 命令以列出不在其主节点和端口上的逻辑接口。</block>
   <block id="01644ff2aec9678b64ae01d076703f1a" category="paragraph">如果任何接口列为 `false` ，请使用 net int revert 命令将这些接口还原回其主端口。</block>
   <block id="db7ef1cc9d8937ba84d376a5424078cb" category="list-text">将控制台缆线移至目标节点，然后运行 version -v 命令以检查 ONTAP 版本。</block>
@@ -8380,4 +8341,38 @@
   <block id="40b8d4029fd45462b5253feed39a5dd7" category="doc">更换控制器模块— FAS500f</block>
   <block id="2793f813a4803a99d34c84da3cc988ff" category="doc">更换控制器模块— FAS8300 和 FAS8700</block>
   <block id="05e9126f65b50fdcc5343f6e7a30ee13" category="doc">更换控制器模块— AFF A200</block>
+  <block id="09ba8705674baa2bb12600bee5888bda" category="paragraph">从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`</block>
+  <block id="6c0c224b8e9179a7c25ea93532145021" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 ` * y*` 来启动此节点。</block>
+  <block id="d7330da3fefbffbe126bbfae916b2005" category="list-text">等待 `savecore`命令完成，然后再发出交还。</block>
+  <block id="03a45c592eebddeaf80cccbc66213075" category="paragraph">To restore your system to full operation, you must restore the NetApp Storage Encryption configuration (if necessary), and install licenses for the new controller, and return the failed part to NetApp, as described in the RMA instructions shipped with the kit.</block>
+  <block id="73d21b6023874255fc8bc704f7454d7e" category="paragraph">从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode impaired_node_name`</block>
+  <block id="07bcf96175c4fb31a9a4900272f1bd18" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。``boot_ontap``</block>
+  <block id="f14e5f22bf7ba96b4c82cde849259a00" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。`boot_ontap`</block>
+  <block id="588550e231fd9dcead167f2e3a8a2926" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用十字螺丝刀。</block>
+  <block id="c2a9feacea3374ba5c6052aaa36c24d5" category="list-text">如果您使用 `storage failover modify` 命令禁用了自动交还，请将其还原。</block>
+  <block id="8eea6ffadcece75bbf0826ed26885fb9" category="list-text">此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。</block>
+  <block id="c651d2f010c85fa1c8605da5e127657e" category="paragraph"><block ref="c651d2f010c85fa1c8605da5e127657e" category="inline-link-macro-rx"></block></block>
+  <block id="72dd2309b9e786d12d19350620a3d631" category="list-text">在替代节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。</block>
+  <block id="36128c6aafe926585eba615393cf3649" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。</block>
+  <block id="eea6adb7d48797d40ac3b9ea4f505d9f" category="paragraph">The MetroCluster configuration takes a few minutes after the replacement to return to a normal state, at which time each node will show a configured state, with DR Mirroring enabled and a mode of normal.MetroCluster node _show -fields node-SystemID_ 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
+  <block id="511831afd7b3843888ba00743f2e205e" category="list-text">断开电源。</block>
+  <block id="24e3ea03dd6cd41feb1c45f7310ac774" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not lose it.</block>
+  <block id="c0a129ed8a4dffac36687970dd9e76e4" category="list-text">使用 1 号磁性螺丝刀，从启动介质中卸下螺钉，并将其安全放在磁铁上。</block>
+  <block id="eaaefabb01a4d3a25c4ee0ebd0294ead" category="paragraph">+ 图像：： ./media/drw_A250_DIMM_replace.png]]</block>
+  <block id="94cac2ca01b8e422961358e25e3f9a03" category="paragraph">+ 注意：将每个 DIMM 安装到受损控制器模块中占用的同一插槽中。</block>
+  <block id="4d682883d3e1a9518c0b12f296e8d3da" category="list-text">对其余 DIMM 重复上述步骤。</block>
+  <block id="4f33c405e177c16965ddeb4f33742c5a" category="list-text">使用 1 号磁性螺丝刀，从受损控制器模块正面和夹层卡上卸下螺钉，并将其安全地放在磁铁上。</block>
+  <block id="515f69ac19c21c33dcf5567d940bc1a6" category="list-text">使用 1 号磁性螺丝刀插入并拧紧替代控制器模块正面和夹层卡上的螺钉。</block>
+  <block id="9c23253df9fe144e525f9767980fd31c" category="list-text">如果受损的控制器模块中存在另一个夹层卡，请重复上述步骤。</block>
+  <block id="181a3766f31135df2527b723f0cd0bf0" category="paragraph">更换控制器模块时，必须将 NV 电池从受损控制器模块移至更换控制器模块。</block>
+  <block id="b4d2392449336ea5c3bc8befa0e0b844" category="list-text">使用 1 号磁性螺丝刀，从受损启动介质上卸下螺钉，并将其安全放在磁铁上。</block>
+  <block id="143c767e9327d7fe1aa0dcf0cd8bf42b" category="list-text">使用 1 号磁性螺丝刀，从控制器模块正面卸下螺钉，并将其安全地放在磁铁上。</block>
+  <block id="04397c96980709afd9322bc55ad16021" category="list-text">使用 1 号磁性螺丝刀拧松受损夹层卡上的螺钉。</block>
+  <block id="d9d89fa2d8f2d045677b6db851f13e8d" category="list-text">使用 1 号磁性螺丝刀插入并拧紧控制器模块正面和夹层卡上的螺钉。</block>
+  <block id="b5bb4830b9cb6cf86cab4203bf9c0ff2" category="list-text">使用 1 号磁性螺丝刀，从控制器模块正面和覆盖夹层卡插槽的面板上卸下螺钉，并将其安全地放在磁铁上。</block>
+  <block id="67bbbac5bc6e3d667f32ac654b6a9d3a" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not loose it.</block>
+  <block id="a1d9910a32ae0cf0a663ca53df75fc48" category="paragraph">+ 重要信息：将每个 DIMM 安装到受损控制器模块中占用的同一插槽中。</block>
+  <block id="e65c4f5a39a793b014b217f53d825905" category="list-text">将控制器模块插入机箱。</block>
+  <block id="04767794ed138df3aa3f519e53e96bcc" category="list-text">使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令仅交还 CFO 聚合。</block>
+  <block id="2f6a11061d2c04a9d9730e06edaa97a6" category="list-text">交还完成后，使用 `storage failover show` 和 storage failover show-giveback 命令检查故障转移和交还状态。</block>
 </blocks>

@@ -55,13 +55,11 @@ LOADER 提示符
  a| 
 系统提示符或密码提示符（输入系统密码）
  a| 
-接管或暂停受损节点：
+从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`
 
-** 对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode _impaired_node_name_`
++ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
 +
-当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
-
-
 
 |===
 . 如果系统机箱中只有一个控制器模块，请关闭电源，然后从电源中拔下受损节点的电源线。
@@ -195,7 +193,7 @@ HA 对
 . 在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。
 +
 
-NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+CAUTION: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
 
 +
 控制器一旦固定在机箱中，就会开始启动。

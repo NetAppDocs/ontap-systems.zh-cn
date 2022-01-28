@@ -39,8 +39,8 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
 . 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
-. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：
-. 等待 _replacement_ 节点控制台上显示 `waiting for giveback...` 消息，然后从运行状况良好的节点上，验证是否已自动分配新的配对系统 ID ： storage failover show
+. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。
+. 请等待` Waiting for giveback... `消息显示在 _replacement_ 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show`
 +
 在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。
 
@@ -62,7 +62,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
 
 .. 保存任何核心转储： `ssystem node run -node _local-node-name_ partner savecore`
-.. 等待 savecore 命令完成，然后再发出交还。
+.. 等待 `savecore`命令完成，然后再发出交还。
 +
 您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`
 
@@ -85,13 +85,13 @@ NOTE: 如果交还被否决，您可以考虑覆盖此否决。
 +
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的高可用性配置内容"]
 
-.. 交还完成后，确认 HA 对运行状况良好且可以进行接管： storage failover show
+.. 交还完成后，确认 HA 对运行状况良好且可以接管： `storage failover show`
 +
-`storage failover show` 命令的输出。不应包含 System ID changed on partner 消息。
+`storage failover show` 命令的输出不应包含 System ID changed on partner 消息。
 
 
 
-. 验证是否已正确分配磁盘： storage disk show -ownership
+. 验证是否已正确分配磁盘： `storage disk show -ownership`
 +
 属于 _replacement_ 节点的磁盘应显示新的系统 ID 。在以下示例中， node1 拥有的磁盘现在显示新的系统 ID 1873775277 ：
 
@@ -110,7 +110,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 ----
 . 如果系统采用 MetroCluster 配置，请监控节点的状态： `MetroCluster node show`
 +
-在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个节点将显示已配置状态，并启用 DR 镜像并显示正常模式。MetroCluster node show -fields node-SystemID 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。
+The MetroCluster configuration takes a few minutes after the replacement to return to a normal state, at which time each node will show a configured state, with DR Mirroring enabled and a mode of normal.MetroCluster node _show -fields node-SystemID_ 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。
 
 . 如果节点采用 MetroCluster 配置，则根据 MetroCluster 状态，如果原始所有者是灾难站点上的节点，请验证 DR 主 ID 字段是否显示磁盘的原始所有者。
 +

@@ -16,7 +16,6 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 == 第 1 步：重新对系统进行布线
 
-[role="lead"]
 运行诊断程序后，您必须重新对控制器模块的存储和网络连接进行布线。
 
 .步骤
@@ -35,20 +34,18 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 == 第 2 步：重新分配磁盘
 
-[role="lead"]
 如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。您必须为您的配置使用正确的操作步骤。
 
 
 
 === 选项 1 ：验证 HA 系统上的系统 ID 更改
 
-[role="lead"]
 您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
 
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
 . 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
-. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ： `boot_ontap`
+. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。`boot_ontap`
 . 请等待` Waiting for giveback... `消息显示在 _replacement_ 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show`
 +
 在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。
@@ -96,7 +93,7 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62
 
 .. 交还完成后，确认 HA 对运行状况良好且可以接管： `storage failover show`
 +
-`storage failover show` 命令的输出。不应包含 System ID changed on partner 消息。
+`storage failover show` 命令的输出不应包含 System ID changed on partner 消息。
 
 
 
@@ -123,7 +120,6 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 
 === 选项 2 ：在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID
 
-[role="lead"]
 在运行 ONTAP 的双节点 MetroCluster 配置中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。
 
 此操作步骤仅适用于运行 ONTAP 的双节点 MetroCluster 配置中的系统。

@@ -68,8 +68,8 @@ NOTE: 数据是从 security key-manager backup show 或 security key-manager on�
 系统将启动并显示 Waiting for giveback... 提示符。
 
 . 将控制台缆线移动到配对节点并以管理员身份登录。
-. 使用 storage failover show 命令确认目标节点已准备好进行交还。
-. 使用 storage failover giveback -fromnode local -only-cfo-aggregates true 命令仅交还 CFO 聚合。
+. 使用 `storage failover show` 命令确认目标节点已准备好进行交还。
+. 使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令仅交还 CFO 聚合。
 +
 ** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。
 ** 如果命令因 CIFS 会话打开而失败，请与客户确认如何关闭 CIFS 会话。
@@ -81,7 +81,7 @@ NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
 ** If the command fails because of an NDMP, SnapMirror, or SnapVault process, disable the process.有关详细信息，请参见相应的内容。
 
 
-. 交还完成后，使用 storage failover show 和 storage failover show-giveback 命令检查故障转移和交还状态。
+. 交还完成后，使用 `storage failover show` 和 storage failover show-giveback 命令检查故障转移和交还状态。
 +
 仅显示 CFO 聚合（根聚合和 CFO 模式的数据聚合）。
 
@@ -97,8 +97,8 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 
 
 . 将控制台缆线移至配对节点。
-. 使用 storage failover giveback -fromnode local 命令交还目标节点。
-. 使用 storage failover show 命令在交还报告完成 3 分钟后检查交还状态。
+. 使用 `storage failover giveback -fromnode local` 命令交还目标节点。
+. 使用 `storage failover show` 命令在交还报告完成 3 分钟后检查交还状态。
 +
 如果 20 分钟后交还未完成，请联系客户支持。
 

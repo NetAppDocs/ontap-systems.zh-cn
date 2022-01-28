@@ -32,9 +32,7 @@ summary: 完成 NVE 或 NSE 任务后，您需要关闭受损节点。
  a| 
 系统提示符或密码提示符（输入系统密码）
  a| 
-接管或暂停受损节点：
-
-对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode impaired_node_name`
+从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode impaired_node_name`
 
 + 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
 

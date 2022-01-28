@@ -73,13 +73,11 @@ LOADER 提示符
  a| 
 系统提示符或密码提示符（输入系统密码）
  a| 
-接管或暂停受损节点：
+从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`
 
-** 对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode _impaired_node_name_`
++ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
 +
-当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
-
-
 
 |===
 
@@ -127,13 +125,11 @@ LOADER 提示符
  a| 
 系统提示符或密码提示符（输入系统密码）
  a| 
-接管或暂停受损节点：
+从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`
 
-** 对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode _impaired_node_name_`
++ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
 +
-当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
-
-
 
 |===
 
@@ -449,7 +445,7 @@ DIMM 和 DIMM 弹出器卡舌
 
 .步骤
 . 如果替代节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
-. 在替代节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：
+. 在替代节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。
 +
 ``boot_ontap bye``
 
@@ -478,7 +474,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
 
 .. 保存任何核心转储： `ssystem node run -node _local-node-name_ partner savecore`
-.. 等待 savecore 命令完成，然后再发出交还。
+.. 等待 `savecore`命令完成，然后再发出交还。
 +
 您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`
 

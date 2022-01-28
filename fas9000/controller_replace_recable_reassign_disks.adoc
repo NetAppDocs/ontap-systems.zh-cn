@@ -42,7 +42,7 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
 . 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
-. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``
+. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。``boot_ontap``
 . 请等待` Waiting for giveback... `消息显示在 _replacement_ 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show`
 +
 在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。
@@ -65,7 +65,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
 
 .. 保存任何核心转储： `ssystem node run -node _local-node-name_ partner savecore`
-.. 等待 savecore 命令完成，然后再发出交还。
+.. 等待 `savecore`命令完成，然后再发出交还。
 +
 您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`
 
@@ -90,7 +90,7 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62
 
 .. 交还完成后，确认 HA 对运行状况良好且可以接管： `storage failover show`
 +
-`storage failover show` 命令的输出。不应包含 System ID changed on partner 消息。
+`storage failover show` 命令的输出不应包含 System ID changed on partner 消息。
 
 
 
