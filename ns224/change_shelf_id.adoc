@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ns224, shelves, shelf, ns224 shelves, change, shelf, id, system, ontap, unown, spare, offline, aggregate, change an ns224 drive shelf id 
 summary: 当 ONTAP 尚未运行或在将磁盘架连接到系统之前热添加磁盘架时，您可以更改系统中的磁盘架 ID 。您也可以在 ONTAP 启动并运行 \ （控制器模块可用于提供数据 \ ）且磁盘架中的所有驱动器均为无所有者，备用或脱机聚合的一部分时更改磁盘架 ID 。 
 ---
-= 更改磁盘架 ID ： &#8201 ； &#8212 ； &#8201 ； NS224 磁盘架
+= 更改磁盘架 ID — NS224 磁盘架
 :icons: font
 :imagesdir: ../media/
 

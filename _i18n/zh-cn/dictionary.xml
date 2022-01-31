@@ -2244,7 +2244,6 @@
   <block id="aeef38b8f860290dfafd28f807c628f7" category="admonition">此地址的格式为 +https://x.x.x.x+ 。</block>
   <block id="58599a78c7345fe9e241e0a8a135d733" category="list-text">使用您在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。</block>
   <block id="8ebc074b350a73fb776c940df7d61fd5" category="summary">要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。</block>
-  <block id="319110c3e978148ae4938c6e58789a84" category="doc">更换风扇 &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； AFF A250</block>
   <block id="bc5719b37f755088b3bb793c36a74d06" category="section-title">第 1 步：关闭受损节点</block>
   <block id="263bd6e17bf6db34d525455907f3ed3e" category="paragraph">*</block>
   <block id="403f4d4be631e5311ef7c1b52afdf039" category="section-title">第 3 步：更换风扇</block>
@@ -4572,7 +4571,6 @@
   <block id="e9c29b2069e0c6c237cd1e2a30e9c48b" category="doc">关闭控制器— FAS8300 和 FAS8700</block>
   <block id="14df5008a24cd65fbb232505d17779b3" category="doc">将故障部件退回给 NetApp — AFF fas8300 和 FAS8700</block>
   <block id="c923231fd8c67b0547a9abe7ecbc8a43" category="doc">更换控制器模块— FAS8300 和 FAS8700</block>
-  <block id="4b1ba8bcbe684e9cd12cd013d6ddada2" category="doc">更换机箱 - FAS8300 和 FAS8700</block>
   <block id="fe0879209afd1fc2f28d40077ccda980" category="doc">关闭受损控制器— FAS8300 和 FAS8700</block>
   <block id="f406838ab1af1615895d90b4b0439c67" category="doc">详细指南— FAS8300 和 FAS8700</block>
   <block id="02b3dac5d46f2e577325711400925ec7" category="list-text">查看 _NetApp ONTAP 配置指南 _ 并收集该指南中列出的所需信息。</block>
@@ -4617,7 +4615,6 @@
   <block id="26b459a4766f77a1bec60418a8e392d1" category="list-text">从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像：</block>
   <block id="75037510df4619ff0448fd0beadedb4d" category="paragraph">` * 启动恢复 *`</block>
   <block id="24f4a2e7ff21c7e7b62929514e79a48b" category="doc">根据需要还原 OKM ， NSE 和 NVE — FAS500f</block>
-  <block id="c0ee168b109b9f07e4d0fbae4eb8e3ff" category="doc">更换风扇 &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； FAS500f</block>
   <block id="95408ece8c23cd5f2a24760856f4819e" category="paragraph">如果风扇出现故障，请将其更换为新的风扇模块。</block>
   <block id="20851709efa205bf63087d09e01725ff" category="paragraph">您可以使用以下视频或表格中的步骤更换风扇：</block>
   <block id="9fb8ac9db9ddb949f108f678e1fa4b9d" category="doc">关闭控制器— FAS500f</block>
@@ -5688,7 +5685,6 @@
   <block id="a995822127725d44db8de596bb8202d5" category="list-text">此操作步骤假定插槽 3 和 / 或 7 已打开。</block>
   <block id="642f6e57cb2cd65a42c4b04259516876" category="list-text">如果要安装第二个 X91148A 模块进行存储，请对插槽 7 中的模块重复此步骤。</block>
   <block id="44323c30f0ec052e74f75c27940101f6" category="list-text">安装 NS224 磁盘架并为其布线，如中所述<block ref="1251716a2329bb7d9111adeba70973d6" category="inline-link-rx"></block>。</block>
-  <block id="82e06a639bb3b6baf6c8840ea7b30f6e" category="doc">更换机箱 - AFF A700 和 FAS9000</block>
   <block id="cdc60418016eaf098678f2cf03dfb9d1" category="doc">详细指南— AFF A700 和 FAS9000</block>
   <block id="b223e7b739d071d1e94b262773fc5fc2" category="paragraph">要安装系统，您需要在 NetApp 支持站点上创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="c1838f2c3da0bae81a7acbb7945a693d" category="paragraph">10 GbE 网络缆线</block>
@@ -7718,12 +7714,8 @@
   <block id="6407763c1d2de6600133ab1f5d7bc94f" category="inline-link">ONTAP 9 NetApp 加密高级内容</block>
   <block id="b70ce74f678772eec8ed950c996578d8" category="paragraph"><block ref="b70ce74f678772eec8ed950c996578d8" category="inline-link-rx"></block></block>
   <block id="3507cf5c7dded65ffdd5ade0f2366605" category="list-text"><block ref="3507cf5c7dded65ffdd5ade0f2366605" category="inline-link-macro-rx"></block></block>
-  <block id="7f9698282ebff237fcb8b23f64344f74" category="doc">更改磁盘架 ID ： &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
   <block id="839439b189cfb3960dee96d5900594f7" category="list-text">您需要一个带一端直发的回形针或一个窄尖圆头笔。</block>
-  <block id="6e5fd7060e070e3ede032f911cd847a8" category="doc">热插拔驱动器和 #8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
   <block id="6de535d32c5294ec13b8cdaefbdfcd96" category="list-text">在固件版本不是最新的新驱动器上，驱动器固件会自动更新（无中断）。</block>
-  <block id="dfffcb0d8a1668fb5cd9e30208261191" category="doc">更换 DIMM&amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
-  <block id="9164ee8993e7358886613e9f73567af0" category="doc">热添加型和 #8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
   <block id="700841889ff35bf8741ce3731cbe8278" category="list-text">HA 对必须具有足够的可用 RoCE 端口，以支持您要热添加的磁盘架数量。</block>
   <block id="3130d58fd4980df36a53d47d41873fc3" category="paragraph">For each shelf you are hot-adding, you need a minimum of two RoCE capable ports on each controller.这些端口可以位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合，也可以位于支持 RoCE 的 I/O 模块上，这一点受您的平台型号支持。</block>
   <block id="149bd884ff7361ec4900f148e94264c1" category="paragraph">如果 HA 对没有足够的可用 RoCE 端口，并且您的平台型号支持使用支持 RoCE 的 PCIe 卡或 I/O 模块，则必须已将额外的卡或 I/O 模块安装到您的平台型号支持的正确控制器插槽中。</block>
@@ -7765,17 +7757,10 @@
   <block id="853f2f58eaae6f81846d73d68ec58fc7" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（板载支持 RoCE 的端口）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
   <block id="46678aedb5de8e96e18124083a8925ee" category="paragraph">下图显示了在每个控制器模块上使用一组支持 RoCE 的端口为一个热添加磁盘架布线：</block>
   <block id="8391296c9ad39c787ad4300c47db3f73" category="list-text">如果要在每个控制器模块上使用两组支持 RoCE 的端口（板载端口和 PCIe 卡支持 RoCE 的端口）热添加一个或两个磁盘架，请完成以下子步骤。</block>
-  <block id="982fb5d6c3cfff35b75ffce103e16e9e" category="doc">将磁盘架作为交换机连接的存储进行布线。 ##8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
-  <block id="c545b77caa4aa944cbb56e6ba4043e1c" category="doc">更换 NSM 模块 &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
-  <block id="5420482c583fd0144bef59be3297ecb2" category="doc">热插拔电源。 #8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
-  <block id="63eada491e794bafed5615da29ae9894" category="doc">更换风扇 &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
-  <block id="f9963316e96e61f20b6272198bc5ffe0" category="doc">热移除磁盘架。 #8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
   <block id="eb7122b6f64c6de77c3ce0aed5e75616" category="admonition">The non-dedicated ports configured for storage use are displayed in the output as follows: If your HA pair is running ONTAP 9.8 or later, the non-dedicated ports display `storage` in the `Mode` column.If your HA pair is running ONTAP 9.7 or 9.6, the non-dedicated ports, which display `false` in the `Is Dedicated?` column, also display `enabled` in the `State` column.</block>
   <block id="d92397f405b46035383db7778e4795f5" category="list-text">重复第一步（ A ），重新配置第二个控制器模块上的端口。</block>
   <block id="ed44ef953e4348bf2bf852e9813bdc5d" category="list-text">重复第二步（ b ），重新启动第二个控制器以使端口更改生效。</block>
   <block id="744b6c476a210a04195ef528c6730bc7" category="paragraph">如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？` 中显示 `false` 列中，也会在 `State` 列中显示 `d已标记` 。</block>
-  <block id="beb61fb93486a22416339bcdc89ed55a" category="doc">更换实时时钟电池。 ##8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
-  <block id="2cf3f2133bbb1e6513b473d4aabca60b" category="doc">更换启动介质 &amp;#8201 ； &amp;#8212 ； &amp;#8201 ； NS224 磁盘架</block>
   <block id="24ce88dcb36e4e61a4334746ee0dc49a" category="list-text">您的 HA 对必须已运行 ONTAP 9.7 或更高版本，并且此版本至少支持 NSM 固件版本，或者您的 HA 对必须已运行 ONTAP 9.6 版本且 NSM 固件版本为 1.1x 或更高版本。</block>
   <block id="71eb59c59a42227ae8b45d0cfaf6f52f" category="paragraph">有两个视频—一个视频介绍如何将系统装入机架并进行布线，另一个视频显示了使用 System Manager 引导式设置执行初始系统配置的示例。</block>
   <block id="f6a00a6b7e6b54382e85e14b5d551999" category="paragraph"><block ref="f6a00a6b7e6b54382e85e14b5d551999" category="inline-link-rx"></block></block>
@@ -8311,26 +8296,18 @@
   <block id="9437c57fcfd0761eae87af1101035857" category="section-title">第 2 步：卸下控制器模块</block>
   <block id="74215317310e6608b7efcf980bd23ce9" category="list-text">注册（<block ref="3ae584b0f28c11edd6df40135d81b8ba" category="inline-link-macro-rx"></block>）您的系统。</block>
   <block id="94fc6517f8931e5bf7fa3db4d65a29f8" category="list-text">使用动画（<block ref="50ccb09f541207f76322daa7df8a0e52" category="inline-link-macro-rx"></block>）将笔记本电脑连接到管理交换机。</block>
-  <block id="98a0d2751076e354fcc60ff032f87adc" category="doc">更换控制器模块— AFF C190</block>
   <block id="f65880020d1427cb243e627e392ce6ef" category="section-title">第 1 步：卸下控制器模块</block>
   <block id="0cb8c95aa83d9b7ae853da12e5bb125c" category="paragraph">Be sure to close the cam handle slowly so that it aligns correctly with the front of the drive carrier.安全时，它会发出卡嗒声。</block>
   <block id="7c13f4f3a84cec8b802281259883339c" category="list-text">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 `false` ，则必须在关闭受损节点之前更正问题描述；请参见 <block ref="1baf9f7ecc4554f61d6168e4897ea002" category="inline-link-macro-rx"></block>。</block>
   <block id="3891e96240b27c2309a21f6387f98917" category="paragraph">转至 "Remove controller module" 。</block>
-  <block id="5779a1239e0ccccac40bf01c6c64c100" category="doc">更换控制器模块— AFF A320</block>
   <block id="063a6c27f42a062a6ece0163f4444fc3" category="list-text">如果您使用的是 NetApp 存储加密，则必须按照的 " 将 FIPS 驱动器或 SED 返回到未受保护的模式 " 一节中的说明重置 MSID <block ref="bb6c6af86c0c41920e9753bb15981800" category="inline-link-macro-rx"></block>。</block>
   <block id="51d6de730b00c1cd722a3e380f269e57" category="paragraph">After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.</block>
-  <block id="be650f1698ae66c00eecc985c2936f06" category="doc">更换控制器模块— FAS8200</block>
-  <block id="3121a415a239bb247e573372c4709f73" category="doc">更换控制器模块— AFF A400</block>
-  <block id="705ce3dc3029de1dedf66e1d99444755" category="doc">更换控制器模块— FAS2600</block>
   <block id="f126a748aa68879f9dcff06da9ee7d1e" category="paragraph"><block ref="f126a748aa68879f9dcff06da9ee7d1e" category="inline-link-macro-rx"></block></block>
-  <block id="f258f2c8167e05252bc731a6de3db719" category="doc">更换控制器模块— AFF A220 和 FAS2700</block>
   <block id="8dcb40a3ec5d5a042451105a7c18324f" category="list-text">使用动画（<block ref="aac3371ee9509f15dc58093b45cef9cb" category="inline-link-macro-rx"></block>）或完成控制器与交换机之间布线的分步说明：</block>
   <block id="1f9c146468982373cd5cf84ac4b891fa" category="list-text">使用动画（<block ref="28d905783e25429dd480a005ec25b827" category="inline-link-macro-rx"></block>）或完成控制器与交换机之间布线的分步说明：</block>
   <block id="09bed4c07726af3c95833b4fe5956855" category="list-text">使用动画（<block ref="436cbc8ea5a42a6ab9e302893923c6d6" category="inline-link-macro-rx"></block> 或使用分步说明将控制器模块连接到单个磁盘架。</block>
   <block id="ebc2de1349fdd092a4d59c56c76d990e" category="list-text">使用以下动画（<block ref="276ca153ab705728abbb092640fae049" category="inline-link-macro-rx"></block>）或使用缆线将控制器连接到两个驱动器架的步骤。</block>
   <block id="477e4e38399eb6d9b3e87cf3aaf81eed" category="list-text">使用以下动画（<block ref="50ccb09f541207f76322daa7df8a0e52" category="inline-link-macro-rx"></block>）将笔记本电脑连接到管理交换机。</block>
-  <block id="4ebea35929bdae8bccc57769ef74a8aa" category="doc">更换控制器模块— AFF A300</block>
-  <block id="5aaf6736ea7a8eb4470957334ed6e354" category="doc">更换控制器模块— AFF A250</block>
   <block id="73d5fff935a92d564e0bdf7bb2d7a90f" category="list-text">使用动画（<block ref="a17365a15daf3fb2651f3dfab7220018" category="inline-link-macro-rx"></block>）或完成控制器与交换机之间布线的分步说明：</block>
   <block id="4c3f985f957682a5efc7cee476bd4fc2" category="list-text">使用动画（<block ref="f591670d8400fafe91f6f6f81729cd0f" category="inline-link-macro-rx"></block>）或完成控制器与交换机之间布线的分步说明：</block>
   <block id="207beda627b93c5c42ae0089f755d368" category="list-text">使用动画（<block ref="07556dbc26930287023a57f9fd6d5afa" category="inline-link-macro-rx"></block>）或将控制器模块连接到单个磁盘架的分步说明。</block>
@@ -8338,9 +8315,6 @@
   <block id="600e46343a5c1b454fe4d6da206b4df4" category="list-text">使用动画 <block ref="acf2617804b40ea229d47bb7c91f9408" category="inline-link-rx"></block>）或完成控制器与交换机之间布线的分步说明：</block>
   <block id="3888a38ba771743aba436340db0ebf5c" category="list-text">使用动画 <block ref="81efed7d5e458f4dd1f779beb1039e7a" category="inline-link-rx"></block>）或将控制器模块连接到单个磁盘架的分步说明。</block>
   <block id="592c78e6a752254c571ef3ec19ab4f02" category="list-text">使用动画 <block ref="d27a08094aa14ff3e85358b5dea53060" category="inline-link-rx"></block>）将笔记本电脑连接到管理交换机。</block>
-  <block id="40b8d4029fd45462b5253feed39a5dd7" category="doc">更换控制器模块— FAS500f</block>
-  <block id="2793f813a4803a99d34c84da3cc988ff" category="doc">更换控制器模块— FAS8300 和 FAS8700</block>
-  <block id="05e9126f65b50fdcc5343f6e7a30ee13" category="doc">更换控制器模块— AFF A200</block>
   <block id="09ba8705674baa2bb12600bee5888bda" category="paragraph">从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`</block>
   <block id="6c0c224b8e9179a7c25ea93532145021" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 ` * y*` 来启动此节点。</block>
   <block id="d7330da3fefbffbe126bbfae916b2005" category="list-text">等待 `savecore`命令完成，然后再发出交还。</block>
@@ -8375,4 +8349,30 @@
   <block id="e65c4f5a39a793b014b217f53d825905" category="list-text">将控制器模块插入机箱。</block>
   <block id="04767794ed138df3aa3f519e53e96bcc" category="list-text">使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令仅交还 CFO 聚合。</block>
   <block id="2f6a11061d2c04a9d9730e06edaa97a6" category="list-text">交还完成后，使用 `storage failover show` 和 storage failover show-giveback 命令检查故障转移和交还状态。</block>
+  <block id="c3386973a8577ef6660070259a82cd76" category="doc">更换控制器模块— AFF C190</block>
+  <block id="c9c809ca8c1b2b30aa31e5c08e6ae9b7" category="doc">更换控制器模块— AFF A320</block>
+  <block id="610ebc0f92fc28129db791d1a49c1f29" category="doc">更换控制器模块— FAS8200</block>
+  <block id="b0d5a2d8a517331a96575fab39f0fa39" category="doc">更换控制器模块— AFF A400</block>
+  <block id="056d6aad4fcec151946644ac7f6ae3b1" category="doc">更换控制器模块— FAS2600</block>
+  <block id="3e89a7e8253deaaafd229f0b5d846d1f" category="doc">更换控制器模块— AFF A220 和 FAS2700</block>
+  <block id="480b3c349b362d8de0e5dd543018f343" category="doc">更换控制器模块— AFF A300</block>
+  <block id="ccec777db695e38806674625cc62f7e7" category="doc">Replace the chassis - AFF A700 and FAS9000</block>
+  <block id="5c70a21a4bf917f555a7a40f163722da" category="doc">更换控制器模块— AFF A250</block>
+  <block id="e2e8db7924e3d9318e09779273f259de" category="doc">更换风扇— AFF A250</block>
+  <block id="06d66c67969e8cc83aa7a9e6d2fc60ac" category="doc">更换控制器模块— FAS500f</block>
+  <block id="bc6668cc9984ca2f625c085c1e7dbe6c" category="doc">更换风扇— FAS500f</block>
+  <block id="19a811a1c8fa92be18ccc21559ddf7aa" category="doc">更换控制器模块— FAS8300 和 FAS8700</block>
+  <block id="04e15e9a02c818cf4604502b8aa82611" category="doc">Replace the chassis - FAS8300 and FAS8700</block>
+  <block id="68a0957bf09993ad8f778b0639748996" category="doc">更换控制器模块— AFF A200</block>
+  <block id="3be4ae09b22ea5360288545a24880c28" category="doc">更改磁盘架 ID — NS224 磁盘架</block>
+  <block id="0762300f2a8dd2bff06afd7351ec8ef1" category="doc">热插拔驱动器— NS224 磁盘架</block>
+  <block id="5aed6a98c7ac6ecb340a8cba673f21ee" category="doc">更换 DIMM — NS224 磁盘架</block>
+  <block id="0180fca5d6d6f316871d594ac7544594" category="doc">热添加— NS224 磁盘架</block>
+  <block id="434f3aa81e59feed4b4d3bce49554cae" category="doc">将磁盘架作为交换机连接的存储进行布线— NS224 磁盘架</block>
+  <block id="c73d4add4ce70620f5ca4fc2015594eb" category="doc">更换 NSM 模块— NS224 磁盘架</block>
+  <block id="4ad55e79178c3c134eb522d65c76b5c2" category="doc">热插拔电源— NS224 磁盘架</block>
+  <block id="5ab6b1866b40378c26742eb72c15ed69" category="doc">更换风扇— NS224 磁盘架</block>
+  <block id="a081405b72103e6782da04b82551c8eb" category="doc">热移除磁盘架— NS224 磁盘架</block>
+  <block id="be2d5bbbf386ed8452b538db844b35b7" category="doc">更换实时时钟电池— NS224 磁盘架</block>
+  <block id="64a2812889b70b6d36a5583faf1a0d3e" category="doc">更换启动介质— NS224 磁盘架</block>
 </blocks>
