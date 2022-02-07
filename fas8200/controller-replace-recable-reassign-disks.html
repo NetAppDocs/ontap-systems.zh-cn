@@ -5204,11 +5204,27 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 16:08:21 +0000">01/31/2022</time>
+    <time datetime="2022-02-07 15:43:00 +0000">02/07/2022</time>
     
   
 
 <span>提供者
+  <a target="_blank" href="https://github.com/thrisun">
+    <img  class="avatar avatar-small"
+          alt="thrisun"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/30325635?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-martyh">
+    <img  class="avatar avatar-small"
+          alt="netapp-martyh"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -5286,7 +5302,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>node1&gt; storage failover show
+<pre>node1&gt; `storage failover show`
                                     Takeover
 Node              Partner           Possible     State Description
 ------------      ------------      --------     -------------------------------------
@@ -5369,7 +5385,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>node1&gt; storage disk show -ownership
+<pre>node1&gt; `storage disk show -ownership`
 
 Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
 ----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
@@ -5418,7 +5434,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 </div>
 </li>
 <li>
-<p>从运行状况良好的节点查看旧系统 ID ： <code>MetroCluster node show -fields node-systemID ， dr-partner-systemID</code></p>
+<p>从运行状况良好的节点查看旧系统 ID ： <code>`MetroCluster node show -fields node-systemID</code> ， dr-partner-systemID`</p>
 <div class="paragraph">
 <p>在此示例中， Node_B_1 是旧节点，旧系统 ID 为 118073209 ：</p>
 </div>

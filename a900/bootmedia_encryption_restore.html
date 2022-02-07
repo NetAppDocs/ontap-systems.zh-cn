@@ -5204,11 +5204,35 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 16:08:21 +0000">01/31/2022</time>
+    <time datetime="2022-02-07 15:43:00 +0000">02/07/2022</time>
     
   
 
 <span>提供者
+  <a target="_blank" href="https://github.com/dougthomp">
+    <img  class="avatar avatar-small"
+          alt="dougthomp"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/76076341?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-martyh">
+    <img  class="avatar avatar-small"
+          alt="netapp-martyh"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/thrisun">
+    <img  class="avatar avatar-small"
+          alt="thrisun"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/30325635?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -5218,12 +5242,12 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM ）， NetApp 存储加密（ NSE ）或 NetApp 卷加密（ NVE ）的系统的步骤。</p>
+<p>检查环境变量后，您必须完成特定于还原板载密钥管理器（ OKM ）， NetApp 存储加密（ NSE ）和 NetApp 卷加密（ NVE ）的步骤。</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>确定应使用哪个部分还原 OKM ， NSE 或 NVE 配置：如果已与板载密钥管理器一起启用 NSE 或 NVE ，则必须还原在此操作步骤开头捕获的设置。</p>
+<p>确定应使用哪个部分还原 OKM ， NSE 或 NVE 配置：如果已启用 NSE 或 NVE 以及板载密钥管理器，则必须还原在此操作步骤开头捕获的设置。</p>
 <div class="ulist">
 <ul>
 <li>
@@ -5285,7 +5309,7 @@
 <p>出现消息： Do you donde halt this node rather than wait [y/n] ？，输入： <code>y</code></p>
 </li>
 <li>
-<p>在 LOADER 提示符处，输入 boot_ontap menu 命令。</p>
+<p>在 LOADER 提示符处，输入 <code>boot_ontap menu</code> 命令。</p>
 </li>
 </ol>
 </div></div></td>
@@ -5300,7 +5324,7 @@
 <p>输入您在此操作步骤开头从客户处获取的板载密钥管理器的密码短语。</p>
 </li>
 <li>
-<p>When prompted to enter the backup data, paste the backup data you captured at the beginning of this procedure, when asked.粘贴 security key-manager backup show 或 security key-manager on板 载 show-backup 命令的输出。</p>
+<p>当系统提示您输入备份数据时，请根据要求粘贴您在本节开头捕获的备份数据。粘贴 <code>security key-manager backup show</code> 或 <code>security key-manager on板 载 show-backup</code> 命令的输出。</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5308,7 +5332,7 @@
 <img src="/us-en/ontap-systems/images/note.svg" alt="注">
 </td>
 <td class="content">
-数据是从 security key-manager backup show 或 security key-manager on板 载 show-backup 命令输出的。
+数据是从 <code>ssecurity key-manager backup show</code> 或 security key-manager on板 载 show-backup` 命令输出的。
 </td>
 </tr>
 </table>
@@ -5318,6 +5342,16 @@
 </div>
 <div class="paragraph">
 <p>输入备份数据：</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>--------------- 开始备份——————— QABWIETLESBCbG9iAAAAAAAAAAAAAAAAAAEAAAACADID+bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvOlH0AAAMH7qDLIWAH1DBZ12piVOT9ATSFMT0C0TlYAFASS4ADAAAAAAQAAAAAAAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAQAAAQAA。。。H4nPQM0nrDRYRA9Scv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAA</p>
+</div>
+<div class="paragraph">
+<p>+--------------- 结束备份———————</p>
+</div>
+</div>
 </div>
 </li>
 <li>
@@ -5364,7 +5398,7 @@
 </div>
 </li>
 <li>
-<p>交还完成后，使用 <code>storage failover show</code> 和 storage failover show-giveback 命令检查故障转移和交还状态。</p>
+<p>交还完成后，使用 <code>storage failover show</code> 和 <code>storage failover show-giveback</code> 命令检查故障转移和交还状态。</p>
 <div class="paragraph">
 <p>仅显示 CFO 聚合（根聚合和 CFO 模式的数据聚合）。</p>
 </div>
@@ -5374,10 +5408,10 @@
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>运行 security key-manager 板载同步命令，然后在出现提示时输入密码短语。</p>
+<p>运行 <code>security key-manager on板 载 sync</code> 命令，然后在出现提示时输入密码短语。</p>
 </li>
 <li>
-<p>输入 security key-manager key query 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 <code>restored</code> column = <code>yes/true</code> 。</p>
+<p>输入 <code>security key-manager key-query</code> 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 <code>restored</code> column = <code>yes/true</code> 。</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5404,7 +5438,7 @@
 <p>使用 <code>storage failover giveback -fromnode local</code> 命令交还目标节点。</p>
 </li>
 <li>
-<p>使用 <code>storage failover show</code> 命令在交还报告完成 3 分钟后检查交还状态。</p>
+<p>使用 <code>storage failover show</code> 命令在交还报告完成三分钟后检查交还状态。</p>
 <div class="paragraph">
 <p>如果 20 分钟后交还未完成，请联系客户支持。</p>
 </div>
@@ -5416,10 +5450,10 @@
 </div>
 </li>
 <li>
-<p>将控制台缆线移至目标节点，然后运行 version -v 命令以检查 ONTAP 版本。</p>
+<p>将控制台缆线移至目标节点，然后运行 <code>version -v</code> 命令以检查 ONTAP 版本。</p>
 </li>
 <li>
-<p>如果您使用 storage failover modify -node local -auto-giveback true 命令禁用了自动交还，则还原自动交还。</p>
+<p>使用 <code>storage failover modify -node local -auto-giveback true</code> 命令禁用自动交还后，可将其还原。</p>
 </li>
 </ol>
 </div>
@@ -5468,7 +5502,7 @@
 <p>登录到配对节点。</p>
 </li>
 <li>
-<p>使用 storage failover show 命令确认目标节点已准备好进行交还。</p>
+<p>使用 <code>storage failover show</code> 命令确认目标节点已准备好进行交还。</p>
 </li>
 </ol>
 </div></div></td>
@@ -5511,22 +5545,22 @@
 <p>等待 3 分钟，然后使用 storage failover show 命令检查故障转移状态。</p>
 </li>
 <li>
-<p>在 clustershell 提示符处，输入 net int show -is-home false 命令以列出不在其主节点和端口上的逻辑接口。</p>
+<p>在 clustershell 提示符处，输入 <code>net int show -is-home false</code> 命令以列出不在其主节点和端口上的逻辑接口。</p>
 <div class="paragraph">
-<p>如果任何接口列为 <code>false</code> ，请使用 net int revert 命令将这些接口还原回其主端口。</p>
+<p>如果任何接口列为 <code>false</code> ，请使用 <code>net int revert</code> 命令将这些接口还原回其主端口。</p>
 </div>
 </li>
 <li>
-<p>将控制台缆线移至目标节点，然后运行 version -v 命令以检查 ONTAP 版本。</p>
+<p>将控制台缆线移至目标节点，然后运行 <code>version -v</code> 命令以检查 ONTAP 版本。</p>
 </li>
 <li>
-<p>如果您使用 storage failover modify -node local -auto-giveback true 命令禁用了自动交还，则还原自动交还。</p>
+<p>使用 <code>storage failover modify -node local -auto-giveback true</code> 命令禁用自动交还后，可将其还原。</p>
 </li>
 <li>
-<p>在 clustershell 提示符处使用 storage encryption disk show 查看输出。</p>
+<p>在 clustershell 提示符处使用 <code>storage encryption disk show</code> 查看输出。</p>
 </li>
 <li>
-<p>使用 security key-manager key query 命令显示存储在密钥管理服务器上的身份验证密钥的密钥 ID 。</p>
+<p>使用 <code>security key-manager key-query</code> 命令显示存储在密钥管理服务器上的加密和身份验证密钥。</p>
 <div class="ulist">
 <ul>
 <li>
@@ -5550,7 +5584,7 @@
 <li>
 <p>如果 <code>密钥管理器类型</code> = <code>板载</code> 和 <code>还原</code> 列 = <code>是 / 真</code> 以外的任何内容，请使用 security key-manager 板载同步命令重新同步密钥管理器类型。</p>
 <div class="paragraph">
-<p>使用 security key-manager key query 验证所有身份验证密钥的 <code>restored</code> column = <code>yes/true</code> 。</p>
+<p>使用 <code>security key-manager key-query</code> 命令验证所有身份验证密钥的 <code>restored</code> column = <code>yes/true</code> 。</p>
 </div>
 </li>
 </ul>
@@ -5563,7 +5597,7 @@
 <p>使用 storage failover giveback -fromnode local 命令交还节点。</p>
 </li>
 <li>
-<p>如果您使用 storage failover modify -node local -auto-giveback true 命令禁用了自动交还，则还原自动交还。</p>
+<p>使用 <code>storage failover modify -node local -auto-giveback true</code> 命令禁用自动交还后，可将其还原。</p>
 </li>
 </ol>
 </div>

@@ -5204,11 +5204,35 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 16:08:21 +0000">01/31/2022</time>
+    <time datetime="2022-02-07 15:43:00 +0000">02/07/2022</time>
     
   
 
 <span>提供者
+  <a target="_blank" href="https://github.com/dougthomp">
+    <img  class="avatar avatar-small"
+          alt="dougthomp"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/76076341?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-martyh">
+    <img  class="avatar avatar-small"
+          alt="netapp-martyh"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/thrisun">
+    <img  class="avatar avatar-small"
+          alt="thrisun"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/30325635?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -5841,9 +5865,9 @@ node2             node1             -            Waiting for giveback (HA mailbo
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>交还完成后，确认 HA 对运行状况良好且可以进行接管： storage failover show</p>
+<p>交还完成后，确认 HA 对运行状况良好且可以接管： <code>storage failover show</code></p>
 <div class="paragraph">
-<p>storage failover show 命令的输出不应包含 System ID changed on partner 消息。</p>
+<p><code>storage failover show</code> 命令的输出不应包含 System ID changed on partner 消息。</p>
 </div>
 </li>
 </ol>
@@ -5871,7 +5895,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 <li>
 <p>如果系统采用 MetroCluster 配置，请监控节点的状态： <code>MetroCluster node show</code></p>
 <div class="paragraph">
-<p>在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个节点将显示已配置状态，并启用 DR 镜像并显示正常模式。MetroCluster node show -fields node-SystemID 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</p>
+<p>在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个节点将显示已配置状态，并启用 DR 镜像并显示正常模式。<code>MetroCluster node show -fields node-SystemID</code> 命令输出将显示旧系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</p>
 </div>
 </li>
 <li>
@@ -5926,21 +5950,26 @@ dr-group-id            cluster node           configuration-state
 <div class="paragraph lead">
 <p>在更换先前配置为使用存储或卷加密的存储系统的控制器模块或 NVRAM 模块后，您必须执行其他步骤以提供无中断加密功能。对于未启用存储或卷加密的存储系统，您可以跳过此任务。</p>
 </div>
-<div class="paragraph">
+<div class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
 <p>使用中的相应操作步骤还原存储或卷加密功能 <a href="https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html">"使用命令行界面概述 NetApp 加密"</a>。</p>
-</div>
-<div class="paragraph">
+</li>
+<li>
 <p>根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>"`还原板载密钥管理加密密钥` "</p>
+<p><a href="https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html">"还原板载密钥管理加密密钥"</a></p>
 </li>
 <li>
-<p>"`还原外部密钥管理加密密钥` "</p>
+<p><a href="https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html">"还原外部密钥管理加密密钥"</a></p>
 </li>
 </ul>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
