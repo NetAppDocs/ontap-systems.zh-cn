@@ -17,7 +17,7 @@
 +
 由于系统 ID 不匹配，系统提示您覆盖系统 ID 时，您必须输入 `Y` 。
 
-. 从运行状况良好的节点查看旧系统 ID ： `MetroCluster node show -fields node-systemID ， dr-partner-systemID`
+. 从运行状况良好的节点查看旧系统 ID ： ``MetroCluster node show -fields node-systemID` ， dr-partner-systemID`
 +
 在此示例中， Node_B_1 是旧节点，旧系统 ID 为 118073209 ：
 

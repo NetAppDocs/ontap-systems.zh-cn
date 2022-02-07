@@ -231,7 +231,7 @@ HA 对
 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["《 ONTAP 9 高可用性配置指南》"]
 
 ====
-.. 使用 `storage failover show-giveback` 命令监控交还操作的进度。
+.. 使用 ``storage failover show` -giveback` 命令监控交还操作的进度。
 .. 交还操作完成后，使用 `storage failover show` 命令确认 HA 对运行状况良好，并且可以进行接管。
 .. 如果您使用 `storage failover modify` 命令禁用了自动交还，请将其还原。
 

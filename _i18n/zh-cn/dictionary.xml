@@ -1466,7 +1466,6 @@
   <block id="0bbc1525261c73e0484c79ecb9b38dc6" category="list-text">从源拔下控制器模块电源。</block>
   <block id="e73f79c9112f5779897d8c0a650b3b99" category="list-text">释放电源线固定器，然后从电源中拔下缆线。</block>
   <block id="1f9529736c8bd4ae7629be26ea8da34d" category="list-text">将前掌插入控制器模块两侧的锁定装置中，用拇指按下控制杆，然后将控制器轻轻拉出机箱几英寸。</block>
-  <block id="43eebcc68df0da086573863f894b0208" category="admonition">如果在卸下控制器模块时遇到困难，请将索引指针从内部穿过指孔（通过跨越臂）</block>
   <block id="0c7b55bb7aff6e5a8118717e6397155b" category="image-alt">DRW A250 PCM 拆卸安装</block>
   <block id="bd017b464f7ccc6f05ea50c47d504548" category="paragraph"><block ref="bd017b464f7ccc6f05ea50c47d504548" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e045615354060a83511b41ee31db4ae9" category="cell">控制杆</block>
@@ -1569,8 +1568,6 @@
   <block id="a2ae6c720a8a0fbf3918f44a33be6b30" category="inline-link">《 ONTAP 9 NetApp 加密高级指南》</block>
   <block id="ba8122bba290a3351611db1b66c99386" category="paragraph"><block ref="ba8122bba290a3351611db1b66c99386" category="inline-link-rx"></block></block>
   <block id="e68c8836280fba147b04a2b14b196600" category="paragraph">根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：</block>
-  <block id="0ba3cc03b09a456d5100379e45dfaaba" category="list-text">"`还原板载密钥管理加密密钥` "</block>
-  <block id="a96d0d7d353c649cc2f1612f3100f861" category="list-text">"`还原外部密钥管理加密密钥` "</block>
   <block id="92f82264c734da3126796f6bfa718d0f" category="section-title">第 3 步：验证 LIF 并注册序列号</block>
   <block id="556aba51608845a42e971c4c7b471837" category="paragraph">在将 _replacement_ 节点恢复使用之前，您应验证 LIF 是否位于其主端口上，如果启用了 AutoSupport ，则注册 _replacement_ 节点的序列号，并重置自动交还。</block>
   <block id="462ec873925d8409f9ead354ff424e1b" category="list-text">验证逻辑接口是否正在向其主服务器和端口报告： `network interface show -is-home false`</block>
@@ -1658,7 +1655,6 @@
   <block id="1b64cdb2f20e2da4f402d5b7b71fb22c" category="paragraph">DIMM 紧紧固定在插槽中。如果没有，请重新插入 DIMM ，使其与插槽重新对齐。</block>
   <block id="ead43025863c239764a3bf49ae31eb66" category="list-text">目视检查 DIMM ，确认其均匀对齐并完全插入插槽。</block>
   <block id="ab3fb33952699fbe3c430cbc883fd07f" category="section-title">第 4 步：安装控制器模块</block>
-  <block id="fc87d7b84ed41775a9327a51a99f1600" category="paragraph">更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。</block>
   <block id="79b7d25a32465f1453599bea780ff825" category="list-text">如果尚未安装此通风管，请安装此通风管。</block>
   <block id="9e8bc2f3ff00e91084e8d9faacfbbbc7" category="image-alt">DRW A250 安装通风管盖</block>
   <block id="d377aa259703e685c1fa1683da0a4acf" category="list-text">合上控制器模块盖并拧紧翼形螺钉。</block>
@@ -1921,7 +1917,6 @@
   <block id="11ce5f5071d3bac04351e20945429ca7" category="list-text">您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用</block>
   <block id="9eacfc37083dfbfb72a750cef9cec4bd" category="paragraph">在更换控制器模块内的组件时，请从机箱中卸下控制器模块。</block>
   <block id="4f654187f77239c29ab18d8f6b107f97" category="section-title">第 3 步：更换或安装夹层卡</block>
-  <block id="40bb0d16d8395cfc4c481b13bcfc8e58" category="paragraph">要更换夹层卡，您必须卸下受损卡并安装更换卡；要安装夹层卡，您必须卸下面板并安装新卡。</block>
   <block id="bacaf7cdccaaf9d43c1abb39a72bebb3" category="paragraph">使用以下视频或表格中的步骤更换夹层卡：</block>
   <block id="5cef9df6cdb8dfb74a9e349922484b98" category="inline-link">更换夹层卡</block>
   <block id="d60b1b5f5dd98f1ef7edf03c0f967cda" category="list-text">更换夹层卡：</block>
@@ -1929,7 +1924,6 @@
   <block id="1d5e6759e2bef51b7fae2c4ab7ce482f" category="paragraph">卸下夹层卡。</block>
   <block id="ec1caaca33d3a05b021847729aa40cf3" category="list-text">拔下与受损夹层卡相关的所有布线。</block>
   <block id="88d1403b9ff7da0e02580013be227aef" category="list-text">卸下受损夹层卡中的所有 SFP 或 QSFP 模块并将其放在一旁。</block>
-  <block id="9f358638435d8a9ef3fe0f035621dcfb" category="list-text">将受损夹层卡直接从插槽中轻轻提起并放在一旁</block>
   <block id="f961927adda34318d2db703a92bee152" category="list-text">从防静电运输袋中取出更换用的夹层卡，并将其与控制器模块的内表面对齐。</block>
   <block id="87328040ae6a340ecbcba7b7a87619d1" category="list-text">将更换用的夹层卡轻轻对齐到位。</block>
   <block id="8e2a462d22bb430aa436ced4c203cc72" category="list-text">将从受损夹层卡中卸下的任何 SFP 或 QSFP 模块插入更换用的夹层卡。</block>
@@ -1945,8 +1939,6 @@
   <block id="fcb5221dab8f227cb578d2942a80851c" category="summary">要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。</block>
   <block id="6b2635d59c8fd6836326288e507b4512" category="doc">更换 NVMEM 电池— AFF A250</block>
   <block id="c8782f79268c8ea2b77de4c0c5d30c89" category="paragraph">根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。</block>
-  <block id="301c48aa12dd5949431fa0e966cbc5fd" category="section-title">第 3 步：更换 NV 电池</block>
-  <block id="aac649b37a5cdcf2f0591a5a163c938a" category="paragraph">要更换 NV 电池，您必须从控制器模块中取出故障电池，然后将更换电池安装到控制器模块中。</block>
   <block id="7a249ce85fd57104704eeac2359bd989" category="paragraph">使用以下视频或表格中的步骤更换 NVMEM 电池：</block>
   <block id="99269e39aac078ea95290aed4992f064" category="inline-link">更换 NVMEM 电池</block>
   <block id="ddc41bc777fec7e9428d17ad3d7a744f" category="list-text">找到并更换控制器模块上受损的 NVMEM 电池。</block>
@@ -2017,7 +2009,6 @@
   <block id="e4ac1bf0fb40fa4b04189d7b631ed1fe" category="list-text">找到散热器和中板之间的 RTC 电池托架，然后完全按照图中所示插入。</block>
   <block id="b54f7ad3db2c3b1f5f075be84cb94813" category="image-alt">DRW A250 安装 RTC 电池</block>
   <block id="77b955f90610902ce85885fceef7f34d" category="cell">正极朝上，将电池滑入电池外壳的卡舌下。</block>
-  <block id="7bf00f66a7951f3291dc46d961725e91" category="paragraph">将电池轻轻推入到位，并确保卡舌将其固定到外壳上。* 注意： * 主动将其推入可能会使电池再次发生原因弹出。</block>
   <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
   <block id="f03bfb81b0d6ffbb00f9e9e58c111c93" category="list-text">目视检查电池，确保其已完全安装到电池架中，并且极性正确。</block>
   <block id="529a5b75d801eb658fc7856f114ac8e5" category="section-title">第 4 步：重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期</block>
@@ -2063,7 +2054,6 @@
   <block id="117a00785fdf02074d05fddbc86f7975" category="paragraph">如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。</block>
   <block id="fa5ccc1fbe9017cdfc585a7ca2f2637a" category="paragraph">此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。</block>
   <block id="ade99ddf24ee766d0846b6173160e37f" category="list-text">如果 _replacement_ 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： `halt`</block>
-  <block id="fbe06d7223609c920831e2dffe0e0a96" category="list-text">等待 _replacement_ 节点控制台上显示 `waiting for giveback...` 消息，然后从运行状况良好的节点上，验证是否已自动分配新的配对系统 ID ： storage failover show</block>
   <block id="3e06d4583220bf6e3116f03fc794dab1" category="paragraph">在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。</block>
   <block id="23b40d7aca05dd545bc77221d79f3fbe" category="list-text">从运行状况良好的节点中，验证是否已保存任何核心转储：</block>
   <block id="0024dc783d0c8562c1fc277cc83c5743" category="list-text">更改为高级权限级别： `set -privilege advanced`</block>
@@ -2077,10 +2067,8 @@
   <block id="25df42cd5ae2e7223d293aeda0c623ed" category="admonition">如果交还被否决，您可以考虑覆盖此否决。</block>
   <block id="1e2a0fcc2986a119062540d6a8a9681f" category="inline-link">查找适用于您的 ONTAP 9 版本的《高可用性配置指南》</block>
   <block id="8761710e49b8b20d4b6cc2adb064a0b2" category="paragraph"><block ref="8761710e49b8b20d4b6cc2adb064a0b2" category="inline-link-rx"></block></block>
-  <block id="a138242d674238dc6089a602c6c8909b" category="list-text">交还完成后，确认 HA 对运行状况良好且可以进行接管： storage failover show</block>
   <block id="4ba4f1aaf81ebb9600884198e939b4a2" category="paragraph">属于 _replacement_ 节点的磁盘应显示新的系统 ID 。在以下示例中， node1 拥有的磁盘现在显示新的系统 ID 1873775277 ：</block>
   <block id="ee6adef69d8b8786ea9c8ed7878b0970" category="list-text">如果系统采用 MetroCluster 配置，请监控节点的状态： `MetroCluster node show`</block>
-  <block id="96f33e8ca303de63172f7e23cbb961c5" category="paragraph">在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个节点将显示已配置状态，并启用 DR 镜像并显示正常模式。MetroCluster node show -fields node-SystemID 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
   <block id="e73102dae0c8597be4416dbc7fd1d930" category="list-text">如果节点采用 MetroCluster 配置，则根据 MetroCluster 状态，如果原始所有者是灾难站点上的节点，请验证 DR 主 ID 字段是否显示磁盘的原始所有者。</block>
   <block id="04c5eb35419cf0bd4d5c48c1e597c8d5" category="paragraph">如果同时满足以下条件，则必须执行此操作：</block>
   <block id="6a7d6dc8ed992a6e2e0f4bae8d5e7c87" category="list-text">MetroCluster 配置处于切换状态。</block>
@@ -2257,14 +2245,11 @@
   <block id="03582aa0f2a939731c07b9900422cd22" category="list-text">如果受损节点处于登录提示符处，请以 `admin` 身份登录。</block>
   <block id="e090553f6fd47e1f1ead7225617772ef" category="list-text">如果受损节点位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的节点上。</block>
   <block id="1192b5377c1ad9dfaf75cb33a7333843" category="list-text">使用 `version -v` 命令检查受损节点（如果已启动）或配对节点（如果受损节点已关闭）上运行的 ONTAP 的版本：</block>
-  <block id="3e556f43ff9d07244b44b88a4a6aa88c" category="list-text">如果命令输出中显示 &lt;lno-dur&gt; ，则表示系统不支持 NVE ，请继续关闭控制器。</block>
   <block id="ababafc28230637bc7ee0dc0762d3d7a" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至下一节。</block>
   <block id="e1cb9a7881589d8bbc03d3bc416f6eb6" category="list-text">如果受损节点属于 HA 配置的一部分，请从运行状况良好的节点禁用自动交还： `storage failover modify -node local -auto-giveback false` 或 `storage failover modify -node local -auto-giveback-after-panic false`</block>
   <block id="ddf5ebb5c1d9ad17f6222185e1822bf6" category="section-title">在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE</block>
   <block id="bf3223ea252f144b1ff6ef82d50d0928" category="paragraph">在关闭受损节点之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。如果是，则需要验证配置。</block>
-  <block id="dae6a2cc2a2023e3e79e3d40be7bb9a4" category="list-text">验证是否为集群中的任何卷配置了 NVE ： `volume show -is-encrypted true`</block>
   <block id="757faef19dddc204a17e4b5890ef2088" category="paragraph">如果输出中列出了任何卷，则会配置 NVE ，您需要验证 NVE 配置。如果未列出任何卷，请检查是否已配置 NSE 。</block>
-  <block id="084c3316184308a63e36717ea864bd3f" category="list-text">验证是否已配置 NSE ： `storage encryption disk show`</block>
   <block id="52f57fb3e4c5bd20a2a75ecc9242ad9a" category="list-text">如果未显示任何磁盘，则表示未配置 NSE 。</block>
   <block id="3f6980a632f1549a6ce891a226389596" category="list-text">如果未配置 NVE 和 NSE ，则可以安全地关闭受损节点。</block>
   <block id="e11e37bddb45a2b092655cc718d388d5" category="section-title">验证 NVE 配置</block>
@@ -2282,11 +2267,9 @@
   <block id="c664ce90df89e48082cd24116ca9c5cf" category="list-text">将外部密钥管理身份验证密钥还原到集群中的所有节点： `security key-manager external restore`</block>
   <block id="aa93e7bc262e7964a396fd16f3a41d6b" category="paragraph">如果命令失败，请联系 NetApp 支持部门。</block>
   <block id="31509d9d2ecd7357c2d79b6100170edf" category="paragraph"><block ref="31509d9d2ecd7357c2d79b6100170edf" category="inline-link-rx"></block></block>
-  <block id="e084232082046eab4e75b332c2a9fbe5" category="list-text">验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key query`</block>
   <block id="09344dc6761d2a7f8e0074911899de26" category="list-text">如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示除 `yes` 以外的任何内容：</block>
   <block id="f5321e091dead7c4ead8728aa3332803" category="list-text">输入板载 security key-manager sync 命令： `ssecurity key-manager on板 载同步`</block>
   <block id="29494bbea0c4b9c81b504ce3c9f0c776" category="admonition">在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。<block ref="7bc6752d2076d2c755eaebbdfeb91d23" category="inline-link-rx"></block></block>
-  <block id="7ef95216354d37756f204adf213d9c42" category="list-text">验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key query`</block>
   <block id="5420f491e628cc60c7e1ffcad20d35da" category="list-text">输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`</block>
   <block id="d518426b6d79ce1aa6dcf60eb5c6300b" category="list-text">您可以安全地关闭节点。</block>
   <block id="8eb91adaedfd18d8e21833ed58db7673" category="section-title">验证 NSE 配置</block>
@@ -3420,7 +3403,6 @@
   <block id="1f42e9038c6c0f88bb01f3472a6a2193" category="list-text">_health_ 节点是受损节点的 DR 配对节点。</block>
   <block id="055c467c8479829e2d2875f71f45450a" category="list-text">如果尚未重新启动 _replacement_ 节点，输入 `Ctrl-C` 以中断启动过程，然后从显示的菜单中选择启动到维护模式的选项。</block>
   <block id="141e1f75afbd19033a631ee380e86c43" category="paragraph">由于系统 ID 不匹配，系统提示您覆盖系统 ID 时，您必须输入 `Y` 。</block>
-  <block id="65107557612cfed10389e042a180e7e6" category="list-text">从运行状况良好的节点查看旧系统 ID ： `MetroCluster node show -fields node-systemID ， dr-partner-systemID`</block>
   <block id="741c2196cc7abcf971992d4e656da7ea" category="paragraph">在此示例中， Node_B_1 是旧节点，旧系统 ID 为 118073209 ：</block>
   <block id="2aa94dd7242f16ec9126f4d25ad06195" category="list-text">在受损节点上的维护模式提示符处查看新的系统 ID ： `disk show`</block>
   <block id="761dab2a2eaf4e205d39d0acc4925d17" category="paragraph">在此示例中，新系统 ID 为 118065481 ：</block>
@@ -4607,7 +4589,6 @@
   <block id="a81df2e570dc98493762bda80de1eb57" category="paragraph">抬起电池。</block>
   <block id="e7e4ada0a9c5f002ced547a8ce4c2ff5" category="admonition">记下电池的极性。</block>
   <block id="326f84612308aa43b411fe6225835ced" category="paragraph">将电池轻轻推入到位，并确保卡舌将其固定到外壳上。</block>
-  <block id="a04e1fb20d510190e695db05aae2212e" category="paragraph">* 注意： * 主动将其推入可能会使电池再次发生原因弹出。</block>
   <block id="3b9e3b1b2ab53b0241dc5867f9200f0f" category="section-title">第 5 步：完成更换过程</block>
   <block id="f201ab41a4eb414e420e16dba34a7cfc" category="doc">重新配置系统并重新分配磁盘— FAS500f</block>
   <block id="eccbdb663759dbfcdc939ff1dfb3e3e8" category="doc">FAS500f 系统文档</block>
@@ -4760,7 +4741,6 @@
   <block id="b279b6600d5af224d26ab7bab80082c7" category="section-title">第 2 步：验证 HA 系统上的系统 ID 更改</block>
   <block id="1a654e01c14bfd5cd4699372c3ef6bf9" category="list-text">如果 _replacement_ 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符：</block>
   <block id="5df49253d4e35c978d098ad728de36b5" category="list-text">等待 _replacement_ 节点控制台上显示 `waiting for giveback...` 消息，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ：</block>
-  <block id="7bbd6982e43cdc0293fb6f27cb2ba130" category="paragraph">` * 存储故障转移显示 *`</block>
   <block id="109773e48c8731216edae51d1686c8bc" category="list-text">更改为高级权限级别：</block>
   <block id="e510b81f84ff95d9355a3f8777aac54e" category="paragraph">系统提示您继续进入高级模式时，您可以回答 ` * Y*` 。此时将显示高级模式提示符（ * &gt; ）。</block>
   <block id="cd398a68db8f00186aae955968cc06d7" category="list-text">保存任何核心转储：</block>
@@ -4770,7 +4750,6 @@
   <block id="4b76b0b24680628173c043d577e24169" category="list-text">从运行正常的节点中，交还已更换节点的存储：</block>
   <block id="84a63e5c67c16845df7acbd3cae860da" category="paragraph">` * 存储故障转移交还 -ofnode _replacement_node_name_*`</block>
   <block id="393be3b3a8c5c898411ba572d160869b" category="paragraph">如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 ` * y*` 。</block>
-  <block id="994c36e7380588cdc99eb0b40ea52d7c" category="paragraph">`storage failover show` 命令的输出。不应包含 `Ssystem ID changed on partner` 消息。</block>
   <block id="fdf71b0bf15eace3d1fb5c829e6fd6bd" category="list-text">验证每个节点是否存在预期卷：</block>
   <block id="e3de43ab4017cb33908b0ff634023d7d" category="paragraph">` * vol show -node _node-name_*`</block>
   <block id="d549e9b55ccc784fa571f784621470ef" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它：</block>
@@ -7589,7 +7568,6 @@
   <block id="937d0c70d7e423315a950793d262cee4" category="sidebar">Cisco 9336</block>
   <block id="72c0fe6bd065c65c37725e2e14ab307a" category="sidebar">共享配置中的 Cisco 9336</block>
   <block id="1bc92df4184e6d4338aed95b6891adc1" category="sidebar">Cisco 92300YC</block>
-  <block id="4b415c21d483b2c59b97efc134f13a2f" category="section-title">选项 2 ：系统位于 MetroCluster 中</block>
   <block id="442396e207d697f3466573acd63cdeb7" category="section-title">选项 2 ：系统位于 MetroCluster 中</block>
   <block id="bd8eb6c12d8928906b264ff9daf7b9e7" category="section-title">选项 2 ：控制器位于 MetroCluster 中</block>
   <block id="686631a3f808d481cbff656f883e6657" category="section-title">Option 3: Controller is in a two-node MetroCluster</block>
@@ -7825,7 +7803,6 @@
   <block id="d61a84f0b033dd225ff9a1af9b0f08a5" category="paragraph">Lift the battery up.*Note:* Make a note of the polarity of the battery.</block>
   <block id="9bc926f854c0657b4a72a1008c1e9b68" category="paragraph"><block ref="9bc926f854c0657b4a72a1008c1e9b68" category="inline-link-macro-rx"></block></block>
   <block id="78929efae941c9a4e2fc6993c4c10c4e" category="paragraph">您必须具有一个格式化为 MBR/FAT32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。</block>
-  <block id="f8030e72e320113cd38b31fd4e52b741" category="list-text">使用 1 号磁性螺丝刀插入并拧紧启动介质上的螺钉。</block>
   <block id="f7b32babba20f290222a62a499496335" category="section-title">选项 2 ： MetroCluster 中的系统</block>
   <block id="62d2a69a13772574552f6d8e154bf2c0" category="paragraph"><block ref="62d2a69a13772574552f6d8e154bf2c0" category="inline-link-macro-rx"></block></block>
   <block id="e2106e16f585b6dc7ad5df82ef42d4c7" category="paragraph"><block ref="e2106e16f585b6dc7ad5df82ef42d4c7" category="inline-link-macro-rx"></block></block>
@@ -7845,7 +7822,6 @@
   <block id="7676556d14b3f7dfc7ddc885b585b132" category="list-text">在 _health_ 节点上，检查系统时间： `show date`</block>
   <block id="704ce524afb02bcf845b03e8ae369f8b" category="paragraph">如果修复被否决，您可以使用 ` override-vetoes` 参数重新发出 `MetroCluster heal` 命令。如果使用此可选参数，则系统将覆盖任何阻止修复操作的软否决。</block>
   <block id="c4761cfb1761b743925b9f1be16248cb" category="list-text">Enter the command to display the OKM backup information: `security key-manager backup show`</block>
-  <block id="a3410f705ab8a22cd8e4955b03ee2420" category="list-text">输入命令以显示 OKM 备份信息： ``security key-manager backup show``</block>
   <block id="9829800481ae88069f363ca18226b993" category="list-text">输入命令以备份 OKM 信息： ``security key-manager backup show``</block>
   <block id="dfeb46620d45b8d49ed48c1634840b5c" category="admonition">Make sure that OKM information is saved in your log file.在可能需要手动恢复 OKM 的灾难情形下，需要此信息。</block>
   <block id="52ca5a52198c80398dfe6a706737b20e" category="paragraph">You must have a USB flash drive, formatted to FAT32, with the appropriate amount of storage to hold the `image_xxx.tgz`.</block>
@@ -7901,18 +7877,8 @@
   <block id="c45c9fc04ba9ebcfc2085fb4d27cb308" category="paragraph">replacement_ 节点将收回其存储并完成启动。</block>
   <block id="e52d65661673e0d8112057f135b30a91" category="inline-link">手动交还命令</block>
   <block id="85bdc20f7292dbafd4caa42c19f7b123" category="paragraph">有关详细信息，请参见<block ref="fea6157c393b81b627aed2aca6311576" category="inline-link-rx"></block> 主题以覆盖否决。</block>
-  <block id="c56c4e68e67a43bbcea54bcb10a45c50" category="paragraph">The MetroCluster configuration takes a few minutes after the replacement to return to a normal state, at which time each node will show a configured state, with DR Mirroring enabled and a mode of normal.MetroCluster node show -fields node-SystemID 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
   <block id="c081ffc5acf576c85556813974927192" category="list-text">_replacement_ 节点是灾难站点上磁盘的当前所有者。</block>
   <block id="7be085f8f1dc91cbac9f773985faef24" category="paragraph">有关详细信息，请参见<block ref="4b1c17d30e94cc8d68adcd4265a76547" category="inline-link-rx"></block> 主题。</block>
-  <block id="a3ac7e9d8980de7907636c8bba9ce65b" category="summary">NVMe SSD FlashCache 模块（ FlashCache 或缓存模块）仅位于 FAS9000 系统插槽 6 中 NVRAM10 模块的正面。Beginning with ONTAP 9.4, you can hot-swap the caching module of the same capacity from the same or different supported vendor.</block>
-  <block id="fb796745f1b93e7c27af0a928be9d5ae" category="doc">热插拔缓存模块— FAS9500</block>
-  <block id="500dc5c4c3fabaf17658fcf1457f4d0a" category="list-text">在管理员权限级别中，准备要更换的目标 NVMe 插槽，并在系统提示是否继续时回答 `y` ： `ssystem controller slot module replace -node node_name -slot slot_number` 以下命令会准备 node1 上的插槽 6-2 以进行更换，并显示一条消息，指出可以安全更换：</block>
-  <block id="542b8ada0f753c9ce009ed6d7d1f2bc7" category="paragraph">NVMe 插槽状态会在需要更换的缓存模块的屏幕输出中显示 power-off 。</block>
-  <block id="948a2b625585740c830fda62dae13d97" category="list-text">按下缓存模块正面的 Terra cotta 释放按钮。</block>
-  <block id="885f16adbb6d40be3fd7f28e30f3dbf2" category="list-text">使用 system controller slot module insert 命令使替代缓存模块联机，如下所示：</block>
-  <block id="01749eec96259584a0543cfb51c7496d" category="list-text">使用 system controller slot module show 命令验证插槽状态。</block>
-  <block id="4b75f27177276fe0e6f2c240be46a30d" category="paragraph">确保命令输出将插槽 6-1 或 6-2 的状态报告为已启动并可运行。</block>
-  <block id="14322a1f6cf98e92283f796431b8f072" category="list-text">包括： ./_include/complete_rma_step.adoc]]</block>
   <block id="d35fd8965949830b92555b33686beb19" category="doc">更换电源— AFF A900</block>
   <block id="12ccb6284dde6c218f4afb3d3857d96e" category="list-text">按住电源手柄上的 Terra cotta 按钮，然后将电源从机箱中拉出。</block>
   <block id="5fd8a0b2e3d84890a789982e8b627534" category="inline-link">动画—删除 / 安装 PSU</block>
@@ -8048,7 +8014,6 @@
   <block id="eeacd9b31ab0c2f60f1d13e5632f7f13" category="list-text">使用 saveenv 命令保存所做的更改。</block>
   <block id="29d4dec218aeaffabfed6dcc8fd1ad45" category="list-text">If your system has onboard keymanager, NSE or NVE configured, go to <block ref="39910b5f3ea1ee39d8059faae857cc98" category="inline-xref-macro-rx"></block></block>
   <block id="b52d8d1d987722da12d16df8a0a63541" category="list-text">在 LOADER 提示符处，输入 boot_ontap 命令。</block>
-  <block id="feb2aab91c5a609dcbc8409f96404671" category="list-text">使用 storage failover show 命令确认目标节点已准备好进行交还。</block>
   <block id="6c6d5b112e5f57cd557a4ce3f7e29059" category="list-text">使用 storage failover giveback -fromnode local 命令交还节点。</block>
   <block id="13b6e1ea33838db60037aa0b1c5c884b" category="list-text">在集群提示符处，使用 net int -is-home false 命令检查逻辑接口。</block>
   <block id="5e5ce8025b11752aab339bd61df121bc" category="paragraph">如果任何接口列为 "false" ，请使用 net int revert 命令将这些接口还原回其主端口。</block>
@@ -8084,7 +8049,6 @@
   <block id="544b7fcf1fe2aaedd577ba107a7f6a56" category="paragraph">您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node local-node-name partner savecore -s`</block>
   <block id="7a18402f95cb86527db24f56d6baec40" category="list-text">从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode replacement_node_name`</block>
   <block id="3217c14b22c3695ed301b94539bd2dbb" category="paragraph">替代节点将收回其存储并完成启动。</block>
-  <block id="8a6fbf23d593cc1be4de4068cb3eeee1" category="paragraph">storage failover show 命令的输出不应包含 System ID changed on partner 消息。</block>
   <block id="18963b05f9f3bc779f544c26aae06ab9" category="paragraph">属于替代节点的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</block>
   <block id="cfe787a999b8c200091f805ad9426e24" category="list-text">替代节点是灾难站点上磁盘的当前所有者。</block>
   <block id="7285c4012d903a86f08da4d4eb643a35" category="paragraph">请参见<block ref="1c9dcde47ee822b3ac120aae2f296f05" category="inline-link-rx"></block> 有关详细信息 ...</block>
@@ -8196,27 +8160,18 @@
   <block id="8c2fb795497456b969ba9307ef6f84c8" category="list-text">在 LOADER 提示符处，重新启动节点： _bybye</block>
   <block id="b40d85db7a9de91cff53c5663c76daaf" category="list-text">使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
   <block id="65dc2e566ca79200d7c70bef0b947464" category="doc">OKM ， NSE 和 NVE 的启动后介质更换步骤— AFF A900</block>
-  <block id="732e0dcc80e3feaced44d9e5a666c2bc" category="list-text">确定应使用哪个部分还原 OKM ， NSE 或 NVE 配置：如果已与板载密钥管理器一起启用 NSE 或 NVE ，则必须还原在此操作步骤开头捕获的设置。</block>
   <block id="a18eb452b8ba972a5f3a705a455fac35" category="list-text">在 LOADER 提示符处使用 boot_ontap 命令启动节点。</block>
-  <block id="fda0c6642b160b8cfe389e0b2a5d9c56" category="list-text">在 LOADER 提示符处，输入 boot_ontap menu 命令。</block>
   <block id="9a35117ce5f367da3a3ca5116d861d73" category="list-text">在启动菜单中，输入隐藏的命令 `re封装板载密钥管理器` ，然后在提示符处回答 `y` 。</block>
-  <block id="817f0c2c0731cc57f0fb5c0088d66a84" category="list-text">When prompted to enter the backup data, paste the backup data you captured at the beginning of this procedure, when asked.粘贴 security key-manager backup show 或 security key-manager on板 载 show-backup 命令的输出。</block>
-  <block id="bd925fbdb9cf654c2d3eb13ad0bf2458" category="admonition">数据是从 security key-manager backup show 或 security key-manager on板 载 show-backup 命令输出的。</block>
   <block id="1491d378fbbc2d9a6048e5b9b67a396a" category="paragraph">输入备份数据：</block>
   <block id="da0c8baa25fcee791ffa412ec90044ca" category="list-text">将控制台缆线移动到配对节点并以管理员身份登录。</block>
   <block id="56b9aa57eb07c87d93d8f36e42537891" category="list-text">如果命令因 CIFS 会话打开而失败，请与客户确认如何关闭 CIFS 会话。</block>
   <block id="99cf22e04f567c5375349f8aa14becd4" category="list-text">如果命令因配对节点 " 未就绪 " 而失败，请等待 5 分钟，使 NVRAM 同步。</block>
   <block id="4d2b3834d59169dcbb17afc3c699e3ac" category="list-text">If the command fails because of an NDMP, SnapMirror, or SnapVault process, disable the process.有关详细信息，请参见相应的内容。</block>
-  <block id="0ca120792c1da0e7f9613ff316afb1bf" category="list-text">运行 security key-manager 板载同步命令，然后在出现提示时输入密码短语。</block>
-  <block id="c58ae875af45a4be51e14080108983b6" category="list-text">输入 security key-manager key query 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes/true` 。</block>
   <block id="a69e3df3fc089f72b8d4244ee2e280dc" category="list-text">在 clustershell 提示符处，输入 net int show -is-home false 命令以列出不在其主节点和端口上的逻辑接口。</block>
   <block id="01644ff2aec9678b64ae01d076703f1a" category="paragraph">如果任何接口列为 `false` ，请使用 net int revert 命令将这些接口还原回其主端口。</block>
-  <block id="db7ef1cc9d8937ba84d376a5424078cb" category="list-text">将控制台缆线移至目标节点，然后运行 version -v 命令以检查 ONTAP 版本。</block>
   <block id="681ec8b91432585ef548a814edeadbb6" category="paragraph">转至第 7 步。</block>
   <block id="894c5814238c15162364a7dd224a5a59" category="list-text">使用 storage failover giveback -fromnode local -only-cfo-aggregates true local 命令将控制台缆线移至配对节点并交还目标节点存储。</block>
   <block id="b17e311ccd8e21ff73506e54f24b6cfd" category="list-text">等待 3 分钟，然后使用 storage failover show 命令检查故障转移状态。</block>
-  <block id="bdd54bf36fdd86edc52e8ade7cb11376" category="list-text">在 clustershell 提示符处使用 storage encryption disk show 查看输出。</block>
-  <block id="255583ddc95e873b21d34d9f4e8d7e3b" category="list-text">使用 security key-manager key query 命令显示存储在密钥管理服务器上的身份验证密钥的密钥 ID 。</block>
   <block id="5af23d53e03e2919ad84a3f9112823ac" category="list-text">如果 `密钥管理器类型` = `external` 和 `restored` 列 = 除 `yes/true` 以外的任何其他内容，请使用 security key-manager external restore 命令还原身份验证密钥的密钥 ID 。</block>
   <block id="3796dde1eb4771fdc94b7b6dd6b04cbf" category="list-text">如果 `密钥管理器类型` = `板载` 和 `还原` 列 = `是 / 真` 以外的任何内容，请使用 security key-manager 板载同步命令重新同步密钥管理器类型。</block>
   <block id="6012de004f4bd50d98163ac921889523" category="doc">更换 LED USB 模块 - AFF A900</block>
@@ -8245,13 +8200,6 @@
   <block id="23b8b7f4acfc70b88b8d4648fc002f73" category="list-text">列出设备的各个测试： `sldiag device show -dev dev_name`</block>
   <block id="1aebafba3153f541511efccc3f81ec62" category="list-text">根据机箱中的控制器模块数量，关闭或保持电源打开状态。+ 保持电源处于打开状态，以便为另一个控制器模块供电。</block>
   <block id="f0c5bf1231304ef8daefc44f7c8c3c2c" category="list-text">启动您正在维护的控制器模块，在系统提示您进入启动菜单时按 `Ctrl-C` 以中断启动。+ 控制器模块在完全就位后启动。</block>
-  <block id="f8ef0c4875d120fc216f0515acf0076d" category="doc">更换缓存模块或添加 / 更换核心转储模块 - FAS9500</block>
-  <block id="790fb1451f2bc27a03777b1339883a05" category="list-text">For instructions about hot swapping the caching module, see <block ref="8914e84bf3c4081b62e360b2117530ab" category="inline-link-macro-rx"></block>。</block>
-  <block id="8d818b7912f2cdd88457272a27b2e1ed" category="paragraph">在 &lt;stdin&gt; 中未解析的指令 - 包括：： .//_include/shutdown_any_mcc_supported 。</block>
-  <block id="38e46d734f6cf3d9cd7ff8074eb7a98b" category="section-title">添加或更换 X9170A 核心转储模块</block>
-  <block id="1c69f6fe4055b6da922172199148a620" category="list-text">按下核心转储模块正面的 Terra cotta 释放按钮。</block>
-  <block id="6a0d150a4b5e517de144f7ef6bc66258" category="section-title">更换 FRU 后重新启动控制器</block>
-  <block id="eb6b929319fcd4b0bfa86e1b41c4a0aa" category="section-title">在双节点 MetroCluster 配置中切回聚合</block>
   <block id="02c2cc4184073e3a32ac2cad0adca3ad" category="section-title">为 AFF A900 HA 对的热添加磁盘架布线</block>
   <block id="e859983e28521134b4429e2ad40d035f" category="paragraph">如果需要更多存储，您可以将最多三个额外的 NS224 驱动器架（总共四个磁盘架）热添加到一个 AFF A900 HA 对中。</block>
   <block id="e1f00a018e7f4f086a0bcbc7eccb98fb" category="list-text">此操作步骤假定您的 HA 对至少具有一个现有 NS224 磁盘架，并且您要热添加最多三个额外的磁盘架。</block>
@@ -8327,8 +8275,6 @@
   <block id="8eea6ffadcece75bbf0826ed26885fb9" category="list-text">此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。</block>
   <block id="c651d2f010c85fa1c8605da5e127657e" category="paragraph"><block ref="c651d2f010c85fa1c8605da5e127657e" category="inline-link-macro-rx"></block></block>
   <block id="72dd2309b9e786d12d19350620a3d631" category="list-text">在替代节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。</block>
-  <block id="36128c6aafe926585eba615393cf3649" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。</block>
-  <block id="eea6adb7d48797d40ac3b9ea4f505d9f" category="paragraph">The MetroCluster configuration takes a few minutes after the replacement to return to a normal state, at which time each node will show a configured state, with DR Mirroring enabled and a mode of normal.MetroCluster node _show -fields node-SystemID_ 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
   <block id="511831afd7b3843888ba00743f2e205e" category="list-text">断开电源。</block>
   <block id="24e3ea03dd6cd41feb1c45f7310ac774" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not lose it.</block>
   <block id="c0a129ed8a4dffac36687970dd9e76e4" category="list-text">使用 1 号磁性螺丝刀，从启动介质中卸下螺钉，并将其安全放在磁铁上。</block>
@@ -8336,19 +8282,15 @@
   <block id="94cac2ca01b8e422961358e25e3f9a03" category="paragraph">+ 注意：将每个 DIMM 安装到受损控制器模块中占用的同一插槽中。</block>
   <block id="4d682883d3e1a9518c0b12f296e8d3da" category="list-text">对其余 DIMM 重复上述步骤。</block>
   <block id="4f33c405e177c16965ddeb4f33742c5a" category="list-text">使用 1 号磁性螺丝刀，从受损控制器模块正面和夹层卡上卸下螺钉，并将其安全地放在磁铁上。</block>
-  <block id="515f69ac19c21c33dcf5567d940bc1a6" category="list-text">使用 1 号磁性螺丝刀插入并拧紧替代控制器模块正面和夹层卡上的螺钉。</block>
   <block id="9c23253df9fe144e525f9767980fd31c" category="list-text">如果受损的控制器模块中存在另一个夹层卡，请重复上述步骤。</block>
   <block id="181a3766f31135df2527b723f0cd0bf0" category="paragraph">更换控制器模块时，必须将 NV 电池从受损控制器模块移至更换控制器模块。</block>
   <block id="b4d2392449336ea5c3bc8befa0e0b844" category="list-text">使用 1 号磁性螺丝刀，从受损启动介质上卸下螺钉，并将其安全放在磁铁上。</block>
   <block id="143c767e9327d7fe1aa0dcf0cd8bf42b" category="list-text">使用 1 号磁性螺丝刀，从控制器模块正面卸下螺钉，并将其安全地放在磁铁上。</block>
-  <block id="04397c96980709afd9322bc55ad16021" category="list-text">使用 1 号磁性螺丝刀拧松受损夹层卡上的螺钉。</block>
-  <block id="d9d89fa2d8f2d045677b6db851f13e8d" category="list-text">使用 1 号磁性螺丝刀插入并拧紧控制器模块正面和夹层卡上的螺钉。</block>
   <block id="b5bb4830b9cb6cf86cab4203bf9c0ff2" category="list-text">使用 1 号磁性螺丝刀，从控制器模块正面和覆盖夹层卡插槽的面板上卸下螺钉，并将其安全地放在磁铁上。</block>
   <block id="67bbbac5bc6e3d667f32ac654b6a9d3a" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not loose it.</block>
   <block id="a1d9910a32ae0cf0a663ca53df75fc48" category="paragraph">+ 重要信息：将每个 DIMM 安装到受损控制器模块中占用的同一插槽中。</block>
   <block id="e65c4f5a39a793b014b217f53d825905" category="list-text">将控制器模块插入机箱。</block>
   <block id="04767794ed138df3aa3f519e53e96bcc" category="list-text">使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令仅交还 CFO 聚合。</block>
-  <block id="2f6a11061d2c04a9d9730e06edaa97a6" category="list-text">交还完成后，使用 `storage failover show` 和 storage failover show-giveback 命令检查故障转移和交还状态。</block>
   <block id="c3386973a8577ef6660070259a82cd76" category="doc">更换控制器模块— AFF C190</block>
   <block id="c9c809ca8c1b2b30aa31e5c08e6ae9b7" category="doc">更换控制器模块— AFF A320</block>
   <block id="610ebc0f92fc28129db791d1a49c1f29" category="doc">更换控制器模块— FAS8200</block>
@@ -8364,15 +8306,63 @@
   <block id="19a811a1c8fa92be18ccc21559ddf7aa" category="doc">更换控制器模块— FAS8300 和 FAS8700</block>
   <block id="04e15e9a02c818cf4604502b8aa82611" category="doc">Replace the chassis - FAS8300 and FAS8700</block>
   <block id="68a0957bf09993ad8f778b0639748996" category="doc">更换控制器模块— AFF A200</block>
-  <block id="3be4ae09b22ea5360288545a24880c28" category="doc">更改磁盘架 ID — NS224 磁盘架</block>
-  <block id="0762300f2a8dd2bff06afd7351ec8ef1" category="doc">热插拔驱动器— NS224 磁盘架</block>
-  <block id="5aed6a98c7ac6ecb340a8cba673f21ee" category="doc">更换 DIMM — NS224 磁盘架</block>
-  <block id="0180fca5d6d6f316871d594ac7544594" category="doc">热添加— NS224 磁盘架</block>
-  <block id="434f3aa81e59feed4b4d3bce49554cae" category="doc">将磁盘架作为交换机连接的存储进行布线— NS224 磁盘架</block>
-  <block id="c73d4add4ce70620f5ca4fc2015594eb" category="doc">更换 NSM 模块— NS224 磁盘架</block>
-  <block id="4ad55e79178c3c134eb522d65c76b5c2" category="doc">热插拔电源— NS224 磁盘架</block>
-  <block id="5ab6b1866b40378c26742eb72c15ed69" category="doc">更换风扇— NS224 磁盘架</block>
-  <block id="a081405b72103e6782da04b82551c8eb" category="doc">热移除磁盘架— NS224 磁盘架</block>
-  <block id="be2d5bbbf386ed8452b538db844b35b7" category="doc">更换实时时钟电池— NS224 磁盘架</block>
-  <block id="64a2812889b70b6d36a5583faf1a0d3e" category="doc">更换启动介质— NS224 磁盘架</block>
+  <block id="3cb52a5c3c25dcd729403c0c723500bc" category="list-text">使用 ``storage failover show` -giveback` 命令监控交还操作的进度。</block>
+  <block id="b36708a8226ddc48a16407516f32b6ae" category="paragraph">` * `s存储故障转移显示` *`</block>
+  <block id="4cc5d765a3b2155ab803f6ce50c11747" category="paragraph">`storage failover show` 命令的输出不应包含 `Ssystem ID changed on partner` 消息。</block>
+  <block id="7b5b637cc082477a9dd4c129c225152e" category="inline-link">还原板载密钥管理加密密钥</block>
+  <block id="bec1622a1f566276141766f76e4b1d70" category="list-text"><block ref="bec1622a1f566276141766f76e4b1d70" category="inline-link-rx"></block></block>
+  <block id="1ee623098df2f7856a034824be882999" category="inline-link">还原外部密钥管理加密密钥</block>
+  <block id="e10bd7c646b5f37d42df52bab6df6c64" category="list-text"><block ref="e10bd7c646b5f37d42df52bab6df6c64" category="inline-link-rx"></block></block>
+  <block id="9552018736df32cfcfe01f2b7f8925ce" category="paragraph">在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查正在运行的 ONTAP 版本。</block>
+  <block id="3c737345883504ebe7f0075c2e20f47e" category="list-text">如果命令输出中显示 &lt;lno-dury&gt; 或 &lt;1osno-dury&gt; ，则系统不支持 NVE ，请继续关闭控制器。</block>
+  <block id="9b744d081289382cce38c59e4b6d3f76" category="list-text">验证集群中的任何卷是否正在使用 NVE ： `volume show -is-encrypted true`</block>
+  <block id="7ab4c93a1ecb36778005e21c2d800f15" category="paragraph">If any volumes are listed in the output, NVE is configured and you need to verify the NVE configuration.如果未列出任何卷，请检查是否已配置 NSE 并正在使用此 NSE 。</block>
+  <block id="9a8dafa2367c711dd5820d53a42508e9" category="list-text">验证是否已配置 NSE 并正在使用： `storage encryption disk show`</block>
+  <block id="ad6e341d56390163e7fc8c5722a9e033" category="list-text">如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置和正在使用的。</block>
+  <block id="7e5f25479cc97ea11694e5af634fc675" category="list-text">如果未配置 NVE 和 NSE ，则不会使用 NSE 密钥保护任何驱动器，因此可以安全地关闭受损节点。</block>
+  <block id="c9c0cd0bbd81ff9ac4cc17d3dad4fb7c" category="list-text">显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager key-query`</block>
+  <block id="08c67f907b0f6c715c552d9ca4f21200" category="admonition">在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 `KMIP` ， `AKV` 和 `GCP` 。确认这些类型的过程与确认 `外部` 或 `板载` 密钥管理器类型相同。</block>
+  <block id="2647b6895add9d235f2ff89a28db2364" category="list-text">验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key-query`</block>
+  <block id="e95eff996520c90aaccb543013169368" category="list-text">验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key-query`</block>
+  <block id="da258252bb942c85fc21f326f3b4ef28" category="list-text">显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager key-query -key-type NSE-AK`</block>
+  <block id="ad72ea31e4e098e2baae0a62a1ab50e5" category="list-text">交还完成后，使用 `storage failover show` 和 ``storage failover show` -giveback` 命令检查故障转移和交还状态。</block>
+  <block id="1ae70fe70bb3c3e97652f8a95985d3ce" category="paragraph">更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。</block>
+  <block id="7762733471d5b473835d903a5329768b" category="list-text">From the LOADER prompt on the _replacement_ node, boot the node, entering `y` if you are prompted to override the system ID due to a system ID mismatch:``boot_ontap``</block>
+  <block id="aae8c2f0334c863e9a3a9acb4beb0c27" category="list-text">从运行状况良好的节点查看旧系统 ID ： ``MetroCluster node show -fields node-systemID` ， dr-partner-systemID`</block>
+  <block id="64b5850437a6c5ede6e9cff83bdaf98e" category="list-text">Enter the command to display the OKM backup information: `security key-manager backup show`</block>
+  <block id="f099c3d90bd5d885da1ab6eb776cdc1d" category="list-text">From the LOADER prompt on the _replacement_ node, boot the node, entering `y` if you are prompted to override the system ID due to a system ID mismatch: `boot_ontap`</block>
+  <block id="edfea1a2881be4e7bcc10dfa9c8b3fc6" category="admonition">如果在卸下控制器模块时遇到困难，请将食指从内部穿过指孔（通过跨越臂）。</block>
+  <block id="1262a5e3b93c18f0ba83db6f539c3e5b" category="paragraph">+ * 小心： *</block>
+  <block id="96f3065963946bf7d4b37f70901cd2c8" category="paragraph">+ 主动推入可能会使电池再次退出发生原因。</block>
+  <block id="188f2d33c82265d54696d7fb9143f330" category="list-text">From the LOADER prompt on the _replacement_ node, boot the node, entering `y` if you are prompted to override the system ID due to a system ID mismatch:</block>
+  <block id="f05dc6ae866c89472a3f7a9b59aa3e6a" category="list-text">使用 1 号磁性螺丝刀插入并拧紧启动介质上的螺钉。</block>
+  <block id="aeafe9c2b3703d604c28ef5d13c03f76" category="list-text">使用 1 号磁性螺丝刀，插入并拧紧替代控制器模块正面和夹层卡上的螺钉。</block>
+  <block id="4a2546eb9c2e57bf15ddf11202689d7c" category="section-title">选项 2 ： MetroCluster 中的系统</block>
+  <block id="860b30584f1b729efd2b58d01580a92c" category="paragraph">要更换 NVMEM 电池，您必须从控制器模块中取出故障电池，然后将更换用电池安装到控制器模块中。</block>
+  <block id="600a73fcb93eb875646134b90ac7d911" category="paragraph">要更换夹层卡，您必须卸下受损卡并安装更换卡；要安装夹层卡，您必须卸下面板并安装新卡。</block>
+  <block id="4177f2df9ae71084d9883a0423cc68d0" category="list-text">使用 1 号磁性螺丝刀拧松受损夹层卡上的螺钉。</block>
+  <block id="e5d74abcd01c3778ad5d160a5101f4f7" category="list-text">使用 1 号磁性螺丝刀将受损夹层卡直接从插槽中轻轻提起并放在一旁。</block>
+  <block id="0f679b461b78a3b0c31f947aabcf2473" category="list-text">使用 1 号磁性螺丝刀，插入并拧紧控制器模块正面和夹层卡上的螺钉。</block>
+  <block id="a3bc8d1d2d48e5e2cb6973108ebf0e82" category="section-title">选项 1 ：更换夹层卡：</block>
+  <block id="5c38e69a6ad9d1c65e24e9ae13dbaa6e" category="section-title">选项 2 ：安装夹层卡：</block>
+  <block id="b301d69a6b0a95b2643c3f11f284ca2e" category="paragraph">You install a new mezzanine card if your system does not have one.。使用 1 号磁性螺丝刀，从控制器模块正面和覆盖夹层卡插槽的面板上卸下螺钉，并将其安全地放在磁铁上。。Remove the mezzanine card from the antistatic shipping bag and align it to the inside face of the controller module.。Gently align the mezzanine card into place.。使用 1 号磁性螺丝刀，插入并拧紧控制器模块正面和夹层卡上的螺钉。</block>
+  <block id="ffdeab5945e241ee6f7c030295c9824b" category="paragraph">+ 注意：拧紧夹层卡上的螺钉时请勿用力，否则可能会使其发生裂纹。</block>
+  <block id="5d43aadf0265bbe861cd90a52514a118" category="list-text">将控制器模块插入机箱</block>
+  <block id="914e957c63d00c0138857ee04fb05826" category="paragraph">The MetroCluster configuration takes a few minutes after the replacement to return to a normal state, at which time each node will show a configured state, with DR Mirroring enabled and a mode of normal."`MetroCluster node show -fields node-SystemID` " 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
+  <block id="3520fe246261ba13b3370caf4fcfc36f" category="paragraph">检查环境变量后，您必须完成特定于还原板载密钥管理器（ OKM ）， NetApp 存储加密（ NSE ）和 NetApp 卷加密（ NVE ）的步骤。</block>
+  <block id="2a5c64cf16afc052ecc2fa22a6498fd8" category="list-text">当系统提示您输入备份数据时，请根据要求粘贴您在本节开头捕获的备份数据。粘贴 `security key-manager backup show` 或 `security key-manager on板 载 show-backup` 命令的输出。</block>
+  <block id="b1a9ca4c67f6b51a4dc8e3cdf1151948" category="admonition">数据是从 `ssecurity key-manager backup show` 或 security key-manager on板 载 show-backup` 命令输出的。</block>
+  <block id="5be03e551b97db6a539bbe44cc95ef89" category="paragraph">+--------------- 结束备份———————</block>
+  <block id="dc8d8ea6e07ddae6b12e88e3bd16de6b" category="list-text">输入 `security key-manager key-query` 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes/true` 。</block>
+  <block id="2c5db3c58d5b9378c452e1c4413e4723" category="list-text">使用 `storage failover show` 命令在交还报告完成三分钟后检查交还状态。</block>
+  <block id="d0dfaa684d62992773c993db76a1b047" category="list-text">使用 `security key-manager key-query` 命令显示存储在密钥管理服务器上的加密和身份验证密钥。</block>
+  <block id="9c261e7ffcca743a66955073e35233a0" category="paragraph">使用 `security key-manager key-query` 命令验证所有身份验证密钥的 `restored` column = `yes/true` 。</block>
+  <block id="100cf583f6cdd16852a08df77146f368" category="doc">Hot-swap a drive - NS224 shelves</block>
+  <block id="1be54ea4e140628405dd1f92cbb65f8e" category="doc">Replace a DIMM - NS224 shelves</block>
+  <block id="e8f8b2e7fe84a76416bedc8340d89ea1" category="doc">Cable shelves as switch-attached storage - NS224 shelves</block>
+  <block id="ce58a339ef0b5aa08e1351185f66a2ec" category="doc">Hot-swap a power supply - NS224 shelves</block>
+  <block id="d7be6d5f22ae136261c4f972f836c784" category="doc">Replace a fan - NS224 shelves</block>
+  <block id="10535f3c95548bd83d9b23d6567b98e4" category="doc">Hot-remove a shelf - NS224 shelves</block>
+  <block id="2cc84b3be9e849adc2789fc0cd994e1b" category="doc">Replace the real-time clock battery - NS224 shelves</block>
+  <block id="89d4335ef7ebbfe1db510925f09d4702" category="doc">Replace the boot media - NS224 shelves</block>
 </blocks>

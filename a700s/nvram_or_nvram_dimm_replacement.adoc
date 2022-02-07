@@ -303,15 +303,15 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
 . 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
-. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。``boot_ontap``
-. 等待 _replacement_ 节点控制台上显示 `waiting for giveback...` 消息，然后从运行状况良好的节点上，验证是否已自动分配新的配对系统 ID ： storage failover show
+. From the LOADER prompt on the _replacement_ node, boot the node, entering `y` if you are prompted to override the system ID due to a system ID mismatch:``boot_ontap``
+. 请等待` Waiting for giveback... `消息显示在 _replacement_ 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show`
 +
 在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。
 
 +
 [listing]
 ----
-node1> storage failover show
+node1> `storage failover show`
                                     Takeover
 Node              Partner           Possible     State Description
 ------------      ------------      --------     -------------------------------------
@@ -362,7 +362,7 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62
 +
 [listing]
 ----
-node1> storage disk show -ownership
+node1> `storage disk show -ownership`
 
 Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
 ----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
@@ -383,12 +383,14 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 [role="lead"]
 在更换先前配置为使用存储或卷加密的存储系统的控制器模块或 NVRAM 模块后，您必须执行其他步骤以提供无中断加密功能。对于未启用存储或卷加密的存储系统，您可以跳过此任务。
 
-使用中的相应操作步骤还原存储或卷加密功能 https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"]。
+.步骤
+. 使用中的相应操作步骤还原存储或卷加密功能 https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"]。
+. 根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"]
 
-根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：
 
-* "`还原板载密钥管理加密密钥` "
-* "`还原外部密钥管理加密密钥` "
 
 
 

@@ -76,7 +76,7 @@ NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
 ** 如果命令因 NDMP ， SnapMirror 或 SnapVault 进程而失败，请禁用此进程。有关详细信息，请参见相应的文档中心。
 
 
-. 交还完成后，使用 `storage failover show` 和 `storage failover show-giveback` 命令检查故障转移和交还状态。
+. 交还完成后，使用 `storage failover show` 和 ``storage failover show` -giveback` 命令检查故障转移和交还状态。
 +
 仅显示 CFO 聚合（根聚合和 CFO 模式的数据聚合）。
 

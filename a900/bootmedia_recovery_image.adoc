@@ -109,7 +109,7 @@ date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state
 正在等待交还
  a| 
 .. 登录到配对节点。
-.. 使用 storage failover show 命令确认目标节点已准备好进行交还。
+.. 使用 `storage failover show` 命令确认目标节点已准备好进行交还。
 
 
 |===
