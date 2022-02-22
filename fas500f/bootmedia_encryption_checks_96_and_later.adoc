@@ -1,10 +1,10 @@
 ---
-permalink: fas8300/bootmedia-encryption-preshutdown-checks.html 
+permalink: fas500f/bootmedia-encryption-checks-96-and-later.html 
 sidebar: sidebar 
-keywords: fas8300, fas8300, shut, down, impair, node, check, status, onboard, encryption, keys, status, disable, automatic, giveback, version, ontap, system, run, pre-shutdown, check, pre-shutdown checks for onboard encryption keys 
-summary: 在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
+keywords: fas500f, check, nve, nse, systems, ontap 9.6, netapp volume encryption, netapp storage encryption, verify, enable, impaired node 
+summary: 'Before shutting down the impaired node, you need to check whether the system has either NetApp Volume Encryption \(NVE\) or NetApp Storage Encryption \(NSE\) enabled.If so, you need to verify the configuration.' 
 ---
-= 检查板载加密密钥— AFF fas8300 和 FAS8700
+= 检查板载加密密钥— FAS500f
 :icons: font
 :imagesdir: ../media/
 
@@ -28,19 +28,8 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 
 . 使用 `version -v` 命令检查受损节点（如果已启动）或配对节点（如果受损节点已关闭）上运行的 ONTAP 的版本：
 +
-** 如果命令输出中显示 <lno-dury> 或 <1osno-dury> ，则系统不支持 NVE ，请继续关闭控制器。
-** 如果命令输出中未显示 <lno-dur> ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至下一节。
+** 如果命令输出中显示 <lno-dury> 或 <1osno-dury> ，则系统不支持 NVE ，请继续关闭控制器。Before shutting down the impaired node, you need to verify whether the system has either NetApp Volume Encryption (NVE) or NetApp Storage Encryption (NSE) enabled.If so, you need to verify the configuration.
 
-
-. 如果受损节点属于 HA 配置的一部分，请从运行状况良好的节点禁用自动交还： `storage failover modify -node local -auto-giveback false` 或 `storage failover modify -node local -auto-giveback-after-panic false`
-
-
-
-
-== 在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE
-
-[role="lead"]
-在关闭受损节点之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。如果是，则需要验证配置。
 
 . 验证集群中的任何卷是否正在使用 NVE ： `volume show -is-encrypted true`
 +

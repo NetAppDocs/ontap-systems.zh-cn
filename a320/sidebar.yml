@@ -57,11 +57,9 @@ entries:
     - title: 还原系统配置
       url: "/a320/controller-replace-system-config-restore-and-verify.html"
     - title: 可重新连接的系统
-      url: "/a320/controller-repalce-recable-reassign-disks.html"
+      url: "/a320/controller-replace-recable-reassign-disks.html"
     - title: 完成系统还原
-      url: "/a320/controller-replace-complete-system-restoration.html"
-    - title: 完成更换
-      url: "/a320/controller-replace-complete-rma.html"
+      url: "/a320/controller-replace-restore-system-rma.html"
   - title: DIMM
     pdf-filename: AFF A320 DIMM
     url: "/a320/dimm-replace.html"

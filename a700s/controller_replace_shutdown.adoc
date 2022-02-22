@@ -12,8 +12,6 @@ summary: 要关闭受损节点，您必须确定此节点的状态，并在必�
 [role="lead"]
 要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
 
-要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
-
 If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
 
 .步骤

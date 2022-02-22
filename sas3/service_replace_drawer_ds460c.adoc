@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, all, host, i/o activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf 
 summary: 在更换驱动器抽盒之前，您必须停止所有主机 I/O 活动并关闭磁盘架电源。 
 ---
-= 更换 DS460C 磁盘架中的驱动器抽盒—使用 IOM12 模块的磁盘架
+= 将 DS460C 磁盘架中的驱动器抽盒更换为 IOM12 模块
 :icons: font
 :imagesdir: ../media/
 
@@ -186,7 +186,7 @@ image:../media/legend_icon_02.png[""]
 
 
 
-== 删除驱动器抽盒
+== 卸下驱动器抽屉
 
 [role="lead"]
 卸下左右缆线链后，您可以从驱动器架中卸下驱动器抽盒。卸下驱动器抽盒需要将抽盒部分滑出，记录驱动器的位置，卸下驱动器以及卸下驱动器抽盒。

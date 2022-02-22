@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700s, aff, a700s, replace, fail, nvram, card, remove, riser, controller, module, system, id, nvram, dimm, shut, down, reassign, disk, restore, encryption, functionality, complete, replacement, process, replace the nvram module and/or nvram dimms, shut down the impaired controller, shut down the impaired node, remove the controller module, remove the nvram card, reinstall the controller module and booting the system, reassign disks, restore storage and volume encryption functionality, complete the replacement process 
 summary: 要更换发生故障的 NVRAM 卡，您必须从控制器模块中卸下 NVRAM 提升板提升板 1 ，从提升板中卸下故障卡，在提升板中安装新的 NVRAM 卡，然后在控制器模块中重新安装提升板。由于系统 ID 源自 NVRAM 卡，因此，如果更换模块，则属于系统的磁盘将重新分配给新的系统 ID 。 
 ---
-= 更换 NVRAM 模块和 / 或 NVRAM DIMM — AFF A700s
+= 更换 NVRAM 模块和 NVRAM DIMM — AFF A700s
 :icons: font
 :imagesdir: ../media/
 

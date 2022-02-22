@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a200, verify and set HA state, run diagnostics, complete the replacement process 
 summary: 您必须验证机箱的 HA 状态，运行诊断并将故障部件退回给 NetApp ，如套件随附的 RMA 说明中所述。 
 ---
-= 还原和验证配置— AFF A200
+= 还原并验证配置— AFF A200
 :icons: font
 :imagesdir: ../media/
 
 
 
 
-== 第 1 步：验证和设置机箱的 HA 状态
+== 第 1 步：验证并设置机箱的 HA 状态
 
 [role="lead"]
 您必须验证机箱的 HA 状态，并在必要时更新此状态以匹配您的系统配置。

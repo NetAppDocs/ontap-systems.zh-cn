@@ -1456,7 +1456,6 @@
   <block id="62e340083f3c5febba2fa693ce759a1a" category="sidebar">第 5 阶段安装和启动节点 4.</block>
   <block id="ded1f8eb21bf382d51471642d150b8d5" category="sidebar">第 6 阶段完成升级</block>
   <block id="e4deab2919ae4ce97668d5271fe4fc29" category="summary">将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。</block>
-  <block id="aaea30d2f885b6bb1adb375959c713d8" category="doc">移动并更换硬件— AFF A250</block>
   <block id="47e6ca7a31b3f3492d704b44dea3bc0e" category="section-title">第 1 步：卸下控制器模块</block>
   <block id="c488924be9cfde77f802e82e996e90e1" category="paragraph">要更换机箱，必须从旧机箱中卸下控制器模块。</block>
   <block id="586424cb167133a0adfaf4650a20127e" category="paragraph">使用以下视频或表格中的步骤更换机箱；它假定已卸下并更换挡板：</block>
@@ -1578,7 +1577,6 @@
   <block id="073b364a34edc88074c1df13d44748dc" category="list-text">如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`</block>
   <block id="95275f416abb0ceec250662ff9b425ed" category="section-title">第 4 步：将故障部件退回 NetApp</block>
   <block id="6f00135662159734f14958c139370d97" category="summary">您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。</block>
-  <block id="5aa606601b2732e8fa8f0cd75ea38802" category="doc">更换控制器模块 - AFF A250</block>
   <block id="271c5a034296b2fd598c729a341c9b8a" category="list-text">所有驱动器架都必须正常工作。</block>
   <block id="82bbfcee09add33fd33001d4761a8949" category="inline-link">选择正确的恢复操作步骤</block>
   <block id="07915727e4f5cb3e1172a8852c17c2bb" category="list-text">如果您的系统采用 MetroCluster 配置，则必须查看一节<block ref="dbcae02c495cc3db61b37ce85396171e" category="inline-link-rx"></block> 以确定是否应使用此操作步骤。</block>
@@ -1687,7 +1685,6 @@
   <block id="b08dcca279bedeebb1e6f621d1a5afa2" category="list-text"><block ref="b08dcca279bedeebb1e6f621d1a5afa2" category="inline-link-macro-rx"></block></block>
   <block id="f0589341a30d82c76a3635dc142e3cde" category="paragraph">联机分步说明，其中包含指向其他内容的实时链接。</block>
   <block id="ea4513e2fbde4152c809a34c62a93e1f" category="summary">您可以将受损机箱更换为与受损机箱型号相同的新机箱。</block>
-  <block id="39a3b1f17e8cc33119262178b12813bf" category="doc">更换机箱 - AFF A250</block>
   <block id="0056f1b7e6a1cbc5c692fe90eeba67d5" category="paragraph">要更换机箱，您必须将挡板，控制器模块和 NVMe 驱动器从受损机箱移至更换机箱，然后从设备机架或系统机柜中卸下受损机箱，并将更换机箱安装到位。</block>
   <block id="bc4c3148602338c7b283fc42b60407da" category="list-text">您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。</block>
   <block id="1c44627eb33d55ec54d505046a55d435" category="list-text">编写此操作步骤时，假设您要将挡板， NVMe 驱动器和控制器模块移至新机箱，而更换机箱是 NetApp 的一个新组件。</block>
@@ -1860,7 +1857,6 @@
   <block id="994661c23bc475079ad3c36d9ac9b058" category="list-text">受损节点是指要在其中执行维护的节点。</block>
   <block id="0fd88e54da65fb1a33a1996f9d00a9cd" category="list-text">_health_ 节点是受损节点的 HA 配对节点。</block>
   <block id="c6cd6a89209cfc4abc3c0c7b7e5336e1" category="summary">您可以先卸下控制器模块上的通风管，然后再更换启动介质，从而在控制器模块中找到发生故障的启动介质。</block>
-  <block id="2eec2141c87f639d605e548fbdd7eb22" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A250</block>
   <block id="e5c77732c72900008e8eb20c104f7bfd" category="paragraph">要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。</block>
   <block id="3135971a1a6b077c3715b12bc5012909" category="section-title">第 1 步：卸下控制器模块 - AFF A250</block>
   <block id="8beaeea3973b517e3c11448d6de4ac1d" category="paragraph">要访问控制器模块中的组件，必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。</block>
@@ -1899,17 +1895,9 @@
   <block id="0032ff6878e0eb024d2d7d2145235782" category="list-text">检查启动环境变量：</block>
   <block id="67cee8596d9c8d2c1fc298a78f8c3906" category="list-text">`bootarg.init.boot_clustered`</block>
   <block id="a1969dbd1bcea583ab8a2d860a39b3af" category="list-text">`partner-sysid`</block>
-  <block id="f350afbe0323f52439b3ab71beee1b58" category="list-text">`bootarg.init.san_optimized` ，适用于全 SAN 阵列</block>
   <block id="2e3640de5e9fa3ac8b95ece22f56c6a0" category="list-text">`bootarg.init.switchless_cluster.enable`</block>
   <block id="7c7ef6e57bb05fedf24ffcf44a231f11" category="list-text">如果已启用外部密钥管理器，请检查 `kenv` ASUP 输出中列出的 bootarg 值：</block>
-  <block id="70ec885c1913cf08b606fb77bb7fea71" category="list-text">`bootarg.storageencryption.support _value_`</block>
-  <block id="4a9e7c116646fed3aae252c46054d592" category="list-text">`bootarg.keymanager.support _value_`</block>
-  <block id="3e2a1c152f63192f4ee784f0bd9584d3" category="list-text">`kmip.init.interface _value_`</block>
-  <block id="8a73425699b1065447389c9ba628abcc" category="list-text">`kmip.init.ipaddr _value_`</block>
-  <block id="2b14e1f52ea7c52112a19cb622020b6e" category="list-text">`kmip.init.netmask _value_`</block>
-  <block id="5445691c48ae2fda48cde03b8644faae" category="list-text">`kmip.init.gateway _value_`</block>
   <block id="9446ce43dbd627b98b6c0d3af5d83a7c" category="list-text">如果启用了板载密钥管理器，请检查 `kenv` ASUP 输出中列出的 bootarg 值：</block>
-  <block id="ba844d2376aed6be7889241c01a7d4a6" category="list-text">`bootarg.onbox_keymanager _value_`</block>
   <block id="d34866f3088c7776e916f77e459c1c80" category="list-text">保存使用 `savenv` 命令更改的环境变量</block>
   <block id="d28690996b38deb3b6d333e5751da58d" category="list-text">使用 `printenv _variable-name_` 命令确认所做的更改。</block>
   <block id="aadfffe02f43bab104a0a2298a19657b" category="summary">要更换发生故障的夹层卡，您必须拔下缆线以及所有 SFP 或 QSFP 模块，更换卡，重新安装 SFP 或 QSFP 模块并重新对卡进行布线。要安装新的夹层卡，您必须使用适当的缆线以及 SFP 或 QSFP 模块。</block>
@@ -2240,7 +2228,6 @@
   <block id="413ac2fd2fb4f86c9ec059076dc0b76b" category="list-text">通过检查控制台错误消息或找到主板上风扇模块的亮起 LED 来确定必须更换的风扇模块。</block>
   <block id="fdef2d1361e0c12e51c8a0eb2279a3f0" category="list-text">将更换用风扇模块的边缘与控制器模块中的开口对齐，然后将更换用的风扇模块滑入控制器模块。</block>
   <block id="b4c31341ab0f1e49529261f974be146d" category="summary">在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。</block>
-  <block id="d001dcf30b221245e0e0f79ff262fcf3" category="doc">根据需要检查板载加密密钥— AFF A250</block>
   <block id="b8ab0743311e15b4dca69b87da3c3e1a" category="list-text">检查受损节点的状态：</block>
   <block id="03582aa0f2a939731c07b9900422cd22" category="list-text">如果受损节点处于登录提示符处，请以 `admin` 身份登录。</block>
   <block id="e090553f6fd47e1f1ead7225617772ef" category="list-text">如果受损节点位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的节点上。</block>
@@ -2365,7 +2352,6 @@
   <block id="c27a73d454940b40747d6959d070735e" category="image-alt">DRW a700s 更换 PSU</block>
   <block id="667ec5d2e7ff49916ac90c31eb178520" category="list-text">将凸轮把手尽可能向下旋转，以将其关闭。</block>
   <block id="e5869c3e3552c60a1a151cf93d8bdbee" category="summary">您必须在控制器模块中找到故障启动介质，方法是卸下控制器模块上的中间 PCIe 模块，通过启动介质附近的亮起 LED 找到故障启动介质，然后更换启动介质。</block>
-  <block id="ec221492ab283fe7bbfd27ad39bbda82" category="doc">卸下控制器模块并更换启动介质— AFF A700s</block>
   <block id="e9e66c1bd59e20ff8acce6fb41f94461" category="paragraph">您必须从机箱中卸下控制器模块并将其打开，然后更换出现故障的启动介质。</block>
   <block id="e88eebc1797d32d10ed4abe331b3ecb6" category="section-title">第 2 步：更换启动介质— AFF A700s</block>
   <block id="d49fe2e5280db996ef1801aa2312cf51" category="list-text">找到启动介质：</block>
@@ -2389,7 +2375,6 @@
   <block id="525f20b798e113619547955d7d7dcf5c" category="list-text">关闭通风管：</block>
   <block id="4fc302016c3931e6a9278cd203ab978a" category="list-text">向下旋转通风管。</block>
   <block id="d9f2c30fa17e17bb535f8c9807f2bd46" category="list-text">将通风管滑向升降器，直到其卡入到位。</block>
-  <block id="90005359fdbebd719077974048e1306f" category="doc">根据需要检查板载加密密钥— AFF A700s</block>
   <block id="ce895c4f6ee583d1352aa92ca42a2e7a" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.5 ，请转至 <block ref="814a166e20bd32e0eb4f111e2d255525" category="inline-xref-macro-rx"></block>。</block>
   <block id="3bdbfc08b67b8b5c267819cc7ef67535" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至 <block ref="9431a288e6ce7a6d88bc6ae31dccd0f0" category="inline-xref-macro-rx"></block>。</block>
   <block id="598fddf79c16170c6db6427cdff14daa" category="section-title">选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE</block>
@@ -2415,7 +2400,6 @@
   <block id="eb924216b30cedba77ddd9a35ecc861e" category="section-title">选项 2 ：在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE</block>
   <block id="feb6e7b3091c7242849233efd75d8a7e" category="doc">将故障部件退回给 NetApp - AFF A700s</block>
   <block id="8a9d9ac73cd783fd8be1adef7a7b3710" category="summary">主启动介质用于存储系统在启动时使用的 ONTAP 启动映像。您可以使用二级启动介质上的 ONTAP 映像还原主启动介质映像，也可以在必要时使用 USB 闪存驱动器还原主启动介质映像。</block>
-  <block id="7b8acdbd6cb1e8cc2c32a3dce8ab8048" category="doc">更换启动介质— AFF A700s</block>
   <block id="327cba4c3b39fe95536adbd9bda04a68" category="paragraph">如果二级启动介质出现故障或缺少 image.tgz 文件，则必须使用 USB 闪存驱动器还原主启动介质。驱动器必须格式化为 fat32 ，并且必须具有适当的存储容量来存放 image_xxx.tgz 文件。</block>
   <block id="c36778782b4ef6254390f7e747b95625" category="list-text">替换过程会将 var 文件系统从二级启动介质或 USB 闪存驱动器还原到主启动介质。</block>
   <block id="c6f502d8dd8eb8b387d8da2e59e48c95" category="summary">以下视频显示了运行 ONTAP 9.2 的系统的端到端软件配置。</block>
@@ -2423,7 +2407,6 @@
   <block id="0e77f42d7c64a07ce718d60dd8e6bd46" category="inline-link-macro">AFF A700s 设置视频</block>
   <block id="ad95e5b69f87474809f8228af5e2fbe2" category="paragraph"><block ref="ad95e5b69f87474809f8228af5e2fbe2" category="inline-link-macro-rx"></block></block>
   <block id="0b95a4177e24ad5d46eb1b71d70c2697" category="summary">要更换控制器模块，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</block>
-  <block id="1b2c61f715888e410f2b1fd6cbd9382b" category="doc">移动硬件— AFF A700s</block>
   <block id="d9119345c9a007e36472326a6510319b" category="section-title">第 2 步：移动 NVRAM 卡</block>
   <block id="63f3a7c41a55885608d548f506cf6e84" category="paragraph">在控制器更换过程中，您必须从受损控制器模块的提升板 1 中卸下 NVRAM 卡，然后将该卡安装到更换控制器模块的提升板 1 中。只有在将 DIMM 从受损的控制器模块移至更换用的控制器模块后，才应将提升板 1 重新安装到更换用的控制器模块中。</block>
   <block id="1ab810cfbdc8e768a7dd00d6ecd7d645" category="list-text">从控制器模块中卸下 NVRAM 提升板提升板 1 ：</block>
@@ -2512,7 +2495,6 @@
   <block id="21b899b642982e6355b933dbbe5ae8d0" category="list-text">从受损控制器模块中卸下 PSU 空白面板，然后将其安装到更换用的控制器模块中。</block>
   <block id="fda53941888fba701f57352c8efaee65" category="section-title">第 11 步：安装控制器模块</block>
   <block id="3da447ebdb632dcafa2eee47ac09d128" category="paragraph">将所有组件从受损控制器模块移至更换控制器模块后，您必须将更换控制器模块安装到机箱中，然后将其启动至维护模式。</block>
-  <block id="dc7c1c2416a08fd0a085e8329fda76ff" category="doc">移动并更换硬件— AFF A700s</block>
   <block id="5c60f6a11c073c93d814de24719fd7f8" category="section-title">第 4 步：安装控制器</block>
   <block id="aca669b08ed42205a122dce8e564a07e" category="paragraph">将控制器模块安装到新机箱后，将其启动到可以运行诊断测试的状态。</block>
   <block id="c58504da624719ce30aca73779ca7dbf" category="doc">还原并验证系统配置— AFF A700s</block>
@@ -2596,7 +2578,6 @@
   <block id="7b1c040ceba02d6d19a8157caebae0e2" category="doc">关闭受损节点— AFF A700s</block>
   <block id="2e7119d7d654a51006d39261079ed460" category="doc">卸下控制器模块 - AFF A700s</block>
   <block id="9a86085357934b0a1859c727c4e1e2ff" category="summary">要更换发生故障的 NVRAM 卡，您必须从控制器模块中卸下 NVRAM 提升板提升板 1 ，从提升板中卸下故障卡，在提升板中安装新的 NVRAM 卡，然后在控制器模块中重新安装提升板。由于系统 ID 源自 NVRAM 卡，因此，如果更换模块，则属于系统的磁盘将重新分配给新的系统 ID 。</block>
-  <block id="c2127d294bb8e1a8a88b8a6b351981ac" category="doc">更换 NVRAM 模块和 / 或 NVRAM DIMM — AFF A700s</block>
   <block id="93042cc4c4d4eead8d68941113308dfd" category="list-text">所有磁盘架都必须正常工作。</block>
   <block id="cfdacb5b8eea6906da1318b4cc5ee5a2" category="list-text">如果您的系统位于 HA 对中，则配对节点必须能够接管与要更换的 NVRAM 模块关联的节点。</block>
   <block id="105e727cdc375bb7add37bd9f101765d" category="list-text">此操作步骤使用以下术语：</block>
@@ -2639,10 +2620,8 @@
   <block id="1675c7f72f346b50740cbed80838eb37" category="doc">更换风扇— AFF A700s</block>
   <block id="c6c330df068950fe73f003a3f85b3fa0" category="list-text">将更换用风扇模块的边缘与控制器模块的开口对齐，然后将更换用的风扇模块滑入控制器模块，直到锁定闩锁卡入到位。</block>
   <block id="ee5ff73969a958477db471cca8246c98" category="doc">关闭控制器— AFF A700s</block>
-  <block id="9e5d9be7658096dcf2c948eacff48791" category="doc">更换控制器模块— AFF A700s</block>
   <block id="62bbf44c561b37677a0688281d60958e" category="list-text">运行正常的节点必须能够接管要更换的节点（在此操作步骤中称为 "`受损节点` " ）。</block>
   <block id="675f472ebd03f28204a76004420e0dc6" category="doc">关闭节点— AFF A700s</block>
-  <block id="3da7b4731a98bf94adb8ae43c535d9eb" category="doc">更换机箱 - AFF A700s</block>
   <block id="2b1646515c4dcacd96acd971239a6f14" category="paragraph">要更换机箱，您必须将控制器模块和 SSD 驱动器从受损机箱移至更换机箱，然后从设备机架或系统机柜中卸下受损机箱，并将更换机箱安装到位。</block>
   <block id="c465df44865c02db52bc6f37023b5b75" category="list-text">编写此操作步骤时，假设您要将 SSD 和控制器模块移至新机箱，而更换的机箱是 NetApp 的新组件。</block>
   <block id="f03c92168a16d01cf92fdfdfc719b6b5" category="summary">您可以使用此工作表收集并记录您的站点专用 IP 地址以及配置 ONTAP 集群时所需的其他信息。</block>
@@ -2735,7 +2714,6 @@
   <block id="365fae0e6393caadfc5e7bef45b9ce56" category="section-title">第 7 步：切回双节点 MetroCluster 配置中的聚合</block>
   <block id="e81625c6f6813a6e5480c2987f5bd781" category="section-title">第 8 步：将故障部件退回 NetApp</block>
   <block id="dc8763d13c28622d2ba4adace1e2fee7" category="summary">用于从恢复映像启动受损节点的操作步骤取决于系统是否采用双节点 MetroCluster 配置。</block>
-  <block id="3efcbf9d7a96ee14c191f92732d09d9d" category="doc">启动恢复映像— AFF A400</block>
   <block id="4e0316258b9c412eb9479c8f462e10f4" category="section-title">选项 1 ：大多数系统</block>
   <block id="7314a9fd3ee72bf0d057c4e5272b697e" category="paragraph">此操作步骤适用场景系统不采用双节点 MetroCluster 配置。</block>
   <block id="4afe550d309fda5baa26dd6ae61e8442" category="cell">* 如果您看到 ...</block>
@@ -2768,7 +2746,6 @@
   <block id="034cdc8c763b58cb46a43e92fa5725bd" category="list-text">将电池插头重新插入控制器模块，然后关闭通风管。</block>
   <block id="48d478390eb7cda13973a166fcbc6922" category="paragraph">您可以使用以下动画，图或写入步骤在机箱中安装控制器模块。</block>
   <block id="601c15b5101316dedeb3a25975e9e2f9" category="summary">您必须在控制器模块中找到启动介质（请参见控制器模块上的 FRU 映射），然后按照说明进行更换。</block>
-  <block id="8e3daca783076f9b3bcb927610eec9b7" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A400</block>
   <block id="88ef394be03c2dee8da212eb3ce203d3" category="paragraph">锁定闩锁</block>
   <block id="be0b7bebdbc010beb298a7c7fac29946" category="paragraph">将控制器滑出机箱</block>
   <block id="5783f79f9e7f2e133566622979b9730b" category="paragraph">您必须在控制器模块中找到启动介质（请参见控制器模块上的 FRU 映射），然后按照说明进行更换。</block>
@@ -2797,20 +2774,11 @@
   <block id="f33d22080714eee8f244e5ef03575052" category="list-text">将 `EFI` 文件夹复制到 USB 闪存驱动器上的顶部目录。</block>
   <block id="261f06ae9beffb3a4add256d9d6d8670" category="paragraph">重新布线时，如果已卸下介质转换器（ SFP 或 QSFP ），请务必重新安装它们。</block>
   <block id="d6247cf97fface5e53fdbd950c4cd532" category="paragraph">如果您未收到此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后 `halt` 节点以启动到加载程序。</block>
-  <block id="415fa0688df8274c164b59b4198962c0" category="list-text">尽管环境变量和 bootarg 已保留，但您应使用 `printenv bootarg name` 命令检查是否已为您的系统类型和配置正确设置所有必需的启动环境变量和 bootarg ，并使用 `setenv _variable-name_ &lt;value&gt;` 命令更正任何错误。</block>
-  <block id="fb6256876c77c84f7b123f77e4a76065" category="list-text">`bootarg.storageencryption.support _&lt;value&gt;_`</block>
-  <block id="b0c502405f3d38003102dc9ff6ecbacf" category="list-text">`bootarg.keymanager.support _<block ref="5e35286d16f4c4f2856a334908410e6e" category="inline-xref-macro-rx"></block>_`</block>
-  <block id="389654b5df7e597b0dca2e5dd38ab206" category="list-text">`kmip.init.interface _<block ref="5e35286d16f4c4f2856a334908410e6e" category="inline-xref-macro-rx"></block>_`</block>
-  <block id="dce763a51232b8b7a8be0369ee4aa6e5" category="list-text">`kmip.init.ipaddr _ &lt; 值 &gt; _`</block>
-  <block id="c587f8e3331dc8af219f5fb544e45305" category="list-text">`kmip.init.netmask _ &lt; 值 &gt; _`</block>
-  <block id="379e757e77ad9295fd49ed6e0b90b587" category="list-text">`kmip.init.gateway _ &lt; 值 &gt; _`</block>
-  <block id="fa7b780cb4a0299b9e38a76a2f8334b4" category="list-text">`bootarg.keymanager.support _value` _</block>
   <block id="6551c986c636d61142c1b77b48a7460d" category="list-text">如果控制器位于延伸型或光纤连接的 MetroCluster 中，则必须还原 FC 适配器配置：</block>
   <block id="9ad558d6e4619b772507061478e81eb9" category="list-text">启动到维护模式： `boot_ontap maint`</block>
   <block id="48aea463c7d284677a392c635ace5bf1" category="list-text">将 MetroCluster 端口设置为启动程序： `ucadmin modify -m fc -t _initiator adapter_name_`</block>
   <block id="224e2cc59ce146e8eee5802e5a172e07" category="list-text">halt 返回维护模式： `halt`</block>
   <block id="839495f837c29d3b1db7b61a9f35b89d" category="paragraph">这些更改将在系统启动时实施。</block>
-  <block id="e50ddfa110fbe30b27fc543c1c1b1e72" category="doc">根据需要检查板载加密密钥— AFF A400</block>
   <block id="170df6d027f1af0af09f17faa2ab6d64" category="doc">更换启动介质— AFF A400</block>
   <block id="2539aecd37c66635374c3189de97ba14" category="paragraph">启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。</block>
   <block id="c7cea431908caf9ec22b5642ce842640" category="list-text">运行状况良好的节点 _ 是受损节点的 HA 配对节点。</block>
@@ -2870,7 +2838,6 @@
   <block id="c2aa5ca76049f978f3894f5764c5a1cf" category="paragraph">确保插头锁定在控制器模块上。</block>
   <block id="ea1ac931101dcb5e350d2730dc13a26f" category="section-title">第 7 步：安装控制器模块</block>
   <block id="3db791f86840d722803e10a186dc04c8" category="summary">将受损机箱中的风扇，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。</block>
-  <block id="59c64930b708a1fa2fc4216bab7c8a0e" category="doc">移动并更换硬件— AFF A400</block>
   <block id="3e5a02473a086978bae6a6516ad46c5e" category="list-text">从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。</block>
   <block id="37b59d0cbc83e5d06f597e0bf7c8b4aa" category="section-title">第 2 步：移动风扇</block>
   <block id="0703654e434cbea56d601648b2580283" category="paragraph">要在更换机箱时将风扇模块移至更换机箱，您必须执行一系列特定的任务。</block>
@@ -2978,10 +2945,8 @@
   <block id="0288adc0f71efbfccd93c799c7b290be" category="section-title">选项 1 ：在更换机箱时关闭控制器</block>
   <block id="56eb83c06d36c90e76429cda40aea7ed" category="section-title">选项 2 ：关闭双节点 MetroCluster 配置中的节点</block>
   <block id="22cc15dad4c522616e5130f927446d07" category="doc">将故障部件退回给 NetApp - AFF A400</block>
-  <block id="8cb1266935764fdd7f06905f51f47216" category="doc">更换控制器模块 - AFF A400</block>
   <block id="3a23955ad584199d013caf86411a3e19" category="paragraph">如果这是您应使用的操作步骤，请注意，四节点或八节点 MetroCluster 配置中节点的控制器替代操作步骤与 HA 对中的控制器替代 相同。无需执行 MetroCluster 专用步骤，因为故障仅限于 HA 对，可以使用存储故障转移命令在更换期间实现无中断运行。</block>
   <block id="77e5d5e9e3fe25e357bcca8804d9d2dd" category="list-text">_replacement nodge_ 是指更换受损节点的新节点。</block>
-  <block id="09febcdc659d47fa316ea77a5da343ff" category="doc">更换机箱 - AFF A400</block>
   <block id="5ab7856b7ebec8f0df312e997fb8acf9" category="paragraph">要更换机箱，必须将风扇和控制器模块从受损机箱移至与受损机箱型号相同的新机箱。</block>
   <block id="244b874016608f71c1442226368f5da8" category="list-text">如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAIN=_number_of_hours_down_h`</block>
   <block id="ba70fdaa734ba4fd788cb6febeb14209" category="paragraph">接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_` 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
@@ -3182,7 +3147,6 @@
   <block id="f6430840c85f6266248e6114248083de" category="list-text">打开新电源的电源，然后验证电源活动 LED 的运行情况。</block>
   <block id="10c1fc08a5b1fdc9646341ddd433a756" category="paragraph">电源联机后，电源 LED 将亮起。</block>
   <block id="5cdd6ca46c1bd8446e669172ffdc9515" category="summary">您必须在控制器中找到启动介质并按照说明进行更换。</block>
-  <block id="3f7ce49a0d1e698f3c797b097e7fe96c" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— FAS8200</block>
   <block id="ef13404364a970b4fd05be667ebe059d" category="section-title">第 1 步：卸下控制器</block>
   <block id="110fdfa3e2fa88169ab703b0f8e4ff64" category="list-text">使用下图或控制器模块上的 FRU 映射找到启动介质：</block>
   <block id="8ccbd61b66565f6f1198c3dcd986738d" category="image-alt">DRW rxl 启动介质</block>
@@ -3205,7 +3169,6 @@
   <block id="47762ae212e6968555d32fa49019c551" category="list-text">dns_domain 是域名系统（ DNS ）域名。</block>
   <block id="241276d92d9d0036e12846a4a79ae084" category="paragraph">如果使用此可选参数，则无需在网络启动服务器 URL 中使用完全限定域名。您只需要服务器的主机名。</block>
   <block id="612578124cf80bac357458bcdf742381" category="admonition">您的接口可能需要其他参数。有关详细信息，可以在固件提示符处输入 `help ifconfig` 。</block>
-  <block id="3d72eea16a1ba04c6ccbe2a269646078" category="doc">根据需要检查板载加密密钥— FAS8200</block>
   <block id="ce0f07ee43e7bb986cfbe4574d968557" category="summary">如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控制器模块已脱机，则必须更换此缓存模块；否则会导致性能下降。</block>
   <block id="0c778d4562d4433df431e74565c47304" category="doc">更换缓存模块— FAS8200</block>
   <block id="e73517d6692e90195d517a3a4e2e02b7" category="paragraph">您可能希望在更换缓存模块之前擦除其内容。。尽管缓存模块上的数据已加密，但您可能希望擦除受损缓存模块中的所有数据，并验证缓存模块是否没有数据： .擦除缓存模块上的数据： `ssystem controller flash-cache secure -erase run` .验证是否已从缓存模块中擦除数据： `ssystem controller flash-cache secure -erase show -node node_name`</block>
@@ -3290,7 +3253,6 @@
   <block id="d16a6d885a49e24963af22e9c871828d" category="list-text">从启动菜单中，选择维护模式选项。</block>
   <block id="ce412027e710a9d744a414178dca4fc9" category="paragraph">* 重要信息： * 在启动过程中，您可能会看到以下提示：</block>
   <block id="a75dd44a30c437dc825bac9da1d4e3b5" category="summary">将受损机箱中的电源，风扇和控制器模块移至新机箱，然后将设备机架或系统机柜中受损机箱更换为与受损机箱型号相同的新机箱。</block>
-  <block id="cffb18da589dc8eb39d4f5a7cbaa5a2e" category="doc">移动并更换硬件— FAS8200</block>
   <block id="5a05c6605a020e1a2163f79eb10968be" category="section-title">第 1 步：移动电源</block>
   <block id="038dcab758c4b41667b9b5f59032a880" category="paragraph">更换机箱时，要取出电源，需要关闭旧机箱中的电源，断开电源并将其卸下，然后将其安装到更换机箱上并进行连接。</block>
   <block id="2d7dc0640073f973b9652b985a0a8fd0" category="list-text">重新连接电源线，并使用电源线锁定机制将其固定到电源。</block>
@@ -3358,7 +3320,6 @@
   <block id="c8335cf8d10164ae80a5aade11c9c2c6" category="list-text">重新连接电源，然后打开存储系统的电源。</block>
   <block id="b26b4e14a5f28cf68612a01acfe3d603" category="list-text">重新运行系统级诊断测试。</block>
   <block id="ce7ac078a00405de488856f37bcd6f09" category="summary">您必须验证机箱的 HA 状态，并运行系统级诊断，切回聚合并将故障部件退回给 NetApp ，如套件随附的 RMA 说明所述。</block>
-  <block id="6d6ccbb5c3f3daf9671e02820c125375" category="doc">还原和验证配置— FAS8200</block>
   <block id="e868d163eb8c93826e8f9ef7d7b0613e" category="list-text">下一步取决于您的系统配置。</block>
   <block id="6561961e36dc0d672367014bb35814b0" category="inline-link-macro">" 正在完成更换过程</block>
   <block id="65f64a7bdb4d22c25178d4fda4e009b6" category="list-text">转至 <block ref="c0ff5fd751abc2ff7939ebc71dae2951" category="inline-link-macro-rx"></block>。</block>
@@ -3451,16 +3412,13 @@
   <block id="9d1976464339a2dc5b681ea4cacc276d" category="doc">FAS8200 系统文档</block>
   <block id="9f3fe6619f3cc21d2cc057e260c9a3ae" category="doc">关闭受损控制器— FAS8200</block>
   <block id="aae29116de4798f9a6b173dc6aa9ace8" category="doc">根据需要还原 OKM ， NSE 和 NVE — FAS8200</block>
-  <block id="fe533c64e3a7324140fc23379a87ccc4" category="doc">关闭控制器— FAS8200</block>
   <block id="2ae25bf6a8aeb42c4073ddba26224b0c" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。</block>
   <block id="061a78fed35fa26d870ae789dd6685b8" category="doc">将故障部件退回给 NetApp - FAS8200</block>
-  <block id="76955bcf53f2288773176cce5b8b9be2" category="doc">更换控制器模块— FAS8200</block>
   <block id="2cbabd3028fd0cb6f4a57144ace2ee33" category="list-text">如果您的系统是 FlexArray 系统或具有 V_StorageAttach 许可证，则在执行此操作步骤之前，必须参考所需的其他步骤。</block>
   <block id="0012bcaadb56ca5543ace124a6a404f9" category="list-text">如果您的系统位于 HA 对中，则运行状况良好的节点必须能够接管要更换的节点（在此操作步骤中称为 "`受损节点` " ）。</block>
   <block id="90aef159b4ad02a5aa95f62d5be7d66d" category="list-text">此操作步骤包含根据系统配置自动或手动将驱动器重新分配到 _replacement_ 节点的步骤。</block>
   <block id="eceeb845d6027471d1eafcff9c9e0e9e" category="paragraph">您应按照操作步骤中的指示执行驱动器重新分配。</block>
   <block id="18286caf45baac43fedf94bfeaff35fa" category="list-text">更换用的控制器模块必须支持从旧控制器模块移至新控制器模块或从现有客户站点清单中添加的任何 PCIe 卡。</block>
-  <block id="cb4445ae1b422344b5e920dcd1d953f1" category="doc">更换机箱 - FAS8200</block>
   <block id="8385c47a31a80f44b8892894d86e73a6" category="paragraph">要更换机箱，您必须将受损机箱中的电源，风扇和控制器模块移至新机箱，然后将设备机架或系统机柜中受损机箱替换为与受损机箱型号相同的新机箱。</block>
   <block id="47dab8e7deee5ba45f8438d286d83eb4" category="list-text">编写此操作步骤时，假设您要将控制器模块移至新机箱，并且此机箱是 NetApp 的新组件。</block>
   <block id="e7d6ca5a4598f4102e93853e3167db4f" category="doc">集群配置工作表— FAS8200</block>
@@ -3504,7 +3462,6 @@
   <block id="1e37147d794224bac36635bdee74d81d" category="list-text">关闭 NVDIMM 通风管。</block>
   <block id="df0ede63d2bddc647b3f8cf55d7be4f6" category="paragraph">确保插头锁定在插槽中。</block>
   <block id="759e216c6a22313a95c34c198ce8cb0b" category="summary">在更换启动介质之前，您可以通过删除控制器模块上的提升板 3 来找到控制器模块中发生故障的启动介质。</block>
-  <block id="702228952a2bbb039b5de60bbb9bdc9e" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A800</block>
   <block id="c77a1ae1297b5c5dbfc50dce06f417ff" category="image-alt">更换 DRW a800 启动介质</block>
   <block id="413c7cb867bfe063a5a3a480228674da" category="paragraph">提升板 3</block>
   <block id="d4d3885e3484305b905fde6b3ef5c19c" category="paragraph">1 号十字螺丝刀</block>
@@ -3516,12 +3473,9 @@
   <block id="98bdc3e90693534845f2b1eeaabe98be" category="list-text">将 USB 闪存驱动器插入控制器模块上的 USB 插槽。+ 确保将 USB 闪存驱动器安装在标有 USB 设备的插槽中，而不是 USB 控制台端口中。</block>
   <block id="66e081aa9e9235fecee66d668b33a06c" category="list-text">将控制器模块一直轻轻推入系统中，直到控制器模块锁定挂钩开始上升，用力推动锁定挂钩以完成控制器模块的就位，然后将锁定挂钩旋转到控制器模块上插脚上方的锁定位置。+ 节点一旦完全安装到机箱中，就会开始启动。</block>
   <block id="ce526ec45d4379a40bad44d2a49da7f1" category="list-text">按 Ctrl-C 在 LOADER 提示符处停止，以中断启动过程。+ 如果未显示此消息，请按 Ctrl-C ，选择启动到维护模式的选项，然后暂停节点以启动到加载程序。</block>
-  <block id="48c4f2c3bb2ee493632edbffc490b423" category="list-text">`bootarg.init.flash_optimized`</block>
-  <block id="665494fdfd944918e2a1f81d0b26a659" category="doc">根据需要检查板载加密密钥— AFF A800</block>
   <block id="5fb89931e5b269129a2ad5936878a851" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.5 ，请转至 <block ref="b9f6f8746149f87def14842273c93bfe" category="inline-xref-macro-rx"></block>。</block>
   <block id="70c3e5c6b05722334dd3cfb521d9e159" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至 <block ref="e0569187fa90a6ae4bbbe053355b82c8" category="inline-xref-macro-rx"></block>。</block>
   <block id="34cf3a43d39d8b0acc65bd578d7188da" category="doc">更换启动介质— AFF A800</block>
-  <block id="48af71f8234ee9045396a05b47a22265" category="doc">移动硬件— AFF A800</block>
   <block id="56ea39f220f0f9a4e092906ae1b4e2a2" category="paragraph">在更换控制器模块时，您必须将受损控制器模块中的电源移至更换控制器模块。</block>
   <block id="79a34d0b71ca1ad3fdbbb6bb3a548146" category="image-alt">DRW a800 更换风扇</block>
   <block id="3526385a16b15ee87aa73e9d27bca396" category="section-title">第 4 步：移动 NVDIMM 电池</block>
@@ -3608,12 +3562,10 @@
   <block id="45c8293117e9731c1b2983abd691e338" category="paragraph">更换风扇模块时，必须从机箱中卸下控制器模块。</block>
   <block id="b8238a1ffeb288edb4606d4cee1cdf5c" category="doc">关闭控制器— AFF A800</block>
   <block id="228833e7e465458067df236eb339d948" category="doc">将故障部件退回给 NetApp - AFF A800</block>
-  <block id="ad4efc4cdb2f366ad32bdd16719d53f6" category="doc">更换控制器模块 - AFF A800</block>
   <block id="b43b6ffe97034eb968501fc99ef0a1c4" category="list-text">运行状况良好的节点 _ 是运行正常的节点。</block>
   <block id="0965105e8b2fca5f6bc22be96233c5e0" category="admonition">请勿降级 _replacement_ 节点的 BIOS 版本以匹配配对节点或旧控制器模块。</block>
   <block id="81e46cc93d394efa5f52a46a0927e127" category="doc">关闭节点— AFF A800</block>
   <block id="b8984f02e6cfd8c017d9d0f4737d0ac7" category="doc">更换机箱 - AFF A800</block>
-  <block id="58eb7c7475c6fdc8a1136e6958568701" category="doc">关闭受损节点 - AFF A800</block>
   <block id="13f3f5d40904a4c5b68e6c877e0c9bbd" category="paragraph">要安装 AFF A800 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="b772890c716d468c4b26510d897c0276" category="paragraph">HA 互连</block>
   <block id="3d8315ff7403b2d22ef55f5c6720369f" category="paragraph">X6621A-05 （ 112-00595 ）， 0.5 米；</block>
@@ -3726,9 +3678,7 @@
   <block id="1905d900d953685708ba58017a550170" category="list-text">按压电源凸轮把手上的闩锁，然后打开凸轮把手，以便从中板完全释放电源。</block>
   <block id="0bc322a4c7df540fa4b8bd8e6252f0cb" category="image-alt">DRW 2600 PSU 报告动画 gif</block>
   <block id="e432c2bc41b7f99dd47f85f51c2f7959" category="list-text">合上凸轮把手，使闩锁卡入到锁定位置，并且电源完全就位。</block>
-  <block id="b1108e16cfbf9bfec6507ad13906c2e5" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A220 和 FAS2700</block>
   <block id="88de6a437c20bc32d754f16685e940b8" category="image-alt">DRW 2600 启动介质移动已禁用 gif</block>
-  <block id="8e52a3809fdb034a02d082c36f777f91" category="doc">根据需要检查板载加密密钥— AFF A220 和 FAS2700</block>
   <block id="322391dba2ed1aad7de572d3e59d7971" category="doc">更换缓存模块— AFF A220 和 FAS2700</block>
   <block id="97b1f2a399a9f8be834e6f759850413e" category="paragraph">+<block ref="38093d6513bb2e960eab247f00f04533" category="inline-link-rx"></block></block>
   <block id="308216007c5ec00e109a42c5068cc3de" category="paragraph">您可能希望在更换缓存模块之前擦除其内容。</block>
@@ -3774,7 +3724,6 @@
   <block id="41fc2e794f85d8118c2ed7ccc20c671a" category="section-title">第 5 步：安装控制器</block>
   <block id="7ece4dc1de81ff4f6a6d373a61c7fd86" category="doc">还原并验证系统配置— AFF A220 和 FAS2700</block>
   <block id="1849818d0241de213ff605d4ee0f2ee4" category="section-title">第 3 步：运行系统级诊断</block>
-  <block id="225990e93efbda40e50290405349df37" category="doc">还原和验证配置— AFF A220 和 FAS2700</block>
   <block id="df6822f659c151f8e258eb209eb61168" category="paragraph">您在这项特定任务中没有其他步骤。</block>
   <block id="fd0db0c0a8315e064601a11ecc8c2b49" category="doc">更换实时时钟电池</block>
   <block id="78cdea792972b347c50369463c3d2407" category="image-alt">DRW 2600 RTC 电池</block>
@@ -3810,8 +3759,6 @@
   <block id="9da34b3563e3dc0c838ac5494efca1fe" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF A220 和 FAS2700</block>
   <block id="7b8a615da4ff1a4b66afd353c0a6117c" category="doc">关闭控制器— AFF A220 和 FAS2700</block>
   <block id="10c7f296fbe86b208c1b89ca81a28947" category="doc">将故障部件退回给 NetApp — AFF A220 和 FAS2700</block>
-  <block id="b400af1ab4656073ad62b92f9b916c24" category="doc">更换控制器模块— AFF A220 和 FAS2700</block>
-  <block id="75877f072c08497206c90d0292eeae79" category="doc">更换机箱 - AFF A220 和 FAS2700</block>
   <block id="390911875f818301a4ee051939794a66" category="paragraph">要更换机箱，您必须将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，并将设备机架或系统机柜中受损机箱替换为与受损机箱型号相同的新机箱。</block>
   <block id="1e67e0629d0e05c486b4b70e46c2e403" category="list-text">编写此操作步骤时，假设您要将所有驱动器和控制器模块移至新机箱，并且此机箱是 NetApp 的新组件。</block>
   <block id="565389f36084e305bd7e2e90f9c2a19d" category="section-title">选项 1 ：关闭节点</block>
@@ -4482,7 +4429,6 @@
   <block id="513b4883451dec21bc772400c3a572d8" category="paragraph"><block ref="513b4883451dec21bc772400c3a572d8" category="inline-link-rx"></block></block>
   <block id="fb346fbc4b16fda2d4c28fb66e0a91d8" category="list-text">如果要服务的节点不在 LOADER 提示符处，请重新启动节点： `ssystem node halt -node _node_name_`</block>
   <block id="1db543711acdae9341bb66467bfc08e7" category="list-text">如果测试未报告任何故障，请从菜单中选择 `Reboot` 以重新启动系统。</block>
-  <block id="e21aa8fb49f203859e11ff4eb68ca0f5" category="doc">启动恢复映像— AFF FAS8300 和 FAS8700</block>
   <block id="bef53c14eb719bb1cd8539b91f7515d7" category="doc">切回双节点 MetroCluster 配置中的聚合— AFF fas8300 和 FAS8700</block>
   <block id="d5329d1a1e1dddf29f9d62bdc1cd54ad" category="doc">视频— FAS8300 和 FAS8700</block>
   <block id="00d38cc5ddcdd3c544a92f2055d67afa" category="inline-link">FAS8300 和 FAS8700 安装和设置说明</block>
@@ -4490,13 +4436,7 @@
   <block id="d1903d398c4c8283b66cc2ee2599cef5" category="doc">快速指南— FAS8300 和 FAS8700</block>
   <block id="221315bbb17a9424f37793425986d6c2" category="inline-link">《 FAS8300 和 FAS8700 安装和设置说明》</block>
   <block id="0f6585f4d22c37462401058292d5968a" category="paragraph"><block ref="0f6585f4d22c37462401058292d5968a" category="inline-link-rx"></block></block>
-  <block id="62391db846702af8767801f5dceef433" category="doc">更换 NVDIMM 电池— FAS8300 和 FAS8700</block>
   <block id="9af1a70147e4372628e3cff0c1a8a31c" category="list-text">如果扫描未报告任何故障，请从菜单中选择 `Reboot` 以重新启动系统。</block>
-  <block id="b3f22c8071c2a0840252f4353acbc695" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— FAS8300 和 FAS8700</block>
-  <block id="888621943c5cf88a8fb2fb47ddc074c9" category="list-text">`kmip.init.interface _ &lt; 值 &gt; _`</block>
-  <block id="b4b54309687e129a828944b91b5c5938" category="list-text">`bootarg.keymanager.support _ &lt; 值 &gt;` _</block>
-  <block id="d792a0b774763ee2c2f1979f79da10f8" category="list-text">`bootarg.onbox_keymanager _&lt;value&gt;_`</block>
-  <block id="adafb1fb613bd0a19edac581ad0e0c2e" category="doc">根据需要检查板载加密密钥— AFF fas8300 和 FAS8700</block>
   <block id="05da715fdd840e7fc27dd764386018bc" category="doc">更换缓存模块— FAS8300 和 FAS8700</block>
   <block id="d457ea14ed8ca14254ad1d75e29dce09" category="list-text">擦除缓存模块上的数据： `ssystem controller flash-cache secure -erase run -node _node_name_ -device-id _device_id_`</block>
   <block id="b9106c27d735907c8812d337029e92be" category="list-text">验证是否已从缓存模块中擦除数据： `ssystem controller flash-cache secure -erase show -node _node_name_`</block>
@@ -4520,7 +4460,6 @@
   <block id="94abc4b4fc0a99ec4af4e15b1f87ad40" category="list-text">从显示的菜单中选择 "* 。 2. NVMe 驱动器压力 "* 。</block>
   <block id="9fd188207b0f7e77aa563d18053142c8" category="section-title">第 8 步：完成更换过程</block>
   <block id="ed8e6ac65f869dd5cec262d6da357514" category="doc">完成更换流程— FAS8300 和 FAS8700</block>
-  <block id="106747009e3404b4a4d5b54c7986550f" category="doc">更换启动介质— AFF FAS8300 和 FAS8700</block>
   <block id="6976de191bb895bccff42aea7f5ef312" category="section-title">第 6 步：移动缓存模块</block>
   <block id="73cf21a4d099a3e93b10c19fe5877edc" category="inline-link">移动缓存模块</block>
   <block id="5f5c3b786cb003943169688afc62625d" category="paragraph"><block ref="5f5c3b786cb003943169688afc62625d" category="inline-link-rx"></block></block>
@@ -4536,7 +4475,6 @@
   <block id="299fe45efcdacbb68bc84ef67b7c2627" category="paragraph">`ha-state` 的值可以是以下值之一：</block>
   <block id="5b904801e53f1801fe6ebd755f21ce8e" category="doc">完成还原和更换过程— FAS8300 和 FAS8700</block>
   <block id="94f9b9f44e9b09623c936fea2cc5c107" category="section-title">第 4 步：完成更换过程</block>
-  <block id="e0b7d90c90226a613c2854fa7517f6c4" category="doc">更换实时时钟电池— FAS8300 和 FAS8700</block>
   <block id="781ec9f87f3965b6a34526e735ee3c5b" category="section-title">选项 2 ：控制器位于双节点 MetroCluster 中</block>
   <block id="97a3946d5380c45539697b463767b69c" category="section-title">第 4 步：重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期</block>
   <block id="c1541e02506543efaa1d18ae5a171fa3" category="doc">重新对系统进行配置并重新分配磁盘— FAS8300 和 FAS8700</block>
@@ -4547,12 +4485,10 @@
   <block id="8d3a887f704ca0886089fac6ec777223" category="section-title">第 7 步：运行诊断后，将控制器模块还原为正常运行</block>
   <block id="07198f13a474589e15ec90df05d856ff" category="doc">FAS8300 和 FAS8700 系统文档</block>
   <block id="27dcde903ce9d2827a6882d72efe7cb4" category="doc">关闭受损控制器— AFF FAS8300 和 FAS8700</block>
-  <block id="91d805e0cb2ee6f7ac1bb317143563e5" category="doc">更换 NVDIMM - FAS8300 和 FAS8700</block>
   <block id="bc6fa9fd41bd50f50a6f712cd33d5e4c" category="list-text">交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode ` impaired_node_name_``</block>
   <block id="85d8efbc74d6524c8654e1ba5832036b" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF fas8300 和 FAS8700</block>
   <block id="e9c29b2069e0c6c237cd1e2a30e9c48b" category="doc">关闭控制器— FAS8300 和 FAS8700</block>
   <block id="14df5008a24cd65fbb232505d17779b3" category="doc">将故障部件退回给 NetApp — AFF fas8300 和 FAS8700</block>
-  <block id="c923231fd8c67b0547a9abe7ecbc8a43" category="doc">更换控制器模块— FAS8300 和 FAS8700</block>
   <block id="fe0879209afd1fc2f28d40077ccda980" category="doc">关闭受损控制器— FAS8300 和 FAS8700</block>
   <block id="f406838ab1af1615895d90b4b0439c67" category="doc">详细指南— FAS8300 和 FAS8700</block>
   <block id="02b3dac5d46f2e577325711400925ec7" category="list-text">查看 _NetApp ONTAP 配置指南 _ 并收集该指南中列出的所需信息。</block>
@@ -4574,11 +4510,7 @@
   <block id="a913fe47ae8dd3f50e4c2659f0aafe28" category="inline-link">安装和设置 FAS500f</block>
   <block id="139b85a2da5c2f7968fae24f14c3ed09" category="inline-link">《 FAS500f 安装和设置说明》</block>
   <block id="dae1434e283524bee3110823c8eb7212" category="inline-link">《 FAS500f 系统安装和设置说明》</block>
-  <block id="acc2bccea0dfeb04591667aa706aad91" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— FAS500f</block>
   <block id="0ce2a0e29499223b29490143e42e0e0e" category="list-text">与受损控制器运行的 ONTAP 映像版本相同的副本。您可以从 NetApp 支持站点上的 * 下载 * 部分下载相应的映像</block>
-  <block id="63bf196da0a71b579342a8c36b458ea1" category="list-text">保存使用 ` * savenv*` 命令更改的环境变量</block>
-  <block id="727378491f0999b5dc0f175c2ad5db46" category="list-text">使用 ` * printenv _variable-name_*` 命令确认所做的更改。</block>
-  <block id="7d297a8476adbfe88efbefd74ac3307a" category="doc">根据需要检查板载加密密钥— FAS500f</block>
   <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">更换启动介质— FAS500f</block>
   <block id="2685cb32d91e3c7296420631a7066229" category="paragraph">您可以使用以下视频或表格中的步骤更换控制器模块：</block>
   <block id="616af20769d44e43520152460f655603" category="doc">移动并更换硬件— FAS500f</block>
@@ -4600,14 +4532,11 @@
   <block id="20851709efa205bf63087d09e01725ff" category="paragraph">您可以使用以下视频或表格中的步骤更换风扇：</block>
   <block id="9fb8ac9db9ddb949f108f678e1fa4b9d" category="doc">关闭控制器— FAS500f</block>
   <block id="5bafa27d304da6702fac02a0b481992c" category="doc">将故障部件退回给 NetApp — FAS500f</block>
-  <block id="c92373da08fc89b1d6f8e717d290038d" category="doc">更换控制器模块— FAS500f</block>
   <block id="806172d09ec083b134236f39467e6f44" category="doc">更换或安装夹层卡— FAS500f</block>
   <block id="5a8806fc27bd2a34806ff3f345c3e780" category="paragraph">您可以使用以下视频或表格中的步骤更换夹层卡：</block>
   <block id="fdf5f4359ee176f1de2ac16926a8b1f1" category="doc">关闭节点— FAS500f</block>
-  <block id="6f379fd2db2934ddcd9565c6bf9195c8" category="doc">更换机箱— FAS500f</block>
   <block id="9cba1bd90da040950cfda65ba6af50aa" category="doc">更换 NVMEM 电池— FAS500f</block>
   <block id="74384aef792e0e84d445bfde0eab13c6" category="paragraph">您可以使用以下视频或表格中的步骤更换 NVMEM 电池：</block>
-  <block id="b3e8eef19f55c74c863b75988d188522" category="doc">关闭受损控制器模块— FAS500f</block>
   <block id="3b92fecaa3772b0492ba3935a96dedea" category="paragraph">要安装 FAS500f 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="3ea38b3923e0e690201e332cebb4b94d" category="paragraph">使用 25GbE 集群互连缆线将集群互连端口彼此相连</block>
   <block id="b5bee911f1169a180dca19eacfac565a" category="paragraph"><block ref="6b6a40b68f5814cad1750bfff7e3b927" category="inline-image-macro-rx" type="image"></block>：</block>
@@ -4636,7 +4565,6 @@
   <block id="0e976cfcc1b2e9eac14c2a85a2af912b" category="inline-link">《 AFF C190 系统安装和设置说明》</block>
   <block id="b351b18aabb1167eb5b0851a7dfde759" category="doc">更换电源— AFF C190</block>
   <block id="48cb3ada49a99389f0b8a03abf466ec8" category="summary">您必须验证机箱的 HA 状态并运行系统级诊断。</block>
-  <block id="ae66ff9f4454403fc4560484ed0e7cec" category="doc">还原和验证配置— AFF C190</block>
   <block id="a9c0a6c57639677722b2d4d4893acd60" category="section-title">第 1 步：验证并设置机箱的 HA 状态</block>
   <block id="d8d0a8b4117d13248466eeef738784f1" category="list-text">在维护模式下，从任一控制器模块显示本地控制器模块和机箱的 HA 状态：</block>
   <block id="b91e5154a426753ab0a5ef0ad93dc50f" category="paragraph">` * ha-config show*`</block>
@@ -4668,11 +4596,8 @@
   <block id="68e529d2952accfa686e08dbef524f0d" category="paragraph">` * 节点：： &gt; storage failover modify -node node0 -enabled true*`</block>
   <block id="6dd7b108c3ad2171c8fc0c3b562d1ec8" category="paragraph">问题描述此命令：</block>
   <block id="7182b14422325235a1325aec0997297b" category="summary">您必须在控制器模块中找到启动介质，然后按照说明进行更换。</block>
-  <block id="9ec7d6a6908af6dbd3df71f1bf41a195" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF C190</block>
   <block id="659f7aba5fceb2bf535b6451bc41959c" category="paragraph">您可以使用已安装映像的 USB 闪存驱动器将系统映像安装到替代启动介质。但是，您必须在此操作步骤期间还原 `var` 文件系统。</block>
   <block id="3ad4ff48e03cad4f50c0e486f9347051" category="list-text">在出现 `Starboot 时按 Ctrl-C 中断启动过程以在 LOADER 提示符处停止。按 Ctrl-C 中止 ...`</block>
-  <block id="bf4692a201a712700b2e5626b77a5791" category="list-text">尽管环境变量和 bootarg 已保留，但您应使用 `printenv _bootarg name_` 命令检查是否已为您的系统类型和配置正确设置了所有必需的启动环境变量和 bootarg ，并使用 `setenv _variable-name &lt;value&gt;_` 命令更正任何错误。</block>
-  <block id="7cd5e0d13ff4c129549064f956a3a423" category="list-text">`bootarg.init.flash_optimized` ，适用于 AFF C190</block>
   <block id="49b41220392a7e4170d9ce3bbd097866" category="list-text">启动恢复映像：</block>
   <block id="c73e1789eacd9f37e24782c40b72f17d" category="paragraph">` * 启动恢复 __ontap_image_name__.tgz*`</block>
   <block id="bced4119afb0340cd3e5c3533733a941" category="admonition">如果 `image.tgz` 文件的名称不是 image.tgz ，例如 `boot_recovery 9_4.tgz` ，则需要在 `boot_recovery` 命令中包含不同的文件名。</block>
@@ -4700,7 +4625,6 @@
   <block id="2b5b86c9ce2d39ee837c5fdad0fc27cc" category="paragraph">这将启动将受损节点聚合和卷的所有权从运行状况良好的节点交还给受损节点的过程。</block>
   <block id="889c078e9cfb9c17ddcfadb4d5c9759c" category="list-text">使用 `storage failover show-giveback` 命令监控交还操作的进度。</block>
   <block id="55264e5caf29a4014bb82535b8f9ddba" category="list-text">如果您使用 `storage failover modify` 命令禁用了自动交还，请将其还原。</block>
-  <block id="9b0a11193fefe2f787bd01bc7b799472" category="doc">根据需要检查板载加密密钥— AFF C190</block>
   <block id="cc36390de0e6f5128a70841fe11c7e73" category="doc">更换启动介质— AFF C190</block>
   <block id="355402a9684b4b94b56cf033327d696e" category="list-text">更换启动介质的无中断和中断方法都要求您还原 var 文件系统：</block>
   <block id="c3e12e601f836e0ea6b976380432b1a0" category="list-text">要实现无中断更换，必须将 HA 对连接到网络以还原 var 文件系统。</block>
@@ -4711,7 +4635,6 @@
   <block id="0f36d2c538b2db218480ae8a6cd7aa5a" category="section-title">第 1 步：移动电源</block>
   <block id="0ec0d2472b9b2c7b3ff1d96ae6ba1111" category="paragraph">在将控制器模块和任何其他组件安装到新机箱中后，您需要将其启动到可以运行互连诊断测试的状态。</block>
   <block id="00a36e9a8759685eeb634a8e573ae042" category="list-text">完成控制器模块的安装</block>
-  <block id="34b8a670110b44f61bb0f87c29767333" category="doc">还原并验证系统配置— AFF C190</block>
   <block id="903ad4ced24fc25dd69a11e17dd6ac00" category="list-text">如果要服务的节点不在 LOADER 提示符处，请重新启动此节点：</block>
   <block id="81120d9f26288d75b43fa9389447301a" category="paragraph">在启动过程中，您可以安全地对提示做出 ` * y*` 响应，直到显示维护模式提示符（ * &gt; ）为止。</block>
   <block id="c9dc8029f1ea83b5f228f69e5cd6b390" category="list-text">显示并记下控制器模块上的可用设备：</block>
@@ -4764,9 +4687,7 @@
   <block id="c8ba643914db1664b5eb486f2f97cf94" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF C190</block>
   <block id="fc3fc335fe3d498e24675e2eff27cd4f" category="doc">关闭控制器 - AFF C190</block>
   <block id="d5d1d7f0ba452ea37dcd299489e09eff" category="doc">将故障部件退回给 NetApp - AFF C190</block>
-  <block id="18108ac2d1d4890bfa267d1c329e82cc" category="doc">更换控制器模块 - AFF C190</block>
   <block id="d88c7eb1c7ef4b32e4cdba82c917bfae" category="doc">关闭节点— AFF C190</block>
-  <block id="9eb6861003219a994b9c41cc634af5a2" category="doc">更换机箱 - AFF C190</block>
   <block id="537180ccf440446ad8816ed356c6cee9" category="paragraph">要安装 AFF C190 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="3fdd87b9e91d1f4dbea3152a3a2b8d0b" category="paragraph">X6566B-3-R6 （ 112-00300 ）， 3 米</block>
   <block id="2dbee959c43fd0b0e9eab0968ff31b96" category="image-alt">OIE 缆线光纤 LC 连接器</block>
@@ -5280,15 +5201,12 @@
   <block id="8ef8932f72109469af86d4e2c65c227c" category="paragraph">将电源从旧机箱移至更换机箱。</block>
   <block id="3d0a009381ea108fad1b0c7f371cca53" category="paragraph">将驱动器从旧机箱中的每个托架开口移至新机箱中的同一托架开口。</block>
   <block id="e7cc374705291915b44392edac6d4956" category="doc">完成系统还原— AFF A200</block>
-  <block id="4888d28522306f51de611503d5206c37" category="doc">更换控制器模块 - AFF A200</block>
   <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">您需要什么？ #8217 ；将需要什么</block>
   <block id="6151adb4be9acf8b78f2772f645f81b4" category="list-text">您必须将控制器模块更换为相同型号类型的控制器模块。您不能只更换控制器模块来升级系统。</block>
   <block id="7406636825b302f07932b3580dc3aa5b" category="doc">关闭控制器— AFF A200</block>
-  <block id="b1d999dcbecd18db4341259232103b4e" category="doc">关闭节点— AFF A200</block>
   <block id="34618f776812de6f5f59a70ca2c17728" category="doc">更换 DIMM - AFF A200</block>
   <block id="170207ac967287c686f238b6880ae540" category="list-text">返回到此操作步骤的步骤 2 以重新检查 NVMEM LED 。</block>
   <block id="6a52caee751b826df1b89e429d1dc564" category="admonition">如果禁用了自动交还，请使用 `storage failover modify` 命令重新启用它。</block>
-  <block id="49163ab30bf2924d9d1750693ba74eb6" category="doc">更换机箱 - AFF A200</block>
   <block id="5a87b33b6d65f98aa6d162e0e81a802e" category="paragraph">要更换机箱，请将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将设备机架或系统机柜中受损机箱替换为与受损机箱型号相同的新机箱。</block>
   <block id="a5f480251d9a5927a8c47d76fc2930e3" category="doc">关闭受损控制器 - AFF A200</block>
   <block id="adbdad02f5bfa87c9c2f8f336a215924" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF A200</block>
@@ -5296,8 +5214,6 @@
   <block id="456b3ef9056943b6d990b202391c1677" category="inline-link-macro">《 AFF A200 安装和设置说明》</block>
   <block id="953946f657bfabfff9e2ced20f22e7a6" category="doc">还原并验证系统配置— AFF A200</block>
   <block id="ebc7476a478f335dcc4ca03640d92275" category="doc">更换启动介质— AFF A200</block>
-  <block id="2b531a2fdf0f43f31cc3d22177ba051d" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A200</block>
-  <block id="8ef1dbd6e6fa116ecbce2e4b39adff7e" category="list-text">尽管环境变量和 bootarg 已保留，但您应使用 `printenv bootarg name` 命令检查是否已为您的系统类型和配置正确设置所有必需的启动环境变量和 bootarg ，并使用 `setenv _variable-name_ _value_` 命令更正任何错误。</block>
   <block id="5cae28c48acee98f2baac425290bbe14" category="list-text">`filer_addr` 是存储系统的 IP 地址。</block>
   <block id="881a30a5eb497e5f1a74adafa0d2fe0d" category="list-text">`netmask` 是连接到 HA 配对节点的管理网络的网络掩码。</block>
   <block id="f902be9386ed1a89086bfd6000dab684" category="list-text">`gateway` 是网络的网关。</block>
@@ -5314,7 +5230,6 @@
   <block id="7ae81662bd11820c2773e2c5dd7cc5fe" category="doc">安装和设置视频— AFF A200</block>
   <block id="034a1a146ef2121dfec2fdbe9d4d6dca" category="inline-link-macro">AFF A200 设置视频</block>
   <block id="61ebd8fcdf103b9ce92a28b6cb2ee6bb" category="doc">更换实时时钟电池 - AFF A200</block>
-  <block id="d65f34688dd887c3f85d6fbd213000b1" category="doc">还原和验证配置— AFF A200</block>
   <block id="37ccf93c64c439daba8a7a5a18adf305" category="section-title">第 1 步：验证和设置机箱的 HA 状态</block>
   <block id="70ad01591507045d24043df2aa0d5763" category="section-title">第 2 步：运行系统级诊断</block>
   <block id="974e25d76804357a5ef200cb958fb945" category="doc">重新配置系统并重新分配磁盘— AFF A200</block>
@@ -5323,7 +5238,6 @@
   <block id="b0da6837b9dc75b3c0fcca1c9c38d89b" category="paragraph">如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。在独立系统中，必须手动将 ID 重新分配给磁盘。您必须为您的配置使用正确的操作步骤。</block>
   <block id="c6fcf31298ea00741e2a62b768872ba4" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它： `storage failover modify -node _replacement-node-name_ -onreboot true`</block>
   <block id="677d8bcfde6bff1a436a7a5e69b4dd4b" category="doc">集群配置工作表— AFF A200</block>
-  <block id="6b6e7724d86b6fc383fcbe2784414aa7" category="doc">根据需要检查板载加密密钥— AFF A200</block>
   <block id="c63040480653df4c796c48ec77d545d6" category="section-title">选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE</block>
   <block id="249776239ba561818dea48749c5be5e8" category="section-title">选项 2 ：在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE</block>
   <block id="8cd2c59a1f3a2ce0c49c92a0d4528f07" category="list-text"><block ref="8cd2c59a1f3a2ce0c49c92a0d4528f07" category="inline-link-macro-rx"></block></block>
@@ -5410,17 +5324,14 @@
   <block id="1c0152b1bce888fe537c442be9dccb80" category="section-title">第 4 步：更换 FRU 后重新启动控制器</block>
   <block id="ba7c6b30d321c807ee6ec4c52d399609" category="paragraph">更换 FRU 后，必须重新启动控制器模块。</block>
   <block id="e56984ce184129f6ba4941f5a5d85c7b" category="list-text">要从加载程序提示符处启动 ONTAP ，请输入 `bye` 。</block>
-  <block id="fd1b90f6b267b9c4bc56682e00624287" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A700 和 FAS9000</block>
   <block id="221a009c2c8e027e67f318554e11c21c" category="paragraph"><block ref="221a009c2c8e027e67f318554e11c21c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1f098bab9337722dcf96ec8db49fd9ff" category="paragraph">按释放卡舌</block>
   <block id="c8587180911d070686f7467322a07db1" category="list-text">重新安装控制器模块盖，方法是将控制器模块盖上的插脚与主板托架上的插槽对齐，然后将控制器模块盖滑入到位。</block>
   <block id="9148f81e87e207af324fa20ce6e3a4df" category="list-text">根据需要重新对控制器模块进行布线。</block>
   <block id="4f242c85307491ee1ac3a7f2d7ca4421" category="list-text">将控制器模块完全推入系统中，确保凸轮把手离开 USB 闪存驱动器，用力推动凸轮把手以使控制器模块完全就位，然后将凸轮把手推至关闭位置。</block>
   <block id="de8dff5c76cce6c1c8bf248199921c22" category="admonition">您配置的目标端口是在使用网络连接执行 `var` 文件系统还原期间，用于与运行状况良好的节点中受损节点进行通信的目标端口。您也可以在此命令中使用 e0M 端口。</block>
-  <block id="9add295f96851a9e3eb3033ba7ffa527" category="doc">根据需要检查板载加密密钥</block>
   <block id="9c675ab95a17d7706cc75c5ef43cd314" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.5 ，请转至 <block ref="bb573a9efe1b6bf0e0892d0c586f8500" category="inline-xref-macro-rx"></block>。</block>
   <block id="08b4a74e7beb4fdd66d8c35f48e446dd" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至 <block ref="51b5502ad45a0354bf57a42b448e6184" category="inline-xref-macro-rx"></block>。</block>
-  <block id="49cc9697d19126586f947ef6e21ed54a" category="doc">更换控制器模块— AFF A700 和 FAS9000</block>
   <block id="31c229194fbba5100585e996a59e1ef4" category="doc">更换启动介质— AFF A700 和 FAS9000</block>
   <block id="558126deee8b790613b8918471f50c25" category="doc">更换控制器模块硬件— AFF A700 和 FAS9000</block>
   <block id="5f1d298de53194255e6ce0c8f30f4bdb" category="list-text">提起控制器模块背面的黑色通风管，然后使用以下示意图或控制器模块上的 FRU 示意图找到启动介质：</block>
@@ -5548,7 +5459,6 @@
   <block id="2f77598cc1406917571281533b6a7290" category="list-text">如果节点处于 LOADER 提示符处，请启动节点，如果您看到系统 ID 不匹配的提示警告并要求覆盖系统 ID `bye` ，请回答 `y`</block>
   <block id="074956b98e6ab62b7ae2bf9b8699df64" category="list-text">如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 `nicadmin convert` 命令将这些端口转换为 10 GbE 连接。</block>
   <block id="a807e98301721a3033173dc23ac9fd93" category="summary">要热插拔包含 NVRAM10 电池的降级控制器电源模块（ DCPM ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。</block>
-  <block id="641f349f2152b2dcf9ef8ebb8e931ac1" category="doc">更换包含 NVRAM10 电池的降级控制器电源模块 - AFF A700 和 FAS9000</block>
   <block id="9b9f090ead8603008076b06ff01712ce" category="paragraph">在从机箱中卸下故障模块之前，您必须准备好一个替代 DCPM 模块，并且必须在卸下此模块后五分钟内更换此模块。从机箱中删除 DCPM 模块后，拥有 DCPM 模块的控制器模块除了故障转移到另一个控制器模块之外，不存在关闭保护。</block>
   <block id="7d7208507cb6b8b1db8929051420283d" category="section-title">更换 DCPM 模块</block>
   <block id="5a00f3de99220093cfa367a074d35fec" category="paragraph">要更换系统中的 DCPM 模块，您必须从系统中卸下出现故障的 DCPM 模块，然后将其更换为新的 DCPM 模块。</block>
@@ -5563,7 +5473,6 @@
   <block id="d1cc8f2b719b85882d883ce7e0b34c6a" category="doc">关闭受损控制器 - AFF A700 和 FAS9000</block>
   <block id="50b1779c690b0fd94ee913e82cbb2328" category="doc">处置电池— AFF A700 和 FAS9000</block>
   <block id="6c5689e6cebd33e09bd3177ac7c907ca" category="summary">NVRAM 模块由 NVRAM10 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。</block>
-  <block id="d61a7d8d9f24f1b3cf8f6103ae12f979" category="doc">更换 NVRAM 模块和 / 或 NVRAM DIMM — AFF A700 和 FAS9000</block>
   <block id="4722e247b6f4c8b13c5d0223d4ef06c3" category="paragraph">NVRAM 模块由 NVRAM10 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。您可以更换发生故障的 NVRAM 模块或 NVRAM 模块中的 DIMM 。要更换发生故障的 NVRAM 模块，您必须将其从机箱中卸下，从 NVRAM 模块中卸下 FlashCache 模块，将 DIMM 移至更换模块，重新安装 FlashCache 模块，然后将更换的 NVRAM 模块安装到机箱中。由于系统 ID 源自 NVRAM 模块，因此，如果更换此模块，则属于此系统的磁盘将重新分配给新的系统 ID 。</block>
   <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">* 开始之前 *</block>
   <block id="ed8076069cbf889b55cfae7fbfe0fa77" category="section-title">第 2 步：更换 NVRAM 模块</block>
@@ -5620,7 +5529,6 @@
   <block id="9947bf3b87585d257219268ad5fee4d1" category="section-title">选项 1 ：关闭控制器</block>
   <block id="4ef2119efbb49942a200e3b516caf558" category="doc">将故障部件退回给 NetApp — AFF A700 和 FAS9000</block>
   <block id="7cf422baa157fc731656c552e7fa38db" category="summary">您可以通过在已完全填充的系统中将 NIC 或存储适配器更换为新的 NIC 或存储适配器，或者将新的 NIC 或存储适配器添加到系统中的空机箱插槽中来向系统添加 I/O 模块。</block>
-  <block id="4146b8eebedbaf7e4967f1b53039cd68" category="doc">添加 X91148A 模块 - AFF A9000</block>
   <block id="81e3372a549fe5f8288392c2b55e8e4d" category="list-text">检查<block ref="bf137fbaca3418d969a7cbbc6acb278c" category="inline-link-rx"></block> 确保新 I/O 模块与您正在运行的系统和 ONTAP 版本兼容。</block>
   <block id="3a0f07d1b89f0d857d68c3c47a03e14d" category="list-text">如果有多个可用插槽，请在中检查插槽优先级<block ref="bf137fbaca3418d969a7cbbc6acb278c" category="inline-link-rx"></block> 并使用适用于您的 I/O 模块的最佳配置。</block>
   <block id="c0231814de48c33dacc879427cd2b0c4" category="list-text">要无中断地添加 I/O 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖或卸下现有 I/O 模块，添加新的或更换的 I/O 模块，然后交还目标控制器。</block>
@@ -5727,14 +5635,12 @@
   <block id="1f71a9eeabff4e5f30b29ba00e836e57" category="inline-link">打开控制器的电源</block>
   <block id="57baf06207321952e0c7d552b4d23995" category="paragraph"><block ref="57baf06207321952e0c7d552b4d23995" category="inline-link-rx"></block></block>
   <block id="98e0a55b81b9188cead04d30df43a89c" category="image-alt">DRW 9000 缆线控制台交换机控制器</block>
-  <block id="670c1e072419ad754fc3c7f092342506" category="doc">移动并更换硬件— AFF A300</block>
   <block id="c11d911fdc6f049d5491a18850fa08dd" category="doc">完成系统还原— AFF A300</block>
   <block id="e935849faf7cd25a183a726f34797bb7" category="doc">更换控制器模块— AFF A300</block>
   <block id="11cedb2a3ea1c051845c4666a3942624" category="doc">关闭控制器— AFF A300</block>
   <block id="4cbf72a112e69e9ca004dad9b0b05d49" category="section-title">选项 2 ：控制器采用双节点 MetroCluster 配置</block>
   <block id="1e8706074b646188f170b091d34c8860" category="doc">更换 DIMM - AFF A300</block>
   <block id="712212730f75f850b7b35a90880cb815" category="paragraph">继续执行下一步。无需执行任何操作。您已完成系统级诊断。</block>
-  <block id="fe390618945e8c579889137dd8562a92" category="doc">更换机箱 - AFF A300</block>
   <block id="889b878f17fd664e744718e80f4d60de" category="doc">关闭受损控制器 - AFF A300</block>
   <block id="e3d77d25c42b5b22d3782666486eb37f" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF A300</block>
   <block id="e63d72ed0cd02fd6dc373efe52370adf" category="doc">安装和设置 PDF 海报— AFF A300</block>
@@ -5742,7 +5648,6 @@
   <block id="de38759ef2dc6f4060b3cdf31f980e53" category="paragraph"><block ref="de38759ef2dc6f4060b3cdf31f980e53" category="inline-link-macro-rx"></block></block>
   <block id="6a9185c32ed25a745ad5a6b2fb9c702e" category="doc">还原并验证系统配置— AFF A300</block>
   <block id="e90917eb1ade74fea4468ecec1b0dfd3" category="doc">更换启动介质— AFF A300</block>
-  <block id="12ede52e9575dc4f85c8c9cbd624a4aa" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A300</block>
   <block id="31681f3abbed1ceeaf397023a488e2e2" category="section-title">第 2 步：更换启动介质— AFF A300</block>
   <block id="29d730ab27c3a5abafda950a34d545ff" category="doc">更换 PCIe 卡— AFF A300</block>
   <block id="03d0d86c8a44fa1fcb7cccb7e807f2bd" category="doc">更换 NVMEM 电池— AFF A300</block>
@@ -5759,12 +5664,10 @@
   <block id="8394191e21f04380d08fe40ae8199691" category="summary">要更换机箱，必须关闭控制器。此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。</block>
   <block id="a5c7a7f72206c6b63d2ec6de862b1cfd" category="doc">关闭控制器— AFF A300</block>
   <block id="c1835b78219bf98dc8901ba1eb56866b" category="paragraph">在更换机箱之前，您必须关闭控制器。</block>
-  <block id="185574c79808587d2f0c3a23363b4587" category="doc">还原和验证配置— AFF A300</block>
   <block id="3746182c68f1f041a5f57979560a0566" category="list-text">转至 <block ref="1665eb69960f5979fe40ff23600bffd1" category="inline-xref-macro-rx"></block>。</block>
   <block id="8a73953f68f7fdf48a4b4ff53aac3e33" category="doc">重新配置系统并重新分配磁盘— AFF A300</block>
   <block id="534553d5e6c1df40c70ac7eb17fa2bee" category="doc">切回双节点 MetroCluster 配置中的聚合— AFF A300</block>
   <block id="22a0944cdb4fa603e25d6c2d3d91664d" category="doc">集群配置工作表— AFF A300</block>
-  <block id="2a9296d88a715260cb3afe5e0adcc9f7" category="doc">根据需要检查板载加密密钥— AFF A300</block>
   <block id="75e670af7a515907420be152e288dc75" category="doc">更换风扇— AFF A300</block>
   <block id="a23c69960d3b280b58087226f261d0e1" category="doc">启动恢复映像— AFF A300</block>
   <block id="6abcd38b98db86440d4e33f853945773" category="doc">完成系统还原— FAS2600</block>
@@ -5775,8 +5678,6 @@
   <block id="cc0229491324372575d8e9833b910f02" category="list-text">重新检查 NVMEM LED 。</block>
   <block id="04a9405b6945cd62aebba48163e7663f" category="doc">更换电源— FAS2600</block>
   <block id="7030094db64cfe33a24436a2528348b6" category="inline-link-macro">AFF FAS2600 电源更换视频</block>
-  <block id="166d0b02f30259134a5bf79406bfa018" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— FAS2600</block>
-  <block id="1ccd7522f9e312cb2fe8037a5bf347e3" category="doc">根据需要检查板载加密密钥— FAS2600</block>
   <block id="a618373732a54299b15020c4fdcc9ff7" category="doc">更换缓存模块— FAS2600</block>
   <block id="f6f6b5bb4c3c117ebfdad565e3beb0c3" category="inline-link-macro">AFF FAS2600 缓存模块更换视频</block>
   <block id="02b2ef9566494498645accc0aa3742ef" category="doc">更换启动介质— FAS2600</block>
@@ -5788,8 +5689,6 @@
   <block id="f5f4db4cbf741ec589cd881a641a1a02" category="paragraph">要移动控制器标签上的 M.2 PCIe 卡缓存模块，请找到旧控制器并将其移至更换控制器，然后按照特定步骤顺序进行操作。</block>
   <block id="fb2b1a9ce62aa797e37590c1f38945e1" category="doc">移动并更换硬件— FAS2600</block>
   <block id="431d17d73264273f0bc377c1c3bd07e9" category="paragraph">在安装替代机箱之前，请先从设备机架或系统机柜中卸下现有机箱。</block>
-  <block id="4342953395146d05ad58dd5114ab6c6c" category="doc">还原和验证系统配置— FAS2600</block>
-  <block id="2b46c7b8b025b3627340674fb8b8b4fe" category="doc">还原和验证配置— FAS2600</block>
   <block id="f40996a53c6875d0f06b63b50c75345e" category="paragraph">问题描述以下命令： `node ：： &gt; cluster ha modify -configured true node ：：： &gt; storage failover modify -node node0 -enabled true`</block>
   <block id="41646e300bc69ef2a9312f19877f3d78" category="paragraph">问题描述此命令： `node ： &gt; storage failover modify -node node0 -enabled true`</block>
   <block id="b6f66be9dc65274f1a5ad75f80aae188" category="inline-link-macro">AFF FAS2600 RTC 电池更换视频</block>
@@ -5803,12 +5702,9 @@
   <block id="5e57d07ff1fc6536107cc6e45fe9f281" category="doc">根据需要还原 OKM ， NSE 和 NVE — FAS2600</block>
   <block id="a102b530af65288511339cf8117713a3" category="doc">关闭控制器— FAS2600</block>
   <block id="a47803b6b6d01b67efcc88a157378c39" category="doc">将故障部件退回 NetApp - FAS2600</block>
-  <block id="a2cba29e1f4ab1cb06b4dd48b71d24af" category="doc">更换控制器模块— FAS2600</block>
   <block id="45bad0a220769ce3e5e852b8009c6c12" category="doc">关闭节点— FAS2600</block>
-  <block id="e3c233308d778f0b7a43f46954788a7e" category="doc">更换机箱— FAS2600</block>
   <block id="e36ec33be061816b4fbfa1c3e8e42798" category="inline-link-macro">AFF FAS2600 机箱更换视频</block>
   <block id="e91a3b78a16fbd7eb7d01342d1c07d69" category="doc">集群配置工作表— FAS2600</block>
-  <block id="b105e52bdfefa0ec7be78e234263fd7d" category="doc">移动并更换硬件— AFF A320</block>
   <block id="88dd2b76e22f517fcc43991c9f49fc1c" category="list-text">从机箱中卸下控制器模块：</block>
   <block id="8a309974bafd50317ccd72aa26c07abb" category="list-text">将前掌插入控制器模块两侧的锁定装置。</block>
   <block id="4d207179ee5262ab22beb9e4daca95a5" category="list-text">向下按压闩锁装置顶部的橙色卡舌，直到其脱离机箱上的闩锁销。</block>
@@ -5853,8 +5749,6 @@
   <block id="8b9cda3c71cd6650aa009c7fadfc8b01" category="image-alt">DRW A320 控制器缆线拔下动画 gif</block>
   <block id="7a7bd9d285c26c52e7363905c161c15e" category="image-alt">DRW A320 nvbat move 动画 gif</block>
   <block id="ddd5abc1f11eb7170e1eeacbd5acc236" category="list-text">打开通风管并找到 NVDIMM 电池。</block>
-  <block id="4a911cf3dad818b3c0821fe7d7fbb266" category="doc">完成更换流程— AFF A320</block>
-  <block id="139f44aa7a23de183d912d94013db6d0" category="doc">更换控制器模块— AFF A320</block>
   <block id="e9ca370a0e8565dd4c2f659637e04cda" category="doc">关闭控制器— AFF A320</block>
   <block id="b6b9806df3f9a4e627587365674eb890" category="doc">关闭节点— AFF A320</block>
   <block id="1f80cfc7ce17ecb96321179e76fe8285" category="list-text">旋转凸轮把手，以便在按下蓝色锁定卡舌的同时，可以将电源从控制器模块中拉出。</block>
@@ -5875,7 +5769,6 @@
   <block id="53f42a112f1341ef375b09a506495afd" category="list-text">沿竖板边缘均匀向下施加压力，直至其固定到位，从而将竖板竖直向下插入插槽。</block>
   <block id="45cf2a44dafd78e32eaf8f429190dc15" category="paragraph">竖板应平稳安装，但阻力极小。如果在插槽中插入提升板时遇到明显阻力，请重新拔插托架中的提升板。</block>
   <block id="376b7fd2a78e94df43caa814d7543dc5" category="list-text">重新安装 PCIe 提升板上的盖板。</block>
-  <block id="22d60fd320a2cb32a44ae61d0779e892" category="doc">更换机箱 - AFF A320</block>
   <block id="de13eae43e74bcedacee29c89051ee54" category="list-text">编写此操作步骤时，假设您要将控制器模块移至新机箱，并且此机箱是 NetApp 的新组件。</block>
   <block id="c75b039e7117dd559fe2e9c54d35354b" category="paragraph">您可以使用以下映像或写入的步骤从机箱中删除控制器模块。</block>
   <block id="f26a5008ba3ae6c52cababa034f37688" category="paragraph">下图显示了如何从受损控制器模块中卸下缆线和缆线管理臂：</block>
@@ -5886,7 +5779,6 @@
   <block id="f473b09529c17581896f9b2f1166ce88" category="section-title">第 1 步：设置并验证更换控制器模块后的系统时间</block>
   <block id="acd5b7a742e22209bb792b093caff068" category="doc">更换启动介质— AFF A320</block>
   <block id="7b346c654ccdab10fc593c01f0c7232e" category="doc">关闭受损控制器 - AFF A320</block>
-  <block id="586dc1291903d6b3fba43b4bdded2253" category="doc">卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A320</block>
   <block id="e6b7941c3f8bfc56083e6d96c76bea05" category="image-alt">DRW A320 启动介质更换动画图像 gif</block>
   <block id="e7ee072a3e06310afcc412655144e84b" category="section-title">第 3 步：使用 USB 闪存驱动器将启动映像传输到启动介质</block>
   <block id="bff69c64ca9124fefc1120a9526e1c86" category="doc">更换实时时钟电池— AFF A320</block>
@@ -5924,7 +5816,6 @@
   <block id="a28d1d59ce7973c59f7c8fb5eb3f42b3" category="image-alt">DRW A320 NVDIMM 更换动画 gif</block>
   <block id="611cf47f3569074932e1d1554c9dcfdd" category="doc">将故障部件退回给 NetApp - AFF A320</block>
   <block id="770d6678fb5416b05c67128a9e4fed01" category="doc">完成还原和更换过程— AFF A320</block>
-  <block id="1461c9db08e46c1e8c70cf3e0a9f73d8" category="doc">根据需要检查板载加密密钥— AFF A320</block>
   <block id="3672b64d07583e651fa9761c4dd84ce8" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至下一节。</block>
   <block id="859ccfcd29caf785c027a394d4d1bbf8" category="doc">详细指南— AFF A320</block>
   <block id="67f289221dc2b8315be57c85a28e0619" category="section-title">准备安装</block>
@@ -6398,7 +6289,6 @@
   <block id="6945b44586dc88e4263f108e9be99095" category="list-text">如果需要，请重新启用自动驱动器分配：``storage disk option modify -node _node_name_ -autodassign on``</block>
   <block id="1bf8504be438eafdf786f7fef56996eb" category="paragraph">您需要在 HA 对中的两个控制器上重新启用自动驱动器分配。</block>
   <block id="8a1a993c74cc431e2e022e6bd26ad915" category="summary">在更换驱动器抽盒之前，您必须停止所有主机 I/O 活动并关闭磁盘架电源。</block>
-  <block id="e62a559839495c7e61b9ce5a088b786c" category="doc">更换 DS460C 磁盘架中的驱动器抽盒—使用 IOM12 模块的磁盘架</block>
   <block id="1d7bbe9c194670e89233cc6c1dc79534" category="paragraph">其中每个 60 个驱动器架都有五个驱动器抽盒。</block>
   <block id="efdce0991089cb793985d216e3fc1bbc" category="image-alt">28 dwg e2860 de460c 正面无标注</block>
   <block id="76ad7e322a2be745998c576cb12affcd" category="paragraph">这五个抽盒中的每个抽盒最多可容纳 12 个驱动器。</block>
@@ -6410,7 +6300,6 @@
   <block id="68103d0e27146f9689251724a7fbf29f" category="list-text">更换左侧和右侧缆线链</block>
   <block id="75b0ae11d26c806413ef6e8aed1ece4f" category="list-text">手电筒</block>
   <block id="c8c22257eb9d1c1c2a60aad49bd446f7" category="list-text">永久标记</block>
-  <block id="2e3d3f0aa5e64af89c170da27ccf0cb2" category="section-title">拆下缆线链</block>
   <block id="12cd6af9147d69765327244240949e1f" category="paragraph">DS460C 驱动器架中每个驱动器抽盒的左右缆线链允许抽盒滑入和滑出。在卸下驱动器抽盒之前，必须同时卸下两个缆线链。</block>
   <block id="b4aaf296207d91e05752ac7857824f14" category="list-text">您已停止主机 I/O 活动并关闭磁盘架电源。</block>
   <block id="295e1710be0bb53c45ab0ed9001e275c" category="list-text">您已获取以下项：</block>
@@ -6454,7 +6343,6 @@
   <block id="b698e09fab0c0cb543414b7caec27e3c" category="list-text">将您的手指插入橙色环。</block>
   <block id="3ed1c59be0305378fd05c017ff86e232" category="list-text">要拔下缆线链，请将您的手指朝您的方向拉大约 1 英寸（ 2.5 厘米），但将缆线链连接器保留在垂直支架中。</block>
   <block id="461b154350e671de29d85bdc26c17b45" category="list-text">断开左侧缆线链与水平支架的连接，然后将整个缆线链从驱动器架中拉出。</block>
-  <block id="bbbd51c2b3c60d5e9becdcf09d29b105" category="section-title">删除驱动器抽盒</block>
   <block id="335dce1d41f6ceb784ef37e86cc55836" category="paragraph">卸下左右缆线链后，您可以从驱动器架中卸下驱动器抽盒。卸下驱动器抽盒需要将抽盒部分滑出，记录驱动器的位置，卸下驱动器以及卸下驱动器抽盒。</block>
   <block id="08d7859a247f6ad39ca81761af784495" category="list-text">您已卸下驱动器抽盒的左右缆线链。</block>
   <block id="28d152fcbe5214a7616239c6b7d7dd6f" category="list-text">您已更换左右风扇模块。</block>
@@ -6479,7 +6367,6 @@
   <block id="d97c00b9a1dae1b32ba8e26b84d61f46" category="list-text">向您的方向拉动闩锁以打开两个释放拉杆。</block>
   <block id="ed3feb0427e42faaeb0702007b184c2f" category="list-text">握住两个释放拉杆，向您的方向拉动驱动器抽盒。</block>
   <block id="f600133ba4287bc55c2092afd014a9a2" category="list-text">从驱动器架中卸下驱动器抽屉。</block>
-  <block id="fe8265ac3d0f9c648e57474b40e2e5d8" category="section-title">安装驱动器抽盒</block>
   <block id="aa88d15bb6aa9c2d7b1282acbe7f8338" category="paragraph">在驱动器架中安装驱动器抽盒需要将抽盒滑入空插槽，安装驱动器并更换前挡板。</block>
   <block id="00a6e09fe995a9431b12ec0b25d1e616" category="list-text">您知道在何处安装每个驱动器。</block>
   <block id="1c0cc2116ea595f697955e9248420c5f" category="list-text">从驱动器架前部，将手电筒放在空抽盒插槽中，然后找到该插槽的锁定滚轮。</block>
@@ -6506,7 +6393,6 @@
   <block id="d6ff75ca96a3f7b0da1db5214e2a5a07" category="list-text">将抽盒从中间推回驱动器架，然后合上两个拉杆，将其滑回驱动器架。</block>
   <block id="88ca50989638a87f86de89481f4cf935" category="admonition">* 设备故障的风险： * 请确保通过推动两个控制杆完全关闭驱动器抽屉。您必须完全关闭驱动器抽盒，以确保通风良好并防止过热。</block>
   <block id="55451c7cebd8269f03ecac9742984329" category="list-text">将挡板连接到驱动器架的正面。</block>
-  <block id="2731a32bd20082112cb21bea67097d21" category="section-title">连接缆线链</block>
   <block id="0170a7ad27d76cb01573cd1f22614cf7" category="paragraph">安装驱动器抽盒的最后一步是将左右缆线链连接到驱动器架。连接缆线链时，请按与断开缆线链相反的顺序进行操作。您必须先将链的水平连接器插入机箱中的水平支架，然后再将链的垂直连接器插入机箱中的垂直支架。</block>
   <block id="4ab9a12c053dc60c1cfdd6c7dd07687e" category="list-text">已更换驱动器抽盒和所有驱动器。</block>
   <block id="72774896cf4456a17908ca4b102fbb02" category="list-text">您有两个替代缆线链，分别标记为左侧和右侧（位于驱动器抽盒旁边的水平连接器上）。</block>
@@ -7383,7 +7269,6 @@
   <block id="20c81043ed040691be35a21ced8b214c" category="sidebar">运行硬件安装诊断</block>
   <block id="622847369a10871880b9d0b967b82ff7" category="sidebar">SuperRail 套件</block>
   <block id="e67646d15c2779b1db9f05f0dccc9ea9" category="sidebar">AFF A700/FAS9000 双柱导轨套件</block>
-  <block id="77b771a758ffa00670e5f30a70f7e1c0" category="sidebar">42U 1280 毫米系统机柜</block>
   <block id="35ae7ad44486ae692ccd485bff6a4ff3" category="sidebar">准备安装机柜</block>
   <block id="b8df5d2f5ce357450ed2e40491603318" category="sidebar">机柜功能</block>
   <block id="231fd4a5acc92cc06adc1ccb58edb1b8" category="sidebar">所需工具 / 设备</block>
@@ -7538,9 +7423,6 @@
   <block id="1087bd6a45d263f28a4b0b93895e1941" category="inline-link-macro">Nexus 92300YC 集群交换机</block>
   <block id="77f98a2f470ce2b7477b375f9fc5073c" category="list-text"><block ref="77f98a2f470ce2b7477b375f9fc5073c" category="inline-link-macro-rx"></block></block>
   <block id="648e8e37330666bde8dd4d1d7be3ea1f" category="list-text"><block ref="648e8e37330666bde8dd4d1d7be3ea1f" category="inline-link-macro-rx"></block></block>
-  <block id="7b01d1a60f929493e4caa403ce23427c" category="list-text"><block ref="7b01d1a60f929493e4caa403ce23427c" category="inline-link-macro-rx"></block></block>
-  <block id="a81d355d860ea6fe08143e2be27b7ed6" category="list-text"><block ref="a81d355d860ea6fe08143e2be27b7ed6" category="inline-link-macro-rx"></block></block>
-  <block id="dc6d73a1180661c5f71f36e0c7d35afb" category="list-text"><block ref="dc6d73a1180661c5f71f36e0c7d35afb" category="inline-link-macro-rx"></block></block>
   <block id="3c6aef09c74bd93941262638ee643789" category="list-text"><block ref="3c6aef09c74bd93941262638ee643789" category="inline-link-macro-rx"></block></block>
   <block id="a50aeec9921e0390bad38d745f1ad53f" category="paragraph"><block ref="a50aeec9921e0390bad38d745f1ad53f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cbd6e530c253bd69eae2efffc8a1d409" category="list-text">Use the following animation to set one or more drive shelf IDs:</block>
@@ -7851,19 +7733,6 @@
   <block id="c8b713ea700fb2decc6696deb87e6679" category="inline-link">"Animation - 更换启动介质 "</block>
   <block id="76e0b6a67c1d0d3ae7fd16124243cd0e" category="paragraph"><block ref="76e0b6a67c1d0d3ae7fd16124243cd0e" category="inline-link-rx"></block></block>
   <block id="89c421ecee17b213d1a0c7b9a2dd8106" category="image-alt">DRW a900 删除启动开发</block>
-  <block id="defa99ee750d2ca6a8f52cf79e8eb713" category="list-text">bootarg.init.boot_clustered</block>
-  <block id="d18fd3db938a26ebbd3f74de41f0b73f" category="list-text">合作伙伴 - 系统</block>
-  <block id="bac349cdf99ddd20206c9b20eb9e6d22" category="list-text">bootarg.init.flash_optimized ，用于 AFF</block>
-  <block id="f3b31cc7028e1885fb21b81b0fdbee37" category="list-text">bootarg.init.san_optimized ，用于 AFF</block>
-  <block id="cbcb656967b507992a4a640a604c47e0" category="list-text">bootarg.init.switchless_cluster.enable</block>
-  <block id="8e66622dd5a924bd59ee4f46318a13a9" category="list-text">bootarg.storageencryption.support &lt;value&gt;</block>
-  <block id="bdafe896118bc000c3a68090808112cd" category="list-text">bootarg.keymanager.support &lt;value&gt;</block>
-  <block id="8f4ea3656910a928382f8c75368c3c2a" category="list-text">kmip.init.interface &lt;value&gt;</block>
-  <block id="b2adbab4ce96430a3475db235c4be8c3" category="list-text">kmip.init.ipaddr &lt;value&gt;</block>
-  <block id="70e8273bd6b058c89bc23bad2de4c396" category="list-text">kmip.init.netmask &lt;value&gt;</block>
-  <block id="4d10af14d34e5e468c4aee19207329d3" category="list-text">kmip.init.gateway &lt;value&gt;</block>
-  <block id="a1781eecf18376feb2f740b6a3d7781d" category="list-text">bootarg.bontery_keymanager &lt;value&gt;</block>
-  <block id="8ed13fe688162a9d4d89829700344e8f" category="list-text">使用 `printenv variable-name` 命令确认所做的更改。</block>
   <block id="61fb64589c53cb1543b86398c0f9bf5f" category="admonition">您的接口可能需要其他参数。有关详细信息，您可以在固件提示符处输入 help ifconfig 。</block>
   <block id="92119567969a6dfb8d14b4d139115118" category="list-text">将 MetroCluster 端口设置为启动程序： `ucadmin modify -m fc -t ininitiator adapter_name`</block>
   <block id="13437270a7a5bb30024bcf51e56b9645" category="doc">将故障部件退回给 NetApp - AFF A900</block>
@@ -8127,7 +7996,6 @@
   <block id="127cae73d2b4d7758b4c0a0e3f49ba5f" category="section-title">ONTAP 9.6 及更高版本</block>
   <block id="d994e1a1688cb6d7b8e264a209d763d6" category="doc">更换机箱 - AFF A900</block>
   <block id="e10b0a89639d4224f22325c89418ef31" category="paragraph">要更换机箱，您必须卸下电源，风扇，控制器模块， I/O 模块， DCPM 模块， 和 USB LED 模块从受损机箱中取出受损机箱，从设备机架或系统机柜中取出受损机箱，将更换机箱安装到位，然后将组件安装到更换机箱中。</block>
-  <block id="6190b44ff7781327c201ca8dcd27535f" category="doc">还原和验证配置— AFF A900</block>
   <block id="3f5fa7ca9a9d6129ce081b64cc104ab6" category="paragraph">要完成机箱更换，您必须完成特定任务。</block>
   <block id="32574a63619099277d431cfd465fea0b" category="list-text">设置机箱的 HA 状态： `ha-config modify chassis _ha-state_`</block>
   <block id="3f91c59c59a1243cb3f176daf3c9c054" category="list-text">使节点恢复正常运行。</block>
@@ -8290,21 +8158,8 @@
   <block id="a1d9910a32ae0cf0a663ca53df75fc48" category="paragraph">+ 重要信息：将每个 DIMM 安装到受损控制器模块中占用的同一插槽中。</block>
   <block id="e65c4f5a39a793b014b217f53d825905" category="list-text">将控制器模块插入机箱。</block>
   <block id="04767794ed138df3aa3f519e53e96bcc" category="list-text">使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令仅交还 CFO 聚合。</block>
-  <block id="c3386973a8577ef6660070259a82cd76" category="doc">更换控制器模块— AFF C190</block>
-  <block id="c9c809ca8c1b2b30aa31e5c08e6ae9b7" category="doc">更换控制器模块— AFF A320</block>
-  <block id="610ebc0f92fc28129db791d1a49c1f29" category="doc">更换控制器模块— FAS8200</block>
-  <block id="b0d5a2d8a517331a96575fab39f0fa39" category="doc">更换控制器模块— AFF A400</block>
-  <block id="056d6aad4fcec151946644ac7f6ae3b1" category="doc">更换控制器模块— FAS2600</block>
-  <block id="3e89a7e8253deaaafd229f0b5d846d1f" category="doc">更换控制器模块— AFF A220 和 FAS2700</block>
-  <block id="480b3c349b362d8de0e5dd543018f343" category="doc">更换控制器模块— AFF A300</block>
-  <block id="ccec777db695e38806674625cc62f7e7" category="doc">Replace the chassis - AFF A700 and FAS9000</block>
-  <block id="5c70a21a4bf917f555a7a40f163722da" category="doc">更换控制器模块— AFF A250</block>
   <block id="e2e8db7924e3d9318e09779273f259de" category="doc">更换风扇— AFF A250</block>
-  <block id="06d66c67969e8cc83aa7a9e6d2fc60ac" category="doc">更换控制器模块— FAS500f</block>
   <block id="bc6668cc9984ca2f625c085c1e7dbe6c" category="doc">更换风扇— FAS500f</block>
-  <block id="19a811a1c8fa92be18ccc21559ddf7aa" category="doc">更换控制器模块— FAS8300 和 FAS8700</block>
-  <block id="04e15e9a02c818cf4604502b8aa82611" category="doc">Replace the chassis - FAS8300 and FAS8700</block>
-  <block id="68a0957bf09993ad8f778b0639748996" category="doc">更换控制器模块— AFF A200</block>
   <block id="3cb52a5c3c25dcd729403c0c723500bc" category="list-text">使用 ``storage failover show` -giveback` 命令监控交还操作的进度。</block>
   <block id="b36708a8226ddc48a16407516f32b6ae" category="paragraph">` * `s存储故障转移显示` *`</block>
   <block id="4cc5d765a3b2155ab803f6ce50c11747" category="paragraph">`storage failover show` 命令的输出不应包含 `Ssystem ID changed on partner` 消息。</block>
@@ -8467,4 +8322,115 @@
   <block id="262434bb76bf9aa49a3efe7de43d9a4e" category="sidebar">AFF 和 FAS 系统文档</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
+  <block id="60786ac16439455c42ee2fbe23a16c06" category="doc">控制器模块更换概述— AFF A300</block>
+  <block id="8f32b075b74f50db60cdc53341ea5195" category="doc">启动介质更换概述— AFF A300</block>
+  <block id="ac205ac062087cc3bddb7bbe8de9e36b" category="doc">机箱更换概述— AFF A300</block>
+  <block id="23afe5a44fb7df71a9b5f333ac3d9ee5" category="doc">更换硬件— AFF A300</block>
+  <block id="57392ef77b666ec53aa7b24253ca15d7" category="doc">还原并验证配置— AFF A300</block>
+  <block id="01c4da54c2c1f7a4ffbf1fca4cc44870" category="doc">检查板载加密密钥— AFF A300</block>
+  <block id="655693b8856b3ddd0aca0944005d67f9" category="doc">Replace the controller module hardware - AFF A320</block>
+  <block id="1654c00921a4540ccc78b0e715f2d722" category="doc">控制器模块更换概述— AFF A320</block>
+  <block id="5d670c53861caee9002db54ba657302f" category="doc">完成风扇更换过程— AFF A320</block>
+  <block id="38336112552a047729e9db773480ddb1" category="doc">启动介质更换概述— AFF A320</block>
+  <block id="3704d1b563dc6b0a84e78627c5e9af06" category="doc">机箱更换概述— AFF A320</block>
+  <block id="6a6726deff56a3d5459d4e11d247e22a" category="doc">更换硬件— AFF A320</block>
+  <block id="f6344d6f5f705ef72e5da86baf7ff342" category="doc">检查板载加密密钥 - AFF A320</block>
+  <block id="1a44c6d683ab4458e8c10088dee0617d" category="doc">还原并验证配置— FAS8200</block>
+  <block id="dd5eaf7a75785b4f26d6e9793b46ea6c" category="doc">机箱更换概述— FAS8200</block>
+  <block id="36db73d94b30571d5e78b69926c4ee10" category="doc">概述控制器模块更换— FAS8200</block>
+  <block id="52a61ff1e81c104a11ce1a58a38dd667" category="doc">关闭控制器— FAS8200</block>
+  <block id="a42edb5535752c77f564dff66261535b" category="doc">更换控制器模块硬件— FAS8200</block>
+  <block id="82430a05d3820aeaeb756230e94ee643" category="doc">检查板载加密— FAS8200</block>
+  <block id="8351404e0633e21cf67cb22047391a59" category="doc">启动介质更换概述— FAS8200</block>
+  <block id="f8a35054c2c3b7ffbacd941c8bc38831" category="doc">更换硬件— FAS8200</block>
+  <block id="9bd3c449bc91b7e2a90bbc21bfbd5dcb" category="doc">更换控制器模块硬件— AFF A250</block>
+  <block id="7f7c331124950f9557fc856947e5c42f" category="doc">控制器模块更换概述— AFF A250</block>
+  <block id="fa0985de926ce301def780548b1def1b" category="doc">启动介质更换概述— AFF A250</block>
+  <block id="894589cfca213bee046082fa6b4377ea" category="doc">机箱更换概述— AFF A250</block>
+  <block id="a73367a24d737b005906f745ac5c73c2" category="doc">更换硬件— AFF A250</block>
+  <block id="fd08b3e072375692cc6d546ed49d7c24" category="summary">You must move the power supplies, NVMe drives, and controller module or modules from the impaired chassis to the new chassis, and swap out the impaired chassis from the equipment rack or system cabinet with the new chassis of the same model as the impaired chassis.</block>
+  <block id="43eebcc68df0da086573863f894b0208" category="admonition">If you have difficulty removing the controller module, place your index fingers through the finger holes from the inside (by crossing your arms)</block>
+  <block id="d4ec9448190c18c9b85b138eae5cfe04" category="doc">检查板载加密密钥 - AFF A250</block>
+  <block id="c0925c06c8c424f377718df251d2ae9f" category="doc">更换实时时钟电池— FAS8300 和 FAS8700</block>
+  <block id="73e891cd10bc7a669d3df2629ca0ed7c" category="doc">更换 NVDIMM - FAS8300 和 FAS8700</block>
+  <block id="25a1b4c8ff5717b58eca78fec7573116" category="doc">机箱更换概述— FAS8300 和 FAS8700</block>
+  <block id="b98cf2068f61b55f2a9881a2a679fcc3" category="doc">更换 NVDIMM 电池— FAS8300 和 FAS8700</block>
+  <block id="94aea6f09b1466d3642940029f1b693a" category="doc">控制器模块更换概述— FAS8300 和 FAS8700</block>
+  <block id="406be05f374ba93dabeb2514a008179a" category="doc">更换控制器模块硬件— FAS8300 和 FAS8700</block>
+  <block id="9860772233b4555001c5a388230758df" category="doc">启动恢复映像— AFF FAS8300 和 FAS8700</block>
+  <block id="b35abadbe34f4c4e5f4b2befaba8124d" category="doc">检查板载加密密钥— AFF fas8300 和 FAS8700</block>
+  <block id="fe0e817b3bc5b4c3f92a0bd2fc673648" category="doc">启动介质更换概述— AFF FAS8300 和 FAS8700</block>
+  <block id="ba4fadf78396a2db14bc9a4e0f707f9d" category="doc">更换启动介质— FAS8300 和 FAS8700</block>
+  <block id="4e4a2611625f6b2041743db1df7febd6" category="doc">机箱更换概述— AFF A400</block>
+  <block id="61c752abcbb868d9432b6f4a5da1593b" category="doc">控制器模块更换概述— AFF A400</block>
+  <block id="20ea0eb9eebca0280abc5766496bdaed" category="doc">更换控制器模块硬件— AFF A400</block>
+  <block id="d8be62011c1882fcf382ba1c61256314" category="doc">启动恢复映像— AFF A400</block>
+  <block id="4b9df7d99ab3f888b89a8bd4aaa10571" category="doc">检查板载加密— AFF A400</block>
+  <block id="81eedb27d867146f5a1ad2679adf0de0" category="doc">启动介质更换概述— AFF A400</block>
+  <block id="29b26f35ca717821e38847f4152f36bb" category="doc">更换硬件— AFF A400</block>
+  <block id="82df4d187ca1c57ddc3d281ba59fc12f" category="doc">还原并验证配置— AFF C190</block>
+  <block id="42ab358b243344438e34cb8483bb2ca2" category="doc">还原并验证系统配置— AFF C190</block>
+  <block id="0f614c99bcb66f2ffd7b4fb27558ea2a" category="doc">机箱更换概述— AFF C190</block>
+  <block id="54cd26f163d61b3be602eb785ab0a241" category="doc">控制器模块更换概述— AFF C190</block>
+  <block id="0d76ca0117187df0c8275a536ccc39ef" category="doc">更换控制器模块硬件— AFF C190</block>
+  <block id="81b014b89575d4c2c10465dcae392a39" category="doc">检查板载加密密钥 - AFF C190</block>
+  <block id="3ec236eb5b8f67430e02ace51c37b834" category="doc">启动介质更换概述— AFF C190</block>
+  <block id="1ab6b8fc7d00d8cf418a98c2a06619a5" category="doc">还原并验证配置— FAS2600</block>
+  <block id="cdb877e559bf1542dd2ee0540807d4a8" category="doc">还原并验证系统配置— FAS2600</block>
+  <block id="fd21bfdd90e6f071c007ad1c32523fc2" category="doc">机箱更换概述— FAS2600</block>
+  <block id="32ab532730861844c01e0b025a4708f5" category="doc">控制器模块更换概述— FAS2600</block>
+  <block id="017630cf9ee2c9c60d9112bb45f305ca" category="doc">更换控制器模块硬件— FAS2600</block>
+  <block id="120d4b04cada3ad4213234c2437fb645" category="doc">检查板载加密密钥— FAS2600</block>
+  <block id="c3a9fb901b6e82e19cf5d6be414a5461" category="doc">关闭受损控制器— FAS2600</block>
+  <block id="048623d528706e72f17139851220f65a" category="doc">启动介质更换概述— FAS2600</block>
+  <block id="f702d1c29e7ad6256680f53ad8fa7195" category="doc">还原并验证配置— AFF A220 和 FAS2700</block>
+  <block id="49d177da03edc46e3dbb473a8199c5e8" category="doc">机箱更换概述— AFF A220 和 FAS2700</block>
+  <block id="9b7b0d412ad06347c021ab14f2092513" category="doc">控制器模块更换概述— AFF A220 和 FAS2700</block>
+  <block id="fb52499eab0b4b1b7caf5081ae4bb295" category="doc">更换控制器模块硬件— AFF A220 和 FAS2700</block>
+  <block id="77c90a069b30ca068906f4bbc5d904e1" category="doc">检查板载加密密钥 - AFF A220 和 FAS2700</block>
+  <block id="c6eb316cc94904301a8765db5aa1680f" category="doc">启动介质更换概述— AFF A220 和 FAS2700</block>
+  <block id="332ecfda75eef89a55acd64671013612" category="doc">热添加 NS224 磁盘架</block>
+  <block id="2045f48765a1762a4ddf1bff71d898d9" category="doc">将 DS460C 磁盘架中的驱动器抽盒更换为 IOM12 模块</block>
+  <block id="f3f4e90f1b3b6970f9ad6037d23137fc" category="section-title">拆下缆线链</block>
+  <block id="39f83f14ef074e7f47f1a89591dede20" category="section-title">卸下驱动器抽屉</block>
+  <block id="c1493a32213b959f5c9f8be86dfb9960" category="section-title">安装驱动器抽盒</block>
+  <block id="02b9f44accc14d7238a1f0607ea50e30" category="section-title">连接缆线链</block>
+  <block id="3fa677b8ecb97b0ae0d14f9ded5ed49a" category="doc">关闭受损控制器— FAS500f</block>
+  <block id="0d924155857f10f70fcab7b719b30403" category="summary">Before shutting down the impaired node, you need to check whether the system has either NetApp Volume Encryption \(NVE\) or NetApp Storage Encryption \(NSE\) enabled.If so, you need to verify the configuration.</block>
+  <block id="a27042b0e01fb9b4136d2de6e8c1db73" category="doc">检查板载加密密钥— FAS500f</block>
+  <block id="da85ea64fba60265c821242ceefcb18c" category="list-text">如果命令输出中显示 &lt;lno-dury&gt; 或 &lt;1osno-dury&gt; ，则系统不支持 NVE ，请继续关闭控制器。Before shutting down the impaired node, you need to verify whether the system has either NetApp Volume Encryption (NVE) or NetApp Storage Encryption (NSE) enabled.If so, you need to verify the configuration.</block>
+  <block id="ee2afac6b0f5165d1fc3096864ac9a41" category="doc">机箱更换概述— FAS500f</block>
+  <block id="2bf23db896fc6ece8a7fd4c8db50ab7d" category="doc">控制器模块更换概述— FAS500f</block>
+  <block id="609f905dd4d82082470b920d9a7de394" category="doc">更换控制器模块硬件— FAS500f</block>
+  <block id="00399cc3a07fad2f3aadfc84abd6ee65" category="doc">启动介质更换概述— FAS500f</block>
+  <block id="0dfb2568739ce156f475dfddb29e2387" category="doc">机箱更换概述— AFF A700s</block>
+  <block id="09b725ec4b513cf16714e69e0bf388eb" category="doc">控制器模块更换概述— AFF A700s</block>
+  <block id="535d86d4b7bd76433b67b69b528e1319" category="doc">更换控制器模块硬件— AFF A700s</block>
+  <block id="002bb0675c02757351d3b908720a16cf" category="doc">检查板载加密密钥— AFF A700s</block>
+  <block id="505ba7be41620674b2d6d7caf7f3453d" category="doc">启动介质更换概述— AFF A700s</block>
+  <block id="212a7c63df3073a24c5ba97aaad63e51" category="doc">更换硬件— AFF A700s</block>
+  <block id="24ce82ff8bc29243190bb0a11659117c" category="doc">更换 NVRAM 模块和 NVRAM DIMM — AFF A700s</block>
+  <block id="b5c7e371c94b117279a0ebbc15ea8bf3" category="doc">更换启动介质— AFF A700s</block>
+  <block id="6f932d5d73e623ce4a8447916188b6ea" category="doc">更换控制器模块硬件— AFF A200</block>
+  <block id="85b7f3e764e39327360545670dcedbf3" category="doc">控制器模块更换概述— AFF A200</block>
+  <block id="6652fbd1cfc662871893088153cbbc80" category="doc">关闭受损节点— AFF A200</block>
+  <block id="2472604fcc7ccf02f05c6c66afaacc6c" category="doc">启动介质更换概述— AFF A200</block>
+  <block id="5dfe4c7eb319ce6f2ebfab2e157e0c1b" category="doc">机箱更换概述— AFF A200</block>
+  <block id="5fbbe4b96a5266b936c056caa3466c60" category="doc">还原并验证配置— AFF A200</block>
+  <block id="692f4928d5204c6348c9d46866e44703" category="doc">检查板载加密密钥 - AFF A200</block>
+  <block id="7b101be99b535a778b40061a6bf3d60c" category="doc">热插拔降级控制器电源模块（ DCPM ）— AFF A700 和 FAS9000</block>
+  <block id="b2116dc83d888b093b69d3c96e593726" category="doc">机箱更换概述— AFF A700 和 FAS9000</block>
+  <block id="df9e1409b1e6984ca93abf409e055edd" category="doc">更换 NVRAM 模块或 NVRAM DIMM — AFF A700 和 FAS9000</block>
+  <block id="7d0da23af2427c2e925e6fa617e32b8f" category="doc">控制器模块更换概述— AFF A700 和 FAS9000</block>
+  <block id="68f1a7b941dc9e6a48709297bda51c0f" category="doc">添加 X91148A 模块概述— AFF A9000</block>
+  <block id="165c715a7b9960848663b1b8fa3c5525" category="doc">启动介质更换概述— AFF A700 和 FAS9000</block>
+  <block id="e14c0bb928a12e5136acf5ae567d00cd" category="list-text"><block ref="e14c0bb928a12e5136acf5ae567d00cd" category="inline-link-macro-rx"></block></block>
+  <block id="78439461e49b3c8ceb36b482d2cf5f31" category="list-text"><block ref="78439461e49b3c8ceb36b482d2cf5f31" category="inline-link-macro-rx"></block></block>
+  <block id="c1570ad5a2eb746daec026c8b6cf5c0a" category="list-text"><block ref="c1570ad5a2eb746daec026c8b6cf5c0a" category="inline-link-macro-rx"></block></block>
+  <block id="865bb86499cf1ad3a70c7ff888673760" category="doc">关闭受损控制器 - AFF A800</block>
+  <block id="868fb46f8db1c45bfa9a49dea454c35a" category="doc">控制器模块更换概述— AFF A800</block>
+  <block id="eaa58bc985f0e200420f274e19bb7272" category="doc">更换控制器模块硬件— AFF A800</block>
+  <block id="7103ae2dc232b897a89408d0cd914f59" category="doc">检查板载加密密钥 - AFF A800</block>
+  <block id="0e3989fd0fd811ede751f0ca9dbfbe88" category="doc">启动介质更换概述— AFF A800</block>
+  <block id="a9785aa14dfcf09366954fcb69625d05" category="sidebar">42U 1280 毫米系统机柜</block>
 </blocks>

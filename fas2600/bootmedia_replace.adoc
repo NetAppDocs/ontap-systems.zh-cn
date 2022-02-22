@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2600, locate, boot, media, controller, direction, replace 
 summary: 您必须在控制器中找到启动介质并按照说明进行更换。 
 ---
-= 卸下控制器模块，更换启动介质并将启动映像传输到启动介质— FAS2600
+= 更换启动介质— FAS2600
 :icons: font
 :imagesdir: ../media/
 
@@ -99,36 +99,6 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 . 对于机箱中有一个控制器的系统，重新连接电源并打开电源。
 +
 系统开始启动并停留在 LOADER 提示符处。
-
-. 尽管环境变量和 bootarg 已保留，但您应使用 `printenv bootarg name` 命令检查是否已为您的系统类型和配置正确设置所有必需的启动环境变量和 bootarg ，并使用 `setenv variable-name <value>` 命令更正任何错误。
-+
-.. 检查启动环境变量：
-+
-*** `bootarg.init.boot_clustered`
-*** `partner-sysid`
-*** `bootarg.init.switchless_cluster.enable`
-
-
-.. 如果已启用外部密钥管理器，请检查 `kenv` ASUP 输出中列出的 bootarg 值：
-+
-*** `bootarg.storageencryption.support <value>`
-*** `bootarg.keymanager.support <value>`
-*** `kmip.init.interface <value>`
-*** `kmip.init.ipaddr <value>`
-*** `kmip.init.netmask <value>`
-*** `kmip.init.gateway <value>`
-
-
-.. 如果启用了板载密钥管理器，请检查 `kenv` ASUP 输出中列出的 bootarg 值：
-+
-*** `bootarg.storageencryption.support <value>`
-*** `bootarg.keymanager.support <value>`
-*** `bootarg.bontery_keymanager <value>`
-
-
-.. 保存使用 `savenv` 命令更改的环境变量
-.. 使用 `printenv _variable-name_` 命令确认所做的更改。
-
 
 . 在 LOADER 提示符处设置网络连接类型：
 +

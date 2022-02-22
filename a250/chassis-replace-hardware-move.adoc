@@ -1,56 +1,54 @@
 ---
-permalink: a700s/chassis-replace-move-hardware.html 
+permalink: a250/chassis-replace-hardware-move.html 
 sidebar: sidebar 
-keywords: aff a700s, move hardware components, replace the chassis 
-summary: 将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。 
+keywords: a250, move, drives, install, controller 
+summary: You must move the power supplies, NVMe drives, and controller module or modules from the impaired chassis to the new chassis, and swap out the impaired chassis from the equipment rack or system cabinet with the new chassis of the same model as the impaired chassis. 
 ---
-= 更换硬件— AFF A700s
+= 更换硬件— AFF A250
 :icons: font
 :imagesdir: ../media/
 
-
-[role="lead"]
-将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。
 
 
 
 == 第 1 步：卸下控制器模块
 
+[role="lead"]
 要更换机箱，必须从旧机箱中卸下控制器模块。
 
+您可以使用以下视频或表格中的步骤更换机箱；它假定已卸下并更换挡板：
+
+https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=1f859217-fede-491a-896e-ac5b015c1a36["更换机箱"]
+
+.步骤
 . 如果您尚未接地，请正确接地。
-. 从源拔下控制器模块电源，然后从电源拔下缆线。
-. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
+. 从源拔下控制器模块电源。
+. 释放电源线固定器，然后从电源中拔下缆线。
+. 将前掌插入控制器模块两侧的锁定装置中，用拇指按下控制杆，然后将控制器轻轻拉出机箱几英寸。
 +
-将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
 
-. 将缆线管理设备从控制器模块中取出并放在一旁。
-. 向下按两个锁定闩锁，然后同时向下旋转两个闩锁。
-+
-此控制器模块会从机箱中略微移出。
+NOTE: If you have difficulty removing the controller module, place your index fingers through the finger holes from the inside (by crossing your arms)
 
 +
-image::../media/drw_a700s_pcm_remove.png[卸下 DRW a700s PCM]
+image::../media/drw_a250_pcm_remove_install.png[DRW A250 PCM 拆卸安装]
 
 +
+[cols="1,3"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png[""]
-| 锁定闩锁 
+| 控制杆 
 
 
  a| 
 image:../media/legend_icon_02.png[""]
  a| 
-锁定销
+锁定机制
 
 |===
-. 将控制器模块滑出机箱。
-+
-将控制器模块滑出机箱时，请确保您支持控制器模块的底部。
-
+. 用双手抓住控制器模块两侧，将其轻轻拉出机箱，并将其放在平稳的表面上。
 . 将控制器模块放在安全的位置，并对机箱中的另一个控制器模块重复这些步骤。
 
 
@@ -58,8 +56,10 @@ image:../media/legend_icon_02.png[""]
 
 == 第 2 步：将驱动器移至新机箱
 
+[role="lead"]
 您需要将驱动器从旧机箱中的每个托架开口移至新机箱中的同一托架开口。
 
+.步骤
 . 从系统正面轻轻卸下挡板。
 . 删除驱动器：
 +
@@ -94,8 +94,10 @@ NOTE: 驱动器很脆弱。尽可能少地对其进行处理，以防止对其�
 
 == 第 3 步：从设备机架或系统机柜中更换机箱
 
+[role="lead"]
 您必须先从设备机架或系统机柜中卸下现有机箱，然后才能安装替代机箱。
 
+.步骤
 . 从机箱安装点卸下螺钉。
 . 两个人将旧机箱滑出系统机柜或设备机架中的机架导轨，然后放好备用。
 . 如果您尚未接地，请正确接地。
@@ -107,38 +109,35 @@ NOTE: 驱动器很脆弱。尽可能少地对其进行处理，以防止对其�
 
 
 
-== 第 4 步：安装控制器
+== 第 4 步：安装控制器模块
 
-将控制器模块安装到新机箱后，将其启动到可以运行诊断测试的状态。
+[role="lead"]
+将控制器模块安装到新机箱中后，您需要将其启动到可以运行诊断测试的状态。
 
 对于在同一机箱中具有两个控制器模块的 HA 对，安装控制器模块的顺序尤为重要，因为一旦将其完全装入机箱，它就会尝试重新启动。
 
-. 如果您尚未接地，请正确接地。
+.步骤
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
 +
 
 NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
 
 . 将控制台重新连接到控制器模块，然后重新连接管理端口。
-. 将电源线插入电源，重新安装电源线锁定环，然后将电源连接到电源。
-. 完成控制器模块的重新安装：
+. 将电源线插入电源，然后重新安装电源线固定器。
+. 将控制器模块插入机箱：
 +
-.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
-.. 将控制器模块牢牢推入机箱，直到它与中板相距并完全就位。
-+
-控制器模块完全就位后，锁定闩锁会上升。
-
-+
-
-NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
-
+.. 确保锁定机制臂锁定在完全展开的位置。
+.. 用双手将控制器模块对齐并轻轻滑入锁定装置臂，直到其停止。
+.. 将食指从锁定装置内侧的指孔中穿过。
+.. 用拇指向下按压闩锁装置顶部的橙色卡舌，然后将控制器模块轻轻推至停止位置上方。
+.. 从锁定机制顶部释放拇指，然后继续推动，直到锁定机制卡入到位。
 +
 控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。
 
-.. 向上旋转锁定闩锁，使其倾斜，以清除锁定销，然后将其降低到锁定位置。
-.. 出现 `Press Ctrl-C for Boot Menu` 时按 `Ctrl-C` 以中断启动过程。
-.. 从显示的菜单中选择启动至维护模式的选项。
 
+
++
+控制器模块应完全插入，并与机箱边缘平齐。
 
 . 重复上述步骤，将第二个控制器安装到新机箱中。
 

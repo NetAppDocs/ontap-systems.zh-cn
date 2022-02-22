@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700s, aff, a700s, shut, down, impair, node, check, status, onboard, encryption, keys, status, disable, automatic, giveback, ontap, pre-shutdown, pre-shutdown checks for onboard encyption keys 
 summary: 在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
 ---
-= 根据需要检查板载加密密钥— AFF A700s
+= 检查板载加密密钥— AFF A700s
 :icons: font
 :imagesdir: ../media/
 

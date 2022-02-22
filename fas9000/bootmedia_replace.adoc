@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, open, controller, module, system, access, component 
 summary: 要访问控制器内部的组件，您必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。 
 ---
-= 卸下控制器模块，更换启动介质并将启动映像传输到启动介质— AFF A700 和 FAS9000
+= 更换启动介质— AFF A700 和 FAS9000
 :icons: font
 :imagesdir: ../media/
 
@@ -130,38 +130,6 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 . 按 Ctrl-C 中断启动过程，并在加载程序提示符处停止。如果看到正在启动自动启动，请按 Ctrl-C 中止 ...
 +
 如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停节点以启动到加载程序。
-
-. 尽管环境变量和 bootarg 已保留，但您应使用 `printenv bootarg name` 命令检查是否已为您的系统类型和配置正确设置所有必需的启动环境变量和 bootarg ，并使用 `setenv variable-name <value>` 命令更正任何错误。
-+
-.. 检查启动环境变量：
-+
-*** `bootarg.init.boot_clustered`
-*** `partner-sysid`
-*** `bootarg.init.flash_optimized` ，适用于 AFF C190/AFF A220 （全闪存 FAS ）
-*** `bootarg.init.san_optimized` ，适用于 AFF A220 和全 SAN 阵列
-*** `bootarg.init.switchless_cluster.enable`
-
-
-.. 如果已启用外部密钥管理器，请检查 `kenv` ASUP 输出中列出的 bootarg 值：
-+
-*** `bootarg.storageencryption.support <value>`
-*** `bootarg.keymanager.support <value>`
-*** `kmip.init.interface <value>`
-*** `kmip.init.ipaddr <value>`
-*** `kmip.init.netmask <value>`
-*** `kmip.init.gateway <value>`
-
-
-.. 如果启用了板载密钥管理器，请检查 `kenv` ASUP 输出中列出的 bootarg 值：
-+
-*** `bootarg.storageencryption.support <value>`
-*** `bootarg.keymanager.support <value>`
-*** `bootarg.bontery_keymanager <value>`
-
-
-.. 保存使用 `savenv` 命令更改的环境变量
-.. 使用 `printenv _variable-name_` 命令确认所做的更改。
-
 
 . 在 LOADER 提示符处设置网络连接类型：
 +

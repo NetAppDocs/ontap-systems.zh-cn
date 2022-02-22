@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700s, aff, a700s, locate, fail, boot, media, controller, module, pcie, led, replace, replace the boot media 
 summary: 您必须在控制器模块中找到故障启动介质，方法是卸下控制器模块上的中间 PCIe 模块，通过启动介质附近的亮起 LED 找到故障启动介质，然后更换启动介质。 
 ---
-= 卸下控制器模块并更换启动介质— AFF A700s
+= 更换启动介质— AFF A700s
 :icons: font
 :imagesdir: ../media/
 
