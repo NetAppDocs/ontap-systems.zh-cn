@@ -3627,7 +3627,6 @@
   <block id="2a8c61005de5c4642cb8dbeba1544811" category="paragraph"><block ref="2a8c61005de5c4642cb8dbeba1544811" category="inline-link-macro-rx"></block></block>
   <block id="97bf953b242f5f98851629db59e82601" category="inline-link-macro">DS4243 磁盘架文档</block>
   <block id="b6d30e3dcd0ba2af54c33b3685aa4429" category="paragraph"><block ref="b42da6ebf9625c910c5d3ba150b439e5" category="inline-link-macro-rx"></block></block>
-  <block id="6fac6f4e16017f2b4bc0f9591a002153" category="summary">您可以将这些链接用于其他 AFF 和 FAS 型号。</block>
   <block id="7d6a5a71ff18c3c788750313d0a4e7e0" category="doc">其他平台型号</block>
   <block id="f453086a36d64a5193cd4183c14bcd72" category="inline-link-macro">AFF 8000 系列文档</block>
   <block id="71bdc94f19d5947bd1cb6d437f119ba2" category="inline-link-macro">FAS8000 系列文档</block>
@@ -7446,8 +7445,6 @@
   <block id="a301eceb20e1d3480375d34e6dfa1274" category="sidebar">NetApp's AFF and FAS storage systems provide leading-edge, enterprise-class, scale-out all flash or hybrid storage with the industry's most advanced data management.使用此站点上的文档安装，扩展，升级和维护 AFF ， FAS 或所有 SAN 阵列系统。</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="sidebar">《 ONTAP 发行说明》</block>
   <block id="a393cd4f170aafc6db54b17ca62ffb74" category="sidebar">Broadcom 支持的 BES-53248</block>
-  <block id="937d0c70d7e423315a950793d262cee4" category="sidebar">Cisco 9336</block>
-  <block id="72c0fe6bd065c65c37725e2e14ab307a" category="sidebar">共享配置中的 Cisco 9336</block>
   <block id="1bc92df4184e6d4338aed95b6891adc1" category="sidebar">Cisco 92300YC</block>
   <block id="442396e207d697f3466573acd63cdeb7" category="section-title">选项 2 ：系统位于 MetroCluster 中</block>
   <block id="bd8eb6c12d8928906b264ff9daf7b9e7" category="section-title">选项 2 ：控制器位于 MetroCluster 中</block>
@@ -8433,4 +8430,10 @@
   <block id="7103ae2dc232b897a89408d0cd914f59" category="doc">检查板载加密密钥 - AFF A800</block>
   <block id="0e3989fd0fd811ede751f0ca9dbfbe88" category="doc">启动介质更换概述— AFF A800</block>
   <block id="a9785aa14dfcf09366954fcb69625d05" category="sidebar">42U 1280 毫米系统机柜</block>
+  <block id="3cafea7668c93f65d306d9021ff14f37" category="summary">您可以将这些链接用于其他 AFF 和 FAS 平台。</block>
+  <block id="f606ada25615407b042f8f189d1b9fab" category="sidebar">Cisco 3132Q-V</block>
+  <block id="782536ad60a0c703fa10fb3d99248ea0" category="sidebar">Cisco 3232C 交换机</block>
+  <block id="059d31543d448499bd1a9c454a8d1ebb" category="sidebar">Cisco 9336C-x2</block>
+  <block id="1c87a984d0a1c6881c9703209fd4341c" category="sidebar">共享配置中的 Cisco 936-x2</block>
+  <block id="237aba816839b6ef546c40514ce24efe" category="sidebar">NetApp CN1610 交换机</block>
 </blocks>
