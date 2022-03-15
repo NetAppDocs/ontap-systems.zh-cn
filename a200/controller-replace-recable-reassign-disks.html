@@ -16,20 +16,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/>
-  
-  <meta name="description" content="您必须重新配置存储并确认磁盘重新分配。">
-  <meta name="keywords" content=" aff a200, how to recable the system, how to reassign disks">
-  
-  
-
-  <!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您必须重新配置存储并确认磁盘重新分配。">
+  <meta name="keywords" content=" aff a200, how to recable the system, how to reassign disks"><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-systems/images/favicon.ico" type="image/x-icon">
 
-  <!-- RSS Feed -->
-  
-
-  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
 
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
@@ -59,27 +50,11 @@
   
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/zh-cn/ontap-systems/css/product-family.css' type="text/css">
-  
-
-  
-  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'>
-  
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-  
-    <script src='/zh-cn/ontap-systems/js/na-search.js'></script>
-  
 
-  
-  <script src='/zh-cn/ontap-systems/js/na-pagenav.js'></script>
-  
-
-  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism.css' type='text/css'>
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/ontap-systems/js/na-search.js'></script><script src='/zh-cn/ontap-systems/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism-netapp.css' type='text/css'>
 
 
@@ -97,9 +72,7 @@
   <script src='/zh-cn/ontap-systems/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/zh-cn/ontap-systems/js/toc.js'></script>
-  <script src='/zh-cn/ontap-systems/js/customscripts.js'></script>
-
-  <script>
+  <script src='/zh-cn/ontap-systems/js/customscripts.js'></script><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -158,7 +131,6 @@
   }
   </script>
   <script src='/zh-cn/ontap-systems/js/version-dropdown.js'></script>
-  <script src='/zh-cn/ontap-systems/js/product-family.js'></script>
   <script src='/zh-cn/ontap-systems/js/FileSaver.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip.min.js'></script>
@@ -171,6 +143,25 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[重新配置系统并重新分配磁盘— AFF A200](https://docs.netapp.com/zh-cn/ontap-systems/a200/controller-replace-recable-reassign-disks.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/a200/controller-replace-recable-reassign-disks.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -5185,26 +5176,22 @@
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container -->
-    <article class="page-content">
+    <!-- Begin of page container --><article class="page-content">
       <div class="ie-utility">
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/ontap-systems/">ONTAP&nbsp;Systems</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          重新配置系统并重新分配磁盘— AFF A200
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -5233,7 +5220,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-23 15:29:17 +0000">02/23/2022</time>
+    <time datetime="2022-03-15 19:26:00 +0000">03/15/2022</time>
     
   
 
@@ -5254,6 +5241,14 @@
           style="border-radius: 50%;"/>
   </a>
   
+  <a target="_blank" href="https://github.com/dougthomp">
+    <img  class="avatar avatar-small"
+          alt="dougthomp"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/76076341?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" href="https://github.com/netapp-jsnyder">
     <img  class="avatar avatar-small"
           alt="netapp-jsnyder"
@@ -5266,7 +5261,6 @@
 
 
 </p>
-
 
 <div id="preamble">
 <div class="sectionbody">
@@ -5319,7 +5313,7 @@
 <div class="sect2">
 <h3 id="选项-1-验证-ha-系统上的系统-id-更改">选项 1 ：验证 HA 系统上的系统 ID 更改</h3>
 <div class="paragraph">
-<p>您必须在启动 <em>replacement</em> 节点时确认系统 ID 更改，然后确认更改是否已实施。</p>
+<p>您必须在启动 <em>replacement</em> 控制器时确认系统 ID 更改，然后确认更改是否已实施。</p>
 </div>
 <div class="paragraph">
 <p>此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。</p>
@@ -5328,15 +5322,15 @@
 <div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>如果 <em>replacement</em> 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： <code>halt</code></p>
+<p>如果 <em>replacement</em> 控制器处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符： <code>halt</code></p>
 </li>
 <li>
-<p>在 <em>replacement</em> 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 <code>y</code> 。<code>boot_ontap</code></p>
+<p>在 <em>replacement</em> 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 <code>y</code> 。<code>boot_ontap</code></p>
 </li>
 <li>
-<p>请等待` Waiting for giveback&#8230;&#8203; <code>消息显示在 <em>replacement</em> 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show</code></p>
+<p>请等待 <code>Waiting for giveback&#8230;&#8203;</code> 消息显示在 <em>replacement</em> 控制器控制台上，然后从运行正常的控制器中验证是否已自动分配新的配对系统 ID ： <code>storage failover show</code></p>
 <div class="paragraph">
-<p>在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。</p>
+<p>在命令输出中，您应看到一条消息，指出受损控制器上的系统 ID 已更改，其中显示了正确的旧 ID 和新 ID 。In the following example, node2 has undergone replacement and has a new system ID of 151759706.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5351,7 +5345,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 </div>
 </li>
 <li>
-<p>从运行状况良好的节点中，验证是否已保存任何核心转储：</p>
+<p>在运行正常的控制器中，验证是否已保存任何核心转储：</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -5376,13 +5370,13 @@ node2             node1             -            Waiting for giveback (HA mailbo
 </div>
 </li>
 <li>
-<p>交还节点：</p>
+<p>交还控制器：</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>从运行正常的节点中，交还已更换节点的存储： <code>storage failover giveback -ofnode <em>replacement_node_name</em></code></p>
+<p>从运行正常的控制器中，交还更换的控制器的存储： <code>storage failover giveback -ofnode <em>replacement_node_name</em></code></p>
 <div class="paragraph">
-<p>replacement_ 节点将收回其存储并完成启动。</p>
+<p><em>replacement</em> 控制器将收回其存储并完成启动。</p>
 </div>
 <div class="paragraph">
 <p>如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 <code>y</code> 。</p>
@@ -5419,7 +5413,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 <li>
 <p>验证是否已正确分配磁盘： <code>storage disk show -ownership</code></p>
 <div class="paragraph">
-<p>属于 <em>replacement</em> 节点的磁盘应显示新的系统 ID 。在以下示例中， node1 拥有的磁盘现在显示新的系统 ID 1873775277 ：</p>
+<p>属于 <em>replacement</em> 控制器的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -5436,10 +5430,10 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 </div>
 </li>
 <li>
-<p>验证每个节点是否存在所需的卷： <code>vol show -node node-name</code></p>
+<p>验证每个控制器是否存在所需的卷： <code>vol show -node node-name</code></p>
 </li>
 <li>
-<p>如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它： <code>storage failover modify -node <em>replacement-node-name</em> -onreboot true</code></p>
+<p>如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： <code>storage failover modify -node <em>replacement-node-name</em> -onreboot true</code></p>
 </li>
 </ol>
 </div>
@@ -5530,27 +5524,7 @@ disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[重新配置系统并重新分配磁盘— AFF A200](https://docs.netapp.com/zh-cn/ontap-systems/a200/controller-replace-recable-reassign-disks.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/a200/controller-replace-recable-reassign-disks.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">在此页面上</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
-  <div style="clear: both"></div><!-- Main needs to have height -->
-</div>
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
 
@@ -5652,9 +5626,7 @@ disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
 </div>
 </footer>
 
-      </div>
-
-      <!-- Elasticsearch JS -->
+      </div><!-- Elasticsearch JS -->
       <script type="text/javascript" src='/zh-cn/ontap-systems/js/bundle.js'></script>
 
       <!-- Syntax Highlighting -->
@@ -5669,7 +5641,4 @@ disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
     </script>
     <script src='/zh-cn/ontap-systems/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-systems/js/tabbed-blocks.js'></script>
-  </body>
-
-  
-</html>
+  </body></html>

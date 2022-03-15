@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>关闭节点— AFF C190</title>
+  <title>关闭控制器 - AFF C190</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="关闭节点— AFF C190" />
+  <meta property="og:title" content="关闭控制器 - AFF C190" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-systems/c190/bootmedia-shutdown.html" />
-	<meta property="og:description" content="完成 NVE 或 NSE 任务后，您需要关闭受损节点。" />
+	<meta property="og:description" content="完成 NVE 或 NSE 任务后，您需要关闭受损控制器。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-systems/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/>
-  
-  <meta name="description" content="完成 NVE 或 NSE 任务后，您需要关闭受损节点。">
-  <meta name="keywords" content=" aff c190, shut down the node">
-  
-  
-
-  <!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="完成 NVE 或 NSE 任务后，您需要关闭受损控制器。">
+  <meta name="keywords" content=" aff c190, shut down the controller"><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-systems/images/favicon.ico" type="image/x-icon">
 
-  <!-- RSS Feed -->
-  
-
-  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
 
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
@@ -59,27 +50,11 @@
   
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/zh-cn/ontap-systems/css/product-family.css' type="text/css">
-  
-
-  
-  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'>
-  
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-  
-    <script src='/zh-cn/ontap-systems/js/na-search.js'></script>
-  
 
-  
-  <script src='/zh-cn/ontap-systems/js/na-pagenav.js'></script>
-  
-
-  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism.css' type='text/css'>
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/ontap-systems/js/na-search.js'></script><script src='/zh-cn/ontap-systems/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism-netapp.css' type='text/css'>
 
 
@@ -97,9 +72,7 @@
   <script src='/zh-cn/ontap-systems/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/zh-cn/ontap-systems/js/toc.js'></script>
-  <script src='/zh-cn/ontap-systems/js/customscripts.js'></script>
-
-  <script>
+  <script src='/zh-cn/ontap-systems/js/customscripts.js'></script><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -158,7 +131,6 @@
   }
   </script>
   <script src='/zh-cn/ontap-systems/js/version-dropdown.js'></script>
-  <script src='/zh-cn/ontap-systems/js/product-family.js'></script>
   <script src='/zh-cn/ontap-systems/js/FileSaver.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip.min.js'></script>
@@ -171,6 +143,25 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[关闭控制器 - AFF C190](https://docs.netapp.com/zh-cn/ontap-systems/c190/bootmedia-shutdown.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/c190/bootmedia_shutdown.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -5185,26 +5176,22 @@
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container -->
-    <article class="page-content">
+    <!-- Begin of page container --><article class="page-content">
       <div class="ie-utility">
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/ontap-systems/">ONTAP&nbsp;Systems</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          关闭节点— AFF C190
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -5226,14 +5213,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">关闭节点— AFF C190</h1>
+  <h1 class="n-doc__component-detail-heading">关闭控制器 - AFF C190</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-02-23 15:29:17 +0000">02/23/2022</time>
+    <time datetime="2022-03-15 19:26:00 +0000">03/15/2022</time>
     
   
 
@@ -5243,6 +5230,14 @@
           alt="thrisun"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/30325635?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/dougthomp">
+    <img  class="avatar avatar-small"
+          alt="dougthomp"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/76076341?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -5259,18 +5254,17 @@
 
 </p>
 
-
 <div class="paragraph lead">
-<p>完成 NVE 或 NSE 任务后，您需要关闭受损节点。</p>
+<p>完成 NVE 或 NSE 任务后，您需要关闭受损控制器。</p>
 </div>
 <div class="paragraph">
-<p>完成 NVE 或 NSE 任务后，您需要关闭受损节点。</p>
+<p>完成 NVE 或 NSE 任务后，您需要关闭受损控制器。</p>
 </div>
 <div class="olist arabic">
 <div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>如果受损节点不在 LOADER 提示符处：</p>
+<p>将受损控制器显示为 LOADER 提示符：</p>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -5278,14 +5272,22 @@
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">如果受损节点显示 &#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">如果受损控制器显示 &#8230;&#8203;</th>
 <th class="tableblock halign-left valign-top">那么 &#8230;&#8203;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>` + 正在等待交还 &#8230;&#8203;+`</p>
+<p>LOADER 提示符</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>转至 "Remove controller module" 。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>正在等待交还 &#8230;&#8203;</code></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>按 Ctrl-C ，然后在出现提示时回答 <code>y</code> 。</p>
@@ -5296,18 +5298,16 @@
 <p>系统提示符或密码提示符（输入系统密码）</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>从运行正常的节点接管或暂停受损节点： <code>storage failover takeover -ofnode impaired_node_name</code></p>
+<p>从运行正常的控制器接管或暂停受损的控制器： <code>storage failover takeover -ofnode impaired_node_name</code></p>
 </div>
 <div class="paragraph">
-<p>+ 当受损节点显示 Waiting for giveback&#8230;&#8203; 时，按 Ctrl-C ，然后回答 <code>y</code> 。</p>
-</div>
-<div class="paragraph">
-<p>+</p>
+<p>当受损控制器显示 Waiting for giveback&#8230;&#8203; 时，按 Ctrl-C ，然后回答 <code>y</code> 。</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
-</li>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>在 LOADER 提示符处，输入 <code>printenv</code> 以捕获所有启动环境变量。将输出保存到日志文件中。</p>
 <div class="admonitionblock note">
@@ -5325,32 +5325,15 @@
 </li>
 </ol>
 </div>
+</li>
+</ol>
+</div>
 
     </article>
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[关闭节点— AFF C190](https://docs.netapp.com/zh-cn/ontap-systems/c190/bootmedia-shutdown.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/c190/bootmedia_shutdown.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">在此页面上</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
-  <div style="clear: both"></div><!-- Main needs to have height -->
-</div>
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
 
@@ -5452,9 +5435,7 @@
 </div>
 </footer>
 
-      </div>
-
-      <!-- Elasticsearch JS -->
+      </div><!-- Elasticsearch JS -->
       <script type="text/javascript" src='/zh-cn/ontap-systems/js/bundle.js'></script>
 
       <!-- Syntax Highlighting -->
@@ -5469,7 +5450,4 @@
     </script>
     <script src='/zh-cn/ontap-systems/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-systems/js/tabbed-blocks.js'></script>
-  </body>
-
-  
-</html>
+  </body></html>

@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>更换控制器模块— AFF A300</title>
+  <title>选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="更换控制器模块— AFF A300" />
+  <meta property="og:title" content="选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-systems/a300/controller-replace-move-hardware.html" />
-	<meta property="og:description" content="要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-systems/fas8200/bootmedia_encryption_preshutdown_checks/" />
+	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-systems/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/>
-  
-  <meta name="description" content="要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。">
-  <meta name="keywords" content=" aff a300, move the controller module hardware">
-  
-  
-
-  <!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
+  <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-systems/images/favicon.ico" type="image/x-icon">
 
-  <!-- RSS Feed -->
-  
-
-  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
 
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
@@ -59,27 +50,11 @@
   
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/zh-cn/ontap-systems/css/product-family.css' type="text/css">
-  
-
-  
-  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'>
-  
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-  
-    <script src='/zh-cn/ontap-systems/js/na-search.js'></script>
-  
 
-  
-  <script src='/zh-cn/ontap-systems/js/na-pagenav.js'></script>
-  
-
-  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism.css' type='text/css'>
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/ontap-systems/js/na-search.js'></script><script src='/zh-cn/ontap-systems/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism-netapp.css' type='text/css'>
 
 
@@ -97,9 +72,7 @@
   <script src='/zh-cn/ontap-systems/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/zh-cn/ontap-systems/js/toc.js'></script>
-  <script src='/zh-cn/ontap-systems/js/customscripts.js'></script>
-
-  <script>
+  <script src='/zh-cn/ontap-systems/js/customscripts.js'></script><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -158,7 +131,6 @@
   }
   </script>
   <script src='/zh-cn/ontap-systems/js/version-dropdown.js'></script>
-  <script src='/zh-cn/ontap-systems/js/product-family.js'></script>
   <script src='/zh-cn/ontap-systems/js/FileSaver.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip.min.js'></script>
@@ -171,6 +143,25 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE](https://docs.netapp.com/zh-cn/ontap-systems/fas8200/bootmedia_encryption_preshutdown_checks/)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/fas8200/bootmedia_encryption_preshutdown_checks.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -281,13 +272,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-systems/a300/controller-replace-move-hardware.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-systems/" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-systems/a300/controller-replace-move-hardware.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-systems/" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-systems/a300/controller-replace-move-hardware.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-systems/" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-systems/a300/controller-replace-move-hardware.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-systems/" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -1065,15 +1056,6 @@
 
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/zh-cn/ontap-systems/pdfs/pages/a300/controller-replace-move-hardware.pdf" >
-    <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
-  
 
 
 
@@ -4107,7 +4089,7 @@
         概述
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a300/controller-replace-shutdown.html">
         关闭受损控制器
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a300/controller-replace-move-hardware.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a300/controller-replace-move-hardware.html">
         更换控制器模块
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a300/controller-replace-system-config-restore-and-verify.html">
         还原系统配置
@@ -5185,26 +5167,22 @@
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container -->
-    <article class="page-content">
+    <!-- Begin of page container --><article class="page-content">
       <div class="ie-utility">
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/ontap-systems/">ONTAP&nbsp;Systems</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          更换控制器模块— AFF A300
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -5226,34 +5204,18 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">更换控制器模块— AFF A300</h1>
+  <h1 class="n-doc__component-detail-heading">选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-02-23 15:29:17 +0000">02/23/2022</time>
+    <time datetime="2022-03-15 19:26:00 +0000">03/15/2022</time>
     
   
 
 <span>提供者
-  <a target="_blank" href="https://github.com/netapp-martyh">
-    <img  class="avatar avatar-small"
-          alt="netapp-martyh"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/66496079?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
-  <a target="_blank" href="https://github.com/thrisun">
-    <img  class="avatar avatar-small"
-          alt="thrisun"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/30325635?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" href="https://github.com/dougthomp">
     <img  class="avatar avatar-small"
           alt="dougthomp"
@@ -5270,518 +5232,201 @@
           style="border-radius: 50%;"/>
   </a>
   
+  <a target="_blank" href="https://github.com/thrisun">
+    <img  class="avatar avatar-small"
+          alt="thrisun"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/30325635?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-martyh">
+    <img  class="avatar avatar-small"
+          alt="netapp-martyh"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/66496079?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
 </p>
 
-
 <div id="preamble">
 <div class="sectionbody">
+<div class="paragraph">
+<p>controller-- perMalink ： fas8200/ bootmedia-encryption-preshutdown-checks.html 边栏：边栏关键字： fas8200 ，板载加密密钥的预关闭检查摘要： " 在关闭受损控制器并检查板载加密密钥状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 "&#8201;&#8212;&#8201;= 检查板载加密 - FAS8200 ：图标：字体： imagesdir ： ../media/</p>
+</div>
 <div class="paragraph lead">
-<p>要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</p>
+<p>在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="第-1-步打开控制器模块">第 1 步：打开控制器模块</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>要更换控制器模块，必须先从机箱中卸下旧控制器模块。</p>
+<p>在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查正在运行的 ONTAP 版本。</p>
+</div>
+<div class="paragraph">
+<p>If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <a href="https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html">"使用命令行界面概述 NetApp 加密"</a>。</p>
 </div>
 <div class="olist arabic">
+<div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>如果您尚未接地，请正确接地。</p>
-</li>
-<li>
-<p>松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。</p>
-<div class="paragraph">
-<p>将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。</p>
-</div>
-</li>
-<li>
-<p>从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_32xx_cbl_mgmt_arm.png" alt="DRW 32xx 电缆管理臂">
-</div>
-</div>
-</li>
-<li>
-<p>如果您在拔下缆线后将 SFP 模块留在系统中，请将其移至新控制器模块。</p>
-</li>
-<li>
-<p>松开控制器模块凸轮把手上的翼形螺钉。</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_8020_cam_handle_thumbscrew.png" alt="DRW 8020 凸轮把手翼形螺钉">
-</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_01.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">翼形螺钉</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_02.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>凸轮把手</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>向下拉凸轮把手，开始将控制器模块滑出机箱。</p>
-<div class="paragraph">
-<p>将控制器模块滑出机箱时，请确保您支持控制器模块的底部。</p>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="第-2-步移动启动设备">第 2 步：移动启动设备</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>您必须找到启动介质并按照说明将其从旧控制器中取出并将其插入新控制器中。</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>使用下图或控制器模块上的 FRU 映射找到启动介质：</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_rxl_boot_media.png" alt="DRW rxl 启动介质">
-</div>
-</div>
-</li>
-<li>
-<p>按启动介质外壳上的蓝色按钮，将启动介质从其外壳中释放，然后将其竖直拉出启动介质插槽。</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-请勿将启动介质竖直向上扭曲或拉，因为这样可能会损坏插槽或启动介质。
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>将启动介质移至新控制器模块，将启动介质的边缘与插槽外壳对齐，然后将其轻轻推入插槽。</p>
-</li>
-<li>
-<p>检查启动介质，确保其完全固定在插槽中。</p>
-<div class="paragraph">
-<p>如有必要，请取出启动介质并将其重新插入插槽。</p>
-</div>
-</li>
-<li>
-<p>向下推启动介质以接合启动介质外壳上的锁定按钮。</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="第-3-步移动-nvmem-电池">第 3 步：移动 NVMEM 电池</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>要将 NVMEM 电池从旧控制器模块移至新控制器模块，您必须执行一系列特定步骤。</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>检查 NVMEM LED ：</p>
+<p>检查受损控制器的状态：</p>
 <div class="ulist">
 <ul>
 <li>
-<p>如果您的系统采用 HA 配置，请转至下一步。</p>
+<p>如果受损控制器处于登录提示符处，请以 <code>admin</code> 身份登录。</p>
 </li>
 <li>
-<p>如果您的系统采用独立配置，请完全关闭控制器模块，然后检查 NV 图标标识的 NVRAM LED 。</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_hw_nvram_icon.png" alt="DRW 硬件 NVRAM 图标">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-在暂停系统时， NVRAM LED 会闪烁，同时将内容存入闪存。目标值完成后，此 LED 将熄灭。
-</td>
-</tr>
-</table>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>如果在未完全关闭的情况下断电， NVMEM LED 将闪烁，直到目标完成，然后 LED 将熄灭。</p>
+<p>如果受损控制器位于 LOADER 提示符处且属于 HA 配置的一部分，请以 <code>admin</code> 身份登录到运行正常的控制器上。</p>
 </li>
 <li>
-<p>如果 LED 亮起且电源打开，则未写入的数据将存储在 NVMEM 上。</p>
-<div class="paragraph">
-<p>此问题通常发生在 ONTAP 成功启动后不受控制的关闭期间。</p>
-</div>
-</li>
-</ul>
-</div>
+<p>如果受损控制器采用独立配置并出现 LOADER 提示符，请联系 <a href="http://mysupport.netapp.com/">"mysupport.netapp.com"</a>。</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>打开 CPU 通风管并找到 NVMEM 电池。</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_rxl_nvmem_battery.png" alt="DRW rxl nvmem 电池">
+<p>如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： <code>ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh</code></p>
+<div class="paragraph">
+<p>以下 AutoSupport 消息禁止自动创建案例两小时： <code>cluster1 ： * &gt; system node AutoSupport invoke -node * -type all -message MAINT=2h</code></p>
 </div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_01.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">电池锁定卡舌</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_02.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>NVMEM 电池组</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 </li>
 <li>
-<p>抓住电池并按下标记为推送的蓝色锁定卡舌，然后将电池从电池架和控制器模块中提出。</p>
+<p>使用 <code>version -v</code> 命令检查受损控制器（如果已启动）或配对控制器（如果受损控制器已关闭）上运行的 ONTAP 版本：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>如果命令输出中显示 &lt;lno-dury&gt; 或 &lt;1osno-dury&gt; ，则系统不支持 NVE ，请继续关闭控制器。</p>
 </li>
 <li>
-<p>从控制器模块中取出电池并将其放在一旁。</p>
+<p>如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.5 ，请转至 <a href="#Option 1: Checking NVE or NSE on systems running ONTAP 9.5 and earlier">[Option 1: Checking NVE or NSE on systems running ONTAP 9.5 and earlier]</a>。</p>
+</li>
+<li>
+<p>如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至 <a href="#Option 2: Checking NVE or NSE on systems running ONTAP 9.6 and later">[Option 2: Checking NVE or NSE on systems running ONTAP 9.6 and later]</a>。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>如果受损控制器属于 HA 配置，请禁用从运行状况良好的控制器自动交还： <code>storage failover modify -node local -auto-giveback false</code> 或 <code>storage failover modify -node local -auto-giveback-after-panic false</code></p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="第-4-步移动-dimm">第 4 步：移动 DIMM</h2>
+<h2 id="选项-1-在运行-ontap-9-5-及更早版本的系统上检查-nve-或-nse">选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>要移动 DIMM ，请找到 DIMM 并将其从旧控制器移至更换控制器，然后按照特定步骤顺序进行操作。</p>
+<p>在关闭受损控制器之前，您需要检查系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.</p>
 </div>
 <div class="olist arabic">
+<div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>找到控制器模块上的 DIMM 。</p>
+<p>将控制台缆线连接到受损的控制器。</p>
 </li>
 <li>
-<p>记下插槽中 DIMM 的方向，以便可以按正确的方向将 DIMM 插入更换用的控制器模块中。</p>
-</li>
-<li>
-<p>缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
-</td>
-</tr>
-</table>
-</div>
+<p>检查是否为集群中的任何卷配置了 NVE ： <code>volume show -is-encrypted true</code></p>
 <div class="paragraph">
-<p>系统 DIMM 的数量和位置取决于系统型号。</p>
-</div>
-<div class="paragraph">
-<p>下图显示了系统 DIMM 的位置：</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_rxl_dimms.png" alt="DRW rxl DIMM">
-</div>
+<p>如果输出中列出了任何卷，则会配置 NVE ，您需要验证 NVE 配置。如果未列出任何卷，请检查是否已配置 NSE 。</p>
 </div>
 </li>
 <li>
-<p>找到要安装 DIMM 的插槽。</p>
+<p>检查是否已配置 NSE ： <code>storage encryption disk show</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置。</p>
 </li>
 <li>
-<p>确保连接器上的 DIMM 弹出器卡舌处于打开位置，然后将 DIMM 垂直插入插槽。</p>
-<div class="paragraph">
-<p>DIMM 紧紧固定在插槽中，但应很容易插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。</p>
+<p>如果未配置 NVE 和 NSE ，则可以安全地关闭受损控制器。</p>
+</li>
+</ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>对其余 DIMM 重复上述步骤。</p>
-</li>
-<li>
-<p>将 NVMEM 电池移至更换用的控制器模块。</p>
-</li>
-<li>
-<p>将电池架上的卡舌或卡舌与控制器模块侧的槽口对齐，然后向下轻推电池外壳，直到电池外壳卡入到位。</p>
 </li>
 </ol>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="第-5-步移动-pcie-卡">第 5 步：移动 PCIe 卡</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>要移动 PCIe 卡，请找到它们并将其从旧控制器移至更换控制器，然后按照特定步骤顺序进行操作。</p>
-</div>
-<div class="paragraph">
-<p>您必须准备好新控制器模块，以便可以将 PCIe 卡直接从旧控制器模块移至新控制器模块中的相应插槽。</p>
-</div>
+<div class="sect2">
+<h3 id="验证-nve-配置">验证 NVE 配置</h3>
 <div class="olist arabic">
+<div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>松开控制器模块侧面板上的翼形螺钉。</p>
+<p>显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： <code>security key-manager query</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>如果 <code>Restored</code> 列显示 <code>yes</code> 且所有密钥管理器显示 <code>Available</code> ，则可以安全地关闭受损的控制器。</p>
 </li>
 <li>
-<p>将侧面板从控制器模块上摆动。</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_rxl_pcie.png" alt="DRW rxl PCIe">
-</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_01.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>侧面板</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_02.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>PCIe 卡</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
+<p>如果 <code>Restored</code> 列显示 <code>yes</code> 以外的任何内容，或者任何密钥管理器显示 <code>不可用</code> ，则需要完成一些额外步骤。</p>
 </li>
 <li>
-<p>从旧控制器模块中卸下 PCIe 卡并将其放在一旁。</p>
+<p>如果在启用板载密钥管理时看到消息 this command is not supported ，则需要完成其他一些步骤。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>如果 <code>restored</code> 列显示 <code>yes</code> 以外的任何内容，或者任何密钥管理器显示 <code>不可用</code> ：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>检索并还原所有身份验证密钥和关联密钥 ID ： <code>security key-manager restore -address *</code></p>
 <div class="paragraph">
-<p>确保跟踪 PCIe 卡所在的插槽。</p>
+<p>如果命令失败，请联系 NetApp 支持部门。</p>
 </div>
-</li>
-<li>
-<p>对旧控制器模块中的其余 PCIe 卡重复上述步骤。</p>
-</li>
-<li>
-<p>如有必要，打开新控制器模块侧面板，根据需要滑出 PCIe 卡填充板，然后小心安装 PCIe 卡。</p>
-<div class="paragraph">
-<p>确保将卡正确对齐在插槽中，并在插槽中插入卡时对卡施加均匀的压力。卡必须完全均匀地固定在插槽中。</p>
-</div>
-</li>
-<li>
-<p>对预留的其余 PCIe 卡重复上述步骤。</p>
-</li>
-<li>
-<p>合上侧面板并拧紧翼形螺钉。</p>
 </li>
 </ol>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="第-6-步安装控制器">第 6 步：安装控制器</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>将旧控制器模块中的组件安装到新控制器模块中后，必须将新控制器模块安装到系统机箱中并启动操作系统。</p>
-</div>
-<div class="paragraph">
-<p>对于在同一机箱中具有两个控制器模块的 HA 对，安装控制器模块的顺序尤为重要，因为一旦将其完全装入机箱，它就会尝试重新启动。</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-系统可能会在启动时更新系统固件。请勿中止此过程。操作步骤要求您中断启动过程，您通常可以在系统提示时随时中断启动过程。但是，如果系统在启动时更新了系统固件，则必须等到更新完成后再中断启动过程。
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>如果您尚未接地，请正确接地。</p>
-</li>
-<li>
-<p>如果尚未关闭 CPU 通风管，请关闭此通风管。</p>
-</li>
-<li>
-<p>将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>仅为管理和控制台端口布线，以便您可以访问系统以执行以下各节中的任务。</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-您将在此操作步骤中稍后将其余缆线连接到控制器模块。
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>完成控制器模块的重新安装：</p>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">如果您的系统位于 &#8230;&#8203;</th>
-<th class="tableblock halign-left valign-top">然后执行以下步骤 &#8230;&#8203;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>HA 对</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
-<div class="content">
-<pre> The controller module begins to boot as soon as it is fully seated in the chassis. Be prepared to interrupt the boot process.
-.. 在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。拧紧控制器模块背面凸轮把手上的翼形螺钉。</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>+</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>+
-控制器一旦固定在机箱中，就会开始启动。</p>
+<p><a href="http://mysupport.netapp.com/">"mysupport.netapp.com"</a></p>
 </div>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>如果尚未重新安装缆线管理设备，请重新安装该设备。</p>
+<p>验证所有身份验证密钥的 <code>Restored</code> 列是否显示 <code>yes</code> ，以及所有密钥管理器是否显示 <code>Available</code> ： <code>sSecurity key-manager query</code></p>
 </li>
 <li>
-<p>使用钩环带将缆线绑定到缆线管理设备。</p>
+<p>关闭受损控制器。</p>
 </li>
-<li>
-<p>当您看到消息 <code>Press Ctrl-C for Boot Menu</code> 时，按 <code>Ctrl-C</code> 以中断启动过程。</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-如果您未看到此提示，而控制器模块启动到 ONTAP ，请输入 <code>halt</code> ，然后在 LOADER 提示符处输入 <code>boot_ontap</code> ，并在出现提示时按 <code>Ctrl-C</code> ，然后启动到维护模式。
-</td>
-</tr>
-</table>
+</ol>
 </div>
 </li>
 <li>
-<p>从显示的菜单中选择启动至维护模式的选项。</p>
-</li>
-</ol>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>一种独立配置</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
+<p>如果在启用板载密钥管理后看到消息 this command is not supported when on板 载密钥管理器，请显示存储在板载密钥管理器中的密钥： <code>security key-manager key show -detail</code></p>
+<div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。拧紧控制器模块背面凸轮把手上的翼形螺钉。</p>
+<p>如果 <code>Restored</code> 列显示 <code>yes</code> manually back up the on板 载密钥管理信息：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>转到高级权限模式，并在系统提示您继续时输入 <code>y</code> ： <code>set -priv advanced</code></p>
+</li>
+<li>
+<p>Enter the command to display the OKM backup information: <code>security key-manager backup show</code></p>
+</li>
+<li>
+<p>将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</p>
+</li>
+<li>
+<p>返回到管理模式： <code>set -priv admin</code></p>
+</li>
+<li>
+<p>关闭受损控制器。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>如果 <code>Restored</code> 列显示除 <code>yes</code> 以外的任何内容：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>运行 key-manager 设置向导： <code>security key-manager setup -node target/impaired node name</code></p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5789,20 +5434,118 @@
 <img src="/us-en/ontap-systems/images/note.svg" alt="注">
 </td>
 <td class="content">
-将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 <a href="http://mysupport.netapp.com/">"mysupport.netapp.com"</a>
 </td>
 </tr>
 </table>
 </div>
 </li>
 <li>
-<p>如果尚未重新安装缆线管理设备，请重新安装该设备。</p>
+<p>验证所有身份验证密钥 <code>ssecuritykey-manager key show -detail</code> 的 <code>restored</code> 列是否显示 <code>yes</code></p>
 </li>
 <li>
-<p>使用钩环带将缆线绑定到缆线管理设备。</p>
+<p>转到高级权限模式，并在系统提示您继续时输入 <code>y</code> ： <code>set -priv advanced</code></p>
 </li>
 <li>
-<p>将电源线重新连接到电源和电源，打开电源以启动启动过程，然后在看到 <code>Press Ctrl-C for Boot Menu</code> 消息后按 <code>Ctrl-C</code> 。</p>
+<p>Enter the command to display the OKM backup information: <code>security key-manager backup show</code></p>
+</li>
+<li>
+<p>将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</p>
+</li>
+<li>
+<p>返回到管理模式： <code>set -priv admin</code></p>
+</li>
+<li>
+<p>您可以安全地关闭控制器。</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="验证-nse-配置">验证 NSE 配置</h3>
+<div class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： <code>security key-manager query</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>如果 <code>Restored</code> 列显示 <code>yes</code> 且所有密钥管理器显示 <code>Available</code> ，则可以安全地关闭受损的控制器。</p>
+</li>
+<li>
+<p>如果 <code>Restored</code> 列显示 <code>yes</code> 以外的任何内容，或者任何密钥管理器显示 <code>不可用</code> ，则需要完成一些额外步骤。</p>
+</li>
+<li>
+<p>如果在启用板载密钥管理时看到消息 this command is not supported ，则需要完成其他一些步骤</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>如果 <code>restored</code> 列显示 <code>yes</code> 以外的任何内容，或者任何密钥管理器显示 <code>不可用</code> ：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>检索并还原所有身份验证密钥和关联密钥 ID ： <code>security key-manager restore -address *</code></p>
+<div class="paragraph">
+<p>如果命令失败，请联系 NetApp 支持部门。</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><a href="http://mysupport.netapp.com/">"mysupport.netapp.com"</a></p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>验证所有身份验证密钥的 <code>Restored</code> 列是否显示 <code>yes</code> ，以及所有密钥管理器是否显示 <code>Available</code> ： <code>sSecurity key-manager query</code></p>
+</li>
+<li>
+<p>关闭受损控制器。</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>如果在启用板载密钥管理后看到消息 this command is not supported when on板 载密钥管理器，请显示存储在板载密钥管理器中的密钥： <code>security key-manager key show -detail</code></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>如果 <code>Restored</code> 列显示 <code>yes</code> ，请手动备份板载密钥管理信息：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>转到高级权限模式，并在系统提示您继续时输入 <code>y</code> ： <code>set -priv advanced</code></p>
+</li>
+<li>
+<p>Enter the command to display the OKM backup information: <code>security key-manager backup show</code></p>
+</li>
+<li>
+<p>将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</p>
+</li>
+<li>
+<p>返回到管理模式： <code>set -priv admin</code></p>
+</li>
+<li>
+<p>关闭受损控制器。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>如果 <code>Restored</code> 列显示除 <code>yes</code> 以外的任何内容：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>运行 key-manager 设置向导： <code>security key-manager setup -node target/impaired node name</code></p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5810,39 +5553,348 @@
 <img src="/us-en/ontap-systems/images/note.svg" alt="注">
 </td>
 <td class="content">
-如果您未看到此提示，而控制器模块启动到 ONTAP ，请输入 <code>halt</code> ，然后在 LOADER 提示符处输入 <code>boot_ontap</code> ，并在出现提示时按 <code>Ctrl-C</code> ，然后启动到维护模式。
+在提示符处输入客户的 OKM 密码短语。如果无法提供密码短语，请联系 <a href="http://mysupport.netapp.com/">"mysupport.netapp.com"</a>
 </td>
 </tr>
 </table>
 </div>
 </li>
 <li>
-<p>从启动菜单中，选择维护模式选项。</p>
+<p>验证所有身份验证密钥的 <code>restored</code> 列是否显示 <code>yes</code> ： <code>security key-manager key show -detail</code></p>
 </li>
-</ol>
-</div></div></td>
+<li>
+<p>转到高级权限模式，并在系统提示您继续时输入 <code>y</code> ： <code>set -priv advanced</code></p>
+</li>
+<li>
+<p>输入命令以备份 OKM 信息： <code>security key-manager backup show</code></p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+Make sure that OKM information is saved in your log file.在可能需要手动恢复 OKM 的灾难情形下，需要此信息。
+</td>
 </tr>
-</tbody>
 </table>
-<div class="ulist">
-<ul>
-<li>
-<p>重要信息： * 在启动过程中，您可能会看到以下提示：</p>
-<div class="ulist">
-<ul>
-<li>
-<p>系统 ID 不匹配的提示警告，并要求覆盖系统 ID 。</p>
-</li>
-<li>
-<p>一条提示，警告您在 HA 配置中进入维护模式时必须确保运行正常的节点保持关闭状态。您可以安全地对这些提示回答 <code>y</code> 。</p>
-</li>
-</ul>
 </div>
+</li>
+<li>
+<p>将备份信息的内容复制到单独的文件或日志中。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</p>
+</li>
+<li>
+<p>返回到管理模式： <code>set -priv admin</code></p>
+</li>
+<li>
+<p>您可以安全地关闭控制器。</p>
 </li>
 </ul>
 </div>
 </li>
 </ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="选项-2-在运行-ontap-9-6-及更高版本的系统上检查-nve-或-nse">选项 2 ：在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>在关闭受损控制器之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>验证集群中的任何卷是否正在使用 NVE ： <code>volume show -is-encrypted true</code></p>
+<div class="paragraph">
+<p>If any volumes are listed in the output, NVE is configured and you need to verify the NVE configuration.如果未列出任何卷，请检查是否已配置 NSE 并正在使用此 NSE 。</p>
+</div>
+</li>
+<li>
+<p>验证是否已配置 NSE 并正在使用： <code>storage encryption disk show</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置和正在使用的。</p>
+</li>
+<li>
+<p>如果未显示任何磁盘，则表示未配置 NSE 。</p>
+</li>
+<li>
+<p>如果未配置 NVE 和 NSE ，则不会使用 NSE 密钥保护任何驱动器，因此可以安全地关闭受损的控制器。</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="验证-nve-配置-2">验证 NVE 配置</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： <code>security key-manager key-query</code></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 <code>KMIP</code> ， <code>AKV</code> 和 <code>GCP</code> 。确认这些类型的过程与确认 <code>外部</code> 或 <code>板载</code> 密钥管理器类型相同。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果 <code>密钥管理器</code> 类型显示 <code>external</code> ，而 <code>restored</code> 列显示 <code>yes</code> ，则可以安全地关闭受损的控制器。</p>
+</li>
+<li>
+<p>如果 <code>密钥管理器</code> 类型显示 <code>板载</code> 且 <code>还原</code> 列显示 <code>是</code> ，则需要完成一些额外步骤。</p>
+</li>
+<li>
+<p>如果 <code>Key Manager</code> type 显示 <code>external</code> ，而 <code>restored</code> 列显示除 <code>yes</code> 以外的任何内容，则需要完成一些额外步骤。</p>
+</li>
+<li>
+<p>如果 <code>密钥管理器</code> 类型显示 <code>板载</code> 且 <code>还原</code> 列显示除 <code>是</code> 以外的任何内容，则需要完成一些额外步骤。</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>如果 <code>Key Manager</code> type 显示 <code>板载</code> 且 <code>Restored</code> 列显示 <code>yes</code> ，请手动备份 OKM 信息：</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>转到高级权限模式，并在系统提示您继续时输入 <code>y</code> ： <code>set -priv advanced</code></p>
+</li>
+<li>
+<p>输入命令以显示密钥管理信息： <code>security key-manager on板 载 show-backup</code></p>
+</li>
+<li>
+<p>将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</p>
+</li>
+<li>
+<p>返回到管理模式： <code>set -priv admin</code></p>
+</li>
+<li>
+<p>关闭受损控制器。</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>如果 <code>Key Manager</code> type 显示 <code>external</code> ，而 <code>restored</code> 列显示除 <code>yes</code> 以外的任何内容：</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>将外部密钥管理身份验证密钥还原到集群中的所有节点： <code>security key-manager external restore</code></p>
+<div class="paragraph">
+<p>如果命令失败，请联系 NetApp 支持部门。</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><a href="http://mysupport.netapp.com/">"mysupport.netapp.com"</a></p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>验证所有身份验证密钥的 <code>restored</code> 列是否等于 <code>yes</code> ： <code>security key-manager key-query</code></p>
+</li>
+<li>
+<p>关闭受损控制器。</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>如果 <code>Key Manager</code> type 显示 <code>板载</code> 且 <code>Restored</code> 列显示除 <code>yes</code> 以外的任何内容：</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>输入板载 security key-manager sync 命令： <code>ssecurity key-manager on板 载同步</code></p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。 <a href="http://mysupport.netapp.com/">"mysupport.netapp.com"</a>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>验证所有身份验证密钥的 <code>restored</code> 列是否显示 <code>yes</code> ： <code>security key-manager key-query</code></p>
+</li>
+<li>
+<p>验证 <code>Key Manager</code> type 是否显示 <code>板载</code> ，然后手动备份 OKM 信息。</p>
+</li>
+<li>
+<p>转到高级权限模式，并在系统提示您继续时输入 <code>y</code> ： <code>set -priv advanced</code></p>
+</li>
+<li>
+<p>输入命令以显示密钥管理备份信息： <code>security key-manager on板 载 show-backup</code></p>
+</li>
+<li>
+<p>将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</p>
+</li>
+<li>
+<p>返回到管理模式： <code>set -priv admin</code></p>
+</li>
+<li>
+<p>您可以安全地关闭控制器。</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="验证-nse-配置-2">验证 NSE 配置</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： <code>security key-manager key-query -key-type NSE-AK</code></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 <code>KMIP</code> ， <code>AKV</code> 和 <code>GCP</code> 。确认这些类型的过程与确认 <code>外部</code> 或 <code>板载</code> 密钥管理器类型相同。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果 <code>密钥管理器</code> 类型显示 <code>external</code> ，而 <code>restored</code> 列显示 <code>yes</code> ，则可以安全地关闭受损的控制器。</p>
+</li>
+<li>
+<p>如果 <code>密钥管理器</code> 类型显示 <code>板载</code> 且 <code>还原</code> 列显示 <code>是</code> ，则需要完成一些额外步骤。</p>
+</li>
+<li>
+<p>如果 <code>Key Manager</code> type 显示 <code>external</code> ，而 <code>restored</code> 列显示除 <code>yes</code> 以外的任何内容，则需要完成一些额外步骤。</p>
+</li>
+<li>
+<p>如果 <code>Key Manager</code> type 显示 <code>external</code> ，而 <code>restored</code> 列显示除 <code>yes</code> 以外的任何内容，则需要完成一些额外步骤。</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>如果 <code>Key Manager</code> type 显示 <code>板载</code> 且 <code>Restored</code> 列显示 <code>yes</code> ，请手动备份 OKM 信息：</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>转到高级权限模式，并在系统提示您继续时输入 <code>y</code> ： <code>set -priv advanced</code></p>
+</li>
+<li>
+<p>输入命令以显示密钥管理信息： <code>security key-manager on板 载 show-backup</code></p>
+</li>
+<li>
+<p>将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</p>
+</li>
+<li>
+<p>返回到管理模式： <code>set -priv admin</code></p>
+</li>
+<li>
+<p>您可以安全地关闭控制器。</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>如果 <code>Key Manager</code> type 显示 <code>external</code> ，而 <code>restored</code> 列显示除 <code>yes</code> 以外的任何内容：</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>输入板载 security key-manager sync 命令： <code>ssecurity key-manager external sync</code></p>
+<div class="paragraph">
+<p>如果命令失败，请联系 NetApp 支持部门。</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><a href="http://mysupport.netapp.com/">"mysupport.netapp.com"</a></p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>验证所有身份验证密钥的 <code>restored</code> 列是否等于 <code>yes</code> ： <code>security key-manager key-query</code></p>
+</li>
+<li>
+<p>您可以安全地关闭控制器。</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>如果 <code>Key Manager</code> type 显示 <code>板载</code> 且 <code>Restored</code> 列显示除 <code>yes</code> 以外的任何内容：</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>输入板载 security key-manager sync 命令： <code>ssecurity key-manager on板 载同步</code></p>
+<div class="paragraph">
+<p>在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><a href="http://mysupport.netapp.com/">"mysupport.netapp.com"</a></p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>验证所有身份验证密钥的 <code>restored</code> 列是否显示 <code>yes</code> ： <code>security key-manager key-query</code></p>
+</li>
+<li>
+<p>验证 <code>Key Manager</code> type 是否显示 <code>板载</code> ，然后手动备份 OKM 信息。</p>
+</li>
+<li>
+<p>转到高级权限模式，并在系统提示您继续时输入 <code>y</code> ： <code>set -priv advanced</code></p>
+</li>
+<li>
+<p>输入命令以显示密钥管理备份信息： <code>security key-manager on板 载 show-backup</code></p>
+</li>
+<li>
+<p>将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</p>
+</li>
+<li>
+<p>返回到管理模式： <code>set -priv admin</code></p>
+</li>
+<li>
+<p>您可以安全地关闭控制器。</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -5851,27 +5903,7 @@
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[更换控制器模块— AFF A300](https://docs.netapp.com/zh-cn/ontap-systems/a300/controller-replace-move-hardware.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/a300/controller-replace-move-hardware.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">在此页面上</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
-  <div style="clear: both"></div><!-- Main needs to have height -->
-</div>
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
 
@@ -5973,9 +6005,7 @@
 </div>
 </footer>
 
-      </div>
-
-      <!-- Elasticsearch JS -->
+      </div><!-- Elasticsearch JS -->
       <script type="text/javascript" src='/zh-cn/ontap-systems/js/bundle.js'></script>
 
       <!-- Syntax Highlighting -->
@@ -5990,7 +6020,4 @@
     </script>
     <script src='/zh-cn/ontap-systems/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-systems/js/tabbed-blocks.js'></script>
-  </body>
-
-  
-</html>
+  </body></html>

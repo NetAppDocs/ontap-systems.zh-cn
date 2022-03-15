@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>更换启动介质— FAS500f</title>
+  <title>第 1 步：打开控制器模块</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="更换启动介质— FAS500f" />
+  <meta property="og:title" content="第 1 步：打开控制器模块" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-systems/fas500f/bootmedia-replace.html" />
-	<meta property="og:description" content="您可以先卸下控制器模块上的通风管，然后再更换启动介质，从而在控制器模块中找到发生故障的启动介质。" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-systems/a300/controller-replace-move-hardware/" />
+	<meta property="og:description" content="" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-systems/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/>
-  
-  <meta name="description" content="您可以先卸下控制器模块上的通风管，然后再更换启动介质，从而在控制器模块中找到发生故障的启动介质。">
-  <meta name="keywords" content=" fas500f, replace the boot media">
-  
-  
-
-  <!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="">
+  <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-systems/images/favicon.ico" type="image/x-icon">
 
-  <!-- RSS Feed -->
-  
-
-  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
 
   <!-- Elastic Search -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
@@ -59,27 +50,11 @@
   
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/tabbed-blocks.css" type="text/css">
-  <link rel="stylesheet" href='/zh-cn/ontap-systems/css/product-family.css' type="text/css">
-  
-
-  
-  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'>
-  
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <!-- Used to import Promise for IE. Required for SearchKit -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-  
-    <script src='/zh-cn/ontap-systems/js/na-search.js'></script>
-  
 
-  
-  <script src='/zh-cn/ontap-systems/js/na-pagenav.js'></script>
-  
-
-  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism.css' type='text/css'>
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/ontap-systems/js/na-search.js'></script><script src='/zh-cn/ontap-systems/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-systems/css/prism-netapp.css' type='text/css'>
 
 
@@ -97,9 +72,7 @@
   <script src='/zh-cn/ontap-systems/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/zh-cn/ontap-systems/js/toc.js'></script>
-  <script src='/zh-cn/ontap-systems/js/customscripts.js'></script>
-
-  <script>
+  <script src='/zh-cn/ontap-systems/js/customscripts.js'></script><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -158,7 +131,6 @@
   }
   </script>
   <script src='/zh-cn/ontap-systems/js/version-dropdown.js'></script>
-  <script src='/zh-cn/ontap-systems/js/product-family.js'></script>
   <script src='/zh-cn/ontap-systems/js/FileSaver.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip.min.js'></script>
@@ -171,6 +143,25 @@
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[第 1 步：打开控制器模块](https://docs.netapp.com/zh-cn/ontap-systems/a300/controller-replace-move-hardware/)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/a300/controller-replace-move-hardware.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
   <!-- Start top_hat -->
   <div class="n-top-hat">
     <div class="n-container">
@@ -281,13 +272,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-systems/fas500f/bootmedia-replace.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-systems/" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-systems/fas500f/bootmedia-replace.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-systems/" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-systems/fas500f/bootmedia-replace.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-systems/" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-systems/fas500f/bootmedia-replace.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-systems/" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -2759,15 +2750,6 @@
 
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/zh-cn/ontap-systems/pdfs/pages/fas500f/bootmedia-replace.pdf" >
-    <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
-  
 
 
 
@@ -4775,7 +4757,7 @@
         检查板载加密密钥
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/fas500f/bootmedia-shutdown.html">
         关闭节点
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/fas500f/bootmedia-replace.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/fas500f/bootmedia-replace.html">
         替换启动映像
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/fas500f/bootmedia-recovery-image-boot-non-2n-mcc.html">
         启动恢复映像
@@ -5185,26 +5167,22 @@
   
 
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
-    <!-- Begin of page container -->
-    <article class="page-content">
+    <!-- Begin of page container --><article class="page-content">
       <div class="ie-utility">
   <div class="ie-menu">
     <div class="n-breadcrumb">
       <ul class="n-breadcrumb__list">
         <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">主页</a>
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">文档</a>
-        </li>
+        
+
         
 
         <li class="n-breadcrumb__list-item">
           <a href="/zh-cn/ontap-systems/">ONTAP&nbsp;Systems</a>
         </li>
-        <li class="n-breadcrumb__list-item">
-          更换启动介质— FAS500f
-        </li>
+
       </ul>
     </div>
     <div style="clear: both"></div><!-- Main needs to have height -->
@@ -5226,18 +5204,26 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">更换启动介质— FAS500f</h1>
+  <h1 class="n-doc__component-detail-heading">第 1 步：打开控制器模块</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-02-23 15:29:17 +0000">02/23/2022</time>
+    <time datetime="2022-03-15 19:26:00 +0000">03/15/2022</time>
     
   
 
 <span>提供者
+  <a target="_blank" href="https://github.com/dougthomp">
+    <img  class="avatar avatar-small"
+          alt="dougthomp"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/76076341?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" href="https://github.com/netapp-martyh">
     <img  class="avatar avatar-small"
           alt="netapp-martyh"
@@ -5254,14 +5240,6 @@
           style="border-radius: 50%;"/>
   </a>
   
-  <a target="_blank" href="https://github.com/dougthomp">
-    <img  class="avatar avatar-small"
-          alt="dougthomp"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/76076341?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" href="https://github.com/netapp-jsnyder">
     <img  class="avatar avatar-small"
           alt="netapp-jsnyder"
@@ -5275,22 +5253,21 @@
 
 </p>
 
-
 <div id="preamble">
 <div class="sectionbody">
+<div class="paragraph">
+<p>控制器— perMalink ： A300/controller-replace-move-hardware.html 侧栏：侧栏关键字： AFF a300 ，移动控制器模块硬件摘要： " 要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 "&#8201;&#8212;&#8201;= 更换控制器模块 - AFF A300 ：图标：字体： imagesdir ： ../media/</p>
+</div>
 <div class="paragraph lead">
-<p>要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。</p>
+<p>要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="第-1-步卸下控制器模块">第 1 步：卸下控制器模块</h2>
+<h2 id="第-1-步打开控制器模块">第 1 步：打开控制器模块</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>更换控制器模块内部的组件时，必须从机箱中卸下控制器模块。</p>
-</div>
-<div class="paragraph">
-<p>请确保为这些缆线贴上标签，以便您知道这些缆线来自何处。</p>
+<p>要更换控制器模块，必须先从机箱中卸下旧控制器模块。</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -5298,28 +5275,27 @@
 <p>如果您尚未接地，请正确接地。</p>
 </li>
 <li>
-<p>从源拔下控制器模块电源。</p>
-</li>
-<li>
-<p>释放电源线固定器，然后从电源中拔下缆线。</p>
-</li>
-<li>
-<p>将前掌插入控制器模块两侧的锁定装置中，用拇指按下控制杆，然后将控制器轻轻拉出机箱几英寸。</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
-</td>
-<td class="content">
-如果在卸下控制器模块时遇到困难，请将食指从内部穿过指孔（通过跨越臂）。
-</td>
-</tr>
-</table>
+<p>松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。</p>
+<div class="paragraph">
+<p>将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。</p>
 </div>
+</li>
+<li>
+<p>从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。</p>
 <div class="imageblock">
 <div class="content">
-<img src="../media/drw_a250_pcm_remove_install.png" alt="DRW A250 PCM 拆卸安装">
+<img src="../media/drw_32xx_cbl_mgmt_arm.png" alt="DRW 32xx 电缆管理臂">
+</div>
+</div>
+</li>
+<li>
+<p>如果您在拔下缆线后将 SFP 模块留在系统中，请将其移至新控制器模块。</p>
+</li>
+<li>
+<p>松开控制器模块凸轮把手上的翼形螺钉。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_8020_cam_handle_thumbscrew.png" alt="DRW 8020 凸轮把手翼形螺钉">
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -5333,9 +5309,7 @@
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>控制杆</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">翼形螺钉</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -5344,56 +5318,16 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>锁定机制</p>
+<p>凸轮把手</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>用双手抓住控制器模块两侧，将其轻轻拉出机箱，并将其放在平稳的表面上。</p>
-</li>
-<li>
-<p>逆时针转动控制器模块正面的翼形螺钉，然后打开控制器模块盖板。</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_a250_open_controller_module_cover.png" alt="DRW A250 打开控制器模块盖板">
-</div>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_01.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>翼形螺钉</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_02.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>控制器模块盖板。</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>取下通风管盖。</p>
-<div class="imageblock">
-<div class="content">
-<img src="../media/drw_a250_remove_airduct_cover.png" alt="DRW A250 拆下通风管盖">
-</div>
+<p>向下拉凸轮把手，开始将控制器模块滑出机箱。</p>
+<div class="paragraph">
+<p>将控制器模块滑出机箱时，请确保您支持控制器模块的底部。</p>
 </div>
 </li>
 </ol>
@@ -5401,69 +5335,23 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="第-2-步更换启动介质">第 2 步：更换启动介质</h2>
+<h2 id="第-2-步移动启动设备">第 2 步：移动启动设备</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>您可以先卸下控制器模块上的通风管，然后再更换启动介质，从而在控制器模块中找到发生故障的启动介质。</p>
-</div>
-<div class="paragraph">
-<p>要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not loose it.</p>
-</div>
-<div class="paragraph">
-<p>您可以使用以下视频或表格步骤更换启动介质：</p>
-</div>
-<div class="paragraph">
-<p><a href="https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=7c2cad51-dd95-4b07-a903-ac5b015c1a6d">"更换启动介质"</a></p>
+<p>您必须找到启动介质并按照说明将其从旧控制器中取出并将其插入新控制器中。</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>找到并更换控制器模块中受损的启动介质。</p>
+<p>使用下图或控制器模块上的 FRU 映射找到启动介质：</p>
 <div class="imageblock">
 <div class="content">
-<img src="../media/drw_a250_replace_boot_media.png" alt="DRW A250 更换启动介质">
+<img src="../media/drw_rxl_boot_media.png" alt="DRW rxl 启动介质">
 </div>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_01.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>卸下将启动介质固定到控制器模块主板的螺钉。</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><span class="image"><img src="../media/legend_icon_02.png" alt=""></span></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>将启动介质从控制器模块中提出。</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>使用 1 号磁性螺丝刀，从受损启动介质上卸下螺钉，并将其安全放在磁铁上。</p>
 </li>
 <li>
-<p>将受损启动介质直接从插槽中轻轻提起并放在一旁。</p>
-</li>
-<li>
-<p>从防静电运输袋中取出更换启动介质，并将其在控制器模块上对齐到位。</p>
-</li>
-<li>
-<p>使用 1 号磁性螺丝刀插入并拧紧启动介质上的螺钉。</p>
+<p>按启动介质外壳上的蓝色按钮，将启动介质从其外壳中释放，然后将其竖直拉出启动介质插槽。</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5471,62 +5359,50 @@
 <img src="/us-en/ontap-systems/images/note.svg" alt="注">
 </td>
 <td class="content">
-拧紧启动介质上的螺钉时请勿用力，否则可能会使其发生裂纹。
+请勿将启动介质竖直向上扭曲或拉，因为这样可能会损坏插槽或启动介质。
 </td>
 </tr>
 </table>
 </div>
 </li>
-</ol>
+<li>
+<p>将启动介质移至新控制器模块，将启动介质的边缘与插槽外壳对齐，然后将其轻轻推入插槽。</p>
+</li>
+<li>
+<p>检查启动介质，确保其完全固定在插槽中。</p>
+<div class="paragraph">
+<p>如有必要，请取出启动介质并将其重新插入插槽。</p>
 </div>
+</li>
+<li>
+<p>向下推启动介质以接合启动介质外壳上的锁定按钮。</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="第-3-步将启动映像传输到启动介质">第 3 步：将启动映像传输到启动介质</h2>
+<h2 id="第-3-步移动-nvmem-电池">第 3 步：移动 NVMEM 电池</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>您必须具有一个 USB 闪存驱动器，该驱动器已格式化为 MBR/FAT32 ，并且容量至少为 4 GB</p>
-</li>
-<li>
-<p>与受损控制器运行的 ONTAP 映像版本相同的副本。您可以从 NetApp 支持站点上的 * 下载 * 部分下载相应的映像</p>
-<div class="ulist">
-<ul>
-<li>
-<p>如果启用了 NVE ，请按照下载按钮中的指示，使用 NetApp 卷加密下载映像。</p>
-</li>
-<li>
-<p>如果未启用 NVE ，请按照下载按钮中的指示，在不使用 NetApp 卷加密的情况下下载映像。</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>如果您的系统是 HA 对，则必须具有网络连接。</p>
-</li>
-<li>
-<p>如果您的系统是独立系统，则不需要网络连接，但在还原 var 文件系统时，您必须执行额外的重新启动。</p>
-</li>
-</ul>
+<p>要将 NVMEM 电池从旧控制器模块移至新控制器模块，您必须执行一系列特定步骤。</p>
 </div>
 <div class="olist arabic">
-<div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>将相应的服务映像从 NetApp 支持站点下载并复制到 USB 闪存驱动器。</p>
+<p>检查 NVMEM LED ：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>如果您的系统采用 HA 配置，请转至下一步。</p>
 </li>
 <li>
-<p>将服务映像下载到笔记本电脑上的工作空间。</p>
-</li>
-<li>
-<p>解压缩服务映像。</p>
+<p>如果您的系统采用独立配置，请完全关闭控制器模块，然后检查 NV 图标标识的 NVRAM LED 。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_hw_nvram_icon.png" alt="DRW 硬件 NVRAM 图标">
+</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -5534,47 +5410,164 @@
 <img src="/us-en/ontap-systems/images/note.svg" alt="注">
 </td>
 <td class="content">
-如果要使用 Windows 提取内容，请勿使用 WinZip 提取网络启动映像。使用其他提取工具，例如 7-Zip 或 WinRAR 。
+在暂停系统时， NVRAM LED 会闪烁，同时将内容存入闪存。目标值完成后，此 LED 将熄灭。
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>解压缩的服务映像文件中有两个文件夹：</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>启动</code></p>
+<p>如果在未完全关闭的情况下断电， NVMEM LED 将闪烁，直到目标完成，然后 LED 将熄灭。</p>
 </li>
 <li>
-<p><code>EFI</code></p>
+<p>如果 LED 亮起且电源打开，则未写入的数据将存储在 NVMEM 上。</p>
+<div class="paragraph">
+<p>此问题通常发生在 ONTAP 成功启动后不受控制的关闭期间。</p>
+</div>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>将 <code>EFI</code> 文件夹复制到 USB 闪存驱动器上的顶部目录。</p>
+<p>打开 CPU 通风管并找到 NVMEM 电池。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_rxl_nvmem_battery.png" alt="DRW rxl nvmem 电池">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="../media/legend_icon_01.png" alt=""></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">电池锁定卡舌</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="../media/legend_icon_02.png" alt=""></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>NVMEM 电池组</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>抓住电池并按下标记为推送的蓝色锁定卡舌，然后将电池从电池架和控制器模块中提出。</p>
+</li>
+<li>
+<p>从控制器模块中取出电池并将其放在一旁。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="第-4-步移动-dimm">第 4 步：移动 DIMM</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>USB 闪存驱动器应具有 EFI 文件夹，并且与受损控制器运行的服务映像（ BIOS ）版本相同。</p>
+<p>要移动 DIMM ，请找到 DIMM 并将其从旧控制器移至更换控制器，然后按照特定步骤顺序进行操作。</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>找到控制器模块上的 DIMM 。</p>
 </li>
 <li>
-<p>从笔记本电脑中取出 USB 闪存驱动器。</p>
+<p>记下插槽中 DIMM 的方向，以便可以按正确的方向将 DIMM 插入更换用的控制器模块中。</p>
 </li>
 <li>
-<p>如果尚未安装此通风管，请安装此通风管。</p>
+<p>缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>系统 DIMM 的数量和位置取决于系统型号。</p>
+</div>
+<div class="paragraph">
+<p>下图显示了系统 DIMM 的位置：</p>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="../media/drw_a250_install_airduct_cover.png" alt="DRW A250 安装通风管盖">
+<img src="../media/drw_rxl_dimms.png" alt="DRW rxl DIMM">
 </div>
 </div>
 </li>
 <li>
-<p>合上控制器模块盖并拧紧翼形螺钉。</p>
+<p>找到要安装 DIMM 的插槽。</p>
+</li>
+<li>
+<p>确保连接器上的 DIMM 弹出器卡舌处于打开位置，然后将 DIMM 垂直插入插槽。</p>
+<div class="paragraph">
+<p>DIMM 紧紧固定在插槽中，但应很容易插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>对其余 DIMM 重复上述步骤。</p>
+</li>
+<li>
+<p>将 NVMEM 电池移至更换用的控制器模块。</p>
+</li>
+<li>
+<p>将电池架上的卡舌或卡舌与控制器模块侧的槽口对齐，然后向下轻推电池外壳，直到电池外壳卡入到位。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="第-5-步移动-pcie-卡">第 5 步：移动 PCIe 卡</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要移动 PCIe 卡，请找到它们并将其从旧控制器移至更换控制器，然后按照特定步骤顺序进行操作。</p>
+</div>
+<div class="paragraph">
+<p>您必须准备好新控制器模块，以便可以将 PCIe 卡直接从旧控制器模块移至新控制器模块中的相应插槽。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>松开控制器模块侧面板上的翼形螺钉。</p>
+</li>
+<li>
+<p>将侧面板从控制器模块上摆动。</p>
 <div class="imageblock">
 <div class="content">
-<img src="../media/drw_a250_close_controller_module_cover.png" alt="DRW A250 合上控制器模块盖">
+<img src="../media/drw_rxl_pcie.png" alt="DRW rxl PCIe">
 </div>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -5589,7 +5582,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>控制器模块盖板</p>
+<p>侧面板</p>
 </div></div></td>
 </tr>
 <tr>
@@ -5599,40 +5592,234 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>翼形螺钉</p>
+<p>PCIe 卡</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+</li>
+<li>
+<p>从旧控制器模块中卸下 PCIe 卡并将其放在一旁。</p>
+<div class="paragraph">
+<p>确保跟踪 PCIe 卡所在的插槽。</p>
+</div>
+</li>
+<li>
+<p>对旧控制器模块中的其余 PCIe 卡重复上述步骤。</p>
+</li>
+<li>
+<p>如有必要，打开新控制器模块侧面板，根据需要滑出 PCIe 卡填充板，然后小心安装 PCIe 卡。</p>
+<div class="paragraph">
+<p>确保将卡正确对齐在插槽中，并在插槽中插入卡时对卡施加均匀的压力。卡必须完全均匀地固定在插槽中。</p>
+</div>
+</li>
+<li>
+<p>对预留的其余 PCIe 卡重复上述步骤。</p>
+</li>
+<li>
+<p>合上侧面板并拧紧翼形螺钉。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="第-6-步安装控制器">第 6 步：安装控制器</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>将旧控制器模块中的组件安装到新控制器模块中后，必须将新控制器模块安装到系统机箱中并启动操作系统。</p>
+</div>
+<div class="paragraph">
+<p>对于在同一机箱中具有两个控制器模块的 HA 对，安装控制器模块的顺序尤为重要，因为一旦将其完全装入机箱，它就会尝试重新启动。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+系统可能会在启动时更新系统固件。请勿中止此过程。操作步骤要求您中断启动过程，您通常可以在系统提示时随时中断启动过程。但是，如果系统在启动时更新了系统固件，则必须等到更新完成后再中断启动过程。
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>如果您尚未接地，请正确接地。</p>
+</li>
+<li>
+<p>如果尚未关闭 CPU 通风管，请关闭此通风管。</p>
 </li>
 <li>
 <p>将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。</p>
-</li>
-<li>
-<p>将电源线插入电源，然后重新安装电源线固定器。</p>
-</li>
-<li>
-<p>将 USB 闪存驱动器插入控制器模块上的 USB 插槽。</p>
-<div class="paragraph">
-<p>确保将 USB 闪存驱动器安装在标有 USB 设备的插槽中，而不是 USB 控制台端口中。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
-<p>将控制器模块完全推入机箱：</p>
+<p>仅为管理和控制台端口布线，以便您可以访问系统以执行以下各节中的任务。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+您将在此操作步骤中稍后将其余缆线连接到控制器模块。
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
-<p>将食指从锁定装置内侧的指孔中穿过。</p>
-</li>
-<li>
-<p>用拇指向下按压闩锁装置顶部的橙色卡舌，然后将控制器模块轻轻推至停止位置上方。</p>
-</li>
-<li>
-<p>从锁定机制顶部释放拇指，然后继续推动，直到锁定机制卡入到位。</p>
-<div class="paragraph">
-<p>控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。</p>
+<p>完成控制器模块的重新安装：</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">如果您的系统位于 &#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">然后执行以下步骤 &#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>HA 对</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
+<div class="content">
+<pre> The controller module begins to boot as soon as it is fully seated in the chassis. Be prepared to interrupt the boot process.
+.. 在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。拧紧控制器模块背面凸轮把手上的翼形螺钉。</pre>
+</div>
 </div>
 <div class="paragraph">
-<p>控制器模块应完全插入，并与机箱边缘平齐。</p>
+<p>+</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>+
+控制器一旦固定在机箱中，就会开始启动。</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>如果尚未重新安装缆线管理设备，请重新安装该设备。</p>
+</li>
+<li>
+<p>使用钩环带将缆线绑定到缆线管理设备。</p>
+</li>
+<li>
+<p>当您看到消息 <code>Press Ctrl-C for Boot Menu</code> 时，按 <code>Ctrl-C</code> 以中断启动过程。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+如果您未看到此提示，而控制器模块启动到 ONTAP ，请输入 <code>halt</code> ，然后在 LOADER 提示符处输入 <code>boot_ontap</code> ，并在出现提示时按 <code>Ctrl-C</code> ，然后启动到维护模式。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>从显示的菜单中选择启动至维护模式的选项。</p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>一种独立配置</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。拧紧控制器模块背面凸轮把手上的翼形螺钉。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>如果尚未重新安装缆线管理设备，请重新安装该设备。</p>
+</li>
+<li>
+<p>使用钩环带将缆线绑定到缆线管理设备。</p>
+</li>
+<li>
+<p>将电源线重新连接到电源和电源，打开电源以启动启动过程，然后在看到 <code>Press Ctrl-C for Boot Menu</code> 消息后按 <code>Ctrl-C</code> 。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+如果您未看到此提示，而控制器模块启动到 ONTAP ，请输入 <code>halt</code> ，然后在 LOADER 提示符处输入 <code>boot_ontap</code> ，并在出现提示时按 <code>Ctrl-C</code> ，然后启动到维护模式。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>从启动菜单中，选择维护模式选项。</p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>重要信息： * 在启动过程中，您可能会看到以下提示：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>系统 ID 不匹配的提示警告，并要求覆盖系统 ID 。</p>
+</li>
+<li>
+<p>一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。You can safely respond <code>y</code> to these prompts.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ol>
@@ -5644,27 +5831,7 @@
     <!-- Page Container -->
   </div>
 
-  
-  <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[更换启动介质— FAS500f](https://docs.netapp.com/zh-cn/ontap-systems/fas500f/bootmedia-replace.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/fas500f/bootmedia_replace.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
-    <div class="page-nav-container">
-      <nav class="page-nav-fixed">
-        <div class="page-nav-title">在此页面上</div>
-        <div class="page-nav-links">
-          <ul class="page-nav-inner" id="page-menu"></ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  
-  <div style="clear: both"></div><!-- Main needs to have height -->
-</div>
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
 
         </main>
 
@@ -5766,9 +5933,7 @@
 </div>
 </footer>
 
-      </div>
-
-      <!-- Elasticsearch JS -->
+      </div><!-- Elasticsearch JS -->
       <script type="text/javascript" src='/zh-cn/ontap-systems/js/bundle.js'></script>
 
       <!-- Syntax Highlighting -->
@@ -5783,7 +5948,4 @@
     </script>
     <script src='/zh-cn/ontap-systems/js/www-ntap.js'></script>
     <script src='/zh-cn/ontap-systems/js/tabbed-blocks.js'></script>
-  </body>
-
-  
-</html>
+  </body></html>
