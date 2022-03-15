@@ -72,6 +72,6 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 
 NOTE: 请务必在完成转换后退出维护模式。
 
-. 交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 交还控制器的存储，使其恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
 . 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
 

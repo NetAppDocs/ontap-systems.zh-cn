@@ -26,9 +26,9 @@ summary: 您可以将 I/O 模块添加到系统中，方法是在已完全填充
 . 关闭控制器 A ：
 +
 .. 禁用自动交还： `storage failover modify -node local -auto-giveback false`
-.. 接管目标节点： `storage failover takeover -ofnode target_node_name`
+.. 接管目标控制器： `storage failover takeover -ofnode target_node_name`
 +
-控制台连接显示，接管完成后，节点将进入 LOADER 提示符。
+控制台连接显示，接管完成后，控制器将进入 LOADER 提示符。
 
 
 
@@ -52,8 +52,8 @@ summary: 您可以将 I/O 模块添加到系统中，方法是在已完全填充
 
 NOTE: 确保所有未使用的 I/O 插槽都安装了空格，以防止可能出现散热问题。
 
-. 从加载程序提示符 _bybye 重新启动节点
-. 从配对节点交还节点。`storage failover giveback -ofnode target_node_name`
+. 从 LOADER 提示符 _bybye 重新启动控制器
+. 从配对控制器交还控制器。`storage failover giveback -ofnode target_node_name`
 . 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
 . 如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _<node name>_ -port _<port name>__ -mode network` 命令转换插槽以供网络连接使用。
 . 对控制器 B 重复上述步骤
@@ -97,9 +97,9 @@ NIC I/O 模块，端口更少
 . 关闭控制器 A ：
 +
 .. 禁用自动交还： `storage failover modify -node local -auto-giveback false`
-.. 接管目标节点： `storage failover takeover -ofnode target_node_name`
+.. 接管目标控制器： `storage failover takeover -ofnode target_node_name`
 +
-控制台连接显示，接管完成后，节点将进入 LOADER 提示符。
+控制台连接显示，接管完成后，控制器将进入 LOADER 提示符。
 
 
 
@@ -154,8 +154,8 @@ I/O 凸轮闩锁完全解锁
 
 . 重复执行拆卸和安装步骤以更换控制器 A 的其他模块
 . 如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。
-. 从加载程序提示符 _bybye 重新启动节点
-. 从配对节点交还节点。`storage failover giveback -ofnode target_node_name`
+. 从 LOADER 提示符 _bybye 重新启动控制器
+. 从配对控制器交还控制器。`storage failover giveback -ofnode target_node_name`
 . 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
 . 如果您添加了：
 +

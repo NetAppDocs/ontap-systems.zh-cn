@@ -23,8 +23,8 @@ summary: 检查环境变量后，您必须完成特定于已启用板载密钥�
 
 == 启用板载密钥管理器后还原 NVE 或 NSE
 
-. 将控制台缆线连接到目标节点。
-. 在 LOADER 提示符处使用 boot_ontap 命令启动节点。
+. 将控制台缆线连接到目标控制器。
+. 在 LOADER 提示符处使用 boot_ontap 命令启动控制器。
 . 检查控制台输出：
 +
 [cols="1,2"]
@@ -35,7 +35,7 @@ summary: 检查环境变量后，您必须完成特定于已启用板载密钥�
  a| 
 LOADER 提示符
  a| 
-将节点启动至启动菜单： `boot_ontap menu`
+将控制器启动到启动菜单： `boot_ontap menu`
 
 
 
@@ -72,8 +72,8 @@ NOTE: 数据是从 `ssecurity key-manager backup show` 或 security key-manager 
 +
 系统将启动并显示 Waiting for giveback... 提示符。
 
-. 将控制台缆线移动到配对节点并以管理员身份登录。
-. 使用 `storage failover show` 命令确认目标节点已准备好进行交还。
+. 将控制台缆线移至配对控制器并以管理员身份登录。
+. 使用 `storage failover show` 命令确认目标控制器已准备好进行交还。
 . 使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令仅交还 CFO 聚合。
 +
 ** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。
@@ -101,17 +101,17 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 .. 等待 10 分钟，使密钥在整个集群中同步。
 
 
-. 将控制台缆线移至配对节点。
-. 使用 `storage failover giveback -fromnode local` 命令交还目标节点。
+. 将控制台缆线移至配对控制器。
+. 使用 `storage failover giveback -fromnode local` 命令交还目标控制器。
 . 使用 `storage failover show` 命令在交还报告完成三分钟后检查交还状态。
 +
 如果 20 分钟后交还未完成，请联系客户支持。
 
-. 在 clustershell 提示符处，输入 net int show -is-home false 命令以列出不在其主节点和端口上的逻辑接口。
+. 在 clustershell 提示符处，输入 net int show -is-home false 命令以列出不在其主控制器和端口上的逻辑接口。
 +
 如果任何接口列为 `false` ，请使用 net int revert 命令将这些接口还原回其主端口。
 
-. 将控制台缆线移至目标节点，然后运行 `version -v` 命令以检查 ONTAP 版本。
+. 将控制台缆线移至目标控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
 
 
@@ -119,8 +119,8 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 
 == 在运行 ONTAP 9.6 及更高版本的系统上还原 NSE/NVE
 
-. 将控制台缆线连接到目标节点。
-. 在 LOADER 提示符处使用 boot_ontap 命令启动节点。
+. 将控制台缆线连接到目标控制器。
+. 在 LOADER 提示符处使用 boot_ontap 命令启动控制器。
 . 检查控制台输出：
 +
 [cols="1,2"]
@@ -138,12 +138,12 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
  a| 
 正在等待交还
  a| 
-.. 登录到配对节点。
-.. 使用 `storage failover show` 命令确认目标节点已准备好进行交还。
+.. 登录到配对控制器。
+.. 使用 `storage failover show` 命令确认目标控制器已准备好进行交还。
 
 
 |===
-. 使用 storage failover giveback -fromnode local -only-cfo-aggregates true local 命令将控制台缆线移至配对节点并交还目标节点存储。
+. 使用 storage failover giveback -fromnode local -only-cfo-aggregates true local 命令将控制台缆线移至配对控制器并交还目标控制器存储。
 +
 ** 如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。
 ** 如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。
@@ -156,11 +156,11 @@ NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
 
 
 . 等待 3 分钟，然后使用 storage failover show 命令检查故障转移状态。
-. 在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主节点和端口上的逻辑接口。
+. 在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主控制器和端口上的逻辑接口。
 +
 如果任何接口列为 `false` ，请使用 `net int revert` 命令将这些接口还原回其主端口。
 
-. 将控制台缆线移至目标节点，然后运行 `version -v` 命令以检查 ONTAP 版本。
+. 将控制台缆线移至目标控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
 . 在 clustershell 提示符处使用 `storage encryption disk show` 查看输出。
 . 使用 `security key-manager key-query` 命令显示存储在密钥管理服务器上的加密和身份验证密钥。
@@ -177,7 +177,7 @@ NOTE: 如果命令失败，请联系客户支持。
 
 
 
-. 将控制台缆线连接到配对节点。
-. 使用 storage failover giveback -fromnode local 命令交还节点。
+. 将控制台缆线连接到配对控制器。
+. 使用 storage failover giveback -fromnode local 命令交还控制器。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
 

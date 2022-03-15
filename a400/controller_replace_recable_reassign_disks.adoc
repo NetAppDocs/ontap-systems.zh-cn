@@ -34,15 +34,15 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 == 第 2 步：重新分配磁盘
 
-如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
+If the storage system is in an HA pair, the system ID of the new controller module is automatically assigned to the disks when the giveback occurs at the end of the procedure.您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。
 
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
-. 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
-. From the LOADER prompt on the _replacement_ node, boot the node, entering `y` if you are prompted to override the system ID due to a system ID mismatch:``boot_ontap``
-. 请等待` Waiting for giveback... `消息显示在 _replacement_ 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show`
+. 如果 _replacement_ 控制器处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`
+. 在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``
+. 请等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行正常的控制器中验证是否已自动分配新的配对系统 ID ： `storage failover show`
 +
-在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。
+在命令输出中，您应看到一条消息，指出受损控制器上的系统 ID 已更改，其中显示了正确的旧 ID 和新 ID 。In the following example, node2 has undergone replacement and has a new system ID of 151759706.
 
 +
 [listing]
@@ -55,7 +55,7 @@ node1             node2             false        System ID changed on partner (O
                                                   151759755, New: 151759706), In takeover
 node2             node1             -            Waiting for giveback (HA mailboxes)
 ----
-. 从运行状况良好的节点中，验证是否已保存任何核心转储：
+. 在运行正常的控制器中，验证是否已保存任何核心转储：
 +
 .. 更改为高级权限级别： `set -privilege advanced`
 +
@@ -69,11 +69,11 @@ node2             node1             -            Waiting for giveback (HA mailbo
 .. 返回到管理权限级别： `set -privilege admin`
 
 
-. 交还节点：
+. 交还控制器：
 +
-.. 从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode _replacement_node_name_`
+.. 从运行正常的控制器中，交还更换的控制器的存储： `storage failover giveback -ofnode _replacement_node_name_`
 +
-replacement_ 节点将收回其存储并完成启动。
+_replacement_ 控制器将收回其存储并完成启动。
 
 +
 如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 `y` 。
@@ -93,7 +93,7 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62
 
 . 验证是否已正确分配磁盘： `storage disk show -ownership`
 +
-属于 _replacement_ 节点的磁盘应显示新的系统 ID 。在以下示例中， node1 拥有的磁盘现在显示新的系统 ID 1873775277 ：
+属于 _replacement_ 控制器的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:
 
 +
 [listing]
@@ -108,23 +108,23 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 .
 .
 ----
-. 如果系统采用 MetroCluster 配置，请监控节点的状态： `MetroCluster node show`
+. 如果系统采用 MetroCluster 配置，请监控控制器的状态： `MetroCluster node show`
 +
-在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个节点将显示已配置状态，并启用 DR 镜像并显示正常模式。`MetroCluster node show -fields node-SystemID` 命令输出将显示旧系统 ID ，直到 MetroCluster 配置恢复正常状态为止。
+在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个控制器将显示已配置状态，并启用 DR 镜像并显示正常模式。The `metrocluster node show -fields node-systemid` command output displays the old system ID until the MetroCluster configuration returns to a normal state.
 
-. 如果节点采用 MetroCluster 配置，则根据 MetroCluster 状态，如果原始所有者是灾难站点上的节点，请验证 DR 主 ID 字段是否显示磁盘的原始所有者。
+. 如果控制器采用 MetroCluster 配置，则根据 MetroCluster 状态，如果原始所有者是灾难站点上的控制器，请验证 DR 主 ID 字段是否显示磁盘的原始所有者。
 +
 如果同时满足以下条件，则必须执行此操作：
 
 +
 ** MetroCluster 配置处于切换状态。
-** _replacement_ 节点是灾难站点上磁盘的当前所有者。
+** _replacement_ 控制器是灾难站点上磁盘的当前所有者。
 +
 https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html#disk-ownership-changes-during-ha-takeover-and-metrocluster-switchover-in-a-four-node-metrocluster-configuration["在四节点 MetroCluster 配置中，磁盘所有权会在 HA 接管和 MetroCluster 切换期间发生更改"]
 
 
 
-. 如果您的系统采用 MetroCluster 配置，请验证是否已配置每个节点： `MetroCluster node show - fields configuration-state`
+. 如果您的系统采用 MetroCluster 配置，请验证是否已配置每个控制器： `MetroCluster node show - fields configuration-state`
 +
 [listing]
 ----
@@ -139,6 +139,6 @@ dr-group-id            cluster node           configuration-state
 
 4 entries were displayed.
 ----
-. 验证每个节点是否存在所需的卷： `vol show -node node-name`
-. 如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它： `storage failover modify -node replacement-node-name -onreboot true`
+. 验证每个控制器是否存在所需的卷： `vol show -node node-name`
+. 如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： `storage failover modify -node replacement-node-name -onreboot true`
 

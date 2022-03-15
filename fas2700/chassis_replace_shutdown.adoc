@@ -1,7 +1,7 @@
 ---
 permalink: fas2700/chassis-replace-shutdown.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, node, configuration, switch, aggregates, replace, move, remove, swap 
+keywords: fas2700, aff a220, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
 summary: 要更换机箱，必须关闭控制器。 
 ---
 = 关闭控制器— AFF A220 和 FAS2700
@@ -10,17 +10,17 @@ summary: 要更换机箱，必须关闭控制器。
 
 
 [role="lead"]
-根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。
+使用适用于您的配置的操作步骤 关闭或接管受损控制器。
 
 
 
 == 选项 1 ：大多数配置
 
 [role="lead"]
-您必须先关闭机箱中的一个或多个节点，然后才能将其移至新机箱。
+您必须先关闭机箱中的控制器或控制器，然后再将其移至新机箱。
 
 .关于此任务
-* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 `false` ，则必须在关闭受损节点之前更正问题描述；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
+* 如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 `false` ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
 * 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
 +
 以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
@@ -36,34 +36,34 @@ summary: 要更换机箱，必须关闭控制器。
 
 
  a| 
-集群中的两个节点
+集群中的两个控制器
  a| 
 `cluster ha modify -configured false` `storage failover modify -node node0 -enabled false`
 
 
 
  a| 
-集群中的两个以上节点
+集群中有两个以上的控制器
  a| 
 `storage failover modify -node node0 -enabled false`
 
 |===
-. 暂停节点，在系统提示您确认暂停时按 `y` ： `ssystem node halt -node _node_name_`
+. 暂停控制器，在系统提示您确认 halt 时按 `y` ： `ssystem node halt -node _node_name_`
 +
 确认消息如下所示：
 
 +
 [listing]
 ----
-Warning: This operation will cause node "node-name" to be marked as unhealthy. Unhealthy nodes do not participate in quorum voting. If the node goes out of service and one more node goes out of service there will be a data serving failure for the entire cluster. This will cause a client disruption. Use "cluster show" to verify cluster state. If possible bring other nodes online to improve the resiliency of this cluster.
+Warning: This operation will cause controller "node-name" to be marked as unhealthy. Unhealthy nodes do not participate in quorum voting. If the controller goes out of service and one more controller goes out of service there will be a data serving failure for the entire cluster. This will cause a client disruption. Use "cluster show" to verify cluster state. If possible bring other nodes online to improve the resiliency of this cluster.
 
 Do you want to continue? {y|n}:
 ----
 +
 
-NOTE: 在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM/NVRAM ）中未写入的数据。根据您的系统，如果 NVMEM/NVRAM LED 闪烁，则 NVMEM/NVRAM 中有尚未保存到磁盘的内容。You need to reboot the node and start from the beginning of this procedure.If repeated attempts to cleanly shut down the node fail, be aware that you might lose any data that was not saved to disk.
+NOTE: 在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM/NVRAM ）中未写入的数据。根据您的系统，如果 NVMEM/NVRAM LED 闪烁，则 NVMEM/NVRAM 中有尚未保存到磁盘的内容。您需要重新启动控制器并从此操作步骤 开始。如果反复尝试完全关闭控制器失败，请注意，未保存到磁盘的任何数据可能会丢失。
 
-. 如果适用，请暂停第二个节点以避免在 HA 对配置中出现可能的仲裁错误消息： `ssystem node halt -node _second_node_name_ -ignore-quorum-warnings true -skip-lif-migration-before-shutdown true`
+. 如果适用，请暂停第二个控制器以避免在 HA 对配置中出现可能的仲裁错误消息： `ssystem node halt -node _second_node_name_ -ignore-quorum-warnings true -skip-lif-migration-before-shutdown true`
 +
 出现提示时，请选择问题解答 `y` 。
 
@@ -76,9 +76,9 @@ NOTE: 在更换机箱之前，您必须完全关闭系统，以避免丢失非�
 
 NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
 
-要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
-* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
 * 如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（`MetroCluster node show` ）。
 
 
@@ -87,12 +87,12 @@ NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操
 +
 以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行正常的节点的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
-. 将受损节点显示为 LOADER 提示符：
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
 +
 [cols="1,2"]
 |===
-| 如果受损节点显示 ... | 那么 ... 
+| 如果受损控制器显示 ... | 那么 ... 
 
 
  a| 
@@ -112,11 +112,9 @@ LOADER 提示符
  a| 
 系统提示符或密码提示符（输入系统密码）
  a| 
-从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
 
-+ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
-
-+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
 
 |===
 

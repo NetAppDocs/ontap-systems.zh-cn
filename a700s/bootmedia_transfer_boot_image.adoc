@@ -61,11 +61,11 @@ image:../media/legend_icon_02.png[""]
 
 . 将控制器模块一直轻轻推入系统中，直到控制器模块锁定挂钩开始上升，用力推动锁定挂钩以完成控制器模块的就位，然后将锁定挂钩旋转到控制器模块上插脚上方的锁定位置。
 +
-一旦节点完全安装到机箱中，它就会开始启动。
+控制器一旦完全安装到机箱中，就会开始启动。
 
 . 按 Ctrl-C 在 LOADER 提示符处停止，以中断启动过程。
 +
-如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停节点以启动到加载程序。
+如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停控制器以启动到加载程序。
 
 . 从 LOADER 提示符处，从二级启动介质启动恢复映像： `boot_recovery`
 +
@@ -74,15 +74,15 @@ image:../media/legend_icon_02.png[""]
 . 出现提示时，请输入映像名称或接受屏幕上括号内显示的默认映像。
 . 安装映像后，启动还原过程：
 +
-.. 记录屏幕上显示的受损节点的 IP 地址。
+.. 记录屏幕上显示的受损控制器的 IP 地址。
 .. 当系统提示您还原备份配置时，按 `y` 。
 .. 出现提示时，按 `y` 确认备份操作步骤已成功。
 
 
-. 在高级权限级别的配对节点中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`
+. 在高级权限级别的配对控制器中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`
 . 配置同步完成且无错误后，在系统提示确认备份操作步骤成功时按 `y` 。
-. 在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动节点时按 `y` 。
-. 在运行正常的节点上退出高级权限级别。
+. 在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动控制器时按 `y` 。
+. 在运行正常的控制器上退出高级权限级别。
 
 
 
@@ -147,11 +147,11 @@ image:../media/legend_icon_02.png[""]
 
 . 将控制器模块一直轻轻推入系统中，直到控制器模块锁定挂钩开始上升，用力推动锁定挂钩以完成控制器模块的就位，然后将锁定挂钩旋转到控制器模块上插脚上方的锁定位置。
 +
-一旦节点完全安装到机箱中，它就会开始启动。
+控制器一旦完全安装到机箱中，就会开始启动。
 
 . 按 Ctrl-C 在 LOADER 提示符处停止，以中断启动过程。
 +
-如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停节点以启动到加载程序。
+如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停控制器以启动到加载程序。
 
 . 尽管环境变量和 bootarg 已保留，但您应使用 `printenv bootarg name` 命令检查是否已为您的系统类型和配置正确设置所有必需的启动环境变量和 bootarg ，并使用 `setenv variable-name <value>` 命令更正任何错误。
 +
@@ -192,28 +192,28 @@ image:../media/legend_icon_02.png[""]
 . 出现提示时，请输入映像名称或接受屏幕上括号内显示的默认映像。
 . 安装映像后，启动还原过程：
 +
-.. 记录屏幕上显示的受损节点的 IP 地址。
+.. 记录屏幕上显示的受损控制器的 IP 地址。
 .. 当系统提示您还原备份配置时，按 `y` 。
 .. 出现提示时，按 `y` 确认备份操作步骤已成功。
 
 
-. 在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动节点时按 `y` 。
-. 在高级权限级别的配对节点中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`
+. 在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动控制器时按 `y` 。
+. 在高级权限级别的配对控制器中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`
 . 配置同步完成且无错误后，在系统提示确认备份操作步骤成功时按 `y` 。
-. 在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动节点时按 `y` 。
+. 在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动控制器时按 `y` 。
 . 验证环境变量是否按预期设置。
 +
-.. 使节点显示 LOADER 提示符。
+.. 将控制器显示 LOADER 提示符。
 +
-在 ONTAP 提示符处，您可以对命令 system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true 执行问题描述操作。
+在 ONTAP 提示符处，您可以对命令 "system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true" 执行问题描述 。
 
 .. 使用 `printenv` 命令检查环境变量设置。
 .. 如果环境变量未按预期设置，请使用 `setenv _environment-variable-name____changed-value_` 命令对其进行修改。
 .. 使用 `savenev` 命令保存所做的更改。
-.. 重新启动节点。
+.. 重新启动控制器。
 
 
-. 当重新启动的受损节点显示 `waiting for giveback...` 消息时，从运行正常的节点执行交还：
+. 在重新启动的受损控制器显示 `Waiting for giveback...` 消息的情况下，从运行正常的控制器执行交还：
 +
 [cols="1,2"]
 |===
@@ -223,11 +223,11 @@ image:../media/legend_icon_02.png[""]
  a| 
 HA 对
  a| 
-受损节点显示 `waiting for giveback...` 消息后，从运行正常的节点执行交还：
+受损控制器显示 `waiting for giveback...` 消息后，从运行正常的控制器执行交还：
 
-.. 从运行状况良好的节点： `storage failover giveback -ofnode partner_node_name`
+.. 从运行状况良好的控制器： `storage failover giveback -ofnode partner_node_name`
 +
-受损节点将收回其存储，完成启动，然后重新启动，并再次由运行正常的节点接管。
+受损控制器将收回其存储，完成启动，然后重新启动，并再次由运行正常的控制器接管。
 
 +
 
@@ -242,5 +242,5 @@ http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["《 O
 
 
 |===
-. 在运行正常的节点上退出高级权限级别。
+. 在运行正常的控制器上退出高级权限级别。
 

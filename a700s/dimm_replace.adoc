@@ -18,22 +18,22 @@ summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断
 
 
 
-== 关闭受损节点
+== Shut down the impaired controller
 
 [role="lead"]
-要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
-如果集群包含两个以上的节点，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述。
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 。
 
 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"]
 
 .步骤
-. 如果受损节点属于 HA 对，请从运行正常的节点的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`
-. 将受损节点显示为 LOADER 提示符：
+. 如果受损控制器属于 HA 对，请从运行正常的控制器的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
 +
 [cols="1,2"]
 |===
-| 如果受损节点显示 ... | 那么 ... 
+| 如果受损控制器显示 ... | 那么 ... 
 
 
  a| 
@@ -53,9 +53,9 @@ LOADER 提示符
  a| 
 系统提示符或密码提示符（输入系统密码）
  a| 
-接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`
+接管或暂停受损控制器： `storage failover takeover -ofnode _impaired_node_name_`
 
-当受损节点显示 `Waiting for giveback...` 时，按 Ctrl-C ，然后回答 `y` 。
+当受损控制器显示 `Waiting for giveback...` 时，按 Ctrl-C ，然后回答 `y` 。
 
 |===
 
@@ -264,10 +264,10 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 
 您的系统必须处于 LOADER 提示符处，才能启动诊断。
 
-诊断过程中的所有命令都是从要更换组件的节点发出的。
+诊断过程中的所有命令都是从要更换组件的控制器发出的。
 
 .步骤
-. 如果要服务的节点不在 LOADER 提示符处，请重新启动节点： `ssystem node halt -node node_name`
+. 如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `ssystem node halt -node node_name`
 +
 问题描述命令后，您应等待系统停留在 LOADER 提示符处。
 

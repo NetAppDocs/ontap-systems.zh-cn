@@ -1592,25 +1592,17 @@
   <block id="c05037a88de91ff2d60122b1ccf7291a" category="paragraph">此操作将为您提供操作步骤的记录，以便您可以对更换过程中可能遇到的任何问题进行故障排除。</block>
   <block id="596bcca65aca56bacb3df39265f83dfb" category="summary">要更换机箱，必须关闭控制器。</block>
   <block id="b0a5349e52bfc1b486c0f4bb7f8c6b18" category="doc">关闭控制器— AFF A250</block>
-  <block id="45bd0f10632b3d357d0e53299710ca0c" category="paragraph">您必须先关闭机箱中的一个或多个节点，然后才能将其移至新机箱。</block>
   <block id="19285c8cf559d5176d09036ecccfca21" category="list-text">如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`</block>
   <block id="f80af4e39d67de6feaae8747f603e24b" category="paragraph">以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * &gt; system node AutoSupport invoke -node * -type all -message MAINT=2h`</block>
   <block id="880c0610027a11af7086ae7e380e12e5" category="list-text">如果您的系统有两个控制器模块，请禁用 HA 对。</block>
   <block id="d426a3f5c9c0e3362f4ed536e7643c03" category="cell">如果您的系统运行的是集群模式 ONTAP</block>
-  <block id="a605680e828f9a13dc5c8773f7f16c59" category="paragraph">集群中的两个节点</block>
   <block id="8d6f30824233e0351fc71f18fbb5c436" category="paragraph">`cluster ha modify -configured false` `storage failover modify -node node0 -enabled false`</block>
-  <block id="4252cc22782c7895d045823c51f6d877" category="paragraph">集群中的两个以上节点</block>
   <block id="b2aa61dcee4d7b77fcd001973469ddde" category="paragraph">`storage failover modify -node node0 -enabled false`</block>
   <block id="481250f3e8ec41b0e994305d8fc52b4a" category="paragraph">确认消息如下所示：</block>
   <block id="cf55af4b4668a579d36bfd91785ecbec" category="summary">完成 NVE 或 NSE 任务后，您需要关闭受损节点。</block>
-  <block id="db4547d0ddae50a76aa47cf54e9d15ae" category="doc">关闭节点— AFF A250</block>
-  <block id="130b18edff1b7e2377d35d657b1f8a53" category="list-text">如果受损节点不在 LOADER 提示符处：</block>
   <block id="d4d4b346339524be979b964b901a1b92" category="cell">然后 ...*</block>
-  <block id="2fbc9f3babe8926d05354b5d3a0f06d4" category="paragraph">` + 正在等待交还 ...+`</block>
   <block id="426ac41b4c68d57196f875fa046c7804" category="paragraph">按 Ctrl-C ，然后在出现提示时回答 `y` 。</block>
   <block id="7e14201f51e262f13f2c3c4eb7e4a175" category="paragraph">系统提示符或密码提示符（输入系统密码）</block>
-  <block id="bbef0c572fdbe204bb84f52d821e393b" category="paragraph">接管或暂停受损节点：</block>
-  <block id="c661090006ca8f995a25dfb913aa9247" category="paragraph">当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
   <block id="ff979fc0a0ab041b0436a8d7243aa05b" category="list-text">在 LOADER 提示符处，输入 `printenv` 以捕获所有启动环境变量。将输出保存到日志文件中。</block>
   <block id="61e0109e9abc6d9e0e9d957157c4a657" category="admonition">如果启动设备损坏或无法正常运行，则此命令可能不起作用。</block>
   <block id="1cfa6f391685fda6b74bedcb88fa1418" category="summary">如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。</block>
@@ -1618,15 +1610,10 @@
   <block id="49d981e4792b1b6bfc193d341fe3b1d4" category="paragraph">系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。</block>
   <block id="118a19c264126d2eb7de4542c32c102d" category="section-title">第 1 步：关闭受损控制器</block>
   <block id="16f911f59a050f663b12ff955a280de7" category="paragraph">要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。</block>
-  <block id="073ebf16dce27d691bcca3d280b72f9b" category="paragraph">如果集群包含两个以上的节点，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述。</block>
   <block id="38093d6513bb2e960eab247f00f04533" category="paragraph"><block ref="38093d6513bb2e960eab247f00f04533" category="inline-link-rx"></block></block>
-  <block id="cbd2cc7bf09016b948d6312eac7c93ff" category="list-text">从运行正常的节点的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`</block>
-  <block id="78c8abed37749a0772d77fceb947f1ac" category="list-text">将受损节点显示为 LOADER 提示符：</block>
-  <block id="390e488e4fa2a84c9493e1ae635bb564" category="cell">如果受损节点显示 ...</block>
   <block id="a2efb773cb3f251f8687b1e41309b525" category="paragraph">LOADER 提示符</block>
   <block id="b1ba38ad947dd1578f31b0197f58b44d" category="paragraph">转至下一步。</block>
   <block id="fd66c964768074eb90f4f1426229bf3e" category="paragraph">正在等待交还</block>
-  <block id="a45c4d08ccf72d071a90de42e42a49bb" category="list-text">对于 HA 对，从运行状况良好的节点接管受损节点： `storage failover takeover -ofnode _impaired_node_name_`</block>
   <block id="1d71cf823dacd99114cf396e262443eb" category="section-title">第 2 步：卸下控制器模块</block>
   <block id="ba33da695ad96f17f79f8e49c2a7e76b" category="paragraph">更换控制器模块内部的组件时，必须从机箱中卸下控制器模块。</block>
   <block id="334bb16405bcc7c9665f21826629b5b3" category="paragraph">请确保为这些缆线贴上标签，以便您知道这些缆线来自何处。</block>
@@ -1689,10 +1676,8 @@
   <block id="bc4c3148602338c7b283fc42b60407da" category="list-text">您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。</block>
   <block id="1c44627eb33d55ec54d505046a55d435" category="list-text">编写此操作步骤时，假设您要将挡板， NVMe 驱动器和控制器模块移至新机箱，而更换机箱是 NetApp 的一个新组件。</block>
   <block id="0c58f83d7ef25b7c494eb992b66728c1" category="list-text">此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。</block>
-  <block id="0e4ba9b88ff6d370d76b54b449cb6648" category="summary">要关闭受损控制器模块，您必须确定节点的状态，并在必要时接管节点，以便运行正常的节点继续从受损节点存储提供数据。</block>
   <block id="d79b377e4ffb63d9f7bc2cd5de1e04de" category="doc">关闭受损控制器模块 - AFF A250</block>
   <block id="04a1c92d61b3e562a673dea0adef0f20" category="list-text">如果您使用的是 NetApp 存储加密，则必须按照 _ONTAP 9 NetApp 加密高级指南 _ 的 "`将 SED 返回到未受保护的模式` " 一节中的说明重置 MSID 。</block>
-  <block id="d159332fd3b62eb0d07a6b33b667c03b" category="list-text">如果您使用的是 SAN 系统，则必须已检查受损节点 SCSI 刀片式服务器的事件消息（事件日志显示）。</block>
   <block id="d341e954ddede02e8d2c553ecfba224a" category="paragraph">每个 SCSI 刀片式服务器进程应与集群中的其他节点保持仲裁关系。在继续更换之前，必须先解决所有问题。</block>
   <block id="971840ecd85a736d5b833bc352989a07" category="list-text">如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（ MetroCluster node show ）。</block>
   <block id="2ac1e9cd887b50e321ead7a3e6beab55" category="summary">要更换控制器模块硬件，您必须卸下受损的控制器模块，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
@@ -1761,12 +1746,9 @@
   <block id="062e5198807f7350b9d909ed3712446f" category="list-text">如果启用了 NSE 或 NVE ，并且启用了板载密钥管理器，请转至 <block ref="33a171c6b2b99214dd0e88721c37d6a3" category="inline-xref-macro-rx"></block>。</block>
   <block id="ab86e173cd8c1637bf2f46855c4a5445" category="list-text">如果为 ONTAP 9.6 启用了 NSE 或 NVE ，请转至 <block ref="562d430b0be788e16727b0e1ac85777d" category="inline-xref-macro-rx"></block>。</block>
   <block id="8ec39994b3f9e646dc5702b80aa074eb" category="section-title">启用板载密钥管理器后还原 NVE 或 NSE</block>
-  <block id="cb8bd5f8b409f772feeb282be5c812fd" category="list-text">将控制台缆线连接到目标节点。</block>
-  <block id="09c59b704f34eb3d4a2fd7d67e831c1b" category="list-text">在 LOADER 提示符处使用 `boot_ontap` 命令启动节点。</block>
   <block id="9031c37a40e72ae548a2065bf45f23a8" category="list-text">检查控制台输出：</block>
   <block id="48bb654d023280bd32c893baf085bc9c" category="cell">* 如果控制台显示 ...*</block>
   <block id="5868efbae90f2f86a5ed062e24cabc9d" category="cell">* 然后 ...*</block>
-  <block id="ee576c01fd9d6961677d0a6255745ad9" category="paragraph">将节点启动至启动菜单： `boot_ontap menu`</block>
   <block id="c6ad4048580181b0fbf4e191b6491baa" category="paragraph">正在等待交还</block>
   <block id="c970b4d58ed065781ff23330890becaf" category="list-text">在提示符处输入 `Ctrl-C`</block>
   <block id="349f344b4475008476c2c7c47e12e197" category="list-text">出现消息： Do you donde halt this node rather than wait [y/n] ？，输入： `y`</block>
@@ -1780,7 +1762,6 @@
   <block id="f24608ce23f83ac6c7240ac03d83765f" category="paragraph">--------------- 结束备份———————</block>
   <block id="4c01cfbecac579c81f79ea4297891a2e" category="list-text">在启动菜单中，选择正常启动选项。</block>
   <block id="18b0469d01c1aab8ffb650afc5ac6e1b" category="paragraph">系统将启动并显示 Waiting for giveback... 提示符。</block>
-  <block id="0cf794b2318cb3589aa41f583b7e7d8d" category="list-text">将控制台缆线移至配对节点，然后以 "admin" 身份登录。</block>
   <block id="0de78a491f219f7714f0bd10c9112f7b" category="list-text">使用 `storage failover show` 命令确认目标节点已准备好进行交还。</block>
   <block id="aec87d8b58ad2257f437b0c97adc8c43" category="list-text">仅使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令交还 CFO 聚合。</block>
   <block id="f872779437b4e53b16edbb822fb3c0f4" category="list-text">如果命令因 CIFS 会话打开而失败，请与客户联系，了解如何关闭 CIFS 会话。</block>
@@ -1789,25 +1770,19 @@
   <block id="4de9d59eeee5e688ec5317cbedf4cac0" category="list-text">如果命令因 NDMP ， SnapMirror 或 SnapVault 进程而失败，请禁用此进程。有关详细信息，请参见相应的文档中心。</block>
   <block id="eab386a3f0ee69cc95b939175ad1da27" category="list-text">交还完成后，使用 `storage failover show` 和 `storage failover show-giveback` 命令检查故障转移和交还状态。</block>
   <block id="579b0712f3b828fdc4e9020e1b1bf320" category="paragraph">仅显示 CFO 聚合（根聚合和 CFO 模式的数据聚合）。</block>
-  <block id="03420b7b4e934ac951aeff951893fc22" category="list-text">将控制台缆线移至目标节点。</block>
   <block id="be2212e27f9b1a451164ead27dee26c8" category="list-text">如果您运行的是 ONTAP 9.6 或更高版本，请运行 security key-manager 板载同步：</block>
   <block id="94f8d95799ad1cb87cd8f02b76a24ddb" category="list-text">运行 `security key-manager on板 载 sync` 命令，然后在出现提示时输入密码短语。</block>
   <block id="7efe0ba3bdb03965520de5d493cb1efa" category="list-text">输入 `security key-manager key query` 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes/true` 。</block>
   <block id="36ec6aaaed7ffba8db1abf0b30f8ad7e" category="admonition">如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户支持。</block>
   <block id="0b5a2bb237981cd334295abf32e335c5" category="list-text">等待 10 分钟，使密钥在整个集群中同步。</block>
-  <block id="da4a2b9c52e805a46a6951e79d1796d9" category="list-text">将控制台缆线移至配对节点。</block>
-  <block id="da4a3c359cf5d24082930f89cd19b3fc" category="list-text">使用 `storage failover giveback -fromnode local` 命令交还目标节点。</block>
   <block id="f1f2858d6d4ebbd18bf81861cde4a024" category="list-text">使用 `storage failover show` 命令在交还报告完成 3 分钟后检查交还状态。</block>
   <block id="c7db1a1f0c259cdde0a5d94486a50eab" category="paragraph">如果 20 分钟后交还未完成，请联系客户支持。</block>
-  <block id="a23d49d00b003ec7514a6fcf51f93bac" category="list-text">在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主节点和端口上的逻辑接口。</block>
   <block id="6b74e1ea2b206c2676c7c5e7a08d32f1" category="paragraph">如果任何接口列为 `false` ，请使用 `net int revert` 命令将这些接口还原回其主端口。</block>
-  <block id="80d6c51420c97a5fd468a280127498fe" category="list-text">将控制台缆线移至目标节点，然后运行 `version -v` 命令以检查 ONTAP 版本。</block>
   <block id="0e4c0966d084bca62cb0b1d57bb4cd37" category="list-text">使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。</block>
   <block id="c21bd0aede10c854ba134924f61e7b69" category="section-title">在运行 ONTAP 9.6 及更高版本的系统上还原 NSE/NVE</block>
   <block id="2d3bee2aa5bb3ec8ffb5a77dc1eba625" category="paragraph">登录提示符</block>
   <block id="9a937b3bb3ba6ff155022c69722c1b2d" category="paragraph">转至步骤 7 。</block>
   <block id="ba3e6eed45ff9076e014e86509a18b9e" category="list-text">登录到配对节点。</block>
-  <block id="809f0d7cd6f78909c00532d70262031d" category="list-text">使用 `storage failover giveback -fromnode local -only-cfo-aggregates true local` 命令将控制台缆线移至配对节点并交还目标节点存储。</block>
   <block id="aa633ff512f47818b432e9d473f72e85" category="list-text">请等待 3 分钟，然后使用 `storage failover show` 命令检查故障转移状态。</block>
   <block id="05b88caec4b40ec70bfc6914f6b9a2ac" category="list-text">在 clustershell 提示符处使用 `storage encryption disk show` 查看输出。</block>
   <block id="847e5cb0171189006a180b0bdc820c1d" category="list-text">使用 `security key-manager key query` 命令显示存储在密钥管理服务器上的身份验证密钥的密钥 ID 。</block>
@@ -1845,7 +1820,6 @@
   <block id="f7fb4156be1dd57a9d1579e38fa24445" category="list-text">从显示的菜单中选择 * 测试系统 * 。</block>
   <block id="f94cb94350d4ec3469cbd6fbb2b8efb3" category="admonition">在启动过程中，您可能会看到以下提示：</block>
   <block id="24718eccce3cd133d143bec81426275c" category="list-text">系统 ID 不匹配的提示警告，并要求覆盖系统 ID 。</block>
-  <block id="85b7eb3de3a7efc217fec5e4bc94878f" category="list-text">一条提示，警告您在 HA 配置中进入维护模式时必须确保运行正常的节点保持关闭状态。您可以安全地对这些提示回答 `y` 。</block>
   <block id="b06018bc829da55a1eb1a43b93312dc5" category="summary">启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。</block>
   <block id="d23cbe6becf6b71df8e4c820a09aed00" category="doc">更换启动介质— AFF A250</block>
   <block id="d3756853c8e6da5920108eeb1441fe5d" category="paragraph">启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。</block>
@@ -2228,20 +2202,13 @@
   <block id="413ac2fd2fb4f86c9ec059076dc0b76b" category="list-text">通过检查控制台错误消息或找到主板上风扇模块的亮起 LED 来确定必须更换的风扇模块。</block>
   <block id="fdef2d1361e0c12e51c8a0eb2279a3f0" category="list-text">将更换用风扇模块的边缘与控制器模块中的开口对齐，然后将更换用的风扇模块滑入控制器模块。</block>
   <block id="b4c31341ab0f1e49529261f974be146d" category="summary">在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。</block>
-  <block id="b8ab0743311e15b4dca69b87da3c3e1a" category="list-text">检查受损节点的状态：</block>
-  <block id="03582aa0f2a939731c07b9900422cd22" category="list-text">如果受损节点处于登录提示符处，请以 `admin` 身份登录。</block>
-  <block id="e090553f6fd47e1f1ead7225617772ef" category="list-text">如果受损节点位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的节点上。</block>
-  <block id="1192b5377c1ad9dfaf75cb33a7333843" category="list-text">使用 `version -v` 命令检查受损节点（如果已启动）或配对节点（如果受损节点已关闭）上运行的 ONTAP 的版本：</block>
   <block id="ababafc28230637bc7ee0dc0762d3d7a" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至下一节。</block>
   <block id="e1cb9a7881589d8bbc03d3bc416f6eb6" category="list-text">如果受损节点属于 HA 配置的一部分，请从运行状况良好的节点禁用自动交还： `storage failover modify -node local -auto-giveback false` 或 `storage failover modify -node local -auto-giveback-after-panic false`</block>
   <block id="ddf5ebb5c1d9ad17f6222185e1822bf6" category="section-title">在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE</block>
-  <block id="bf3223ea252f144b1ff6ef82d50d0928" category="paragraph">在关闭受损节点之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。如果是，则需要验证配置。</block>
   <block id="757faef19dddc204a17e4b5890ef2088" category="paragraph">如果输出中列出了任何卷，则会配置 NVE ，您需要验证 NVE 配置。如果未列出任何卷，请检查是否已配置 NSE 。</block>
   <block id="52f57fb3e4c5bd20a2a75ecc9242ad9a" category="list-text">如果未显示任何磁盘，则表示未配置 NSE 。</block>
-  <block id="3f6980a632f1549a6ce891a226389596" category="list-text">如果未配置 NVE 和 NSE ，则可以安全地关闭受损节点。</block>
   <block id="e11e37bddb45a2b092655cc718d388d5" category="section-title">验证 NVE 配置</block>
   <block id="a2a9cf44f7484401e6ca68da00a8fb6f" category="list-text">显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager query`</block>
-  <block id="ffd7e3da9902b5f2c0b821890444dac1" category="list-text">如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损节点。</block>
   <block id="ea9a06f5fb2cd5470a0c0c25b039a03c" category="list-text">如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示 `是` ，则需要完成一些额外步骤。</block>
   <block id="c6d9b949fc815c7d1290e5acb1f3ade9" category="list-text">如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。</block>
   <block id="b43c8f6b2fe8e4b5d1d2f97c83c7c6ca" category="list-text">如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示除 `是` 以外的任何内容，则需要完成一些额外步骤。</block>
@@ -2249,7 +2216,6 @@
   <block id="1b3e3ec3fd07bf53abc8401f17b2a7b5" category="list-text">输入命令以显示密钥管理信息： `security key-manager on板 载 show-backup`</block>
   <block id="78a22d38c1530a757fec402c5079de18" category="list-text">将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。</block>
   <block id="19f83f3f355a8b287ae2aa40b5c8fc99" category="list-text">返回到管理模式： `set -priv admin`</block>
-  <block id="5f6d1138869d4cbc60656a6367061ca8" category="list-text">关闭受损节点。</block>
   <block id="59d3229a75f9a710337879feec6b35c8" category="list-text">如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容：</block>
   <block id="c664ce90df89e48082cd24116ca9c5cf" category="list-text">将外部密钥管理身份验证密钥还原到集群中的所有节点： `security key-manager external restore`</block>
   <block id="aa93e7bc262e7964a396fd16f3a41d6b" category="paragraph">如果命令失败，请联系 NetApp 支持部门。</block>
@@ -2258,7 +2224,6 @@
   <block id="f5321e091dead7c4ead8728aa3332803" category="list-text">输入板载 security key-manager sync 命令： `ssecurity key-manager on板 载同步`</block>
   <block id="29494bbea0c4b9c81b504ce3c9f0c776" category="admonition">在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。<block ref="7bc6752d2076d2c755eaebbdfeb91d23" category="inline-link-rx"></block></block>
   <block id="5420f491e628cc60c7e1ffcad20d35da" category="list-text">输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`</block>
-  <block id="d518426b6d79ce1aa6dcf60eb5c6300b" category="list-text">您可以安全地关闭节点。</block>
   <block id="8eb91adaedfd18d8e21833ed58db7673" category="section-title">验证 NSE 配置</block>
   <block id="a5e337a3469d0028e9b72fe170e6d372" category="list-text">输入板载 security key-manager sync 命令： `ssecurity key-manager external sync`</block>
   <block id="f0bb66ccc33b2423473b4997076e2e15" category="paragraph">在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。</block>
@@ -2286,12 +2251,8 @@
   <block id="4c6ce16f45f7004dafb410a6fe342bcf" category="list-text">如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 nicadmin convert 命令将这些端口转换为 10 GbE 连接。</block>
   <block id="ccfa1cc380a451bf6234e36543721fae" category="admonition">请务必在完成转换后退出维护模式。</block>
   <block id="24907dee7e4205c74e589d14a85e4bbd" category="doc">更换 DIMM - AFF A700s</block>
-  <block id="0e271d5aca1b3353fc680f14e84bc418" category="section-title">关闭受损节点</block>
-  <block id="2eea170e7de15002c353944160886c8d" category="list-text">如果受损节点属于 HA 对，请从运行正常的节点的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`</block>
   <block id="bf7918e10696cda0294441f81ad32ee4" category="paragraph">`正在等待交还 ...`</block>
   <block id="2c605d107b8b0f8d344d6c863e4c47a9" category="paragraph">按 Ctrl-C ，然后回答 `y` 。</block>
-  <block id="34d23e48cd83c2c2bc05008eee207c60" category="paragraph">接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`</block>
-  <block id="403c040087c497f68c8f876e6ef4b765" category="paragraph">当受损节点显示 `Waiting for giveback...` 时，按 Ctrl-C ，然后回答 `y` 。</block>
   <block id="26e38d31d368fa344a653ab87cee79bb" category="section-title">卸下控制器模块</block>
   <block id="ea199306c38c35706c03077ded4d9d02" category="paragraph">在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。</block>
   <block id="359b2f64ed46d9bc640532f2fd8810c0" category="list-text">松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。</block>
@@ -2378,11 +2339,8 @@
   <block id="ce895c4f6ee583d1352aa92ca42a2e7a" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.5 ，请转至 <block ref="814a166e20bd32e0eb4f111e2d255525" category="inline-xref-macro-rx"></block>。</block>
   <block id="3bdbfc08b67b8b5c267819cc7ef67535" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至 <block ref="9431a288e6ce7a6d88bc6ae31dccd0f0" category="inline-xref-macro-rx"></block>。</block>
   <block id="598fddf79c16170c6db6427cdff14daa" category="section-title">选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE</block>
-  <block id="ea9becc3cf634d16e6469abd6d240c49" category="paragraph">在关闭受损节点之前，您需要检查系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。如果是，则需要验证配置。</block>
-  <block id="624bedc07a82079383ebddb8e1d17e03" category="list-text">将控制台缆线连接到受损节点。</block>
   <block id="b227d8958eb504b6da0a08172b4222db" category="list-text">检查是否为集群中的任何卷配置了 NVE ： `volume show -is-encrypted true`</block>
   <block id="68e27ac90c8755079206639397a6abfe" category="list-text">检查是否已配置 NSE ： `storage encryption disk show`</block>
-  <block id="2c3101fc6b218cfb1515e6df7981ff27" category="list-text">如果 `Restored` 列显示 `yes` 且所有密钥管理器显示 `Available` ，则可以安全地关闭受损节点。</block>
   <block id="6c2aeadd2a92753dd1f137a6c7068dc8" category="list-text">如果 `Restored` 列显示 `yes` 以外的任何内容，或者任何密钥管理器显示 `不可用` ，则需要完成一些额外步骤。</block>
   <block id="ff31b8e8c86ed558e88ec6430564b19a" category="list-text">如果在启用板载密钥管理时看到消息 this command is not supported ，则需要完成其他一些步骤。</block>
   <block id="fdf5e8b8acf351dcc2fa5bbdd1ba8957" category="list-text">如果 `restored` 列显示 `yes` 以外的任何内容，或者任何密钥管理器显示 `不可用` ：</block>
@@ -2406,7 +2364,6 @@
   <block id="1ab25fd464770ca38598dbf7e3aa872c" category="doc">安装和设置视频— AFF A700s</block>
   <block id="0e77f42d7c64a07ce718d60dd8e6bd46" category="inline-link-macro">AFF A700s 设置视频</block>
   <block id="ad95e5b69f87474809f8228af5e2fbe2" category="paragraph"><block ref="ad95e5b69f87474809f8228af5e2fbe2" category="inline-link-macro-rx"></block></block>
-  <block id="0b95a4177e24ad5d46eb1b71d70c2697" category="summary">要更换控制器模块，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</block>
   <block id="d9119345c9a007e36472326a6510319b" category="section-title">第 2 步：移动 NVRAM 卡</block>
   <block id="63f3a7c41a55885608d548f506cf6e84" category="paragraph">在控制器更换过程中，您必须从受损控制器模块的提升板 1 中卸下 NVRAM 卡，然后将该卡安装到更换控制器模块的提升板 1 中。只有在将 DIMM 从受损的控制器模块移至更换用的控制器模块后，才应将提升板 1 重新安装到更换用的控制器模块中。</block>
   <block id="1ab810cfbdc8e768a7dd00d6ecd7d645" category="list-text">从控制器模块中卸下 NVRAM 提升板提升板 1 ：</block>
@@ -2450,7 +2407,6 @@
   <block id="c9a7f7b22423148ff42d7fc7fedbb5b7" category="list-text">将卡与提升板上的卡导轨和提升板中的卡插槽对齐，然后将其垂直滑入提升板中的插槽。</block>
   <block id="acc0d4e6b4c7b0f2e407c949b8dd6652" category="list-text">将锁定闩锁旋转到位，直到其卡入到位。</block>
   <block id="fa228664bf1ad02a11c9db65213d5433" category="list-text">对受损控制器模块中插槽 4 和 5 中的提升板 3 和 PCIe 卡重复上述步骤。</block>
-  <block id="a5fa3839b28f343622ed27f9477a42ac" category="paragraph">AFF A700s 中有两个启动介质设备，一个是主启动介质，一个是二级启动介质或备份启动介质。您必须将其从受损节点移至 _replacement_ 节点，然后将其安装到 _replacement_ 节点中相应的插槽中。</block>
   <block id="37574ed52700f32d94a2d5116467a266" category="paragraph">启动介质位于中间 PCIe 提升板模块提升板 2 下。要访问启动介质，必须卸下此 PCIe 模块。</block>
   <block id="73f96b8f9c23f8a33dd778e2999bf39e" category="list-text">将启动介质移至新控制器模块并安装：</block>
   <block id="b7dbb1be616fad247b3d6aed3164e853" category="admonition">将启动介质安装到更换控制器模块中与受损控制器模块中安装的相同插槽中；将主启动介质插槽（插槽 1 ）安装到主启动介质插槽中，将二级启动介质插槽（插槽 2 ）安装到二级启动介质插槽中。</block>
@@ -2521,7 +2477,6 @@
   <block id="1a688134d3c3170545e61ebc16a95fe8" category="list-text">出现提示时，按 `y` 确认备份操作步骤已成功。</block>
   <block id="7eebffe155284ad2945a0e00f74ac4af" category="list-text">在高级权限级别的配对节点中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`</block>
   <block id="bc8660c5f3569dff11062aab0e8487d1" category="list-text">配置同步完成且无错误后，在系统提示确认备份操作步骤成功时按 `y` 。</block>
-  <block id="2f735eb9275a1a5467132ade67e42f08" category="list-text">在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动节点时按 `y` 。</block>
   <block id="2f0448dc28af93361e8ab911dc742aa9" category="list-text">在运行正常的节点上退出高级权限级别。</block>
   <block id="77fa1d2fec9c705a79b5ec4300599706" category="section-title">选项 2 ：使用 USB 闪存驱动器将启动映像传输到启动介质</block>
   <block id="13d5b33c8f1d9280033879c8b0a8fb7c" category="list-text">您必须具有一个已格式化为 32 位的 USB 闪存驱动器，并且容量至少为 4 GB 。</block>
@@ -2575,7 +2530,6 @@
   <block id="ab0f1b74bde528a6c04a7682a94cb284" category="paragraph">要更换 PCIe 卡，您必须从目标提升板中 PCIe 卡上的端口上卸下布线和所有 SFP ，从控制器模块中卸下提升板，卸下并更换 PCIe 卡，重新安装提升板并重新对其进行布线。</block>
   <block id="08b1c3ca7a11560dc5469640d0575de2" category="summary">通过 AFF A700s 系统文档，您可以安装，设置和维护系统。</block>
   <block id="12fa8b293937af24714101545edb706a" category="doc">AFF A700s 系统文档</block>
-  <block id="7b1c040ceba02d6d19a8157caebae0e2" category="doc">关闭受损节点— AFF A700s</block>
   <block id="2e7119d7d654a51006d39261079ed460" category="doc">卸下控制器模块 - AFF A700s</block>
   <block id="9a86085357934b0a1859c727c4e1e2ff" category="summary">要更换发生故障的 NVRAM 卡，您必须从控制器模块中卸下 NVRAM 提升板提升板 1 ，从提升板中卸下故障卡，在提升板中安装新的 NVRAM 卡，然后在控制器模块中重新安装提升板。由于系统 ID 源自 NVRAM 卡，因此，如果更换模块，则属于系统的磁盘将重新分配给新的系统 ID 。</block>
   <block id="93042cc4c4d4eead8d68941113308dfd" category="list-text">所有磁盘架都必须正常工作。</block>
@@ -2598,13 +2552,11 @@
   <block id="e9076ebdee65093373c882a63b81bfb4" category="list-text">如果为 ONTAP 9.6 启用了 NSE 或 NVE ，请转至 <block ref="76f4cb410fb9692bc2a4c8bc5d9a16b6" category="inline-xref-macro-rx"></block>。</block>
   <block id="a4522d671c9a1eaef7e6861375bcf9ff" category="section-title">选项 1 ：启用板载密钥管理器后还原 NVE 或 NSE</block>
   <block id="a7af9d05a3f737ccfcf08da76a941833" category="paragraph">系统将启动至 `Waiting for giveback...` 提示符。</block>
-  <block id="0e07e0b2fec57655fd382f0ae9e97ae0" category="list-text">将控制台缆线移动到配对节点并以管理员身份登录。</block>
   <block id="ec51bbadff0b2b58dd5e17500450347d" category="list-text">如果您运行的是 ONTAP 9.5 及更早版本，请运行 key-manager 设置向导：</block>
   <block id="349391cfc8a88972d7c1ff23df854b42" category="list-text">使用 `security key-manager setup -nodename` 命令启动向导，然后在出现提示时输入板载密钥管理的密码短语。</block>
   <block id="11a7c9bd5d2c9f9371ccfbc7d899847b" category="list-text">输入 `key-manager key show -detail` 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes` 。</block>
   <block id="cf63f70b7dc6ead2d083c12ded486fe3" category="admonition">如果 `Restored` 列 = `yes` 以外的任何内容，请联系客户支持。</block>
   <block id="49c84012756b1d43065ffef96acd5bf9" category="section-title">选项 2 ：在运行 ONTAP 9.5 及更早版本的系统上还原 NSE/NVE</block>
-  <block id="97f5759431a55ef08f0e866dace247f7" category="list-text">将控制台缆线移至目标节点，然后运行 version ` -v 命令` 以检查 ONTAP 版本。</block>
   <block id="334778235b226e6b9a2fa7bdae194a55" category="admonition">如果配置了 NVE （ NetApp 卷加密），则此命令不起作用</block>
   <block id="86f0dc416f631fdf25bde8175a84c56b" category="list-text">使用 security key-manager 查询可显示密钥管理服务器上存储的身份验证密钥的密钥 ID 。</block>
   <block id="45039b8f247c5c5af62e9b5aa63f488d" category="list-text">如果 `restored` column = `yes` 且所有密钥管理器均报告为可用状态，请转至 _complete the replacement process_ 。</block>
@@ -2620,8 +2572,6 @@
   <block id="1675c7f72f346b50740cbed80838eb37" category="doc">更换风扇— AFF A700s</block>
   <block id="c6c330df068950fe73f003a3f85b3fa0" category="list-text">将更换用风扇模块的边缘与控制器模块的开口对齐，然后将更换用的风扇模块滑入控制器模块，直到锁定闩锁卡入到位。</block>
   <block id="ee5ff73969a958477db471cca8246c98" category="doc">关闭控制器— AFF A700s</block>
-  <block id="62bbf44c561b37677a0688281d60958e" category="list-text">运行正常的节点必须能够接管要更换的节点（在此操作步骤中称为 "`受损节点` " ）。</block>
-  <block id="675f472ebd03f28204a76004420e0dc6" category="doc">关闭节点— AFF A700s</block>
   <block id="2b1646515c4dcacd96acd971239a6f14" category="paragraph">要更换机箱，您必须将控制器模块和 SSD 驱动器从受损机箱移至更换机箱，然后从设备机架或系统机柜中卸下受损机箱，并将更换机箱安装到位。</block>
   <block id="c465df44865c02db52bc6f37023b5b75" category="list-text">编写此操作步骤时，假设您要将 SSD 和控制器模块移至新机箱，而更换的机箱是 NetApp 的新组件。</block>
   <block id="f03c92168a16d01cf92fdfdfc719b6b5" category="summary">您可以使用此工作表收集并记录您的站点专用 IP 地址以及配置 ONTAP 集群时所需的其他信息。</block>
@@ -2664,14 +2614,10 @@
   <block id="c98df33d69df5ef2c70238c6ec12241c" category="doc">更换 DIMM - AFF A400</block>
   <block id="c7e602fe7db61b23799d51454d70f0cd" category="section-title">选项 1 ：大多数配置</block>
   <block id="c055245c084600ec7129f0f3c0692170" category="section-title">选项 2 ：控制器采用双节点 MetroCluster 配置</block>
-  <block id="4d279a0ab2cc0186322c5c93efdc2057" category="paragraph">要关闭受损节点，您必须确定此节点的状态，并在必要时切换此节点，以便运行正常的节点继续从受损节点存储提供数据。</block>
-  <block id="4b0734b8f2c30a70467894b0f3e7baf2" category="list-text">您必须在此操作步骤末尾保持电源处于打开状态，以便为运行正常的节点供电。</block>
-  <block id="a504e6d60b77acc66d4d4e9b46f8893a" category="list-text">检查 MetroCluster 状态以确定受损节点是否已自动切换到运行正常的节点： `MetroCluster show`</block>
   <block id="a4d3e0e884bda08238ebcf294cd22173" category="list-text">根据是否发生了自动切换，按照下表继续操作：</block>
   <block id="3bb6bfde9e3647655849196d4817633d" category="paragraph">已自动切换</block>
   <block id="e6d6a543bb86452c29c8ce9dd3d034cc" category="paragraph">继续执行下一步。</block>
   <block id="223bed434b435ef97172b24efc947bc4" category="paragraph">未自动切换</block>
-  <block id="5d270126365d2a58fbcc7add688fa3a1" category="paragraph">从运行正常的节点执行计划内切换操作： `MetroCluster switchover`</block>
   <block id="284c5fffd88c543f295f7e4d82a51c93" category="paragraph">未自动切换，您尝试使用 `MetroCluster switchover` 命令进行切换，并且切换已被否决</block>
   <block id="da1a32de06ff316b64e2e238f6a533d7" category="paragraph">查看否决消息，如果可能，请解决问题描述并重试。如果无法解决问题描述问题，请联系技术支持。</block>
   <block id="68e094bfa509e0c8a036a923f747b4cb" category="list-text">在运行正常的集群中运行 `MetroCluster heal -phase aggregates` 命令，以重新同步数据聚合。</block>
@@ -2773,7 +2719,6 @@
   <block id="797462bacc0f6fc2b9a4b4f5c1ec212e" category="list-text">`EFI`</block>
   <block id="f33d22080714eee8f244e5ef03575052" category="list-text">将 `EFI` 文件夹复制到 USB 闪存驱动器上的顶部目录。</block>
   <block id="261f06ae9beffb3a4add256d9d6d8670" category="paragraph">重新布线时，如果已卸下介质转换器（ SFP 或 QSFP ），请务必重新安装它们。</block>
-  <block id="d6247cf97fface5e53fdbd950c4cd532" category="paragraph">如果您未收到此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后 `halt` 节点以启动到加载程序。</block>
   <block id="6551c986c636d61142c1b77b48a7460d" category="list-text">如果控制器位于延伸型或光纤连接的 MetroCluster 中，则必须还原 FC 适配器配置：</block>
   <block id="9ad558d6e4619b772507061478e81eb9" category="list-text">启动到维护模式： `boot_ontap maint`</block>
   <block id="48aea463c7d284677a392c635ace5bf1" category="list-text">将 MetroCluster 端口设置为启动程序： `ucadmin modify -m fc -t _initiator adapter_name_`</block>
@@ -2946,10 +2891,8 @@
   <block id="56eb83c06d36c90e76429cda40aea7ed" category="section-title">选项 2 ：关闭双节点 MetroCluster 配置中的节点</block>
   <block id="22cc15dad4c522616e5130f927446d07" category="doc">将故障部件退回给 NetApp - AFF A400</block>
   <block id="3a23955ad584199d013caf86411a3e19" category="paragraph">如果这是您应使用的操作步骤，请注意，四节点或八节点 MetroCluster 配置中节点的控制器替代操作步骤与 HA 对中的控制器替代 相同。无需执行 MetroCluster 专用步骤，因为故障仅限于 HA 对，可以使用存储故障转移命令在更换期间实现无中断运行。</block>
-  <block id="77e5d5e9e3fe25e357bcca8804d9d2dd" category="list-text">_replacement nodge_ 是指更换受损节点的新节点。</block>
   <block id="5ab7856b7ebec8f0df312e997fb8acf9" category="paragraph">要更换机箱，必须将风扇和控制器模块从受损机箱移至与受损机箱型号相同的新机箱。</block>
   <block id="244b874016608f71c1442226368f5da8" category="list-text">如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAIN=_number_of_hours_down_h`</block>
-  <block id="ba70fdaa734ba4fd788cb6febeb14209" category="paragraph">接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_` 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
   <block id="29d6646c4ba000d4b3b4a533c4f85905" category="summary">本指南详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本指南。</block>
   <block id="8ebf8284e0fff7b962f6416451a28baa" category="doc">详细指南— AFF A400</block>
   <block id="da49da2deacce47c1e05a410c3ccb072" category="paragraph">要安装系统，您需要创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
@@ -3103,7 +3046,6 @@
   <block id="30d8ab439e6b5776a81bc35dd0caaf81" category="paragraph">节点将显示 LOADER 提示符。</block>
   <block id="be418a014cc7dddea0e7a9c11e74684f" category="list-text">从加载程序提示符处启动节点： `bye`</block>
   <block id="5cb4dbca31ce772b17987c15a725b52e" category="list-text">使节点恢复正常运行：</block>
-  <block id="99b2041dbc4d85328f37031f86e8632c" category="cell">如果您的节点位于 ...</block>
   <block id="acb7bc189d4b0f21fe9d90e11ec17502" category="paragraph">执行交还： `storage failover giveback -ofnode _replacement_node_name_`</block>
   <block id="b5be884251fa1837a5590734f7c5e1a3" category="admonition">如果禁用了自动交还，请使用 storage failover modify 命令重新启用它。</block>
   <block id="f5e89f698341583eba1c85cae0cf57dd" category="paragraph">双节点 MetroCluster 配置</block>
@@ -3160,7 +3102,6 @@
   <block id="40445df40d6d89bcbb7a04cfa01ad049" category="paragraph">系统开始启动并停留在 LOADER 提示符处。</block>
   <block id="adc2b16ccdc84e4c86c816c36e52800a" category="list-text">在 LOADER 提示符处设置网络连接类型：</block>
   <block id="c70c6056ae23579028362bde426e3877" category="list-text">如果要配置 DHCP ： `ifconfig e0a -auto`</block>
-  <block id="890a5db496d99a96f099de944c9791c0" category="admonition">您配置的目标端口是在使用网络连接还原 var 文件系统期间，用于与运行正常的节点中受损节点进行通信的目标端口。您也可以在此命令中使用 e0M 端口。</block>
   <block id="c754db7b7be7a3848e6afdf6a1d4ef73" category="list-text">如果要配置手动连接： `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`</block>
   <block id="f3700920f467a00b8bc7a997e5ca02f8" category="list-text">filer_addr 是存储系统的 IP 地址。</block>
   <block id="f5eaffd1f9397c8558b144847401dddd" category="list-text">netmask 是连接到 HA 配对节点的管理网络的网络掩码。</block>
@@ -3416,7 +3357,6 @@
   <block id="061a78fed35fa26d870ae789dd6685b8" category="doc">将故障部件退回给 NetApp - FAS8200</block>
   <block id="2cbabd3028fd0cb6f4a57144ace2ee33" category="list-text">如果您的系统是 FlexArray 系统或具有 V_StorageAttach 许可证，则在执行此操作步骤之前，必须参考所需的其他步骤。</block>
   <block id="0012bcaadb56ca5543ace124a6a404f9" category="list-text">如果您的系统位于 HA 对中，则运行状况良好的节点必须能够接管要更换的节点（在此操作步骤中称为 "`受损节点` " ）。</block>
-  <block id="90aef159b4ad02a5aa95f62d5be7d66d" category="list-text">此操作步骤包含根据系统配置自动或手动将驱动器重新分配到 _replacement_ 节点的步骤。</block>
   <block id="eceeb845d6027471d1eafcff9c9e0e9e" category="paragraph">您应按照操作步骤中的指示执行驱动器重新分配。</block>
   <block id="18286caf45baac43fedf94bfeaff35fa" category="list-text">更换用的控制器模块必须支持从旧控制器模块移至新控制器模块或从现有客户站点清单中添加的任何 PCIe 卡。</block>
   <block id="8385c47a31a80f44b8892894d86e73a6" category="paragraph">要更换机箱，您必须将受损机箱中的电源，风扇和控制器模块移至新机箱，然后将设备机架或系统机柜中受损机箱替换为与受损机箱型号相同的新机箱。</block>
@@ -3471,8 +3411,6 @@
   <block id="055ce7154e7ea0261c8667a0d628ee36" category="image-alt">DRW a800 封闭通风管</block>
   <block id="fe789fced0492cc44e230547286ad2fd" category="list-text">重新安装缆线管理设备，并根据需要重新对系统进行布线。+ 重新布线时，如果已卸下介质转换器（ SFP 或 QSFP ），请务必重新安装它们。</block>
   <block id="98bdc3e90693534845f2b1eeaabe98be" category="list-text">将 USB 闪存驱动器插入控制器模块上的 USB 插槽。+ 确保将 USB 闪存驱动器安装在标有 USB 设备的插槽中，而不是 USB 控制台端口中。</block>
-  <block id="66e081aa9e9235fecee66d668b33a06c" category="list-text">将控制器模块一直轻轻推入系统中，直到控制器模块锁定挂钩开始上升，用力推动锁定挂钩以完成控制器模块的就位，然后将锁定挂钩旋转到控制器模块上插脚上方的锁定位置。+ 节点一旦完全安装到机箱中，就会开始启动。</block>
-  <block id="ce526ec45d4379a40bad44d2a49da7f1" category="list-text">按 Ctrl-C 在 LOADER 提示符处停止，以中断启动过程。+ 如果未显示此消息，请按 Ctrl-C ，选择启动到维护模式的选项，然后暂停节点以启动到加载程序。</block>
   <block id="5fb89931e5b269129a2ad5936878a851" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.5 ，请转至 <block ref="b9f6f8746149f87def14842273c93bfe" category="inline-xref-macro-rx"></block>。</block>
   <block id="70c3e5c6b05722334dd3cfb521d9e159" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至 <block ref="e0569187fa90a6ae4bbbe053355b82c8" category="inline-xref-macro-rx"></block>。</block>
   <block id="34cf3a43d39d8b0acc65bd578d7188da" category="doc">更换启动介质— AFF A800</block>
@@ -3497,7 +3435,6 @@
   <block id="b860df82f0aa962ce83ad7cbf06bb972" category="list-text">记下插槽中 NVDIMM 的方向，以便可以按正确的方向将 NVDIMM 插入更换用的控制器模块中。</block>
   <block id="fb9c911f5fd782e8fd686ca595abbfed" category="list-text">重复上述步骤以移动另一个 NVDIMM 。</block>
   <block id="80392a74120115863aba040983d75dcc" category="section-title">第 8 步：移动启动介质</block>
-  <block id="2a3437dc0d5f56d89ec7665ada160404" category="paragraph">AFF A800 中有一个启动介质设备。您必须将其从受损节点移动并安装在 _replacement_ 节点中。</block>
   <block id="4ca80d99d67871d37c8da5807f9599aa" category="paragraph">启动介质位于提升板 3 下。</block>
   <block id="22593e2f0620849aa4f82e482025ae6d" category="image-alt">DRW a800 PCM 仅更换启动介质</block>
   <block id="c2ac0f879d7f2a549904c604053848ff" category="section-title">第 9 步：安装 PCIe 提升板</block>
@@ -3562,9 +3499,6 @@
   <block id="45c8293117e9731c1b2983abd691e338" category="paragraph">更换风扇模块时，必须从机箱中卸下控制器模块。</block>
   <block id="b8238a1ffeb288edb4606d4cee1cdf5c" category="doc">关闭控制器— AFF A800</block>
   <block id="228833e7e465458067df236eb339d948" category="doc">将故障部件退回给 NetApp - AFF A800</block>
-  <block id="b43b6ffe97034eb968501fc99ef0a1c4" category="list-text">运行状况良好的节点 _ 是运行正常的节点。</block>
-  <block id="0965105e8b2fca5f6bc22be96233c5e0" category="admonition">请勿降级 _replacement_ 节点的 BIOS 版本以匹配配对节点或旧控制器模块。</block>
-  <block id="81e46cc93d394efa5f52a46a0927e127" category="doc">关闭节点— AFF A800</block>
   <block id="b8984f02e6cfd8c017d9d0f4737d0ac7" category="doc">更换机箱 - AFF A800</block>
   <block id="13f3f5d40904a4c5b68e6c877e0c9bbd" category="paragraph">要安装 AFF A800 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="b772890c716d468c4b26510d897c0276" category="paragraph">HA 互连</block>
@@ -3645,7 +3579,6 @@
   <block id="56c92e962f19f33c819fa704568c60fe" category="list-text"><block ref="56c92e962f19f33c819fa704568c60fe" category="inline-link-macro-rx"></block></block>
   <block id="c4de84ea78d221e98599baf30d3e65d1" category="doc">更换 DIMM — AFF A220 和 FAS2700</block>
   <block id="07b824a16e2eac6bafd600bdf983d340" category="list-text">对于独立系统： `ssystem node halt _impaired_node_name_`</block>
-  <block id="2a6a2e33656853ca022195e9fa505ddd" category="list-text">如果系统机箱中只有一个控制器模块，请关闭电源，然后从电源中拔下受损节点的电源线。</block>
   <block id="cf233c8f355b435b1d8d0eac06c1f98c" category="image-alt">DRW 25xx 缆线管理臂</block>
   <block id="1b96f3aa099b152fc864dedb115af912" category="list-text">按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。</block>
   <block id="d6daae29261c119313124d1d21a1c267" category="image-alt">DRW 2240 x 打开凸轮闩锁</block>
@@ -3690,9 +3623,7 @@
   <block id="b37236c3c4a90442c4db951305ea57a0" category="image-alt">DRW 2600 fcache rel 动画 gif</block>
   <block id="6bbc48da569bffd650e8c37eb91825ba" category="list-text">将缓存模块竖直从外壳中轻轻拉出。</block>
   <block id="b08b6d72a159368a3b72d6c28c8a2392" category="list-text">根据需要关闭控制器模块盖板。</block>
-  <block id="ed9b788614568aa4c8be8b82b384cd8c" category="paragraph">* 如果节点位于 HA 对中 * ，请执行交还： `storage failover giveback -ofnode _replacement_node_name_`</block>
   <block id="b27659a5892c965f391bf77476f97118" category="paragraph">* 注： * 如果禁用了自动交还，请使用 `storage failover modify` 命令重新启用它。</block>
-  <block id="f5833a336f25b45a7be45536998c8479" category="paragraph">* 如果节点采用独立配置 * ，请继续执行下一步。无需执行任何操作。</block>
   <block id="066c0a2f133fb39e8887805ab2dd11a0" category="doc">更换启动介质— AFF A220 和 FAS2700</block>
   <block id="616fd6518ea3af054114db97fda5ce99" category="section-title">第 2 步：移动 NVMEM 电池</block>
   <block id="b739b134857dab60a93e85c752192f2e" category="list-text">在控制器模块中找到 NVMEM 电池。</block>
@@ -3760,7 +3691,6 @@
   <block id="10c7f296fbe86b208c1b89ca81a28947" category="doc">将故障部件退回给 NetApp — AFF A220 和 FAS2700</block>
   <block id="390911875f818301a4ee051939794a66" category="paragraph">要更换机箱，您必须将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，并将设备机架或系统机柜中受损机箱替换为与受损机箱型号相同的新机箱。</block>
   <block id="1e67e0629d0e05c486b4b70e46c2e403" category="list-text">编写此操作步骤时，假设您要将所有驱动器和控制器模块移至新机箱，并且此机箱是 NetApp 的新组件。</block>
-  <block id="565389f36084e305bd7e2e90f9c2a19d" category="section-title">选项 1 ：关闭节点</block>
   <block id="4289cf60429a6597dbd75e47b7eba5d6" category="summary">本指南详细介绍了安装典型 NetApp 系统的分步说明。</block>
   <block id="a42fdd142aa1644b3d98ec92a6a5bed0" category="doc">详细指南— AFF A220 和 FAS2700</block>
   <block id="61468a5495da3377a5cc2395006b700f" category="paragraph">要安装 FAS2700 或 AFF A220 系统，您需要在 NetApp 支持站点上创建帐户，注册您的系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
@@ -4426,7 +4356,6 @@
   <block id="e8aff1eca48ad56a3b7a6f32b35725fb" category="list-text">如果您使用的是 FAS8700 系统，则系统 DIMM 位于插槽 2 ， 4 ， 7 ， 9 ， 13 ， 15 ， 18 和 20 。</block>
   <block id="23322e561ac6bea2fdd969f81f065cb0" category="list-text">NVDIMM 位于插槽 11 中。</block>
   <block id="513b4883451dec21bc772400c3a572d8" category="paragraph"><block ref="513b4883451dec21bc772400c3a572d8" category="inline-link-rx"></block></block>
-  <block id="fb346fbc4b16fda2d4c28fb66e0a91d8" category="list-text">如果要服务的节点不在 LOADER 提示符处，请重新启动节点： `ssystem node halt -node _node_name_`</block>
   <block id="1db543711acdae9341bb66467bfc08e7" category="list-text">如果测试未报告任何故障，请从菜单中选择 `Reboot` 以重新启动系统。</block>
   <block id="bef53c14eb719bb1cd8539b91f7515d7" category="doc">切回双节点 MetroCluster 配置中的聚合— AFF fas8300 和 FAS8700</block>
   <block id="d5329d1a1e1dddf29f9d62bdc1cd54ad" category="doc">视频— FAS8300 和 FAS8700</block>
@@ -4484,7 +4413,6 @@
   <block id="8d3a887f704ca0886089fac6ec777223" category="section-title">第 7 步：运行诊断后，将控制器模块还原为正常运行</block>
   <block id="07198f13a474589e15ec90df05d856ff" category="doc">FAS8300 和 FAS8700 系统文档</block>
   <block id="27dcde903ce9d2827a6882d72efe7cb4" category="doc">关闭受损控制器— AFF FAS8300 和 FAS8700</block>
-  <block id="bc6fa9fd41bd50f50a6f712cd33d5e4c" category="list-text">交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode ` impaired_node_name_``</block>
   <block id="85d8efbc74d6524c8654e1ba5832036b" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF fas8300 和 FAS8700</block>
   <block id="e9c29b2069e0c6c237cd1e2a30e9c48b" category="doc">关闭控制器— FAS8300 和 FAS8700</block>
   <block id="14df5008a24cd65fbb232505d17779b3" category="doc">将故障部件退回给 NetApp — AFF fas8300 和 FAS8700</block>
@@ -4510,7 +4438,6 @@
   <block id="139b85a2da5c2f7968fae24f14c3ed09" category="inline-link">《 FAS500f 安装和设置说明》</block>
   <block id="dae1434e283524bee3110823c8eb7212" category="inline-link">《 FAS500f 系统安装和设置说明》</block>
   <block id="0ce2a0e29499223b29490143e42e0e0e" category="list-text">与受损控制器运行的 ONTAP 映像版本相同的副本。您可以从 NetApp 支持站点上的 * 下载 * 部分下载相应的映像</block>
-  <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">更换启动介质— FAS500f</block>
   <block id="2685cb32d91e3c7296420631a7066229" category="paragraph">您可以使用以下视频或表格中的步骤更换控制器模块：</block>
   <block id="616af20769d44e43520152460f655603" category="doc">移动并更换硬件— FAS500f</block>
   <block id="49cc582b0e041effb99494704c8f0963" category="doc">还原并验证系统配置— FAS500f</block>
@@ -4533,7 +4460,6 @@
   <block id="5bafa27d304da6702fac02a0b481992c" category="doc">将故障部件退回给 NetApp — FAS500f</block>
   <block id="806172d09ec083b134236f39467e6f44" category="doc">更换或安装夹层卡— FAS500f</block>
   <block id="5a8806fc27bd2a34806ff3f345c3e780" category="paragraph">您可以使用以下视频或表格中的步骤更换夹层卡：</block>
-  <block id="fdf5f4359ee176f1de2ac16926a8b1f1" category="doc">关闭节点— FAS500f</block>
   <block id="9cba1bd90da040950cfda65ba6af50aa" category="doc">更换 NVMEM 电池— FAS500f</block>
   <block id="74384aef792e0e84d445bfde0eab13c6" category="paragraph">您可以使用以下视频或表格中的步骤更换 NVMEM 电池：</block>
   <block id="3b92fecaa3772b0492ba3935a96dedea" category="paragraph">要安装 FAS500f 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
@@ -4545,7 +4471,6 @@
   <block id="277ba6b7a127ec6b40495a0cd012279f" category="paragraph">使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。</block>
   <block id="eacfd9b01b607ec0ff14339768945edd" category="image-alt">DRW affa250 25GbE 主机布线</block>
   <block id="13bebe2596a4000b53c1d171e85d4669" category="doc">完成系统还原— AFF C190</block>
-  <block id="a4e3016238e1fb829942cfb8f4f45e09" category="section-title">第 1 步：在 ONTAP 中为替代节点安装许可证</block>
   <block id="90e0a79f0dc5582ba3bb7a9b28936d5c" category="section-title">第 2 步：还原存储和卷加密功能</block>
   <block id="0072b0fd9d430209e4485c4040bcaa19" category="section-title">第 3 步：验证 LIF 并注册序列号</block>
   <block id="6ca5f95bd86b688d89de7f54f3cbcd42" category="list-text"><block ref="6ca5f95bd86b688d89de7f54f3cbcd42" category="inline-link-macro-rx"></block></block>
@@ -4574,7 +4499,6 @@
   <block id="f30bf82bc8eafa66c54fa40dcf42ea44" category="paragraph">` * 暂停 *`</block>
   <block id="31f3689ce01f90a247c3f17346eb5f05" category="paragraph">退出维护模式： ` * halt*`</block>
   <block id="156eb6e82c7345080012a8f00d566c5e" category="paragraph">此时将显示 LOADER 提示符。</block>
-  <block id="4f3bd230b388c6ddd486715d3b230134" category="list-text">节点启动到维护模式后，暂停节点：</block>
   <block id="a8eb93337a2a8db4dcaf67a28a1eba2d" category="list-text">在 LOADER 提示符处，访问专为系统级诊断而设计的专用驱动程序，以便正常运行：</block>
   <block id="1e3e141decf7b954578b8dac9d8085dc" category="paragraph">` * boot_diags*`</block>
   <block id="9c30298450099fe0339c67c08dd8868c" category="list-text">从维护模式提示符处启用互连诊断测试：</block>
@@ -4603,38 +4527,28 @@
   <block id="79c0dc0c1d416cbf593b39a6001241d6" category="paragraph">系统将启动到启动菜单，并提示您输入启动映像名称。</block>
   <block id="a69b72837c8e8003d87a5507ce60fd57" category="list-text">输入 USB 闪存驱动器上的启动映像名称：</block>
   <block id="28cc6978ce4feeff76b4c396346e2134" category="paragraph">` * _ 映像名称 _ .tgz*`</block>
-  <block id="d978c1210c17487e55dc119bb51ecafe" category="paragraph">安装 `image_name.tgz` 后，系统会提示您从运行状况良好的节点还原备份配置（ `var` 文件系统）。</block>
   <block id="62769241856ee82359451259b52a5002" category="list-text">当系统提示您还原备份配置时，按 ` * y*` 。</block>
-  <block id="a8c26f715f9f4a3ea9ec1f68d24c9c4a" category="list-text">将运行状况良好的节点设置为高级权限级别：</block>
   <block id="2fb10535c586c96b3774f785a3997a21" category="paragraph">` * 设置 -privilege advanced*`</block>
   <block id="c1177edd7108fa7d9910ed257f6649d2" category="list-text">运行 restore backup 命令：</block>
   <block id="0bf1d1b4f2e3e68fc29769ff74068bb0" category="paragraph">` * 系统节点还原备份 -node local -target-address _impaired_node_ip_address_*`</block>
-  <block id="ac16d10b03b9eee302663c0ff964af6b" category="list-text">将节点恢复为管理员级别：</block>
   <block id="e16abfed5120765160124f48c832fec8" category="paragraph">` * 设置 -privilege admin*`</block>
   <block id="3a4533e361276ae9b4739b9bfb026264" category="list-text">当系统提示您使用已还原的配置时，按 ` * y*` 。</block>
-  <block id="7b20fcd7cc0853f9d9747853a0fcdc60" category="list-text">当系统提示重新启动节点时，按 ` * y*` 。</block>
   <block id="f13064e88c8a13f2443d04d2ee4b74bf" category="list-text">当系统提示您还原备份配置时，按 ` * n*` 。</block>
   <block id="fedbb144e0526b11e71f32ee68d8592d" category="paragraph">在 ONTAP 提示符处，您可以对命令 `ssystem node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true` 执行问题描述。</block>
   <block id="2c3a780fd5e013ffc611cc8a846f36b2" category="list-text">如果未按预期设置环境变量，请使用 `setenv _environment_variable_name changed_value_` 命令对其进行修改。</block>
   <block id="110cdf95c13597ed0aeb3ee971d7cec5" category="list-text">下一步取决于您的系统配置：</block>
-  <block id="fec180986cf3ffaf8601b5de24881de4" category="paragraph">您可以在节点重新启动后开始使用系统。</block>
-  <block id="76cf40fe172d1ea9ec57cdefa14c953a" category="paragraph">受损节点显示 `Waiting for Giveback...` 消息后，从运行正常的节点执行交还：</block>
-  <block id="9e48e69d61ca4ea4e8c1b6709a0ba816" category="list-text">从运行正常的节点执行交还：</block>
   <block id="28489481ec7e834c6b195baa68dd19c1" category="paragraph">` * 存储故障转移交还 -ofnode _partner_node_name_*`</block>
-  <block id="2b5b86c9ce2d39ee837c5fdad0fc27cc" category="paragraph">这将启动将受损节点聚合和卷的所有权从运行状况良好的节点交还给受损节点的过程。</block>
   <block id="889c078e9cfb9c17ddcfadb4d5c9759c" category="list-text">使用 `storage failover show-giveback` 命令监控交还操作的进度。</block>
   <block id="55264e5caf29a4014bb82535b8f9ddba" category="list-text">如果您使用 `storage failover modify` 命令禁用了自动交还，请将其还原。</block>
   <block id="cc36390de0e6f5128a70841fe11c7e73" category="doc">更换启动介质— AFF C190</block>
   <block id="355402a9684b4b94b56cf033327d696e" category="list-text">更换启动介质的无中断和中断方法都要求您还原 var 文件系统：</block>
   <block id="c3e12e601f836e0ea6b976380432b1a0" category="list-text">要实现无中断更换，必须将 HA 对连接到网络以还原 var 文件系统。</block>
   <block id="bcdaf92a221f36e5be14e3d79ed1b17b" category="list-text">要进行中断更换，您无需网络连接即可还原 var 文件系统，但此过程需要重新启动两次。</block>
-  <block id="ff9a2f89454589a74ceb25742ee79817" category="paragraph">要更换控制器模块，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</block>
   <block id="2a2508e145c26be9a521a151ff4382ee" category="section-title">第 2 步：移动启动介质</block>
   <block id="e58eb254fd5dc6ef69f76093a20348c1" category="doc">移动并更换硬件— AFF C190</block>
   <block id="0f36d2c538b2db218480ae8a6cd7aa5a" category="section-title">第 1 步：移动电源</block>
   <block id="0ec0d2472b9b2c7b3ff1d96ae6ba1111" category="paragraph">在将控制器模块和任何其他组件安装到新机箱中后，您需要将其启动到可以运行互连诊断测试的状态。</block>
   <block id="00a36e9a8759685eeb634a8e573ae042" category="list-text">完成控制器模块的安装</block>
-  <block id="903ad4ced24fc25dd69a11e17dd6ac00" category="list-text">如果要服务的节点不在 LOADER 提示符处，请重新启动此节点：</block>
   <block id="81120d9f26288d75b43fa9389447301a" category="paragraph">在启动过程中，您可以安全地对提示做出 ` * y*` 响应，直到显示维护模式提示符（ * &gt; ）为止。</block>
   <block id="c9dc8029f1ea83b5f228f69e5cd6b390" category="list-text">显示并记下控制器模块上的可用设备：</block>
   <block id="f80a3cd3b85434b46084198ab45c8206" category="paragraph">` * sldiag device show -dev MB*`</block>
@@ -4655,26 +4569,20 @@
   <block id="7f6a5a727ffde2290e51bb81b2fa2319" category="paragraph">` * sldiag device show*`</block>
   <block id="7c3d4bf83f0ceda0dbed47b8b357a0d9" category="list-text">对所有设备运行诊断：</block>
   <block id="c05451d6d9cf9f407c09f91a088ac7ca" category="paragraph">` * sldiag 设备运行`</block>
-  <block id="a96498340af01d003737eedaa3c5a2bf" category="list-text">验证节点上是否没有硬件问题：</block>
   <block id="52cc19f0b40712640b9045caa499f77b" category="paragraph">` * sldiag device status -long -state failed*`</block>
   <block id="c97564e8e6a94dc642e3f69b7ae80557" category="paragraph">要更换 RTC 电池，您需要在控制器模块中找到该电池，然后按照特定步骤顺序进行操作。</block>
   <block id="2aa8970a7aa05c71d0c35e524a059d35" category="list-text">完成控制器模块的重新安装。控制器模块一旦完全固定在机箱中，就会开始启动。</block>
   <block id="d9a7a09d2734ecc763c0c5a8586a61a3" category="doc">重新配置系统并重新分配磁盘— AFF C190</block>
   <block id="b279b6600d5af224d26ab7bab80082c7" category="section-title">第 2 步：验证 HA 系统上的系统 ID 更改</block>
-  <block id="1a654e01c14bfd5cd4699372c3ef6bf9" category="list-text">如果 _replacement_ 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符：</block>
-  <block id="5df49253d4e35c978d098ad728de36b5" category="list-text">等待 _replacement_ 节点控制台上显示 `waiting for giveback...` 消息，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ：</block>
   <block id="109773e48c8731216edae51d1686c8bc" category="list-text">更改为高级权限级别：</block>
   <block id="e510b81f84ff95d9355a3f8777aac54e" category="paragraph">系统提示您继续进入高级模式时，您可以回答 ` * Y*` 。此时将显示高级模式提示符（ * &gt; ）。</block>
   <block id="cd398a68db8f00186aae955968cc06d7" category="list-text">保存任何核心转储：</block>
   <block id="5bedc6fbcb54f704df8ebd472d318d98" category="paragraph">` * 系统节点 run -node _local-node-name_ partner savecore*`</block>
   <block id="5ba88971aec930df5e482b401ee5bda7" category="paragraph">您可以输入以下命令来监控 savecore 命令的进度：</block>
   <block id="0a6496658205fc38ba1b1f3e184070ba" category="paragraph">` * 系统节点 run -node _local-node-name_ partner savecore -s *`</block>
-  <block id="4b76b0b24680628173c043d577e24169" category="list-text">从运行正常的节点中，交还已更换节点的存储：</block>
   <block id="84a63e5c67c16845df7acbd3cae860da" category="paragraph">` * 存储故障转移交还 -ofnode _replacement_node_name_*`</block>
   <block id="393be3b3a8c5c898411ba572d160869b" category="paragraph">如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 ` * y*` 。</block>
-  <block id="fdf71b0bf15eace3d1fb5c829e6fd6bd" category="list-text">验证每个节点是否存在预期卷：</block>
   <block id="e3de43ab4017cb33908b0ff634023d7d" category="paragraph">` * vol show -node _node-name_*`</block>
-  <block id="d549e9b55ccc784fa571f784621470ef" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它：</block>
   <block id="73b172a422efac317883ee1a518015e1" category="paragraph">` * storage failover modify -node _replacement-node-name_ -onreboot true*`</block>
   <block id="c08618c5a0ce81948b9cda2e429f0deb" category="doc">更换 NVMEM 电池— AFF C190</block>
   <block id="31fd200f667413cd052c85fc2b0d53a1" category="image-alt">DRW 2600 nvmem batt rel 动画 gif</block>
@@ -4686,7 +4594,6 @@
   <block id="c8ba643914db1664b5eb486f2f97cf94" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF C190</block>
   <block id="fc3fc335fe3d498e24675e2eff27cd4f" category="doc">关闭控制器 - AFF C190</block>
   <block id="d5d1d7f0ba452ea37dcd299489e09eff" category="doc">将故障部件退回给 NetApp - AFF C190</block>
-  <block id="d88c7eb1c7ef4b32e4cdba82c917bfae" category="doc">关闭节点— AFF C190</block>
   <block id="537180ccf440446ad8816ed356c6cee9" category="paragraph">要安装 AFF C190 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="3fdd87b9e91d1f4dbea3152a3a2b8d0b" category="paragraph">X6566B-3-R6 （ 112-00300 ）， 3 米</block>
   <block id="2dbee959c43fd0b0e9eab0968ff31b96" category="image-alt">OIE 缆线光纤 LC 连接器</block>
@@ -5235,7 +5142,6 @@
   <block id="3dad031ba5544f976b631ffad1564b7a" category="paragraph">通过重新为存储布线并确认磁盘重新分配来继续更换操作步骤。</block>
   <block id="536b0bd1a9c2b544d6cfae19d9289ea7" category="section-title">第 1 步：为系统重新布线</block>
   <block id="b0da6837b9dc75b3c0fcca1c9c38d89b" category="paragraph">如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。在独立系统中，必须手动将 ID 重新分配给磁盘。您必须为您的配置使用正确的操作步骤。</block>
-  <block id="c6fcf31298ea00741e2a62b768872ba4" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它： `storage failover modify -node _replacement-node-name_ -onreboot true`</block>
   <block id="677d8bcfde6bff1a436a7a5e69b4dd4b" category="doc">集群配置工作表— AFF A200</block>
   <block id="c63040480653df4c796c48ec77d545d6" category="section-title">选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE</block>
   <block id="249776239ba561818dea48749c5be5e8" category="section-title">选项 2 ：在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE</block>
@@ -5635,7 +5541,6 @@
   <block id="57baf06207321952e0c7d552b4d23995" category="paragraph"><block ref="57baf06207321952e0c7d552b4d23995" category="inline-link-rx"></block></block>
   <block id="98e0a55b81b9188cead04d30df43a89c" category="image-alt">DRW 9000 缆线控制台交换机控制器</block>
   <block id="c11d911fdc6f049d5491a18850fa08dd" category="doc">完成系统还原— AFF A300</block>
-  <block id="e935849faf7cd25a183a726f34797bb7" category="doc">更换控制器模块— AFF A300</block>
   <block id="11cedb2a3ea1c051845c4666a3942624" category="doc">关闭控制器— AFF A300</block>
   <block id="4cbf72a112e69e9ca004dad9b0b05d49" category="section-title">选项 2 ：控制器采用双节点 MetroCluster 配置</block>
   <block id="1e8706074b646188f170b091d34c8860" category="doc">更换 DIMM - AFF A300</block>
@@ -5701,7 +5606,6 @@
   <block id="5e57d07ff1fc6536107cc6e45fe9f281" category="doc">根据需要还原 OKM ， NSE 和 NVE — FAS2600</block>
   <block id="a102b530af65288511339cf8117713a3" category="doc">关闭控制器— FAS2600</block>
   <block id="a47803b6b6d01b67efcc88a157378c39" category="doc">将故障部件退回 NetApp - FAS2600</block>
-  <block id="45bad0a220769ce3e5e852b8009c6c12" category="doc">关闭节点— FAS2600</block>
   <block id="e36ec33be061816b4fbfa1c3e8e42798" category="inline-link-macro">AFF FAS2600 机箱更换视频</block>
   <block id="e91a3b78a16fbd7eb7d01342d1c07d69" category="doc">集群配置工作表— FAS2600</block>
   <block id="88dd2b76e22f517fcc43991c9f49fc1c" category="list-text">从机箱中卸下控制器模块：</block>
@@ -7382,11 +7286,9 @@
   <block id="d35e9de4dd221879d5824b232348dc91" category="sidebar">DS460C 磁盘架中的磁盘驱动器</block>
   <block id="8dfce13bab3428db55090c483e5d838b" category="sidebar">DS460C 磁盘架中的驱动器抽盒</block>
   <block id="024aa13f0235d96f6c5d0182ea7c1a94" category="sidebar">DS460C 磁盘架中的风扇模块</block>
-  <block id="0b56478c906127f53acd028bea14e248" category="cell">如果受损节点显示 ...</block>
   <block id="255b2c61d579fe79679408ad9b8fd757" category="paragraph">您可以使用下图或写入的步骤在机箱中安装替代控制器模块。</block>
   <block id="1ce77f487e28076022ddc7ec80345c1a" category="paragraph">您可以使用下图或写入的步骤在机箱中安装替代控制器模块。</block>
   <block id="54f4c70c653781a776673e986d65e502" category="paragraph">您可以使用以下动画，插图或写入的步骤更换电源。</block>
-  <block id="72a6b0593195cf1c4747031ea9a4b6ce" category="cell">如果受损节点 ...</block>
   <block id="a695ddd31702bf0ddff2a7cf2f63d196" category="paragraph">您可以使用以下动画，插图或写入的步骤从机箱中卸下控制器模块。</block>
   <block id="7fafe988a2b8e22f676e4c8546dc2c17" category="paragraph">您可以使用以下动画，插图或写入的步骤来更换系统 DIMM 。</block>
   <block id="83f5dbc08aca0f364692b2a42ed31f22" category="admonition">动画和图中显示了不带 DIMM 的插槽的空插槽。These empty sockets are populated with blanks.</block>
@@ -7453,7 +7355,6 @@
   <block id="f6706fbf02796cde0f95e3aa80e2a592" category="section-title">选项 3 ：控制器位于双节点 MetroCluster 中</block>
   <block id="ad0e39682bcd1cd18eb8f815706bdc7d" category="paragraph">HA 状态的值可以是以下值之一： `ha` *** `mcc` *** `mcc-2n` *** `mCCIP` *** `non-ha`</block>
   <block id="37567fb6b8c5af5beeabf61a11cdb257" category="paragraph">After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.注意：如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。</block>
-  <block id="ce7f39a5b75c204d01ca7d8fab45334e" category="section-title">第 1 步：关闭节点</block>
   <block id="99028e2ad3b8cc332ccf01555ed73338" category="section-title">Step 2: Replace the RTC battery</block>
   <block id="3433227d36a185f8d1ec626e50a32a55" category="section-title">Step 5: Reinstall the controller module and setting time/date after RTC battery replacement</block>
   <block id="7bf65a3b0b2623ee81c0deee6045bfbb" category="section-title">9 月 4 日：安装控制器模块</block>
@@ -7468,7 +7369,6 @@
   <block id="d495410a7f7a2c72ad8aa73f5cdb0372" category="list-text"><block ref="d495410a7f7a2c72ad8aa73f5cdb0372" category="inline-link-rx"></block></block>
   <block id="7d8078ddedc71e65975b2f48e0a08873" category="inline-link">安装 MetroCluster 光纤连接配置</block>
   <block id="8711dbf45eeb8f6f1664a1d0fb9dd217" category="list-text"><block ref="8711dbf45eeb8f6f1664a1d0fb9dd217" category="inline-link-rx"></block></block>
-  <block id="20addf17550ae6e814bef2a079f3f96a" category="list-text"><block ref="20addf17550ae6e814bef2a079f3f96a" category="inline-link-macro-rx"></block></block>
   <block id="4b03e4a08b555f0fcfb41ec98179267c" category="paragraph">对于大多数配置（包括 ASA 配置），您可以从不同的内容格式中进行选择。</block>
   <block id="976b50556e35cc2ef44062a69fc6b2fc" category="list-text"><block ref="976b50556e35cc2ef44062a69fc6b2fc" category="inline-link-macro-rx"></block></block>
   <block id="1fc23df34c1ef373bc238879bf1082e5" category="list-text"><block ref="1fc23df34c1ef373bc238879bf1082e5" category="inline-link-macro-rx"></block></block>
@@ -7494,8 +7394,6 @@
   <block id="934d0bdda7a0d1a8822fd442720c5972" category="paragraph">有关如何将磁盘重新分配给新控制器的说明，请选择以下选项之一。</block>
   <block id="32f251bc81f643cafcff8ad711b81b00" category="open-title">选项 1 ：验证 ID （ HA 对）</block>
   <block id="a5d68caf62cce2afa4e8ca12ce07943a" category="open-title">选项 2 ：重新分配 ID （ MetroCluster 配置）</block>
-  <block id="8cb7716be47a4efa4afe82c12815cb79" category="list-text">暂停节点，在系统提示您确认暂停时按 `y` ： `ssystem node halt -node _node_name_`</block>
-  <block id="842cdd4dec84e54705b2d07255fbd559" category="list-text">如果适用，请暂停第二个节点以避免在 HA 对配置中出现可能的仲裁错误消息： `ssystem node halt -node _second_node_name_ -ignore-quorum-warnings true -skip-lif-migration-before-shutdown true`</block>
   <block id="7da65b5a10b69b45b490009ac07696ff" category="paragraph">出现提示时，请选择问题解答 `y` 。</block>
   <block id="c86ca2ad8b18f1b66eec5105c703ce0a" category="list-text">如果您有 AFF A700 HA 对，并且要热添加初始 NS224 驱动器架（ HA 对中不存在 NS224 驱动器架），则必须在每个控制器中安装核心转储模块（ X9170A ， NVMe 1 TB SSD ）以支持核心转储（存储核心文件）。</block>
   <block id="b979e87e6bde70f013c6af59e1fa73aa" category="list-text">如果您的 ASA HA 对支持 NS224 磁盘架，则可以使用此操作步骤。</block>
@@ -7641,15 +7539,10 @@
   <block id="3125087114c2490b7c6800800a39a990" category="summary">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。</block>
   <block id="bee540306d8719a7dd6a93184e6e4d86" category="paragraph">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。使用 <block ref="bae4385e599409430f11ef78df732c82" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="2721d15a1712238198ba49214a74054c" category="paragraph">您必须使用格式化为 fat32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。</block>
-  <block id="325cef81d6a2e0da8d766cd78aeedd6c" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 <block ref="5f63b18eda466634ee235fd0cb5a9d6a" category="inline-link-macro-rx"></block>。</block>
-  <block id="0dd5d9e032b1801c3d71568253325ccb" category="list-text">如果受损节点采用独立配置并出现 LOADER 提示符，请联系 <block ref="fbe7ba585c90dfc99f38e8779c97c5f3" category="inline-link-macro-rx"></block>。</block>
   <block id="f5275334d8eb3b5cf9ea9368de40cedc" category="list-text">如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置。</block>
   <block id="b1dfba2b33907e87a5254267b34a3e32" category="list-text">验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。</block>
-  <block id="46c9d33b77f9064bc8fbe1743c6118eb" category="list-text">您可以安全地关闭节点。</block>
-  <block id="54d84b238a1f0e6e83e06b2788451c8f" category="paragraph">+ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
   <block id="8179ceedf2aad3a2fafb48feb6a32bdb" category="list-text">如果命令因磁盘发生故障而失败，请物理断开故障磁盘，但将磁盘保留在插槽中，直到收到更换磁盘为止。</block>
   <block id="b6c33850022ae87ff1d2d111469a0da5" category="paragraph">：您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。</block>
-  <block id="e5a1c9478e22eed2b8ae96009afe24a1" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="72822038b68cdd9969cf7e86feb8bbff" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
   <block id="b8657f72d8b4e1ef5c7e2c082690279e" category="list-text"><block ref="b8657f72d8b4e1ef5c7e2c082690279e" category="inline-link-rx"></block></block>
   <block id="4d2e328d055378ef43067726132a9c56" category="list-text"><block ref="4d2e328d055378ef43067726132a9c56" category="inline-link-rx"></block></block>
   <block id="6675c229d440b5fa295266d2c66af8cb" category="list-text">如果 `Restored` 列显示 `yes` manually back up the on板 载密钥管理信息：</block>
@@ -7695,7 +7588,6 @@
   <block id="e4e83a2c82324a2a6d5448b03909ecfa" category="paragraph">您可以使用 <block ref="b22470d24dd615c99a09a118a80f7353" category="inline-link-macro-rx"></block> 用于安装和设置新系统的海报。The PDF poster provides step-by-step instructions with live links to additional content.</block>
   <block id="9eb9c148662d69c22bab62cf12a75812" category="paragraph">。 <block ref="36ed39ac78f542a04e83212067a271f3" category="inline-link-macro-rx"></block> 显示了运行 ONTAP 9.2 的系统的端到端软件配置。</block>
   <block id="ad569dbab7bcafe6ae2a28cd4d832fd1" category="list-text">如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示 `yes` ，请手动备份 OKM 信息：</block>
-  <block id="152f3adf69bffe0bb0658bb05364f89b" category="admonition">在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM/NVRAM ）中未写入的数据。根据您的系统，如果 NVMEM/NVRAM LED 闪烁，则 NVMEM/NVRAM 中有尚未保存到磁盘的内容。You need to reboot the node and start from the beginning of this procedure.If repeated attempts to cleanly shut down the node fail, be aware that you might lose any data that was not saved to disk.</block>
   <block id="d6cd7784b4e7b607424fb3f31dc53b2d" category="list-text">_health_ 节点是 _replacement_ 节点的 HA 配对节点。</block>
   <block id="7676556d14b3f7dfc7ddc885b585b132" category="list-text">在 _health_ 节点上，检查系统时间： `show date`</block>
   <block id="704ce524afb02bcf845b03e8ae369f8b" category="paragraph">如果修复被否决，您可以使用 ` override-vetoes` 参数重新发出 `MetroCluster heal` 命令。如果使用此可选参数，则系统将覆盖任何阻止修复操作的软否决。</block>
@@ -7712,7 +7604,6 @@
   <block id="4693df7fc44203724111e55493c1f236" category="paragraph">Terra cotta 释放按钮</block>
   <block id="a6b7b1f6b451582b4f3e4ee818b0b022" category="paragraph">将风扇滑入 / 滑出机箱</block>
   <block id="b9f8bf80fa7fab32aca8c28430b0b999" category="doc">更换实时时钟电池— AFF A900</block>
-  <block id="34de7ae9bee05647de754a7bdd5b00d5" category="section-title">第 2 步：打开控制器</block>
   <block id="4cc95bf9d5b32fe7d0352f48b0791827" category="list-text">向下滑动凸轮把手上的 Terra cotta 按钮，直到其解锁为止。</block>
   <block id="157fddeae41486bcaef21356a0ec5bb1" category="inline-link">动画—删除控制器</block>
   <block id="1e6a22a0167a906d5d500778e514adce" category="paragraph"><block ref="1e6a22a0167a906d5d500778e514adce" category="inline-link-rx"></block></block>
@@ -7722,7 +7613,6 @@
   <block id="f58146f61f30db6d5df364a7751fc65a" category="paragraph"><block ref="f58146f61f30db6d5df364a7751fc65a" category="inline-link-rx"></block></block>
   <block id="70f590ae3de022f014ffe169e236da55" category="image-alt">DRW a900 取出 RTC 电池</block>
   <block id="7ac0a68ff3a0c6b3beb7f03b58c8496d" category="paragraph">更换 RTC 电池后，您必须重新安装控制器模块。如果将 RTC 电池从控制器模块中取出超过 10 分钟，您可能需要重置时间和日期。</block>
-  <block id="4714e8423619d9cc43be300b5a406117" category="list-text">交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
   <block id="f019032ca5e4ee1339ef0bcd485f9c8d" category="summary">您必须卸下并打开控制器模块，找到并更换控制器中的启动介质，然后将映像传输到替代启动介质。</block>
   <block id="f42f050dc5269ad7b9f62abb5be6f335" category="doc">卸下控制器，更换启动介质并传输启动映像— AFF A900</block>
   <block id="2124dcd5f889b56f5d21d376ccfe034a" category="inline-link">动画—删除控制器</block>
@@ -7737,7 +7627,6 @@
   <block id="f57131a371345f28120c2c1540cdc3dd" category="paragraph">通过重新为存储和网络连接布线，继续更换用的操作步骤。</block>
   <block id="2f966eb8b55c870ae5de4a1ce0bc89cb" category="list-text">Verify that the cabling is correct by using<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block>。</block>
   <block id="0163a3b42f42d43e15610ad575decda8" category="admonition">系统 ID 和磁盘分配信息位于 NVRAM 模块中，该模块位于与控制器模块不同的模块中，不受控制器模块更换的影响。</block>
-  <block id="580fe6e7e310b3db810754c7c7927744" category="list-text">如果 _replacement_ 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： `halt`</block>
   <block id="1f8a127e3837fb66c1f3c8c02d8392cd" category="list-text">等待 savecore 命令完成，然后再发出交还。</block>
   <block id="c45c9fc04ba9ebcfc2085fb4d27cb308" category="paragraph">replacement_ 节点将收回其存储并完成启动。</block>
   <block id="e52d65661673e0d8112057f135b30a91" category="inline-link">手动交还命令</block>
@@ -7879,10 +7768,8 @@
   <block id="eeacd9b31ab0c2f60f1d13e5632f7f13" category="list-text">使用 saveenv 命令保存所做的更改。</block>
   <block id="29d4dec218aeaffabfed6dcc8fd1ad45" category="list-text">If your system has onboard keymanager, NSE or NVE configured, go to <block ref="39910b5f3ea1ee39d8059faae857cc98" category="inline-xref-macro-rx"></block></block>
   <block id="b52d8d1d987722da12d16df8a0a63541" category="list-text">在 LOADER 提示符处，输入 boot_ontap 命令。</block>
-  <block id="6c6d5b112e5f57cd557a4ce3f7e29059" category="list-text">使用 storage failover giveback -fromnode local 命令交还节点。</block>
   <block id="13b6e1ea33838db60037aa0b1c5c884b" category="list-text">在集群提示符处，使用 net int -is-home false 命令检查逻辑接口。</block>
   <block id="5e5ce8025b11752aab339bd61df121bc" category="paragraph">如果任何接口列为 "false" ，请使用 net int revert 命令将这些接口还原回其主端口。</block>
-  <block id="fdfb5a2b2c62652b047bacddf92e9188" category="list-text">将控制台缆线移至修复的节点，然后运行 version -v 命令以检查 ONTAP 版本。</block>
   <block id="21771aeeca9194c9c6cc4646a2230c93" category="list-text">如果您使用 storage failover modify -node local -auto-giveback true 命令禁用了自动交还，则还原自动交还。</block>
   <block id="eec41346a265cfb88abb54f51ec33fe7" category="summary">您可以通过 AFF A900 系统文档安装，设置和维护系统。</block>
   <block id="b35a00e75330322eefd710713ca83b02" category="doc">AFF A900 系统</block>
@@ -7891,8 +7778,6 @@
   <block id="4d365227a3a5ccf9886fa9c35ba6a99d" category="paragraph">NVRAM 模块由 NVRAM11 和 DIMM 组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.要更换发生故障的 NVRAM 模块，您必须将其从机箱中卸下，将 DIMM 移至更换模块，然后将更换的 NVRAM 模块安装到机箱中。</block>
   <block id="50b70636b9b845e1cca7db72fbdeec68" category="paragraph">要更换和 NVRAM DIMM ，您必须从机箱中卸下 NVRAM 模块，更换模块中发生故障的 DIMM ，然后重新安装 NVRAM 模块。</block>
   <block id="356bb2eaf8fe1f9955f9f22e00ddcb54" category="paragraph">由于系统 ID 源自 NVRAM 模块，因此，如果更换此模块，则属于此系统的磁盘将重新分配给新的系统 ID 。</block>
-  <block id="566dc57c04b76274e7168e53e1eea041" category="list-text">受损节点是指要在其中执行维护的节点。</block>
-  <block id="350cecd9af7d98cbf31c22fbd46e60fe" category="list-text">运行状况良好的节点是受损节点的 HA 配对节点。</block>
   <block id="e0ffee47cf76076ed4c6531bb6ebf63f" category="inline-link">动画—更换 NVRAM 模块</block>
   <block id="1877796130af55388822e2758225131e" category="paragraph"><block ref="1877796130af55388822e2758225131e" category="inline-link-rx"></block></block>
   <block id="dad23827b140b55a3121c86e5b861fad" category="image-alt">DRW a900 移动删除 NVRAM 模块</block>
@@ -7908,14 +7793,8 @@
   <block id="8d8e1d2c17edc6fe8262408b12b73390" category="list-text">如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller _ha-state_`</block>
   <block id="c36d25abc9dfdbc31228c74f7e654d0c" category="list-text">如果显示的机箱系统状态与您的系统配置不匹配，请为机箱设置 `HA` state ： `ha-config modify chassis _ha-state_`</block>
   <block id="f95e8e8b229c3aee97b205509f91df66" category="section-title">第 6 步：重新分配磁盘</block>
-  <block id="0855873e0fa5bed2d0067d6acae6c0df" category="paragraph">您必须在启动替代节点时确认系统 ID 更改，然后确认更改是否已实施。</block>
-  <block id="1a97de4b7c87981ce7420f6c88c32df0" category="list-text">等待更换节点控制台上显示 Waiting for giveback... 消息，然后从运行状况良好的节点上，验证是否已自动分配新的配对系统 ID ： `storage failover show`</block>
   <block id="8672de10e3d8295abd1be60e2569c4c6" category="list-text">保存任何核心转储： `ssystem node run -node local-node-name partner savecore`</block>
   <block id="544b7fcf1fe2aaedd577ba107a7f6a56" category="paragraph">您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node local-node-name partner savecore -s`</block>
-  <block id="7a18402f95cb86527db24f56d6baec40" category="list-text">从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode replacement_node_name`</block>
-  <block id="3217c14b22c3695ed301b94539bd2dbb" category="paragraph">替代节点将收回其存储并完成启动。</block>
-  <block id="18963b05f9f3bc779f544c26aae06ab9" category="paragraph">属于替代节点的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</block>
-  <block id="cfe787a999b8c200091f805ad9426e24" category="list-text">替代节点是灾难站点上磁盘的当前所有者。</block>
   <block id="7285c4012d903a86f08da4d4eb643a35" category="paragraph">请参见<block ref="1c9dcde47ee822b3ac120aae2f296f05" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="2a1253e1eb3f5fea69107948ef4c203d" category="summary">本主题以图形方式说明了从机架安装和布线到初始系统启动的典型系统安装。</block>
   <block id="cb0bd9965128fe9d9c7dc5fe35ba00fa" category="doc">快速步骤— AFF A900</block>
@@ -7933,9 +7812,7 @@
   <block id="8b786c8ea77512c3dbdaa8bd1b973696" category="paragraph"><block ref="8b786c8ea77512c3dbdaa8bd1b973696" category="inline-link-rx"></block></block>
   <block id="ad4cfe6fc2b7cb05bf19c4a07bb3ec19" category="list-text">出现 Press Ctrl-C for Boot Menu 时，按 `Ctrl-C` 以中断启动过程。</block>
   <block id="c63722af0556df99585d9c4de88eb02d" category="admonition">在启动过程中，您可以安全地响应 `y` 提示。</block>
-  <block id="86319021cdc9cc33274101862a78bb0d" category="list-text">如果显示一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的节点保持关闭状态。</block>
   <block id="beae2577508dff32956933c72e8af78a" category="paragraph">执行交还： `storage failover giveback -ofnode replacement_node_name` * 注意： * 如果禁用了自动交还，请使用 storage failover modify 命令重新启用它。</block>
-  <block id="ef27904ffe8486e4c45f99e2284dcde0" category="doc">关闭受损节点— AFF A900</block>
   <block id="4a11061a1e6cf88a01ac0a8a2d4682c6" category="doc">更换控制器模块硬件— AFF A900</block>
   <block id="a1828edb3cde53f0ba3419e2ebe71f61" category="paragraph">以下动画显示了将组件从受损控制器移至更换控制器的整个过程。</block>
   <block id="9af409fe069f89e48cd941abd1907054" category="inline-link">动画—将组件移至更换控制器</block>
@@ -7947,24 +7824,17 @@
   <block id="800c8750475f7f7221a9b7946bec8d10" category="list-text">选择选项以启动到 LOADER 。</block>
   <block id="eee1a85c64e17c1ca9ed30c1f544d35d" category="doc">更换控制器模块 - AFF A900</block>
   <block id="8b20a20371bd26b5083507f395cf24ab" category="paragraph">要更换受损的控制器模块，您必须关闭受损控制器，将内部组件移至更换用的控制器模块，安装更换用的控制器模块，然后重新启动更换用的控制器。</block>
-  <block id="c60c00789a015e4c8edc176d68ea53c2" category="list-text">在此操作步骤中，启动设备将从受损节点移至更换节点，以便更换节点在与旧控制器模块相同版本的 ONTAP 中启动。</block>
-  <block id="fd6012123eb1d03462c1cd48d50c92e6" category="list-text">受损节点是指要更换的节点。</block>
-  <block id="9e51ab12d26faade2a31d70da71c74f5" category="list-text">替代节点是指正在更换受损节点的新节点。</block>
-  <block id="537af5095a4992ae7e9026bd3ff008a6" category="list-text">运行正常的节点是运行正常的节点。</block>
   <block id="4e4fca0318eac6dc1315f4bad56eb1c6" category="summary">您可以将 I/O 模块添加到系统中，方法是在已完全填充的系统中将现有 I/O 模块更换为新的 I/O 模块，或者将新的 I/O 模块添加到机箱中的空插槽中。</block>
   <block id="a164244a6913c60772e9b9fbbbc17a4a" category="doc">添加 I/O 模块— AFF A900</block>
   <block id="e01b6c84aaebe2321eef7b7a933b171f" category="list-text">要无中断地添加 I/O 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖或卸下现有 I/O 模块，添加新的或更换的 I/O 模块，然后交还目标控制器。</block>
   <block id="329fe7c89a525def535e03c6dbc6f98f" category="section-title">选项 1 ：将 I/O 模块添加到插槽已打开的系统中</block>
   <block id="12f686a2d13fd4b93c3ef7fbc915cdcd" category="paragraph">您可以将 I/O 模块作为 NIC 或 NS224 存储架的存储模块添加到系统中的空模块插槽中。</block>
-  <block id="ff231ca484e594004f4ca93ecfa6683e" category="paragraph">控制台连接显示，接管完成后，节点将进入 LOADER 提示符。</block>
   <block id="c45c3f1f9d099575b7abd851e7ef8b33" category="list-text">向下旋转凸轮闩锁，直到其处于打开位置。</block>
   <block id="9a08e35bf8850515585d9bd11e96351b" category="list-text">安装 I/O 模块：</block>
   <block id="66efd9c2b6ae55ef5c1ff3be01c1fe65" category="list-text">将 I/O 模块与插槽边缘对齐。</block>
   <block id="35d6c9040844123446e81fce55da1548" category="list-text">将 I/O 模块滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销接合。</block>
   <block id="7ca78c6d47f27487175e23a00c576196" category="list-text">如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</block>
   <block id="3267c15e351fe1dd15721e79b072fedc" category="admonition">确保所有未使用的 I/O 插槽都安装了空格，以防止可能出现散热问题。</block>
-  <block id="2a5cd1f850ee79601be57448f10d9595" category="list-text">从加载程序提示符 _bybye 重新启动节点</block>
-  <block id="4d3b1425bbd62943a546a9f98dc3b7ef" category="list-text">从配对节点交还节点。`storage failover giveback -ofnode target_node_name`</block>
   <block id="05648a23fc430a3dcc4fb4c1fbb040cd" category="list-text">如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _&lt;node name&gt;_ -port _&lt;port name&gt;__ -mode network` 命令转换插槽以供网络连接使用。</block>
   <block id="2d881a27ee894664c2e7cc8d1795b104" category="list-text">如果您安装了存储 I/O 模块，请按照中所述安装 NS224 磁盘架并为其布线<block ref="8b1d41e5fd14f554e8b3490e0dfd47ae" category="inline-link-rx"></block>。</block>
   <block id="3e0887648c519f4a3c16a1c61b2e8ec3" category="section-title">选项 2 ：在没有打开插槽的系统中添加 I/O 模块</block>
@@ -7995,7 +7865,6 @@
   <block id="e10b0a89639d4224f22325c89418ef31" category="paragraph">要更换机箱，您必须卸下电源，风扇，控制器模块， I/O 模块， DCPM 模块， 和 USB LED 模块从受损机箱中取出受损机箱，从设备机架或系统机柜中取出受损机箱，将更换机箱安装到位，然后将组件安装到更换机箱中。</block>
   <block id="3f5fa7ca9a9d6129ce081b64cc104ab6" category="paragraph">要完成机箱更换，您必须完成特定任务。</block>
   <block id="32574a63619099277d431cfd465fea0b" category="list-text">设置机箱的 HA 状态： `ha-config modify chassis _ha-state_`</block>
-  <block id="3f91c59c59a1243cb3f176daf3c9c054" category="list-text">使节点恢复正常运行。</block>
   <block id="e81993a1d153ae6594cc7e0070093d6a" category="doc">移动并更换硬件— AFF A900</block>
   <block id="a30a15e944afabde046385685fec252c" category="paragraph">要更换机箱，您必须从旧机箱中卸下组件，然后将其安装到更换机箱中。</block>
   <block id="69c3b8cc95d3690f8df22cd6f70a3b78" category="inline-link">动画—删除 / 安装 PSU</block>
@@ -8014,7 +7883,6 @@
   <block id="8da7df8c5a74dcac7b5b9a5067e72313" category="image-alt">DRW a900 卸下更换 LED 模块</block>
   <block id="6b058f6aab05ab39cfb929fd3a13e5ad" category="paragraph">弹出模块。</block>
   <block id="fdbcf566dc8794b2a2c635f286edfa2b" category="paragraph">滑出机箱。</block>
-  <block id="6e7d5178a758393b97e367ca3da27d68" category="list-text">在每个节点开始启动时，如果您看到 Press Ctrl-C for Boot Menu 消息，请按 `Ctrl-C` 以中断启动过程。</block>
   <block id="9cc3abf99d341ddf4468a9377444f16d" category="doc">关闭受损控制器 - AFF A900</block>
   <block id="2aba05ee9a4093e5315b48903c27d988" category="doc">更换 I/O 模块 - AFF A900</block>
   <block id="915d49d9990f69f4d3152ddfea76d324" category="inline-link">动画—删除 / 安装 I/O 模块</block>
@@ -8024,17 +7892,13 @@
   <block id="8c2fb795497456b969ba9307ef6f84c8" category="list-text">在 LOADER 提示符处，重新启动节点： _bybye</block>
   <block id="b40d85db7a9de91cff53c5663c76daaf" category="list-text">使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
   <block id="65dc2e566ca79200d7c70bef0b947464" category="doc">OKM ， NSE 和 NVE 的启动后介质更换步骤— AFF A900</block>
-  <block id="a18eb452b8ba972a5f3a705a455fac35" category="list-text">在 LOADER 提示符处使用 boot_ontap 命令启动节点。</block>
   <block id="9a35117ce5f367da3a3ca5116d861d73" category="list-text">在启动菜单中，输入隐藏的命令 `re封装板载密钥管理器` ，然后在提示符处回答 `y` 。</block>
   <block id="1491d378fbbc2d9a6048e5b9b67a396a" category="paragraph">输入备份数据：</block>
-  <block id="da0c8baa25fcee791ffa412ec90044ca" category="list-text">将控制台缆线移动到配对节点并以管理员身份登录。</block>
   <block id="56b9aa57eb07c87d93d8f36e42537891" category="list-text">如果命令因 CIFS 会话打开而失败，请与客户确认如何关闭 CIFS 会话。</block>
   <block id="99cf22e04f567c5375349f8aa14becd4" category="list-text">如果命令因配对节点 " 未就绪 " 而失败，请等待 5 分钟，使 NVRAM 同步。</block>
   <block id="4d2b3834d59169dcbb17afc3c699e3ac" category="list-text">If the command fails because of an NDMP, SnapMirror, or SnapVault process, disable the process.有关详细信息，请参见相应的内容。</block>
-  <block id="a69e3df3fc089f72b8d4244ee2e280dc" category="list-text">在 clustershell 提示符处，输入 net int show -is-home false 命令以列出不在其主节点和端口上的逻辑接口。</block>
   <block id="01644ff2aec9678b64ae01d076703f1a" category="paragraph">如果任何接口列为 `false` ，请使用 net int revert 命令将这些接口还原回其主端口。</block>
   <block id="681ec8b91432585ef548a814edeadbb6" category="paragraph">转至第 7 步。</block>
-  <block id="894c5814238c15162364a7dd224a5a59" category="list-text">使用 storage failover giveback -fromnode local -only-cfo-aggregates true local 命令将控制台缆线移至配对节点并交还目标节点存储。</block>
   <block id="b17e311ccd8e21ff73506e54f24b6cfd" category="list-text">等待 3 分钟，然后使用 storage failover show 命令检查故障转移状态。</block>
   <block id="5af23d53e03e2919ad84a3f9112823ac" category="list-text">如果 `密钥管理器类型` = `external` 和 `restored` 列 = 除 `yes/true` 以外的任何其他内容，请使用 security key-manager external restore 命令还原身份验证密钥的密钥 ID 。</block>
   <block id="3796dde1eb4771fdc94b7b6dd6b04cbf" category="list-text">如果 `密钥管理器类型` = `板载` 和 `还原` 列 = `是 / 真` 以外的任何内容，请使用 security key-manager 板载同步命令重新同步密钥管理器类型。</block>
@@ -8103,17 +7967,14 @@
   <block id="043f87552b799b527c2dd72b0313e404" category="sidebar">更换控制器模块硬件</block>
   <block id="718b8a88a314d56b344c3895d896ab2a" category="sidebar">还原并验证系统配置</block>
   <block id="3182807165615fb651163be98cb522b4" category="sidebar">目标控制电源模块</block>
-  <block id="f3a683d1b48244546d607c15e8a715ab" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 <block ref="1baf9f7ecc4554f61d6168e4897ea002" category="inline-link-macro-rx"></block>。</block>
   <block id="8b2c2beff1e9638576a300eecae505bf" category="paragraph">转至 "Remove controller module" 。</block>
   <block id="9437c57fcfd0761eae87af1101035857" category="section-title">第 2 步：卸下控制器模块</block>
   <block id="74215317310e6608b7efcf980bd23ce9" category="list-text">注册（<block ref="3ae584b0f28c11edd6df40135d81b8ba" category="inline-link-macro-rx"></block>）您的系统。</block>
   <block id="94fc6517f8931e5bf7fa3db4d65a29f8" category="list-text">使用动画（<block ref="50ccb09f541207f76322daa7df8a0e52" category="inline-link-macro-rx"></block>）将笔记本电脑连接到管理交换机。</block>
   <block id="f65880020d1427cb243e627e392ce6ef" category="section-title">第 1 步：卸下控制器模块</block>
   <block id="0cb8c95aa83d9b7ae853da12e5bb125c" category="paragraph">Be sure to close the cam handle slowly so that it aligns correctly with the front of the drive carrier.安全时，它会发出卡嗒声。</block>
-  <block id="7c13f4f3a84cec8b802281259883339c" category="list-text">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 `false` ，则必须在关闭受损节点之前更正问题描述；请参见 <block ref="1baf9f7ecc4554f61d6168e4897ea002" category="inline-link-macro-rx"></block>。</block>
   <block id="3891e96240b27c2309a21f6387f98917" category="paragraph">转至 "Remove controller module" 。</block>
   <block id="063a6c27f42a062a6ece0163f4444fc3" category="list-text">如果您使用的是 NetApp 存储加密，则必须按照的 " 将 FIPS 驱动器或 SED 返回到未受保护的模式 " 一节中的说明重置 MSID <block ref="bb6c6af86c0c41920e9753bb15981800" category="inline-link-macro-rx"></block>。</block>
-  <block id="51d6de730b00c1cd722a3e380f269e57" category="paragraph">After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.</block>
   <block id="f126a748aa68879f9dcff06da9ee7d1e" category="paragraph"><block ref="f126a748aa68879f9dcff06da9ee7d1e" category="inline-link-macro-rx"></block></block>
   <block id="8dcb40a3ec5d5a042451105a7c18324f" category="list-text">使用动画（<block ref="aac3371ee9509f15dc58093b45cef9cb" category="inline-link-macro-rx"></block>）或完成控制器与交换机之间布线的分步说明：</block>
   <block id="1f9c146468982373cd5cf84ac4b891fa" category="list-text">使用动画（<block ref="28d905783e25429dd480a005ec25b827" category="inline-link-macro-rx"></block>）或完成控制器与交换机之间布线的分步说明：</block>
@@ -8127,13 +7988,9 @@
   <block id="600e46343a5c1b454fe4d6da206b4df4" category="list-text">使用动画 <block ref="acf2617804b40ea229d47bb7c91f9408" category="inline-link-rx"></block>）或完成控制器与交换机之间布线的分步说明：</block>
   <block id="3888a38ba771743aba436340db0ebf5c" category="list-text">使用动画 <block ref="81efed7d5e458f4dd1f779beb1039e7a" category="inline-link-rx"></block>）或将控制器模块连接到单个磁盘架的分步说明。</block>
   <block id="592c78e6a752254c571ef3ec19ab4f02" category="list-text">使用动画 <block ref="d27a08094aa14ff3e85358b5dea53060" category="inline-link-rx"></block>）将笔记本电脑连接到管理交换机。</block>
-  <block id="09ba8705674baa2bb12600bee5888bda" category="paragraph">从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`</block>
-  <block id="6c0c224b8e9179a7c25ea93532145021" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 ` * y*` 来启动此节点。</block>
   <block id="d7330da3fefbffbe126bbfae916b2005" category="list-text">等待 `savecore`命令完成，然后再发出交还。</block>
   <block id="03a45c592eebddeaf80cccbc66213075" category="paragraph">To restore your system to full operation, you must restore the NetApp Storage Encryption configuration (if necessary), and install licenses for the new controller, and return the failed part to NetApp, as described in the RMA instructions shipped with the kit.</block>
-  <block id="73d21b6023874255fc8bc704f7454d7e" category="paragraph">从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode impaired_node_name`</block>
   <block id="07bcf96175c4fb31a9a4900272f1bd18" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。``boot_ontap``</block>
-  <block id="f14e5f22bf7ba96b4c82cde849259a00" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。`boot_ontap`</block>
   <block id="588550e231fd9dcead167f2e3a8a2926" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用十字螺丝刀。</block>
   <block id="c2a9feacea3374ba5c6052aaa36c24d5" category="list-text">如果您使用 `storage failover modify` 命令禁用了自动交还，请将其还原。</block>
   <block id="8eea6ffadcece75bbf0826ed26885fb9" category="list-text">此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。</block>
@@ -8164,13 +8021,11 @@
   <block id="bec1622a1f566276141766f76e4b1d70" category="list-text"><block ref="bec1622a1f566276141766f76e4b1d70" category="inline-link-rx"></block></block>
   <block id="1ee623098df2f7856a034824be882999" category="inline-link">还原外部密钥管理加密密钥</block>
   <block id="e10bd7c646b5f37d42df52bab6df6c64" category="list-text"><block ref="e10bd7c646b5f37d42df52bab6df6c64" category="inline-link-rx"></block></block>
-  <block id="9552018736df32cfcfe01f2b7f8925ce" category="paragraph">在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查正在运行的 ONTAP 版本。</block>
   <block id="3c737345883504ebe7f0075c2e20f47e" category="list-text">如果命令输出中显示 &lt;lno-dury&gt; 或 &lt;1osno-dury&gt; ，则系统不支持 NVE ，请继续关闭控制器。</block>
   <block id="9b744d081289382cce38c59e4b6d3f76" category="list-text">验证集群中的任何卷是否正在使用 NVE ： `volume show -is-encrypted true`</block>
   <block id="7ab4c93a1ecb36778005e21c2d800f15" category="paragraph">If any volumes are listed in the output, NVE is configured and you need to verify the NVE configuration.如果未列出任何卷，请检查是否已配置 NSE 并正在使用此 NSE 。</block>
   <block id="9a8dafa2367c711dd5820d53a42508e9" category="list-text">验证是否已配置 NSE 并正在使用： `storage encryption disk show`</block>
   <block id="ad6e341d56390163e7fc8c5722a9e033" category="list-text">如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置和正在使用的。</block>
-  <block id="7e5f25479cc97ea11694e5af634fc675" category="list-text">如果未配置 NVE 和 NSE ，则不会使用 NSE 密钥保护任何驱动器，因此可以安全地关闭受损节点。</block>
   <block id="c9c0cd0bbd81ff9ac4cc17d3dad4fb7c" category="list-text">显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager key-query`</block>
   <block id="08c67f907b0f6c715c552d9ca4f21200" category="admonition">在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 `KMIP` ， `AKV` 和 `GCP` 。确认这些类型的过程与确认 `外部` 或 `板载` 密钥管理器类型相同。</block>
   <block id="2647b6895add9d235f2ff89a28db2364" category="list-text">验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key-query`</block>
@@ -8181,11 +8036,9 @@
   <block id="7762733471d5b473835d903a5329768b" category="list-text">From the LOADER prompt on the _replacement_ node, boot the node, entering `y` if you are prompted to override the system ID due to a system ID mismatch:``boot_ontap``</block>
   <block id="aae8c2f0334c863e9a3a9acb4beb0c27" category="list-text">从运行状况良好的节点查看旧系统 ID ： ``MetroCluster node show -fields node-systemID` ， dr-partner-systemID`</block>
   <block id="64b5850437a6c5ede6e9cff83bdaf98e" category="list-text">Enter the command to display the OKM backup information: `security key-manager backup show`</block>
-  <block id="f099c3d90bd5d885da1ab6eb776cdc1d" category="list-text">From the LOADER prompt on the _replacement_ node, boot the node, entering `y` if you are prompted to override the system ID due to a system ID mismatch: `boot_ontap`</block>
   <block id="edfea1a2881be4e7bcc10dfa9c8b3fc6" category="admonition">如果在卸下控制器模块时遇到困难，请将食指从内部穿过指孔（通过跨越臂）。</block>
   <block id="1262a5e3b93c18f0ba83db6f539c3e5b" category="paragraph">+ * 小心： *</block>
   <block id="96f3065963946bf7d4b37f70901cd2c8" category="paragraph">+ 主动推入可能会使电池再次退出发生原因。</block>
-  <block id="188f2d33c82265d54696d7fb9143f330" category="list-text">From the LOADER prompt on the _replacement_ node, boot the node, entering `y` if you are prompted to override the system ID due to a system ID mismatch:</block>
   <block id="f05dc6ae866c89472a3f7a9b59aa3e6a" category="list-text">使用 1 号磁性螺丝刀插入并拧紧启动介质上的螺钉。</block>
   <block id="aeafe9c2b3703d604c28ef5d13c03f76" category="list-text">使用 1 号磁性螺丝刀，插入并拧紧替代控制器模块正面和夹层卡上的螺钉。</block>
   <block id="4a2546eb9c2e57bf15ddf11202689d7c" category="section-title">选项 2 ： MetroCluster 中的系统</block>
@@ -8199,7 +8052,6 @@
   <block id="b301d69a6b0a95b2643c3f11f284ca2e" category="paragraph">You install a new mezzanine card if your system does not have one.。使用 1 号磁性螺丝刀，从控制器模块正面和覆盖夹层卡插槽的面板上卸下螺钉，并将其安全地放在磁铁上。。Remove the mezzanine card from the antistatic shipping bag and align it to the inside face of the controller module.。Gently align the mezzanine card into place.。使用 1 号磁性螺丝刀，插入并拧紧控制器模块正面和夹层卡上的螺钉。</block>
   <block id="ffdeab5945e241ee6f7c030295c9824b" category="paragraph">+ 注意：拧紧夹层卡上的螺钉时请勿用力，否则可能会使其发生裂纹。</block>
   <block id="5d43aadf0265bbe861cd90a52514a118" category="list-text">将控制器模块插入机箱</block>
-  <block id="914e957c63d00c0138857ee04fb05826" category="paragraph">The MetroCluster configuration takes a few minutes after the replacement to return to a normal state, at which time each node will show a configured state, with DR Mirroring enabled and a mode of normal."`MetroCluster node show -fields node-SystemID` " 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
   <block id="3520fe246261ba13b3370caf4fcfc36f" category="paragraph">检查环境变量后，您必须完成特定于还原板载密钥管理器（ OKM ）， NetApp 存储加密（ NSE ）和 NetApp 卷加密（ NVE ）的步骤。</block>
   <block id="2a5c64cf16afc052ecc2fa22a6498fd8" category="list-text">当系统提示您输入备份数据时，请根据要求粘贴您在本节开头捕获的备份数据。粘贴 `security key-manager backup show` 或 `security key-manager on板 载 show-backup` 命令的输出。</block>
   <block id="b1a9ca4c67f6b51a4dc8e3cdf1151948" category="admonition">数据是从 `ssecurity key-manager backup show` 或 security key-manager on板 载 show-backup` 命令输出的。</block>
@@ -8337,7 +8189,6 @@
   <block id="36db73d94b30571d5e78b69926c4ee10" category="doc">概述控制器模块更换— FAS8200</block>
   <block id="52a61ff1e81c104a11ce1a58a38dd667" category="doc">关闭控制器— FAS8200</block>
   <block id="a42edb5535752c77f564dff66261535b" category="doc">更换控制器模块硬件— FAS8200</block>
-  <block id="82430a05d3820aeaeb756230e94ee643" category="doc">检查板载加密— FAS8200</block>
   <block id="8351404e0633e21cf67cb22047391a59" category="doc">启动介质更换概述— FAS8200</block>
   <block id="f8a35054c2c3b7ffbacd941c8bc38831" category="doc">更换硬件— FAS8200</block>
   <block id="9bd3c449bc91b7e2a90bbc21bfbd5dcb" category="doc">更换控制器模块硬件— AFF A250</block>
@@ -8393,9 +8244,7 @@
   <block id="c1493a32213b959f5c9f8be86dfb9960" category="section-title">安装驱动器抽盒</block>
   <block id="02b9f44accc14d7238a1f0607ea50e30" category="section-title">连接缆线链</block>
   <block id="3fa677b8ecb97b0ae0d14f9ded5ed49a" category="doc">关闭受损控制器— FAS500f</block>
-  <block id="0d924155857f10f70fcab7b719b30403" category="summary">Before shutting down the impaired node, you need to check whether the system has either NetApp Volume Encryption \(NVE\) or NetApp Storage Encryption \(NSE\) enabled.If so, you need to verify the configuration.</block>
   <block id="a27042b0e01fb9b4136d2de6e8c1db73" category="doc">检查板载加密密钥— FAS500f</block>
-  <block id="da85ea64fba60265c821242ceefcb18c" category="list-text">如果命令输出中显示 &lt;lno-dury&gt; 或 &lt;1osno-dury&gt; ，则系统不支持 NVE ，请继续关闭控制器。Before shutting down the impaired node, you need to verify whether the system has either NetApp Volume Encryption (NVE) or NetApp Storage Encryption (NSE) enabled.If so, you need to verify the configuration.</block>
   <block id="ee2afac6b0f5165d1fc3096864ac9a41" category="doc">机箱更换概述— FAS500f</block>
   <block id="2bf23db896fc6ece8a7fd4c8db50ab7d" category="doc">控制器模块更换概述— FAS500f</block>
   <block id="609f905dd4d82082470b920d9a7de394" category="doc">更换控制器模块硬件— FAS500f</block>
@@ -8410,7 +8259,6 @@
   <block id="b5c7e371c94b117279a0ebbc15ea8bf3" category="doc">更换启动介质— AFF A700s</block>
   <block id="6f932d5d73e623ce4a8447916188b6ea" category="doc">更换控制器模块硬件— AFF A200</block>
   <block id="85b7f3e764e39327360545670dcedbf3" category="doc">控制器模块更换概述— AFF A200</block>
-  <block id="6652fbd1cfc662871893088153cbbc80" category="doc">关闭受损节点— AFF A200</block>
   <block id="2472604fcc7ccf02f05c6c66afaacc6c" category="doc">启动介质更换概述— AFF A200</block>
   <block id="5dfe4c7eb319ce6f2ebfab2e157e0c1b" category="doc">机箱更换概述— AFF A200</block>
   <block id="5fbbe4b96a5266b936c056caa3466c60" category="doc">还原并验证配置— AFF A200</block>
@@ -8436,4 +8284,257 @@
   <block id="059d31543d448499bd1a9c454a8d1ebb" category="sidebar">Cisco 9336C-x2</block>
   <block id="1c87a984d0a1c6881c9703209fd4341c" category="sidebar">共享配置中的 Cisco 936-x2</block>
   <block id="237aba816839b6ef546c40514ce24efe" category="sidebar">NetApp CN1610 交换机</block>
+  <block id="21a759f002cfc3385b168953dde9a34e" category="summary">用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双节点 MetroCluster 配置。</block>
+  <block id="825f13ad9fc8dc2bdd837adbced6f40f" category="paragraph">用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双控制器 MetroCluster 配置。</block>
+  <block id="238e9bea2bdd4f731b75d630cdf207a3" category="list-text">将运行状况良好的控制器设置为高级权限级别： `set -privilege advanced`</block>
+  <block id="9d237c44d908f71fb6254a95480574a2" category="list-text">将控制器恢复为管理员级别： `set -privilege admin`</block>
+  <block id="09224cb7028edd32132ee821e0073685" category="list-text">在系统提示重新启动控制器时，按 `y` 。</block>
+  <block id="324e677465a3eca81c578dca79975d76" category="list-text">将控制器显示 LOADER 提示符。</block>
+  <block id="da3aca27b9eb9a6e192b169e434a93ae" category="list-text">登录到配对控制器。</block>
+  <block id="fd8f15b053a3b35d3aaa40b5f46c7fbc" category="list-text">使用 `storage failover show` 命令确认目标控制器已准备好进行交还。</block>
+  <block id="5902a3ce474984c1a3dac5ba814ff133" category="list-text">将控制台缆线连接到配对控制器。</block>
+  <block id="432fbc80d952a560e7d764411dacca12" category="list-text">使用 `storage failover giveback -fromnode local` 命令交还控制器。</block>
+  <block id="8af929f5f2bb65d4fe36d9188a257bba" category="list-text">将控制台缆线移至已修复的控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。</block>
+  <block id="3a11addb86720d7891a7b14fea7f4776" category="paragraph">要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。</block>
+  <block id="22a3fad7c3cfdd379a652e4aa08aa70e" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="1baf9f7ecc4554f61d6168e4897ea002" category="inline-link-macro-rx"></block>。</block>
+  <block id="04b13459c31bdc128c187f2b882c3d74" category="list-text">从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`</block>
+  <block id="087b01deb1bef7c8b4ffe6fe81283666" category="list-text">将受损控制器显示为 LOADER 提示符：</block>
+  <block id="ebc5673f419bc9da94f2c2f001aaf3ff" category="cell">如果受损控制器显示 ...</block>
+  <block id="966128cd96d65546b8f10085658600df" category="paragraph">从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`</block>
+  <block id="ecf5a2418096a3bd4f4e05f201a5c846" category="paragraph">当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
+  <block id="0c2cb7a10e04116783dbfedc59540a50" category="paragraph">要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。</block>
+  <block id="230cc8b63d72a2bf47b7c87ead7ab0b8" category="list-text">您必须在此操作步骤 末尾保持电源处于打开状态，以便为运行正常的控制器供电。</block>
+  <block id="eec0e5f9d553c7b70402acd4568f1ec7" category="list-text">检查 MetroCluster 状态以确定受损控制器是否已自动切换到运行正常的控制器： `MetroCluster show`</block>
+  <block id="4176d047c40d8635a978efe76111589d" category="cell">如果控制器受损 ...</block>
+  <block id="bc926a90924e14c99dbad976cbc306f6" category="paragraph">从运行正常的控制器执行计划内切换操作： `MetroCluster switchover`</block>
+  <block id="8377db96ff49e2b3bab4737836a8e0ce" category="paragraph">控制器— perMalink ： A300/controller-replace-move-hardware.html 侧栏：侧栏关键字： AFF a300 ，移动控制器模块硬件摘要： " 要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 " -- = 更换控制器模块 - AFF A300 ：图标：字体： imagesdir ： ../media/</block>
+  <block id="c4d9687f431492e0a90b422288606306" category="paragraph">要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</block>
+  <block id="5882cd2f55c4bcf825c0675d56d4677a" category="list-text">一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。You can safely respond `y` to these prompts.</block>
+  <block id="6444f932b3d3398ef847475f65dde87a" category="paragraph">使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
+  <block id="399f225e1b570ae91edafe38ed1e3467" category="list-text">在每个控制器开始启动时，如果您看到消息 `Press Ctrl-C for Boot Menu` ，请按 `Ctrl-C` 以中断启动过程。</block>
+  <block id="1082bfd13ce3c25ccfc85ed699b54126" category="paragraph">诊断过程中的所有命令都是从要更换组件的控制器发出的。</block>
+  <block id="a9aa9ee572e50473b1c62b2a894e2043" category="list-text">如果要维护的控制器不在 LOADER 提示符处，请执行以下步骤：</block>
+  <block id="2f550a4de949e9364b8ac6aefff7f6b7" category="list-text">控制器启动到维护模式后，暂停控制器： `halt`</block>
+  <block id="e467309a2d5b6f98a98b6db8bed54bfc" category="list-text">一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。</block>
+  <block id="9130288fde26913b149c87c0c3f09798" category="paragraph">控制器将显示 LOADER 提示符。</block>
+  <block id="e98eb54c273dabf46f95d865ffe06863" category="list-text">从 LOADER 提示符处启动控制器： `bye`</block>
+  <block id="ff8f74aeadb5ed14c3562a83de710ce2" category="list-text">使控制器恢复正常运行：</block>
+  <block id="72b23f149d410394a99402b17b524532" category="cell">如果控制器位于 ...</block>
+  <block id="526e7908f5d2d796c1fb3cb3bcb64b9c" category="list-text">如果受损控制器属于 HA 对，请从运行正常的控制器的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`</block>
+  <block id="991329d4a586a51cc0b3ddeb5fcff6ed" category="paragraph">+ 当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
+  <block id="344b944036d11848a4eeafa033713d79" category="list-text">如果您的系统位于 HA 对中，运行状况良好的控制器必须能够接管正在更换的控制器（在本操作步骤 中称为 "`受损控制器` " ）。</block>
+  <block id="e92b8f690c724e2a393908da2704794c" category="paragraph">如果这是您应使用的操作步骤 ，请注意，四节点或八节点 MetroCluster 配置中的控制器的控制器替代操作步骤 与 HA 对中的控制器替代相同。No MetroCluster-specific steps are required because the failure is restricted to an HA pair and storage failover commands can be used to provide nondisruptive operation during the replacement.</block>
+  <block id="915ea02a4ae87fc1e12a79bc77d53d29" category="list-text">此操作步骤 包含根据系统配置自动或手动将驱动器重新分配给 _replacement_ 控制器的步骤。</block>
+  <block id="c72dc8cc96be75f0f7be2979a08e7a3c" category="list-text">在此操作步骤 中，启动设备将从受损控制器移至 _replacement_ 控制器，以便 _replacement_ 控制器在与旧控制器模块相同版本的 ONTAP 中启动。</block>
+  <block id="93693d8b94899fb843897083df3dfad1" category="list-text">受损控制器是指要更换的控制器。</block>
+  <block id="8fc18417b34debbf06d43a8004e7af83" category="list-text">_replacement_ 控制器是一个新控制器，用于更换受损的控制器。</block>
+  <block id="adb78e1174ae799e5d64ba90539a8d1a" category="list-text">_health_ 控制器是运行正常的控制器。</block>
+  <block id="d1e26bcc4cbc247391931bd56755d0de" category="list-text">您必须始终将控制器的控制台输出捕获到文本文件中。</block>
+  <block id="8e7b0fd27b2fda4467ea9b412f6b1995" category="list-text">使用 `show date` 命令检查运行状况良好的控制器上的日期和时间。</block>
+  <block id="e09ab6999180d4e7f9a47f740144761f" category="list-text">在目标控制器上的 LOADER 提示符处，检查时间和日期。</block>
+  <block id="988240067960851699de08084d42c5e5" category="list-text">确认目标控制器上的日期和时间。</block>
+  <block id="b35de7de64d5c3d839898e892a43a0c4" category="list-text">在 LOADER 提示符处，输入 `bye` 以重新初始化 PCIe 卡和其他组件，并让控制器重新启动。</block>
+  <block id="c06b17164dae22b3eba23ea33792b57c" category="list-text">交还控制器的存储，使其恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`</block>
+  <block id="27be5ff3320dd506741c0dbef8e1a1d9" category="list-text">将控制台缆线连接到目标控制器。</block>
+  <block id="58381527d135a27a6bde4b5bd05e7a8a" category="list-text">在 LOADER 提示符处使用 `boot_ontap` 命令启动控制器。</block>
+  <block id="be909ce65bf8d6df63809bd8c8368b35" category="paragraph">将控制器启动到启动菜单： `boot_ontap menu`</block>
+  <block id="bba0a4490b9b5d901440b4efe0a7eb1e" category="list-text">出现消息： Do you donn to halt this controller rather than wait [y/n] ？, enter: `y`</block>
+  <block id="1510bdf514dfae1723f7a1f6b0ff03db" category="list-text">将控制台缆线移至配对控制器，然后以管理员身份登录。</block>
+  <block id="9b1d1f16f124136fae5f19f7571be4e8" category="list-text">将控制台缆线移至目标控制器。</block>
+  <block id="e5a640f18574a8775849c862d1047203" category="list-text">将控制台缆线移至配对控制器。</block>
+  <block id="3626acf8f3fb043db8b4ec1fa9c88689" category="list-text">使用 `storage failover giveback -fromnode local` 命令交还目标控制器。</block>
+  <block id="fbca918423039255e9a6e82d918f66a5" category="list-text">在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主控制器和端口上的逻辑接口。</block>
+  <block id="c1f75c987a465b1cc4e36d81f98dc0f6" category="list-text">将控制台缆线移至目标控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。</block>
+  <block id="22a48d4647a1c5395be2a1c92346ddfe" category="list-text">使用 `storage failover giveback -fromnode local -only-cfo-aggregates true local` 命令将控制台缆线移至配对控制器并交还目标控制器存储。</block>
+  <block id="57280142f53f2468b01205668a497bd7" category="list-text">将控制台缆线移至目标控制器，然后运行 version ` -v 命令` 以检查 ONTAP 版本。</block>
+  <block id="4e413e090ef125caf56dbe5368109175" category="list-text">如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `halt`</block>
+  <block id="a6662115bfcf9aca738911273292362c" category="list-text">验证控制器上是否没有硬件问题： `sldiag device status -long -state failed`</block>
+  <block id="eebf63bcf7fcba78ebd7e303619a4e75" category="list-text">将每个控制器启动至维护模式：</block>
+  <block id="0ac47fa5e6b32bbd32bc23dda31f6f48" category="paragraph">控制器一旦完全安装到机箱中，就会开始启动。</block>
+  <block id="742cf561af7f07544ddf9f3e66121452" category="paragraph">如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停控制器以启动到加载程序。</block>
+  <block id="c8dc5733d35c41c184dc2e9c60fd8a12" category="admonition">您配置的目标端口是在通过网络连接还原 var 文件系统期间，用于与运行正常的控制器中受损的控制器进行通信的目标端口。You can also use the e0M port in this command.</block>
+  <block id="8db7a5b6ece2af3b075639e41512d618" category="section-title">选项 1 ：关闭控制器</block>
+  <block id="b5d03ef67a171c85bf4bd311e2fd75df" category="paragraph">您必须先关闭机箱中的控制器或控制器，然后再将其移至新机箱。</block>
+  <block id="c53eb92ae6b734f0f5b5e257acb152cb" category="list-text">如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 `false` ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="1baf9f7ecc4554f61d6168e4897ea002" category="inline-link-macro-rx"></block>。</block>
+  <block id="93ff4b8a35c5f08ad3e97fdc9983948e" category="paragraph">集群中的两个控制器</block>
+  <block id="a0540c64b7001eb9739a6eed390808ac" category="paragraph">集群中有两个以上的控制器</block>
+  <block id="853a8c6f8383ee1dc5f3826af9ff6797" category="list-text">暂停控制器，在系统提示您确认 halt 时按 `y` ： `ssystem node halt -node _node_name_`</block>
+  <block id="253a50052b60be1951a606aa7c311ba2" category="admonition">在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM/NVRAM ）中未写入的数据。根据您的系统，如果 NVMEM/NVRAM LED 闪烁，则 NVMEM/NVRAM 中有尚未保存到磁盘的内容。您需要重新启动控制器并从此操作步骤 开始。如果反复尝试完全关闭控制器失败，请注意，未保存到磁盘的任何数据可能会丢失。</block>
+  <block id="8373aa3aac3c8f18564812bfcb55615a" category="list-text">如果适用，请暂停第二个控制器以避免在 HA 对配置中出现可能的仲裁错误消息： `ssystem node halt -node _second_node_name_ -ignore-quorum-warnings true -skip-lif-migration-before-shutdown true`</block>
+  <block id="4c10c8d9f18f0c8ba6fc3ea32f7beee4" category="list-text">如果采用 HA 配置，请在第二个控制器上重复上述步骤。</block>
+  <block id="6d21dbcd6d30fc2426dd0b077d719da5" category="summary">在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。</block>
+  <block id="d1614290531967ae3b3623d71b4ed961" category="paragraph">在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查正在运行的 ONTAP 版本。</block>
+  <block id="dcaee2dcae546228e31a0898bd961734" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="5f63b18eda466634ee235fd0cb5a9d6a" category="inline-link-macro-rx"></block>。</block>
+  <block id="6d4079af860d745f44d13bfe9834115d" category="list-text">检查受损控制器的状态：</block>
+  <block id="6f0786e478994e04512bb55e945ab79c" category="list-text">如果受损控制器处于登录提示符处，请以 `admin` 身份登录。</block>
+  <block id="1f543f99cb43496b3a35f9786089c979" category="list-text">如果受损控制器位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的控制器上。</block>
+  <block id="52172eb9e905726c940b5894e2ccc281" category="list-text">如果受损控制器采用独立配置并出现 LOADER 提示符，请联系 <block ref="fbe7ba585c90dfc99f38e8779c97c5f3" category="inline-link-macro-rx"></block>。</block>
+  <block id="efed560995ba912dfc2aa959620707ff" category="list-text">使用 `version -v` 命令检查受损控制器（如果已启动）或配对控制器（如果受损控制器已关闭）上运行的 ONTAP 版本：</block>
+  <block id="24b6214418480e5248eaed7a69ead79c" category="list-text">如果受损控制器属于 HA 配置，请禁用从运行状况良好的控制器自动交还： `storage failover modify -node local -auto-giveback false` 或 `storage failover modify -node local -auto-giveback-after-panic false`</block>
+  <block id="5a9f897d2d5283081378f66d6ed3cb7a" category="paragraph">在关闭受损控制器之前，您需要检查系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.</block>
+  <block id="a66e142cebcfd6f8d676e487cf4cc04c" category="list-text">将控制台缆线连接到受损的控制器。</block>
+  <block id="d13e2b9934c9ee03ca8acee53a7c7ab8" category="list-text">如果未配置 NVE 和 NSE ，则可以安全地关闭受损控制器。</block>
+  <block id="a4dd34bde59d47a4d8ab4374389ea809" category="list-text">如果 `Restored` 列显示 `yes` 且所有密钥管理器显示 `Available` ，则可以安全地关闭受损的控制器。</block>
+  <block id="215eb27cc249e5b8e5b527e07342268c" category="list-text">关闭受损控制器。</block>
+  <block id="b0ca95eab963c35c3d977c396c4acc7d" category="list-text">您可以安全地关闭控制器。</block>
+  <block id="9e81e760541928935bc75be3ec2823a3" category="list-text">您可以安全地关闭控制器。</block>
+  <block id="dbb06a74442cb70fc4d49f092b265be8" category="paragraph">在关闭受损控制器之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.</block>
+  <block id="d592a26ccf1ea8ee5faa30f916fd2fb6" category="list-text">如果未配置 NVE 和 NSE ，则不会使用 NSE 密钥保护任何驱动器，因此可以安全地关闭受损的控制器。</block>
+  <block id="bc06dd585ab0c8107e022844d1397b0b" category="list-text">如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损的控制器。</block>
+  <block id="f5febbe164036410d93a5fc97b5bb033" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。</block>
+  <block id="099c2029bb447e3da034bae16f902b90" category="cell">如果受损控制器显示 ...</block>
+  <block id="ec47857c388eff31e9962f4f2e2ce2e5" category="paragraph">从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode impaired_node_name`</block>
+  <block id="653275a6740924b891457d92a9cbc8ef" category="section-title">第 1 步：关闭控制器</block>
+  <block id="e7715fbdf353439bc04c101e641a6a00" category="list-text">如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `ssystem node halt -node node_name`</block>
+  <block id="736818ee29ba3143ee0a9e06231deb0e" category="list-text">运行正常的控制器必须能够接管要更换的控制器（在本操作步骤 中称为 "`受损控制器` " ）。</block>
+  <block id="dc034442a42b074e0609ba09ebc77d0e" category="paragraph">After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
+  <block id="af645d133cdcbcc30956c0bb802a4d34" category="list-text">记录屏幕上显示的受损控制器的 IP 地址。</block>
+  <block id="c619d3b97fd49137c962a0b53f5ded67" category="list-text">在高级权限级别的配对控制器中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`</block>
+  <block id="b070946475ca76a9891046ef46e3262c" category="list-text">如果还原成功，请在系统提示您使用还原的副本时按受损控制器上的 `y` 。</block>
+  <block id="0d1483a76a1f71437aa9197bfa562122" category="list-text">当您看到确认备份操作步骤 成功时，按 `y` ，然后在系统提示您重新启动控制器时按 `y` 。</block>
+  <block id="7f5d701a64318868c16d00d43b911d93" category="list-text">重新启动控制器。</block>
+  <block id="dc2fb67295c2f173a720e03d73f0e627" category="list-text">在重新启动的受损控制器显示 `Waiting for giveback...` 消息的情况下，从运行正常的控制器执行交还：</block>
+  <block id="ff02ca9b372ecd5e7de683ed182d26e4" category="paragraph">受损控制器显示 `waiting for giveback...` 消息后，从运行正常的控制器执行交还：</block>
+  <block id="9bdcceabcaeaceb62327dbad774d83fd" category="list-text">从运行状况良好的控制器： `storage failover giveback -ofnode partner_node_name`</block>
+  <block id="7ca421ecacbe47c97cfdc6f02bceeb1b" category="paragraph">受损控制器将收回其存储，完成启动，然后重新启动，并再次由运行正常的控制器接管。</block>
+  <block id="3228093fe4dbdd24659a9a88f379aa09" category="list-text">在运行正常的控制器上退出高级权限级别。</block>
+  <block id="6e831181b071042488de60792bba5661" category="paragraph">If the storage system is in an HA pair, the system ID of the new controller module is automatically assigned to the disks when the giveback occurs at the end of the procedure.您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。</block>
+  <block id="16d0a8dc4c1c1d9b90797e5493036465" category="list-text">如果 _replacement_ 控制器处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`</block>
+  <block id="38c6311b7d9271edd32d4452d105b150" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``</block>
+  <block id="fd5e721decb7ad09b3247ff55a584c6a" category="list-text">请等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行正常的控制器中验证是否已自动分配新的配对系统 ID ： `storage failover show`</block>
+  <block id="f3c1f72d4855105033eafe078ecc921c" category="paragraph">在命令输出中，您应看到一条消息，指出受损控制器上的系统 ID 已更改，其中显示了正确的旧 ID 和新 ID 。In the following example, node2 has undergone replacement and has a new system ID of 151759706.</block>
+  <block id="2b740998f7a4b1a34ad6d12ae61f81fd" category="list-text">在运行正常的控制器中，验证是否已保存任何核心转储：</block>
+  <block id="df0e46df74ce50bde919f4a670392378" category="list-text">交还控制器：</block>
+  <block id="af998da379a6b1d6bab64a94ebad8ee0" category="list-text">从运行正常的控制器中，交还更换的控制器的存储： `storage failover giveback -ofnode _replacement_node_name_`</block>
+  <block id="e83f2f623a5ecd01a2bc3c69f3cce4cb" category="paragraph">_replacement_ 控制器将收回其存储并完成启动。</block>
+  <block id="1cd605139bf377c8532c404fdbca04f0" category="paragraph">属于 _replacement_ 控制器的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</block>
+  <block id="10f72301134f1f2b78e11983dd3c4654" category="list-text">验证每个控制器是否存在所需的卷： `vol show -node node-name`</block>
+  <block id="e5fb91f466e4f9bded3cae7f56b2a15e" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： `storage failover modify -node replacement-node-name -onreboot true`</block>
+  <block id="71f1fa980323b48bfcd7c23a6851e346" category="list-text">将控制台缆线移至配对控制器，然后以 "admin" 身份登录。</block>
+  <block id="6fb459fd46b17c9a37607abf2db84056" category="section-title">第 1 步：在 ONTAP 中为替代控制器安装许可证</block>
+  <block id="3b3499594ea137775f7c8cecc49f8655" category="paragraph">* 如果控制器位于 HA 对中 * ，请执行交还： `storage failover giveback -ofnode _replacement_node_name_`</block>
+  <block id="cb26d26c354a0f934343a4ed5435dc22" category="paragraph">* 如果控制器采用独立配置 * ，请继续执行下一步。无需执行任何操作。</block>
+  <block id="51e6a2fb5c6f27756e90e2666efd984d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。完成 NVE 或 NSE 任务后，您需要关闭受损控制器。</block>
+  <block id="d1342671e7a1aeffea6df3cd0214be86" category="list-text">此操作步骤会造成系统中断。对于双控制器集群，多节点集群中的服务将完全中断，部分中断将会发生。</block>
+  <block id="4fa4535552a76ba6abb695db42b48161" category="paragraph">如果这是您应使用的操作步骤 ，请注意，四控制器或八控制器 MetroCluster 配置中控制器的控制器替代操作步骤 与 HA 对中的控制器替代相同。No MetroCluster-specific steps are required because the failure is restricted to an HA pair and storage failover commands can be used to provide nondisruptive operation during the replacement.</block>
+  <block id="1c35b5fd0eb2c66f98019f6d2ea253e2" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="5ad5e3145183bec8ce765d99b2db775a" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
+  <block id="f360cbc0b1776cef715c46bbf963f211" category="paragraph">controller-- perMalink ： fas8200/ bootmedia-encryption-preshutdown-checks.html 边栏：边栏关键字： fas8200 ，板载加密密钥的预关闭检查摘要： " 在关闭受损控制器并检查板载加密密钥状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 " -- = 检查板载加密 - FAS8200 ：图标：字体： imagesdir ： ../media/</block>
+  <block id="c83b964c98e24aa342fa8069ffd85dd0" category="list-text"><block ref="c83b964c98e24aa342fa8069ffd85dd0" category="inline-link-macro-rx"></block></block>
+  <block id="f51c8858085d7dcfe4d79d9774f8270d" category="paragraph">您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。</block>
+  <block id="58d1979204cdde4ca641ddc56ae5fe91" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。`boot_ontap`</block>
+  <block id="4d3408827df16f2063082b26e489e785" category="summary">要关闭受损控制器模块，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。</block>
+  <block id="f3ccc6a1c062dbba61f459b0e8b57597" category="list-text">如果您使用的是 SAN 系统，则必须已检查受损控制器 SCSI 刀片式服务器的事件消息（事件日志显示）。</block>
+  <block id="d9d59ddb1bc0ff1000e4664413e713fe" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：</block>
+  <block id="6887fe4f6ef917daf3d3f454ae837e99" category="list-text">如果系统采用 MetroCluster 配置，请监控控制器的状态： `MetroCluster node show`</block>
+  <block id="e8d2a192788fc79eb80ab29e07304094" category="paragraph">在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个控制器将显示已配置状态，并启用 DR 镜像并显示正常模式。The `metrocluster node show -fields node-systemid` command output displays the old system ID until the MetroCluster configuration returns to a normal state.</block>
+  <block id="82f6c604031bc8c9d9a996a31fa2e842" category="list-text">如果控制器采用 MetroCluster 配置，则根据 MetroCluster 状态，如果原始所有者是灾难站点上的控制器，请验证 DR 主 ID 字段是否显示磁盘的原始所有者。</block>
+  <block id="83df237f35401e5686540721c993131c" category="list-text">_replacement_ 控制器是灾难站点上磁盘的当前所有者。</block>
+  <block id="ce6027c9ce6b680c0adbb4a4d26235ed" category="list-text">如果您的系统采用 MetroCluster 配置，请验证是否已配置每个控制器： `MetroCluster node show - fields configuration-state`</block>
+  <block id="a99f211848e0a3fa987df05f364dcc0b" category="doc">关闭控制器 - AFF A250</block>
+  <block id="3df4b609e8276258189914063ffb17c2" category="list-text">请务必在正确的控制器上应用以下步骤中的命令：</block>
+  <block id="6ecaf183574ece325cced3bb483dfdf9" category="list-text">受损节点是指要在其中执行维护的控制器。</block>
+  <block id="d5e5a42c3659480b5bd0d7fe962a3e0d" category="list-text">_health_ 节点是受损控制器的 HA 配对节点。</block>
+  <block id="aae78f4a3d47a08dddca98a632d4a75f" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 。</block>
+  <block id="852ccbca31b38b90e5621b15b3d30e1b" category="paragraph">接管或暂停受损控制器： `storage failover takeover -ofnode _impaired_node_name_` 当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
+  <block id="fdd4547d2c765390cc53d47d00b7ed31" category="list-text">如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `ssystem node halt -node _node_name_`</block>
+  <block id="bf333756fca94003818a0db8ced6f7d9" category="list-text">交还控制器的存储，使其恢复正常运行： `storage failover giveback -ofnode ` impaired_node_name_``</block>
+  <block id="855366b23fbc8af0c5a01bb5529b380c" category="list-text">_replacement nodge_ 是一个新控制器，用于更换受损的控制器。</block>
+  <block id="ed5c161a1791c86ccb545adc60653369" category="paragraph">如果您未收到此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后 `halt` 控制器以启动到加载程序。</block>
+  <block id="aeb37e440c5f2e1087a4396fdd1d260b" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
+  <block id="c41b3a61f99c2acfc4df4b56cbc1ea35" category="section-title">选项 2 ：关闭双节点 MetroCluster 配置中的控制器</block>
+  <block id="1608b002e3cca4d10cc4ab135e0d2578" category="list-text">控制器启动到维护模式后，暂停控制器：</block>
+  <block id="1b5c5dedf8f50eb0bb4d148da7d3ebda" category="list-text">将运行状况良好的控制器设置为高级权限级别：</block>
+  <block id="3aa5ba6c23dcd3a8c88fb26dd933a5e4" category="list-text">将控制器恢复为管理员级别：</block>
+  <block id="34787acdddb9fc6fe721e719a262d6aa" category="list-text">当系统提示重新启动控制器时，按 ` * y*` 。</block>
+  <block id="ca305e69a315b30dad8d789c197489f9" category="doc">关闭控制器 - AFF C190</block>
+  <block id="29a2d452ed2d564c438c1ea95d20a0a8" category="list-text">如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器：</block>
+  <block id="4e8183e059c2de281c12f4e36b356634" category="list-text">验证控制器上是否没有硬件问题：</block>
+  <block id="ab16b7659f1f3d151837f3f6574edbce" category="paragraph">要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
+  <block id="f9d753fddfdd4cf75bdcf826d545a576" category="list-text">受损 _ 控制器是要在其中执行维护的控制器。</block>
+  <block id="e4107ee9d71fad92265b6222f2822ad8" category="list-text">_health_ 控制器是受损控制器的 HA 配对控制器。</block>
+  <block id="ecc93de5d9e6d1de2c8f307f37c933d1" category="list-text">如果 _replacement_ 控制器处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符：</block>
+  <block id="1ece66f8bf58294a3a5da700df5daffe" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 ` * y*` 。</block>
+  <block id="ad40e97175b514d2c81a91067ad04ed7" category="list-text">等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行状况良好的控制器中验证是否已自动分配新的配对系统 ID ：</block>
+  <block id="65ae07541c754093eda9cd898cf890f7" category="list-text">在运行正常的控制器中，交还更换后的控制器的存储：</block>
+  <block id="2e02c080662f8fd550785b87be3c1144" category="list-text">验证每个控制器是否存在预期卷：</block>
+  <block id="f7e34e40e37b03149dbadb73b8513476" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它：</block>
+  <block id="86c3969f421b58d4b4b270ed1fb7b003" category="section-title">第 1 步：在 ONTAP 中为替代控制器安装许可证</block>
+  <block id="2a0338d4b284b44bbd6e5b5a0e564e4f" category="paragraph">安装 `image_name.tgz` 后，系统会提示您从运行正常的控制器还原备份配置（ `var` 文件系统）。</block>
+  <block id="922768ec58831cabe5b129a1aa26dc78" category="paragraph">您可以在控制器重新启动后开始使用系统。</block>
+  <block id="fec1ee82d47382a6acadcb4104dd3ce3" category="paragraph">在受损控制器显示 `Waiting for Giveback...` 消息后，从运行正常的控制器执行交还：</block>
+  <block id="b93b2e31999c0ef2197b846adf6fd32d" category="list-text">从运行正常的控制器执行交还：</block>
+  <block id="85e5c14e4c98322df87028e0cafd79a7" category="paragraph">这将启动将受损控制器聚合和卷的所有权从运行状况良好的控制器交还给受损控制器的过程。</block>
+  <block id="31cf13c61d40269ec7d8237264ca25ba" category="open-title">大多数系统</block>
+  <block id="5ab3b65334d9648ac44bf62025764ce2" category="section-title">第 2 步：卸下控制器</block>
+  <block id="f1eb9bf0f474a83bbe6d11b59f16da8c" category="list-text">交还控制器的存储，使其恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
+  <block id="bced3f55c14cfa1d16ca32cbbb0b1d97" category="list-text">将受损控制器设置为高级权限级别： `set -privilege advanced`</block>
+  <block id="19e5239645b6945e8296ea6ae040ed4c" category="list-text">将受损控制器恢复为管理员级别： `set -privilege admin`</block>
+  <block id="fc86636cc733253cec13dbbddcd9f251" category="list-text">当系统提示重新启动受损控制器时，按 `y` 。</block>
+  <block id="35e25520eae4191769a5f17749607c22" category="list-text">将受损控制器显示为 LOADER 提示符。</block>
+  <block id="5d5be5511db4bca75b01ab22c4adf4ce" category="list-text">使用 `storage failover show` 命令确认目标已准备好进行交还。</block>
+  <block id="6895f6bac75ce22d9b20367054acb577" category="list-text">使用 storage failover giveback -fromnode local 命令交还控制器。</block>
+  <block id="05de3ff101e97b558e9ecd1a48f59f80" category="list-text">使用适用于您的配置的相应操作步骤 将控制台缆线移至修复后的关闭控制器或接管受损控制器。并运行 version -v 命令以检查 ONTAP 版本。</block>
+  <block id="c03d9a33e888c8ba0969d655b0bb1791" category="list-text">使控制器恢复正常运行。</block>
+  <block id="0b0ce175074093bb880164e8608f30ab" category="list-text">在 LOADER 提示符处使用 boot_ontap 命令启动控制器。</block>
+  <block id="c44f1e5dca108a88d3a5c0122cfaad60" category="list-text">将控制台缆线移至配对控制器并以管理员身份登录。</block>
+  <block id="6c8465bcaf5ce5fddf9eade0934b0fcf" category="list-text">在 clustershell 提示符处，输入 net int show -is-home false 命令以列出不在其主控制器和端口上的逻辑接口。</block>
+  <block id="3e18dc9be2b2d52bb3684dd323591a77" category="list-text">使用 storage failover giveback -fromnode local -only-cfo-aggregates true local 命令将控制台缆线移至配对控制器并交还目标控制器存储。</block>
+  <block id="68a1306a8c08262df17717b7309d7609" category="list-text">如果您的系统位于 HA 对中，则配对控制器必须能够接管与要更换的 NVRAM 模块关联的控制器。</block>
+  <block id="1e27080aaa4839341247d89fa27230f6" category="list-text">受损控制器是指要在其中执行维护的控制器。</block>
+  <block id="cb82be680779cb2f6fe87d5303395ca3" category="list-text">运行正常的控制器是受损控制器的 HA 配对控制器。</block>
+  <block id="75058bf61b1188ee8304798f89ca02bf" category="paragraph">您必须在启动替代控制器时确认系统 ID 更改，然后确认更改是否已实施。</block>
+  <block id="fa0bfd482c7a3a6dfc65930e176b0502" category="list-text">如果更换用的控制器处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`</block>
+  <block id="ba6fae1de76d6230e1c74a17242ebf97" category="list-text">在替代控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。</block>
+  <block id="a0d04de6e8774043ed7dd31ce11a9577" category="list-text">等待更换控制器控制台上显示 Waiting for giveback... 消息，然后从运行状况良好的控制器上验证是否已自动分配新的配对系统 ID ： `storage failover show`</block>
+  <block id="590ef635c433371eead20b940bf6c429" category="list-text">从运行正常的控制器中，交还更换的控制器的存储： `storage failover giveback -ofnode replacement_node_name`</block>
+  <block id="4cd2ac4c22d2d6323c4f80d036ea5320" category="paragraph">更换用的控制器将收回其存储并完成启动。</block>
+  <block id="5e0cea5d67aaa32c62721aadfacd5df4" category="paragraph">属于替代控制器的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</block>
+  <block id="11cd58ab2810de65be01109093020b63" category="list-text">替代控制器是灾难站点上磁盘的当前所有者。</block>
+  <block id="3f0db9aa8dd4145d2c4b64ea3481303a" category="list-text">在此操作步骤 中，启动设备将从受损控制器移至更换控制器，以便更换控制器在与旧控制器模块相同版本的 ONTAP 中启动。</block>
+  <block id="c679e8417b3c86837c70fa5e162e77a6" category="list-text">受损控制器是指要更换的控制器。</block>
+  <block id="df958dff87a8c819a8e0b81a1b306ead" category="list-text">替代控制器是指更换受损控制器的新控制器。</block>
+  <block id="283fab4cea5d664827b937416e41a5e5" category="list-text">运行正常的控制器是运行正常的控制器。</block>
+  <block id="92a410b1608886e36ab28b2f459ca694" category="list-text">如果显示一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。</block>
+  <block id="e7e0acd4a94a610862553a655c0372a3" category="list-text">接管目标控制器： `storage failover takeover -ofnode target_node_name`</block>
+  <block id="0a7ae7a43062cf45861e620d40d10ab9" category="paragraph">控制台连接显示，接管完成后，控制器将进入 LOADER 提示符。</block>
+  <block id="f741156cf7f3ded008481322de2de820" category="list-text">从 LOADER 提示符 _bybye 重新启动控制器</block>
+  <block id="ff307501f6507919aa7c2196b367a42d" category="list-text">从配对控制器交还控制器。`storage failover giveback -ofnode target_node_name`</block>
+  <block id="cf261a4e73438cb00bd1e7a2fef7257c" category="list-text">在每个控制器开始启动时，如果您看到 Press Ctrl-C for Boot Menu 消息，请按 `Ctrl-C` 以中断启动过程。</block>
+  <block id="e369528dc9f39a1a8434ddc29b3f9179" category="list-text">如果 _replacement_ 控制器处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`</block>
+  <block id="9e5146e0b81862c730b75bdd6321c3d7" category="paragraph">在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个控制器将显示已配置状态，并启用 DR 镜像并显示正常模式。"`MetroCluster node show -fields node-SystemID` " 命令输出将显示旧的系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
+  <block id="0443683677e40fa41815d2d7edef042b" category="doc">关闭控制器— FAS2600</block>
+  <block id="335674b10e9fdcf2eb342bef30970801" category="list-text">如果系统机箱中只有一个控制器模块，请关闭电源，然后从电源中拔下受损控制器的电源线。</block>
+  <block id="b6ea0c6054b7f5b7832dafbb8468dc0f" category="paragraph">接管或暂停受损的控制器：</block>
+  <block id="4571f480b4cb6246b64d91e6cacdf34c" category="list-text">对于 HA 对，从运行正常的控制器接管受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`</block>
+  <block id="0ebf647b3184259131a8c1ffcdea60dc" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ： `boot_ontap`</block>
+  <block id="e033b8601f70c600b73dc01580794ef1" category="summary">在关闭受损控制器之前，您需要检查系统是否已启用 NetApp 卷加密 \ （ NVE\ ）或 NetApp 存储加密 \ （ NSE\ ）。If so, you need to verify the configuration.</block>
+  <block id="8b97c720bb08aa0118f13600478e225f" category="list-text">如果命令输出中显示 &lt;lno-dury&gt; 或 &lt;1osno-dury&gt; ，则系统不支持 NVE ，请继续关闭控制器。在关闭受损控制器之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.</block>
+  <block id="4ca27b7e1f4aad146e9ddc45f9af0410" category="doc">关闭控制器— FAS500f</block>
+  <block id="2523dbc6a24be97a9e6522ed8cc0a2da" category="paragraph">PerfMalink ： fas500f/bootmedia-replace.html 边栏：边栏关键字： fas500f ，请替换启动介质摘要： " 在更换启动介质之前，您可以通过卸下控制器模块上的通风管在控制器模块中找到故障启动介质。 " -- = 更换启动介质 - FAS500f ： icons ：字体： imagesdir ： ../media/</block>
+  <block id="2a468fdd2649c2bddd5f46d0d16b08af" category="doc">关闭受损控制器 - AFF A700s</block>
+  <block id="abb3159815c7d305ec1a9697a5ec0fef" category="summary">要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
+  <block id="a3d92d77da598c2538c04939f7322e49" category="list-text">如果您尚未接地，请使用 properlcontrollerer 对自己进行绑定。</block>
+  <block id="a14d65aea00503e78c39b9273b38fa4e" category="paragraph">There are two boot media devices in the AFF A700s, a primary and a secondary or backup boot media.您必须将其从受损控制器移至 _replacement_ 控制器，并将其安装到 _replacement_ 控制器中相应的插槽中。</block>
+  <block id="d0a414fa814c592a9fcc74f3aaae710b" category="paragraph">接管或暂停受损控制器： `storage failover takeover -ofnode _impaired_node_name_`</block>
+  <block id="e160675dcb2bc6ebdb28380884820e26" category="paragraph">当受损控制器显示 `Waiting for giveback...` 时，按 Ctrl-C ，然后回答 `y` 。</block>
+  <block id="fc9b566637bbcf2a8a0459c61e065654" category="doc">关闭控制器 - AFF A700s</block>
+  <block id="499f2b4faaecf09ce2df725ed89b18e0" category="list-text">在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动控制器时按 `y` 。</block>
+  <block id="018ed71ecc770af5fd2b70a8cffb7032" category="paragraph">在 ONTAP 提示符处，您可以对命令 "system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true" 执行问题描述 。</block>
+  <block id="6be69aa70f07d7fff388bde809e5a5ae" category="list-text">如果您的系统位于 HA 对中，则运行状况良好的控制器必须能够接管正在更换的控制器（在本操作步骤 中称为 "`受损节点` " ）。</block>
+  <block id="7343fb79026ff743ff1923cdd971a19f" category="list-text">在此操作步骤 中，启动设备将从受损控制器移至 _replacement_ 节点，以便 _replacement_ 节点在与旧控制器模块相同版本的 ONTAP 中启动。</block>
+  <block id="a555f92ceccdc34af0d85dfd74c70d5b" category="list-text">受损节点是指要更换的控制器。</block>
+  <block id="5c3bec8c76d405798259f46c3a7883c5" category="list-text">_replacement_ 节点是指用于更换受损控制器的新控制器。</block>
+  <block id="7963bf953f9aa62d4e259bcb0523a139" category="list-text">_health_ 节点是运行正常的控制器。</block>
+  <block id="4d81c64d68f7eeb09101e0c5153a1dfa" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。``boot_ontap``</block>
+  <block id="ea22b9523724a1472e9a6474903abd69" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： `storage failover modify -node _replacement-node-name_ -onreboot true`</block>
+  <block id="82b742085f424ab9b6b3cdea2a76ee8d" category="paragraph">集群中的两个控制器</block>
+  <block id="f810400e8f6c8db0e850e30403d338b7" category="paragraph">集群中存在两个以上的控制器</block>
+  <block id="3b1cae4630f47c8bafa2138c896b9e8d" category="list-text">使用 `storage failover giveback -fromnode local` 命令交还控制器</block>
+  <block id="1bab600dfeb5dd52557d4dc719a4016b" category="admonition">请勿降级 _replacement_ 控制器的 BIOS 版本以匹配配对控制器或旧控制器模块。</block>
+  <block id="59127b0f44ecf00024ded8cfe59f8f12" category="paragraph">There is one boot media device in the AFF A800.您必须将其从受损控制器中移动并安装到 _replacement_ 控制器中。</block>
+  <block id="842e14e3a23f8c1d39234a2a722507d3" category="list-text">如果禁用了自动交还，请重新启用它： `storage failover modify -controller local -auto-giveback true`</block>
+  <block id="03163c4d180c5b6d6482efa550043cd8" category="doc">关闭控制器 - AFF A800</block>
+  <block id="f0623f3de563d7ac67a984a76c53803d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
+  <block id="e0024964f985f74787a4ffc15850d67d" category="list-text">Gently push the controller module all the way into the system until the controller module locking hooks begin to rise, firmly push on the locking hooks to finish seating the controller module, and then swing the locking hooks into the locked position over the pins on the controller module.+ 控制器一旦完全安装到机箱中，就会开始启动。</block>
+  <block id="a924c157082c4974237a4bb347fd9228" category="list-text">Interrupt the boot process by pressing Ctrl-C to stop at the LOADER prompt.+ 如果未显示此消息，请按 Ctrl-C ，选择启动到维护模式的选项，然后暂停控制器以启动到加载程序。</block>
 </blocks>

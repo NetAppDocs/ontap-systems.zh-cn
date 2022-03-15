@@ -89,11 +89,11 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 
 . 将控制器模块完全推入系统中，确保凸轮把手离开 USB 闪存驱动器，用力推动凸轮把手以完成控制器模块的就位，将凸轮把手推至关闭位置，然后拧紧翼形螺钉。
 +
-一旦节点完全安装到机箱中，它就会开始启动。
+控制器一旦完全安装到机箱中，就会开始启动。
 
 . 在出现 `Starboot 时按 Ctrl-C 中断启动过程以在 LOADER 提示符处停止。按 Ctrl-C 中止 ...`
 +
-如果您未收到此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后 `halt` 节点以启动到加载程序。
+如果您未收到此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后 `halt` 控制器以启动到加载程序。
 
 . 启动恢复映像：
 +
@@ -111,7 +111,7 @@ NOTE: 如果 `image.tgz` 文件的名称不是 image.tgz ，例如 `boot_recover
 ` * _ 映像名称 _ .tgz*`
 
 +
-安装 `image_name.tgz` 后，系统会提示您从运行状况良好的节点还原备份配置（ `var` 文件系统）。
+安装 `image_name.tgz` 后，系统会提示您从运行正常的控制器还原备份配置（ `var` 文件系统）。
 
 . 还原 `var` 文件系统：
 +
@@ -124,7 +124,7 @@ NOTE: 如果 `image.tgz` 文件的名称不是 image.tgz ，例如 `boot_recover
 网络连接
  a| 
 .. 当系统提示您还原备份配置时，按 ` * y*` 。
-.. 将运行状况良好的节点设置为高级权限级别：
+.. 将运行状况良好的控制器设置为高级权限级别：
 +
 ` * 设置 -privilege advanced*`
 
@@ -132,12 +132,12 @@ NOTE: 如果 `image.tgz` 文件的名称不是 image.tgz ，例如 `boot_recover
 +
 ` * 系统节点还原备份 -node local -target-address _impaired_node_ip_address_*`
 
-.. 将节点恢复为管理员级别：
+.. 将控制器恢复为管理员级别：
 +
 ` * 设置 -privilege admin*`
 
 .. 当系统提示您使用已还原的配置时，按 ` * y*` 。
-.. 当系统提示重新启动节点时，按 ` * y*` 。
+.. 当系统提示重新启动控制器时，按 ` * y*` 。
 
 
 
@@ -156,14 +156,14 @@ NOTE: 如果 `image.tgz` 文件的名称不是 image.tgz ，例如 `boot_recover
 |===
 . 验证环境变量是否按预期设置。
 +
-.. 使节点显示 LOADER 提示符。
+.. 将控制器显示 LOADER 提示符。
 +
 在 ONTAP 提示符处，您可以对命令 `ssystem node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true` 执行问题描述。
 
 .. 使用 `printenv` 命令检查环境变量设置。
 .. 如果未按预期设置环境变量，请使用 `setenv _environment_variable_name changed_value_` 命令对其进行修改。
 .. 使用 `saveenv` 命令保存所做的更改。
-.. 重新启动节点。
+.. 重新启动控制器。
 
 
 . 下一步取决于您的系统配置：
@@ -176,21 +176,21 @@ NOTE: 如果 `image.tgz` 文件的名称不是 image.tgz ，例如 `boot_recover
  a| 
 一种独立配置
  a| 
-您可以在节点重新启动后开始使用系统。
+您可以在控制器重新启动后开始使用系统。
 
 
 
  a| 
 HA 对
  a| 
-受损节点显示 `Waiting for Giveback...` 消息后，从运行正常的节点执行交还：
+在受损控制器显示 `Waiting for Giveback...` 消息后，从运行正常的控制器执行交还：
 
-.. 从运行正常的节点执行交还：
+.. 从运行正常的控制器执行交还：
 +
 ` * 存储故障转移交还 -ofnode _partner_node_name_*`
 
 +
-这将启动将受损节点聚合和卷的所有权从运行状况良好的节点交还给受损节点的过程。
+这将启动将受损控制器聚合和卷的所有权从运行状况良好的控制器交还给受损控制器的过程。
 
 +
 [NOTE]

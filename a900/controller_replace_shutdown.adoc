@@ -2,36 +2,35 @@
 permalink: a900/controller_replace_shutdown.html 
 sidebar: sidebar 
 keywords: AFF A900 
-summary: 要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。 
+summary: 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。 
 ---
-= 关闭受损节点— AFF A900
+= 关闭受损控制器 - AFF A900
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。
+使用适用于您的配置的操作步骤 关闭或接管受损控制器。
 
+[role="tabbed-block"]
+====
+.大多数系统
+--
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
-
-== 选项 1 ：大多数配置
-
-[role="lead"]
-要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
-
-If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
 
 .步骤
 . 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
 +
 以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行正常的节点的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
-. 将受损节点显示为 LOADER 提示符：
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
 +
 [cols="1,2"]
 |===
-| 如果受损节点显示 ... | 那么 ... 
+| 如果受损控制器显示 ... | 那么 ... 
 
 
  a| 
@@ -51,25 +50,22 @@ LOADER 提示符
  a| 
 系统提示符或密码提示符（输入系统密码）
  a| 
-从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
 
-+ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
-
-+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
 
 |===
 
 
-
-
-== 选项 2 ：控制器位于 MetroCluster 中
-
+--
+.控制器位于 MetroCluster 中
+--
 
 NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
 
-要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
-* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
 * 如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（`MetroCluster node show` ）。
 
 
@@ -78,12 +74,12 @@ NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操
 +
 以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行正常的节点的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
-. 将受损节点显示为 LOADER 提示符：
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
 +
 [cols="1,2"]
 |===
-| 如果受损节点显示 ... | 那么 ... 
+| 如果受损控制器显示 ... | 那么 ... 
 
 
  a| 
@@ -103,11 +99,12 @@ LOADER 提示符
  a| 
 系统提示符或密码提示符（输入系统密码）
  a| 
-从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
 
-+ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
-
-+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
 
 |===
 
+
+--
+====

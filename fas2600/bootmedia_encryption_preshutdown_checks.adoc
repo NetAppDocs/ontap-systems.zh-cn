@@ -2,7 +2,7 @@
 permalink: fas2600/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: fas2600, pre-shutdown checks for onboard encryption keys 
-summary: 在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
+summary: 在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
 ---
 = 检查板载加密密钥— FAS2600
 :icons: font
@@ -10,42 +10,42 @@ summary: 在关闭受损节点并检查板载加密密钥状态之前，您必�
 
 
 [role="lead"]
-在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。
+在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。
 
-在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查正在运行的 ONTAP 版本。
+在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查正在运行的 ONTAP 版本。
 
-If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"]。
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"]。
 
 .步骤
-. 检查受损节点的状态：
+. 检查受损控制器的状态：
 +
-** 如果受损节点处于登录提示符处，请以 `admin` 身份登录。
-** 如果受损节点位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的节点上。
-** 如果受损节点采用独立配置并出现 LOADER 提示符，请联系 link:http://mysupport.netapp.com/["mysupport.netapp.com"]。
+** 如果受损控制器处于登录提示符处，请以 `admin` 身份登录。
+** 如果受损控制器位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的控制器上。
+** 如果受损控制器采用独立配置并出现 LOADER 提示符，请联系 link:http://mysupport.netapp.com/["mysupport.netapp.com"]。
 
 
 . 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
 +
 以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
 
-. 使用 `version -v` 命令检查受损节点（如果已启动）或配对节点（如果受损节点已关闭）上运行的 ONTAP 的版本：
+. 使用 `version -v` 命令检查受损控制器（如果已启动）或配对控制器（如果受损控制器已关闭）上运行的 ONTAP 版本：
 +
 ** 如果命令输出中显示 <lno-dury> 或 <1osno-dury> ，则系统不支持 NVE ，请继续关闭控制器。
 ** 如果命令输出中未显示 <lno-dur> ，并且系统运行的是 ONTAP 9.5 ，请转至 <<Option 1: Checking NVE or NSE on systems running ONTAP 9.5 and earlier>>。
 ** 如果命令输出中未显示 <lno-dur> ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至 <<Option 2: Checking NVE or NSE on systems running ONTAP 9.6 and later>>。
 
 
-. 如果受损节点属于 HA 配置的一部分，请从运行状况良好的节点禁用自动交还： `storage failover modify -node local -auto-giveback false` 或 `storage failover modify -node local -auto-giveback-after-panic false`
+. 如果受损控制器属于 HA 配置，请禁用从运行状况良好的控制器自动交还： `storage failover modify -node local -auto-giveback false` 或 `storage failover modify -node local -auto-giveback-after-panic false`
 
 
 
 
 == 选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE
 
-在关闭受损节点之前，您需要检查系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。如果是，则需要验证配置。
+在关闭受损控制器之前，您需要检查系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.
 
 .步骤
-. 将控制台缆线连接到受损节点。
+. 将控制台缆线连接到受损的控制器。
 . 检查是否为集群中的任何卷配置了 NVE ： `volume show -is-encrypted true`
 +
 如果输出中列出了任何卷，则会配置 NVE ，您需要验证 NVE 配置。如果未列出任何卷，请检查是否已配置 NSE 。
@@ -53,7 +53,7 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 . 检查是否已配置 NSE ： `storage encryption disk show`
 +
 ** 如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置。
-** 如果未配置 NVE 和 NSE ，则可以安全地关闭受损节点。
+** 如果未配置 NVE 和 NSE ，则可以安全地关闭受损控制器。
 
 
 
@@ -65,7 +65,7 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 .步骤
 . 显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager query`
 +
-** 如果 `Restored` 列显示 `yes` 且所有密钥管理器显示 `Available` ，则可以安全地关闭受损节点。
+** 如果 `Restored` 列显示 `yes` 且所有密钥管理器显示 `Available` ，则可以安全地关闭受损的控制器。
 ** 如果 `Restored` 列显示 `yes` 以外的任何内容，或者任何密钥管理器显示 `不可用` ，则需要完成一些额外步骤。
 ** 如果在启用板载密钥管理时看到消息 this command is not supported ，则需要完成其他一些步骤。
 
@@ -80,7 +80,7 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 http://mysupport.netapp.com/["mysupport.netapp.com"]
 
 .. 验证所有身份验证密钥的 `Restored` 列是否显示 `yes` ，以及所有密钥管理器是否显示 `Available` ： `sSecurity key-manager query`
-.. 关闭受损节点。
+.. 关闭受损控制器。
 
 
 . 如果在启用板载密钥管理后看到消息 this command is not supported when on板 载密钥管理器，请显示存储在板载密钥管理器中的密钥： `security key-manager key show -detail`
@@ -91,7 +91,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"]
 *** Enter the command to display the OKM backup information: `security key-manager backup show`
 *** 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
 *** 返回到管理模式： `set -priv admin`
-*** 关闭受损节点。
+*** 关闭受损控制器。
 
 
 .. 如果 `Restored` 列显示除 `yes` 以外的任何内容：
@@ -106,7 +106,7 @@ NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无�
 *** Enter the command to display the OKM backup information: `security key-manager backup show`
 *** 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
 *** 返回到管理模式： `set -priv admin`
-*** 您可以安全地关闭节点。
+*** 您可以安全地关闭控制器。
 
 
 
@@ -120,7 +120,7 @@ NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无�
 .步骤
 . 显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager query`
 +
-** 如果 `Restored` 列显示 `yes` 且所有密钥管理器显示 `Available` ，则可以安全地关闭受损节点。
+** 如果 `Restored` 列显示 `yes` 且所有密钥管理器显示 `Available` ，则可以安全地关闭受损的控制器。
 ** 如果 `Restored` 列显示 `yes` 以外的任何内容，或者任何密钥管理器显示 `不可用` ，则需要完成一些额外步骤。
 ** 如果在启用板载密钥管理时看到消息 this command is not supported ，则需要完成其他一些步骤
 
@@ -135,7 +135,7 @@ NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无�
 http://mysupport.netapp.com/["mysupport.netapp.com"]
 
 .. 验证所有身份验证密钥的 `Restored` 列是否显示 `yes` ，以及所有密钥管理器是否显示 `Available` ： `sSecurity key-manager query`
-.. 关闭受损节点。
+.. 关闭受损控制器。
 
 
 . 如果在启用板载密钥管理后看到消息 this command is not supported when on板 载密钥管理器，请显示存储在板载密钥管理器中的密钥： `security key-manager key show -detail`
@@ -146,7 +146,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"]
 *** Enter the command to display the OKM backup information: `security key-manager backup show`
 *** 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
 *** 返回到管理模式： `set -priv admin`
-*** 关闭受损节点。
+*** 关闭受损控制器。
 
 
 .. 如果 `Restored` 列显示除 `yes` 以外的任何内容：
@@ -165,7 +165,7 @@ NOTE: Make sure that OKM information is saved in your log file.在可能需要�
 
 *** 将备份信息的内容复制到单独的文件或日志中。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
 *** 返回到管理模式： `set -priv admin`
-*** 您可以安全地关闭节点。
+*** 您可以安全地关闭控制器。
 
 
 
@@ -176,7 +176,7 @@ NOTE: Make sure that OKM information is saved in your log file.在可能需要�
 
 == 选项 2 ：在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE
 
-在关闭受损节点之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。如果是，则需要验证配置。
+在关闭受损控制器之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.
 
 . 验证集群中的任何卷是否正在使用 NVE ： `volume show -is-encrypted true`
 +
@@ -186,7 +186,7 @@ If any volumes are listed in the output, NVE is configured and you need to verif
 +
 ** 如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置和正在使用的。
 ** 如果未显示任何磁盘，则表示未配置 NSE 。
-** 如果未配置 NVE 和 NSE ，则不会使用 NSE 密钥保护任何驱动器，因此可以安全地关闭受损节点。
+** 如果未配置 NVE 和 NSE ，则不会使用 NSE 密钥保护任何驱动器，因此可以安全地关闭受损的控制器。
 
 
 
@@ -201,7 +201,7 @@ If any volumes are listed in the output, NVE is configured and you need to verif
 
 NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 `KMIP` ， `AKV` 和 `GCP` 。确认这些类型的过程与确认 `外部` 或 `板载` 密钥管理器类型相同。
 
-* 如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损节点。
+* 如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损的控制器。
 * 如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示 `是` ，则需要完成一些额外步骤。
 * 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。
 * 如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示除 `是` 以外的任何内容，则需要完成一些额外步骤。
@@ -212,7 +212,7 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 ... 输入命令以显示密钥管理信息： `security key-manager on板 载 show-backup`
 ... 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
 ... 返回到管理模式： `set -priv admin`
-... 关闭受损节点。
+... 关闭受损控制器。
 
 
 .. 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容：
@@ -225,7 +225,7 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 http://mysupport.netapp.com/["mysupport.netapp.com"]
 
 ... 验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key-query`
-... 关闭受损节点。
+... 关闭受损控制器。
 
 
 .. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示除 `yes` 以外的任何内容：
@@ -241,7 +241,7 @@ NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无�
 ... 输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`
 ... 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
 ... 返回到管理模式： `set -priv admin`
-... 您可以安全地关闭节点。
+... 您可以安全地关闭控制器。
 
 
 
@@ -258,7 +258,7 @@ NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无�
 
 NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 `KMIP` ， `AKV` 和 `GCP` 。确认这些类型的过程与确认 `外部` 或 `板载` 密钥管理器类型相同。
 
-* 如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损节点。
+* 如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损的控制器。
 * 如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示 `是` ，则需要完成一些额外步骤。
 * 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。
 * 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。
@@ -269,7 +269,7 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 ... 输入命令以显示密钥管理信息： `security key-manager on板 载 show-backup`
 ... 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
 ... 返回到管理模式： `set -priv admin`
-... 您可以安全地关闭节点。
+... 您可以安全地关闭控制器。
 
 
 .. 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容：
@@ -282,7 +282,7 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 http://mysupport.netapp.com/["mysupport.netapp.com"]
 
 ... 验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key-query`
-... 您可以安全地关闭节点。
+... 您可以安全地关闭控制器。
 
 
 .. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示除 `yes` 以外的任何内容：
@@ -300,7 +300,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"]
 ... 输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`
 ... 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
 ... 返回到管理模式： `set -priv admin`
-... 您可以安全地关闭节点。
+... 您可以安全地关闭控制器。
 
 
 

@@ -1,7 +1,7 @@
 ---
 permalink: fas2700/chassis-replace-overview.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, node, configuration, switch, aggregates, replace, move, remove, swap 
+keywords: fas2700, aff a220, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
 summary: 您可以将受损机箱更换为与受损机箱型号相同的新机箱。 
 ---
 = 机箱更换概述— AFF A220 和 FAS2700
@@ -16,5 +16,5 @@ summary: 您可以将受损机箱更换为与受损机箱型号相同的新机�
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。
 * 编写此操作步骤时，假设您要将所有驱动器和控制器模块移至新机箱，并且此机箱是 NetApp 的新组件。
-* 此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。
+* 此操作步骤会造成系统中断。对于双控制器集群，多节点集群中的服务将完全中断，部分中断将会发生。
 

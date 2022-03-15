@@ -1,7 +1,7 @@
 ---
 permalink: a700s/nvram-or-nvram-dimm-replacement.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, replace, fail, nvram, card, remove, riser, controller, module, system, id, nvram, dimm, shut, down, reassign, disk, restore, encryption, functionality, complete, replacement, process, replace the nvram module and/or nvram dimms, shut down the impaired controller, shut down the impaired node, remove the controller module, remove the nvram card, reinstall the controller module and booting the system, reassign disks, restore storage and volume encryption functionality, complete the replacement process 
+keywords: aff a700s, aff, a700s, replace, fail, nvram, card, remove, riser, controller, module, system, id, nvram, dimm, shut, down, reassign, disk, restore, encryption, functionality, complete, replacement, process, replace the nvram module and/or nvram dimms, shut down the impaired controller, shut down the impaired controller, remove the controller module, remove the nvram card, reinstall the controller module and booting the system, reassign disks, restore storage and volume encryption functionality, complete the replacement process 
 summary: 要更换发生故障的 NVRAM 卡，您必须从控制器模块中卸下 NVRAM 提升板提升板 1 ，从提升板中卸下故障卡，在提升板中安装新的 NVRAM 卡，然后在控制器模块中重新安装提升板。由于系统 ID 源自 NVRAM 卡，因此，如果更换模块，则属于系统的磁盘将重新分配给新的系统 ID 。 
 ---
 = 更换 NVRAM 模块和 NVRAM DIMM — AFF A700s
@@ -14,11 +14,11 @@ summary: 要更换发生故障的 NVRAM 卡，您必须从控制器模块中卸�
 
 .开始之前
 * 所有磁盘架都必须正常工作。
-* 如果您的系统位于 HA 对中，则配对节点必须能够接管与要更换的 NVRAM 模块关联的节点。
+* 如果您的系统位于 HA 对中，则配对控制器必须能够接管与要更换的 NVRAM 模块关联的控制器。
 * 此操作步骤使用以下术语：
 +
-** 受损节点是指要在其中执行维护的节点。
-** _health_ 节点是受损节点的 HA 配对节点。
+** 受损 _ 控制器是要在其中执行维护的控制器。
+** _health_ 控制器是受损控制器的 HA 配对控制器。
 
 
 * 此操作步骤包括自动或手动将磁盘重新分配给与新 NVRAM 模块关联的控制器模块的步骤。当操作步骤中指示您重新分配磁盘时，您必须重新分配这些磁盘。在交还之前完成磁盘重新分配可能会出现发生原因问题。
@@ -28,24 +28,24 @@ summary: 要更换发生故障的 NVRAM 卡，您必须从控制器模块中卸�
 
 
 
-== 关闭受损节点
+== Shut down the impaired controller
 
 [role="lead"]
-要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
-If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的节点在资格和运行状况方面显示 false ，则必须在关闭受损节点之前更正问题描述；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
 
 .步骤
 . 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
 +
 以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行正常的节点的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
-. 将受损节点显示为 LOADER 提示符：
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
 +
 [cols="1,2"]
 |===
-| 如果受损节点显示 ... | 那么 ... 
+| 如果受损控制器显示 ... | 那么 ... 
 
 
  a| 
@@ -65,11 +65,9 @@ LOADER 提示符
  a| 
 系统提示符或密码提示符（输入系统密码）
  a| 
-从运行正常的节点接管或暂停受损节点： `storage failover takeover -ofnode _impaired_node_name_`
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
 
-+ 当受损节点显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
-
-+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
 
 |===
 +
@@ -298,15 +296,15 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 == 验证 HA 系统上的系统 ID 更改
 
 [role="lead"]
-您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
+您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。
 
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
-. 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
-. From the LOADER prompt on the _replacement_ node, boot the node, entering `y` if you are prompted to override the system ID due to a system ID mismatch:``boot_ontap``
-. 请等待` Waiting for giveback... `消息显示在 _replacement_ 节点控制台上，然后从运行状况良好的节点上验证是否已自动分配新的配对系统 ID ： `storage failover show`
+. 如果 _replacement_ 控制器处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`
+. 在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``
+. 请等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行正常的控制器中验证是否已自动分配新的配对系统 ID ： `storage failover show`
 +
-在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。
+在命令输出中，您应看到一条消息，指出受损控制器上的系统 ID 已更改，其中显示了正确的旧 ID 和新 ID 。In the following example, node2 has undergone replacement and has a new system ID of 151759706.
 
 +
 [listing]
@@ -319,7 +317,7 @@ node1             node2             false        System ID changed on partner (O
                                                   151759755, New: 151759706), In takeover
 node2             node1             -            Waiting for giveback (HA mailboxes)
 ----
-. 从运行状况良好的节点中，验证是否已保存任何核心转储：
+. 在运行正常的控制器中，验证是否已保存任何核心转储：
 +
 .. 更改为高级权限级别： `set -privilege advanced`
 +
@@ -333,11 +331,11 @@ node2             node1             -            Waiting for giveback (HA mailbo
 .. 返回到管理权限级别： `set -privilege admin`
 
 
-. 交还节点：
+. 交还控制器：
 +
-.. 从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode _replacement_node_name_`
+.. 从运行正常的控制器中，交还更换的控制器的存储： `storage failover giveback -ofnode _replacement_node_name_`
 +
-replacement_ 节点将收回其存储并完成启动。
+_replacement_ 控制器将收回其存储并完成启动。
 
 +
 如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 `y` 。
@@ -357,7 +355,7 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62
 
 . 验证是否已正确分配磁盘： `storage disk show -ownership`
 +
-属于 _replacement_ 节点的磁盘应显示新的系统 ID 。在以下示例中， node1 拥有的磁盘现在显示新的系统 ID 1873775277 ：
+属于 _replacement_ 控制器的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:
 
 +
 [listing]
@@ -372,8 +370,8 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 .
 .
 ----
-. 验证每个节点是否存在所需的卷： `vol show -node node-name`
-. 如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它： `storage failover modify -node replacement-node-name -onreboot true`
+. 验证每个控制器是否存在所需的卷： `vol show -node node-name`
+. 如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： `storage failover modify -node replacement-node-name -onreboot true`
 
 
 

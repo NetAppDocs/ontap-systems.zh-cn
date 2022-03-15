@@ -2,7 +2,7 @@
 permalink: a400/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a400, move the controller module hardware 
-summary: 要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。 
+summary: 要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。 
 ---
 = 更换控制器模块硬件— AFF A400
 :icons: font
@@ -10,7 +10,7 @@ summary: 要更换控制器模块硬件，您必须卸下受损节点，将 FRU 
 
 
 [role="lead"]
-要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。
+要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。
 
 
 

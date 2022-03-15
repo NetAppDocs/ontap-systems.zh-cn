@@ -2,7 +2,7 @@
 permalink: a700s/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a700s, move the controller module hardware 
-summary: 要更换控制器模块，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。 
+summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 
 ---
 = 更换控制器模块硬件— AFF A700s
 :icons: font
@@ -10,7 +10,7 @@ summary: 要更换控制器模块，您必须卸下受损节点，将 FRU 组件
 
 
 [role="lead"]
-要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。
+要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。
 
 
 
@@ -18,7 +18,7 @@ summary: 要更换控制器模块，您必须卸下受损节点，将 FRU 组件
 
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
 
-. 如果您尚未接地，请正确接地。
+. 如果您尚未接地，请使用 properlcontrollerer 对自己进行绑定。
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
 +
 将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
@@ -238,7 +238,7 @@ NOTE: 确保此卡完全，正对着提升板插槽。
 
 == 第 4 步：移动启动介质
 
-AFF A700s 中有两个启动介质设备，一个是主启动介质，一个是二级启动介质或备份启动介质。您必须将其从受损节点移至 _replacement_ 节点，然后将其安装到 _replacement_ 节点中相应的插槽中。
+There are two boot media devices in the AFF A700s, a primary and a secondary or backup boot media.您必须将其从受损控制器移至 _replacement_ 控制器，并将其安装到 _replacement_ 控制器中相应的插槽中。
 
 启动介质位于中间 PCIe 提升板模块提升板 2 下。要访问启动介质，必须卸下此 PCIe 模块。
 

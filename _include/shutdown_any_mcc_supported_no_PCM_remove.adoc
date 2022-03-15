@@ -1,67 +1,5 @@
----
-permalink: a320/bootmedia-shutdown.html 
-sidebar: sidebar 
-keywords: aff, a320, aff a320, complete, completing, nve, nse, task, shutdown, impair, node, shut, down, shut down the node 
-summary: 完成 NVE 或 NSE 任务后，您需要关闭受损节点。 
----
-= 关闭节点— AFF A320
-:icons: font
-:imagesdir: ../media/
+= 
 
-
-[role="lead"]
-After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.使用适用于您的配置的操作步骤 关闭或接管受损控制器。
-
-
-
-== 选项 1 ：大多数系统
-
-[role="lead"]
-完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
-
-.步骤
-. 将受损控制器显示为 LOADER 提示符：
-+
-[cols="1,2"]
-|===
-| 如果受损控制器显示 ... | 那么 ... 
-
-
- a| 
-LOADER 提示符
- a| 
-转至 "Remove controller module" 。
-
-
-
- a| 
-`正在等待交还 ...`
- a| 
-按 Ctrl-C ，然后在出现提示时回答 `y` 。
-
-
-
- a| 
-系统提示符或密码提示符（输入系统密码）
- a| 
-从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode impaired_node_name`
-
-当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
-
-|===
-+
-.. 在 LOADER 提示符处，输入 `printenv` 以捕获所有启动环境变量。将输出保存到日志文件中。
-+
-
-NOTE: 如果启动设备损坏或无法正常运行，则此命令可能不起作用。
-
-
-
-
-
-
-
-== 选项 2 ：系统位于 MetroCluster 中
 
 
 NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
@@ -88,7 +26,7 @@ NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操
  a| 
 LOADER 提示符
  a| 
-转至 "Remove controller module" 。
+转至下一步。
 
 
 

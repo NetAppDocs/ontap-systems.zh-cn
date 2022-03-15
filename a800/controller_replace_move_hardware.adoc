@@ -2,7 +2,7 @@
 permalink: a800/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a800, move the controller module hardware 
-summary: 要更换控制器模块，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。 
+summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 
 ---
 = 更换控制器模块硬件— AFF A800
 :icons: font
@@ -10,7 +10,7 @@ summary: 要更换控制器模块，您必须卸下受损节点，将 FRU 组件
 
 
 [role="lead"]
-要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。
+要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。
 
 
 
@@ -317,7 +317,7 @@ NOTE: 目视检查 NVDIMM ，确认其已均匀对齐并完全插入插槽。
 
 == 第 8 步：移动启动介质
 
-AFF A800 中有一个启动介质设备。您必须将其从受损节点移动并安装在 _replacement_ 节点中。
+There is one boot media device in the AFF A800.您必须将其从受损控制器中移动并安装到 _replacement_ 控制器中。
 
 启动介质位于提升板 3 下。
 

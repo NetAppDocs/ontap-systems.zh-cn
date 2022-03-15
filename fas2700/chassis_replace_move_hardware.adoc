@@ -1,7 +1,7 @@
 ---
 permalink: fas2700/chassis-replace-move-hardware.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, node, configuration, switch, aggregates, replace, move, remove, swap 
+keywords: fas2700, aff a220, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
 summary: 将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。 
 ---
 = 移动并更换硬件— AFF A220 和 FAS2700
@@ -173,9 +173,9 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 
 |===
 . 将电源连接到不同的电源，然后打开电源。
-. 将每个节点启动至维护模式：
+. 将每个控制器启动至维护模式：
 +
-.. 在每个节点开始启动时，如果您看到消息 `Press Ctrl-C for Boot Menu` ，请按 `Ctrl-C` 以中断启动过程。
+.. 在每个控制器开始启动时，如果您看到消息 `Press Ctrl-C for Boot Menu` ，请按 `Ctrl-C` 以中断启动过程。
 +
 
 NOTE: 如果您未看到此提示，并且控制器模块启动到 ONTAP ，请输入 `halt` ，然后在 LOADER 提示符处输入 `boot_ontap` ，并在出现提示时按 `Ctrl-C` ，然后重复此步骤。
