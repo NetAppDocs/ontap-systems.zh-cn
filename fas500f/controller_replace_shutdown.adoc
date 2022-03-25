@@ -27,7 +27,7 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["ONTAP 9 
 
 
 
-=== 选项 1 ：大多数配置
+== 选项 1 ：大多数配置
 
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
@@ -72,7 +72,7 @@ LOADER 提示符
 
 
 
-=== 选项 2 ：控制器位于 MetroCluster 中
+== 选项 2 ：控制器位于 MetroCluster 中
 
 
 NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。

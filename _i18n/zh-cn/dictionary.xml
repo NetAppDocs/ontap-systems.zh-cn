@@ -5759,7 +5759,6 @@
   <block id="564becbb42cc33012e00424619583eca" category="list-text">为存储布线： <block ref="42bf816180738dc1660363ee044d9786" category="inline-link-macro-rx"></block></block>
   <block id="eb9634f2ea796139d7f0aeca3f6ce2d4" category="section-title">选项 2 ：为有交换机集群布线</block>
   <block id="5b2974409018c6d4642074b9be18209d" category="paragraph">控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。集群互连 /HA 端口通过缆线连接到集群 /HA 交换机。</block>
-  <block id="80b4875daa443a09798bdba01e316e78" category="image-alt">DRW A320 交换网络布线复合动画 gif</block>
   <block id="f5412d7277a9aad4f1e320bf63f0582b" category="paragraph">使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口连接到集群 /HA 交换机：</block>
   <block id="840e60c4749a688bca9fc657aaff1710" category="list-text">两个控制器上的 e0a 连接到集群 /HA 交换机</block>
   <block id="c59f62b950bdb48bdd4229f438a8c8a8" category="list-text">两个控制器上的 e0d 连接到集群 /HA 交换机<block ref="15e7674fee3b32b30f565083329e5ce8" category="inline-image-macro-rx" type="image"></block></block>
@@ -8278,7 +8277,6 @@
   <block id="7103ae2dc232b897a89408d0cd914f59" category="doc">检查板载加密密钥 - AFF A800</block>
   <block id="0e3989fd0fd811ede751f0ca9dbfbe88" category="doc">启动介质更换概述— AFF A800</block>
   <block id="a9785aa14dfcf09366954fcb69625d05" category="sidebar">42U 1280 毫米系统机柜</block>
-  <block id="3cafea7668c93f65d306d9021ff14f37" category="summary">您可以将这些链接用于其他 AFF 和 FAS 平台。</block>
   <block id="f606ada25615407b042f8f189d1b9fab" category="sidebar">Cisco 3132Q-V</block>
   <block id="782536ad60a0c703fa10fb3d99248ea0" category="sidebar">Cisco 3232C 交换机</block>
   <block id="059d31543d448499bd1a9c454a8d1ebb" category="sidebar">Cisco 9336C-x2</block>
@@ -8307,7 +8305,6 @@
   <block id="eec0e5f9d553c7b70402acd4568f1ec7" category="list-text">检查 MetroCluster 状态以确定受损控制器是否已自动切换到运行正常的控制器： `MetroCluster show`</block>
   <block id="4176d047c40d8635a978efe76111589d" category="cell">如果控制器受损 ...</block>
   <block id="bc926a90924e14c99dbad976cbc306f6" category="paragraph">从运行正常的控制器执行计划内切换操作： `MetroCluster switchover`</block>
-  <block id="8377db96ff49e2b3bab4737836a8e0ce" category="paragraph">控制器— perMalink ： A300/controller-replace-move-hardware.html 侧栏：侧栏关键字： AFF a300 ，移动控制器模块硬件摘要： " 要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 " -- = 更换控制器模块 - AFF A300 ：图标：字体： imagesdir ： ../media/</block>
   <block id="c4d9687f431492e0a90b422288606306" category="paragraph">要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</block>
   <block id="5882cd2f55c4bcf825c0675d56d4677a" category="list-text">一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。You can safely respond `y` to these prompts.</block>
   <block id="6444f932b3d3398ef847475f65dde87a" category="paragraph">使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
@@ -8418,7 +8415,6 @@
   <block id="d1342671e7a1aeffea6df3cd0214be86" category="list-text">此操作步骤会造成系统中断。对于双控制器集群，多节点集群中的服务将完全中断，部分中断将会发生。</block>
   <block id="4fa4535552a76ba6abb695db42b48161" category="paragraph">如果这是您应使用的操作步骤 ，请注意，四控制器或八控制器 MetroCluster 配置中控制器的控制器替代操作步骤 与 HA 对中的控制器替代相同。No MetroCluster-specific steps are required because the failure is restricted to an HA pair and storage failover commands can be used to provide nondisruptive operation during the replacement.</block>
   <block id="1c35b5fd0eb2c66f98019f6d2ea253e2" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="5ad5e3145183bec8ce765d99b2db775a" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
-  <block id="f360cbc0b1776cef715c46bbf963f211" category="paragraph">controller-- perMalink ： fas8200/ bootmedia-encryption-preshutdown-checks.html 边栏：边栏关键字： fas8200 ，板载加密密钥的预关闭检查摘要： " 在关闭受损控制器并检查板载加密密钥状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 " -- = 检查板载加密 - FAS8200 ：图标：字体： imagesdir ： ../media/</block>
   <block id="c83b964c98e24aa342fa8069ffd85dd0" category="list-text"><block ref="c83b964c98e24aa342fa8069ffd85dd0" category="inline-link-macro-rx"></block></block>
   <block id="f51c8858085d7dcfe4d79d9774f8270d" category="paragraph">您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。</block>
   <block id="58d1979204cdde4ca641ddc56ae5fe91" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。`boot_ontap`</block>
@@ -8464,7 +8460,6 @@
   <block id="fec1ee82d47382a6acadcb4104dd3ce3" category="paragraph">在受损控制器显示 `Waiting for Giveback...` 消息后，从运行正常的控制器执行交还：</block>
   <block id="b93b2e31999c0ef2197b846adf6fd32d" category="list-text">从运行正常的控制器执行交还：</block>
   <block id="85e5c14e4c98322df87028e0cafd79a7" category="paragraph">这将启动将受损控制器聚合和卷的所有权从运行状况良好的控制器交还给受损控制器的过程。</block>
-  <block id="31cf13c61d40269ec7d8237264ca25ba" category="open-title">大多数系统</block>
   <block id="5ab3b65334d9648ac44bf62025764ce2" category="section-title">第 2 步：卸下控制器</block>
   <block id="f1eb9bf0f474a83bbe6d11b59f16da8c" category="list-text">交还控制器的存储，使其恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
   <block id="bced3f55c14cfa1d16ca32cbbb0b1d97" category="list-text">将受损控制器设置为高级权限级别： `set -privilege advanced`</block>
@@ -8510,7 +8505,6 @@
   <block id="e033b8601f70c600b73dc01580794ef1" category="summary">在关闭受损控制器之前，您需要检查系统是否已启用 NetApp 卷加密 \ （ NVE\ ）或 NetApp 存储加密 \ （ NSE\ ）。If so, you need to verify the configuration.</block>
   <block id="8b97c720bb08aa0118f13600478e225f" category="list-text">如果命令输出中显示 &lt;lno-dury&gt; 或 &lt;1osno-dury&gt; ，则系统不支持 NVE ，请继续关闭控制器。在关闭受损控制器之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.</block>
   <block id="4ca27b7e1f4aad146e9ddc45f9af0410" category="doc">关闭控制器— FAS500f</block>
-  <block id="2523dbc6a24be97a9e6522ed8cc0a2da" category="paragraph">PerfMalink ： fas500f/bootmedia-replace.html 边栏：边栏关键字： fas500f ，请替换启动介质摘要： " 在更换启动介质之前，您可以通过卸下控制器模块上的通风管在控制器模块中找到故障启动介质。 " -- = 更换启动介质 - FAS500f ： icons ：字体： imagesdir ： ../media/</block>
   <block id="2a468fdd2649c2bddd5f46d0d16b08af" category="doc">关闭受损控制器 - AFF A700s</block>
   <block id="abb3159815c7d305ec1a9697a5ec0fef" category="summary">要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
   <block id="a3d92d77da598c2538c04939f7322e49" category="list-text">如果您尚未接地，请使用 properlcontrollerer 对自己进行绑定。</block>
@@ -8537,4 +8531,17 @@
   <block id="f0623f3de563d7ac67a984a76c53803d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
   <block id="e0024964f985f74787a4ffc15850d67d" category="list-text">Gently push the controller module all the way into the system until the controller module locking hooks begin to rise, firmly push on the locking hooks to finish seating the controller module, and then swing the locking hooks into the locked position over the pins on the controller module.+ 控制器一旦完全安装到机箱中，就会开始启动。</block>
   <block id="a924c157082c4974237a4bb347fd9228" category="list-text">Interrupt the boot process by pressing Ctrl-C to stop at the LOADER prompt.+ 如果未显示此消息，请按 Ctrl-C ，选择启动到维护模式的选项，然后暂停控制器以启动到加载程序。</block>
+  <block id="e935849faf7cd25a183a726f34797bb7" category="doc">Replace the controller module - AFF A300</block>
+  <block id="75a0d3caeb66a7c3aca3b7bc0f0c5985" category="image-alt">DRW A320 交换网络布线复合动画 GIF</block>
+  <block id="82430a05d3820aeaeb756230e94ee643" category="doc">检查板载加密— FAS8200</block>
+  <block id="0082203fcfff94aab099c16763176076" category="image-alt">DRW fas8300 TNSC 网络布线</block>
+  <block id="507f9f4c8680d2c9a9bcba815a7976e8" category="image-alt">DRW fas8300 交换网络布线</block>
+  <block id="56cbc310abb53560871f37318fe0636d" category="image-alt">DRW fas8300 三个 ds224c 磁盘架</block>
+  <block id="a28455bf2eecf6cc499c335ee152cd75" category="paragraph">使用以下选项之一关闭或接管受损控制器。</block>
+  <block id="5a503439969930e9e348f79d2b8004d7" category="section-title">第 7 步：还原存储和卷加密功能</block>
+  <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">Replace the boot media - FAS500f</block>
+  <block id="de2d1282e102972a6af003781e9a5c02" category="paragraph">_SLDIAG ：不存在日志消息。 _</block>
+  <block id="3f91c59c59a1243cb3f176daf3c9c054" category="list-text">使节点恢复正常运行。</block>
+  <block id="eb90dbf89cffd9812a8720d277f30583" category="summary">您可以使用这些链接查找其他 AFF 和 FAS 平台的文档。</block>
+  <block id="0f40216c1ad47c12e8ccc087d555570f" category="sidebar">《 ONTAP 发行说明》</block>
 </blocks>

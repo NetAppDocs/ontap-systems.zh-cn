@@ -422,19 +422,16 @@ NOTE: 在启动过程中，您可以安全地响应 `y` 提示：
 +
 此时将显示以下默认响应：
 
-+
-[listing]
-----
-SLDIAG: No log messages are present.
------
 
- .. Exit Maintenance mode: `halt`
-+
-The node displays the LOADER prompt.
 
- .. Boot the node from the LOADER prompt: `bye`
- .. Return the node to normal operation.
-----
+_SLDIAG ：不存在日志消息。 _
+
+.. 退出维护模式： `halt`
++
+节点将显示 LOADER 提示符。
+
+.. 从加载程序提示符处启动节点： `bye`
+.. 使节点恢复正常运行。
 
 
 

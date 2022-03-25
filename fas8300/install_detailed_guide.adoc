@@ -219,7 +219,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=80c4701e-8e4a-408e-96e6-ab1b00666d3f["双节点无交换机集群布线"]
 
 +
-image::../media/drw_A400_TNSC-network-cabling.png[DRW A400 TNSC 网络布线]
+image::../media/drw_fas8300_TNSC_network_cabling.png[DRW fas8300 TNSC 网络布线]
 
 . 转至 <<Step 4: Cable controllers to drive shelves>> 有关驱动器架布线说明。
 
@@ -248,7 +248,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=5893b7d4-6f67-4a64-ad89-ab1b006658d1["有交换机集群布线"]
 
 +
-image::../media/drw_a400_switched_network_cabling.png[DRW a400 交换网络布线]
+image::../media/drw_fas8300_switched_network_cabling.png[DRW fas8300 交换网络布线]
 
 . 转至 <<Step 4: Cable controllers to drive shelves>> 有关驱动器架布线说明。
 
@@ -277,7 +277,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=46c0da0b-6842-449f-b28c-ab1b0066584b["使用缆线将控制器连接到 SAS 驱动器架"]
 
 +
-image::../media/drw_a400_three_ds224c_shelves.png[DRW a400 三个 ds224c 磁盘架]
+image::../media/drw_fas8300_three-ds224c_shelves.png[DRW fas8300 三个 ds224c 磁盘架]
 
 . 转至 <<Step 5: Complete system setup and configuration>> 完成系统设置和配置。
 

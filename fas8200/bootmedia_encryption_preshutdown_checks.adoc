@@ -1,7 +1,13 @@
-= 选项 1 ：在运行 ONTAP 9.5 及更早版本的系统上检查 NVE 或 NSE
+---
+permalink: fas8200/bootmedia-encryption-preshutdown-checks.html 
+sidebar: sidebar 
+keywords: fas8200, pre-shutdown checks for onboard encryption keys 
+summary: 在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
+---
+= 检查板载加密— FAS8200
+:icons: font
+:imagesdir: ../media/
 
-
-controller-- perMalink ： fas8200/ bootmedia-encryption-preshutdown-checks.html 边栏：边栏关键字： fas8200 ，板载加密密钥的预关闭检查摘要： " 在关闭受损控制器并检查板载加密密钥状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 " -- = 检查板载加密 - FAS8200 ：图标：字体： imagesdir ： ../media/
 
 [role="lead"]
 在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。

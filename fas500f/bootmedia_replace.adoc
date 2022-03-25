@@ -1,8 +1,13 @@
-= 第 1 步：卸下控制器模块
+---
+permalink: fas500f/bootmedia-replace.html 
+sidebar: sidebar 
+keywords: fas500f, replace the boot media 
+summary: 您可以先卸下控制器模块上的通风管，然后再更换启动介质，从而在控制器模块中找到发生故障的启动介质。 
+---
+= Replace the boot media - FAS500f
+:icons: font
+:imagesdir: ../media/
 
-
-'''
-PerfMalink ： fas500f/bootmedia-replace.html 边栏：边栏关键字： fas500f ，请替换启动介质摘要： " 在更换启动介质之前，您可以通过卸下控制器模块上的通风管在控制器模块中找到故障启动介质。 " -- = 更换启动介质 - FAS500f ： icons ：字体： imagesdir ： ../media/
 
 [role="lead"]
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
