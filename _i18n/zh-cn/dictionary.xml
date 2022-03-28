@@ -5556,7 +5556,6 @@
   <block id="29d730ab27c3a5abafda950a34d545ff" category="doc">更换 PCIe 卡— AFF A300</block>
   <block id="03d0d86c8a44fa1fcb7cccb7e807f2bd" category="doc">更换 NVMEM 电池— AFF A300</block>
   <block id="0abaa421c46070cd2ec45f7bc5586da5" category="paragraph">执行交还： `storage failover giveback -ofnode replacement_node_name`</block>
-  <block id="add009983e63f2b0d108525989c12028" category="section-title">第 7 步（仅限双节点 MetroCluster ）：切回聚合</block>
   <block id="3f7f4ac12f292fdfd3a03d2e6ca590ad" category="summary">您可以通过 AFF A300 系统文档安装，设置和维护系统。</block>
   <block id="8c8521d7bd33c3aaeafeef557f4eadbb" category="doc">AFF A300 系统文档</block>
   <block id="14dcd64a8e337723e8b53ea592f0d173" category="doc">更换电源— AFF A300</block>
@@ -8544,4 +8543,5 @@
   <block id="3f91c59c59a1243cb3f176daf3c9c054" category="list-text">使节点恢复正常运行。</block>
   <block id="eb90dbf89cffd9812a8720d277f30583" category="summary">您可以使用这些链接查找其他 AFF 和 FAS 平台的文档。</block>
   <block id="0f40216c1ad47c12e8ccc087d555570f" category="sidebar">《 ONTAP 发行说明》</block>
+  <block id="c0a1a3a5bc62ecf46953d4c7ebde86a7" category="section-title">第 6 步：（仅限双节点 MetroCluster ）：切回聚合</block>
 </blocks>
