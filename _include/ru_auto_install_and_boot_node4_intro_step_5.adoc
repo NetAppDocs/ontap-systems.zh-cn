@@ -4,7 +4,7 @@
 如果 node4 的 ONTAP 9 版本与 node2 上安装的版本不同，则需要对其进行网络启动。安装 node4 后，从 Web 服务器上存储的 ONTAP 9 映像启动它。然后，您可以按照中的说明将正确的文件下载到启动介质设备，以供后续系统启动 link:prepare_for_netboot.html["准备网络启动"]。
 
 .重要
-* 如果要升级连接到存储阵列的 V 系列系统或安装了 FlexArray 虚拟化软件并连接到存储阵列的系统，则必须完成升级 <<auto_install4_step1,第 1 步>> 到 <<auto_install4_step21,第 21 步>>，然后退出本节并按照说明进行操作 link:set_fc_or_uta_uta2_config_node4.html#configure-fc-ports-on-node4["在节点 4 上配置 FC 端口"] 和到 ，在维护模式下输入命令。然后，您必须返回到此部分并继续使用 <<auto_install4_step23,第 23 步>>。
+* 如果要升级连接到存储阵列的 V 系列系统或安装了 FlexArray 虚拟化软件并连接到存储阵列的系统，则必须完成升级 <<auto_install4_step1,第 1 步>> 到 <<auto_install4_step21,第 21 步>>，然后退出本节并按照说明进行操作 link:set_fc_or_uta_uta2_config_node4.html#configure-fc-ports-on-node4["在节点 4 上配置 FC 端口"] 和到 link:set_fc_or_uta_uta2_config_node4.html#check-and-configure-utauta2-ports-on-node4["检查并配置 node4 上的 UTA/UTA2 端口"]，在维护模式下输入命令。然后，您必须返回到此部分并继续使用 <<auto_install4_step23,第 23 步>>。
 * 但是，如果要升级具有存储磁盘的系统，则必须完成整个部分，然后继续 link:set_fc_or_uta_uta2_config_node4.html["在 node4 上设置 FC 或 UTA/UTA2 配置"]，在集群提示符处输入命令。
 
 

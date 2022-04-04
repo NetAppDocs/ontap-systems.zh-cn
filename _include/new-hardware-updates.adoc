@@ -1,0 +1,37 @@
+= 
+
+
+[cols="25h,~,~"]
+|===
+| 功能 | 问题描述 以及从何处了解更多信息 | 可从一开始使用 
+
+
+ a| 
+扩展了对 NS224 驱动器架的平台支持
+ a| 
+以下平台支持 NS224 驱动器架：
+
+* AFF A800/AFF ASA A800
+* AFF A700/AFF ASA A700
+* AFF A250/AFF ASA A250
+* FAS500f
+
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+将 12 Gb SAS 磁盘架热添加到 6 Gb SAS 存储堆栈
+ a| 
+现在，支持在 SAS 存储堆栈中从 6 Gb 到 12 Gb 的单速过渡。这样可以使用 12 Gb 磁盘架扩展现有 6 Gb 堆栈的存储。
+
+https://docs.netapp.com/platstor/topic/com.netapp.doc.hw-ds-mix-hotadd/home.html["将带有 IOM12 模块的磁盘架热添加到带有 IOM6 模块的磁盘架堆栈中"]
+ a| 
+ONTAP 9.7P4
+
+ONTAP 9.6P9
+
+ONTAP 9.5P14
+
+|===

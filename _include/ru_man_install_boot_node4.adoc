@@ -103,7 +103,7 @@ WARNING: * 警告：不要覆盖此延迟。如果不允许电池充电，可能
 
 
 | 是 V 系列系统或具有 FlexArray 虚拟化软件并连接到存储阵列  a| 
-.. 转至 _set the FC or UTA/UTA2 configuration on node4_ 一节并完成各节 link:set_fc_uta_uta2_config_node4.html#configure-fc-ports-on-node4["在节点 4 上配置 FC 端口"] 和 ，根据您的系统情况而定。
+.. 转至 _set the FC or UTA/UTA2 configuration on node4_ 一节并完成各节 link:set_fc_uta_uta2_config_node4.html#configure-fc-ports-on-node4["在节点 4 上配置 FC 端口"] 和 link:set_fc_uta_uta2_config_node4.html#check-and-configure-utauta2-ports-on-node4["检查并配置 node4 上的 UTA/UTA2 端口"]，根据您的系统情况而定。
 .. 返回到此部分，完成从开始的其余步骤 <<man_install4_Step9,第 9 步>>。
 
 

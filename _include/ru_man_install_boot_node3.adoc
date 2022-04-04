@@ -8,7 +8,7 @@
 但是，如果 node3 安装的 ONTAP 9 版本与 node1 相同或更高，则不需要对其执行网络启动。
 
 
-NOTE: * 重要信息 * ：如果要升级连接到存储阵列的 V 系列系统或使用连接到存储阵列的 FlexArray 虚拟化软件的系统，则需要完成升级 <<man_install3_step1,第 1 步>> 到 <<man_install3_step5,第 5 步>>，请将此部分保留在 <<man_install3_step6,第 6 步>> 并按照中的说明进行操作 link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3["在 node3 上配置 FC 端口"] 和  根据需要在维护模式下输入命令。然后，您必须返回到此部分并继续使用 <<man_install3_step7,第 7 步>>。但是，如果要升级具有存储磁盘的系统，则需要完成整个部分，然后转到 link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3["在 node3 上配置 FC 端口"] 和 ，在集群提示符处输入命令。
+NOTE: * 重要信息 * ：如果要升级连接到存储阵列的 V 系列系统或使用连接到存储阵列的 FlexArray 虚拟化软件的系统，则需要完成升级 <<man_install3_step1,第 1 步>> 到 <<man_install3_step5,第 5 步>>，请将此部分保留在 <<man_install3_step6,第 6 步>> 并按照中的说明进行操作 link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3["在 node3 上配置 FC 端口"] 和 link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3["检查并配置 node3 上的 UTA/UTA2 端口"] 根据需要在维护模式下输入命令。然后，您必须返回到此部分并继续使用 <<man_install3_step7,第 7 步>>。但是，如果要升级具有存储磁盘的系统，则需要完成整个部分，然后转到 link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3["在 node3 上配置 FC 端口"] 和 link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3["检查并配置 node3 上的 UTA/UTA2 端口"]，在集群提示符处输入命令。
 
 .步骤
 . 【 man_install3_step1]] 确保为 node3 预留机架空间。
@@ -82,7 +82,7 @@ NOTE: * 注意 * ：请勿覆盖此延迟；如果不允许电池充电，可能
 
 
 | 是 V 系列系统或已将 FlexArray 虚拟化软件连接到存储阵列的系统  a| 
-.. 转至 link:set_fc_uta_uta2_config_node3.html["在 node3 上设置 FC 或 UTA/UTA2 配置"] 并完成各小节  和 ，根据您的系统情况而定。
+.. 转至 link:set_fc_uta_uta2_config_node3.html["在 node3 上设置 FC 或 UTA/UTA2 配置"] 并完成各小节 link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3["在 node3 上配置 FC 端口"] 和 link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3["检查并配置 node3 上的 UTA/UTA2 端口"]，根据您的系统情况而定。
 .. 返回到此部分，完成从开始的其余步骤 <<man_install3_step7,第 7 步>>。
 
 

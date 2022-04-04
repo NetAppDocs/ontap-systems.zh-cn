@@ -3,7 +3,7 @@ settings:
   search: ontap-systems
   name: ONTAP Systems
   internal:
-    pdf_enabled: true
+    pdf_enabled: false
   prod:
     pdf_enabled: true
     harmony_enabled: false
@@ -12,30 +12,444 @@ sidebar:
   entries:
   - title: AFF 和 FAS 系统文档
     url: "/index.html"
-  - title: 发行说明
+  - title: 入门
     entries:
     - title: 新增功能
       url: "/whats-new.html"
     - title: 发行说明
       url: "/rel-notes.html"
-  - section: a200
-  - section: fas2700
-  - section: a250
-  - section: a300
-  - section: a320
-  - section: a400
-  - section: fas9000
-  - section: a700s
-  - section: a800
-  - section: a900
-  - section: c190
-  - section: fas2600
-  - section: fas500f
-  - section: fas8200
-  - section: fas8300
-  - section: platform-supplemental
-  - section: ns224
-  - section: sas3
-  - section: other
+  - title: AFF 系统
+    entries:
+    - section: c190
+    - section: a200
+    - title: AFF A220 系统
+      url: "/fas2700/index.html"
+      entries:
+      - title: 安装和设置
+        pdf-filename: AFF A220 安装和设置
+        entries:
+        - title: 选择安装和设置体验
+          url: "/fas2700/install-setup.html"
+        - title: 快速步骤
+          url: "/fas2700/install-quick-guide.html"
+        - title: 视频步骤
+          url: "/fas2700/install-videos.html"
+        - title: 详细步骤
+          url: "/fas2700/install-detailed-guide.html"
+      - title: 维护
+        pdf-filename: AFF A220 维护
+        entries:
+        - title: 启动介质
+          pdf-filename: AFF A220 启动介质
+          entries:
+          - title: 概述
+            url: "/fas2700/bootmedia-replace-overview.html"
+          - title: 检查板载加密密钥
+            url: "/fas2700/bootmedia-encryption-preshutdown-checks.html"
+          - title: 关闭受损控制器
+            url: "/fas2700/bootmedia-impaired-controller-shutdown.html"
+          - title: 替换启动映像
+            url: "/fas2700/bootmedia-replace.html"
+          - title: 启动恢复映像
+            url: "/fas2700/bootmedia-recovery-image-boot-non-2n-mcc.html"
+          - title: 还原 OKM ， NSE 和 NVE
+            url: "/fas2700/bootmedia-encryption-restore.html"
+          - title: 将故障部件退回 NetApp
+            url: "/fas2700/bootmedia-complete-rma.html"
+        - title: 缓存模块
+          pdf-filename: AFF A220 缓存模块
+          url: "/fas2700/caching-module-replace.html"
+        - title: 机箱
+          pdf-filename: AFF A220 和 FAS2700 机箱
+          entries:
+          - title: 概述
+            url: "/fas2700/chassis-replace-overview.html"
+          - title: 关闭受损控制器
+            url: "/fas2700/chassis-replace-shutdown.html"
+          - title: 更换硬件
+            url: "/fas2700/chassis-replace-move-hardware.html"
+          - title: 还原配置
+            url: "/fas2700/chassis-replace-complete-system-restore-rma.html"
+        - title: 控制器
+          pdf-filename: AFF A220 控制器
+          entries:
+          - title: 概述
+            url: "/fas2700/controller-replace-overview.html"
+          - title: 关闭受损控制器
+            url: "/fas2700/controller-replace-shutdown.html"
+          - title: 更换控制器硬件
+            url: "/fas2700/controller-replace-move-hardware.html"
+          - title: 还原系统配置
+            url: "/fas2700/controller-replace-system-config-restore-and-verify.html"
+          - title: 可重新连接的系统
+            url: "/fas2700/controller-replace-recable-reassign-disks.html"
+          - title: 完成系统还原
+            url: "/fas2700/controller-replace-restore-system-rma.html"
+        - title: DIMM
+          pdf-filename: AFF A220 DIMM
+          url: "/fas2700/dimm-replace.html"
+        - title: 驱动器
+          pdf-filename: AFF A220 驱动器
+          url: "/fas2700/drive-replace.html"
+        - title: NVMEM 电池
+          pdf-filename: AFF A220 和 FAS2700 NVMEM 电池
+          url: "/fas2700/nvmem-nvram-battery-replace.html"
+        - title: 电源
+          pdf-filename: AFF A220 和 FAS2700 电源
+          url: "/fas2700/power-supply-swap-out.html"
+        - title: 实时时钟电池
+          pdf-filename: AFF A220 实时时钟电池
+          url: "/fas2700/rtc-battery-replace.html"
+    - section: a250
+    - section: a300
+    - section: a320
+    - section: a400
+    - title: AFF A700 系统
+      url: "/fas9000/index.html"
+      entries:
+      - title: 安装和设置
+        pdf-filename: AFF A700 安装和设置
+        entries:
+        - title: 选择安装和设置体验
+          url: "/fas9000/install-setup.html"
+        - title: 快速步骤
+          url: "/fas9000/install-quick-guide.html"
+        - title: 视频步骤
+          url: "/fas9000/install-videos.html"
+        - title: 详细步骤
+          url: "/fas9000/install-detailed-guide.html"
+      - title: 维护
+        pdf-filename: AFF A700 维护
+        entries:
+        - title: 启动介质
+          pdf-filename: AFF A700 启动介质
+          entries:
+          - title: 概述
+            url: "/fas9000/bootmedia-replace-overview.html"
+          - title: 检查板载加密密钥
+            url: "/fas9000/bootmedia-encryption-preshutdown-checks.html"
+          - title: 关闭受损控制器
+            url: "/fas9000/bootmedia-impaired-controller-shutdown.html"
+          - title: 替换启动映像
+            url: "/fas9000/bootmedia-replace.html"
+          - title: 启动恢复映像
+            url: "/fas9000/bootmedia-recovery-image-boot-options.html"
+          - title: 切回 MetroCluster 配置
+            url: "/fas9000/bootmedia-2n-mcc-switchback.html"
+          - title: 还原 OKM ， NSE 和 NVE
+            url: "/fas9000/bootmedia-encryption-restore.html"
+          - title: 将故障部件退回 NetApp
+            url: "/fas9000/bootmedia-complete-rma.html"
+        - title: 缓存模块
+          url: "/fas9000/caching-module-and-core-dump-module-replace.html"
+        - title: 缓存模块（热插拔）
+          url: "/fas9000/caching-module-hot-swap.html"
+        - title: 机箱
+          pdf-filename: AFF A700 机箱
+          entries:
+          - title: 概述
+            url: "/fas9000/chassis-replace-overview.html"
+          - title: 关闭受损控制器
+            url: "/fas9000/chassis-replace-shutdown.html"
+          - title: 更换硬件
+            url: "/fas9000/chassis-replace-move-hardware.html"
+          - title: 完成更换
+            url: "/fas9000/chassis-replace-complete-system-restore-rma.html"
+        - title: 控制器模块
+          pdf-filename: AFF A700 控制器
+          entries:
+          - title: 概述
+            url: "/fas9000/controller-replace-overview.html"
+          - title: 关闭受损控制器
+            url: "/fas9000/controller-replace-shutdown.html"
+          - title: 更换控制器模块
+            url: "/fas9000/controller-replace.html"
+          - title: 还原系统配置
+            url: "/fas9000/controller-replace-system-config-restore-and-verify.html"
+          - title: 可重新连接的系统
+            url: "/fas9000/controller-replace-recable-reassign-disks.html"
+          - title: 完成系统还原
+            url: "/fas9000/controller-replace-complete-system-restoration.html"
+        - title: DCPM
+          url: "/fas9000/dcpm-nvram10-battery-replace.html"
+        - title: DIMM
+          url: "/fas9000/dimm-replace.html"
+        - title: 风扇
+          url: "/fas9000/fan-swap-out.html"
+        - title: I/O 模块
+          url: "/fas9000/pci-cards-and-risers-replace.html"
+        - title: LED USB 模块
+          url: "/fas9000/led-module-replace.html"
+        - title: NVRAM
+          url: "/fas9000/nvram-module-or-nvram-dimm-replacement.html"
+        - title: 电源
+          url: "/fas9000/power-supply-swap-out.html"
+        - title: RTC 电池
+          url: "/fas9000/rtc-battery-replace.html"
+        - title: X91148A 模块
+          pdf-filename: AFF A700 X91148A 模块
+          entries:
+          - title: 概述
+            url: "/fas9000/x91148a-module-install-overview.html"
+          - title: AFF A700 系统，具有开放插槽
+            url: "/fas9000/x91148a-modules-with-open-slots-add.html"
+          - title: AFF A700 系统没有打开的插槽
+            url: "/fas9000/x91148a-modules-with-no-open-slots-add.html"
+    - section: a700s
+    - section: a800
+    - section: a900
+  - title: FAS 系统
+    entries:
+    - section: fas500f
+    - section: fas2600
+    - title: FAS2700 系统
+      url: "/fas2700/index.html"
+      entries:
+      - title: 安装和设置
+        pdf-filename: FAS2700 安装和设置
+        entries:
+        - title: 选择安装和设置体验
+          url: "/fas2700/install-setup.html"
+        - title: 快速步骤
+          url: "/fas2700/install-quick-guide.html"
+        - title: 视频步骤
+          url: "/fas2700/install-videos.html"
+        - title: 详细步骤
+          url: "/fas2700/install-detailed-guide.html"
+      - title: 维护
+        pdf-filename: FAS2700 维护
+        entries:
+        - title: 启动介质
+          pdf-filename: FAS2700 启动介质
+          entries:
+          - title: 概述
+            url: "/fas2700/bootmedia-replace-overview.html"
+          - title: 检查板载加密密钥
+            url: "/fas2700/bootmedia-encryption-preshutdown-checks.html"
+          - title: 关闭受损控制器
+            url: "/fas2700/bootmedia-impaired-controller-shutdown.html"
+          - title: 替换启动映像
+            url: "/fas2700/bootmedia-replace.html"
+          - title: 启动恢复映像
+            url: "/fas2700/bootmedia-recovery-image-boot-non-2n-mcc.html"
+          - title: 还原 OKM ， NSE 和 NVE
+            url: "/fas2700/bootmedia-encryption-restore.html"
+          - title: 将故障部件退回 NetApp
+            url: "/fas2700/bootmedia-complete-rma.html"
+        - title: 缓存模块
+          pdf-filename: FAS2700 缓存模块
+          url: "/fas2700/caching-module-replace.html"
+        - title: 机箱
+          pdf-filename: FAS2700 机箱
+          entries:
+          - title: 概述
+            url: "/fas2700/chassis-replace-overview.html"
+          - title: 关闭受损控制器
+            url: "/fas2700/chassis-replace-shutdown.html"
+          - title: 更换硬件
+            url: "/fas2700/chassis-replace-move-hardware.html"
+          - title: 还原配置
+            url: "/fas2700/chassis-replace-complete-system-restore-rma.html"
+        - title: 控制器
+          pdf-filename: FAS2700 控制器
+          entries:
+          - title: 概述
+            url: "/fas2700/controller-replace-overview.html"
+          - title: 关闭受损控制器
+            url: "/fas2700/controller-replace-shutdown.html"
+          - title: 更换控制器硬件
+            url: "/fas2700/controller-replace-move-hardware.html"
+          - title: 还原系统配置
+            url: "/fas2700/controller-replace-system-config-restore-and-verify.html"
+          - title: 可重新连接的系统
+            url: "/fas2700/controller-replace-recable-reassign-disks.html"
+          - title: 完成系统还原
+            url: "/fas2700/controller-replace-restore-system-rma.html"
+        - title: DIMM
+          pdf-filename: FAS2700 DIMM
+          url: "/fas2700/dimm-replace.html"
+        - title: 驱动器
+          pdf-filename: FAS2700 驱动器
+          url: "/fas2700/drive-replace.html"
+        - title: NVMEM 电池
+          pdf-filename: AFF A220 和 FAS2700 NVMEM 电池
+          url: "/fas2700/nvmem-nvram-battery-replace.html"
+        - title: 电源
+          pdf-filename: AFF A220 和 FAS2700 电源
+          url: "/fas2700/power-supply-swap-out.html"
+        - title: 实时时钟电池
+          pdf-filename: FAS2700 实时时钟电池
+          url: "/fas2700/rtc-battery-replace.html"
+    - section: fas8200
+    - section: fas8300
+    - title: FAS9000 系统
+      url: "/fas9000/index.html"
+      entries:
+      - title: 安装和设置
+        pdf-filename: FAS9000 安装和设置
+        entries:
+        - title: 选择安装和设置体验
+          url: "/fas9000/install-setup.html"
+        - title: 快速步骤
+          url: "/fas9000/install-quick-guide.html"
+        - title: 视频步骤
+          url: "/fas9000/install-videos.html"
+        - title: 详细步骤
+          url: "/fas9000/install-detailed-guide.html"
+      - title: 维护
+        pdf-filename: FAS9000 维护
+        entries:
+        - title: 启动介质
+          pdf-filename: FAS9000 启动介质
+          entries:
+          - title: 概述
+            url: "/fas9000/bootmedia-replace-overview.html"
+          - title: 检查板载加密密钥
+            url: "/fas9000/bootmedia-encryption-preshutdown-checks.html"
+          - title: 关闭受损控制器
+            url: "/fas9000/bootmedia-impaired-controller-shutdown.html"
+          - title: 替换启动映像
+            url: "/fas9000/bootmedia-replace.html"
+          - title: 启动恢复映像
+            url: "/fas9000/bootmedia-recovery-image-boot-options.html"
+          - title: 切回 MetroCluster 配置
+            url: "/fas9000/bootmedia-2n-mcc-switchback.html"
+          - title: 还原 OKM ， NSE 和 NVE
+            url: "/fas9000/bootmedia-encryption-restore.html"
+          - title: 将故障部件退回 NetApp
+            url: "/fas9000/bootmedia-complete-rma.html"
+        - title: 缓存模块
+          url: "/fas9000/caching-module-and-core-dump-module-replace.html"
+        - title: 缓存模块（热插拔）
+          url: "/fas9000/caching-module-hot-swap.html"
+        - title: 机箱
+          pdf-filename: FAS9000 机箱
+          entries:
+          - title: 概述
+            url: "/fas9000/chassis-replace-overview.html"
+          - title: 关闭受损控制器
+            url: "/fas9000/chassis-replace-shutdown.html"
+          - title: 更换硬件
+            url: "/fas9000/chassis-replace-move-hardware.html"
+          - title: 完成更换
+            url: "/fas9000/chassis-replace-complete-system-restore-rma.html"
+        - title: 控制器模块
+          pdf-filename: FAS9000 控制器
+          entries:
+          - title: 概述
+            url: "/fas9000/controller-replace-overview.html"
+          - title: 关闭受损控制器
+            url: "/fas9000/controller-replace-shutdown.html"
+          - title: 更换控制器模块
+            url: "/fas9000/controller-replace.html"
+          - title: 还原系统配置
+            url: "/fas9000/controller-replace-system-config-restore-and-verify.html"
+          - title: 可重新连接的系统
+            url: "/fas9000/controller-replace-recable-reassign-disks.html"
+          - title: 完成系统还原
+            url: "/fas9000/controller-replace-complete-system-restoration.html"
+        - title: DCPM
+          url: "/fas9000/dcpm-nvram10-battery-replace.html"
+        - title: DIMM
+          url: "/fas9000/dimm-replace.html"
+        - title: 风扇
+          url: "/fas9000/fan-swap-out.html"
+        - title: I/O 模块
+          url: "/fas9000/pci-cards-and-risers-replace.html"
+        - title: LED USB 模块
+          url: "/fas9000/led-module-replace.html"
+        - title: NVRAM
+          url: "/fas9000/nvram-module-or-nvram-dimm-replacement.html"
+        - title: 电源
+          url: "/fas9000/power-supply-swap-out.html"
+        - title: RTC 电池
+          url: "/fas9000/rtc-battery-replace.html"
+        - title: X91148A 模块
+          pdf-filename: FAS9000 X91148A 模块
+          entries:
+          - title: 概述
+            url: "/fas9000/x91148a-module-install-overview.html"
+          - title: AFF A700 系统，具有开放插槽
+            url: "/fas9000/x91148a-modules-with-open-slots-add.html"
+          - title: AFF A700 系统没有打开的插槽
+            url: "/fas9000/x91148a-modules-with-no-open-slots-add.html"
+  - title: 所有 SAN 阵列系统
+    url: "/platform-supplemental/all-san-array.html"
+  - title: 系统级诊断
+    entries:
+    - title: 简介
+      url: "/platform-supplemental/sldiag-introduction.html"
+    - title: 要求
+      url: "/platform-supplemental/sldiag-requirements.html"
+    - title: 如何使用命令行帮助
+      url: "/platform-supplemental/sldiag-use-cli-help.html"
+    - title: 运行系统安装诊断
+      url: "/platform-supplemental/sldiag-system-installation-diagnostics.html"
+    - title: 运行系统崩溃诊断
+      url: "/platform-supplemental/sldiag-system-panic-diagnostics.html"
+    - title: 运行系统响应缓慢诊断
+      url: "/platform-supplemental/sldiag-slow-system-diagnostics.html"
+    - title: 运行硬件安装诊断
+      url: "/platform-supplemental/sldiag-hardware-installation-diagnostics.html"
+    - title: 运行设备故障诊断
+      url: "/platform-supplemental/sldiag-device-failure-diagnostics.html"
+  - title: 驱动器架
+    entries:
+    - section: ns224
+    - section: sas3
+  - title: 交换机
+    url: "/other/switch-linkout.html"
+  - title: 机柜和导轨套件
+    entries:
+    - title: SuperRail 套件
+      url: "/platform-supplemental/superrail-install.html"
+    - title: AFF A700/FAS9000 双柱导轨套件
+      url: "/platform-supplemental/telco-installation-instructions.html"
+    - title: 42U 1280 毫米系统机柜
+      entries:
+      - title: 准备安装机柜
+        entries:
+        - title: 机柜功能
+          url: "/platform-supplemental/42u-1280mm-features.html"
+        - title: 所需工具 / 设备
+          url: "/platform-supplemental/42u-1280mm-required-tools.html"
+        - title: 空间要求和机柜尺寸
+          url: "/platform-supplemental/42u-1280mm-space-and-dimensions.html"
+        - title: 支持的 PDU 类型和规格
+          url: "/platform-supplemental/42u-1280mm-supported-pdu-types-and-specifications.html"
+      - title: 打开系统机柜的包装
+        url: "/platform-supplemental/42u-1280mm-unpack.html"
+      - title: 安装机柜
+        entries:
+        - title: 概述
+          url: "/platform-supplemental/42u-1280mm-install.html"
+        - title: 安装机柜互连套件
+          url: "/platform-supplemental/42u-1280mm-install-cabinet-interconnect-kit.html"
+        - title: 安装固定套件
+          url: "/platform-supplemental/42u-1280mm-install-bolt-down-kit.html"
+        - title: 安装支持导轨
+          url: "/platform-supplemental/42u-1280mm-install-additional-rails.html"
+        - title: 安装设备
+          url: "/platform-supplemental/42u-1280mm-install-equipment.html"
+        - title: 打开机柜电源
+          url: "/platform-supplemental/42u-1280mm-power-on.html"
+      - title: 更换 PDU
+        url: "/platform-supplemental/42u-1280mm-replace-pdus.html"
+      - title: 反转机柜前盖
+        entries:
+        - title: 您需要的内容
+          url: "/platform-supplemental/42u-1280mm-reverse-front-door.html"
+        - title: 拆下照明标志
+          url: "/platform-supplemental/42u-1280mm-remove-illuminated-badge.html"
+        - title: 卸下机柜门
+          url: "/platform-supplemental/42u-1280mm-remove-door.html"
+        - title: 移动标志电源和布线
+          url: "/platform-supplemental/42u-1280mm-move-badge-ps-and-cabling.html"
+        - title: 反向车门转轴和锁扣
+          url: "/platform-supplemental/42u-1280mm-reverse-hinge-and-lock.html"
+        - title: 重新安装车门和照明标志
+          url: "/platform-supplemental/42u-1280mm-reinstall-door-and-badge.html"
+  - title: 其他型号
+    url: "/other/other-models.html"
   - title: 法律声明
     url: "/legal-notices.html"

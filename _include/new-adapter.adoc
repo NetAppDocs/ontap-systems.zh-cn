@@ -1,0 +1,45 @@
+= 
+
+
+[cols="4*"]
+|===
+| 适配器部件号 | Description | 类别 | 可从一开始使用 
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X91148A"]
+ a| 
+2 端口 100GbE RoCE QSFP28
+ a| 
+* 存储
+* 网络
+* HA/MetroCluster
+
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X91122A"]
+ a| 
+2 端口 25GbE RoCE QSFP28
+ a| 
+* 网络
+* HA/MetroCluster
+
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X9170A"]
+ a| 
+NVMe SSD 模块（ 1 TB ）
+ a| 
+核心转储设备
+ a| 
+ONTAP 9.8
+
+|===

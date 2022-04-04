@@ -142,4 +142,4 @@ Do you want to continue? {y|n}: y
 . 如果要在新节点上设置无交换机集群，请转至 link:other_references.html["参考资料"] 要链接到 _Network 支持站点 _ 并按照 _switchover to a two-node switchless cluster_ 中的说明进行操作。
 
 
-如果在 node3 和 node4 上启用了存储加密，请完成中的步骤 link:set_up_storage_encryption_new_controller.html["在新控制器模块上设置存储加密"]。否则，请完成中的步骤 。
+如果在 node3 和 node4 上启用了存储加密，请完成中的步骤 link:set_up_storage_encryption_new_controller.html["在新控制器模块上设置存储加密"]。否则，请完成中的步骤 link:decommission_old_system.html["停用旧系统"]。

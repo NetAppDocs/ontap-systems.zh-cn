@@ -65,6 +65,9 @@ entries:
   - title: DIMM
     pdf-filename: AFF A700s DIMM
     url: "/a700s/dimm-replace.html"
+  - title: 驱动器
+    pdf-filename: AFF A700s 驱动器
+    url: "/a700s/drive-replace.html"
   - title: 风扇
     entries:
     - title: 关闭受损节点

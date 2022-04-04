@@ -5,10 +5,14 @@ indexpage:
     links:
     - title: "《 ONTAP 发行说明》"
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
+    - title: 新增功能
+      url: "../whats-new.html"
     - title: 系统数据表
       url: https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf
     - title: 存储数据表
       url: https://www.netapp.com/data-storage/disk-shelves-storage-media/
+    - title: TR-4539-NetApp 全闪存 FAS 解决方案 for VMware Horizon View
+      url: https://www.netapp.com/pdf.html?item=/media/10695-tr-4539.pdf
   - title: 安装和设置
     links:
     - title: 大多数配置
@@ -47,12 +51,6 @@ indexpage:
       url: "/rtc-battery-replace.html"
     - title: X91148A 模块
       url: "/x91148a-module-install-overview.html"
-  - title: 了解
-    links:
-    - title: 更换内部磁盘驱动器视频
-      url: https://www.youtube.com/watch?v=Ziqg9HL8oYQ
-    - title: 适用于采用 VMware Horizon View 的非持久性桌面的 NetApp 纯闪存 FAS 解决方案 | TR-4539
-      url: https://www.netapp.com/pdf.html?item=/media/10695-tr-4539.pdf
   - title: 添加或删除磁盘架
     links:
     - title: NS224

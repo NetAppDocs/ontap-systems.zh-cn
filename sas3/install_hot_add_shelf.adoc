@@ -288,7 +288,7 @@ CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒
 
 .关于此任务
 * 有关磁盘架到磁盘架的 `standard` 布线和磁盘架到磁盘架的 `d外宽` 布线的说明和示例，请参见 link:install-cabling-rules.html#shelf-to-shelf-connection-rules["磁盘架到磁盘架 SAS 连接规则"]。
-* 有关如何阅读使用缆线连接控制器到堆栈连接的工作表的说明，请参见 link:install-cabling-worksheets-how-to-read-multipath.html["如何阅读使用缆线连接控制器到堆栈连接以实现多路径连接的工作表"] 或 。
+* 有关如何阅读使用缆线连接控制器到堆栈连接的工作表的说明，请参见 link:install-cabling-worksheets-how-to-read-multipath.html["如何阅读使用缆线连接控制器到堆栈连接以实现多路径连接的工作表"] 或 link:install-cabling-worksheets-how-to-read-quadpath.html["如何阅读使用缆线连接控制器到堆栈连接以实现四路径连接的工作表"]。
 * 为热添加的磁盘架布线后， ONTAP 会识别它们：如果启用了磁盘所有权自动分配，则会分配磁盘所有权；如果需要，磁盘架（ IOM ）固件和磁盘驱动器固件应自动更新； 如果您的配置启用了带内 ACP ，则会在热添加的磁盘架上自动启用它。
 +
 

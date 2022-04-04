@@ -2492,7 +2492,6 @@
   <block id="8a0d213b82dba7e159bf42a3ac99febf" category="list-text">验证环境变量是否按预期设置。</block>
   <block id="28267e3d063c489c0ed82d1f0863da80" category="paragraph">在 ONTAP 提示符处，您可以对命令 system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true 执行问题描述操作。</block>
   <block id="65abf086161519d5b7303801f17badfc" category="list-text">如果环境变量未按预期设置，请使用 `setenv _environment-variable-name____changed-value_` 命令对其进行修改。</block>
-  <block id="a9ff665cf855e59641b71498bd066dc2" category="list-text">使用 `savenev` 命令保存所做的更改。</block>
   <block id="d512ecec76aa43a3417c7b9f7ac216b3" category="list-text">重新启动节点。</block>
   <block id="92ccf13258bf9f740502601a8edd96f2" category="list-text">当重新启动的受损节点显示 `waiting for giveback...` 消息时，从运行正常的节点执行交还：</block>
   <block id="9779333e2154119b2b5972805e7dda90" category="cell">如果您的系统位于 ...</block>
@@ -3683,7 +3682,6 @@
   <block id="d7f3697202a93edfa9694f456f135d47" category="section-title">选项 3 ：在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID</block>
   <block id="1903509c2e0527e99c5b6bf04998c1bd" category="doc">更换 NVMEM 电池— AFF A220 和 FAS2700</block>
   <block id="f8513ba35fb79fff664658165975390f" category="list-text">将电池插头重新插入控制器模块。</block>
-  <block id="e899cd265eb0284d156930495e1a6147" category="doc">AFF A220 和 FAS2700 系统文档</block>
   <block id="4a548135158bf0dbaee8622657e29f8a" category="doc">关闭受损控制器— AFF A220 和 FAS2700</block>
   <block id="7322467d01726afa3b63a66bb748a30d" category="doc">启动恢复映像— AFF A220 和 FAS2700</block>
   <block id="9da34b3563e3dc0c838ac5494efca1fe" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF A220 和 FAS2700</block>
@@ -7313,7 +7311,6 @@
   <block id="0d41b873813de2203d2c7cc22322899d" category="list-text">使用以下动画或插图将控制器连接到两个驱动器架。</block>
   <block id="f7a5a513bed985929212bb6fb12674e1" category="list-text">使用下图将控制器连接到两个驱动器架。</block>
   <block id="be28c3d24688dc5b9d0391b67c1b3f40" category="paragraph">+<block ref="91b9dae90e904c2901e5a02752e081c0" category="inline-link-rx"></block></block>
-  <block id="77d9df2bb55558446417de1799833272" category="doc">Cisco 和 Broadcom 支持的集群，存储和管理交换机</block>
   <block id="bd397018360b37f0581b599a75518e00" category="paragraph">您可以使用这些链接查找交换机文档。</block>
   <block id="fcad6ad7a3d292b04f7014170c512dec" category="list-text"><block ref="fcad6ad7a3d292b04f7014170c512dec" category="inline-link-macro-rx"></block></block>
   <block id="3fa05a8d523c4bde34121d2cb916f642" category="list-text"><block ref="3fa05a8d523c4bde34121d2cb916f642" category="inline-link-macro-rx"></block></block>
@@ -8167,7 +8164,6 @@
   <block id="e43128f7c789cef4c5803c71a455e62b" category="inline-link">访问《 ONTAP 9 发行说明》</block>
   <block id="aee57c40ad1b8fc3b33e5e954861e270" category="paragraph"><block ref="aee57c40ad1b8fc3b33e5e954861e270" category="inline-link-rx"></block></block>
   <block id="262434bb76bf9aa49a3efe7de43d9a4e" category="sidebar">AFF 和 FAS 系统文档</block>
-  <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="60786ac16439455c42ee2fbe23a16c06" category="doc">控制器模块更换概述— AFF A300</block>
   <block id="8f32b075b74f50db60cdc53341ea5195" category="doc">启动介质更换概述— AFF A300</block>
@@ -8544,4 +8540,76 @@
   <block id="eb90dbf89cffd9812a8720d277f30583" category="summary">您可以使用这些链接查找其他 AFF 和 FAS 平台的文档。</block>
   <block id="0f40216c1ad47c12e8ccc087d555570f" category="sidebar">《 ONTAP 发行说明》</block>
   <block id="c0a1a3a5bc62ecf46953d4c7ebde86a7" category="section-title">第 6 步：（仅限双节点 MetroCluster ）：切回聚合</block>
+  <block id="af844de12c61a1b2d86c05934c317256" category="summary">如果平台向系统控制台记录一条警告消息，指出驱动器出现故障，则必须更换驱动器。In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.</block>
+  <block id="92198152754d5741f3a481c1555464b4" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF C190</block>
+  <block id="5f807f08fe5525cbcd6708fd63eac203" category="paragraph">You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。</block>
+  <block id="0d05e02f604e76f41068ce0c51bc6d81" category="paragraph">When a drive fails, the platform logs a warning message to the system console indicating which drive has failed.In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.</block>
+  <block id="b89efb90c65765476218cc7e0cdb4195" category="list-text">在更换驱动器之前，请遵循最佳实践并安装最新版本的磁盘认证包（ DQP ）。</block>
+  <block id="9f2373b743cd63cae2165d916d44ed8f" category="list-text">Identify the failed disk drive by running the `storage disk show -broken` command from the system console.</block>
+  <block id="583696e8273677d4dbae849781cbf55d" category="paragraph">The failed drive appears in the list of failed drives.If it does not, you should wait, and then run the command again.</block>
+  <block id="1bb0fd4258be50b59e46882b35acc28e" category="list-text">确定是否已启用 SED 身份验证。</block>
+  <block id="5d5aa765d031a6aec40949b1fe489f43" category="paragraph">如何更换磁盘取决于磁盘驱动器的使用方式。如果启用了 SED 身份验证，则必须使用中的 SED 更换说明<block ref="fc87e4868a863f484cb32d2391c4aa0d" category="inline-link-rx"></block>。这些说明介绍了在更换 SED 之前和之后必须执行的其他步骤。</block>
+  <block id="81e1b67b4176274b272b2432d79bb3a4" category="list-text">确保您的平台支持替代驱动器。请参见<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>。</block>
+  <block id="35947e84e557291e52a523d2f7eefc27" category="list-text">确保系统中的所有其他组件均正常运行；否则，您必须联系技术支持。</block>
+  <block id="dd48f304652176299be75f07f2b6523a" category="paragraph">通过选择适用于您的平台支持的驱动器的选项来更换故障驱动器。</block>
+  <block id="4a0f8aecbf870bfdf4815f2f2ceeb53f" category="inline-link">更换发生故障的驱动器视频</block>
+  <block id="d6e9040aecfa516e4a65b04b455f9f8f" category="paragraph">您也可以选择观看<block ref="3e3795a2a8fcc1e5dcfff5dff428e5f2" category="inline-link-rx"></block> 其中简要介绍了嵌入式驱动器更换操作步骤 。</block>
+  <block id="b2503ad254a75d9be517466a531e8187" category="open-title">选项 1 ：更换 SSD</block>
+  <block id="3862a4353217fcdcd0118bfd4cc1c05a" category="open-title">选项 2 ：更换 HDD</block>
+  <block id="3c533ebf2f9fc11504f4940fa25f3d60" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A200</block>
+  <block id="8b4eefcd8e93a21d1bcd9ddea95d0b29" category="list-text">使用 `savenv` 命令保存所做的更改。</block>
+  <block id="b7cfb975a50851418ad4bf0bcad4933f" category="section-title">新增硬件升级增强功能</block>
+  <block id="9f6a47c67bda21bca9bc7674dc5f2c67" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A250</block>
+  <block id="586b0b2395e2a0e300f3fa9bf559633c" category="doc">更换 SSD 驱动器或 HDD 驱动器— FAS2600</block>
+  <block id="b20f6d14e4d2aa074f783ed7ba24d15f" category="doc">更换故障驱动器— AFF A200</block>
+  <block id="f24bbd8bd23b87a9a7d8b466f2edd685" category="list-text">最佳实践是，在热插拔驱动器之前，安装最新版本的磁盘认证包（ DQP ）。</block>
+  <block id="38b15850492133a635d50ad8448e62b9" category="list-text">How you hot-swap the disk depends on how the disk drive is being used.如果启用了 SED 身份验证，则必须使用中的 SED 更换说明<block ref="fc87e4868a863f484cb32d2391c4aa0d" category="inline-link-rx"></block>。这些说明介绍了在更换 SED 之前和之后必须执行的其他步骤。</block>
+  <block id="6e3d311e755c860fa8be4786c7ffe617" category="list-text">The replacement drive must be supported by your platform.请参见<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>。</block>
+  <block id="455e7132916e2cfdc2ed81e21742458e" category="paragraph">在 &lt;stdin&gt; 中未解析的指令 - 包括： ../_include/drive_hotswap_sas.adoc]]</block>
+  <block id="ed6243b9da8cbb52d7ded5d7a78d3b37" category="paragraph">在 &lt;stdin&gt; 中未解析的指令 - 包括： ../_include/drive_hotswap_sas.adoc.adoc]]</block>
+  <block id="2bed99b4660dcf909368c3a2ae62b513" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A800</block>
+  <block id="ad451e1c6a6a584f53b88b5c73144db7" category="doc">其他型号</block>
+  <block id="07fa61787cd64fafda80a8c62e643a38" category="section-title">平台型号</block>
+  <block id="7a31198e87ee2c9071d7bf63050a7088" category="section-title">磁盘架型号</block>
+  <block id="03be12a0476133b21cb6c1c927956d23" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A220 和 FAS2700</block>
+  <block id="24b3b18d4ae3c460037fb58156d310c6" category="doc">FAS2700 系统文档</block>
+  <block id="7b8d355a80903af67d6bd3bd4c49f973" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A700s</block>
+  <block id="1bfc6b841bbb9beb5900ea65dba46d0d" category="sidebar">TR-4539-NetApp 全闪存 FAS 解决方案 for VMware Horizon View</block>
+  <block id="12c860323c3b7c3ce59343f747296367" category="sidebar">AFF A220 系统</block>
+  <block id="9d01d7eb3a0827983de11cc9671e5029" category="sidebar">AFF A220 安装和设置</block>
+  <block id="01d7cd58de6e7861c757c7723be1642f" category="sidebar">AFF A220 维护</block>
+  <block id="c39d4a3a07244494f50723bf4b6bee7c" category="sidebar">AFF A220 启动介质</block>
+  <block id="595db83f42715fcd4f8806a8433e430a" category="sidebar">AFF A220 缓存模块</block>
+  <block id="139224360f764f63e0f1a87f6575b350" category="sidebar">AFF A220 控制器</block>
+  <block id="f6caefdbf5b7d345e721affd6b6d9bab" category="sidebar">AFF A220 DIMM</block>
+  <block id="9e493c35f280e1be11ab7f0f286f498b" category="sidebar">AFF A220 驱动器</block>
+  <block id="ca55628a813bde8148e26c974fb5bd2e" category="sidebar">AFF A220 实时时钟电池</block>
+  <block id="abff35a157d2dacb23862f65107e6046" category="sidebar">AFF A700 系统</block>
+  <block id="32f4ca4d86bfc7a1abf3647cecc1958a" category="sidebar">AFF A700 安装和设置</block>
+  <block id="b7d8ac4aa5747d1981de364593ecfafb" category="sidebar">AFF A700 维护</block>
+  <block id="052421ddc6a5f7b7d6dadeea44c31393" category="sidebar">AFF A700 启动介质</block>
+  <block id="3342b2d561671b3a6adba94af79af745" category="sidebar">AFF A700 机箱</block>
+  <block id="7bfe8ab3ea2ac4c472be39fc05f489b1" category="sidebar">AFF A700 控制器</block>
+  <block id="d4f63ac2425db51a7af4d929775e79c5" category="sidebar">AFF A700 X91148A 模块</block>
+  <block id="78d2c75e596fdde729e02a7f3810fe1f" category="sidebar">FAS2700 系统</block>
+  <block id="7940df38b8691fb00f99eee3a415bac2" category="sidebar">FAS2700 安装和设置</block>
+  <block id="789f34e0a7a0ec20087af4c807df7ad5" category="sidebar">FAS2700 维护</block>
+  <block id="76de51a63a301223ddb49113a7278a3e" category="sidebar">FAS2700 启动介质</block>
+  <block id="a44baa6c5ec4e4f488c6169d4bc35047" category="sidebar">FAS2700 缓存模块</block>
+  <block id="48c473b9c5452c417d41b924d79d6c1c" category="sidebar">FAS2700 机箱</block>
+  <block id="a4cc7a945ef6ba93df52114c201edd01" category="sidebar">FAS2700 控制器</block>
+  <block id="c5a520bea2989fd52c3041960b69fed4" category="sidebar">FAS2700 DIMM</block>
+  <block id="f69188f77ddf41c996359e3104869fb3" category="sidebar">FAS2700 驱动器</block>
+  <block id="abf01648d47e7b2a7ff0a2d4727b1bb3" category="sidebar">FAS2700 实时时钟电池</block>
+  <block id="af3b1c3faa9bccc5b975d147d144033d" category="sidebar">FAS9000 系统</block>
+  <block id="38a83ff8505f0e21e31eba00c5d34f74" category="sidebar">FAS9000 安装和设置</block>
+  <block id="5ddc6a27c53ac9702b0d756e229caf0a" category="sidebar">FAS9000 维护</block>
+  <block id="5fb158056328f252c445a51f600be8cf" category="sidebar">FAS9000 启动介质</block>
+  <block id="11a40190bb36e43cbe860e374d9ecde9" category="sidebar">FAS9000 机箱</block>
+  <block id="1999e7b9b8a359e0a34178719a904727" category="sidebar">FAS9000 控制器</block>
+  <block id="e3c2d91c7cf7bef5a04aecd6ac9a7aa2" category="sidebar">FAS9000 X91148A 模块</block>
+  <block id="3b4f8423fb92aace5b1c957248b6fd18" category="sidebar">机柜和导轨套件</block>
+  <block id="45f409f69b4619cb11a8c9066bd236ac" category="sidebar">AFF A200 驱动器</block>
+  <block id="bda8b2764dc533181c801be2c8b33b73" category="sidebar">AFF A220 和 FAS2700 驱动器</block>
+  <block id="7cc615fcffd37b0f004ba9169b5db521" category="sidebar">AFF A700s 驱动器</block>
 </blocks>

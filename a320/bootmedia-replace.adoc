@@ -177,7 +177,7 @@ NOTE: 锁定机制臂滑入机箱。
 
 ... 使用 `printenv` 命令检查环境变量设置。
 ... 如果环境变量未按预期设置，请使用 `setenv _environment-variable-name____changed-value_` 命令对其进行修改。
-... 使用 `savenev` 命令保存所做的更改。
+... 使用 `savenv` 命令保存所做的更改。
 ... 重新启动节点。
 
 

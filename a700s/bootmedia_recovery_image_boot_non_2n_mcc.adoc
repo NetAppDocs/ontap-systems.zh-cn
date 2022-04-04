@@ -54,7 +54,7 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 .. 将控制器显示 LOADER 提示符。
 .. 使用 `printenv` 命令检查环境变量设置。
 .. 如果环境变量未按预期设置，请使用 `setenv _environment-variable-name____changed-value_` 命令对其进行修改。
-.. 使用 `savenev` 命令保存所做的更改。
+.. 使用 `savenv` 命令保存所做的更改。
 
 
 . 下一个取决于您的系统配置：
