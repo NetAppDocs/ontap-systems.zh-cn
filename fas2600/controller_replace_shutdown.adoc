@@ -5,6 +5,7 @@ keywords: fas2600, shut down, impaired controller, take over
 summary: 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。 
 ---
 = 关闭控制器— FAS2600
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

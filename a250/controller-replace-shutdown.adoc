@@ -5,6 +5,7 @@ keywords: aff a250, shut down the impaired controller
 summary: 要关闭受损控制器模块，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。 
 ---
 = 关闭受损控制器模块 - AFF A250
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

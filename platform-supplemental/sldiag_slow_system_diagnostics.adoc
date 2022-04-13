@@ -5,6 +5,7 @@ keywords: run, diagnostic, help, identify, slow, system, response, time, run slo
 summary: 运行诊断可以帮助您确定导致系统响应时间较慢的原因。 
 ---
 = 运行系统响应缓慢诊断
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

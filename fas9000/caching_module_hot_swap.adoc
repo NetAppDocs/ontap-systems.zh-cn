@@ -5,6 +5,7 @@ keywords: aff a700, fas9000, hot swap, replace, FlashCache
 summary: NVMe SSD FlashCache 模块（ FlashCache 或缓存模块）仅位于 FAS9000 系统插槽 6 中 NVRAM10 模块的正面。从 ONTAP 9.4 开始，您可以从同一个或不同的受支持供应商热插拔具有相同容量的缓存模块。 
 ---
 = 热插拔缓存模块— AFF A700 和 FAS9000
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

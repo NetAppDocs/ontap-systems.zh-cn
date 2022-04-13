@@ -5,6 +5,7 @@ keywords: run, diagnostic, initial, system, installation, identify, version, sys
 summary: 您可以在初始系统安装后运行诊断，以确定系统级诊断的版本以及存储系统上支持的设备，并验证安装是否成功以及所有硬件是否正常运行。 
 ---
 = 运行系统安装诊断
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

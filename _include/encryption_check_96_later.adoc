@@ -1,4 +1,5 @@
 = 验证 NVE 配置
+:allow-uri-read: 
 
 
 在关闭受损控制器之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.

@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 您需要在机架中安装 node4 ，将 node2 连接传输到 node4 以及启动 node4 。此外，还必须重新分配任何 node2 备用磁盘，属于 root 的任何磁盘以及先前未重新定位到 node3 的任何非根聚合。

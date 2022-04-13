@@ -5,6 +5,7 @@ keywords: aff a700, fas9000, storage encryption, licenses, storage encryption, v
 summary: 要完成替换操作步骤并将系统还原为完全正常运行，您必须重新配置存储，还原 NetApp 存储加密配置（如果需要）并为新控制器安装许可证。 
 ---
 = 完成系统还原— AFF A700 和 FAS9000
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

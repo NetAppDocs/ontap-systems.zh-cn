@@ -1,10 +1,10 @@
 ---
 section: fas9000
-title: AFF A700 和 FAS9000 系统
+title: FAS9000 系统
 url: "/fas9000/index.html"
 entries:
 - title: 安装和设置
-  pdf-filename: AFF A700 和 FAS9000 安装和设置
+  pdf-filename: FAS9000 安装和设置
   entries:
   - title: 选择安装和设置体验
     url: "/fas9000/install-setup.html"
@@ -15,10 +15,10 @@ entries:
   - title: 详细步骤
     url: "/fas9000/install-detailed-guide.html"
 - title: 维护
-  pdf-filename: AFF A700 和 FAS9000 维护
+  pdf-filename: FAS9000 维护
   entries:
   - title: 启动介质
-    pdf-filename: AFF A700 和 FAS9000 启动介质
+    pdf-filename: FAS9000 启动介质
     entries:
     - title: 概述
       url: "/fas9000/bootmedia-replace-overview.html"
@@ -41,7 +41,7 @@ entries:
   - title: 缓存模块（热插拔）
     url: "/fas9000/caching-module-hot-swap.html"
   - title: 机箱
-    pdf-filename: AFF A700 和 FAS9000 机箱
+    pdf-filename: FAS9000 机箱
     entries:
     - title: 概述
       url: "/fas9000/chassis-replace-overview.html"
@@ -52,7 +52,7 @@ entries:
     - title: 完成更换
       url: "/fas9000/chassis-replace-complete-system-restore-rma.html"
   - title: 控制器模块
-    pdf-filename: AFF A700 和 FAS9000 控制器
+    pdf-filename: FAS9000 控制器
     entries:
     - title: 概述
       url: "/fas9000/controller-replace-overview.html"
@@ -83,7 +83,7 @@ entries:
   - title: RTC 电池
     url: "/fas9000/rtc-battery-replace.html"
   - title: X91148A 模块
-    pdf-filename: AFF A700 和 FAS9000 X91148A 模块
+    pdf-filename: FAS9000 X91148A 模块
     entries:
     - title: 概述
       url: "/fas9000/x91148a-module-install-overview.html"

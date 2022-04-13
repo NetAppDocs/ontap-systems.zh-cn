@@ -5,6 +5,7 @@ keywords: aff, a320, aff a320, replace, pcie, card, disconnect, cable, card, sfp
 summary: 要更换 PCIe 卡，您必须断开卡的缆线连接，从卡中卸下 SFP 和 QSFP 模块，然后再卸下提升板，重新安装提升板，最后重新安装 SFP 和 QSFP 模块，最后再为卡布线。 
 ---
 = 更换 PCIe 卡— AFF A320
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

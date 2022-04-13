@@ -5,6 +5,7 @@ keywords: fas8300, fas8700, move the controller module hardware
 summary: 要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。 
 ---
 = 更换控制器模块硬件— FAS8300 和 FAS8700
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

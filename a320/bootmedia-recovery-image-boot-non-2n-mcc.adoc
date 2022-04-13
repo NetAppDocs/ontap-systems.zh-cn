@@ -5,6 +5,7 @@ keywords: aff a320, aff, a320, procedure, boot, impair, node, recovery, image, s
 summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
 ---
 = 启动恢复映像— AFF A320
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

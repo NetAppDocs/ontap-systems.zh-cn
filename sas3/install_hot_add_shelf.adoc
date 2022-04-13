@@ -5,6 +5,7 @@ keywords: hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, 
 summary: 您可以将一个或多个具有 IOM12 模块的磁盘架热添加到具有 IOM12 模块的现有磁盘架堆栈中，或者将一个或多个具有 IOM12 模块的磁盘架堆栈直接热添加到控制器上的 SAS HBA 或板载 SAS 端口中。 
 ---
 = 热添加磁盘架—具有 IOM12 模块的磁盘架
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

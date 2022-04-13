@@ -5,6 +5,7 @@ keywords: system, configuration, whether, perform, nondisruptive, iom12, module,
 summary: 您的系统配置可确定在 IOM12 模块发生故障时是否可以执行无中断 IOM12 模块热插拔或中断 IOM12 模块更换。 
 ---
 = 热插拔或更换 IOM12 模块—使用 IOM12 模块的磁盘架
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

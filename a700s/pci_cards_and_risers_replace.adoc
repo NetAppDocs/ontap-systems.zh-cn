@@ -5,6 +5,7 @@ keywords: aff a700s, aff, a700s, replace, pcie, card, disconnect, cable, riser, 
 summary: 要更换 PCIe 卡，您必须断开与提升板中卡的缆线连接，卸下提升板，更换提升板，然后重新对该提升板中的卡进行布线。 
 ---
 = 更换 PCIe 卡— AFF A700s
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

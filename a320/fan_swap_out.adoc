@@ -5,6 +5,7 @@ keywords: aff, a320, aff a320, swap, fan, module, interrupt, service, perform, s
 summary: 要在不中断服务的情况下交换风扇模块，您必须执行一系列特定的任务。 
 ---
 = 热插拔风扇模块— AFF A320
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

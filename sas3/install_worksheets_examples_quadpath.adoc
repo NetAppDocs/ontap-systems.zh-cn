@@ -5,6 +5,7 @@ keywords: complete, controller-to-stack, cabling, cable, worksheet, quad-path, h
 summary: 您可以使用完整的控制器到堆栈布线工作表和布线示例为具有两个四端口 SAS HBA 的四路径 HA 配置布线。 
 ---
 = 具有两个四端口 SAS HBA 的四路径 HA 配置的控制器到堆栈布线工作表和布线示例—磁盘架带有 IOM12 模块
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

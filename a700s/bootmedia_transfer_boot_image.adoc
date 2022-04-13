@@ -5,6 +5,7 @@ keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fai
 summary: 只有当二级启动介质还原失败或在二级启动介质上找不到 image.tgz 文件时，才应使用此操作步骤。 
 ---
 = 将启动映像传输到启动介质— AFF A700s
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

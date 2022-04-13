@@ -5,6 +5,7 @@ keywords: AFF A900
 summary: 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。 
 ---
 = 更换启动介质— AFF A900
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 :firstname: [.include]

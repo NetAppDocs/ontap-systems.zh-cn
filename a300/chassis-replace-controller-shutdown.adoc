@@ -5,6 +5,7 @@ keywords: a300, shut, chassis, controller, replace, remove, metrocluster, aggreg
 summary: 要更换机箱，必须关闭控制器。此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。 
 ---
 = 关闭控制器— AFF A300
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

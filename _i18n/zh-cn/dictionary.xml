@@ -2578,8 +2578,6 @@
   <block id="f80cea0e802a372818458562fc5d9f43" category="inline-link-macro">集群配置工作表</block>
   <block id="29bd1f640adeeec5f2bc6e197d0840c4" category="paragraph"><block ref="29bd1f640adeeec5f2bc6e197d0840c4" category="inline-link-macro-rx"></block></block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
-  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
-  <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
   <block id="27e4f654e31a54c18c3f94846eb8fcc2" category="inline-link">磁盘架注意事项</block>
   <block id="0c8d7a4e0e5ab5d34b549a9af84add17" category="paragraph"><block ref="0c8d7a4e0e5ab5d34b549a9af84add17" category="inline-link-rx"></block></block>
   <block id="2147ead816c0910c1fb713da5e278601" category="doc">完成系统还原— AFF A400</block>
@@ -3550,8 +3548,6 @@
   <block id="43f44eb6eab88bd3dd44d614bab79684" category="list-text">Nexus 3132Q-V</block>
   <block id="3c45f2f6b490b6057b0b3cee9eab4438" category="list-text">CN1610</block>
   <block id="1829a6378e29fdb2a01976800d3ca60e" category="list-text">CN1601</block>
-  <block id="c73f2abaa0fbe28e182e42a3ad4f3be4" category="summary">您可以将这些链接用于其他存储架型号。</block>
-  <block id="d439636d290b3dcbcfba5b2ad50a8790" category="doc">其他存储架型号</block>
   <block id="dc562a84ed096c677cedf44a7c5df0bf" category="inline-link-macro">DS2246 磁盘架文档</block>
   <block id="dd26152c70d312482c21516c3889b669" category="paragraph"><block ref="dd26152c70d312482c21516c3889b669" category="inline-link-macro-rx"></block></block>
   <block id="06df42750628898d4d9028ca8a299fb0" category="inline-link-macro">DS4486 磁盘架文档</block>
@@ -3560,7 +3556,6 @@
   <block id="2a8c61005de5c4642cb8dbeba1544811" category="paragraph"><block ref="2a8c61005de5c4642cb8dbeba1544811" category="inline-link-macro-rx"></block></block>
   <block id="97bf953b242f5f98851629db59e82601" category="inline-link-macro">DS4243 磁盘架文档</block>
   <block id="b6d30e3dcd0ba2af54c33b3685aa4429" category="paragraph"><block ref="b42da6ebf9625c910c5d3ba150b439e5" category="inline-link-macro-rx"></block></block>
-  <block id="7d6a5a71ff18c3c788750313d0a4e7e0" category="doc">其他平台型号</block>
   <block id="f453086a36d64a5193cd4183c14bcd72" category="inline-link-macro">AFF 8000 系列文档</block>
   <block id="71bdc94f19d5947bd1cb6d437f119ba2" category="inline-link-macro">FAS8000 系列文档</block>
   <block id="2b3a51bca746a221bf4a0af6d3098ccf" category="paragraph"><block ref="2b3a51bca746a221bf4a0af6d3098ccf" category="inline-link-macro-rx"></block></block>
@@ -4274,10 +4269,7 @@
   <block id="4f0051637a20ec6776e183298f86f2f5" category="doc">要使用的操作步骤</block>
   <block id="c9c398d96e19f76a792dde6c40d97674" category="summary">您可以订购安装了 NetApp 存储控制器和磁盘架的系统机柜，也可以订购已安装 NetApp 设备的空系统机柜。可以使用可选互连套件将多个系统机柜连接在一起，也可以使用可选的固定套件将其固定到数据中心楼层。</block>
   <block id="04dd3356a6ed1dc409a57e068d7f5007" category="doc">安装系统机柜</block>
-  <block id="7c390983595918ec6a1147e4bce70a5b" category="summary">AFF 和 FAS 控制器模块的升级可从 AFF 和 FAS 升级文档站点获取。</block>
   <block id="15ec95a1d0a631e3b92b0edbb8cc676a" category="doc">升级过程</block>
-  <block id="6c92285fa6d3e827b198d120ea3ac674" category="inline-link">此处</block>
-  <block id="63f74eefa2d2424afffb0a795322616b" category="paragraph">AFF 或 FAS 控制器模块升级过程已发生移动<block ref="9a6db30b9d9a5bf487ab06bfb17f0812" category="inline-link-rx"></block>。</block>
   <block id="77edb60a5060dd35dbf31b71147dde8d" category="summary">系统机柜支持不同类型的配电单元（ PDU ）。PDU 符合 NEMA 或 IEC 标准。</block>
   <block id="3536220b5e80ece536e76091bbcde43f" category="doc">支持的 PDU 类型和规格</block>
   <block id="345f336ebbb6b879b90d461c9ead417e" category="paragraph">系统机柜支持不同的配电单元（ PDU ）类型。PDU 符合 NEMA 或 IEC 标准。</block>
@@ -7145,21 +7137,11 @@
   <block id="50e67d9b10aa79baef3dc48d6b7a85e0" category="sidebar">替换启动映像</block>
   <block id="7bc56029e8efc19176ac65d5c1b11f63" category="sidebar">AFF A800 机箱</block>
   <block id="03a6e6d8c5aef6f456ef142fc5a3912b" category="sidebar">AFF A800 控制器模块</block>
-  <block id="4b6a99064889a9134bf384abc13918fa" category="sidebar">其他平台，磁盘架和交换机型号</block>
-  <block id="54688f54e203f3e54d2c33c058d8b225" category="sidebar">其他磁盘架型号</block>
   <block id="2b2815ca4a9fd5973ee66317adb580e4" category="sidebar">其他交换机型号</block>
-  <block id="6102b478e873b43ce74ca91058eb6031" category="sidebar">AFF A220 和 FAS2700 系统</block>
-  <block id="557a7df6cea323ab549ffac2c8ba5289" category="sidebar">AFF A220 和 FAS2700 安装和设置</block>
-  <block id="8e04ad92809371f4f3ce6a8a8a44af97" category="sidebar">AFF A220 和 FAS2700 维护</block>
-  <block id="1a6bb88c09c1f0a9170cf85992d5ff5c" category="sidebar">AFF A220 和 FAS2700 启动介质</block>
-  <block id="7c21b84f99318ada3d85ed1c643646a7" category="sidebar">AFF A220 和 FAS2700 缓存模块</block>
   <block id="061f630ee35953fe4f15356e785a0329" category="sidebar">AFF A220 和 FAS2700 机箱</block>
-  <block id="09e1f13980953a65c98e61d647b907cc" category="sidebar">AFF A220 和 FAS2700 控制器</block>
   <block id="487a62b1e3f916df9ec01e4837ea1e73" category="sidebar">更换控制器硬件</block>
-  <block id="b223c2e6f43ffb7c6dbaf448f16c14b9" category="sidebar">AFF A220 和 FAS2700 DIMM</block>
   <block id="d1d724370ac4931ceb4406d2e17a6217" category="sidebar">AFF A220 和 FAS2700 NVMEM 电池</block>
   <block id="64567073c265f39653af49885ec68a63" category="sidebar">AFF A220 和 FAS2700 电源</block>
-  <block id="49c1127edd6fef54486e13809ed77065" category="sidebar">AFF A220 和 FAS2700 实时时钟电池</block>
   <block id="7dc0a4c9b1bf6d7cd26d6089be0d9825" category="sidebar">其他平台过程</block>
   <block id="0b79795d3efc95b9976c7c5b933afce2" category="sidebar">简介</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="sidebar">要求</block>
@@ -7187,12 +7169,6 @@
   <block id="6cc45a7a318afd2ecfa9b7b05c51ce5c" category="sidebar">移动标志电源和布线</block>
   <block id="6d5cfac2de29a5333b0a36fb584f5df6" category="sidebar">反向车门转轴和锁扣</block>
   <block id="8c8eaddfb0bbf5e47c2729602126527a" category="sidebar">重新安装车门和照明标志</block>
-  <block id="ed9cbfc6fa855aae4199825d9fb15f87" category="sidebar">交换内部磁盘驱动器</block>
-  <block id="ad03f558ca3a811e1a298a8c01be7f5c" category="sidebar">热插拔嵌入式驱动器</block>
-  <block id="20365130f49998402a6d0df57c438804" category="sidebar">热插拔 SSD</block>
-  <block id="26454f8949fc38018eea02197b858b72" category="sidebar">热插拔 HDD</block>
-  <block id="5f94e9116b2948856fc6818a9e1bf29a" category="sidebar">设置和维护</block>
-  <block id="1f97b6f1a3aa58348491cc584e07af1d" category="sidebar">硬件升级</block>
   <block id="246a9aee554901f0dcaa84281ba65f27" category="sidebar">FAS8300 和 FAS8700 系统</block>
   <block id="47457e18f221715e00fad3fb4c7a52dc" category="sidebar">AFF FAS8300 和 FAS8700 安装和设置</block>
   <block id="de07745e6df6470f2740b5a80f2cfc02" category="sidebar">AFF FAS8300 和 FAS8700 维护</block>
@@ -7230,14 +7206,7 @@
   <block id="69197301cb56574fc56288a3e58f5214" category="sidebar">AFF A200 NVMEM 电池</block>
   <block id="5a23c7002956a0e647543225fab68b63" category="sidebar">AFF A200 电源</block>
   <block id="c806fa9e8b1640e211b0ebdc4dbce098" category="sidebar">AFF A200 实时时钟电池</block>
-  <block id="a46f9cbce7974dbd9625eea55ba9f21f" category="sidebar">AFF A700 和 FAS9000 系统</block>
-  <block id="729206c886384e54a12e1bed25bb564e" category="sidebar">AFF A700 和 FAS9000 安装和设置</block>
-  <block id="9c8c082bf74388db6fc5e2c657a77db8" category="sidebar">AFF A700 和 FAS9000 维护</block>
-  <block id="b2ddab4cf65a5d4a0fc9a05403b842e7" category="sidebar">AFF A700 和 FAS9000 启动介质</block>
-  <block id="eb6f0206ce9ad3c398f4b3b246b9bcaf" category="sidebar">AFF A700 和 FAS9000 机箱</block>
-  <block id="98bbbeecca3d23d4fea3df957211ce7a" category="sidebar">AFF A700 和 FAS9000 控制器</block>
   <block id="0d186ff3455a6f8be78aeb1835dba7ae" category="sidebar">DCPM</block>
-  <block id="c5a74c97685a1c4caf02e63348828add" category="sidebar">AFF A700 和 FAS9000 X91148A 模块</block>
   <block id="7547243d10899150b4ccf6b6d811d3fd" category="sidebar">AFF A700 系统，具有开放插槽</block>
   <block id="bf70815b663ebd2fdd48772e7c4ce17c" category="sidebar">AFF A700 系统没有打开的插槽</block>
   <block id="a2a59cc84b43cc17aa6e731f4af825fc" category="sidebar">AFF A300 系统</block>
@@ -7380,7 +7349,6 @@
   <block id="d1f671afbf5d4ca47b95e86f70c6bcc1" category="list-text">安装存储交换机：</block>
   <block id="4aaebba2a5287c74eb41bf080e6d1fe4" category="list-text">确认您的平台型号支持的硬件，例如存储交换机和缆线：</block>
   <block id="f1832f4de88037c446f0b7e9c0163aaa" category="paragraph">可从磁盘和聚合内容中找到用于从驱动器中删除所有权的操作步骤：</block>
-  <block id="7882fbe8d6edf8d5b486832cb819249c" category="doc">AFF 和 FAS9000 系统文档中心</block>
   <block id="71e38f927e8a1c6f9bc875e8ab8112eb" category="open-title">选项 1 ：大多数配置</block>
   <block id="0b6c08751d3c9a2a0d92384f10b9d168" category="open-title">选项 2 ： MetroCluster 配置</block>
   <block id="6a925f3765a4dc795f4b5a0732579780" category="admonition-title">控制器位于 MetroCluster 中</block>
@@ -8610,6 +8578,28 @@
   <block id="e3c2d91c7cf7bef5a04aecd6ac9a7aa2" category="sidebar">FAS9000 X91148A 模块</block>
   <block id="3b4f8423fb92aace5b1c957248b6fd18" category="sidebar">机柜和导轨套件</block>
   <block id="45f409f69b4619cb11a8c9066bd236ac" category="sidebar">AFF A200 驱动器</block>
-  <block id="bda8b2764dc533181c801be2c8b33b73" category="sidebar">AFF A220 和 FAS2700 驱动器</block>
   <block id="7cc615fcffd37b0f004ba9169b5db521" category="sidebar">AFF A700s 驱动器</block>
+  <block id="fd6e0dc56bc08d5a210f50e7388d932f" category="doc">A220 系统文档</block>
+  <block id="64ade082ee5f7cc92e1fcf2264b98814" category="summary">您可以使用这些链接查找其他 AFF 和 FAS 系统的文档。</block>
+  <block id="00a7f3c2d2e90362fce77e39121e81ff" category="summary">升级 AFF 和 FAS 控制器模块。</block>
+  <block id="121b7f57f2237bf67b44a7e14ee89c24" category="inline-link">升级 AFF 和 FAS 系统文档站点</block>
+  <block id="fb36c3b150bf1c660fa047f914671fe9" category="paragraph">对于大多数 AFF 和 FAS 系统，请按照上的升级过程进行操作<block ref="f4a6e72cc4cd54e373f3669e0efc6928" category="inline-link-rx"></block>。</block>
+  <block id="8f656f617cb33dc389da6056b5ff435f" category="inline-link">ONTAP MetroCluster 文档站点</block>
+  <block id="98f66e52f80ef8be6e7eb5b32d8a3936" category="paragraph">对于采用 MetroCluster 配置的系统，请按照上的升级过程进行操作<block ref="a7fb36e42455a1948dcb9199bcb45ad0" category="inline-link-rx"></block>。</block>
+  <block id="9858e62153c9fdbd94de20e9842ed9e8" category="doc">FAS9000 系统文档</block>
+  <block id="b0eb2000c28914914d753220d696b368" category="doc">AFF A700 系统文档</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律声明提供对版权声明、商标、专利等的访问。</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商标</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
+  <block id="e62f199edf5ce700e5ae74c377f48585" category="sidebar">所有 SAN 阵列系统</block>
 </blocks>

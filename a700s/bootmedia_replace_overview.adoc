@@ -5,6 +5,7 @@ keywords: aff a700s, aff, a700s, primary, boot, media, store, ontap, image, syst
 summary: 主启动介质用于存储系统在启动时使用的 ONTAP 启动映像。您可以使用二级启动介质上的 ONTAP 映像还原主启动介质映像，也可以在必要时使用 USB 闪存驱动器还原主启动介质映像。 
 ---
 = 启动介质更换概述— AFF A700s
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

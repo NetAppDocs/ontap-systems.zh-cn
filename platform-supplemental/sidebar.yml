@@ -68,23 +68,3 @@ entries:
       url: "/platform-supplemental/42u-1280mm-reverse-hinge-and-lock.html"
     - title: 重新安装车门和照明标志
       url: "/platform-supplemental/42u-1280mm-reinstall-door-and-badge.html"
-- title: 交换内部磁盘驱动器
-  entries:
-  - title: 视频概述
-    url: "/platform-supplemental/drive-video.html"
-  - title: 热插拔嵌入式驱动器
-    entries:
-    - title: 要使用的操作步骤
-      url: "/platform-supplemental/drive-hotswap.html"
-    - title: 热插拔 SSD
-      url: "/platform-supplemental/drive-hotswap-drive.html"
-    - title: 热插拔 HDD
-      url: "/platform-supplemental/drive-hotswap-sas.html"
-- title: 所有 SAN 阵列系统
-  entries:
-  - title: 设置和维护
-    url: "/platform-supplemental/all-san-array.html"
-- title: 硬件升级
-  entries:
-  - title: 升级过程
-    url: "/platform-supplemental/upgrade-linkout.html"

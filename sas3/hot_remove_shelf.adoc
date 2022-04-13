@@ -5,6 +5,7 @@ keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisru
 summary: 您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（从已启动并提供数据的系统中无中断移除磁盘架，这意味着 I/O 正在进行中）。您可以从磁盘架堆栈中的任意位置热移除一个或多个磁盘架，也可以移除磁盘架堆栈。 
 ---
 = 热移除磁盘架—带有 IOM12 模块的磁盘架
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

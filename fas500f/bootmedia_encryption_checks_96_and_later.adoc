@@ -5,6 +5,7 @@ keywords: fas500f, check, nve, nse, systems, ontap 9.6, netapp volume encryption
 summary: 在关闭受损控制器之前，您需要检查系统是否已启用 NetApp 卷加密 \ （ NVE\ ）或 NetApp 存储加密 \ （ NSE\ ）。If so, you need to verify the configuration. 
 ---
 = 检查板载加密密钥— FAS500f
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

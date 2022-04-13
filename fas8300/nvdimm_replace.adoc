@@ -5,6 +5,7 @@ keywords: fas8300, fas8700, replace, nvmem, battery, remove, controller, module,
 summary: 如果系统记录闪存生命周期接近结束或已识别的 NVDIMM 总体运行状况不佳，则必须更换控制器模块中的 NVDIMM ；否则会导致系统崩溃。 
 ---
 = 更换 NVDIMM - FAS8300 和 FAS8700
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

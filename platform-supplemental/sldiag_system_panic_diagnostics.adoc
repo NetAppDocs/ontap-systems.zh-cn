@@ -5,6 +5,7 @@ keywords: run, diagnostic, storage, system, suffer, panic, identify, cause, run 
 summary: 在存储系统发生系统崩溃后运行诊断可以帮助您确定可能发生崩溃的发生原因。 
 ---
 = 运行系统崩溃诊断
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

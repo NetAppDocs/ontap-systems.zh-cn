@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 将聚合从 node2 重新定位到 node3 后，您需要将 node2 拥有的 NAS 数据 LIF 移动到 node3 。

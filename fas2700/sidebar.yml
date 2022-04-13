@@ -1,10 +1,10 @@
 ---
 section: fas2700
-title: AFF A220 和 FAS2700 系统
+title: FAS2700 系统
 url: "/fas2700/index.html"
 entries:
 - title: 安装和设置
-  pdf-filename: AFF A220 和 FAS2700 安装和设置
+  pdf-filename: FAS2700 安装和设置
   entries:
   - title: 选择安装和设置体验
     url: "/fas2700/install-setup.html"
@@ -15,10 +15,10 @@ entries:
   - title: 详细步骤
     url: "/fas2700/install-detailed-guide.html"
 - title: 维护
-  pdf-filename: AFF A220 和 FAS2700 维护
+  pdf-filename: FAS2700 维护
   entries:
   - title: 启动介质
-    pdf-filename: AFF A220 和 FAS2700 启动介质
+    pdf-filename: FAS2700 启动介质
     entries:
     - title: 概述
       url: "/fas2700/bootmedia-replace-overview.html"
@@ -35,10 +35,10 @@ entries:
     - title: 将故障部件退回 NetApp
       url: "/fas2700/bootmedia-complete-rma.html"
   - title: 缓存模块
-    pdf-filename: AFF A220 和 FAS2700 缓存模块
+    pdf-filename: FAS2700 缓存模块
     url: "/fas2700/caching-module-replace.html"
   - title: 机箱
-    pdf-filename: AFF A220 和 FAS2700 机箱
+    pdf-filename: FAS2700 机箱
     entries:
     - title: 概述
       url: "/fas2700/chassis-replace-overview.html"
@@ -49,7 +49,7 @@ entries:
     - title: 还原配置
       url: "/fas2700/chassis-replace-complete-system-restore-rma.html"
   - title: 控制器
-    pdf-filename: AFF A220 和 FAS2700 控制器
+    pdf-filename: FAS2700 控制器
     entries:
     - title: 概述
       url: "/fas2700/controller-replace-overview.html"
@@ -64,10 +64,10 @@ entries:
     - title: 完成系统还原
       url: "/fas2700/controller-replace-restore-system-rma.html"
   - title: DIMM
-    pdf-filename: AFF A220 和 FAS2700 DIMM
+    pdf-filename: FAS2700 DIMM
     url: "/fas2700/dimm-replace.html"
   - title: 驱动器
-    pdf-filename: AFF A220 和 FAS2700 驱动器
+    pdf-filename: FAS2700 驱动器
     url: "/fas2700/drive-replace.html"
   - title: NVMEM 电池
     pdf-filename: AFF A220 和 FAS2700 NVMEM 电池
@@ -76,5 +76,5 @@ entries:
     pdf-filename: AFF A220 和 FAS2700 电源
     url: "/fas2700/power-supply-swap-out.html"
   - title: 实时时钟电池
-    pdf-filename: AFF A220 和 FAS2700 实时时钟电池
+    pdf-filename: FAS2700 实时时钟电池
     url: "/fas2700/rtc-battery-replace.html"

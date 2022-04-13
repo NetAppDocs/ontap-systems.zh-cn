@@ -5,6 +5,7 @@ keywords: disk, drive fail, platform, log, warning, message, system, console, le
 summary: 当磁盘驱动器发生故障时，平台会向系统控制台记录一条警告消息，指示哪个磁盘驱动器发生故障。此外，操作员显示面板上的故障 LED 和故障磁盘驱动器上的故障 LED 都会亮起。您可以在 I/O 运行期间无中断更换故障驱动器。 
 ---
 = 热插拔磁盘驱动器
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

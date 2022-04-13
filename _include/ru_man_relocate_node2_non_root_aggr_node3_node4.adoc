@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 将 node2 的非根聚合重新定位到 node3 后，您现在必须将其从 node3 重新定位到 node4 。

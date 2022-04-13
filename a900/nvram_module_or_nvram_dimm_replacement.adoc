@@ -5,6 +5,7 @@ keywords:
 summary: NVRAM 模块由 NVRAM11 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。 
 ---
 = 更换 NVRAM 模块和 / 或 NVRAM DIMM — AFF A900
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

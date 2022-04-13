@@ -5,6 +5,7 @@ keywords: addional, storage, hot-add, iom12, shelves, shelf, sas, shelves, shelf
 summary: 如果需要更多存储，您可以将 IOM12 磁盘架（带有 IOM12 模块的 SAS 磁盘架）热添加到 IOM6 磁盘架堆栈（带有 IOM6 模块的 SAS 磁盘架）中，这意味着您可以混合一个堆栈。 
 ---
 = 将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

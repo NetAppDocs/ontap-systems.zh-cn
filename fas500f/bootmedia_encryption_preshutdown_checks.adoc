@@ -5,6 +5,7 @@ keywords: fas500f, check onboard encryption keys as needed
 summary: 在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
 ---
 = 检查板载加密密钥— FAS500f
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -1,0 +1,93 @@
+---
+section: a700
+title: AFF A700 系统
+url: "/a700/index.html"
+entries:
+- title: 安装和设置
+  pdf-filename: AFF A700 安装和设置
+  entries:
+  - title: 选择安装和设置体验
+    url: "/fas9000/install-setup.html"
+  - title: 快速步骤
+    url: "/fas9000/install-quick-guide.html"
+  - title: 视频步骤
+    url: "/fas9000/install-videos.html"
+  - title: 详细步骤
+    url: "/fas9000/install-detailed-guide.html"
+- title: 维护
+  pdf-filename: AFF A700 维护
+  entries:
+  - title: 启动介质
+    pdf-filename: AFF A700 启动介质
+    entries:
+    - title: 概述
+      url: "/fas9000/bootmedia-replace-overview.html"
+    - title: 检查板载加密密钥
+      url: "/fas9000/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭受损控制器
+      url: "/fas9000/bootmedia-impaired-controller-shutdown.html"
+    - title: 替换启动映像
+      url: "/fas9000/bootmedia-replace.html"
+    - title: 启动恢复映像
+      url: "/fas9000/bootmedia-recovery-image-boot-options.html"
+    - title: 切回 MetroCluster 配置
+      url: "/fas9000/bootmedia-2n-mcc-switchback.html"
+    - title: 还原 OKM ， NSE 和 NVE
+      url: "/fas9000/bootmedia-encryption-restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/fas9000/bootmedia-complete-rma.html"
+  - title: 缓存模块
+    url: "/fas9000/caching-module-and-core-dump-module-replace.html"
+  - title: 缓存模块（热插拔）
+    url: "/fas9000/caching-module-hot-swap.html"
+  - title: 机箱
+    pdf-filename: AFF A700 机箱
+    entries:
+    - title: 概述
+      url: "/fas9000/chassis-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/fas9000/chassis-replace-shutdown.html"
+    - title: 更换硬件
+      url: "/fas9000/chassis-replace-move-hardware.html"
+    - title: 完成更换
+      url: "/fas9000/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器模块
+    pdf-filename: AFF A700 控制器
+    entries:
+    - title: 概述
+      url: "/fas9000/controller-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/fas9000/controller-replace-shutdown.html"
+    - title: 更换控制器模块
+      url: "/fas9000/controller-replace.html"
+    - title: 还原系统配置
+      url: "/fas9000/controller-replace-system-config-restore-and-verify.html"
+    - title: 可重新连接的系统
+      url: "/fas9000/controller-replace-recable-reassign-disks.html"
+    - title: 完成系统还原
+      url: "/fas9000/controller-replace-complete-system-restoration.html"
+  - title: DCPM
+    url: "/fas9000/dcpm-nvram10-battery-replace.html"
+  - title: DIMM
+    url: "/fas9000/dimm-replace.html"
+  - title: 风扇
+    url: "/fas9000/fan-swap-out.html"
+  - title: I/O 模块
+    url: "/fas9000/pci-cards-and-risers-replace.html"
+  - title: LED USB 模块
+    url: "/fas9000/led-module-replace.html"
+  - title: NVRAM
+    url: "/fas9000/nvram-module-or-nvram-dimm-replacement.html"
+  - title: 电源
+    url: "/fas9000/power-supply-swap-out.html"
+  - title: RTC 电池
+    url: "/fas9000/rtc-battery-replace.html"
+  - title: X91148A 模块
+    pdf-filename: AFF A700 X91148A 模块
+    entries:
+    - title: 概述
+      url: "/fas9000/x91148a-module-install-overview.html"
+    - title: AFF A700 系统，具有开放插槽
+      url: "/fas9000/x91148a-modules-with-open-slots-add.html"
+    - title: AFF A700 系统没有打开的插槽
+      url: "/fas9000/x91148a-modules-with-no-open-slots-add.html"

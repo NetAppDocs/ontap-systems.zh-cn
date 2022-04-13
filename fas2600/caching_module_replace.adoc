@@ -5,6 +5,7 @@ keywords: fas2600, replace the caching module
 summary: 如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控制器模块已脱机，则必须更换此缓存模块；否则会导致性能下降。 
 ---
 = 更换缓存模块— FAS2600
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

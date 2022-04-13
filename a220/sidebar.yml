@@ -1,0 +1,80 @@
+---
+section: a220
+title: AFF A220 系统
+url: "/a220/index.html"
+entries:
+- title: 安装和设置
+  pdf-filename: AFF A220 安装和设置
+  entries:
+  - title: 选择安装和设置体验
+    url: "/fas2700/install-setup.html"
+  - title: 快速步骤
+    url: "/fas2700/install-quick-guide.html"
+  - title: 视频步骤
+    url: "/fas2700/install-videos.html"
+  - title: 详细步骤
+    url: "/fas2700/install-detailed-guide.html"
+- title: 维护
+  pdf-filename: AFF A220 维护
+  entries:
+  - title: 启动介质
+    pdf-filename: AFF A220 启动介质
+    entries:
+    - title: 概述
+      url: "/fas2700/bootmedia-replace-overview.html"
+    - title: 检查板载加密密钥
+      url: "/fas2700/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭受损控制器
+      url: "/fas2700/bootmedia-impaired-controller-shutdown.html"
+    - title: 替换启动映像
+      url: "/fas2700/bootmedia-replace.html"
+    - title: 启动恢复映像
+      url: "/fas2700/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: 还原 OKM ， NSE 和 NVE
+      url: "/fas2700/bootmedia-encryption-restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/fas2700/bootmedia-complete-rma.html"
+  - title: 缓存模块
+    pdf-filename: AFF A220 缓存模块
+    url: "/fas2700/caching-module-replace.html"
+  - title: 机箱
+    pdf-filename: AFF A220 和 FAS2700 机箱
+    entries:
+    - title: 概述
+      url: "/fas2700/chassis-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/fas2700/chassis-replace-shutdown.html"
+    - title: 更换硬件
+      url: "/fas2700/chassis-replace-move-hardware.html"
+    - title: 还原配置
+      url: "/fas2700/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器
+    pdf-filename: AFF A220 控制器
+    entries:
+    - title: 概述
+      url: "/fas2700/controller-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/fas2700/controller-replace-shutdown.html"
+    - title: 更换控制器硬件
+      url: "/fas2700/controller-replace-move-hardware.html"
+    - title: 还原系统配置
+      url: "/fas2700/controller-replace-system-config-restore-and-verify.html"
+    - title: 可重新连接的系统
+      url: "/fas2700/controller-replace-recable-reassign-disks.html"
+    - title: 完成系统还原
+      url: "/fas2700/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: AFF A220 DIMM
+    url: "/fas2700/dimm-replace.html"
+  - title: 驱动器
+    pdf-filename: AFF A220 驱动器
+    url: "/fas2700/drive-replace.html"
+  - title: NVMEM 电池
+    pdf-filename: AFF A220 和 FAS2700 NVMEM 电池
+    url: "/fas2700/nvmem-nvram-battery-replace.html"
+  - title: 电源
+    pdf-filename: AFF A220 和 FAS2700 电源
+    url: "/fas2700/power-supply-swap-out.html"
+  - title: 实时时钟电池
+    pdf-filename: AFF A220 实时时钟电池
+    url: "/fas2700/rtc-battery-replace.html"

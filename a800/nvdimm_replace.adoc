@@ -5,6 +5,7 @@ keywords: aff a800, replace an nvdimm
 summary: 如果系统记录闪存生命周期接近结束或已识别的 NVDIMM 总体运行状况不佳，则必须更换控制器模块中的 NVDIMM ；否则会导致系统崩溃。 
 ---
 = 更换 NVDIMM - AFF A800
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

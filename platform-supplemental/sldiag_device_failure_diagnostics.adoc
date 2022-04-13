@@ -5,6 +5,7 @@ keywords: run, diagnostic, help, access, device, intermittent, device, unavailab
 summary: 运行诊断可以帮助您确定访问特定设备的时间间隔为何或该设备在存储系统中变得不可用的原因。 
 ---
 = 运行设备故障诊断
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

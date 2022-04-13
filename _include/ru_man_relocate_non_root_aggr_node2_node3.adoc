@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 在将 node2 替换为 node4 之前，您必须为 node2 发送 AutoSupport 消息，然后将 node2 所拥有的非根聚合重新定位到 node3 。

@@ -5,6 +5,7 @@ keywords: run, diagnostic, add, replacing, replace, hardware, component, storage
 summary: 在存储系统中添加或更换硬件组件后，您可以运行诊断，以验证此组件是否没有问题，以及安装是否成功。 
 ---
 = 运行硬件安装诊断
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

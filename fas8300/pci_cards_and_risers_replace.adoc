@@ -5,6 +5,7 @@ keywords: fas8300, fas8700, replace, pcie, mezzanine, card, controller, metroclu
 summary: 要更换 PCIe 或夹层卡，您必须断开缆线以及所有 SFP 和 QSFP 模块与卡的连接，更换发生故障的 PCIe 或夹层卡，然后重新对卡进行布线。 
 ---
 = 更换 PCIe 或夹层卡— FAS8300 和 FAS8700
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

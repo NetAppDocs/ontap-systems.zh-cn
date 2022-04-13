@@ -5,6 +5,7 @@ keywords: complete, completing, worksheet, template, controller, sas, port, pair
 summary: 完成工作表模板后，您可以定义控制器 SAS 端口对，使用这些端口对将控制器连接到具有 IOM12 模块的磁盘架堆栈，以便在 HA 对或单控制器配置中实现多路径连接。您还可以使用已完成的工作表来指导自己完成配置的多路径连接布线。 
 ---
 = 多路径连接的控制器到堆栈布线工作表模板—带有 IOM12 模块的磁盘架
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

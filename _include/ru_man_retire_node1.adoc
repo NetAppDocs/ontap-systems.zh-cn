@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 要停用 node1 ，您需要禁用 node2 的 HA 对，正确关闭 node1 并将其从机架或机箱中卸下。

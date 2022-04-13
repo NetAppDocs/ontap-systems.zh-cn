@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 在将 _replacement_ 节点恢复使用之前，您应验证 LIF 是否位于其主端口上，如果启用了 AutoSupport ，则注册 _replacement_ 节点的序列号，并重置自动交还。

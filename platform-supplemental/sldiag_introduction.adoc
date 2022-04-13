@@ -5,6 +5,7 @@ keywords: system-level, diagnostic, command-line, interface, test, search, hardw
 summary: 系统级诊断可通过命令行界面进行测试，以搜索并确定受支持存储系统上的硬件问题。您可以使用系统级诊断来确认特定组件运行正常或帮助确定故障组件。 
 ---
 = ‑级别诊断简介
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

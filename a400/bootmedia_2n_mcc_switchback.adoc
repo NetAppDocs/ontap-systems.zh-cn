@@ -5,6 +5,7 @@ keywords: aff a400, aff, a400, fru, replacement, two-node, metrocluster, configu
 summary: 在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine \ （ SVM\ ）现在处于活动状态，并从本地磁盘池提供数据。 
 ---
 = 切回双节点 MetroCluster 配置中的聚合— AFF A400
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

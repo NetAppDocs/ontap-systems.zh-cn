@@ -5,6 +5,7 @@ keywords: aff a700, fas9000, boot, recovery, image, two, node, metrocluster, con
 summary: 用于从恢复映像启动受损节点的操作步骤取决于系统是否采用双节点 MetroCluster 配置。 
 ---
 = 启动恢复映像— AFF A700 和 FAS9000
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

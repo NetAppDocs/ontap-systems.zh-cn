@@ -5,6 +5,7 @@ keywords: aff a400, aff, a400, environment, variable, complete, system, onboard,
 summary: 检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM\ ）， NetApp 存储加密 \ （ NSE\ ）或 NetApp 卷加密 \ （ NVE\ ）的系统的步骤。 
 ---
 = 根据需要还原 OKM ， NSE 和 NVE — AFF A400
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

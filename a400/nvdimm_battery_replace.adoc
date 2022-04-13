@@ -5,6 +5,7 @@ keywords: aff a400, aff, a400, replace, nvdimm, battery, remove, controller, mod
 summary: 要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。 
 ---
 = 更换 NVDIMM 电池— AFF A400
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

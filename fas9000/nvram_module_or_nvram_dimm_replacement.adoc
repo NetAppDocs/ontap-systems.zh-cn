@@ -5,6 +5,7 @@ keywords: aff a700, fas9000, replace, nvram, module, dimm, manually, reassign, s
 summary: NVRAM 模块由 NVRAM10 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。 
 ---
 = 更换 NVRAM 模块或 NVRAM DIMM — AFF A700 和 FAS9000
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

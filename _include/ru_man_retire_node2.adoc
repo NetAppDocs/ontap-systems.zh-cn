@@ -1,4 +1,5 @@
 = 
+:allow-uri-read: 
 
 
 要停用 node2 ，您需要正确关闭 node2 并将其从机架或机箱中卸下。如果集群位于 SAN 环境中，则还需要删除 SAN LIF 。

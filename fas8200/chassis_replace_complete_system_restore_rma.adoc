@@ -5,6 +5,7 @@ keywords: fas8200, verify and set HA state, run diagnostics, complete the replac
 summary: 您必须验证机箱的 HA 状态，并运行系统级诊断，切回聚合并将故障部件退回给 NetApp ，如套件随附的 RMA 说明所述。 
 ---
 = 还原并验证配置— FAS8200
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: aff a400, aff, a400, replace, pcie, mezzanine, card, disconnect, cable
 summary: 要更换 PCIe 或夹层卡，您必须断开缆线以及所有 SFP 和 QSFP 模块与卡的连接，更换发生故障的 PCIe 或夹层卡，然后重新对卡进行布线。 
 ---
 = 更换 PCIe 或夹层卡— AFF A400
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

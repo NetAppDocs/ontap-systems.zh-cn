@@ -5,6 +5,7 @@ keywords: aff a700, fas9000, shut, down, impaired, node, controller, two, node, 
 summary: 要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。 
 ---
 = Shut down the impaired controller
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
