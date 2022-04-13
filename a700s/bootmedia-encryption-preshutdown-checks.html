@@ -45,12 +45,52 @@
   <link rel="stylesheet" href='/zh-cn/ontap-systems/css/na-utility.css' type='text/css'>
   <link rel="stylesheet" href='/zh-cn/ontap-systems/css/na-sidebar.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-systems/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/custom-dropdown.css' type='text/css'>
   <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-pagenav.css' type='text/css'>
 
   
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/zh-cn/ontap-systems/css/tabbed-blocks.css" type="text/css">
-  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/zh-cn/ontap-systems/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
@@ -60,15 +100,6 @@
 
   <script src='/zh-cn/ontap-systems/js/na-utility.js'></script>
   <script src='/zh-cn/ontap-systems/js/clouddocs.js'></script>
-  <script>
-  if (document.location.hostname === "docs.netapp.com") {
-    var head = document.getElementsByTagName('head')[0];
-    var adobe = document.createElement("script");
-    adobe.type = "text/javascript";
-    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
-    head.appendChild(adobe);
-  }
-  </script>
   <script src='/zh-cn/ontap-systems/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src='/zh-cn/ontap-systems/js/toc.js'></script>
@@ -121,16 +152,8 @@
               $("#tg-sb-icon").toggleClass('fa-toggle-off');
           });
       });
-  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
-  <script>
-  if (document.location.hostname === "docs.netapp.com") {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-81697994-3');
-  }
   </script>
-  <script src='/zh-cn/ontap-systems/js/version-dropdown.js'></script>
+  <script src='/zh-cn/ontap-systems/js/custom-dropdown.js'></script>
   <script src='/zh-cn/ontap-systems/js/FileSaver.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip-utils.min.js'></script>
   <script src='/zh-cn/ontap-systems/js/jszip.min.js'></script>
@@ -138,20 +161,15 @@
 </head>
 
 
-  <body class role="document">
+  <body class role="document" data-flavor="">
     <div id="page" class="n-off-canvas-menu">
       <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
       <div class="n-off-canvas-menu__content-wrap">
         <header class="site-header" id="banner">
   
   <!-- Start Page Toolbar -->
-  <div class="page-nav-toolbar">
-    <div id="version-dropdown"></div>
-    <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[检查板载加密密钥— AFF A700s](https://docs.netapp.com/zh-cn/ontap-systems/a700s/bootmedia-encryption-preshutdown-checks.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/a700s/bootmedia_encryption_preshutdown_checks.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a>
-    </div>
+  
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[检查板载加密密钥— AFF A700s](https://docs.netapp.com/zh-cn/ontap-systems/a700s/bootmedia-encryption-preshutdown-checks.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/a700s/bootmedia_encryption_preshutdown_checks.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此页面上</div>
@@ -161,6 +179,7 @@
       </nav>
     </div>
   </div>
+  
   
   <!-- Start top_hat -->
   <div class="n-top-hat">
@@ -244,7 +263,8 @@
           data-did-you-mean="搜索 {suggestion}。" 
           data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
           data-results-found="找到 {hitCount} 个结果"  
-          data-sk-es-pf-indexes=""></div>
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
@@ -333,6 +353,9 @@
 </div>
 <div class="n-pdf-body-container">
   <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
         <a target="_blank" href="/zh-cn/ontap-systems/pdfs/fullsite-sidebar/AFF_和_FAS_系统文档.pdf" >
           <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
 
@@ -341,6 +364,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/入门.pdf" 
@@ -367,6 +393,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_系统.pdf" 
@@ -380,6 +409,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_C190_系统.pdf" 
@@ -393,6 +425,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_C190_安装和设置.pdf" 
@@ -423,6 +458,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_C190_维护.pdf" 
@@ -436,6 +474,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_C190_启动介质.pdf" 
@@ -472,6 +513,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_C190_机箱.pdf" 
@@ -502,6 +546,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_C190_控制器模块.pdf" 
@@ -564,6 +611,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A200_系统.pdf" 
@@ -577,6 +627,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A200_安装和设置.pdf" 
@@ -607,6 +660,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A200_维护.pdf" 
@@ -620,6 +676,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A200_启动介质.pdf" 
@@ -656,6 +715,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A200_机箱.pdf" 
@@ -686,6 +748,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A200_控制器模块.pdf" 
@@ -748,6 +813,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A220_系统.pdf" 
@@ -761,6 +829,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A220_安装和设置.pdf" 
@@ -791,6 +862,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A220_维护.pdf" 
@@ -804,6 +878,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A220_启动介质.pdf" 
@@ -842,6 +919,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A220_和_FAS2700_机箱.pdf" 
@@ -872,6 +952,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A220_控制器.pdf" 
@@ -934,6 +1017,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A250_系统.pdf" 
@@ -947,6 +1033,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A250_安装和设置.pdf" 
@@ -977,6 +1066,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A250_维护.pdf" 
@@ -990,6 +1082,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A250_启动介质.pdf" 
@@ -1026,6 +1121,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A250_机箱.pdf" 
@@ -1056,6 +1154,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A250_控制器模块.pdf" 
@@ -1122,6 +1223,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A300_系统.pdf" 
@@ -1135,6 +1239,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A300_安装和设置.pdf" 
@@ -1165,6 +1272,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A300_维护.pdf" 
@@ -1178,6 +1288,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A300_启动介质.pdf" 
@@ -1216,6 +1329,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A300_机箱.pdf" 
@@ -1246,6 +1362,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A300_控制器模块.pdf" 
@@ -1310,6 +1429,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A320_系统.pdf" 
@@ -1323,6 +1445,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A320_安装和设置.pdf" 
@@ -1353,6 +1478,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A320_维护.pdf" 
@@ -1366,6 +1494,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A320_启动介质.pdf" 
@@ -1402,6 +1533,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A320_机箱.pdf" 
@@ -1432,6 +1566,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A320_控制器模块.pdf" 
@@ -1498,6 +1635,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A400_系统.pdf" 
@@ -1511,6 +1651,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A400_安装和设置.pdf" 
@@ -1541,6 +1684,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A400_维护.pdf" 
@@ -1554,6 +1700,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A400_启动介质.pdf" 
@@ -1592,6 +1741,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A400_机箱.pdf" 
@@ -1622,6 +1774,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A400_控制器模块.pdf" 
@@ -1688,6 +1843,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700_系统.pdf" 
@@ -1701,6 +1859,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700_安装和设置.pdf" 
@@ -1731,6 +1892,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700_维护.pdf" 
@@ -1744,6 +1908,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700_启动介质.pdf" 
@@ -1786,6 +1953,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700_机箱.pdf" 
@@ -1816,6 +1986,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700_控制器.pdf" 
@@ -1866,6 +2039,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700_X91148A_模块.pdf" 
@@ -1912,6 +2088,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700s_系统.pdf" 
@@ -1925,6 +2104,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700s_安装和设置.pdf" 
@@ -1955,6 +2137,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700s_维护.pdf" 
@@ -1968,6 +2153,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700s_启动介质.pdf" 
@@ -2015,6 +2203,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700s_机箱.pdf" 
@@ -2045,6 +2236,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A700s_控制器.pdf" 
@@ -2083,6 +2277,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/风扇.pdf" 
@@ -2145,6 +2342,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A800_系统.pdf" 
@@ -2158,6 +2358,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A800_安装和设置.pdf" 
@@ -2188,6 +2391,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A800_维护.pdf" 
@@ -2201,6 +2407,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A800_启动介质.pdf" 
@@ -2237,6 +2446,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A800_机箱.pdf" 
@@ -2267,6 +2479,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A800_控制器模块.pdf" 
@@ -2335,6 +2550,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_A900_系统.pdf" 
@@ -2348,6 +2566,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/安装和设置.pdf" 
@@ -2378,6 +2599,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/维护.pdf" 
@@ -2393,6 +2617,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/启动介质.pdf" 
@@ -2429,6 +2656,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/机箱.pdf" 
@@ -2459,6 +2689,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/控制器模块.pdf" 
@@ -2536,6 +2769,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS_系统.pdf" 
@@ -2549,6 +2785,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS500f_系统.pdf" 
@@ -2562,6 +2801,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS500f_安装和设置.pdf" 
@@ -2592,6 +2834,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS500f_维护.pdf" 
@@ -2605,6 +2850,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS500f_启动介质.pdf" 
@@ -2641,6 +2889,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS500f_机箱.pdf" 
@@ -2671,6 +2922,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS500f_控制器模块.pdf" 
@@ -2737,6 +2991,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2600_系统.pdf" 
@@ -2750,6 +3007,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2600_安装和设置.pdf" 
@@ -2780,6 +3040,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2600_维护.pdf" 
@@ -2793,6 +3056,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2600_启动介质.pdf" 
@@ -2831,6 +3097,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2600_机箱.pdf" 
@@ -2861,6 +3130,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2600_控制器模块.pdf" 
@@ -2923,6 +3195,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2700_系统.pdf" 
@@ -2936,6 +3211,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2700_安装和设置.pdf" 
@@ -2966,6 +3244,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2700_维护.pdf" 
@@ -2979,6 +3260,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2700_启动介质.pdf" 
@@ -3017,6 +3301,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2700_机箱.pdf" 
@@ -3047,6 +3334,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS2700_控制器.pdf" 
@@ -3109,6 +3399,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS8200_系统.pdf" 
@@ -3122,6 +3415,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS8200_安装和设置.pdf" 
@@ -3152,6 +3448,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS8200_维护.pdf" 
@@ -3165,6 +3464,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS8200_启动介质.pdf" 
@@ -3205,6 +3507,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS8200_机箱.pdf" 
@@ -3235,6 +3540,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS8200_控制器模块.pdf" 
@@ -3299,6 +3607,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS8300_和_FAS8700_系统.pdf" 
@@ -3312,6 +3623,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_FAS8300_和_FAS8700_安装和设置.pdf" 
@@ -3342,6 +3656,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_FAS8300_和_FAS8700_维护.pdf" 
@@ -3355,6 +3672,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_FAS8300_和_FAS8700_启动介质.pdf" 
@@ -3395,6 +3715,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_FAS8300_和_FAS8700_机箱.pdf" 
@@ -3425,6 +3748,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/AFF_FAS8300_和_FAS8700_控制器.pdf" 
@@ -3491,6 +3817,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS9000_系统.pdf" 
@@ -3504,6 +3833,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS9000_安装和设置.pdf" 
@@ -3534,6 +3866,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS9000_维护.pdf" 
@@ -3547,6 +3882,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS9000_启动介质.pdf" 
@@ -3589,6 +3927,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS9000_机箱.pdf" 
@@ -3619,6 +3960,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS9000_控制器.pdf" 
@@ -3669,6 +4013,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/FAS9000_X91148A_模块.pdf" 
@@ -3723,9 +4070,14 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/系统级诊断.pdf" 
@@ -3764,6 +4116,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/驱动器架.pdf" 
@@ -3777,6 +4132,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/NS224_磁盘架.pdf" 
@@ -3790,6 +4148,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/NS224_磁盘架安装和布线.pdf" 
@@ -3818,6 +4179,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/NS224_磁盘架维护.pdf" 
@@ -3865,6 +4229,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/带有_IOM12_模块的_SAS_磁盘架.pdf" 
@@ -3878,6 +4245,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/使用_IOM12_模块的磁盘架安装和布线.pdf" 
@@ -3899,6 +4269,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/SAS_布线规则_工作表和示例.pdf" 
@@ -3948,6 +4321,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/具有_IOM12_模块的磁盘架进行维护.pdf" 
@@ -4006,6 +4382,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/机柜和导轨套件.pdf" 
@@ -4023,6 +4402,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/42U_1280_毫米系统机柜.pdf" 
@@ -4036,6 +4418,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/准备安装机柜.pdf" 
@@ -4068,6 +4453,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/安装机柜.pdf" 
@@ -4104,6 +4492,9 @@
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
+          
+          
+          
           <a target="_blank" 
             
               href="/zh-cn/ontap-systems/pdfs/sidebar/反转机柜前盖.pdf" 
@@ -4345,7 +4736,7 @@
         电源
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a200/rtc-battery-replace.html">
         实时时钟电池
-      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-systems/fas2700/index.html">
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-systems/a220/index.html">
         <div class="na-navbar-padding"> AFF A220 系统</div>
       </a>
       <ul><li class="subfolders "><a href="#">
@@ -4715,7 +5106,7 @@
         电源
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a400/rtc-battery-replace.html">
         实时时钟电池
-      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-systems/fas9000/index.html">
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-systems/a700/index.html">
         <div class="na-navbar-padding"> AFF A700 系统</div>
       </a>
       <ul><li class="subfolders "><a href="#">
@@ -5517,8 +5908,10 @@
         AFF A700 系统，具有开放插槽
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/fas9000/x91148a-modules-with-no-open-slots-add.html">
         AFF A700 系统没有打开的插槽
-      </a></li></ul></li></ul></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/platform-supplemental/all-san-array.html">
+      </a></li></ul></li></ul></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/all-san/all-san-array.html">
         所有 SAN 阵列系统
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/upgrade/upgrade-linkout.html">
+        平台升级
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 系统级诊断</div>
       </a>
@@ -5626,7 +6019,7 @@
         电源
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/service-monitor-leds.html">
         磁盘架 LED 状态条件
-      </a></li></ul></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/other/switch-linkout.html">
+      </a></li></ul></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/switch/switch-linkout.html">
         交换机
       </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 机柜和导轨套件</div>
@@ -5699,6 +6092,7 @@
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
+
   </div>
   
 
@@ -5747,7 +6141,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-15 19:26:00 +0000">03/15/2022</time>
+    <time datetime="2022-04-13 13:16:22 +0000">04/13/2022</time>
     
   
 
@@ -6406,98 +6800,122 @@ Make sure that OKM information is saved in your log file.在可能需要手动�
   <div class="n-footer__bottom">
     <div class="n-container">
       <div class="n-footer__bottom-left">
-
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
-
-</ul>
-</div>
-<div class="n-footer__social-links">
-<ul class="n-footer__social-link-list">
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
-<span class="n-footer__social-link-text">blog</span>
-<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
-  <title>blog@</title>
-  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#blog"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
-<span class="n-footer__social-link-text">community</span>
-<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
-<title>community@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#comments"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
-<span class="n-footer__social-link-text">twitter</span>
-<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
-<title>twitter@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#twitter"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
-<span class="n-footer__social-link-text">facebook</span>
-<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
-<title>facebook@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#facebook"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
-<span class="n-footer__social-link-text">linkedin</span>
-<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
-<title>linkedin@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#linkedin"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
-<span class="n-footer__social-link-text">youtube</span>
-<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
-<title>youtube@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#youtube"></use>
-</svg>
-
-</a>
-</li>
-<li class="n-footer__social-link-list-item">
-<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
-<span class="n-footer__social-link-text">slideshare</span>
-<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
-<title>slideshare@</title>
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#slideshare"></use>
-</svg>
-
-</a>
-</li>
-</ul>
-</div>
-
-</div>
-<div class="n-footer__bottom-right">
-  <p class="n-footer__fine-print">想就我们的网站提供反馈?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">请告诉我们</a>
-  <a href="https://docs.netapp.com/zh-cn/announcements/" class="n-footer__copyright">通知</a>
-  </p>
-</div>
-</div>
-</div>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">条款和条件</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">隐私政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie 政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie 设置</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">想就我们的网站提供反馈?</span>
+              <a target="_self" href="javascript:netapp_mailto()">请告诉我们</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/zh-cn/announcements/">通知</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-cn/ontap-systems/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
       </div><!-- Elasticsearch JS -->
