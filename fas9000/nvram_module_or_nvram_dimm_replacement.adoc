@@ -32,12 +32,10 @@ NVRAM 模块由 NVRAM10 和 DIMM 组成，每个 NVRAM 模块最多包含两个 
 
 == 第 1 步：关闭受损控制器
 
-[role="lead"]
-根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。
-
+ Shut down or take over the impaired controller using one of the following options.
 [role="tabbed-block"]
 ====
-.选项 1 ：大多数配置
+.选项 1 ：大多数系统
 --
 [role="lead"]
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
@@ -82,7 +80,7 @@ LOADER 提示符
 
 
 --
-.选项 2 ： MetroCluster 配置
+.选项 2 ：控制器位于 MetroCluster 中
 --
 
 NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
@@ -131,7 +129,7 @@ LOADER 提示符
 
 
 --
-.选项 3 ：双节点 MetroCluster
+.选项 3 ：控制器位于双节点 MetroCluster 中
 --
 [role="lead"]
 要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。

@@ -7349,10 +7349,7 @@
   <block id="d1f671afbf5d4ca47b95e86f70c6bcc1" category="list-text">安装存储交换机：</block>
   <block id="4aaebba2a5287c74eb41bf080e6d1fe4" category="list-text">确认您的平台型号支持的硬件，例如存储交换机和缆线：</block>
   <block id="f1832f4de88037c446f0b7e9c0163aaa" category="paragraph">可从磁盘和聚合内容中找到用于从驱动器中删除所有权的操作步骤：</block>
-  <block id="71e38f927e8a1c6f9bc875e8ab8112eb" category="open-title">选项 1 ：大多数配置</block>
-  <block id="0b6c08751d3c9a2a0d92384f10b9d168" category="open-title">选项 2 ： MetroCluster 配置</block>
   <block id="6a925f3765a4dc795f4b5a0732579780" category="admonition-title">控制器位于 MetroCluster 中</block>
-  <block id="56064382d522717971cdb206043bc575" category="open-title">选项 3 ：双节点 MetroCluster</block>
   <block id="b2fdb7d98e0aecd7d98c266cea50e1e4" category="paragraph">根据您使用的是 HA 对还是双节点 MetroCluster 配置，您必须验证是否已将磁盘重新分配给新控制器模块，或者手动重新分配磁盘。</block>
   <block id="934d0bdda7a0d1a8822fd442720c5972" category="paragraph">有关如何将磁盘重新分配给新控制器的说明，请选择以下选项之一。</block>
   <block id="32f251bc81f643cafcff8ad711b81b00" category="open-title">选项 1 ：验证 ID （ HA 对）</block>
@@ -8602,4 +8599,7 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="e62f199edf5ce700e5ae74c377f48585" category="sidebar">所有 SAN 阵列系统</block>
+  <block id="c4565f27e7eb1d0640e258fb796df9c4" category="list-text">将系统缆线和收发器模块插入控制器模块，然后重新安装缆线管理设备。</block>
+  <block id="6c35991313f21e9038f629e9e809488a" category="admonition">请勿混用具有不同效率额定值的 PSU 。请始终像这样替换。</block>
+  <block id="0fbe0630286ce5debeb3d11174988b34" category="open-title">选项 3 ：控制器位于双节点 MetroCluster 中</block>
 </blocks>
