@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架</title>
+  <title>带有板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架" />
+  <meta property="og:title" content="带有板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-systems/sas3/install-cabling-worksheets-examples-fas2600.html" />
-	<meta property="og:description" content="您可以使用完整的控制器到堆栈布线工作表和布线示例为常见的 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置布线。" />
+	<meta property="og:description" content="您可以使用完整的控制器到堆栈布线工作表和布线示例为 AFF 和 FAS 平台连接板载存储，例如但不限于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 平台。此信息不适用于 FAS25XX 平台。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-systems/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您可以使用完整的控制器到堆栈布线工作表和布线示例为常见的 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置布线。">
-  <meta name="keywords" content=" complete, controller-to-stack, cabling, worksheet, cable, common, aff, a200, a220, fas2600, series, fas2700, configuration"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您可以使用完整的控制器到堆栈布线工作表和布线示例为 AFF 和 FAS 平台连接板载存储，例如但不限于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 平台。此信息不适用于 FAS25XX 平台。">
+  <meta name="keywords" content=" controller-to-stack, cabling, worksheet, cable, aff, a200, a220, fas2600, fas2700, onboard, onboard storage"><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-systems/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架](https://docs.netapp.com/zh-cn/ontap-systems/sas3/install-cabling-worksheets-examples-fas2600.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/sas3/install_cabling_worksheets_examples_fas2600.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[带有板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架](https://docs.netapp.com/zh-cn/ontap-systems/sas3/install-cabling-worksheets-examples-fas2600.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/sas3/install_cabling_worksheets_examples_fas2600.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" class="github-icon" />提供者指南</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此页面上</div>
@@ -6134,14 +6134,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架</h1>
+  <h1 class="n-doc__component-detail-heading">带有板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-04-13 13:16:22 +0000">04/13/2022</time>
+    <time datetime="2022-04-25 20:12:48 +0000">04/25/2022</time>
     
   
 
@@ -6151,12 +6151,12 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>您可以使用完整的控制器到堆栈布线工作表和布线示例为常见的 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置布线。</p>
+<p>您可以使用完整的控制器到堆栈布线工作表和布线示例为 AFF 和 FAS 平台连接板载存储，例如但不限于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 平台。此信息不适用于 FAS25XX 平台。</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>如果需要，可以参考 <a href="install-cabling-rules.html">"SAS 布线规则"</a> 有关支持的配置，磁盘架到磁盘架连接和控制器到磁盘架连接（包括 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 端口 0b 相同域连接）的信息。</p>
+<p>If needed, you can refer to <a href="install-cabling-rules.html">"SAS 布线规则"</a> 有关支持的配置，磁盘架到磁盘架连接以及控制器到磁盘架连接的信息。</p>
 </li>
 <li>
 <p>布线示例将控制器到堆栈的缆线显示为实心或虚线，以区分控制器 0b 端口连接与控制器 0a 端口连接。</p>
@@ -6179,7 +6179,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="aff-a200-aff-a220-fas2600-系列和-fas2700-多路径-ha-配置带有一个多架堆栈">AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 多路径 HA 配置，带有一个多架堆栈</h2>
+<h2 id="采用多路径-ha-配置并具有一个多架堆栈的板载存储的-aff-和-fas-平台">采用多路径 HA 配置并具有一个多架堆栈的板载存储的 AFF 和 FAS 平台</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>以下工作表和布线示例使用端口对 0A/0b ：</p>

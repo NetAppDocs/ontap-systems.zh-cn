@@ -9,14 +9,14 @@
   <meta property="og:title" content="热移除磁盘架—带有 IOM12 模块的磁盘架" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-systems/sas3/hot-remove-shelf.html" />
-	<meta property="og:description" content="您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（从已启动并提供数据的系统中无中断移除磁盘架，这意味着 I/O 正在进行中）。您可以从磁盘架堆栈中的任意位置热移除一个或多个磁盘架，也可以移除磁盘架堆栈。" />
+	<meta property="og:description" content="您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-systems/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（从已启动并提供数据的系统中无中断移除磁盘架，这意味着 I/O 正在进行中）。您可以从磁盘架堆栈中的任意位置热移除一个或多个磁盘架，也可以移除磁盘架堆栈。">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。">
   <meta name="keywords" content=" hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, i/o, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules"><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-systems/images/favicon.ico" type="image/x-icon">
 
@@ -6141,7 +6141,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-13 13:16:22 +0000">04/13/2022</time>
+    <time datetime="2022-04-25 20:12:48 +0000">04/25/2022</time>
     
   
 
@@ -6149,7 +6149,7 @@
 </p>
 
 <div class="paragraph lead">
-<p>您可以热移除带有 IOM12 模块的磁盘架—在需要移动或更换磁盘架时，从已启动并提供数据（ I/O 正在进行）的系统中无中断地移除磁盘架。您可以从磁盘架堆栈中的任意位置热移除一个或多个磁盘架，也可以移除磁盘架堆栈。</p>
+<p>您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。</p>
 </div>
 <div class="ulist">
 <div class="title">开始之前</div>
@@ -6185,7 +6185,7 @@
 <p>HA 对配置不能处于接管状态。</p>
 </li>
 <li>
-<p>您必须已从要移除的磁盘架中的磁盘驱动器中删除所有聚合，这些磁盘驱动器必须是备用磁盘。</p>
+<p>您必须已从要移除的磁盘架中的磁盘驱动器（磁盘驱动器必须为备用磁盘）中删除所有聚合。</p>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6280,6 +6280,9 @@
 </table>
 </div>
 </li>
+<li>
+<p>* 可能的磁盘架损坏： * 如果要卸下 DS460C 磁盘架，而将其移至数据中心的其他部分或将其运送到其他位置，请卸下驱动器，以免损坏驱动器抽屉和驱动器。</p>
+</li>
 </ul>
 </div>
 <div class="olist arabic">
@@ -6336,9 +6339,6 @@
 </tr>
 </table>
 </div>
-</li>
-</ol>
-</div>
 <div class="paragraph">
 <p>以下输出显示了要移除的磁盘架（磁盘架 3 ）上的磁盘驱动器处于正确状态，可用于移除磁盘架。所有磁盘驱动器上的聚合都会被删除；因此，每个磁盘驱动器的 <code>Container Name</code> 列会显示一个短划线。所有磁盘驱动器上的所有权也会被删除；因此，每个磁盘驱动器的 <code>owner</code> 列会显示一个短划线。</p>
 </div>
@@ -6360,8 +6360,7 @@ Disk         Size Shelf Bay Type   Type        Name       Owner
 ...</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>以物理方式找到要移除的磁盘架。</p>
 <div class="paragraph">
