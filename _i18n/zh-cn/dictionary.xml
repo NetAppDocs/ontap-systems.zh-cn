@@ -5782,14 +5782,10 @@
   <block id="f76dc75f678aa69ffe38bc567a89bca0" category="paragraph">以下工作表和布线示例对堆栈 1 使用端口对 11/2b （多路径）和 2a/1D （四路径），对 stack2 使用端口对 1c/2D （多路径）和 2c/1b （四路径）。</block>
   <block id="1ba62ddf8cca99736a1b554044171b2e" category="image-alt">DRW 工作表 qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 NAU</block>
   <block id="bfaf47370d0e0636d466e95dcd0ebeb2" category="image-alt">DRW qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 NAU</block>
-  <block id="a1ed8439f9e8dd8abbf897208819784d" category="summary">您可以使用完整的控制器到堆栈布线工作表和布线示例为常见的 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置布线。</block>
-  <block id="1c2eda53a3c2390b00d66e75048ca95f" category="doc">常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架</block>
-  <block id="560038a44309d6251e4f834ae3746531" category="list-text">如果需要，可以参考 <block ref="db31d33614fd87795381d5ac14be04aa" category="inline-link-macro-rx"></block> 有关支持的配置，磁盘架到磁盘架连接和控制器到磁盘架连接（包括 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 端口 0b 相同域连接）的信息。</block>
   <block id="ba38e437ae673ee3e3f19dd893a38b35" category="list-text">布线示例将控制器到堆栈的缆线显示为实心或虚线，以区分控制器 0b 端口连接与控制器 0a 端口连接。</block>
   <block id="1b423539e905b630394da7971c47a88a" category="image-alt">DRW fas2600 控制器到堆栈缆线类型密钥</block>
   <block id="ee547c1c638ccba345b1cbcb32709bcc" category="list-text">布线示例显示了控制器到堆栈连接以及磁盘架到磁盘架连接的两种不同颜色，用于区分通过 IOM A （域 A ）和 IOM B （域 B ）进行的连接。</block>
   <block id="c81b301c5f51b115f5e18cb1507f7388" category="image-alt">DRW fas2600 电缆颜色密钥</block>
-  <block id="3073d82d9dcde527789013d14eff0590" category="section-title">AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 多路径 HA 配置，带有一个多架堆栈</block>
   <block id="ff82ea2b354e0f934f26abf26044a994" category="paragraph">以下工作表和布线示例使用端口对 0A/0b ：</block>
   <block id="722de0e0a7dcfb970621a772bae3850c" category="image-alt">DRW fas2600 mpha 工作表</block>
   <block id="5eb85c13122610ca0d3c8606ac0884a7" category="image-alt">DRW fas2600 mpha</block>
@@ -5831,16 +5827,13 @@
   <block id="c190e47c300a3781bbf4edf442004427" category="list-text">将电源线重新连接到电源，并使用电源线固定器固定电源线。</block>
   <block id="7942c8c0a2938d554ca414a57b6286aa" category="list-text">打开电源开关。</block>
   <block id="b30bd480240ea6cb86b54735c115a8db" category="paragraph">电源的电源（绿色） LED 和警示（琥珀色） LED 亮起，然后在 40 秒内，警示（琥珀色） LED 熄灭。</block>
-  <block id="77c1c66d8ce6aa90628f37515ac41ba2" category="summary">您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（从已启动并提供数据的系统中无中断移除磁盘架，这意味着 I/O 正在进行中）。您可以从磁盘架堆栈中的任意位置热移除一个或多个磁盘架，也可以移除磁盘架堆栈。</block>
   <block id="1b13b207ae1928cd420c7771c798eb3d" category="doc">热移除磁盘架—带有 IOM12 模块的磁盘架</block>
-  <block id="27e201e3d04d5e9a38b24624577d3d3f" category="paragraph">您可以热移除带有 IOM12 模块的磁盘架—在需要移动或更换磁盘架时，从已启动并提供数据（ I/O 正在进行）的系统中无中断地移除磁盘架。您可以从磁盘架堆栈中的任意位置热移除一个或多个磁盘架，也可以移除磁盘架堆栈。</block>
   <block id="c5cabc5bd527563ec2a9e03c2ca16ab6" category="list-text">您的系统必须采用多路径 HA ，多路径，四路径 HA 或四路径配置。</block>
   <block id="9c2a85bd806fec2b1e3452f15f799e68" category="paragraph">对于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统，外部存储必须采用多路径 HA 或多路径的形式进行布线。</block>
   <block id="079a7f8e81dcfa4ea9fb370c9901815f" category="admonition">对于使用多路径连接对外部存储进行布线的 FAS2600 系列单控制器系统，该系统为混合路径配置，因为内部存储使用单路径连接。</block>
   <block id="bbf5512c7d19cdd9d9a6fd9e97d3a51b" category="list-text">您的系统不能显示任何 SAS 布线错误消息。</block>
   <block id="7aef33153293755f25958302c5aed92b" category="paragraph">您可以下载并运行 Active IQ Config Advisor 以查看任何 SAS 布线错误消息以及应采取的更正操作。</block>
   <block id="a87e1a96f2d7d8d3f543485f49e17ff9" category="list-text">HA 对配置不能处于接管状态。</block>
-  <block id="e31335395bd34b8764591a789418ea20" category="list-text">您必须已从要移除的磁盘架中的磁盘驱动器中删除所有聚合，这些磁盘驱动器必须是备用磁盘。</block>
   <block id="53c840808f25d00f1d58d54eb1d542a0" category="admonition">如果尝试使用要删除的磁盘架上的聚合执行此操作步骤，则可能会使系统出现故障，并出现多磁盘崩溃。</block>
   <block id="e43abe3ed88114c3c553dbf6413e6265" category="list-text">如果要从堆栈中移除一个或多个磁盘架，则必须考虑距离因素，以绕过要移除的磁盘架；因此，如果当前缆线不够长，则需要提供更长的缆线。</block>
   <block id="00124b65b0475ef5a1ef8812a9a5aa02" category="list-text">* 最佳实践： * 最佳实践是，从要删除的磁盘架中的磁盘驱动器中删除聚合后，删除磁盘驱动器所有权。</block>
@@ -6903,8 +6896,6 @@
   <block id="466938affa9a199b1c83c75ca5cb1a5b" category="paragraph">* 布线工作表和示例 *</block>
   <block id="9da6ad063de2521b4320f53e9eaef62c" category="inline-link-macro">常见多路径 HA 配置</block>
   <block id="d9e855b435b4d134eea547e0fa310441" category="list-text"><block ref="d9e855b435b4d134eea547e0fa310441" category="inline-link-macro-rx"></block></block>
-  <block id="9bb0aaeecd6b8ef6459136fe58d3005b" category="inline-link-macro">常见的 AFF A200 ， AFF A220 ， FAS2600 和 FAS2700 配置</block>
-  <block id="41af106a10d104f231ff7ec566b3a5bf" category="list-text"><block ref="41af106a10d104f231ff7ec566b3a5bf" category="inline-link-macro-rx"></block></block>
   <block id="d0b14672f568caba4ff0c9e7e94adbfd" category="inline-link-macro">四路径 HA 配置</block>
   <block id="c9652f347c61d0d2c370d1229afb9e37" category="list-text"><block ref="c9652f347c61d0d2c370d1229afb9e37" category="inline-link-macro-rx"></block></block>
   <block id="8ae471d6400ac43c05cee2f01574b10c" category="paragraph">* 布线工作表模板 *</block>
@@ -8602,4 +8593,19 @@
   <block id="c4565f27e7eb1d0640e258fb796df9c4" category="list-text">将系统缆线和收发器模块插入控制器模块，然后重新安装缆线管理设备。</block>
   <block id="6c35991313f21e9038f629e9e809488a" category="admonition">请勿混用具有不同效率额定值的 PSU 。请始终像这样替换。</block>
   <block id="0fbe0630286ce5debeb3d11174988b34" category="open-title">选项 3 ：控制器位于双节点 MetroCluster 中</block>
+  <block id="6bec966647e1b9c8a03ddd277c8fe864" category="inline-link">部件退回和放大器；更换</block>
+  <block id="822bec4a0db0c5fd17b5f05b4e1c0335" category="paragraph">按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见<block ref="4fc2cab5a4eb2f6a408378b0d596ae42" category="inline-link-rx"></block> 第页，了解更多信息。</block>
+  <block id="e188406fb2d6108447e3bc6cb9155625" category="inline-link-macro">采用板载存储的 AFF 和 FAS 平台</block>
+  <block id="7a63e08a24ae8c9c1ab5dcddaf6f551f" category="list-text"><block ref="7a63e08a24ae8c9c1ab5dcddaf6f551f" category="inline-link-macro-rx"></block></block>
+  <block id="bd7b8cb1f03ceb90528c843b3cd8c0a4" category="summary">您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。</block>
+  <block id="bf9eaa32fa671084f441eeba9c863ef6" category="paragraph">您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。</block>
+  <block id="ba0a2d97499e2e560187690f4b54b10c" category="list-text">您必须已从要移除的磁盘架中的磁盘驱动器（磁盘驱动器必须为备用磁盘）中删除所有聚合。</block>
+  <block id="eaca20aa2eab6f0d724e09d105bcde6d" category="list-text">* 可能的磁盘架损坏： * 如果要卸下 DS460C 磁盘架，而将其移至数据中心的其他部分或将其运送到其他位置，请卸下驱动器，以免损坏驱动器抽屉和驱动器。</block>
+  <block id="df890e7b6d800ea7f63516f78dc7b333" category="inline-link-macro">适用于采用板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例</block>
+  <block id="4831f887bab13b0957b607ad184c87f7" category="paragraph"><block ref="4831f887bab13b0957b607ad184c87f7" category="inline-link-macro-rx"></block></block>
+  <block id="fdd0f707bd71fcef53b653ae53e31f53" category="summary">您可以使用完整的控制器到堆栈布线工作表和布线示例为 AFF 和 FAS 平台连接板载存储，例如但不限于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 平台。此信息不适用于 FAS25XX 平台。</block>
+  <block id="34a9eb16320fa575f00d96a29be9d645" category="doc">带有板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例—带有 IOM12 模块的磁盘架</block>
+  <block id="18e93c7175385ec259f95d9d453bdda1" category="list-text">If needed, you can refer to <block ref="db31d33614fd87795381d5ac14be04aa" category="inline-link-macro-rx"></block> 有关支持的配置，磁盘架到磁盘架连接以及控制器到磁盘架连接的信息。</block>
+  <block id="67f2d45d4d0936132195fb6f111ce3e8" category="section-title">采用多路径 HA 配置并具有一个多架堆栈的板载存储的 AFF 和 FAS 平台</block>
+  <block id="83742af000bdb059461854fab1a8b606" category="list-text">请勿混用具有不同效率额定值的电源。请始终像这样替换。</block>
 </blocks>
