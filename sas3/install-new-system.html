@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="如果新系统 HA 对或单控制器配置未安装在机柜中，则必须在机架中安装磁盘架并为其布线。">
-  <meta name="keywords" content=" install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation"><!-- Icons -->
+  <meta name="keywords" content=" install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling"><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-systems/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -2266,39 +2266,6 @@
 
 
 
-
-    
-      <ul class="subfolders" style="display:none;">
-        <li class="pdf-ux-container">
-          
-          
-          
-          <a target="_blank" 
-            
-              href="/zh-cn/ontap-systems/pdfs/sidebar/风扇.pdf" 
-            
-          >
-            <img src="/zh-cn/ontap-systems/images/pdf.png" width="16" height="16"/>
-            风扇
-          </a>
-          
-
-
-
-
-
-
-
-
-
-
-
-          
-        </li>
-      </ul>
-    
-
-  
 
 
 
@@ -5265,20 +5232,9 @@
         DIMM
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a700s/drive-replace.html">
         驱动器
-      </a></li><li class="subfolders "><a href="#">
-        <div class="na-navbar-padding"> 风扇</div>
-      </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a700s/fan-impaired-controller-shutdown.html">
-        关闭受损节点
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a700s/fan-controller-remove.html">
-        卸下控制器模块
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a700s/fan-replace.html">
         风扇
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a700s/fan-controller-reinstall-pcie-rtc.html">
-        重新安装控制器模块
-      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a700s/fan-complete-rma.html">
-        将故障部件退回 NetApp
-      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a700s/nvmem-nvram-battery-replace.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a700s/nvmem-nvram-battery-replace.html">
         NVRAM 电池
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/a700s/nvram-or-nvram-dimm-replacement.html">
         NVRAM
@@ -5991,7 +5947,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/install-cabling-worksheets-examples-multipath.html">
         常见多路径 HA 配置的布线工作表和示例
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/install-cabling-worksheets-examples-fas2600.html">
-        常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的布线工作表和示例
+        使用板载存储的AFF 和FAS 平台的布线工作表和示例
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/install-worksheets-examples-quadpath.html">
         具有两个四端口 SAS HBA 的四路径 HA 配置的布线工作表和示例
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/install-cabling-worksheet-template-multipath.html">
@@ -6143,7 +6099,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-13 13:16:22 +0000">04/13/2022</time>
+    <time datetime="2022-05-06 14:22:10 +0000">05/06/2022</time>
     
   
 
@@ -6218,7 +6174,7 @@
 <li>
 <p>包含根聚合的磁盘架可通过磁盘架箱和磁盘架机箱上的标签来标识。</p>
 <div class="paragraph">
-<p>这些标签将显示堆栈编号；例如， "`Loop 或 Stack # ： 1 ` " 和 "`Loop 或 Stack # ： 2 ` " 。不包含根聚合的磁盘架仅会在标签上显示磁盘架序列号。</p>
+<p>标签显示堆栈编号；例如、<strong>环路或堆栈编号：1*和*环路或堆栈编号：2</strong>。Disk shelves that do not contain the root aggregates only show the disk shelf serial number is on the labels.</p>
 </div>
 </li>
 <li>
@@ -6289,6 +6245,52 @@
 </ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="ds460c驱动器处理注意事项">DS460C驱动器处理注意事项</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>这些驱动器与磁盘架机箱单独包装。</p>
+<div class="paragraph">
+<p>您应清点收到的驱动器以及其余系统设备。</p>
+</div>
+</li>
+<li>
+<p>拆开驱动器包装后、应保存包装材料以供将来使用。</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/caution.svg" alt="注意">
+</td>
+<td class="content">
+*可能丢失数据访问：*如果将来将磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+请将磁盘驱动器放在ESD袋中、直到准备好安装为止。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>处理驱动器时、请始终佩戴ESD腕带、该腕带接地到存储机箱机箱上未上漆的表面、以防止静电释放。</p>
+<div class="paragraph">
+<p>如果没有腕带，请先触摸存储机箱机箱上未上漆的表面，然后再处理磁盘驱动器。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -6332,22 +6334,22 @@
 <p>为了减轻磁盘架重量并便于操作，请卸下电源和 I/O 模块（ IOM ）。</p>
 </div>
 <div class="paragraph">
-<p>对于 DS460C 磁盘架，您还可以使用磁盘架随附的四个可拆卸手柄。手柄（机箱每侧两个）可通过向上推直至卡入到位来安装。将磁盘架滑入导轨时，请使用拇指闩锁分离手柄。</p>
+<p>对于DS460C磁盘架、尽管驱动器是单独包装的、因此磁盘架更轻便、但空的DS460C磁盘架的重量仍约为132磅(60千克)；因此、移动磁盘架时请注意以下事项。</p>
 </div>
-<div class="paragraph">
-<p>如果要移动满载的 DS460C 磁盘架，建议使用机械升降机或升降机。</p>
-</div>
-<div class="admonitionblock note">
+<div class="admonitionblock caution">
 <table>
 <tr>
 <td class="icon">
-<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+<img src="/us-en/ontap-systems/images/caution.svg" alt="注意">
 </td>
 <td class="content">
-满载的 DS460C 磁盘架的重量约为 247 磅（ 112 千克）。
+建议您使用一个机械升降机或四个人使用升降机把手安全移动空的DS460C磁盘架。
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>您的DS460C发货随附了四个可拆卸的升降把手(每侧两个)。要使用提升把手、请将把手的卡舌插入磁盘架侧面的插槽并向上推、直到其卡入到位、以安装提升把手。然后、在将磁盘架滑入导轨时、一次使用拇指闩锁断开一组手柄。下图显示了如何连接提升把手。</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -6356,32 +6358,70 @@
 </div>
 </li>
 <li>
-<p>如果要安装 DS460C 磁盘架，请将组件安装到机架式磁盘架中；否则，请转至下一步。</p>
+<p>重新安装在将磁盘架安装到机架之前卸下的所有电源和 IOM 。</p>
+</li>
+<li>
+<p>如果要安装DS460C磁盘架、请将驱动器安装到驱动器抽盒中；否则、请转至下一步。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
 <div class="paragraph">
-<p>如果您购买的磁盘架已部分填充，但每个驱动器插槽中没有驱动器，则必须确保：</p>
+<p>请始终佩戴ESD腕带、该腕带接地至存储机箱上未上漆的表面、以防止静电放电。</p>
+</div>
+<div class="paragraph">
+<p>如果没有腕带，请先触摸存储机箱机箱上未上漆的表面，然后再处理磁盘驱动器。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>如果您购买的磁盘架部分填充、这意味着该磁盘架所支持的驱动器少于60个、请按如下所示安装每个磁盘架的驱动器：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>每个抽盒中的前四个插槽（ 0 ， 3 ， 6 和 9 ）已被占用。</p>
-<div class="paragraph">
-<p>这样可确保磁盘架通风良好。</p>
+<p>将前四个驱动器安装到正面插槽(0、3、6和9)中。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+*设备故障风险：*为了确保气流正常并防止过热、请始终将前四个驱动器安装到前面的插槽(0、3、6和9)中。
+</td>
+</tr>
+</table>
 </div>
 </li>
 <li>
-<p>在包含 30 个驱动器的磁盘架中，其余 10 个驱动器均匀分布在每个抽盒的插槽 1 和 10 中的整个磁盘架中。下图显示了如何在磁盘架中的每个驱动器抽盒中将驱动器编号为 0 到 11 。插槽 0 ， 3 ， 6 ， 9 和， 在包含 30 个驱动器的磁盘架中，每个抽盒中的插槽 1 和 10 必须包含驱动器。</p>
+<p>对于其余驱动器、请将其均匀分布在每个抽盒中。</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>下图显示了如何在磁盘架中的每个驱动器抽盒中将驱动器编号为 0 到 11 。</p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../media/dwg_trafford_drawer_with_hdds_callouts.gif" alt="带有 HDD 标注的 Dwg Trafford 抽屉">
 </div>
 </div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>重新安装在将磁盘架安装到机架之前卸下的所有电源和 IOM 。</p>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
 <p>打开磁盘架的顶部抽盒。</p>
+</li>
+<li>
+<p>从ESD袋中取出驱动器。</p>
 </li>
 <li>
 <p>将驱动器上的凸轮把手提起至垂直位置。</p>
@@ -6392,12 +6432,6 @@
 <div class="content">
 <img src="../media/28_dwg_e2860_de460c_drive_cru.gif" alt="28 dwg e2860 de460c 驱动器 cru">
 </div>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -6414,8 +6448,7 @@
 </tr>
 </tbody>
 </table>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+</li>
 <li>
 <p>竖直向下放下驱动器，然后向下旋转凸轮把手，直到驱动器在橙色释放闩锁下卡入到位。</p>
 </li>
@@ -6460,9 +6493,10 @@
 <li>
 <p>对磁盘架中的每个抽盒重复上述步骤。</p>
 </li>
-</ol>
-</div>
-</li>
+<li>
+<p>连接前挡板。</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>如果要添加多个磁盘架，请对要安装的每个磁盘架重复此操作步骤。</p>
 <div class="admonitionblock note">
@@ -6476,6 +6510,9 @@
 </td>
 </tr>
 </table>
+</div>
+</li>
+</ol>
 </div>
 </li>
 </ol>
@@ -6569,7 +6606,7 @@
 <li>
 <p>查看控制器到堆栈的布线工作表和布线示例，了解是否存在适用于您的配置的完整工作表。</p>
 <div class="paragraph">
-<p><a href="install-cabling-worksheets-examples-fas2600.html">"常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例"</a></p>
+<p><a href="install-cabling-worksheets-examples-fas2600.html">"适用于采用板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例"</a></p>
 </div>
 <div class="paragraph">
 <p><a href="install-cabling-worksheets-examples-multipath.html">"常见多路径 HA 配置的控制器到堆栈布线工作表和布线示例"</a></p>
@@ -6808,6 +6845,70 @@
 </div>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="移动或传输ds460c磁盘架">移动或传输DS460C磁盘架</h2>
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>如果将来将DS460C磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>如果在新系统安装过程中安装了DS460C磁盘架、但您保存了驱动器包装材料、请在移动驱动器之前使用这些材料重新打包驱动器。</p>
+<div class="paragraph">
+<p>如果未保存包装材料、则应将驱动器放在缓冲表面上或使用备用缓冲包装。切勿将驱动器堆栈在彼此之上。</p>
+</div>
+</li>
+<li>
+<p>在处理驱动器之前、请佩戴ESD腕带、该腕带接地到存储机箱上未上漆的表面。</p>
+<div class="paragraph">
+<p>如果没有腕带、请先触摸存储机箱机箱上未上漆的表面、然后再处理驱动器。</p>
+</div>
+</li>
+<li>
+<p>您应采取措施小心处理驱动器：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>在拆卸、安装或搬运驱动器以支撑其重量时、请始终用双手。</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/caution.svg" alt="注意">
+</td>
+<td class="content">
+请勿将手放在驱动器托架下侧暴露的驱动器板上。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>请注意、不要将驱动器撞到其他表面。</p>
+</li>
+<li>
+<p>驱动器应远离磁性设备。</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/caution.svg" alt="注意">
+</td>
+<td class="content">
+磁场可能会破坏驱动器上的所有数据、并且发生原因 会对驱动器电路造成不可修复的损坏。
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
