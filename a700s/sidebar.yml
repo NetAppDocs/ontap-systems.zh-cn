@@ -69,18 +69,8 @@ entries:
     pdf-filename: AFF A700s 驱动器
     url: "/a700s/drive-replace.html"
   - title: 风扇
-    entries:
-    - title: 关闭受损节点
-      url: "/a700s/fan-impaired-controller-shutdown.html"
-    - title: 卸下控制器模块
-      url: "/a700s/fan-controller-remove.html"
-    - title: 风扇
-      pdf-filename: AFF A700s 风扇
-      url: "/a700s/fan-replace.html"
-    - title: 重新安装控制器模块
-      url: "/a700s/fan-controller-reinstall-pcie-rtc.html"
-    - title: 将故障部件退回 NetApp
-      url: "/a700s/fan-complete-rma.html"
+    pdf-filename: AFF A700s 风扇
+    url: "/a700s/fan-replace.html"
   - title: NVRAM 电池
     pdf-filename: AFF A700s NVRAM 电池
     url: "/a700s/nvmem-nvram-battery-replace.html"

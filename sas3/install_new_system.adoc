@@ -1,7 +1,7 @@
 ---
 permalink: sas3/install-new-system.html 
 sidebar: sidebar 
-keywords: install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation 
+keywords: install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling 
 summary: 如果新系统 HA 对或单控制器配置未安装在机柜中，则必须在机架中安装磁盘架并为其布线。 
 ---
 = 安装新系统安装的磁盘架并为其布线—带有 IOM12 模块的磁盘架
@@ -55,7 +55,7 @@ NOTE: 如果 HA 对至少包含两个堆栈，则包含第二个堆栈根聚合�
 
 * 包含根聚合的磁盘架可通过磁盘架箱和磁盘架机箱上的标签来标识。
 +
-这些标签将显示堆栈编号；例如， "`Loop 或 Stack # ： 1 ` " 和 "`Loop 或 Stack # ： 2 ` " 。不包含根聚合的磁盘架仅会在标签上显示磁盘架序列号。
+标签显示堆栈编号；例如、*环路或堆栈编号：1*和*环路或堆栈编号：2*。Disk shelves that do not contain the root aggregates only show the disk shelf serial number is on the labels.
 
 * 如果在系统设置和配置时未将系统配置为使用自动磁盘所有权分配，则需要手动分配磁盘所有权。
 * 系统会自动启用带内备用控制路径（ In-band Alternate Control Path ， ACP ）。
@@ -110,6 +110,29 @@ SAS 缆线连接器具有键控。正确连接到 SAS 端口后，连接器会�
 
 
 
+=== DS460C驱动器处理注意事项
+
+* 这些驱动器与磁盘架机箱单独包装。
++
+您应清点收到的驱动器以及其余系统设备。
+
+* 拆开驱动器包装后、应保存包装材料以供将来使用。
++
+
+CAUTION: *可能丢失数据访问：*如果将来将磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。
+
++
+
+NOTE: 请将磁盘驱动器放在ESD袋中、直到准备好安装为止。
+
+* 处理驱动器时、请始终佩戴ESD腕带、该腕带接地到存储机箱机箱上未上漆的表面、以防止静电释放。
++
+如果没有腕带，请先触摸存储机箱机箱上未上漆的表面，然后再处理磁盘驱动器。
+
+
+
+
+
 == 安装带有 IOM12 模块的磁盘架，以便安装新的系统
 
 [role="lead"]
@@ -129,38 +152,50 @@ NOTE: 请勿通过法兰将磁盘架安装到电信型机架中；磁盘架的�
 为了减轻磁盘架重量并便于操作，请卸下电源和 I/O 模块（ IOM ）。
 
 +
-对于 DS460C 磁盘架，您还可以使用磁盘架随附的四个可拆卸手柄。手柄（机箱每侧两个）可通过向上推直至卡入到位来安装。将磁盘架滑入导轨时，请使用拇指闩锁分离手柄。
-
-+
-如果要移动满载的 DS460C 磁盘架，建议使用机械升降机或升降机。
+对于DS460C磁盘架、尽管驱动器是单独包装的、因此磁盘架更轻便、但空的DS460C磁盘架的重量仍约为132磅(60千克)；因此、移动磁盘架时请注意以下事项。
 
 +
 
-NOTE: 满载的 DS460C 磁盘架的重量约为 247 磅（ 112 千克）。
+CAUTION: 建议您使用一个机械升降机或四个人使用升降机把手安全移动空的DS460C磁盘架。
+
++
+您的DS460C发货随附了四个可拆卸的升降把手(每侧两个)。要使用提升把手、请将把手的卡舌插入磁盘架侧面的插槽并向上推、直到其卡入到位、以安装提升把手。然后、在将磁盘架滑入导轨时、一次使用拇指闩锁断开一组手柄。下图显示了如何连接提升把手。
 
 +
 image::../media/drw_ds460c_handles.gif[DRW ds460c 句柄]
 
-. 如果要安装 DS460C 磁盘架，请将组件安装到机架式磁盘架中；否则，请转至下一步。
+. 重新安装在将磁盘架安装到机架之前卸下的所有电源和 IOM 。
+. 如果要安装DS460C磁盘架、请将驱动器安装到驱动器抽盒中；否则、请转至下一步。
 +
-如果您购买的磁盘架已部分填充，但每个驱动器插槽中没有驱动器，则必须确保：
+[NOTE]
+====
+请始终佩戴ESD腕带、该腕带接地至存储机箱上未上漆的表面、以防止静电放电。
+
+如果没有腕带，请先触摸存储机箱机箱上未上漆的表面，然后再处理磁盘驱动器。
+
+====
++
+如果您购买的磁盘架部分填充、这意味着该磁盘架所支持的驱动器少于60个、请按如下所示安装每个磁盘架的驱动器：
 
 +
-** 每个抽盒中的前四个插槽（ 0 ， 3 ， 6 和 9 ）已被占用。
+** 将前四个驱动器安装到正面插槽(0、3、6和9)中。
 +
-这样可确保磁盘架通风良好。
 
-** 在包含 30 个驱动器的磁盘架中，其余 10 个驱动器均匀分布在每个抽盒的插槽 1 和 10 中的整个磁盘架中。下图显示了如何在磁盘架中的每个驱动器抽盒中将驱动器编号为 0 到 11 。插槽 0 ， 3 ， 6 ， 9 和， 在包含 30 个驱动器的磁盘架中，每个抽盒中的插槽 1 和 10 必须包含驱动器。
+NOTE: *设备故障风险：*为了确保气流正常并防止过热、请始终将前四个驱动器安装到前面的插槽(0、3、6和9)中。
+
+** 对于其余驱动器、请将其均匀分布在每个抽盒中。
 
 
-+
+
+
+下图显示了如何在磁盘架中的每个驱动器抽盒中将驱动器编号为 0 到 11 。
+
 image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[带有 HDD 标注的 Dwg Trafford 抽屉]
 
-+
-.. 重新安装在将磁盘架安装到机架之前卸下的所有电源和 IOM 。
-.. 打开磁盘架的顶部抽盒。
-.. 将驱动器上的凸轮把手提起至垂直位置。
-.. 将驱动器托架两侧的两个凸起按钮与驱动器抽屉上驱动器通道中的匹配间隙对齐。
+. 打开磁盘架的顶部抽盒。
+. 从ESD袋中取出驱动器。
+. 将驱动器上的凸轮把手提起至垂直位置。
+. 将驱动器托架两侧的两个凸起按钮与驱动器抽屉上驱动器通道中的匹配间隙对齐。
 +
 image::../media/28_dwg_e2860_de460c_drive_cru.gif[28 dwg e2860 de460c 驱动器 cru]
 
@@ -172,12 +207,12 @@ image::../media/28_dwg_e2860_de460c_drive_cru.gif[28 dwg e2860 de460c 驱动器 
 image:../media/legend_icon_01.png[""]
 | 驱动器托架右侧的凸起按钮 
 |===
-.. 竖直向下放下驱动器，然后向下旋转凸轮把手，直到驱动器在橙色释放闩锁下卡入到位。
-.. 对抽盒中的每个驱动器重复上述子步骤。
+. 竖直向下放下驱动器，然后向下旋转凸轮把手，直到驱动器在橙色释放闩锁下卡入到位。
+. 对抽盒中的每个驱动器重复上述子步骤。
 +
 您必须确保每个抽盒中的插槽 0 ， 3 ， 6 和 9 包含驱动器。
 
-.. 小心地将驱动器抽盒推回机箱。
+. 小心地将驱动器抽盒推回机箱。
 +
 |===
 
@@ -192,14 +227,16 @@ image:../media/2860_dwg_e2860_de460c_gentle_close.gif[""]
 CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒，以避免抽盒震动并损坏存储阵列。
 
 |===
-.. 将两个拉杆推向中央，关闭驱动器抽屉。
-.. 对磁盘架中的每个抽盒重复上述步骤。
-
-
-. 如果要添加多个磁盘架，请对要安装的每个磁盘架重复此操作步骤。
+. 将两个拉杆推向中央，关闭驱动器抽屉。
+. 对磁盘架中的每个抽盒重复上述步骤。
+. 连接前挡板。
++
+.. 如果要添加多个磁盘架，请对要安装的每个磁盘架重复此操作步骤。
 +
 
 NOTE: 此时请勿打开磁盘架的电源。
+
+
 
 
 
@@ -253,7 +290,7 @@ NOTE: 此时请勿打开磁盘架的电源。
 +
 .. 查看控制器到堆栈的布线工作表和布线示例，了解是否存在适用于您的配置的完整工作表。
 +
-link:install-cabling-worksheets-examples-fas2600.html["常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例"]
+link:install-cabling-worksheets-examples-fas2600.html["适用于采用板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例"]
 
 +
 link:install-cabling-worksheets-examples-multipath.html["常见多路径 HA 配置的控制器到堆栈布线工作表和布线示例"]
@@ -384,5 +421,37 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 . 验证是否已自动启用带内 ACP 。`s存储架 ACP 显示`
 +
 在输出中，每个节点的 "`带内` " 列为 "`活动` " 。
+
+
+
+
+
+== 移动或传输DS460C磁盘架
+
+[role="lead"]
+如果将来将DS460C磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。
+
+* 如果在新系统安装过程中安装了DS460C磁盘架、但您保存了驱动器包装材料、请在移动驱动器之前使用这些材料重新打包驱动器。
++
+如果未保存包装材料、则应将驱动器放在缓冲表面上或使用备用缓冲包装。切勿将驱动器堆栈在彼此之上。
+
+* 在处理驱动器之前、请佩戴ESD腕带、该腕带接地到存储机箱上未上漆的表面。
++
+如果没有腕带、请先触摸存储机箱机箱上未上漆的表面、然后再处理驱动器。
+
+* 您应采取措施小心处理驱动器：
++
+** 在拆卸、安装或搬运驱动器以支撑其重量时、请始终用双手。
++
+
+CAUTION: 请勿将手放在驱动器托架下侧暴露的驱动器板上。
+
+** 请注意、不要将驱动器撞到其他表面。
+** 驱动器应远离磁性设备。
++
+
+CAUTION: 磁场可能会破坏驱动器上的所有数据、并且发生原因 会对驱动器电路造成不可修复的损坏。
+
+
 
 

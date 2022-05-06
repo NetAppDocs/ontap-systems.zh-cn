@@ -2232,7 +2232,6 @@
   <block id="a042d62f38b129b2b0a14f9ad8ef93fa" category="doc">安装和设置 PDF 海报— AFF A700s</block>
   <block id="a6f8184cf42c02441138be75b0c4c9da" category="inline-link-macro">《 AFF A700s 安装和设置说明》</block>
   <block id="b4ddf9d759f084ba25e7c363dcfcd65e" category="paragraph"><block ref="b4ddf9d759f084ba25e7c363dcfcd65e" category="inline-link-macro-rx"></block></block>
-  <block id="71579293cd0dc4c10d7d09bfc05b43aa" category="doc">重新安装控制器模块 - AFF A700s</block>
   <block id="9baf211c6ecdaf2caa4ae8ac90089172" category="list-text">如果尚未关闭通风管：</block>
   <block id="af9622020670ce2b86cd2845b04b00f4" category="list-text">将通风管一直旋转到控制器模块。</block>
   <block id="97be101d543785854ad18ca62a561d32" category="list-text">向提升板滑动通风管，直到锁定卡舌卡入到位。</block>
@@ -2253,7 +2252,6 @@
   <block id="24907dee7e4205c74e589d14a85e4bbd" category="doc">更换 DIMM - AFF A700s</block>
   <block id="bf7918e10696cda0294441f81ad32ee4" category="paragraph">`正在等待交还 ...`</block>
   <block id="2c605d107b8b0f8d344d6c863e4c47a9" category="paragraph">按 Ctrl-C ，然后回答 `y` 。</block>
-  <block id="26e38d31d368fa344a653ab87cee79bb" category="section-title">卸下控制器模块</block>
   <block id="ea199306c38c35706c03077ded4d9d02" category="paragraph">在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。</block>
   <block id="359b2f64ed46d9bc640532f2fd8810c0" category="list-text">松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。</block>
   <block id="73ffa1532dd710d7eb1520cb730fb392" category="paragraph">将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。</block>
@@ -2273,7 +2271,6 @@
   <block id="bf1b040c014a82c7128928f952e50325" category="paragraph">通风管锁定卡舌</block>
   <block id="72188531636fc5815089233196e1ec35" category="paragraph">提升板</block>
   <block id="8d669e84d5ccc297894b17bd6469d12d" category="paragraph">通风管</block>
-  <block id="136dcb2edcd74121805a5141d72b31e0" category="section-title">更换 DIMM</block>
   <block id="8d73259baf4ddfb7a4ebcc9452d895e0" category="paragraph">要更换 DIMM ，您必须使用控制器模块内部的 DIMM 映射在控制器模块中找到该 DIMM ，或者使用 DIMM 旁边的 LED 找到该 DIMM ，然后按照特定步骤顺序进行更换。</block>
   <block id="9de291eec146aa309ed46727b945c6d4" category="list-text">卸下适用的提升板。</block>
   <block id="36ac39cea070e713b0fb0a0f54db88b7" category="image-alt">更换 DRW a700s DIMM</block>
@@ -2294,11 +2291,9 @@
   <block id="42276924a11ced220d6673bca09aab34" category="list-text">重新安装从控制器模块中卸下的所有提升板。</block>
   <block id="f7d2e85282b0ca5073c032b071225e16" category="paragraph">如果您已卸下 NVRAM 提升板和提升板 1 ，请确保将 NVRAM 电池插入控制器模块。</block>
   <block id="78891883edccb7cc97dd58049b3468fd" category="list-text">关闭通风管。</block>
-  <block id="46dff51ede0ec9818d5f63c00dfa5746" category="section-title">重新安装控制器模块并启动系统</block>
   <block id="751da2770ffa07ad30e1b98d596ba78c" category="paragraph">更换控制器模块中的 FRU 后，您必须重新安装控制器模块并重新启动它。</block>
   <block id="bd29c68c1d822e5458bc751793cb0415" category="list-text">出现 `Press Ctrl-C for Boot Menu` 时按 `Ctrl-C` 以中断启动过程。</block>
   <block id="cceefd9f0d8ae2b522801129da926bd4" category="list-text">从显示的菜单中选择启动至维护模式的选项。</block>
-  <block id="5a9efed957a764efe5954f9cb1a6df54" category="section-title">运行诊断</block>
   <block id="10581f2379a6cef29e5326e690ced10e" category="section-title">将故障部件退回 NetApp</block>
   <block id="b8fd9710f762b1dbb3d6da2d8e6d2f87" category="summary">AFF A700s 系统级诊断指南链接</block>
   <block id="1f2367bc1875d773be8f6dfebf714155" category="doc">适用于 AFF A700s 的系统级诊断</block>
@@ -2504,25 +2499,21 @@
   <block id="d2438a9a8b88afff0b59df6c125b3884" category="list-text">如果您使用 storage failover modify 命令禁用了自动交还，请将其还原。</block>
   <block id="d574c271d37aff5dfc97b6ecd338458f" category="doc">完成还原和更换过程— AFF A700s</block>
   <block id="28746dbce7c4fc8053d035e3b2295bde" category="doc">更换实时时钟电池— AFF A700s</block>
-  <block id="ba465a4963e9d81b0df00697f6765e53" category="section-title">更换 RTC 电池</block>
   <block id="65c45f25b11ef516aa4180bd435460a0" category="list-text">找到 RTC 电池。</block>
   <block id="6199e9ac737bb64b5d2e7bfb2a3da5a0" category="image-alt">更换 DRW a700s RTC 电池</block>
   <block id="a7f375a810d73a673cfac8d89305ccac" category="paragraph">RTC 电池和外壳</block>
   <block id="e789dadff6ab02fe418b101bca452d66" category="list-text">将电池轻轻推离电池架，将其旋转出电池架，然后将其从电池架中取出。</block>
   <block id="9e5b0cf96e39c07e340d8e7e3f98141d" category="admonition">从电池架中取出电池时，请注意电池的极性。电池标有加号，必须正确放置在支架中。电池座旁边的加号用于指示电池的位置。</block>
   <block id="73fb11225a96d88498169da07382a3fe" category="list-text">记下 RTC 电池的极性，然后将电池倾斜并向下推，将其插入电池架中。</block>
-  <block id="5ac2ce23b602bd690adf87a4ddadc899" category="section-title">重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期</block>
   <block id="864c38e2026ab798db96e7d96459d9e2" category="doc">重新配置系统并重新分配磁盘— AFF A700s</block>
   <block id="a0d8eae32c5a472f83afef8b93706ea5" category="paragraph">要完成替换操作步骤并将系统还原为完全正常运行，您必须重新配置存储，还原 NetApp 存储加密配置（如果需要）并为新控制器安装许可证。您必须先完成一系列任务，然后才能将系统还原为完全正常运行。</block>
   <block id="38681c139b912b74e9f2c478df5e20c0" category="summary">要更换系统中的 NVRAM 电池，您必须从系统中卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。</block>
   <block id="ddb14ada2ef97be8ad7f40139160426e" category="doc">更换 NVRAM 电池— AFF A700s</block>
   <block id="b4528c91634508bf10f34e21233169c0" category="list-text">将控制器模块放在一旁安全的地方。</block>
-  <block id="732cb0105e10dcf3046c4f8dd9a5a991" category="section-title">更换 NVRAM 电池</block>
   <block id="b6e4e85c37e79abd40b307ddc60db9d3" category="paragraph">要更换 NVRAM 电池，您必须从控制器模块中取出发生故障的 NVRAM 电池，然后将更换的 NVRAM 电池安装到控制器模块中。</block>
   <block id="e4191ffb24cf00ba5d94d1981ea4fb72" category="list-text">推动电池托架上的蓝色锁定卡舌，使闩锁从托架上释放。</block>
   <block id="35d5fed86af7da6a1d67e961dbf87ef5" category="list-text">将电池向下滑动提升板支架，将电池从控制器中提出，然后将其放在一旁。</block>
   <block id="9c17b03bf990ca5da9d620cde5370927" category="list-text">沿着金属板侧墙向下滑动更换用电池组，直到侧面板上的支架卡舌扣入电池组上的插槽，并且电池组闩锁扣入并锁定到位。</block>
-  <block id="e08bd2526a396d2c969a102035c42fed" category="section-title">重新安装控制器模块</block>
   <block id="0adc04c81c64b8636310e95596f6f092" category="summary">要更换 PCIe 卡，您必须断开与提升板中卡的缆线连接，卸下提升板，更换提升板，然后重新对该提升板中的卡进行布线。</block>
   <block id="ae5748bcef90e1cb5076c109b969e1d9" category="doc">更换 PCIe 卡— AFF A700s</block>
   <block id="d26f9a8db778421541cf5cebfdeb9039" category="section-title">第 3 步：更换 PCIe 卡</block>
@@ -2536,11 +2527,8 @@
   <block id="105e727cdc375bb7add37bd9f101765d" category="list-text">此操作步骤使用以下术语：</block>
   <block id="0f8e7bfea6aa060d757ea5effeaeaf14" category="list-text">此操作步骤包括自动或手动将磁盘重新分配给与新 NVRAM 模块关联的控制器模块的步骤。当操作步骤中指示您重新分配磁盘时，您必须重新分配这些磁盘。在交还之前完成磁盘重新分配可能会出现发生原因问题。</block>
   <block id="3dc9d74e0e70274198fc890e3238aa6f" category="list-text">您不能在此操作步骤中更改任何磁盘或磁盘架。</block>
-  <block id="37e63a96eb8ab113e88a1d983dd9fcf5" category="section-title">卸下 NVRAM 卡</block>
   <block id="645e0a3ffab83941f2797575b7ccbdd0" category="paragraph">更换 NVRAM 包括：从控制器模块中卸下 NVRAM 提升板提升板 1 ，断开 NVRAM 电池与 NVRAM 卡的连接，卸下故障 NVRAM 卡并安装更换的 NVRAM 卡，然后将 NVRAM 提升板重新安装回控制器模块。</block>
-  <block id="6bcc4bf7321499602cc726d01ccea765" category="section-title">验证 HA 系统上的系统 ID 更改</block>
   <block id="333272d8be912f27b67264ccba42967d" category="paragraph">您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。</block>
-  <block id="c2deae7c367921c0b07893dc6e315415" category="section-title">还原存储和卷加密功能</block>
   <block id="5e1a5ffb20ce25d1d79c8e2014f87d45" category="doc">启动恢复映像— AFF A700s</block>
   <block id="5ff3f260d4c603a9f1e9d18be080e7e7" category="list-text">还原 var 文件系统：</block>
   <block id="39d85e49c5dadc98a9a1f6eaef4229dc" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF A700s</block>
@@ -2568,7 +2556,6 @@
   <block id="a43578c1a3b2f4b016fc1e478c1b7369" category="section-title">选项 3 ：在运行 ONTAP 9.6 及更高版本的系统上还原 NSE/NVE</block>
   <block id="4b6f3f55d184c33efac164b8b2ee5af1" category="cell">如果控制台显示 ...</block>
   <block id="85782e063d10d2f824adbf09b6b2f2df" category="paragraph">使用 security key-manager key query 验证所有身份验证密钥的 `restored` column = `yes/true` 。</block>
-  <block id="1675c7f72f346b50740cbed80838eb37" category="doc">更换风扇— AFF A700s</block>
   <block id="c6c330df068950fe73f003a3f85b3fa0" category="list-text">将更换用风扇模块的边缘与控制器模块的开口对齐，然后将更换用的风扇模块滑入控制器模块，直到锁定闩锁卡入到位。</block>
   <block id="ee5ff73969a958477db471cca8246c98" category="doc">关闭控制器— AFF A700s</block>
   <block id="2b1646515c4dcacd96acd971239a6f14" category="paragraph">要更换机箱，您必须将控制器模块和 SSD 驱动器从受损机箱移至更换机箱，然后从设备机架或系统机柜中卸下受损机箱，并将更换机箱安装到位。</block>
@@ -6176,14 +6163,12 @@
   <block id="1d7bbe9c194670e89233cc6c1dc79534" category="paragraph">其中每个 60 个驱动器架都有五个驱动器抽盒。</block>
   <block id="efdce0991089cb793985d216e3fc1bbc" category="image-alt">28 dwg e2860 de460c 正面无标注</block>
   <block id="76ad7e322a2be745998c576cb12affcd" category="paragraph">这五个抽盒中的每个抽盒最多可容纳 12 个驱动器。</block>
-  <block id="585248eeaa0c7aa335cb47a05c525433" category="image-alt">92 个 dwg de6600 抽盒，带有 HDD ，无标注</block>
   <block id="a83cb446c51cb0bdbc4bec489e45b406" category="paragraph">此操作步骤需要以下项目：</block>
   <block id="4b4b58cabc76886a516816c3c1dca8a2" category="list-text">防静电保护</block>
   <block id="a3dfcf9f8add4df0b4976c41ffa8abb2" category="admonition">* 可能的硬件损坏： * 为了防止静电释放损坏驱动器架，在处理驱动器架组件时，请使用适当的防静电保护。</block>
   <block id="bc374274f48b3aed06922e75376fd83c" category="list-text">更换驱动器抽屉</block>
   <block id="68103d0e27146f9689251724a7fbf29f" category="list-text">更换左侧和右侧缆线链</block>
   <block id="75b0ae11d26c806413ef6e8aed1ece4f" category="list-text">手电筒</block>
-  <block id="c8c22257eb9d1c1c2a60aad49bd446f7" category="list-text">永久标记</block>
   <block id="12cd6af9147d69765327244240949e1f" category="paragraph">DS460C 驱动器架中每个驱动器抽盒的左右缆线链允许抽盒滑入和滑出。在卸下驱动器抽盒之前，必须同时卸下两个缆线链。</block>
   <block id="b4aaf296207d91e05752ac7857824f14" category="list-text">您已停止主机 I/O 活动并关闭磁盘架电源。</block>
   <block id="295e1710be0bb53c45ab0ed9001e275c" category="list-text">您已获取以下项：</block>
@@ -6227,15 +6212,11 @@
   <block id="b698e09fab0c0cb543414b7caec27e3c" category="list-text">将您的手指插入橙色环。</block>
   <block id="3ed1c59be0305378fd05c017ff86e232" category="list-text">要拔下缆线链，请将您的手指朝您的方向拉大约 1 英寸（ 2.5 厘米），但将缆线链连接器保留在垂直支架中。</block>
   <block id="461b154350e671de29d85bdc26c17b45" category="list-text">断开左侧缆线链与水平支架的连接，然后将整个缆线链从驱动器架中拉出。</block>
-  <block id="335dce1d41f6ceb784ef37e86cc55836" category="paragraph">卸下左右缆线链后，您可以从驱动器架中卸下驱动器抽盒。卸下驱动器抽盒需要将抽盒部分滑出，记录驱动器的位置，卸下驱动器以及卸下驱动器抽盒。</block>
   <block id="08d7859a247f6ad39ca81761af784495" category="list-text">您已卸下驱动器抽盒的左右缆线链。</block>
   <block id="28d152fcbe5214a7616239c6b7d7dd6f" category="list-text">您已更换左右风扇模块。</block>
-  <block id="8ef71e80ff9b1b842baf4030f316fb11" category="list-text">从抽盒中取出驱动器时，您已获得一个永久标记，用于记下每个驱动器的确切位置。</block>
   <block id="e68059b8f2d4e713684a4ebcf96dcaca" category="list-text">从驱动器架正面卸下挡板。</block>
   <block id="d562b2bf78de10b1c081baaab5289cdf" category="list-text">拉出两个拉杆，以解锁驱动器抽屉。</block>
   <block id="978b42922d8c3bc15e9a979ce2c8cf1a" category="list-text">使用扩展拉杆小心地拉出驱动器抽盒，直到其停止。请勿从驱动器架中完全卸下驱动器抽盒。</block>
-  <block id="152621a29ef9446b42880cb317783a76" category="list-text">如果已创建并分配逻辑单元号（ LUN ），请使用永久标记来记下每个驱动器的确切位置。例如，使用下图作为参考，在每个驱动器的顶部写入相应的插槽编号。</block>
-  <block id="7d2466032b15e1b1adb1ac2c562eda3b" category="admonition">* 可能会丢失数据访问： * 在删除每个驱动器之前，请务必记录其确切位置。</block>
   <block id="66ba465a335a9fbce33b49f55f94397c" category="list-text">从驱动器抽盒中取出驱动器：</block>
   <block id="10d1dd29bccd11c53b8fe8d5262038e8" category="list-text">轻轻向后拉每个驱动器前部中央可见的橙色释放闩锁。下图显示了每个驱动器的橙色释放闩锁。</block>
   <block id="38e70df2ee8a82d813f8533469938b12" category="image-alt">28 dwg e2860 驱动器闩锁顶视图</block>
@@ -6252,7 +6233,6 @@
   <block id="ed3feb0427e42faaeb0702007b184c2f" category="list-text">握住两个释放拉杆，向您的方向拉动驱动器抽盒。</block>
   <block id="f600133ba4287bc55c2092afd014a9a2" category="list-text">从驱动器架中卸下驱动器抽屉。</block>
   <block id="aa88d15bb6aa9c2d7b1282acbe7f8338" category="paragraph">在驱动器架中安装驱动器抽盒需要将抽盒滑入空插槽，安装驱动器并更换前挡板。</block>
-  <block id="00a6e09fe995a9431b12ec0b25d1e616" category="list-text">您知道在何处安装每个驱动器。</block>
   <block id="1c0cc2116ea595f697955e9248420c5f" category="list-text">从驱动器架前部，将手电筒放在空抽盒插槽中，然后找到该插槽的锁定滚轮。</block>
   <block id="c8e81f437d4ffbfea91534a5fc234aa3" category="paragraph">锁定式转储器组件是一项安全功能，可防止您一次打开多个驱动器抽盒。</block>
   <block id="e35f213b1a3e33e3eeefc18fdd4b20bd" category="image-alt">92 PHT de6600 锁定了转鼓器细节</block>
@@ -6266,9 +6246,6 @@
   <block id="95ae28d5b7b1b338f5ddc97dba98c55b" category="admonition">* 设备损坏风险： * 如果您感觉阻力过大或绑定过大，请停止推驱动器抽盒。使用抽盒正面的释放杆将抽盒滑回。然后，将抽盒重新插入插槽，并确保其可以自由滑入和滑出。</block>
   <block id="60bd4a202f9baff0b80754d10e2e32a2" category="list-text">按照以下步骤在驱动器抽屉中重新安装驱动器：</block>
   <block id="c4abdc9936683d02882a7283c019a16f" category="list-text">拉出驱动器抽盒正面的两个拉杆，以解锁驱动器抽盒。</block>
-  <block id="844dfe4267fa67e9f6790c353bfd5146" category="list-text">使用您在卸下驱动器时所做的注释确定要在每个插槽中安装的驱动器。</block>
-  <block id="eaae88ce87aad975b7d2ee116355a25d" category="admonition">* 可能丢失数据访问： * 您必须将每个驱动器安装在驱动器抽盒的原始位置。</block>
-  <block id="bb9b26a61fb91f1d47a271d0ed32a967" category="list-text">将驱动器上的手柄提起至垂直位置。</block>
   <block id="a184d6eedc1fd5f3a32f366dc1b70527" category="list-text">将驱动器两侧的两个凸起按钮与抽盒上的缺口对齐。</block>
   <block id="a1e9935bab922c38bfe212c6775c9455" category="paragraph">此图显示了驱动器的右侧视图，其中显示了凸起按钮的位置。</block>
   <block id="e70bd03011071eae774c88b44113e3d7" category="cell">驱动器右侧的凸起按钮。</block>
@@ -6659,7 +6636,6 @@
   <block id="2b9663ad46a5f2dcd8c2fffdba003269" category="list-text">使用 Velcro 缆线束而不是捆扎带捆绑和固定系统缆线，可以更轻松地调整缆线。</block>
   <block id="06dfcb3b1a9c224a29ae8981c6882d18" category="section-title">安装具有 IOM12 模块的磁盘架以进行热添加</block>
   <block id="4e24ff050030d18996425f4adbef1c69" category="paragraph">对于要热添加的每个磁盘架，您可以在为 SAS 连接布线之前将磁盘架安装到机架中，连接电源线，打开磁盘架电源并设置磁盘架 ID 。</block>
-  <block id="16f422f510f8de409c1e9545d1121593" category="list-text">在包含 30 个驱动器的磁盘架中，其余 10 个驱动器均匀分布在每个抽盒的插槽 1 和 10 中的整个磁盘架中。下图显示了如何在磁盘架中的每个驱动器抽盒中将驱动器编号为 0 到 11 。插槽 0 ， 3 ， 6 ， 9 和， 在包含 30 个驱动器的磁盘架中，每个抽盒中的插槽 1 和 10 必须包含驱动器。</block>
   <block id="82fd485bd66b7a7cf95b41701aff95f4" category="list-text">将要热添加的每个磁盘架的磁盘架 ID 设置为 HA 对或单控制器配置中唯一的 ID 。</block>
   <block id="6f3cc8e26b4a1e5fe24b9cfea68de345" category="paragraph">如果您的系统具有内部磁盘架，则磁盘架 ID 必须在内部磁盘架和外部连接的磁盘架之间是唯一的。</block>
   <block id="437cff47077287b8acaab6cf6eb3f66e" category="inline-link-macro">更改磁盘架 ID</block>
@@ -6709,7 +6685,6 @@
   <block id="e5db3fb8bc84ca3e26b513ea750c6127" category="list-text">断开与任何控制器相连的堆栈末端磁盘架 IOM A 的所有缆线；否则，请转至子步骤 E</block>
   <block id="eded78be6c2ef5bdeed5cb2e044b45ea" category="paragraph">保持这些缆线的另一端连接到控制器，或者根据需要使用较长的缆线更换缆线。</block>
   <block id="30a13f506678dd37c6740d0a8210db83" category="list-text">使用缆线将磁盘架的 IOM A 连接到堆栈末端的磁盘架与要热添加的磁盘架的 IOM A 。</block>
-  <block id="04e527203c5db793872f9a09c2541063" category="list-text">将子步骤 A 中移除的所有缆线重新连接到要热添加的磁盘架的 IOM A 上的相同端口；否则，转至下一子步骤。</block>
   <block id="f78a5c7555b6cd2b3fdedadb0027e0b3" category="list-text">对 IOM B 重复子步骤 a 到 d ；否则，转至步骤 4 。</block>
   <block id="1c641987c1af8344f2d212fa40fed903" category="paragraph">在单路径 HA 或单路径配置中将磁盘架热添加到堆栈的一端，适用于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统。</block>
   <block id="48e906ef4da7a3e48fedb259edff9f3c" category="paragraph">以下说明用于将未建立控制器到堆栈连接的堆栈的末端热添加到该堆栈的末尾。</block>
@@ -6821,7 +6796,6 @@
   <block id="1d4c0fb2a243494a984412dc5b5381a1" category="admonition">如果 HA 对至少包含两个堆栈，则包含第二个堆栈根聚合的磁盘架的磁盘架 ID 将预设为 10 。</block>
   <block id="f2717497b83e7964ce960a0ca5ac4860" category="paragraph">您必须设置磁盘架 ID ，使其在 HA 对或单控制器配置中是唯一的。您可以在维护模式下使用命令手动设置 HA 对或单控制器配置中的所有磁盘架的磁盘架 ID 或自动为其分配磁盘架 ID 。本节将介绍这两种方法。</block>
   <block id="b1b6e8ddb338daabf15cdf510590fae4" category="list-text">包含根聚合的磁盘架可通过磁盘架箱和磁盘架机箱上的标签来标识。</block>
-  <block id="522a2f05fd82ab2503423b0634977776" category="paragraph">这些标签将显示堆栈编号；例如， "`Loop 或 Stack # ： 1 ` " 和 "`Loop 或 Stack # ： 2 ` " 。不包含根聚合的磁盘架仅会在标签上显示磁盘架序列号。</block>
   <block id="ecf2c214f39b200ba60904cb20770b94" category="list-text">如果在系统设置和配置时未将系统配置为使用自动磁盘所有权分配，则需要手动分配磁盘所有权。</block>
   <block id="3e4b78a10116c79b33b35d6940601a98" category="list-text">系统会自动启用带内备用控制路径（ In-band Alternate Control Path ， ACP ）。</block>
   <block id="a465c0fe78962946e881b32ab9ec2b88" category="paragraph">单路径 HA 或单路径配置不支持带内 ACP 。</block>
@@ -7087,10 +7061,7 @@
   <block id="8ce7b6e5aee8c1dcf7992d9de100b646" category="sidebar">AFF A700s 控制器</block>
   <block id="427614df681039d0b63f4a5e73e2acf0" category="sidebar">完成更换过程</block>
   <block id="80ac780cac93a4f8c06402d665f9f0e9" category="sidebar">AFF A700s DIMM</block>
-  <block id="a181a78d69e123d03e181a2cb2fbb6fc" category="sidebar">关闭受损节点</block>
-  <block id="f58d98f433350ee3e614bfdfe3036a89" category="sidebar">卸下控制器模块</block>
   <block id="ffaa5f174b403b28545d000ddde7500c" category="sidebar">AFF A700s 风扇</block>
-  <block id="4edb2ba531a7a0a1dd60f4492d82e36f" category="sidebar">重新安装控制器模块</block>
   <block id="3e74bf4522dcfc59214d7a174639087c" category="sidebar">AFF A700s NVRAM 电池</block>
   <block id="e3f3f58b597fba6fefb596c5ce76d468" category="sidebar">NVRAM</block>
   <block id="70c32d2e5a7e814ac7a8b58e2cbc4d7f" category="sidebar">AFF A700s NVRAM</block>
@@ -7231,7 +7202,6 @@
   <block id="4ccd403eb19c48e7ebdaaeb982ef2481" category="sidebar">热添加磁盘架</block>
   <block id="cf999199f9d4c3e90d15399860476f13" category="sidebar">更改磁盘架 ID</block>
   <block id="b32341112e04cf53228eb2711e7faa5c" category="sidebar">常见多路径 HA 配置的布线工作表和示例</block>
-  <block id="7f0b45a163e9c09089bd1df8d3d9b9de" category="sidebar">常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的布线工作表和示例</block>
   <block id="99035f209c8d40299210fe873096f23b" category="sidebar">具有两个四端口 SAS HBA 的四路径 HA 配置的布线工作表和示例</block>
   <block id="f64eba4acc825268e4959bef4c193b11" category="sidebar">多路径连接的布线工作表模板</block>
   <block id="ce6374cb8d43c65f66d31cf1a0ede69e" category="sidebar">四路径连接的布线工作表模板</block>
@@ -8365,7 +8335,6 @@
   <block id="51e6a2fb5c6f27756e90e2666efd984d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。完成 NVE 或 NSE 任务后，您需要关闭受损控制器。</block>
   <block id="d1342671e7a1aeffea6df3cd0214be86" category="list-text">此操作步骤会造成系统中断。对于双控制器集群，多节点集群中的服务将完全中断，部分中断将会发生。</block>
   <block id="4fa4535552a76ba6abb695db42b48161" category="paragraph">如果这是您应使用的操作步骤 ，请注意，四控制器或八控制器 MetroCluster 配置中控制器的控制器替代操作步骤 与 HA 对中的控制器替代相同。No MetroCluster-specific steps are required because the failure is restricted to an HA pair and storage failover commands can be used to provide nondisruptive operation during the replacement.</block>
-  <block id="1c35b5fd0eb2c66f98019f6d2ea253e2" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="5ad5e3145183bec8ce765d99b2db775a" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
   <block id="c83b964c98e24aa342fa8069ffd85dd0" category="list-text"><block ref="c83b964c98e24aa342fa8069ffd85dd0" category="inline-link-macro-rx"></block></block>
   <block id="f51c8858085d7dcfe4d79d9774f8270d" category="paragraph">您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。</block>
   <block id="58d1979204cdde4ca641ddc56ae5fe91" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。`boot_ontap`</block>
@@ -8600,7 +8569,6 @@
   <block id="bd7b8cb1f03ceb90528c843b3cd8c0a4" category="summary">您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。</block>
   <block id="bf9eaa32fa671084f441eeba9c863ef6" category="paragraph">您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。</block>
   <block id="ba0a2d97499e2e560187690f4b54b10c" category="list-text">您必须已从要移除的磁盘架中的磁盘驱动器（磁盘驱动器必须为备用磁盘）中删除所有聚合。</block>
-  <block id="eaca20aa2eab6f0d724e09d105bcde6d" category="list-text">* 可能的磁盘架损坏： * 如果要卸下 DS460C 磁盘架，而将其移至数据中心的其他部分或将其运送到其他位置，请卸下驱动器，以免损坏驱动器抽屉和驱动器。</block>
   <block id="df890e7b6d800ea7f63516f78dc7b333" category="inline-link-macro">适用于采用板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例</block>
   <block id="4831f887bab13b0957b607ad184c87f7" category="paragraph"><block ref="4831f887bab13b0957b607ad184c87f7" category="inline-link-macro-rx"></block></block>
   <block id="fdd0f707bd71fcef53b653ae53e31f53" category="summary">您可以使用完整的控制器到堆栈布线工作表和布线示例为 AFF 和 FAS 平台连接板载存储，例如但不限于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 平台。此信息不适用于 FAS25XX 平台。</block>
@@ -8608,4 +8576,60 @@
   <block id="18e93c7175385ec259f95d9d453bdda1" category="list-text">If needed, you can refer to <block ref="db31d33614fd87795381d5ac14be04aa" category="inline-link-macro-rx"></block> 有关支持的配置，磁盘架到磁盘架连接以及控制器到磁盘架连接的信息。</block>
   <block id="67f2d45d4d0936132195fb6f111ce3e8" category="section-title">采用多路径 HA 配置并具有一个多架堆栈的板载存储的 AFF 和 FAS 平台</block>
   <block id="83742af000bdb059461854fab1a8b606" category="list-text">请勿混用具有不同效率额定值的电源。请始终像这样替换。</block>
+  <block id="94a2f43b7e5299d436a356db402524cc" category="section-title">第3步：更换NVRAM电池</block>
+  <block id="5f5fd4de9ab7b399342d9b9e721bc6b6" category="section-title">第3步：卸下NVRAM卡</block>
+  <block id="6378f7fb953fa140d999f1d68c5e6145" category="section-title">第5步：验证HA系统上的系统ID更改</block>
+  <block id="07c4e79c1eed9787f0716b4d65f147b2" category="list-text">按`Ctrl-C`以中断启动过程。</block>
+  <block id="37f3122e97201daeb17a029c6ba18afb" category="section-title">第1步：关闭受损控制器—AFF A700s</block>
+  <block id="72031a15fbaab6eb40b617b0663962bb" category="section-title">第2步：卸下控制器模块- AFF A700s</block>
+  <block id="fedeae451b36efcc460d172d9fe45850" category="section-title">第3步：更换风扇—AFF A700s</block>
+  <block id="e1d83f38808259079bf63398959b5064" category="section-title">第4步：重新安装控制器模块—AFF A700s</block>
+  <block id="db1d1fc556b59fbc6af03005e8bfd733" category="section-title">第4步：将故障部件退回给NetApp—AFF A700s</block>
+  <block id="e5ddd774e93783b28f265ecb6d19adb2" category="section-title">第6步：将故障部件退回NetApp</block>
+  <block id="5c542a7e2ad58397aad1271e4d3a0117" category="paragraph">标签显示堆栈编号；例如、*环路或堆栈编号：1*和*环路或堆栈编号：2*。Disk shelves that do not contain the root aggregates only show the disk shelf serial number is on the labels.</block>
+  <block id="6ac2291fe0e85584d8316cc0e6c7364f" category="section-title">DS460C驱动器处理注意事项</block>
+  <block id="b2171f8c50bfc77432114b327848466f" category="list-text">这些驱动器与磁盘架机箱单独包装。</block>
+  <block id="729ab22e4daec3dc8eb94284e2ff928a" category="paragraph">您应清点收到的驱动器以及其余系统设备。</block>
+  <block id="8244db29bd8d18d221639bfa5a7af47a" category="list-text">拆开驱动器包装后、应保存包装材料以供将来使用。</block>
+  <block id="0c9768cef5797a31f719b148cb97c2b0" category="admonition">*可能丢失数据访问：*如果将来将磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。</block>
+  <block id="790b3fbbc9d4408c83be569b33f62df4" category="admonition">请将磁盘驱动器放在ESD袋中、直到准备好安装为止。</block>
+  <block id="f505a7983bc262c1785ce6adc5c9c152" category="list-text">处理驱动器时、请始终佩戴ESD腕带、该腕带接地到存储机箱机箱上未上漆的表面、以防止静电释放。</block>
+  <block id="035f36f8cb7a7149476fc3a606085ac7" category="paragraph">对于DS460C磁盘架、尽管驱动器是单独包装的、因此磁盘架更轻便、但空的DS460C磁盘架的重量仍约为132磅(60千克)；因此、移动磁盘架时请注意以下事项。</block>
+  <block id="c04b249a92156b3830dd23c4f0227ad3" category="admonition">建议您使用一个机械升降机或四个人使用升降机把手安全移动空的DS460C磁盘架。</block>
+  <block id="271ccf7899e5bebc4f9e5879e8b4e969" category="paragraph">您的DS460C发货随附了四个可拆卸的升降把手(每侧两个)。要使用提升把手、请将把手的卡舌插入磁盘架侧面的插槽并向上推、直到其卡入到位、以安装提升把手。然后、在将磁盘架滑入导轨时、一次使用拇指闩锁断开一组手柄。下图显示了如何连接提升把手。</block>
+  <block id="3a7aa90b7e6e30d4cea14996d05d2cb4" category="list-text">如果要安装DS460C磁盘架、请将驱动器安装到驱动器抽盒中；否则、请转至下一步。</block>
+  <block id="f0d969f7b7ef3f514e1ebe9dd5ba1adf" category="paragraph">请始终佩戴ESD腕带、该腕带接地至存储机箱上未上漆的表面、以防止静电放电。</block>
+  <block id="d73d42687e521e8e514e51136cf28dde" category="paragraph">如果您购买的磁盘架部分填充、这意味着该磁盘架所支持的驱动器少于60个、请按如下所示安装每个磁盘架的驱动器：</block>
+  <block id="91b773fbb1c2eaf562803abbe21daf35" category="list-text">将前四个驱动器安装到正面插槽(0、3、6和9)中。</block>
+  <block id="2d46a0e0bfeb381cc0efc2e57a23d530" category="admonition">*设备故障风险：*为了确保气流正常并防止过热、请始终将前四个驱动器安装到前面的插槽(0、3、6和9)中。</block>
+  <block id="0a420e5d9ce2ddffd04807c20c8775ca" category="list-text">对于其余驱动器、请将其均匀分布在每个抽盒中。</block>
+  <block id="74e528b6d2588aa55dd04aa2665edc1e" category="list-text">从ESD袋中取出驱动器。</block>
+  <block id="f0e4d108bd327aa0295d08fc98aaafd0" category="list-text">连接前挡板。</block>
+  <block id="40eaf65b2964a77febbd5ac5e16bf92b" category="section-title">移动或传输DS460C磁盘架</block>
+  <block id="f1c58ede133573cb49918c3081333246" category="paragraph">如果将来将DS460C磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。</block>
+  <block id="84a46b8403244afe9d960b3db710302e" category="list-text">如果在新系统安装过程中安装了DS460C磁盘架、但您保存了驱动器包装材料、请在移动驱动器之前使用这些材料重新打包驱动器。</block>
+  <block id="0d7187478aa1ddf360c471b9442a100c" category="paragraph">如果未保存包装材料、则应将驱动器放在缓冲表面上或使用备用缓冲包装。切勿将驱动器堆栈在彼此之上。</block>
+  <block id="3fa80daa5430a17daaa8f9448fbea3de" category="list-text">在处理驱动器之前、请佩戴ESD腕带、该腕带接地到存储机箱上未上漆的表面。</block>
+  <block id="677a4b8e4c9931e56a425ccba1cabe24" category="paragraph">如果没有腕带、请先触摸存储机箱机箱上未上漆的表面、然后再处理驱动器。</block>
+  <block id="ec115696caeda4f59b91bec667134e10" category="list-text">您应采取措施小心处理驱动器：</block>
+  <block id="eec95928a8386ff4e74b660f06af6a2e" category="list-text">在拆卸、安装或搬运驱动器以支撑其重量时、请始终用双手。</block>
+  <block id="484930724bd79c20081515728c70573d" category="admonition">请勿将手放在驱动器托架下侧暴露的驱动器板上。</block>
+  <block id="8c30657768334aaeee6af98af6fe488f" category="list-text">请注意、不要将驱动器撞到其他表面。</block>
+  <block id="b2cba33b1b51dce41879eced349ff3ba" category="list-text">驱动器应远离磁性设备。</block>
+  <block id="222cfe0be0a1bf567b9a7f87fd33f031" category="admonition">磁场可能会破坏驱动器上的所有数据、并且发生原因 会对驱动器电路造成不可修复的损坏。</block>
+  <block id="35edd171f5c445f9c2a843e056a3fdc2" category="paragraph">您应清点驱动器。</block>
+  <block id="7069466d86118b29043e6ed214511c1c" category="list-text">Reconnect any cables that you removed in substep a to the same port(s) on IOM A of the disk shelf you are hot-adding; otherwise, go to the next substep.+确保在断开缆线连接和重新连接缆线之间至少等待70秒。</block>
+  <block id="20244777af6f97db49ab4dc75a00ca87" category="paragraph">一次更换一根缆线、并确保在断开缆线与连接新缆线之间至少等待70秒。</block>
+  <block id="94ccebf898fb7d7300145c16c598544a" category="list-text">如果在磁盘架热添加过程中安装了DS460C磁盘架、但您保存了驱动器包装材料、请在移动驱动器之前使用这些材料重新打包驱动器。</block>
+  <block id="8456c08b8772c6458de93a0a78ff4f85" category="paragraph">After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.卸下驱动器抽盒需要将抽盒部分滑出、卸下驱动器并卸下驱动器抽盒。</block>
+  <block id="40cfdd2fa544c18fef836a58df7bb2e9" category="list-text">在要安装的驱动器上、将手柄提起至垂直位置。</block>
+  <block id="2560c526c9d334c39cab4311db7eff4d" category="paragraph">如果磁盘架已部分填充、这意味着要重新安装驱动器的抽盒所支持的驱动器少于12个、请将前四个驱动器安装到正面插槽(0、3、6和9)中。</block>
+  <block id="0c19992873d54086f9866be6126e317c" category="list-text">*可能的磁盘架损坏：*如果要卸下DS460C磁盘架、而要将其移至数据中心的其他部分或将其运送到其他位置、请参见一节。 <block ref="2dfa5cde780121ff739815d2402836cf" category="inline-xref-macro-rx"></block> 此操作步骤 的末尾。</block>
+  <block id="2832373659f325a28de2b5462611f72c" category="paragraph">对于DS460C磁盘架、满载的磁盘架的重量约为247磅(112千克)；因此、从机架或机柜中卸下磁盘架时、请务必小心谨慎。</block>
+  <block id="69803fc9f7acd429df0403558d86852a" category="admonition">建议您使用一个机械升降机或四个人使用升降机把手来安全移动DS460C磁盘架。</block>
+  <block id="d2190ca0f2bf90686cb089f6fb2d5e2b" category="paragraph">如果要将DS460C磁盘架移动到数据中心的其他部分或将其传输到其他位置、请参见下一节。 <block ref="2dfa5cde780121ff739815d2402836cf" category="inline-xref-macro-rx"></block>。</block>
+  <block id="1d5287e79870e687badf4e2da0612ad0" category="paragraph">如果将DS460C磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。</block>
+  <block id="c3fdb0812209f286e664a4d0cd47c328" category="list-text">如果您在新系统安装或磁盘架热添加过程中安装了DS460C磁盘架、则保存了驱动器包装材料、请在移动驱动器之前使用这些材料重新打包驱动器。</block>
+  <block id="ba70aeebfd3549f6f01e998eb6dd6e28" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="a8e3f4b75381b375e7ce8abf385604f8" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
+  <block id="4919d15b1a0ddd0c55a729c741fd5005" category="sidebar">使用板载存储的AFF 和FAS 平台的布线工作表和示例</block>
 </blocks>
