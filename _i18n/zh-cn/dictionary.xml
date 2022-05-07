@@ -8335,7 +8335,6 @@
   <block id="51e6a2fb5c6f27756e90e2666efd984d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。完成 NVE 或 NSE 任务后，您需要关闭受损控制器。</block>
   <block id="d1342671e7a1aeffea6df3cd0214be86" category="list-text">此操作步骤会造成系统中断。对于双控制器集群，多节点集群中的服务将完全中断，部分中断将会发生。</block>
   <block id="4fa4535552a76ba6abb695db42b48161" category="paragraph">如果这是您应使用的操作步骤 ，请注意，四控制器或八控制器 MetroCluster 配置中控制器的控制器替代操作步骤 与 HA 对中的控制器替代相同。No MetroCluster-specific steps are required because the failure is restricted to an HA pair and storage failover commands can be used to provide nondisruptive operation during the replacement.</block>
-  <block id="c83b964c98e24aa342fa8069ffd85dd0" category="list-text"><block ref="c83b964c98e24aa342fa8069ffd85dd0" category="inline-link-macro-rx"></block></block>
   <block id="f51c8858085d7dcfe4d79d9774f8270d" category="paragraph">您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。</block>
   <block id="58d1979204cdde4ca641ddc56ae5fe91" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。`boot_ontap`</block>
   <block id="4d3408827df16f2063082b26e489e785" category="summary">要关闭受损控制器模块，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。</block>
@@ -8632,4 +8631,5 @@
   <block id="c3fdb0812209f286e664a4d0cd47c328" category="list-text">如果您在新系统安装或磁盘架热添加过程中安装了DS460C磁盘架、则保存了驱动器包装材料、请在移动驱动器之前使用这些材料重新打包驱动器。</block>
   <block id="ba70aeebfd3549f6f01e998eb6dd6e28" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="a8e3f4b75381b375e7ce8abf385604f8" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
   <block id="4919d15b1a0ddd0c55a729c741fd5005" category="sidebar">使用板载存储的AFF 和FAS 平台的布线工作表和示例</block>
+  <block id="9285e5d96d62653cbfc04067e2de249c" category="list-text"><block ref="9285e5d96d62653cbfc04067e2de249c" category="inline-link-macro-rx"></block></block>
 </blocks>
