@@ -22,21 +22,21 @@ indexpage:
   - title: 维护
     links:
     - title: 启动介质
-      url: "/bootmedia-replace-overview.html"
+      url: "../fas2700/bootmedia-replace-overview.html"
     - title: 缓存模块
-      url: "/caching-module-replace.html"
+      url: "../fas2700/caching-module-replace.html"
     - title: 机箱
-      url: "/chassis-replace-overview.html"
+      url: "../fas2700/chassis-replace-overview.html"
     - title: 控制器模块
-      url: "/controller-replace-overview.html"
+      url: "../fas2700/controller-replace-overview.html"
     - title: DIMM
-      url: "/dimm-replace.html"
+      url: "../fas2700/dimm-replace.html"
     - title: NVMEM 电池
-      url: "/nvmem-battery-replace.html"
+      url: "../fas2700/nvram-nvmem-battery-replace.html"
     - title: 电源
-      url: "/power-supply-swapout.html"
+      url: "../fas2700/power-supply-swap-out.html"
     - title: RTC 电池
-      url: "/rtc-battery-replace.html"
+      url: "../fas2700/rtc-battery-replace.html"
   - title: 了解
     links:
     - title: 更换内部磁盘驱动器视频

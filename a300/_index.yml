@@ -30,13 +30,13 @@ indexpage:
     - title: 控制器模块
       url: "/controller-replace-overview.html"
     - title: 风扇
-      url: "/fan-replace.html"
+      url: "/fan-swap-out.html"
     - title: NV 电池
       url: "/nvmem-nvram-battery-replace.html"
     - title: PCIe 卡
       url: "/pci-cards-and-risers-replace.html"
     - title: 电源
-      url: "/power-supply-swapout.html"
+      url: "/power-supply-swap-out.html"
     - title: 系统 DIMM
       url: "/dimm-replace.html"
     - title: RTC 电池
