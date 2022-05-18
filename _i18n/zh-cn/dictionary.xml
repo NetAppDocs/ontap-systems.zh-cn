@@ -8158,11 +8158,6 @@
   <block id="77c90a069b30ca068906f4bbc5d904e1" category="doc">检查板载加密密钥 - AFF A220 和 FAS2700</block>
   <block id="c6eb316cc94904301a8765db5aa1680f" category="doc">启动介质更换概述— AFF A220 和 FAS2700</block>
   <block id="332ecfda75eef89a55acd64671013612" category="doc">热添加 NS224 磁盘架</block>
-  <block id="2045f48765a1762a4ddf1bff71d898d9" category="doc">将 DS460C 磁盘架中的驱动器抽盒更换为 IOM12 模块</block>
-  <block id="f3f4e90f1b3b6970f9ad6037d23137fc" category="section-title">拆下缆线链</block>
-  <block id="39f83f14ef074e7f47f1a89591dede20" category="section-title">卸下驱动器抽屉</block>
-  <block id="c1493a32213b959f5c9f8be86dfb9960" category="section-title">安装驱动器抽盒</block>
-  <block id="02b9f44accc14d7238a1f0607ea50e30" category="section-title">连接缆线链</block>
   <block id="3fa677b8ecb97b0ae0d14f9ded5ed49a" category="doc">关闭受损控制器— FAS500f</block>
   <block id="a27042b0e01fb9b4136d2de6e8c1db73" category="doc">检查板载加密密钥— FAS500f</block>
   <block id="ee2afac6b0f5165d1fc3096864ac9a41" category="doc">机箱更换概述— FAS500f</block>
@@ -8421,8 +8416,6 @@
   <block id="b6ea0c6054b7f5b7832dafbb8468dc0f" category="paragraph">接管或暂停受损的控制器：</block>
   <block id="4571f480b4cb6246b64d91e6cacdf34c" category="list-text">对于 HA 对，从运行正常的控制器接管受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`</block>
   <block id="0ebf647b3184259131a8c1ffcdea60dc" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ： `boot_ontap`</block>
-  <block id="e033b8601f70c600b73dc01580794ef1" category="summary">在关闭受损控制器之前，您需要检查系统是否已启用 NetApp 卷加密 \ （ NVE\ ）或 NetApp 存储加密 \ （ NSE\ ）。If so, you need to verify the configuration.</block>
-  <block id="8b97c720bb08aa0118f13600478e225f" category="list-text">如果命令输出中显示 &lt;lno-dury&gt; 或 &lt;1osno-dury&gt; ，则系统不支持 NVE ，请继续关闭控制器。在关闭受损控制器之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.</block>
   <block id="4ca27b7e1f4aad146e9ddc45f9af0410" category="doc">关闭控制器— FAS500f</block>
   <block id="2a468fdd2649c2bddd5f46d0d16b08af" category="doc">关闭受损控制器 - AFF A700s</block>
   <block id="abb3159815c7d305ec1a9697a5ec0fef" category="summary">要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
@@ -8617,12 +8610,8 @@
   <block id="b2cba33b1b51dce41879eced349ff3ba" category="list-text">驱动器应远离磁性设备。</block>
   <block id="222cfe0be0a1bf567b9a7f87fd33f031" category="admonition">磁场可能会破坏驱动器上的所有数据、并且发生原因 会对驱动器电路造成不可修复的损坏。</block>
   <block id="35edd171f5c445f9c2a843e056a3fdc2" category="paragraph">您应清点驱动器。</block>
-  <block id="7069466d86118b29043e6ed214511c1c" category="list-text">Reconnect any cables that you removed in substep a to the same port(s) on IOM A of the disk shelf you are hot-adding; otherwise, go to the next substep.+确保在断开缆线连接和重新连接缆线之间至少等待70秒。</block>
   <block id="20244777af6f97db49ab4dc75a00ca87" category="paragraph">一次更换一根缆线、并确保在断开缆线与连接新缆线之间至少等待70秒。</block>
   <block id="94ccebf898fb7d7300145c16c598544a" category="list-text">如果在磁盘架热添加过程中安装了DS460C磁盘架、但您保存了驱动器包装材料、请在移动驱动器之前使用这些材料重新打包驱动器。</block>
-  <block id="8456c08b8772c6458de93a0a78ff4f85" category="paragraph">After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.卸下驱动器抽盒需要将抽盒部分滑出、卸下驱动器并卸下驱动器抽盒。</block>
-  <block id="40cfdd2fa544c18fef836a58df7bb2e9" category="list-text">在要安装的驱动器上、将手柄提起至垂直位置。</block>
-  <block id="2560c526c9d334c39cab4311db7eff4d" category="paragraph">如果磁盘架已部分填充、这意味着要重新安装驱动器的抽盒所支持的驱动器少于12个、请将前四个驱动器安装到正面插槽(0、3、6和9)中。</block>
   <block id="0c19992873d54086f9866be6126e317c" category="list-text">*可能的磁盘架损坏：*如果要卸下DS460C磁盘架、而要将其移至数据中心的其他部分或将其运送到其他位置、请参见一节。 <block ref="2dfa5cde780121ff739815d2402836cf" category="inline-xref-macro-rx"></block> 此操作步骤 的末尾。</block>
   <block id="2832373659f325a28de2b5462611f72c" category="paragraph">对于DS460C磁盘架、满载的磁盘架的重量约为247磅(112千克)；因此、从机架或机柜中卸下磁盘架时、请务必小心谨慎。</block>
   <block id="69803fc9f7acd429df0403558d86852a" category="admonition">建议您使用一个机械升降机或四个人使用升降机把手来安全移动DS460C磁盘架。</block>
@@ -8633,4 +8622,21 @@
   <block id="4919d15b1a0ddd0c55a729c741fd5005" category="sidebar">使用板载存储的AFF 和FAS 平台的布线工作表和示例</block>
   <block id="9285e5d96d62653cbfc04067e2de249c" category="list-text"><block ref="9285e5d96d62653cbfc04067e2de249c" category="inline-link-macro-rx"></block></block>
   <block id="cff7366c4191a9dd1698e3fd38e5acaf" category="sidebar">NVRAM模块或NVRAM DIMM</block>
+  <block id="dbe0afeaa91b9a08168e98b33a4c7de8" category="admonition">请确保在断开缆线连接并重新连接缆线之间至少等待70秒、如果要将缆线更换为较长的缆线、请务必等待。</block>
+  <block id="04e527203c5db793872f9a09c2541063" category="list-text">Reconnect any cables that you removed in substep a to the same port(s) on IOM A of the disk shelf you are hot-adding; otherwise, go to the next substep.</block>
+  <block id="e62a559839495c7e61b9ce5a088b786c" category="doc">Replacing a drive drawer in a DS460C disk shelf - shelves with IOM12 modules</block>
+  <block id="585248eeaa0c7aa335cb47a05c525433" category="image-alt">92 dwg de6600 drawer with hdds no callouts</block>
+  <block id="c8c22257eb9d1c1c2a60aad49bd446f7" category="list-text">Permanent marker</block>
+  <block id="2e3d3f0aa5e64af89c170da27ccf0cb2" category="section-title">Removing the cable chains</block>
+  <block id="bbbd51c2b3c60d5e9becdcf09d29b105" category="section-title">Removing a drive drawer</block>
+  <block id="335dce1d41f6ceb784ef37e86cc55836" category="paragraph">After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.Removing a drive drawer entails sliding the drawer part of the way out, recording the locations of the drives, removing the drives, and removing the drive drawer.</block>
+  <block id="8ef71e80ff9b1b842baf4030f316fb11" category="list-text">You have obtained a permanent marker to note the exact location of each drive as you remove the drive from the drawer.</block>
+  <block id="152621a29ef9446b42880cb317783a76" category="list-text">If logical unit numbers (LUNs) have already been created and assigned, use a permanent marker to note the exact location of each drive.For example, using the following drawing as a reference, write the appropriate slot number on the top of each drive.</block>
+  <block id="7d2466032b15e1b1adb1ac2c562eda3b" category="admonition">*Possible loss of data access:* Make sure to record the exact location of each drive before removing it.</block>
+  <block id="fe8265ac3d0f9c648e57474b40e2e5d8" category="section-title">Installing a drive drawer</block>
+  <block id="00a6e09fe995a9431b12ec0b25d1e616" category="list-text">You know where to install each drive.</block>
+  <block id="844dfe4267fa67e9f6790c353bfd5146" category="list-text">Determine which drive to install in each slot by using the notes you made when removing the drives.</block>
+  <block id="eaae88ce87aad975b7d2ee116355a25d" category="admonition">*Possible loss of data access:* You must install each drive in its original location in the drive drawer.</block>
+  <block id="bb9b26a61fb91f1d47a271d0ed32a967" category="list-text">Raise the handle on the drive to vertical.</block>
+  <block id="2731a32bd20082112cb21bea67097d21" category="section-title">Attaching the cable chains</block>
 </blocks>

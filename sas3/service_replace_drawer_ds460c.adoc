@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, all, host, i/o activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf 
 summary: 在更换驱动器抽盒之前，您必须停止所有主机 I/O 活动并关闭磁盘架电源。 
 ---
-= 将 DS460C 磁盘架中的驱动器抽盒更换为 IOM12 模块
+= Replacing a drive drawer in a DS460C disk shelf - shelves with IOM12 modules
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,11 +19,7 @@ image::../media/28_dwg_e2860_de460c_front_no_callouts.gif[28 dwg e2860 de460c �
 
 这五个抽盒中的每个抽盒最多可容纳 12 个驱动器。
 
-image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[带有 HDD 标注的 Dwg Trafford 抽屉]
-
-
-
-== 开始之前
+image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts.gif[92 dwg de6600 drawer with hdds no callouts]
 
 此操作步骤需要以下项目：
 
@@ -35,11 +31,12 @@ NOTE: * 可能的硬件损坏： * 为了防止静电释放损坏驱动器架，
 * 更换驱动器抽屉
 * 更换左侧和右侧缆线链
 * 手电筒
+* Permanent marker
 
 
 
 
-== 拆下缆线链
+== Removing the cable chains
 
 [role="lead"]
 DS460C 驱动器架中每个驱动器抽盒的左右缆线链允许抽盒滑入和滑出。在卸下驱动器抽盒之前，必须同时卸下两个缆线链。
@@ -76,7 +73,6 @@ NOTE: * 可能的硬件损坏： * 为了防止静电释放损坏磁盘架，请
 image::../media/28_dwg_e2860_de460c_fan_canister_handle_with_callout.gif[28 dwg e2860 de460c 风扇箱手柄，带标注]
 
 +
-[cols="10,90"]
 |===
 
 
@@ -95,7 +91,6 @@ image:../media/legend_icon_01.png[""]
 image::../media/2860_dwg_full_back_view_chain_connectors.gif[2860 dwg 全背面图链连接器]
 
 +
-[cols="10,90"]
 |===
 
 
@@ -128,7 +123,6 @@ image:../media/legend_icon_03.png[""]
 image::../media/2860_dwg_vertical_ring_for_chain.gif[用于链的 2860 dwg 垂直环]
 
 +
-[cols="10,90"]
 |===
 
 
@@ -150,7 +144,6 @@ image:../media/legend_icon_01.png[""]
 image::../media/2860_dwg_horiz_ring_for_chain.gif[2860 dwg 链的水平环]
 
 +
-[cols="10,90"]
 |===
 
 
@@ -186,20 +179,29 @@ image:../media/legend_icon_02.png[""]
 
 
 
-== 卸下驱动器抽屉
+== Removing a drive drawer
 
 [role="lead"]
-After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.卸下驱动器抽盒需要将抽盒部分滑出、卸下驱动器并卸下驱动器抽盒。
+After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.Removing a drive drawer entails sliding the drawer part of the way out, recording the locations of the drives, removing the drives, and removing the drive drawer.
 
 .开始之前
 * 您已卸下驱动器抽盒的左右缆线链。
 * 您已更换左右风扇模块。
+* You have obtained a permanent marker to note the exact location of each drive as you remove the drive from the drawer.
 
 
 .步骤
 . 从驱动器架正面卸下挡板。
 . 拉出两个拉杆，以解锁驱动器抽屉。
 . 使用扩展拉杆小心地拉出驱动器抽盒，直到其停止。请勿从驱动器架中完全卸下驱动器抽盒。
+. If logical unit numbers (LUNs) have already been created and assigned, use a permanent marker to note the exact location of each drive.For example, using the following drawing as a reference, write the appropriate slot number on the top of each drive.
++
+image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[带有 HDD 标注的 Dwg Trafford 抽屉]
+
++
+
+NOTE: *Possible loss of data access:* Make sure to record the exact location of each drive before removing it.
+
 . 从驱动器抽盒中取出驱动器：
 +
 .. 轻轻向后拉每个驱动器前部中央可见的橙色释放闩锁。下图显示了每个驱动器的橙色释放闩锁。
@@ -225,7 +227,6 @@ NOTE: * 可能的数据访问丢失： * 磁场会破坏驱动器上的所有数
 image::../media/92_pht_de6600_drive_drawer_release_lever.gif[92 PHT de6600 驱动器抽屉释放拉杆]
 
 +
-[cols="10,90"]
 |===
 
 
@@ -242,12 +243,13 @@ image:../media/legend_icon_01.png[""]
 
 
 
-== 安装驱动器抽盒
+== Installing a drive drawer
 
 [role="lead"]
 在驱动器架中安装驱动器抽盒需要将抽盒滑入空插槽，安装驱动器并更换前挡板。
 
 .开始之前
+* You know where to install each drive.
 * 您已获取以下项：
 +
 ** 更换驱动器抽屉
@@ -265,7 +267,6 @@ image:../media/legend_icon_01.png[""]
 image::../media/92_pht_de6600_lock_out_tumbler_detail.gif[92 PHT de6600 锁定了转鼓器细节]
 
 +
-[cols="10,90"]
 |===
 
 
@@ -298,7 +299,15 @@ NOTE: * 设备损坏风险： * 如果您感觉阻力过大或绑定过大，请
 +
 .. 拉出驱动器抽盒正面的两个拉杆，以解锁驱动器抽盒。
 .. 使用扩展拉杆小心地拉出驱动器抽盒，直到其停止。请勿从驱动器架中完全卸下驱动器抽盒。
-.. 在要安装的驱动器上、将手柄提起至垂直位置。
+.. Determine which drive to install in each slot by using the notes you made when removing the drives.
++
+
+NOTE: *Possible loss of data access:* You must install each drive in its original location in the drive drawer.
+
++
+image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[带有 HDD 标注的 Dwg Trafford 抽屉]
+
+.. Raise the handle on the drive to vertical.
 .. 将驱动器两侧的两个凸起按钮与抽盒上的缺口对齐。
 +
 此图显示了驱动器的右侧视图，其中显示了凸起按钮的位置。
@@ -307,7 +316,6 @@ NOTE: * 设备损坏风险： * 如果您感觉阻力过大或绑定过大，请
 image::../media/28_dwg_e2860_de460c_drive_cru.gif[28 dwg e2860 de460c 驱动器 cru]
 
 +
-[cols="10,90"]
 |===
 
 
@@ -316,13 +324,6 @@ image:../media/legend_icon_01.png[""]
 | 驱动器右侧的凸起按钮。 
 |===
 .. 竖直向下放下驱动器，然后向下旋转驱动器把手，直到驱动器卡入到位。
-+
-如果磁盘架已部分填充、这意味着要重新安装驱动器的抽盒所支持的驱动器少于12个、请将前四个驱动器安装到正面插槽(0、3、6和9)中。
-
-+
-
-NOTE: *设备故障风险：*为了确保气流正常并防止过热、请始终将前四个驱动器安装到前面的插槽(0、3、6和9)中。
-
 +
 image::../media/92_dwg_de6600_install_or_remove_drive.gif[92 dwg de6600 安装或删除驱动器]
 
@@ -339,7 +340,7 @@ NOTE: * 设备故障的风险： * 请确保通过推动两个控制杆完全关
 
 
 
-== 连接缆线链
+== Attaching the cable chains
 
 [role="lead"]
 安装驱动器抽盒的最后一步是将左右缆线链连接到驱动器架。连接缆线链时，请按与断开缆线链相反的顺序进行操作。您必须先将链的水平连接器插入机箱中的水平支架，然后再将链的垂直连接器插入机箱中的垂直支架。
@@ -414,7 +415,6 @@ image:../media/legend_icon_02.png[""]
 image::../media/2860_dwg_guide_rail.gif[2860 dwg 导轨]
 
 +
-[cols="10,90"]
 |===
 
 
