@@ -24,25 +24,14 @@ summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断
 
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
-.关于此任务
-* 如果您使用的是 NetApp 存储加密，则必须按照 _ONTAP 9 NetApp 加密高级指南 _ 的 "`将 SED 返回到未受保护的模式` " 一节中的说明重置 MSID 。
-+
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTAP 9 NetApp 加密高级指南》"]
-
-* 如果您使用的是 SAN 系统，则必须已检查受损控制器 SCSI 刀片式服务器的事件消息（事件日志显示）。
-+
-每个 SCSI 刀片式服务器进程应与集群中的其他节点保持仲裁关系。在继续更换之前，必须先解决所有问题。
-
-* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
-* 如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（`MetroCluster node show` ）。
-
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
 
 .步骤
-. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAIN=_number_of_hours_down_h`
 +
 以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 如果受损控制器属于 HA 对，请从运行正常的控制器的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`
 . 将受损控制器显示为 LOADER 提示符：
 +
 [cols="1,2"]
@@ -60,7 +49,7 @@ LOADER 提示符
  a| 
 正在等待交还
  a| 
-按 Ctrl-C ，然后在出现提示时回答 `y` 。
+按 Ctrl-C ，然后回答 `y` 。
 
 
 
@@ -69,7 +58,7 @@ LOADER 提示符
  a| 
 从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
 
-当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
++ 当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
 
 |===
 . 如果系统机箱中只有一个控制器模块，请关闭电源，然后从电源中拔下受损控制器的电源线。

@@ -1679,7 +1679,6 @@
   <block id="d79b377e4ffb63d9f7bc2cd5de1e04de" category="doc">关闭受损控制器模块 - AFF A250</block>
   <block id="04a1c92d61b3e562a673dea0adef0f20" category="list-text">如果您使用的是 NetApp 存储加密，则必须按照 _ONTAP 9 NetApp 加密高级指南 _ 的 "`将 SED 返回到未受保护的模式` " 一节中的说明重置 MSID 。</block>
   <block id="d341e954ddede02e8d2c553ecfba224a" category="paragraph">每个 SCSI 刀片式服务器进程应与集群中的其他节点保持仲裁关系。在继续更换之前，必须先解决所有问题。</block>
-  <block id="971840ecd85a736d5b833bc352989a07" category="list-text">如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（ MetroCluster node show ）。</block>
   <block id="2ac1e9cd887b50e321ead7a3e6beab55" category="summary">要更换控制器模块硬件，您必须卸下受损的控制器模块，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
   <block id="b78bf62e6c1dd80b4eab87a4a3039f94" category="paragraph">要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</block>
   <block id="e2f9fc0be7a0bec719378633fe5d0324" category="section-title">第 1 步：卸下控制器模块</block>
@@ -5886,9 +5885,6 @@
   <block id="3037b211ed81d339e89983a39433d5ed" category="list-text">关闭已断开连接的磁盘架，并从磁盘架拔下电源线。</block>
   <block id="60f2a3cfd26e6f6c57aebe8c8e233493" category="list-text">从机架或机柜中卸下磁盘架。</block>
   <block id="fa4c9ef92b72a4afda4eb5a196eecc3f" category="paragraph">为了减轻磁盘架重量并便于操作，请卸下电源和 I/O 模块（ IOM ）。</block>
-  <block id="6c3e7eebf0d82be7ff1f926b348de584" category="paragraph">对于 DS460C 磁盘架，您还可以使用磁盘架随附的四个可拆卸手柄。手柄（机箱每侧两个）可通过向上推直至卡入到位来安装。将磁盘架滑入导轨时，请使用拇指闩锁分离手柄。</block>
-  <block id="3d4236fe344d3a92a8695db10ccb5072" category="paragraph">如果要移动满载的 DS460C 磁盘架，建议使用机械升降机或升降机。</block>
-  <block id="a5e5379fb06ced70dc284e6acb2cdcee" category="admonition">满载的 DS460C 磁盘架的重量约为 247 磅（ 112 千克）。</block>
   <block id="2794022ceac3fcd7a5363d665e5359a5" category="image-alt">DRW ds460c 句柄</block>
   <block id="7dbdcb32c9db2612bd031043224dae8f" category="summary">完成工作表模板后，您可以定义控制器 SAS 端口对，使用这些端口对将控制器连接到具有 IOM12 模块的磁盘架堆栈，以便在 HA 对或单控制器配置中实现四路径连接。您还可以使用已完成的工作表来指导自己完成配置的四路径连接布线。</block>
   <block id="5cf2b662ddc9e386ea849d5a2d3ba76d" category="doc">四路径连接的控制器到堆栈布线工作表模板—带有 IOM12 模块的磁盘架</block>
@@ -5989,12 +5985,6 @@
   <block id="0242c187e17fdc5fb8c6c39a3c7e44cf" category="paragraph">如果要安装多个磁盘架，则应从机架的底部到顶部安装这些磁盘架，以获得最佳稳定性。</block>
   <block id="485915b2618f6e44eeb59fb1a237eb08" category="paragraph">请勿通过法兰将磁盘架安装到电信型机架中；磁盘架的重量可以发生原因使其在机架中自行折叠。</block>
   <block id="f7ec6f03d48ba0d482840bec340da0cf" category="list-text">使用套件随附的安装宣传单将磁盘架安装并固定到支架和机架上。</block>
-  <block id="6af8ffd92d343a1b0d2759bc6fc5ae7e" category="list-text">如果要安装 DS460C 磁盘架，请将组件安装到机架式磁盘架中；否则，请转至下一步。</block>
-  <block id="3f5bbce38720364dafaa1c4e291566a6" category="paragraph">如果您购买的磁盘架已部分填充，但每个驱动器插槽中没有驱动器，则必须确保：</block>
-  <block id="8c298229e7eae71bf34cd42839641cb1" category="list-text">每个抽盒中的前四个插槽（ 0 ， 3 ， 6 和 9 ）已被占用。</block>
-  <block id="cf6acee577d7cefcf79dd4e1b561dbe6" category="paragraph">这样可确保磁盘架通风良好。</block>
-  <block id="e685698b3cc7edc0edbcb6b4f0acca4b" category="list-text">在包含 30 个驱动器的磁盘架中，其余 10 个驱动器均匀分布在每个抽盒的插槽 1 和 10 中的整个磁盘架中。</block>
-  <block id="7ecce0af07cdd6bc780ac358240cc0a4" category="paragraph">下图显示了如何在磁盘架中的每个驱动器抽盒中将驱动器编号为 0 到 11 。插槽 0 ， 3 ， 6 ， 9 和， 在包含 30 个驱动器的磁盘架中，每个抽盒中的插槽 1 和 10 必须包含驱动器。</block>
   <block id="82edbae4acf5762cfee69aaa6facde11" category="image-alt">带有 HDD 标注的 Dwg Trafford 抽屉</block>
   <block id="451345ca48e949ee2fe424e0fc68ce3d" category="list-text">重新安装在将磁盘架安装到机架之前卸下的所有电源和 IOM 。</block>
   <block id="07f7351fb2334783d3087885957e5f5e" category="list-text">打开磁盘架的顶部抽盒。</block>
@@ -7386,8 +7376,6 @@
   <block id="401703f1a6e6c4174ecfa75cf476aeec" category="list-text">英语<block ref="3b271abd5f4b9b54a3379e0450431921" category="inline-link-rx"></block></block>
   <block id="c98535a3efcc3902c442def855aa8fcd" category="list-text">Japanese:<block ref="74a4002c724f044d7e6834f3506cd16d" category="inline-link-rx"></block></block>
   <block id="c9d9e9c98bea821ee3130955cb98a54c" category="list-text">Chinese:<block ref="d495a553b62dffb464c7810acf543358" category="inline-link-rx"></block></block>
-  <block id="6407763c1d2de6600133ab1f5d7bc94f" category="inline-link">ONTAP 9 NetApp 加密高级内容</block>
-  <block id="b70ce74f678772eec8ed950c996578d8" category="paragraph"><block ref="b70ce74f678772eec8ed950c996578d8" category="inline-link-rx"></block></block>
   <block id="3507cf5c7dded65ffdd5ade0f2366605" category="list-text"><block ref="3507cf5c7dded65ffdd5ade0f2366605" category="inline-link-macro-rx"></block></block>
   <block id="839439b189cfb3960dee96d5900594f7" category="list-text">您需要一个带一端直发的回形针或一个窄尖圆头笔。</block>
   <block id="6de535d32c5294ec13b8cdaefbdfcd96" category="list-text">在固件版本不是最新的新驱动器上，驱动器固件会自动更新（无中断）。</block>
@@ -7962,7 +7950,6 @@
   <block id="96f3065963946bf7d4b37f70901cd2c8" category="paragraph">+ 主动推入可能会使电池再次退出发生原因。</block>
   <block id="f05dc6ae866c89472a3f7a9b59aa3e6a" category="list-text">使用 1 号磁性螺丝刀插入并拧紧启动介质上的螺钉。</block>
   <block id="aeafe9c2b3703d604c28ef5d13c03f76" category="list-text">使用 1 号磁性螺丝刀，插入并拧紧替代控制器模块正面和夹层卡上的螺钉。</block>
-  <block id="4a2546eb9c2e57bf15ddf11202689d7c" category="section-title">选项 2 ： MetroCluster 中的系统</block>
   <block id="860b30584f1b729efd2b58d01580a92c" category="paragraph">要更换 NVMEM 电池，您必须从控制器模块中取出故障电池，然后将更换用电池安装到控制器模块中。</block>
   <block id="600a73fcb93eb875646134b90ac7d911" category="paragraph">要更换夹层卡，您必须卸下受损卡并安装更换卡；要安装夹层卡，您必须卸下面板并安装新卡。</block>
   <block id="4177f2df9ae71084d9883a0423cc68d0" category="list-text">使用 1 号磁性螺丝刀拧松受损夹层卡上的螺钉。</block>
@@ -8553,7 +8540,6 @@
   <block id="e62f199edf5ce700e5ae74c377f48585" category="sidebar">所有 SAN 阵列系统</block>
   <block id="c4565f27e7eb1d0640e258fb796df9c4" category="list-text">将系统缆线和收发器模块插入控制器模块，然后重新安装缆线管理设备。</block>
   <block id="6c35991313f21e9038f629e9e809488a" category="admonition">请勿混用具有不同效率额定值的 PSU 。请始终像这样替换。</block>
-  <block id="0fbe0630286ce5debeb3d11174988b34" category="open-title">选项 3 ：控制器位于双节点 MetroCluster 中</block>
   <block id="6bec966647e1b9c8a03ddd277c8fe864" category="inline-link">部件退回和放大器；更换</block>
   <block id="822bec4a0db0c5fd17b5f05b4e1c0335" category="paragraph">按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见<block ref="4fc2cab5a4eb2f6a408378b0d596ae42" category="inline-link-rx"></block> 第页，了解更多信息。</block>
   <block id="e188406fb2d6108447e3bc6cb9155625" category="inline-link-macro">采用板载存储的 AFF 和 FAS 平台</block>
@@ -8626,17 +8612,14 @@
   <block id="04e527203c5db793872f9a09c2541063" category="list-text">Reconnect any cables that you removed in substep a to the same port(s) on IOM A of the disk shelf you are hot-adding; otherwise, go to the next substep.</block>
   <block id="e62a559839495c7e61b9ce5a088b786c" category="doc">Replacing a drive drawer in a DS460C disk shelf - shelves with IOM12 modules</block>
   <block id="585248eeaa0c7aa335cb47a05c525433" category="image-alt">92 dwg de6600 drawer with hdds no callouts</block>
-  <block id="c8c22257eb9d1c1c2a60aad49bd446f7" category="list-text">Permanent marker</block>
   <block id="2e3d3f0aa5e64af89c170da27ccf0cb2" category="section-title">Removing the cable chains</block>
   <block id="bbbd51c2b3c60d5e9becdcf09d29b105" category="section-title">Removing a drive drawer</block>
-  <block id="335dce1d41f6ceb784ef37e86cc55836" category="paragraph">After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.Removing a drive drawer entails sliding the drawer part of the way out, recording the locations of the drives, removing the drives, and removing the drive drawer.</block>
-  <block id="8ef71e80ff9b1b842baf4030f316fb11" category="list-text">You have obtained a permanent marker to note the exact location of each drive as you remove the drive from the drawer.</block>
-  <block id="152621a29ef9446b42880cb317783a76" category="list-text">If logical unit numbers (LUNs) have already been created and assigned, use a permanent marker to note the exact location of each drive.For example, using the following drawing as a reference, write the appropriate slot number on the top of each drive.</block>
-  <block id="7d2466032b15e1b1adb1ac2c562eda3b" category="admonition">*Possible loss of data access:* Make sure to record the exact location of each drive before removing it.</block>
   <block id="fe8265ac3d0f9c648e57474b40e2e5d8" category="section-title">Installing a drive drawer</block>
-  <block id="00a6e09fe995a9431b12ec0b25d1e616" category="list-text">You know where to install each drive.</block>
-  <block id="844dfe4267fa67e9f6790c353bfd5146" category="list-text">Determine which drive to install in each slot by using the notes you made when removing the drives.</block>
-  <block id="eaae88ce87aad975b7d2ee116355a25d" category="admonition">*Possible loss of data access:* You must install each drive in its original location in the drive drawer.</block>
-  <block id="bb9b26a61fb91f1d47a271d0ed32a967" category="list-text">Raise the handle on the drive to vertical.</block>
   <block id="2731a32bd20082112cb21bea67097d21" category="section-title">Attaching the cable chains</block>
+  <block id="b3e40f87c203ef282d4d64a42d869542" category="open-title">选项2：控制器位于双节点MetroCluster 中</block>
+  <block id="2cb6637a5fdf450f80c9f19b8c718a47" category="admonition">请确保在断开缆线连接并重新连接缆线与更换另一根缆线之间至少等待70秒。</block>
+  <block id="17c343da5115d1e0b01e0d9fab1f9d4e" category="paragraph">+如果没有腕带、请在处理磁盘驱动器之前先触摸存储机箱机箱上未上漆的表面。</block>
+  <block id="8456c08b8772c6458de93a0a78ff4f85" category="paragraph">After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.卸下驱动器抽盒需要将抽盒部分滑出、卸下驱动器并卸下驱动器抽盒。</block>
+  <block id="40cfdd2fa544c18fef836a58df7bb2e9" category="list-text">在要安装的驱动器上、将手柄提起至垂直位置。</block>
+  <block id="2560c526c9d334c39cab4311db7eff4d" category="paragraph">如果磁盘架已部分填充、这意味着要重新安装驱动器的抽盒所支持的驱动器少于12个、请将前四个驱动器安装到正面插槽(0、3、6和9)中。</block>
 </blocks>
