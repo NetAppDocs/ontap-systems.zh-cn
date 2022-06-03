@@ -1,7 +1,7 @@
 ---
 permalink: sas3/service-replace-drawer-ds460c.html 
 sidebar: sidebar 
-keywords: stop, all, host, i/o activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf 
+keywords: i/o activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf 
 summary: 在更换驱动器抽盒之前，您必须停止所有主机 I/O 活动并关闭磁盘架电源。 
 ---
 = Replacing a drive drawer in a DS460C disk shelf - shelves with IOM12 modules
@@ -322,9 +322,9 @@ NOTE: *设备故障风险：*为了确保气流正常并防止过热、请始终
 +
 image::../media/92_dwg_de6600_install_or_remove_drive.gif[92 dwg de6600 安装或删除驱动器]
 
+.. 重复这些子步骤以重新安装所有驱动器。
 
 
-. 重复这些子步骤以重新安装所有驱动器。
 . 将抽盒从中间推回驱动器架，然后合上两个拉杆，将其滑回驱动器架。
 +
 
