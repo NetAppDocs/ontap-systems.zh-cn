@@ -1,0 +1,23 @@
+---
+permalink: fas9500/controller_replace.html 
+sidebar: sidebar 
+keywords: FAS9500, open controller, download service image to USB drive, transfer boot image, USB drive, service image 
+summary: 要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。 
+---
+= 更换控制器模块硬件—FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。
+
+以下动画显示了将组件从受损控制器移至更换控制器的整个过程。
+
+
+endif::[]
+
+endif::[]
+
+endif::[]

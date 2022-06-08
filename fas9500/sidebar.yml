@@ -1,0 +1,77 @@
+---
+section: fas9500
+title: FAS9500系统
+url: "/fas9500/index.html"
+entries:
+- title: 安装和设置
+  entries:
+  - title: 选择安装和设置体验
+    url: "/fas9500/install_setup.html"
+  - title: 快速步骤
+    url: "/fas9500/install_quick_guide.html"
+  - title: 视频步骤
+    url: "/fas9500/install_videos.html"
+  - title: 详细步骤
+    url: "/fas9500/install_detailed_guide.html"
+- title: 维护
+  entries:
+  - title: 添加 I/O 模块
+    url: "/fas9500/add_io_module.html"
+  - title: 启动介质
+    entries:
+    - title: 概述
+      url: "/fas9500/bootmedia_replace_overview.html"
+    - title: 预关闭检查板载加密密钥
+      url: "/fas9500/bootmedia_encryption_preshutdown_checks.html"
+    - title: Shut down the impaired controller
+      url: "/fas9500/bootmedia_impaired_controller_shutdown.html"
+    - title: 传输启动映像并更换出现故障的启动介质
+      url: "/fas9500/bootmedia_replace.html"
+    - title: 启动恢复映像
+      url: "/fas9500/bootmedia_recovery_image.html"
+    - title: OKM ， NSE 和 NVE 的启动后介质更换步骤
+      url: "/fas9500/bootmedia_encryption_restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/fas9500/bootmedia_complete_rma.html"
+  - title: 缓存模块
+    url: "/fas9500/caching_module_hot_swap.html"
+  - title: 机箱
+    entries:
+    - title: 概述
+      url: "/fas9500/chassis_replace_overview.html"
+    - title: Shut down the impaired controller
+      url: "/fas9500/chassis_replace_shutdown.html"
+    - title: 更换硬件
+      url: "/fas9500/chassis_replace_move_hardware.html"
+    - title: 还原和验证配置
+      url: "/fas9500/chassis_replace_complete_system_restore_rma.html"
+  - title: 控制器模块
+    entries:
+    - title: 概述
+      url: "/fas9500/controller_replace_overview.html"
+    - title: Shut down the impaired controller
+      url: "/fas9500/controller_replace_shutdown.html"
+    - title: 更换控制器模块硬件
+      url: "/fas9500/controller_replace.html"
+    - title: 还原并验证系统配置
+      url: "/fas9500/controller_replace_system_config_restore_and_verify.html"
+    - title: 重新对系统进行布线
+      url: "/fas9500/controller_replace_recable_reassign_disks.html"
+    - title: 完成系统还原
+      url: "/fas9500/controller_replace_complete_system_restoration_rma.html"
+  - title: DIMM
+    url: "/fas9500/dimm_replace.html"
+  - title: 目标控制电源模块
+    url: "/fas9500/dcpm_NVRAM11_battery_replace.html"
+  - title: 风扇
+    url: "/fas9500/fan_swap_out.html"
+  - title: I/O 模块
+    url: "/fas9500/pci_cards_and_risers_replace.html"
+  - title: LED USB 模块
+    url: "/fas9500/led_module_replace.html"
+  - title: NVRAM 模块和 / 或 NVRAM DIMM
+    url: "/fas9500/nvram_module_or_nvram_dimm_replacement.html"
+  - title: 电源
+    url: "/fas9500/power_supply_swap_out.html"
+  - title: RTC 电池
+    url: "/fas9500/rtc_battery_replace.html"

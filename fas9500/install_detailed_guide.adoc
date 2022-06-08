@@ -1,0 +1,249 @@
+---
+permalink: fas9500/install_detailed_guide.html 
+sidebar: sidebar 
+keywords: FAS9500 
+summary: 此提供了有关安装典型 NetApp 系统的详细分步说明。 
+---
+= 详细步骤—FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本文详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本文。
+
+
+
+== 第 1 步：准备安装
+
+要安装系统，您需要在 NetApp 支持站点上创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
+
+您需要有权访问 https://hwu.netapp.com["NetApp Hardware Universe"^] 有关站点要求以及已配置系统上的追加信息的信息。
+
+您可能还希望有权访问 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["《 ONTAP 9 发行说明》"^] 有关此系统的详细信息，请参见您的 ONTAP 版本。
+
+您需要在站点上提供以下内容：
+
+* 存储系统的机架空间
+* 2 号十字螺丝刀
+* 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
+
+
+.步骤
+. 打开所有框内容的包装。
+. 记录控制器的系统序列号。
++
+image::../media/drw_ssn_label.svg[DRW SSN 标签]
+
+. 清点并记下收到的缆线数量和类型。
++
+下表列出了您可能收到的电缆类型。如果您收到的电缆未在表中列出，请参见 Hardware Universe 以找到该电缆并确定其用途。
+
++
+https://hwu.netapp.com["NetApp Hardware Universe"^]
+
++
+[cols="1,2,1,2"]
+|===
+| 缆线类型 ... | 部件号和长度 | 连接器类型 | 针对 ... 
+
+
+ a| 
+25 GbE 数据缆线
+ a| 
+X66240A-05 （ 112-00639 ）， 0.5 米
+
+X66240A-2 （ 112-00598 ）， 2 米
+
+X66240A-5 （ 112-00600 ）， 5 米
+| image:../media/oie_cable_sfp_gbe_copper.svg["宽度= 85px"]  a| 
+网络缆线
+
+
+
+ a| 
+32 Gb FC （ SFP+ 操作）
+ a| 
+X66250-2 （ 112-00342 ）， 2 米
+
+X66250-5 （ 112-00344 ）， 5 米
+
+X66250-15 （ 112-00346 ）， 15 米
+ a| 
+image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+ a| 
+FC 光纤网络缆线
+
+
+
+ a| 
+40 GbE 网络缆线
+ a| 
+X66100-1 （ 112-00542 ）， 1 米
+
+X66100-3 （ 112-00543 ）， 3 米
+
+X66100-5 （ 112-00544 ）， 5 米
+ a| 
+image::../media/oie_cable100_gbe_qsfp28.svg[OIE cable100 GbE QSFP28]
+ a| 
+以太网数据，集群网络
+
+
+
+ a| 
+100 GbE 缆线
+ a| 
+X6621B-1 （ 112-00573 ）， 1 米
+
+X6621B-2 （ 112-00574 ）， 2 米
+
+X6621B-5 （ 112-00576 ）， 5 米
+ a| 
+image::../media/oie_cable100_gbe_qsfp28.svg[OIE cable100 GbE QSFP28]
+ a| 
+网络，
+
+以太网数据，
+
+集群网络
+
+
+
+ a| 
+光缆
+ a| 
+X66031A （ 112-00436A ）， 1 米
+
+X66032A （ 112-00437 ）， 2 米
+
+X66033A （ 112-00438 ）， 3 米
+ a| 
+image::../media/oie_cable_fiber_lc_connector.svg[OIE 缆线光纤 LC 连接器]
+ a| 
+FC 光纤网络
+
+
+
+ a| 
+6 类， RJ-45 （取决于订单）
+ a| 
+部件号 X6585-R6 （ 112-00291 ）， 3 米
+
+X6562-R6 （ 112-00196 ）， 5 米
+ a| 
+image::../media/oie_cable_rj45.svg[OIE 缆线 RJ45]
+ a| 
+管理网络和以太网数据
+
+
+
+ a| 
+存储
+ a| 
+X66031A （ 112-00436A ）， 1 米
+
+X66032A （ 112-00437 ）， 2 米
+
+X66033A （ 112-00438 ）， 3 米
+ a| 
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
+ a| 
+存储
+
+
+
+ a| 
+微型 USB 控制台缆线
+ a| 
+不适用
+ a| 
+image::../media/oie_cable_micro_usb.svg[OIE缆线微型USB]
+ a| 
+在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
+
+
+
+ a| 
+电源线
+ a| 
+不适用
+ a| 
+image::../media/oie_cable_power.svg[OIE缆线电源]
+ a| 
+启动系统
+
+|===
+. 查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^] 并收集该指南中列出的所需信息。
+
+
+
+
+== 第 2 步：安装硬件
+
+您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
+
+. 根据需要安装导轨套件。
+. 按照导轨套件附带的说明安装并固定系统。
++
+
+NOTE: 您需要了解与系统重量相关的安全问题。
+
++
+左侧的标签表示空机箱，右侧的标签表示系统已完全填充。
+
++
+image::../media/drw_9500_lifting_icon.svg[DRW 9500"提升"图标]
+
+. 连接缆线管理设备（如图所示）。
++
+image::../media/drw_9500_cable_management_arms.svg[DRW 9500缆线 管理臂]
+
+. 将挡板放在系统正面。
+
+
+
+
+== 第 3 步：使用缆线将控制器连接到网络
+
+您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
+
+[role="tabbed-block"]
+====
+.选项 1 ：双节点无交换机集群
+--
+控制器上的管理网络，数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
+
+您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
+
+在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
+
+image::../media/oie_cable_pull_tab_up.svg[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
+
+. 使用动画或插图完成控制器与交换机之间的布线：
++
+
+
+
+endif::[]
+
+endif::[]
+
+endif::[]
+
+endif::[]
+
+endif::[]
+
+endif::[]
+
+endif::[]
+
+endif::[]
+
+--
+====

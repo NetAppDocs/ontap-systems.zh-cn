@@ -47,11 +47,11 @@ NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文�
 在更换先前配置为使用存储或卷加密的存储系统的控制器模块或 NVRAM 模块后，您必须执行其他步骤以提供无中断加密功能。对于未启用存储或卷加密的存储系统，您可以跳过此任务。
 
 .步骤
-. 使用中的相应操作步骤还原存储或卷加密功能 https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"]。
+. 使用中的相应操作步骤还原存储或卷加密功能 https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"^]。
 . 根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：
 +
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"]
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
 
 
 

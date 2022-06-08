@@ -1,0 +1,30 @@
+---
+permalink: fas9500/bootmedia_replace.html 
+sidebar: sidebar 
+keywords: FAS9500, replace, boot, media, controller, directions. replace boot media, transfer image 
+summary: 您必须卸下并打开控制器模块，找到并更换控制器中的启动介质，然后将映像传输到替代启动介质。 
+---
+= 卸下控制器、更换启动介质并传输启动映像—FAS9500
+:allow-uri-read: 
+
+
+[role="lead"]
+您必须卸下并打开控制器模块，找到并更换控制器中的启动介质，然后将映像传输到替代启动介质。
+
+
+
+== 第 1 步：卸下控制器模块
+
+要访问控制器内部的组件，您必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 从受损控制器模块拔下缆线，并跟踪缆线的连接位置。
+. 向下滑动凸轮把手上的 Terra cotta 按钮，直到其解锁为止。
++
+
+
+
+endif::[]
+
+endif::[]

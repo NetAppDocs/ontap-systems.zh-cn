@@ -1,0 +1,21 @@
+---
+permalink: fas9500/chassis_replace_overview.html 
+sidebar: sidebar 
+keywords:  
+summary: 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。 
+---
+= 更换机箱- FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换机箱，您必须卸下电源，风扇，控制器模块， I/O 模块， DCPM 模块， 和 USB LED 模块从受损机箱中取出受损机箱，从设备机架或系统机柜中取出受损机箱，将更换机箱安装到位，然后将组件安装到更换机箱中。
+
+系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+.关于此任务
+* 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。
+* 此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。
+

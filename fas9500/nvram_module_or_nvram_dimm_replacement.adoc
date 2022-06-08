@@ -1,0 +1,105 @@
+---
+permalink: fas9500/nvram_module_or_nvram_dimm_replacement.html 
+sidebar: sidebar 
+keywords:  
+summary: NVRAM 模块由 NVRAM11 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。 
+---
+= 更换NVRAM模块和/或NVRAM DIMM—FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NVRAM 模块由 NVRAM11 和 DIMM 组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.要更换发生故障的 NVRAM 模块，您必须将其从机箱中卸下，将 DIMM 移至更换模块，然后将更换的 NVRAM 模块安装到机箱中。
+
+要更换和NVRAM DIMM、您必须从机箱中卸下NVRAM模块、更换模块中发生故障的DIMM、然后重新安装NVRAM模块。
+
+由于系统 ID 源自 NVRAM 模块，因此，如果更换此模块，则属于此系统的磁盘将重新分配给新的系统 ID 。
+
+.开始之前
+* 所有磁盘架都必须正常工作。
+* 如果您的系统位于 HA 对中，则配对节点必须能够接管与要更换的 NVRAM 模块关联的节点。
+* 此操作步骤使用以下术语：
++
+** 受损节点是指要在其中执行维护的节点。
+** 运行状况良好的节点是受损节点的 HA 配对节点。
+
+
+* 此操作步骤包括自动或手动将磁盘重新分配给与新 NVRAM 模块关联的控制器模块的步骤。当操作步骤中指示您重新分配磁盘时，您必须重新分配这些磁盘。在交还之前完成磁盘重新分配可能会出现发生原因问题。
+* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+* 您不能在此操作步骤中更改任何磁盘或磁盘架。
+
+
+
+
+== 第 1 步：关闭受损节点
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+`正在等待交还 ...`
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+
+
+== 第 2 步：更换 NVRAM 模块
+
+要更换 NVRAM 模块，请在机箱的插槽 6 中找到该模块，然后按照特定步骤顺序进行操作。
+
+. 如果您尚未接地，请正确接地。
+. 从机箱中删除目标 NVRAM 模块：
++
+.. 按下带字母和编号的凸轮按钮。
++
+凸轮按钮离开机箱。
+
+.. 向下旋转凸轮闩锁，直到其处于水平位置。
++
+NVRAM 模块从机箱中分离并移出几英寸。
+
+.. 拉动 NVRAM 模块侧面的拉片，将其从机箱中卸下。
++
+
+
+
+
+
+endif::[]
+
+endif::[]

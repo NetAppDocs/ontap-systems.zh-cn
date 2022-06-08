@@ -1,0 +1,49 @@
+---
+permalink: fas9500/chassis_replace_move_hardware.html 
+sidebar: sidebar 
+keywords:  
+summary: 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。 
+---
+= 移动并更换硬件—FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换机箱，您必须从旧机箱中卸下组件，然后将其安装到更换机箱中。
+
+
+
+== 第 1 步：卸下电源
+
+更换机箱时，要卸下电源，需要关闭电源，断开连接，然后从旧机箱中卸下电源。
+
+. 如果您尚未接地，请正确接地。
+. 关闭电源并断开电源线：
++
+.. 关闭电源上的电源开关。
+.. 打开电源线固定器，然后从电源拔下电源线。
+.. 从电源拔下电源线。
+
+
+. 按住电源手柄上的 Terra cotta 按钮，然后将电源从机箱中拉出。
++
+
+NOTE: 卸下电源时，请始终用双手支撑其重量。
+
++
+
+
+
+endif::[]
+
+endif::[]
+
+endif::[]
+
+endif::[]
+
+endif::[]
+
+endif::[]

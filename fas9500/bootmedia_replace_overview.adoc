@@ -1,0 +1,36 @@
+---
+permalink: fas9500/bootmedia_replace_overview.html 
+sidebar: sidebar 
+keywords: FAS9500 
+summary: 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。 
+---
+= 更换启动介质—FAS9500
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:firstname: [.include]
+:author: [.include]
+:authorinitials: [
+:authors: [.include]
+
+
+启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。
+
+You must have a USB flash drive, formatted to FAT32, with the appropriate amount of storage to hold the `image_xxx.tgz`.
+
+您还必须将 `image_xxx.tgz` 文件复制到 USB 闪存驱动器，以供日后在此操作步骤中使用。
+
+* 更换启动介质的无中断和中断方法都要求您还原 `var` 文件系统：
++
+** 要进行无中断更换， HA 对不需要连接到网络即可还原 `var` 文件系统。一个机箱中的 HA 对具有一个内部 e0S 连接，用于在它们之间传输 `var` config 。
+** 要进行中断更换，您不需要网络连接即可还原 `var` 文件系统，但此过程需要重新启动两次。
+
+
+* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+* 请务必在正确的节点上应用以下步骤中的命令：
++
+** 受损节点是指要在其中执行维护的节点。
+** 运行状况良好的节点 _ 是受损节点的 HA 配对节点。
+
+
+

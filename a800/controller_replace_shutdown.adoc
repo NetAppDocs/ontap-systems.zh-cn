@@ -16,9 +16,9 @@ summary: 要关闭受损控制器，您必须确定控制器的状态，并在�
 .关于此任务
 * 如果您使用的是 NetApp 存储加密，则必须按照 _ONTAP 9 NetApp 加密高级指南 _ 的 "`将 SED 返回到未受保护的模式` " 一节中的说明重置 MSID 。
 +
-https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTAP 9 NetApp 加密高级指南》"]
+https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTAP 9 NetApp 加密高级指南》"^]
 
-* 如果您使用的是 SAN 系统，则必须已检查受损控制器 SCSI 刀片式服务器的事件消息（事件日志显示）。
+* 如果您使用的是SAN系统、则必须已检查受损控制器SCSI刀片式服务器的事件消息(`event log show`)。
 +
 每个 SCSI 刀片式服务器进程应与集群中的其他节点保持仲裁关系。在继续更换之前，必须先解决所有问题。
 

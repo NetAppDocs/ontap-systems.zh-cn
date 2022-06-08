@@ -2221,7 +2221,6 @@
   <block id="31509d9d2ecd7357c2d79b6100170edf" category="paragraph"><block ref="31509d9d2ecd7357c2d79b6100170edf" category="inline-link-rx"></block></block>
   <block id="09344dc6761d2a7f8e0074911899de26" category="list-text">如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示除 `yes` 以外的任何内容：</block>
   <block id="f5321e091dead7c4ead8728aa3332803" category="list-text">输入板载 security key-manager sync 命令： `ssecurity key-manager on板 载同步`</block>
-  <block id="29494bbea0c4b9c81b504ce3c9f0c776" category="admonition">在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。<block ref="7bc6752d2076d2c755eaebbdfeb91d23" category="inline-link-rx"></block></block>
   <block id="5420f491e628cc60c7e1ffcad20d35da" category="list-text">输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`</block>
   <block id="8eb91adaedfd18d8e21833ed58db7673" category="section-title">验证 NSE 配置</block>
   <block id="a5e337a3469d0028e9b72fe170e6d372" category="list-text">输入板载 security key-manager sync 命令： `ssecurity key-manager external sync`</block>
@@ -7291,7 +7290,6 @@
   <block id="3f98fa9dd0068de7a3158d3cefe04024" category="list-text"><block ref="3f98fa9dd0068de7a3158d3cefe04024" category="inline-link-macro-rx"></block></block>
   <block id="a2960939186ae78b824d694e2cbba800" category="inline-link">CLI 管理概述</block>
   <block id="518d2076bf387a28038f7558530bb987" category="inline-link">使用命令行界面概述 NetApp 加密</block>
-  <block id="a0ad8f5b8d13f1cd5ef039b68ed21700" category="list-text">使用中的相应操作步骤还原存储或卷加密功能<block ref="48a668c3219947c390bb7b4ff0fcb822" category="inline-link-rx"></block>。</block>
   <block id="673f7a1f10ce14ef29b06ba53cf1e5d7" category="inline-link">使用命令行界面概述 NetApp 加密</block>
   <block id="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="paragraph"><block ref="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="inline-link-rx"></block></block>
   <block id="459527cf1ec141d19f1b0f88f8c19905" category="inline-link">磁盘和聚合概述</block>
@@ -7927,9 +7925,7 @@
   <block id="b36708a8226ddc48a16407516f32b6ae" category="paragraph">` * `s存储故障转移显示` *`</block>
   <block id="4cc5d765a3b2155ab803f6ce50c11747" category="paragraph">`storage failover show` 命令的输出不应包含 `Ssystem ID changed on partner` 消息。</block>
   <block id="7b5b637cc082477a9dd4c129c225152e" category="inline-link">还原板载密钥管理加密密钥</block>
-  <block id="bec1622a1f566276141766f76e4b1d70" category="list-text"><block ref="bec1622a1f566276141766f76e4b1d70" category="inline-link-rx"></block></block>
   <block id="1ee623098df2f7856a034824be882999" category="inline-link">还原外部密钥管理加密密钥</block>
-  <block id="e10bd7c646b5f37d42df52bab6df6c64" category="list-text"><block ref="e10bd7c646b5f37d42df52bab6df6c64" category="inline-link-rx"></block></block>
   <block id="3c737345883504ebe7f0075c2e20f47e" category="list-text">如果命令输出中显示 &lt;lno-dury&gt; 或 &lt;1osno-dury&gt; ，则系统不支持 NVE ，请继续关闭控制器。</block>
   <block id="9b744d081289382cce38c59e4b6d3f76" category="list-text">验证集群中的任何卷是否正在使用 NVE ： `volume show -is-encrypted true`</block>
   <block id="7ab4c93a1ecb36778005e21c2d800f15" category="paragraph">If any volumes are listed in the output, NVE is configured and you need to verify the NVE configuration.如果未列出任何卷，请检查是否已配置 NSE 并正在使用此 NSE 。</block>
@@ -8264,11 +8260,9 @@
   <block id="4c10c8d9f18f0c8ba6fc3ea32f7beee4" category="list-text">如果采用 HA 配置，请在第二个控制器上重复上述步骤。</block>
   <block id="6d21dbcd6d30fc2426dd0b077d719da5" category="summary">在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。</block>
   <block id="d1614290531967ae3b3623d71b4ed961" category="paragraph">在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查正在运行的 ONTAP 版本。</block>
-  <block id="dcaee2dcae546228e31a0898bd961734" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="5f63b18eda466634ee235fd0cb5a9d6a" category="inline-link-macro-rx"></block>。</block>
   <block id="6d4079af860d745f44d13bfe9834115d" category="list-text">检查受损控制器的状态：</block>
   <block id="6f0786e478994e04512bb55e945ab79c" category="list-text">如果受损控制器处于登录提示符处，请以 `admin` 身份登录。</block>
   <block id="1f543f99cb43496b3a35f9786089c979" category="list-text">如果受损控制器位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的控制器上。</block>
-  <block id="52172eb9e905726c940b5894e2ccc281" category="list-text">如果受损控制器采用独立配置并出现 LOADER 提示符，请联系 <block ref="fbe7ba585c90dfc99f38e8779c97c5f3" category="inline-link-macro-rx"></block>。</block>
   <block id="efed560995ba912dfc2aa959620707ff" category="list-text">使用 `version -v` 命令检查受损控制器（如果已启动）或配对控制器（如果受损控制器已关闭）上运行的 ONTAP 版本：</block>
   <block id="24b6214418480e5248eaed7a69ead79c" category="list-text">如果受损控制器属于 HA 配置，请禁用从运行状况良好的控制器自动交还： `storage failover modify -node local -auto-giveback false` 或 `storage failover modify -node local -auto-giveback-after-panic false`</block>
   <block id="5a9f897d2d5283081378f66d6ed3cb7a" category="paragraph">在关闭受损控制器之前，您需要检查系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.</block>
@@ -8320,7 +8314,6 @@
   <block id="f51c8858085d7dcfe4d79d9774f8270d" category="paragraph">您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。</block>
   <block id="58d1979204cdde4ca641ddc56ae5fe91" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。`boot_ontap`</block>
   <block id="4d3408827df16f2063082b26e489e785" category="summary">要关闭受损控制器模块，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。</block>
-  <block id="f3ccc6a1c062dbba61f459b0e8b57597" category="list-text">如果您使用的是 SAN 系统，则必须已检查受损控制器 SCSI 刀片式服务器的事件消息（事件日志显示）。</block>
   <block id="d9d59ddb1bc0ff1000e4664413e713fe" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：</block>
   <block id="6887fe4f6ef917daf3d3f454ae837e99" category="list-text">如果系统采用 MetroCluster 配置，请监控控制器的状态： `MetroCluster node show`</block>
   <block id="e8d2a192788fc79eb80ab29e07304094" category="paragraph">在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个控制器将显示已配置状态，并启用 DR 镜像并显示正常模式。The `metrocluster node show -fields node-systemid` command output displays the old system ID until the MetroCluster configuration returns to a normal state.</block>
@@ -8618,8 +8611,116 @@
   <block id="2731a32bd20082112cb21bea67097d21" category="section-title">Attaching the cable chains</block>
   <block id="b3e40f87c203ef282d4d64a42d869542" category="open-title">选项2：控制器位于双节点MetroCluster 中</block>
   <block id="2cb6637a5fdf450f80c9f19b8c718a47" category="admonition">请确保在断开缆线连接并重新连接缆线与更换另一根缆线之间至少等待70秒。</block>
-  <block id="17c343da5115d1e0b01e0d9fab1f9d4e" category="paragraph">+如果没有腕带、请在处理磁盘驱动器之前先触摸存储机箱机箱上未上漆的表面。</block>
   <block id="8456c08b8772c6458de93a0a78ff4f85" category="paragraph">After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.卸下驱动器抽盒需要将抽盒部分滑出、卸下驱动器并卸下驱动器抽盒。</block>
   <block id="40cfdd2fa544c18fef836a58df7bb2e9" category="list-text">在要安装的驱动器上、将手柄提起至垂直位置。</block>
   <block id="2560c526c9d334c39cab4311db7eff4d" category="paragraph">如果磁盘架已部分填充、这意味着要重新安装驱动器的抽盒所支持的驱动器少于12个、请将前四个驱动器安装到正面插槽(0、3、6和9)中。</block>
+  <block id="dbe360eaa5ee89fd4f31c500db9f2fd7" category="paragraph"><block ref="dbe360eaa5ee89fd4f31c500db9f2fd7" category="inline-link-rx"></block></block>
+  <block id="44eacc26d730bc46ddc55858ccb8e7e3" category="list-text">如果您使用的是SAN系统、则必须已检查受损控制器SCSI刀片式服务器的事件消息(`event log show`)。</block>
+  <block id="503506ac51c03177e4e29bdd8f3f83e0" category="list-text">使用中的相应操作步骤还原存储或卷加密功能<block ref="2ff5666698979ec87e001217f795c3dd" category="inline-link-rx"></block>。</block>
+  <block id="b18ad0a07953c39e92025f3df711d7e8" category="list-text"><block ref="b18ad0a07953c39e92025f3df711d7e8" category="inline-link-rx"></block></block>
+  <block id="137edbb782dbd05e84addda1ad111604" category="list-text"><block ref="137edbb782dbd05e84addda1ad111604" category="inline-link-rx"></block></block>
+  <block id="d331c2ddc96dbf38f25371617243bf17" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="1ab03132ea6210439f901707b3806211" category="inline-link-macro-rx"></block>。</block>
+  <block id="ec5866194941126dcbe55d496f612191" category="list-text">如果受损控制器采用独立配置并出现 LOADER 提示符，请联系 <block ref="d4b5db761eff3af8abec9c2aa8b19609" category="inline-link-macro-rx"></block>。</block>
+  <block id="4729966d1b42f799e14eba4dd6dedbdb" category="paragraph"><block ref="4729966d1b42f799e14eba4dd6dedbdb" category="inline-link-rx"></block></block>
+  <block id="60db4a77031ab02d5c7d793d8ee8e564" category="admonition">Enter the customer's onboard key management passphrase at the prompt.If the passphrase cannot be provided, contact NetApp Support.<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block></block>
+  <block id="0f4f43e093db80d862a516057fb4a1b2" category="list-text">按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见<block ref="9d47acedf189f7880a7ff697cbca93c5" category="inline-link-rx"></block> 第页，了解更多信息。</block>
+  <block id="756d409209ace98589705774b5011aa0" category="inline-link">FAS9500</block>
+  <block id="777fd6d7388769d3f60adc007c4390a4" category="paragraph"><block ref="777fd6d7388769d3f60adc007c4390a4" category="inline-link-rx"></block></block>
+  <block id="801fb2644ef002c15826950c6197b174" category="paragraph">ONTAP 9.10.1P3和9.11.1</block>
+  <block id="a31ab93f41516026d249aceb633bccc3" category="doc">添加一个I/O模块—FAS9500</block>
+  <block id="133808c24f6fb32a9a2a58ed28150498" category="paragraph">您可以将I/O模块作为NIC或SAS存储架的存储模块添加到系统中的空模块插槽中。</block>
+  <block id="ff231ca484e594004f4ca93ecfa6683e" category="paragraph">控制台连接显示，接管完成后，节点将进入 LOADER 提示符。</block>
+  <block id="2a5cd1f850ee79601be57448f10d9595" category="list-text">从加载程序提示符 _bybye 重新启动节点</block>
+  <block id="4d3b1425bbd62943a546a9f98dc3b7ef" category="list-text">从配对节点交还节点。`storage failover giveback -ofnode target_node_name`</block>
+  <block id="6f8193ca6bfb281db32afbcc9e285f79" category="inline-link">热添加SAS磁盘架</block>
+  <block id="9856beabcb389225df78cec96e74e365" category="list-text">如果您安装了存储I/O模块、请按照中所述安装SAS磁盘架并为其布线<block ref="322cc377ef41f5776a1c64690e12c49b" category="inline-link-rx"></block>。</block>
+  <block id="c964f542415e7614484e4edf970ab7a8" category="paragraph">将受影响的 LIF 永久重新分配到其他主端口。请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> 有关使用 System Manager 永久移动 LIF 的信息，请参见。</block>
+  <block id="6d351dbc4a7187d4512a1c505c200687" category="paragraph">使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block>。</block>
+  <block id="f3ca7c7565b074fbf5e12ffb59930d2f" category="doc">将故障部件退回给NetApp—FAS9500</block>
+  <block id="111654993a380e0c9bea6bf2840bed64" category="doc">对板载加密密钥进行预关闭检查—FAS9500</block>
+  <block id="4ea7136415cb99f780a4177ea7ada9f4" category="doc">还原并验证系统配置—FAS9500</block>
+  <block id="99b2041dbc4d85328f37031f86e8632c" category="cell">If your node is in...</block>
+  <block id="a7ed9ff4da75adb740c610eda185e598" category="doc">快速步骤—FAS9500</block>
+  <block id="6c77c0963cc43d89befd25aeab2f805c" category="inline-link-macro">《FAS9500安装和设置说明》</block>
+  <block id="c0151088b8d16a7df5f5ceccf770a44b" category="paragraph"><block ref="c0151088b8d16a7df5f5ceccf770a44b" category="inline-link-macro-rx"></block></block>
+  <block id="6b076d5e08feabcb936ff1fc2298c9cb" category="doc">更换机箱- FAS9500</block>
+  <block id="0829d23216964b4cc2a11bb04c4cf143" category="summary">NVMe SSD FlashCache模块(FlashCache或缓存模块)仅位于FAS900系统插槽6中NVRAM11模块的正面。您可以从相同或不同的受支持供应商热插拔具有相同容量的缓存模块。</block>
+  <block id="fb796745f1b93e7c27af0a928be9d5ae" category="doc">热插拔缓存模块— FAS9500</block>
+  <block id="e5684d853146c37193094e90fea21bff" category="paragraph">NVMe SSD FlashCache模块(FlashCache或缓存模块)位于FAS9500系统插槽6中NVRAM11模块的正面。您可以从相同或不同的受支持供应商热插拔具有相同容量的缓存模块。</block>
+  <block id="1360261f3d9e17642c609debfd62b1d6" category="admonition">如果您需要或希望冷插拔FlashCache模块、请按照有关更换I/O模块的过程进行操作。</block>
+  <block id="fa807167a57a5e7782f90326093319e4" category="list-text">缓存模块必须运行良好、才能被系统识别。如果缓存模块自上次启动以来未正常运行、则无法使用此操作步骤 、必须使用冷插拔操作步骤。</block>
+  <block id="bdd8c99ec41c2de3e99ba0a36e04bfbf" category="list-text">在管理权限级别中、准备要删除的目标NVMe插槽、并在系统提示是否继续时回答`y`：`ssystem controller slot module remove -node node_name -slot slot_number`以下命令会准备node1上的插槽6-1以进行删除、并显示一条消息、指出可以安全删除：</block>
+  <block id="e47fa3700d8c8b185b05f4e09285f497" category="admonition">请参见<block ref="7dfdd4167a3eb44ee8af382f653a3ce0" category="inline-link-rx"></block> for your version of ONTAP for more details.</block>
+  <block id="68607949342d7df39c7770d809d0a5f2" category="image-alt">DRW 9500-删除闪存</block>
+  <block id="5e8d2460689245ee00f6d51f5db543dc" category="paragraph">Terra cotta释放按钮。</block>
+  <block id="948a2b625585740c830fda62dae13d97" category="list-text">按下缓存模块正面的 Terra cotta 释放按钮。</block>
+  <block id="783e93aa36e1cf0b0fe9d46618c3f4da" category="admonition">Do not use the numbered and lettered I/O cam latch to eject the caching module.带编号和字母的I/O凸轮闩锁可弹出整个NVRAM11模块、而不是缓存模块。</block>
+  <block id="4a73e216feb4277e4b9ed4b0d06e52b6" category="list-text">旋转凸轮把手、直到缓存模块开始滑出NVRAM11模块。</block>
+  <block id="889bf94232348261e70a1f1630722a8f" category="list-text">将凸轮把手竖直轻轻拉向您、以从NVRAM11模块中卸下缓存模块。</block>
+  <block id="2449804e78fe2ca344268ced61ab3353" category="paragraph">从NVRAM11模块中删除缓存模块时、请务必为其提供支持。</block>
+  <block id="5eafc6b946f42f85611a7020c8963ef8" category="list-text">将缓存模块的边缘与NVRAM11模块中的开口对齐。</block>
+  <block id="6f36adf35f17125c62c31d605c56f817" category="paragraph">以下命令会为node1上的插槽6-1准备开机、并显示一条消息、指出已打开电源：</block>
+  <block id="496be6cf22594c66057746f4ed0e1e39" category="paragraph">确保命令输出将的状态报告为`power-on`并做好操作准备。</block>
+  <block id="cdcb00922b21796793c48c3b35b6c0f4" category="doc">启动恢复映像—FAS9500</block>
+  <block id="46dd13a6814ed7f56a6b685a892da660" category="doc">更换实时时钟电池—FAS9500</block>
+  <block id="542a28d27da2740fcbd2bfb50ba849cc" category="doc">关闭受损节点—FAS9500</block>
+  <block id="c864447c725c6855c6a867ef48db2ee6" category="doc">OKM、NSE和NVE的启动后介质更换步骤—FAS9500</block>
+  <block id="cb8bd5f8b409f772feeb282be5c812fd" category="list-text">Connect the console cable to the target node.</block>
+  <block id="09c59b704f34eb3d4a2fd7d67e831c1b" category="list-text">Use the `boot_ontap` command at the LOADER prompt to boot the node.</block>
+  <block id="ee576c01fd9d6961677d0a6255745ad9" category="paragraph">将节点启动至启动菜单： `boot_ontap menu`</block>
+  <block id="da0c8baa25fcee791ffa412ec90044ca" category="list-text">将控制台缆线移动到配对节点并以管理员身份登录。</block>
+  <block id="2f6a11061d2c04a9d9730e06edaa97a6" category="list-text">交还完成后，使用 `storage failover show` 和 storage failover show-giveback 命令检查故障转移和交还状态。</block>
+  <block id="da4a2b9c52e805a46a6951e79d1796d9" category="list-text">Move the console cable to the partner node.</block>
+  <block id="da4a3c359cf5d24082930f89cd19b3fc" category="list-text">Give back the target node using the `storage failover giveback -fromnode local` command.</block>
+  <block id="a23d49d00b003ec7514a6fcf51f93bac" category="list-text">At the clustershell prompt, enter the `net int show -is-home false` command to list the logical interfaces that are not on their home node and port.</block>
+  <block id="80d6c51420c97a5fd468a280127498fe" category="list-text">Move the console cable to the target node and run the `version -v` command to check the ONTAP versions.</block>
+  <block id="809f0d7cd6f78909c00532d70262031d" category="list-text">Move the console cable to the partner node and give back the target node storage using the `storage failover giveback -fromnode local -only-cfo-aggregates true local` command.</block>
+  <block id="20d54df84f7e55d01eb019ccfe3eebef" category="summary">您可以通过FAS9500系统文档来安装、设置和维护系统。</block>
+  <block id="5852e0b4d479d20d783c528e9f8e41fa" category="doc">FAS9500系统</block>
+  <block id="bc8cb8c20c19791f56e4ce60f7a2aad0" category="doc">卸下控制器、更换启动介质并传输启动映像—FAS9500</block>
+  <block id="eb0c0a024c4f0aa6cfdd5767de1f16f1" category="doc">更换I/O模块—FAS9500</block>
+  <block id="6e2a8281a18f34ebf7b28cf7584e58ea" category="doc">更换风扇—FAS9500</block>
+  <block id="96454e2f4cce6f7ff26336656ad504c5" category="doc">关闭受损控制器—FAS9500</block>
+  <block id="2fcf4c33596849c180828b304c73609a" category="doc">更换LED USB模块—FAS9500</block>
+  <block id="737b04c7e695216162d794c71001099a" category="doc">更换控制器模块硬件—FAS9500</block>
+  <block id="c3b3c57f039315476b0683acbee42a5a" category="doc">关闭受损控制器—FAS9500</block>
+  <block id="3b56ab083e8d5c37dcc957efc509182f" category="doc">完成系统还原—FAS9500</block>
+  <block id="3f679ad9b20cbb8994ff36e9ce18d58f" category="doc">更换NVRAM模块和/或NVRAM DIMM—FAS9500</block>
+  <block id="140a295824b1023b2fcf1ac1414fc56b" category="paragraph">要更换和NVRAM DIMM、您必须从机箱中卸下NVRAM模块、更换模块中发生故障的DIMM、然后重新安装NVRAM模块。</block>
+  <block id="566dc57c04b76274e7168e53e1eea041" category="list-text">受损节点是指要在其中执行维护的节点。</block>
+  <block id="350cecd9af7d98cbf31c22fbd46e60fe" category="list-text">运行状况良好的节点是受损节点的 HA 配对节点。</block>
+  <block id="821b1e6be57f410ab68ac2071fc04df4" category="doc">更换包含NVRAM11电池的目标控制电源模块- FAS9 500</block>
+  <block id="1aa73ef56da88752323de5876f9b3750" category="doc">更换电源—FAS9500</block>
+  <block id="70ebba1c8f978f26a3ed9799176dd8a9" category="doc">更换控制器模块—FAS9500</block>
+  <block id="0b69ae5dbb558a62f47c8962baf19909" category="list-text">If your system is in a MetroCluster configuration, you must review the section<block ref="2a021072247e4cc2397c2bcdaab4e2b0" category="inline-link-rx"></block> to determine whether you should use this procedure.</block>
+  <block id="c60c00789a015e4c8edc176d68ea53c2" category="list-text">在此操作步骤中，启动设备将从受损节点移至更换节点，以便更换节点在与旧控制器模块相同版本的 ONTAP 中启动。</block>
+  <block id="fd6012123eb1d03462c1cd48d50c92e6" category="list-text">受损节点是指要更换的节点。</block>
+  <block id="9e51ab12d26faade2a31d70da71c74f5" category="list-text">替代节点是指正在更换受损节点的新节点。</block>
+  <block id="537af5095a4992ae7e9026bd3ff008a6" category="list-text">运行正常的节点是运行正常的节点。</block>
+  <block id="c704a060606b2944e3c331124aaaa743" category="doc">详细步骤—FAS9500</block>
+  <block id="babff6765c503db416f9aad69aec82a2" category="inline-image-macro">宽度= 85px</block>
+  <block id="6cb216de48e8994ccb0a6c7cbc427e02" category="cell"><block ref="6cb216de48e8994ccb0a6c7cbc427e02" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="32a6e642c9cd7b5239fed7deb8d11082" category="image-alt">OIE cable100 GbE QSFP28</block>
+  <block id="9a7819d4ddc611b1438c0a7f4633f619" category="image-alt">OIE使用缆线将迷你SAS HD连接到迷你SAS HD</block>
+  <block id="47138f998237cc4fa9d1dde4218e6a79" category="image-alt">OIE缆线微型USB</block>
+  <block id="c08fd160f4570df01d3a40efa2524ce7" category="image-alt">OIE缆线电源</block>
+  <block id="92688677e16c8790a606404e51b362d1" category="image-alt">DRW 9500"提升"图标</block>
+  <block id="0604808a9f6264877dad5ce927edb94f" category="image-alt">DRW 9500缆线 管理臂</block>
+  <block id="fd2cb99acafb4f0144bfb5e0e4c31373" category="admonition">插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。</block>
+  <block id="3bdc20d60c6095f8c752a75e72777feb" category="doc">重新对系统进行布线—FAS9500</block>
+  <block id="580fe6e7e310b3db810754c7c7927744" category="list-text">如果 _replacement_ 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： `halt`</block>
+  <block id="fbe06d7223609c920831e2dffe0e0a96" category="list-text">Wait until the `Waiting for giveback...` message is displayed on the _replacement_ node console and then, from the healthy node, verify that the new partner system ID has been automatically assigned: storage failover show</block>
+  <block id="a138242d674238dc6089a602c6c8909b" category="list-text">After the giveback has been completed, confirm that the HA pair is healthy and that takeover is possible: storage failover show</block>
+  <block id="f2c155633ff38e4e2d070e9d244a9074" category="doc">移动并更换硬件—FAS9500</block>
+  <block id="68828ed4b0036df85ace8abb1ad7c137" category="doc">还原并验证配置—FAS9500</block>
+  <block id="de94b6a2b38d310a993cae18e6a797fe" category="paragraph">问题描述 以下命令：`node：：&gt; cluster ha modify -configured true``node：：&gt; storage failover modify -node node0 -enabled true`</block>
+  <block id="0efaf93a941de2d7943b578a71c531e5" category="paragraph">问题描述 此命令：``node：&gt; storage failover modify -node node0 -enabled true``</block>
+  <block id="ca44994b81cf73317bcdf6088f5dae8f" category="list-text"><block ref="ca44994b81cf73317bcdf6088f5dae8f" category="inline-link-macro-rx"></block></block>
+  <block id="bfd64d4015631c5c2c0c4db3a0badb51" category="list-text"><block ref="bfd64d4015631c5c2c0c4db3a0badb51" category="inline-link-macro-rx"></block></block>
+  <block id="f15e9fe5ff90a0ec8840f664bb40c138" category="list-text"><block ref="f15e9fe5ff90a0ec8840f664bb40c138" category="inline-link-macro-rx"></block></block>
+  <block id="b139dc4b4943474860d7b90b369c2b27" category="doc">视频步骤—FAS9500</block>
+  <block id="3a1bdb9a053493a7e1c1e62e796f32e6" category="doc">更换启动介质—FAS9500</block>
+  <block id="3e5fda4bdb63c28cc3aa53cadbde1129" category="doc">更换DIMM - FAS9500</block>
+  <block id="6a58b2807f942e88a255882209bad046" category="sidebar">缓存模块热插拔</block>
+  <block id="3867a4f17cad66bc9a480e8ad7b9ae3c" category="paragraph">endif::[]</block>
 </blocks>

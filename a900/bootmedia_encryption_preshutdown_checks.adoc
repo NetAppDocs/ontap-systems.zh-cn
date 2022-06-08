@@ -10,14 +10,14 @@ summary: 在关闭受损控制器并检查板载加密密钥的状态之前，�
 
 在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查正在运行的 ONTAP 版本。
 
-If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"]。
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"^]。
 
 .步骤
 . 检查受损控制器的状态：
 +
 ** 如果受损控制器处于登录提示符处，请以 `admin` 身份登录。
 ** 如果受损控制器位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的控制器上。
-** 如果受损控制器采用独立配置并出现 LOADER 提示符，请联系 link:http://mysupport.netapp.com/["mysupport.netapp.com"]。
+** 如果受损控制器采用独立配置并出现 LOADER 提示符，请联系 link:http://mysupport.netapp.com/["mysupport.netapp.com"^]。
 
 
 . 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
@@ -81,7 +81,7 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 如果命令失败，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"]
+http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
 ... 验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key-query`
 ... 关闭受损控制器。
@@ -92,7 +92,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"]
 ... 输入板载 security key-manager sync 命令： `ssecurity key-manager on板 载同步`
 +
 
-NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。 http://mysupport.netapp.com/["mysupport.netapp.com"]
+NOTE: Enter the customer's onboard key management passphrase at the prompt.If the passphrase cannot be provided, contact NetApp Support. http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
 ... 验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key-query`
 ... 验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。
@@ -138,7 +138,7 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 如果命令失败，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"]
+http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
 ... 验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key-query`
 ... 您可以安全地关闭控制器。
@@ -151,7 +151,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"]
 在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"]
+http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
 ... 验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key-query`
 ... 验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。
