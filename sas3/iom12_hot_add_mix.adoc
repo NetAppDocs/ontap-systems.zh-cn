@@ -1,7 +1,7 @@
 ---
 permalink: sas3/iom12-hot-add-mix.html 
 sidebar: sidebar 
-keywords: addional, storage, hot-add, iom12, shelves, shelf, sas, shelves, shelf, module, iom6, mix, stack, hot-add iom12 sheles to a stack of iom6 shelves 
+keywords: additional, storage, hot-add, iom12, shelves, shelf, sas, shelves, shelf, module, iom6, mix, stack, hot-add iom12 shelves to a stack of iom6 shelves 
 summary: 如果需要更多存储，您可以将 IOM12 磁盘架（带有 IOM12 模块的 SAS 磁盘架）热添加到 IOM6 磁盘架堆栈（带有 IOM6 模块的 SAS 磁盘架）中，这意味着您可以混合一个堆栈。 
 ---
 = 将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中
@@ -345,6 +345,7 @@ CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒
 |===
 . 将两个拉杆推向中央，关闭驱动器抽屉。
 . 对磁盘架中的每个抽盒重复上述步骤。
+. 连接前挡板。
 +
 .. 如果要添加多个磁盘架，请对要安装的每个磁盘架重复上述步骤。
 .. 连接每个磁盘架的电源：

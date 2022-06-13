@@ -6626,7 +6626,6 @@
   <block id="06dfcb3b1a9c224a29ae8981c6882d18" category="section-title">安装具有 IOM12 模块的磁盘架以进行热添加</block>
   <block id="4e24ff050030d18996425f4adbef1c69" category="paragraph">对于要热添加的每个磁盘架，您可以在为 SAS 连接布线之前将磁盘架安装到机架中，连接电源线，打开磁盘架电源并设置磁盘架 ID 。</block>
   <block id="82fd485bd66b7a7cf95b41701aff95f4" category="list-text">将要热添加的每个磁盘架的磁盘架 ID 设置为 HA 对或单控制器配置中唯一的 ID 。</block>
-  <block id="6f3cc8e26b4a1e5fe24b9cfea68de345" category="paragraph">如果您的系统具有内部磁盘架，则磁盘架 ID 必须在内部磁盘架和外部连接的磁盘架之间是唯一的。</block>
   <block id="437cff47077287b8acaab6cf6eb3f66e" category="inline-link-macro">更改磁盘架 ID</block>
   <block id="f44e011a4789f1353840c4446705dbef" category="paragraph">您可以使用以下子步骤更改磁盘架 ID ，或者有关更详细的说明，请使用 <block ref="7a954fe7521681b1209c8a82ea854632" category="inline-link-macro-rx"></block>。</block>
   <block id="be888bc11355717d8c2ff0800204b0b3" category="list-text">如果需要，请运行 Config Advisor 来验证已在使用的磁盘架 ID 。</block>
@@ -8723,4 +8722,5 @@
   <block id="3e5fda4bdb63c28cc3aa53cadbde1129" category="doc">更换DIMM - FAS9500</block>
   <block id="6a58b2807f942e88a255882209bad046" category="sidebar">缓存模块热插拔</block>
   <block id="3867a4f17cad66bc9a480e8ad7b9ae3c" category="paragraph">endif::[]</block>
+  <block id="50a5f31124b37f0e6f0175b4691d290a" category="paragraph">如果您的平台型号具有内部磁盘架、则磁盘架ID必须在内部磁盘架和外部连接的磁盘架之间是唯一的。</block>
 </blocks>
