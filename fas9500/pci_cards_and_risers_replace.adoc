@@ -88,9 +88,55 @@ I/O 模块从机箱中分离，并从 I/O 插槽中移出大约 1/2 英寸。
 确保跟踪 I/O 模块所在的插槽。
 
 +
+.动画-删除/安装I/O模块
+video::0903b1f9-187b-4bb8-9548-ae9b0012bb21[panopto]
++
+image::../media/drw_9500_remove_PCIe_module.svg[DRW 9500-卸下PCIe模块]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[图例图标 01]
+ a| 
+I/O 凸轮闩锁有字母和编号
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[图例图标 02]
+ a| 
+I/O 凸轮闩锁完全解锁
+
+|===
+
+
+. 将 I/O 模块放在一旁。
+. 将替代 I/O 模块安装到机箱中，方法是将 I/O 模块轻轻滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销啮合，然后将 I/O 凸轮闩锁一直向上推，将模块锁定到位。
+. 根据需要重新对 I/O 模块进行布线。
 
 
 
 
+== 第 3 步：更换 I/O 模块后重新启动控制器
 
-endif::[]
+更换 I/O 模块后，必须重新启动控制器模块。
+
+.步骤
+. 在LOADER提示符处、重新启动节点：_Bye_注：此操作将重新初始化PCIe卡和其他组件、然后重新启动节点。
+. 如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 `nicadmin convert` 命令将这些端口转换为 10 GbE 连接。
++
+
+NOTE: 请务必在完成转换后退出维护模式。
+
+. 使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
+
+
+
+
+== 第 4 步：将故障部件退回 NetApp
+
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

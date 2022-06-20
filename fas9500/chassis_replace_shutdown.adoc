@@ -6,6 +6,8 @@ summary: 要更换机箱，必须关闭控制器。
 ---
 = 关闭受损控制器—FAS9500
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 您必须先关闭机箱中的控制器或控制器，然后再将其移至新机箱。

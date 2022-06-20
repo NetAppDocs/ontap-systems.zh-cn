@@ -26,7 +26,34 @@ IMPORTANT: 您必须在将风扇模块从机箱中卸下后两分钟内更换此
 IMPORTANT: 风扇模块较短。请始终用您的空闲手托住风扇模块的底部，以免其突然从机箱中脱离并造成您的人身伤害。
 
 +
+.动画-拆卸/安装风扇
+video::86b0ed39-1083-4b3a-9e9c-ae78004c2ffc[panopto]
++
+image::../media/drw_9500_remove_install_fan.svg[DRW 9500-卸下安装风扇]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[图例图标 01]
+ a| 
+Terra cotta 释放按钮
 
 
 
-endif::[]
+ a| 
+image::../media/legend_icon_02.svg[图例图标 02]
+ a| 
+将风扇滑入 / 滑出机箱
+
+|===
+. 将风扇模块放在一旁。
+. 将替代风扇模块的边缘与机箱中的开口对齐，然后将其滑入机箱，直至其卡入到位。
++
+将风扇模块成功插入机箱后，琥珀色警示 LED 会闪烁四次。
+
+. 将挡板与球形螺柱对齐，然后将挡板轻轻推入球形螺柱上。
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"^] 第页，了解更多信息。
+

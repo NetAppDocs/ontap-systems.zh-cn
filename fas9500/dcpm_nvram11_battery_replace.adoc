@@ -33,7 +33,42 @@ IMPORTANT: 必须在卸下 DCPM 模块后五分钟内更换机箱中的 DCPM 模
 
 . 按下模块把手上的 Terra cotta 锁定按钮，然后将 DCPM 模块滑出机箱。
 +
+.动画-删除/安装DCPM
+video::c067cf9d-35b8-4fbe-9573-ae78004c2328[panopto]
++
+image::../media/drw_9500_remove_NV_battery.svg[DRW 9500-取出NV电池]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[图例图标 01]
+ a| 
+DCPM 模块的 Terra cotta 锁定按钮
+
+|===
+. 将 DCPM 模块的末端与机箱开口对齐，然后将其轻轻滑入机箱，直到其卡入到位。
++
+
+NOTE: 模块和插槽采用键控方式。请勿强行将模块插入开口。如果模块不易插入，请重新对齐模块并将其滑入机箱。
+
++
+插入电池后，琥珀色 LED 会闪烁四次，如果电池提供电压，绿色 LED 也会闪烁。如果不闪存，则可能需要更换。
 
 
 
-endif::[]
+
+
+== 第 2 步：处置电池
+
+您必须根据当地有关电池回收或处置的法规处置电池。如果您无法正确处置电池，则必须按照套件随附的 RMA 说明将电池退回 NetApp 。
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["安全信息和法规通知"^]
+
+
+
+== 第 3 步：将故障部件退回 NetApp
+
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

@@ -5336,7 +5336,6 @@
   <block id="45effe123bc9d7b38324ac0170a7d2ed" category="list-text">将替代 I/O 模块安装到机箱中，方法是将 I/O 模块轻轻滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销啮合，然后将 I/O 凸轮闩锁一直向上推，将模块锁定到位。</block>
   <block id="fe93c3e28753ccd59e8b3dc55497b074" category="section-title">第 3 步：更换 PCIe 模块后重新启动控制器</block>
   <block id="60f0e4a73edf1a4e40be1d8fff5656f6" category="paragraph">更换 PCIe 模块后，必须重新启动控制器模块。</block>
-  <block id="2f77598cc1406917571281533b6a7290" category="list-text">如果节点处于 LOADER 提示符处，请启动节点，如果您看到系统 ID 不匹配的提示警告并要求覆盖系统 ID `bye` ，请回答 `y`</block>
   <block id="074956b98e6ab62b7ae2bf9b8699df64" category="list-text">如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 `nicadmin convert` 命令将这些端口转换为 10 GbE 连接。</block>
   <block id="a807e98301721a3033173dc23ac9fd93" category="summary">要热插拔包含 NVRAM10 电池的降级控制器电源模块（ DCPM ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。</block>
   <block id="9b9f090ead8603008076b06ff01712ce" category="paragraph">在从机箱中卸下故障模块之前，您必须准备好一个替代 DCPM 模块，并且必须在卸下此模块后五分钟内更换此模块。从机箱中删除 DCPM 模块后，拥有 DCPM 模块的控制器模块除了故障转移到另一个控制器模块之外，不存在关闭保护。</block>
@@ -8721,6 +8720,111 @@
   <block id="3a1bdb9a053493a7e1c1e62e796f32e6" category="doc">更换启动介质—FAS9500</block>
   <block id="3e5fda4bdb63c28cc3aa53cadbde1129" category="doc">更换DIMM - FAS9500</block>
   <block id="6a58b2807f942e88a255882209bad046" category="sidebar">缓存模块热插拔</block>
-  <block id="3867a4f17cad66bc9a480e8ad7b9ae3c" category="paragraph">endif::[]</block>
   <block id="50a5f31124b37f0e6f0175b4691d290a" category="paragraph">如果您的平台型号具有内部磁盘架、则磁盘架ID必须在内部磁盘架和外部连接的磁盘架之间是唯一的。</block>
+  <block id="5db74a009a275aefa3af112cb922e082" category="list-text">在LOADER提示符处、重新启动节点：_Bye_注：此操作将重新初始化PCIe卡和其他组件、然后重新启动节点。</block>
+  <block id="208e6af1006f73ba3b37a7e05e3692cd" category="list-text">使节点恢复正常运行：`storage failover giveback -ofnode _impaired_node_name_`</block>
+  <block id="837fcf17f123dccb1301f252ade8a58e" category="admonition">如果您的系统采用双节点MetroCluster 配置、则必须按照下一步中所述切回聚合。</block>
+  <block id="abc219c929a34cf7b62e36c2503b63ac" category="video-title">动画-删除控制器模块</block>
+  <block id="0b3bd9d9290b20b7deabeee68dbd8982" category="image-alt">DRW 9500-删除PCM源</block>
+  <block id="0c95144374a371b7d780cf2dda8caa68" category="image-alt">DRW 9500PCM开源</block>
+  <block id="0b8e9f368ea269ec23c6c676a7561e53" category="video-title">动画-更换启动介质</block>
+  <block id="3937ac537a8c89789d0e3e5e505a0afb" category="image-alt">DRW 9500-删除启动开发源</block>
+  <block id="b598514d43d2a37ba4d4454196b07253" category="inline-image-macro">宽度= 20</block>
+  <block id="e96cf2879e64ebff07df1eef426e915f" category="paragraph"><block ref="e96cf2879e64ebff07df1eef426e915f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="72f8e032e3cfe23ff2d5b260d669bf04" category="paragraph"><block ref="72f8e032e3cfe23ff2d5b260d669bf04" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="defa99ee750d2ca6a8f52cf79e8eb713" category="list-text">bootarg.init.boot_clustered</block>
+  <block id="d18fd3db938a26ebbd3f74de41f0b73f" category="list-text">合作伙伴 - 系统</block>
+  <block id="bac349cdf99ddd20206c9b20eb9e6d22" category="list-text">bootarg.init.flash_optimized ，用于 AFF</block>
+  <block id="f3b31cc7028e1885fb21b81b0fdbee37" category="list-text">bootarg.init.san_optimized ，用于 AFF</block>
+  <block id="cbcb656967b507992a4a640a604c47e0" category="list-text">bootarg.init.switchless_cluster.enable</block>
+  <block id="8e66622dd5a924bd59ee4f46318a13a9" category="list-text">bootarg.storageencryption.support &lt;value&gt;</block>
+  <block id="bdafe896118bc000c3a68090808112cd" category="list-text">bootarg.keymanager.support &lt;value&gt;</block>
+  <block id="8f4ea3656910a928382f8c75368c3c2a" category="list-text">kmip.init.interface &lt;value&gt;</block>
+  <block id="b2adbab4ce96430a3475db235c4be8c3" category="list-text">kmip.init.ipaddr &lt;value&gt;</block>
+  <block id="70e8273bd6b058c89bc23bad2de4c396" category="list-text">kmip.init.netmask &lt;value&gt;</block>
+  <block id="4d10af14d34e5e468c4aee19207329d3" category="list-text">kmip.init.gateway &lt;value&gt;</block>
+  <block id="a1781eecf18376feb2f740b6a3d7781d" category="list-text">bootarg.bontery_keymanager &lt;value&gt;</block>
+  <block id="8ed13fe688162a9d4d89829700344e8f" category="list-text">使用 `printenv variable-name` 命令确认所做的更改。</block>
+  <block id="890a5db496d99a96f099de944c9791c0" category="admonition">The target port you configure is the target port you use to communicate with the impaired node from the healthy node during var file system restore with a network connection.You can also use the e0M port in this command.</block>
+  <block id="f8cc7bd538c729e18dab57ecfd18b69e" category="video-title">动画-更换NVRAM模块</block>
+  <block id="9b191eaf82da57faf3acb37f96f84ca6" category="image-alt">DRW 9500移动删除NVRAM模块</block>
+  <block id="1b75d6028af1363f62eb9a45010f31c4" category="image-alt">DRW 9500-删除NVRAM模块内容</block>
+  <block id="0855873e0fa5bed2d0067d6acae6c0df" category="paragraph">您必须在启动替代节点时确认系统 ID 更改，然后确认更改是否已实施。</block>
+  <block id="93a4033a981ca86f17e1c02656473521" category="list-text">如果替代节点处于维护模式(显示`*&gt;`提示符)、请退出维护模式并转到加载程序提示符：`halt`</block>
+  <block id="fbb9a853512346feaa4279f18e3efe8c" category="list-text">等待更换节点控制台上显示`waiting for giveback...`消息、然后从运行状况良好的节点上、验证是否已自动分配新的配对系统ID：`storage failover show`</block>
+  <block id="2675f497966bc5cad0cdd88dbe6eab31" category="list-text">等待`savecore`命令完成、然后再发出交还。</block>
+  <block id="80de24e4482214278771d2b0f3142427" category="paragraph">您可以输入以下命令来监控`savecore`命令的进度：`ssystem node run -node local-node-name partner savecore -s`</block>
+  <block id="7a18402f95cb86527db24f56d6baec40" category="list-text">从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode replacement_node_name`</block>
+  <block id="3217c14b22c3695ed301b94539bd2dbb" category="paragraph">替代节点将收回其存储并完成启动。</block>
+  <block id="8a6fbf23d593cc1be4de4068cb3eeee1" category="paragraph">storage failover show 命令的输出不应包含 System ID changed on partner 消息。</block>
+  <block id="18963b05f9f3bc779f544c26aae06ab9" category="paragraph">属于替代节点的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</block>
+  <block id="cfe787a999b8c200091f805ad9426e24" category="list-text">替代节点是灾难站点上磁盘的当前所有者。</block>
+  <block id="7c5a57d1d4b3b589da7f755562ad50f8" category="paragraph">请参见<block ref="4b1c17d30e94cc8d68adcd4265a76547" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="2c2b9a83665e5336275a4320efcb9a16" category="image-alt">DRW 9500-删除PCM</block>
+  <block id="31006bbd619d2a77e6fe8ac85bee0cc0" category="image-alt">DRW 9500PCM已打开</block>
+  <block id="65b7d00d22ce12162c084039ae28de63" category="video-title">动画-更换RTC电池</block>
+  <block id="53eb8664ee63f8ed2095fd3f5e8eb8f1" category="image-alt">DRW 9500-取出RTC电池</block>
+  <block id="e0ec09ab8cb93f04e1ddb90be314a159" category="paragraph">向上转动电池</block>
+  <block id="0c724ad091d5fbe112bba9f946140f9b" category="paragraph">将电池从外壳中滑出</block>
+  <block id="4714e8423619d9cc43be300b5a406117" category="list-text">交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
+  <block id="29aa4a699a26a575f893c69af8527aa7" category="video-title">动画-拆卸/安装风扇</block>
+  <block id="2966eb224d8489f097a42690752e472a" category="image-alt">DRW 9500-卸下安装风扇</block>
+  <block id="51ad52ed6ddd21c164ee0ea5b8407f3a" category="video-title">动画—FAS9500安装和设置说明(ISI)</block>
+  <block id="2ab60626c3ca1f306ba2c65e1e8f5d49" category="paragraph">以下视频显示了运行ONTAP 9.6及更高版本的系统的端到端软件配置。</block>
+  <block id="262047271a9f0ac7ba69952e78e4ced1" category="video-title">动画-删除/安装PSU</block>
+  <block id="9494be0e4fc0cc7bf5a561ba23cc37dd" category="image-alt">DRW 9500remove install PSU module</block>
+  <block id="c593377a30c937702f96d13d76989bc2" category="video-title">动画-删除/安装I/O模块</block>
+  <block id="5ef805c7229de31e948db97478049a11" category="image-alt">DRW 9500-卸下PCIe模块</block>
+  <block id="1738e7d625dcae031916a2d329f6a6b1" category="video-title">动画-删除/安装DCPM</block>
+  <block id="450c055f11dd33524e41f3c84160e631" category="image-alt">DRW 9500-取出NV电池</block>
+  <block id="cae2fd913220da36fb401366df2ed0b8" category="video-title">动画-删除/安装USB模块</block>
+  <block id="0161d43ee09fff69cc35ae43ed1f07f5" category="image-alt">DRW 9500-删除更换LED模块</block>
+  <block id="6e7d5178a758393b97e367ca3da27d68" category="list-text">在每个节点开始启动时，如果您看到 Press Ctrl-C for Boot Menu 消息，请按 `Ctrl-C` 以中断启动过程。</block>
+  <block id="58f1a63de110893e27e2b9974273d710" category="video-title">动画—更换控制器模块、完成过程</block>
+  <block id="eee0b061ed19ecc08e6c30167f3b0ca9" category="image-alt">DRW 9500remove boot dev</block>
+  <block id="3c882fe343465f148bf8900ab7dde11b" category="image-alt">DRW 9500"更换PCM DIMM</block>
+  <block id="abe0e9d012f3bb2e25626cbd54f69e36" category="video-title">动画-安装控制器模块</block>
+  <block id="9c50a16ad09918eb5e84e11b90826699" category="video-title">动画-删除控制器</block>
+  <block id="3b0d2698116982bc6cc48e12fb31e0d2" category="image-alt">DRW 9500DIMM映射</block>
+  <block id="a0ab299f7b0b0e1628580e5c326625a7" category="video-title">动画-更换DIMM</block>
+  <block id="2ea72e4e42953327054629036f1b6a12" category="video-title">动画-安装控制器</block>
+  <block id="86319021cdc9cc33274101862a78bb0d" category="list-text">如果显示一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的节点保持关闭状态。</block>
+  <block id="ce43cf0f3fdd398cbca499ba447d6df2" category="video-title">动画—双节点无交换机集群布线</block>
+  <block id="b78339b4bcd807d0cb07b09d3b379c86" category="image-alt">DRW 9500tnsc网络布线</block>
+  <block id="8d9c487a6d60ae07a889bc52787cfb8f" category="image-alt">OIE图例图标1长</block>
+  <block id="9f6754a88107405b79961d111f064f72" category="paragraph">使用缆线连接32 Gb FC网络交换机：</block>
+  <block id="393993c9f7562f1a53d4d13744facd0e" category="paragraph">插槽A3和B3 (E3A和E3C)以及插槽A9和B9 (e9a和e9c)中的端口连接到32 Gb FC网络交换机。</block>
+  <block id="7b49110d5bcbc4998964949bf1d4d386" category="paragraph">使用缆线连接25 GbE连接：</block>
+  <block id="823c1d0595274590edabd782a377efc4" category="paragraph">使用缆线将插槽5和B5 (5a、5b、5c和5d)以及插槽A7和B7 (7a、7b、7c和7d)中的端口连接到25 GbE网络交换机。</block>
+  <block id="69b080eb9ee2f49ccb265903c6a2e0a9" category="list-text">将电源线连接到PSU并将其连接到不同的电源(未显示)。</block>
+  <block id="67e68c155f62af046486d4818ab551b1" category="list-text">将缆线固定到缆线管理臂上(未显示)。</block>
+  <block id="0815daeb3f5819b5b26f2d852a3480ed" category="video-title">动画—切换集群布线</block>
+  <block id="ab4ba237fa2abf24783610d2c0f56a3a" category="image-alt">DRW 9500"交换网络布线"</block>
+  <block id="cc0952f55da6292c79f2dc5ff372d9af" category="paragraph">使用缆线连接25 GbE连接：</block>
+  <block id="0761555d16ac8203353f5bd7e80d3769" category="list-text">将电源线连接到PSU并将其连接到不同的电源(未显示)。</block>
+  <block id="c88355c0ee4fee45dfc3a83996fea5ca" category="admonition">有关SAS布线的详细信息和工作表、请参见<block ref="a92f79530cc2a1794f52d1c1214e4c1c" category="inline-link-rx"></block></block>
+  <block id="9d00a2e517a4069bd82955f8b1b02a18" category="list-text">填写适用于您系统的SAS布线工作表。请参见<block ref="a92f79530cc2a1794f52d1c1214e4c1c" category="inline-link-rx"></block>。</block>
+  <block id="3e86e158b18295e17a62b9c2ae164933" category="list-text">使用以下动画或图将控制器连接到三个(一个驱动器架的一个堆栈和两个驱动器架的一个堆栈) DS224C驱动器架。</block>
+  <block id="3ef90c4464f34327f4d05f1f924feb0e" category="video-title">动画—为驱动器架布线</block>
+  <block id="dd012e2b911cefcb3afb5c18a9eea983" category="image-alt">DRW 9500SAS磁盘架布线</block>
+  <block id="b16ca301b4f1b51a963f8ecd8de52638" category="image-alt">OIE图例图标1 MB</block>
+  <block id="b216213c8469f70fd4cd72ba7795f4aa" category="paragraph">使用图作为参考、将驱动器架堆栈1连接到控制器。</block>
+  <block id="27ed07f0cfc6beedfca00fcc35ebf10c" category="paragraph">迷你SAS缆线</block>
+  <block id="0c1fee206f5adbf8dec7b6781d20a072" category="image-alt">OIE图例图标2 t</block>
+  <block id="ff080081ab0602360a6573f88141ada1" category="paragraph">使用图作为参考、将驱动器架堆栈2连接到控制器。</block>
+  <block id="e42228484668e8763c1c0da7af87772c" category="video-title">动画—设置磁盘架ID&amp;#8217</block>
+  <block id="6029e94957ee34ca18227d08b799c166" category="admonition">第一个数字将继续闪烁</block>
+  <block id="5d41de9f95f6b3adc43d1136659190d1" category="paragraph">按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。</block>
+  <block id="28764a4bf139e725956a33d36127da72" category="admonition">第一个数字停止闪烁、第二个数字继续闪烁。</block>
+  <block id="9c57a0190e6e11b8fcff37edb97fbe78" category="image-alt">图例图标04</block>
+  <block id="53a45c8708767f781eeaca52dba79727" category="image-alt">图例图标05</block>
+  <block id="a308cbadd7ff9683558704008014a7a5" category="video-title">动画—打开控制器的电源</block>
+  <block id="92ffcfe5fdb4d48f02fe79bb44448ab3" category="image-alt">打开DRW 9500"电源</block>
+  <block id="4b9bab34d04412dbe9160b882c2a8c81" category="video-title">动画—将笔记本电脑连接到管理交换机</block>
+  <block id="89b878b89413c1b8d2254e6380e13c0d" category="list-text">使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台、然后将笔记本电脑连接到管理子网上的交换机。</block>
+  <block id="27daaf3028854170e8321e8ffc573b7a" category="image-alt">DRW 9500缆线 控制台交换机控制器</block>
+  <block id="c1ba9dd5eac89f4e8a8e84e18e1785d1" category="list-text">Configure the system using the data you collected in the<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block> 。</block>
+  <block id="e9a40b7f4288ab51ddb8de2a88f0cf93" category="video-title">动画-删除/安装LED/USB模块</block>
+  <block id="8e040b00982105244874f94450843d7a" category="video-title">动画—更换I/O模块</block>
+  <block id="a282c221fc0b795896ece0422f9febe5" category="paragraph">安装SAS磁盘架并为其布线、如中所述<block ref="f5c5b2b96e8da7cc3e4c1c8ae096611e" category="inline-link-rx"></block>。</block>
 </blocks>

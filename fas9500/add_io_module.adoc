@@ -6,8 +6,11 @@ summary: 您可以将 I/O 模块添加到系统中，方法是在已完全填充
 ---
 = 添加一个I/O模块—FAS9500
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
+[role="lead"]
 您可以通过在已完全填充的系统中将 NIC 或存储适配器更换为新的 NIC 或存储适配器，或者将新的 NIC 或存储适配器添加到系统中的空机箱插槽中来向系统添加 I/O 模块。
 
 .开始之前
@@ -119,9 +122,62 @@ I/O 模块从机箱中分离，并从 I/O 插槽中移出大约 1/2 英寸。
 确保跟踪 I/O 模块所在的插槽。
 
 +
+.动画—更换I/O模块
+video::0903b1f9-187b-4bb8-9548-ae9b0012bb21[panopto]
++
+image::../media/drw_9500_remove_PCIe_module.svg[DRW 9500-卸下PCIe模块]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[图例图标 01]
+ a| 
+I/O 凸轮闩锁有字母和编号
 
 
 
+ a| 
+image::../media/legend_icon_02.svg[图例图标 02]
+ a| 
+I/O 凸轮闩锁完全解锁
+
+|===
 
 
-endif::[]
+. 将 I/O 模块安装到目标插槽中：
++
+.. 将 I/O 模块与插槽边缘对齐。
+.. 将 I/O 模块滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销接合。
+.. 将 I/O 凸轮闩锁完全向上推，以将模块锁定到位。
+
+
+. 重复执行拆卸和安装步骤以更换控制器 A 的其他模块
+. 如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。
+. 从加载程序提示符 _bybye 重新启动节点
+. 从配对节点交还节点。`storage failover giveback -ofnode target_node_name`
+. 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
+. 如果您添加了：
++
+[cols="1,2"]
+|===
+| 如果 I/O 模块为 ... | 那么 ... 
+
+
+ a| 
+插槽 3 或 7 中的 NIC 模块，
+ a| 
+对每个端口使用 `storage port modify -node *_< 节点名称 >_ -port *_< 端口名称 >__ -mode network` 命令。
+
+
+
+ a| 
+存储模块
+ a| 
+安装SAS磁盘架并为其布线、如中所述https://docs.netapp.com/us-en/ontap-systems/sas3/install-hot-add-shelf.html["热添加SAS磁盘架"^]。
+
+|===
+. 对控制器 B 重复上述步骤
+
