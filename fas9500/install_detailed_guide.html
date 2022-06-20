@@ -6383,7 +6383,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-08 13:53:02 +0000">06/08/2022</time>
+    <time datetime="2022-06-20 13:54:59 +0000">06/20/2022</time>
     
   
 
@@ -6748,6 +6748,930 @@
 <ol class="arabic">
 <li>
 <p>使用动画或插图完成控制器与交换机之间的布线：</p>
+<div class="videoblock">
+<div class="title">动画—双节点无交换机集群布线</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=da08295f-ba8c-4de7-88c3-ae7c0170408d" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_tnsc_network_cabling.svg" alt="DRW 9500tnsc网络布线">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">步骤</th>
+<th class="tableblock halign-left valign-top">在每个控制器上执行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_1_lg.svg" alt="OIE图例图标1长">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用缆线连接集群互连端口：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>插槽 A4 和 B4 （ E4A ）</p>
+</li>
+<li>
+<p>插槽 -A8 和 B8 （ E8a ）</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable100_gbe_qsfp28.svg" alt="OIE cable100 GbE QSFP28">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_2_lp.svg" alt="OIE 图例图标 2 LP">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用缆线连接控制器管理（扳手）端口。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_rj45.svg" alt="OIE 缆线 RJ45">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_3_o.svg" alt="OIE 图例图标 3 o">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用缆线连接32 Gb FC网络交换机：</p>
+</div>
+<div class="paragraph">
+<p>插槽A3和B3 (E3A和E3C)以及插槽A9和B9 (e9a和e9c)中的端口连接到32 Gb FC网络交换机。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_sfp_gbe_copper.svg" alt="OIE 使用缆线连接 SFP GbE 铜缆">
+</div>
+</div>
+<div class="paragraph">
+<p>40GbE 主机网络交换机：</p>
+</div>
+<div class="paragraph">
+<p>使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable100_gbe_qsfp28.svg" alt="OIE cable100 GbE QSFP28">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_4_dr.svg" alt="OIE 图例图标 4 驱动器">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用缆线连接25 GbE连接：</p>
+</div>
+<div class="paragraph">
+<p>使用缆线将插槽5和B5 (5a、5b、5c和5d)以及插槽A7和B7 (7a、7b、7c和7d)中的端口连接到25 GbE网络交换机。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_sfp_gbe_copper.svg" alt="OIE 使用缆线连接 SFP GbE 铜缆">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>将电源线连接到PSU并将其连接到不同的电源(未显示)。</p>
+</li>
+<li>
+<p>将缆线固定到缆线管理臂上(未显示)。</p>
+</li>
+<li>
+<p>To cable your storage, see <a href="#Step 4: Cable controllers to drive shelves">[Step 4: Cable controllers to drive shelves]</a>。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">选项 2 ：交换集群</div>
+<div class="content">
+<div class="paragraph">
+<p>控制器上的管理网络，数据网络和管理端口连接到交换机。集群互连和 HA 端口通过缆线连接到集群 /HA 交换机。</p>
+</div>
+<div class="paragraph">
+<p>您必须已联系网络管理员，了解有关将系统连接到交换机的信息。</p>
+</div>
+<div class="paragraph">
+<p>在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_pull_tab_up.svg" alt="OIE 缆线拉片向上">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>使用动画或插图完成控制器与交换机之间的布线：</p>
+<div class="videoblock">
+<div class="title">动画—切换集群布线</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=3ad3f118-8339-4683-865f-ae7c0170400c" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_switched_network_cabling.svg" alt="DRW 9500&quot;交换网络布线&quot;">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">步骤</th>
+<th class="tableblock halign-left valign-top">在每个控制器上执行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_1_lg.svg" alt="OIE图例图标1长">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用缆线连接集群互连 A 端口：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>插槽 A4 和 B4 （ E4A ）连接到集群网络交换机。</p>
+</li>
+<li>
+<p>插槽 "A8 和 B8 （ E8a ）连接到集群网络交换机。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable100_gbe_qsfp28.svg" alt="OIE cable100 GbE QSFP28">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_2_lp.svg" alt="OIE 图例图标 2 LP">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用缆线连接控制器管理（扳手）端口。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_rj45.svg" alt="OIE 缆线 RJ45">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_3_o.svg" alt="OIE 图例图标 3 o">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用缆线连接32 Gb FC网络交换机：</p>
+</div>
+<div class="paragraph">
+<p>插槽A3和B3 (E3A和E3C)以及插槽A9和B9 (e9a和e9c)中的端口连接到32 Gb FC网络交换机。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_sfp_gbe_copper.svg" alt="OIE 使用缆线连接 SFP GbE 铜缆">
+</div>
+</div>
+<div class="paragraph">
+<p>40GbE 主机网络交换机：</p>
+</div>
+<div class="paragraph">
+<p>使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable100_gbe_qsfp28.svg" alt="OIE cable100 GbE QSFP28">
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_4_dr.svg" alt="OIE 图例图标 4 驱动器">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用缆线连接25 GbE连接：</p>
+</div>
+<div class="paragraph">
+<p>使用缆线将插槽5和B5 (5a、5b、5c和5d)以及插槽A7和B7 (7a、7b、7c和7d)中的端口连接到25 GbE网络交换机。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_sfp_gbe_copper.svg" alt="OIE 使用缆线连接 SFP GbE 铜缆">
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>将电源线连接到PSU并将其连接到不同的电源(未显示)。</p>
+</li>
+<li>
+<p>将缆线固定到缆线管理臂上(未显示)。</p>
+</li>
+<li>
+<p>To cable your storage, see <a href="#Step 4: Cable controllers to drive shelves">[Step 4: Cable controllers to drive shelves]</a>。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="第-4-步使用缆线将控制器连接到驱动器架">第 4 步：使用缆线将控制器连接到驱动器架</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到 DS212C 或 DS224C 驱动器磁盘架。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+有关SAS布线的详细信息和工作表、请参见 <a href="https://docs.netapp.com/us-en/ontap-systems/sas3/overview-cabling-rules-examples.html" target="_blank" rel="noopener">"SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<div class="title">开始之前</div>
+<ul>
+<li>
+<p>填写适用于您系统的SAS布线工作表。请参见 <a href="https://docs.netapp.com/us-en/ontap-systems/sas3/overview-cabling-rules-examples.html" target="_blank" rel="noopener">"SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"</a>。</p>
+</li>
+<li>
+<p>请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_pull_tab_up.svg" alt="OIE 缆线拉片向上">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_pull_tab_down.svg" alt="OIE 缆线下拉卡舌">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>使用以下动画或图将控制器连接到三个(一个驱动器架的一个堆栈和两个驱动器架的一个堆栈) DS224C驱动器架。</p>
+<div class="videoblock">
+<div class="title">动画—为驱动器架布线</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=c958aae6-9d08-4d3d-a213-ae7c017040cd" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_sas_shelf_cabling.svg" alt="DRW 9500SAS磁盘架布线">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">步骤</th>
+<th class="tableblock halign-left valign-top">在每个控制器上执行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_1_mb.svg" alt="OIE图例图标1 MB">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用图作为参考、将驱动器架堆栈1连接到控制器。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg" alt="OIE使用缆线将迷你SAS HD连接到迷你SAS HD">
+</div>
+</div>
+<div class="paragraph">
+<p>迷你SAS缆线</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/oie_legend_icon_2_t.svg" alt="OIE图例图标2 t">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>使用图作为参考、将驱动器架堆栈2连接到控制器。</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg" alt="OIE使用缆线将迷你SAS HD连接到迷你SAS HD">
+</div>
+</div>
+<div class="paragraph">
+<p>迷你SAS缆线</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>To complete setting up your system, see <a href="#Step 5: Complete system setup and configuration">[Step 5: Complete system setup and configuration]</a>。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="第-5-步完成系统设置和配置">第 5 步：完成系统设置和配置</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。</p>
+</div>
+<div class="exampleblock tabbed-block">
+<div class="content">
+<div class="openblock">
+<div class="title">选项 1 ：如果启用了网络发现</div>
+<div class="content">
+<div class="paragraph">
+<p>如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>使用以下动画或图形设置一个或多个驱动器架 ID ：</p>
+<div class="videoblock">
+<div class="title">动画—设置磁盘架ID&amp;#8217</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=95a29da1-faa3-4ceb-8a0b-ac7600675aa6" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_power-on_set_shelf_ID_set.svg" alt="已设置 DRW 电源打开设置磁盘架 ID">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_01.svg" alt="图例图标 01">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>拆下端盖。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_02.svg" alt="图例图标 02">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+第一个数字将继续闪烁
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_03.svg" alt="图例图标 03">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+第一个数字停止闪烁、第二个数字继续闪烁。
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_04.svg" alt="图例图标04">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>更换端盖。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_05.svg" alt="图例图标05">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>将电源线插入控制器电源，然后将其连接到不同电路上的电源。</p>
+</li>
+<li>
+<p>打开两个节点的电源开关。</p>
+<div class="videoblock">
+<div class="title">动画—打开控制器的电源</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a905e56e-c995-4704-9673-adfa0005a891" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_power-on.svg" alt="打开DRW 9500&quot;电源">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+初始启动可能需要长达八分钟的时间。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>确保您的笔记本电脑已启用网络发现。</p>
+<div class="paragraph">
+<p>有关详细信息，请参见笔记本电脑的联机帮助。</p>
+</div>
+</li>
+<li>
+<p>使用以下动画将您的笔记本电脑连接到管理交换机。</p>
+<div class="videoblock">
+<div class="title">动画—将笔记本电脑连接到管理交换机</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/dwr_laptop_to_switch_only.svg" alt="DWR 笔记本电脑仅连接到交换机">
+</div>
+</div>
+</li>
+<li>
+<p>选择列出的 ONTAP 图标以发现：</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_autodiscovery_controler_select.svg" alt="DRW 自动发现控制器选择">
+</div>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>打开文件资源管理器。</p>
+</li>
+<li>
+<p>单击左窗格中的 network 。</p>
+</li>
+<li>
+<p>右键单击并选择刷新。</p>
+</li>
+<li>
+<p>双击 ONTAP 图标并接受屏幕上显示的任何证书。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+XXXXX 是目标节点的系统序列号。
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>此时将打开 System Manager 。</p>
+</div>
+</li>
+<li>
+<p>使用 System Manager 引导式设置使用中收集的数据配置系统 <a href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613" target="_blank" rel="noopener">"《 ONTAP 配置指南》"</a>。</p>
+</li>
+<li>
+<p>设置您的帐户并下载 Active IQ Config Advisor ：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>登录到现有帐户或创建帐户。</p>
+<div class="paragraph">
+<p><a href="https://mysupport.netapp.com/eservice/public/now.do" target="_blank" rel="noopener">"NetApp 支持注册"</a></p>
+</div>
+</li>
+<li>
+<p>注册您的系统。</p>
+<div class="paragraph">
+<p><a href="https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct" target="_blank" rel="noopener">"NetApp 产品注册"</a></p>
+</div>
+</li>
+<li>
+<p>下载 Active IQ Config Advisor 。</p>
+<div class="paragraph">
+<p><a href="https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor" target="_blank" rel="noopener">"NetApp 下载： Config Advisor"</a></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>运行 Config Advisor 以验证系统的运行状况。</p>
+</li>
+<li>
+<p>After you have completed the initial configuration, go to the <a href="https://www.netapp.com/data-management/oncommand-system-documentation/" target="_blank" rel="noopener">"ONTAP 和 AMP ； ONTAP System Manager 文档资源"</a> page for information about configuring additional features in ONTAP.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title">选项 2 ：如果未启用网络发现</div>
+<div class="content">
+<div class="paragraph">
+<p>如果您使用的不是基于 Windows 或 Mac 的笔记本电脑或控制台，或者未启用自动发现，则必须使用此任务完成配置和设置。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>为笔记本电脑或控制台布线并进行配置：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>使用 N-8-1 将笔记本电脑或控制台上的控制台端口设置为 115200 波特。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+有关如何配置控制台端口的信息，请参见笔记本电脑或控制台的联机帮助。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台、然后将笔记本电脑连接到管理子网上的交换机。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_cable_console_switch_controller.svg" alt="DRW 9500缆线 控制台交换机控制器">
+</div>
+</div>
+</li>
+<li>
+<p>使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>使用以下动画设置一个或多个驱动器架 ID ：</p>
+<div class="videoblock">
+<div class="title">动画—设置磁盘架ID&amp;#8217</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=95a29da1-faa3-4ceb-8a0b-ac7600675aa6" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_power-on_set_shelf_ID_set.svg" alt="已设置 DRW 电源打开设置磁盘架 ID">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_01.svg" alt="图例图标 01">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>拆下端盖。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_02.svg" alt="图例图标 02">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+第一个数字将继续闪烁
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_03.svg" alt="图例图标 03">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+第一个数字停止闪烁、第二个数字继续闪烁。
+</td>
+</tr>
+</table>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_04.svg" alt="图例图标04">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>更换端盖。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_05.svg" alt="图例图标05">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>将电源线插入控制器电源，然后将其连接到不同电路上的电源。</p>
+</li>
+<li>
+<p>打开两个节点的电源开关。</p>
+<div class="videoblock">
+<div class="title">动画—打开控制器的电源</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=a905e56e-c995-4704-9673-adfa0005a891" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_power-on.svg" alt="打开DRW 9500&quot;电源">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+初始启动可能需要长达八分钟的时间。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>将初始节点管理 IP 地址分配给其中一个节点。</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">如果管理网络具有 DHCP&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">那么 &#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>已配置</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>记录分配给新控制器的 IP 地址。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>未配置</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>使用 PuTTY ，终端服务器或环境中的等效项打开控制台会话。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制台的联机帮助。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>在脚本提示时输入管理 IP 地址。</p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>使用笔记本电脑或控制台上的 System Manager 配置集群：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>将浏览器指向节点管理 IP 地址。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+The format for the address is https://x.x.x.x.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Configure the system using the data you collected in the <a href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613" target="_blank" rel="noopener">"《 ONTAP 配置指南》"</a> 。</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>设置您的帐户并下载 Active IQ Config Advisor ：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>登录到现有帐户或创建帐户。</p>
+<div class="paragraph">
+<p><a href="https://mysupport.netapp.com/eservice/public/now.do" target="_blank" rel="noopener">"NetApp 支持注册"</a></p>
+</div>
+</li>
+<li>
+<p>注册您的系统。</p>
+<div class="paragraph">
+<p><a href="https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct" target="_blank" rel="noopener">"NetApp 产品注册"</a></p>
+</div>
+</li>
+<li>
+<p>下载 Active IQ Config Advisor 。</p>
+<div class="paragraph">
+<p><a href="https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor" target="_blank" rel="noopener">"NetApp 下载： Config Advisor"</a></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>运行 Config Advisor 以验证系统的运行状况。</p>
+</li>
+<li>
+<p>After you have completed the initial configuration, go to the <a href="https://www.netapp.com/data-management/oncommand-system-documentation/" target="_blank" rel="noopener">"ONTAP 和 AMP ； ONTAP System Manager 文档资源"</a> page for information about configuring additional features in ONTAP.</p>
 </li>
 </ol>
 </div>

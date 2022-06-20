@@ -6383,18 +6383,452 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-08 13:53:02 +0000">06/08/2022</time>
+    <time datetime="2022-06-20 13:54:59 +0000">06/20/2022</time>
     
   
 
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</p>
 </div>
 <div class="paragraph">
 <p>以下动画显示了将组件从受损控制器移至更换控制器的整个过程。</p>
+</div>
+<div class="videoblock">
+<div class="title">动画—更换控制器模块、完成过程</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=dc8d4acb-e061-45dd-8a0e-ae78004b6974" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="第-1-步卸下控制器模块">第 1 步：卸下控制器模块</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要访问控制器内部的组件，您必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>如果您尚未接地，请正确接地。</p>
+</li>
+<li>
+<p>从受损控制器模块拔下缆线，并跟踪缆线的连接位置。</p>
+</li>
+<li>
+<p>向下滑动凸轮把手上的 Terra cotta 按钮，直到其解锁为止。</p>
+<div class="videoblock">
+<div class="title">动画-删除控制器模块</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=5e029a19-8acc-4fa1-be5d-ae78004b365a" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_remove_PCM.svg" alt="DRW 9500-删除PCM">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_01.svg" alt="图例图标 01">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>凸轮把手释放按钮</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_02.svg" alt="图例图标 02">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>凸轮把手</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>旋转凸轮把手，使其完全脱离机箱，然后将控制器模块滑出机箱。</p>
+<div class="paragraph">
+<p>将控制器模块滑出机箱时，请确保您支持控制器模块的底部。</p>
+</div>
+</li>
+<li>
+<p>将控制器模块的盖板朝上放在平稳的平面上，按下盖板上的蓝色按钮，将盖板滑至控制器模块的背面，然后向上转动盖板并将其从控制器模块中提出。</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_PCM_open.svg" alt="DRW 9500PCM已打开">
+</div>
+</div>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_01.svg" alt="图例图标 01">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>控制器模块盖锁定按钮</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="第-2-步移动启动介质">第 2 步：移动启动介质</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您必须找到启动介质并按照说明将其从旧控制器中取出并将其插入新控制器中。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>使用下图或控制器模块上的 FRU 映射找到启动介质：</p>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_remove_boot_dev.svg" alt="DRW 9500remove boot dev">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_01.svg" alt="图例图标 01">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>按释放卡舌</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_02.svg" alt="图例图标 02">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>启动介质</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>按启动介质外壳上的蓝色按钮，将启动介质从其外壳中释放，然后将其竖直拉出启动介质插槽。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+请勿将启动介质竖直向上扭曲或拉，因为这样可能会损坏插槽或启动介质。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>将启动介质移至新控制器模块，将启动介质的边缘与插槽外壳对齐，然后将其轻轻推入插槽。</p>
+</li>
+<li>
+<p>检查启动介质，确保其完全固定在插槽中。</p>
+<div class="paragraph">
+<p>如有必要，请取出启动介质并将其重新插入插槽。</p>
+</div>
+</li>
+<li>
+<p>向下推启动介质以接合启动介质外壳上的锁定按钮。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="第-3-步移动系统-dimm">第 3 步：移动系统 DIMM</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>要移动 DIMM ，请找到 DIMM 并将其从旧控制器移至更换控制器，然后按照特定步骤顺序进行操作。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>如果您尚未接地，请正确接地。</p>
+</li>
+<li>
+<p>找到控制器模块上的 DIMM 。</p>
+</li>
+<li>
+<p>记下插槽中 DIMM 的方向，以便可以按正确的方向将 DIMM 插入更换用的控制器模块中。</p>
+</li>
+<li>
+<p>缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/important.svg" alt="重要">
+</td>
+<td class="content">
+小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_replace_PCM_dimms.svg" alt="DRW 9500&quot;更换PCM DIMM">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_01.svg" alt="图例图标 01">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>DIMM 弹出器卡舌</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_02.svg" alt="图例图标 02">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>DIMM</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>找到要安装 DIMM 的插槽。</p>
+</li>
+<li>
+<p>确保连接器上的 DIMM 弹出器卡舌处于打开位置，然后将 DIMM 垂直插入插槽。</p>
+<div class="paragraph">
+<p>DIMM 紧紧固定在插槽中，但应很容易插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/important.svg" alt="重要">
+</td>
+<td class="content">
+目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>将 DIMM 垂直插入插槽。</p>
+<div class="paragraph">
+<p>DIMM 紧紧固定在插槽中，但应很容易插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/important.svg" alt="重要">
+</td>
+<td class="content">
+目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>小心而稳固地推动 DIMM 的上边缘，直到弹出器卡舌卡入到位，卡入到位于 DIMM 两端的缺口上。</p>
+</li>
+<li>
+<p>对其余 DIMM 重复上述步骤。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="第-4-步安装控制器">第 4 步：安装控制器</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>将组件安装到更换用的控制器模块中后，您必须将更换用的控制器模块安装到系统机箱中并启动操作系统。</p>
+</div>
+<div class="paragraph">
+<p>对于在同一机箱中具有两个控制器模块的 HA 对，安装控制器模块的顺序尤为重要，因为一旦将其完全装入机箱，它就会尝试重新启动。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+系统可能会在启动时更新系统固件。请勿中止此过程。操作步骤要求您中断启动过程，您通常可以在系统提示时随时中断启动过程。但是，如果系统在启动时更新了系统固件，则必须等到更新完成后再中断启动过程。
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>如果您尚未接地，请正确接地。</p>
+</li>
+<li>
+<p>如果您尚未更换控制器模块上的外盖，请进行更换。</p>
+</li>
+<li>
+<p>将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。</p>
+<div class="videoblock">
+<div class="title">动画-安装控制器模块</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f2aa14b4-0d95-4109-b410-ae78004b35c9" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_remove_PCM_source.svg" alt="DRW 9500-删除PCM源">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_01.svg" alt="图例图标 01">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>凸轮把手释放按钮</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_02.svg" alt="图例图标 02">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>凸轮把手</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>仅为管理和控制台端口布线，以便您可以访问系统以执行以下各节中的任务。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+您将在此操作步骤中稍后将其余缆线连接到控制器模块。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>完成控制器模块的重新安装：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>如果尚未重新安装缆线管理设备，请重新安装该设备。</p>
+</li>
+<li>
+<p>将控制器模块牢牢推入机箱，直到它与中板相距并完全就位。</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/important.svg" alt="重要">
+</td>
+<td class="content">
+将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>将控制器模块凸轮把手旋转到锁定位置。</p>
+</li>
+<li>
+<p>出现 Press Ctrl-C for Boot Menu 时，按 <code>Ctrl-C</code> 以中断启动过程。</p>
+</li>
+<li>
+<p>选择选项以启动到 LOADER 。</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 
     </article>

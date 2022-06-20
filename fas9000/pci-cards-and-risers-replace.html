@@ -6392,7 +6392,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-08 13:53:02 +0000">06/08/2022</time>
+    <time datetime="2022-06-20 13:54:59 +0000">06/20/2022</time>
     
   
 
@@ -6401,7 +6401,7 @@
 
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>要更换 I/O 模块，您必须执行一系列特定的任务。</p>
 </div>
 <div class="ulist">
@@ -6419,7 +6419,7 @@
 <div class="sect1">
 <h2 id="第-1-步关闭受损控制器">第 1 步：关闭受损控制器</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。</p>
 </div>
 <div class="exampleblock tabbed-block">
@@ -6427,7 +6427,7 @@
 <div class="openblock">
 <div class="title">选项 1 ：大多数配置</div>
 <div class="content">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。</p>
 </div>
 <div class="ulist">
@@ -6516,7 +6516,7 @@
 <div class="openblock">
 <div class="title">选项 2 ：控制器位于双节点 MetroCluster 中</div>
 <div class="content">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。</p>
 </div>
 <div class="ulist">
@@ -6653,7 +6653,7 @@ aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirr
 <div class="sect1">
 <h2 id="第-2-步更换-io-模块">第 2 步：更换 I/O 模块</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>要更换 I/O 模块，请在机箱中找到该模块，然后按照特定步骤顺序进行操作。</p>
 </div>
 <div class="olist arabic">
@@ -6738,14 +6738,14 @@ aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirr
 <div class="sect1">
 <h2 id="第-3-步更换-pcie-模块后重新启动控制器">第 3 步：更换 PCIe 模块后重新启动控制器</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>更换 PCIe 模块后，必须重新启动控制器模块。</p>
 </div>
 <div class="olist arabic">
 <div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>如果节点处于 LOADER 提示符处，请启动节点，如果您看到系统 ID 不匹配的提示警告并要求覆盖系统 ID <code>bye</code> ，请回答 <code>y</code></p>
+<p>在LOADER提示符处、重新启动节点：_Bye_注：此操作将重新初始化PCIe卡和其他组件、然后重新启动节点。</p>
 </li>
 <li>
 <p>如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 <code>nicadmin convert</code> 命令将这些端口转换为 10 GbE 连接。</p>
@@ -6763,52 +6763,31 @@ aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirr
 </div>
 </li>
 <li>
-<p>使节点恢复正常运行：</p>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">如果您的系统位于 &#8230;&#8203;</th>
-<th class="tableblock halign-left valign-top">从配对节点的控制台问题描述此命令 &#8230;&#8203;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>HA 对</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><code>storage failover giveback -ofnode <em>impaired_node_name</em></code></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>双节点 MetroCluster 配置</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>继续执行下一步。</p>
-</div>
-<div class="paragraph">
-<p>MetroCluster 切回操作步骤将在更换过程的下一任务中完成。</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
+<p>使节点恢复正常运行：<code>storage failover giveback -ofnode <em>impaired_node_name</em></code></p>
 </li>
 <li>
 <p>如果已禁用自动交还，请重新启用它： <code>storage failover modify -node local -auto-giveback true</code></p>
 </li>
 </ol>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+如果您的系统采用双节点MetroCluster 配置、则必须按照下一步中所述切回聚合。
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="第-4-步切回双节点-metrocluster-配置中的聚合">第 4 步：切回双节点 MetroCluster 配置中的聚合</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine （ SVM ）现在处于活动状态，并从本地磁盘池提供数据。</p>
 </div>
 <div class="paragraph">
@@ -6883,7 +6862,7 @@ Remote: cluster_A configured      		normal</pre>
 <div class="sect1">
 <h2 id="第-5-步将故障部件退回-netapp">第 5 步：将故障部件退回 NetApp</h2>
 <div class="sectionbody">
-<div class="paragraph lead">
+<div class="paragraph">
 <p>按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 <a href="https://mysupport.netapp.com/site/info/rma">"部件退回和放大器；更换"</a> 第页，了解更多信息。</p>
 </div>
 </div>

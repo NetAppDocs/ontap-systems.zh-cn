@@ -6383,7 +6383,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-08 13:53:02 +0000">06/08/2022</time>
+    <time datetime="2022-06-20 13:54:59 +0000">06/20/2022</time>
     
   
 
@@ -6392,7 +6392,7 @@
 
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph lead">
 <p>您可以通过在已完全填充的系统中将 NIC 或存储适配器更换为新的 NIC 或存储适配器，或者将新的 NIC 或存储适配器添加到系统中的空机箱插槽中来向系统添加 I/O 模块。</p>
 </div>
 <div class="ulist">
@@ -6602,9 +6602,115 @@
 <div class="paragraph">
 <p>确保跟踪 I/O 模块所在的插槽。</p>
 </div>
+<div class="videoblock">
+<div class="title">动画—更换I/O模块</div>
+<div class="content">
+<iframe frameborder="0"  src="https://netapp.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0903b1f9-187b-4bb8-9548-ae9b0012bb21" allowfullscreen allow="autoplay"> </iframe>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/drw_9500_remove_PCIe_module.svg" alt="DRW 9500-卸下PCIe模块">
+</div>
+</div>
 </li>
 </ol>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_01.svg" alt="图例图标 01">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>I/O 凸轮闩锁有字母和编号</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock">
+<div class="content">
+<img src="../media/legend_icon_02.svg" alt="图例图标 02">
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>I/O 凸轮闩锁完全解锁</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>将 I/O 模块安装到目标插槽中：</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>将 I/O 模块与插槽边缘对齐。</p>
+</li>
+<li>
+<p>将 I/O 模块滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销接合。</p>
+</li>
+<li>
+<p>将 I/O 凸轮闩锁完全向上推，以将模块锁定到位。</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>重复执行拆卸和安装步骤以更换控制器 A 的其他模块</p>
+</li>
+<li>
+<p>如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</p>
+</li>
+<li>
+<p>从加载程序提示符 _bybye 重新启动节点</p>
+</li>
+<li>
+<p>从配对节点交还节点。<code>storage failover giveback -ofnode target_node_name</code></p>
+</li>
+<li>
+<p>如果已禁用，请启用自动交还： <code>storage failover modify -node local -auto-giveback true</code></p>
+</li>
+<li>
+<p>如果您添加了：</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">如果 I/O 模块为 &#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">那么 &#8230;&#8203;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>插槽 3 或 7 中的 NIC 模块，</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>对每个端口使用 <code>storage port modify -node *<em>&lt; 节点名称 &gt;</em> -port *<em>&lt; 端口名称 &gt;_</em> -mode network</code> 命令。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>存储模块</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>安装SAS磁盘架并为其布线、如中所述https://docs.netapp.com/us-en/ontap-systems/sas3/install-hot-add-shelf.html["热添加SAS磁盘架"^]。</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>对控制器 B 重复上述步骤</p>
 </li>
 </ol>
 </div>
