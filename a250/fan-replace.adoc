@@ -136,8 +136,8 @@ image:../media/legend_icon_02.png[""]
 
 使用以下视频或表格中的步骤更换风扇：
 
-link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=ccfa6665-2c2b-4571-ae79-ac5b015c19fc["更换风扇"^]
-
+.更换风扇
+video::ccfa6665-2c2b-4571-ae79-ac5b015c19fc[panopto]
 . 通过检查控制台错误消息或找到主板上风扇模块的亮起 LED 来确定必须更换的风扇模块。
 . 通过挤压风扇模块的侧面，然后将风扇模块竖直提出控制器模块来卸下风扇模块。
 +

@@ -21,8 +21,8 @@ summary: 将受损机箱中的电源，硬盘驱动器和控制器模块或模�
 
 您可以使用以下视频或表格中的步骤更换机箱；它假定已卸下并更换挡板：
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=1f859217-fede-491a-896e-ac5b015c1a36["更换机箱"]
-
+.更换机箱
+video::1f859217-fede-491a-896e-ac5b015c1a36[panopto]
 . 如果您尚未接地，请正确接地。
 . 从源拔下控制器模块电源。
 . 释放电源线固定器，然后从电源中拔下缆线。

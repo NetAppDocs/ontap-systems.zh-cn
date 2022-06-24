@@ -28,8 +28,8 @@ IMPORTANT: 请勿混用具有不同效率额定值的 PSU 。请始终像这样�
 
 使用以下视频或表格中的步骤更换电源：
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=86487f5e-20ff-43e6-99ae-ac5b015c1aa5["更换电源"]
-
+.更换电源
+video::86487f5e-20ff-43e6-99ae-ac5b015c1aa5[panopto]
 . 如果您尚未接地，请正确接地。
 . 根据控制台错误消息或通过电源上的红色故障 LED 确定要更换的电源。
 . 断开电源：

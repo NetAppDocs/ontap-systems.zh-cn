@@ -24,8 +24,8 @@ summary: 要更换控制器模块硬件，您必须卸下受损的控制器模�
 
 使用以下视频或表格中的步骤更换控制器模块：
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=ab0ebe6b-e891-489c-aab4-ac5b015c8f01["更换控制器模块"]
-
+.更换控制器模块
+video::ab0ebe6b-e891-489c-aab4-ac5b015c8f01[panopto]
 . 如果您尚未接地，请正确接地。
 . 从源拔下控制器模块电源。
 . 释放电源线固定器，然后从电源中拔下缆线。

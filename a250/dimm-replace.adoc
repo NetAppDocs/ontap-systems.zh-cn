@@ -143,8 +143,8 @@ image::../media/drw_a250_remove_airduct_cover.png[DRW A250 拆下通风管盖]
 
 使用以下视频或表格中的步骤更换 DIMM ：
 
-link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fa6b8107-86fb-4332-aa57-ac5b01605e52["更换 DIMM"^]
-
+.更换 DIMM
+video::fa6b8107-86fb-4332-aa57-ac5b01605e52[panopto]
 . 更换控制器模块上损坏的 DIMM 。
 +
 DIMM 位于主板上的插槽 3 或 1 中。插槽 2 和 4 为空。请勿尝试在这些插槽中安装 DIMM 。

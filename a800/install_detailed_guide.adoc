@@ -210,7 +210,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=edc42447-f721-4cbe-b080-ab0c0123a139["为双节点无交换机集群布线"^]）或完成控制器与交换机之间布线的分步说明：
+. 使用动画或表格中的步骤完成控制器和交换机之间的布线：视频：edc42447-f721-4cbe-b080-ab0c0123a139[panopto、title="Cable a two-node switchless cluster"]
 +
 [cols="10,90"]
 |===
@@ -279,7 +279,7 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=49e48140-4c5a-4395-a7d7-ab0c0123a10e["为交换集群布线"^]）或完成控制器与交换机之间布线的分步说明：
+. 使用动画或表格中的步骤完成控制器和交换机之间的布线：视频：49e48140-4c5a-4395-a7d7-ab0c0123a10e[panopto、title="Cabling a Switched Cluster"]
 +
 [cols="10,90"]
 |===
@@ -435,9 +435,12 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-.步骤
-. 使用动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=09dade4f-00bd-4d41-97d7-ab0c0123a0b4["使用缆线将控制器连接到单个驱动器架"^] 或使用分步说明将控制器模块连接到单个磁盘架。
+使用动画或表格中的步骤将控制器连接到一个磁盘架：
+
+.使用缆线将控制器连接到单个驱动器架
+video::09dade4f-00bd-4d41-97d7-ab0c0123a0b4[panopto]
 +
+
 [cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
@@ -456,8 +459,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_1shelf_cabling_b.png[""]
 
 |===
-. To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
-
+To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
 
 
 
@@ -472,9 +474,12 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-.步骤
-. 使用以下动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=fe50ac38-9375-4e6b-85af-ab0c0123a0e0["使用缆线将控制器连接到两个驱动器架"^]）或使用缆线将控制器连接到两个驱动器架的步骤。
+使用动画或表格中的步骤将控制器连接到两个驱动器架：
+
+.使用缆线将控制器连接到两个驱动器架
+video::fe50ac38-9375-4e6b-85af-ab0c0123a0e0[panopto]
 +
+
 [cols="10,90"]
 |===
 | 步骤 | 对每个控制器模块执行 
@@ -493,8 +498,7 @@ image:../media/oie_legend_icon_2_lo.png[""]
 使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_2shelf_cabling_b.png[""]
 
 |===
-. To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
-
+To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
 
 
 
@@ -517,7 +521,10 @@ image:../media/oie_legend_icon_2_lo.png[""]
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用以下动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]）将笔记本电脑连接到管理交换机。
+. 使用动画将笔记本电脑连接到管理交换机：
++
+.将笔记本电脑连接到管理交换机
+video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]

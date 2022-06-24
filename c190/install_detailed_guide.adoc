@@ -443,7 +443,10 @@ NOTE: 初始启动可能需要长达八分钟的时间。
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用动画（link:https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"^]）将笔记本电脑连接到管理交换机。
+. 使用动画将笔记本电脑连接到管理交换机：
++
+.将笔记本电脑连接到管理交换机
+video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
