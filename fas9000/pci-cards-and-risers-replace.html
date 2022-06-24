@@ -6123,7 +6123,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-20 13:54:59 +0000">06/20/2022</time>
+    <time datetime="2022-06-24 13:45:12 +0000">06/24/2022</time>
     
   
 
@@ -6476,7 +6476,19 @@ aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirr
 <div class="title">步骤</div>
 <ol class="arabic">
 <li>
-<p>在LOADER提示符处、重新启动节点：_Bye_注：此操作将重新初始化PCIe卡和其他组件、然后重新启动节点。</p>
+<p>在 LOADER 提示符处，重新启动节点： _bybye</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-systems/images/note.svg" alt="注">
+</td>
+<td class="content">
+此操作将重新初始化PCIe卡和其他组件、并重新启动节点。
+</td>
+</tr>
+</table>
+</div>
 </li>
 <li>
 <p>如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 <code>nicadmin convert</code> 命令将这些端口转换为 10 GbE 连接。</p>
