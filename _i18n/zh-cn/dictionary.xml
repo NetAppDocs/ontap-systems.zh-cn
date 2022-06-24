@@ -2649,8 +2649,6 @@
   <block id="085d4c339245e025ba9f6a2524c69c57" category="summary">在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine \ （ SVM\ ）现在处于活动状态，并从本地磁盘池提供数据。</block>
   <block id="79cfe080d4a6943442ed3bba2502d8a1" category="doc">切回双节点 MetroCluster 配置中的聚合— AFF A400</block>
   <block id="a45631fee94bb9189db5b0c74b176a42" category="doc">视频— AFF A400</block>
-  <block id="5949ca5a0712a87a23c812bd0bed6961" category="inline-link">AFF A400 安装和设置说明</block>
-  <block id="d7e804433803616440fb890d20cd6c1f" category="paragraph"><block ref="eeb7cea97b365499514850665d379c9d" category="inline-link-rx"></block><block ref="cd0b1d103fc5f20acda93803684ae105" category="inline-link-rx"></block></block>
   <block id="d92d79541486453c440f5d479e7c2937" category="section-title">视频二：执行端到端软件配置</block>
   <block id="e3a2cdbe22ad29e03fbebb6c1261ed15" category="doc">快速指南— AFF A400</block>
   <block id="34a75c3c3d31678dc9bc82fd2d547569" category="inline-link">《 AFF A400 安装和设置说明》</block>
@@ -8803,4 +8801,6 @@
   <block id="90497e0cc94d62e215b4a4b6706d7cda" category="paragraph">使用动画或表格中的步骤完成控制器和交换机之间的布线：</block>
   <block id="b5b86ac4620d5f1cb0b675d761c6c548" category="paragraph">使用动画或表格中的步骤完成控制器和交换机之间的布线：视频：bf6759dc-4cbf-488e-982e-ac68017fbef8[panopto、title="Cabling a Switched Cluster"]</block>
   <block id="030773f8722b074a51df84aa530f0c3d" category="paragraph">使用动画或表格中的步骤完成控制器和单个磁盘架之间的布线：</block>
+  <block id="f56310c49687a40fd4b43bced4b3dcc8" category="video-title">动画—AFF A400安装和设置说明</block>
+  <block id="c511d3a873cdf45068fb4cd9897dd7d1" category="admonition">此操作将重新初始化PCIe卡和其他组件、并重新启动节点。</block>
 </blocks>
