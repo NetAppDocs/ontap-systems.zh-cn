@@ -210,7 +210,10 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或表格中的步骤完成控制器和交换机之间的布线：视频：edc42447-f721-4cbe-b080-ab0c0123a139[panopto、title="Cable a two-node switchless cluster"]
+. 使用动画或表格中的步骤完成控制器和交换机之间的布线：
++
+.为双节点无交换机集群布线
+video::edc42447-f721-4cbe-b080-ab0c0123a139[panopto]
 +
 [cols="10,90"]
 |===
@@ -279,7 +282,10 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或表格中的步骤完成控制器和交换机之间的布线：视频：49e48140-4c5a-4395-a7d7-ab0c0123a10e[panopto、title="Cabling a Switched Cluster"]
+. 使用动画或表格中的步骤完成控制器和交换机之间的布线：
++
+.Cabling a switched cluster
+video::49e48140-4c5a-4395-a7d7-ab0c0123a10e[panopto]
 +
 [cols="10,90"]
 |===
