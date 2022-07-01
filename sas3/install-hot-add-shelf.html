@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
   <head class="at-element-marker">
-  <title>热添加磁盘架—具有 IOM12 模块的磁盘架</title>
+  <title>热添加磁盘架—具有IOM12/IOM12B模块的磁盘架</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="热添加磁盘架—具有 IOM12 模块的磁盘架" />
+  <meta property="og:title" content="热添加磁盘架—具有IOM12/IOM12B模块的磁盘架" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/zh-cn/ontap-systems/sas3/install-hot-add-shelf.html" />
-	<meta property="og:description" content="您可以将一个或多个具有 IOM12 模块的磁盘架热添加到具有 IOM12 模块的现有磁盘架堆栈中，或者将一个或多个具有 IOM12 模块的磁盘架堆栈直接热添加到控制器上的 SAS HBA 或板载 SAS 端口中。" />
+	<meta property="og:description" content="您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添加到具有IOM12/IOM12B模块的现有磁盘架堆栈中、或者将一个或多个具有IOM12B模块的磁盘架堆栈直接热添加到控制器上的SAS HBA或板载SAS端口中。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-cn/ontap-systems/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您可以将一个或多个具有 IOM12 模块的磁盘架热添加到具有 IOM12 模块的现有磁盘架堆栈中，或者将一个或多个具有 IOM12 模块的磁盘架堆栈直接热添加到控制器上的 SAS HBA 或板载 SAS 端口中。">
-  <meta name="keywords" content=" hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, onboard, sas, port, controller, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添加到具有IOM12/IOM12B模块的现有磁盘架堆栈中、或者将一个或多个具有IOM12B模块的磁盘架堆栈直接热添加到控制器上的SAS HBA或板载SAS端口中。">
+  <meta name="keywords" content=" hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, onboard, sas, port, controller, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b"><!-- Icons -->
   <link rel="icon" href="/zh-cn/ontap-systems/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[热添加磁盘架—具有 IOM12 模块的磁盘架](https://docs.netapp.com/zh-cn/ontap-systems/sas3/install-hot-add-shelf.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" alt="" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/sas3/install_hot_add_shelf.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" alt="" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" alt="" class="github-icon" />提供者指南</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/issues/new?body=Page%3A%20[热添加磁盘架—具有IOM12/IOM12B模块的磁盘架](https://docs.netapp.com/zh-cn/ontap-systems/sas3/install-hot-add-shelf.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/discuss-sm.svg" alt="" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/ontap-systems/blob/main/sas3/install_hot_add_shelf.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/ontap-systems/images/edit-sm.svg" alt="" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/ontap-systems/images/article-sm.svg" alt="" class="github-icon" />提供者指南</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此页面上</div>
@@ -4164,11 +4164,11 @@
           
           <a target="_blank" 
             
-              href="/zh-cn/ontap-systems/pdfs/sidebar/带有_IOM12_模块的_SAS_磁盘架.pdf" 
+              href="/zh-cn/ontap-systems/pdfs/sidebar/带有IOM12_IOM12B模块的SAS磁盘架.pdf" 
             
           >
             <img src="/zh-cn/ontap-systems/images/pdf.png" alt="" width="16" height="16"/>
-            带有 IOM12 模块的 SAS 磁盘架
+            带有IOM12/IOM12B模块的SAS磁盘架
           </a>
           
 
@@ -4180,7 +4180,7 @@
           
           <a target="_blank" 
             
-              href="/zh-cn/ontap-systems/pdfs/sidebar/使用_IOM12_模块的磁盘架安装和布线.pdf" 
+              href="/zh-cn/ontap-systems/pdfs/sidebar/使用IOM12_IOM2B模块的磁盘架安装和布线.pdf" 
             
           >
             <img src="/zh-cn/ontap-systems/images/pdf.png" alt="" width="16" height="16"/>
@@ -4254,7 +4254,7 @@
           
           <a target="_blank" 
             
-              href="/zh-cn/ontap-systems/pdfs/sidebar/具有_IOM12_模块的磁盘架进行维护.pdf" 
+              href="/zh-cn/ontap-systems/pdfs/sidebar/具有IOM12_IOM12B模块的磁盘架会进行维护.pdf" 
             
           >
             <img src="/zh-cn/ontap-systems/images/pdf.png" alt="" width="16" height="16"/>
@@ -5946,7 +5946,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/ns224/service-replace-rtc-battery.html">
         实时时钟电池
       </a></li></ul></li></ul></li><li class="subfolders "><a href="/zh-cn/ontap-systems/sas3/index.html">
-        <div class="na-navbar-padding"> 带有 IOM12 模块的 SAS 磁盘架</div>
+        <div class="na-navbar-padding"> 带有IOM12/IOM12B模块的SAS磁盘架</div>
       </a>
       <ul><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 安装并布线</div>
@@ -5956,7 +5956,7 @@
       </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/install-hot-add-shelf.html">
         热添加磁盘架
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/iom12-hot-add-mix.html">
-        将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中
+        将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈中
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/install-change-shelf-id.html">
         更改磁盘架 ID
       </a></li><li class="subfolders "><a href="#">
@@ -5994,7 +5994,7 @@
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/hot-remove-shelf.html">
         热移除磁盘架
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/service-hot-swap-iom.html">
-        IOM12 模块
+        IOM12/IOM12B模块
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/service-hot-swap-power-supply.html">
         电源
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/ontap-systems/sas3/service-monitor-leds.html">
@@ -6114,14 +6114,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">热添加磁盘架—具有 IOM12 模块的磁盘架</h1>
+  <h1 class="n-doc__component-detail-heading">热添加磁盘架—具有IOM12/IOM12B模块的磁盘架</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-06-13 16:28:35 +0000">06/13/2022</time>
+    <time datetime="2022-07-01 15:47:46 +0000">07/01/2022</time>
     
   
 
@@ -6131,18 +6131,18 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>您可以将一个或多个具有 IOM12 模块的磁盘架热添加到具有 IOM12 模块的现有磁盘架堆栈中，或者将一个或多个具有 IOM12 模块的磁盘架堆栈直接热添加到控制器上的 SAS HBA 或板载 SAS 端口中。</p>
+<p>您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添加到具有IOM12/IOM12B模块的现有磁盘架堆栈中、或者将一个或多个具有IOM12B模块的磁盘架堆栈直接热添加到控制器上的SAS HBA或板载SAS端口中。</p>
 </div>
 <div class="paragraph">
-<p>您不能使用此操作步骤混用堆栈：将具有 IOM12 模块的磁盘架热添加到具有 IOM6 模块的磁盘架堆栈中。如果需要混合堆栈，请使用 <a href="iom12-hot-add-mix.html">"将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中"</a>。</p>
+<p>您不能使用此操作步骤 混用堆栈：将具有IOM12/IOM12B模块的磁盘架热添加到具有IOM6模块的磁盘架堆栈中。If you need to mix a stack, use <a href="iom12-hot-add-mix.html">"将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中"</a>。</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="使用-iom12-模块热添加磁盘架的要求">使用 IOM12 模块热添加磁盘架的要求</h2>
+<h2 id="使用iom12iom12b模块热添加磁盘架的要求">使用IOM12/IOM12B模块热添加磁盘架的要求</h2>
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>在使用 IOM12 模块热添加磁盘架之前，您的系统必须满足特定要求。</p>
+<p>在使用IOM12/IOM12B模块热添加磁盘架之前、您的系统必须满足特定要求。</p>
 </div>
 <div class="sect2">
 <h3 id="系统状态">系统状态</h3>
@@ -6217,7 +6217,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="使用-iom12-模块热添加磁盘架的注意事项">使用 IOM12 模块热添加磁盘架的注意事项</h2>
+<h2 id="使用iom12iom12b模块热添加磁盘架的注意事项">使用IOM12/IOM12B模块热添加磁盘架的注意事项</h2>
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>在热添加磁盘架之前，您应熟悉此操作步骤的各个方面和最佳实践。</p>
@@ -6227,19 +6227,19 @@
 <div class="ulist">
 <ul>
 <li>
-<p>如果要将具有 IOM12 模块的磁盘架热添加到现有堆栈（包含 IOM12 模块的磁盘架），则可以将磁盘架热添加到堆栈的任一端，即第一个或最后一个逻辑磁盘架。</p>
+<p>如果要将具有IOM12/IOM12B模块的磁盘架热添加到现有堆栈(包含IOM12/IOM12B模块的磁盘架)、则可以将磁盘架热添加到堆栈的任一端、即第一个或最后一个逻辑磁盘架。</p>
 <div class="paragraph">
 <p>对于适用于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统的单路径 HA 和单路径配置，您可以将磁盘架热添加到堆栈的末尾，而该堆栈没有控制器连接。</p>
 </div>
 </li>
 <li>
-<p>带有 IOM12 模块的磁盘架必须位于其自身唯一的堆栈中；不能将其添加到包含带有 IOM6 模块或 IOM3 模块的磁盘架的堆栈中。</p>
+<p>带有IOM12/IOM12B模块的磁盘架必须位于其自身唯一的堆栈中；不能将其添加到包含带有IOM6模块或IOM3模块的磁盘架的堆栈中。</p>
 <div class="paragraph">
-<p>此操作步骤不会解决混合堆栈的问题：将具有 IOM12 模块的磁盘架热添加到具有 IOM6 模块的磁盘架堆栈中。</p>
+<p>此操作步骤 不会解决混合堆栈的问题：将具有IOM12/IOM12B模块的磁盘架热添加到具有IOM6模块的磁盘架堆栈中。</p>
 </div>
 </li>
 <li>
-<p>一个系统可以具有多路径和四路径磁盘架堆栈以及 IOM12 模块。</p>
+<p>一个系统可以具有多路径和四路径磁盘架堆栈以及IOM12B模块。</p>
 <div class="paragraph">
 <p>如果您有 HA 对， ONTAP 会将系统配置显示为 " <code>m多路径 HA</code> " 。如果您使用的是单控制器配置，则 ONTAP 会将系统配置显示为 <code>multipath</code> 。</p>
 </div>
@@ -6376,7 +6376,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="安装具有-iom12-模块的磁盘架以进行热添加">安装具有 IOM12 模块的磁盘架以进行热添加</h2>
+<h2 id="安装具有iom12iom12b模块的磁盘架以进行热添加">安装具有IOM12/IOM12B模块的磁盘架以进行热添加</h2>
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>对于要热添加的每个磁盘架，您可以在为 SAS 连接布线之前将磁盘架安装到机架中，连接电源线，打开磁盘架电源并设置磁盘架 ID 。</p>
@@ -6642,7 +6642,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="为具有-iom12-模块的磁盘架布线以进行热添加">为具有 IOM12 模块的磁盘架布线以进行热添加</h2>
+<h2 id="为具有iom12iom12b模块的磁盘架布线以进行热添加">为具有IOM12/IOM12B模块的磁盘架布线以进行热添加</h2>
 <div class="sectionbody">
 <div class="paragraph lead">
 <p>您可以根据热添加磁盘架的适用情况为 SAS 连接布线—磁盘架到磁盘架和控制器到堆栈，以便它们可以连接到系统。</p>
