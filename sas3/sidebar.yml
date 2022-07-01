@@ -1,16 +1,16 @@
 ---
 section: sas3
-title: 带有 IOM12 模块的 SAS 磁盘架
+title: 带有IOM12/IOM12B模块的SAS磁盘架
 url: "/sas3/index.html"
 entries:
 - title: 安装并布线
-  pdf-filename: 使用 IOM12 模块的磁盘架安装和布线
+  pdf-filename: 使用IOM12/IOM2B模块的磁盘架安装和布线
   entries:
   - title: 安装新系统的磁盘架并为其布线
     url: "/sas3/install-new-system.html"
   - title: 热添加磁盘架
     url: "/sas3/install-hot-add-shelf.html"
-  - title: 将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中
+  - title: 将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈中
     url: "/sas3/iom12-hot-add-mix.html"
   - title: 更改磁盘架 ID
     url: "/sas3/install-change-shelf-id.html"
@@ -35,7 +35,7 @@ entries:
     - title: 如何读取工作表以进行四路径连接
       url: "/sas3/install-cabling-worksheets-how-to-read-quadpath.html"
 - title: 维护
-  pdf-filename: 具有 IOM12 模块的磁盘架进行维护
+  pdf-filename: 具有IOM12/IOM12B模块的磁盘架会进行维护
   entries:
   - title: DS224C 或 DS212C 磁盘架中的磁盘驱动器
     url: "/sas3/service-hot-swap-drive-ds224c-ds212c.html"
@@ -47,7 +47,7 @@ entries:
     url: "/sas3/service-replace-fan-ds460c.html"
   - title: 热移除磁盘架
     url: "/sas3/hot-remove-shelf.html"
-  - title: IOM12 模块
+  - title: IOM12/IOM12B模块
     url: "/sas3/service-hot-swap-iom.html"
   - title: 电源
     url: "/sas3/service-hot-swap-power-supply.html"

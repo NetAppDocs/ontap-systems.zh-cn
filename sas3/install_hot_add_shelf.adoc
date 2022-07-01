@@ -1,26 +1,26 @@
 ---
 permalink: sas3/install-hot-add-shelf.html 
 sidebar: sidebar 
-keywords: hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, onboard, sas, port, controller, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling 
-summary: 您可以将一个或多个具有 IOM12 模块的磁盘架热添加到具有 IOM12 模块的现有磁盘架堆栈中，或者将一个或多个具有 IOM12 模块的磁盘架堆栈直接热添加到控制器上的 SAS HBA 或板载 SAS 端口中。 
+keywords: hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, onboard, sas, port, controller, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
+summary: 您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添加到具有IOM12/IOM12B模块的现有磁盘架堆栈中、或者将一个或多个具有IOM12B模块的磁盘架堆栈直接热添加到控制器上的SAS HBA或板载SAS端口中。 
 ---
-= 热添加磁盘架—具有 IOM12 模块的磁盘架
+= 热添加磁盘架—具有IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以将一个或多个具有 IOM12 模块的磁盘架热添加到具有 IOM12 模块的现有磁盘架堆栈中，或者将一个或多个具有 IOM12 模块的磁盘架堆栈直接热添加到控制器上的 SAS HBA 或板载 SAS 端口中。
+您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添加到具有IOM12/IOM12B模块的现有磁盘架堆栈中、或者将一个或多个具有IOM12B模块的磁盘架堆栈直接热添加到控制器上的SAS HBA或板载SAS端口中。
 
-您不能使用此操作步骤混用堆栈：将具有 IOM12 模块的磁盘架热添加到具有 IOM6 模块的磁盘架堆栈中。如果需要混合堆栈，请使用 link:iom12-hot-add-mix.html["将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中"]。
+您不能使用此操作步骤 混用堆栈：将具有IOM12/IOM12B模块的磁盘架热添加到具有IOM6模块的磁盘架堆栈中。If you need to mix a stack, use link:iom12-hot-add-mix.html["将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中"]。
 
 
 
-== 使用 IOM12 模块热添加磁盘架的要求
+== 使用IOM12/IOM12B模块热添加磁盘架的要求
 
 [role="lead"]
-在使用 IOM12 模块热添加磁盘架之前，您的系统必须满足特定要求。
+在使用IOM12/IOM12B模块热添加磁盘架之前、您的系统必须满足特定要求。
 
 
 
@@ -71,7 +71,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 
-== 使用 IOM12 模块热添加磁盘架的注意事项
+== 使用IOM12/IOM12B模块热添加磁盘架的注意事项
 
 [role="lead"]
 在热添加磁盘架之前，您应熟悉此操作步骤的各个方面和最佳实践。
@@ -80,15 +80,15 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 === 一般注意事项
 
-* 如果要将具有 IOM12 模块的磁盘架热添加到现有堆栈（包含 IOM12 模块的磁盘架），则可以将磁盘架热添加到堆栈的任一端，即第一个或最后一个逻辑磁盘架。
+* 如果要将具有IOM12/IOM12B模块的磁盘架热添加到现有堆栈(包含IOM12/IOM12B模块的磁盘架)、则可以将磁盘架热添加到堆栈的任一端、即第一个或最后一个逻辑磁盘架。
 +
 对于适用于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统的单路径 HA 和单路径配置，您可以将磁盘架热添加到堆栈的末尾，而该堆栈没有控制器连接。
 
-* 带有 IOM12 模块的磁盘架必须位于其自身唯一的堆栈中；不能将其添加到包含带有 IOM6 模块或 IOM3 模块的磁盘架的堆栈中。
+* 带有IOM12/IOM12B模块的磁盘架必须位于其自身唯一的堆栈中；不能将其添加到包含带有IOM6模块或IOM3模块的磁盘架的堆栈中。
 +
-此操作步骤不会解决混合堆栈的问题：将具有 IOM12 模块的磁盘架热添加到具有 IOM6 模块的磁盘架堆栈中。
+此操作步骤 不会解决混合堆栈的问题：将具有IOM12/IOM12B模块的磁盘架热添加到具有IOM6模块的磁盘架堆栈中。
 
-* 一个系统可以具有多路径和四路径磁盘架堆栈以及 IOM12 模块。
+* 一个系统可以具有多路径和四路径磁盘架堆栈以及IOM12B模块。
 +
 如果您有 HA 对， ONTAP 会将系统配置显示为 " `m多路径 HA` " 。如果您使用的是单控制器配置，则 ONTAP 会将系统配置显示为 `multipath` 。
 
@@ -181,7 +181,7 @@ NOTE: 请将磁盘驱动器放在ESD袋中、直到准备好安装为止。
 
 
 
-== 安装具有 IOM12 模块的磁盘架以进行热添加
+== 安装具有IOM12/IOM12B模块的磁盘架以进行热添加
 
 [role="lead"]
 对于要热添加的每个磁盘架，您可以在为 SAS 连接布线之前将磁盘架安装到机架中，连接电源线，打开磁盘架电源并设置磁盘架 ID 。
@@ -316,7 +316,7 @@ CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒
 
 
 
-== 为具有 IOM12 模块的磁盘架布线以进行热添加
+== 为具有IOM12/IOM12B模块的磁盘架布线以进行热添加
 
 [role="lead"]
 您可以根据热添加磁盘架的适用情况为 SAS 连接布线—磁盘架到磁盘架和控制器到堆栈，以便它们可以连接到系统。

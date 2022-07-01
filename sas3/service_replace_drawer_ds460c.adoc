@@ -1,25 +1,17 @@
 ---
 permalink: sas3/service-replace-drawer-ds460c.html 
 sidebar: sidebar 
-keywords: i/o activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf 
-summary: 在更换驱动器抽盒之前，您必须停止所有主机 I/O 活动并关闭磁盘架电源。 
+keywords: i/o activity, power, off, shelf, replacing, replace, drive, drawer, disk, replace a drive drawer in a ds460c disk shelf, dcm2, dcm 
+summary: '要更换磁盘架中的驱动器抽盒、您需要暂停整个存储系统(HA对)、以便在磁盘架上保留数据聚合、或者可以选择保持HA对正常运行。 这要求您将磁盘驱动器上的数据聚合中的所有数据移动到脱机状态并删除这些数据聚合。但是、如果磁盘架包含根聚合、则必须暂停HA对。' 
 ---
-= Replacing a drive drawer in a DS460C disk shelf - shelves with IOM12 modules
+= 将DS460C磁盘架中的驱动器抽盒更换为IOM12/IOM12B模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在更换驱动器抽盒之前，您必须停止所有主机 I/O 活动并关闭磁盘架电源。
-
-其中每个 60 个驱动器架都有五个驱动器抽盒。
-
-image::../media/28_dwg_e2860_de460c_front_no_callouts.gif[28 dwg e2860 de460c 正面无标注]
-
-这五个抽盒中的每个抽盒最多可容纳 12 个驱动器。
-
-image::../media/92_dwg_de6600_drawer_with_hdds_no_callouts.gif[92 dwg de6600 drawer with hdds no callouts]
+要更换磁盘架中的驱动器抽盒、您需要暂停整个存储系统(HA对)、以便在磁盘架上保留数据聚合、或者可以选择保持HA对正常运行。 这要求您将磁盘驱动器上的数据聚合中的所有数据移动到脱机状态并删除这些数据聚合。但是、如果磁盘架包含根聚合、则必须暂停HA对。
 
 此操作步骤需要以下项目：
 
@@ -33,15 +25,111 @@ NOTE: * 可能的硬件损坏： * 为了防止静电释放损坏驱动器架，
 * 手电筒
 
 
+.关于此任务
+* 此 操作步骤 适用场景 磁盘架具有数据中心驱动器抽盒和/或数据中心2驱动器抽盒。(磁盘架还具有两个IOM12模块或两个IOM12B模块。)
++
+如果一个DCM或DCM2驱动器抽盒出现故障、您将收到一个要更换的DCM或DCM2驱动器抽盒。
 
 
-== Removing the cable chains
+
+[NOTE]
+====
+如果在更换发生故障的驱动器抽盒时、导致磁盘架同时具有IOM12模块和任意数量的DCM2驱动器抽盒、 您必须将IOM12固件升级到0300或更高版本、因为IOM12模块需要支持DCM2驱动器抽盒的固件版本。
+
+可以在更换驱动器抽盒之前或之后完成IOM12固件升级。在准备更换抽盒操作步骤 时、您可以使用此操作步骤 升级固件。
+
+====
+* 可以通过其外观来区分数据中心驱动器抽盒和数据中心驱动器抽盒：
++
+dcm驱动器抽盒如下所示：
+
++
+image::../media/28_dwg_e2860_de460c_front_no_callouts.gif[28 dwg e2860 de460c 正面无标注]
+
++
+DCM2驱动器抽盒采用蓝色条带和"DCM2"标签来区分：
+
++
+image::../media/dcm2.png[dcm2]
+
+
+
+
+
+== 准备更换驱动器抽盒
+
+[role="Lead"]
+在更换驱动器抽盒之前、如果需要、您必须确保更新IOM12固件、并暂停HA对以使数据聚合保留在磁盘架上、或者您可以选择保持HA对正常运行。 这要求您将磁盘驱动器上的数据聚合中的所有数据移动到脱机状态并删除这些数据聚合。但是、如果磁盘架包含根聚合、则必须暂停HA对。最后、您必须关闭磁盘架。
+
+.步骤
+. 确定在更换发生故障的驱动器抽盒时、是否会使磁盘架同时具有IOM12模块和任意数量的DCM2驱动器抽盒。
+. 如果磁盘架将包含IOM12模块和任意数量的DCM2驱动器抽盒、则必须将IOM12固件升级到0300或更高版本；否则、请转至下一步。
++
+可以在 NetApp 支持站点上找到最新版本的固件。
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+
+. 如果磁盘架包含来自HA对中任一控制器的根聚合、或者您选择暂停HA对(而不是保持HA对正常运行)、请完成以下子步骤；否则、请转至下一步。
++
+
+NOTE: 暂停HA对时、数据聚合可以保留在磁盘架上。
+
++
+.. 暂停HA对中的两个控制器。
+.. 通过检查存储系统控制台验证HA对是否已暂停。
+.. 关闭磁盘架。
+.. 转到部分、 <<Remove the cable chains>>。
+
+
+. 如果您选择保持HA对正常运行、请完成以下子步骤：
++
+
+NOTE: 如果您尝试将某个抽盒更换为磁盘架上的聚合发生原因 、则可能会出现多磁盘崩溃、从而造成系统中断。
+
++
+.. 移动磁盘驱动器上的数据聚合中的所有数据。
++
+数据包括但不限于卷和LUN。
+
+.. 脱机并删除聚合以使磁盘驱动器成为备用磁盘：
++
+可以从任一控制器的clustershell输入命令。
+
++
+`s存储聚合脱机-aggregate _aggregate_name_`
+
++
+`storage aggregate delete -aggregate _aggregate_name_`
+
+.. 验证磁盘驱动器是否没有聚合(备用)：
++
+... 在任一控制器的 clustershell 中输入以下命令： `storage disk show -shelf _shelf_number_`
+... 检查输出以验证磁盘驱动器是否为备用驱动器。
++
+备用磁盘驱动器在`Container Type`列中显示`spare`。
+
++
+
+NOTE: 如果磁盘架中的磁盘驱动器出现故障、则`Broken`会显示在`Container Type`列中。
+
+
+
+.. 关闭磁盘架。
+
+
+
+
+
+
+== 拆下缆线链
 
 [role="lead"]
 DS460C 驱动器架中每个驱动器抽盒的左右缆线链允许抽盒滑入和滑出。在卸下驱动器抽盒之前，必须同时卸下两个缆线链。
 
 .开始之前
-* 您已停止主机 I/O 活动并关闭磁盘架电源。
+* 您已完成 <<Prepare to replace a drive drawer>> 使HA对暂停或您已从磁盘驱动器上的数据聚合移动所有数据、并使数据聚合脱机和删除以使磁盘驱动器成为备用磁盘的步骤。
+* 您已关闭磁盘架。
 * 您已获取以下项：
 +
 ** 防静电保护
@@ -182,7 +270,7 @@ image:../media/legend_icon_02.png[""]
 
 
 
-== Removing a drive drawer
+== 卸下驱动器抽屉
 
 [role="lead"]
 After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.卸下驱动器抽盒需要将抽盒部分滑出、卸下驱动器并卸下驱动器抽盒。
@@ -238,7 +326,7 @@ image:../media/legend_icon_01.png[""]
 
 
 
-== Installing a drive drawer
+== 安装驱动器抽盒
 
 [role="lead"]
 在驱动器架中安装驱动器抽盒需要将抽盒滑入空插槽，安装驱动器并更换前挡板。
@@ -335,10 +423,10 @@ NOTE: * 设备故障的风险： * 请确保通过推动两个控制杆完全关
 
 
 
-== Attaching the cable chains
+== 连接缆线链
 
 [role="lead"]
-安装驱动器抽盒的最后一步是将左右缆线链连接到驱动器架。连接缆线链时，请按与断开缆线链相反的顺序进行操作。您必须先将链的水平连接器插入机箱中的水平支架，然后再将链的垂直连接器插入机箱中的垂直支架。
+安装驱动器抽盒的最后一步是将更换用的左右缆线链连接到驱动器架。When attaching a cable chain, reverse the order you used when disconnecting the cable chain.You must insert the chain's horizontal connector into the horizontal bracket in the enclosure before inserting the chain's vertical connector into the vertical bracket in the enclosure.
 
 .开始之前
 * 已更换驱动器抽盒和所有驱动器。
@@ -462,5 +550,13 @@ image:../media/legend_icon_01.png[""]
 .. 打开驱动器架上的两个电源开关。
 .. 确认两个风扇均已打开，并且风扇背面的琥珀色 LED 熄灭。
 
+
+. 如果已暂停HA对、请在两个控制器上启动ONTAP ；否则、请转至下一步。
+. 如果您已将数据从磁盘架移出并删除了数据聚合、则现在可以使用磁盘架中的备用磁盘来创建或扩展聚合。
++
+https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-creation-workflow-concept.html["聚合创建工作流"]
+
++
+https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-expansion-workflow-concept.html["聚合扩展工作流"]
 
 

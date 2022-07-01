@@ -1,22 +1,22 @@
 ---
 permalink: sas3/hot-remove-shelf.html 
 sidebar: sidebar 
-keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, i/o, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling 
+keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, i/o, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
 summary: 您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。 
 ---
-= 热移除磁盘架—带有 IOM12 模块的磁盘架
+= 热移除磁盘架—带有IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。
+您可以在需要移动或更换磁盘架时热移除带有IOM12/IOM12B模块的磁盘架(无中断地从已启动且正在执行I/O的系统中移除磁盘架)。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。
 
 .开始之前
 * 您的系统必须采用多路径 HA ，多路径，四路径 HA 或四路径配置。
 +
-对于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统，外部存储必须采用多路径 HA 或多路径的形式进行布线。
+对于具有板载存储的平台、例如AFF A200、AFF A220、FAS2600系列和FAS2700系统、外部存储必须采用多路径HA或多路径的形式进行布线。
 
 +
 

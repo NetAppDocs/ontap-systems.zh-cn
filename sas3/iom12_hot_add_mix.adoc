@@ -1,29 +1,29 @@
 ---
 permalink: sas3/iom12-hot-add-mix.html 
 sidebar: sidebar 
-keywords: additional, storage, hot-add, iom12, shelves, shelf, sas, shelves, shelf, module, iom6, mix, stack, hot-add iom12 shelves to a stack of iom6 shelves 
-summary: 如果需要更多存储，您可以将 IOM12 磁盘架（带有 IOM12 模块的 SAS 磁盘架）热添加到 IOM6 磁盘架堆栈（带有 IOM6 模块的 SAS 磁盘架）中，这意味着您可以混合一个堆栈。 
+keywords: additional, storage, hot-add, iom12, shelves, shelf, sas, shelves, shelf, module, iom6, mix, stack, hot-add iom12 shelves to a stack of iom6 shelves, iom12b 
+summary: '如果需要更多存储、您可以将IOM12/IOM12B磁盘架(带有IOM12/IOM12B模块的SAS磁盘架)热添加到IOM6磁盘架堆栈(带有IOM6模块的SAS磁盘架)中、这意味着您可以混合一个堆栈。' 
 ---
-= 将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中
+= 将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈中
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-如果需要更多存储，您可以将 IOM12 磁盘架（带有 IOM12 模块的 SAS 磁盘架）热添加到 IOM6 磁盘架堆栈（带有 IOM6 模块的 SAS 磁盘架）中，这意味着您可以混合一个堆栈。
+如果需要更多存储、您可以将IOM12/IOM12B磁盘架(带有IOM12/IOM12B模块的SAS磁盘架)热添加到IOM6磁盘架堆栈(带有IOM6模块的SAS磁盘架)中、这意味着您可以混合一个堆栈。
 
 
 
 == 热添加的要求
 
 [role="lead"]
-在将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈之前， HA 对，单控制器或延伸型 MetroCluster 配置（系统）必须满足特定要求。
+在将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈之前、HA对、单控制器或延伸型MetroCluster 配置(系统)必须满足特定要求。
 
 
 NOTE: 有关网桥连接的 MetroCluster 配置，请参见 <<Requirements for a hot-add in bridge-attached MetroCluster configurations>>。
 
-* 您的系统和 ONTAP 版本必须支持在同一个堆栈（混合堆栈）中混合使用 IOM6 磁盘架和 IOM12 磁盘架。
+* 您的系统和ONTAP 版本必须支持在同一个堆栈(混合堆栈)中混合使用IOM6磁盘架和IOM12B磁盘架。
 +
 您可以使用以下方法之一验证支持：
 
@@ -61,7 +61,7 @@ NOTE: 如果 IOM6 磁盘架堆栈使用任何 SAS 光缆进行布线，则不能
 
 * 您的系统必须少于支持的最大驱动器数，至少等于要热添加的 IOM12 磁盘架中能够安装的驱动器数。
 +
-热添加 IOM12 磁盘架后，您不能超过系统支持的最大驱动器数。
+热添加IOM12/IOM12B磁盘架后、您不能超过系统支持的最大驱动器数。
 
 +
 https://hwu.netapp.com["NetApp Hardware Universe"]
@@ -73,7 +73,7 @@ https://hwu.netapp.com["NetApp Hardware Universe"]
 +
 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
 
-* 您必须已订购并收到 IOM12 磁盘架以及适当数量和类型的 SAS 铜缆。
+* 您必须已订购并收到IOM12/IOM12B磁盘架以及适当数量和类型的SAS铜缆。
 +
 IOM12 磁盘架使用迷你 SAS HD 连接器。IOM6 磁盘架使用 QSFP 连接器。
 
@@ -84,13 +84,13 @@ IOM12 磁盘架使用迷你 SAS HD 连接器。IOM6 磁盘架使用 QSFP 连接�
 == 网桥连接 MetroCluster 配置中的热添加要求
 
 [role="lead"]
-如果要将 IOM12 磁盘架热添加到使用 MetroCluster 配置中的一对 ATTO FibreBridge 网桥连接的 IOM6 磁盘架堆栈中，则系统必须满足特定要求。
+如果要将IOM12/IOM12B磁盘架热添加到使用MetroCluster 配置中的一对ATTO FibreBridge网桥连接的IOM6磁盘架堆栈中、则系统必须满足特定要求。
 
 * 如果网桥 SAS 端口在当前配置中可用，则应将 IOM12 磁盘架作为单独的堆栈添加。
 +
-在堆栈中混用 IOM12 和 IOM6 模块之前，请使用所有网桥端口。
+在堆栈中混用IOM12/IOM12B和IOM6模块之前、请使用所有网桥端口。
 
-* 您的系统和 ONTAP 版本必须支持在同一个堆栈（混合堆栈）中混合使用 IOM6 磁盘架和 IOM12 磁盘架。
+* 您的系统和ONTAP 版本必须支持在同一个堆栈(混合堆栈)中混合使用IOM6磁盘架和IOM12B磁盘架。
 +
 您可以使用以下方法之一验证支持：
 
@@ -115,18 +115,18 @@ https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html["安
 +
 https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html["安装和配置光纤连接的 MetroCluster 配置"]
 
-* 要热添加 IOM12 磁盘架的 IOM6 磁盘架堆栈必须使用 SAS 铜缆进行布线（适用于所有磁盘架到磁盘架和控制器到堆栈连接）。
+* 要热添加IOM12/IOM12B磁盘架的IOM6磁盘架堆栈必须使用SAS铜缆进行布线(适用于所有磁盘架到磁盘架和控制器到堆栈连接)。
 +
 混合堆栈不支持 SAS 光缆。
 
 +
 
-NOTE: 如果 IOM6 磁盘架堆栈使用任何 SAS 光缆进行布线，则不能热添加 IOM12 磁盘架。请联系您的 NetApp 销售代表。
+NOTE: 如果IOM6磁盘架堆栈使用任何SAS光缆进行布线、则不能热添加IOM12/IOM12B磁盘架。Contact your NetApp sales representative.
 
 * 您的配置必须小于网桥端口支持的最大驱动器数。
-* 您必须已订购并收到 IOM12 磁盘架以及适当数量和类型的 SAS 铜缆。
+* 您必须已订购并收到IOM12/IOM12B磁盘架以及适当数量和类型的SAS铜缆。
 +
-IOM12 磁盘架使用迷你 SAS HD 连接器。IOM6 磁盘架使用 QSFP 连接器。
+IOM12/IOM12B磁盘架使用迷你SAS HD连接器。IOM6 shelves use QSFP connectors.
 
 * 网桥必须运行固件版本 3.16/4.16 及更高版本。
 
@@ -136,18 +136,18 @@ IOM12 磁盘架使用迷你 SAS HD 连接器。IOM6 磁盘架使用 QSFP 连接�
 == 热添加注意事项
 
 [role="lead"]
-在将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈之前，您应熟悉此操作步骤的各个方面和最佳实践。
+在将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈之前、您应熟悉此操作步骤 的各个方面和最佳实践。
 
 
 
 === 一般注意事项
 
-* 强烈建议您要热添加的 IOM12 磁盘架运行固件版本 0260 或更高版本，然后再使用缆线将其连接到系统。
+* 强烈建议您热添加的IOM12/IOM12B磁盘架运行固件版本0260或更高版本、然后再使用缆线将其连接到系统。
 +
 如果热添加磁盘架未正确连接到堆栈，则使用受支持版本的磁盘架固件可防止存储堆栈访问问题。
 
 +
-将 IOM12 磁盘架固件下载到磁盘架后，通过在任一控制器的控制台中输入 `storage shelf show -module` 命令，验证固件版本是否为 0260 或更高版本。
+将IOM12/IOM12B磁盘架固件下载到磁盘架后、请在任一控制器的控制台中输入`storage shelf show -module`命令、以验证固件版本是否为0260或更高版本。
 
 * 不支持无中断堆栈整合。
 +
@@ -387,7 +387,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 == 为热添加的磁盘架布线
 
 [role="lead"]
-如何将 IOM12 磁盘架连接到 IOM6 磁盘架堆栈取决于 IOM12 磁盘架是否为初始 IOM12 磁盘架，这意味着该堆栈中不存在其他 IOM12 磁盘架， 或者，它是否是现有混合堆栈的额外 IOM12 磁盘架，这意味着该堆栈中已存在一个或多个 IOM12 磁盘架。它还取决于堆栈是否具有多路径 HA ，多路径，单路径 HA 或单路径连接。
+如何将IOM12/IOM12B磁盘架连接到IOM6磁盘架堆栈取决于IOM12磁盘架是否为初始IOM12/IOM12B磁盘架、这意味着该堆栈中不存在其他IOM12磁盘架、 或者、它是否是现有混合堆栈的额外IOM12/IOM12B磁盘架、这意味着该堆栈中已存在一个或多个IOM12B磁盘架。It also depends on whether the stack has multipath HA, multipath, single-path HA, or single-path connectivity.
 
 .开始之前
 * 您必须已满足系统要求。
@@ -405,47 +405,47 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 .关于此任务
-* 您始终可以将 IOM12 磁盘架热添加到堆栈中最后一个逻辑磁盘架，以便在堆栈中保持单速过渡。
+* 您始终可以将IOM12/IOM12B磁盘架热添加到堆栈中最后一个逻辑磁盘架、以便在堆栈中保持单个速度过渡。
 +
-通过将 IOM12 磁盘架热添加到堆栈中最后一个逻辑磁盘架， IOM6 磁盘架将保持分组在一起，而 IOM12 磁盘架将保持分组在一起，以便在两组磁盘架之间实现单速过渡。
+通过将IOM12/IOM12B磁盘架热添加到堆栈中最后一个逻辑磁盘架、IOM6磁盘架将保持分组在一起、IOM12B磁盘架将保持分组在一起、以便在两组磁盘架之间实现单速过渡。
 
 +
 例如：
 
 +
-** 在 HA 对中，包含两个 IOM6 磁盘架和两个 IOM12 磁盘架的堆栈中的单速过渡如下所示：
+** 在HA对中、包含两个IOM6磁盘架和两个IOM12/IOM12B磁盘架的堆栈中的单速过渡如下所示：
 +
- Controller <-> IOM6 <-> IOM6 <---> IOM12 <-> IOM12 <-> Controller
+ Controller <-> IOM6 <-> IOM6 <---> IOM12IOM12B <-> IOM12/IOM12B <-> Controller
 ** 在具有板载 IOM12E 存储的 HA 对中，包含两个 IOM12 磁盘架和两个 IOM6 磁盘架的堆栈中的单速过渡如下所示：
 +
- IOM12E 0b <-> IOM12 <-> IOM12 <---> IOM6 <-> IOM6 <-> IOM12E 0a
+ IOM12E 0b <-> IOM12/IOM12B <-> IOM12/IOM12B <---> IOM6 <-> IOM6 <-> IOM12E 0a
 +
-板载存储端口 0b 是来自内部存储（扩展器）的端口，由于它连接到热添加的 IOM12 磁盘架（堆栈中的最后一个磁盘架），因此 IOM12 磁盘架组会放在一起，并通过堆栈和板载 IOM12E 存储保持一次过渡。
+板载存储端口0b是来自内部存储(扩展器)的端口、由于它连接到热添加的IOM12/IOM12B磁盘架(堆栈中的最后一个磁盘架)、因此IOM12B磁盘架组会放在一起、并通过堆栈和板载IOM12E存储保持单个过渡。
 
 
 
 * 混合堆栈仅支持单速过渡。您不能再进行其他速度过渡。例如，一个堆栈中不能有两个速度过渡，如下所示：
 +
- Controller <-> IOM6 <-> IOM6 <---> IOM12 <-> IOM12 <---> IOM6 <-> Controller
+ Controller <-> IOM6 <-> IOM6 <---> IOM12/IOM12B <-> IOM12/IOM12B <---> IOM6 <-> Controller
 * 您可以将 IOM6 磁盘架热添加到混合堆栈中。但是，您必须将其热添加到 IOM6 磁盘架（现有一组 IOM6 磁盘架）所在堆栈的一侧，以便在堆栈中保持单速过渡。
-* 首先通过连接 IOM A 路径上的 SAS 端口来为 IOM12 磁盘架布线，然后根据堆栈连接情况对 IOM B 路径重复上述布线步骤。
+* 首先通过连接IOM A路径上的SAS端口来为IOM12/IOM12B磁盘架布线、然后根据堆栈连接情况对IOM B路径重复上述布线步骤。
 +
 
 NOTE: 在 MetroCluster 配置中，不能使用 IOM B 路径。
 
-* 初始 IOM12 磁盘架（连接到逻辑上一个 IOM6 磁盘架的 IOM12 磁盘架）始终连接到 IOM6 磁盘架圆形端口（而不是方形端口）。
+* 初始IOM12/IOM12B磁盘架(连接到逻辑上一个IOM6磁盘架的IOM12磁盘架)始终连接到IOM6磁盘架圆形端口(而不是方形端口)。
 * SAS 缆线连接器具有方向性；正确连接到 SAS 端口时，连接器会卡入到位。
 +
 对于磁盘架，您可以插入 SAS 缆线连接器，拉片朝下（位于连接器的下侧）。对于控制器， SAS 端口的方向可能因平台型号而异；因此，正确的 SAS 缆线连接器方向会有所不同。
 
-* 在未使用 FC-SAS 网桥的配置中，您可以参考下图将 IOM12 磁盘架连接到 IOM6 磁盘架堆栈。
+* 在未使用FC-SAS网桥的配置中、您可以参考下图将IOM12/IOM12B磁盘架连接到IOM6磁盘架堆栈。
 +
 此图仅适用于具有多路径 HA 连接的堆栈；但是，布线概念可以应用于具有多路径，单路径 HA ，单路径连接和延伸型 MetroCluster 配置的堆栈。
 
 +
 image::../media/drw_sas2_sas3_mixed_stack.png[DRW SAS2 SAS3 混合堆栈]
 
-* 在桥接 MetroCluster 配置中，您可以参考下图将 IOM12 磁盘架连接到 IOM6 磁盘架堆栈。 image:../media/hot_adding_iom12_shelves_to_iom6_stack_in_bridge_attached_config.png[""]
+* 在桥接MetroCluster 配置中、使用缆线将IOM12/IOM12B磁盘架连接到IOM6磁盘架堆栈时、您可以参考下图。 image:../media/hot_adding_iom12_shelves_to_iom6_stack_in_bridge_attached_config.png[""]
 
 
 .步骤
@@ -453,7 +453,7 @@ image::../media/drw_sas2_sas3_mixed_stack.png[DRW SAS2 SAS3 混合堆栈]
 +
 根据您的平台型号和堆栈连接（多路径 HA ，多路径，单路径 HA 或单路径），最后一个逻辑磁盘架是从控制器 SAS 端口 B 和 D 建立控制器到堆栈连接的磁盘架， 或者，磁盘架没有连接到任何控制器（因为控制器到堆栈的连接是通过控制器 SAS 端口 A 和 C 连接到堆栈的逻辑顶部）。
 
-. 如果要热添加的 IOM12 磁盘架是要添加到 IOM6 堆栈的初始 IOM12 磁盘架，这意味着 IOM6 磁盘架堆栈中不存在其他 IOM12 磁盘架，请完成相应的子步骤。
+. 如果要热添加的IOM12/IOM12B磁盘架是要添加到IOM6堆栈的初始IOM12/IOM12B磁盘架、这意味着IOM6磁盘架堆栈中不存在其他IOM12/IOM12B磁盘架、请完成相应的子步骤。
 +
 
 NOTE: 请确保在断开缆线连接并重新连接缆线与更换另一根缆线之间至少等待70秒。
@@ -480,11 +480,11 @@ NOTE: 请确保在断开缆线连接并重新连接缆线与更换另一根缆�
 +
 否则，请转至子步骤 E
 
-.. 使用缆线将最后一个 IOM6 磁盘架 IOM A 圆形端口（子步骤 A ）与新的 IOM12 磁盘架 IOM A 端口 1 之间的磁盘架到磁盘架连接。
+.. 使用缆线将最后一个IOM6磁盘架IOM A圆形端口(子步骤A)与新的IOM12/IOM12B磁盘架IOM A端口1之间的磁盘架到磁盘架连接。
 +
 使用 SAS 铜缆 QSFP-to-Mini-SAS HD 。
 
-.. 如果您要热添加另一个 IOM12 磁盘架，请使用缆线将 IOM12 磁盘架 IOM A 端口 3 ，刚刚连接的磁盘架连接到下一个 IOM12 磁盘架 IOM A 端口 1 。
+.. 如果要热添加另一个IOM12/IOM12B磁盘架、请在刚刚连接缆线的磁盘架的IOM12/IOM12B磁盘架IOM A端口3和下一个IOM12B磁盘架IOM A端口1之间使用缆线连接磁盘架到磁盘架。
 +
 使用 SAS 铜缆迷你 SAS HD 到迷你 SAS HD 缆线。
 
@@ -520,7 +520,7 @@ MetroCluster 配置中的网桥连接
 +
 使用 SAS 铜缆 QSFP-to-Mini-SAS HD 。
 
-.. 如果您要热添加另一个 IOM12 磁盘架，请使用缆线将 IOM12 磁盘架 IOM A 端口 3 ，刚刚连接的磁盘架连接到下一个 IOM12 磁盘架 IOM A 端口 1 。
+.. 如果要热添加另一个IOM12/IOM12B磁盘架、请在刚刚连接缆线的磁盘架的IOM12/IOM12B磁盘架IOM A端口3和下一个IOM12B磁盘架IOM A端口1之间使用缆线连接磁盘架到磁盘架。
 +
 使用 SAS 铜缆迷你 SAS HD 到迷你 SAS HD 缆线。
 
@@ -540,19 +540,19 @@ MetroCluster 配置中的网桥连接
  a| 
 单路径 HA 或单路径，没有控制器连接到最后一个逻辑磁盘架
  a| 
-.. 使用缆线将最后一个 IOM6 磁盘架 IOM A 圆形端口与新的 IOM12 磁盘架 IOM A 端口 1 之间的磁盘架到磁盘架连接。
+.. 使用缆线将最后一个IOM6磁盘架IOM A圆形端口与新的IOM12/IOM12B磁盘架IOM A端口1之间的磁盘架到磁盘架连接。
 +
 使用 SAS 铜缆 QSFP-to-Mini-SAS HD 。
 
 .. 对 IOM B 重复上述子步骤
-.. 如果要热添加另一个 IOM12 磁盘架，请重复子步骤 a 和 b
+.. 如果要热添加另一个IOM12/IOM12B磁盘架、请重复子步骤a和b
 +
 否则，请转至步骤 4 。
 
 
 
 |===
-. 如果要热添加的 IOM12 磁盘架是现有混合堆栈的额外 IOM12 磁盘架，这意味着堆栈中已存在一个或多个 IOM12 磁盘架，请完成相应的子步骤。
+. 如果您要热添加的IOM12/IOM12B磁盘架是现有混合堆栈中的一个额外IOM12/IOM12B磁盘架、这意味着堆栈中已存在一个或多个IOM12B磁盘架、请完成相应的子步骤。
 +
 
 NOTE: 请确保在断开缆线连接并重新连接缆线之间至少等待70秒、如果要将缆线更换为较长的缆线、请务必等待。
@@ -566,15 +566,15 @@ NOTE: 请确保在断开缆线连接并重新连接缆线之间至少等待70秒
  a| 
 多路径 HA 或多路径，或单路径 HA ，可通过控制器连接到逻辑最后一个磁盘架，或者在 MetroCluster 配置中通过网桥连接
  a| 
-.. 将控制器到堆栈的缆线从最后一个 IOM12 磁盘架 IOM A 端口 3 移至最后一个新 IOM12 磁盘架上的同一端口。
-.. 如果要热添加一个 IOM12 磁盘架，请使用缆线将旧的最后一个 IOM12 磁盘架 IOM A 端口 3 之间的磁盘架到磁盘架连接连接到新的最后一个 IOM12 磁盘架 IOM A 端口 1 。
+.. 将控制器到堆栈的缆线从最后一个IOM12/IOM12B磁盘架IOM A端口3移至最后一个新IOM12/IOM12B磁盘架上的同一端口。
+.. 如果要热添加一个IOM12/IOM12B磁盘架、请使用缆线将最后一个IOM12/IOM12B磁盘架IOM A端口3与最后一个IOM12B磁盘架IOM A端口1之间的磁盘架到磁盘架连接。
 +
 使用 SAS 铜缆迷你 SAS HD 到迷你 SAS HD 缆线。
 
 +
 否则，请转至下一子步骤。
 
-.. 如果要热添加多个 IOM12 磁盘架，请在最后一个 IOM12 磁盘架 IOM A 端口 3 和下一个 IOM12 磁盘架 IOM A 端口 1 之间使用缆线连接磁盘架到磁盘架，然后对任何其他 IOM12 磁盘架重复此操作。
+.. 如果要热添加多个IOM12/IOM12B磁盘架、请在最后一个IOM12/IOM12B磁盘架IOM A端口3和下一个IOM12B磁盘架IOM A端口1之间使用缆线连接磁盘架到磁盘架、然后对任何其他IOM12/IOM12B磁盘架重复此操作。
 +
 使用额外的 SAS 铜线迷你 SAS HD 到迷你 SAS HD 缆线。
 
@@ -592,12 +592,12 @@ NOTE: 请确保在断开缆线连接并重新连接缆线之间至少等待70秒
  a| 
 MetroCluster 配置中的网桥连接
  a| 
-.. 将底部网桥到堆栈缆线从最后一个 IOM12 磁盘架移至最后一个新 IOM12 磁盘架上的同一端口。
-.. 使用缆线将最后一个 IOM12 磁盘架 IOM A 端口 3 与下一个 IOM12 磁盘架 IOM A 端口 1 之间的磁盘架到磁盘架连接，然后对任何其他 IOM12 磁盘架重复此操作。
+.. 将底部网桥到堆栈缆线从旧的最后一个IOM12/IOM12B磁盘架移至最后一个新IOM12B磁盘架上的同一端口。
+.. 使用缆线将最后一个IOM12/IOM12B磁盘架IOM A端口3与下一个IOM12/IOM12B磁盘架IOM A端口1之间的磁盘架到磁盘架连接到磁盘架、然后对任何其他IOM12B磁盘架重复此操作。
 +
 使用 SAS 铜缆迷你 SAS HD 到迷你 SAS HD 缆线。
 
-.. 使用缆线将最后一个 IOM12 磁盘架 IOM B 端口 3 与下一个 IOM12 磁盘架 IOM B 端口 1 之间的磁盘架到磁盘架连接，然后对任何其他 IOM12 磁盘架重复此操作。
+.. 使用缆线将最后一个IOM12/IOM12B磁盘架IOM B端口3与下一个IOM12/IOM12B磁盘架IOM B端口1之间的磁盘架到磁盘架连接到磁盘架、然后对任何其他IOM12B磁盘架重复此操作。
 .. 转至步骤 4. 。
 
 
@@ -606,12 +606,12 @@ MetroCluster 配置中的网桥连接
  a| 
 单路径 HA 或单路径，没有控制器连接到最后一个逻辑磁盘架
  a| 
-.. 使用缆线将最后一个 IOM12 磁盘架 IOM A 端口 3 与最后一个新 IOM12 磁盘架 IOM A 端口 1 之间的磁盘架到磁盘架连接。
+.. 使用缆线将最后一个IOM12/IOM12B磁盘架IOM A端口3与最后一个新IOM12/IOM12B磁盘架IOM A端口1之间的磁盘架到磁盘架连接。
 +
 使用 SAS 铜缆迷你 SAS HD 到迷你 SAS HD 缆线。
 
 .. 对 IOM B 重复上述子步骤
-.. 如果要热添加另一个 IOM12 磁盘架，请重复子步骤 a 和 b
+.. 如果要热添加另一个IOM12/IOM12B磁盘架、请重复子步骤a和b
 +
 否则，请转至步骤 4 。
 
@@ -643,7 +643,7 @@ NOTE: 所有 MetroCluster 配置都需要手动分配驱动器。
 == 完成热添加
 
 [role="lead"]
-如果在准备将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
+如果在准备将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈时禁用了自动驱动器分配、则需要手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。
 
 您必须已按照系统说明为磁盘架布线。
 

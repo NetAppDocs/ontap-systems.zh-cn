@@ -2,16 +2,16 @@
 permalink: sas3/install-cabling-worksheet-template-multipath.html 
 sidebar: sidebar 
 keywords: complete, completing, worksheet, template, controller, sas, port, pair, cable, controller, disk, shelves, iom12, module, achieve, multipathed, connectivity, ha, pair, single-controller, configuration, worksheet, connection, controller-to-stack cabling worksheet template for multipathed connectivity 
-summary: 完成工作表模板后，您可以定义控制器 SAS 端口对，使用这些端口对将控制器连接到具有 IOM12 模块的磁盘架堆栈，以便在 HA 对或单控制器配置中实现多路径连接。您还可以使用已完成的工作表来指导自己完成配置的多路径连接布线。 
+summary: 通过填写工作表模板、您可以定义控制器SAS端口对、以便使用缆线将控制器连接到具有IOM12/IOM12B模块的磁盘架堆栈、从而在HA对或单控制器配置中实现多路径连接。You can also use the completed worksheet to walk yourself through cabling the multipathed connections for your configuration. 
 ---
-= 多路径连接的控制器到堆栈布线工作表模板—带有 IOM12 模块的磁盘架
+= 多路径连接的控制器到堆栈布线工作表模板—具有IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-完成工作表模板后，您可以定义控制器 SAS 端口对，使用这些端口对将控制器连接到具有 IOM12 模块的磁盘架堆栈，以便在 HA 对或单控制器配置中实现多路径连接。您还可以使用已完成的工作表来指导自己完成配置的多路径连接布线。
+通过填写工作表模板、您可以定义控制器SAS端口对、以便使用缆线将控制器连接到具有IOM12/IOM12B模块的磁盘架堆栈、从而在HA对或单控制器配置中实现多路径连接。You can also use the completed worksheet to walk yourself through cabling the multipathed connections for your configuration.
 
 HA 对或单控制器配置不能是 AFF A200 ， AFF A220 ， FAS2600 系列或 FAS2700 系统。如果您具有以下配置之一，请使用以下命令：
 
@@ -23,7 +23,7 @@ link:install-cabling-worksheets-examples-fas2600.html["常见 AFF A200 ， AFF A
 本文档提供了多路径 HA 和多路径配置的完整工作表示例。
 
 +
-工作表示例使用了一种配置，其中包含两个四端口 SAS HBA 和两个磁盘架堆栈以及 IOM12 模块。
+工作表示例使用了一种配置、其中包含两个四端口SAS HBA和两个磁盘架堆栈以及IOM12B模块。
 
 * 此工作表模板最多支持六个堆栈；如果需要，您需要添加更多列。
 * 如果需要，您可以参考 link:install-cabling-rules.html["SAS 布线规则"] 有关支持的配置，控制器插槽编号约定，磁盘架到磁盘架连接以及控制器到磁盘架连接（包括端口对的使用）的信息。
@@ -33,11 +33,11 @@ link:install-cabling-worksheets-examples-fas2600.html["常见 AFF A200 ， AFF A
 image::../media/drw_worksheet_mpha_template.gif[DRW 工作表 mpha 模板]
 
 .步骤
-. 在灰色框上方的框中，列出系统上的所有 SAS A 端口，然后按插槽（ 0 ， 1 ， 2 ， 3 等）顺序列出系统上的所有 SAS C 端口。
+. 在灰色框上方的框中、列出系统上的所有SAS A端口、然后按插槽(0、1、2、3等)顺序列出系统上的所有SAS C端口。
 +
 例如： 1A ， 2a ， 1c ， 2c
 
-. 在灰色框中，列出系统上的所有 SAS B 端口，然后按插槽（ 0 ， 1 ， 2 ， 3 等）顺序列出系统上的所有 SAS D 端口。
+. 在灰色框中、列出系统上的所有SAS B端口、然后按插槽(0、1、2、3等)顺序列出系统上的所有SAS D端口。
 +
 例如： 1B ， 2b ， 1D ， 2D
 

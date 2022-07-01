@@ -2,16 +2,16 @@
 permalink: sas3/install-cabling-worksheets-how-to-read-quadpath.html 
 sidebar: sidebar 
 keywords: example, guide, read, apply, complete, worksheet, stack, disk, shelves, shelf, iom12, quad-pathed, connectivity, how to read a worksheet to cable controller-to-stack connections for quad-pathed connectivity 
-summary: 您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便使用 IOM12 模块为磁盘架堆栈布线，从而实现四路径连接。 
+summary: 您可以使用此示例指导您完成如何读取已完成的工作表并将其应用于使用IOM12/IOM12B模块对磁盘架堆栈进行缆线连接、以实现四路径连接。 
 ---
-= 如何阅读使用缆线连接控制器到堆栈连接以实现四路径连接的工作表—具有 IOM12 模块的磁盘架
+= 如何阅读使用缆线连接控制器到堆栈连接的工作表—采用IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便使用 IOM12 模块为磁盘架堆栈布线，从而实现四路径连接。
+您可以使用此示例指导您完成如何读取已完成的工作表并将其应用于使用IOM12/IOM12B模块对磁盘架堆栈进行缆线连接、以实现四路径连接。
 
 .关于此任务
 * 此操作步骤引用以下工作表和布线示例，用于演示如何阅读工作表，以便为控制器到堆栈连接布线。

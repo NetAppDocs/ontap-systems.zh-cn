@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: example, guide, read, apply, complete, worksheet, cable, controller-to-stack, connection, disk, shelves, shelf, iom12, multipathed, connectivity, hot to read a worksheet to cable controller-to-stack connections for multipathed connectivity 
 summary: 您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便为具有 IOM12 模块的磁盘架使用缆线连接控制器到堆栈连接，从而实现多路径连接。 
 ---
-= 如何阅读使用缆线连接控制器到堆栈连接以实现多路径连接的工作表—具有 IOM12 模块的磁盘架
+= 如何阅读使用缆线连接控制器到堆栈连接以实现多路径连接的工作表—具有IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便为具有 IOM12 模块的磁盘架使用缆线连接控制器到堆栈连接，从而实现多路径连接。
+您可以使用此示例来指导您完成如何读取和应用已完成的工作表、以便为具有IOM12/IOM12B模块的磁盘架使用缆线连接控制器到堆栈连接、从而实现多路径连接。
 
 HA 对或单控制器配置不能是 AFF A200 ， AFF A220 ， FAS2600 系列或 FAS2700 系统。这些系统使用唯一的工作表：
 
@@ -20,7 +20,7 @@ link:install-cabling-worksheets-examples-fas2600.html["常见 AFF A200 ， AFF A
 .关于此任务
 * 此操作步骤引用以下工作表和布线示例，用于演示如何阅读工作表，以便为控制器到堆栈连接布线。
 +
-本示例中使用的配置是一种多路径 HA 配置，其中每个控制器上有两个四端口 SAS HBA （八个 SAS 端口），并有两个磁盘架堆栈与 IOM12 模块。跳过工作表中的其他每个端口对，可以为端口对布线。
+本示例中使用的配置是多路径HA配置、其中每个控制器上有两个四端口SAS HBA (八个SAS端口)、并有两个磁盘架堆栈和IOM12B模块。Port pairs are cabled by skipping every other port pair in the worksheet.
 
 +
 

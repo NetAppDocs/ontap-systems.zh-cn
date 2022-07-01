@@ -1,10 +1,10 @@
 ---
 permalink: sas3/install-new-system.html 
 sidebar: sidebar 
-keywords: install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling 
+keywords: install, cabling, cable, disk, shelves, shelf, iom12, module, system, installation, system, ha, pair, single-controller, configuration, cabinet, rack, requirement, install and cable disk shelves with iom12 modules for a new system installation, requirements for installing and cabling disk shelves with iom12 modules for a new system installation, considerations for installing and cabling disk shelves with iom12 modules for a new system installation, install disk shelves with iom12 modules for a new system installation, cable disk shelves with iom12 modules for a new system installation, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
 summary: 如果新系统 HA 对或单控制器配置未安装在机柜中，则必须在机架中安装磁盘架并为其布线。 
 ---
-= 安装新系统安装的磁盘架并为其布线—带有 IOM12 模块的磁盘架
+= 为新系统安装安装安装磁盘架并为其布线—带有IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ summary: 如果新系统 HA 对或单控制器配置未安装在机柜中，则�
 
 
 
-== 在新系统安装中安装带有 IOM12 模块的磁盘架并为其布线的要求
+== 为新系统安装安装安装使用IOM12/IOM12B模块的磁盘架并为其布线的要求
 
 [role="lead"]
 在安装磁盘架并为其布线之前，您必须满足特定要求。
@@ -36,7 +36,7 @@ link:../index.html["AFF 和 FAS 系统文档"]
 
 
 
-== 在新系统安装中安装具有 IOM12 模块的磁盘架并为其布线的注意事项
+== 在新系统安装中安装具有IOM12/IOM12B模块的磁盘架并为其布线的注意事项
 
 [role="lead"]
 在安装磁盘架并为其布线之前，您应熟悉此操作步骤的各个方面和最佳实践。
@@ -45,7 +45,7 @@ link:../index.html["AFF 和 FAS 系统文档"]
 
 === 一般注意事项
 
-* 带有 IOM12 模块的磁盘架在出厂时已将磁盘架 ID 预设为 00 。
+* 带有IOM12/IOM12B模块的磁盘架在出厂时已将磁盘架ID预设为00。
 +
 
 NOTE: 如果 HA 对至少包含两个堆栈，则包含第二个堆栈根聚合的磁盘架的磁盘架 ID 将预设为 10 。
@@ -133,7 +133,7 @@ NOTE: 请将磁盘驱动器放在ESD袋中、直到准备好安装为止。
 
 
 
-== 安装带有 IOM12 模块的磁盘架，以便安装新的系统
+== 安装带有IOM12/IOM12B模块的磁盘架、以便安装新的系统
 
 [role="lead"]
 您可以使用磁盘架随附的机架安装套件在机架中安装磁盘架。
@@ -240,7 +240,7 @@ NOTE: 此时请勿打开磁盘架的电源。
 
 
 
-== 使用缆线连接具有 IOM12 模块的磁盘架，以进行新的系统安装
+== 使用缆线连接具有IOM12/IOM12B模块的磁盘架、以进行新的系统安装
 
 [role="lead"]
 使用缆线连接磁盘架 SAS 连接（磁盘架到磁盘架（如果适用）和控制器到磁盘架），以便为系统建立存储连接。
