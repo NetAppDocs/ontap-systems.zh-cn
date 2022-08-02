@@ -188,8 +188,8 @@ mcc1A::> metrocluster operation show
 
 您可以使用以下动画，插图或写入的步骤从机箱中卸下控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=75b6fa91-96b9-4323-b156-aae10007c9a5["卸下控制器模块"]
-
+.动画-删除控制器模块
+video::75b6fa91-96b9-4323-b156-aae10007c9a5[panopto]
 image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 .步骤
@@ -223,8 +223,8 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 NOTE: 动画和图中显示了不带 DIMM 的插槽的空插槽。These empty sockets are populated with blanks.
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=175c6597-449e-4dc8-8c02-aad9012f08b5["更换系统 DIMM"]
-
+.动画-更换系统DIMM
+video::175c6597-449e-4dc8-8c02-aad9012f08b5[panopto]
 image::../media/drw_A400_Replace-NVDIMM-DIMM.png[DRW A400 更换 NVDIMM DIMM]
 
 系统中 DIMM 的数量和位置取决于系统的型号。有关详细信息，请参见通风管上的 FRU 示意图。
@@ -273,8 +273,8 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 您可以使用以下动画，图或写入步骤在机箱中安装控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=9249fdb8-1522-437d-9280-aae10007c97b["安装控制器模块"]
-
+.动画-安装控制器模块
+video::9249fdb8-1522-437d-9280-aae10007c97b[panopto]
 image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
 
 .步骤

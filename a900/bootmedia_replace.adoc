@@ -23,8 +23,8 @@ summary: 您必须卸下并打开控制器模块，找到并更换控制器中�
 . 从受损控制器模块拔下缆线，并跟踪缆线的连接位置。
 . 向下滑动凸轮把手上的 Terra cotta 按钮，直到其解锁为止。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=256721fd-4c2e-40b3-841a-adf2000df5fa["动画—删除控制器"^]
-
+.动画-删除控制器
+video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
 +
 image::../media/drw_a900_remove_PCM.png[DRW a900 删除 PCM]
 
@@ -77,8 +77,8 @@ image:../media/legend_icon_01.png[""]
 .步骤
 . 提起控制器模块背面的黑色通风管，然后使用以下示意图或控制器模块上的 FRU 示意图找到启动介质：
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c5080658-765e-4d29-8456-adf2000e1495[""Animation - 更换启动介质 ""^]
-
+.动画-更换启动介质
+video::c5080658-765e-4d29-8456-adf2000e1495[panopto]
 +
 image::../media/drw_a900_remove_boot_dev.png[DRW a900 删除启动开发]
 

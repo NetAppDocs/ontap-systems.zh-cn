@@ -34,8 +34,8 @@ summary: 系统中的所有其他组件必须正常运行；否则，您必须�
 NOTE: 卸下电源时，请始终用双手支撑其重量。
 
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d0eee92-72e2-4da4-a4fa-adf9016b57ff["动画—删除 / 安装 PSU"^]
-
+.动画-删除/安装PSU
+video::6d0eee92-72e2-4da4-a4fa-adf9016b57ff[panopto]
 +
 image::../media/drw_a900_remove_install_PSU_module.png[DRW a900 卸下安装 PSU 模块]
 
@@ -68,8 +68,8 @@ image:../media/legend_icon_01.png[""]
 NOTE: 风扇模块较短。请始终用您的空闲手托住风扇模块的底部，以免其突然从机箱中脱离并造成您的人身伤害。
 
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3c3c8d93-b48e-4554-87c8-adf9016af819["动画—拆卸 / 安装风扇"^]
-
+.动画-拆卸/安装风扇
+video::3c3c8d93-b48e-4554-87c8-adf9016af819[panopto]
 +
 image::../media/drw_a900_remove_install_fan.png[DRW a900 卸下安装风扇]
 
@@ -106,8 +106,8 @@ image:../media/legend_icon_02.png[""]
 . 从受损控制器模块拔下缆线，并跟踪缆线的连接位置。
 . 向下滑动凸轮把手上的 Terra cotta 按钮，直到其解锁为止。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=256721fd-4c2e-40b3-841a-adf2000df5fa["动画—删除控制器"^]
-
+.动画-删除控制器
+video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
 +
 image::../media/drw_a900_remove_PCM.png[DRW a900 删除 PCM]
 
@@ -163,10 +163,12 @@ I/O 模块从机箱中分离，并从 I/O 插槽中移出大约 1/2 英寸。
 确保跟踪 I/O 模块所在的插槽。
 
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3a5b1f6e-15ec-40b4-bb2a-adf9016af7b6["动画—删除 / 安装 I/O 模块"^]
-
+.动画-删除/安装I/O模块
+video::3a5b1f6e-15ec-40b4-bb2a-adf9016af7b6[panopto]
 +
 image:../media/drw_a900_remove_PCIe_module.png[""]
+
+
 
 +
 [cols="10,90"]
@@ -186,8 +188,6 @@ image:../media/legend_icon_02.png[""]
 I/O 凸轮闩锁完全解锁
 
 |===
-
-
 . 将 I/O 模块放在一旁。
 . 对旧机箱中的其余 I/O 模块重复上述步骤。
 
@@ -202,8 +202,8 @@ I/O 凸轮闩锁完全解锁
 . 如果您尚未接地，请正确接地。
 . 按下模块把手上的 Terra cotta 锁定按钮，然后将 DCPM 模块滑出机箱。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ade18276-5dbc-4b91-9a0e-adf9016b4e55["动画—删除 / 安装 DCPM"^]
-
+.动画-删除/安装DCPM
+video::ade18276-5dbc-4b91-9a0e-adf9016b4e55[panopto]
 +
 image::../media/drw_a900_remove_NV_battery.png[DRW a900 取出 NV 电池]
 
@@ -250,8 +250,8 @@ NOTE: 如果系统位于系统机柜中，则可能需要卸下后部系紧支�
 [role="lead"]
 将新机箱安装到机架或机柜中后，必须将 USB LED 模块从旧机箱移至新机箱。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=eb715462-cc20-454f-bcf9-adf9016af84e["动画—删除 / 安装 USB"^]
-
+.动画-删除/安装USB
+video::eb715462-cc20-454f-bcf9-adf9016af84e[panopto]
 image::../media/drw_a900_remove_replace_LED_mod.png[DRW a900 卸下更换 LED 模块]
 
 [cols="10,90"]

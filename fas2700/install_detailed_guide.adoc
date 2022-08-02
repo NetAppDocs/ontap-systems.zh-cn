@@ -576,8 +576,8 @@ link:../com.netapp.doc.hw-ds-sas3-icg/home.html["安装和布线"]
 .步骤
 . Use the following animation to set one or more drive shelf IDs:
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a-89d9-ab1b0066589b["设置驱动器架 ID"]
-
+.动画—设置驱动器架ID
+video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 打开两个节点的电源开关。
 +
@@ -593,8 +593,8 @@ NOTE: 初始启动可能需要长达八分钟的时间。
 
 . 使用以下动画将您的笔记本电脑连接到管理交换机。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=d61f983e-f911-4b76-8b3a-ab1b0066909b["将笔记本电脑连接到管理交换机"]
-
+.动画—将笔记本电脑连接到管理交换机
+video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
@@ -649,8 +649,8 @@ image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[从 DRW 客户端�
 
 . 使用以下动画设置一个或多个驱动器架 ID ：
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=c600f366-4d30-481a-89d9-ab1b0066589b["设置驱动器架 ID"]
-
+.动画—设置驱动器架ID
+video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 打开两个节点的电源开关。
 +

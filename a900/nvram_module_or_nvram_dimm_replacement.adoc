@@ -165,10 +165,12 @@ NVRAM 模块从机箱中分离并移出几英寸。
 
 .. 拉动 NVRAM 模块侧面的拉片，将其从机箱中卸下。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6eb2d864-9d35-4a23-b6c2-adf9016b359f["动画—更换 NVRAM 模块"^]
-
+.动画-更换NVRAM模块
+video::6eb2d864-9d35-4a23-b6c2-adf9016b359f[panopto]
 +
 image::../media/drw_a900_move-remove_NVRAM_module.png[DRW a900 移动删除 NVRAM 模块]
+
+
 
 +
 [cols="10,90"]
@@ -188,8 +190,6 @@ image:../media/legend_icon_02.png[""]
 I/O 闩锁完全解锁
 
 |===
-
-
 . 将 NVRAM 模块放在一个稳定的表面上，向下按压 NVRAM 模块上的蓝色锁定按钮，然后在按住蓝色按钮的同时，将盖从 NVRAM 模块上滑出。
 +
 image::../media/drw_a900_remove_NVRAM_module_contents.png[DRW a900 删除 NVRAM 模块内容]
@@ -242,10 +242,12 @@ NVRAM 模块从机箱中分离并移出几英寸。
 
 .. 拉动 NVRAM 模块侧面的拉片，将其从机箱中卸下。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0ae4e603-c22b-4930-8070-adf2000e38b5["动画—更换 NVRAM DIMM"^]
-
+.动画-更换NVRAM DIMM
+video::0ae4e603-c22b-4930-8070-adf2000e38b5[panopto]
 +
 image::../media/drw_a900_move-remove_NVRAM_module.png[DRW a900 移动删除 NVRAM 模块]
+
+
 
 +
 [cols="10,90"]
@@ -265,8 +267,6 @@ image:../media/legend_icon_02.png[""]
 I/O 闩锁完全解锁
 
 |===
-
-
 . 将 NVRAM 模块放在一个稳定的表面上，向下按压 NVRAM 模块上的蓝色锁定按钮，然后在按住蓝色按钮的同时，将盖从 NVRAM 模块上滑出。
 +
 image::../media/drw_a900_remove_NVRAM_module_contents.png[DRW a900 删除 NVRAM 模块内容]

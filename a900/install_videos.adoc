@@ -19,12 +19,12 @@ summary: 有两个视频：一个视频介绍了如何将系统装入机架并�
 
 以下视频显示了如何安装新系统并为其布线。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4c222e90-864b-4435-9405-adf200112f3e["动画— AFF A900 安装和设置说明"^]
-
+.动画—AFF A900安装和设置说明
+video::4c222e90-864b-4435-9405-adf200112f3e[panopto]
 
 
 == 视频二：执行端到端软件配置
 
 以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
 
-https://www.youtube.com/embed/WAE0afWhj1c?rel=0["NetApp 视频：为运行 ONTAP 9.2 的 FAS/AFF 系统的 vSphere NAS 数据存储库配置软件"^]
+video::WAE0afWhj1c?[youtube]

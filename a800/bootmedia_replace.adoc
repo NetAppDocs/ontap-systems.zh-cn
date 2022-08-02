@@ -188,7 +188,14 @@ image:../media/legend_icon_05.png[""]
 . 将相应的服务映像从 NetApp 支持站点下载并复制到 USB 闪存驱动器。
 +
 .. 将服务映像下载到笔记本电脑上的工作空间。
-.. 解压缩服务映像。+ 注意：如果要使用 Windows 提取内容，请勿使用 WinZip 提取网络启动映像。使用其他提取工具，例如 7-Zip 或 WinRAR 。+ 解压缩的服务映像文件中有两个文件夹： +
+.. 解压缩服务映像。
++
+
+NOTE: 如果要使用 Windows 提取内容，请勿使用 WinZip 提取网络启动映像。使用其他提取工具，例如 7-Zip 或 WinRAR 。
+
++
+解压缩的服务映像文件中有两个文件夹：
+
 +
 *** /boot
 *** EFI
@@ -227,9 +234,21 @@ image:../media/legend_icon_02.png[""]
 
 
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
-. 重新安装缆线管理设备，并根据需要重新对系统进行布线。+ 重新布线时，如果已卸下介质转换器（ SFP 或 QSFP ），请务必重新安装它们。
+. 重新安装缆线管理设备，并根据需要重新对系统进行布线。
++
+重新布线时，如果已卸下介质转换器（ SFP 或 QSFP ），请务必重新安装它们。
+
 . 将电源线插入电源，然后重新安装电源线固定器。
-. 将 USB 闪存驱动器插入控制器模块上的 USB 插槽。+ 确保将 USB 闪存驱动器安装在标有 USB 设备的插槽中，而不是 USB 控制台端口中。
-. Gently push the controller module all the way into the system until the controller module locking hooks begin to rise, firmly push on the locking hooks to finish seating the controller module, and then swing the locking hooks into the locked position over the pins on the controller module.+ 控制器一旦完全安装到机箱中，就会开始启动。
-. Interrupt the boot process by pressing Ctrl-C to stop at the LOADER prompt.+ 如果未显示此消息，请按 Ctrl-C ，选择启动到维护模式的选项，然后暂停控制器以启动到加载程序。
+. 将 USB 闪存驱动器插入控制器模块上的 USB 插槽。
++
+确保将 USB 闪存驱动器安装在标有 USB 设备的插槽中，而不是 USB 控制台端口中。
+
+. 将控制器模块一直轻轻推入系统中，直到控制器模块锁定挂钩开始上升，用力推动锁定挂钩以完成控制器模块的就位，然后将锁定挂钩旋转到控制器模块上插脚上方的锁定位置。
++
+控制器一旦完全安装到机箱中，就会开始启动。
+
+. 按 Ctrl-C 在 LOADER 提示符处停止，以中断启动过程。
++
+如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停控制器以启动到加载程序。
+
 

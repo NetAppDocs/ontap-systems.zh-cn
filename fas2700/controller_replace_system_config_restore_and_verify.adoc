@@ -121,7 +121,7 @@ _dev_name_ 可以是上一步中标识的任何一个端口和设备。
 
 .. 检查输出，如果适用，仅选择要运行的测试： `sldiag device modify -dev _dev_name_ -Selection only`
 +
--Selection 仅会禁用不希望对设备运行的所有其他测试。
+仅限 ` 选择` 会禁用您不想对设备运行的所有其他测试。
 
 .. 运行选定测试： `sldiag device run -dev _dev_name_`
 +

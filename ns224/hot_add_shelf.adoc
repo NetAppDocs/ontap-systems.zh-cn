@@ -559,10 +559,10 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 
-=== 为 FAS500f ， AFF A250 或 ASA A250HA 对的热添加磁盘架布线
+=== 为 FAS500f 或 AFF A250 HA 对的热添加磁盘架布线
 
 [role="lead"]
-如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f ， AFF A250 或 ASA A250HA 对中。
+如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f 或 AFF A250 HA 对中。
 
 .开始之前
 * 您必须已满足系统要求。

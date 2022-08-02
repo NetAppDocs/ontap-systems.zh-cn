@@ -130,15 +130,20 @@ TEST END --------------------------------------------
  a| 
 没有硬件问题，存储系统将返回到提示符。
 
-.. 输入以下命令以清除状态日志： `sldiag device clearstatus -dev devtype
+.. 输入以下命令以清除状态日志：`sldiag device clearstatus [-dev _devtype_|MB_slotnum]`
+.. 输入以下命令以验证是否已清除日志：`sldiag device status [-dev _devtype_|MB_slotnum]`
++
+此时将显示以下默认响应：
+
++
+[listing]
+----
+SLDIAG: No log messages are present.
+----
+.. 输入以下命令退出维护模式： `halt`
+.. 在 Loader 提示符处输入以下命令以启动存储系统： `boot_ontap` 您已完成系统级诊断。
 
 
-
-
-| MB | slototnum]` ..输入以下命令以验证是否已清除日志： `sldiag device status -dev devtype 
-
-
-| MB | slototnum]` + 显示以下默认响应： + - - SLDIAG ：不存在日志消息。-- ..输入以下命令退出维护模式： `halt`在 Loader 提示符处输入以下命令以启动存储系统： `boot_ontap` 您已完成系统级诊断。 
 
 
  a| 
@@ -150,7 +155,6 @@ TEST END --------------------------------------------
 .. 执行完全关闭并断开电源。
 .. 验证您是否已遵循在运行系统级诊断时确定的所有注意事项，缆线是否已牢固连接以及硬件组件是否已正确安装在存储系统中。
 .. 重新连接电源并打开存储系统的电源。
-.. 重复 _running hardware installation diagnostics_的 步骤 1 到 6 。
 
 
 |===

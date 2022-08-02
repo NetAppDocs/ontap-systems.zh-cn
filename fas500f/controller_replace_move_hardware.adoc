@@ -24,7 +24,7 @@ summary: 要更换控制器模块硬件，您必须卸下受损的控制器模�
 
 您可以使用以下视频或表格中的步骤更换控制器模块：
 
-.更换控制器模块
+.动画-更换控制器模块
 video::ab0ebe6b-e891-489c-aab4-ac5b015c8f01[panopto]
 . 如果您尚未接地，请正确接地。
 . 从源拔下控制器模块电源。
@@ -192,9 +192,10 @@ NOTE: 拧紧启动介质上的螺钉时请勿用力，否则可能会使其发�
 [role="lead"]
 要移动 DIMM ，请找到 DIMM 并将其从受损控制器移至更换控制器，然后按照特定步骤顺序进行操作。
 
-+ 图像：： ./media/drw_A250_DIMM_replace.png]]
+image::../media/drw_a250_dimm_replace.png[更换 DRW A250 DIMM]
 
-+ 重要信息：将每个 DIMM 安装到受损控制器模块中占用的同一插槽中。
+
+IMPORTANT: Install each DIMM into the same slot it occupied in the impaired controller module.
 
 . 缓慢地将 DIMM 两侧的 DIMM 弹出卡舌分开，然后将 DIMM 滑出插槽。
 +

@@ -142,8 +142,8 @@ LOADER 提示符
 . 从受损控制器模块拔下缆线，并跟踪缆线的连接位置。
 . 向下滑动凸轮把手上的 Terra cotta 按钮，直到其解锁为止。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=256721fd-4c2e-40b3-841a-adf2000df5fa["动画—删除控制器"^]
-
+.动画-删除控制器
+video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
 +
 image::../media/drw_a900_remove_PCM.png[DRW a900 删除 PCM]
 
@@ -208,8 +208,8 @@ image::../media/drw_a900_DIMM_map.png[DRW a900 DIMM 映射]
 IMPORTANT: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
 
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=db161030-298a-4ae4-b902-adf2000e2aa4["动画—更换 DIMM"^]
-
+.动画-更换DIMM
+video::db161030-298a-4ae4-b902-adf2000e2aa4[panopto]
 +
 image::../media/drw_a900_replace_PCM_dimms.png[DRW a900 可更换 PCM DIMM]
 
@@ -274,8 +274,8 @@ image:../media/legend_icon_01.png[""]
 |===
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=099237f3-d7f2-4749-86e2-adf2000df53c["动画—安装控制器"^]
-
+.动画-安装控制器
+video::099237f3-d7f2-4749-86e2-adf2000df53c[panopto]
 +
 image::../media/drw_a900_remove_PCM.png[DRW a900 删除 PCM]
 

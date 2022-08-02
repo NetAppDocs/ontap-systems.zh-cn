@@ -247,13 +247,10 @@ There are two boot media devices in the AFF A700s, a primary and a secondary or 
 +
 .. 如果需要，打开通风管。
 .. 如果需要，请解锁锁定闩锁，然后从控制器模块中卸下提升板，以卸下中间 PCIe 模块提升板 2 。
-
-
 +
 image::../media/drw_a700s_boot_media_replace.png[DRW a700s 启动介质更换]
 
-+
-+
+
 
 +
 [cols="1,4"]
@@ -528,13 +525,10 @@ NOTE: 为避免损坏内部连接器，请勿在将电源滑入系统时用力�
 .. 将通风管一直旋转到控制器模块。
 .. 向提升板滑动通风管，直到锁定卡舌卡入到位。
 .. 检查通风管，确保其正确就位并锁定到位。
-
-
 +
 image::../media/drw_a700s_close_air_duct.png[DRW a700s 封闭通风管]
 
-+
-+
+
 
 +
 |===

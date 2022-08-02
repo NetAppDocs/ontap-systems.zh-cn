@@ -188,8 +188,8 @@ mcc1A::> metrocluster operation show
 
 您可以使用以下动画，插图或写入的步骤从机箱中删除控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=ca74d345-e213-4390-a599-aae10019ec82["卸下控制器模块"]
-
+.动画-删除控制器模块
+video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
 image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 . 如果您尚未接地，请正确接地。
@@ -219,8 +219,8 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 您可以使用以下动画，插图或写入步骤更换 RTC 电池。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=80fe7a9b-de6f-46e0-a18b-aadb0157263d["更换 RTC 电池"]
-
+.动画-更换RTC电池
+video::80fe7a9b-de6f-46e0-a18b-aadb0157263d[panopto]
 image::../media/drw_A400_rtc-batt.png[DRW A400 RTC 电池]
 
 . 如果您尚未接地，请正确接地。
@@ -255,8 +255,8 @@ NOTE: 从电池架中取出电池时，请注意电池的极性。电池标有�
 
 您可以使用以下动画，插图或写入的步骤在机箱中安装控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=0310fe80-b129-4685-8fef-ab19010e720a["安装控制器模块"]
-
+.动画-安装控制器模块
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
 image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
 
 . 如果尚未关闭通风管或控制器模块盖板，请将其关闭。

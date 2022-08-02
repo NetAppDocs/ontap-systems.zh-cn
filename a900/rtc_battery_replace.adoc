@@ -142,8 +142,8 @@ LOADER 提示符
 . 从受损控制器模块拔下缆线，并跟踪缆线的连接位置。
 . 向下滑动凸轮把手上的 Terra cotta 按钮，直到其解锁为止。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=256721fd-4c2e-40b3-841a-adf2000df5fa["动画—删除控制器"^]
-
+.动画-删除控制器
+video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
 +
 image::../media/drw_a900_remove_PCM.png[DRW a900 删除 PCM]
 
@@ -194,8 +194,8 @@ image:../media/legend_icon_01.png[""]
 . 如果您尚未接地，请正确接地。
 . 找到 RTC 电池。
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1bb4d8d4-5040-471c-9593-adf2000df48d["动画—更换 RTC 电池"^]
-
+.动画-更换RTC电池
+video::1bb4d8d4-5040-471c-9593-adf2000df48d[panopto]
 +
 image::../media/drw_a900_remove_RTC_battery.png[DRW a900 取出 RTC 电池]
 

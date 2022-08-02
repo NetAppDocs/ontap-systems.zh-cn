@@ -147,10 +147,12 @@ I/O 模块从机箱中分离，并从 I/O 插槽中移出大约 1/2 英寸。
 确保跟踪 I/O 模块所在的插槽。
 
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3a5b1f6e-15ec-40b4-bb2a-adf9016af7b6["动画—删除 / 安装 I/O 模块"^]
-
+.动画-删除/安装I/O模块
+video::3a5b1f6e-15ec-40b4-bb2a-adf9016af7b6[panopto]
 +
 image:../media/drw_a900_remove_PCIe_module.png[""]
+
+
 
 +
 [cols="10,90"]
@@ -170,8 +172,6 @@ image:../media/legend_icon_02.png[""]
 I/O 凸轮闩锁完全解锁
 
 |===
-
-
 . 将 I/O 模块放在一旁。
 . 将替代 I/O 模块安装到机箱中，方法是将 I/O 模块轻轻滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销啮合，然后将 I/O 凸轮闩锁一直向上推，将模块锁定到位。
 . 根据需要重新对 I/O 模块进行布线。

@@ -17,8 +17,7 @@ summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ，
 * 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 
 
-link:https://youtu.be/CNk4FB5OUOI["AFF FAS2600 RTC 电池更换视频"^]
-
+video::CNk4FB5OUOI[youtube]
 
 
 == 第 1 步：关闭受损控制器
@@ -59,7 +58,7 @@ LOADER 提示符
  a| 
 从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
 
-+ 当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
 
 |===
 . 如果系统机箱中只有一个控制器模块，请关闭电源，然后从电源中拔下受损控制器的电源线。

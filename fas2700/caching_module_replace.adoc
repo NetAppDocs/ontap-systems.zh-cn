@@ -25,7 +25,7 @@ summary: 如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控�
 
 If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 。
 
-+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"]
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ONTAP 9 系统管理参考》"^]
 
 您可能希望在更换缓存模块之前擦除其内容。
 

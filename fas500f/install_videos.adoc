@@ -19,7 +19,7 @@ summary: 有两个视频：一个视频介绍了如何将系统装入机架并�
 
 以下视频显示了如何安装新系统并为其布线。
 
-.安装和设置 FAS500f
+.动画—安装和设置FAS500f
 video::1f975061-b285-411b-b2d7-ac680185a0d1[panopto]
 
 
@@ -27,4 +27,4 @@ video::1f975061-b285-411b-b2d7-ac680185a0d1[panopto]
 
 以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
 
-https://www.youtube.com/embed/WAE0afWhj1c?rel=0["NetApp 视频：为运行 ONTAP 9.2 的 FAS/AFF 系统的 vSphere NAS 数据存储库配置软件"^]
+video::WAE0afWhj1c?[youtube]

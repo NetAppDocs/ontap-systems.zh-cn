@@ -21,8 +21,8 @@ summary: 要更换控制器模块硬件，您必须卸下受损的控制器，�
 
 您可以使用以下，插图或写入的步骤从机箱中卸下控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=ca74d345-e213-4390-a599-aae10019ec82["卸下控制器模块"]
-
+.动画-删除控制器模块
+video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
 . 如果您尚未接地，请正确接地。
 . 释放电源线固定器，然后从电源中拔下缆线。
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
@@ -44,8 +44,8 @@ image:../media/drw_A400_Remove_controller.png[""]
 . 将控制器模块放在平稳的表面上。
 . 在更换用的控制器模块上，使用动画，插图或写入的步骤打开通风管并从控制器模块中卸下空的提升板：
 +
-https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=49053752-e813-4c15-a917-ab190147fa6e["从更换用的控制器模块中卸下空的提升板"]
-
+.动画-从更换用的控制器模块中删除空的提升板
+video::49053752-e813-4c15-a917-ab190147fa6e[panopto]
 
 
 image::../media/drw_a400_empty_riser_remove.png[卸下 DRW a400 空提升板]
@@ -64,8 +64,8 @@ image::../media/drw_a400_empty_riser_remove.png[卸下 DRW a400 空提升板]
 
 您可以使用以下动画，插图或写入的步骤将电源移至更换用的控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=92060115-1967-475b-b517-aad9012f130c["移动电源"]
-
+.动画-移动电源
+video::92060115-1967-475b-b517-aad9012f130c[panopto]
 . 卸下电源：
 +
 image::../media/drw_A400_psu.png[DRW A400 PSU]
@@ -96,8 +96,8 @@ NOTE: 为避免损坏内部连接器，请勿在将电源滑入系统时用力�
 
 您可以使用以下动画，插图或写入步骤将 NVDIMM 电池从受损控制器模块移至更换用的控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=94d115b2-b02a-4234-805c-aad9012f204c["移动 NVDIMM 电池"]
-
+.动画-移动NVDIMM电池
+video::94d115b2-b02a-4234-805c-aad9012f204c[panopto]
 image::../media/drw_A400_nvdimm-batt.png[DRW A400 NVDIMM 电池]
 
 . 打开通风管：
@@ -125,8 +125,8 @@ NOTE: 除非系统指示，否则请勿将电池缆线重新插入主板。
 
 您可以使用以下动画，插图或写入步骤将启动介质从受损控制器模块移至更换控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=2a14099c-85de-4a84-867c-aad9012efac8["移动启动介质"]
-
+.动画—移动启动介质
+video::2a14099c-85de-4a84-867c-aad9012efac8[panopto]
 image::../media/drw_A400_Replace-boot_media.png[DRW A400 更换启动介质]
 
 . 从控制器模块中找到并取出启动介质：
@@ -159,12 +159,12 @@ image::../media/drw_A400_Replace-boot_media.png[DRW A400 更换启动介质]
 
 移动 PCIe 提升板 1 和 2 （左侧和中间提升板）：
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=f4ee1d4d-6029-4fe6-a063-aad9012f170b["移动 PCI 提升板 1 和 2"]
-
+.动画—移动PCI提升板1和2
+video::f4ee1d4d-6029-4fe6-a063-aad9012f170b[panopto]
 移动夹层卡和提升板 3 （右侧提升板）：
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=b0c3b575-3434-4e00-a421-aad9012f2e9e["移动夹层卡和提升板 3."]
-
+.动画-移动夹层卡和提升板3
+video::b0c3b575-3434-4e00-a421-aad9012f2e9e[panopto]
 image::../media/drw_A400_Replace-PCIe-cards.png[DRW A400 更换 PCIe 卡]
 
 . 将受损控制器模块中的一个和两个 PCIe 提升板移至替代控制器模块：
@@ -204,8 +204,8 @@ image::../media/drw_A400_Replace-PCIe-cards.png[DRW A400 更换 PCIe 卡]
 
 您可以使用以下动画，插图或写入的步骤将 DIMM 从受损的控制器模块移至更换用的控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=717b52fa-f236-4f3d-b07d-aad9012f51a3["移动 DIMM"]
-
+.动画-移动DIMM
+video::717b52fa-f236-4f3d-b07d-aad9012f51a3[panopto]
 image::../media/drw_A400_Replace-NVDIMM-DIMM.png[DRW A400 更换 NVDIMM DIMM]
 
 . 找到控制器模块上的 DIMM 。
@@ -245,8 +245,8 @@ DIMM 紧紧固定在插槽中，但应易于插入。如果没有，请将 DIMM 
 
 您可以使用以下动画，插图或写入的步骤在机箱中安装替代控制器模块。
 
-https://netapp.hosted.panopto.com/Panopto/Pages/embed.aspx?id=0310fe80-b129-4685-8fef-ab19010e720a["安装控制器模块"]
-
+.动画-安装控制器模块
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
 image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
 
 . 如果尚未关闭此通风管，请关闭此通风管。
