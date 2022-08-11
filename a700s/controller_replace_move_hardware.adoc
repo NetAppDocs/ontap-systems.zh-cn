@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700s, move the controller module hardware 
 summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 
 ---
-= 更换控制器模块硬件— AFF A700s
+= 更换控制器模块硬件—AFF A700s
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,7 +19,7 @@ summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 
 
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
 
-. 如果您尚未接地，请使用 properlcontrollerer 对自己进行绑定。
+. 如果您尚未接地，请正确接地。
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
 +
 将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。

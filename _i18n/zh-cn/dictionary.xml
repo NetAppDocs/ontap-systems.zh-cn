@@ -6413,7 +6413,6 @@
   <block id="00399cc3a07fad2f3aadfc84abd6ee65" category="doc">启动介质更换概述— FAS500f</block>
   <block id="0dfb2568739ce156f475dfddb29e2387" category="doc">机箱更换概述— AFF A700s</block>
   <block id="09b725ec4b513cf16714e69e0bf388eb" category="doc">控制器模块更换概述— AFF A700s</block>
-  <block id="535d86d4b7bd76433b67b69b528e1319" category="doc">更换控制器模块硬件— AFF A700s</block>
   <block id="002bb0675c02757351d3b908720a16cf" category="doc">检查板载加密密钥— AFF A700s</block>
   <block id="505ba7be41620674b2d6d7caf7f3453d" category="doc">启动介质更换概述— AFF A700s</block>
   <block id="212a7c63df3073a24c5ba97aaad63e51" category="doc">更换硬件— AFF A700s</block>
@@ -6659,7 +6658,6 @@
   <block id="4ca27b7e1f4aad146e9ddc45f9af0410" category="doc">关闭控制器— FAS500f</block>
   <block id="2a468fdd2649c2bddd5f46d0d16b08af" category="doc">关闭受损控制器 - AFF A700s</block>
   <block id="abb3159815c7d305ec1a9697a5ec0fef" category="summary">要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
-  <block id="a3d92d77da598c2538c04939f7322e49" category="list-text">如果您尚未接地，请使用 properlcontrollerer 对自己进行绑定。</block>
   <block id="a14d65aea00503e78c39b9273b38fa4e" category="paragraph">There are two boot media devices in the AFF A700s, a primary and a secondary or backup boot media.您必须将其从受损控制器移至 _replacement_ 控制器，并将其安装到 _replacement_ 控制器中相应的插槽中。</block>
   <block id="d0a414fa814c592a9fcc74f3aaae710b" category="paragraph">接管或暂停受损控制器： `storage failover takeover -ofnode _impaired_node_name_`</block>
   <block id="e160675dcb2bc6ebdb28380884820e26" category="paragraph">当受损控制器显示 `Waiting for giveback...` 时，按 Ctrl-C ，然后回答 `y` 。</block>
@@ -7338,4 +7336,5 @@
   <block id="e4fe2ba20af64acaf45fc4ff2fdf0009" category="video-title">动画—为单个NS224磁盘架布线—ONTAP 9.8及更高版本</block>
   <block id="438bbae9c36667383085b6ae9e94d71f" category="video-title">动画—用缆线连接两个NS224磁盘架—ONTAP 9.8及更高版本</block>
   <block id="45fe4cb2226f52988b50d1f171612f5b" category="video-title">动画—安装和设置AFF A700或FAS9000</block>
+  <block id="a6528a788f88cf757ff6bbfe3f5da074" category="doc">更换控制器模块硬件—AFF A700s</block>
 </blocks>
