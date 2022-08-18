@@ -5054,7 +5054,6 @@
   <block id="e721fed5752af28a811f95c9517647d5" category="paragraph">磁盘架 ID 将闪烁，操作员显示面板琥珀色 LED 将闪烁，直到重新启动磁盘架。</block>
   <block id="114b5f5f60d5305cae68f7358becbb08" category="list-text">对要热添加的每个磁盘架重复子步骤 a 到 d 。</block>
   <block id="7d1f085b961baef4ee505ff0b202f8af" category="paragraph">您可以根据热添加磁盘架的适用情况为 SAS 连接布线—磁盘架到磁盘架和控制器到堆栈，以便它们可以连接到系统。</block>
-  <block id="25144a0fdc573490379af60a79ce8953" category="paragraph">您必须已满足中的要求 <block ref="b97fb0f13d8cc81479b53e89d9178105" category="inline-xref-macro-rx"></block> 并按照中的说明为每个磁盘架安装，启动和设置磁盘架 ID <block ref="1559829c998f121990e6747d77c5c076" category="inline-xref-macro-rx"></block>。</block>
   <block id="634f97c34a23666fd57c06fc0817e89c" category="inline-link-macro">磁盘架到磁盘架 SAS 连接规则</block>
   <block id="3580003f42a2219bf8368586293ce5d1" category="list-text">有关磁盘架到磁盘架的 `standard` 布线和磁盘架到磁盘架的 `d外宽` 布线的说明和示例，请参见 <block ref="cc9fe1e757b2015fb556613621f1b2cf" category="inline-link-macro-rx"></block>。</block>
   <block id="94b940d24fc57c2a1a1a40bc68523940" category="list-text">有关如何阅读使用缆线连接控制器到堆栈连接的工作表的说明，请参见 <block ref="32f1048d76ed4ef07349228b731694c0" category="inline-link-macro-rx"></block> 或 <block ref="22de937f8b92c8373761b256e9819f4a" category="inline-link-macro-rx"></block>。</block>
@@ -7135,8 +7134,6 @@
   <block id="4a6c06310d2bcd1c9758407cb59a423d" category="list-text">带有IOM12/IOM12B模块的磁盘架必须位于其自身唯一的堆栈中；不能将其添加到包含带有IOM6模块或IOM3模块的磁盘架的堆栈中。</block>
   <block id="1297a8f1ac3fcf90ab0c70ff5e47b71d" category="paragraph">此操作步骤 不会解决混合堆栈的问题：将具有IOM12/IOM12B模块的磁盘架热添加到具有IOM6模块的磁盘架堆栈中。</block>
   <block id="0712df39e8d2ca11a74df9f3fe275482" category="list-text">一个系统可以具有多路径和四路径磁盘架堆栈以及IOM12B模块。</block>
-  <block id="fb510c511f697ba0b554724f2d55ce12" category="section-title">安装具有IOM12/IOM12B模块的磁盘架以进行热添加</block>
-  <block id="eef12ccd7f9c2345b5a3e069f9088bd0" category="section-title">为具有IOM12/IOM12B模块的磁盘架布线以进行热添加</block>
   <block id="5b07090bafdc58182b6f01852ecbad05" category="summary">完成工作表模板后、您可以定义控制器SAS端口对、使用这些端口对将控制器连接到具有IOM12/IOM12B模块的磁盘架堆栈、以便在HA对或单控制器配置中实现四路径连接。You can also use the completed worksheet to walk yourself through cabling the quad-pathed connections for your configuration.</block>
   <block id="5d57c73dbe661f28ff4ab36825900d40" category="doc">四路径连接的控制器到堆栈布线工作表模板—具有IOM1/IOM12B2模块的磁盘架</block>
   <block id="51432cf63c198a0a11bab993299ae7fd" category="paragraph">工作表示例使用了一种配置、其中包含两个四端口SAS HBA和两个磁盘架堆栈以及IOM12B模块。</block>
@@ -7337,4 +7334,10 @@
   <block id="438bbae9c36667383085b6ae9e94d71f" category="video-title">动画—用缆线连接两个NS224磁盘架—ONTAP 9.8及更高版本</block>
   <block id="45fe4cb2226f52988b50d1f171612f5b" category="video-title">动画—安装和设置AFF A700或FAS9000</block>
   <block id="a6528a788f88cf757ff6bbfe3f5da074" category="doc">更换控制器模块硬件—AFF A700s</block>
+  <block id="d39ffb80309f658b2cc5987e7d3fe12b" category="section-title">安装具有IOM12/IOM12B模块的磁盘架以进行热添加</block>
+  <block id="7c100d04606be0913d1347f47c7198ab" category="section-title">使用缆线连接具有IOM12/IOM12B模块的磁盘架以进行热添加</block>
+  <block id="c920d4841ecd46b57d9a50e7295a2153" category="inline-link-macro">Requirements for hot-adding disk shelves with IOM12 modules</block>
+  <block id="36779ed778ea1fac61fae3be46917d43" category="inline-link-macro">安装具有IOM12模块的磁盘架以进行热添加</block>
+  <block id="56ccacf68c60aa589cdd947ffabc6a40" category="paragraph">You must have met the requirements in <block ref="38d5024537883b0bd86511e0b5e50dba" category="inline-link-macro-rx"></block> and installed, powered on, and set shelf IDs for each disk shelf as instructed in <block ref="2957551c96808bfde01acb853ddbc0af" category="inline-link-macro-rx"></block>。</block>
+  <block id="4ec6a95192d18718a540794417c8fa63" category="sidebar">NetApp Active IQ Digital Advisor</block>
 </blocks>

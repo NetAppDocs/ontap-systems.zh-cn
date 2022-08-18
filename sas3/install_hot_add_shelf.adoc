@@ -316,12 +316,12 @@ CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒
 
 
 
-== 为具有IOM12/IOM12B模块的磁盘架布线以进行热添加
+== 使用缆线连接具有IOM12/IOM12B模块的磁盘架以进行热添加
 
 [role="lead"]
 您可以根据热添加磁盘架的适用情况为 SAS 连接布线—磁盘架到磁盘架和控制器到堆栈，以便它们可以连接到系统。
 
-您必须已满足中的要求 <<Requirements for hot-adding disk shelves with IOM12 modules>> 并按照中的说明为每个磁盘架安装，启动和设置磁盘架 ID <<Installing disk shelves with IOM12 modules for a hot-add>>。
+You must have met the requirements in link:install-hot-add-shelf.html#requirements-for-hot-adding-disk-shelves-with-iom12iom12b-modules["Requirements for hot-adding disk shelves with IOM12 modules"] and installed, powered on, and set shelf IDs for each disk shelf as instructed in link:install-hot-add-shelf.html#install-disk-shelves-with-iom12iom12b-modules-for-a-hot-add["安装具有IOM12模块的磁盘架以进行热添加"]。
 
 .关于此任务
 * 有关磁盘架到磁盘架的 `standard` 布线和磁盘架到磁盘架的 `d外宽` 布线的说明和示例，请参见 link:install-cabling-rules.html#shelf-to-shelf-connection-rules["磁盘架到磁盘架 SAS 连接规则"]。
