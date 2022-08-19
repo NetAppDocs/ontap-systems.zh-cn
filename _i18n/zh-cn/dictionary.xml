@@ -7095,7 +7095,6 @@
   <block id="0455216bece3ce620e2fd5c84b24a523" category="list-text">在HA对中、包含两个IOM6磁盘架和两个IOM12/IOM12B磁盘架的堆栈中的单速过渡如下所示：</block>
   <block id="988fffa48b6a32203597193ccfb194d0" category="paragraph">板载存储端口0b是来自内部存储(扩展器)的端口、由于它连接到热添加的IOM12/IOM12B磁盘架(堆栈中的最后一个磁盘架)、因此IOM12B磁盘架组会放在一起、并通过堆栈和板载IOM12E存储保持单个过渡。</block>
   <block id="22c141c57159ea5a9cf5ecee1f8b4145" category="list-text">首先通过连接IOM A路径上的SAS端口来为IOM12/IOM12B磁盘架布线、然后根据堆栈连接情况对IOM B路径重复上述布线步骤。</block>
-  <block id="74e72cd0b8695a83723abedf9f9e8d92" category="list-text">初始IOM12/IOM12B磁盘架(连接到逻辑上一个IOM6磁盘架的IOM12磁盘架)始终连接到IOM6磁盘架圆形端口(而不是方形端口)。</block>
   <block id="f40ad7d263effd48cd15f5ec54dc2775" category="list-text">在未使用FC-SAS网桥的配置中、您可以参考下图将IOM12/IOM12B磁盘架连接到IOM6磁盘架堆栈。</block>
   <block id="5c5d06fa180884eea62ba831b980ed33" category="list-text">在桥接MetroCluster 配置中、使用缆线将IOM12/IOM12B磁盘架连接到IOM6磁盘架堆栈时、您可以参考下图。 <block ref="3bf7d126d94220be52cd0d278e98261d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3d7f99cbbf1b9ba05ea3a6ec89eae8b6" category="list-text">如果要热添加的IOM12/IOM12B磁盘架是要添加到IOM6堆栈的初始IOM12/IOM12B磁盘架、这意味着IOM6磁盘架堆栈中不存在其他IOM12/IOM12B磁盘架、请完成相应的子步骤。</block>
@@ -7340,4 +7339,7 @@
   <block id="36779ed778ea1fac61fae3be46917d43" category="inline-link-macro">安装具有IOM12模块的磁盘架以进行热添加</block>
   <block id="56ccacf68c60aa589cdd947ffabc6a40" category="paragraph">You must have met the requirements in <block ref="38d5024537883b0bd86511e0b5e50dba" category="inline-link-macro-rx"></block> and installed, powered on, and set shelf IDs for each disk shelf as instructed in <block ref="2957551c96808bfde01acb853ddbc0af" category="inline-link-macro-rx"></block>。</block>
   <block id="4ec6a95192d18718a540794417c8fa63" category="sidebar">NetApp Active IQ Digital Advisor</block>
+  <block id="398a3c8d2269f5f0bf21e8be014ed54c" category="list-text">将带有IOM12模块的磁盘架热添加到带有IOM6模块的磁盘架堆栈时、整个堆栈的性能将以6 Gbps (以最低通用速度运行)运行。</block>
+  <block id="75e1d900c724ecf27f282e3bba238d06" category="paragraph">如果要热添加的磁盘架是已从IOM3或IOM6模块升级到IOM12模块的磁盘架、则该堆栈的运行速度为12 Gbps；但是、磁盘架背板和磁盘功能可能会将磁盘性能限制为3 Gbps或6 Gbps。</block>
+  <block id="240920b675de649a14eaba01757477c0" category="list-text">初始IOM12/IOM12B磁盘架(连接到逻辑上一个IOM6磁盘架的磁盘架)始终连接到IOM6磁盘架圆形端口(而不是方形端口)。</block>
 </blocks>
