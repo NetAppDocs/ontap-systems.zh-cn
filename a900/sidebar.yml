@@ -4,6 +4,7 @@ title: AFF A900 系统
 url: "/a900/index.html"
 entries:
 - title: 安装和设置
+  pdf-filename: AFF A900安装和设置
   entries:
   - title: 选择安装和设置体验
     url: "/a900/install_setup.html"
@@ -14,10 +15,12 @@ entries:
   - title: 详细步骤
     url: "/a900/install_detailed_guide.html"
 - title: 维护
+  pdf-filename: AFF A900维护
   entries:
   - title: 添加 I/O 模块
     url: "/a900/add_io_module.html"
   - title: 启动介质
+    pdf-filename: AFF A900启动介质
     entries:
     - title: 概述
       url: "/a900/bootmedia_replace_overview.html"
@@ -34,6 +37,7 @@ entries:
     - title: 将故障部件退回 NetApp
       url: "/a900/bootmedia_complete_rma.html"
   - title: 机箱
+    pdf-filename: AFF A900机箱
     entries:
     - title: 概述
       url: "/a900/chassis_replace_overview.html"
@@ -44,6 +48,7 @@ entries:
     - title: 还原和验证配置
       url: "/a900/chassis_replace_complete_system_restore_rma.html"
   - title: 控制器模块
+    pdf-filename: AFF A900控制器模块
     entries:
     - title: 概述
       url: "/a900/controller_replace_overview.html"

@@ -231,12 +231,21 @@ I/O 凸轮闩锁完全解锁
 
 
 
-== 第 3 步：更换 PCIe 模块后重新启动控制器
+== 第 3 步：更换 I/O 模块后重新启动控制器
 
-更换 PCIe 模块后，必须重新启动控制器模块。
+更换 I/O 模块后，必须重新启动控制器模块。
+
+
+NOTE: 如果新I/O模块与故障模块型号不同、则必须先重新启动BMC。
 
 .步骤
-. 在 LOADER 提示符处，重新启动节点： _bybye
+. 如果替代模块与旧模块的型号不同、请重新启动BMC：
++
+.. 在LOADER提示符处、更改为高级权限模式：`priv set advanced`
+.. 重新启动BMC：`sp reboot`
+
+
+. 从LOADER提示符处、重新启动节点：`bye`
 +
 
 NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点。
@@ -248,10 +257,11 @@ NOTE: 请务必在完成转换后退出维护模式。
 
 . 使节点恢复正常运行：`storage failover giveback -ofnode _impaired_node_name_`
 . 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
-
-
++
 
 NOTE: 如果您的系统采用双节点MetroCluster 配置、则必须按照下一步中所述切回聚合。
+
+
 
 
 

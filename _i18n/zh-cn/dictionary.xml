@@ -3842,8 +3842,6 @@
   <block id="e3ca62ecd59008690a4c01731db9497c" category="section-title">第 2 步：更换 I/O 模块</block>
   <block id="6ba4f7d92194f0cbca5f6652f992bebf" category="paragraph">要更换 I/O 模块，请在机箱中找到该模块，然后按照特定步骤顺序进行操作。</block>
   <block id="45effe123bc9d7b38324ac0170a7d2ed" category="list-text">将替代 I/O 模块安装到机箱中，方法是将 I/O 模块轻轻滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销啮合，然后将 I/O 凸轮闩锁一直向上推，将模块锁定到位。</block>
-  <block id="fe93c3e28753ccd59e8b3dc55497b074" category="section-title">第 3 步：更换 PCIe 模块后重新启动控制器</block>
-  <block id="60f0e4a73edf1a4e40be1d8fff5656f6" category="paragraph">更换 PCIe 模块后，必须重新启动控制器模块。</block>
   <block id="074956b98e6ab62b7ae2bf9b8699df64" category="list-text">如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 `nicadmin convert` 命令将这些端口转换为 10 GbE 连接。</block>
   <block id="a807e98301721a3033173dc23ac9fd93" category="summary">要热插拔包含 NVRAM10 电池的降级控制器电源模块（ DCPM ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。</block>
   <block id="9b9f090ead8603008076b06ff01712ce" category="paragraph">在从机箱中卸下故障模块之前，您必须准备好一个替代 DCPM 模块，并且必须在卸下此模块后五分钟内更换此模块。从机箱中删除 DCPM 模块后，拥有 DCPM 模块的控制器模块除了故障转移到另一个控制器模块之外，不存在关闭保护。</block>
@@ -6087,7 +6085,6 @@
   <block id="2aba05ee9a4093e5315b48903c27d988" category="doc">更换 I/O 模块 - AFF A900</block>
   <block id="a8869e142255ff80f45be4817f469087" category="section-title">第 3 步：更换 I/O 模块后重新启动控制器</block>
   <block id="bbee62c98bf71c87d77b3d48e5cacaff" category="paragraph">更换 I/O 模块后，必须重新启动控制器模块。</block>
-  <block id="8c2fb795497456b969ba9307ef6f84c8" category="list-text">在 LOADER 提示符处，重新启动节点： _bybye</block>
   <block id="b40d85db7a9de91cff53c5663c76daaf" category="list-text">使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
   <block id="65dc2e566ca79200d7c70bef0b947464" category="doc">OKM ， NSE 和 NVE 的启动后介质更换步骤— AFF A900</block>
   <block id="9a35117ce5f367da3a3ca5116d861d73" category="list-text">在启动菜单中，输入隐藏的命令 `re封装板载密钥管理器` ，然后在提示符处回答 `y` 。</block>
@@ -6966,7 +6963,6 @@
   <block id="3e5fda4bdb63c28cc3aa53cadbde1129" category="doc">更换DIMM - FAS9500</block>
   <block id="6a58b2807f942e88a255882209bad046" category="sidebar">缓存模块热插拔</block>
   <block id="50a5f31124b37f0e6f0175b4691d290a" category="paragraph">如果您的平台型号具有内部磁盘架、则磁盘架ID必须在内部磁盘架和外部连接的磁盘架之间是唯一的。</block>
-  <block id="5db74a009a275aefa3af112cb922e082" category="list-text">在LOADER提示符处、重新启动节点：_Bye_注：此操作将重新初始化PCIe卡和其他组件、然后重新启动节点。</block>
   <block id="208e6af1006f73ba3b37a7e05e3692cd" category="list-text">使节点恢复正常运行：`storage failover giveback -ofnode _impaired_node_name_`</block>
   <block id="837fcf17f123dccb1301f252ade8a58e" category="admonition">如果您的系统采用双节点MetroCluster 配置、则必须按照下一步中所述切回聚合。</block>
   <block id="abc219c929a34cf7b62e36c2503b63ac" category="video-title">动画-删除控制器模块</block>
@@ -7342,4 +7338,19 @@
   <block id="398a3c8d2269f5f0bf21e8be014ed54c" category="list-text">将带有IOM12模块的磁盘架热添加到带有IOM6模块的磁盘架堆栈时、整个堆栈的性能将以6 Gbps (以最低通用速度运行)运行。</block>
   <block id="75e1d900c724ecf27f282e3bba238d06" category="paragraph">如果要热添加的磁盘架是已从IOM3或IOM6模块升级到IOM12模块的磁盘架、则该堆栈的运行速度为12 Gbps；但是、磁盘架背板和磁盘功能可能会将磁盘性能限制为3 Gbps或6 Gbps。</block>
   <block id="240920b675de649a14eaba01757477c0" category="list-text">初始IOM12/IOM12B磁盘架(连接到逻辑上一个IOM6磁盘架的磁盘架)始终连接到IOM6磁盘架圆形端口(而不是方形端口)。</block>
+  <block id="966c8588db44d6fc5bd740f02c4aeb91" category="admonition">如果新I/O模块与故障模块型号不同、则必须先重新启动BMC。</block>
+  <block id="fac432b1efa495a7ca9205e962038529" category="list-text">如果替代模块与旧模块的型号不同、请重新启动BMC：</block>
+  <block id="741ed5c64ad3d534bfa3f19ff5509d9b" category="list-text">在LOADER提示符处、更改为高级权限模式：`priv set advanced`</block>
+  <block id="b40f61c6dd95c940867e3e5d99f099be" category="list-text">重新启动BMC：`sp reboot`</block>
+  <block id="7ec1cacfbf4271c9864b8e40717b1f8f" category="list-text">从LOADER提示符处、重新启动节点：`bye`</block>
+  <block id="d73758375aa4c2c0d806b85cf93229be" category="sidebar">FAS9500安装和设置</block>
+  <block id="fd44bc5547a31fa6a44a5dba383710f5" category="sidebar">FAS9500维护</block>
+  <block id="ee6cf51d21f40cc78c0a70dbb1b8d104" category="sidebar">FAS9500启动介质</block>
+  <block id="33a725da473f57f9db39e8cb90fb8ec1" category="sidebar">FAS9500机箱</block>
+  <block id="cea781d942e6e6feafc25284d025750b" category="sidebar">FAS9500控制器模块</block>
+  <block id="4ea03be5210b1deef6915fc966939eb4" category="sidebar">AFF A900安装和设置</block>
+  <block id="9dac2c892993fb8afd0257c050073a7a" category="sidebar">AFF A900维护</block>
+  <block id="fe673aff2ce9eb5c6eaf841f4ec88b30" category="sidebar">AFF A900启动介质</block>
+  <block id="6cff7e5493433d24015d6ef5a8566b38" category="sidebar">AFF A900机箱</block>
+  <block id="7d1c80f318f9bf16deac2495abe88a7e" category="sidebar">AFF A900控制器模块</block>
 </blocks>

@@ -4,6 +4,7 @@ title: FAS9500系统
 url: "/fas9500/index.html"
 entries:
 - title: 安装和设置
+  pdf-filename: FAS9500安装和设置
   entries:
   - title: 选择安装和设置体验
     url: "/fas9500/install_setup.html"
@@ -14,10 +15,12 @@ entries:
   - title: 详细步骤
     url: "/fas9500/install_detailed_guide.html"
 - title: 维护
+  pdf-filename: FAS9500维护
   entries:
   - title: 添加 I/O 模块
     url: "/fas9500/add_io_module.html"
   - title: 启动介质
+    pdf-filename: FAS9500启动介质
     entries:
     - title: 概述
       url: "/fas9500/bootmedia_replace_overview.html"
@@ -36,6 +39,7 @@ entries:
   - title: 缓存模块
     url: "/fas9500/caching_module_hot_swap.html"
   - title: 机箱
+    pdf-filename: FAS9500机箱
     entries:
     - title: 概述
       url: "/fas9500/chassis_replace_overview.html"
@@ -46,6 +50,7 @@ entries:
     - title: 还原和验证配置
       url: "/fas9500/chassis_replace_complete_system_restore_rma.html"
   - title: 控制器模块
+    pdf-filename: FAS9500控制器模块
     entries:
     - title: 概述
       url: "/fas9500/controller_replace_overview.html"
