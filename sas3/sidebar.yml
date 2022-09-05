@@ -22,7 +22,7 @@ entries:
       url: "/sas3/install-cabling-rules.html"
     - title: 常见多路径 HA 配置的布线工作表和示例
       url: "/sas3/install-cabling-worksheets-examples-multipath.html"
-    - title: 使用板载存储的AFF 和FAS 平台的布线工作表和示例
+    - title: 使用内部存储的平台的布线工作表和示例
       url: "/sas3/install-cabling-worksheets-examples-fas2600.html"
     - title: 具有两个四端口 SAS HBA 的四路径 HA 配置的布线工作表和示例
       url: "/sas3/install-worksheets-examples-quadpath.html"

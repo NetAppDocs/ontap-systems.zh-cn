@@ -33,12 +33,15 @@ NOTE: 本指南中介绍的有关控制器插槽编号规则、磁盘架到磁�
 == 配置规则
 
 [role="lead"]
-具有 IOM12 模块的磁盘架在特定类型的 HA 对和单控制器配置中受支持。
+特定类型的HA对和单控制器配置支持具有IOM12模块的磁盘架。
+
+
+NOTE: 此内容不会介绍FAS25XX平台。
 
 * HA 对配置必须采用多路径 HA 或四路径 HA 配置的形式进行布线，但以下情况除外：
 +
-** AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700HA 对配置（带有外部磁盘架）可以作为单路径 HA 配置进行布线，以支持连接到外部 SAS 磁带备份设备。
-** AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700HA 对配置不支持四路径 HA 连接。
+** 具有内部存储的平台、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、可以作为单路径HA配置进行布线、以支持连接到外部SAS磁带备份设备。
+** 具有内部存储的平台、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、不支持四路径HA连接。
 
 
 * 单控制器配置必须采用多路径或四路径配置的形式进行布线，但以下情况除外：
@@ -119,7 +122,7 @@ image::../media/drw_shelf_to_shelf_double_wide.gif[DRW 磁盘架到磁盘架的�
 == 控制器到堆栈的连接规则
 
 [role="lead"]
-您可以通过了解 SAS 磁盘架使用基于软件的磁盘所有权，控制器端口 A/C 和 B/D 如何连接到堆栈来正确地将 SAS 连接从 HA 对或单控制器配置中的每个控制器连接到每个堆栈。 控制器端口 A/C 和 B/D 如何组织成端口对，以及 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统端口 0b 和 0a 如何连接到堆栈。
+您可以通过了解SAS磁盘架使用基于软件的磁盘所有权、控制器端口A/C和B/D如何连接到堆栈来正确地将SAS连接从HA对或单控制器配置中的每个控制器连接到每个堆栈。 如何将控制器端口A/C和B/D组织成端口对、以及具有内部存储的平台如何将其控制器端口连接到堆栈。
 
 
 
@@ -131,7 +134,7 @@ SAS 磁盘架使用基于软件的磁盘所有权（而不是基于硬件的磁�
 
 
 
-=== 控制器 A 和 C 端口连接规则（适用于非 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置）
+=== 控制器A和C端口连接规则(适用于没有内部存储的平台)
 
 * A 和 C 端口始终是堆栈的主路径。
 * A 和 C 端口始终连接到堆栈中第一个逻辑磁盘架。
@@ -149,7 +152,7 @@ image::../media/drw_controller_to_stack_rules_ports_a_and_c_example.gif[drw 控�
 
 
 
-=== 控制器 B 和 D 端口连接规则（适用于非 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置）
+=== 控制器B和D端口连接规则(适用于没有内部存储的平台)
 
 * B 和 D 端口始终是堆栈的二级路径。
 * B 和 D 端口始终连接到堆栈中最后一个逻辑磁盘架。
@@ -168,7 +171,7 @@ image::../media/drw_controller_to_stack_rules_ports_b_and_d_example.gif[drw 控�
 
 
 
-=== 端口对连接规则（适用于非 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置）
+=== 端口对连接规则(适用于没有内部存储的平台)
 
 控制器 SAS 端口 A ， B ， C 和 D 按端口对进行组织，在 HA 对和单控制器配置中使用缆线连接控制器到堆栈连接时，可以利用所有 SAS 端口来提高系统故障恢复能力和一致性。
 
@@ -239,9 +242,12 @@ link:install-cabling-worksheet-template-quadpath.html["用于四路径连接的�
 
 
 
-=== AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 控制器 0b 和 0a 端口连接规则连接到外部磁盘架
+=== 使用内部存储的平台的控制器0b和0a端口连接规则
 
-AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统具有一组唯一的连接规则，因为每个控制器必须在内部存储（端口 0b ）和堆栈之间保持相同的域连接。这意味着，如果控制器位于机箱（控制器 1 ）的插槽 A 中，则它位于域 A （ IOM A ）中，因此端口 0b 必须连接到堆栈中的 IOM A 。如果控制器位于机箱的插槽 B （控制器 2 ）中，则它位于域 B （ IOM B ）中，因此端口 0b 必须连接到堆栈中的 IOM B 。
+具有内部存储的平台、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、具有一组唯一的连接规则、因为每个控制器必须在内部存储(端口0b)和堆栈之间保持相同的域连接。This means that when a controller is located in slot A of the chassis (controller 1) it is in domain A (IOM A) and therefore port 0b must connect to IOM A in the stack.When a controller is located in slot B of the chassis (controller 2) it is in domain B (IOM B) and therefore port 0b must connect to IOM B in the stack.
+
+
+NOTE: 此内容不会介绍FAS25XX平台。
 
 
 NOTE: 如果您未将 0b 端口连接到正确的域（交叉连接域），则会使系统面临故障恢复能力问题，从而无法安全地执行无中断过程。
@@ -266,7 +272,7 @@ NOTE: 如果您未将 0b 端口连接到正确的域（交叉连接域），则�
 
 
 
-下图突出显示了 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 多路径 HA 配置的内部存储端口（ 0b ）域连接：
+下图突出显示了FAS2600系列、AFF A200、FAS2700系列、AFF A220及更高版本多路径HA配置的内部存储端口(0b)域连接：
 
 image::../media/drw_fas2600_mpha_domain_example.png[DRW fas2600 mpha 域示例]
 

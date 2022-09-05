@@ -1521,7 +1521,6 @@
   <block id="b9068760536b874bf77dc015fb91c3ae" category="doc">完成系统还原— FAS8200</block>
   <block id="332c846459ecae57b885b30c41482384" category="section-title">第 3 步：验证 LIF 并注册序列号</block>
   <block id="0336dcab6aaf6e0e6b3e580f2e159ad5" category="doc">安装和设置 PDF 海报— FAS8200</block>
-  <block id="345a2a62ce004a5b297819af054c9777" category="inline-link-macro">《 AFF FAS8200 安装和设置说明》</block>
   <block id="10bc7f8044338127350055a62aad1a90" category="doc">更换 DIMM - FAS8200</block>
   <block id="de2a859c590dc7d6eabe3126531d15fe" category="section-title">第 2 步：打开控制器模块</block>
   <block id="63d6811d18004212a8a99f9cbad84f37" category="paragraph">要访问控制器内部的组件，您必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。</block>
@@ -3177,7 +3176,6 @@
   <block id="4b0f11237c7fb298046b87e4e5edf9a0" category="paragraph">您可以运行 `storage disk show -broken` 命令来验证驱动器是否出现故障。故障驱动器将显示在故障驱动器列表中。如果不是，则应等待，然后重新运行命令。</block>
   <block id="49499bb4b11cb28cd05725cd5cafadd0" category="paragraph">安装最新版本的 DQP 后，您的系统便可识别和使用新认证的驱动器。这样可以避免出现有关驱动器信息不最新以及由于无法识别驱动器而阻止驱动器分区的系统事件消息。DQP 还会通知您驱动器固件不是最新的。</block>
   <block id="27ad121f85fccbb2fbae4c00d3c38810" category="inline-link">NetApp 下载：磁盘认证包</block>
-  <block id="1b6d02ae9b640ed72271cd7270a2f643" category="paragraph"><block ref="1b6d02ae9b640ed72271cd7270a2f643" category="inline-link-rx"></block></block>
   <block id="d5b3850d37eca03c3be10401093f24dc" category="admonition">驱动器固件检查每两分钟进行一次。</block>
   <block id="2d45373c9232e88942b868669cd8511a" category="list-text">以下视频简要介绍了驱动器热插拔操作步骤的物理拆卸和插入部分。</block>
   <block id="01d36c3de356a203f6380095e17d5483" category="list-text">如果要手动为替代驱动器分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。</block>
@@ -4718,9 +4716,6 @@
   <block id="959229536cc29f3d3dabc76fbb3f7e34" category="list-text">重新接通电源：</block>
   <block id="f3c63ac44190e806f7590f75016082ad" category="list-text">打开驱动器架上的两个电源开关。</block>
   <block id="39cc2d6f5935ef61ab1eac11e4ea2a0a" category="list-text">确认两个风扇均已打开，并且风扇背面的琥珀色 LED 熄灭。</block>
-  <block id="cea3ccc996d16531a1bdc296b2d6851c" category="paragraph">HA 对或单控制器配置不能是 AFF A200 ， AFF A220 ， FAS2600 系列或 FAS2700 系统。如果您具有以下配置之一，请使用以下命令：</block>
-  <block id="c938619c45a867da395e1f0213cdb4b0" category="inline-link-macro">常见 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置的控制器到堆栈布线工作表和布线示例</block>
-  <block id="8298bd1953102e090c7ee364e7677f25" category="paragraph"><block ref="8298bd1953102e090c7ee364e7677f25" category="inline-link-macro-rx"></block></block>
   <block id="5976250f174c7aa7423cbb91c458e804" category="list-text">此操作步骤和工作表模板适用于为包含一个或多个堆栈的多路径 HA 或多路径配置布线多路径连接。</block>
   <block id="8c7e7585bf065649c4ca12e935833b4c" category="paragraph">本文档提供了多路径 HA 和多路径配置的完整工作表示例。</block>
   <block id="da38645c7fd59844e84034f3e0e006a1" category="list-text">此工作表模板最多支持六个堆栈；如果需要，您需要添加更多列。</block>
@@ -4874,10 +4869,7 @@
   <block id="540d6dd9e8a601304f58e8b1692a0cbc" category="list-text">提供尽可能高的弹性，以保持可用性并最大限度地减少对控制器接管的依赖</block>
   <block id="ac9d521507af48d2a069896628ddcbe1" category="paragraph">您应避免偏离规则；偏差可能会降低可靠性，通用性和通用性。</block>
   <block id="1411fab742ef51836dbcd20dc81b333a" category="section-title">配置规则</block>
-  <block id="1ef4b114887ad97836aad1df50936d3b" category="paragraph">具有 IOM12 模块的磁盘架在特定类型的 HA 对和单控制器配置中受支持。</block>
   <block id="e813922cd0bf97e10c1d75af7555f41d" category="list-text">HA 对配置必须采用多路径 HA 或四路径 HA 配置的形式进行布线，但以下情况除外：</block>
-  <block id="bc5739bb9ad5df08aab832948b129daf" category="list-text">AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700HA 对配置（带有外部磁盘架）可以作为单路径 HA 配置进行布线，以支持连接到外部 SAS 磁带备份设备。</block>
-  <block id="c30e5ab802ae6eda8b94fc166555d469" category="list-text">AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700HA 对配置不支持四路径 HA 连接。</block>
   <block id="905e44a8d6df3feceb87ebb53cfc800e" category="list-text">单控制器配置必须采用多路径或四路径配置的形式进行布线，但以下情况除外：</block>
   <block id="4f84345fdfdaaef18218a7ade58e0626" category="list-text">FAS2600 系列单控制器配置（带有外部磁盘架）可以作为单路径配置进行布线。</block>
   <block id="ab36d824336ef6ebffc6dcb6e6c8f5c7" category="paragraph">由于内部存储使用单路径连接，因此 ONTAP 偶尔会发出警告，指出检测到混合路径。为了避免这些警告，您可以使用单路径连接到外部磁盘架。此外，在使用外部 SAS 磁带备份设备时，您可以使用单路径连接。</block>
@@ -4906,11 +4898,9 @@
   <block id="7830411c7d1c383be96811621cfdb2e5" category="paragraph">从堆栈中的第一个逻辑磁盘架到最后一个逻辑磁盘架，您需要将 IOM 端口 3 连接到域 A 和域 B 中下一个磁盘架的 IOM 端口 1从堆栈中的第一个逻辑磁盘架到最后一个逻辑磁盘架，您需要将 IOM 端口 4 连接到域 A 和域 B 中下一个磁盘架的 IOM 端口 2（以双宽连接方式连接的 IOM 端口显示为蓝色。）</block>
   <block id="cea4f34bbde19b19ec8b528484463d97" category="image-alt">DRW 磁盘架到磁盘架的宽度为双倍</block>
   <block id="76ac5618163f7cfdc83af1a982460b25" category="section-title">控制器到堆栈的连接规则</block>
-  <block id="e7e704fe1a564b4bba84a4b89d7ab9b8" category="paragraph">您可以通过了解 SAS 磁盘架使用基于软件的磁盘所有权，控制器端口 A/C 和 B/D 如何连接到堆栈来正确地将 SAS 连接从 HA 对或单控制器配置中的每个控制器连接到每个堆栈。 控制器端口 A/C 和 B/D 如何组织成端口对，以及 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统端口 0b 和 0a 如何连接到堆栈。</block>
   <block id="815ae1da852a7e116dabaa4790481ca1" category="section-title">基于 SAS 磁盘架软件的磁盘所有权规则</block>
   <block id="b090fb384d88ba417ddba5bc09e12033" category="paragraph">SAS 磁盘架使用基于软件的磁盘所有权（而不是基于硬件的磁盘所有权）。这意味着磁盘驱动器所有权存储在磁盘驱动器上，而不是由存储系统物理连接的拓扑来确定（就基于硬件的磁盘所有权而言）。具体而言，磁盘驱动器所有权由 ONTAP （自动或 CLI 命令）分配，而不是通过控制器到堆栈连接的布线方式分配。</block>
   <block id="561976391c859af5f378c2249b3ab7cc" category="paragraph">切勿使用基于硬件的磁盘所有权方案为 SAS 磁盘架布线。</block>
-  <block id="7b1a771699d48eb5b0ebb788ec8a2494" category="section-title">控制器 A 和 C 端口连接规则（适用于非 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置）</block>
   <block id="543f14beeef4a9be4cc43463e7a5882c" category="list-text">A 和 C 端口始终是堆栈的主路径。</block>
   <block id="28f5d46a191ea26e7d3d6a7b8f95cb0b" category="list-text">A 和 C 端口始终连接到堆栈中第一个逻辑磁盘架。</block>
   <block id="323025b84432843afbacb8850eab48b1" category="list-text">A 和 C 端口始终连接到磁盘架 IOM 端口 1 和 2 。</block>
@@ -4919,7 +4909,6 @@
   <block id="845648a6d13ed37c7454c6be1991a364" category="list-text">控制器 2 A 和 C 端口始终连接到 IOM B （域 B ）。</block>
   <block id="1f393663a63759c6a1dd2986c13770e5" category="paragraph">下图突出显示了控制器端口 A 和 C 如何在具有一个四端口 HBA 和两个磁盘架堆栈的多路径 HA 配置中进行连接。与堆栈 1 的连接显示为蓝色。与堆栈 2 的连接以橙色显示。</block>
   <block id="52b9f36f0a0ece73e588e8d49a1d2e38" category="image-alt">drw 控制器到堆栈规则端口 a 和 c 示例</block>
-  <block id="ef0714114d85b9f9cefcc62cc0b65e22" category="section-title">控制器 B 和 D 端口连接规则（适用于非 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置）</block>
   <block id="28b0df79d69d4b7bf21f0271c55d4f4e" category="list-text">B 和 D 端口始终是堆栈的二级路径。</block>
   <block id="9280f37bc620ca5d0b26ec8580f87f58" category="list-text">B 和 D 端口始终连接到堆栈中最后一个逻辑磁盘架。</block>
   <block id="5961adddd5595d6aa7de1c01c6f229b8" category="list-text">B 和 D 端口始终连接到磁盘架 IOM 端口 3 和 4 。</block>
@@ -4929,7 +4918,6 @@
   <block id="6265370a0863851abf028ccb76cce9bb" category="list-text">B 和 D 端口通过将 PCI 插槽的顺序偏移 1 来连接到堆栈，以便第一个插槽上的第一个端口最后进行布线。</block>
   <block id="1180b7b391f14633455e18d7e8a70316" category="paragraph">下图突出显示了控制器端口 B 和 D 如何在具有一个四端口 HBA 和两个磁盘架堆栈的多路径 HA 配置中进行连接。与堆栈 1 的连接显示为蓝色。与堆栈 2 的连接以橙色显示。</block>
   <block id="937c34f84d0b7a30ac6064abdb97a6f0" category="image-alt">drw 控制器到堆栈规则端口 b 和 d 示例</block>
-  <block id="0805da24af8e9775551e97055c6d00d2" category="section-title">端口对连接规则（适用于非 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 配置）</block>
   <block id="adc0f860870e3220b08daf202d1dbe12" category="paragraph">控制器 SAS 端口 A ， B ， C 和 D 按端口对进行组织，在 HA 对和单控制器配置中使用缆线连接控制器到堆栈连接时，可以利用所有 SAS 端口来提高系统故障恢复能力和一致性。</block>
   <block id="b74977118ce8bd6994f851515d0aff70" category="list-text">端口对由控制器 A 或 C SAS 端口以及控制器 B 或 D SAS 端口组成。</block>
   <block id="4b317a36993fd6d376aba7d0d82eef4b" category="paragraph">A 和 C SAS 端口连接到堆栈中第一个逻辑磁盘架。B 和 D SAS 端口连接到堆栈中最后一个逻辑磁盘架。</block>
@@ -4958,8 +4946,6 @@
   <block id="7c1436929540272177fd4adb6152e9ba" category="paragraph"><block ref="7c1436929540272177fd4adb6152e9ba" category="inline-link-macro-rx"></block></block>
   <block id="b9e772dcfe474ff5403c912944516e36" category="inline-link-macro">用于四路径连接的控制器到堆栈布线工作表模板</block>
   <block id="612ddf012153a583a53a09e3d7b592ea" category="paragraph"><block ref="612ddf012153a583a53a09e3d7b592ea" category="inline-link-macro-rx"></block></block>
-  <block id="03668c626125d88dfbaebd0ec0c3051b" category="section-title">AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 控制器 0b 和 0a 端口连接规则连接到外部磁盘架</block>
-  <block id="2e70696cbfe7e045226c133146c10a21" category="paragraph">AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统具有一组唯一的连接规则，因为每个控制器必须在内部存储（端口 0b ）和堆栈之间保持相同的域连接。这意味着，如果控制器位于机箱（控制器 1 ）的插槽 A 中，则它位于域 A （ IOM A ）中，因此端口 0b 必须连接到堆栈中的 IOM A 。如果控制器位于机箱的插槽 B （控制器 2 ）中，则它位于域 B （ IOM B ）中，因此端口 0b 必须连接到堆栈中的 IOM B 。</block>
   <block id="f49f9d1b35c60dce77fd03008b90cb34" category="admonition">如果您未将 0b 端口连接到正确的域（交叉连接域），则会使系统面临故障恢复能力问题，从而无法安全地执行无中断过程。</block>
   <block id="5118c6333d912e1b490b20c974a571ef" category="list-text">控制器 0b 端口（内部存储端口）：</block>
   <block id="53b81829b8b397189aaa4f3eb1ae76a7" category="list-text">控制器 1 0b 端口始终连接到 IOM A （域 A ）。</block>
@@ -4973,7 +4959,6 @@
   <block id="0757935fc13bec433eaf412d005fb61b" category="list-text">端口 0a 始终是二级路径。</block>
   <block id="5821e49b61c774c699a1d7c8f58887e5" category="list-text">端口 0a 始终连接到堆栈中第一个逻辑磁盘架。</block>
   <block id="47f1d04db41788a76ce8ec9e42c7defd" category="list-text">端口 0a 始终连接到磁盘架 IOM 端口 1 。</block>
-  <block id="2b903583c4ae425459eed4f57caaa35d" category="paragraph">下图突出显示了 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 多路径 HA 配置的内部存储端口（ 0b ）域连接：</block>
   <block id="d6be80f16b2e703ff33257470dacbcf3" category="image-alt">DRW fas2600 mpha 域示例</block>
   <block id="5b19d4f8bb5c1509ddbcb3050340348d" category="section-title">迷你 SAS HD SAS 光缆规则</block>
   <block id="cfabee74f7cf81c29938b44cfcd37eae" category="paragraph">您可以使用迷你 SAS HD SAS 光缆—带有迷你 SAS HD 到迷你 SAS HD 连接器的多模式有源光缆（ AOC ）缆线和带有迷你 SAS HD 到 LC 连接器的多模式（ OM4 ）分支缆线—为某些配置（其中磁盘架带有 IOM12 模块）实现远程 SAS 连接。</block>
@@ -4997,7 +4982,6 @@
   <block id="9d3db7bfcd4e676bd510caab64ec8d51" category="list-text">如果磁盘架到磁盘架的连接是 SAS 光缆，则与该堆栈的控制器到堆栈连接也必须是 SAS 光缆。</block>
   <block id="02a51574500eff63a08bc1c345282e3c" category="list-text">如果磁盘架到磁盘架的连接是 SAS 铜缆，则该堆栈的控制器到堆栈连接可以是 SAS 光缆或 SAS 铜缆。</block>
   <block id="7a48725aae87c25c20800da734657f8d" category="summary">您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便为具有 IOM12 模块的磁盘架使用缆线连接控制器到堆栈连接，从而实现多路径连接。</block>
-  <block id="34a29535255d4c9658cf8667fb70f827" category="paragraph">HA 对或单控制器配置不能是 AFF A200 ， AFF A220 ， FAS2600 系列或 FAS2700 系统。这些系统使用唯一的工作表：</block>
   <block id="d69f8bb928c8179d4a1d81a77b9f6a4c" category="list-text">此操作步骤引用以下工作表和布线示例，用于演示如何阅读工作表，以便为控制器到堆栈连接布线。</block>
   <block id="a513cfe8d83ba38ea85b01260a4ffb53" category="list-text">如果您使用的是单控制器配置，请跳过子步骤 b 和 d ，以便通过缆线连接到另一个控制器。</block>
   <block id="cd0bbcf8c45ff326b72c889eab8250c0" category="paragraph">这些端口对使用工作表中的每一个其他端口对进行布线： 1A/2b 和 11/2D 。</block>
@@ -5026,7 +5010,6 @@
   <block id="bea8d9a74a333358da573c569f901a16" category="paragraph">热添加磁盘架后，您必须更换堆栈中其余磁盘架到磁盘架连接以及控制器到堆栈连接的 SAS 铜缆，以使堆栈满足中的规则 <block ref="981073c6c3d6ceff62f8d350a20e9ca2" category="inline-link-macro-rx"></block>。这意味着您必须已订购适当数量的迷你 SAS HD SAS 光缆。</block>
   <block id="91d741bb049c9a466853b4ad38bb8ca8" category="paragraph">在热添加磁盘架之前，您应熟悉此操作步骤的各个方面和最佳实践。</block>
   <block id="f0e56e4ad757d6fad89dfcfe1aa12d88" category="paragraph">对于适用于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统的单路径 HA 和单路径配置，您可以将磁盘架热添加到堆栈的末尾，而该堆栈没有控制器连接。</block>
-  <block id="1367c0042a0771df50820889203cf147" category="paragraph">如果您有 HA 对， ONTAP 会将系统配置显示为 " `m多路径 HA` " 。如果您使用的是单控制器配置，则 ONTAP 会将系统配置显示为 `multipath` 。</block>
   <block id="23799cee6c2d33512d5d7c2c4dd066da" category="list-text">此操作步骤假定您的配置使用带内 ACP 。</block>
   <block id="0a21ef57c079b8fb55adaac84e5c7dc9" category="paragraph">对于启用了带内 ACP 的配置，会在热添加磁盘架上自动启用带内 ACP 。对于未启用带内 ACP 的配置，热添加磁盘架在运行时不会使用任何 ACP 功能。</block>
   <block id="512350f125bb7245b3fb215fde5ff006" category="list-text">最佳实践是，在热添加磁盘架之前，安装最新版本的磁盘认证包（ DQP ）。</block>
@@ -5693,7 +5676,6 @@
   <block id="d23a9067ce9ab0452898d620ad7aa84d" category="paragraph">属于替代节点的磁盘应显示新的系统 ID 。现在，以下示例将显示 system-1 所拥有的磁盘以及新的系统 ID 118065481 ：</block>
   <block id="7c5ee56a01b06b00d2d910cc295d8c56" category="paragraph"><block ref="7c5ee56a01b06b00d2d910cc295d8c56" category="inline-link-rx"></block></block>
   <block id="63950e6254e665584c6e0a02f9b4388b" category="paragraph"><block ref="63950e6254e665584c6e0a02f9b4388b" category="inline-link-rx"></block></block>
-  <block id="14baf7cbaa5e214a8313f9ae6e6b8214" category="paragraph"><block ref="14baf7cbaa5e214a8313f9ae6e6b8214" category="inline-link-rx"></block></block>
   <block id="585e085c167dffb4091a9c937b46294a" category="paragraph"><block ref="585e085c167dffb4091a9c937b46294a" category="inline-link-rx"></block></block>
   <block id="10df5509416416659fe58fd40c64d2ec" category="paragraph"><block ref="10df5509416416659fe58fd40c64d2ec" category="inline-link-rx"></block></block>
   <block id="4ccbda321ca169104f4e4cac42fd679f" category="paragraph">If you need the RMA number or additional help with the replacement procedure, contact technical support at<block ref="9a6f401ca1e7e89d8a0c29fb0cbe81b7" category="inline-link-rx"></block>, 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).</block>
@@ -6789,9 +6771,7 @@
   <block id="ba0a2d97499e2e560187690f4b54b10c" category="list-text">您必须已从要移除的磁盘架中的磁盘驱动器（磁盘驱动器必须为备用磁盘）中删除所有聚合。</block>
   <block id="df890e7b6d800ea7f63516f78dc7b333" category="inline-link-macro">适用于采用板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例</block>
   <block id="4831f887bab13b0957b607ad184c87f7" category="paragraph"><block ref="4831f887bab13b0957b607ad184c87f7" category="inline-link-macro-rx"></block></block>
-  <block id="fdd0f707bd71fcef53b653ae53e31f53" category="summary">您可以使用完整的控制器到堆栈布线工作表和布线示例为 AFF 和 FAS 平台连接板载存储，例如但不限于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 平台。此信息不适用于 FAS25XX 平台。</block>
   <block id="18e93c7175385ec259f95d9d453bdda1" category="list-text">If needed, you can refer to <block ref="db31d33614fd87795381d5ac14be04aa" category="inline-link-macro-rx"></block> 有关支持的配置，磁盘架到磁盘架连接以及控制器到磁盘架连接的信息。</block>
-  <block id="67f2d45d4d0936132195fb6f111ce3e8" category="section-title">采用多路径 HA 配置并具有一个多架堆栈的板载存储的 AFF 和 FAS 平台</block>
   <block id="83742af000bdb059461854fab1a8b606" category="list-text">请勿混用具有不同效率额定值的电源。请始终像这样替换。</block>
   <block id="94a2f43b7e5299d436a356db402524cc" category="section-title">第3步：更换NVRAM电池</block>
   <block id="5f5fd4de9ab7b399342d9b9e721bc6b6" category="section-title">第3步：卸下NVRAM卡</block>
@@ -6843,8 +6823,6 @@
   <block id="d2190ca0f2bf90686cb089f6fb2d5e2b" category="paragraph">如果要将DS460C磁盘架移动到数据中心的其他部分或将其传输到其他位置、请参见下一节。 <block ref="2dfa5cde780121ff739815d2402836cf" category="inline-xref-macro-rx"></block>。</block>
   <block id="1d5287e79870e687badf4e2da0612ad0" category="paragraph">如果将DS460C磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。</block>
   <block id="c3fdb0812209f286e664a4d0cd47c328" category="list-text">如果您在新系统安装或磁盘架热添加过程中安装了DS460C磁盘架、则保存了驱动器包装材料、请在移动驱动器之前使用这些材料重新打包驱动器。</block>
-  <block id="ba70aeebfd3549f6f01e998eb6dd6e28" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="a8e3f4b75381b375e7ce8abf385604f8" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
-  <block id="4919d15b1a0ddd0c55a729c741fd5005" category="sidebar">使用板载存储的AFF 和FAS 平台的布线工作表和示例</block>
   <block id="9285e5d96d62653cbfc04067e2de249c" category="list-text"><block ref="9285e5d96d62653cbfc04067e2de249c" category="inline-link-macro-rx"></block></block>
   <block id="cff7366c4191a9dd1698e3fd38e5acaf" category="sidebar">NVRAM模块或NVRAM DIMM</block>
   <block id="dbe0afeaa91b9a08168e98b33a4c7de8" category="admonition">请确保在断开缆线连接并重新连接缆线之间至少等待70秒、如果要将缆线更换为较长的缆线、请务必等待。</block>
@@ -7231,7 +7209,6 @@
   <block id="5d2249930d4d6f285a5ccc70c9734de6" category="inline-link">聚合扩展工作流</block>
   <block id="fcdebdb1f4c79cc7a93d9f17744521c5" category="paragraph"><block ref="fcdebdb1f4c79cc7a93d9f17744521c5" category="inline-link-rx"></block></block>
   <block id="87e222a1917be35f082aeb99501e10ca" category="doc">热插拔DS460C磁盘架中的磁盘驱动器—使用IOM12/IOM12B模块的磁盘架</block>
-  <block id="85085227e7191ff5201df5ab0dba828e" category="doc">带有板载存储的AFF 和FAS 平台的控制器到堆栈布线工作表和布线示例—带有IOM12/IOM12B模块的磁盘架</block>
   <block id="3cf53d4c9bda935f2527cd9e3072ef82" category="sidebar">IOM12/IOM12B模块</block>
   <block id="c495d94f32f50365b375a20870280fde" category="sidebar">使用IOM12/IOM2B模块的磁盘架安装和布线</block>
   <block id="932dcd191a61980121848404f3579ffb" category="sidebar">具有IOM12/IOM12B模块的磁盘架会进行维护</block>
@@ -7353,4 +7330,30 @@
   <block id="fe673aff2ce9eb5c6eaf841f4ec88b30" category="sidebar">AFF A900启动介质</block>
   <block id="6cff7e5493433d24015d6ef5a8566b38" category="sidebar">AFF A900机箱</block>
   <block id="7d1c80f318f9bf16deac2495abe88a7e" category="sidebar">AFF A900控制器模块</block>
+  <block id="2014d8b66b0e05fba286f79c1c8aac17" category="admonition">当您看到_Do you want to disable auto-giveback？_时、输入`y`。</block>
+  <block id="f80b45f73e8b653fc036922e438eff9e" category="inline-link-macro">《FAS8200安装和设置说明》</block>
+  <block id="ca2e2999fd16933cd908b9c9e44161d0" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="666c6c27ec3878a6b3f3c3cb24d10587" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
+  <block id="0e1569786cd5c99315511da0d9e3f2aa" category="admonition">如果系统停留在启动菜单处、请选择"重新启动节点"选项并在出现提示时回答y、然后按`Ctrl-C`启动到LOADER。</block>
+  <block id="6f0e65a313ceda26ae3094641da52d2e" category="paragraph"><block ref="6f0e65a313ceda26ae3094641da52d2e" category="inline-link-rx"></block></block>
+  <block id="e789db57588c567cf162bf2f8ec8b65e" category="paragraph">如果您的平台具有内部存储、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、请使用以下内容(这些平台使用唯一的工作表)：</block>
+  <block id="f5d03e0aa6d32340b1284f6bb82c8ee3" category="inline-link-macro">使用内部存储的平台的控制器到堆栈布线工作表和布线示例</block>
+  <block id="c19123e6031c139d66f534ae4311d605" category="paragraph"><block ref="c19123e6031c139d66f534ae4311d605" category="inline-link-macro-rx"></block></block>
+  <block id="9f5ac9f9e33d14b5edcf142aa6534de3" category="paragraph">特定类型的HA对和单控制器配置支持具有IOM12模块的磁盘架。</block>
+  <block id="a02316bb16a44dfeab4bba0330def5a9" category="admonition">此内容不会介绍FAS25XX平台。</block>
+  <block id="f18e20acd27581fe2f1075089d65a455" category="list-text">具有内部存储的平台、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、可以作为单路径HA配置进行布线、以支持连接到外部SAS磁带备份设备。</block>
+  <block id="c47a6f7fbf347f2ab09e05ad80c1fc30" category="list-text">具有内部存储的平台、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、不支持四路径HA连接。</block>
+  <block id="dee118410b7e171b0f510cb87be443b7" category="paragraph">您可以通过了解SAS磁盘架使用基于软件的磁盘所有权、控制器端口A/C和B/D如何连接到堆栈来正确地将SAS连接从HA对或单控制器配置中的每个控制器连接到每个堆栈。 如何将控制器端口A/C和B/D组织成端口对、以及具有内部存储的平台如何将其控制器端口连接到堆栈。</block>
+  <block id="8018a1e3a70e95fa6594f859c3232987" category="section-title">控制器A和C端口连接规则(适用于没有内部存储的平台)</block>
+  <block id="91be64cf601d5c3cea92700e0feb259b" category="section-title">控制器B和D端口连接规则(适用于没有内部存储的平台)</block>
+  <block id="53de5403d00811e5f44fb1b9f62019a4" category="section-title">端口对连接规则(适用于没有内部存储的平台)</block>
+  <block id="0ce2d44d1215d0431e0b46ed686dd560" category="section-title">使用内部存储的平台的控制器0b和0a端口连接规则</block>
+  <block id="0c574ecb6a58bb92327391af7cfd84d2" category="paragraph">具有内部存储的平台、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、具有一组唯一的连接规则、因为每个控制器必须在内部存储(端口0b)和堆栈之间保持相同的域连接。This means that when a controller is located in slot A of the chassis (controller 1) it is in domain A (IOM A) and therefore port 0b must connect to IOM A in the stack.When a controller is located in slot B of the chassis (controller 2) it is in domain B (IOM B) and therefore port 0b must connect to IOM B in the stack.</block>
+  <block id="27858a1c4654311bc60fbcd9494b2c3e" category="admonition">此内容不会介绍FAS25XX平台。</block>
+  <block id="06da34e55ca27b5fa072a7b523991230" category="paragraph">下图突出显示了FAS2600系列、AFF A200、FAS2700系列、AFF A220及更高版本多路径HA配置的内部存储端口(0b)域连接：</block>
+  <block id="0fdd3a9de120fbacd6c04d73ee6832df" category="summary">您可以使用完整的控制器到堆栈布线工作表和布线示例为内部存储平台布线、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 和更高版本。</block>
+  <block id="bb42dbb13759e9df73ffa74412e3548a" category="doc">使用内部存储的平台的控制器到堆栈布线工作表和布线示例—使用IOM12/IOM12B模块的磁盘架</block>
+  <block id="424f2fdac9e61f7b7785b602da677d00" category="admonition">此信息不适用于 FAS25XX 平台。</block>
+  <block id="4efb7705f98005596f065e30ddf32363" category="section-title">采用多路径HA配置且具有一个多架堆栈的内部存储平台</block>
+  <block id="835ecba5eb095440eda54c2f50f1ef89" category="paragraph">如果您有HA对、ONTAP 会将系统配置显示为`m多路径HA`。如果您使用的是单控制器配置、则ONTAP 会将系统配置显示为`m多路径`。</block>
+  <block id="3f9904dabd6885ddf815902aade7d320" category="sidebar">使用内部存储的平台的布线工作表和示例</block>
 </blocks>

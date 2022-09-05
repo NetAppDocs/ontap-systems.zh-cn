@@ -83,7 +83,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 安装最新版本的 DQP 后，您的系统便可识别和使用新认证的驱动器。这样可以避免出现有关驱动器信息不最新以及由于无法识别驱动器而阻止驱动器分区的系统事件消息。DQP 还会通知您驱动器固件不是最新的。
 
 +
-https://mysupport.netapp.com/NOW/download/tools/diskqual/["NetApp 下载：磁盘认证包"^]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp 下载：磁盘认证包"^]
 
 * * 最佳实践： * 最佳实践是在热添加磁盘架前后运行 Active IQ Config Advisor 。
 +

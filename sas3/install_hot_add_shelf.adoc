@@ -90,7 +90,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 * 一个系统可以具有多路径和四路径磁盘架堆栈以及IOM12B模块。
 +
-如果您有 HA 对， ONTAP 会将系统配置显示为 " `m多路径 HA` " 。如果您使用的是单控制器配置，则 ONTAP 会将系统配置显示为 `multipath` 。
+如果您有HA对、ONTAP 会将系统配置显示为`m多路径HA`。如果您使用的是单控制器配置、则ONTAP 会将系统配置显示为`m多路径`。
 
 * 此操作步骤假定您的配置使用带内 ACP 。
 +
@@ -111,7 +111,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 安装当前版本的 DQP 后，您的系统便可识别和使用新认证的磁盘驱动器；因此，可以避免出现有关磁盘驱动器信息不是最新的系统事件消息。此外，您还可以避免由于无法识别磁盘驱动器而可能阻止磁盘分区。DQP 还会通知您磁盘驱动器固件不是最新的。
 
 +
-https://mysupport.netapp.com/NOW/download/tools/diskqual/["NetApp 下载：磁盘认证包"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp 下载：磁盘认证包"^]
 
 * 最佳做法是，在热添加磁盘架前后运行 Config Advisor 。
 +
