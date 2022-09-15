@@ -2086,14 +2086,8 @@
   <block id="f453086a36d64a5193cd4183c14bcd72" category="inline-link-macro">AFF 8000 系列文档</block>
   <block id="71bdc94f19d5947bd1cb6d437f119ba2" category="inline-link-macro">FAS8000 系列文档</block>
   <block id="2b3a51bca746a221bf4a0af6d3098ccf" category="paragraph"><block ref="2b3a51bca746a221bf4a0af6d3098ccf" category="inline-link-macro-rx"></block></block>
-  <block id="f739ddc76de0a287d2c0b563d814e953" category="inline-link-macro">FAS6200 系列文档</block>
-  <block id="e9631782eda247a09ad2e090180b8c23" category="paragraph"><block ref="e9631782eda247a09ad2e090180b8c23" category="inline-link-macro-rx"></block></block>
-  <block id="f7c466bdf55160e7ccabf40d2020dad0" category="inline-link-macro">FAS3200 系列文档</block>
-  <block id="d710040b8ac876a0da7dc8e847bb40ee" category="paragraph"><block ref="d710040b8ac876a0da7dc8e847bb40ee" category="inline-link-macro-rx"></block></block>
   <block id="c7e39e875a3a875d9445eace0794b0f5" category="inline-link-macro">FAS2500 系列文档</block>
   <block id="ebc5a75e4df8077b15f7cef6c123c7db" category="paragraph"><block ref="ebc5a75e4df8077b15f7cef6c123c7db" category="inline-link-macro-rx"></block></block>
-  <block id="3c0f93dc3f40f9ea0aef607cee8d55b1" category="inline-link-macro">FAS2200 系列文档</block>
-  <block id="1da789723077cd18e287167bf56d9b2e" category="paragraph"><block ref="1da789723077cd18e287167bf56d9b2e" category="inline-link-macro-rx"></block></block>
   <block id="f707961e750c3177d39579c3dd6298da" category="doc">完整的系统还原— AFF A220 和 FAS2700</block>
   <block id="4bbcc3f3d11202923e4c61604d535622" category="list-text"><block ref="4bbcc3f3d11202923e4c61604d535622" category="inline-link-macro-rx"></block></block>
   <block id="7c308c086b5e1b83f888d7cdb4ec7dfc" category="list-text"><block ref="7c308c086b5e1b83f888d7cdb4ec7dfc" category="inline-link-macro-rx"></block></block>
@@ -6668,7 +6662,6 @@
   <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">Replace the boot media - FAS500f</block>
   <block id="de2d1282e102972a6af003781e9a5c02" category="paragraph">_SLDIAG ：不存在日志消息。 _</block>
   <block id="3f91c59c59a1243cb3f176daf3c9c054" category="list-text">使节点恢复正常运行。</block>
-  <block id="eb90dbf89cffd9812a8720d277f30583" category="summary">您可以使用这些链接查找其他 AFF 和 FAS 平台的文档。</block>
   <block id="0f40216c1ad47c12e8ccc087d555570f" category="sidebar">《 ONTAP 发行说明》</block>
   <block id="c0a1a3a5bc62ecf46953d4c7ebde86a7" category="section-title">第 6 步：（仅限双节点 MetroCluster ）：切回聚合</block>
   <block id="af844de12c61a1b2d86c05934c317256" category="summary">如果平台向系统控制台记录一条警告消息，指出驱动器出现故障，则必须更换驱动器。In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.</block>
@@ -6848,7 +6841,6 @@
   <block id="a31ab93f41516026d249aceb633bccc3" category="doc">添加一个I/O模块—FAS9500</block>
   <block id="133808c24f6fb32a9a2a58ed28150498" category="paragraph">您可以将I/O模块作为NIC或SAS存储架的存储模块添加到系统中的空模块插槽中。</block>
   <block id="ff231ca484e594004f4ca93ecfa6683e" category="paragraph">控制台连接显示，接管完成后，节点将进入 LOADER 提示符。</block>
-  <block id="2a5cd1f850ee79601be57448f10d9595" category="list-text">从加载程序提示符 _bybye 重新启动节点</block>
   <block id="4d3b1425bbd62943a546a9f98dc3b7ef" category="list-text">从配对节点交还节点。`storage failover giveback -ofnode target_node_name`</block>
   <block id="6f8193ca6bfb281db32afbcc9e285f79" category="inline-link">热添加SAS磁盘架</block>
   <block id="9856beabcb389225df78cec96e74e365" category="list-text">如果您安装了存储I/O模块、请按照中所述安装SAS磁盘架并为其布线<block ref="322cc377ef41f5776a1c64690e12c49b" category="inline-link-rx"></block>。</block>
@@ -7356,4 +7348,8 @@
   <block id="4efb7705f98005596f065e30ddf32363" category="section-title">采用多路径HA配置且具有一个多架堆栈的内部存储平台</block>
   <block id="835ecba5eb095440eda54c2f50f1ef89" category="paragraph">如果您有HA对、ONTAP 会将系统配置显示为`m多路径HA`。如果您使用的是单控制器配置、则ONTAP 会将系统配置显示为`m多路径`。</block>
   <block id="3f9904dabd6885ddf815902aade7d320" category="sidebar">使用内部存储的平台的布线工作表和示例</block>
+  <block id="e3fd55f400cc227fbbc7c777c0679db1" category="list-text">如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</block>
+  <block id="c51e6cbbe594b20461edba0d83817fce" category="list-text">重新启动BMC、然后重新启动节点：</block>
+  <block id="e727b00944f81e1d0a95c12886ac4641" category="inline-link-macro">归档</block>
+  <block id="97a6415da8202d0321d49b92f019e7b1" category="paragraph">您可以使用这些链接查找其他 AFF 和 FAS 平台的文档。有关硬件支持已结束的AFF 和FAS 系统的文档、可在中供客户使用 <block ref="5e4606a12c7b193a6ccb23ff349575d7" category="inline-link-macro-rx"></block>。</block>
 </blocks>

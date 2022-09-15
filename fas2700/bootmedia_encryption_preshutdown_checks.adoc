@@ -30,8 +30,8 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 . 使用 `version -v` 命令检查受损控制器（如果已启动）或配对控制器（如果受损控制器已关闭）上运行的 ONTAP 版本：
 +
 ** 如果命令输出中显示 <lno-dury> 或 <1osno-dury> ，则系统不支持 NVE ，请继续关闭控制器。
-** 如果命令输出中未显示 <lno-dur> ，并且系统运行的是 ONTAP 9.5 ，请转至 <<Option 1: Checking NVE or NSE on systems running ONTAP 9.5 and earlier>>。
-** 如果命令输出中未显示 <lno-dur> ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至 <<Option 2: Checking NVE or NSE on systems running ONTAP 9.6 and later>>。
+** 如果命令输出中未显示 <lno-dur> ，并且系统运行的是 ONTAP 9.5 ，请转至  1: Checking NVE or NSE on systems running ONTAP 9.5 and earlier。
+** 如果命令输出中未显示 <lno-dur> ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至  2: Checking NVE or NSE on systems running ONTAP 9.6 and later。
 
 
 . 如果受损控制器属于 HA 配置，请禁用从运行状况良好的控制器自动交还： `storage failover modify -node local -auto-giveback false` 或 `storage failover modify -node local -auto-giveback-after-panic false`

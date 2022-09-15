@@ -47,14 +47,14 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
  a| 
 HA 对
  a| 
-<<Option 1: Verify the system ID change on an HA system>>]
+ 1: Verify the system ID change on an HA system]
 
 
 
  a| 
 双节点 MetroCluster 配置
  a| 
-<<Option 2: Manually reassign the system ID on systems in a two-node MetroCluster configuration>>
+ 2: Manually reassign the system ID on systems in a two-node MetroCluster configuration
 
 |===
 

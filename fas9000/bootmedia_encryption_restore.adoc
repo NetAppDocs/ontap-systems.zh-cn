@@ -16,9 +16,9 @@ summary: 检查环境变量后，您必须完成特定于已启用板载密钥�
 
 如果随板载密钥管理器一起启用了 NSE 或 NVE ，则必须还原在此操作步骤开头捕获的设置。
 
-* 如果启用了 NSE 或 NVE ，并且启用了板载密钥管理器，请转至 <<Option 1: Restore NVE or NSE when Onboard Key Manager is enabled>>。
-* 如果为 ONATP 9.5 启用了 NSE 或 NVE ，请转至 <<Option 2: Restore NSE/NVE on systems running ONTAP 9.5 and earlier>>。
-* 如果为 ONTAP 9.6 启用了 NSE 或 NVE ，请转至 <<Option 3: Restore NSE/NVE on systems running ONTAP 9.6 and later>>。
+* 如果启用了 NSE 或 NVE ，并且启用了板载密钥管理器，请转至  1: Restore NVE or NSE when Onboard Key Manager is enabled。
+* 如果为 ONATP 9.5 启用了 NSE 或 NVE ，请转至  2: Restore NSE/NVE on systems running ONTAP 9.5 and earlier。
+* 如果为 ONTAP 9.6 启用了 NSE 或 NVE ，请转至  3: Restore NSE/NVE on systems running ONTAP 9.6 and later。
 
 
 
