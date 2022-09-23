@@ -238,11 +238,9 @@
   <block id="7420f9b1d8e8ed836b7ae9c80124f6b8" category="list-text">取下通风管盖。</block>
   <block id="22ecf0c78d63cfad3a4d14bb76e9e473" category="image-alt">DRW A250 拆下通风管盖</block>
   <block id="ef9f4e0c500a9033e3ecc6ac2bea9386" category="section-title">第 3 步：更换 DIMM</block>
-  <block id="ff2cabdfad197ecc54cac7ac5edf88bc" category="paragraph">要更换 DIMM ，您必须使用通风管顶部的 DIMM 映射标签在控制器模块中找到该 DIMM ，或者使用 DIMM 旁边的 LED 找到该 DIMM ，然后按照特定步骤顺序进行更换。</block>
   <block id="52a264f83e80026af9b21b4d57f0db5a" category="paragraph">使用以下视频或表格中的步骤更换 DIMM ：</block>
   <block id="4dc151f1789db92d7721706161168644" category="list-text">更换控制器模块上损坏的 DIMM 。</block>
   <block id="efd84250e54da20a3b20aedbf193e8d1" category="paragraph">DIMM 位于主板上的插槽 3 或 1 中。插槽 2 和 4 为空。请勿尝试在这些插槽中安装 DIMM 。</block>
-  <block id="01b87f8f81299496a9cc1c1d0fcbb0df" category="admonition">位于主板上每个 DIMM 旁边的故障 LED 每两秒闪烁一次。</block>
   <block id="3c2f4d45d9bb9dd0708e7cb1b34f4890" category="image-alt">更换 DRW A250 DIMM</block>
   <block id="169525b3af51c8a1a1183325e19e3768" category="list-text">记下插槽中 DIMM 的方向，以便可以按正确的方向插入更换用的 DIMM 。</block>
   <block id="8c4c883dc47946a34b3706d63b8b1efb" category="list-text">缓慢地将 DIMM 两侧的 DIMM 弹出卡舌分开，然后将 DIMM 滑出插槽。</block>
@@ -829,7 +827,6 @@
   <block id="e1782167c4ccac91c29c561fbdf9bd10" category="summary">您可以使用 PDF 海报安装和设置新系统。PDF 海报提供了分步说明，并提供了指向其他内容的实时链接。</block>
   <block id="a042d62f38b129b2b0a14f9ad8ef93fa" category="doc">安装和设置 PDF 海报— AFF A700s</block>
   <block id="a6f8184cf42c02441138be75b0c4c9da" category="inline-link-macro">《 AFF A700s 安装和设置说明》</block>
-  <block id="b4ddf9d759f084ba25e7c363dcfcd65e" category="paragraph"><block ref="b4ddf9d759f084ba25e7c363dcfcd65e" category="inline-link-macro-rx"></block></block>
   <block id="9baf211c6ecdaf2caa4ae8ac90089172" category="list-text">如果尚未关闭通风管：</block>
   <block id="af9622020670ce2b86cd2845b04b00f4" category="list-text">将通风管一直旋转到控制器模块。</block>
   <block id="97be101d543785854ad18ca62a561d32" category="list-text">向提升板滑动通风管，直到锁定卡舌卡入到位。</block>
@@ -1248,7 +1245,6 @@
   <block id="d92d79541486453c440f5d479e7c2937" category="section-title">视频二：执行端到端软件配置</block>
   <block id="e3a2cdbe22ad29e03fbebb6c1261ed15" category="doc">快速指南— AFF A400</block>
   <block id="34a75c3c3d31678dc9bc82fd2d547569" category="inline-link">《 AFF A400 安装和设置说明》</block>
-  <block id="6a31f53ac6bcbf967fd4f6d12d604380" category="paragraph"><block ref="6a31f53ac6bcbf967fd4f6d12d604380" category="inline-link-rx"></block></block>
   <block id="3cae55e1e828ede8665faa84a0a66de4" category="summary">要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。</block>
   <block id="376ecb7742395c276940c386f403f622" category="doc">更换 NVDIMM 电池— AFF A400</block>
   <block id="cc9b9cbb2b7e2941b317fa5e4937583c" category="section-title">第 3 步：更换 NVDIMM 电池</block>
@@ -1916,7 +1912,6 @@
   <block id="d38e923a5dbd4c9cea0e47d7894638fd" category="section-title">第 4 步：重新安装控制器模块并启动系统</block>
   <block id="b30af54ded6b355219c01928989c094b" category="list-text">按 `Ctrl-C` 以中断正常启动过程。</block>
   <block id="f3a01cef2d9918b3669edb9ee2a1c2b8" category="doc">视频— AFF A800</block>
-  <block id="85d1ffd9f4e349440b69cef9b8b49607" category="inline-link">《 AFF A800 系统安装和设置说明》</block>
   <block id="2ee0c03cb33be156e12b5b33dbf8e422" category="doc">更换 NVDIMM 电池— AFF A800</block>
   <block id="a2a7f6c4d01f5224a71aaaa23dd37c83" category="list-text">松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线以及 SFP 和 QSFP 模块（如果需要），并跟踪缆线的连接位置。松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线，跟踪缆线的连接位置。</block>
   <block id="23303fd786407709fac1485d347f7aa2" category="paragraph">要更换 NVDIMM 电池，您必须从控制器模块中取出故障电池，然后将更换电池安装到控制器模块中。</block>
@@ -2117,7 +2112,6 @@
   <block id="3b0a912063aa2a9d7f280a370d140403" category="summary">本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。</block>
   <block id="8e4df4f91c6c51fc9f3abb5c8031333c" category="doc">快速指南— AFF A220 和 FAS2700</block>
   <block id="9b84aee1c6149b8506044c563e4a3178" category="inline-link">《 AFF A220/FAS2700 系统安装和设置说明》</block>
-  <block id="81de09167d66dad47ae2c7fcbd20a82e" category="paragraph"><block ref="81de09167d66dad47ae2c7fcbd20a82e" category="inline-link-rx"></block></block>
   <block id="50c99b8a77b810f6cd5e8517f4310c31" category="doc">更换电源— AFF A220 和 FAS2700</block>
   <block id="5c256d552d60420853939e570c30fbf1" category="admonition">散热与电源集成在一起，因此您必须在卸下电源后两分钟内更换电源，以防止由于通风量减少而导致过热。由于机箱为两个 HA 节点提供了共享散热配置，因此如果延迟超过两分钟，则会关闭机箱中的所有控制器模块。如果两个控制器模块都关闭，请确保两个电源均已插入，将这两个控制器模块都关闭 30 秒，然后将这两个控制器模块都打开。</block>
   <block id="1905d900d953685708ba58017a550170" category="list-text">按压电源凸轮把手上的闩锁，然后打开凸轮把手，以便从中板完全释放电源。</block>
@@ -2859,7 +2853,6 @@
   <block id="d5329d1a1e1dddf29f9d62bdc1cd54ad" category="doc">视频— FAS8300 和 FAS8700</block>
   <block id="d1903d398c4c8283b66cc2ee2599cef5" category="doc">快速指南— FAS8300 和 FAS8700</block>
   <block id="221315bbb17a9424f37793425986d6c2" category="inline-link">《 FAS8300 和 FAS8700 安装和设置说明》</block>
-  <block id="0f6585f4d22c37462401058292d5968a" category="paragraph"><block ref="0f6585f4d22c37462401058292d5968a" category="inline-link-rx"></block></block>
   <block id="9af1a70147e4372628e3cff0c1a8a31c" category="list-text">如果扫描未报告任何故障，请从菜单中选择 `Reboot` 以重新启动系统。</block>
   <block id="05da715fdd840e7fc27dd764386018bc" category="doc">更换缓存模块— FAS8300 和 FAS8700</block>
   <block id="d457ea14ed8ca14254ad1d75e29dce09" category="list-text">擦除缓存模块上的数据： `ssystem controller flash-cache secure -erase run -node _node_name_ -device-id _device_id_`</block>
@@ -2972,7 +2965,6 @@
   <block id="17268c6ef2838628d8d6888cfbe7b25b" category="paragraph">执行交还： `storage failover giveback -ofnode _replacement_node_name_` * 注： * 如果禁用了自动交还，请使用 storage failover modify 命令重新启用它。</block>
   <block id="1af1fe949907061171a34fcc37aae4b2" category="paragraph">继续执行下一步。无需执行任何操作。</block>
   <block id="e66322388322d8b74707e920c5738c23" category="doc">视频— AFF C190</block>
-  <block id="0e976cfcc1b2e9eac14c2a85a2af912b" category="inline-link">《 AFF C190 系统安装和设置说明》</block>
   <block id="b351b18aabb1167eb5b0851a7dfde759" category="doc">更换电源— AFF C190</block>
   <block id="48cb3ada49a99389f0b8a03abf466ec8" category="summary">您必须验证机箱的 HA 状态并运行系统级诊断。</block>
   <block id="a9c0a6c57639677722b2d4d4893acd60" category="section-title">第 1 步：验证并设置机箱的 HA 状态</block>
@@ -3647,9 +3639,7 @@
   <block id="a7d25da9721276bf3e6000f3e10e8dc2" category="doc">视频步骤— AFF A700 和 FAS9000</block>
   <block id="272ee5e46e5ef6e3dc91121b76104026" category="doc">快速步骤— AFF A700 和 FAS9000</block>
   <block id="e03aee19ca3d6bfae73287d53384458b" category="inline-link">《 AFF A700 安装和设置说明》</block>
-  <block id="2a451873dac0e974133609a3ebd4bfa2" category="paragraph"><block ref="2a451873dac0e974133609a3ebd4bfa2" category="inline-link-rx"></block></block>
   <block id="123ef787b4689ac71f6faa1ecdb5c6c4" category="inline-link">《 FAS9000 安装和设置说明》</block>
-  <block id="c764ea98e97a23ddf4166615b9e79a95" category="paragraph"><block ref="c764ea98e97a23ddf4166615b9e79a95" category="inline-link-rx"></block></block>
   <block id="b513a705f9d6390668dbb9abbba03311" category="doc">更换电源— AFF A700 和 FAS9000</block>
   <block id="3d5375a17f55c7bdf08ca9af8aca2b83" category="list-text">按住电源手柄上的橙色按钮，然后将电源从机箱中拉出。</block>
   <block id="71cd574cf82c03ecc2bf9c3d37e621d3" category="image-alt">DRW 9000 卸下安装 PSU 模块</block>
@@ -4007,7 +3997,6 @@
   <block id="e3d77d25c42b5b22d3782666486eb37f" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF A300</block>
   <block id="e63d72ed0cd02fd6dc373efe52370adf" category="doc">安装和设置 PDF 海报— AFF A300</block>
   <block id="26fa42b1e179247a86e500fd0bdc576c" category="inline-link-macro">《 AFF A300 安装和设置说明》</block>
-  <block id="de38759ef2dc6f4060b3cdf31f980e53" category="paragraph"><block ref="de38759ef2dc6f4060b3cdf31f980e53" category="inline-link-macro-rx"></block></block>
   <block id="6a9185c32ed25a745ad5a6b2fb9c702e" category="doc">还原并验证系统配置— AFF A300</block>
   <block id="e90917eb1ade74fea4468ecec1b0dfd3" category="doc">更换启动介质— AFF A300</block>
   <block id="31681f3abbed1ceeaf397023a488e2e2" category="section-title">第 2 步：更换启动介质— AFF A300</block>
@@ -4033,7 +4022,6 @@
   <block id="a23c69960d3b280b58087226f261d0e1" category="doc">启动恢复映像— AFF A300</block>
   <block id="6abcd38b98db86440d4e33f853945773" category="doc">完成系统还原— FAS2600</block>
   <block id="f8775be935fb9d9effeb8c290b2531ef" category="doc">安装和设置 PDF 海报— FAS2600</block>
-  <block id="cdc94270d32a037fc80536b1ce6a1948" category="inline-link-macro">《 AFF FAS2600 安装和设置说明》</block>
   <block id="9d74ba2bcb476d63733debafcde443ea" category="doc">更换 DIMM - FAS2600</block>
   <block id="c217f888de7cccc4e5f27065cb754354" category="inline-link-macro">AFF FAS2600 DIMM 更换视频</block>
   <block id="cc0229491324372575d8e9833b910f02" category="list-text">重新检查 NVMEM LED 。</block>
@@ -4099,8 +4087,6 @@
   <block id="b5625ff9a6be11130311547598e19f4d" category="list-text">如果尚未关闭控制器模块后部的通风管，请将盖板重新安装到 PCIe 卡上。</block>
   <block id="c694147ee40e260d30d4121d2213ee14" category="doc">视频— AFF A320</block>
   <block id="3e3ba2d775216becefab028bffec753a" category="doc">快速指南— AFF A320</block>
-  <block id="dec6a1059fef7846f11606837d66ab54" category="inline-link">《 AFF A320 系统安装和设置说明》</block>
-  <block id="6b59b1ed1da90d67a9669493c83f5dbe" category="paragraph"><block ref="6b59b1ed1da90d67a9669493c83f5dbe" category="inline-link-rx"></block></block>
   <block id="8041c469e6d9bb1d2588be103ea09ab6" category="doc">更换 NVDIMM 电池— AFF A320</block>
   <block id="8b9cda3c71cd6650aa009c7fadfc8b01" category="image-alt">DRW A320 控制器缆线拔下动画 gif</block>
   <block id="7a7bd9d285c26c52e7363905c161c15e" category="image-alt">DRW A320 nvbat move 动画 gif</block>
@@ -5699,7 +5685,6 @@
   <block id="b0e69a1b113b20966641e48d3d36e788" category="doc">快速步骤— AFF A800</block>
   <block id="91a6324d4b829f5094febe4585477532" category="paragraph">如果您的系统采用 MetroCluster IP 配置，请参见<block ref="5cf80fcf55f6ce2ad8515082eb643f93" category="inline-link-rx"></block> 说明。</block>
   <block id="86f44362d6c66d2da3785180e12a0bd3" category="doc">快速步骤— AFF A250</block>
-  <block id="812ead2c74df2f4cc3f4360dde12caf0" category="list-text">英语<block ref="26c0c434f792bc3a07fd368408578c89" category="inline-link-rx"></block></block>
   <block id="b6f7b04f44a105e63a953d8fbcf4fc54" category="list-text">Japanese:<block ref="cf50f5c8ace58e0f860ef43dfc5fe5aa" category="inline-link-rx"></block></block>
   <block id="f7e356c673218d549865ad38a211dfb2" category="list-text">Chinese:<block ref="380dfc11004fa7aa9af7b73b57d7721f" category="inline-link-rx"></block></block>
   <block id="aa180b05de0eee653f89c2d190680947" category="summary">本节详细介绍了安装 AFF A250 系统的分步说明。</block>
@@ -5709,10 +5694,8 @@
   <block id="bee4c56b42643842f4964906e7825545" category="summary">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。</block>
   <block id="a376b44668bb35ec353a3b762ae375c6" category="doc">快速步骤— FAS500f</block>
   <block id="7d9036d60bbca8f733402060d735f7ba" category="paragraph">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。Use this guide if you are familiar with installing NetApp systems.</block>
-  <block id="401703f1a6e6c4174ecfa75cf476aeec" category="list-text">英语<block ref="3b271abd5f4b9b54a3379e0450431921" category="inline-link-rx"></block></block>
   <block id="c98535a3efcc3902c442def855aa8fcd" category="list-text">Japanese:<block ref="74a4002c724f044d7e6834f3506cd16d" category="inline-link-rx"></block></block>
   <block id="c9d9e9c98bea821ee3130955cb98a54c" category="list-text">Chinese:<block ref="d495a553b62dffb464c7810acf543358" category="inline-link-rx"></block></block>
-  <block id="3507cf5c7dded65ffdd5ade0f2366605" category="list-text"><block ref="3507cf5c7dded65ffdd5ade0f2366605" category="inline-link-macro-rx"></block></block>
   <block id="839439b189cfb3960dee96d5900594f7" category="list-text">您需要一个带一端直发的回形针或一个窄尖圆头笔。</block>
   <block id="6de535d32c5294ec13b8cdaefbdfcd96" category="list-text">在固件版本不是最新的新驱动器上，驱动器固件会自动更新（无中断）。</block>
   <block id="700841889ff35bf8741ce3731cbe8278" category="list-text">HA 对必须具有足够的可用 RoCE 端口，以支持您要热添加的磁盘架数量。</block>
@@ -5780,7 +5763,6 @@
   <block id="e6db50cefb25b43305353a6a987f05e3" category="list-text">After you have completed the initial configuration, go to the <block ref="9c0a34143b47aa65068059820284fe99" category="inline-link-macro-rx"></block> page for information about configuring additional features in ONTAP.</block>
   <block id="abda447c368c0080cdf2af6a77ea3d22" category="list-text">Configure the system using the data you collected in the <block ref="571ad76602d16a750ecd1119ab38063c" category="inline-link-macro-rx"></block>。</block>
   <block id="3125087114c2490b7c6800800a39a990" category="summary">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。</block>
-  <block id="bee540306d8719a7dd6a93184e6e4d86" category="paragraph">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。使用 <block ref="bae4385e599409430f11ef78df732c82" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="2721d15a1712238198ba49214a74054c" category="paragraph">您必须使用格式化为 fat32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。</block>
   <block id="f5275334d8eb3b5cf9ea9368de40cedc" category="list-text">如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置。</block>
   <block id="b1dfba2b33907e87a5254267b34a3e32" category="list-text">验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。</block>
@@ -5799,14 +5781,12 @@
   <block id="b52ec9545c2eb85c1596e99bc30ce43d" category="list-text">如果命令因配对节点 " 未就绪 " 而失败，请等待 5 分钟，使 NVMEM 同步。</block>
   <block id="17b949ad3f0aee5e0f32cb49f51f6f3d" category="list-text">如果您运行的是 ONTAP 9.6 或更高版本：</block>
   <block id="e85e66f99bf70a0cd52615d346aa4f9f" category="paragraph"><block ref="e85e66f99bf70a0cd52615d346aa4f9f" category="inline-link-macro-rx"></block></block>
-  <block id="352c7fcaa0834bc994a6cf4d8953c111" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="5dc38b4c94702b8e594dd848db91e158" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
   <block id="e3d9e54e0daad2e60e36e8b370fec883" category="paragraph"><block ref="e3d9e54e0daad2e60e36e8b370fec883" category="inline-link-macro-rx"></block></block>
   <block id="083781fc87756a032121b806b4d18a92" category="paragraph"><block ref="083781fc87756a032121b806b4d18a92" category="inline-link-macro-rx"></block></block>
   <block id="b95a2b769ddc69403557ab79e1942007" category="paragraph"><block ref="b95a2b769ddc69403557ab79e1942007" category="inline-link-rx"></block></block>
   <block id="5f3f6cd3a4d5edc50129f46b603aa9c2" category="paragraph"><block ref="5f3f6cd3a4d5edc50129f46b603aa9c2" category="inline-link-macro-rx"></block></block>
   <block id="80fbd508bddeffc33092c60be0d4f6b0" category="paragraph">使用缆线将控制器 A 连接到磁盘架： <block ref="5a7e82fa4b93fb16c2c5bc44a8522f5a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e477637685baafe9bbd353f71ef51283" category="paragraph">允许系统启动。Initial booting may take up to eight minutes.</block>
-  <block id="6c128b420b40978f9694a86a2a019225" category="paragraph">This guide gives graphic instructions for a typical installation of your system from racking and cabling, through initial system bring-up.使用 <block ref="544c1dcefcbf1c60081e6f3087a7138d" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="fe3be7b129e2b9c74abd26381eea72bb" category="cell">Gently pull tab away from the battery housing.*Attention:* Pulling it away aggressively might displace the tab.</block>
   <block id="d61a84f0b033dd225ff9a1af9b0f08a5" category="paragraph">Lift the battery up.*Note:* Make a note of the polarity of the battery.</block>
   <block id="78929efae941c9a4e2fc6993c4c10c4e" category="paragraph">您必须具有一个格式化为 MBR/FAT32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。</block>
@@ -7323,8 +7303,6 @@
   <block id="6cff7e5493433d24015d6ef5a8566b38" category="sidebar">AFF A900机箱</block>
   <block id="7d1c80f318f9bf16deac2495abe88a7e" category="sidebar">AFF A900控制器模块</block>
   <block id="2014d8b66b0e05fba286f79c1c8aac17" category="admonition">当您看到_Do you want to disable auto-giveback？_时、输入`y`。</block>
-  <block id="f80b45f73e8b653fc036922e438eff9e" category="inline-link-macro">《FAS8200安装和设置说明》</block>
-  <block id="ca2e2999fd16933cd908b9c9e44161d0" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="666c6c27ec3878a6b3f3c3cb24d10587" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
   <block id="0e1569786cd5c99315511da0d9e3f2aa" category="admonition">如果系统停留在启动菜单处、请选择"重新启动节点"选项并在出现提示时回答y、然后按`Ctrl-C`启动到LOADER。</block>
   <block id="6f0e65a313ceda26ae3094641da52d2e" category="paragraph"><block ref="6f0e65a313ceda26ae3094641da52d2e" category="inline-link-rx"></block></block>
   <block id="e789db57588c567cf162bf2f8ec8b65e" category="paragraph">如果您的平台具有内部存储、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、请使用以下内容(这些平台使用唯一的工作表)：</block>
@@ -7352,4 +7330,25 @@
   <block id="c51e6cbbe594b20461edba0d83817fce" category="list-text">重新启动BMC、然后重新启动节点：</block>
   <block id="e727b00944f81e1d0a95c12886ac4641" category="inline-link-macro">归档</block>
   <block id="97a6415da8202d0321d49b92f019e7b1" category="paragraph">您可以使用这些链接查找其他 AFF 和 FAS 平台的文档。有关硬件支持已结束的AFF 和FAS 系统的文档、可在中供客户使用 <block ref="5e4606a12c7b193a6ccb23ff349575d7" category="inline-link-macro-rx"></block>。</block>
+  <block id="1c91d351b95f21de02a1d9bc700d73d0" category="list-text"><block ref="1c91d351b95f21de02a1d9bc700d73d0" category="inline-link-macro-rx"></block></block>
+  <block id="f6bbb48a9b41928e229484fe63e71f8c" category="list-text">英语 <block ref="3584c2c323ff7942e23aca437704f9d5" category="inline-link-macro-rx"></block></block>
+  <block id="96f14ebe376369fa093d83ad924d667a" category="paragraph">要更换DIMM、您必须使用通风管顶部的DIMM映射标签在控制器模块中找到该DIMM、然后按照特定步骤顺序进行更换。</block>
+  <block id="617bafb92e72c64d9d65b60de9aea456" category="paragraph"><block ref="617bafb92e72c64d9d65b60de9aea456" category="inline-link-macro-rx"></block></block>
+  <block id="345a2a62ce004a5b297819af054c9777" category="inline-link-macro">《 AFF FAS8200 系统安装和设置说明》</block>
+  <block id="981a3078ce60e42311749c48845ae935" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="2b72a1d770496dfb89a7b96d77b8dcc0" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
+  <block id="66baa375eeb4eeafaa0788f1450b293e" category="paragraph"><block ref="66baa375eeb4eeafaa0788f1450b293e" category="inline-link-macro-rx"></block></block>
+  <block id="cae56c0e35640281e9970acbddf74c50" category="paragraph"><block ref="cae56c0e35640281e9970acbddf74c50" category="inline-link-macro-rx"></block></block>
+  <block id="ed65510b4998b0c361d8eb350c655bf1" category="paragraph"><block ref="ed65510b4998b0c361d8eb350c655bf1" category="inline-link-macro-rx"></block></block>
+  <block id="4707af501257324eebcc0182dcfed521" category="inline-link-macro">《FAS2600安装和设置说明》</block>
+  <block id="e968d995195c5befd8e63072a29d7a87" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="7bcaada228bfef0bb9707c307be17530" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
+  <block id="b32a57c06a6b6572f324185a0b81d90c" category="paragraph"><block ref="b32a57c06a6b6572f324185a0b81d90c" category="inline-link-macro-rx"></block></block>
+  <block id="0acd1668055811ba455a173f5b2007e1" category="inline-link-macro">《AFF C190安装和设置说明》</block>
+  <block id="78986e3198e620c9a4397bd93b083e68" category="paragraph">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。使用 <block ref="3eed3afb9edbfbab44cea22e18033b51" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
+  <block id="0112dd8e71f10fe869246a29836663d8" category="inline-link-macro">《AFF A320安装和设置说明》</block>
+  <block id="70a2087c6fb473305a0e232844fd565f" category="paragraph"><block ref="70a2087c6fb473305a0e232844fd565f" category="inline-link-macro-rx"></block></block>
+  <block id="8db94eb390aaecb9128a260b00e455e8" category="paragraph"><block ref="8db94eb390aaecb9128a260b00e455e8" category="inline-link-macro-rx"></block></block>
+  <block id="474b4646ba15883494cbfd9239d508ad" category="list-text">英语 <block ref="053faba884b41a351b336aa44c8075ff" category="inline-link-macro-rx"></block></block>
+  <block id="42e8099baf01da8bcc3b8362f29f317c" category="inline-link-macro">《AFF A800安装和设置说明》</block>
+  <block id="08b9fb46f5aced4cd732b3ae62e9764f" category="paragraph">This guide gives graphic instructions for a typical installation of your system from racking and cabling, through initial system bring-up.使用 <block ref="0cdb4981396afec17d02c8ce5d1b8e06" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
+  <block id="3968cc9d2fa7f59d81661adbaf12cfac" category="paragraph"><block ref="3968cc9d2fa7f59d81661adbaf12cfac" category="inline-link-macro-rx"></block></block>
 </blocks>
