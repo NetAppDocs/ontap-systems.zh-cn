@@ -199,11 +199,8 @@ image:../media/legend_icon_01.png[""]
 
 . 如果您尚未接地，请正确接地。
 . 找到控制器模块上的 DIMM 。
-+
 
-NOTE: 每个系统内存 DIMM 的每个 DIMM 插槽旁边的主板上都有一个 LED 。故障 LED 每两秒闪烁一次。
 
-+
 image::../media/drw_a900_DIMM_map.png[DRW a900 DIMM 映射]
 
 . 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。

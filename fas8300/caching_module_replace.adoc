@@ -245,7 +245,7 @@ image::../media/drw_8300_Replace-flashcache.png[DRW 8300 更换闪存]
 
 . 使用控制器模块上的 FRU 映射，找到故障缓存模块并将其卸下：
 +
-根据您的配置，控制器模块中可能有零个，一个或两个缓存模块。发生故障的缓存模块的 LED 亮起。
+Depending on your configuration, there may be zero, one, or two caching modules in the controller module.使用控制器模块内部的FRU映射帮助查找缓存模块。
 
 +
 .. 按蓝色释放卡舌。

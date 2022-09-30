@@ -220,7 +220,7 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 == 第 3 步：更换 NVDIMM
 
 [role="lead"]
-要更换 NVDIMM ，您必须使用风管顶部的 FRU 映射在控制器模块中找到它，或者使用插槽 1 提升板顶部的 FRU 映射查找警示 LED 。
+要更换NVDIMM、您必须使用风道顶部的FRU映射和插槽1提升板顶部的FRU映射在控制器模块中找到它。
 
 * 在暂停系统后，在转存内容时， NVDIMM LED 会闪烁。目标值完成后，此 LED 将熄灭。
 * 尽管 NVDIMM 的内容已加密，但最好在更换 NVDIMM 之前先擦除其内容。有关详细信息，请参见 https://mysupport.netapp.com/info/web/ECMP1132988.html["易失性声明"] 在 NetApp 支持站点上。

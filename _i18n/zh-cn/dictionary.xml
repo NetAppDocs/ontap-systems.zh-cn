@@ -1414,7 +1414,6 @@
   <block id="3e39936f936e4834cc06a63b1868d4c5" category="summary">如果系统记录闪存生命周期接近结束或已识别的 NVDIMM 总体运行状况不佳，则必须更换控制器模块中的 NVDIMM ；否则会导致系统崩溃。</block>
   <block id="6873688fd24ce06352b0f67301567306" category="doc">更换 NVDIMM - AFF A400</block>
   <block id="00a491f6ddc82f254e9e3fa6711c8a44" category="section-title">第 3 步：更换 NVDIMM</block>
-  <block id="de9c147054e3fb33c301b1846d2c2c80" category="paragraph">要更换 NVDIMM ，您必须使用风管顶部的 FRU 映射在控制器模块中找到它，或者使用插槽 1 提升板顶部的 FRU 映射查找警示 LED 。</block>
   <block id="702c236818660597292fd2708b25d1d7" category="list-text">尽管 NVDIMM 的内容已加密，但最好在更换 NVDIMM 之前先擦除其内容。有关详细信息，请参见<block ref="89de74d6a86df9137b0ef3fb03a43036" category="inline-link-rx"></block> 在 NetApp 支持站点上。</block>
   <block id="47cd398c5a2374103dbd8377631bc325" category="list-text">打开通风管，然后在控制器模块的插槽 11 中找到 NVDIMM 。</block>
   <block id="dbbfb501b0cd6e084bc9a536cb1e4772" category="admonition">NVDIMM 与系统 DIMM 的外观截然不同。</block>
@@ -2006,7 +2005,6 @@
   <block id="9757dfef94af2886048fc48fd0f2508e" category="doc">AFF A800 系统文档</block>
   <block id="161d11f75b68457ea33ac52c79b01c05" category="doc">更换 NVDIMM - AFF A800</block>
   <block id="7ccf04d2fd9b25a78287b4db5e34e7d6" category="paragraph">要更换 NVDIMM ，您必须使用通风管顶部的 NVDIMM 映射标签在控制器模块中找到它，或者使用 NVDIMM 旁边的 LED 找到它，然后按照特定步骤顺序进行更换。</block>
-  <block id="bca504eb60c2c7a5f3511f22eeb34338" category="admonition">在暂停系统后，在转存内容时， NVDIMM LED 会闪烁。目标值完成后，此 LED 将熄灭。</block>
   <block id="2c0856fef0927def0bd154513fb326fb" category="list-text">如果要卸下或移动 NVDIMM ，请解锁此提升板上的锁定闩锁，然后卸下相应的提升板。</block>
   <block id="e9d13b816c74953ab05ce3d6d2486166" category="image-alt">更换 DRW a800 NVDIMM</block>
   <block id="f8cdcc9997405437e79f5d57e18498f5" category="paragraph">提升板 2 和 NVDIMM 11</block>
@@ -2861,7 +2859,6 @@
   <block id="70edce28424200208b28981e9b221707" category="list-text">尽管缓存模块的内容已加密，但最好在更换模块之前擦除该模块的内容。有关详细信息，请参见<block ref="89de74d6a86df9137b0ef3fb03a43036" category="inline-link-rx"></block> NetApp 支持站点上适用于您的系统的。</block>
   <block id="540a3a140ba4c7da7729d8bbfbe06861" category="image-alt">DRW 8300 更换闪存</block>
   <block id="b08a9c5bee019bb00ec5f4f00b59819e" category="list-text">使用控制器模块上的 FRU 映射，找到故障缓存模块并将其卸下：</block>
-  <block id="ea38ef5f5282f326e6e880ef9f6db82b" category="paragraph">根据您的配置，控制器模块中可能有零个，一个或两个缓存模块。发生故障的缓存模块的 LED 亮起。</block>
   <block id="58a5256eec02e1fef80c02b3deffc3f5" category="list-text">按蓝色释放卡舌。</block>
   <block id="3b9dfc19fe13a88ce4bf85240df578ae" category="paragraph">缓存模块端部不会从释放选项卡中升起。</block>
   <block id="03ca5be2075218c7bb1546c7700fbc6a" category="list-text">向上旋转缓存模块并将其滑出插槽。</block>
@@ -3869,7 +3866,6 @@
   <block id="4336c94d0986062a5e7d1d117b05fa50" category="section-title">第 3 步：更换 NVRAM DIMM</block>
   <block id="5aa839d702c6b821077d7a98ae849b99" category="paragraph">要更换 NVRAM 模块中的 NVRAM DIMM ，您必须卸下 NVRAM 模块，打开该模块，然后更换目标 DIMM 。</block>
   <block id="2f38ba189ae414ae66180b4a58eb6b22" category="list-text">找到 NVRAM 模块内部要更换的 DIMM ，然后按下 DIMM 锁定卡舌并将 DIMM 从插槽中提出来将其卸下。</block>
-  <block id="f08fa3f1d8bff6dfbc18be0fdca6444e" category="paragraph">每个 DIMM 旁边都有一个 LED ，当 DIMM 发生故障时，此 LED 会闪烁。</block>
   <block id="418a022f56c1e24ab49e10afac569c94" category="list-text">安装更换用的 DIMM ，方法是将 DIMM 与插槽对齐，然后将 DIMM 轻轻推入插槽，直到锁定卡舌锁定到位。</block>
   <block id="680d8cf9003e2f0c6c16768d83979722" category="section-title">第 5 步：重新分配磁盘</block>
   <block id="f48da66fac9628892734da282b687412" category="list-text">如果替代节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： `halt`</block>
@@ -7351,4 +7347,9 @@
   <block id="42e8099baf01da8bcc3b8362f29f317c" category="inline-link-macro">《AFF A800安装和设置说明》</block>
   <block id="08b9fb46f5aced4cd732b3ae62e9764f" category="paragraph">This guide gives graphic instructions for a typical installation of your system from racking and cabling, through initial system bring-up.使用 <block ref="0cdb4981396afec17d02c8ce5d1b8e06" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="3968cc9d2fa7f59d81661adbaf12cfac" category="paragraph"><block ref="3968cc9d2fa7f59d81661adbaf12cfac" category="inline-link-macro-rx"></block></block>
+  <block id="b72bee50d170af9037bebf46f5eb89d7" category="paragraph">要更换NVDIMM、您必须使用通风管顶部的FRU映射或插槽1提升板顶部的FRU映射在控制器模块中找到它。</block>
+  <block id="ad7f5333de2f76cfccc7ea7fa134c8a7" category="paragraph">更换系统DIMM涉及通过相关错误消息识别目标DIMM、使用风管上的FRU映射查找目标DIMM、然后更换DIMM。</block>
+  <block id="2ceb6141859316070c657f406135cd1c" category="paragraph">Depending on your configuration, there may be zero, one, or two caching modules in the controller module.使用控制器模块内部的FRU映射帮助查找缓存模块。</block>
+  <block id="edae17e7394c8face12fc5d74d33aa9b" category="paragraph">要更换NVDIMM、您必须使用风道顶部的FRU映射和插槽1提升板顶部的FRU映射在控制器模块中找到它。</block>
+  <block id="ca7c99126c90b6d4e929e35a12f23c35" category="paragraph">要更换NVDIMM、您必须使用通风管顶部的NVDIMM映射标签在控制器模块中找到它、然后按照特定步骤顺序进行更换。</block>
 </blocks>
