@@ -2066,8 +2066,6 @@
   <block id="21ee2e5e51f0485744f531669814fed3" category="summary">您可以将这些链接用于其他交换机型号。</block>
   <block id="c65be06145c6932d272087d8bd0dc751" category="list-text">Nexus 5596</block>
   <block id="43f44eb6eab88bd3dd44d614bab79684" category="list-text">Nexus 3132Q-V</block>
-  <block id="3c45f2f6b490b6057b0b3cee9eab4438" category="list-text">CN1610</block>
-  <block id="1829a6378e29fdb2a01976800d3ca60e" category="list-text">CN1601</block>
   <block id="dc562a84ed096c677cedf44a7c5df0bf" category="inline-link-macro">DS2246 磁盘架文档</block>
   <block id="dd26152c70d312482c21516c3889b669" category="paragraph"><block ref="dd26152c70d312482c21516c3889b669" category="inline-link-macro-rx"></block></block>
   <block id="06df42750628898d4d9028ca8a299fb0" category="inline-link-macro">DS4486 磁盘架文档</block>
@@ -5289,7 +5287,6 @@
   <block id="0a10ffb3d8f2b29b2aed44120c4b52ee" category="sidebar">NS224</block>
   <block id="207e21ff57c713dc789acfa5e99040ae" category="sidebar">采用 IOM12 的 SAS</block>
   <block id="cce8f24137d8ba188a996f1ac50fd1c9" category="sidebar">集群和存储交换机</block>
-  <block id="87ac6ecba347afc9b3bfcf5a25512ddc" category="sidebar">Broadcom 支持的 BES-53248 交换机</block>
   <block id="077d93425bc0aa7f9c6512d9b58b5d96" category="sidebar">Nexus 9336C-x2 集群交换机</block>
   <block id="408e6b1f14e3275adbc6a975f5910340" category="sidebar">平台升级</block>
   <block id="840e0e2bbbf69bf03b84d0acdeb4580f" category="sidebar">升级大多数系统</block>
@@ -5565,7 +5562,6 @@
   <block id="0d41b873813de2203d2c7cc22322899d" category="list-text">使用以下动画或插图将控制器连接到两个驱动器架。</block>
   <block id="f7a5a513bed985929212bb6fb12674e1" category="list-text">使用下图将控制器连接到两个驱动器架。</block>
   <block id="bd397018360b37f0581b599a75518e00" category="paragraph">您可以使用这些链接查找交换机文档。</block>
-  <block id="d5191e1d1daef1fe46971f1f30582439" category="inline-link-macro">9336C-x2 共享交换机</block>
   <block id="1087bd6a45d263f28a4b0b93895e1941" category="inline-link-macro">Nexus 92300YC 集群交换机</block>
   <block id="a50aeec9921e0390bad38d745f1ad53f" category="paragraph"><block ref="a50aeec9921e0390bad38d745f1ad53f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cbd6e530c253bd69eae2efffc8a1d409" category="list-text">Use the following animation to set one or more drive shelf IDs:</block>
@@ -6385,10 +6381,8 @@
   <block id="0e3989fd0fd811ede751f0ca9dbfbe88" category="doc">启动介质更换概述— AFF A800</block>
   <block id="a9785aa14dfcf09366954fcb69625d05" category="sidebar">42U 1280 毫米系统机柜</block>
   <block id="f606ada25615407b042f8f189d1b9fab" category="sidebar">Cisco 3132Q-V</block>
-  <block id="782536ad60a0c703fa10fb3d99248ea0" category="sidebar">Cisco 3232C 交换机</block>
   <block id="059d31543d448499bd1a9c454a8d1ebb" category="sidebar">Cisco 9336C-x2</block>
   <block id="1c87a984d0a1c6881c9703209fd4341c" category="sidebar">共享配置中的 Cisco 936-x2</block>
-  <block id="237aba816839b6ef546c40514ce24efe" category="sidebar">NetApp CN1610 交换机</block>
   <block id="21a759f002cfc3385b168953dde9a34e" category="summary">用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双节点 MetroCluster 配置。</block>
   <block id="825f13ad9fc8dc2bdd837adbced6f40f" category="paragraph">用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双控制器 MetroCluster 配置。</block>
   <block id="238e9bea2bdd4f731b75d630cdf207a3" category="list-text">将运行状况良好的控制器设置为高级权限级别： `set -privilege advanced`</block>
@@ -7254,15 +7248,11 @@
   <block id="aea2017eeef1ac0b5bedf736bb4cc56c" category="paragraph">对于大多数 AFF 和 FAS 系统，请按照上的升级过程进行操作<block ref="45cab07a2e6950f494ed7c0063e4eca0" category="inline-link-rx"></block>。</block>
   <block id="a6401ef397991d88e225879ba9ed75c9" category="paragraph">对于采用 MetroCluster 配置的系统，请按照上的升级过程进行操作<block ref="691c45d5fd38b720542002162cc3ef59" category="inline-link-rx"></block>。</block>
   <block id="1294bc9e9e9ff5fc5c905d2eebfcfa3a" category="paragraph">`选择`仅会禁用不想对设备运行的所有其他测试。</block>
-  <block id="47f502c37e61d38f2448a50d5186d8a7" category="list-text"><block ref="47f502c37e61d38f2448a50d5186d8a7" category="inline-link-macro-rx"></block></block>
   <block id="86ca80c530df92e51a5342bb132791d4" category="list-text"><block ref="86ca80c530df92e51a5342bb132791d4" category="inline-link-macro-rx"></block></block>
-  <block id="4a6d5f07662cf94441da511506452405" category="list-text"><block ref="4a6d5f07662cf94441da511506452405" category="inline-link-macro-rx"></block></block>
   <block id="c1382a426f7a22fb86c0c3bc5c872813" category="list-text"><block ref="c1382a426f7a22fb86c0c3bc5c872813" category="inline-link-macro-rx"></block></block>
   <block id="1b4fef00bfd6ba6d87574d44349b96c6" category="list-text"><block ref="1b4fef00bfd6ba6d87574d44349b96c6" category="inline-link-macro-rx"></block></block>
   <block id="069558aa8531de93c732e3ad85152f0b" category="list-text"><block ref="069558aa8531de93c732e3ad85152f0b" category="inline-link-macro-rx"></block></block>
   <block id="373042f8867690f31666fb2c254472b2" category="list-text"><block ref="373042f8867690f31666fb2c254472b2" category="inline-link-macro-rx"></block></block>
-  <block id="85abaed800bbf5a084896dbc7903c481" category="list-text"><block ref="85abaed800bbf5a084896dbc7903c481" category="inline-link-macro-rx"></block></block>
-  <block id="274b7336430e13113399b94673813e7c" category="list-text"><block ref="274b7336430e13113399b94673813e7c" category="inline-link-macro-rx"></block></block>
   <block id="dbfcf28fbace45ccb8bc86694314e16b" category="paragraph"><block ref="dbfcf28fbace45ccb8bc86694314e16b" category="inline-link-rx"></block></block>
   <block id="35c124f455f44a154eb3b514029ee58a" category="section-title">安全信息和法规声明</block>
   <block id="a6518839a3ee2f900f136494094df3cf" category="paragraph"><block ref="a6518839a3ee2f900f136494094df3cf" category="inline-link-rx"></block></block>
@@ -7352,4 +7342,14 @@
   <block id="2ceb6141859316070c657f406135cd1c" category="paragraph">Depending on your configuration, there may be zero, one, or two caching modules in the controller module.使用控制器模块内部的FRU映射帮助查找缓存模块。</block>
   <block id="edae17e7394c8face12fc5d74d33aa9b" category="paragraph">要更换NVDIMM、您必须使用风道顶部的FRU映射和插槽1提升板顶部的FRU映射在控制器模块中找到它。</block>
   <block id="ca7c99126c90b6d4e929e35a12f23c35" category="paragraph">要更换NVDIMM、您必须使用通风管顶部的NVDIMM映射标签在控制器模块中找到它、然后按照特定步骤顺序进行更换。</block>
+  <block id="d7e26346af961fd458b06e903fa1c22f" category="list-text"><block ref="d7e26346af961fd458b06e903fa1c22f" category="inline-link-macro-rx"></block></block>
+  <block id="52dc0fa7aa63a597a3aa6891a2cdd53d" category="inline-link-macro">Cisco Nexus 9336C-x2 共享交换机</block>
+  <block id="d67dacff598cf99bd3107746a21662be" category="list-text"><block ref="d67dacff598cf99bd3107746a21662be" category="inline-link-macro-rx"></block></block>
+  <block id="94f92369bb57ec3cd50af356ac87615d" category="inline-link-macro">NVIDIA SN2100</block>
+  <block id="f8cd80fb62bb327e6f2e300d81ac3a27" category="list-text"><block ref="f8cd80fb62bb327e6f2e300d81ac3a27" category="inline-link-macro-rx"></block></block>
+  <block id="280107a5f53cc09efecfd6d30a3b7ebc" category="inline-link-macro">NetApp CN1610</block>
+  <block id="c7b110777e110ebf201cadf84803bdb5" category="list-text"><block ref="c7b110777e110ebf201cadf84803bdb5" category="inline-link-macro-rx"></block></block>
+  <block id="58be97337d3377c59cd19ffb71fbc7fb" category="inline-link-macro">NetApp CN1601</block>
+  <block id="36c686b6a1d561ca87a79e4ac0028295" category="list-text"><block ref="36c686b6a1d561ca87a79e4ac0028295" category="inline-link-macro-rx"></block></block>
+  <block id="c83195c9d5e5dd5960c0976c81d14ea5" category="sidebar">Cisco 3232C</block>
 </blocks>

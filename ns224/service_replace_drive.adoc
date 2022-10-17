@@ -46,13 +46,15 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/downloa
 
 * * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
 +
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
+
++
 [NOTE]
 ====
 请勿将固件还原到不支持您的磁盘架及其组件的版本。
-
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
-
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 ====
 * 在固件版本不是最新的新驱动器上，驱动器固件会自动更新（无中断）。

@@ -22,13 +22,15 @@ summary: 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 �
 
 * * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
 +
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
+
++
 [NOTE]
 ====
 请勿将固件还原到不支持您的磁盘架及其组件的版本。
-
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
-
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 ====
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
