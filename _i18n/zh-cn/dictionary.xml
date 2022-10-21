@@ -866,7 +866,6 @@
   <block id="bf1b040c014a82c7128928f952e50325" category="paragraph">通风管锁定卡舌</block>
   <block id="72188531636fc5815089233196e1ec35" category="paragraph">提升板</block>
   <block id="8d669e84d5ccc297894b17bd6469d12d" category="paragraph">通风管</block>
-  <block id="8d73259baf4ddfb7a4ebcc9452d895e0" category="paragraph">要更换 DIMM ，您必须使用控制器模块内部的 DIMM 映射在控制器模块中找到该 DIMM ，或者使用 DIMM 旁边的 LED 找到该 DIMM ，然后按照特定步骤顺序进行更换。</block>
   <block id="9de291eec146aa309ed46727b945c6d4" category="list-text">卸下适用的提升板。</block>
   <block id="36ac39cea070e713b0fb0a0f54db88b7" category="image-alt">更换 DRW a700s DIMM</block>
   <block id="a4e4695daf3bcdb3f2c31bf35c0a5950" category="paragraph">通风管盖</block>
@@ -912,7 +911,6 @@
   <block id="3e4e796f89697f9552e6f9741f53026c" category="paragraph">提升板 2 （中间 PCIe 模块）</block>
   <block id="10cacafa178fdb6b46f50bea9be0d8cf" category="paragraph">启动介质螺钉</block>
   <block id="c6a69d731488373ecdb2d591b1a85654" category="paragraph">启动介质</block>
-  <block id="bf74c7ac7f9e7efeee2d230b44098194" category="list-text">通过控制器模块主板上亮起的 LED 找到故障启动介质。</block>
   <block id="a3d6314a25280e2e38308f58486d3929" category="list-text">从控制器模块中取出启动介质：</block>
   <block id="6ff72dc7d55fbd7ee2ad6dd88053463e" category="list-text">使用 1 号十字螺丝刀卸下固定启动介质的螺钉，并将螺钉放在安全位置。</block>
   <block id="244f0d518122ade08cc762c1395d4c5e" category="list-text">抓住启动介质的两侧，将启动介质轻轻向上旋转，然后将启动介质竖直拉出插槽并放在一旁。</block>
@@ -1540,7 +1538,6 @@
   <block id="ace5062e3323e0454888b1e7005d39e6" category="cell">NVMEM 电池锁定选项卡</block>
   <block id="ca72b3cd4b60815c9c0a025e08bf7b80" category="paragraph">NVMEM 电池</block>
   <block id="7304e8e8b413c8df2d53284d43e1c947" category="list-text">等待几秒钟，然后将电池重新插入插槽。</block>
-  <block id="b2bd14184e9f3b25f1856f38f5e4292a" category="admonition">每个系统内存 DIMM 的每个 DIMM 插槽旁边的主板上都有一个 LED 。故障 LED 每两秒闪烁一次。</block>
   <block id="19cc15a56d312c0b108cb53b467856b0" category="paragraph">系统 DIMM 的数量和位置取决于系统型号。</block>
   <block id="e5f0d91d63a27f446a79033eff3b041b" category="paragraph">下图显示了系统 DIMM 的位置：</block>
   <block id="2afadaee32bfbcb58fbdc6c77b43ac9a" category="image-alt">DRW rxl DIMM</block>
@@ -7352,4 +7349,9 @@
   <block id="58be97337d3377c59cd19ffb71fbc7fb" category="inline-link-macro">NetApp CN1601</block>
   <block id="36c686b6a1d561ca87a79e4ac0028295" category="list-text"><block ref="36c686b6a1d561ca87a79e4ac0028295" category="inline-link-macro-rx"></block></block>
   <block id="c83195c9d5e5dd5960c0976c81d14ea5" category="sidebar">Cisco 3232C</block>
+  <block id="b609dd6c87556493ce1f11c7ab61cbdb" category="list-text">检查控制器模块背面的NVMEM LED。</block>
+  <block id="62052f557603d07beccb5c5c5b7c8d48" category="list-text">通过检查控制台错误消息来确定必须更换的风扇模块。</block>
+  <block id="6c0f8c80eb90bb62692eec695b2b97a4" category="paragraph">您必须在控制器模块中找到故障启动介质、方法是卸下控制器模块上的中间PCIe模块、找到故障启动介质、然后更换启动介质。</block>
+  <block id="75482a309ad2153a216d2cc1f37de42a" category="list-text">找到故障启动介质。</block>
+  <block id="3f09782d88b17a1d4d58adb09f8cd8ee" category="paragraph">要更换DIMM、您必须使用控制器模块内部的DIMM映射在控制器模块中找到该DIMM、然后按照特定步骤顺序进行更换。</block>
 </blocks>

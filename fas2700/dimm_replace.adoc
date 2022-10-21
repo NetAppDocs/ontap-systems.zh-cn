@@ -118,7 +118,7 @@ image::../media/drw_2600_opening_pcm_cover.png[DRW 2600 打开 PCM 盖板]
 
 .步骤
 . 如果您尚未接地，请正确接地。
-. 检查控制器模块上的 NVMEM LED 。
+. 检查控制器模块背面的NVMEM LED。
 +
 在更换系统组件之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM ）中未写入的数据。此 LED 位于控制器模块的背面。查找以下图标：
 
@@ -138,10 +138,6 @@ image::../media/drw_2600_nvmem_battery_unplug.png[DRW 2600 nvmem 电池已拔下
 
 . 返回到 link:dimm_replace.md["更换 DIMM"] 重新检查此操作步骤的 NVMEM LED 。
 . 找到控制器模块上的 DIMM 。
-+
-
-NOTE: 每个系统内存 DIMM 的每个 DIMM 插槽旁边的主板上都有一个 LED 。故障 LED 每两秒闪烁一次。
-
 . 记下插槽中 DIMM 的方向，以便可以按正确的方向插入更换用的 DIMM 。
 . 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。
 +
