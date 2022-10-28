@@ -67,7 +67,6 @@
   <block id="b7167dcb288bc483f270fcd135c332ec" category="doc">通过添加两个新的共享交换机，从具有数据存储的无交换机集群进行迁移</block>
   <block id="97c16f2bd68041ac79ef06049407d0c7" category="list-text">退出维护模式：</block>
   <block id="bdbf296139657929f989f110dccebbd3" category="doc">检查聚合重新定位失败</block>
-  <block id="00bfced11707df12b7beabc9cb1854c6" category="list-text">返回到管理权限级别：</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概述</block>
   <block id="3ffee04e4bb020103f1bece18c2ac58e" category="sidebar">自动执行控制器升级过程</block>
   <block id="eee953986530407bd81dc7dec37f7151" category="sidebar">第 1 阶段准备升级</block>
@@ -175,13 +174,11 @@
   <block id="11d90ad9838fdc1545ee368cd8943df9" category="list-text">如果需要，删除旧许可证：</block>
   <block id="eb9892aa7a6ee6cfe6b30dad735d6d7a" category="list-text">检查未使用的许可证： `license clean-up -unused -simulate`</block>
   <block id="f77eef718a5ddb0006a44a75016370bf" category="list-text">如果列表显示正确，请删除未使用的许可证： `license clean-up -unused`</block>
-  <block id="ff3a1a304de699b15bd2a5a39798c5a8" category="section-title">第 2 步：还原存储和卷加密功能</block>
   <block id="37b0fb827bbc179115abc1768c9c5f12" category="paragraph">在更换先前配置为使用存储或卷加密的存储系统的控制器模块或 NVRAM 模块后，您必须执行其他步骤以提供无中断加密功能。对于未启用存储或卷加密的存储系统，您可以跳过此任务。</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">步骤</block>
   <block id="a2ae6c720a8a0fbf3918f44a33be6b30" category="inline-link">《 ONTAP 9 NetApp 加密高级指南》</block>
   <block id="ba8122bba290a3351611db1b66c99386" category="paragraph"><block ref="ba8122bba290a3351611db1b66c99386" category="inline-link-rx"></block></block>
   <block id="e68c8836280fba147b04a2b14b196600" category="paragraph">根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：</block>
-  <block id="92f82264c734da3126796f6bfa718d0f" category="section-title">第 3 步：验证 LIF 并注册序列号</block>
   <block id="556aba51608845a42e971c4c7b471837" category="paragraph">在将 _replacement_ 节点恢复使用之前，您应验证 LIF 是否位于其主端口上，如果启用了 AutoSupport ，则注册 _replacement_ 节点的序列号，并重置自动交还。</block>
   <block id="462ec873925d8409f9ead354ff424e1b" category="list-text">验证逻辑接口是否正在向其主服务器和端口报告： `network interface show -is-home false`</block>
   <block id="8ea6b3a9b2a4529608397a2c8232b2e9" category="paragraph">如果任何 LIF 列为 false ，请将其还原到其主端口： `network interface revert`</block>
@@ -1205,7 +1202,6 @@
   <block id="f5016594b8e72f5a97ef9aa0ab2ce820" category="image-alt">DRW A400 删除控制器</block>
   <block id="1dfd8f0a690cafa9d3544e4817f68306" category="list-text">将控制器模块放在平稳的表面上。</block>
   <block id="5beb49709902306e7264c7704117a827" category="section-title">第 3 步：更换系统 DIMM</block>
-  <block id="3848c7730c285ede150ddd598894cf0b" category="paragraph">更换系统 DIMM 需要通过相关的错误消息识别目标 DIMM ，使用风管上的 FRU 映射或主板上亮起的 LED 查找目标 DIMM ，然后更换 DIMM 。</block>
   <block id="4cdb88b773dbbe796646d321ccc17d79" category="admonition">此动画显示了没有 DIMM 的插槽中的空插槽。这些空插槽中填有空格。</block>
   <block id="dddaeedd9556d05cf4df1989bab97eb0" category="image-alt">DRW A400 更换 NVDIMM DIMM</block>
   <block id="ef3d6a7034bbb6a1a5a3adc4e54f05da" category="paragraph">DIMM 位于插槽 2 ， 4 ， 13 和 15 中。NVDIMM 位于插槽 11 中。</block>
@@ -1512,7 +1508,6 @@
   <block id="c7f2defea9cd5b73fda5cc58aadedfcc" category="admonition">初始启动可能需要长达八分钟的时间。</block>
   <block id="ec15ae659445c6b6db2f5a726a8eac48" category="admonition">此地址的格式为 +https://x.x.x.x.+</block>
   <block id="b9068760536b874bf77dc015fb91c3ae" category="doc">完成系统还原— FAS8200</block>
-  <block id="332c846459ecae57b885b30c41482384" category="section-title">第 3 步：验证 LIF 并注册序列号</block>
   <block id="0336dcab6aaf6e0e6b3e580f2e159ad5" category="doc">安装和设置 PDF 海报— FAS8200</block>
   <block id="10bc7f8044338127350055a62aad1a90" category="doc">更换 DIMM - FAS8200</block>
   <block id="de2a859c590dc7d6eabe3126531d15fe" category="section-title">第 2 步：打开控制器模块</block>
@@ -2001,7 +1996,6 @@
   <block id="515a9278fa676806936af5610703610f" category="list-text">对于提升板 2 或 3 ，请合上侧面板。</block>
   <block id="9757dfef94af2886048fc48fd0f2508e" category="doc">AFF A800 系统文档</block>
   <block id="161d11f75b68457ea33ac52c79b01c05" category="doc">更换 NVDIMM - AFF A800</block>
-  <block id="7ccf04d2fd9b25a78287b4db5e34e7d6" category="paragraph">要更换 NVDIMM ，您必须使用通风管顶部的 NVDIMM 映射标签在控制器模块中找到它，或者使用 NVDIMM 旁边的 LED 找到它，然后按照特定步骤顺序进行更换。</block>
   <block id="2c0856fef0927def0bd154513fb326fb" category="list-text">如果要卸下或移动 NVDIMM ，请解锁此提升板上的锁定闩锁，然后卸下相应的提升板。</block>
   <block id="e9d13b816c74953ab05ce3d6d2486166" category="image-alt">更换 DRW a800 NVDIMM</block>
   <block id="f8cdcc9997405437e79f5d57e18498f5" category="paragraph">提升板 2 和 NVDIMM 11</block>
@@ -2944,8 +2938,6 @@
   <block id="277ba6b7a127ec6b40495a0cd012279f" category="paragraph">使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。</block>
   <block id="eacfd9b01b607ec0ff14339768945edd" category="image-alt">DRW affa250 25GbE 主机布线</block>
   <block id="13bebe2596a4000b53c1d171e85d4669" category="doc">完成系统还原— AFF C190</block>
-  <block id="90e0a79f0dc5582ba3bb7a9b28936d5c" category="section-title">第 2 步：还原存储和卷加密功能</block>
-  <block id="0072b0fd9d430209e4485c4040bcaa19" category="section-title">第 3 步：验证 LIF 并注册序列号</block>
   <block id="6ca5f95bd86b688d89de7f54f3cbcd42" category="list-text"><block ref="6ca5f95bd86b688d89de7f54f3cbcd42" category="inline-link-macro-rx"></block></block>
   <block id="3e9eeff790689f3fae33fe0fe1362b23" category="list-text"><block ref="3e9eeff790689f3fae33fe0fe1362b23" category="inline-link-macro-rx"></block></block>
   <block id="a3e79fff93cae393b9fcd5d08d264b15" category="list-text"><block ref="a3e79fff93cae393b9fcd5d08d264b15" category="inline-link-macro-rx"></block></block>
@@ -3044,16 +3036,8 @@
   <block id="2aa8970a7aa05c71d0c35e524a059d35" category="list-text">完成控制器模块的重新安装。控制器模块一旦完全固定在机箱中，就会开始启动。</block>
   <block id="d9a7a09d2734ecc763c0c5a8586a61a3" category="doc">重新配置系统并重新分配磁盘— AFF C190</block>
   <block id="b279b6600d5af224d26ab7bab80082c7" category="section-title">第 2 步：验证 HA 系统上的系统 ID 更改</block>
-  <block id="109773e48c8731216edae51d1686c8bc" category="list-text">更改为高级权限级别：</block>
   <block id="e510b81f84ff95d9355a3f8777aac54e" category="paragraph">系统提示您继续进入高级模式时，您可以回答 ` * Y*` 。此时将显示高级模式提示符（ * &gt; ）。</block>
-  <block id="cd398a68db8f00186aae955968cc06d7" category="list-text">保存任何核心转储：</block>
-  <block id="5bedc6fbcb54f704df8ebd472d318d98" category="paragraph">` * 系统节点 run -node _local-node-name_ partner savecore*`</block>
-  <block id="5ba88971aec930df5e482b401ee5bda7" category="paragraph">您可以输入以下命令来监控 savecore 命令的进度：</block>
-  <block id="0a6496658205fc38ba1b1f3e184070ba" category="paragraph">` * 系统节点 run -node _local-node-name_ partner savecore -s *`</block>
-  <block id="84a63e5c67c16845df7acbd3cae860da" category="paragraph">` * 存储故障转移交还 -ofnode _replacement_node_name_*`</block>
   <block id="393be3b3a8c5c898411ba572d160869b" category="paragraph">如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 ` * y*` 。</block>
-  <block id="e3de43ab4017cb33908b0ff634023d7d" category="paragraph">` * vol show -node _node-name_*`</block>
-  <block id="73b172a422efac317883ee1a518015e1" category="paragraph">` * storage failover modify -node _replacement-node-name_ -onreboot true*`</block>
   <block id="c08618c5a0ce81948b9cda2e429f0deb" category="doc">更换 NVMEM 电池— AFF C190</block>
   <block id="31fd200f667413cd052c85fc2b0d53a1" category="image-alt">DRW 2600 nvmem batt rel 动画 gif</block>
   <block id="0aea44e537dad96c67b72ef6ed5e78d4" category="list-text">当您看到消息 ``Press Ctrl-C for Boot Menu`` 时，按 ` * Ctrl-C *` 以中断启动过程。</block>
@@ -3702,7 +3686,6 @@
   <block id="844463768f93b4eeabac9c4516ca0130" category="section-title">第 3 步：移动系统 DIMM</block>
   <block id="727b43bb986548fddfd9fbbfd6c3c609" category="summary">要完成替换操作步骤并将系统还原为完全正常运行，您必须重新配置存储，还原 NetApp 存储加密配置（如果需要）并为新控制器安装许可证。</block>
   <block id="647f24f2eb58a916547a537a4937864d" category="doc">完成系统还原— AFF A700 和 FAS9000</block>
-  <block id="bbc9c42b99312692d6c920df2a10da53" category="section-title">第 4 步（仅限 MetroCluster ）：在双节点 MetroCluster 配置中切回聚合</block>
   <block id="49ab05c6d209447659fe5dd4e1fd1db5" category="doc">移动并更换硬件— AFF A700 和 FAS9000</block>
   <block id="0a7d4055ebf0329a7a3468cd3ccca3ca" category="section-title">第 1 步：卸下电源</block>
   <block id="060c350ffa4e24bde01789b8be8138f7" category="paragraph">更换机箱时，要卸下电源，需要关闭电源，断开连接，然后从旧机箱中卸下电源。</block>
@@ -6134,7 +6117,6 @@
   <block id="e2e8db7924e3d9318e09779273f259de" category="doc">更换风扇— AFF A250</block>
   <block id="bc6668cc9984ca2f625c085c1e7dbe6c" category="doc">更换风扇— FAS500f</block>
   <block id="3cb52a5c3c25dcd729403c0c723500bc" category="list-text">使用 ``storage failover show` -giveback` 命令监控交还操作的进度。</block>
-  <block id="b36708a8226ddc48a16407516f32b6ae" category="paragraph">` * `s存储故障转移显示` *`</block>
   <block id="4cc5d765a3b2155ab803f6ce50c11747" category="paragraph">`storage failover show` 命令的输出不应包含 `Ssystem ID changed on partner` 消息。</block>
   <block id="7b5b637cc082477a9dd4c129c225152e" category="inline-link">还原板载密钥管理加密密钥</block>
   <block id="1ee623098df2f7856a034824be882999" category="inline-link">还原外部密钥管理加密密钥</block>
@@ -6540,12 +6522,7 @@
   <block id="ab16b7659f1f3d151837f3f6574edbce" category="paragraph">要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
   <block id="f9d753fddfdd4cf75bdcf826d545a576" category="list-text">受损 _ 控制器是要在其中执行维护的控制器。</block>
   <block id="e4107ee9d71fad92265b6222f2822ad8" category="list-text">_health_ 控制器是受损控制器的 HA 配对控制器。</block>
-  <block id="ecc93de5d9e6d1de2c8f307f37c933d1" category="list-text">如果 _replacement_ 控制器处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符：</block>
   <block id="1ece66f8bf58294a3a5da700df5daffe" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 ` * y*` 。</block>
-  <block id="ad40e97175b514d2c81a91067ad04ed7" category="list-text">等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行状况良好的控制器中验证是否已自动分配新的配对系统 ID ：</block>
-  <block id="65ae07541c754093eda9cd898cf890f7" category="list-text">在运行正常的控制器中，交还更换后的控制器的存储：</block>
-  <block id="2e02c080662f8fd550785b87be3c1144" category="list-text">验证每个控制器是否存在预期卷：</block>
-  <block id="f7e34e40e37b03149dbadb73b8513476" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它：</block>
   <block id="86c3969f421b58d4b4b270ed1fb7b003" category="section-title">第 1 步：在 ONTAP 中为替代控制器安装许可证</block>
   <block id="2a0338d4b284b44bbd6e5b5a0e564e4f" category="paragraph">安装 `image_name.tgz` 后，系统会提示您从运行正常的控制器还原备份配置（ `var` 文件系统）。</block>
   <block id="922768ec58831cabe5b129a1aa26dc78" category="paragraph">您可以在控制器重新启动后开始使用系统。</block>
@@ -7354,4 +7331,10 @@
   <block id="6c0f8c80eb90bb62692eec695b2b97a4" category="paragraph">您必须在控制器模块中找到故障启动介质、方法是卸下控制器模块上的中间PCIe模块、找到故障启动介质、然后更换启动介质。</block>
   <block id="75482a309ad2153a216d2cc1f37de42a" category="list-text">找到故障启动介质。</block>
   <block id="3f09782d88b17a1d4d58adb09f8cd8ee" category="paragraph">要更换DIMM、您必须使用控制器模块内部的DIMM映射在控制器模块中找到该DIMM、然后按照特定步骤顺序进行更换。</block>
+  <block id="161316904c049c8661c4860ac103d326" category="list-text">如果您的存储系统配置了存储或卷加密、则必须根据您使用的是板载密钥管理还是外部密钥管理、通过以下过程之一还原存储或卷加密功能：</block>
+  <block id="cd52056b12799b75e95ce3715dbd95d0" category="section-title">第2步：验证LIF并注册序列号</block>
+  <block id="e5d342b84a7b4a1d294e75d2ff62d759" category="section-title">第2步：验证LIF并注册序列号</block>
+  <block id="483a752599520b0534872ca3822c9083" category="list-text">验证每个控制器是否存在预期卷：<block ref="6931ff74d75f98d072d2434c71cfc1e4" prefix=" " category="inline-code"></block></block>
+  <block id="8ba332a9944c2e6a66e36aee66689593" category="section-title">第2步：验证LIF并注册序列号</block>
+  <block id="6de93a3d40cba5a9f17ae225a0a97f4e" category="section-title">第3步：(仅限MetroCluster)：在双节点MetroCluster 配置中切回聚合</block>
 </blocks>

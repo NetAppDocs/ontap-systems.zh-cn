@@ -119,10 +119,7 @@ image::../media/drw_a320_controller_remove_animated_gif.png[DRW A320 控制器�
 == 第 3 步：更换 NVDIMM
 
 [role="lead"]
-要更换 NVDIMM ，您必须使用通风管顶部的 NVDIMM 映射标签在控制器模块中找到它，或者使用 NVDIMM 旁边的 LED 找到它，然后按照特定步骤顺序进行更换。
-
-
-NOTE: 在暂停系统后，在转存内容时， NVDIMM LED 会闪烁。目标值完成后，此 LED 将熄灭。
+要更换NVDIMM、您必须使用通风管顶部的NVDIMM映射标签在控制器模块中找到它、然后按照特定步骤顺序进行更换。
 
 image::../media/drw_a320_nvdimm_replace_animated_gif.png[DRW A320 NVDIMM 更换动画 gif]
 

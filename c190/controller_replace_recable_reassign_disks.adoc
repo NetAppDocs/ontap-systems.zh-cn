@@ -39,15 +39,9 @@ If the storage system is in an HA pair, the system ID of the new controller modu
 
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
-. 如果 _replacement_ 控制器处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到 LOADER 提示符：
-+
-` * 暂停 *`
-
+. 如果 _replacement_ 控制器处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`
 . 在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 ` * y*` 。
-. 等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行状况良好的控制器中验证是否已自动分配新的配对系统 ID ：
-+
-` * `s存储故障转移显示` *`
-
+. 请等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行正常的控制器中验证是否已自动分配新的配对系统 ID ： `storage failover show`
 +
 在命令输出中，您应看到一条消息，指出受损控制器上的系统 ID 已更改，其中显示了正确的旧 ID 和新 ID 。In the following example, node2 has undergone replacement and has a new system ID of 151759706.
 
@@ -64,36 +58,27 @@ node2             node1             -            Waiting for giveback (HA mailbo
 ----
 . 在运行正常的控制器中，验证是否已保存任何核心转储：
 +
-.. 更改为高级权限级别：
-+
-` * 设置 -privilege advanced*`
-
+.. 更改为高级权限级别： `set -privilege advanced`
 +
 系统提示您继续进入高级模式时，您可以回答 ` * Y*` 。此时将显示高级模式提示符（ * > ）。
 
-.. 保存任何核心转储：
-+
-` * 系统节点 run -node _local-node-name_ partner savecore*`
-
+.. 保存任何核心转储： `ssystem node run -node _local-node-name_ partner savecore`
 .. 等待 `savecore`命令完成，然后再发出交还。
 +
-您可以输入以下命令来监控 savecore 命令的进度：
+您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`
 
+.. 返回到管理权限级别： `set -privilege admin`
+
+
+. 如果您的存储系统配置了存储或卷加密、则必须根据您使用的是板载密钥管理还是外部密钥管理、通过以下过程之一还原存储或卷加密功能：
 +
-` * 系统节点 run -node _local-node-name_ partner savecore -s *`
-
-.. 返回到管理权限级别：
-+
-` * 设置 -privilege admin*`
-
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
 
 
 . 交还控制器：
 +
-.. 在运行正常的控制器中，交还更换后的控制器的存储：
-+
-` * 存储故障转移交还 -ofnode _replacement_node_name_*`
-
+.. 从运行正常的控制器中，交还更换的控制器的存储： `storage failover giveback -ofnode _replacement_node_name_`
 +
 _replacement_ 控制器将收回其存储并完成启动。
 
@@ -130,12 +115,6 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 .
 .
 ----
-. 验证每个控制器是否存在预期卷：
-+
-` * vol show -node _node-name_*`
-
-. 如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它：
-+
-` * storage failover modify -node _replacement-node-name_ -onreboot true*`
-
+. 验证每个控制器是否存在预期卷： `vol show -node _node-name_`
+. 如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： `storage failover modify -node _replacement-node-name_ -onreboot true`
 

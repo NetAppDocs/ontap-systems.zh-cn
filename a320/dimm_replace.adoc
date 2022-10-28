@@ -114,7 +114,7 @@ image::../media/drw_a320_controller_remove_animated_gif.png[DRW A320 控制器�
 == 第 3 步：更换系统 DIMM
 
 [role="lead"]
-更换系统 DIMM 需要通过相关的错误消息识别目标 DIMM ，使用风管上的 FRU 映射或主板上亮起的 LED 查找目标 DIMM ，然后更换 DIMM 。
+更换系统DIMM涉及通过相关错误消息识别目标DIMM、使用风管上的FRU映射查找目标DIMM、然后更换DIMM。
 
 . 将通风管旋转到打开位置。
 . 找到控制器模块上的 DIMM 。
