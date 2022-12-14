@@ -15,6 +15,7 @@ NVRAM 模块由 NVRAM11 和 DIMM 组成。You can replace a failed NVRAM module 
 
 要更换和 NVRAM DIMM ，您必须从机箱中卸下 NVRAM 模块，更换模块中发生故障的 DIMM ，然后重新安装 NVRAM 模块。
 
+.关于此任务
 由于系统 ID 源自 NVRAM 模块，因此，如果更换此模块，则属于此系统的磁盘将重新分配给新的系统 ID 。
 
 .开始之前
@@ -35,6 +36,7 @@ NVRAM 模块由 NVRAM11 和 DIMM 组成。You can replace a failed NVRAM module 
 
 == 第 1 步：关闭受损控制器
 
+.步骤
 [role="lead"]
 使用以下选项之一关闭或接管受损控制器。
 

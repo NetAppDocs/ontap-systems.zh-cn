@@ -19,6 +19,7 @@ summary: 此提供了有关安装典型 NetApp 系统的详细分步说明。
 
 要安装系统，您需要在 NetApp 支持站点上创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
 
+.开始之前
 [role="lead"]
 您需要有权访问 https://hwu.netapp.com["NetApp Hardware Universe"^] 有关站点要求以及已配置系统上的追加信息的信息。
 
@@ -203,6 +204,7 @@ image::../media/drw_9000_cable_management_arms.png[DRW 9000 缆线管理臂]
 [role="lead"]
 控制器上的管理网络，数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
 
+.开始之前
 您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
@@ -273,7 +275,7 @@ image::../media/oie_legend_icon_4_dr.png[OIE 图例图标 4 驱动器]
 image:../media/oie_cable_sfp_gbe_copper.png[""]
 
 |===
-. To cable your storage, see  4: Cable controllers to drive shelves。
+. To cable your storage, see <<第 4 步：使用缆线将控制器连接到驱动器架>>。
 
 
 
@@ -283,6 +285,7 @@ image:../media/oie_cable_sfp_gbe_copper.png[""]
 [role="lead"]
 控制器上的管理网络，数据网络和管理端口连接到交换机。集群互连和 HA 端口通过缆线连接到集群 /HA 交换机。
 
+.开始之前
 您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
@@ -353,7 +356,7 @@ image::../media/oie_legend_icon_4_dr.png[OIE 图例图标 4 驱动器]
 image:../media/oie_cable_sfp_gbe_copper.png[""]
 
 |===
-. To cable your storage, see  4: Cable controllers to drive shelves。
+. To cable your storage, see <<第 4 步：使用缆线将控制器连接到驱动器架>>。
 
 
 
@@ -420,7 +423,7 @@ image:../media/oie_cable100_gbe_qsfp28.png[""]
 
 |===
 +
-.. To complete setting up your system, see  5: Complete system setup and configuration。
+.. To complete setting up your system, see <<第 5 步：完成系统设置和配置>>。
 
 
 
@@ -489,7 +492,7 @@ image:../media/oie_cable100_gbe_qsfp28.png[""]
 100 GbE 缆线
 
 |===
-. To complete setting up your system, see  5: Complete system setup and configuration。
+. To complete setting up your system, see <<第 5 步：完成系统设置和配置>>。
 
 
 

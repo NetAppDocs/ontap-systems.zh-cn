@@ -21,7 +21,7 @@ summary: '如果需要更多存储、您可以将IOM12/IOM12B磁盘架(带有IOM
 在将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈之前、HA对、单控制器或延伸型MetroCluster 配置(系统)必须满足特定要求。
 
 
-NOTE: 有关网桥连接的 MetroCluster 配置，请参见  for a hot-add in bridge-attached MetroCluster configurations。
+NOTE: 有关网桥连接的 MetroCluster 配置，请参见 <<网桥连接 MetroCluster 配置中的热添加要求>>。
 
 * 您的系统和ONTAP 版本必须支持在同一个堆栈(混合堆栈)中混合使用IOM6磁盘架和IOM12B磁盘架。
 +
@@ -226,12 +226,14 @@ NOTE: 迁移说明提供了 IBACP 的系统要求。
 [role="lead"]
 如果要为要热添加的 IOM12 磁盘架手动分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。
 
+.开始之前
 您必须已满足系统要求。
 
- for a hot-add
+<<热添加的要求>>
 
- for a hot-add in bridge-attached MetroCluster configurations
+<<网桥连接 MetroCluster 配置中的热添加要求>>
 
+.关于此任务
 如果您有 HA 对，则如果磁盘架中的驱动器将由两个控制器模块拥有，则需要手动分配驱动器所有权。
 
 .步骤
@@ -396,15 +398,15 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 .开始之前
 * 您必须已满足系统要求。
 +
- for a hot-add
+<<热添加的要求>>
 
 * 如果适用，您必须已完成准备操作步骤。
 +
- to manually assign drive ownership for a hot-add
+<<准备手动分配驱动器所有权以进行热添加>>
 
 * 您必须已安装磁盘架，打开其电源并设置磁盘架 ID 。
 +
- shelves for a hot-add
+<<安装用于热添加的磁盘架>>
 
 
 
@@ -634,7 +636,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 否则，您将使用此操作步骤。
 
 +
- the hot-add
+<<完成热添加>>
 
 +
 
@@ -649,9 +651,10 @@ NOTE: 所有 MetroCluster 配置都需要手动分配驱动器。
 [role="lead"]
 如果在准备将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈时禁用了自动驱动器分配、则需要手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。
 
+.开始之前
 您必须已按照系统说明为磁盘架布线。
 
- shelves for a hot-add
+<<为热添加的磁盘架布线>>
 
 .步骤
 . 显示所有未分配的驱动器： `storage disk show -container-type unassigned`

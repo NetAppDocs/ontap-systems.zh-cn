@@ -47,14 +47,14 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
  a| 
 HA 对
  a| 
- 1: Verify the system ID change on an HA system]
+<<选项 1 ：验证 HA 系统上的系统 ID 更改>>]
 
 
 
  a| 
 双节点 MetroCluster 配置
  a| 
- 2: Manually reassign the system ID on systems in a two-node MetroCluster configuration
+<<选项 2 ：在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID>>
 
 |===
 
@@ -149,6 +149,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 
 在运行 ONTAP 的双节点 MetroCluster 配置中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。
 
+.关于此任务
 此操作步骤仅适用于运行 ONTAP 的双节点 MetroCluster 配置中的系统。
 
 您必须确保问题描述在此操作步骤中的命令位于正确的节点上：

@@ -69,6 +69,7 @@ image:../media/legend_icon_02.png[""]
 [role="lead"]
 您必须在控制器模块中找到启动介质（请参见控制器模块上的 FRU 映射），然后按照说明进行更换。
 
+.开始之前
 虽然启动介质的内容已加密，但最好在更换启动介质之前先擦除此介质的内容。有关详细信息，请参见 https://mysupport.netapp.com/info/web/ECMP1132988.html["易失性声明"] NetApp 支持站点上适用于您的系统的。
 
 

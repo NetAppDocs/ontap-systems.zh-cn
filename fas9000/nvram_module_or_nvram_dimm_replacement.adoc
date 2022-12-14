@@ -397,6 +397,7 @@ DIMM 和 DIMM 弹出器卡舌
 ====
 .选项 1 ：验证 ID （ HA 对）
 --
+.Verify the system ID change on an HA system
 [role="lead"]
 您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
 
@@ -517,9 +518,11 @@ dr-group-id            cluster node           configuration-state
 --
 .选项 2 ：重新分配 ID （ MetroCluster 配置）
 --
+.在双节点MetroCluster 配置中重新分配系统ID
 [role="lead"]
 在运行 ONTAP 的双节点 MetroCluster 配置中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。
 
+.关于此任务
 此操作步骤仅适用于运行 ONTAP 的双节点 MetroCluster 配置中的系统。
 
 您必须确保问题描述在此操作步骤中的命令位于正确的节点上：

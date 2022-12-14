@@ -24,6 +24,7 @@ summary: 本节详细介绍了安装 AFF A250 系统的分步说明。
 
 NOTE: 具有特定电源要求的客户必须检查 HWU 以了解其配置选项。
 
+.您需要的内容
 您需要在站点上提供以下内容：
 
 * 存储系统的机架空间
@@ -176,6 +177,7 @@ image::../media/drw_affa250_weight_caution.png[DRW affa250 重量注意事项]
 
 控制器模块上的管理，光纤通道和数据或主机网络端口连接到交换机。两个控制器模块上的集群互连端口均已布线。
 
+.开始之前
 有关将系统连接到交换机的信息，请与网络管理员联系。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -228,6 +230,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 
 控制器上的所有端口都连接到交换机；集群互连，管理，光纤通道以及数据或主机网络交换机。
 
+.开始之前
 有关将系统连接到交换机的信息，请与网络管理员联系。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -286,6 +289,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 
 控制器上的光纤通道端口连接到光纤通道主机网络交换机。
 
+.开始之前
 有关将系统连接到交换机的信息，请与网络管理员联系。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -312,8 +316,8 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 要执行其他可选布线，请选择：
 
-*  2: Cable to a 25GbE data or host network
-*  3: Cable the controllers to a single drive shelf
+* <<选项 2 ：使用缆线连接到 25GbE 数据或主机网络>>
+* <<选项 3 ：使用缆线将控制器连接到一个驱动器架>>
 
 
 
@@ -330,6 +334,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 
 控制器上的 25GbE 端口连接到 25GbE 数据或主机网络交换机。
 
+.开始之前
 有关将系统连接到交换机的信息，请与网络管理员联系。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -356,8 +361,8 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 要执行其他可选布线，请选择：
 
-*  1: Cable to a Fibre Channel host network
-*  3: Cable the controllers to a single drive shelf
+* <<选项 1 ：使用缆线连接到光纤通道主机网络>>
+* <<选项 3 ：使用缆线将控制器连接到一个驱动器架>>
 
 
 
@@ -374,6 +379,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 
 使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。
 
+.开始之前
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]

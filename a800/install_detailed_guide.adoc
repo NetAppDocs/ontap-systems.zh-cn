@@ -21,6 +21,7 @@ summary: 本节详细介绍了安装 AFF A800 系统的分步说明。
 
 您需要有权访问 link:https://hwu.netapp.com["NetApp Hardware Universe"^] （ HWU ），了解有关站点要求以及已配置系统上的追加信息的信息。您可能还希望有权访问 link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["适用于您的 ONTAP 版本的发行说明"^] 有关此系统的详细信息，请参见。
 
+.您需要的内容
 您需要在站点上提供以下内容：
 
 * 存储系统的机架空间
@@ -200,6 +201,7 @@ image::../media/drw_affa800_install_cable_mgmt.png[DRW affa800 安装缆线管�
 
 控制器上的管理网络端口连接到交换机。HA 互连端口和集群互连端口都连接在两个控制器上。
 
+.开始之前
 有关将系统连接到交换机的信息，请与网络管理员联系。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -257,10 +259,10 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 |===
 . 要执行可选布线，请参见：
 +
-**  1: Connect to a Fibre Channel host
-**  2: Connect to a 10GbE host
-**  3: Connect to a single direct-attached NS224 drive shelf
-**  4: Connect to two direct-attached NS224 drive shelves
+** <<Option 1: Connect to a Fibre Channel host>>
+** <<Option 2: Connect to a 10GbE host>>
+** <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
+** <<Option 4: Connect to two direct-attached NS224 drive shelves>>
 
 
 . To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
@@ -272,6 +274,7 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 
 控制器上的集群互连和管理网络端口连接到交换机，而 HA 互连端口则连接到两个控制器上。
 
+.开始之前
 有关将系统连接到交换机的信息，请与网络管理员联系。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -325,10 +328,10 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 |===
 . 要执行可选布线，请参见：
 +
-**  1: Connect to a Fibre Channel host
-**  2: Connect to a 10GbE host
-**  3: Connect to a single direct-attached NS224 drive shelf
-**  4: Connect to two direct-attached NS224 drive shelves
+** <<Option 1: Connect to a Fibre Channel host>>
+** <<Option 2: Connect to a 10GbE host>>
+** <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
+** <<Option 4: Connect to two direct-attached NS224 drive shelves>>
 
 
 . To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
@@ -346,6 +349,7 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 
 控制器上的光纤通道端口连接到光纤通道主机网络交换机。
 
+.开始之前
 有关将系统连接到交换机的信息，请与网络管理员联系。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -372,8 +376,8 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 要执行其他可选布线，请选择：
 
-*  3: Connect to a single direct-attached NS224 drive shelf
-*  4: Connect to two direct-attached NS224 drive shelves
+* <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
+* <<Option 4: Connect to two direct-attached NS224 drive shelves>>
 
 
 
@@ -390,6 +394,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 
 控制器上的 10GbE 端口连接到 10GbE 主机网络交换机。
 
+.开始之前
 有关将系统连接到交换机的信息，请与网络管理员联系。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -416,8 +421,8 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 要执行其他可选布线，请选择：
 
-*  3: Connect to a single direct-attached NS224 drive shelf
-*  4: Connect to two direct-attached NS224 drive shelves
+* <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
+* <<Option 4: Connect to two direct-attached NS224 drive shelves>>
 
 
 
@@ -434,6 +439,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 
 您必须使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。
 
+.开始之前
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
@@ -471,6 +477,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 
 您必须使用缆线将每个控制器连接到两个 NS224 驱动器架上的 NSM 模块。
 
+.开始之前
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]

@@ -3553,7 +3553,6 @@
   <block id="8ef8932f72109469af86d4e2c65c227c" category="paragraph">将电源从旧机箱移至更换机箱。</block>
   <block id="3d0a009381ea108fad1b0c7f371cca53" category="paragraph">将驱动器从旧机箱中的每个托架开口移至新机箱中的同一托架开口。</block>
   <block id="e7cc374705291915b44392edac6d4956" category="doc">完成系统还原— AFF A200</block>
-  <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">您需要什么？ #8217 ；将需要什么</block>
   <block id="6151adb4be9acf8b78f2772f645f81b4" category="list-text">您必须将控制器模块更换为相同型号类型的控制器模块。您不能只更换控制器模块来升级系统。</block>
   <block id="7406636825b302f07932b3580dc3aa5b" category="doc">关闭控制器— AFF A200</block>
   <block id="34618f776812de6f5f59a70ca2c17728" category="doc">更换 DIMM - AFF A200</block>
@@ -6523,7 +6522,6 @@
   <block id="f9d753fddfdd4cf75bdcf826d545a576" category="list-text">受损 _ 控制器是要在其中执行维护的控制器。</block>
   <block id="e4107ee9d71fad92265b6222f2822ad8" category="list-text">_health_ 控制器是受损控制器的 HA 配对控制器。</block>
   <block id="1ece66f8bf58294a3a5da700df5daffe" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 ` * y*` 。</block>
-  <block id="86c3969f421b58d4b4b270ed1fb7b003" category="section-title">第 1 步：在 ONTAP 中为替代控制器安装许可证</block>
   <block id="2a0338d4b284b44bbd6e5b5a0e564e4f" category="paragraph">安装 `image_name.tgz` 后，系统会提示您从运行正常的控制器还原备份配置（ `var` 文件系统）。</block>
   <block id="922768ec58831cabe5b129a1aa26dc78" category="paragraph">您可以在控制器重新启动后开始使用系统。</block>
   <block id="fec1ee82d47382a6acadcb4104dd3ce3" category="paragraph">在受损控制器显示 `Waiting for Giveback...` 消息后，从运行正常的控制器执行交还：</block>
@@ -7337,4 +7335,12 @@
   <block id="483a752599520b0534872ca3822c9083" category="list-text">验证每个控制器是否存在预期卷：<block ref="6931ff74d75f98d072d2434c71cfc1e4" prefix=" " category="inline-code"></block></block>
   <block id="8ba332a9944c2e6a66e36aee66689593" category="section-title">第2步：验证LIF并注册序列号</block>
   <block id="6de93a3d40cba5a9f17ae225a0a97f4e" category="section-title">第3步：(仅限MetroCluster)：在双节点MetroCluster 配置中切回聚合</block>
+  <block id="8c4271e6faf2cea4cfc8e5b7108d8ee9" category="paragraph-title">操作步骤</block>
+  <block id="6bcc4bf7321499602cc726d01ccea765" category="paragraph-title">Verify the system ID change on an HA system</block>
+  <block id="354b2998d28fedeb0bad97fc9be9b342" category="paragraph-title">在双节点MetroCluster 配置中重新分配系统ID</block>
+  <block id="9826dc7dca2ce77788236ffc0e442de8" category="section-title">Step 2: Verify and set the HA state of the controller module</block>
+  <block id="48023daa3129599e2b4aa0dbaefd201f" category="paragraph-title">关于此任务</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">您需要的内容</block>
+  <block id="7d60346fb854755b0fc4b8486f2e5769" category="section-title">第1步：在ONTAP 中为_replacement_控制器安装许可证</block>
+  <block id="541648f14089765ba6e8c3198be32507" category="section-title">Step 2: Replace the boot media</block>
 </blocks>

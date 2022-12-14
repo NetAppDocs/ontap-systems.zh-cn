@@ -194,6 +194,7 @@ mcc1A::> metrocluster operation show
 [role="lead"]
 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）是单独的模块。它们位于 NVRAM 模块的正面。要更换或添加缓存模块，请在系统背面的插槽 6 上找到该模块，然后按照特定步骤顺序进行更换。
 
+.开始之前
 您的存储系统必须满足特定条件，具体取决于您的情况：
 
 * 它必须具有与要安装的缓存模块对应的操作系统。

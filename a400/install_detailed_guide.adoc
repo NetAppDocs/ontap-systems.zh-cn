@@ -20,6 +20,7 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。如
 [role="lead"]
 要安装系统，您需要创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
 
+.开始之前
 您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。
 
 https://hwu.netapp.com["NetApp Hardware Universe"]
@@ -221,7 +222,7 @@ video::48552ddf-0925-4f88-8e93-ab1b00666489[panopto]
 +
 image::../media/drw_A400_TNSC-network-cabling.png[DRW A400 TNSC 网络布线]
 
-. 转至  4: Cable controllers to drive shelves 有关驱动器架布线说明。
+. 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
 
 
@@ -250,7 +251,7 @@ video::8fefba75-f395-4cf2-ba3c-ab1b00665870[panopto]
 +
 image::../media/drw_a400_switched_network_cabling.png[DRW a400 交换网络布线]
 
-. 转至  4: Cable controllers to drive shelves 有关驱动器架布线说明。
+. 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
 
 
@@ -282,7 +283,7 @@ video::48d68897-c91d-47dc-b4b0-ab1b0066808a[panopto]
 +
 image::../media/drw_a400_one_ns224_shelves.png[DRW a400 一个 nss224 磁盘架]
 
-. 转至  5: Complete system setup and configuration 完成系统设置和配置。
+. 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
 
 
@@ -307,7 +308,7 @@ video::5501c7bf-8b74-49e8-8067-ab1b00668804[panopto]
 +
 image::../media/drw_a400_two_ns224_shelves.png[DRW a400 两个 nss224 磁盘架]
 
-. 转至  5: Complete system setup and configuration 完成系统设置和配置。
+. 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
 
 
@@ -332,7 +333,7 @@ video::cbb0280e-708d-4365-92b6-ab1b006677ef[panopto]
 +
 image::../media/drw_a400_three_ds224c_shelves.png[DRW a400 三个 ds224c 磁盘架]
 
-. 转至  5: Complete system setup and configuration 完成系统设置和配置。
+. 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
 
 

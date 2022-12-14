@@ -245,8 +245,10 @@ NOTE: 此时请勿打开磁盘架的电源。
 [role="lead"]
 使用缆线连接磁盘架 SAS 连接（磁盘架到磁盘架（如果适用）和控制器到磁盘架），以便为系统建立存储连接。
 
-您必须已满足中的要求  for installing and cabling disk shelves with IOM12 modules for a new system installation 并将磁盘架安装在机架中。
+.开始之前
+您必须已满足中的要求 <<Requirements for installing and cabling disk shelves with IOM12 modules for a new system installation>> 并将磁盘架安装在机架中。
 
+.关于此任务
 在为磁盘架布线后，您可以打开其电源，设置磁盘架 ID 并完成系统设置和配置。
 
 .步骤
