@@ -12,7 +12,7 @@ summary: 要更换机箱，必须关闭控制器。
 您必须先关闭机箱中的控制器或控制器，然后再将其移至新机箱。
 
 .关于此任务
-* 如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 `false` ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/index.html["CLI 管理概述"^]。
+* 如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或控制器运行状况良好、则会显示 `false` 有关资格和运行状况、您必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
 * 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
 +
 以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`

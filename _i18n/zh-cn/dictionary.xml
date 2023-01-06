@@ -174,7 +174,6 @@
   <block id="11d90ad9838fdc1545ee368cd8943df9" category="list-text">如果需要，删除旧许可证：</block>
   <block id="eb9892aa7a6ee6cfe6b30dad735d6d7a" category="list-text">检查未使用的许可证： `license clean-up -unused -simulate`</block>
   <block id="f77eef718a5ddb0006a44a75016370bf" category="list-text">如果列表显示正确，请删除未使用的许可证： `license clean-up -unused`</block>
-  <block id="37b0fb827bbc179115abc1768c9c5f12" category="paragraph">在更换先前配置为使用存储或卷加密的存储系统的控制器模块或 NVRAM 模块后，您必须执行其他步骤以提供无中断加密功能。对于未启用存储或卷加密的存储系统，您可以跳过此任务。</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">步骤</block>
   <block id="a2ae6c720a8a0fbf3918f44a33be6b30" category="inline-link">《 ONTAP 9 NetApp 加密高级指南》</block>
   <block id="ba8122bba290a3351611db1b66c99386" category="paragraph"><block ref="ba8122bba290a3351611db1b66c99386" category="inline-link-rx"></block></block>
@@ -5591,7 +5590,6 @@
   <block id="1fc23df34c1ef373bc238879bf1082e5" category="list-text"><block ref="1fc23df34c1ef373bc238879bf1082e5" category="inline-link-macro-rx"></block></block>
   <block id="b8a901030a76c92bf9e4426d81439fa5" category="list-text"><block ref="b8a901030a76c92bf9e4426d81439fa5" category="inline-link-macro-rx"></block></block>
   <block id="3f98fa9dd0068de7a3158d3cefe04024" category="list-text"><block ref="3f98fa9dd0068de7a3158d3cefe04024" category="inline-link-macro-rx"></block></block>
-  <block id="a2960939186ae78b824d694e2cbba800" category="inline-link">CLI 管理概述</block>
   <block id="518d2076bf387a28038f7558530bb987" category="inline-link">使用命令行界面概述 NetApp 加密</block>
   <block id="673f7a1f10ce14ef29b06ba53cf1e5d7" category="inline-link">使用命令行界面概述 NetApp 加密</block>
   <block id="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="paragraph"><block ref="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="inline-link-rx"></block></block>
@@ -5880,12 +5878,9 @@
   <block id="1d069ff54ee29cbfaafd7650132e6cd5" category="list-text">To complete setting up your system, see <block ref="53346fef0c147b551f530d05bbad2e41" category="inline-xref-macro-rx"></block>。</block>
   <block id="1a012ae90c41b7530ce0df40b8053d54" category="section-title">选项 1 ：如果启用了网络发现</block>
   <block id="5eadc00e7d9146c2fd474e7d8d5f5137" category="list-text">使用以下动画或图形设置一个或多个驱动器架 ID ：</block>
-  <block id="f551b341dd5555b5471ea63f7fad8db8" category="paragraph">NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.</block>
   <block id="6b39390f8836ac9ddcaf033f6ec9d535" category="image-alt">已设置 DRW 电源打开设置磁盘架 ID</block>
   <block id="543ab7831f0589c951278e6073647eb0" category="paragraph">拆下端盖。</block>
   <block id="77b9275f6fd711644f4214aa9c1fd216" category="paragraph">按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。</block>
-  <block id="5463cd717cd1248bc167a0577c0d17a5" category="paragraph">注意：第一位数字将继续闪烁</block>
-  <block id="f5e9a997371da544ff3b8bba352ef6e5" category="paragraph">按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。注意：第一个数字停止闪烁，第二个数字继续闪烁。</block>
   <block id="72e911c52ba51e970a39b1b30b1c8424" category="paragraph">更换端盖。</block>
   <block id="241b3d2acad120dfd8decf92e173cd23" category="paragraph">等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。</block>
   <block id="b12c60055be138bf7526b1769365b47e" category="image-alt">已启动 DRW a900</block>
@@ -5925,7 +5920,6 @@
   <block id="23b82013e68c4445eaa3ec355ca09fb4" category="summary">NVRAM 模块由 NVRAM11 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。</block>
   <block id="b422a6f4d3945c00efbef5a1554df972" category="doc">更换 NVRAM 模块和 / 或 NVRAM DIMM — AFF A900</block>
   <block id="4d365227a3a5ccf9886fa9c35ba6a99d" category="paragraph">NVRAM 模块由 NVRAM11 和 DIMM 组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.要更换发生故障的 NVRAM 模块，您必须将其从机箱中卸下，将 DIMM 移至更换模块，然后将更换的 NVRAM 模块安装到机箱中。</block>
-  <block id="50b70636b9b845e1cca7db72fbdeec68" category="paragraph">要更换和 NVRAM DIMM ，您必须从机箱中卸下 NVRAM 模块，更换模块中发生故障的 DIMM ，然后重新安装 NVRAM 模块。</block>
   <block id="356bb2eaf8fe1f9955f9f22e00ddcb54" category="paragraph">由于系统 ID 源自 NVRAM 模块，因此，如果更换此模块，则属于此系统的磁盘将重新分配给新的系统 ID 。</block>
   <block id="dad23827b140b55a3121c86e5b861fad" category="image-alt">DRW a900 移动删除 NVRAM 模块</block>
   <block id="df3566616f23116dab812ba8e95510cb" category="image-alt">DRW a900 删除 NVRAM 模块内容</block>
@@ -5939,13 +5933,11 @@
   <block id="c36d25abc9dfdbc31228c74f7e654d0c" category="list-text">如果显示的机箱系统状态与您的系统配置不匹配，请为机箱设置 `HA` state ： `ha-config modify chassis _ha-state_`</block>
   <block id="f95e8e8b229c3aee97b205509f91df66" category="section-title">第 6 步：重新分配磁盘</block>
   <block id="8672de10e3d8295abd1be60e2569c4c6" category="list-text">保存任何核心转储： `ssystem node run -node local-node-name partner savecore`</block>
-  <block id="544b7fcf1fe2aaedd577ba107a7f6a56" category="paragraph">您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node local-node-name partner savecore -s`</block>
   <block id="7285c4012d903a86f08da4d4eb643a35" category="paragraph">请参见<block ref="1c9dcde47ee822b3ac120aae2f296f05" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="2a1253e1eb3f5fea69107948ef4c203d" category="summary">本主题以图形方式说明了从机架安装和布线到初始系统启动的典型系统安装。</block>
   <block id="cb0bd9965128fe9d9c7dc5fe35ba00fa" category="doc">快速步骤— AFF A900</block>
   <block id="86b058636c934f73a262e3a5469f088e" category="paragraph">本主题以图形方式说明了从机架安装和布线到初始系统启动的典型系统安装。如果您熟悉安装 NetApp 系统，请使用此内容。</block>
   <block id="cd9130a2736bae3213b0c2da4de3435e" category="inline-link-macro">《 AFF A900 安装和设置说明》</block>
-  <block id="4409045029375618296b6ed24e35aec6" category="paragraph"><block ref="4409045029375618296b6ed24e35aec6" category="inline-link-macro-rx"></block></block>
   <block id="6551c0f6e6caf0566c6eae152ecd7b38" category="doc">更换启动介质— AFF A900</block>
   <block id="10446d8e0f9e8e6b297995ce7dafe03c" category="doc">完成更换流程— AFF A900</block>
   <block id="fcc9aa8940599a2c3be38723a65e9e21" category="doc">更换 DIMM - AFF A900</block>
@@ -6373,7 +6365,6 @@
   <block id="432fbc80d952a560e7d764411dacca12" category="list-text">使用 `storage failover giveback -fromnode local` 命令交还控制器。</block>
   <block id="8af929f5f2bb65d4fe36d9188a257bba" category="list-text">将控制台缆线移至已修复的控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。</block>
   <block id="3a11addb86720d7891a7b14fea7f4776" category="paragraph">要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。</block>
-  <block id="22a3fad7c3cfdd379a652e4aa08aa70e" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="1baf9f7ecc4554f61d6168e4897ea002" category="inline-link-macro-rx"></block>。</block>
   <block id="04b13459c31bdc128c187f2b882c3d74" category="list-text">从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`</block>
   <block id="087b01deb1bef7c8b4ffe6fe81283666" category="list-text">将受损控制器显示为 LOADER 提示符：</block>
   <block id="ebc5673f419bc9da94f2c2f001aaf3ff" category="cell">如果受损控制器显示 ...</block>
@@ -6430,7 +6421,6 @@
   <block id="c8dc5733d35c41c184dc2e9c60fd8a12" category="admonition">您配置的目标端口是在通过网络连接还原 var 文件系统期间，用于与运行正常的控制器中受损的控制器进行通信的目标端口。You can also use the e0M port in this command.</block>
   <block id="8db7a5b6ece2af3b075639e41512d618" category="section-title">选项 1 ：关闭控制器</block>
   <block id="b5d03ef67a171c85bf4bd311e2fd75df" category="paragraph">您必须先关闭机箱中的控制器或控制器，然后再将其移至新机箱。</block>
-  <block id="c53eb92ae6b734f0f5b5e257acb152cb" category="list-text">如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 `false` ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="1baf9f7ecc4554f61d6168e4897ea002" category="inline-link-macro-rx"></block>。</block>
   <block id="93ff4b8a35c5f08ad3e97fdc9983948e" category="paragraph">集群中的两个控制器</block>
   <block id="a0540c64b7001eb9739a6eed390808ac" category="paragraph">集群中有两个以上的控制器</block>
   <block id="853a8c6f8383ee1dc5f3826af9ff6797" category="list-text">暂停控制器，在系统提示您确认 halt 时按 `y` ： `ssystem node halt -node _node_name_`</block>
@@ -6545,12 +6535,8 @@
   <block id="1e27080aaa4839341247d89fa27230f6" category="list-text">受损控制器是指要在其中执行维护的控制器。</block>
   <block id="cb82be680779cb2f6fe87d5303395ca3" category="list-text">运行正常的控制器是受损控制器的 HA 配对控制器。</block>
   <block id="75058bf61b1188ee8304798f89ca02bf" category="paragraph">您必须在启动替代控制器时确认系统 ID 更改，然后确认更改是否已实施。</block>
-  <block id="fa0bfd482c7a3a6dfc65930e176b0502" category="list-text">如果更换用的控制器处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`</block>
-  <block id="ba6fae1de76d6230e1c74a17242ebf97" category="list-text">在替代控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。</block>
-  <block id="a0d04de6e8774043ed7dd31ce11a9577" category="list-text">等待更换控制器控制台上显示 Waiting for giveback... 消息，然后从运行状况良好的控制器上验证是否已自动分配新的配对系统 ID ： `storage failover show`</block>
   <block id="590ef635c433371eead20b940bf6c429" category="list-text">从运行正常的控制器中，交还更换的控制器的存储： `storage failover giveback -ofnode replacement_node_name`</block>
   <block id="4cd2ac4c22d2d6323c4f80d036ea5320" category="paragraph">更换用的控制器将收回其存储并完成启动。</block>
-  <block id="5e0cea5d67aaa32c62721aadfacd5df4" category="paragraph">属于替代控制器的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</block>
   <block id="11cd58ab2810de65be01109093020b63" category="list-text">替代控制器是灾难站点上磁盘的当前所有者。</block>
   <block id="3f0db9aa8dd4145d2c4b64ea3481303a" category="list-text">在此操作步骤 中，启动设备将从受损控制器移至更换控制器，以便更换控制器在与旧控制器模块相同版本的 ONTAP 中启动。</block>
   <block id="c679e8417b3c86837c70fa5e162e77a6" category="list-text">受损控制器是指要更换的控制器。</block>
@@ -6767,9 +6753,6 @@
   <block id="8456c08b8772c6458de93a0a78ff4f85" category="paragraph">After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.卸下驱动器抽盒需要将抽盒部分滑出、卸下驱动器并卸下驱动器抽盒。</block>
   <block id="40cfdd2fa544c18fef836a58df7bb2e9" category="list-text">在要安装的驱动器上、将手柄提起至垂直位置。</block>
   <block id="2560c526c9d334c39cab4311db7eff4d" category="paragraph">如果磁盘架已部分填充、这意味着要重新安装驱动器的抽盒所支持的驱动器少于12个、请将前四个驱动器安装到正面插槽(0、3、6和9)中。</block>
-  <block id="dbe360eaa5ee89fd4f31c500db9f2fd7" category="paragraph"><block ref="dbe360eaa5ee89fd4f31c500db9f2fd7" category="inline-link-rx"></block></block>
-  <block id="44eacc26d730bc46ddc55858ccb8e7e3" category="list-text">如果您使用的是SAN系统、则必须已检查受损控制器SCSI刀片式服务器的事件消息(`event log show`)。</block>
-  <block id="503506ac51c03177e4e29bdd8f3f83e0" category="list-text">使用中的相应操作步骤还原存储或卷加密功能<block ref="2ff5666698979ec87e001217f795c3dd" category="inline-link-rx"></block>。</block>
   <block id="b18ad0a07953c39e92025f3df711d7e8" category="list-text"><block ref="b18ad0a07953c39e92025f3df711d7e8" category="inline-link-rx"></block></block>
   <block id="137edbb782dbd05e84addda1ad111604" category="list-text"><block ref="137edbb782dbd05e84addda1ad111604" category="inline-link-rx"></block></block>
   <block id="d331c2ddc96dbf38f25371617243bf17" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="1ab03132ea6210439f901707b3806211" category="inline-link-macro-rx"></block>。</block>
@@ -7343,4 +7326,38 @@
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">您需要的内容</block>
   <block id="7d60346fb854755b0fc4b8486f2e5769" category="section-title">第1步：在ONTAP 中为_replacement_控制器安装许可证</block>
   <block id="541648f14089765ba6e8c3198be32507" category="section-title">Step 2: Replace the boot media</block>
+  <block id="6fdf23777adc5b39f52f2829b69833e5" category="inline-link-macro">将节点与集群同步</block>
+  <block id="1bb835185391c9f6463cb5dc111090d1" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
+  <block id="7260398ee351f45c2b93073dcc9f358d" category="list-text">如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或控制器运行状况良好、则会显示<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 有关资格和运行状况、您必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
+  <block id="692418fcc9983296fd6b89b4072b99d2" category="inline-link-macro">将SED恢复到未受保护的模式</block>
+  <block id="aa641c641cc4509747c629778ceba1e6" category="list-text">如果您使用的是NetApp存储加密、则必须按照中的说明重置MSID <block ref="deeaf76d485e47e462d03c774bc2ca5e" category="inline-link-macro-rx"></block>。</block>
+  <block id="dca9d9d34ff973dbf261373e223aa9e4" category="list-text">如果您使用的是SAN系统、则必须已检查事件消息 <block ref="090678c8ba0a25df800d3d4eeaf19522" prefix="(" category="inline-code"></block>)。。<block ref="090678c8ba0a25df800d3d4eeaf19522" prefix=" " category="inline-code"></block> command可显示节点名称、该节点的仲裁状态、该节点的可用性状态以及该节点的运行状态。</block>
+  <block id="03733c422db2a03d86659ae5a1e923dc" category="paragraph">以下AutoSupport 消息禁止自动创建案例两小时：<block ref="387708b955ccf034fcf9197ad51ba879" prefix=" " category="inline-code"></block></block>
+  <block id="f1f0ba04096d04407de2d15a11510ac1" category="paragraph">系统提示符或密码提示符</block>
+  <block id="639008d04bbddd83a85cafeeb0a39a18" category="paragraph">对于先前配置为使用存储或卷加密的存储系统、您必须执行其他步骤以提供无中断加密功能。You can skip this task on storage systems that do not have Storage or Volume Encryption enabled.</block>
+  <block id="96e55b268667b462cab9bd34069f1863" category="admonition">更换DIMM时不需要执行此步骤。</block>
+  <block id="ff0dc22dde7f31608d4b3c140aa680a6" category="list-text">重置SED MSID</block>
+  <block id="fc3118913338c7fb342195db815855cb" category="admonition">如果要为MetroCluster IP配置布线、则端口e0a/e0b可用于托管数据LIF (通常在默认IP空间中)。</block>
+  <block id="450bb6c29a5f5af0fe4d1f8fcfcb4777" category="paragraph">更换电源包括关闭、断开和卸下电源以及安装、连接和打开替代电源。</block>
+  <block id="3e476a4d56adc74857e9c49cf82980f1" category="list-text">系统中有四个电源。</block>
+  <block id="d35281b877a38ecad54d9ac919c0ff9a" category="list-text">将电源线重新连接到电源。</block>
+  <block id="5803fc3bcce0b024b213bb355de85f8f" category="paragraph">NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.请参见<block ref="86c3962fabec597b00cc6faeabccf883" category="inline-link-rx"></block> 有关详细说明、请参见。</block>
+  <block id="312be20d26d0db2b40b706dc2f350028" category="image-alt">DRW a900 OIE change nss224 shelf ID IEOPS 836</block>
+  <block id="48fb10beb7e1cd15b9bdbab40aac9532" category="paragraph">磁盘架端盖</block>
+  <block id="22f4a2aa68e94fdf29e1fc7d0f30d571" category="paragraph">磁盘架面板</block>
+  <block id="fd4a04a1b7abc5cadef1bf584e6e5547" category="paragraph">磁盘架ID LED</block>
+  <block id="700f4fc6f1e4c3e585e23be6378affa0" category="paragraph">磁盘架ID设置按钮</block>
+  <block id="1f35a49e1a9f3ad335b1add2e4080478" category="paragraph"><block ref="1f35a49e1a9f3ad335b1add2e4080478" category="inline-link-macro-rx"></block></block>
+  <block id="f37dfb2a27ff4e023e475b54c0ad055e" category="list-text">此操作步骤 包含将磁盘自动重新分配给与新NVRAM模块关联的控制器模块的步骤。You must reassign the disks when directed to in the procedure.Completing the disk reassignment before giveback can cause issues.</block>
+  <block id="d73a26bc3e3d4896bae825c2a70691a4" category="paragraph">凸轮闩锁有字母和编号</block>
+  <block id="3c327a3216d201c494ac60534e1a2117" category="paragraph">凸轮闩锁完全解锁</block>
+  <block id="e1d6265d5c32eb8c4e989291b8d72d20" category="list-text">将模块轻轻滑入插槽、直到带字母和编号的凸轮闩锁开始与I/O凸轮销啮合、然后将凸轮闩锁一直向上推、以将模块锁定到位。</block>
+  <block id="bc62fa4bef9a4cd2a983ca01d5a5b1b3" category="paragraph">凸轮闩锁完全解锁</block>
+  <block id="58e30dc94cdf372b64dac305fbb57bc0" category="section-title">第5步：重新分配磁盘</block>
+  <block id="7b0ac7dba1c185e5ac66482ca29488da" category="admonition">只有在更换NVRAM模块时才需要重新分配磁盘。</block>
+  <block id="84bda9f97f27f63cc6fa0c4cac3ddcb4" category="list-text">如果更换用的控制器处于维护模式(显示<block ref="2cf8a3bab83c4d2618c18eeeca9ebc98" prefix=" " category="inline-code"></block> 提示符)、退出维护模式并转到LOADER提示符：<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block></block>
+  <block id="3cea6cd019ee970febca58bfe050e1cb" category="list-text">在替代控制器上的LOADER提示符处、启动控制器、如果系统因系统ID不匹配而提示您覆盖系统ID、请输入y。</block>
+  <block id="40ef2970d7d205d6f0ba4ecddaec7b51" category="list-text">等待交还...控制器的控制台上会显示一条消息、其中包含更换模块、然后、在运行正常的控制器上、验证是否已自动分配新的配对系统ID：<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block></block>
+  <block id="e8060bae9316148ae38460dbb2356f26" category="paragraph">属于替代控制器的磁盘应显示新的系统 ID 。在以下示例中、node1拥有的磁盘现在显示新的系统ID 151759706：</block>
+  <block id="209f885dfe9e7d41b82f04b945d68576" category="list-text">如果启用了存储加密、则必须为"**"</block>
 </blocks>

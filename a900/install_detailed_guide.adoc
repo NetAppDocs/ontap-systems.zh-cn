@@ -511,13 +511,13 @@ image:../media/oie_cable100_gbe_qsfp28.png[""]
 
 . 使用以下动画或图形设置一个或多个驱动器架 ID ：
 +
-NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.
+NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.请参见 https://docs.netapp.com/us-en/ontap-systems/ns224/change-shelf-id.html["更改磁盘架 ID — NS224 磁盘架"] 有关详细说明、请参见。
 
 +
 .Animation—设置SAS或NVMe驱动器架ID
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_power-on_set_shelf_ID_set.png[已设置 DRW 电源打开设置磁盘架 ID]
+image::../media/drw_a900_oie_change_ns224_shelf ID_IEOPS-836.svg[DRW a900 OIE change nss224 shelf ID IEOPS 836]
 
 +
 [cols="25h,~"]
@@ -527,37 +527,28 @@ image::../media/drw_power-on_set_shelf_ID_set.png[已设置 DRW 电源打开设�
  a| 
 image:../media/legend_icon_01.png[""]
  a| 
-拆下端盖。
+磁盘架端盖
 
 
 
  a| 
 image:../media/legend_icon_02.png[""]
  a| 
-按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。
-
-注意：第一位数字将继续闪烁
+磁盘架面板
 
 
 
  a| 
 image:../media/legend_icon_03.png[""]
  a| 
-按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。注意：第一个数字停止闪烁，第二个数字继续闪烁。
+磁盘架ID LED
 
 
 
  a| 
 image:../media/legend_icon_04.png[""]
  a| 
-更换端盖。
-
-
-
- a| 
-image:../media/legend_icon_05.png[""]
- a| 
-等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。
+磁盘架ID设置按钮
 
 |===
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
@@ -645,13 +636,13 @@ image::../media/drw_9000_cable_console_switch_controller.png[DRW 9000 缆线控�
 
 . 使用以下动画设置一个或多个驱动器架 ID ：
 +
-NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.
+NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.请参见 https://docs.netapp.com/us-en/ontap-systems/ns224/change-shelf-id.html["更改磁盘架 ID — NS224 磁盘架"] 有关详细说明、请参见。
 
 +
 .Animation—设置SAS或NVMe驱动器架ID
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image::../media/drw_power-on_set_shelf_ID_set.png[已设置 DRW 电源打开设置磁盘架 ID]
+image::../media/drw_a900_oie_change_ns224_shelf ID_IEOPS-836.svg[DRW a900 OIE change nss224 shelf ID IEOPS 836]
 
 +
 [cols="25h,~"]
@@ -661,37 +652,28 @@ image::../media/drw_power-on_set_shelf_ID_set.png[已设置 DRW 电源打开设�
  a| 
 image:../media/legend_icon_01.png[""]
  a| 
-拆下端盖。
+磁盘架端盖
 
 
 
  a| 
 image:../media/legend_icon_02.png[""]
  a| 
-按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。
-
-注意：第一位数字将继续闪烁
+磁盘架面板
 
 
 
  a| 
 image:../media/legend_icon_03.png[""]
  a| 
-按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。注意：第一个数字停止闪烁，第二个数字继续闪烁。
+磁盘架ID LED
 
 
 
  a| 
 image:../media/legend_icon_04.png[""]
  a| 
-更换端盖。
-
-
-
- a| 
-image:../media/legend_icon_05.png[""]
- a| 
-等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。
+磁盘架ID设置按钮
 
 |===
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
