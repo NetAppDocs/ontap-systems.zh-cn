@@ -196,4 +196,5 @@ NSM 模块重新启动后，操作员显示面板警示 LED 将熄灭。这可�
 +
 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
+. 确保磁盘架中的两个NSM模块运行相同版本的固件：0200或更高版本。
 

@@ -11,17 +11,17 @@ summary: 如果运行 ONTAP 9.7 或更高版本的 HA 对中的 NS224 驱动器�
 
 
 [role="lead"]
-如果运行 ONTAP 9.7 或更高版本的 HA 对中的 NS224 驱动器架上的启动介质出现故障，或者磁盘架运行的是 NVMe 磁盘架模块（ NSM ）固件版本 1.1x 或更高版本，则可以更换启动介质。在驱动器架通电且 I/O 正在进行的情况下，可以无中断地更换启动介质。
+如果运行ONTAP 9.7或更高版本的HA对中的NS224驱动器架上的启动介质出现故障、或者磁盘架运行的是NVMe磁盘架模块(NSM)固件版本0111或更高版本、则可以更换启动介质。Replacing the boot media can be done nondisruptively, while the drive shelf is powered on, and I/O is in progress.
 
 .开始之前
-* 您的 HA 对必须已运行 ONTAP 9.7 或更高版本，并且此版本至少支持 NSM 固件版本，或者您的 HA 对必须已运行 ONTAP 9.6 版本且 NSM 固件版本为 1.1x 或更高版本。
+* 您的HA对必须已运行ONTAP 9.7或更高版本、并且此版本至少支持NSM固件版本、或者您的HA对必须已运行ONTAP 9.6版本和NSM固件版本0111或更高版本。
 +
 您可以在任一控制器的控制台中输入 `storage shelf show -module` 命令，以验证磁盘架上的 NSM 固件版本。
 
 +
 [NOTE]
 ====
-如果您的磁盘架未运行 NSM 固件版本 1.1x 或更高版本，则无法更换启动介质，您必须更换 NSM 模块。
+如果您的磁盘架未运行NSM固件版本0111或更高版本、则无法更换启动介质、您必须更换NSM模块。
 
 link:service-replace-nsm100.html["更换 NSM 模块— NS224 磁盘架"^]
 
@@ -48,13 +48,15 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 * * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
 +
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
+
++
 [NOTE]
 ====
 请勿将固件还原到不支持您的磁盘架及其组件的版本。
-
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
-
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 ====
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
@@ -75,6 +77,7 @@ video::20ed85f9-1f80-4e0e-9219-ab4600070d8a[panopto]
 
 
 .步骤
+. 确保磁盘架中的两个NSM模块运行相同版本的固件：0200或更高版本。
 . 正确接地。
 . 从包含要更换的 FRU 的 NSM 模块断开布线：
 +
@@ -108,11 +111,7 @@ NOTE: 如果您要卸下底部 NSM 模块，并且底部导轨阻碍了对锁定
 . 松开 NSM 模块外盖翼形螺钉并打开外盖。
 . 以物理方式找到故障启动介质。
 +
-启动介质位于电源对面的机架机箱墙上。位于启动介质插槽旁边的主板上的启动介质警示（琥珀色） LED 将亮起。
-
-+
-
-NOTE: 从磁盘架中卸下 NSM 模块后，此 LED 将保持亮起 10 分钟。
+The boot media is located along the shelf chassis wall opposite from the power supply.
 
 . 更换启动介质：
 +

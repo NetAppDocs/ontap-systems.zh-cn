@@ -26,6 +26,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 +
 这样， ONTAP 就有足够的时间来处理 NSM 删除事件。
 
+* 更换RTC电池、重新安装NSM模块并启动此模块后、ONTAP 将更新实时时钟时间。
 * * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
 +
 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
@@ -92,13 +93,6 @@ NOTE: 如果您要卸下底部 NSM 模块，并且底部导轨阻碍了对锁定
 NSM 模块外盖上的 FRU 标签显示了 RTC 电池的位置，靠近 NSM 模块前部和电源右侧。
 
 . 以物理方式确定发生故障的 RTC 电池。
-+
-位于主板上电池插槽旁边的 RTC 电池警示（琥珀色） LED 将亮起。
-
-+
-
-NOTE: 从磁盘架中卸下 NSM 模块后，发生故障的 RTC 电池的 LED 将保持亮起 10 分钟。
-
 . 更换 RTC 电池：
 +
 .. 将电池轻轻推离电池架，直至其倾斜（与电池架倾斜），然后将其从电池架中取出。

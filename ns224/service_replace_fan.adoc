@@ -94,11 +94,7 @@ NOTE: NSM 模块盖上的 FRU 标签显示了五个风扇在 NSM 模块后墙上
 
 . 以物理方式确定故障风扇。
 +
-当风扇发生故障时，系统会向系统控制台记录一条警告消息，指示哪个风扇发生故障。此外，位于靠近风扇插槽的板上的风扇警示（琥珀色） LED 也会亮起。
-
-+
-
-NOTE: 从磁盘架中卸下 NSM 模块后，故障风扇的 LED 将保持亮起 10 分钟。
+When a fan fails, the system logs a warning message to the system console indicating which fan failed.
 
 . 更换故障风扇：
 +

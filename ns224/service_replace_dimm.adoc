@@ -93,11 +93,7 @@ NSM 模块外盖上的 FRU 标签显示了四个 DIMM 的位置，其中两个 D
 
 . 物理确定故障 DIMM 。
 +
-当 DIMM 出现故障时，系统会向系统控制台记录一条警告消息，指示哪个 DIMM 出现故障。此外，位于主板上 DIMM 插槽旁边的 DIMM 警示（琥珀色） LED 会亮起。
-
-+
-
-NOTE: 从磁盘架中卸下 NSM 模块后，故障 DIMM 的 LED 将保持亮起 10 分钟。
+When a DIMM is faulty, the system logs a warning message to the system console indicating which DIMM is faulty.
 
 . 更换出现故障的 DIMM ：
 +

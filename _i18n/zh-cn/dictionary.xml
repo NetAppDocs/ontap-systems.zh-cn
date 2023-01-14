@@ -3099,8 +3099,6 @@
   <block id="27e678adf7638dee0685d336eee4d327" category="list-text">松开 NSM 模块外盖翼形螺钉并打开外盖。</block>
   <block id="7109d4dc916d45e9366b7c657316ac40" category="paragraph">NSM 模块外盖上的 FRU 标签显示了四个 DIMM 的位置，其中两个 DIMM 位于散热片的任意一侧，位于 NSM 模块的中心。</block>
   <block id="8784146272dd716aac8c73ca366c7cc8" category="list-text">物理确定故障 DIMM 。</block>
-  <block id="dadd78fdb3c6e2ea2ea7ab4bbb929618" category="paragraph">当 DIMM 出现故障时，系统会向系统控制台记录一条警告消息，指示哪个 DIMM 出现故障。此外，位于主板上 DIMM 插槽旁边的 DIMM 警示（琥珀色） LED 会亮起。</block>
-  <block id="813bee9559bf78c09aa8885a12d5320c" category="admonition">从磁盘架中卸下 NSM 模块后，故障 DIMM 的 LED 将保持亮起 10 分钟。</block>
   <block id="7a53774970ebbc388ee000791ae12db3" category="list-text">更换出现故障的 DIMM ：</block>
   <block id="6b8676d0e83295cf2e06f62b67dc335e" category="list-text">记下插槽中 DIMM 的方向，以便可以按相同的方向插入更换用的 DIMM 。</block>
   <block id="40d7c94992ee1c119b1654a536669fe9" category="list-text">缓慢推动 DIMM 插槽两端的弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 从插槽中提出。</block>
@@ -3243,8 +3241,6 @@
   <block id="f35ad689c95d772c71204022636dabe5" category="list-text">您可以使用以下视频或写入的步骤更换风扇。</block>
   <block id="4fe5c70371cacd7543cf54df75bedd0a" category="admonition">NSM 模块盖上的 FRU 标签显示了五个风扇在 NSM 模块后墙上的位置。</block>
   <block id="5605f4aa461ce479ba2b6762822acf2b" category="list-text">以物理方式确定故障风扇。</block>
-  <block id="574b0c09ebc1f816ee7722cc2b16597c" category="paragraph">当风扇发生故障时，系统会向系统控制台记录一条警告消息，指示哪个风扇发生故障。此外，位于靠近风扇插槽的板上的风扇警示（琥珀色） LED 也会亮起。</block>
-  <block id="1ab4aa2ef8e978637a25c0cebd43704b" category="admonition">从磁盘架中卸下 NSM 模块后，故障风扇的 LED 将保持亮起 10 分钟。</block>
   <block id="9d1ae14f2ff79acfc8e3625d7e49361b" category="list-text">更换故障风扇：</block>
   <block id="139ce540361536d483467917385aa5b2" category="list-text">牢牢抓住蓝色接触点所在的两侧，然后垂直提起故障风扇以断开其与插槽的连接，从而将其卸下。</block>
   <block id="f722151f886b6d867be170b0ee89e837" category="list-text">通过将替代风扇与导轨对齐来插入，然后向下推，直到风扇模块连接器在插槽中完全就位。</block>
@@ -3253,9 +3249,7 @@
   <block id="5cc3ac161d068bd18a26a529762bedc8" category="summary">您可以通过存储架文档安装，设置和维护系统。</block>
   <block id="04d800fa50ce1545b4418475b40e3ed5" category="doc">NS224 磁盘架</block>
   <block id="ee902d4594abf28b5457ac82defd33ec" category="summary">如果运行 ONTAP 9.7 或更高版本的 HA 对中的 NS224 驱动器架上的启动介质出现故障，或者磁盘架运行的是 NVMe 磁盘架模块（ NSM\ ）固件版本 1.1x 或更高版本，则可以更换启动介质。在驱动器架通电且 I/O 正在进行的情况下，可以无中断地更换启动介质。</block>
-  <block id="fe4889c3c14829f659038af092c58c0f" category="paragraph">如果运行 ONTAP 9.7 或更高版本的 HA 对中的 NS224 驱动器架上的启动介质出现故障，或者磁盘架运行的是 NVMe 磁盘架模块（ NSM ）固件版本 1.1x 或更高版本，则可以更换启动介质。在驱动器架通电且 I/O 正在进行的情况下，可以无中断地更换启动介质。</block>
   <block id="74f49f6f28d9fd5e7df6f1800c601a73" category="paragraph">您可以在任一控制器的控制台中输入 `storage shelf show -module` 命令，以验证磁盘架上的 NSM 固件版本。</block>
-  <block id="553dc0c59541aeaac9552fd0e9932c27" category="paragraph">如果您的磁盘架未运行 NSM 固件版本 1.1x 或更高版本，则无法更换启动介质，您必须更换 NSM 模块。</block>
   <block id="ab72df24859b52c3af8d40d64d3c4050" category="inline-link-macro">更换 NSM 模块— NS224 磁盘架</block>
   <block id="daeece39bd904e83241a90c8b8570c0a" category="list-text">您需要一把 1 号十字螺丝刀。</block>
   <block id="d6d6b039d46a324ed8ec81e6ba9ff295" category="paragraph">用于将启动介质固定到主板的螺钉需要 1 号十字螺丝刀；使用其他类型的螺丝刀可能会使螺钉脱开。</block>
@@ -3265,8 +3259,6 @@
   <block id="9d0a00a5aff4ec18c5c781787962378b" category="list-text">更换启动介质后，您可以按照套件随附的 RMA 说明中所述将故障部件退回 NetApp 。</block>
   <block id="d7fc7b8a28737104902684f03a8279e6" category="list-text">您可以使用以下视频或写入的步骤更换启动介质。</block>
   <block id="41d0446a43bf0ca4e32d8aa74acfb9dc" category="list-text">以物理方式找到故障启动介质。</block>
-  <block id="2ac77c1f53d2acaf74354a442d9484d9" category="paragraph">启动介质位于电源对面的机架机箱墙上。位于启动介质插槽旁边的主板上的启动介质警示（琥珀色） LED 将亮起。</block>
-  <block id="926c6df0fdfeee94a62afab70e1f9cb3" category="admonition">从磁盘架中卸下 NSM 模块后，此 LED 将保持亮起 10 分钟。</block>
   <block id="f100a7d7d4d0125055a6d5f3a0bea50d" category="list-text">更换启动介质：</block>
   <block id="0c6687325a026afea7971f92ec185cbb" category="list-text">使用 1 号十字螺丝刀小心地卸下将启动介质底端（有缺口）固定到主板的螺钉。</block>
   <block id="76099b6de6a0677a0267f7925ff91f68" category="list-text">将启动介质的凹口一端稍向上旋转，然后向您轻拉，直到其从插槽中释放为止，以将其取出。</block>
@@ -3490,8 +3482,6 @@
   <block id="69346a8711cdec1c863cab85cc16d548" category="list-text">您可以使用以下视频或写入的步骤更换 RTC 电池。</block>
   <block id="4666aab744a5064fa4082c8fac681c8b" category="paragraph">NSM 模块外盖上的 FRU 标签显示了 RTC 电池的位置，靠近 NSM 模块前部和电源右侧。</block>
   <block id="8e3521698724daea37d72f82d00b93c9" category="list-text">以物理方式确定发生故障的 RTC 电池。</block>
-  <block id="803b47b0e40e190124f45c4a9e49deaf" category="paragraph">位于主板上电池插槽旁边的 RTC 电池警示（琥珀色） LED 将亮起。</block>
-  <block id="4ed28e0141128c6835c2a5c39d8fbd44" category="admonition">从磁盘架中卸下 NSM 模块后，发生故障的 RTC 电池的 LED 将保持亮起 10 分钟。</block>
   <block id="4230cd66e4b97c5c537e2fc66b106a54" category="list-text">更换 RTC 电池：</block>
   <block id="bf6676c1b4e1cac9f1e6593249e2ba7d" category="list-text">将电池轻轻推离电池架，直至其倾斜（与电池架倾斜），然后将其从电池架中取出。</block>
   <block id="3b3396eaf97f4b90a50effb7d2321635" category="list-text">将更换用电池倾斜地插入电池架（从电池架上倾斜），将其推入直立位置，然后将其牢牢按入连接器中，直到其完全就位。</block>
@@ -5712,7 +5702,6 @@
   <block id="d92397f405b46035383db7778e4795f5" category="list-text">重复第一步（ A ），重新配置第二个控制器模块上的端口。</block>
   <block id="ed44ef953e4348bf2bf852e9813bdc5d" category="list-text">重复第二步（ b ），重新启动第二个控制器以使端口更改生效。</block>
   <block id="744b6c476a210a04195ef528c6730bc7" category="paragraph">如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？` 中显示 `false` 列中，也会在 `State` 列中显示 `d已标记` 。</block>
-  <block id="24ce88dcb36e4e61a4334746ee0dc49a" category="list-text">您的 HA 对必须已运行 ONTAP 9.7 或更高版本，并且此版本至少支持 NSM 固件版本，或者您的 HA 对必须已运行 ONTAP 9.6 版本且 NSM 固件版本为 1.1x 或更高版本。</block>
   <block id="71eb59c59a42227ae8b45d0cfaf6f52f" category="paragraph">有两个视频—一个视频介绍如何将系统装入机架并进行布线，另一个视频显示了使用 System Manager 引导式设置执行初始系统配置的示例。</block>
   <block id="25cf65ddd80144b70d3dac5fc3efd292" category="doc">详细步骤— AFF C190</block>
   <block id="94c14a3a3429ee874d19f598eabeb841" category="inline-link-macro">适用于您的 ONTAP 版本的发行说明</block>
@@ -7360,4 +7349,12 @@
   <block id="40ef2970d7d205d6f0ba4ecddaec7b51" category="list-text">等待交还...控制器的控制台上会显示一条消息、其中包含更换模块、然后、在运行正常的控制器上、验证是否已自动分配新的配对系统ID：<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block></block>
   <block id="e8060bae9316148ae38460dbb2356f26" category="paragraph">属于替代控制器的磁盘应显示新的系统 ID 。在以下示例中、node1拥有的磁盘现在显示新的系统ID 151759706：</block>
   <block id="209f885dfe9e7d41b82f04b945d68576" category="list-text">如果启用了存储加密、则必须为"**"</block>
+  <block id="929bfee1ef6e5f44f83a22a0ee585e88" category="paragraph">When a fan fails, the system logs a warning message to the system console indicating which fan failed.</block>
+  <block id="3f39e3eb27d53c3293d829964b0aec99" category="list-text">确保磁盘架中的两个NSM模块运行相同版本的固件：0200或更高版本。</block>
+  <block id="c4a176fcfed8ad262bd0a9b82f87a961" category="paragraph">When a DIMM is faulty, the system logs a warning message to the system console indicating which DIMM is faulty.</block>
+  <block id="85cd9535810e294c0523d2b75788a394" category="paragraph">如果运行ONTAP 9.7或更高版本的HA对中的NS224驱动器架上的启动介质出现故障、或者磁盘架运行的是NVMe磁盘架模块(NSM)固件版本0111或更高版本、则可以更换启动介质。Replacing the boot media can be done nondisruptively, while the drive shelf is powered on, and I/O is in progress.</block>
+  <block id="8813a3bc6746d75d51a9aca6d90b54cb" category="list-text">您的HA对必须已运行ONTAP 9.7或更高版本、并且此版本至少支持NSM固件版本、或者您的HA对必须已运行ONTAP 9.6版本和NSM固件版本0111或更高版本。</block>
+  <block id="480be366fc83dd9fbbf8246b5e2f9f40" category="paragraph">如果您的磁盘架未运行NSM固件版本0111或更高版本、则无法更换启动介质、您必须更换NSM模块。</block>
+  <block id="0c2b7daebf1a1e94a676675bf614fba6" category="paragraph">The boot media is located along the shelf chassis wall opposite from the power supply.</block>
+  <block id="178d438c63a174b511750f68655d814d" category="list-text">更换RTC电池、重新安装NSM模块并启动此模块后、ONTAP 将更新实时时钟时间。</block>
 </blocks>
