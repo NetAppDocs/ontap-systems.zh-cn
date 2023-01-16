@@ -18,7 +18,6 @@
   <block id="a2539e65a13fda0a8ce497ac0baa63a7" category="inline-link-macro">《控制器硬件升级快速指南》</block>
   <block id="3804b132271e47a4db7521e977b43625" category="inline-link-macro">《 ONTAP 9 高可用性配置指南》</block>
   <block id="1988e9c8cf124cb346a67d52ea613567" category="inline-link-macro">《 ONTAP 9 SAN 管理指南》</block>
-  <block id="dec0306e681fc720cf31bc4851ebcee4" category="inline-link-macro">《 ONTAP 9 系统管理参考》</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp 支持站点</block>
   <block id="865e9b4ef52f3b0d3050c8b3c14eb660" category="inline-link-macro">Active IQ Config Advisor</block>
   <block id="405ab80b96586360ea83735c37305935" category="inline-link-macro">验证 node4 安装</block>
@@ -220,7 +219,6 @@
   <block id="49d981e4792b1b6bfc193d341fe3b1d4" category="paragraph">系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。</block>
   <block id="118a19c264126d2eb7de4542c32c102d" category="section-title">第 1 步：关闭受损控制器</block>
   <block id="16f911f59a050f663b12ff955a280de7" category="paragraph">要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。</block>
-  <block id="38093d6513bb2e960eab247f00f04533" category="paragraph"><block ref="38093d6513bb2e960eab247f00f04533" category="inline-link-rx"></block></block>
   <block id="a2efb773cb3f251f8687b1e41309b525" category="paragraph">LOADER 提示符</block>
   <block id="b1ba38ad947dd1578f31b0197f58b44d" category="paragraph">转至下一步。</block>
   <block id="fd66c964768074eb90f4f1426229bf3e" category="paragraph">正在等待交还</block>
@@ -5741,7 +5739,6 @@
   <block id="e85e66f99bf70a0cd52615d346aa4f9f" category="paragraph"><block ref="e85e66f99bf70a0cd52615d346aa4f9f" category="inline-link-macro-rx"></block></block>
   <block id="e3d9e54e0daad2e60e36e8b370fec883" category="paragraph"><block ref="e3d9e54e0daad2e60e36e8b370fec883" category="inline-link-macro-rx"></block></block>
   <block id="083781fc87756a032121b806b4d18a92" category="paragraph"><block ref="083781fc87756a032121b806b4d18a92" category="inline-link-macro-rx"></block></block>
-  <block id="b95a2b769ddc69403557ab79e1942007" category="paragraph"><block ref="b95a2b769ddc69403557ab79e1942007" category="inline-link-rx"></block></block>
   <block id="5f3f6cd3a4d5edc50129f46b603aa9c2" category="paragraph"><block ref="5f3f6cd3a4d5edc50129f46b603aa9c2" category="inline-link-macro-rx"></block></block>
   <block id="80fbd508bddeffc33092c60be0d4f6b0" category="paragraph">使用缆线将控制器 A 连接到磁盘架： <block ref="5a7e82fa4b93fb16c2c5bc44a8522f5a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e477637685baafe9bbd353f71ef51283" category="paragraph">允许系统启动。Initial booting may take up to eight minutes.</block>
@@ -6482,7 +6479,6 @@
   <block id="3df4b609e8276258189914063ffb17c2" category="list-text">请务必在正确的控制器上应用以下步骤中的命令：</block>
   <block id="6ecaf183574ece325cced3bb483dfdf9" category="list-text">受损节点是指要在其中执行维护的控制器。</block>
   <block id="d5e5a42c3659480b5bd0d7fe962a3e0d" category="list-text">_health_ 节点是受损控制器的 HA 配对节点。</block>
-  <block id="aae78f4a3d47a08dddca98a632d4a75f" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 。</block>
   <block id="852ccbca31b38b90e5621b15b3d30e1b" category="paragraph">接管或暂停受损控制器： `storage failover takeover -ofnode _impaired_node_name_` 当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
   <block id="fdd4547d2c765390cc53d47d00b7ed31" category="list-text">如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `ssystem node halt -node _node_name_`</block>
   <block id="bf333756fca94003818a0db8ced6f7d9" category="list-text">交还控制器的存储，使其恢复正常运行： `storage failover giveback -ofnode ` impaired_node_name_``</block>
@@ -6744,7 +6740,6 @@
   <block id="2560c526c9d334c39cab4311db7eff4d" category="paragraph">如果磁盘架已部分填充、这意味着要重新安装驱动器的抽盒所支持的驱动器少于12个、请将前四个驱动器安装到正面插槽(0、3、6和9)中。</block>
   <block id="b18ad0a07953c39e92025f3df711d7e8" category="list-text"><block ref="b18ad0a07953c39e92025f3df711d7e8" category="inline-link-rx"></block></block>
   <block id="137edbb782dbd05e84addda1ad111604" category="list-text"><block ref="137edbb782dbd05e84addda1ad111604" category="inline-link-rx"></block></block>
-  <block id="d331c2ddc96dbf38f25371617243bf17" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="1ab03132ea6210439f901707b3806211" category="inline-link-macro-rx"></block>。</block>
   <block id="ec5866194941126dcbe55d496f612191" category="list-text">如果受损控制器采用独立配置并出现 LOADER 提示符，请联系 <block ref="d4b5db761eff3af8abec9c2aa8b19609" category="inline-link-macro-rx"></block>。</block>
   <block id="4729966d1b42f799e14eba4dd6dedbdb" category="paragraph"><block ref="4729966d1b42f799e14eba4dd6dedbdb" category="inline-link-rx"></block></block>
   <block id="60db4a77031ab02d5c7d793d8ee8e564" category="admonition">Enter the customer's onboard key management passphrase at the prompt.If the passphrase cannot be provided, contact NetApp Support.<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block></block>
@@ -7316,8 +7311,6 @@
   <block id="7d60346fb854755b0fc4b8486f2e5769" category="section-title">第1步：在ONTAP 中为_replacement_控制器安装许可证</block>
   <block id="541648f14089765ba6e8c3198be32507" category="section-title">Step 2: Replace the boot media</block>
   <block id="6fdf23777adc5b39f52f2829b69833e5" category="inline-link-macro">将节点与集群同步</block>
-  <block id="1bb835185391c9f6463cb5dc111090d1" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
-  <block id="7260398ee351f45c2b93073dcc9f358d" category="list-text">如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或控制器运行状况良好、则会显示<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 有关资格和运行状况、您必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
   <block id="692418fcc9983296fd6b89b4072b99d2" category="inline-link-macro">将SED恢复到未受保护的模式</block>
   <block id="aa641c641cc4509747c629778ceba1e6" category="list-text">如果您使用的是NetApp存储加密、则必须按照中的说明重置MSID <block ref="deeaf76d485e47e462d03c774bc2ca5e" category="inline-link-macro-rx"></block>。</block>
   <block id="dca9d9d34ff973dbf261373e223aa9e4" category="list-text">如果您使用的是SAN系统、则必须已检查事件消息 <block ref="090678c8ba0a25df800d3d4eeaf19522" prefix="(" category="inline-code"></block>)。。<block ref="090678c8ba0a25df800d3d4eeaf19522" prefix=" " category="inline-code"></block> command可显示节点名称、该节点的仲裁状态、该节点的可用性状态以及该节点的运行状态。</block>
@@ -7357,4 +7350,6 @@
   <block id="480be366fc83dd9fbbf8246b5e2f9f40" category="paragraph">如果您的磁盘架未运行NSM固件版本0111或更高版本、则无法更换启动介质、您必须更换NSM模块。</block>
   <block id="0c2b7daebf1a1e94a676675bf614fba6" category="paragraph">The boot media is located along the shelf chassis wall opposite from the power supply.</block>
   <block id="178d438c63a174b511750f68655d814d" category="list-text">更换RTC电池、重新安装NSM模块并启动此模块后、ONTAP 将更新实时时钟时间。</block>
+  <block id="d067784c8bad4d41a4f87accd50abbc1" category="list-text">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
+  <block id="1c0138111ac00fdce24dc38ffd9859d5" category="list-text">如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或控制器运行状况良好、则会显示<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 有关资格和运行状况、您必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
 </blocks>
