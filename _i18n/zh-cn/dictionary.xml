@@ -6304,7 +6304,6 @@
   <block id="fb52499eab0b4b1b7caf5081ae4bb295" category="doc">更换控制器模块硬件— AFF A220 和 FAS2700</block>
   <block id="77c90a069b30ca068906f4bbc5d904e1" category="doc">检查板载加密密钥 - AFF A220 和 FAS2700</block>
   <block id="c6eb316cc94904301a8765db5aa1680f" category="doc">启动介质更换概述— AFF A220 和 FAS2700</block>
-  <block id="332ecfda75eef89a55acd64671013612" category="doc">热添加 NS224 磁盘架</block>
   <block id="3fa677b8ecb97b0ae0d14f9ded5ed49a" category="doc">关闭受损控制器— FAS500f</block>
   <block id="a27042b0e01fb9b4136d2de6e8c1db73" category="doc">检查板载加密密钥— FAS500f</block>
   <block id="ee2afac6b0f5165d1fc3096864ac9a41" category="doc">机箱更换概述— FAS500f</block>
@@ -7352,4 +7351,5 @@
   <block id="178d438c63a174b511750f68655d814d" category="list-text">更换RTC电池、重新安装NSM模块并启动此模块后、ONTAP 将更新实时时钟时间。</block>
   <block id="d067784c8bad4d41a4f87accd50abbc1" category="list-text">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
   <block id="1c0138111ac00fdce24dc38ffd9859d5" category="list-text">如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或控制器运行状况良好、则会显示<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 有关资格和运行状况、您必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
+  <block id="305fade7b83ae4e7549b33a3ae1b1fd0" category="doc">热添加磁盘架—NS224磁盘架</block>
 </blocks>
