@@ -140,7 +140,7 @@ NOTE: 如果新I/O模块与故障模块型号不同、则必须先重新启动BM
 
 NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点。
 
-. 如果您的系统配置为在 40 GbE NIC 或板载端口上支持 10 GbE 集群互连和数据连接，请在维护模式下使用 `nicadmin convert` 命令将这些端口转换为 10 GbE 连接。
+. 如果您的系统配置为在40 GbE NIC上支持10 GbE集群互连和数据连接、请使用将这些端口转换为10 GbE连接 `nicadmin convert` 命令。请参见 https://docs.netapp.com/us-en/ontap/networking/convert_40gbe_nic_ports_into_multiple_10gbe_ports_for_10gbe_connectivity.html["将 40GbE NIC 端口转换为多个 10GbE 端口以实现 10GbE 连接"^] 有关详细信息 ...
 +
 
 NOTE: 请务必在完成转换后退出维护模式。

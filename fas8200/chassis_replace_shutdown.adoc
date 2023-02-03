@@ -38,7 +38,9 @@ summary: 要更换机箱，必须关闭控制器。
  a| 
 集群中的两个控制器
  a| 
-`cluster ha modify -configured false` `storage failover modify -node node0 -enabled false`
+`cluster ha modify -configured false`
+
+`storage failover modify -node node0 -enabled false`
 
 
 

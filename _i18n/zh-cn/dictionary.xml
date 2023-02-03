@@ -205,7 +205,6 @@
   <block id="f80af4e39d67de6feaae8747f603e24b" category="paragraph">以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * &gt; system node AutoSupport invoke -node * -type all -message MAINT=2h`</block>
   <block id="880c0610027a11af7086ae7e380e12e5" category="list-text">如果您的系统有两个控制器模块，请禁用 HA 对。</block>
   <block id="d426a3f5c9c0e3362f4ed536e7643c03" category="cell">如果您的系统运行的是集群模式 ONTAP</block>
-  <block id="8d6f30824233e0351fc71f18fbb5c436" category="paragraph">`cluster ha modify -configured false` `storage failover modify -node node0 -enabled false`</block>
   <block id="b2aa61dcee4d7b77fcd001973469ddde" category="paragraph">`storage failover modify -node node0 -enabled false`</block>
   <block id="481250f3e8ec41b0e994305d8fc52b4a" category="paragraph">确认消息如下所示：</block>
   <block id="cf55af4b4668a579d36bfd91785ecbec" category="summary">完成 NVE 或 NSE 任务后，您需要关闭受损节点。</block>
@@ -2062,11 +2061,6 @@
   <block id="2a8c61005de5c4642cb8dbeba1544811" category="paragraph"><block ref="2a8c61005de5c4642cb8dbeba1544811" category="inline-link-macro-rx"></block></block>
   <block id="97bf953b242f5f98851629db59e82601" category="inline-link-macro">DS4243 磁盘架文档</block>
   <block id="b6d30e3dcd0ba2af54c33b3685aa4429" category="paragraph"><block ref="b42da6ebf9625c910c5d3ba150b439e5" category="inline-link-macro-rx"></block></block>
-  <block id="f453086a36d64a5193cd4183c14bcd72" category="inline-link-macro">AFF 8000 系列文档</block>
-  <block id="71bdc94f19d5947bd1cb6d437f119ba2" category="inline-link-macro">FAS8000 系列文档</block>
-  <block id="2b3a51bca746a221bf4a0af6d3098ccf" category="paragraph"><block ref="2b3a51bca746a221bf4a0af6d3098ccf" category="inline-link-macro-rx"></block></block>
-  <block id="c7e39e875a3a875d9445eace0794b0f5" category="inline-link-macro">FAS2500 系列文档</block>
-  <block id="ebc5a75e4df8077b15f7cef6c123c7db" category="paragraph"><block ref="ebc5a75e4df8077b15f7cef6c123c7db" category="inline-link-macro-rx"></block></block>
   <block id="f707961e750c3177d39579c3dd6298da" category="doc">完整的系统还原— AFF A220 和 FAS2700</block>
   <block id="4bbcc3f3d11202923e4c61604d535622" category="list-text"><block ref="4bbcc3f3d11202923e4c61604d535622" category="inline-link-macro-rx"></block></block>
   <block id="7c308c086b5e1b83f888d7cdb4ec7dfc" category="list-text"><block ref="7c308c086b5e1b83f888d7cdb4ec7dfc" category="inline-link-macro-rx"></block></block>
@@ -5881,7 +5875,6 @@
   <block id="3c941071b26a1822e1cb4494c2fd71da" category="doc">关闭受损控制器 - AFF A900</block>
   <block id="68908cbb53a7b71659933af600697a19" category="summary">要热插拔包含 NVRAM11 电池的降级控制器电源模块（ DCPM\ ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。</block>
   <block id="d04f6248062fc9d16de8588d61c28d1e" category="doc">更换包含 NVRAM11 电池的目标控制电源模块 - AFF A900</block>
-  <block id="b36f3c4187cae8553973b284879e1c97" category="paragraph">要热插拔包含 NVRAM11 电池的降级控制器电源模块（ DCPM ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。</block>
   <block id="90eb2af5a768fd638c695d0394817a0e" category="section-title">第 1 步：更换 DCPM 模块</block>
   <block id="6acd2520bad86e2719b0a66d04f59f28" category="list-text">按下模块把手上的 Terra cotta 锁定按钮，然后将 DCPM 模块滑出机箱。</block>
   <block id="dd70305ea5f8fef426dbcb35b56b5a51" category="paragraph">DCPM 模块的 Terra cotta 锁定按钮</block>
@@ -6076,7 +6069,6 @@
   <block id="588550e231fd9dcead167f2e3a8a2926" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用十字螺丝刀。</block>
   <block id="c2a9feacea3374ba5c6052aaa36c24d5" category="list-text">如果您使用 `storage failover modify` 命令禁用了自动交还，请将其还原。</block>
   <block id="8eea6ffadcece75bbf0826ed26885fb9" category="list-text">此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。</block>
-  <block id="c651d2f010c85fa1c8605da5e127657e" category="paragraph"><block ref="c651d2f010c85fa1c8605da5e127657e" category="inline-link-macro-rx"></block></block>
   <block id="72dd2309b9e786d12d19350620a3d631" category="list-text">在替代节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。</block>
   <block id="511831afd7b3843888ba00743f2e205e" category="list-text">断开电源。</block>
   <block id="24e3ea03dd6cd41feb1c45f7310ac774" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not lose it.</block>
@@ -6603,7 +6595,6 @@
   <block id="ed6243b9da8cbb52d7ded5d7a78d3b37" category="paragraph">在 &lt;stdin&gt; 中未解析的指令 - 包括： ../_include/drive_hotswap_sas.adoc.adoc]]</block>
   <block id="2bed99b4660dcf909368c3a2ae62b513" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A800</block>
   <block id="ad451e1c6a6a584f53b88b5c73144db7" category="doc">其他型号</block>
-  <block id="07fa61787cd64fafda80a8c62e643a38" category="section-title">平台型号</block>
   <block id="7a31198e87ee2c9071d7bf63050a7088" category="section-title">磁盘架型号</block>
   <block id="03be12a0476133b21cb6c1c927956d23" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A220 和 FAS2700</block>
   <block id="24b3b18d4ae3c460037fb58156d310c6" category="doc">FAS2700 系统文档</block>
@@ -7352,4 +7343,44 @@
   <block id="d067784c8bad4d41a4f87accd50abbc1" category="list-text">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
   <block id="1c0138111ac00fdce24dc38ffd9859d5" category="list-text">如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或控制器运行状况良好、则会显示<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 有关资格和运行状况、您必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
   <block id="305fade7b83ae4e7549b33a3ae1b1fd0" category="doc">热添加磁盘架—NS224磁盘架</block>
+  <block id="859c951ebab21901f2fd6183c53339d5" category="summary">要热插拔包含NVRAM11电池的目标控制器电源模块(DCPM\)、您必须找到发生故障的DCPM模块、将其从机箱中卸下、然后安装更换的DCPM模块。</block>
+  <block id="8ea19d634d233a26f4f650bd2e2b467c" category="paragraph">要热插拔包含NVRAM11电池的目标控制器电源模块(DCPM)、您必须找到发生故障的DCPM模块、将其从机箱中卸下、然后安装更换的DCPM模块。</block>
+  <block id="58fb0a507d97ff336e5db5d69ba846e9" category="inline-link">将 40GbE NIC 端口转换为多个 10GbE 端口以实现 10GbE 连接</block>
+  <block id="8ae73aa056882e7b560f3b52b5764957" category="list-text">如果您的系统配置为在40 GbE NIC上支持10 GbE集群互连和数据连接、请使用将这些端口转换为10 GbE连接<block ref="5ec041cdb2bbdf01cd4ea2c400b17495" prefix=" " category="inline-code"></block> 命令。请参见<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="d875f9fec183da794cd6d6245ef00d1d" category="paragraph"><block ref="272f3c49a4ec1753c70013d06165277b" prefix="" category="inline-code"></block></block>
+  <block id="1bb835185391c9f6463cb5dc111090d1" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
+  <block id="aae78f4a3d47a08dddca98a632d4a75f" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 。</block>
+  <block id="68d9e980b8b4998ef88139d7b7ab8ff6" category="paragraph"><block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block></block>
+  <block id="3cf0b39ddc0b0c6fbe705a62aacc7d3c" category="list-text">在机箱正面、用拇指用力推入每个驱动器、直到您感觉到有一定的停机。这样可确保驱动器牢固地固定在机箱中板上。</block>
+  <block id="7acc547c8acfbe4a745ca72a3e0e83e4" category="image-alt">DRW a800驱动器已就位IEOPS960</block>
+  <block id="9fec9d1f051b750c4b137dc68aaa9695" category="list-text">转至机箱背面。如果您尚未接地，请正确接地。</block>
+  <block id="3caccb46026f8affc6c95f65aa0c8af1" category="list-text">将控制器模块滑出机箱、然后将其放在平稳的表面上。</block>
+  <block id="9bc9bee1c7c86ea6e815437b4f02ff6c" category="paragraph">Make sure that you support the bottom of the controller module as you slide it out of the chassis.。</block>
+  <block id="1422875ceb77c2edc7c07474b11b3c6f" category="list-text">打开控制器模块通风管：</block>
+  <block id="43ae4ee714a69574b12c2b05c54410b5" category="list-text">按下模块把手上的Terra cotta释放按钮、然后将DCPM模块滑出机箱。</block>
+  <block id="0721343ac8e5e32a5122775fda62e4d0" category="doc">还原并验证配置—AFF A900</block>
+  <block id="4db8dbc03fb77b9d2fa1dabdeec7a07a" category="list-text">Rerun the system-level diagnostics test.+如果系统级诊断测试再次失败、请联系 <block ref="d4b5db761eff3af8abec9c2aa8b19609" category="inline-link-macro-rx"></block>。</block>
+  <block id="22afc2cb7855948b6347ad0d5b8816a7" category="paragraph">如果已启用存储加密、请使用相应的操作步骤。</block>
+  <block id="2c35abfceaabbce6e9a2f24491d249c0" category="open-title">选项1：使用板载密钥管理器</block>
+  <block id="86b112e5aa1ced4fbffb09dded147e9f" category="list-text">将节点启动至启动菜单。</block>
+  <block id="e07ae2ef2fbd56f8a3ced5a2ab602ded" category="list-text">选择选项10、<block ref="cdca34dc3d7defb03d741a65d78de01c" prefix=" " category="inline-code"></block>。</block>
+  <block id="5affab7614cb0938ec2fe16dbf6094bd" category="list-text">在提示符处输入集群的板载密钥管理器密码短语：need example here.</block>
+  <block id="e1abc7408800fce9a7b34d2d5dca8aee" category="list-text">输入备份密钥数据</block>
+  <block id="99f5c4eee12090497e3ca28e84e49cab" category="admonition">密码短语信息完成后、节点将返回到启动菜单。</block>
+  <block id="0a2404583aab34668c1c8004bddabbaa" category="list-text">选择选项1、<block ref="e6922a1788401c5ef431db829a2c387b" prefix=" " category="inline-code"></block></block>
+  <block id="c566d4828cd295258aa8097a90880602" category="open-title">选项2：使用外部管理器</block>
+  <block id="0a05a9975c9259ea331a85366e41d3ce" category="list-text">选择选项11、<block ref="0dd518498ab98fe1fd543910856e6153" prefix=" " category="inline-code"></block>。</block>
+  <block id="b0bab47307c92499e81bac9b25dc3e52" category="list-text">在提示符处输入管理证书信息：need example here.</block>
+  <block id="453b94e2cc94c331c590159bf6b2d21e" category="admonition">管理证书信息完成后、节点将返回到启动菜单。</block>
+  <block id="6f7b977f442186b3a2cff79208772851" category="list-text">重置磁盘的MSID：</block>
+  <block id="55bbcb479d2d67bc8ad4b8a2598ddd48" category="inline-link">将数据身份验证密钥分配给 FIPS 驱动器或 SED （板载密钥管理）</block>
+  <block id="be8dfb1b8df54a914e06c0a343100004" category="list-text">如果使用板载存储加密、请按照中的操作步骤 进行操作<block ref="503b29df34267dc3c3e3b8927894b0ee" category="inline-link-rx"></block></block>
+  <block id="32c3cf2b38ceb59d729e7de2ff67fefc" category="inline-link">将数据身份验证密钥分配给 FIPS 驱动器或 SED （外部密钥管理）</block>
+  <block id="a785aecc0aa86cd8bf8795e1bc4c3e60" category="list-text">如果您使用的是外部密钥管理器、请按照中的操作步骤 进行操作<block ref="c5282a2eb5b1733e45b98afbe5b54d05" category="inline-link-rx"></block></block>
+  <block id="a5462faa34b6cf806cb49f24d84b02a7" category="list-text">如果您的系统配置为在40 GbE NIC上支持10 GbE集群互连和数据连接、请在维护模式下使用nicadmin convert命令将这些端口转换为10 GbE连接。请参见<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="55c99fae85fce446adbb5ceb895cf55e" category="paragraph">更换机箱时、要卸下电源、需要先关闭、断开连接、然后再从旧机箱背面卸下四个电源。</block>
+  <block id="c56809d9cff2ea190c6fb9d67e804b42" category="paragraph">更换机箱时、必须卸下机箱正面的六个风扇模块。</block>
+  <block id="63ee7e61fbd30f44f9b9df101a63a845" category="paragraph">从旧机箱正面卸下两个降级控制器电源模块。</block>
+  <block id="1d8e1f6692aa85c8d94c39dda8015fdb" category="paragraph">将新机箱安装到机架或机柜中后、将USB LED模块从旧机箱前部移至新机箱。</block>
+  <block id="02c98171b36d44757b42c6b5c5d2acb9" category="paragraph">问题解答<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> 当您看到启动到维护模式的提示时</block>
 </blocks>

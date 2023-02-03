@@ -2,7 +2,7 @@
 permalink: fas9500/dcpm_NVRAM11_battery_replace.html 
 sidebar: sidebar 
 keywords: FAS9500 
-summary: 要热插拔包含 NVRAM11 电池的降级控制器电源模块（ DCPM\ ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。 
+summary: '要热插拔包含NVRAM11电池的目标控制器电源模块(DCPM\)、您必须找到发生故障的DCPM模块、将其从机箱中卸下、然后安装更换的DCPM模块。' 
 ---
 = 更换包含NVRAM11电池的目标控制电源模块- FAS9 500
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 要热插拔包含 NVRAM11 电池的降级控制器电源模块（ DCPM
 
 
 [role="lead"]
-要热插拔包含 NVRAM11 电池的降级控制器电源模块（ DCPM ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。
+要热插拔包含NVRAM11电池的目标控制器电源模块(DCPM)、您必须找到发生故障的DCPM模块、将其从机箱中卸下、然后安装更换的DCPM模块。
 
 在从机箱中卸下故障模块之前，您必须准备好一个替代 DCPM 模块，并且必须在卸下此模块后五分钟内更换此模块。从机箱中删除 DCPM 模块后，拥有 DCPM 模块的控制器模块除了故障转移到另一个控制器模块之外，不存在关闭保护。
 
