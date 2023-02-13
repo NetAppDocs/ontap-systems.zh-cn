@@ -153,6 +153,8 @@ NOTE: 您必须在两个控制器上退出维护模式，然后再继续执行�
 . 验证您是否已遵循在运行系统级诊断时确定的所有注意事项，缆线是否已牢固连接以及硬件组件是否已正确安装在存储系统中。
 . 重新连接电源，然后打开存储系统的电源。
 . 重新运行系统级诊断测试。
++
+ If the system-level diagnostics test fails again, contact link:http://mysupport.netapp.com/[mysupport.netapp.com^].
 
 
 |===

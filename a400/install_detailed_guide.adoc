@@ -197,6 +197,9 @@ image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
 
 
+NOTE: 如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后查找卡、然后按部件号在中查找卡 https://hwu.netapp.com["NetApp Hardware Universe"^] 用于显示端口标签的挡板图形。可以使用查找卡部件号 `sysconfig -a` 命令或。
+
+
 NOTE: 如果要为MetroCluster IP配置布线、则端口e0a/e0b可用于托管数据LIF (通常在默认IP空间中)。
 
 

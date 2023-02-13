@@ -190,6 +190,10 @@ image::../media/drw_9000_cable_management_arms.png[DRW 9000 缆线管理臂]
 . 将挡板放在系统正面。
 
 
+下图显示了典型系统的外观以及系统读取时主要组件所在位置：
+
+image::../media/drw_a900_controller_in _chassis_ID_IEOPS-856.svg[机箱ID为IEOPS 856的DRW a900控制器]
+
 
 
 == 第 3 步：使用缆线将控制器连接到网络
@@ -217,9 +221,9 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 . 使用动画或插图完成控制器与交换机之间的布线：
 +
 .动画—为双节点无交换机集群布线
-video::7a55b98a-e8b8-41d5-821f-ac5b0032ead0[panopto]
+video::37419c37-f56f-48e5-8e6c-afa600095444[panopto]
 +
-image::../media/drw_a900_tnsc_network_cabling.png[DRW a900 tnsc 网络布线]
+image::../media/drw_a900_tnsc_network_cabling_IEOPS-933.svg[DRW a900 tnsc网络布线IEOPS 933]
 
 +
 |===
@@ -298,9 +302,9 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 . 使用动画或插图完成控制器与交换机之间的布线：
 +
 .动画—为有交换机集群布线
-video::6381b3f1-4ce5-4805-bd0a-ac5b0032f51d[panopto]
+video::61ec11ec-aa30-474a-87a5-afa60008b52b[panopto]
 +
-image::../media/drw_a900_switched_network_cabling.png[DRW a900 交换网络布线]
+image::../media/drw_a900_switched_network_cabling_IEOPS-934.svg[DRW a900交换机网络布线IEOPS 934]
 
 +
 |===
@@ -386,9 +390,9 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .. 使用以下动画或图形将控制器连接到一个 NS224 驱动器架。
 +
 .动画-为一个NS224磁盘架布线
-video::6520eb01-87b3-4520-9109-ac5b0032ea4e[panopto]
+video::8d8b45cd-bd8f-4fab-a4fa-afa5017e7b72[panopto]
 +
-image::../media/drw_a900_NS224_one shelf_cabling.png[DRW a900 NS224 一个磁盘架布线]
+image::../media/drw_a900_NS224_one shelf_cabling_IEOPS-937.svg[DRW a900 NS224一个磁盘架、使用缆线连接IEOPS 937]
 
 
 
@@ -450,12 +454,12 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 . Use the following animation or diagram to cable your controllers to two NS224 drive shelves.
 +
 .动画-使用缆线连接两个NS224磁盘架
-video::34098e39-73ad-45de-9af7-ac5b0032ea9a[panopto]
+video::ec143c32-9e4b-47e5-893e-afa5017da6b4[panopto]
 +
 image:../media/drw_a900_NS224_line_art_two shelf_cabling.png[""]
 
 +
-image::../media/drw_a900_NS224_two shelf_cabling.png[DRW a900 NS224 两个磁盘架布线]
+image::../media/drw_a900_NS224_two_shelf_cabling_IEOPS-938.svg[DRW a900 NS224两个磁盘架布线IEOPS 938]
 
 +
 |===
@@ -514,7 +518,7 @@ image:../media/oie_cable100_gbe_qsfp28.png[""]
 NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.请参见 https://docs.netapp.com/us-en/ontap-systems/ns224/change-shelf-id.html["更改磁盘架 ID — NS224 磁盘架"] 有关详细说明、请参见。
 
 +
-.Animation—设置SAS或NVMe驱动器架ID
+.动画—设置NVMe驱动器架ID
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
 image::../media/drw_a900_oie_change_ns224_shelf ID_IEOPS-836.svg[DRW a900 OIE change nss224 shelf ID IEOPS 836]
@@ -557,7 +561,7 @@ image:../media/legend_icon_04.png[""]
 .动画—打开控制器的电源
 video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
 +
-image::../media/drw_a900_power-on.png[已启动 DRW a900]
+image::../media/drw_a900_power-on_IEOPS-941.svg[DRW a900启动IEOPS941]
 
 +
 
@@ -629,7 +633,7 @@ NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或�
 
 .. 使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台，然后将此笔记本电脑连接到管理子网上的管理交换机。
 +
-image::../media/drw_9000_cable_console_switch_controller.png[DRW 9000 缆线控制台交换机控制器]
+image::../media/drw_9000_cable_console_switch_controller_IEOPS-953.svg[DRW 9000缆线控制台交换机控制器IEOPS 953]
 
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 
@@ -639,7 +643,7 @@ image::../media/drw_9000_cable_console_switch_controller.png[DRW 9000 缆线控�
 NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.请参见 https://docs.netapp.com/us-en/ontap-systems/ns224/change-shelf-id.html["更改磁盘架 ID — NS224 磁盘架"] 有关详细说明、请参见。
 
 +
-.Animation—设置SAS或NVMe驱动器架ID
+.动画—设置NVMe驱动器架ID
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
 image::../media/drw_a900_oie_change_ns224_shelf ID_IEOPS-836.svg[DRW a900 OIE change nss224 shelf ID IEOPS 836]

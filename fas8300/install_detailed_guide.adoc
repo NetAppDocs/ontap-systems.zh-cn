@@ -22,9 +22,9 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。如
 
 您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。
 
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的发行说明"]
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的发行说明"^]
 
 您需要在站点上提供以下内容：
 
@@ -41,10 +41,7 @@ image::../media/drw_ssn_label.png[DRW SSN 标签]
 
 . 清点并记下收到的缆线数量和类型。
 +
-下表列出了您可能收到的电缆类型。如果您收到的电缆未在表中列出，请参见 Hardware Universe 以找到该电缆并确定其用途。
-
-+
-https://hwu.netapp.com["NetApp Hardware Universe"]
+The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 https://hwu.netapp.com["NetApp Hardware Universe"^] 以找到缆线并确定其用途。
 
 +
 [cols="1,2,1,2"]
@@ -195,6 +192,9 @@ image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
 
 [role="lead"]
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
+
+
+NOTE: 如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后查找卡、然后按部件号在中查找卡 https://hwu.netapp.com["NetApp Hardware Universe"^] 用于显示端口标签的挡板图形。可以使用查找卡部件号 `sysconfig -a` 命令或。
 
 
 

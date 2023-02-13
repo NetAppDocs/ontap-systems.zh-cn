@@ -5809,7 +5809,6 @@
   <block id="09fd8552ab48c65ddc70dbeb1978b198" category="paragraph">集群网络</block>
   <block id="9e970bc474972d15dfb05462a6fa4595" category="paragraph">FC 光纤网络</block>
   <block id="28746f946d763ce537494ffe0d6c6727" category="list-text">查看<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block> 并收集该指南中列出的所需信息。</block>
-  <block id="1fb0ebfbc5b5595571d6d5f9b6042526" category="image-alt">DRW a900 tnsc 网络布线</block>
   <block id="d718ffb6aaa936306ccf33aefa9f9462" category="paragraph">使用缆线连接集群互连端口：</block>
   <block id="832e6447f3f0b4b7127bf98e691dabe2" category="list-text">插槽 A4 和 B4 （ E4A ）</block>
   <block id="afb27063fb1efe124e2c7a172cae259c" category="list-text">插槽 -A8 和 B8 （ E8a ）</block>
@@ -5826,7 +5825,6 @@
   <block id="8b891f41fe066d01d04ca12a9bd0033f" category="paragraph">使用缆线连接 32 Gb FC 连接：</block>
   <block id="c368da6f34e41cf660fe742d1776c0c1" category="paragraph">使用缆线将插槽 5 和 B5 （ 5a ， 5b ， 5c 和 5d ）以及插槽 A7 和 B7 （ 7a ， 7b ， 7c 和 7d ）中的端口连接到 32 Gb FC 网络交换机。</block>
   <block id="dea6830a53392dc3b1f30fb0a37fb5e4" category="list-text">To cable your storage, see <block ref="4261ea2b75c295a1978f7924667f1c11" category="inline-xref-macro-rx"></block>。</block>
-  <block id="4ee80bb938c529fd8e585ff1663b9324" category="image-alt">DRW a900 交换网络布线</block>
   <block id="5f4965084173e3c414637c35200b73a8" category="paragraph">使用缆线连接集群互连 A 端口：</block>
   <block id="765c3c3f314b105120b116fa72fa83ec" category="list-text">插槽 A4 和 B4 （ E4A ）连接到集群网络交换机。</block>
   <block id="370ef18034bcd8124be9ef4b4b76a551" category="list-text">插槽 "A8 和 B8 （ E8a ）连接到集群网络交换机。</block>
@@ -5836,7 +5834,6 @@
   <block id="7a98f654f31b3263341788faed4ecbdd" category="section-title">选项 1 ：使用缆线将控制器连接到 AFF A900 中的一个 NS224 驱动器架</block>
   <block id="c60dbcf19edff60839d3c0fbf6f60f2a" category="paragraph">您必须使用缆线将每个控制器连接到 AFF A900 系统上 NS224 驱动器架上的 NSM 模块。</block>
   <block id="5ec6942c74c6a8edac1d2288d383731d" category="list-text">使用以下动画或图形将控制器连接到一个 NS224 驱动器架。</block>
-  <block id="3edbc67f0fd2ebb274aeb6ee9dd581fe" category="image-alt">DRW a900 NS224 一个磁盘架布线</block>
   <block id="3a58f6912b98caf7435fd9f6896ba4c6" category="list-text">将控制器 A 端口 E2A 连接到磁盘架上 NSM A 上的端口 e0a 。</block>
   <block id="e4e47b4780428e178a9b09390f2362b3" category="list-text">将控制器 A 端口 e10b 连接到磁盘架上 NSM B 上的端口 e0b 。</block>
   <block id="393f89fb63e48229ad961dd1e405b53e" category="list-text">将控制器 B 端口 E2A 连接到磁盘架上 NSM B 上的端口 e0a 。</block>
@@ -5846,7 +5843,6 @@
   <block id="46c91124d100547c9507fea50ae0639b" category="paragraph">您必须使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。</block>
   <block id="26fe6dbccc48fc5e3f27bb01af6740e6" category="list-text">Use the following animation or diagram to cable your controllers to two NS224 drive shelves.</block>
   <block id="2b31343b857fe67d64a1a976e200e971" category="paragraph"><block ref="2b31343b857fe67d64a1a976e200e971" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3cf9ca19fe84380073a6046bd956f972" category="image-alt">DRW a900 NS224 两个磁盘架布线</block>
   <block id="1d4442969281e166b667219af7e7fe7b" category="list-text">将控制器 A 端口 E2A 连接到磁盘架 1 上的 NSM A e0a 。</block>
   <block id="952e197be70605a4933f1fa544e89cf3" category="list-text">将控制器 A 端口 e10b 连接到磁盘架 1 上的 NSM B e0b 。</block>
   <block id="92d9c39d99b3b14f8b5b4b785e697404" category="list-text">将控制器 A 端口 e2b 连接到磁盘架 2 上的 NSM B e0b 。</block>
@@ -7383,4 +7379,17 @@
   <block id="63ee7e61fbd30f44f9b9df101a63a845" category="paragraph">从旧机箱正面卸下两个降级控制器电源模块。</block>
   <block id="1d8e1f6692aa85c8d94c39dda8015fdb" category="paragraph">将新机箱安装到机架或机柜中后、将USB LED模块从旧机箱前部移至新机箱。</block>
   <block id="02c98171b36d44757b42c6b5c5d2acb9" category="paragraph">问题解答<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> 当您看到启动到维护模式的提示时</block>
+  <block id="2adab982ea2c53caec320e625667e439" category="list-text">找到旧机箱正面DCPM模块正下方的USB LED模块。</block>
+  <block id="e9e9a6de5e421dfe8a5ccc0b156ecc94" category="admonition">如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后查找卡、然后按部件号在中查找卡<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 用于显示端口标签的挡板图形。可以使用查找卡部件号<block ref="432345ed72f5509f18312f01d4f08dff" prefix=" " category="inline-code"></block> 命令或。</block>
+  <block id="bea43746a1060b2b6af67fba31ca2890" category="paragraph">下图显示了典型系统的外观以及系统读取时主要组件所在位置：</block>
+  <block id="2f50f96b8a95f8c73f9257ccd13d3c46" category="image-alt">机箱ID为IEOPS 856的DRW a900控制器</block>
+  <block id="ea69d5fd5f06add244968ab4b689c261" category="image-alt">DRW a900 tnsc网络布线IEOPS 933</block>
+  <block id="e1ed9dc03578bbf7dfdc44cf31220a86" category="image-alt">DRW a900交换机网络布线IEOPS 934</block>
+  <block id="f31eedcaeccdc6e2f0110a8d59512b5b" category="image-alt">DRW a900 NS224一个磁盘架、使用缆线连接IEOPS 937</block>
+  <block id="de9724762d060c871892fe8183e35056" category="image-alt">DRW a900 NS224两个磁盘架布线IEOPS 938</block>
+  <block id="6f189db9f1b1dfc1be838de48c805168" category="video-title">动画—设置NVMe驱动器架ID</block>
+  <block id="c81415a6ed927280dac360edb5000bc6" category="image-alt">DRW a900启动IEOPS941</block>
+  <block id="7a0118bb1b2d6a800462ca70c23a1876" category="image-alt">DRW 9000缆线控制台交换机控制器IEOPS 953</block>
+  <block id="1f583998630e94806bf5b9e059227dd4" category="paragraph"><block ref="1f583998630e94806bf5b9e059227dd4" category="inline-link-rx"></block></block>
+  <block id="9b0500b65158795cfc5abb2becae4e80" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 以找到缆线并确定其用途。</block>
 </blocks>
