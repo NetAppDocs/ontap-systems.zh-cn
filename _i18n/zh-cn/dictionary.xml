@@ -5932,7 +5932,6 @@
   <block id="a164244a6913c60772e9b9fbbbc17a4a" category="doc">添加 I/O 模块— AFF A900</block>
   <block id="e01b6c84aaebe2321eef7b7a933b171f" category="list-text">要无中断地添加 I/O 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖或卸下现有 I/O 模块，添加新的或更换的 I/O 模块，然后交还目标控制器。</block>
   <block id="329fe7c89a525def535e03c6dbc6f98f" category="section-title">选项 1 ：将 I/O 模块添加到插槽已打开的系统中</block>
-  <block id="12f686a2d13fd4b93c3ef7fbc915cdcd" category="paragraph">您可以将 I/O 模块作为 NIC 或 NS224 存储架的存储模块添加到系统中的空模块插槽中。</block>
   <block id="c45c3f1f9d099575b7abd851e7ef8b33" category="list-text">向下旋转凸轮闩锁，直到其处于打开位置。</block>
   <block id="9a08e35bf8850515585d9bd11e96351b" category="list-text">安装 I/O 模块：</block>
   <block id="66efd9c2b6ae55ef5c1ff3be01c1fe65" category="list-text">将 I/O 模块与插槽边缘对齐。</block>
@@ -5940,17 +5939,13 @@
   <block id="7ca78c6d47f27487175e23a00c576196" category="list-text">如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</block>
   <block id="3267c15e351fe1dd15721e79b072fedc" category="admonition">确保所有未使用的 I/O 插槽都安装了空格，以防止可能出现散热问题。</block>
   <block id="05648a23fc430a3dcc4fb4c1fbb040cd" category="list-text">如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _&lt;node name&gt;_ -port _&lt;port name&gt;__ -mode network` 命令转换插槽以供网络连接使用。</block>
-  <block id="2d881a27ee894664c2e7cc8d1795b104" category="list-text">如果您安装了存储 I/O 模块，请按照中所述安装 NS224 磁盘架并为其布线<block ref="8b1d41e5fd14f554e8b3490e0dfd47ae" category="inline-link-rx"></block>。</block>
   <block id="3e0887648c519f4a3c16a1c61b2e8ec3" category="section-title">选项 2 ：在没有打开插槽的系统中添加 I/O 模块</block>
-  <block id="3a94a10e2dbe887d30ec12c0e2d2170d" category="paragraph">您必须删除系统中的一个或多个现有 NIC 或存储模块，才能将一个或多个 I/O 模块安装到已完全填充的系统中。</block>
   <block id="cebb0168d5bfd94a91f0da51501ba6b8" category="list-text">如果您是：</block>
   <block id="e818b574f8a890f6c21405d9164bb6ef" category="cell">替换 ...</block>
   <block id="d6737fd4fc838900efec68220d9b62d5" category="paragraph">具有相同端口数的 NIC I/O 模块</block>
   <block id="c5cb03fb8ac84e8ed0867902373368c5" category="paragraph">LIF 将在其控制器模块关闭时自动迁移。</block>
   <block id="5b4da5fe899903c4fb7ea38cdcd59059" category="paragraph">NIC I/O 模块，端口更少</block>
-  <block id="92fa459a77121184c537af9ee2b58dff" category="paragraph">将受影响的 LIF 永久重新分配到其他主端口。请参见<block ref="85291e79b86f275650bb0fb4e90a39e9" category="inline-link-rx"></block> 有关使用 System Manager 永久移动 LIF 的信息，请参见。</block>
   <block id="f83c48dd124994c4062d124a835da954" category="paragraph">带有存储 I/O 模块的 NIC I/O 模块</block>
-  <block id="2640f01f139d87de119d4e0ddc369433" category="paragraph">使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述<block ref="85291e79b86f275650bb0fb4e90a39e9" category="inline-link-rx"></block>。</block>
   <block id="d401d7f8340a560f025bd48c41cf9fd1" category="paragraph"><block ref="d401d7f8340a560f025bd48c41cf9fd1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9e64f9f7a827c26fc2d5c89975330a4c" category="image-alt">图例图标 01</block>
   <block id="658f167c4900ed24167db8a2c8ec0dae" category="list-text">将 I/O 模块安装到目标插槽中：</block>
@@ -5960,7 +5955,6 @@
   <block id="85fd23f64df6d6e4c54bd55af7b58c44" category="paragraph">插槽 3 或 7 中的 NIC 模块，</block>
   <block id="86cf1151f6e6623b20e6f28b8eb846ea" category="paragraph">对每个端口使用 `storage port modify -node *_&lt; 节点名称 &gt;_ -port *_&lt; 端口名称 &gt;__ -mode network` 命令。</block>
   <block id="3cb2d50b71ca167f282d29cc4a2f763f" category="paragraph">存储模块</block>
-  <block id="907b4c195a2387f3ef35df10e9b1a0eb" category="paragraph">Install and cable your NS224 shelves, as described in<block ref="71b38ceec90716734f26b1c06463d904" category="inline-link-rx"></block>。</block>
   <block id="ee509c1ffca70e9f258ad73c3116cf37" category="doc">板载加密密钥的预关闭检查— AFF A900</block>
   <block id="127cae73d2b4d7758b4c0a0e3f49ba5f" category="section-title">ONTAP 9.6 及更高版本</block>
   <block id="d994e1a1688cb6d7b8e264a209d763d6" category="doc">更换机箱 - AFF A900</block>
@@ -6515,8 +6509,6 @@
   <block id="df958dff87a8c819a8e0b81a1b306ead" category="list-text">替代控制器是指更换受损控制器的新控制器。</block>
   <block id="283fab4cea5d664827b937416e41a5e5" category="list-text">运行正常的控制器是运行正常的控制器。</block>
   <block id="92a410b1608886e36ab28b2f459ca694" category="list-text">如果显示一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。</block>
-  <block id="e7e0acd4a94a610862553a655c0372a3" category="list-text">接管目标控制器： `storage failover takeover -ofnode target_node_name`</block>
-  <block id="0a7ae7a43062cf45861e620d40d10ab9" category="paragraph">控制台连接显示，接管完成后，控制器将进入 LOADER 提示符。</block>
   <block id="f741156cf7f3ded008481322de2de820" category="list-text">从 LOADER 提示符 _bybye 重新启动控制器</block>
   <block id="ff307501f6507919aa7c2196b367a42d" category="list-text">从配对控制器交还控制器。`storage failover giveback -ofnode target_node_name`</block>
   <block id="cf261a4e73438cb00bd1e7a2fef7257c" category="list-text">在每个控制器开始启动时，如果您看到 Press Ctrl-C for Boot Menu 消息，请按 `Ctrl-C` 以中断启动过程。</block>
@@ -6734,8 +6726,6 @@
   <block id="777fd6d7388769d3f60adc007c4390a4" category="paragraph"><block ref="777fd6d7388769d3f60adc007c4390a4" category="inline-link-rx"></block></block>
   <block id="801fb2644ef002c15826950c6197b174" category="paragraph">ONTAP 9.10.1P3和9.11.1</block>
   <block id="a31ab93f41516026d249aceb633bccc3" category="doc">添加一个I/O模块—FAS9500</block>
-  <block id="133808c24f6fb32a9a2a58ed28150498" category="paragraph">您可以将I/O模块作为NIC或SAS存储架的存储模块添加到系统中的空模块插槽中。</block>
-  <block id="ff231ca484e594004f4ca93ecfa6683e" category="paragraph">控制台连接显示，接管完成后，节点将进入 LOADER 提示符。</block>
   <block id="4d3b1425bbd62943a546a9f98dc3b7ef" category="list-text">从配对节点交还节点。`storage failover giveback -ofnode target_node_name`</block>
   <block id="6f8193ca6bfb281db32afbcc9e285f79" category="inline-link">热添加SAS磁盘架</block>
   <block id="9856beabcb389225df78cec96e74e365" category="list-text">如果您安装了存储I/O模块、请按照中所述安装SAS磁盘架并为其布线<block ref="322cc377ef41f5776a1c64690e12c49b" category="inline-link-rx"></block>。</block>
@@ -7356,23 +7346,13 @@
   <block id="43ae4ee714a69574b12c2b05c54410b5" category="list-text">按下模块把手上的Terra cotta释放按钮、然后将DCPM模块滑出机箱。</block>
   <block id="0721343ac8e5e32a5122775fda62e4d0" category="doc">还原并验证配置—AFF A900</block>
   <block id="4db8dbc03fb77b9d2fa1dabdeec7a07a" category="list-text">Rerun the system-level diagnostics test.+如果系统级诊断测试再次失败、请联系 <block ref="d4b5db761eff3af8abec9c2aa8b19609" category="inline-link-macro-rx"></block>。</block>
-  <block id="22afc2cb7855948b6347ad0d5b8816a7" category="paragraph">如果已启用存储加密、请使用相应的操作步骤。</block>
   <block id="2c35abfceaabbce6e9a2f24491d249c0" category="open-title">选项1：使用板载密钥管理器</block>
   <block id="86b112e5aa1ced4fbffb09dded147e9f" category="list-text">将节点启动至启动菜单。</block>
   <block id="e07ae2ef2fbd56f8a3ced5a2ab602ded" category="list-text">选择选项10、<block ref="cdca34dc3d7defb03d741a65d78de01c" prefix=" " category="inline-code"></block>。</block>
-  <block id="5affab7614cb0938ec2fe16dbf6094bd" category="list-text">在提示符处输入集群的板载密钥管理器密码短语：need example here.</block>
-  <block id="e1abc7408800fce9a7b34d2d5dca8aee" category="list-text">输入备份密钥数据</block>
-  <block id="99f5c4eee12090497e3ca28e84e49cab" category="admonition">密码短语信息完成后、节点将返回到启动菜单。</block>
   <block id="0a2404583aab34668c1c8004bddabbaa" category="list-text">选择选项1、<block ref="e6922a1788401c5ef431db829a2c387b" prefix=" " category="inline-code"></block></block>
   <block id="c566d4828cd295258aa8097a90880602" category="open-title">选项2：使用外部管理器</block>
   <block id="0a05a9975c9259ea331a85366e41d3ce" category="list-text">选择选项11、<block ref="0dd518498ab98fe1fd543910856e6153" prefix=" " category="inline-code"></block>。</block>
-  <block id="b0bab47307c92499e81bac9b25dc3e52" category="list-text">在提示符处输入管理证书信息：need example here.</block>
   <block id="453b94e2cc94c331c590159bf6b2d21e" category="admonition">管理证书信息完成后、节点将返回到启动菜单。</block>
-  <block id="6f7b977f442186b3a2cff79208772851" category="list-text">重置磁盘的MSID：</block>
-  <block id="55bbcb479d2d67bc8ad4b8a2598ddd48" category="inline-link">将数据身份验证密钥分配给 FIPS 驱动器或 SED （板载密钥管理）</block>
-  <block id="be8dfb1b8df54a914e06c0a343100004" category="list-text">如果使用板载存储加密、请按照中的操作步骤 进行操作<block ref="503b29df34267dc3c3e3b8927894b0ee" category="inline-link-rx"></block></block>
-  <block id="32c3cf2b38ceb59d729e7de2ff67fefc" category="inline-link">将数据身份验证密钥分配给 FIPS 驱动器或 SED （外部密钥管理）</block>
-  <block id="a785aecc0aa86cd8bf8795e1bc4c3e60" category="list-text">如果您使用的是外部密钥管理器、请按照中的操作步骤 进行操作<block ref="c5282a2eb5b1733e45b98afbe5b54d05" category="inline-link-rx"></block></block>
   <block id="a5462faa34b6cf806cb49f24d84b02a7" category="list-text">如果您的系统配置为在40 GbE NIC上支持10 GbE集群互连和数据连接、请在维护模式下使用nicadmin convert命令将这些端口转换为10 GbE连接。请参见<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="55c99fae85fce446adbb5ceb895cf55e" category="paragraph">更换机箱时、要卸下电源、需要先关闭、断开连接、然后再从旧机箱背面卸下四个电源。</block>
   <block id="c56809d9cff2ea190c6fb9d67e804b42" category="paragraph">更换机箱时、必须卸下机箱正面的六个风扇模块。</block>
@@ -7392,4 +7372,29 @@
   <block id="7a0118bb1b2d6a800462ca70c23a1876" category="image-alt">DRW 9000缆线控制台交换机控制器IEOPS 953</block>
   <block id="1f583998630e94806bf5b9e059227dd4" category="paragraph"><block ref="1f583998630e94806bf5b9e059227dd4" category="inline-link-rx"></block></block>
   <block id="9b0500b65158795cfc5abb2becae4e80" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 以找到缆线并确定其用途。</block>
+  <block id="192e7ded6d54e3ac04596dc33b9c67cf" category="paragraph">您可以将I/O模块添加到系统中的空模块插槽中。</block>
+  <block id="741ade379895992f2a574e8e60de1571" category="section-title">第2步：添加I/O模块</block>
+  <block id="31ac56c0f673cbef254563f6a8a32626" category="paragraph">如果系统已完全填充、您可以通过删除现有I/O模块并将其更换为其他I/O模块来更改I/O插槽中的I/O模块。</block>
+  <block id="ed4dc030dff8dfc29b5cd17aafe4c26e" category="paragraph">=步骤2：更换I/O模块</block>
+  <block id="abd172307b56cb5c0bccb5323a67b886" category="paragraph">=步骤3：更换I/O模块后重新启动控制器</block>
+  <block id="fd25e96fa9d35ae62fb86caa243d8698" category="paragraph">=步骤4：将故障部件退回NetApp</block>
+  <block id="74458273e576f4b2da617a6e0e209a5f" category="paragraph">如果已启用存储加密、请使用相应的操作步骤。</block>
+  <block id="23620cc2fa7491aefb480afbef75dac2" category="list-text">输入您从客户处获取的板载密钥管理器的密码短语。</block>
+  <block id="15247f97704eb964c60d179c321c1370" category="list-text">在提示符处、粘贴输出中的备份密钥数据<block ref="6b6f6c1a8bc1fede794cda92ed140953" prefix=" " category="inline-code"></block> 或<block ref="32ba7af89b7557f6e3e6d80a922080ce" prefix=" " category="inline-code"></block> 命令：</block>
+  <block id="8726b2ef66dc0e734b269a3191597e11" category="paragraph">--------------- 开始备份———————</block>
+  <block id="328f6eaec3741c1d0f9558d6c40c1da4" category="paragraph">QABWIETLESBCbG9iAAAAAAAAAAAAAAAAAAEAAAACADID+bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvOlH0AAAMH7qDLIWAH1DBZ12PiVdy9ATSFMT0C0TlYAFASS4ADAAAAAAAAQAAAAAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQ。。。H4nPQM0nrDRYRa9SCv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAA</block>
+  <block id="26eef74dee0269079c9b6b002eeddb34" category="admonition">节点将返回到启动菜单。</block>
+  <block id="1e4d7cab6ce42bcab6973efa42fc0b2c" category="list-text">运行安全密钥管理器板载同步：</block>
+  <block id="377fca3965b001b9bcc8843e1b287fe7" category="list-text">如果以前设置了MSID、并且此MSID是在此操作步骤 开头捕获的、请重置此MSID：</block>
+  <block id="a967d40ef247a202e5f1ce7a9626a0ca" category="list-text">使用为FIPS驱动器或SED分配数据身份验证密钥<block ref="8fc59e93e98503b6d1b1230269b06192" prefix=" " category="inline-code"></block> 命令：</block>
+  <block id="551eb7af7cdc6ae3394d506bd47a783d" category="admonition">您可以使用<block ref="eb3cf23f0c9c60ca759ddca34bbfbf56" prefix=" " category="inline-code"></block> 用于查看密钥ID的命令。</block>
+  <block id="6f44d6d36af2c0294f4e53a2e6947b94" category="list-text">使用确认已分配身份验证密钥<block ref="46353f4e0bb2c136591c37c9eeedcf40" prefix=" " category="inline-code"></block> 命令：</block>
+  <block id="960bc5d7d199e0e148cd3dd0e517250d" category="list-text">在提示符处输入管理证书信息。</block>
+  <block id="037baf09c7ddcc7c38f81e7dbe35fa87" category="paragraph">您可以通过在插槽为空的系统中添加新的I/O节点或在已完全填充的系统中使用新的I/O模块来将I/O模块添加到系统中。</block>
+  <block id="55f1569cdcfb82612fcf293f23db4f6f" category="list-text">检查<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> to make sure that the new I/O module is compatible with your system and version of ONTAP you're running.</block>
+  <block id="6e4968851f4373ab9764e16cffb39389" category="list-text">If multiple slots are available, check the slot priorities in<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> and use the best one available for your I/O module.</block>
+  <block id="849384ba6480c0ea1f0194c179b1dad2" category="list-text">如果您安装了存储 I/O 模块，请按照中所述安装 NS224 磁盘架并为其布线<block ref="a84558faf7b836b9db418a291f2462b5" category="inline-link-rx"></block>。</block>
+  <block id="3aa5c10c865ad075f0b3003697aa0a31" category="inline-image-macro">宽度= 20像素</block>
+  <block id="5574e785cb3feaf25b9cde927c042bd5" category="paragraph"><block ref="5574e785cb3feaf25b9cde927c042bd5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="314032c5f76e6fcf7f32085e64ca9fd1" category="paragraph">Install and cable your NS224 shelves, as described in<block ref="120b604fa0c5a5c9d522c8314c790770" category="inline-link-rx"></block>。</block>
 </blocks>

@@ -24,16 +24,116 @@ summary: 您可以将 I/O 模块添加到系统中，方法是在已完全填充
 
 == 选项 1 ：将 I/O 模块添加到插槽已打开的系统中
 
-您可以将I/O模块作为NIC或SAS存储架的存储模块添加到系统中的空模块插槽中。
+[role="lead"]
+您可以将I/O模块添加到系统中的空模块插槽中。
 
-. 关闭控制器 A ：
+
+
+== 第 1 步：关闭受损节点
+
+[role="lead"]
+使用以下选项之一关闭或接管受损控制器。
+
+[role="tabbed-block"]
+====
+.选项 1 ：大多数系统
+--
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
 +
-.. 禁用自动交还： `storage failover modify -node local -auto-giveback false`
-.. 接管目标节点： `storage failover takeover -ofnode target_node_name`
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
 +
-控制台连接显示，接管完成后，节点将进入 LOADER 提示符。
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
 
 
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+`正在等待交还 ...`
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+--
+.选项 2 ：控制器位于 MetroCluster 中
+--
+
+NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+* 如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（`MetroCluster node show` ）。
+
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+--
+====
+
+
+== 第2步：添加I/O模块
 
 . 如果您尚未接地，请正确接地。
 . 卸下目标插槽空白盖：
@@ -71,7 +171,8 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
 
 == 选项 2 ：在没有打开插槽的系统中添加 I/O 模块
 
-您必须删除系统中的一个或多个现有 NIC 或存储模块，才能将一个或多个 I/O 模块安装到已完全填充的系统中。
+[role="lead"]
+如果系统已完全填充、您可以通过删除现有I/O模块并将其更换为其他I/O模块来更改I/O插槽中的I/O模块。
 
 . 如果您是：
 +
@@ -100,14 +201,115 @@ NIC I/O 模块，端口更少
 使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"^]。
 
 |===
-. 关闭控制器 A ：
-+
-.. 禁用自动交还： `storage failover modify -node local -auto-giveback false`
-.. 接管目标节点： `storage failover takeover -ofnode target_node_name`
-+
-控制台连接显示，接管完成后，节点将进入 LOADER 提示符。
 
 
+
+
+== 第 1 步：关闭受损节点
+
+[role="lead"]
+使用以下选项之一关闭或接管受损控制器。
+
+[role="tabbed-block"]
+====
+.选项 1 ：大多数系统
+--
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+`正在等待交还 ...`
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+--
+.选项 2 ：控制器位于 MetroCluster 中
+--
+
+NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+* 如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（`MetroCluster node show` ）。
+
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+--
+====
+
+
+== 第 2 步：更换 I/O 模块
 
 . 如果您尚未接地，请正确接地。
 . 拔下目标 I/O 模块上的所有布线。

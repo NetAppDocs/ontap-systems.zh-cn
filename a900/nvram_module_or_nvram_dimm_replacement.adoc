@@ -432,11 +432,23 @@ dr-group-id            cluster node           configuration-state
 .步骤
 . 将节点启动至启动菜单。
 . 选择选项10、 `Set onboard key management recovery secrets`。
-. 在提示符处输入集群的板载密钥管理器密码短语：need example here.
-. 输入备份密钥数据
+. 输入您从客户处获取的板载密钥管理器的密码短语。
+. 在提示符处、粘贴输出中的备份密钥数据 `security key-manager backup show` 或 `security key-manager onboard show-backup` 命令：
++
+备份数据示例：
+
++
+--------------- 开始备份———————
+
++
+QABWIETLESBCbG9iAAAAAAAAAAAAAAAAAAEAAAACADID+bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvOlH0AAAMH7qDLIWAH1DBZ12PiVdy9ATSFMT0C0TlYAFASS4ADAAAAAAAAQAAAAAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQ。。。H4nPQM0nrDRYRa9SCv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAA
+
++
+--------------- 结束备份———————
+
 +
 
-NOTE: 密码短语信息完成后、节点将返回到启动菜单。
+NOTE: 节点将返回到启动菜单。
 
 . 选择选项1、 `Normal Boot`
 . 使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令仅交还 CFO 聚合。
@@ -455,7 +467,7 @@ NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
 +
 仅显示 CFO 聚合（根聚合和 CFO 模式的数据聚合）。
 
-. 如果您运行的是 ONTAP 9.6 或更高版本，请运行 security key-manager 板载同步：
+. 运行安全密钥管理器板载同步：
 +
 .. 运行 `security key-manager on板 载 sync` 命令，然后在出现提示时输入密码短语。
 .. 输入 `security key-manager key-query` 命令可查看板载密钥管理器中存储的所有密钥的详细视图，并验证所有身份验证密钥的 `restored` column = `yes/true` 。
@@ -478,6 +490,16 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 
 . 将控制台缆线移至目标控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+. 如果以前设置了MSID、并且此MSID是在此操作步骤 开头捕获的、请重置此MSID：
++
+.. 使用为FIPS驱动器或SED分配数据身份验证密钥 `storage encryption disk modify -disk _disk_ID_ -data-key-id _key_ID_` 命令：
++
+
+NOTE: 您可以使用 `security key-manager key query -key-type NSE-AK` 用于查看密钥ID的命令。
+
+.. 使用确认已分配身份验证密钥 `storage encryption disk show` 命令：
+
+
 
 
 --
@@ -485,7 +507,7 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 --
 . 将节点启动至启动菜单。
 . 选择选项11、 `Configure node for external key management`。
-. 在提示符处输入管理证书信息：need example here.
+. 在提示符处输入管理证书信息。
 +
 
 NOTE: 管理证书信息完成后、节点将返回到启动菜单。
@@ -528,18 +550,20 @@ NOTE: 如果命令失败，请联系客户支持。
 . 将控制台缆线连接到配对控制器。
 . 使用 storage failover giveback -fromnode local 命令交还控制器。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+. 如果以前设置了MSID、并且此MSID是在此操作步骤 开头捕获的、请重置此MSID：
++
+.. 使用为FIPS驱动器或SED分配数据身份验证密钥 `storage encryption disk modify -disk _disk_ID_ -data-key-id _key_ID_` 命令：
++
+
+NOTE: 您可以使用 `security key-manager key query -key-type NSE-AK` 用于查看密钥ID的命令。
+
+.. 使用确认已分配身份验证密钥 `storage encryption disk show` 命令：
+
+
 
 
 --
 ====
-. 重置磁盘的MSID：
-+
-.. 如果使用板载存储加密、请按照中的操作步骤 进行操作 https://docs.netapp.com/us-en/ontap/encryption-at-rest/assign-authentication-keys-seds-onboard-task.html["将数据身份验证密钥分配给 FIPS 驱动器或 SED （板载密钥管理）"^]
-.. 如果您使用的是外部密钥管理器、请按照中的操作步骤 进行操作 https://docs.netapp.com/us-en/ontap/encryption-at-rest/assign-authentication-keys-seds-external-task.html["将数据身份验证密钥分配给 FIPS 驱动器或 SED （外部密钥管理）"^]
-
-
-
-
 
 
 == 第 7 步：将故障部件退回 NetApp
