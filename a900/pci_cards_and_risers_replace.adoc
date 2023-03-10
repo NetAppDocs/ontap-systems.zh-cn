@@ -120,7 +120,10 @@ LOADER 提示符
 
 
 --
-=步骤2：更换I/O模块
+====
+
+
+== 第 2 步：更换 I/O 模块
 
 [role="lead"]
 要更换 I/O 模块，请在机箱中找到该模块，然后按照特定步骤顺序进行操作。
@@ -175,7 +178,9 @@ I/O 凸轮闩锁完全解锁
 . 根据需要重新对 I/O 模块进行布线。
 
 
-=步骤3：更换I/O模块后重新启动控制器
+
+
+== 第 3 步：更换 I/O 模块后重新启动控制器
 
 [role="lead"]
 更换 I/O 模块后，必须重新启动控制器模块。
@@ -204,9 +209,9 @@ NOTE: 请务必在完成转换后退出维护模式。
 . 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
 
 
-=步骤4：将故障部件退回NetApp
+
+
+== 第 4 步：将故障部件退回 NetApp
 
 [role="lead"]
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
-
-====

@@ -40,11 +40,12 @@ link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-t
 .步骤
 . 尽管缓存模块上的数据已加密，但您可能希望擦除受损缓存模块中的所有数据，并验证缓存模块是否没有数据：
 +
-.. 擦除缓存模块上的数据： `ssystem controller flash-cache secure -erase run -node _node_name_ -device-id _device_id_`
-.. 验证是否已从缓存模块中擦除数据： `ssystem controller flash-cache secure -erase show -node _node_name_`
+.. 擦除缓存模块上的数据： `system controller flash-cache secure-erase run -node _node name_ localhost -device-id _device_number_`
 +
-输出应将缓存模块状态显示为已擦除。
 
+NOTE: 运行 `system controller flash-cache show` 命令。
+
+.. 验证是否已从缓存模块中擦除数据： `system controller flash-cache secure-erase show`
 
 
 . 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAIN=_number_of_hours_down_h`

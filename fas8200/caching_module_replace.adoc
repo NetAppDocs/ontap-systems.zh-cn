@@ -16,11 +16,14 @@ summary: 如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控�
 您可能希望在更换缓存模块之前擦除其内容。
 
 * 尽管缓存模块上的数据已加密，但您可能希望擦除受损缓存模块中的所有数据，并验证缓存模块是否没有数据：
-* 擦除缓存模块上的数据： `ssystem controller flash-cache secure -erase run`
-* 验证是否已从缓存模块中擦除数据： `ssystem controller flash-cache secure -erase show -node node_name`
++
+** 擦除缓存模块上的数据： `system controller flash-cache secure-erase run -node _node name_ localhost -device-id _device_number_`
++
 
+NOTE: 运行 `system controller flash-cache show` 命令。
 
-输出应将缓存模块状态显示为已擦除。
+** 验证是否已从缓存模块中擦除数据： `system controller flash-cache secure-erase show`
+
 
 * 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
 

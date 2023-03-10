@@ -2099,9 +2099,6 @@
   <block id="322391dba2ed1aad7de572d3e59d7971" category="doc">更换缓存模块— AFF A220 和 FAS2700</block>
   <block id="308216007c5ec00e109a42c5068cc3de" category="paragraph">您可能希望在更换缓存模块之前擦除其内容。</block>
   <block id="6ec04a396d43adc0bf840cc9e4cce4b3" category="list-text">尽管缓存模块上的数据已加密，但您可能希望擦除受损缓存模块中的所有数据，并验证缓存模块是否没有数据：</block>
-  <block id="7befdc0c8cc35d0c1711e11bd7feb970" category="list-text">擦除缓存模块上的数据： `ssystem controller flash-cache secure -erase run`</block>
-  <block id="236dd84b9226dbf8dfd98a6c46b59972" category="list-text">验证是否已从缓存模块中擦除数据： `ssystem controller flash-cache secure -erase show -node node_name`</block>
-  <block id="af41b619bf9d50ddae2454efc001e4dd" category="paragraph">输出应将缓存模块状态显示为已擦除。</block>
   <block id="01ca059245897bf13f451aefdac2252d" category="section-title">第 3 步：更换缓存模块</block>
   <block id="fcb47fab108a0238221cf0b2d24663f3" category="paragraph">要更换控制器上标签上称为 M.2 PCIe 卡的缓存模块，请找到控制器内的插槽并按照特定步骤顺序进行操作。</block>
   <block id="b37236c3c4a90442c4db951305ea57a0" category="image-alt">DRW 2600 fcache rel 动画 gif</block>
@@ -2833,8 +2830,6 @@
   <block id="221315bbb17a9424f37793425986d6c2" category="inline-link">《 FAS8300 和 FAS8700 安装和设置说明》</block>
   <block id="9af1a70147e4372628e3cff0c1a8a31c" category="list-text">如果扫描未报告任何故障，请从菜单中选择 `Reboot` 以重新启动系统。</block>
   <block id="05da715fdd840e7fc27dd764386018bc" category="doc">更换缓存模块— FAS8300 和 FAS8700</block>
-  <block id="d457ea14ed8ca14254ad1d75e29dce09" category="list-text">擦除缓存模块上的数据： `ssystem controller flash-cache secure -erase run -node _node_name_ -device-id _device_id_`</block>
-  <block id="b9106c27d735907c8812d337029e92be" category="list-text">验证是否已从缓存模块中擦除数据： `ssystem controller flash-cache secure -erase show -node _node_name_`</block>
   <block id="8a653be38ee9a052d5a08a28a70c1d9e" category="paragraph">要更换控制器标签上的缓存模块（称为 Flash Cache ），请找到控制器中的插槽并按照特定步骤顺序进行操作。有关 Flash Cache 的位置，请参见控制器模块上的 FRU 映射。</block>
   <block id="70edce28424200208b28981e9b221707" category="list-text">尽管缓存模块的内容已加密，但最好在更换模块之前擦除该模块的内容。有关详细信息，请参见<block ref="89de74d6a86df9137b0ef3fb03a43036" category="inline-link-rx"></block> NetApp 支持站点上适用于您的系统的。</block>
   <block id="540a3a140ba4c7da7729d8bbfbe06861" category="image-alt">DRW 8300 更换闪存</block>
@@ -7375,9 +7370,6 @@
   <block id="192e7ded6d54e3ac04596dc33b9c67cf" category="paragraph">您可以将I/O模块添加到系统中的空模块插槽中。</block>
   <block id="741ade379895992f2a574e8e60de1571" category="section-title">第2步：添加I/O模块</block>
   <block id="31ac56c0f673cbef254563f6a8a32626" category="paragraph">如果系统已完全填充、您可以通过删除现有I/O模块并将其更换为其他I/O模块来更改I/O插槽中的I/O模块。</block>
-  <block id="ed4dc030dff8dfc29b5cd17aafe4c26e" category="paragraph">=步骤2：更换I/O模块</block>
-  <block id="abd172307b56cb5c0bccb5323a67b886" category="paragraph">=步骤3：更换I/O模块后重新启动控制器</block>
-  <block id="fd25e96fa9d35ae62fb86caa243d8698" category="paragraph">=步骤4：将故障部件退回NetApp</block>
   <block id="74458273e576f4b2da617a6e0e209a5f" category="paragraph">如果已启用存储加密、请使用相应的操作步骤。</block>
   <block id="23620cc2fa7491aefb480afbef75dac2" category="list-text">输入您从客户处获取的板载密钥管理器的密码短语。</block>
   <block id="15247f97704eb964c60d179c321c1370" category="list-text">在提示符处、粘贴输出中的备份密钥数据<block ref="6b6f6c1a8bc1fede794cda92ed140953" prefix=" " category="inline-code"></block> 或<block ref="32ba7af89b7557f6e3e6d80a922080ce" prefix=" " category="inline-code"></block> 命令：</block>
@@ -7397,4 +7389,9 @@
   <block id="3aa5c10c865ad075f0b3003697aa0a31" category="inline-image-macro">宽度= 20像素</block>
   <block id="5574e785cb3feaf25b9cde927c042bd5" category="paragraph"><block ref="5574e785cb3feaf25b9cde927c042bd5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="314032c5f76e6fcf7f32085e64ca9fd1" category="paragraph">Install and cable your NS224 shelves, as described in<block ref="120b604fa0c5a5c9d522c8314c790770" category="inline-link-rx"></block>。</block>
+  <block id="757216293ea1da04339a2c9b8eaa2641" category="admonition">tar.gz文件必须放置在至少4 GB的32位格式化分区上。虽然32 TB分区的大小可以达到2 TB、但Windows内置工具(例如diskpart)无法格式化32 GB以上的32 GB分区。</block>
+  <block id="e9d3276fadd16a57346b54cecf613793" category="list-text">擦除缓存模块上的数据：<block ref="5ffb603e9f437c31dabf66aeb6dc9941" prefix=" " category="inline-code"></block></block>
+  <block id="06dd51a0351c6bc1041f60a7a78358f1" category="admonition">运行<block ref="77da07d2ad54f11335f6a0e867b30843" prefix=" " category="inline-code"></block> 命令。</block>
+  <block id="955a29c530e47b3a4d397e3e2ff7a94a" category="list-text">验证是否已从缓存模块中擦除数据：<block ref="5a00050b2fc68dfbfe21cffc587aa407" prefix=" " category="inline-code"></block></block>
+  <block id="04f13a81f468108c54934d79ebdf3ceb" category="admonition">如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后按部件号在中查找此卡<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 用于显示端口标签的挡板图形。可以使用查找卡部件号<block ref="432345ed72f5509f18312f01d4f08dff" prefix=" " category="inline-code"></block> 命令或。</block>
 </blocks>
