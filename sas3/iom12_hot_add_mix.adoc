@@ -30,10 +30,13 @@ NOTE: 有关网桥连接的 MetroCluster 配置，请参见 <<网桥连接 Metro
 +
 ** 在任一控制器的管理提示符处输入 ``run local sysconfig`` 命令。
 +
-如果 SAS2/SAS3 混合堆栈支持字段未显示在输出中或其值为 none ，则表示您的系统不支持混合堆栈。
+如果SAS2/SAS3混合堆栈支持字段未显示在输出中或其值为"none"、则表示您的系统不支持混合堆栈。
 
 +
-如果 SAS2/SAS3 Mixed Stack Support 字段中显示了其他任何内容，例如 ALL 或 bride-attached ，则表示您的系统支持混合堆栈。
+如果SAS2/SAS3 Mixed Stack Support字段中显示"all"、则表示您的系统支持混合堆栈。
+
++
+如果SAS2/SAS3 Mixed Stack Support字段中显示"Bree-Attached "、则只有当存储架通过ATTO FibreBridge连接时、您的系统才支持混合堆栈。
 
 ** 转到 Hardware Universe 并导航到您的平台信息。
 +

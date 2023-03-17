@@ -7394,4 +7394,7 @@
   <block id="06dd51a0351c6bc1041f60a7a78358f1" category="admonition">运行<block ref="77da07d2ad54f11335f6a0e867b30843" prefix=" " category="inline-code"></block> 命令。</block>
   <block id="955a29c530e47b3a4d397e3e2ff7a94a" category="list-text">验证是否已从缓存模块中擦除数据：<block ref="5a00050b2fc68dfbfe21cffc587aa407" prefix=" " category="inline-code"></block></block>
   <block id="04f13a81f468108c54934d79ebdf3ceb" category="admonition">如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后按部件号在中查找此卡<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 用于显示端口标签的挡板图形。可以使用查找卡部件号<block ref="432345ed72f5509f18312f01d4f08dff" prefix=" " category="inline-code"></block> 命令或。</block>
+  <block id="3a5f51ab8f29522107285c1bd243bf95" category="paragraph">如果SAS2/SAS3混合堆栈支持字段未显示在输出中或其值为"none"、则表示您的系统不支持混合堆栈。</block>
+  <block id="b57b9debcc2348af5e609f2c38ecae74" category="paragraph">如果SAS2/SAS3 Mixed Stack Support字段中显示"all"、则表示您的系统支持混合堆栈。</block>
+  <block id="7a2d660ca9e94c940789a57658eb9268" category="paragraph">如果SAS2/SAS3 Mixed Stack Support字段中显示"Bree-Attached "、则只有当存储架通过ATTO FibreBridge连接时、您的系统才支持混合堆栈。</block>
 </blocks>
