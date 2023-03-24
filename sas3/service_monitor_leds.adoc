@@ -17,7 +17,6 @@ summary: 您可以通过了解磁盘架组件上 LED 的位置和状态条件来
 
 == 操作员显示面板 LED
 
-[role="lead"]
 磁盘架前操作员显示面板上的 LED 指示磁盘架运行正常还是硬件出现问题。
 
 下表介绍了 DS460C ， DS224C 和 DS212C 磁盘架中使用的操作员显示面板上的三个 LED ：
@@ -78,7 +77,6 @@ image::../media/drw_opd.gif[DRW 选项]
 
 == IOM12 模块 LED
 
-[role="lead"]
 IOM12 模块上的 LED 指示此模块是否正常运行，是否已为 I/O 流量做好准备，以及硬件是否存在任何问题。
 
 下表介绍了与模块功能以及模块上每个 SAS 端口的功能相关的 IOM12 模块 LED 。
@@ -136,7 +134,6 @@ image::../media/drw_iom12.gif[DRW iom12]
 
 == 电源 LED
 
-[role="lead"]
 电源上的 LED 指示电源运行正常还是存在硬件问题。
 
 下表介绍了 DS460C ， DS224C 和 DS212C 磁盘架中使用的电源上的两个 LED ：
@@ -190,7 +187,6 @@ image::../media/drw_powersupply_913w_vsd.gif[DRW 电源 913w VSD]
 
 == DS460C 磁盘架上的风扇 LED
 
-[role="lead"]
 DS460C 风扇上的 LED 指示风扇是运行正常还是存在硬件问题。
 
 下表介绍了 DS460C 磁盘架中使用的风扇上的 LED ：
@@ -218,7 +214,6 @@ image:../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout.gif[""]
 
 == 磁盘驱动器 LED
 
-[role="lead"]
 磁盘驱动器上的 LED 指示其运行正常还是硬件出现问题。
 
 

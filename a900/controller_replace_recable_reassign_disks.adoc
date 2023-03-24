@@ -38,10 +38,8 @@ NOTE: 系统 ID 和磁盘分配信息位于 NVRAM 模块中，该模块位于与
 
 == 第 2 步：重新分配磁盘
 
-[role="lead"]
 If the storage system is in an HA pair, the system ID of the new controller module is automatically assigned to the disks when the giveback occurs at the end of the procedure.您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。
 
-[role="lead"]
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
 . 如果 _replacement_ 控制器处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`

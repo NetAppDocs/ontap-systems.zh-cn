@@ -20,7 +20,6 @@ summary: 此提供了有关安装典型 NetApp 系统的详细分步说明。
 要安装系统，您需要在 NetApp 支持站点上创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
 
 .开始之前
-[role="lead"]
 您需要有权访问 https://hwu.netapp.com["NetApp Hardware Universe"^] 有关站点要求以及已配置系统上的追加信息的信息。
 
 您可能还希望有权访问 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["《 ONTAP 9 发行说明》"^] 有关此系统的详细信息，请参见您的 ONTAP 版本。
@@ -171,7 +170,6 @@ image:../media/oie_cable_power.png[""]
 
 == 第 2 步：安装硬件
 
-[role="lead"]
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
 
 . 根据需要安装导轨套件。
@@ -198,14 +196,12 @@ image::../media/drw_a900_controller_in _chassis_ID_IEOPS-856.svg[机箱ID为IEOP
 
 == 第 3 步：使用缆线将控制器连接到网络
 
-[role="lead"]
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
 
 
 
 === 选项 1 ：双节点无交换机集群
 
-[role="lead"]
 控制器上的管理网络，数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
 
 .开始之前
@@ -286,7 +282,6 @@ image:../media/oie_cable_sfp_gbe_copper.png[""]
 
 === 选项 2 ：交换集群
 
-[role="lead"]
 控制器上的管理网络，数据网络和管理端口连接到交换机。集群互连和 HA 端口通过缆线连接到集群 /HA 交换机。
 
 .开始之前
@@ -371,7 +366,6 @@ image:../media/oie_cable_sfp_gbe_copper.png[""]
 
 === 选项 1 ：使用缆线将控制器连接到 AFF A900 中的一个 NS224 驱动器架
 
-[role="lead"]
 您必须使用缆线将每个控制器连接到 AFF A900 系统上 NS224 驱动器架上的 NSM 模块。
 
 .开始之前
@@ -436,7 +430,6 @@ image:../media/oie_cable100_gbe_qsfp28.png[""]
 
 === 选项 2 ：使用缆线将控制器连接到 AFF A900 中的两个 NS224 驱动器架
 
-[role="lead"]
 您必须使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。
 
 .开始之前
@@ -503,14 +496,12 @@ image:../media/oie_cable100_gbe_qsfp28.png[""]
 
 == 第 5 步：完成系统设置和配置
 
-[role="lead"]
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
 
 
 
 === 选项 1 ：如果启用了网络发现
 
-[role="lead"]
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
 . 使用以下动画或图形设置一个或多个驱动器架 ID ：
@@ -621,7 +612,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 === 选项 2 ：如果未启用网络发现
 
-[role="lead"]
 如果您使用的不是基于 Windows 或 Mac 的笔记本电脑或控制台，或者未启用自动发现，则必须使用此任务完成配置和设置。
 
 . 为笔记本电脑或控制台布线并进行配置：
@@ -633,7 +623,7 @@ NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或�
 
 .. 使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台，然后将此笔记本电脑连接到管理子网上的管理交换机。
 +
-image::../media/drw_9000_cable_console_switch_controller_IEOPS-953.svg[DRW 9000缆线控制台交换机控制器IEOPS 953]
+image::../media/drw_A900_cable_console_switch_controller_IEOPS-953.svg[DRW A900缆线控制台交换机控制器IEOPS 953]
 
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 

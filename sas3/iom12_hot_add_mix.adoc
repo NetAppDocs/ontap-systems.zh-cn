@@ -17,7 +17,6 @@ summary: '如果需要更多存储、您可以将IOM12/IOM12B磁盘架(带有IOM
 
 == 热添加的要求
 
-[role="lead"]
 在将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈之前、HA对、单控制器或延伸型MetroCluster 配置(系统)必须满足特定要求。
 
 
@@ -86,7 +85,6 @@ IOM12 磁盘架使用迷你 SAS HD 连接器。IOM6 磁盘架使用 QSFP 连接�
 
 == 网桥连接 MetroCluster 配置中的热添加要求
 
-[role="lead"]
 如果要将IOM12/IOM12B磁盘架热添加到使用MetroCluster 配置中的一对ATTO FibreBridge网桥连接的IOM6磁盘架堆栈中、则系统必须满足特定要求。
 
 * 如果网桥 SAS 端口在当前配置中可用，则应将 IOM12 磁盘架作为单独的堆栈添加。
@@ -138,7 +136,6 @@ IOM12/IOM12B磁盘架使用迷你SAS HD连接器。IOM6 shelves use QSFP connect
 
 == 热添加注意事项
 
-[role="lead"]
 在将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈之前、您应熟悉此操作步骤 的各个方面和最佳实践。
 
 
@@ -226,7 +223,6 @@ NOTE: 迁移说明提供了 IBACP 的系统要求。
 
 == 准备手动分配驱动器所有权以进行热添加
 
-[role="lead"]
 如果要为要热添加的 IOM12 磁盘架手动分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。
 
 .开始之前
@@ -257,7 +253,6 @@ NOTE: 迁移说明提供了 IBACP 的系统要求。
 
 == 安装用于热添加的磁盘架
 
-[role="lead"]
 对于要热添加的每个磁盘架，您可以将磁盘架安装到机架中，连接电源线，打开磁盘架电源并设置磁盘架 ID 。
 
 . 使用磁盘架随附的安装宣传单安装磁盘架随附的机架安装套件（适用于两柱或四柱机架安装）。
@@ -395,7 +390,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 == 为热添加的磁盘架布线
 
-[role="lead"]
 如何将IOM12/IOM12B磁盘架连接到IOM6磁盘架堆栈取决于IOM12磁盘架是否为初始IOM12/IOM12B磁盘架、这意味着该堆栈中不存在其他IOM12磁盘架、 或者、它是否是现有混合堆栈的额外IOM12/IOM12B磁盘架、这意味着该堆栈中已存在一个或多个IOM12B磁盘架。It also depends on whether the stack has multipath HA, multipath, single-path HA, or single-path connectivity.
 
 .开始之前
@@ -651,7 +645,6 @@ NOTE: 所有 MetroCluster 配置都需要手动分配驱动器。
 
 == 完成热添加
 
-[role="lead"]
 如果在准备将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈时禁用了自动驱动器分配、则需要手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。
 
 .开始之前

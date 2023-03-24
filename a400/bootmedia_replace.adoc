@@ -10,13 +10,13 @@ summary: 您必须在控制器模块中找到启动介质（请参见控制器�
 :imagesdir: ../media/
 
 
+[role="lead"]
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
 
 
 
 == 第 1 步：卸下控制器模块
 
-[role="lead"]
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
 您可以使用以下动画，插图或写入的步骤从机箱中卸下控制器模块。
@@ -66,7 +66,6 @@ image:../media/legend_icon_02.png[""]
 
 == 第 2 步：更换启动介质
 
-[role="lead"]
 您必须在控制器模块中找到启动介质（请参见控制器模块上的 FRU 映射），然后按照说明进行更换。
 
 .开始之前
@@ -115,7 +114,7 @@ image::../media/legend_icon_03.png[图例图标 03]
 
 . 从控制器模块中找到并取出启动介质：
 +
-image::../media/drw_A400_Replace-boot_media.png[DRW A400 更换启动介质]
+image::../media/drw_A400_Replace-boot_media_IEOPS-1007.svg[DRW A400更换启动介质IEOPS 1007]
 
 +
 |===
@@ -158,7 +157,6 @@ image:../media/legend_icon_02.png[""]
 
 == 第 3 步：将启动映像传输到启动介质
 
-[role="lead"]
 您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。
 
 .开始之前

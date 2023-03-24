@@ -47,21 +47,21 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
  a| 
 HA 对
  a| 
-link:controller_replace_complete_system_restoration.md#["验证 HA 系统上的系统 ID 更改"]
+<<选项 1 ：验证 HA 系统上的系统 ID 更改>>
 
 
 
  a| 
 独立
  a| 
-link:controller_replace_complete_system_restoration.md#["在 ONTAP 中的独立系统上手动重新分配系统 ID"]
+<<选项 2 ：在 ONTAP 中的独立系统上手动重新分配系统 ID>>
 
 
 
  a| 
 双节点 MetroCluster 配置
  a| 
-link:controller_replace_complete_system_restoration.md#["在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID"]
+<<选项 3 ：在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID>>
 
 |===
 

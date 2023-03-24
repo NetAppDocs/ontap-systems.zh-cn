@@ -30,7 +30,6 @@ image::../media/drw_controller_to_stack_cable_color_key_non2600_4stackcolors.gif
 
 == 使用四端口 SAS HBA 的多路径 HA 配置的控制器到堆栈布线工作表和布线示例
 
-[role="lead"]
 您可以使用完整的控制器到堆栈布线工作表和布线示例为具有四端口 SAS HBA 的常见多路径 HA 配置布线。这些控制器没有板载 SAS 端口。
 
 
@@ -81,7 +80,6 @@ image::../media/drw_mpha_slots_1_and_2_two_4porthbas_two_stacks_skipped.gif[已�
 
 == 具有四个板载 SAS 端口的多路径 HA 配置的控制器到堆栈布线工作表和布线示例
 
-[role="lead"]
 您可以使用完整的控制器到堆栈布线工作表和布线示例为具有四个板载 SAS 端口的常见多路径 HA 配置布线。
 
 

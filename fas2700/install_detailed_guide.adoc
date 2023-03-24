@@ -17,7 +17,6 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 == 第 1 步：准备安装
 
-[role="lead"]
 要安装 FAS2700 或 AFF A220 系统，您需要在 NetApp 支持站点上创建帐户，注册您的系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
 
 您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。
@@ -170,7 +169,6 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工�
 
 == 第 2 步：安装硬件
 
-[role="lead"]
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
 
 .步骤
@@ -194,14 +192,12 @@ image::../media/drw_cable_management_arm_install.png[DRW 缆线管理臂安装]
 
 == 第 3 步：使用缆线将控制器连接到网络
 
-[role="lead"]
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
 
 
 
 === 选项 1 ：为双节点无交换机集群布线，统一网络配置
 
-[role="lead"]
 控制器上的管理网络， UTA2 数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
 
 您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
@@ -270,14 +266,13 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 此时请勿插入电源线。
 
 |===
-. 要为存储布线，请参见 link:install_detailed_guide.md#["使用缆线将控制器连接到驱动器架"]
+. To cable your storage, see <<第 4 步：使用缆线将控制器连接到驱动器架>>
 
 
 
 
 === 选项 2 ：为交换集群布线，统一网络配置
 
-[role="lead"]
 控制器上的管理网络， UTA2 数据网络和管理端口连接到交换机。集群互连端口通过缆线连接到集群互连交换机。
 
 您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
@@ -348,14 +343,13 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 此时请勿插入电源线。
 
 |===
-. 要为存储布线，请参见 link:install_detailed_guide.md#["使用缆线将控制器连接到驱动器架"]
+. To cable your storage, see <<第 4 步：使用缆线将控制器连接到驱动器架>>
 
 
 
 
 === 选项 3 ：为双节点无交换机集群布线，以太网网络配置
 
-[role="lead"]
 控制器上的管理网络，以太网数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
 
 您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
@@ -413,14 +407,13 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 此时请勿插入电源线。
 
 |===
-. 要为存储布线，请参见 link:install_detailed_guide.md#["使用缆线将控制器连接到驱动器架"]
+. To cable your storage, see <<第 4 步：使用缆线将控制器连接到驱动器架>>
 
 
 
 
 === 选项 4 ：为有交换机集群布线，以太网网络配置
 
-[role="lead"]
 控制器上的管理网络，以太网数据网络和管理端口连接到交换机。集群互连端口通过缆线连接到集群互连交换机。
 
 您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
@@ -476,21 +469,19 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 此时请勿插入电源线。
 
 |===
-. 要为存储布线，请参见 link:install_detailed_guide.md#["使用缆线将控制器连接到驱动器架"]
+. To cable your storage, see <<第 4 步：使用缆线将控制器连接到驱动器架>>
 
 
 
 
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
-[role="lead"]
 您必须使用板载存储端口将控制器连接到磁盘架。NetApp 建议对具有外部存储的系统使用 MP-HA 布线。如果您使用的是 SAS 磁带驱动器，则可以使用单路径布线。如果没有外部磁盘架，则可选择使用 MP-HA 缆线连接到内部驱动器（未显示），前提是 SAS 缆线是随系统一起订购的。
 
 
 
 === 选项 1 ：使用缆线将 HA 对上的存储与外部驱动器架连接起来
 
-[role="lead"]
 您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到驱动器磁盘架。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -554,23 +545,21 @@ image:../media/oie_legend_icon_3_t.png[""]
 如果您有多个驱动器架堆栈，请参见适用于您的驱动器架类型的 _Installation and Cabling Guide_ 。
 
 +
-link:../com.netapp.doc.hw-ds-sas3-icg/home.html["安装和布线"]
+https://docs.netapp.com/us-en/ontap-systems/sas3/index.html["安装和布线"]
 
-. 要完成系统设置，请参见 link:install_detailed_guide.md#["正在完成系统设置和配置"]
+. To complete setting up your system, see <<第 5 步：完成系统设置和配置>>
 
 
 
 
 == 第 5 步：完成系统设置和配置
 
-[role="lead"]
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
 
 
 
 === 选项 1 ：如果启用了网络发现，则完成系统设置
 
-[role="lead"]
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
 .步骤
@@ -625,7 +614,6 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置�
 
 === 选项 2 ：如果未启用网络发现，则完成系统设置和配置
 
-[role="lead"]
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。
 
 .步骤

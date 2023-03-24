@@ -1776,8 +1776,6 @@
   <block id="b26b4e14a5f28cf68612a01acfe3d603" category="list-text">重新运行系统级诊断测试。</block>
   <block id="ce7ac078a00405de488856f37bcd6f09" category="summary">您必须验证机箱的 HA 状态，并运行系统级诊断，切回聚合并将故障部件退回给 NetApp ，如套件随附的 RMA 说明所述。</block>
   <block id="e868d163eb8c93826e8f9ef7d7b0613e" category="list-text">下一步取决于您的系统配置。</block>
-  <block id="6561961e36dc0d672367014bb35814b0" category="inline-link-macro">" 正在完成更换过程</block>
-  <block id="65f64a7bdb4d22c25178d4fda4e009b6" category="list-text">转至 <block ref="c0ff5fd751abc2ff7939ebc71dae2951" category="inline-link-macro-rx"></block>。</block>
   <block id="17c7d5cfc1341d03fca63b7c848b5ad1" category="paragraph">与另一个控制器模块的 HA 对</block>
   <block id="ebb1194e26e6cc8c6c5c749fda017889" category="paragraph">退出维护模式： `halt` 此时将显示 LOADER 提示符。</block>
   <block id="ce1f5653e10bc9b34ef489b3cf886866" category="paragraph">安装新机箱后，应运行互连诊断。</block>
@@ -2079,8 +2077,6 @@
   <block id="159b1c0ea96f8dc44e01227e342600c4" category="image-alt">DRW 2600 nvmem 电池已拔下</block>
   <block id="9d80f287709beea4f34371644025d541" category="list-text">确认 NVMEM LED 不再亮起。</block>
   <block id="2df619b7d1a08e00bedcc91e7f49e549" category="list-text">重新连接电池连接器。</block>
-  <block id="376b1cae869bbe8ab1cce68fdb30b696" category="inline-link-macro">更换 DIMM</block>
-  <block id="91e13f2779cb51174165fa30eaba7e5b" category="list-text">返回到 <block ref="cf268cc4bc5a73daf7348170b397c07d" category="inline-link-macro-rx"></block> 重新检查此操作步骤的 NVMEM LED 。</block>
   <block id="1037b1c609239a848832f786d5ffba1b" category="image-alt">DRW 2600 DIMM 更换动画 gif</block>
   <block id="3970e41706ca509bbbe93d6bce9c9705" category="paragraph">更换控制器模块中的组件后，将其重新安装到机箱中。</block>
   <block id="600f8e0ee1f13b99f760eb8d7a935559" category="list-text">如果您尚未更换控制器模块上的外盖，请进行更换。</block>
@@ -2146,14 +2142,8 @@
   <block id="6050f7a94074865f0c7eb8f65b5c5a8f" category="cell">控制器冗余</block>
   <block id="21f105a570b6840e0f78f7fef2476046" category="cell">然后使用此操作步骤 ...</block>
   <block id="556696d309aaf81ce29c6a76f8f8a503" category="paragraph">HA 对</block>
-  <block id="91b91feeb88498e7be1c10bbbb6db4c2" category="inline-link-macro">验证 HA 系统上的系统 ID 更改</block>
-  <block id="4e87b3c0f415f46d36e8fa6bd32a6ff7" category="paragraph"><block ref="4e87b3c0f415f46d36e8fa6bd32a6ff7" category="inline-link-macro-rx"></block></block>
   <block id="d7fb1a4bddb3db62efbcefc0f8162f42" category="paragraph">独立</block>
-  <block id="465740a443e85d455a90494615d629b9" category="inline-link-macro">在 ONTAP 中的独立系统上手动重新分配系统 ID</block>
-  <block id="7070195bf98baff2e0462461db9cb074" category="paragraph"><block ref="7070195bf98baff2e0462461db9cb074" category="inline-link-macro-rx"></block></block>
   <block id="c35620e4053e83506175fd11f77f79d1" category="paragraph">双节点 MetroCluster 配置</block>
-  <block id="734e28e3c6b715a48c7043347210471e" category="inline-link-macro">在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID</block>
-  <block id="ca5a5e07d656cff35da2184538cfc5fb" category="paragraph"><block ref="ca5a5e07d656cff35da2184538cfc5fb" category="inline-link-macro-rx"></block></block>
   <block id="6b0ffb907f1863f46339c1cee8853799" category="section-title">选项 2 ：在 ONTAP 中的独立系统上手动重新分配系统 ID</block>
   <block id="a68a35a43540dd794ad04d22e6017f00" category="paragraph">在独立系统中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。</block>
   <block id="149765daf2bb4f317cf4bf88eeba26d8" category="admonition">此操作步骤仅适用于采用独立配置的系统。</block>
@@ -2211,8 +2201,6 @@
   <block id="519c55b1abbe70db981fa64fb386a258" category="paragraph"><block ref="519c55b1abbe70db981fa64fb386a258" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c0a9eb11c9962c2eb967f53a4845bf1a" category="paragraph">使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：</block>
   <block id="f2333c38a5002ab3a3ce6f24b2d22d95" category="paragraph"><block ref="f2333c38a5002ab3a3ce6f24b2d22d95" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="dd1dcd1cd7a28bbfc3b5a581b055bce3" category="inline-link-macro">使用缆线将控制器连接到驱动器架</block>
-  <block id="6c9cda13d9d7d9f8f82d912175e78d9b" category="list-text">要为存储布线，请参见 <block ref="42bf816180738dc1660363ee044d9786" category="inline-link-macro-rx"></block></block>
   <block id="6d4bc3cf86318438b709fd5087158d59" category="section-title">选项 2 ：为交换集群布线，统一网络配置</block>
   <block id="afcfe9ab06da740b8b6db896f79a9ba9" category="paragraph">控制器上的管理网络， UTA2 数据网络和管理端口连接到交换机。集群互连端口通过缆线连接到集群互连交换机。</block>
   <block id="65dc5db3d1655dcd2f6bb2520a3cbef6" category="list-text">您可以使用图或分步说明完成控制器和交换机之间的布线：</block>
@@ -2253,9 +2241,6 @@
   <block id="25e9c854cd268404ba760167e55a47b9" category="list-text">控制器 2 端口 0b 连接到堆栈中最后一个驱动器架上的 IOM B 端口 3 。<block ref="1869c18bf4845d129ab70a2555c3fa58" category="inline-image-macro-rx" type="image"></block> 迷你 SAS HD 到迷你 SAS HD 缆线</block>
   <block id="8c2c57baca5559cc6deaa2d149cbcc7e" category="paragraph">如果您有多个驱动器架堆栈，请参见适用于您的驱动器架类型的 _Installation and Cabling Guide_ 。</block>
   <block id="ba9a3cf272ff19e49b8066ab84a2b3dc" category="inline-link-macro">安装和布线</block>
-  <block id="a1770e5cf644990212f313f91eccb2d8" category="paragraph"><block ref="a1770e5cf644990212f313f91eccb2d8" category="inline-link-macro-rx"></block></block>
-  <block id="4402c8b8d6c489ed5617a151ffa90726" category="inline-link-macro">正在完成系统设置和配置</block>
-  <block id="41e876cad607f9363190645026f4f818" category="list-text">要完成系统设置，请参见 <block ref="cf51f79f23f70e62c97013df347c6a0f" category="inline-link-macro-rx"></block></block>
   <block id="a83c5e67d745b0c85b815af3214463cd" category="section-title">选项 1 ：如果启用了网络发现，则完成系统设置</block>
   <block id="d01f82c054ee1a7df429f478c56a204a" category="list-text">打开两个节点的电源开关。</block>
   <block id="347e1a8985d85eefdfec9853c8769148" category="image-alt">DRW 打开 PSU 的电源开关</block>
@@ -2929,7 +2914,6 @@
   <block id="a3e79fff93cae393b9fcd5d08d264b15" category="list-text"><block ref="a3e79fff93cae393b9fcd5d08d264b15" category="inline-link-macro-rx"></block></block>
   <block id="bdcac988a0903764d18f7be5086a6f98" category="doc">更换 DIMM - AFF C190</block>
   <block id="70307621ba0045acdea9f2a7c113fa13" category="paragraph">要更换 DIMM ，您需要在控制器模块中找到它们，然后按照特定步骤顺序进行操作。</block>
-  <block id="0a980a0f7131164348aa395168430c19" category="list-text">返回到 <block ref="8d9485b043d2d189d21e80102089dac7" category="inline-link-macro-rx"></block> 重新检查此操作步骤的 NVMEM LED 。</block>
   <block id="9389022fd9667b8163e127e0e02ae432" category="paragraph">更换控制器模块中的组件后，必须将其重新安装到机箱中。</block>
   <block id="3aa65b6dd04ce8c10a11bc203220a807" category="list-text">完成控制器模块的重新安装。控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。</block>
   <block id="17268c6ef2838628d8d6888cfbe7b25b" category="paragraph">执行交还： `storage failover giveback -ofnode _replacement_node_name_` * 注： * 如果禁用了自动交还，请使用 storage failover modify 命令重新启用它。</block>
@@ -3758,7 +3742,6 @@
   <block id="bee1f07b307186667ad005db1d21960d" category="list-text">如果要安装另一个 X91148A 模块进行存储，请对插槽 7 中的模块重复执行拆卸和安装步骤。</block>
   <block id="b8e74ae60e8625fb6ed112fc8da2a6b9" category="list-text">从配对节点交还节点： `storage failover giveback -ofnode _target_node_name_`</block>
   <block id="9744ad3e63fafdf6d52c1d0eeed92d7d" category="inline-link">热添加 NS224 驱动器架</block>
-  <block id="da6e337f5926cf03f06bcd1c9fb63113" category="list-text">安装 NS224 磁盘架并为其布线，如中所述<block ref="a5aecdce285751c9f856700f4feb4311" category="inline-link-rx"></block>。</block>
   <block id="db1a20a219feecb8c4e586f86bdc60b7" category="doc">完成还原和更换过程— AFF A700 和 FAS9000</block>
   <block id="e52767baff8c3db31584a507f789bcc4" category="paragraph">问题描述以下命令： `node ：： &gt; cluster ha modify -configured true`</block>
   <block id="48bd6994053d62f49f387a72052d180a" category="paragraph">`node ：： &gt; storage failover modify -node node0 -enabled true`</block>
@@ -3862,7 +3845,6 @@
   <block id="ebc2b7657690ae02a25495dd970c279d" category="list-text">使用 `ssystem controller slot module show` 命令显示插槽状态。</block>
   <block id="dac273d93724b47a21b755da953f81be" category="paragraph">对于需要更换的缓存模块， NVMe 插槽状态会在屏幕输出中显示 `powed-off` 。</block>
   <block id="9cdb076245d84700443d3aee5a21f0ff" category="inline-link">命令手册页</block>
-  <block id="70241a33e23df22a0f8f997b18ff24a7" category="admonition">请参见<block ref="853257fe46b33572328cc9f35a075f2a" category="inline-link-rx"></block> 有关详细信息，请参见您的 ONTAP 版本。</block>
   <block id="6889e6aea700ddb8ffc126572b96cdca" category="list-text">使用 `ssystem controller slot module insert` 命令将替代缓存模块置于联机状态，如下所示：</block>
   <block id="03ffe1ad6eee59a62bd912b30524dc4f" category="paragraph">以下命令会为 node1 上的插槽 6-2 做好开机准备，并显示一条消息，指出已打开电源：</block>
   <block id="7b4a8a9abbba5d85a58219d1e5163f5b" category="list-text">使用 `ssystem controller slot module show` 命令验证插槽状态。</block>
@@ -3925,7 +3907,6 @@
   <block id="1843827ef03aba05b85ff9846acb4a4f" category="list-text">在 FAS9000 ， AFF A700 和 ASA AFF A700 ， ONTAP 9.8 及更高版本中为 SAS 磁盘架布线：</block>
   <block id="e2da081ec1f9e5df221849d0bca3449a" category="paragraph"><block ref="e2da081ec1f9e5df221849d0bca3449a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dc1949c56b4feff1c4f2d03eb17ee3cb" category="inline-link-macro">安装新系统安装的磁盘架并为其布线—带有 IOM12 模块的磁盘架</block>
-  <block id="2b5a9c03e0a3ef447899ed93ac4917cb" category="paragraph"><block ref="2b5a9c03e0a3ef447899ed93ac4917cb" category="inline-link-macro-rx"></block></block>
   <block id="90a326588028ddcde615038a3974e162" category="paragraph"><block ref="90a326588028ddcde615038a3974e162" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51b3003c067a0d5dfcbcfbc5aab0240d" category="section-title">选项 2 ：在仅运行 ONTAP 9.8 及更高版本的 AFF A700 和 ASA AFF A700 系统中，使用缆线将控制器连接到一个 NS224 驱动器架</block>
   <block id="2335e41d88b4562f66436306d6ba0268" category="paragraph">必须使用缆线将每个控制器连接到运行系统 ONTAP 9.8 或更高版本的 AFF A700 或 ASA AFF A700 上 NS224 驱动器架上的 NSM 模块。</block>
@@ -4144,7 +4125,6 @@
   <block id="d1ac48d4410d6102fa54b8b3405a83e5" category="paragraph"><block ref="d1ac48d4410d6102fa54b8b3405a83e5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9dfe7ca4d480fd4e10a0954286489a0f" category="paragraph">使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。</block>
   <block id="5d86a652667b386e0b98042631990c02" category="paragraph"><block ref="5d86a652667b386e0b98042631990c02" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="564becbb42cc33012e00424619583eca" category="list-text">为存储布线： <block ref="42bf816180738dc1660363ee044d9786" category="inline-link-macro-rx"></block></block>
   <block id="eb9634f2ea796139d7f0aeca3f6ce2d4" category="section-title">选项 2 ：为有交换机集群布线</block>
   <block id="5b2974409018c6d4642074b9be18209d" category="paragraph">控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。集群互连 /HA 端口通过缆线连接到集群 /HA 交换机。</block>
   <block id="f5412d7277a9aad4f1e320bf63f0582b" category="paragraph">使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口连接到集群 /HA 交换机：</block>
@@ -4155,7 +4135,6 @@
   <block id="d49bb9b3f4ea10bb2faedd5805957881" category="image-alt">DRW A320 单磁盘架连接动画 gif</block>
   <block id="fcc21d6aa5ce2f3d80b7b15b3efd7622" category="paragraph">使用缆线将控制器 A 连接到磁盘架 <block ref="97ef6a28616ee1b44c8e319d2e09ad63" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cf09fa2cd4cedb36165538f6f6133b7f" category="paragraph">使用缆线将控制器 B 连接到磁盘架： <block ref="adad54de70c837652052dc8fbe20179a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d183e64634b3038a2447a8af4bc6f415" category="list-text">要完成系统设置，请参见 <block ref="cf51f79f23f70e62c97013df347c6a0f" category="inline-link-macro-rx"></block>。</block>
   <block id="e49f4a89e69b410e9fd76acc797854aa" category="image-alt">DRW A320 2 可通过动画 gif 显示布线</block>
   <block id="1fd24d2bc89f56e2b5b986eb7d944870" category="paragraph">使用缆线将控制器 A 连接到磁盘架： <block ref="dc30c6795d4eccef24ec9e4cbd9f34a9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="64cd25defcb831725e6dbd4eeb07cec0" category="paragraph">使用缆线将控制器 B 连接到磁盘架： <block ref="fcd3de865e51763ca7c18796d9eecca6" category="inline-image-macro-rx" type="image"></block></block>
@@ -5500,7 +5479,6 @@
   <block id="2328259b44c61e074b53206e40c60845" category="paragraph">您可以使用以下动画，插图或写入的步骤来更换启动介质。</block>
   <block id="d77f71cbbb3c8057b08d0dfb49aa5664" category="paragraph">您可以使用以下，插图或写入的步骤从机箱中卸下控制器模块。</block>
   <block id="f4c10aef61f6ce27a93c5212bf85139d" category="list-text">在更换用的控制器模块上，使用动画，插图或写入的步骤打开通风管并从控制器模块中卸下空的提升板：</block>
-  <block id="1f25549d09d9fee6b326b3ae80c2ed1b" category="image-alt">卸下 DRW a400 空提升板</block>
   <block id="467b2bc695ac2ddfea8c36e9a7b57ac2" category="paragraph">您可以使用以下动画，插图或写入的步骤将电源移至更换用的控制器模块。</block>
   <block id="991ae28892a3f5f4d831cdf6dd55ed5a" category="paragraph">您可以使用以下动画，插图或写入步骤将 NVDIMM 电池从受损控制器模块移至更换用的控制器模块。</block>
   <block id="efedd511d0e15af2a88b1af1e665f3f3" category="paragraph">您可以使用以下动画，插图或写入步骤将启动介质从受损控制器模块移至更换控制器模块。</block>
@@ -5627,7 +5605,6 @@
   <block id="ddd1a9511bc4cec117e8b939fbe7f2cc" category="list-text"><block ref="ddd1a9511bc4cec117e8b939fbe7f2cc" category="inline-link-macro-rx"></block></block>
   <block id="5ffba9ed2c673f5145fe25996fc2b0dc" category="summary">本节详细介绍了安装 AFF A800 系统的分步说明。</block>
   <block id="823b36f7fa4cb798d78af7be2bf8aca7" category="doc">详细步骤— AFF A800</block>
-  <block id="09e80812def315f5cdd1c01dcdfeecd6" category="paragraph"><block ref="09e80812def315f5cdd1c01dcdfeecd6" category="inline-link-macro-rx"></block></block>
   <block id="b0e69a1b113b20966641e48d3d36e788" category="doc">快速步骤— AFF A800</block>
   <block id="91a6324d4b829f5094febe4585477532" category="paragraph">如果您的系统采用 MetroCluster IP 配置，请参见<block ref="5cf80fcf55f6ce2ad8515082eb643f93" category="inline-link-rx"></block> 说明。</block>
   <block id="86f44362d6c66d2da3785180e12a0bd3" category="doc">快速步骤— AFF A250</block>
@@ -5894,15 +5871,12 @@
   <block id="dad23827b140b55a3121c86e5b861fad" category="image-alt">DRW a900 移动删除 NVRAM 模块</block>
   <block id="df3566616f23116dab812ba8e95510cb" category="image-alt">DRW a900 删除 NVRAM 模块内容</block>
   <block id="0133a8841f8d283d3a060042f4904613" category="list-text">将 NVRAM 模块安装到机箱中：</block>
-  <block id="d2afd23f9efb1f5de6cadd26fcce1cf5" category="section-title">第 5 步：验证并设置控制器模块的 HA 状态</block>
   <block id="2afb3c10441f511142ed51efdd86c073" category="list-text">在维护模式下，从更换用的控制器模块验证所有组件是否显示相同 `HA` state ： `ha-config show`</block>
   <block id="e4d75425009bc77525096ccae70bd9ac" category="cell">所有组件的 HA 状态均应为 "mccip" 。</block>
   <block id="14d3c29aecf5054de86c0d913b978541" category="paragraph">A MetroCluster FC configuration with four or more nodes</block>
   <block id="a81b41b0ce60920d308c876b3e9b38f1" category="paragraph">安装 MetroCluster IP 配置</block>
   <block id="8d8e1d2c17edc6fe8262408b12b73390" category="list-text">如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller _ha-state_`</block>
   <block id="c36d25abc9dfdbc31228c74f7e654d0c" category="list-text">如果显示的机箱系统状态与您的系统配置不匹配，请为机箱设置 `HA` state ： `ha-config modify chassis _ha-state_`</block>
-  <block id="f95e8e8b229c3aee97b205509f91df66" category="section-title">第 6 步：重新分配磁盘</block>
-  <block id="8672de10e3d8295abd1be60e2569c4c6" category="list-text">保存任何核心转储： `ssystem node run -node local-node-name partner savecore`</block>
   <block id="7285c4012d903a86f08da4d4eb643a35" category="paragraph">请参见<block ref="1c9dcde47ee822b3ac120aae2f296f05" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="2a1253e1eb3f5fea69107948ef4c203d" category="summary">本主题以图形方式说明了从机架安装和布线到初始系统启动的典型系统安装。</block>
   <block id="cb0bd9965128fe9d9c7dc5fe35ba00fa" category="doc">快速步骤— AFF A900</block>
@@ -6545,7 +6519,6 @@
   <block id="507f9f4c8680d2c9a9bcba815a7976e8" category="image-alt">DRW fas8300 交换网络布线</block>
   <block id="56cbc310abb53560871f37318fe0636d" category="image-alt">DRW fas8300 三个 ds224c 磁盘架</block>
   <block id="a28455bf2eecf6cc499c335ee152cd75" category="paragraph">使用以下选项之一关闭或接管受损控制器。</block>
-  <block id="5a503439969930e9e348f79d2b8004d7" category="section-title">第 7 步：还原存储和卷加密功能</block>
   <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">Replace the boot media - FAS500f</block>
   <block id="de2d1282e102972a6af003781e9a5c02" category="paragraph">_SLDIAG ：不存在日志消息。 _</block>
   <block id="3f91c59c59a1243cb3f176daf3c9c054" category="list-text">使节点恢复正常运行。</block>
@@ -6740,7 +6713,6 @@
   <block id="1360261f3d9e17642c609debfd62b1d6" category="admonition">如果您需要或希望冷插拔FlashCache模块、请按照有关更换I/O模块的过程进行操作。</block>
   <block id="fa807167a57a5e7782f90326093319e4" category="list-text">缓存模块必须运行良好、才能被系统识别。如果缓存模块自上次启动以来未正常运行、则无法使用此操作步骤 、必须使用冷插拔操作步骤。</block>
   <block id="bdd8c99ec41c2de3e99ba0a36e04bfbf" category="list-text">在管理权限级别中、准备要删除的目标NVMe插槽、并在系统提示是否继续时回答`y`：`ssystem controller slot module remove -node node_name -slot slot_number`以下命令会准备node1上的插槽6-1以进行删除、并显示一条消息、指出可以安全删除：</block>
-  <block id="e47fa3700d8c8b185b05f4e09285f497" category="admonition">请参见<block ref="7dfdd4167a3eb44ee8af382f653a3ce0" category="inline-link-rx"></block> for your version of ONTAP for more details.</block>
   <block id="68607949342d7df39c7770d809d0a5f2" category="image-alt">DRW 9500-删除闪存</block>
   <block id="5e8d2460689245ee00f6d51f5db543dc" category="paragraph">Terra cotta释放按钮。</block>
   <block id="948a2b625585740c830fda62dae13d97" category="list-text">按下缓存模块正面的 Terra cotta 释放按钮。</block>
@@ -6777,8 +6749,6 @@
   <block id="3b56ab083e8d5c37dcc957efc509182f" category="doc">完成系统还原—FAS9500</block>
   <block id="3f679ad9b20cbb8994ff36e9ce18d58f" category="doc">更换NVRAM模块和/或NVRAM DIMM—FAS9500</block>
   <block id="140a295824b1023b2fcf1ac1414fc56b" category="paragraph">要更换和NVRAM DIMM、您必须从机箱中卸下NVRAM模块、更换模块中发生故障的DIMM、然后重新安装NVRAM模块。</block>
-  <block id="566dc57c04b76274e7168e53e1eea041" category="list-text">受损节点是指要在其中执行维护的节点。</block>
-  <block id="350cecd9af7d98cbf31c22fbd46e60fe" category="list-text">运行状况良好的节点是受损节点的 HA 配对节点。</block>
   <block id="821b1e6be57f410ab68ac2071fc04df4" category="doc">更换包含NVRAM11电池的目标控制电源模块- FAS9 500</block>
   <block id="1aa73ef56da88752323de5876f9b3750" category="doc">更换电源—FAS9500</block>
   <block id="70ebba1c8f978f26a3ed9799176dd8a9" category="doc">更换控制器模块—FAS9500</block>
@@ -6840,17 +6810,6 @@
   <block id="f8cc7bd538c729e18dab57ecfd18b69e" category="video-title">动画-更换NVRAM模块</block>
   <block id="9b191eaf82da57faf3acb37f96f84ca6" category="image-alt">DRW 9500移动删除NVRAM模块</block>
   <block id="1b75d6028af1363f62eb9a45010f31c4" category="image-alt">DRW 9500-删除NVRAM模块内容</block>
-  <block id="0855873e0fa5bed2d0067d6acae6c0df" category="paragraph">您必须在启动替代节点时确认系统 ID 更改，然后确认更改是否已实施。</block>
-  <block id="93a4033a981ca86f17e1c02656473521" category="list-text">如果替代节点处于维护模式(显示`*&gt;`提示符)、请退出维护模式并转到加载程序提示符：`halt`</block>
-  <block id="fbb9a853512346feaa4279f18e3efe8c" category="list-text">等待更换节点控制台上显示`waiting for giveback...`消息、然后从运行状况良好的节点上、验证是否已自动分配新的配对系统ID：`storage failover show`</block>
-  <block id="2675f497966bc5cad0cdd88dbe6eab31" category="list-text">等待`savecore`命令完成、然后再发出交还。</block>
-  <block id="80de24e4482214278771d2b0f3142427" category="paragraph">您可以输入以下命令来监控`savecore`命令的进度：`ssystem node run -node local-node-name partner savecore -s`</block>
-  <block id="7a18402f95cb86527db24f56d6baec40" category="list-text">从运行正常的节点中，交还已更换节点的存储： `storage failover giveback -ofnode replacement_node_name`</block>
-  <block id="3217c14b22c3695ed301b94539bd2dbb" category="paragraph">替代节点将收回其存储并完成启动。</block>
-  <block id="8a6fbf23d593cc1be4de4068cb3eeee1" category="paragraph">storage failover show 命令的输出不应包含 System ID changed on partner 消息。</block>
-  <block id="18963b05f9f3bc779f544c26aae06ab9" category="paragraph">属于替代节点的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</block>
-  <block id="cfe787a999b8c200091f805ad9426e24" category="list-text">替代节点是灾难站点上磁盘的当前所有者。</block>
-  <block id="7c5a57d1d4b3b589da7f755562ad50f8" category="paragraph">请参见<block ref="4b1c17d30e94cc8d68adcd4265a76547" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="2c2b9a83665e5336275a4320efcb9a16" category="image-alt">DRW 9500-删除PCM</block>
   <block id="31006bbd619d2a77e6fe8ac85bee0cc0" category="image-alt">DRW 9500PCM已打开</block>
   <block id="65b7d00d22ce12162c084039ae28de63" category="video-title">动画-更换RTC电池</block>
@@ -7222,8 +7181,6 @@
   <block id="4efb7705f98005596f065e30ddf32363" category="section-title">采用多路径HA配置且具有一个多架堆栈的内部存储平台</block>
   <block id="835ecba5eb095440eda54c2f50f1ef89" category="paragraph">如果您有HA对、ONTAP 会将系统配置显示为`m多路径HA`。如果您使用的是单控制器配置、则ONTAP 会将系统配置显示为`m多路径`。</block>
   <block id="3f9904dabd6885ddf815902aade7d320" category="sidebar">使用内部存储的平台的布线工作表和示例</block>
-  <block id="e3fd55f400cc227fbbc7c777c0679db1" category="list-text">如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</block>
-  <block id="c51e6cbbe594b20461edba0d83817fce" category="list-text">重新启动BMC、然后重新启动节点：</block>
   <block id="e727b00944f81e1d0a95c12886ac4641" category="inline-link-macro">归档</block>
   <block id="97a6415da8202d0321d49b92f019e7b1" category="paragraph">您可以使用这些链接查找其他 AFF 和 FAS 平台的文档。有关硬件支持已结束的AFF 和FAS 系统的文档、可在中供客户使用 <block ref="5e4606a12c7b193a6ccb23ff349575d7" category="inline-link-macro-rx"></block>。</block>
   <block id="1c91d351b95f21de02a1d9bc700d73d0" category="list-text"><block ref="1c91d351b95f21de02a1d9bc700d73d0" category="inline-link-macro-rx"></block></block>
@@ -7312,7 +7269,6 @@
   <block id="3cea6cd019ee970febca58bfe050e1cb" category="list-text">在替代控制器上的LOADER提示符处、启动控制器、如果系统因系统ID不匹配而提示您覆盖系统ID、请输入y。</block>
   <block id="40ef2970d7d205d6f0ba4ecddaec7b51" category="list-text">等待交还...控制器的控制台上会显示一条消息、其中包含更换模块、然后、在运行正常的控制器上、验证是否已自动分配新的配对系统ID：<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block></block>
   <block id="e8060bae9316148ae38460dbb2356f26" category="paragraph">属于替代控制器的磁盘应显示新的系统 ID 。在以下示例中、node1拥有的磁盘现在显示新的系统ID 151759706：</block>
-  <block id="209f885dfe9e7d41b82f04b945d68576" category="list-text">如果启用了存储加密、则必须为"**"</block>
   <block id="929bfee1ef6e5f44f83a22a0ee585e88" category="paragraph">When a fan fails, the system logs a warning message to the system console indicating which fan failed.</block>
   <block id="3f39e3eb27d53c3293d829964b0aec99" category="list-text">确保磁盘架中的两个NSM模块运行相同版本的固件：0200或更高版本。</block>
   <block id="c4a176fcfed8ad262bd0a9b82f87a961" category="paragraph">When a DIMM is faulty, the system logs a warning message to the system console indicating which DIMM is faulty.</block>
@@ -7347,7 +7303,6 @@
   <block id="0a2404583aab34668c1c8004bddabbaa" category="list-text">选择选项1、<block ref="e6922a1788401c5ef431db829a2c387b" prefix=" " category="inline-code"></block></block>
   <block id="c566d4828cd295258aa8097a90880602" category="open-title">选项2：使用外部管理器</block>
   <block id="0a05a9975c9259ea331a85366e41d3ce" category="list-text">选择选项11、<block ref="0dd518498ab98fe1fd543910856e6153" prefix=" " category="inline-code"></block>。</block>
-  <block id="453b94e2cc94c331c590159bf6b2d21e" category="admonition">管理证书信息完成后、节点将返回到启动菜单。</block>
   <block id="a5462faa34b6cf806cb49f24d84b02a7" category="list-text">如果您的系统配置为在40 GbE NIC上支持10 GbE集群互连和数据连接、请在维护模式下使用nicadmin convert命令将这些端口转换为10 GbE连接。请参见<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="55c99fae85fce446adbb5ceb895cf55e" category="paragraph">更换机箱时、要卸下电源、需要先关闭、断开连接、然后再从旧机箱背面卸下四个电源。</block>
   <block id="c56809d9cff2ea190c6fb9d67e804b42" category="paragraph">更换机箱时、必须卸下机箱正面的六个风扇模块。</block>
@@ -7364,7 +7319,6 @@
   <block id="de9724762d060c871892fe8183e35056" category="image-alt">DRW a900 NS224两个磁盘架布线IEOPS 938</block>
   <block id="6f189db9f1b1dfc1be838de48c805168" category="video-title">动画—设置NVMe驱动器架ID</block>
   <block id="c81415a6ed927280dac360edb5000bc6" category="image-alt">DRW a900启动IEOPS941</block>
-  <block id="7a0118bb1b2d6a800462ca70c23a1876" category="image-alt">DRW 9000缆线控制台交换机控制器IEOPS 953</block>
   <block id="1f583998630e94806bf5b9e059227dd4" category="paragraph"><block ref="1f583998630e94806bf5b9e059227dd4" category="inline-link-rx"></block></block>
   <block id="9b0500b65158795cfc5abb2becae4e80" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 以找到缆线并确定其用途。</block>
   <block id="192e7ded6d54e3ac04596dc33b9c67cf" category="paragraph">您可以将I/O模块添加到系统中的空模块插槽中。</block>
@@ -7375,7 +7329,6 @@
   <block id="15247f97704eb964c60d179c321c1370" category="list-text">在提示符处、粘贴输出中的备份密钥数据<block ref="6b6f6c1a8bc1fede794cda92ed140953" prefix=" " category="inline-code"></block> 或<block ref="32ba7af89b7557f6e3e6d80a922080ce" prefix=" " category="inline-code"></block> 命令：</block>
   <block id="8726b2ef66dc0e734b269a3191597e11" category="paragraph">--------------- 开始备份———————</block>
   <block id="328f6eaec3741c1d0f9558d6c40c1da4" category="paragraph">QABWIETLESBCbG9iAAAAAAAAAAAAAAAAAAEAAAACADID+bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvOlH0AAAMH7qDLIWAH1DBZ12PiVdy9ATSFMT0C0TlYAFASS4ADAAAAAAAAQAAAAAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQ。。。H4nPQM0nrDRYRa9SCv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAA</block>
-  <block id="26eef74dee0269079c9b6b002eeddb34" category="admonition">节点将返回到启动菜单。</block>
   <block id="1e4d7cab6ce42bcab6973efa42fc0b2c" category="list-text">运行安全密钥管理器板载同步：</block>
   <block id="377fca3965b001b9bcc8843e1b287fe7" category="list-text">如果以前设置了MSID、并且此MSID是在此操作步骤 开头捕获的、请重置此MSID：</block>
   <block id="a967d40ef247a202e5f1ce7a9626a0ca" category="list-text">使用为FIPS驱动器或SED分配数据身份验证密钥<block ref="8fc59e93e98503b6d1b1230269b06192" prefix=" " category="inline-code"></block> 命令：</block>
@@ -7397,4 +7350,37 @@
   <block id="3a5f51ab8f29522107285c1bd243bf95" category="paragraph">如果SAS2/SAS3混合堆栈支持字段未显示在输出中或其值为"none"、则表示您的系统不支持混合堆栈。</block>
   <block id="b57b9debcc2348af5e609f2c38ecae74" category="paragraph">如果SAS2/SAS3 Mixed Stack Support字段中显示"all"、则表示您的系统支持混合堆栈。</block>
   <block id="7a2d660ca9e94c940789a57658eb9268" category="paragraph">如果SAS2/SAS3 Mixed Stack Support字段中显示"Bree-Attached "、则只有当存储架通过ATTO FibreBridge连接时、您的系统才支持混合堆栈。</block>
+  <block id="4a9a79dbcdff2c804e887801277bb57c" category="list-text">Cable your storage: <block ref="64b4bebcc285271f3157ecc735b0c062" category="inline-xref-macro-rx"></block></block>
+  <block id="e90d1c109a9cd8d68a357882d5cf925c" category="list-text">To complete setting up your system, see <block ref="84c1e7f35fa076545c5f4c4417de33e1" category="inline-xref-macro-rx"></block></block>
+  <block id="d12db64c0cb5cb862afbde49d98d6f25" category="inline-link-macro">正在完成更换过程</block>
+  <block id="e739fb18db4795dd1e2cea8f3c5244c3" category="list-text">转至 <block ref="56c57196a2457d200e49164377b65ba5" category="inline-link-macro-rx"></block>。</block>
+  <block id="ba9fde9925258d03950e9c2d180f665c" category="image-alt">DRW A400更换启动介质IEOPS 1007</block>
+  <block id="e7f3c0051e6bc5cbd205f59b35151985" category="inline-image-macro">宽度= 500像素</block>
+  <block id="6a226d8716b094e1702259265b496684" category="paragraph"><block ref="6a226d8716b094e1702259265b496684" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="afe794b290a5da51dd8b580fadd2b035" category="image-alt">DRW A400更换夹层卡IEOPS 1006</block>
+  <block id="a7f924c2147b80d349701c702d7f091f" category="image-alt">DRW a400空提升板删除IEOPS 1002</block>
+  <block id="54c5909d12d5c473924ce9b2c856a68d" category="image-alt">DRW A400 NVDIMM电池IEOPS 1004</block>
+  <block id="947bc8320a7df1722adcc49a6bdc81ba" category="image-alt">DRW A400更换PCIe卡IEOPS 1008</block>
+  <block id="85445cdcf89edd32e9cf4cb8554898a3" category="image-alt">DRW A400更换NVDIMM DIMM IEOPS 1009</block>
+  <block id="f7e6cca62df33f4887013e8daaa9e77d" category="image-alt">DRW A400 RTC电池IEOPS 1003</block>
+  <block id="f5a5a95a5282486c3989ed932401b693" category="image-alt">DRW A900缆线控制台交换机控制器IEOPS 953</block>
+  <block id="0ea0d47e034118a7f063c35eaf67ebd2" category="list-text">如果启用了存储加密、则必须还原功能。</block>
+  <block id="718ea359d9cc2d2bff619909d16ec537" category="admonition">控制器将返回到启动菜单。</block>
+  <block id="a9cbabd3f42c5ad7f4796dbf5e384b08" category="list-text">将控制器启动至启动菜单。</block>
+  <block id="1e37c9a4ea44b0a302091f02c74564c1" category="admonition">管理证书信息完成后、控制器将返回到启动菜单。</block>
+  <block id="34dbbed571bcfe30f4b9897172116b74" category="list-text">To cable your storage, see <block ref="4261ea2b75c295a1978f7924667f1c11" category="inline-xref-macro-rx"></block></block>
+  <block id="24ed59b86428c96c86204227163206c0" category="paragraph"><block ref="24ed59b86428c96c86204227163206c0" category="inline-link-rx"></block></block>
+  <block id="90d49fcc83418b049803a1b2081f3c6b" category="list-text">To complete setting up your system, see <block ref="53346fef0c147b551f530d05bbad2e41" category="inline-xref-macro-rx"></block></block>
+  <block id="14fa1a86493af188cbb574d402b31f1b" category="list-text">返回到 <block ref="c67cdb63ab5b46180d9910dcb0f03689" category="inline-xref-macro-rx"></block> 在此操作步骤 中重新检查NVMEM LED。</block>
+  <block id="ba17e519b189ae10cd004d12dcc5e44d" category="paragraph"><block ref="751c01f8467f96987ff97e3a647e9973" category="inline-xref-macro-rx"></block></block>
+  <block id="c1918f58421ab69768df267ff2412c99" category="paragraph"><block ref="0b030be2689b90a40f49c456c91f18ec" category="inline-xref-macro-rx"></block></block>
+  <block id="b102c1828cf53d9df33f622c2208da4c" category="paragraph"><block ref="6ac3340c69a46ee235155eba76c461d6" category="inline-xref-macro-rx"></block></block>
+  <block id="68495e0db11cd8c3fcd536c93ecb150b" category="list-text">Install and cable your NS224 shelves, as described in<block ref="8b1d41e5fd14f554e8b3490e0dfd47ae" category="inline-link-rx"></block>。</block>
+  <block id="d034ad76bb5b20c4f0a1790c3665c3b2" category="paragraph"><block ref="d034ad76bb5b20c4f0a1790c3665c3b2" category="inline-link-rx"></block></block>
+  <block id="7be2f40216e9676314a384c650694fed" category="admonition">请参见<block ref="17d46f7a995ead494ec7b2eb9caffda8" category="inline-link-rx"></block> for your version of ONTAP for more details.</block>
+  <block id="1fad4d8ec174b60255a8febb2707e048" category="paragraph"><block ref="1fad4d8ec174b60255a8febb2707e048" category="inline-link-rx"></block></block>
+  <block id="8427b7c5bd63cec67b7bb2edba538972" category="list-text">重新启动节点：</block>
+  <block id="8c2c8bc4e47d0ed180d7a321a6f45a30" category="paragraph">要更换NVRAM模块、请将其置于机箱中的插槽6中、并按照特定步骤顺序进行操作。</block>
+  <block id="44e91a10c5fb9bc923eb6ca613b41106" category="list-text">按下带字母和编号的凸轮闩锁。</block>
+  <block id="35ed901089030d76b9de29f7bb8d54ce" category="paragraph">凸轮闩锁从机箱中移出。</block>
 </blocks>

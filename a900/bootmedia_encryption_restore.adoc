@@ -10,6 +10,7 @@ summary: 检查环境变量后，您必须完成特定于已启用板载密钥�
 :imagesdir: ../media/
 
 
+[role="lead"]
 检查环境变量后，您必须完成特定于还原板载密钥管理器（ OKM ）， NetApp 存储加密（ NSE ）和 NetApp 卷加密（ NVE ）的步骤。
 
 . 确定应使用哪个部分还原 OKM ， NSE 或 NVE 配置：如果已启用 NSE 或 NVE 以及板载密钥管理器，则必须还原在此操作步骤开头捕获的设置。

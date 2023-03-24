@@ -21,7 +21,6 @@ summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ，
 
 == 第 1 步：关闭受损控制器
 
-[role="lead"]
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
@@ -67,7 +66,6 @@ LOADER 提示符
 
 == 第 2 步：卸下控制器模块
 
-[role="lead"]
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
 
 . 如果您尚未接地，请正确接地。
@@ -145,7 +143,6 @@ image:../media/legend_icon_03.png[""]
 
 == 第 3 步：更换 RTC 电池
 
-[role="lead"]
 要更换 RTC 电池，请在控制器中找到该电池，然后按照特定步骤顺序进行操作。
 
 . 如果您尚未接地，请正确接地。
@@ -185,7 +182,6 @@ NOTE: 从电池架中取出电池时，请注意电池的极性。电池标有�
 
 == 第 4 步：重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期
 
-[role="lead"]
 更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块，重置控制器上的时间和日期，然后启动它。
 
 . 如果尚未关闭通风管或控制器模块盖板，请将其关闭。
@@ -234,5 +230,4 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 
 == 第 5 步：将故障部件退回 NetApp
 
-[role="lead"]
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

@@ -32,7 +32,6 @@ https://hwu.netapp.com["NetApp Hardware Universe"]
 
 == 选项 1 ：将 X91148A 模块作为 NIC 模块添加到插槽已打开的系统中
 
-[role="lead"]
 要在插槽已打开的系统中将 X91148A 模块添加为 NIC 模块，您必须按照特定步骤顺序进行操作。
 
 .步骤
@@ -71,7 +70,6 @@ https://hwu.netapp.com["NetApp Hardware Universe"]
 
 == 选项 2 ：在插槽打开的系统中，将 X91148A 模块作为存储模块添加
 
-[role="lead"]
 要将 X91148A 模块作为存储模块添加到插槽已打开的系统中，您必须按照特定步骤顺序进行操作。
 
 * 此操作步骤假定插槽 3 和 / 或 7 已打开。

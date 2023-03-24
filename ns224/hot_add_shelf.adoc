@@ -17,7 +17,6 @@ summary: 您可以在 HA 对满足特定要求后以及完成适用于 HA 对的
 
 == 热添加的要求
 
-[role="lead"]
 热添加 NS224 驱动器架之前， HA 对必须满足特定要求。
 
 * 您的平台型号和 ONTAP 版本必须支持您要热添加的 NS224 磁盘架和驱动器。
@@ -74,7 +73,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 == 热添加注意事项
 
-[role="lead"]
 在热添加 NS224 驱动器架之前，您应熟悉此操作步骤的最佳实践和相关方面。
 
 * 如果您的 ASA HA 对支持 NS224 磁盘架，则可以使用此操作步骤。
@@ -119,7 +117,6 @@ NOTE: 固件更新可能需要长达 30 分钟。
 
 == 准备热添加
 
-[role="lead"]
 在热添加 NS224 驱动器架之前，您必须完成适用于 HA 对的准备任务。
 
 
@@ -373,7 +370,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 == 安装驱动器架以进行热添加
 
-[role="lead"]
 安装新的 NS224 驱动器架涉及到将磁盘架安装到机架或机柜中，连接电源线（自动打开磁盘架电源），然后设置磁盘架 ID 。
 
 .开始之前
@@ -441,7 +437,6 @@ NOTE: 如果此 ID 闪烁所需时间超过 15 秒，请再次按住此按钮，
 
 == 为驱动器架布线以进行热添加
 
-[role="lead"]
 You cable each NS224 drive shelf you are hot-adding so that each shelf has two connections to each controller module in the HA pair.根据您要热添加的磁盘架数量以及您的平台型号，您可以在控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上使用支持 RoCE 的端口。
 
 
@@ -564,7 +559,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 === 为 FAS500f 或 AFF A250 HA 对的热添加磁盘架布线
 
-[role="lead"]
 如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f 或 AFF A250 HA 对中。
 
 .开始之前
@@ -966,7 +960,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 == 完成热添加
 
-[role="lead"]
 如果在准备 NS224 驱动器架热添加时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
 
 .开始之前

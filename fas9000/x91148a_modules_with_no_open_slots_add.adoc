@@ -27,7 +27,6 @@ https://hwu.netapp.com["NetApp Hardware Universe"]
 
 == 选项 1 ：在没有打开插槽的系统中，将 X91148A 模块作为 NIC 模块添加
 
-[role="lead"]
 要在已完全填充的系统中安装一个或多个 X91148A NIC 模块，您必须删除系统中的一个或多个现有 NIC 或存储模块。
 
 .步骤
@@ -99,7 +98,6 @@ I/O 凸轮闩锁完全解锁
 
 == 选项 2 ：在没有空插槽的系统中将 X91148A 模块添加为存储模块
 
-[role="lead"]
 要在已完全填充的系统中安装一个或多个 X91148A 存储模块，您必须删除系统中的一个或多个现有 NIC 或存储模块。
 
 * 此操作步骤假定您将 X91148A 模块安装到插槽 3 和 / 或 7 中。
@@ -166,5 +164,5 @@ I/O 凸轮闩锁完全解锁
 . 从配对节点交还节点： `storage failover giveback -ofnode _target_node_name_`
 . 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
 . 对控制器 B 重复上述步骤
-. 安装 NS224 磁盘架并为其布线，如中所述 https://docs.netapp.com/platstor/topic/com.netapp.doc.hw-ds-nvme-hotadd/GUID-B215753F-F3E6-4FA0-A1E1-B9390B19AD94.html["热添加 NS224 驱动器架"]。
+. Install and cable your NS224 shelves, as described in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["热添加 NS224 驱动器架"]。
 

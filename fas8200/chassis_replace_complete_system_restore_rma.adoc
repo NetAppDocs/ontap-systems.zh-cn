@@ -44,7 +44,7 @@ HA 状态的值可以是以下值之一： `ha` *** `mcc` *** `mcc-2n` *** `mCCI
 一种独立配置
  a| 
 .. 退出维护模式： `halt`
-.. 转至 link:chassis_replace.html["" 正在完成更换过程"]。
+.. 转至 link:chassis-replace-move-hardware.html["正在完成更换过程"]。
 
 
 

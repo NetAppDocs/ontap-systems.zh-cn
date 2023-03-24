@@ -10,7 +10,7 @@ summary: 启动介质存储系统在启动时使用的一组主文件和二级�
 :imagesdir: ../media/
 
 
-[role="include"]
+[role="lead include"]
 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。
 
 You must have a USB flash drive, formatted to FAT32, with the appropriate amount of storage to hold the `image_xxx.tgz`.

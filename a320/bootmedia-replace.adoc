@@ -49,7 +49,6 @@ image::../media/drw_a320_controller_remove_animated_gif.png[DRW A320 控制器�
 
 == 第 2 步：更换启动介质
 
-[role="lead"]
 您必须在控制器模块中找到启动介质，然后按照说明进行更换。
 
 . 打开通风管，并使用下图或控制器模块上的 FRU 示意图找到启动介质：
@@ -83,7 +82,6 @@ image::../media/drw_a320_boot_media_replace_animated_gif.png[DRW A320 启动介�
 
 == 第 3 步：使用 USB 闪存驱动器将启动映像传输到启动介质
 
-[role="lead"]
 您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。
 
 * 您必须具有一个 USB 闪存驱动器，该驱动器已格式化为 MBR/FAT32 ，并且容量至少为 4 GB

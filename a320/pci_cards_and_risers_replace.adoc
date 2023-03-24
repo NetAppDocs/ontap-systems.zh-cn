@@ -77,7 +77,6 @@ LOADER 提示符
 
 == 第 2 步：卸下控制器模块
 
-[role="lead"]
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
 . 如果您尚未接地，请正确接地。
@@ -113,7 +112,6 @@ image::../media/drw_a320_controller_remove_animated_gif.png[DRW A320 控制器�
 
 == 第 3 步：更换 PCIe 卡
 
-[role="lead"]
 您必须从控制器模块中卸下包含故障 PCIe 卡的 PCIe 提升板，从提升板中卸下故障 PCIe 卡，在提升板中安装替代 PCIe 卡，然后将此提升板重新安装到控制器模块中。
 
 image::../media/drw_a320_pci_card_replace_animated_gif.png[DRW A320 PCI 卡更换动画 gif]
@@ -149,7 +147,6 @@ image::../media/drw_a320_pci_card_replace_animated_gif.png[DRW A320 PCI 卡更�
 
 == 9 月 4 日：安装控制器模块
 
-[role="lead"]
 更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
 
 . 如果尚未关闭控制器模块后部的通风管，请将盖板重新安装到 PCIe 卡上。
@@ -191,7 +188,6 @@ NOTE: 锁定机制臂滑入机箱。
 
 == Step 5: Restore the controller module to operation
 
-[role="lead"]
 完成诊断后，您必须重新对系统进行配置，交还控制器模块，然后重新启用自动交还。
 
 . 根据需要重新对系统进行布线。
@@ -206,5 +202,4 @@ NOTE: 锁定机制臂滑入机箱。
 
 == 第 6 步：将故障部件退回 NetApp
 
-[role="lead"]
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

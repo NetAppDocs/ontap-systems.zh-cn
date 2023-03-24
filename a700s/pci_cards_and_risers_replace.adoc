@@ -21,7 +21,6 @@ summary: 要更换 PCIe 卡，您必须断开与提升板中卡的缆线连接�
 
 == 第 1 步：关闭受损控制器
 
-[role="lead"]
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
@@ -67,7 +66,6 @@ LOADER 提示符
 
 == 第 2 步：卸下控制器模块
 
-[role="lead"]
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
 
 . 如果您尚未接地，请正确接地。
@@ -145,7 +143,6 @@ image:../media/legend_icon_03.png[""]
 
 == 第 3 步：更换 PCIe 卡
 
-[role="lead"]
 要更换 PCIe 卡，您必须从目标提升板中 PCIe 卡上的端口上卸下布线和所有 SFP ，从控制器模块中卸下提升板，卸下并更换 PCIe 卡，重新安装提升板并重新对其进行布线。
 
 . 如果您尚未接地，请正确接地。
@@ -228,7 +225,6 @@ NOTE: 确保此卡完全，正对着提升板插槽。
 
 == 第 4 步：重新安装控制器模块
 
-[role="lead"]
 更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块并启动它。
 
 . 如果您尚未接地，请正确接地。
@@ -300,5 +296,4 @@ NOTE: 请务必在完成转换后退出维护模式。
 
 == 第 5 步：将故障部件退回 NetApp
 
-[role="lead"]
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

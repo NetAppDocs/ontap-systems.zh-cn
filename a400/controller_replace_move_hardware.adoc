@@ -48,7 +48,7 @@ image:../media/drw_A400_Remove_controller.png[""]
 video::49053752-e813-4c15-a917-ab190147fa6e[panopto]
 
 
-image::../media/drw_a400_empty_riser_remove.png[卸下 DRW a400 空提升板]
+image::../media/drw_a400_empty_riser_remove_IEOPS-1002.svg[DRW a400空提升板删除IEOPS 1002]
 
 . 将通风管两侧的锁定片朝控制器模块中间按压。
 . 将通风管滑向控制器模块的背面，然后将其向上旋转到完全打开的位置。
@@ -98,7 +98,7 @@ NOTE: 为避免损坏内部连接器，请勿在将电源滑入系统时用力�
 
 .动画-移动NVDIMM电池
 video::94d115b2-b02a-4234-805c-aad9012f204c[panopto]
-image::../media/drw_A400_nvdimm-batt.png[DRW A400 NVDIMM 电池]
+image::../media/drw_A400_nvdimm-batt_IEOPS-1004.svg[DRW A400 NVDIMM电池IEOPS 1004]
 
 . 打开通风管：
 +
@@ -127,7 +127,7 @@ NOTE: 除非系统指示，否则请勿将电池缆线重新插入主板。
 
 .动画—移动启动介质
 video::2a14099c-85de-4a84-867c-aad9012efac8[panopto]
-image::../media/drw_A400_Replace-boot_media.png[DRW A400 更换启动介质]
+image::../media/drw_A400_Replace-boot_media_IEOPS-1007.svg[DRW A400更换启动介质IEOPS 1007]
 
 . 从控制器模块中找到并取出启动介质：
 +
@@ -165,7 +165,7 @@ video::f4ee1d4d-6029-4fe6-a063-aad9012f170b[panopto]
 
 .动画-移动夹层卡和提升板3
 video::b0c3b575-3434-4e00-a421-aad9012f2e9e[panopto]
-image::../media/drw_A400_Replace-PCIe-cards.png[DRW A400 更换 PCIe 卡]
+image::../media/drw_A400_Replace-PCIe-cards_IEOPS-1008.svg[DRW A400更换PCIe卡IEOPS 1008]
 
 . 将受损控制器模块中的一个和两个 PCIe 提升板移至替代控制器模块：
 +
@@ -206,7 +206,7 @@ image::../media/drw_A400_Replace-PCIe-cards.png[DRW A400 更换 PCIe 卡]
 
 .动画-移动DIMM
 video::717b52fa-f236-4f3d-b07d-aad9012f51a3[panopto]
-image::../media/drw_A400_Replace-NVDIMM-DIMM.png[DRW A400 更换 NVDIMM DIMM]
+image::../media/drw_A400_Replace-NVDIMM-DIMM_IEOPS-1009.svg[DRW A400更换NVDIMM DIMM IEOPS 1009]
 
 . 找到控制器模块上的 DIMM 。
 . 记下插槽中 DIMM 的方向，以便可以按正确的方向将 DIMM 插入更换用的控制器模块中。

@@ -32,7 +32,6 @@ NOTE: 本指南中介绍的有关控制器插槽编号规则、磁盘架到磁�
 
 == 配置规则
 
-[role="lead"]
 特定类型的HA对和单控制器配置支持具有IOM12模块的磁盘架。
 
 
@@ -59,7 +58,6 @@ NOTE: 此内容不会介绍FAS25XX平台。
 
 == 控制器插槽编号规则
 
-[role="lead"]
 为了在所有受支持的 HA 对和单控制器配置中应用布线规则，我们会使用控制器插槽编号约定。
 
 * 对于所有 HA 对和单控制器配置，以下情况适用：
@@ -84,7 +82,6 @@ image::../media/slot0_rules.png[插槽 0 规则]
 
 == 磁盘架到磁盘架连接规则
 
-[role="lead"]
 如果一个磁盘架堆栈中有多个磁盘架，则这些磁盘架会使用适用的 `standard` 或 `double-wide` 磁盘架到磁盘架布线通过每个 SAS 域（ IOM A 和 IOM B ）彼此连接。使用 `standard` 或 `double-wide` 磁盘架到磁盘架布线取决于您的配置。
 
 
@@ -121,7 +118,6 @@ image::../media/drw_shelf_to_shelf_double_wide.gif[DRW 磁盘架到磁盘架的�
 
 == 控制器到堆栈的连接规则
 
-[role="lead"]
 您可以通过了解SAS磁盘架使用基于软件的磁盘所有权、控制器端口A/C和B/D如何连接到堆栈来正确地将SAS连接从HA对或单控制器配置中的每个控制器连接到每个堆栈。 如何将控制器端口A/C和B/D组织成端口对、以及具有内部存储的平台如何将其控制器端口连接到堆栈。
 
 
@@ -280,7 +276,6 @@ image::../media/drw_fas2600_mpha_domain_example.png[DRW fas2600 mpha 域示例]
 
 == 迷你 SAS HD SAS 光缆规则
 
-[role="lead"]
 您可以使用迷你 SAS HD SAS 光缆—带有迷你 SAS HD 到迷你 SAS HD 连接器的多模式有源光缆（ AOC ）缆线和带有迷你 SAS HD 到 LC 连接器的多模式（ OM4 ）分支缆线—为某些配置（其中磁盘架带有 IOM12 模块）实现远程 SAS 连接。
 
 * 您的 ONTAP 平台和版本必须支持使用迷你 SAS HD SAS 光缆：带迷你 SAS HD 到迷你 SAS HD 连接器的多模式活动光缆（ AOC ）缆线和带迷你 SAS HD 到 LC 连接器的多模式（ OM4 ）分支缆线。

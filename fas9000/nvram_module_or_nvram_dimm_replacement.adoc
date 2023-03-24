@@ -32,14 +32,12 @@ NVRAM 模块由 NVRAM10 和 DIMM 组成，每个 NVRAM 模块最多包含两个 
 
 == 第 1 步：关闭受损控制器
 
-[role="lead"]
 使用以下选项之一关闭或接管受损控制器。
 
 [role="tabbed-block"]
 ====
 .选项 1 ：大多数系统
 --
-[role="lead"]
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 .关于此任务
@@ -95,7 +93,6 @@ LOADER 提示符
 --
 .选项2：控制器位于双节点MetroCluster 中
 --
-[role="lead"]
 要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 .关于此任务
@@ -194,7 +191,6 @@ mcc1A::> metrocluster operation show
 
 == 第 2 步：更换 NVRAM 模块
 
-[role="lead"]
 要更换 NVRAM 模块，请在机箱的插槽 6 中找到该模块，然后按照特定步骤顺序进行操作。
 
 .步骤
@@ -299,7 +295,6 @@ DIMM 和 DIMM 弹出器卡舌
 
 == 第 3 步：更换 NVRAM DIMM
 
-[role="lead"]
 要更换 NVRAM 模块中的 NVRAM DIMM ，您必须卸下 NVRAM 模块，打开该模块，然后更换目标 DIMM 。
 
 .步骤
@@ -373,7 +368,6 @@ DIMM 和 DIMM 弹出器卡舌
 
 == 第 4 步：更换 FRU 后重新启动控制器
 
-[role="lead"]
 更换 FRU 后，必须重新启动控制器模块。
 
 .步骤
@@ -384,7 +378,6 @@ DIMM 和 DIMM 弹出器卡舌
 
 == 第 5 步：重新分配磁盘
 
-[role="lead"]
 根据您使用的是 HA 对还是双节点 MetroCluster 配置，您必须验证是否已将磁盘重新分配给新控制器模块，或者手动重新分配磁盘。
 
 有关如何将磁盘重新分配给新控制器的说明，请选择以下选项之一。
@@ -394,7 +387,6 @@ DIMM 和 DIMM 弹出器卡舌
 .选项 1 ：验证 ID （ HA 对）
 --
 .Verify the system ID change on an HA system
-[role="lead"]
 您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
 
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
@@ -515,7 +507,6 @@ dr-group-id            cluster node           configuration-state
 .选项 2 ：重新分配 ID （ MetroCluster 配置）
 --
 .在双节点MetroCluster 配置中重新分配系统ID
-[role="lead"]
 在运行 ONTAP 的双节点 MetroCluster 配置中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。
 
 .关于此任务
@@ -643,7 +634,6 @@ dr-group-id            cluster node           configuration-state
 
 == 第 6 步：还原存储和卷加密功能
 
-[role="lead"]
 对于先前配置为使用存储或卷加密的存储系统、您必须执行其他步骤以提供无中断加密功能。You can skip this task on storage systems that do not have Storage or Volume Encryption enabled.
 
 
@@ -663,5 +653,4 @@ NOTE: 更换DIMM时不需要执行此步骤。
 
 == 第 7 步：将故障部件退回 NetApp
 
-[role="lead"]
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
