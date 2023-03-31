@@ -1,0 +1,34 @@
+---
+permalink: c400/install-setup.html 
+sidebar: sidebar 
+keywords: aff c400, install, setup, initial configuration 
+summary: 安装和设置系统。 
+---
+= 从此处开始：选择您的安装和设置体验
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于大多数配置，您可以从不同的内容格式中进行选择。
+
+* link:../c400/install-quick-guide.html["快速步骤"]
++
+一份可打印的 PDF 分步说明，其中包含指向其他内容的实时链接。
+
+* link:../c400/install-videos.html["视频步骤"]
++
+视频分步说明。
+
+* link:../c400/install-detailed-guide.html["详细步骤"]
++
+联机分步说明，其中包含指向其他内容的实时链接。
+
+
+
+有关 MetroCluster 配置，请参见：
+
+* https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html["安装 MetroCluster IP 配置"]
+* https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html["安装 MetroCluster 光纤连接配置"]
+

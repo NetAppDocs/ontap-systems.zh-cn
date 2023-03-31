@@ -1,0 +1,30 @@
+---
+permalink: a150/install-setup.html 
+sidebar: sidebar 
+keywords: aff a150, a150, aff, install, setup, initial configuration 
+summary: 安装和设置系统。 
+---
+= 从此处开始：选择您的安装和设置体验
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于大多数配置，您可以从不同的内容格式中进行选择。
+
+* link:../a150/install-quick-guide.html["快速步骤"]
++
+一份可打印的 PDF 分步说明，其中包含指向其他内容的实时链接。
+
+* link:../a150/install-videos.html["视频步骤"]
++
+视频分步说明。
+
+* link:../a150/install-detailed-guide.html["详细步骤"]
++
+联机分步说明，其中包含指向其他内容的实时链接。
+
+
+
+如果您的系统采用 MetroCluster IP 配置，请参见 https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html["安装 MetroCluster IP 配置"] 说明。

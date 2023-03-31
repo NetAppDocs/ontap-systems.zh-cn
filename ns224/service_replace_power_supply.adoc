@@ -14,25 +14,16 @@ summary: 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 �
 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 驱动器架中的故障电源。
 
 .关于此任务
-* 请勿混用具有不同效率额定值的电源。请始终像这样替换。
+* 请勿混用具有不同效率额定值或不同输入类型的电源。
++
+请始终像这样替换。
+
 * 如果要更换多个电源，则必须一次更换一个，以便磁盘架保持供电。
 * * 最佳实践： * 最佳实践是在从 NSM 模块卸下电源后两分钟内更换电源。
 +
 如果超过这两分钟，磁盘架将继续运行，但 ONTAP 会向控制台发送有关电源降级的消息，直到更换电源为止。
 
-* * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
-
-+
-[NOTE]
-====
-请勿将固件还原到不支持您的磁盘架及其组件的版本。
-
-====
+* 请勿将固件还原到不支持您的磁盘架及其组件的版本。
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
 如果您不知道受影响磁盘架的 `shelf_name` ，请运行 `storage shelf show` 命令。
@@ -44,12 +35,18 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp
 +
 If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
-* 您可以使用以下视频或写入的步骤更换电源。
-+
+
+
+请根据您的PSU类型使用相应的操作步骤 ：AC或DC。
+
+[role="tabbed-block"]
+====
+.选项1：更换交流电源
+--
+要更换交流电源、您可以观看动画或完成以下步骤。
+
 .动画—热插拔NS224驱动器架中的电源
 video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
-
-
 .步骤
 . 正确接地。
 . 以物理方式确定故障电源。
@@ -60,9 +57,9 @@ video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
 +
 电源没有电源开关。
 
-. 卸下故障电源：
+. 卸下电源：
 +
-.. 将凸轮把手旋转到其打开（水平）位置，然后抓住它。
+.. 将手柄向上旋转到其水平位置、然后抓住它。
 .. 用拇指按下蓝色卡舌以释放锁定机制。
 .. 将电源从 NSM 模块中拉出，同时用另一只手支撑其重量。
 
@@ -75,7 +72,7 @@ video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
 
 NOTE: 请勿用力过大，否则可能会损坏内部连接器。
 
-.. 将凸轮把手旋转到关闭位置。
+.. 向下旋转手柄、使其无法正常运行。
 
 
 . 将电源线连接到电源，并使用电源线固定器固定电源线。
@@ -83,3 +80,96 @@ NOTE: 请勿用力过大，否则可能会损坏内部连接器。
 正常运行时，电源的双色 LED 将呈绿色亮起。
 
 
+
+--
+.选项2：更换直流电源
+--
+要更换直流电源、请完成以下步骤。
+
+. 正确接地。
+. 以物理方式确定故障电源。
++
+系统会向系统控制台记录一条警告消息，指示哪个电源出现故障。此外，磁盘架操作员显示面板上的警示（琥珀色） LED 会亮起，故障电源上的双色 LED 会呈红色亮起。
+
+. 断开电源：
++
+下一步中的图和表显示了两个翼形螺钉(项目1)和D-sub直流电源线连接器(项目2)。
+
++
+.. 拧下电源线连接器上的两个翼形螺钉。
+.. 从电源拔下电源线连接器并将其放在一旁。
+
+
+. 卸下电源：
++
+.. 将手柄向上旋转到其水平位置、然后抓住它。
+.. 用拇指按下蓝色卡舌以释放锁定机制。
+.. 将电源从 NSM 模块中拉出，同时用另一只手支撑其重量。
++
+
+NOTE: The power supply is short.从NSM模块中取出时、请始终用双手托住它、以免它从NSM模块中自由转动并给您造成损害。
+
++
+image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[DRW dcpsu remove replace generic IEOPS 788]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["宽度= 10像素"]
+ a| 
+翼形螺钉
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["宽度= 10像素"]
+ a| 
+D-sub直流电源线连接器
+
+
+
+ a| 
+image:../media/legend_icon_03.svg["宽度= 10像素"]
+ a| 
+电源手柄
+
+
+
+ a| 
+image:../media/legend_icon_04.svg["宽度= 10像素"]
+ a| 
+蓝色电源锁定卡舌
+
+|===
+
+
+. 插入替代电源：
++
+.. 用双手支撑电源边缘并将其与 NSM 模块中的开口对齐。
+.. 将电源轻轻推入 NSM 模块，直到锁定机制卡入到位。
++
+电源必须与内部连接器和锁定机制正确接合。如果您认为电源未正确就位、请重复此步骤。
+
++
+
+NOTE: 请勿用力过大，否则可能会损坏内部连接器。
+
+.. 向下旋转手柄、使其无法正常运行。
+
+
+. 重新连接D-sub DC电源线：
++
+电源恢复供电后，状态 LED 应为绿色。
+
++
+.. 将电源线连接器插入电源。
+.. 拧紧将电源线连接器固定到电源的两个翼形螺钉。
+
+
+
+
+--
+====

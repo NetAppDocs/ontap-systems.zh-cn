@@ -1,14 +1,6 @@
 ---
 indexpage:
   tiles:
-  - title: 入门 
-    links:
-    - title: "《 ONTAP 发行说明》"
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
-    - title: 新增功能
-      url: "../whats-new.html"
-    - title: 存储数据表
-      url: https://www.netapp.com/data-storage/disk-shelves-storage-media/
   - title: 安装和设置
     links:
     - title: 热添加磁盘架
@@ -35,19 +27,3 @@ indexpage:
       url: "/service-replace-power-supply.html"
     - title: RTC 电池
       url: "/service-replace-rtc-battery.html"
-  - title: 更多资源
-    links:
-    - title: ONTAP 文档
-      url: https://docs.netapp.com/us-en/ontap/
-    - title: NetApp Hardware Universe
-      url: https://hwu.netapp.com/home/index
-    - title: NetApp Active IQ Digital Advisor
-      url: https://docs.netapp.com/us-en/active-iq/index.html
-    - title: NetApp Active IQ Config Advisor
-      url: https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor
-    - title: NetApp 互操作性表工具
-      url: https://mysupport.netapp.com/matrix/#welcome
-    - title: NetApp 支持知识库
-      url: https://kb.netapp.com/
-    - title: NetApp 社区
-      url: https://community.netapp.com/

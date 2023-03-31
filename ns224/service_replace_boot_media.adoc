@@ -46,19 +46,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 +
 这样， ONTAP 就有足够的时间来处理 NSM 删除事件。
 
-* * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
-
-+
-[NOTE]
-====
-请勿将固件还原到不支持您的磁盘架及其组件的版本。
-
-====
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
 如果您不知道受影响磁盘架的 ` _shelf_name_` ，请运行 `storage shelf show` 命令。
@@ -70,7 +57,7 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp
 +
 If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
-* 您可以使用以下视频或写入的步骤更换启动介质。
+* You can use the following animation or the written steps to replace the boot media.
 +
 .动画-更换NS224驱动器架中的启动介质
 video::20ed85f9-1f80-4e0e-9219-ab4600070d8a[panopto]
@@ -81,7 +68,7 @@ video::20ed85f9-1f80-4e0e-9219-ab4600070d8a[panopto]
 . 正确接地。
 . 从包含要更换的 FRU 的 NSM 模块断开布线：
 +
-.. 打开电源线固定器，断开电源线与电源的连接，然后从电源中拔下电源线。
+.. 如果是交流电源、请打开电源线固定器、如果是直流电源、请拧下两个翼形螺钉、然后从电源拔下电源线、从而断开电源线与电源的连接。
 +
 电源没有电源开关。
 
@@ -163,7 +150,7 @@ NSM 模块应完全插入磁盘架并与磁盘架边缘平齐。
 +
 插入缆线时，连接器拉片朝上。正确插入缆线后，它会卡入到位。
 
-.. 将电源线重新连接到电源，然后使用电源线固定器固定电源线。
+.. 将电源线重新连接到电源、如果电源为交流电源、则使用电源线固定器固定电源线；如果是直流电源、则拧紧两个翼形螺钉。
 +
 正常运行时，电源的双色 LED 将呈绿色亮起。
 

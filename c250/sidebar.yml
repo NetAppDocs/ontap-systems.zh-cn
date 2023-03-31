@@ -1,0 +1,76 @@
+---
+section: c250
+title: AFF C250系统
+url: "/c250/index.html"
+entries:
+- title: 安装和设置
+  pdf-filename: AFF C250安装和设置
+  entries:
+  - title: 选择安装和设置体验
+    url: "/c250/install-setup.html"
+  - title: 快速步骤
+    url: "/c250/install-quick-guide.html"
+  - title: 视频步骤
+    url: "/c250/install-videos.html"
+  - title: 详细步骤
+    url: "/c250/install-detailed-guide.html"
+- title: 维护
+  pdf-filename: AFF C250维护
+  entries:
+  - title: 启动介质
+    pdf-filename: AFF C250启动介质
+    entries:
+    - title: 概述
+      url: "/c250/bootmedia-replace-overview.html"
+    - title: 检查板载加密密钥
+      url: "/c250/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭受损控制器
+      url: "/c250/bootmedia-shutdown.html"
+    - title: 更换启动介质
+      url: "/c250/bootmedia-replace.html"
+    - title: 启动恢复映像
+      url: "/c250/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: 还原 OKM ， NSE 和 NVE
+      url: "/c250/bootmedia-encryption-restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/c250/bootmedia-complete-rma.html"
+  - title: 机箱
+    pdf-filename: AFF C250机箱
+    entries:
+    - title: 概述
+      url: "/c250/chassis-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/c250/chassis-replace-shutdown.html"
+    - title: 更换硬件
+      url: "/c250/chassis-replace-move-hardware.html"
+    - title: 完成更换
+      url: "/c250/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器
+    pdf-filename: AFF C250控制器模块
+    entries:
+    - title: 概述
+      url: "/c250/controller-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/c250/controller-replace-shutdown.html"
+    - title: 更换控制器模块
+      url: "/c250/controller-replace-move-hardware.html"
+    - title: 还原系统配置
+      url: "/c250/controller-replace-system-config-restore-and-verify.html"
+    - title: 可重新连接的系统
+      url: "/c250/controller-replace-recable-reassign-disks.html"
+    - title: 完成系统还原
+      url: "/c250/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/c250/dimm-replace.html"
+  - title: 驱动器
+    url: "/c250/drive-replace.html"
+  - title: 风扇
+    url: "/c250/fan-replace.html"
+  - title: 夹层卡
+    url: "/c250/mezzanine-replace.html"
+  - title: NVMEM 电池
+    url: "/c250/nvmem-nvram-battery-replace.html"
+  - title: 电源
+    url: "/c250/power-supply-replace.html"
+  - title: 实时时钟电池
+    url: "/c250/rtc-battery-replace.html"

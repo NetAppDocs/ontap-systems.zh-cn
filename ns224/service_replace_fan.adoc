@@ -50,7 +50,7 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp
 +
 If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
-* 您可以使用以下视频或写入的步骤更换风扇。
+* 您可以使用以下动画或写入的步骤更换风扇。
 +
 .动画-更换NS224驱动器架中的风扇
 video::29635ff8-ae86-4a48-ab2a-aa86002f3b66[panopto]
@@ -60,7 +60,7 @@ video::29635ff8-ae86-4a48-ab2a-aa86002f3b66[panopto]
 . 正确接地。
 . 从包含要更换的 FRU 的 NSM 模块断开布线：
 +
-.. 打开电源线固定器，断开电源线与电源的连接，然后从电源中拔下电源线。
+.. 如果是交流电源、请打开电源线固定器、如果是直流电源、请拧下两个翼形螺钉、然后从电源拔下电源线、从而断开电源线与电源的连接。
 +
 电源没有电源开关。
 
@@ -130,7 +130,7 @@ NSM 模块应完全插入磁盘架并与磁盘架边缘平齐。
 +
 插入缆线时，连接器拉片朝上。正确插入缆线后，它会卡入到位。
 
-.. 将电源线重新连接到电源，然后使用电源线固定器固定电源线。
+.. 将电源线重新连接到电源、如果电源为交流电源、请使用电源线固定器固定电源线、如果是直流电源、则拧紧两个翼形螺钉、然后从电源中拔下电源线。
 +
 正常运行时，电源的双色 LED 将呈绿色亮起。
 

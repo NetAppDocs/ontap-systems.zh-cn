@@ -1,22 +1,14 @@
 ---
 indexpage:
   tiles:
-  - title: 入门 
-    links:
-    - title: "《 ONTAP 发行说明》"
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
-    - title: 新增功能
-      url: "../whats-new.html"
-    - title: 系统数据表
-      url: https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf
-    - title: 存储数据表
-      url: https://www.netapp.com/data-storage/disk-shelves-storage-media/
-    - title: TR-4539-NetApp 全闪存 FAS 解决方案 for VMware Horizon View
-      url: https://www.netapp.com/pdf.html?item=/media/10695-tr-4539.pdf
   - title: 安装和设置
     links:
-    - title: 大多数配置
-      url: https://docs.netapp.com/us-en/ontap-systems/fas9000/install-setup.html
+    - title: 快速步骤
+      url: "../fas9000/install-quick-guide.html"
+    - title: 视频步骤
+      url: "../fas9000/install-videos.html"
+    - title: 详细步骤
+      url: "../fas9000/install-detailed-guide.html"
     - title: 光纤连接的 MetroCluster 配置
       url: https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html
     - title: 延伸型 MetroCluster 配置
@@ -51,37 +43,23 @@ indexpage:
       url: "../fas9000/rtc-battery-replace.html"
     - title: X91148A 模块
       url: "../fas9000/x91148a-module-install-overview.html"
-  - title: 添加或删除磁盘架
+    - title: NS224 磁盘架
+      url: "../ns224/index.html"
+    - title: SAS磁盘架
+      url: "../sas3/index.html"
+  - title: 支持的交换机
     links:
-    - title: NS224
-      url: https://docs.netapp.com/us-en/ontap-systems/ns224/index.html
-    - title: 采用 IOM12 的 SAS
-      url: https://docs.netapp.com/us-en/ontap-systems/sas3/index.html
-  - title: 安装和维护交换机
-    links:
-    - title: Broadcom 支持的交换机
-      url: https://docs.netapp.com/us-en/ontap-systems-switches/
-    - title: Cisco 交换机
-      url: https://docs.netapp.com/us-en/ontap-systems-switches/
-  - title: 升级
+    - title: BES-53248
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
+    - title: Cisco Nexus 9336C-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
+    - title: 共享配置中的Cisco Nexus 9336C-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
+  - title: 更多文档资源
     links:
     - title: 系统硬件升级
       url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
     - title: ONTAP 软件升级
       url: https://docs.netapp.com/us-en/ontap/upgrade/index.html
-  - title: 更多资源
-    links:
-    - title: ONTAP 文档
-      url: https://docs.netapp.com/us-en/ontap/
-    - title: NetApp Hardware Universe
-      url: https://hwu.netapp.com/home/index
-    - title: NetApp Active IQ Digital Advisor
-      url: https://docs.netapp.com/us-en/active-iq/index.html
-    - title: NetApp Active IQ Config Advisor
-      url: https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor
-    - title: NetApp 互操作性表工具
-      url: https://mysupport.netapp.com/matrix/#welcome
-    - title: NetApp 支持知识库
-      url: https://kb.netapp.com/
-    - title: NetApp 社区
-      url: https://community.netapp.com/
+    - title: 更换内部磁盘驱动器(视频)
+      url: https://www.youtube.com/watch?v=Ziqg9HL8oYQ

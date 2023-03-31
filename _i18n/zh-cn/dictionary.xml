@@ -3054,7 +3054,6 @@
   <block id="e9caf8970c9cbd8e7d1c5427d3a20cf1" category="paragraph">如果您不知道受影响磁盘架的 ` _shelf_name_` ，请运行 `storage shelf show` 命令。</block>
   <block id="3afc4b70c9c05bf5b1aceb2da0636da1" category="paragraph">一个磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 NSM 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令，但使用 `off` 选项将其关闭。</block>
   <block id="ee5bf2cd4b43105d31343a884728a3d4" category="list-text">拆开备用 DIMM 的包装时，请保存所有包装材料，以便在退回发生故障的 DIMM 时使用。</block>
-  <block id="36d40c496b02dc7324aae319cf2fac47" category="list-text">您可以使用以下视频或写入的步骤更换 DIMM 。</block>
   <block id="f7f603a242c5acee1fd68cd2a7202563" category="list-text">从包含要更换的 FRU 的 NSM 模块断开布线：</block>
   <block id="68b63efc11b1cc1408b8f55095718557" category="list-text">打开电源线固定器，断开电源线与电源的连接，然后从电源中拔下电源线。</block>
   <block id="e0a29acbd9bdcb48c7307027b6c4dd53" category="paragraph">电源没有电源开关。</block>
@@ -3093,7 +3092,6 @@
   <block id="e8fef282da4b27077fa05f5a91f0c50a" category="list-text">重新连接到 NSM 模块的布线：</block>
   <block id="60983401410be453968fe876ae1895bc" category="list-text">将存储布线重新连接到同一两个 NSM 模块端口。</block>
   <block id="b0b368796d73b8aa5677358196d63594" category="paragraph">插入缆线时，连接器拉片朝上。正确插入缆线后，它会卡入到位。</block>
-  <block id="68ea53fe54056e3cd966fd8634770fa8" category="list-text">将电源线重新连接到电源，然后使用电源线固定器固定电源线。</block>
   <block id="5260d6b60af6cb8ae138542a4545f3c8" category="paragraph">正常运行时，电源的双色 LED 将呈绿色亮起。</block>
   <block id="0a6c03fcdf805ed4138340f040b2b7f8" category="paragraph">此外，两个 NSM 模块端口 LNK （绿色） LED 均会亮起。如果 LNK LED 不亮，请重新拔插缆线。</block>
   <block id="25ac0bbb241da35798ba38b376ac474d" category="list-text">验证包含故障 DIMM 的 NSM 模块和磁盘架操作员显示面板上的警示（琥珀色） LED 是否不再亮起。</block>
@@ -3107,7 +3105,6 @@
   <block id="49499bb4b11cb28cd05725cd5cafadd0" category="paragraph">安装最新版本的 DQP 后，您的系统便可识别和使用新认证的驱动器。这样可以避免出现有关驱动器信息不最新以及由于无法识别驱动器而阻止驱动器分区的系统事件消息。DQP 还会通知您驱动器固件不是最新的。</block>
   <block id="27ad121f85fccbb2fbae4c00d3c38810" category="inline-link">NetApp 下载：磁盘认证包</block>
   <block id="d5b3850d37eca03c3be10401093f24dc" category="admonition">驱动器固件检查每两分钟进行一次。</block>
-  <block id="2d45373c9232e88942b868669cd8511a" category="list-text">以下视频简要介绍了驱动器热插拔操作步骤的物理拆卸和插入部分。</block>
   <block id="01d36c3de356a203f6380095e17d5483" category="list-text">如果要手动为替代驱动器分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。</block>
   <block id="427dffc49ca6a83001ca0caadf14d0ed" category="admonition">如果磁盘架中的驱动器由 HA 对中的两个控制器模块拥有，则需要手动分配驱动器所有权。</block>
   <block id="ba85497a31a9938c9ee8b64479f5eb73" category="paragraph">如果启用了自动驱动器分配，则输出会在 `Auto Assign` 列中显示 `on` （对于每个控制器模块）。</block>
@@ -3209,7 +3206,6 @@
   <block id="acdfef9c5579ff3ba02ba954b42b0b9d" category="summary">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换发生故障的风扇。</block>
   <block id="ad469db4a94f773cb57ea851a2258c7d" category="list-text">系统中的所有其他组件，包括其他四个风扇，必须正常运行。</block>
   <block id="19ca7e08bce4c0e124faa15fe7b1d419" category="list-text">拆开备用风扇的包装时，请保存所有包装材料，以便在退回故障风扇时使用。</block>
-  <block id="f35ad689c95d772c71204022636dabe5" category="list-text">您可以使用以下视频或写入的步骤更换风扇。</block>
   <block id="4fe5c70371cacd7543cf54df75bedd0a" category="admonition">NSM 模块盖上的 FRU 标签显示了五个风扇在 NSM 模块后墙上的位置。</block>
   <block id="5605f4aa461ce479ba2b6762822acf2b" category="list-text">以物理方式确定故障风扇。</block>
   <block id="9d1ae14f2ff79acfc8e3625d7e49361b" category="list-text">更换故障风扇：</block>
@@ -3228,7 +3224,6 @@
   <block id="5d5593d62eb78fe1958ab4c502873ec3" category="list-text">更换启动介质后，磁盘架的配对 NSM 模块中的启动映像会自动复制到更换的启动介质中。</block>
   <block id="00aa3f1a6a7c08b0657c7993e5c8b5c3" category="paragraph">这可能需要长达五分钟的时间。</block>
   <block id="9d0a00a5aff4ec18c5c781787962378b" category="list-text">更换启动介质后，您可以按照套件随附的 RMA 说明中所述将故障部件退回 NetApp 。</block>
-  <block id="d7fc7b8a28737104902684f03a8279e6" category="list-text">您可以使用以下视频或写入的步骤更换启动介质。</block>
   <block id="41d0446a43bf0ca4e32d8aa74acfb9dc" category="list-text">以物理方式找到故障启动介质。</block>
   <block id="f100a7d7d4d0125055a6d5f3a0bea50d" category="list-text">更换启动介质：</block>
   <block id="0c6687325a026afea7971f92ec185cbb" category="list-text">使用 1 号十字螺丝刀小心地卸下将启动介质底端（有缺口）固定到主板的螺钉。</block>
@@ -3252,7 +3247,6 @@
   <block id="65b16d583a1cd635d9c4a4d6d0e33451" category="paragraph">NSM 模块固件每 10 分钟检查一次。NSM 模块固件更新最多可能需要 30 分钟。</block>
   <block id="b2f313ee86144ada0c48562afb2d40cc" category="paragraph">如果您不知道受影响磁盘架的 `shelf_name` ，请运行 `storage shelf show` 命令。</block>
   <block id="278aef8b4e228833692f9747f4ae7475" category="list-text">拆开备用 NSM 模块的包装时，请保存所有包装材料，以便在退回发生故障的 NSM 模块时使用。</block>
-  <block id="46e09979a3172c8b9285556fdf5ec2d2" category="list-text">您可以使用以下视频或写入的步骤更换 NSM 模块。</block>
   <block id="6b7a231127b7a2acbb4edd9d89b96b8c" category="list-text">以物理方式识别受损的 NSM 模块。</block>
   <block id="9b731dce42bd65dfa675cd0e5bd470a1" category="paragraph">系统会向系统控制台记录一条警告消息，指示哪个模块受损。此外，驱动器架操作员显示面板和受损模块上的警示（琥珀色） LED 也会亮起。</block>
   <block id="45d29d834250186d99645df43e4c6ae8" category="list-text">断开受损 NSM 模块的布线：</block>
@@ -3260,26 +3254,21 @@
   <block id="3af45a161b6e2649f84dc24a3b75a33b" category="list-text">拆开备用 NSM 模块的包装，并将其放在受损 NSM 模块附近的水平表面上。</block>
   <block id="b03b11bd46dba9b4f3d0c676ab67a458" category="list-text">松开受损 NSM 模块和更换用 NSM 模块上的翼形螺钉，打开受损 NSM 模块的外盖。</block>
   <block id="4081761118c0f10a28e46f61305f0e65" category="admonition">NSM 模块盖上的 FRU 标签显示了 DIMM 和风扇的位置。</block>
-  <block id="61110a6dacfcea9391ed100a1e557d39" category="list-text">将 DIMM 从受损的 NSM 模块移至更换的 NSM 模块。</block>
   <block id="2ad1f71e58a464b56a62dd00529e8870" category="list-text">记下插槽中 DIMM 的方向，以便可以使用相同的方向将 DIMM 插入更换用的 NSM 模块。</block>
   <block id="b4f66f1a433a916fcb4c24db72bfd342" category="list-text">缓慢地将 DIMM 插槽两端的弹出卡舌推离插槽，然后将 DIMM 从插槽中提出，从而从插槽中弹出 DIMM 。</block>
   <block id="458eddb761760eab26467d6f530e8bbd" category="admonition">小心握住 DIMM 的边角或边缘，以避免对 DIMM 电路板组件施加压力。弹出器凸耳保持打开位置。</block>
   <block id="3280053d76d9caa701e3504fb0607953" category="list-text">拿住 DIMM 的边角，然后将 DIMM 垂直插入更换用的 NSM 模块上的插槽。</block>
   <block id="6e29dcbc9bd913dc051f1423378cc587" category="list-text">对其余 DIMM 重复子步骤 7a 到 7d 。</block>
-  <block id="1414184aaa319aad7970f88f85fae9ad" category="list-text">将风扇从受损的 NSM 模块移至更换的 NSM 模块。</block>
   <block id="12971ba49546d866b91851e9b1b6ad92" category="list-text">从蓝色接触点所在的两侧牢牢抓住风扇，然后垂直提起风扇，将其从插槽中断开。</block>
   <block id="dac2c94347c73e11ea196f5baa2e7dec" category="paragraph">在将风扇提出之前，您可能需要来回轻缓地摇动风扇以断开其连接。</block>
   <block id="b237e01cc69f430feb2460bcd838575b" category="list-text">将风扇与更换用的 NSM 模块中的导轨对齐，然后向下推，直到风扇模块连接器在插槽中完全就位。</block>
   <block id="203b00bd25f98cb7aa81871e2c9b00d2" category="list-text">对其余风扇重复子步骤 8a 和 8b 。</block>
   <block id="d96e5c7e64c8d0db723ea42b820c7604" category="list-text">合上每个 NSM 模块的外盖，然后拧紧每个翼形螺钉。</block>
-  <block id="6c5f489f30752895bb29a28748b9b12c" category="list-text">将电源从受损的 NSM 模块移至更换的 NSM 模块。</block>
-  <block id="b9b93ba38cd49330be16261592a676f4" category="list-text">将凸轮把手旋转到其打开（水平）位置，然后抓住它。</block>
   <block id="c86f9586ccfa1546382bb00c762288d5" category="list-text">用拇指按下蓝色卡舌以释放锁定机制。</block>
   <block id="12de78077c3b65069784e96679059a9c" category="list-text">将电源从 NSM 模块中拉出，同时用另一只手支撑其重量。</block>
   <block id="0fe92b0f3770a025126b5601d534eabc" category="list-text">用双手支撑电源边缘并将其与更换用 NSM 模块的开口对齐。</block>
   <block id="8d9538413b9a60d6cde813201656e466" category="list-text">将电源轻轻推入 NSM 模块，直到锁定机制卡入到位。</block>
   <block id="6f62b455052540a6f03d9666561be1c2" category="admonition">请勿用力过大，否则可能会损坏内部连接器。</block>
-  <block id="0c0cdf1552f56e75817d943e76e26563" category="list-text">将凸轮把手旋转到关闭位置。</block>
   <block id="ccd1df1e64400c930fd567fe947c2bca" category="list-text">将替代 NSM 模块插入磁盘架：</block>
   <block id="231d3f36498918bf3f8978127e4be044" category="list-text">验证磁盘架操作员显示面板上的警示（琥珀色） LED 是否不再亮起。</block>
   <block id="c5557339087176167e89aba7a1af2eff" category="paragraph">NSM 模块重新启动后，操作员显示面板警示 LED 将熄灭。这可能需要三到五分钟。</block>
@@ -3348,7 +3337,6 @@
   <block id="4dc0b17b937c12129ebe893f11113096" category="paragraph"><block ref="b033791636e3890ff7903341ce0a7906" category="inline-xref-macro-rx"></block></block>
   <block id="738a7d32562c5557c170a7a1bacec3f1" category="admonition">请勿使用法兰安装磁盘架。</block>
   <block id="70dc4293ceb1c0525c9a51737c5667b8" category="list-text">使用安装宣传单将磁盘架安装并固定到支架以及机架或机柜上。</block>
-  <block id="032241d3ad139656f292a55835e7d7b8" category="list-text">将电源线连接到磁盘架，使用电源线固定器将其固定，然后将电源线连接到不同的电源以提高故障恢复能力。</block>
   <block id="378b62d2964ec0a6c4ac6ec95662dee4" category="paragraph">连接到电源时，磁盘架将通电；它没有电源开关。正常运行时，电源的双色 LED 将呈绿色亮起。</block>
   <block id="7468ac9b50ce2792c160ba5ee26808fe" category="list-text">将磁盘架 ID 设置为 HA 对中唯一的数字：</block>
   <block id="34ed719c558f180e6a8425d176730344" category="paragraph">有关更多详细说明，请参见：</block>
@@ -3376,7 +3364,6 @@
   <block id="dd76ecf50f41da091f6d857178f31123" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 1 端口 b （ e1b ）。</block>
   <block id="175a349725f8b3af6b3ec0d82c0e2318" category="list-text">使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 1 端口 A （ e1a ）。</block>
   <block id="838163abcc84ed9f0cfee1181f77a021" category="list-text">使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 1 端口 b （ e1b ）。+ 下图显示了完成后的磁盘架布线。</block>
-  <block id="95140daddef8f8ffd29f41f52ba63e7e" category="image-alt">DRW nss224 aff250 fas500f 1 个磁盘架</block>
   <block id="7383703619146a59a96c04d7ca7f4542" category="list-text">验证热添加磁盘架的布线是否正确。</block>
   <block id="0c9aa1b8a23b895dc34c3de2f2a905b7" category="list-text">如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。</block>
   <block id="e408fe4a40b4e2b5b430bb1a2e4b56a1" category="paragraph"><block ref="054067282f59c2ea6008fdf8f0b78dea" category="inline-xref-macro-rx"></block></block>
@@ -3401,17 +3388,7 @@
   <block id="0dcadfb972a7b539c769d330f7ccc286" category="list-text">转至步骤 3 。</block>
   <block id="44602264e094d019e88a336cd27d0156" category="paragraph">下图显示了第一个和第二个热添加磁盘架的布线：</block>
   <block id="bda29c65071b0b49cc9a79c7f3ba0ceb" category="image-alt">DRW nss224 a700 2 个磁盘架</block>
-  <block id="7c45e35cf1f1269da7f239bbce34287a" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 5 端口 a</block>
-  <block id="a59162c8f8af57e9933c57cbc8fc2e2e" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 5 端口 b</block>
-  <block id="a668cb1c0a82083d498d62fdcc9b88db" category="list-text">使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 5 端口 a</block>
-  <block id="4ceaacb52a9b0ba21b42397d82e9c9b8" category="list-text">使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 5 端口 b</block>
-  <block id="373e018c4ca509f2172931f931def7e2" category="image-alt">DRW nss224 a800 1 个磁盘架</block>
-  <block id="18a1ee71f8dba0400c7d631c554f89bb" category="list-text">使用缆线将 NSM A 端口 e0a 连接到控制器 A 插槽 5 端口 a</block>
-  <block id="70e6d1487e4df35e27ad77b5a5dc8bb2" category="list-text">使用缆线将 NSM B 端口 e0a 连接到控制器 B 插槽 5 端口 a</block>
-  <block id="905417014d69df94145e05d6c152deec" category="list-text">使用缆线将 NSM A 端口 e0b 连接到控制器 B 插槽 5 端口 b</block>
-  <block id="a8d608f77f3fbb4c1156978cc97e2ec4" category="list-text">使用缆线将 NSM B 端口 e0b 连接到控制器 A 插槽 5 端口 b</block>
   <block id="75a57e4a236226bc25c09e120aeab4c5" category="paragraph">下图显示了两个热添加磁盘架的布线：</block>
-  <block id="9613ef0ded970898834cffbf203f3c72" category="image-alt">DRW nss224 a800 2 个磁盘架</block>
   <block id="22f0e629287a1d1f90741ddf77caa944" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 端口 e0c 。</block>
   <block id="8c937d6d94aae90362b1dc41da2b9988" category="list-text">使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 端口 e0d 。</block>
   <block id="1338474ed1400f2decaa8fd4832a842d" category="list-text">使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 端口 e0c 。</block>
@@ -3421,7 +3398,6 @@
   <block id="dfaa68fc610c2b43abf32ee0c2eff4d7" category="list-text">使用缆线将 NSM B 端口 e0a 连接到控制器 B 端口 e0c 。</block>
   <block id="9d77f869ed166aeb4c27e1b6054d86bb" category="list-text">使用缆线将 NSM A 端口 e0b 连接到控制器 B 端口 e0d 。</block>
   <block id="f192386ba82b03da6277a09d4a2c63ac" category="list-text">使用缆线将 NSM B 端口 e0b 连接到控制器 A 端口 e0d 。</block>
-  <block id="aa976c2217ca2de5e9d1001418c7b09a" category="image-alt">DRW nss224 a400 2 个磁盘架</block>
   <block id="f38b00317e342e10d9cf44073d00e94e" category="list-text">如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。</block>
   <block id="e708da297b918a1363bc58facb9105b4" category="paragraph">需要额外存储时，可以使用缆线将另一个 NS224 驱动器架连接到现有 HA 对。</block>
   <block id="41165b98d83f72cbb439ce5bdb9e71da" category="list-text">用缆线将磁盘架连接到控制器模块。</block>
@@ -3440,17 +3416,14 @@
   <block id="830b9acdce8babc4152c94321f48a584" category="list-text">* 最佳实践： * 最佳实践是在从 NSM 模块卸下电源后两分钟内更换电源。</block>
   <block id="9933eb186a5ed678263e25a456659d04" category="paragraph">如果超过这两分钟，磁盘架将继续运行，但 ONTAP 会向控制台发送有关电源降级的消息，直到更换电源为止。</block>
   <block id="48d0ab80f7b5ca9cf8dc1ac2c8c7123a" category="list-text">拆开备用电源的包装时，请保存所有包装材料，以便在退回故障电源时使用。</block>
-  <block id="34e3a163643415343661f5f7f2392785" category="list-text">您可以使用以下视频或写入的步骤更换电源。</block>
   <block id="a919f0ee05d363883138207b3294f80c" category="list-text">以物理方式确定故障电源。</block>
   <block id="11c70933cb832a926e6ebf2229ee8058" category="paragraph">系统会向系统控制台记录一条警告消息，指示哪个电源出现故障。此外，磁盘架操作员显示面板上的警示（琥珀色） LED 会亮起，故障电源上的双色 LED 会呈红色亮起。</block>
-  <block id="992b40e8cd1ce5e2e70ad710bea6f3c5" category="list-text">卸下故障电源：</block>
   <block id="a21aebd6c961b6fea31ffa6bf85151e5" category="list-text">插入替代电源：</block>
   <block id="4db9a696c509e28c74bddbffbc5d8cd3" category="list-text">用双手支撑电源边缘并将其与 NSM 模块中的开口对齐。</block>
   <block id="12cdfd44047ba85a8d6c05ef152143d9" category="list-text">将电源线连接到电源，并使用电源线固定器固定电源线。</block>
   <block id="eca4ecc78ec43fe459fcc0715dc2d5db" category="summary">您可以在已打开电源且正在执行 I/O 的 NS224 驱动器架中无中断更换发生故障的实时时钟 \ （ RTC\ ）电池。</block>
   <block id="e4882b21497de6fedaf4c9c3b8016faa" category="paragraph">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换发生故障的实时时钟（ Real-Time Clock ， RTC ）电池。</block>
   <block id="d8a4ade402c2a58964f76f76d5e40639" category="list-text">拆开备用 RTC 电池的包装时，请保存所有包装材料，以便在退回发生故障的 RTC 电池时使用。</block>
-  <block id="69346a8711cdec1c863cab85cc16d548" category="list-text">您可以使用以下视频或写入的步骤更换 RTC 电池。</block>
   <block id="4666aab744a5064fa4082c8fac681c8b" category="paragraph">NSM 模块外盖上的 FRU 标签显示了 RTC 电池的位置，靠近 NSM 模块前部和电源右侧。</block>
   <block id="8e3521698724daea37d72f82d00b93c9" category="list-text">以物理方式确定发生故障的 RTC 电池。</block>
   <block id="4230cd66e4b97c5c537e2fc66b106a54" category="list-text">更换 RTC 电池：</block>
@@ -5220,11 +5193,8 @@
   <block id="c89a58741e7240ddf3c43ec7dbb21cd7" category="sidebar">驱动器架</block>
   <block id="0a10ffb3d8f2b29b2aed44120c4b52ee" category="sidebar">NS224</block>
   <block id="207e21ff57c713dc789acfa5e99040ae" category="sidebar">采用 IOM12 的 SAS</block>
-  <block id="cce8f24137d8ba188a996f1ac50fd1c9" category="sidebar">集群和存储交换机</block>
   <block id="077d93425bc0aa7f9c6512d9b58b5d96" category="sidebar">Nexus 9336C-x2 集群交换机</block>
   <block id="408e6b1f14e3275adbc6a975f5910340" category="sidebar">平台升级</block>
-  <block id="840e0e2bbbf69bf03b84d0acdeb4580f" category="sidebar">升级大多数系统</block>
-  <block id="5ed8ff4eb5f3fd686a59745f6c5c78b5" category="sidebar">升级 MetroCluster 配置中的系统</block>
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">更多资源</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="sidebar">ONTAP 文档</block>
   <block id="519131237f79eadb2dc6a1e003a087bc" category="sidebar">NetApp Active IQ Config Advisor</block>
@@ -5263,13 +5233,11 @@
   <block id="bbdde7c95b92cf74b7a00751ed051c22" category="sidebar">NVDIMM 电池</block>
   <block id="bbe5cfba1366505a700c77ffc3f25e15" category="sidebar">缓存模块</block>
   <block id="8387d7ad8d7f0093bd55d8f421665e8f" category="sidebar">夹层</block>
-  <block id="a989a22057bbc8e33d7370e8e5bf91c2" category="sidebar">为 AFF C190 视频添加容量</block>
   <block id="b5428794115862895177c132452bd21f" category="sidebar">热添加磁盘架</block>
   <block id="098be92f0aeba04b5ea336aeb0e987a0" category="sidebar">将磁盘架作为交换机连接的存储进行布线</block>
   <block id="f2c6151d6c0d99f3666129b97e2100f5" category="sidebar">驱动器</block>
   <block id="a53cc92d668601f5026d62e74ca44764" category="sidebar">热移除磁盘架</block>
   <block id="87ad0a7d7737882bd3a94656d7433131" category="sidebar">NSM 模块</block>
-  <block id="18b2a2b97187adb055ca14d651381474" category="sidebar">所有配置</block>
   <block id="a9638d4d52688cbe2f6d101cb55be3b8" category="sidebar">系统 DIMM</block>
   <block id="c5ee1908bc809728e968990e07fb6bf9" category="sidebar">缓存或核心转储模块</block>
   <block id="5f793f5baea0189d5dfe9f38c6ae12fe" category="sidebar">缓存模块（热插拔）</block>
@@ -5356,7 +5324,6 @@
   <block id="50e67d9b10aa79baef3dc48d6b7a85e0" category="sidebar">替换启动映像</block>
   <block id="7bc56029e8efc19176ac65d5c1b11f63" category="sidebar">AFF A800 机箱</block>
   <block id="03a6e6d8c5aef6f456ef142fc5a3912b" category="sidebar">AFF A800 控制器模块</block>
-  <block id="2b2815ca4a9fd5973ee66317adb580e4" category="sidebar">其他交换机型号</block>
   <block id="061f630ee35953fe4f15356e785a0329" category="sidebar">AFF A220 和 FAS2700 机箱</block>
   <block id="487a62b1e3f916df9ec01e4837ea1e73" category="sidebar">更换控制器硬件</block>
   <block id="d1d724370ac4931ceb4406d2e17a6217" category="sidebar">AFF A220 和 FAS2700 NVMEM 电池</block>
@@ -5518,7 +5485,6 @@
   <block id="a301eceb20e1d3480375d34e6dfa1274" category="sidebar">NetApp's AFF and FAS storage systems provide leading-edge, enterprise-class, scale-out all flash or hybrid storage with the industry's most advanced data management.使用此站点上的文档安装，扩展，升级和维护 AFF ， FAS 或所有 SAN 阵列系统。</block>
   <block id="626a7cbe056796bcb1c158b143866230" category="sidebar">《 ONTAP 发行说明》</block>
   <block id="a393cd4f170aafc6db54b17ca62ffb74" category="sidebar">Broadcom 支持的 BES-53248</block>
-  <block id="1bc92df4184e6d4338aed95b6891adc1" category="sidebar">Cisco 92300YC</block>
   <block id="442396e207d697f3466573acd63cdeb7" category="section-title">选项 2 ：系统位于 MetroCluster 中</block>
   <block id="bd8eb6c12d8928906b264ff9daf7b9e7" category="section-title">选项 2 ：控制器位于 MetroCluster 中</block>
   <block id="686631a3f808d481cbff656f883e6657" category="section-title">Option 3: Controller is in a two-node MetroCluster</block>
@@ -5564,12 +5530,9 @@
   <block id="b979e87e6bde70f013c6af59e1fa73aa" category="list-text">如果您的 ASA HA 对支持 NS224 磁盘架，则可以使用此操作步骤。</block>
   <block id="7e874a7e7fce6d08319e452556499a17" category="paragraph">AFF A700 HA 对</block>
   <block id="863ee9a0c8ca40928975158c8441cb3e" category="paragraph"><block ref="8b0dd5f6450b331119d433eade9d39d0" category="inline-xref-macro-rx"></block></block>
-  <block id="d191ea6e7cb4a619eb566229aa99b285" category="paragraph">AFF A800 HA 对</block>
-  <block id="faca4b5bb9a5da5b47d1425ef2489bdf" category="paragraph"><block ref="8417f927f631db9ff6dcfc207992ae5a" category="inline-xref-macro-rx"></block></block>
   <block id="299be2017fe243bf0cb27752cb61cba4" category="paragraph">AFF A400 HA 对</block>
   <block id="35abee2b20175ae748c82f6ba4453ac1" category="paragraph"><block ref="2d20d554d868477c9c895109bac068ae" category="inline-xref-macro-rx"></block></block>
   <block id="075ac783ee242c66ec7ef26475fd212b" category="section-title">为 AFF A700 HA 对的热添加磁盘架布线</block>
-  <block id="5c817f2686998b5a889ca66df6194716" category="section-title">为 AFF A800 HA 对的热添加磁盘架布线</block>
   <block id="873efd8427437501798d979ea439809c" category="section-title">为 AFF A400 HA 对的热添加磁盘架布线</block>
   <block id="b994ebf3b12ef21aee27b63036342d83" category="section-title">为 AFF A320 HA 对的热添加磁盘架布线</block>
   <block id="0d0422686a7d332d6a719d1fb6e38772" category="paragraph">此操作步骤假定您的 AFF A320 HA 对具有现有 NS224 磁盘架，并且您要热添加第二个磁盘架。</block>
@@ -5584,7 +5547,6 @@
   <block id="10df5509416416659fe58fd40c64d2ec" category="paragraph"><block ref="10df5509416416659fe58fd40c64d2ec" category="inline-link-rx"></block></block>
   <block id="4ccbda321ca169104f4e4cac42fd679f" category="paragraph">If you need the RMA number or additional help with the replacement procedure, contact technical support at<block ref="9a6f401ca1e7e89d8a0c29fb0cbe81b7" category="inline-link-rx"></block>, 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).</block>
   <block id="3868a54921a81264bddb64b574765582" category="paragraph"><block ref="3868a54921a81264bddb64b574765582" category="inline-link-rx"></block></block>
-  <block id="dade207912e2765bacca35b7125bdffa" category="section-title">准备 AFF A700 ， AFF A800 或 AFF A400 HA 对以热添加第二个磁盘架</block>
   <block id="c69a1009359358cbb1f3e5d6483736fb" category="paragraph"><block ref="c69a1009359358cbb1f3e5d6483736fb" category="inline-link-macro-rx"></block></block>
   <block id="9824994e3f8651cf2b6d695555bdc011" category="paragraph"><block ref="9824994e3f8651cf2b6d695555bdc011" category="inline-link-rx"></block></block>
   <block id="008b8867712161228bd794977fcd0d4b" category="paragraph"><block ref="008b8867712161228bd794977fcd0d4b" category="inline-link-rx"></block></block>
@@ -5633,7 +5595,6 @@
   <block id="204c25542c5d660c031ae735415785bc" category="list-text">对于某些平台型号，如果在控制器上受支持的插槽中安装了支持 RoCE 的 PCIe 卡或 I/O 模块，则这些端口会自动默认为存储使用（而不是网络连接）；但是，建议您完成此操作步骤以验证是否已将支持 RoCE 的端口配置为存储使用。</block>
   <block id="2cd678bb1387e05d5c4dd3461278cff2" category="list-text">如果您确定 HA 对中不支持 RoCE 的专用端口未配置为存储使用，则配置这些端口是无中断操作步骤。</block>
   <block id="622e2c1e48cbf4234cb8c28434a52588" category="list-text">验证 HA 对中的非专用端口是否已配置为存储使用： `storage port show`</block>
-  <block id="cca15cb895a64dd0f4b45e86009749fb" category="paragraph">如果您的 AFF A700 ， AFF A800 或 AFF A400 HA 对具有一个 NS224 驱动器架，并通过缆线连接到每个控制器上一组支持 RoCE 的端口，则必须重新对该磁盘架进行布线（在安装了其他支持 RoCE 的 PCIe 卡或 I/O 模块之后） 在热添加第二个磁盘架之前，请在每个控制器上的两组端口之间执行此操作。</block>
   <block id="9dd4670d3c797341bf0b1649ee18743f" category="list-text">您必须已启用您安装的支持 RoCE 的 PCIe 卡或 I/O 模块上的端口。</block>
   <block id="2f37a5aa23cfb87abad4097db5d8b5ee" category="admonition">这些子步骤假定已将现有磁盘架连接到每个控制器上插槽 3 中支持 RoCE 的 I/O 模块。</block>
   <block id="336f4ce595af8dfded4dff3e6c2d2dbe" category="list-text">在控制器 A 上，将缆线从插槽 3 端口 b （ e3b ）移至插槽 7 端口 b （ e7b ）。</block>
@@ -5643,14 +5604,12 @@
   <block id="0d42cbc8b21edd5f33f740bf5b14d10d" category="list-text">使用磁盘架随附的安装宣传单安装磁盘架随附的导轨安装套件。</block>
   <block id="52f4904b9873d65908b7d22ca910291e" category="paragraph">You cable each NS224 drive shelf you are hot-adding so that each shelf has two connections to each controller module in the HA pair.根据您要热添加的磁盘架数量以及您的平台型号，您可以在控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上使用支持 RoCE 的端口。</block>
   <block id="fa9763a154ca61da241ba542f9d894f7" category="paragraph">从平台机箱背面看，左侧支持 RoCE 的卡端口为端口 "A" （ e1a ），右侧端口为端口 "b" （ e1b ）。</block>
-  <block id="f921a19c559c3b6b0be95e07c25e9232" category="paragraph">如何为 AFF A700 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="544773fca9e8ae07d62dcf4db5a7cb78" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（一个支持 RoCE 的 I/O 模块）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
   <block id="fec7dbe822daa329031be7af970538e7" category="admonition">此步骤假定您在每个控制器模块上的插槽 3 中安装了支持 RoCE 的 I/O 模块，而不是插槽 7 。</block>
   <block id="6e06431b37da6d52783c06ed54eb0e42" category="paragraph">下图显示了在每个控制器模块中使用一个支持 RoCE 的 I/O 模块为一个热添加磁盘架布线：</block>
   <block id="387fb751376fe75512f4de0a3be8f22e" category="list-text">如果要在每个控制器模块中使用两组支持 RoCE 的端口（两个支持 RoCE 的 I/O 模块）热添加一个或两个磁盘架，请完成相应的子步骤。</block>
   <block id="bab3236ac19e59e47d2daf1e2f19a0e1" category="admonition">这些子步骤假定您开始布线时使用的是将磁盘架端口 e0a 连接到插槽 3 中支持 RoCE 的 I/O 模块，而不是插槽 7 。</block>
   <block id="2e3b7d6e769a48d4603c0ca4b6b9d83f" category="admonition">这些子步骤假定您开始布线时使用的是将磁盘架端口 e0a 连接到插槽 7 中支持 RoCE 的 I/O 模块，而不是插槽 3 （与磁盘架 1 的布线子步骤相关）。</block>
-  <block id="88bb98efede2cd38aaaa041e45a5a456" category="paragraph">如何为 AFF A800 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="100c5224303bd4ddbc570f323ec3b601" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（一个支持 RoCE 的 PCIe 卡）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
   <block id="7f52c439783621a5d09c0e1eb50d4319" category="admonition">此步骤假定您已在插槽 5 中安装支持 RoCE 的 PCIe 卡。</block>
   <block id="6f1539c78a094ce3c97746e4f05a0642" category="paragraph">下图显示了在每个控制器模块上使用一个支持 RoCE 的 PCIe 卡为一个热添加磁盘架布线：</block>
@@ -5658,7 +5617,6 @@
   <block id="47f5ff4e183a793933d1f47d1d5d5b04" category="admonition">此步骤假定您已在插槽 5 和插槽 3 中安装了支持 RoCE 的 PCIe 卡。</block>
   <block id="928e9f3198873a99cc05c02ab5403b7b" category="admonition">这些子步骤假定您正在通过将磁盘架端口 e0a 连接到插槽 5 中支持 RoCE 的 PCIe 卡（而不是插槽 3 ）来开始布线。</block>
   <block id="6ced4955dcb25812c5e43101235629b9" category="admonition">这些子步骤假定您开始使用缆线将磁盘架端口 e0a 连接到插槽 3 中支持 RoCE 的 PCIe 卡，而不是插槽 5 （与磁盘架 1 的布线子步骤相关）。</block>
-  <block id="14daff6613d1ba920cb759163ce8e7da" category="paragraph">如何为 AFF A400 HA 对中的 NS224 驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持 RoCE 的端口集数量（一个或两个）。</block>
   <block id="853f2f58eaae6f81846d73d68ec58fc7" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（板载支持 RoCE 的端口）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
   <block id="46678aedb5de8e96e18124083a8925ee" category="paragraph">下图显示了在每个控制器模块上使用一组支持 RoCE 的端口为一个热添加磁盘架布线：</block>
   <block id="8391296c9ad39c787ad4300c47db3f73" category="list-text">如果要在每个控制器模块上使用两组支持 RoCE 的端口（板载端口和 PCIe 卡支持 RoCE 的端口）热添加一个或两个磁盘架，请完成以下子步骤。</block>
@@ -6286,7 +6244,6 @@
   <block id="7103ae2dc232b897a89408d0cd914f59" category="doc">检查板载加密密钥 - AFF A800</block>
   <block id="0e3989fd0fd811ede751f0ca9dbfbe88" category="doc">启动介质更换概述— AFF A800</block>
   <block id="a9785aa14dfcf09366954fcb69625d05" category="sidebar">42U 1280 毫米系统机柜</block>
-  <block id="f606ada25615407b042f8f189d1b9fab" category="sidebar">Cisco 3132Q-V</block>
   <block id="059d31543d448499bd1a9c454a8d1ebb" category="sidebar">Cisco 9336C-x2</block>
   <block id="1c87a984d0a1c6881c9703209fd4341c" category="sidebar">共享配置中的 Cisco 936-x2</block>
   <block id="21a759f002cfc3385b168953dde9a34e" category="summary">用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双节点 MetroCluster 配置。</block>
@@ -6522,7 +6479,6 @@
   <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">Replace the boot media - FAS500f</block>
   <block id="de2d1282e102972a6af003781e9a5c02" category="paragraph">_SLDIAG ：不存在日志消息。 _</block>
   <block id="3f91c59c59a1243cb3f176daf3c9c054" category="list-text">使节点恢复正常运行。</block>
-  <block id="0f40216c1ad47c12e8ccc087d555570f" category="sidebar">《 ONTAP 发行说明》</block>
   <block id="c0a1a3a5bc62ecf46953d4c7ebde86a7" category="section-title">第 6 步：（仅限双节点 MetroCluster ）：切回聚合</block>
   <block id="af844de12c61a1b2d86c05934c317256" category="summary">如果平台向系统控制台记录一条警告消息，指出驱动器出现故障，则必须更换驱动器。In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.</block>
   <block id="92198152754d5741f3a481c1555464b4" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF C190</block>
@@ -6555,7 +6511,6 @@
   <block id="03be12a0476133b21cb6c1c927956d23" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A220 和 FAS2700</block>
   <block id="24b3b18d4ae3c460037fb58156d310c6" category="doc">FAS2700 系统文档</block>
   <block id="7b8d355a80903af67d6bd3bd4c49f973" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A700s</block>
-  <block id="1bfc6b841bbb9beb5900ea65dba46d0d" category="sidebar">TR-4539-NetApp 全闪存 FAS 解决方案 for VMware Horizon View</block>
   <block id="12c860323c3b7c3ce59343f747296367" category="sidebar">AFF A220 系统</block>
   <block id="9d01d7eb3a0827983de11cc9671e5029" category="sidebar">AFF A220 安装和设置</block>
   <block id="01d7cd58de6e7861c757c7723be1642f" category="sidebar">AFF A220 维护</block>
@@ -6624,7 +6579,6 @@
   <block id="df890e7b6d800ea7f63516f78dc7b333" category="inline-link-macro">适用于采用板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例</block>
   <block id="4831f887bab13b0957b607ad184c87f7" category="paragraph"><block ref="4831f887bab13b0957b607ad184c87f7" category="inline-link-macro-rx"></block></block>
   <block id="18e93c7175385ec259f95d9d453bdda1" category="list-text">If needed, you can refer to <block ref="db31d33614fd87795381d5ac14be04aa" category="inline-link-macro-rx"></block> 有关支持的配置，磁盘架到磁盘架连接以及控制器到磁盘架连接的信息。</block>
-  <block id="83742af000bdb059461854fab1a8b606" category="list-text">请勿混用具有不同效率额定值的电源。请始终像这样替换。</block>
   <block id="94a2f43b7e5299d436a356db402524cc" category="section-title">第3步：更换NVRAM电池</block>
   <block id="5f5fd4de9ab7b399342d9b9e721bc6b6" category="section-title">第3步：卸下NVRAM卡</block>
   <block id="6378f7fb953fa140d999f1d68c5e6145" category="section-title">第5步：验证HA系统上的系统ID更改</block>
@@ -7104,7 +7058,6 @@
   <block id="d94c06e259f5d258e151a2fafa975b4a" category="list-text">输入以下命令以验证是否已清除日志：`sldiag device status [-dev _devtype_|MB_slotnum]`</block>
   <block id="d272d6404ac091b7fda10049815d3c66" category="video-title">动画-更换NS224驱动器架中的NSM模块</block>
   <block id="c1e842505e6c0c129cf294ca23947b12" category="video-title">动画-更换NS224驱动器架中的风扇</block>
-  <block id="f1f8b8def80b9337373513998dd13c3e" category="section-title">为 FAS500f 或 AFF A250 HA 对的热添加磁盘架布线</block>
   <block id="f0fad2647eb722df1f95d7cea636dfac" category="paragraph">如果需要更多存储，您可以将 NS224 驱动器架热添加到 FAS500f 或 AFF A250 HA 对中。</block>
   <block id="851089e257660775de9f14fc67ced6b3" category="video-title">动画-更换NS224驱动器架中的RTC电池</block>
   <block id="d4b0cbc1b32ce59a45784581449d8ba9" category="video-title">动画-更换NS224驱动器架中的启动介质</block>
@@ -7218,7 +7171,6 @@
   <block id="c7b110777e110ebf201cadf84803bdb5" category="list-text"><block ref="c7b110777e110ebf201cadf84803bdb5" category="inline-link-macro-rx"></block></block>
   <block id="58be97337d3377c59cd19ffb71fbc7fb" category="inline-link-macro">NetApp CN1601</block>
   <block id="36c686b6a1d561ca87a79e4ac0028295" category="list-text"><block ref="36c686b6a1d561ca87a79e4ac0028295" category="inline-link-macro-rx"></block></block>
-  <block id="c83195c9d5e5dd5960c0976c81d14ea5" category="sidebar">Cisco 3232C</block>
   <block id="b609dd6c87556493ce1f11c7ab61cbdb" category="list-text">检查控制器模块背面的NVMEM LED。</block>
   <block id="62052f557603d07beccb5c5c5b7c8d48" category="list-text">通过检查控制台错误消息来确定必须更换的风扇模块。</block>
   <block id="6c0f8c80eb90bb62692eec695b2b97a4" category="paragraph">您必须在控制器模块中找到故障启动介质、方法是卸下控制器模块上的中间PCIe模块、找到故障启动介质、然后更换启动介质。</block>
@@ -7369,7 +7321,6 @@
   <block id="a9cbabd3f42c5ad7f4796dbf5e384b08" category="list-text">将控制器启动至启动菜单。</block>
   <block id="1e37c9a4ea44b0a302091f02c74564c1" category="admonition">管理证书信息完成后、控制器将返回到启动菜单。</block>
   <block id="34dbbed571bcfe30f4b9897172116b74" category="list-text">To cable your storage, see <block ref="4261ea2b75c295a1978f7924667f1c11" category="inline-xref-macro-rx"></block></block>
-  <block id="24ed59b86428c96c86204227163206c0" category="paragraph"><block ref="24ed59b86428c96c86204227163206c0" category="inline-link-rx"></block></block>
   <block id="90d49fcc83418b049803a1b2081f3c6b" category="list-text">To complete setting up your system, see <block ref="53346fef0c147b551f530d05bbad2e41" category="inline-xref-macro-rx"></block></block>
   <block id="14fa1a86493af188cbb574d402b31f1b" category="list-text">返回到 <block ref="c67cdb63ab5b46180d9910dcb0f03689" category="inline-xref-macro-rx"></block> 在此操作步骤 中重新检查NVMEM LED。</block>
   <block id="ba17e519b189ae10cd004d12dcc5e44d" category="paragraph"><block ref="751c01f8467f96987ff97e3a647e9973" category="inline-xref-macro-rx"></block></block>
@@ -7383,4 +7334,456 @@
   <block id="8c2c8bc4e47d0ed180d7a321a6f45a30" category="paragraph">要更换NVRAM模块、请将其置于机箱中的插槽6中、并按照特定步骤顺序进行操作。</block>
   <block id="44e91a10c5fb9bc923eb6ca613b41106" category="list-text">按下带字母和编号的凸轮闩锁。</block>
   <block id="35ed901089030d76b9de29f7bb8d54ce" category="paragraph">凸轮闩锁从机箱中移出。</block>
+  <block id="4cc790f78d8c248b4709cb24358daa53" category="doc">机箱更换概述—AFF A150</block>
+  <block id="bd7c3c276d72352464260b4544a830d8" category="doc">还原并验证配置—AFF A150</block>
+  <block id="6561961e36dc0d672367014bb35814b0" category="inline-link-macro">"Completing the replacement process</block>
+  <block id="65f64a7bdb4d22c25178d4fda4e009b6" category="list-text">转至 <block ref="c0ff5fd751abc2ff7939ebc71dae2951" category="inline-link-macro-rx"></block>。</block>
+  <block id="49c230c702ed6b30a6efde8eba87e563" category="doc">将故障部件退回给NetApp - AFF A150</block>
+  <block id="3dfa4c8dc7083d8d9bf2fb1fc402660a" category="doc">快速指南—AFF A150</block>
+  <block id="6e0311a42e114c05c9779f6c830f1d97" category="inline-link-macro">《AFF A150系统安装和设置说明》</block>
+  <block id="2e869cac122e3063f7b418f03cb3fa26" category="paragraph"><block ref="2e869cac122e3063f7b418f03cb3fa26" category="inline-link-macro-rx"></block></block>
+  <block id="b80ee1e7ed290f304dbaae444297a4fa" category="doc">根据需要还原OKM、NSE和NVE—AFF A150</block>
+  <block id="e822ef8c7b4b17d3230b125760d56e76" category="doc">还原并验证系统配置—AFF A150</block>
+  <block id="178a6a7a54abe615089fef92a8499c05" category="doc">启动恢复映像—AFF A150</block>
+  <block id="1639fff89eb56a9268790c9fe41436ab" category="doc">控制器模块更换概述—AFF A150</block>
+  <block id="beacfeb2bd1b2368710a9c5b41320482" category="list-text"><block ref="beacfeb2bd1b2368710a9c5b41320482" category="inline-link-macro-rx"></block></block>
+  <block id="71454761ab34aa791ad6a36c8a8778cb" category="list-text"><block ref="71454761ab34aa791ad6a36c8a8778cb" category="inline-link-macro-rx"></block></block>
+  <block id="e0d8bfe3e100500569288dd90bb120d4" category="list-text"><block ref="e0d8bfe3e100500569288dd90bb120d4" category="inline-link-macro-rx"></block></block>
+  <block id="31f2d2d52e4c5c09696388fc953ce437" category="doc">更换启动介质—AFF A150</block>
+  <block id="7efaed64dfb4761648f604a34ee8b1b1" category="doc">关闭受损控制器- AFF A150</block>
+  <block id="738267be961299815138cc385f9de070" category="doc">详细指南—AFF A150</block>
+  <block id="9b6f6ecb6633d22a67cc6a982fc55841" category="paragraph">如果您使用的是MetroCluster 配置、请使用MetroCluster 安装内容。</block>
+  <block id="7f4d4fbe08a8a895671d05c4a82b0c85" category="inline-link">MetroCluster 文档</block>
+  <block id="c56326d51fd75802f2144766bd1e36d3" category="paragraph"><block ref="c56326d51fd75802f2144766bd1e36d3" category="inline-link-rx"></block></block>
+  <block id="11f6227d0571f4bf3fac6b6d821a60d1" category="paragraph">要安装AFF A150系统、您需要在NetApp 支持站点 上创建帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
+  <block id="dd1dcd1cd7a28bbfc3b5a581b055bce3" category="inline-link-macro">Cabling controllers to drive shelves</block>
+  <block id="6c9cda13d9d7d9f8f82d912175e78d9b" category="list-text">To cable your storage, see <block ref="42bf816180738dc1660363ee044d9786" category="inline-link-macro-rx"></block></block>
+  <block id="ee44682d06dd8612d09f370d6f80069a" category="image-alt">DRW A150 HA存储布线IEOPS 1032</block>
+  <block id="a1770e5cf644990212f313f91eccb2d8" category="paragraph"><block ref="a1770e5cf644990212f313f91eccb2d8" category="inline-link-macro-rx"></block></block>
+  <block id="4402c8b8d6c489ed5617a151ffa90726" category="inline-link-macro">Completing system setup and configuration</block>
+  <block id="41e876cad607f9363190645026f4f818" category="list-text">To complete setting up your system, see <block ref="cf51f79f23f70e62c97013df347c6a0f" category="inline-link-macro-rx"></block></block>
+  <block id="ab65dd4e976f1787737fc87ae65b8a6d" category="paragraph"><block ref="ab65dd4e976f1787737fc87ae65b8a6d" category="inline-link-rx"></block></block>
+  <block id="c2df61cd54941946b9e1d41669228517" category="paragraph"><block ref="c2df61cd54941946b9e1d41669228517" category="inline-link-rx"></block></block>
+  <block id="a7d0c7f24713f4f2e4432bb2b91f97d0" category="paragraph"><block ref="a7d0c7f24713f4f2e4432bb2b91f97d0" category="inline-link-rx"></block></block>
+  <block id="477b007cc84cc2f34c8bc4e37baeafa7" category="doc">视频—AFF A150</block>
+  <block id="c4c07270ebbe6cd1bc5aa6f45be76f02" category="video-title">动画—安装和设置AFF A150</block>
+  <block id="15bdfa06733933ff3285c6dd92cad9c7" category="doc">更换电源—AFF A150</block>
+  <block id="f9195e4f2cbce0b6d30752619eae4687" category="doc">更换控制器模块硬件—AFF A150</block>
+  <block id="890166d65f80913ec2882e814dc85cff" category="doc">关闭控制器—AFF A150</block>
+  <block id="882c273cdfcc452f3288c0e3d97ccb3a" category="doc">更换缓存模块- AFF A150</block>
+  <block id="7befdc0c8cc35d0c1711e11bd7feb970" category="list-text">擦除缓存模块上的数据：<block ref="6daf7f4112fcf7c7be366c44ff70faf2" prefix=" " category="inline-code"></block></block>
+  <block id="236dd84b9226dbf8dfd98a6c46b59972" category="list-text">验证是否已从缓存模块中擦除数据：<block ref="55030d884a341e8f95d06478b61fbec9" prefix=" " category="inline-code"></block></block>
+  <block id="af41b619bf9d50ddae2454efc001e4dd" category="paragraph">The output should display the caching module status as erased.</block>
+  <block id="376b1cae869bbe8ab1cce68fdb30b696" category="inline-link-macro">Replace the DIMMs</block>
+  <block id="91e13f2779cb51174165fa30eaba7e5b" category="list-text">返回到 <block ref="cf268cc4bc5a73daf7348170b397c07d" category="inline-link-macro-rx"></block> of this procedure to recheck the NVMEM LED.</block>
+  <block id="e23872c7fd1b170c488a2c5244bc263e" category="doc">A150系统文档</block>
+  <block id="1a9ae2b5eb296d614bebfdc33f389268" category="doc">检查板载加密密钥- AFF A150</block>
+  <block id="3bf6a2921f0e655ea4d2b6b2851e02df" category="doc">重新配置系统并重新分配磁盘—AFF A150</block>
+  <block id="91b91feeb88498e7be1c10bbbb6db4c2" category="inline-link-macro">Verifying the system ID change on an HA system</block>
+  <block id="4e87b3c0f415f46d36e8fa6bd32a6ff7" category="paragraph"><block ref="4e87b3c0f415f46d36e8fa6bd32a6ff7" category="inline-link-macro-rx"></block></block>
+  <block id="465740a443e85d455a90494615d629b9" category="inline-link-macro">Manually reassigning the system ID on a stand-alone system in ONTAP</block>
+  <block id="7070195bf98baff2e0462461db9cb074" category="paragraph"><block ref="7070195bf98baff2e0462461db9cb074" category="inline-link-macro-rx"></block></block>
+  <block id="734e28e3c6b715a48c7043347210471e" category="inline-link-macro">Manually reassigning the system ID on systems in a two-node MetroCluster configuration</block>
+  <block id="ca5a5e07d656cff35da2184538cfc5fb" category="paragraph"><block ref="ca5a5e07d656cff35da2184538cfc5fb" category="inline-link-macro-rx"></block></block>
+  <block id="1cd8a39839471e937855a3c54b6b84d9" category="doc">启动介质更换概述—AFF A150</block>
+  <block id="35db388e4e99e4a7488ab682126d7fa6" category="doc">更换NVMEM电池—AFF A150</block>
+  <block id="2867a72512f6330f74fb93ac9f93f07d" category="doc">移动并更换硬件—AFF A150</block>
+  <block id="480828de65d5061e901ac63046040770" category="doc">完成系统还原—AFF A150</block>
+  <block id="930fad66fb3a257a1d24f20ac59c003f" category="doc">控制器模块更换概述—AFF C250</block>
+  <block id="7e48994ab2d6db5f4a1f1971bdb7686f" category="doc">关闭控制器—AFF C250</block>
+  <block id="094570163b0febbd13eb031d12659f04" category="doc">更换控制器模块硬件- AFF C250</block>
+  <block id="f84d1999c8440d424fb52cc419a6a097" category="paragraph">在AFF C250中、控制器模块的通风管下方有一个启动介质设备。You must move it from the impaired controller module to the replacement controller module.</block>
+  <block id="bc845a0c4e457ee657740a9be626eafa" category="doc">完成系统还原—AFF C250</block>
+  <block id="094124db560bb515e3d41248ca00f18a" category="doc">更换硬件—AFF C250</block>
+  <block id="e2f649ac2d970925993f9e5fb7967c22" category="doc">更换或安装夹层卡- AFF C250</block>
+  <block id="cd2699a4d57f54778810b017b2525727" category="doc">更换风扇—AFF C250</block>
+  <block id="3e56ae245ac8653052ca2cbe9766da4b" category="doc">完成还原和更换过程—AFF C250</block>
+  <block id="bf6b6560f6b1f050d2a1808c4b6336aa" category="doc">视频—AFF C250</block>
+  <block id="ff0126462ebf63e99c0e579efb8f1760" category="video-title">动画—安装和设置AFF C250</block>
+  <block id="bb948df5a06fd8fb2e2b9e9f99cc69d4" category="doc">启动恢复映像—AFF C250</block>
+  <block id="ab8a572131275958428f9007945f684f" category="doc">机箱更换概述—AFF C250</block>
+  <block id="7efc07dce9135b59eda99eab451a8d33" category="doc">将故障部件退回给NetApp—AFF C250</block>
+  <block id="4b244bbe02217e1cc95dfefa194113e0" category="doc">更换NVMEM电池—AFF C250</block>
+  <block id="9787dc0906e96e78e67df0b3f9dad9a0" category="doc">更换实时时钟电池- AFF C250</block>
+  <block id="5e7787ae07713719c2880dedfbaa61f7" category="doc">还原并验证系统配置—AFF C250</block>
+  <block id="2fe38375bb3f7a0d45a583d876016df5" category="doc">更换DIMM - AFF C250</block>
+  <block id="157f430cb5493d5d45b9bcab28a74c47" category="doc">更换启动介质—AFF C250</block>
+  <block id="d4f7e708fe70911948b2ee39a366f69a" category="section-title">第1步：卸下控制器模块- AFF C250</block>
+  <block id="9c0f44d79b852189eca9e0c3c970c0ff" category="doc">更换电源—AFF C250</block>
+  <block id="3801b936526098c0a13cec6739840593" category="doc">重新配置系统并重新分配磁盘—AFF C250</block>
+  <block id="9173003f27a48b6c3802570ab91f9690" category="summary">本节详细介绍了安装AFF C250系统的分步说明。</block>
+  <block id="650ebf976037bb8321f0f947063e1da1" category="doc">详细步骤—AFF C250</block>
+  <block id="b9130a693f6e37444632fe71a4b60f7b" category="paragraph">要安装AFF C250系统、您需要创建一个帐户并注册该系统。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
+  <block id="3a4e965359d6ad3b670569d4d81a4897" category="list-text">使用以下动画打开一个或多个驱动器架的电源并设置其磁盘架ID：</block>
+  <block id="5ba23cc00c6685a0d9b231590e5ee1c0" category="paragraph">对于NS224驱动器架、磁盘架ID会预先设置为00和01。如果要更改磁盘架ID、请使用回形针的直发端或窄尖球头笔访问面板后面的磁盘架ID按钮。</block>
+  <block id="688ed49ee5cf1b7f7ef70935870d42d8" category="summary">您可以通过AFF C250系统文档安装、设置和维护系统。</block>
+  <block id="c2deffcaea49ccd174c7da17d80e1edf" category="doc">AFF C250系统文档</block>
+  <block id="68234c72c82d88dc22b60a4f8925c19a" category="doc">更换SSD驱动器—AFF C250</block>
+  <block id="a4829fef0cfb953ea3181e31db648a62" category="paragraph">您可以在I/O运行期间无中断更换发生故障的SSD驱动器。</block>
+  <block id="d7b7b72f7a0bd85854375ed25ad54137" category="admonition">该驱动器可能需要长达数小时才能显示在故障驱动器列表中。</block>
+  <block id="f6551f88d88dddb684035802224a0336" category="doc">关闭控制器- AFF C250</block>
+  <block id="1338d35acdb3c964dd3a62d00b16a635" category="doc">检查板载加密密钥- AFF C250</block>
+  <block id="d667058635875eca097800e4379f58cd" category="doc">快速步骤—AFF C250</block>
+  <block id="84918b89947f6a68e4b25fe4753c02bc" category="inline-link-macro">《AFF C250安装和设置说明》</block>
+  <block id="66e0597e25a38bc180d5270f4021127a" category="paragraph"><block ref="66e0597e25a38bc180d5270f4021127a" category="inline-link-macro-rx"></block></block>
+  <block id="d3d5358ee829ec20cfebc87c86eed844" category="doc">根据需要还原OKM、NSE和NVE—AFF C250</block>
+  <block id="64e5c97f01cbac1639343e8b0f670c20" category="list-text"><block ref="64e5c97f01cbac1639343e8b0f670c20" category="inline-link-macro-rx"></block></block>
+  <block id="38471c9931ce26e5aeb8c80bf6483a48" category="list-text"><block ref="38471c9931ce26e5aeb8c80bf6483a48" category="inline-link-macro-rx"></block></block>
+  <block id="82e9cd9a6fede8cb6fa3e276cac9a710" category="list-text"><block ref="82e9cd9a6fede8cb6fa3e276cac9a710" category="inline-link-macro-rx"></block></block>
+  <block id="3232f137ca5f81b881073e30f07d4927" category="doc">关闭受损控制器模块- AFF C250</block>
+  <block id="528ac168c6accb2201fcbf9a5baff8a0" category="doc">启动介质更换概述—AFF C250</block>
+  <block id="d01bad26d559eb16c91d450cefe02539" category="doc">更换实时时钟电池- AFF C400</block>
+  <block id="771f4aeef9d68203f402ef43f2428c23" category="paragraph">控制器从机箱中略微移出</block>
+  <block id="404943d0b155396f410fdc44b57014a3" category="doc">机箱更换概述—AFF C400</block>
+  <block id="8403c2aeb3b774ba2a4c036b814a8776" category="doc">完成还原和更换过程—AFF C400</block>
+  <block id="2f23284eb79c6d8562a57ec511c4045a" category="doc">热插拔风扇模块—AFF C400</block>
+  <block id="4d8adba62be8512e84ae7825848692e9" category="doc">将故障部件退回给NetApp - AFF C400</block>
+  <block id="28dd2419d5232cd5e390f590d7d76b55" category="doc">快速指南—AFF C400</block>
+  <block id="bef061f2ba2a880a4d71960c6fb14a8f" category="inline-link-macro">《AFF C400安装和设置说明》</block>
+  <block id="1fb877c7c5a192a0f8712065429afd55" category="paragraph"><block ref="1fb877c7c5a192a0f8712065429afd55" category="inline-link-macro-rx"></block></block>
+  <block id="dde11f85a430c37e085e56c530fa6482" category="doc">根据需要还原OKM、NSE和NVE—AFF C400</block>
+  <block id="a637f1b4c2a1d9b5cb9f0347c7e77539" category="doc">还原并验证系统配置—AFF C400</block>
+  <block id="b1c4aeeae550bfbe7c6574898398d781" category="doc">更换NVDIMM电池—AFF C400</block>
+  <block id="76f50c3f31d2ab405df556357b00ae41" category="doc">控制器模块更换概述—AFF C400</block>
+  <block id="327f4c7d5141a205c506afea880dfdef" category="doc">更换电源—AFF C400</block>
+  <block id="bd47a35792b075014fd52e08e307f334" category="paragraph">您可以使用下图以及书面步骤更换电源。</block>
+  <block id="59278043c69406fc3ad5a92b1268c7a1" category="list-text"><block ref="59278043c69406fc3ad5a92b1268c7a1" category="inline-link-macro-rx"></block></block>
+  <block id="207fa20809605ec76418419987911de1" category="list-text"><block ref="207fa20809605ec76418419987911de1" category="inline-link-macro-rx"></block></block>
+  <block id="8ec5a018cdb8c2ff183e79e6526679cf" category="list-text"><block ref="8ec5a018cdb8c2ff183e79e6526679cf" category="inline-link-macro-rx"></block></block>
+  <block id="a8284f2b3b25b926b6a065b08aa67e1a" category="doc">更换启动介质—AFF C400</block>
+  <block id="aeb801131e9e445741a961cfb931c2db" category="doc">关闭受损控制器- AFF C400</block>
+  <block id="5ab526c2d8a23c39c3d68b1080ca3e89" category="doc">详细指南—AFF C400</block>
+  <block id="ed1fe7521861c492832064f3b6daca68" category="paragraph">100 GbE缆线(QSFP28)</block>
+  <block id="e0cc8c545401fc3b34281140c54756c7" category="admonition">如果卡上的端口标签不可见、您可以通过检查卡安装方向(对于C400、PCIe连接器插槽位于卡插槽的左侧)来识别端口、然后在NetApp Hardware Universe 中按部件号查找此卡。 其中显示了一个带端口标签的挡板图形。您可以使用sysconfig -a命令或在系统包装列表中查找卡部件号。</block>
+  <block id="80a7f396e1bc3ed796a9313a0aa75443" category="image-alt">DRW C400 TNSC网络布线</block>
+  <block id="a905d4a42dacfc07296e02d609b47cb0" category="image-alt">DRW C400交换网络布线</block>
+  <block id="670ce436320fc9008e2880db983e27d2" category="paragraph">以下选项显示了如何使用缆线将一个或两个NS224驱动器架连接到系统。</block>
+  <block id="66587f1aa86b9e296b1d1dd43ca73e3e" category="image-alt">DRW C400一个nss224磁盘架</block>
+  <block id="0b9e9bf3097ae366abf0d35474fb4b1f" category="image-alt">DRW C400两个nss224磁盘架</block>
+  <block id="eca713323e6fa9782ebae60357fc0453" category="doc">更换NVDIMM - AFF C400</block>
+  <block id="719e61ffcf0d96924351db01f7e50603" category="doc">视频—AFF C400</block>
+  <block id="51e4f59a1aaa143b8d5c910f0a77328e" category="video-title">动画—AFF C400安装和设置说明</block>
+  <block id="e6423ca3487b9b75d5af512862698175" category="doc">更换控制器模块硬件—AFF C400</block>
+  <block id="e46b8c6d3d358d972a1fe516250dcf5d" category="paragraph">将控制器滑入机箱</block>
+  <block id="5edd30c4cef8fac3bd29e60266f4cb36" category="doc">关闭控制器- AFF C400</block>
+  <block id="5254fce53c38649f011fdb307e35d4b3" category="doc">更换DIMM - AFF C400</block>
+  <block id="d026008f7eb80e36926da619f0e8aa79" category="summary">您可以通过AFF C400系统文档安装、设置和维护系统。</block>
+  <block id="e8e2cfacbe6cfb70649bd4e2bb33598e" category="doc">AFF C400系统文档</block>
+  <block id="8db6fdf9679dcdf01a0f39d01d482c0c" category="doc">检查板载加密—AFF C400</block>
+  <block id="454f2d4445f738afc6491f938272785d" category="doc">重新配置系统并重新分配磁盘—AFF C400</block>
+  <block id="7fc305adae8e903c0dc8bff5a49862c9" category="doc">更换PCIe或夹层卡- AFF C400</block>
+  <block id="042e6e8da8b6da480bf85ff04e4d7922" category="doc">启动介质更换概述—AFF C400</block>
+  <block id="bb2c0218cb7e6195837599cbb3d03ac1" category="doc">切回双节点MetroCluster 配置中的聚合—AFF C400</block>
+  <block id="1d3d538ec62d31076cad785952dec0e5" category="doc">更换硬件—AFF C400</block>
+  <block id="f961e8ce56452340996ff8bab8e0d037" category="doc">启动恢复映像—AFF C400</block>
+  <block id="2642a6c4a1666402654202d970bc20a6" category="doc">完成系统还原—AFF C400</block>
+  <block id="3e442d8f2f13e8331a31e7c1c2737e59" category="paragraph">更换电源(PSU)包括断开目标PSU与电源的连接、拔下电源线、卸下旧PSU并安装替代PSU、然后将其重新连接到电源。</block>
+  <block id="311f323a046afbcf6ce4b152ad2dee93" category="list-text">此操作步骤 是为一次更换一个PSU而编写的。</block>
+  <block id="be0020622e775d64818f3acc7c2d856d" category="admonition">最佳做法是、在将PSU从机箱中卸下后两分钟内更换PSU。系统仍可正常运行、但ONTAP 会向控制台发送有关已降级的PSU的消息、直到更换PSU为止。</block>
+  <block id="e5b2987f321084b00bed28fd97c58226" category="paragraph">请根据您的PSU类型使用相应的操作步骤 ；AC或DC。</block>
+  <block id="f93bc8f892972bb47d2b0ca4cd480fad" category="open-title">选项1：更换交流PSU</block>
+  <block id="19a7bfc2c20931ac9f3593ce3f8c7632" category="paragraph">使用以下视频或表格中的步骤更换PSU：</block>
+  <block id="a2528ca750816c5cbcc2ab1df78a8eb6" category="video-title">动画-更换交流PSU</block>
+  <block id="ba076df359148e35b1b589b37e5d2faa" category="list-text">根据控制台错误消息或PSU上的红色故障LED确定要更换的PSU。</block>
+  <block id="87bf19b9bb87e3527a13e2beb951da0a" category="list-text">断开PSU的连接：</block>
+  <block id="d8b3adb935955fae05f64c8de837e522" category="list-text">打开电源线固定器、然后从PSU拔下电源线。</block>
+  <block id="be704b19b534f427c13213bebc1bc44d" category="list-text">向上旋转手柄、按下锁定卡舌、然后将PSU拉出控制器模块、以卸下PSU。</block>
+  <block id="04c1aefc3b70eb0cf5a5362fbc5efc89" category="admonition">PSU较短。Always use two hands to support it when removing it from the controller module so that it does not suddenly swing free from the controller module and injure you.</block>
+  <block id="4fbdadb4fe2de0a22b6a6e7f9303997c" category="cell">蓝色PSU锁定卡舌</block>
+  <block id="0fba729f16fcfcc49a0af849cbbf49e3" category="list-text">在控制器模块中安装替代PSU：</block>
+  <block id="6b689019fdf63b33788e8122cee5d807" category="list-text">用双手支撑PSU的边缘并将其与控制器模块的开口对齐。</block>
+  <block id="158827adeb2e51a7a4411ccf31abc518" category="list-text">将PSU轻轻推入控制器模块、直到锁定卡舌卡入到位。</block>
+  <block id="87a96ba236fa6528e20ebe340d990e6e" category="admonition">为了避免损坏内部连接器、请勿在将PSU滑入系统时用力过大。</block>
+  <block id="62656dd1e6a6787bd054fb659bb474d4" category="list-text">重新连接PSU布线：</block>
+  <block id="965cc3fcca40fe72903f2bf567787bd9" category="list-text">将电源线重新连接到PSU。</block>
+  <block id="774e50999ed71aed779cdb839371a69d" category="list-text">使用电源线固定器将电源线固定到PSU。</block>
+  <block id="eb3ac9b9efdc3a8db20ea72534f74755" category="paragraph">在PSU恢复供电后、状态LED应为绿色。</block>
+  <block id="88ff7f55200d397b9c241c6c03ccd6ab" category="open-title">选项2：更换DC PSU</block>
+  <block id="6a5cc777b5cea5516ed3c04946243c15" category="paragraph">要更换直流PSU、请完成以下步骤。</block>
+  <block id="81118bbf4dc8e737a15cb33e309d5928" category="list-text">使用插头上的翼形螺钉拧下D-sub直流电源线连接器。</block>
+  <block id="a11fffebed2ec4e6399a05866d830825" category="list-text">从PSU拔下电源线并将其放在一旁。</block>
+  <block id="50e55f801844aaccd3dd2512f4973284" category="image-alt">DRW dcpsu remove replace generic IEOPS 788</block>
+  <block id="7e9c947073c870125f5537753ceb963c" category="inline-image-macro">宽度= 10像素</block>
+  <block id="3c41e1437657ea44ea906d59991155fe" category="paragraph"><block ref="3c41e1437657ea44ea906d59991155fe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1a2188e25bb7db28c0b09dd772382a5c" category="paragraph">翼形螺钉</block>
+  <block id="6b1819a9a296dc2a07dbd901dfb22247" category="paragraph"><block ref="6b1819a9a296dc2a07dbd901dfb22247" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c589f0723743108df8fff79412bb01b9" category="paragraph">D-sub直流电源线连接器</block>
+  <block id="b5a3b4332b7e14b61ef4982cbd323974" category="paragraph"><block ref="b5a3b4332b7e14b61ef4982cbd323974" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="feafb86ee931bf1f66f76fbde04555e9" category="paragraph">电源手柄</block>
+  <block id="f9d5c310b5608c831c5d0dd6865c6294" category="paragraph"><block ref="f9d5c310b5608c831c5d0dd6865c6294" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="173dbae753c5a17af5a0f12d0fd36a1d" category="list-text">重新连接D-sub DC电源线：</block>
+  <block id="5189bdda5c50ec48e9cb3132d0fa8678" category="list-text">将电源线连接器插入PSU。</block>
+  <block id="996349ffc749676ad9ad3291406b24cf" category="list-text">使用翼形螺钉将电源线固定到PSU。</block>
+  <block id="baf107967ece7d67d1783f4502771ad4" category="admonition">请勿混用效率等级不同或输入类型不同的PSU。请始终像这样替换。</block>
+  <block id="d63b332a7d7806b789880c5d6f160228" category="paragraph">要更换交流PSU、请完成以下步骤。</block>
+  <block id="9955c2b1562468fb4711a85f3ef88fde" category="list-text">用双手支撑备用PSU的边缘并将其与控制器模块的开口对齐。</block>
+  <block id="9f0aed9654d394747b630a47a617d5b8" category="list-text">将电源线重新连接到PSU和电源。</block>
+  <block id="ee9a667be020c33cc2b2d4ede76c2f4f" category="list-text">使用插头上的翼形螺钉拧下D-sub DC缆线连接器。</block>
+  <block id="45b4088dd83a4a7b2bba149e4e3d9b79" category="list-text">从PSU拔下缆线并将其放在一旁。</block>
+  <block id="7086b5b8246e319a69ceaa9c8bea88f2" category="list-text">向上旋转手柄、按下锁定卡舌、然后将PSU拉出控制器模块、以卸下PSU。</block>
+  <block id="3c7945776be28bf262f95808630c98bc" category="paragraph">D-sub直流电源PSU缆线连接器</block>
+  <block id="f8fec4f228a85c4176dc455080b37d93" category="inline-image-macro">宽度= 10倍</block>
+  <block id="3d1a418b11058f0297d85300215afbc1" category="paragraph"><block ref="3d1a418b11058f0297d85300215afbc1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="14a4774e9c6245d6341272988d1f5fbe" category="admonition">如果您的系统具有直流电源、请确保电源电缆上的翼形螺钉已拧紧。</block>
+  <block id="46f00909dad629ef305730aebec6b362" category="list-text">You can use the following animation or the written steps to replace the boot media.</block>
+  <block id="d277c9568778ee459f0e04f57bb73a7b" category="list-text">如果是交流电源、请打开电源线固定器、如果是直流电源、请拧下两个翼形螺钉、然后从电源拔下电源线、从而断开电源线与电源的连接。</block>
+  <block id="8ba0a60c4c9ef98086ff14a53b417216" category="list-text">将电源线重新连接到电源、如果电源为交流电源、则使用电源线固定器固定电源线；如果是直流电源、则拧紧两个翼形螺钉。</block>
+  <block id="d392479770485002d002d4ef0aaf3fb7" category="list-text">您可以使用以下动画或写入的步骤更换RTC电池。</block>
+  <block id="413763831143110464ea32cf926646ff" category="list-text">将电源线重新连接到电源、如果电源为交流电源、请使用电源线固定器固定电源线、如果是直流电源、则拧紧两个翼形螺钉、然后从电源中拔下电源线。</block>
+  <block id="fc2b3ed430cb8c91e352b492f909df0e" category="list-text">以下动画简要介绍了驱动器热插拔操作步骤 的物理拆卸和插入部分。</block>
+  <block id="a5296c0167e1a9e0e79d0ac90763897a" category="list-text">您可以使用以下动画或写入的步骤来更换DIMM。</block>
+  <block id="4be5ffb0248a7f7fbd958f1cda061f7a" category="section-title">准备AFF A700、AFF A800、AFF C800、AFF A400或AFF C400 HA对以热添加第二个磁盘架</block>
+  <block id="c574e5a033e5460323e267b83b04dfe1" category="paragraph">如果您的AFF A700、AFF A800、AFF C800、AFF A400或AFF C400 HA对具有一个NS224驱动器架、并通过缆线连接到每个控制器上一组支持RoCE的端口、则必须对该架重新布线 (在为每个控制器上的两组端口安装了支持RoCE的额外PCIe卡或I/O模块之后)、然后热添加第二个磁盘架。</block>
+  <block id="20b6f43af9fa83cc4fb91fe544ed870c" category="paragraph">AFF A800或AFF C800 HA对</block>
+  <block id="39d970461581cdbd7cd52a0c942e09cc" category="paragraph"><block ref="4c1ac301fada9548f6ad2acaf0e467d2" category="inline-xref-macro-rx"></block></block>
+  <block id="f3d5d75e576e887e5cc38744e9413dea" category="paragraph">AFF C400 HA对</block>
+  <block id="d83f6d97e759c5156f389e1bbaca2e46" category="paragraph"><block ref="b415fb6b993cf20b1b9d3f6c50f3ab17" category="inline-xref-macro-rx"></block></block>
+  <block id="08755d45823cf538e7c3e95cdbf3232d" category="list-text">在控制器A上、将缆线从插槽4端口A (E4A)移至插槽5端口b (e5b)。</block>
+  <block id="2714efafc88a564eeaaee969d028a550" category="list-text">将电源线连接到磁盘架、如果是交流电源、请使用电源线固定器将其固定到位；如果是直流电源、则使用两个拇指螺钉将其固定到位、然后将电源线连接到不同的电源以提高故障恢复能力。</block>
+  <block id="ac729677e330b2bd79ba466237427cd0" category="section-title">为AFF A250、AFF C250或FAS500f HA对的热添加磁盘架布线</block>
+  <block id="f785dc6fbda4bf5cffbc5642d9f63fcc" category="image-alt">DRW nss224 A250 c250 f500f 1架IEOPS 963</block>
+  <block id="1f16f18b5edbb033abeecd941eede311" category="paragraph">如何为AFF A700 HA对中的NS224驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持RoCE的端口集数量(一个或两个)。</block>
+  <block id="06d25e1ce74f6aaec655716b2dff74fa" category="section-title">为AFF A800或AFF C800 HA对的热添加磁盘架布线</block>
+  <block id="e71af3f859a96a4597c3ee57f2465148" category="paragraph">如何为AFF A800或AFF C800 HA对中的NS224驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持RoCE的端口集数量(一个或两个)。</block>
+  <block id="4a64724d8e98b13ea57df6fa3ef82797" category="list-text">使用缆线将磁盘架NSM A端口e0a连接到控制器A插槽5端口A (e5a)。</block>
+  <block id="645f1ad1e72000ad9dc8c3735828b28a" category="list-text">使用缆线将磁盘架NSM A端口e0b连接到控制器B插槽5端口b (e5b)。</block>
+  <block id="0b2da11bd8c712291a7f895f49e9e5e9" category="list-text">使用缆线将磁盘架NSM B端口e0a连接到控制器B插槽5端口A (e5a)。</block>
+  <block id="7d87c1e0b37af31cc86321a5d5f8fad9" category="list-text">使用缆线将磁盘架NSM B端口e0b连接到控制器A插槽5端口b (e5b)。</block>
+  <block id="77216f6b109bab92f8497e814fbcd4a5" category="image-alt">DRW nss224 a800 c800单架IEOPS 9664</block>
+  <block id="67a1e7b2fb2710119ca2c369df46d177" category="list-text">使用缆线将NSM A端口e0a连接到控制器A插槽5端口A (e5a)。</block>
+  <block id="b2d8ae37f68adbef520c33f95bc7740d" category="list-text">使用缆线将NSM A端口e0b连接到控制器B插槽3端口b (e3b)。</block>
+  <block id="109d29131c6d5647c766eefb23aec61b" category="list-text">使用缆线将NSM B端口e0a连接到控制器B插槽5端口A (e5a)。</block>
+  <block id="27310283a3908ee815e83bb06328e1d3" category="list-text">使用缆线将NSM B端口e0b连接到控制器A插槽3端口b (e3b)。</block>
+  <block id="59c7f6788f7ef12a4b2524328b13a7fb" category="list-text">使用缆线将NSM A端口e0a连接到控制器A插槽3端口A (E3A)。</block>
+  <block id="a73dfc2db8f70243575712b9db968b1b" category="list-text">使用缆线将NSM A端口e0b连接到控制器B插槽5端口b (e5b)。</block>
+  <block id="cb68744bc941069df627bd20238f7997" category="list-text">使用缆线将NSM B端口e0a连接到控制器B插槽3端口A (E3A)。</block>
+  <block id="62e633c0432fba605a22e8a2ab4b4bbe" category="list-text">使用缆线将NSM B端口e0b连接到控制器A插槽5端口b (e5b)。</block>
+  <block id="e353caf6698cfea61d3a9c18256a7e59" category="image-alt">DRW nss224 a800 c800 2个磁盘架IEOPS 96696</block>
+  <block id="bf357d9e6b8fc772b2e450e7c12e862a" category="paragraph">如何为AFF A400 HA对中的NS224驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持RoCE的端口集数量(一个或两个)。</block>
+  <block id="c8714c0d9fd482c82a6eb9a1f88a6c6a" category="list-text">使用缆线将NSM A端口e0b连接到控制器B插槽5端口2 (e5b)。</block>
+  <block id="ce53afcddddc3b3dd304dc0ca5abed65" category="list-text">使用缆线将NSM B端口e0b连接到控制器A插槽5端口2 (e5b)。</block>
+  <block id="6239efbf6396bdace9a9955581f4409b" category="list-text">使用缆线将NSM A端口e0a连接到控制器A插槽5端口1 (e5a)。</block>
+  <block id="2fe8fb2268f4a14629b04075d5feb39b" category="list-text">使用缆线将NSM B端口e0a连接到控制器B插槽5端口1 (e5a)。</block>
+  <block id="f083687f229e9087607fc97422e119c0" category="image-alt">DRW nss224 a400 2个磁盘架IEOPS 983</block>
+  <block id="3a6fe973f6f6e375a30d50e1b00bea51" category="section-title">为AFF C400 HA对的热添加磁盘架布线</block>
+  <block id="0b6cfa43bebeb67d84b94f8437703149" category="paragraph">如何为AFF C400 HA对中的NS224驱动器架布线取决于您要热添加的磁盘架数量以及控制器模块上使用的支持RoCE的端口集数量(一个或两个)。</block>
+  <block id="7bbb938b0cef224ffa8f6826122559e4" category="list-text">如果要在每个控制器模块上使用一组支持RoCE的端口热添加一个磁盘架、而这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
+  <block id="d5453cac8ec10c5502b08b0ac5208b06" category="list-text">使用缆线将磁盘架NSM A端口e0a连接到控制器A插槽4端口1 (E4A)。</block>
+  <block id="f74b21e9e00a4f232af4a83d6e91ea56" category="list-text">使用缆线将磁盘架NSM A端口e0b连接到控制器B插槽4端口2 (e4b)。</block>
+  <block id="dea9986ba87dcbe7e1e56edd0971ea75" category="list-text">使用缆线将磁盘架NSM B端口e0a连接到控制器B插槽4端口1 (E4A)。</block>
+  <block id="f0f25c87c1779ef06057bd2f760dd44a" category="list-text">使用缆线将磁盘架NSM B端口e0b连接到控制器A插槽4端口2 (e4b)。</block>
+  <block id="3c77f8a010dc228fdfa09613c4594a7f" category="image-alt">DRW nss224 c400 1架IEOPS 9885</block>
+  <block id="b53dcc9edd6c4009c02a65c16082912f" category="list-text">如果要在每个控制器模块上使用两组支持RoCE的端口热添加一个或两个磁盘架、请完成以下子步骤。</block>
+  <block id="a3a2d87cd45ac90b1a64a157d596387a" category="list-text">使用缆线将NSM A端口e0a连接到控制器A插槽4端口1 (E4A)。</block>
+  <block id="ec21ec9fcd2f64561315df3e90210f4e" category="list-text">使用缆线将NSM B端口e0a连接到控制器B端口插槽4端口1 (E4A)。</block>
+  <block id="271862bfe83769232e835a8b7bc18b91" category="list-text">使用缆线将NSM A端口e0b连接到控制器B插槽4端口2 (e4b)。</block>
+  <block id="15c080954c797a5f48e731fe0b0c039f" category="list-text">使用缆线将NSM B端口e0b连接到控制器A插槽4端口2 (e4b)。</block>
+  <block id="e33765db8a9f63ae6e0b091a821ba6e2" category="image-alt">DRW nss224 c400 2个磁盘架IEOPS 984</block>
+  <block id="367a5e8a40acf4970fc5bd256036dad0" category="list-text">请勿混用具有不同效率额定值或不同输入类型的电源。</block>
+  <block id="ca2b5a039c8e27702d6e3bceb10da121" category="paragraph">请始终像这样替换。</block>
+  <block id="90b475888361b2f83d88d4a8d50e38ae" category="paragraph">请根据您的PSU类型使用相应的操作步骤 ：AC或DC。</block>
+  <block id="dbe274976a0675ada94a7cd154b41770" category="open-title">选项1：更换交流电源</block>
+  <block id="766cd1f86b59b34959a00e935d7879f0" category="paragraph">要更换交流电源、您可以观看动画或完成以下步骤。</block>
+  <block id="237b374556444adacad703246e5d9ef0" category="list-text">将手柄向上旋转到其水平位置、然后抓住它。</block>
+  <block id="f0167637a350c4dd2e81ce6e691cd9db" category="list-text">向下旋转手柄、使其无法正常运行。</block>
+  <block id="f66f18cf0f377b83882ade5b0618dbe0" category="open-title">选项2：更换直流电源</block>
+  <block id="75a2f242d94a472d387a461ee767e00c" category="paragraph">要更换直流电源、请完成以下步骤。</block>
+  <block id="de5c94ee80b23390308831ba0a74d44b" category="paragraph">下一步中的图和表显示了两个翼形螺钉(项目1)和D-sub直流电源线连接器(项目2)。</block>
+  <block id="75b8b67557750f13b0b08808f90f76e3" category="list-text">拧下电源线连接器上的两个翼形螺钉。</block>
+  <block id="37a0782c59ce799b3f0ac9f1fd300d95" category="list-text">从电源拔下电源线连接器并将其放在一旁。</block>
+  <block id="dd59df5055ae64422d06dada9ff46511" category="admonition">The power supply is short.从NSM模块中取出时、请始终用双手托住它、以免它从NSM模块中自由转动并给您造成损害。</block>
+  <block id="6e496e45275d9692038e8f0693a1ec58" category="paragraph">电源必须与内部连接器和锁定机制正确接合。如果您认为电源未正确就位、请重复此步骤。</block>
+  <block id="de1e769c433d3a929aaa6f6ee4b43fe2" category="list-text">将电源线连接器插入电源。</block>
+  <block id="a637e5d063c7b8dd7bfddc7608e9573e" category="list-text">拧紧将电源线连接器固定到电源的两个翼形螺钉。</block>
+  <block id="89f1a7f8afce2b821a07ad90fa45719c" category="list-text">您可以使用以下动画或写入的步骤更换风扇。</block>
+  <block id="3b3c879ba506df7489cfabd2dcff0ce2" category="list-text">如果电源是交流电源、请打开电源线固定器、或者如果是直流电源、请拧下两个翼形螺钉、然后从电源中拔下电源线、从而断开电源线与电源的连接。</block>
+  <block id="2618c98d909106f2012ce83478a61e98" category="list-text">您可以使用以下动画或写入的步骤来更换NSM模块。</block>
+  <block id="0bf5ff9e72c934359f371e6cfcac4e7a" category="list-text">如果电源为交流电源、请打开电源线固定器、或者如果为直流电源、请拧下两个拇指螺丝、然后从电源拔下电源线、从而断开电源线与电源的连接。</block>
+  <block id="a5eed34e2848e5d8b4a2e7db6420eb0b" category="list-text">将DIMM从受损的NSM模块移至更换的NSM模块：</block>
+  <block id="c09133f07e81aff9529fa7603192c4e6" category="list-text">将风扇从受损的NSM模块移至更换的NSM模块：</block>
+  <block id="f5c149574e080653110f6de1e58f8a94" category="list-text">将电源从受损的NSM模块移至更换的NSM模块：</block>
+  <block id="c2e2567b93e54427d80c6e00b15817db" category="summary">要启动并运行AFF 和FAS 系统、您需要在ONTAP 中安装硬件组件、配置交换机以及配置存储。</block>
+  <block id="5ffdf920c790023dff209052146f3717" category="doc">启动并运行AFF 和FAS 存储系统</block>
+  <block id="5580e672f0ec2eb7f97978674ab11acb" category="inline-link">MetroCluster 文档站点</block>
+  <block id="1a4af28a3bbd2601782d5a7f4300eace" category="paragraph">如果您的系统采用MetroCluster 配置、请转至<block ref="7a41c0ceac7b7f46cc98ba334d076153" category="inline-link-rx"></block> 并按照适用于您的MetroCluster 配置类型的安装说明进行操作。</block>
+  <block id="71e3f3adc231b164f4f0837d133f2bc6" category="paragraph">如果您的存储系统未在MetroCluster 配置中设置、请使用以下工作流进行部署。</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一个</block>
+  <block id="1488c7c37653a45223ebecdfabcefa04" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 安装AFF/FAS控制器</block>
+  <block id="edc4a76e22711e26f2e103a32108feb0" category="paragraph">在机架或机柜中安装AFF/FAS控制器。访问适用于您的AFF/FAS平台型号的安装和设置说明。</block>
+  <block id="8e4eec704f9a8706e1a3cf96accb2c17" category="list-text"><block ref="8e4eec704f9a8706e1a3cf96accb2c17" category="inline-link-rx"></block></block>
+  <block id="564ec135f22614fd51e7ace4addc3c82" category="list-text"><block ref="564ec135f22614fd51e7ace4addc3c82" category="inline-link-rx"></block></block>
+  <block id="5173935e91aef44c51b8afd57f32f13f" category="list-text"><block ref="5173935e91aef44c51b8afd57f32f13f" category="inline-link-rx"></block></block>
+  <block id="e06ad9290eff5c16396920aafb75091e" category="list-text"><block ref="e06ad9290eff5c16396920aafb75091e" category="inline-link-rx"></block></block>
+  <block id="5cebcc95a2116e4839d188e34a24089c" category="list-text"><block ref="5cebcc95a2116e4839d188e34a24089c" category="inline-link-rx"></block></block>
+  <block id="2f143cdae4fee80d6697460e215b8a02" category="list-text"><block ref="2f143cdae4fee80d6697460e215b8a02" category="inline-link-rx"></block></block>
+  <block id="5ac126eccd9cedace8ba8c1ea4723760" category="list-text"><block ref="5ac126eccd9cedace8ba8c1ea4723760" category="inline-link-rx"></block></block>
+  <block id="266197ce8fb9d3417e159a8b375e04ef" category="list-text"><block ref="266197ce8fb9d3417e159a8b375e04ef" category="inline-link-rx"></block></block>
+  <block id="9832cac218f9fee6c6d44a9f9b5e7d76" category="list-text"><block ref="9832cac218f9fee6c6d44a9f9b5e7d76" category="inline-link-rx"></block></block>
+  <block id="4cd32923632a1028f1e64fee85335b39" category="list-text"><block ref="4cd32923632a1028f1e64fee85335b39" category="inline-link-rx"></block></block>
+  <block id="6cfed826aaeccc59ecbf1bef0c41c6b6" category="list-text"><block ref="6cfed826aaeccc59ecbf1bef0c41c6b6" category="inline-link-rx"></block></block>
+  <block id="2bf999bae7084da5db26c6b483ac44f0" category="list-text"><block ref="2bf999bae7084da5db26c6b483ac44f0" category="inline-link-rx"></block></block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
+  <block id="d130f1dd19e93aaf9701cc968056061f" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 安装交换机硬件</block>
+  <block id="26d2e0bd267361cc8916e7e16faebcbb" category="paragraph">将交换机安装在机架或机柜中。根据您的交换机型号访问以下说明。</block>
+  <block id="f267a68fd1c8bddcc992701898021398" category="list-title">集群交换机</block>
+  <block id="8821c03ea98d1edaf4b4b82c0aaf59dc" category="inline-link-macro">安装BES-53248交换机</block>
+  <block id="9000e67500cb5e61bcd3ec702237913b" category="list-text"><block ref="9000e67500cb5e61bcd3ec702237913b" category="inline-link-macro-rx"></block></block>
+  <block id="f4f4adc3268a66380dfdff9b1a20bc7b" category="inline-link-macro">安装Cisco Nexus 9336C-x2交换机</block>
+  <block id="ecdf11290d1440e9c1a6d4b9666ad878" category="list-text"><block ref="ecdf11290d1440e9c1a6d4b9666ad878" category="inline-link-macro-rx"></block></block>
+  <block id="66e51b9ff1adb3e615b49ae8223869a4" category="inline-link-macro">安装NVIDIA SN2100交换机</block>
+  <block id="459378c7b38e766a9c40673dc6b7d6b6" category="list-text"><block ref="459378c7b38e766a9c40673dc6b7d6b6" category="inline-link-macro-rx"></block></block>
+  <block id="403284bd44beda112195a484c8a76421" category="list-title">存储交换机</block>
+  <block id="75ddd4263ff912af7be6b34b846062ec" category="list-text"><block ref="75ddd4263ff912af7be6b34b846062ec" category="inline-link-macro-rx"></block></block>
+  <block id="617820a8b836e10d6f5146fc0f043112" category="list-text"><block ref="617820a8b836e10d6f5146fc0f043112" category="inline-link-macro-rx"></block></block>
+  <block id="bc8a2cd252a5beb1dbf4f209baea67eb" category="list-title">共享交换机</block>
+  <block id="5e56acfb152f096818349fa67202b6f7" category="list-text"><block ref="5e56acfb152f096818349fa67202b6f7" category="inline-link-macro-rx"></block></block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三个</block>
+  <block id="a4ae5d0bd4e47ba267a8df1ceee51985" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>使用缆线将交换机连接到控制器</block>
+  <block id="427748ed6a44d0d6126050507a461881" category="paragraph">AFF/FAS安装和设置说明介绍了如何使用缆线将控制器端口连接到交换机。但是、如果您需要受支持的缆线和收发器列表以及有关交换机主机端口的详细信息、请根据您的交换机型号访问以下说明。</block>
+  <block id="497781401f115451ecac27f7f2933cb3" category="inline-link-macro">为BES-53248交换机布线</block>
+  <block id="4762b908167d7cdf9e4a1c2789f3dc25" category="list-text"><block ref="4762b908167d7cdf9e4a1c2789f3dc25" category="inline-link-macro-rx"></block></block>
+  <block id="2586f55a2b9174f4cb4f6ba1d3074ad1" category="inline-link-macro">使用缆线连接Cisco Nexus 9336C-x2交换机</block>
+  <block id="93bab82665555723d09cf89ede810907" category="list-text"><block ref="93bab82665555723d09cf89ede810907" category="inline-link-macro-rx"></block></block>
+  <block id="52f7a5e6d4c023e5fef53f473f22b20a" category="inline-link-macro">使用缆线连接NVIDIA SN2100交换机</block>
+  <block id="0ee060af4c87c4fbc6cbd8f24ffeda59" category="list-text"><block ref="0ee060af4c87c4fbc6cbd8f24ffeda59" category="inline-link-macro-rx"></block></block>
+  <block id="3f53fd4b09af6c568ea0f9f54f9f2d23" category="list-text"><block ref="3f53fd4b09af6c568ea0f9f54f9f2d23" category="inline-link-macro-rx"></block></block>
+  <block id="705795ef685b9269be58747bb63f1206" category="list-text"><block ref="705795ef685b9269be58747bb63f1206" category="inline-link-macro-rx"></block></block>
+  <block id="8ed9021db09e01ee30c3f88e6bb6c84a" category="list-text"><block ref="8ed9021db09e01ee30c3f88e6bb6c84a" category="inline-link-macro-rx"></block></block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">四个</block>
+  <block id="2d51a4c0647f6c33eb1618ae2b75bbbf" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block>配置交换机</block>
+  <block id="ec105a48fce29c3cef5a1857c97bf49f" category="paragraph">对交换机执行初始设置。根据您的交换机型号访问以下说明。</block>
+  <block id="f5dcfee71330ba72d10a9ef205dd69e5" category="inline-link-macro">配置BES-53248交换机</block>
+  <block id="fa53fe969df039b61c8e18516b5dc73c" category="list-text"><block ref="fa53fe969df039b61c8e18516b5dc73c" category="inline-link-macro-rx"></block></block>
+  <block id="b26d2c239cf0d70021ec2d611dd2cefd" category="inline-link-macro">配置Cisco Nexus 9336C-x2交换机</block>
+  <block id="0a2dce0d006281c864fd0f86f4ea8582" category="list-text"><block ref="0a2dce0d006281c864fd0f86f4ea8582" category="inline-link-macro-rx"></block></block>
+  <block id="7bfd713e089f5e59b6c1826b2af39c2a" category="inline-link-macro">配置NVIDIA SN2100交换机</block>
+  <block id="2519e7f54407f60dc79e9259ef7945d2" category="list-text"><block ref="2519e7f54407f60dc79e9259ef7945d2" category="inline-link-macro-rx"></block></block>
+  <block id="06a65f0a1639e3cb60d130682802f0f4" category="list-text"><block ref="06a65f0a1639e3cb60d130682802f0f4" category="inline-link-macro-rx"></block></block>
+  <block id="3a8a1008ac39062434132158737ee20f" category="list-text"><block ref="3a8a1008ac39062434132158737ee20f" category="inline-link-macro-rx"></block></block>
+  <block id="19f48057a2a8e92f21d37a0c84da71ca" category="list-text"><block ref="19f48057a2a8e92f21d37a0c84da71ca" category="inline-link-macro-rx"></block></block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">五个</block>
+  <block id="64637562d7e27f62620328710451f9ca" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 安装交换机软件</block>
+  <block id="8c5afc8d3c5a4855ac8b127c598aaf6c" category="paragraph">要在交换机上安装和配置软件、请按照适用于您的交换机型号的软件安装工作流进行操作。</block>
+  <block id="be6af2b7851b2766e149e88f47cd231e" category="inline-link-macro">为BES-53248交换机安装软件</block>
+  <block id="283819fa3187f4cab4901fd782a00562" category="list-text"><block ref="283819fa3187f4cab4901fd782a00562" category="inline-link-macro-rx"></block></block>
+  <block id="60772399a01d09f82f607f7cc816aef1" category="inline-link-macro">为Cisco Nexus 9336C-x2交换机安装软件</block>
+  <block id="17cd31cbaa939cc9be9b435aa9bc29b3" category="list-text"><block ref="17cd31cbaa939cc9be9b435aa9bc29b3" category="inline-link-macro-rx"></block></block>
+  <block id="3437ca96f916be870bf8b2b922d6299d" category="inline-link-macro">为NVIDIA SN2100交换机安装软件</block>
+  <block id="56e2901763e1f0f4a779d43168cd0e17" category="list-text"><block ref="56e2901763e1f0f4a779d43168cd0e17" category="inline-link-macro-rx"></block></block>
+  <block id="71e74baaa680eaec49a78bcc05bd4cae" category="list-text"><block ref="71e74baaa680eaec49a78bcc05bd4cae" category="inline-link-macro-rx"></block></block>
+  <block id="79b5bea37a0a17cdb8b4e1b94ffc5c28" category="list-text"><block ref="79b5bea37a0a17cdb8b4e1b94ffc5c28" category="inline-link-macro-rx"></block></block>
+  <block id="09ebf9105e3a0e85568481422cb709d1" category="list-text"><block ref="09ebf9105e3a0e85568481422cb709d1" category="inline-link-macro-rx"></block></block>
+  <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">六个</block>
+  <block id="aea7345148c1589735242fc13ad81924" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> 完成系统设置</block>
+  <block id="8a19d1619bb8803d8a6b5d21556d87ad" category="paragraph">配置交换机并安装所需软件后、请访问适用于AFF/FAS平台型号的安装和设置说明以完成系统设置。</block>
+  <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">七个</block>
+  <block id="8f5988d6d5abedb5da92f0fcbc79872d" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> 完成ONTAP 配置</block>
+  <block id="f0a39bebe9f0d59f6fc97c14de8b2a1a" category="paragraph">安装并设置AFF/FAS控制器和交换机后、必须在ONTAP 中完成存储配置。根据您的部署配置访问以下说明。</block>
+  <block id="549f827e07761bafef053e8ca7564a39" category="inline-link">配置 ONTAP</block>
+  <block id="8849c41092b79554e9b7f3a213d25622" category="list-text">有关ONTAP 部署、请参见<block ref="a9c0083f0559526553eb5b29452926d5" category="inline-link-rx"></block>。</block>
+  <block id="10775dd39d5bac0a859a7c2aa804576e" category="inline-link">使用ONTAP 配置MetroCluster</block>
+  <block id="cd0ac8ac6ae100c0f56d712237ad4aea" category="list-text">有关采用MetroCluster 的ONTAP 部署、请参见<block ref="725c74f5b5396d66bd86e73daf02329b" category="inline-link-rx"></block>。</block>
+  <block id="c5a63894b2cca959254f190c438b2862" category="doc">更换实时时钟电池- AFF C800</block>
+  <block id="4e98f7d06c194d745ab8b22805c9cf46" category="doc">更换机箱- AFF C800</block>
+  <block id="7084b904bc2fba91a6a3acb82001365c" category="doc">完成还原和更换过程—AFF C800</block>
+  <block id="a7d1c95d57e2d4d91562898a605711c2" category="doc">将故障部件退回给NetApp—AFF C800</block>
+  <block id="c7567cf7dbf1c0e5da4f2ff1ced923ef" category="doc">快速步骤—AFF C800</block>
+  <block id="f8eb42a3c2c9e8d82c874d7ccd6ef2a9" category="inline-link-macro">《AFF C800安装和设置说明》</block>
+  <block id="1b687c0cb9f5dcfa6fe0020541ed6d97" category="paragraph"><block ref="1b687c0cb9f5dcfa6fe0020541ed6d97" category="inline-link-macro-rx"></block></block>
+  <block id="51e6f316a2e32ea2e86cbacf242892f6" category="doc">根据需要还原OKM、NSE和NVE—AFF C800</block>
+  <block id="6d940c412bcfcdb76ebf095399d157ea" category="doc">还原并验证系统配置—AFF C800</block>
+  <block id="83087c77244cbf7473481303d60706cd" category="doc">启动恢复映像—AFF C800</block>
+  <block id="e00efce1b44b4a70e33640aa4e4da7ab" category="doc">更换风扇—AFF C800</block>
+  <block id="7bb5b3f1026a3e755afd3077cd503481" category="doc">更换NVDIMM电池—AFF C800</block>
+  <block id="47b1e09c5a04b6651d4bc03190565935" category="doc">控制器模块更换概述—AFF C800</block>
+  <block id="f3812c1bc21f4b91457674bcb79e0abd" category="doc">关闭控制器- AFF C800</block>
+  <block id="555193cbb314d41872f483748d489825" category="doc">更换电源—AFF C800</block>
+  <block id="3898efc1e45ee027e1343af6cd87375e" category="list-text"><block ref="3898efc1e45ee027e1343af6cd87375e" category="inline-link-macro-rx"></block></block>
+  <block id="76908712922b1fbfdbdf730f794b109c" category="list-text"><block ref="76908712922b1fbfdbdf730f794b109c" category="inline-link-macro-rx"></block></block>
+  <block id="96ec8a0dff9ea2637e9a0469cd7bf45e" category="list-text"><block ref="96ec8a0dff9ea2637e9a0469cd7bf45e" category="inline-link-macro-rx"></block></block>
+  <block id="b841c581d0bd2543077c9323cde216c2" category="doc">更换启动介质—AFF C800</block>
+  <block id="820a6cf0e2bcf8d6df3250e33f97c935" category="doc">关闭受损控制器- AFF C800</block>
+  <block id="f9df48646e98bcca0ef69fd1b5827115" category="summary">本节详细介绍了安装AFF C800系统的分步说明。</block>
+  <block id="c090b19d359523d8768d0e3b3aecfeac" category="doc">详细步骤—AFF C800</block>
+  <block id="b2ff23ff7a4337d3bf36446e97f1f1f4" category="paragraph">要安装AFF C800系统、您需要创建一个帐户并注册该系统。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
+  <block id="09e80812def315f5cdd1c01dcdfeecd6" category="paragraph"><block ref="09e80812def315f5cdd1c01dcdfeecd6" category="inline-link-macro-rx"></block></block>
+  <block id="7040351b0fc4c5a538e3b99ec1ec804a" category="doc">更换NVDIMM - AFF C800</block>
+  <block id="7879dde42cda05c8d4a155645c4a2b6d" category="doc">视频—AFF C800</block>
+  <block id="6b60c2f33c9927e16d390be43c988aa0" category="video-title">动画—安装和设置AFF C800</block>
+  <block id="2a6e70f5ba0bf4b1e8256c095ec0cd1c" category="doc">更换控制器模块硬件—AFF C800</block>
+  <block id="4d1f4d1959439db01cd08ead7adf26ca" category="paragraph">AFF C800中有一个启动介质设备。您必须将其从受损控制器中移动并安装到 _replacement_ 控制器中。</block>
+  <block id="90571542a9bc3f19e7a4f29fa9556cff" category="doc">关闭控制器- AFF C800</block>
+  <block id="96575ba10e2fbb7c8295e344411ca2d1" category="doc">更换DIMM - AFF C800</block>
+  <block id="0251caa15dc8d2cbd1cfcc6d72965b59" category="summary">您可以通过AFF C800系统文档安装、设置和维护系统。</block>
+  <block id="9683970b55904c77ccb71ba2bd90666f" category="doc">AFF C800系统文档</block>
+  <block id="b048da3eaccc3591e9c1d6b08af1a750" category="doc">更换SSD驱动器—AFF C800</block>
+  <block id="592fdd085a6d32be5ca82d8cf41fd57d" category="doc">检查板载加密密钥- AFF C800</block>
+  <block id="053f6b40fe6bb9b0a6dde49c0f76dc01" category="doc">重新配置系统并重新分配磁盘—AFF C800</block>
+  <block id="1085be18597d7d6c96ecba68a211bd73" category="doc">更换PCIe卡- AFF C800</block>
+  <block id="a3ab531d62779409698b7c4da393c7e6" category="doc">将启动映像传输到启动介质—AFF C800</block>
+  <block id="c73861201327e5c06b062143f039e8bc" category="doc">启动介质更换概述—AFF C800</block>
+  <block id="07aadbac64794a2290e43416f4863695" category="doc">移动并更换硬件—AFF C800</block>
+  <block id="253caa9c2eebe3748f90a07e4d0d1158" category="doc">完成系统还原—AFF C800</block>
+  <block id="de76cd60441abcdc9d5a84858b3a0fad" category="sidebar">SAS磁盘架</block>
+  <block id="ccd67995cab28bf139c1e242119020df" category="sidebar">支持的交换机</block>
+  <block id="6db27f68adde7b6578b513891108402f" category="sidebar">BES-53248</block>
+  <block id="5aec304982416461faa5bf9b3a0b2cf3" category="sidebar">Cisco Nexus 9336C-x2</block>
+  <block id="47b6f3be1213edd22611d686b390abda" category="sidebar">共享配置中的Cisco Nexus 9336C-x2</block>
+  <block id="a7d3b6d16f07555f1105a7d1e5d0821b" category="sidebar">更多文档资源</block>
+  <block id="cede59a3d2d42bc422e2a59b7efe9552" category="sidebar">更换内部磁盘驱动器(视频)</block>
+  <block id="6505495ba9a5199a2f01768528d92397" category="sidebar">向AFF C190添加容量(视频)</block>
+  <block id="349838fb1d851d3e2014b9fe39203275" category="sidebar">安装</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">快速入门</block>
+  <block id="f729a9ea4752a1ac8e959061af3b0612" category="sidebar">AFF 和FAS 存储数据表</block>
+  <block id="5c4d47ba596f06f53b9aa793345127dd" category="sidebar">AFF C250</block>
+  <block id="c9996a1b1fe92047dfbcfbef9989c233" category="sidebar">AFF C400</block>
+  <block id="e0d8a184e851ebead0da8ef2d160d077" category="sidebar">AFF C800</block>
+  <block id="8a1d06fd27bf0bfc6535b6a49185e591" category="sidebar">AFF A150</block>
+  <block id="9f4416e119f06c0f37d722efa8fabfe9" category="sidebar">可用性已终止的系统</block>
+  <block id="6e637bf90c8e52e1b5b8fa7b076594de" category="sidebar">可用性终止的交换机</block>
+  <block id="732eab758bc032e5cc4992b97650c69b" category="sidebar">相关ONTAP 文档</block>
+  <block id="fcaf8c1ce832814314e7cdc51233676b" category="sidebar">平台升级(大多数系统)</block>
+  <block id="7c4365c5c3b36c349d31ac07e90053ce" category="sidebar">平台升级(MetroCluster 配置)</block>
+  <block id="46edf46f46a5fc2267bcf312e1955d28" category="sidebar">ONTAP 软件文档</block>
+  <block id="c8a6259aed44fea9ff6723eeb59cce9e" category="sidebar">Digital Advisor文档</block>
+  <block id="974ad78dc53c253ebfe5b2b8b376f353" category="sidebar">工具和支持</block>
+  <block id="668e2078ef1b1722c77cdb5c523a4463" category="sidebar">NetApp 知识库</block>
+  <block id="2bae42f280067110dfd52cc69a468364" category="sidebar">Active IQ （需要登录）</block>
+  <block id="b5bfe3d61bf9be292418cb9d21eec19c" category="sidebar">启动并运行</block>
+  <block id="8f7cc2c7f8ea66405c4805e7ebc09f8f" category="sidebar">AFF A150系统</block>
+  <block id="cafd0584cfa2700cbb38234c6c87ff44" category="sidebar">AFF A150安装和设置</block>
+  <block id="19aa00b7e147cb8650f3b77592febb48" category="sidebar">AFF A150维护</block>
+  <block id="6dbe7abf62684ff33daa35e4cfe2dad6" category="sidebar">AFF A150启动介质</block>
+  <block id="1d3fd2e7fce9bd10949365404c11c97c" category="sidebar">AFF A150缓存模块</block>
+  <block id="c3257e2a1d015102202312f79a478c54" category="sidebar">AFF A150机箱</block>
+  <block id="458bbaee6ced13db5a8e0de32d6df8a8" category="sidebar">AFF A150控制器</block>
+  <block id="6fce75a073a0f8f56117212fb7d30171" category="sidebar">AFF A150 DIMM</block>
+  <block id="ca9a4b969c17171e3c54d4927ca92794" category="sidebar">AFF A150驱动器</block>
+  <block id="4bf5a1cfe5331b0b2d25ecb372774f4e" category="sidebar">AFF A150 NVMEM电池</block>
+  <block id="efd13c664557927ef55aa1db345b7134" category="sidebar">AFF A150电源</block>
+  <block id="4ee45fd3000c3d26ca4a96d5e0a1f8ae" category="sidebar">AFF A150实时时钟电池</block>
+  <block id="368d641430dae2b0a8c7c2bf6311587d" category="sidebar">AFF C250系统</block>
+  <block id="5f4343bc91f5884e913fac7fc5ef6879" category="sidebar">AFF C250安装和设置</block>
+  <block id="6ab6fba62ccec79ff36ba3c0657af4ae" category="sidebar">AFF C250维护</block>
+  <block id="6d7295bb011b88dfff81fa24b83caee3" category="sidebar">AFF C250启动介质</block>
+  <block id="c200941f98f365b1ea223e9b5017435c" category="sidebar">AFF C250机箱</block>
+  <block id="c9ce06c68e758edf256ecf0855912d40" category="sidebar">AFF C250控制器模块</block>
+  <block id="6329b1134cd585a80e1c1289687135be" category="sidebar">AFF C400系统</block>
+  <block id="fef6e20056a9a97444ad5d035918d0f2" category="sidebar">AFF C400安装和设置</block>
+  <block id="abdc9f1c1f1fa93deddb3513a455ff74" category="sidebar">AFF C400维护</block>
+  <block id="69077bf839678df07e0a3ee2c5ce0c19" category="sidebar">AFF C400启动介质</block>
+  <block id="4e7c968326614b0c8bb6e7220446c15e" category="sidebar">AFF C400机箱</block>
+  <block id="275e786433a7b9ba3c47efacaf9e9d56" category="sidebar">AFF C400控制器模块</block>
+  <block id="a49ab8f17cda96f1a42a275df274b272" category="sidebar">AFF C400 DIMM</block>
+  <block id="3e934ddf41ea8861eac71a830daf0169" category="sidebar">AFF C400风扇模块</block>
+  <block id="ccb0bb24e3698848c3106d9fadfd6e0f" category="sidebar">AFF C400 NVDIMM电池</block>
+  <block id="0b4c3d287afdcc3e7c8b64810e8287cc" category="sidebar">AFF C400 PCIe或夹层卡</block>
+  <block id="fa139a62f55ea11ea4db982fd219daad" category="sidebar">AFF C400电源</block>
+  <block id="0f4a0190a5a77923ee7af25171aa9b9f" category="sidebar">AFF C400实时时钟电池</block>
+  <block id="abab29a6fb252536c5c31f6382d49164" category="sidebar">AFF C800系统</block>
+  <block id="7db3bd8a3e788453e923804704eb87b7" category="sidebar">AFF C800安装和设置</block>
+  <block id="27d884866d0c53b71a3641e639ac19f3" category="sidebar">AFF C800维护</block>
+  <block id="36c69c49c18ae2fa7dce0347a69f0065" category="sidebar">AFF C800启动介质</block>
+  <block id="81e825abffe43a736d6c9dc55fd84da2" category="sidebar">AFF C800机箱</block>
+  <block id="c164f067875d1a9aa792717f22c79b98" category="sidebar">AFF C800控制器模块</block>
 </blocks>

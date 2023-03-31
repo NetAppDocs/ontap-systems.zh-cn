@@ -1,0 +1,34 @@
+---
+permalink: c800/install-videos.html 
+sidebar: sidebar 
+keywords: aff c800, hardware installation and cabling video, perform end-to-end software configuration video 
+summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
+---
+= 视频—AFF C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有两个视频—一个视频介绍如何将系统装入机架并进行布线，另一个视频显示了使用 System Manager 引导式设置执行初始系统配置的示例。
+
+如果您使用的是MetroCluster 配置、请使用MetroCluster 安装内容。
+
+https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]
+
+
+
+== 视频：硬件安装和布线，共两个视频之一
+
+以下视频显示了如何安装新系统并为其布线。
+
+.动画—安装和设置AFF C800
+video::db9f506c-b08e-4b66-b781-afc40187b639[panopto]
+
+
+== 视频二：执行端到端软件配置
+
+以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
+
+video::WAE0afWhj1c?[youtube]
