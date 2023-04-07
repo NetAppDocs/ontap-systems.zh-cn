@@ -12,18 +12,14 @@ indexpage:
       url: "/get-up-and-run.html"
     - title: AFF 和FAS 存储数据表
       url: https://www.netapp.com/data-storage/disk-shelves-storage-media/
+    - title: AFF A系列系统数据表
+      url: https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf
+    - title: AFF C系列系统数据表
+      url: https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf
     - title: "《 ONTAP 发行说明》"
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
-  - title: AFF 系统
+  - title: AFF A系列系统
     links:
-    - title: AFF C190
-      url: "/c190/index.html"
-    - title: AFF C250
-      url: "/c250/index.html"
-    - title: AFF C400
-      url: "/c400/index.html"
-    - title: AFF C800
-      url: "/c800/index.html"
     - title: AFF A150
       url: "/a150/index.html"
     - title: AFF A220
@@ -38,6 +34,16 @@ indexpage:
       url: "/a800/index.html"
     - title: AFF A900
       url: "/a900/index.html"
+  - title: AFF C系列系统
+    links:
+    - title: AFF C190
+      url: "/c190/index.html"
+    - title: AFF C250
+      url: "/c250/index.html"
+    - title: AFF C400
+      url: "/c400/index.html"
+    - title: AFF C800
+      url: "/c800/index.html"
   - title: FAS 系统
     links:
     - title: FAS500f
