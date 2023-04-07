@@ -3,7 +3,7 @@
 
 
 [role="lead"]
-You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。
+您可以在I/O运行期间无中断更换发生故障的SSD驱动器。
 
 When a drive fails, the platform logs a warning message to the system console indicating which drive has failed.In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.
 
@@ -15,7 +15,7 @@ The failed drive appears in the list of failed drives.If it does not, you should
 
 +
 
-NOTE: 根据驱动器类型和容量，该驱动器可能需要长达数小时才能显示在故障驱动器列表中。
+NOTE: 该驱动器可能需要长达数小时才能显示在故障驱动器列表中。
 
 * 确定是否已启用 SED 身份验证。
 +
@@ -29,6 +29,3 @@ NOTE: 根据驱动器类型和容量，该驱动器可能需要长达数小时�
 在固件版本不是最新的新驱动器上，驱动器固件会自动更新（无中断）。
 
 在更换多个磁盘驱动器时，您必须等待一分钟，以便在卸下每个故障磁盘驱动器与插入更换磁盘驱动器之间进行连接，以便存储系统能够识别每个新磁盘的存在。
-
-.操作步骤
-通过选择适用于您的平台支持的驱动器的选项来更换故障驱动器。

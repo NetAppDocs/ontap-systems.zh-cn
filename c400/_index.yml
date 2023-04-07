@@ -13,10 +13,8 @@ indexpage:
     links:
     - title: 大多数配置
       url: "/install-setup.html"
-    - title: 光纤连接的 MetroCluster 配置
-      url: https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html
-    - title: 延伸型 MetroCluster 配置
-      url: https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html
+    - title: MetroCluster IP 配置
+      url: https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html
   - title: 维护
     links:
     - title: 启动介质
@@ -41,8 +39,8 @@ indexpage:
       url: "/rtc-battery-replace.html"
   - title: 添加或删除磁盘架
     links:
-    - title: 采用 IOM12 的 SAS
-      url: https://docs.netapp.com/us-en/ontap-systems/sas3/index.html
+    - title: NS224
+      url: https://docs.netapp.com/us-en/ontap-systems/ns224/index.html
   - title: 安装和维护交换机
     links:
     - title: Broadcom 支持的交换机

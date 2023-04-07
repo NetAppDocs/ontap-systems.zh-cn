@@ -39,16 +39,12 @@ indexpage:
       url: "/rtc-battery-replace.html"
   - title: 了解
     links:
-    - title: 更换内部磁盘驱动器视频
-      url: https://www.youtube.com/watch?v=Ziqg9HL8oYQ
     - title: 适用于采用 VMware Horizon View 的非持久性桌面的 NetApp 纯闪存 FAS 解决方案 | TR-4539
       url: https://www.netapp.com/pdf.html?item=/media/10695-tr-4539.pdf
   - title: 添加或删除磁盘架
     links:
     - title: NS224
       url: https://docs.netapp.com/us-en/ontap-systems/ns224/index.html
-    - title: 采用 IOM12 的 SAS
-      url: https://docs.netapp.com/us-en/ontap-systems/sas3/index.html
   - title: 安装和维护交换机
     links:
     - title: Broadcom 支持的交换机
