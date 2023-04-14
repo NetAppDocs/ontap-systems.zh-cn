@@ -56,9 +56,9 @@ If any volumes are listed in the output, NVE is configured and you need to verif
 
 
 
-=== 验证 NVE 配置
+== 验证 NVE 配置
 
-. 显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager key-query`
+. 显示密钥管理服务器上存储的身份验证密钥的密钥ID： `security key-manager key query`
 +
 
 NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 `KMIP` ， `AKV` 和 `GCP` 。确认这些类型的过程与确认 `外部` 或 `板载` 密钥管理器类型相同。
@@ -88,7 +88,7 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 +
 http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
-.. 验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key-query`
+.. 验证是否已 `Restored` 列等于 `yes` 对于所有身份验证密钥： `security key-manager key query`
 .. 关闭受损控制器。
 
 
@@ -99,7 +99,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
 NOTE: Enter the customer's onboard key management passphrase at the prompt.If the passphrase cannot be provided, contact NetApp Support. http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
-.. 验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key-query`
+.. 验证 `Restored` 列显示 `yes` 对于所有身份验证密钥： `security key-manager key query`
 .. 验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。
 .. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
 .. 输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`
@@ -112,9 +112,9 @@ NOTE: Enter the customer's onboard key management passphrase at the prompt.If th
 
 
 
-=== 验证 NSE 配置
+== 验证 NSE 配置
 
-. 显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager key-query -key-type NSE-AK`
+. 显示密钥管理服务器上存储的身份验证密钥的密钥ID： `security key-manager key query -key-type NSE-AK`
 +
 
 NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 `KMIP` ， `AKV` 和 `GCP` 。确认这些类型的过程与确认 `外部` 或 `板载` 密钥管理器类型相同。
@@ -137,14 +137,14 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 
 . 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容：
 +
-.. 输入板载 security key-manager sync 命令： `ssecurity key-manager external sync`
+.. 将外部密钥管理身份验证密钥还原到集群中的所有节点： `security key-manager external restore`
 +
 如果命令失败，请联系 NetApp 支持部门。
 
 +
 http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
-.. 验证所有身份验证密钥的 `restored` 列是否等于 `yes` ： `security key-manager key-query`
+.. 验证是否已 `Restored` 列等于 `yes` 对于所有身份验证密钥： `security key-manager key query`
 .. 您可以安全地关闭控制器。
 
 
@@ -157,7 +157,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"^]
 +
 http://mysupport.netapp.com/["mysupport.netapp.com"^]
 
-.. 验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key-query`
+.. 验证 `Restored` 列显示 `yes` 对于所有身份验证密钥： `security key-manager key query`
 .. 验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。
 .. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
 .. 输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`

@@ -20,7 +20,7 @@
 
 
 
-=== 验证 NVE 配置
+== 验证 NVE 配置
 
 .步骤
 . 显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager query`
@@ -75,7 +75,7 @@ NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无�
 
 
 
-=== 验证 NSE 配置
+== 验证 NSE 配置
 
 .步骤
 . 显示密钥管理服务器上存储的身份验证密钥的密钥 ID ： `security key-manager query`
