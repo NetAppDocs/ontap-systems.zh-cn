@@ -75,7 +75,7 @@ image:../media/oie_cable100_gbe_qsfp28.png[""]
 
 
  a| 
-25 GbE 缆线（ SFP28 ）
+25 GbE缆线(SFP28)
  a| 
 X66240-2 （ 112-00598 ）， 2 米
 
@@ -208,12 +208,9 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或插图完成控制器与交换机之间的布线：
+. 按照图示完成控制器和交换机之间的布线：
 +
-.动画—双节点无交换机集群布线
-video::48552ddf-0925-4f88-8e93-ab1b00666489[panopto]
-+
-image::../media/drw_c400_TNSC-network-cabling.png[DRW C400 TNSC网络布线]
+image::../media/drw_c400_TNSC-networking-cabling_IEOPS-1095.svg[DRW C400 TNSC网络布线IEOPS 1095]
 
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
@@ -237,12 +234,9 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用动画或插图完成控制器与交换机之间的布线：
+. 按照图示完成控制器和交换机之间的布线：
 +
-.动画—切换集群布线
-video::8fefba75-f395-4cf2-ba3c-ab1b00665870[panopto]
-+
-image::../media/drw_c400_switched_network_cabling.png[DRW C400交换网络布线]
+image::../media/drw_c400_switched_network_cabling_IEOPS-1096.svg[DRW C400交换网络布线IEOPS 1096]
 
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
@@ -269,12 +263,9 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用以下动画或插图将控制器连接到一个驱动器架。
+. 使用下图将控制器连接到单个驱动器架。
 +
-.动画-使用缆线将控制器连接到一个NS224驱动器架
-video::48d68897-c91d-47dc-b4b0-ab1b0066808a[panopto]
-+
-image::../media/drw_c400_one_ns224_shelves.png[DRW C400一个nss224磁盘架]
+image::../media/drw_c400_one_ns224_shelf_IEOPS-1097.svg[DRW C400单个ns224磁盘架IEOPS 1097]
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
@@ -294,12 +285,9 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用以下动画或插图将控制器连接到两个驱动器架。
+. 使用下图将控制器连接到两个驱动器架。
 +
-.动画-使用缆线将控制器连接到一个NS224驱动器架
-video::5501c7bf-8b74-49e8-8067-ab1b00668804[panopto]
-+
-image::../media/drw_c400_two_ns224_shelves.png[DRW C400两个nss224磁盘架]
+image::../media/drw_c400_two_ns224_shelves_IEOPS-1098.svg[DRW C400两个ns224磁盘架IEOPS 1098]
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 

@@ -1,0 +1,61 @@
+= 
+:allow-uri-read: 
+
+
+更换机箱后、请按以下顺序启动集群组件：
+
+* 打开交换机电源
+* 启动驱动器架
+* 启动控制器
+
+
+.步骤
+. 打开交换机电源：
++
+.. 重新插入从PDU到PSU的每根电源线。
+.. 将每个PSU摇臂开关翻转至ON位置(如果适用)。
+.. 等待交换机通电。
+.. 检查开关(前部和后部)上是否有任何故障指示灯。
+.. 通过管理IP地址连接到交换机。
+.. 确认交换机运行状况(有关详细信息、请参阅交换机供应商文档)。
+.. 对每个交换机重复此操作、直到所有交换机均已启动且运行正常为止。
+
+
+. 启动驱动器架：
++
+.. 重新插入从PDU到PSU的每根电源线。
+.. 将每个PSU摇臂开关翻转至ON位置(如果适用)。
+.. 等待所有磁盘架通电并使驱动器启动。
+.. 确保所有磁盘架ID均为预期值。
+.. 检查关闭前磁盘架(正面和背面)上是否存在任何故障指示灯。
+
+
+. 启动控制器：
++
+.. 重新插入从PDU到PSU的每根电源线。
+.. 将每个PSU摇臂开关翻转至ON位置(如果适用)。不在同一机箱中的HA对应同时启动。
+.. 等待机箱中的控制器启动。
+.. 检查机箱和控制器(正面和背面)上的任何故障指示灯。
+.. 对每个控制器/机箱重复此步骤、直到所有控制器/机箱均已通电为止。
+.. 通过SSH连接到节点的SP或BMC IP地址。在关闭电源之前、请使用以下命令获取IP地址：
++
+`system service-processor show -node * -fields address`
+
+.. 执行其他系统运行状况检查：
++
+... 解决任何问题 https://activeiq.netapp.com/["Active IQ 健康提醒和风险"]
+... 运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]
+... 按照中所述检查系统运行状况 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何在ONTAP 中使用脚本执行集群运行状况检查"]
+
+
+.. 生成维护任务完成AutoSupport 消息：
++
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+.. 确保自动交还处于活动状态：
++
+`storage failover modify -node local -auto-giveback true`
+
+
+
+

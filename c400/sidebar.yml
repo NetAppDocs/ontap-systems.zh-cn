@@ -6,8 +6,14 @@ entries:
 - title: 安装和设置
   pdf-filename: AFF C400安装和设置
   entries:
+  - title: 选择安装和设置体验
+    url: "/c400/install-setup.html"
   - title: 快速步骤
     url: "/c400/install-quick-guide.html"
+  - title: 视频步骤
+    url: "/c400/install-videos.html"
+  - title: 详细步骤
+    url: "/c400/install-detailed-guide.html"
 - title: 维护
   pdf-filename: AFF C400维护
   entries:

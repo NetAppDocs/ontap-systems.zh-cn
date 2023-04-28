@@ -203,10 +203,6 @@
   <block id="b0a5349e52bfc1b486c0f4bb7f8c6b18" category="doc">关闭控制器— AFF A250</block>
   <block id="19285c8cf559d5176d09036ecccfca21" category="list-text">如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`</block>
   <block id="f80af4e39d67de6feaae8747f603e24b" category="paragraph">以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * &gt; system node AutoSupport invoke -node * -type all -message MAINT=2h`</block>
-  <block id="880c0610027a11af7086ae7e380e12e5" category="list-text">如果您的系统有两个控制器模块，请禁用 HA 对。</block>
-  <block id="d426a3f5c9c0e3362f4ed536e7643c03" category="cell">如果您的系统运行的是集群模式 ONTAP</block>
-  <block id="b2aa61dcee4d7b77fcd001973469ddde" category="paragraph">`storage failover modify -node node0 -enabled false`</block>
-  <block id="481250f3e8ec41b0e994305d8fc52b4a" category="paragraph">确认消息如下所示：</block>
   <block id="cf55af4b4668a579d36bfd91785ecbec" category="summary">完成 NVE 或 NSE 任务后，您需要关闭受损节点。</block>
   <block id="d4d4b346339524be979b964b901a1b92" category="cell">然后 ...*</block>
   <block id="426ac41b4c68d57196f875fa046c7804" category="paragraph">按 Ctrl-C ，然后在出现提示时回答 `y` 。</block>
@@ -5505,7 +5501,6 @@
   <block id="934d0bdda7a0d1a8822fd442720c5972" category="paragraph">有关如何将磁盘重新分配给新控制器的说明，请选择以下选项之一。</block>
   <block id="32f251bc81f643cafcff8ad711b81b00" category="open-title">选项 1 ：验证 ID （ HA 对）</block>
   <block id="a5d68caf62cce2afa4e8ca12ce07943a" category="open-title">选项 2 ：重新分配 ID （ MetroCluster 配置）</block>
-  <block id="7da65b5a10b69b45b490009ac07696ff" category="paragraph">出现提示时，请选择问题解答 `y` 。</block>
   <block id="c86ca2ad8b18f1b66eec5105c703ce0a" category="list-text">如果您有 AFF A700 HA 对，并且要热添加初始 NS224 驱动器架（ HA 对中不存在 NS224 驱动器架），则必须在每个控制器中安装核心转储模块（ X9170A ， NVMe 1 TB SSD ）以支持核心转储（存储核心文件）。</block>
   <block id="b979e87e6bde70f013c6af59e1fa73aa" category="list-text">如果您的 ASA HA 对支持 NS224 磁盘架，则可以使用此操作步骤。</block>
   <block id="7e874a7e7fce6d08319e452556499a17" category="paragraph">AFF A700 HA 对</block>
@@ -5874,7 +5869,6 @@
   <block id="8da7df8c5a74dcac7b5b9a5067e72313" category="image-alt">DRW a900 卸下更换 LED 模块</block>
   <block id="6b058f6aab05ab39cfb929fd3a13e5ad" category="paragraph">弹出模块。</block>
   <block id="fdbcf566dc8794b2a2c635f286edfa2b" category="paragraph">滑出机箱。</block>
-  <block id="9cc3abf99d341ddf4468a9377444f16d" category="doc">关闭受损控制器 - AFF A900</block>
   <block id="2aba05ee9a4093e5315b48903c27d988" category="doc">更换 I/O 模块 - AFF A900</block>
   <block id="a8869e142255ff80f45be4817f469087" category="section-title">第 3 步：更换 I/O 模块后重新启动控制器</block>
   <block id="bbee62c98bf71c87d77b3d48e5cacaff" category="paragraph">更换 I/O 模块后，必须重新启动控制器模块。</block>
@@ -6287,12 +6281,6 @@
   <block id="742cf561af7f07544ddf9f3e66121452" category="paragraph">如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停控制器以启动到加载程序。</block>
   <block id="c8dc5733d35c41c184dc2e9c60fd8a12" category="admonition">您配置的目标端口是在通过网络连接还原 var 文件系统期间，用于与运行正常的控制器中受损的控制器进行通信的目标端口。You can also use the e0M port in this command.</block>
   <block id="8db7a5b6ece2af3b075639e41512d618" category="section-title">选项 1 ：关闭控制器</block>
-  <block id="b5d03ef67a171c85bf4bd311e2fd75df" category="paragraph">您必须先关闭机箱中的控制器或控制器，然后再将其移至新机箱。</block>
-  <block id="93ff4b8a35c5f08ad3e97fdc9983948e" category="paragraph">集群中的两个控制器</block>
-  <block id="a0540c64b7001eb9739a6eed390808ac" category="paragraph">集群中有两个以上的控制器</block>
-  <block id="853a8c6f8383ee1dc5f3826af9ff6797" category="list-text">暂停控制器，在系统提示您确认 halt 时按 `y` ： `ssystem node halt -node _node_name_`</block>
-  <block id="253a50052b60be1951a606aa7c311ba2" category="admonition">在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM/NVRAM ）中未写入的数据。根据您的系统，如果 NVMEM/NVRAM LED 闪烁，则 NVMEM/NVRAM 中有尚未保存到磁盘的内容。您需要重新启动控制器并从此操作步骤 开始。如果反复尝试完全关闭控制器失败，请注意，未保存到磁盘的任何数据可能会丢失。</block>
-  <block id="8373aa3aac3c8f18564812bfcb55615a" category="list-text">如果适用，请暂停第二个控制器以避免在 HA 对配置中出现可能的仲裁错误消息： `ssystem node halt -node _second_node_name_ -ignore-quorum-warnings true -skip-lif-migration-before-shutdown true`</block>
   <block id="4c10c8d9f18f0c8ba6fc3ea32f7beee4" category="list-text">如果采用 HA 配置，请在第二个控制器上重复上述步骤。</block>
   <block id="6d21dbcd6d30fc2426dd0b077d719da5" category="summary">在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。</block>
   <block id="d1614290531967ae3b3623d71b4ed961" category="paragraph">在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查正在运行的 ONTAP 版本。</block>
@@ -7198,13 +7186,11 @@
   <block id="0c2b7daebf1a1e94a676675bf614fba6" category="paragraph">The boot media is located along the shelf chassis wall opposite from the power supply.</block>
   <block id="178d438c63a174b511750f68655d814d" category="list-text">更换RTC电池、重新安装NSM模块并启动此模块后、ONTAP 将更新实时时钟时间。</block>
   <block id="d067784c8bad4d41a4f87accd50abbc1" category="list-text">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
-  <block id="1c0138111ac00fdce24dc38ffd9859d5" category="list-text">如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或控制器运行状况良好、则会显示<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block> 有关资格和运行状况、您必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
   <block id="305fade7b83ae4e7549b33a3ae1b1fd0" category="doc">热添加磁盘架—NS224磁盘架</block>
   <block id="859c951ebab21901f2fd6183c53339d5" category="summary">要热插拔包含NVRAM11电池的目标控制器电源模块(DCPM\)、您必须找到发生故障的DCPM模块、将其从机箱中卸下、然后安装更换的DCPM模块。</block>
   <block id="8ea19d634d233a26f4f650bd2e2b467c" category="paragraph">要热插拔包含NVRAM11电池的目标控制器电源模块(DCPM)、您必须找到发生故障的DCPM模块、将其从机箱中卸下、然后安装更换的DCPM模块。</block>
   <block id="58fb0a507d97ff336e5db5d69ba846e9" category="inline-link">将 40GbE NIC 端口转换为多个 10GbE 端口以实现 10GbE 连接</block>
   <block id="8ae73aa056882e7b560f3b52b5764957" category="list-text">如果您的系统配置为在40 GbE NIC上支持10 GbE集群互连和数据连接、请使用将这些端口转换为10 GbE连接<block ref="5ec041cdb2bbdf01cd4ea2c400b17495" prefix=" " category="inline-code"></block> 命令。请参见<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> 有关详细信息 ...</block>
-  <block id="d875f9fec183da794cd6d6245ef00d1d" category="paragraph"><block ref="272f3c49a4ec1753c70013d06165277b" prefix="" category="inline-code"></block></block>
   <block id="1bb835185391c9f6463cb5dc111090d1" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 <block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block>。</block>
   <block id="aae78f4a3d47a08dddca98a632d4a75f" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 。</block>
   <block id="68d9e980b8b4998ef88139d7b7ab8ff6" category="paragraph"><block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block></block>
@@ -7416,11 +7402,7 @@
   <block id="5ab526c2d8a23c39c3d68b1080ca3e89" category="doc">详细指南—AFF C400</block>
   <block id="ed1fe7521861c492832064f3b6daca68" category="paragraph">100 GbE缆线(QSFP28)</block>
   <block id="e0cc8c545401fc3b34281140c54756c7" category="admonition">如果卡上的端口标签不可见、您可以通过检查卡安装方向(对于C400、PCIe连接器插槽位于卡插槽的左侧)来识别端口、然后在NetApp Hardware Universe 中按部件号查找此卡。 其中显示了一个带端口标签的挡板图形。您可以使用sysconfig -a命令或在系统包装列表中查找卡部件号。</block>
-  <block id="80a7f396e1bc3ed796a9313a0aa75443" category="image-alt">DRW C400 TNSC网络布线</block>
-  <block id="a905d4a42dacfc07296e02d609b47cb0" category="image-alt">DRW C400交换网络布线</block>
   <block id="670ce436320fc9008e2880db983e27d2" category="paragraph">以下选项显示了如何使用缆线将一个或两个NS224驱动器架连接到系统。</block>
-  <block id="66587f1aa86b9e296b1d1dd43ca73e3e" category="image-alt">DRW C400一个nss224磁盘架</block>
-  <block id="0b9e9bf3097ae366abf0d35474fb4b1f" category="image-alt">DRW C400两个nss224磁盘架</block>
   <block id="eca713323e6fa9782ebae60357fc0453" category="doc">更换NVDIMM - AFF C400</block>
   <block id="719e61ffcf0d96924351db01f7e50603" category="doc">视频—AFF C400</block>
   <block id="51e4f59a1aaa143b8d5c910f0a77328e" category="video-title">动画—AFF C400安装和设置说明</block>
@@ -7804,4 +7786,80 @@
   <block id="66ba60034a525a69b1b5cf4344529c25" category="paragraph">要从受损机箱中卸下I/O模块、包括NVRAM模块、请按照特定步骤顺序进行操作。</block>
   <block id="76558becedd79e95bf3921d5f08baeb6" category="list-text">找到受损机箱正面DCPM托架正下方的USB LED模块。</block>
   <block id="ac6201b7b810f81cfaef54d4d8fe63d5" category="list-text">适用于系统机柜螺钉的TORQ驱动程序</block>
+  <block id="d581cc3762a48b4da22069bdeae81b8f" category="inline-link">如何正常关闭和启动四节点集群中的一个HA对</block>
+  <block id="3f7ee1fb6cfdfd18c49f8e060fa8f9c9" category="paragraph">此操作步骤 仅适用于双节点非MetroCluster配置。如果您的系统包含两个以上的节点、请参见<block ref="681b47fbe1cebc545a75e77efd420ec0" category="inline-link-rx"></block>。</block>
+  <block id="36ee27bc3fc7c617977b35534609c979" category="paragraph">您需要：</block>
+  <block id="68d685ddbaa25f1a411d5e93d6f91913" category="list-text">ONTAP 的本地管理员凭据。</block>
+  <block id="ac1036c822296c33d140ef7ba7cd246d" category="list-text">NetApp板载密钥管理(OKM)集群范围的密码短语(如果使用存储加密)。</block>
+  <block id="93e6bf3fa29a7ebd2a4bb235a54deb94" category="list-text">每个控制器的SP/BMC访问能力。</block>
+  <block id="d6562c849f41b9038124f0c304aed030" category="list-text">停止所有客户端/主机访问NetApp系统上的数据。</block>
+  <block id="d61b46d9cd719b77efb76269147aa377" category="list-text">暂停外部备份作业。</block>
+  <block id="527f18fb3f8ac4bca4ae01901a2c9317" category="list-text">更换所需的工具和设备。</block>
+  <block id="3b6fc5695f8237510131da824ce788d0" category="inline-link">《正常关闭和启动存储系统解决方案指南》</block>
+  <block id="03f7958d5b1fc7636429e97368e2f97f" category="admonition">如果系统是用作FabricPool 云层的NetApp StorageGRID 或ONTAP S3、请参见<block ref="6db187057e0b0e01589d1a1a7f510469" category="inline-link-rx"></block> 执行此操作步骤 之后。</block>
+  <block id="ec965df16952820cbea39156c0dfe2f0" category="admonition">如果使用的是FlexArray 阵列LUN、请按照特定供应商的存储阵列文档执行此操作步骤 后要对这些系统执行的关闭操作步骤。</block>
+  <block id="ad8a5006901db5ea8481166a34f27929" category="inline-link">SU490：(影响：关键) SSD最佳实践：避免关闭电源超过两个月后发生驱动器故障和数据丢失的风险</block>
+  <block id="7d140f8b4464f9a8684a7943df8e74d9" category="admonition">如果使用SSD、请参见<block ref="13eec713a6c81535d5709aa561195b7a" category="inline-link-rx"></block></block>
+  <block id="356bf392971487f892daba5338258571" category="paragraph">作为关闭之前的最佳实践、您应：</block>
+  <block id="2ee5edc561a6167cf2d57a64ee655bef" category="inline-link">系统运行状况检查</block>
+  <block id="7023017d0098f741d6569842ee62b922" category="list-text">执行其他<block ref="9ace058273de133e6accbea83a7d278a" category="inline-link-rx"></block>。</block>
+  <block id="f40b8507b340a958be200bec6d3758a0" category="list-text">将ONTAP 升级到系统的建议版本。</block>
+  <block id="9f4d2068e7b3d206efc0252b3da597a5" category="inline-link">Active IQ 健康提醒和风险</block>
+  <block id="c5df4dcae9a001142a36959487445ff6" category="list-text">解决任何问题<block ref="31b25beca26cb366eeb0665e3c0d7cbf" category="inline-link-rx"></block>。记下系统当前的任何故障、例如系统组件上的LED。</block>
+  <block id="3923b7d5100131c85be2160c8b680704" category="list-text">通过SSH登录到集群、或者使用本地控制台缆线和笔记本电脑/控制台从集群中的任何节点登录。</block>
+  <block id="d9e8189e14354652821e1f0f10f12dfe" category="list-text">关闭AutoSupport 并指示系统预计脱机多长时间：</block>
+  <block id="ff3faabe8aca2ae4a92cf7dec5b62b8f" category="paragraph"><block ref="14fb036c43dbcde966a639d33554da5c" prefix="" category="inline-code"></block></block>
+  <block id="ac2a6618449930e8abeb32fd078d7716" category="list-text">确定所有节点的SP/BMC地址：</block>
+  <block id="0d16db60da2c01b63ef84ee8d616c2fb" category="paragraph"><block ref="b206d268f79aeaa7c4f1e44684d2f080" prefix="" category="inline-code"></block></block>
+  <block id="a0fd5b31be719aeb26e2fc9c6991da9f" category="list-text">退出集群Shell：<block ref="f24f62eeb789199b9b2e467df3b1876b" prefix=" " category="inline-code"></block></block>
+  <block id="cf814f480a03329076e1d0cf2f71d7e3" category="list-text">使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP/BMC。</block>
+  <block id="aed4c23042b5f25dad252449f4ddcc59" category="paragraph">如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。</block>
+  <block id="a3dcd96fdc725fa51c4161c8a03146ab" category="admonition">打开与每个SP/BMC连接的SSH会话、以便监控进度。</block>
+  <block id="e2cba6e644aeaf95f80f688b880746da" category="list-text">暂停集群中的所有节点：</block>
+  <block id="02e0d9b5c39d838c007bfad7b6e34196" category="paragraph"><block ref="b89a38fd8ae1ad809e5b3560be211bfa" prefix="" category="inline-code"></block>。</block>
+  <block id="aba2c36fe67a0528d4417c7e5c4da8a1" category="admonition">对于使用在StrictSync模式下运行的同步SnapMirror的集群：<block ref="03e2e719454253f2db864fa560da7899" prefix=" " category="inline-code"></block></block>
+  <block id="3171aeb3fa199cec60349b4529cc0178" category="list-text">如果看到、请为集群中的每个控制器输入* y *<block ref="25cae4cb08eccf660db87cfb99a959d7" prefix=" " category="inline-code"></block></block>
+  <block id="a39c8c38e51a42fcfaac22367dd19064" category="list-text">等待每个控制器暂停、然后显示加载程序提示符。</block>
+  <block id="461bb1724a0adc2c975edfdd4b4923a1" category="list-text">如果没有PSU开/关开关、请关闭每个PSU或拔下电源插头。</block>
+  <block id="e3dc6cc26ed03ba51ee4327edde1e1fc" category="list-text">从每个PSU拔下电源线。</block>
+  <block id="0042f27885e192c9ea879dde4ac34445" category="list-text">确认与集群关联的所有控制器、驱动器架和交换机均已关闭。</block>
+  <block id="3f80193798fcbb08cbe99cbe0a3aff95" category="paragraph">更换机箱后、请按以下顺序启动集群组件：</block>
+  <block id="f9604921fe40d48421b9ae74e9a50059" category="list-text">打开交换机电源</block>
+  <block id="85ee83d55e3fb9b20f9f17b7fb773ca0" category="list-text">启动驱动器架</block>
+  <block id="d692ae791953fc513c9f3fd94d866964" category="list-text">启动控制器</block>
+  <block id="6d0114cd2de3e017d8d76d6b9f2191fc" category="list-text">打开交换机电源：</block>
+  <block id="fe12fd40092a74cc86c0db3006d72880" category="list-text">重新插入从PDU到PSU的每根电源线。</block>
+  <block id="d79f0458e922251555ddc7baa3538dbc" category="list-text">将每个PSU摇臂开关翻转至ON位置(如果适用)。</block>
+  <block id="420a1ffc592934afa358803642255547" category="list-text">等待交换机通电。</block>
+  <block id="67935e6f17c778c98c8e80fce8e29a9f" category="list-text">检查开关(前部和后部)上是否有任何故障指示灯。</block>
+  <block id="978a8732c5cda53a8b4a3de35d2184fd" category="list-text">通过管理IP地址连接到交换机。</block>
+  <block id="c72d57bd067b2b477426ef13c9c81629" category="list-text">确认交换机运行状况(有关详细信息、请参阅交换机供应商文档)。</block>
+  <block id="fc5b4d6235b015336cafcedc54683d5d" category="list-text">对每个交换机重复此操作、直到所有交换机均已启动且运行正常为止。</block>
+  <block id="874c11301500ddf99db8a26ccc161200" category="list-text">启动驱动器架：</block>
+  <block id="6309302d98e4a634b65821ffb59dcafc" category="list-text">等待所有磁盘架通电并使驱动器启动。</block>
+  <block id="453fd8a2e005a3688cb57a1715403eb8" category="list-text">确保所有磁盘架ID均为预期值。</block>
+  <block id="43efaf94ccfd1b8ff73ede9310aa0726" category="list-text">检查关闭前磁盘架(正面和背面)上是否存在任何故障指示灯。</block>
+  <block id="9a14737750e117b254a09e3e342bf4d4" category="list-text">启动控制器：</block>
+  <block id="1526ecbd5f3186fd0391bcab851746a6" category="list-text">将每个PSU摇臂开关翻转至ON位置(如果适用)。不在同一机箱中的HA对应同时启动。</block>
+  <block id="4ac3730c7728ff9f397c9c9c30e61398" category="list-text">等待机箱中的控制器启动。</block>
+  <block id="2a966b5531ce1a15adff1f9be922268a" category="list-text">检查机箱和控制器(正面和背面)上的任何故障指示灯。</block>
+  <block id="c908a555fb9bda03518faf090d62b55f" category="list-text">对每个控制器/机箱重复此步骤、直到所有控制器/机箱均已通电为止。</block>
+  <block id="1ace3ad5235525fbfcabf5c9ed71d2c2" category="list-text">通过SSH连接到节点的SP或BMC IP地址。在关闭电源之前、请使用以下命令获取IP地址：</block>
+  <block id="42bd22c6658be2e7f86763221caaff8d" category="list-text">执行其他系统运行状况检查：</block>
+  <block id="6cae41ec99a87022e2ff84639c1c9bc1" category="list-text">解决任何问题<block ref="31b25beca26cb366eeb0665e3c0d7cbf" category="inline-link-rx"></block></block>
+  <block id="a4e515a78d7900d16a4af3f913b033f7" category="list-text">运行<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block></block>
+  <block id="2d7735678080387bf2714cda931af8cf" category="inline-link">如何在ONTAP 中使用脚本执行集群运行状况检查</block>
+  <block id="b13401e632345d1a1c36a42722a9cdd7" category="list-text">按照中所述检查系统运行状况<block ref="8441a6aeb4c8951afc9d3ef26143aa41" category="inline-link-rx"></block></block>
+  <block id="36bc7c68ef7de2e917f4a186a4edaa58" category="list-text">生成维护任务完成AutoSupport 消息：</block>
+  <block id="538f577c4284d097aef57681a2acf728" category="paragraph"><block ref="a0502e9e767995ecf84f499d84740634" prefix="" category="inline-code"></block></block>
+  <block id="c779830d2c1a694320dcf49ae503c75a" category="list-text">确保自动交还处于活动状态：</block>
+  <block id="3d2d5e9a2a8cef4225a4bd073c2aeefb" category="paragraph"><block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix="" category="inline-code"></block></block>
+  <block id="a095b22aaa929c82c4414b8a51e710af" category="doc">关闭控制器- AFF A900</block>
+  <block id="736a1f9cdd2dabb4a30feb86e55777ad" category="paragraph">25 GbE缆线(SFP28)</block>
+  <block id="bbeb14c0a41e32ab9190d6fef7d7d2de" category="list-text">按照图示完成控制器和交换机之间的布线：</block>
+  <block id="3f90eae06a0fd4fa951102461bc035a2" category="image-alt">DRW C400 TNSC网络布线IEOPS 1095</block>
+  <block id="dc70a7fbe1f21380db9b236898b87503" category="image-alt">DRW C400交换网络布线IEOPS 1096</block>
+  <block id="2a29b6abc01fa919029a6defab91ed09" category="list-text">使用下图将控制器连接到单个驱动器架。</block>
+  <block id="cf05a1b835cc522d6ff312818c4655b5" category="image-alt">DRW C400单个ns224磁盘架IEOPS 1097</block>
+  <block id="c8bb212781cb1ea1ac1f2bb19672260b" category="image-alt">DRW C400两个ns224磁盘架IEOPS 1098</block>
 </blocks>

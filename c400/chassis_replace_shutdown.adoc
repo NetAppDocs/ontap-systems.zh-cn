@@ -18,58 +18,68 @@ summary: 要更换机箱，必须关闭控制器。
 == 选项 1 ：在更换机箱时关闭控制器
 
 [role="lead"]
-您必须先关闭机箱中的控制器或控制器，然后再将其移至新机箱。
+此操作步骤 仅适用于双节点非MetroCluster配置。如果您的系统包含两个以上的节点、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["如何正常关闭和启动四节点集群中的一个HA对"^]。
 
-.关于此任务
-* 如果集群包含两个以上的控制器，则该集群必须处于仲裁状态。如果集群未达到仲裁或控制器运行状况良好、则会显示 `false` 有关资格和运行状况、您必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
-* 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+.开始之前
+您需要：
 
+* ONTAP 的本地管理员凭据。
+* NetApp板载密钥管理(OKM)集群范围的密码短语(如果使用存储加密)。
+* 每个控制器的SP/BMC访问能力。
+* 停止所有客户端/主机访问NetApp系统上的数据。
+* 暂停外部备份作业。
+* 更换所需的工具和设备。
+
+
+
+NOTE: 如果系统是用作FabricPool 云层的NetApp StorageGRID 或ONTAP S3、请参见 https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["《正常关闭和启动存储系统解决方案指南》"] 执行此操作步骤 之后。
+
+
+NOTE: 如果使用的是FlexArray 阵列LUN、请按照特定供应商的存储阵列文档执行此操作步骤 后要对这些系统执行的关闭操作步骤。
+
+
+NOTE: 如果使用SSD、请参见 https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490：(影响：关键) SSD最佳实践：避免关闭电源超过两个月后发生驱动器故障和数据丢失的风险"]
+
+作为关闭之前的最佳实践、您应：
+
+* 执行其他 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["系统运行状况检查"]。
+* 将ONTAP 升级到系统的建议版本。
+* 解决任何问题 https://activeiq.netapp.com/["Active IQ 健康提醒和风险"]。记下系统当前的任何故障、例如系统组件上的LED。
 
 
 .步骤
-. 如果您的系统有两个控制器模块，请禁用 HA 对。
+. 通过SSH登录到集群、或者使用本地控制台缆线和笔记本电脑/控制台从集群中的任何节点登录。
+. 关闭AutoSupport 并指示系统预计脱机多长时间：
 +
-[cols="1,2"]
-|===
-| 如果您的系统运行的是集群模式 ONTAP | 那么 ... 
+`system node autosupport invoke -node * -type all -messages "MAINT=8h Power Maintenance"`
 
-
- a| 
-集群中的两个控制器
- a| 
-`cluster ha modify -configured false`
-
-`storage failover modify -node node0 -enabled false`
-
-
-
- a| 
-集群中有两个以上的控制器
- a| 
-`storage failover modify -node node0 -enabled false`
-
-|===
-. 暂停控制器，在系统提示您确认 halt 时按 `y` ： `ssystem node halt -node _node_name_`
+. 确定所有节点的SP/BMC地址：
 +
-确认消息如下所示：
+`system service-processor show -node * -fields address`
+
+. 退出集群Shell： `exit`
+. 使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP/BMC。
++
+如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。
 
 +
-[listing]
-----
-Warning: This operation will cause controller "node-name" to be marked as unhealthy. Unhealthy nodes do not participate in quorum voting. If the controller goes out of service and one more controller goes out of service there will be a data serving failure for the entire cluster. This will cause a client disruption. Use "cluster show" to verify cluster state. If possible bring other nodes online to improve the resiliency of this cluster.
 
-Do you want to continue? {y|n}:
-----
+NOTE: 打开与每个SP/BMC连接的SSH会话、以便监控进度。
+
+. 暂停集群中的所有节点：
++
+`system node halt -node * -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`。
+
 +
 
-NOTE: 在更换机箱之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM/NVRAM ）中未写入的数据。根据您的系统，如果 NVMEM/NVRAM LED 闪烁，则 NVMEM/NVRAM 中有尚未保存到磁盘的内容。您需要重新启动控制器并从此操作步骤 开始。如果反复尝试完全关闭控制器失败，请注意，未保存到磁盘的任何数据可能会丢失。
+NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `system node halt -node * -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
 
-. 如果适用，请暂停第二个控制器以避免在 HA 对配置中出现可能的仲裁错误消息： `ssystem node halt -node _second_node_name_ -ignore-quorum-warnings true -skip-lif-migration-before-shutdown true`
-+
-出现提示时，请选择问题解答 `y` 。
-
+. 如果看到、请为集群中的每个控制器输入* y * `_Warning: Are you sure you want to halt node "cluster name-controller number"?
+{y|n}:_`
+. 等待每个控制器暂停、然后显示加载程序提示符。
+. 如果没有PSU开/关开关、请关闭每个PSU或拔下电源插头。
+. 从每个PSU拔下电源线。
+. 确认与集群关联的所有控制器、驱动器架和交换机均已关闭。
 
 
 
