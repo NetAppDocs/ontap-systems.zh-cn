@@ -58,7 +58,9 @@ X66240A-05 （ 112-00639 ）， 0.5 米
 X66240A-2 （ 112-00598 ）， 2 米
 
 X66240A-5 （ 112-00600 ）， 5 米
-| image:../media/oie_cable_sfp_gbe_copper.svg["宽度= 85px"]  a| 
+ a| 
+image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+ a| 
 网络缆线
 
 
@@ -234,7 +236,6 @@ video::da08295f-ba8c-4de7-88c3-ae7c0170408d[panopto]
 image::../media/drw_9500_tnsc_network_cabling.svg[DRW 9500tnsc网络布线]
 
 +
-[cols="20%,80%"]
 |===
 | 步骤 | 在每个控制器上执行 
 
@@ -287,10 +288,18 @@ image::../media/oie_legend_icon_4_dr.svg[OIE 图例图标 4 驱动器]
 
 image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
 
+
+
+ a| 
+** 将缆线固定到缆线管理臂上(未显示)。
+** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
+
+ a| 
+image::../media/oie_cable_power.svg[OIE缆线电源]
+
+image::../media/drw_a900fas9500_power_source_icon_IEOPS-1142.svg[DRW a900FAS9500电源图标IEOPS 1142.]
+
 |===
-. 将电源线连接到PSU并将其连接到不同的电源(未显示)。
-. 将缆线固定到缆线管理臂上(未显示)。
-. To cable your storage, see <<第 4 步：使用缆线将控制器连接到驱动器架>>。
 
 
 --
@@ -316,7 +325,6 @@ video::3ad3f118-8339-4683-865f-ae7c0170400c[panopto]
 image::../media/drw_9500_switched_network_cabling.svg[DRW 9500"交换网络布线"]
 
 +
-[cols="20%,80%"]
 |===
 | 步骤 | 在每个控制器上执行 
 
@@ -369,10 +377,18 @@ image::../media/oie_legend_icon_4_dr.svg[OIE 图例图标 4 驱动器]
 
 image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
 
+
+
+ a| 
+** 将缆线固定到缆线管理臂上(未显示)。
+** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
+
+ a| 
+image::../media/oie_cable_power.svg[OIE缆线电源]
+
+image::../media/drw_a900fas9500_power_source_icon_IEOPS-1142.svg[DRW a900FAS9500电源图标IEOPS 1142.]
+
 |===
-. 将电源线连接到PSU并将其连接到不同的电源(未显示)。
-. 将缆线固定到缆线管理臂上(未显示)。
-. To cable your storage, see <<第 4 步：使用缆线将控制器连接到驱动器架>>。
 
 
 --
@@ -381,7 +397,7 @@ image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜�
 
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
-您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到 DS212C 或 DS224C 驱动器磁盘架。
+使用缆线将DS212C或DS224C驱动器架连接到控制器。
 
 
 NOTE: 有关SAS布线的详细信息和工作表、请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/overview-cabling-rules-examples.html["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"^]
@@ -432,7 +448,6 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷�
 迷你SAS缆线
 
 |===
-. To complete setting up your system, see <<第 5 步：完成系统设置和配置>>。
 
 
 
@@ -499,8 +514,7 @@ image::../media/legend_icon_05.svg[图例图标05]
 等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。
 
 |===
-. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
-. 打开两个节点的电源开关。
+. 打开两个节点电源上的电源开关。
 +
 .动画—打开控制器的电源
 video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
@@ -632,15 +646,15 @@ image::../media/legend_icon_05.svg[图例图标05]
 等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。
 
 |===
-. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
-. 打开两个节点的电源开关。
+. 打开两个节点电源上的电源开关。
 +
 .动画—打开控制器的电源
 video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
 +
 image::../media/drw_9500_power-on.svg[打开DRW 9500"电源]
 
-+
+
+
 
 NOTE: 初始启动可能需要长达八分钟的时间。
 

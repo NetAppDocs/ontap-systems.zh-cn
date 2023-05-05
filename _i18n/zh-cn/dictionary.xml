@@ -5717,7 +5717,6 @@
   <block id="d718ffb6aaa936306ccf33aefa9f9462" category="paragraph">使用缆线连接集群互连端口：</block>
   <block id="832e6447f3f0b4b7127bf98e691dabe2" category="list-text">插槽 A4 和 B4 （ E4A ）</block>
   <block id="afb27063fb1efe124e2c7a172cae259c" category="list-text">插槽 -A8 和 B8 （ E8a ）</block>
-  <block id="e5d93b7dd741454087516c062b2039a9" category="paragraph"><block ref="e5d93b7dd741454087516c062b2039a9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4d929445fb22edc648f8a3c2ad66dbbc" category="paragraph">使用缆线连接控制器管理（扳手）端口。</block>
   <block id="e77136c5bb4120b57e8fb14ff5bfc9e5" category="image-alt">OIE 缆线 RJ45</block>
   <block id="5d86adeae4cafa6e9bc7b67a443ec6e0" category="image-alt">OIE 图例图标 3 o</block>
@@ -5729,25 +5728,19 @@
   <block id="018580c2da3ddca7f76b71c3c8e16b9e" category="image-alt">OIE 图例图标 4 驱动器</block>
   <block id="8b891f41fe066d01d04ca12a9bd0033f" category="paragraph">使用缆线连接 32 Gb FC 连接：</block>
   <block id="c368da6f34e41cf660fe742d1776c0c1" category="paragraph">使用缆线将插槽 5 和 B5 （ 5a ， 5b ， 5c 和 5d ）以及插槽 A7 和 B7 （ 7a ， 7b ， 7c 和 7d ）中的端口连接到 32 Gb FC 网络交换机。</block>
-  <block id="dea6830a53392dc3b1f30fb0a37fb5e4" category="list-text">To cable your storage, see <block ref="4261ea2b75c295a1978f7924667f1c11" category="inline-xref-macro-rx"></block>。</block>
   <block id="5f4965084173e3c414637c35200b73a8" category="paragraph">使用缆线连接集群互连 A 端口：</block>
   <block id="765c3c3f314b105120b116fa72fa83ec" category="list-text">插槽 A4 和 B4 （ E4A ）连接到集群网络交换机。</block>
   <block id="370ef18034bcd8124be9ef4b4b76a551" category="list-text">插槽 "A8 和 B8 （ E8a ）连接到集群网络交换机。</block>
   <block id="57f2f6ee86a9d40ab8a7837d0d864830" category="image-alt">OIE 图例图标 2 LP</block>
   <block id="3b632bef76bf01e7a7e2e0c7d8200b68" category="paragraph">使用缆线连接 25GbE 网络交换机：</block>
-  <block id="e61525b2473886e554ed01ddeed52e1d" category="paragraph">使用缆线连接 32 Gb FC 连接：</block>
-  <block id="7a98f654f31b3263341788faed4ecbdd" category="section-title">选项 1 ：使用缆线将控制器连接到 AFF A900 中的一个 NS224 驱动器架</block>
   <block id="c60dbcf19edff60839d3c0fbf6f60f2a" category="paragraph">您必须使用缆线将每个控制器连接到 AFF A900 系统上 NS224 驱动器架上的 NSM 模块。</block>
   <block id="5ec6942c74c6a8edac1d2288d383731d" category="list-text">使用以下动画或图形将控制器连接到一个 NS224 驱动器架。</block>
   <block id="3a58f6912b98caf7435fd9f6896ba4c6" category="list-text">将控制器 A 端口 E2A 连接到磁盘架上 NSM A 上的端口 e0a 。</block>
   <block id="e4e47b4780428e178a9b09390f2362b3" category="list-text">将控制器 A 端口 e10b 连接到磁盘架上 NSM B 上的端口 e0b 。</block>
   <block id="393f89fb63e48229ad961dd1e405b53e" category="list-text">将控制器 B 端口 E2A 连接到磁盘架上 NSM B 上的端口 e0a 。</block>
   <block id="db6b75fb665e0f2ab8be21099367b97a" category="list-text">将控制器 B 端口 e10b 连接到磁盘架上 NSM A 上的端口 e0b 。</block>
-  <block id="938cc7aca11f8ea0a909bcfbd5b224bc" category="list-text">To complete setting up your system, see <block ref="53346fef0c147b551f530d05bbad2e41" category="inline-xref-macro-rx"></block>。</block>
-  <block id="5cc4f695591ccf54e2c20c08c7e44281" category="section-title">选项 2 ：使用缆线将控制器连接到 AFF A900 中的两个 NS224 驱动器架</block>
   <block id="46c91124d100547c9507fea50ae0639b" category="paragraph">您必须使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。</block>
   <block id="26fe6dbccc48fc5e3f27bb01af6740e6" category="list-text">Use the following animation or diagram to cable your controllers to two NS224 drive shelves.</block>
-  <block id="2b31343b857fe67d64a1a976e200e971" category="paragraph"><block ref="2b31343b857fe67d64a1a976e200e971" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1d4442969281e166b667219af7e7fe7b" category="list-text">将控制器 A 端口 E2A 连接到磁盘架 1 上的 NSM A e0a 。</block>
   <block id="952e197be70605a4933f1fa544e89cf3" category="list-text">将控制器 A 端口 e10b 连接到磁盘架 1 上的 NSM B e0b 。</block>
   <block id="92d9c39d99b3b14f8b5b4b785e697404" category="list-text">将控制器 A 端口 e2b 连接到磁盘架 2 上的 NSM B e0b 。</block>
@@ -5756,7 +5749,6 @@
   <block id="b96eaffe433fe3b487cd82b4f61be219" category="list-text">将控制器 B 端口 e10b 连接到磁盘架 1 上的 NSM A e0b 。</block>
   <block id="8c6d7187872b78ef08222578448b1731" category="list-text">将控制器 B 端口 e2b 连接到磁盘架 2 上的 NSM A e0b 。</block>
   <block id="c3ecc9b1be38b712a8f61f8b27c41352" category="list-text">将控制器 B 端口 E10A 连接到磁盘架 2 上的 NSM B e0a 。</block>
-  <block id="1d069ff54ee29cbfaafd7650132e6cd5" category="list-text">To complete setting up your system, see <block ref="53346fef0c147b551f530d05bbad2e41" category="inline-xref-macro-rx"></block>。</block>
   <block id="1a012ae90c41b7530ce0df40b8053d54" category="section-title">选项 1 ：如果启用了网络发现</block>
   <block id="5eadc00e7d9146c2fd474e7d8d5f5137" category="list-text">使用以下动画或图形设置一个或多个驱动器架 ID ：</block>
   <block id="6b39390f8836ac9ddcaf033f6ec9d535" category="image-alt">已设置 DRW 电源打开设置磁盘架 ID</block>
@@ -5764,7 +5756,6 @@
   <block id="77b9275f6fd711644f4214aa9c1fd216" category="paragraph">按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。</block>
   <block id="72e911c52ba51e970a39b1b30b1c8424" category="paragraph">更换端盖。</block>
   <block id="241b3d2acad120dfd8decf92e173cd23" category="paragraph">等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。</block>
-  <block id="b12c60055be138bf7526b1769365b47e" category="image-alt">已启动 DRW a900</block>
   <block id="bd21e6ec29256eee4c7a9b34dd71c9ba" category="image-alt">DWR 笔记本电脑仅连接到交换机</block>
   <block id="382f497663af8b0b026d3c66f6a2bfce" category="list-text">使用 System Manager 引导式设置使用中收集的数据配置系统<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block>。</block>
   <block id="c866cf78ea22fe8b8a7122b28202ae22" category="paragraph"><block ref="c866cf78ea22fe8b8a7122b28202ae22" category="inline-link-rx"></block></block>
@@ -5772,7 +5763,6 @@
   <block id="208ee0864fe983f53622b3619eef5932" category="section-title">选项 2 ：如果未启用网络发现</block>
   <block id="b3364f412d1466e4f6e340836fff9abb" category="paragraph">如果您使用的不是基于 Windows 或 Mac 的笔记本电脑或控制台，或者未启用自动发现，则必须使用此任务完成配置和设置。</block>
   <block id="11991b3479fcd322fec352f130b7b364" category="admonition">The format for the address is +https://x.x.x.x+.</block>
-  <block id="bb0210ac9561e033fc7d726a6ac134e8" category="paragraph"><block ref="bb0210ac9561e033fc7d726a6ac134e8" category="inline-link-rx"></block></block>
   <block id="3c941071b26a1822e1cb4494c2fd71da" category="doc">关闭受损控制器 - AFF A900</block>
   <block id="68908cbb53a7b71659933af600697a19" category="summary">要热插拔包含 NVRAM11 电池的降级控制器电源模块（ DCPM\ ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。</block>
   <block id="d04f6248062fc9d16de8588d61c28d1e" category="doc">更换包含 NVRAM11 电池的目标控制电源模块 - AFF A900</block>
@@ -6672,8 +6662,6 @@
   <block id="9e51ab12d26faade2a31d70da71c74f5" category="list-text">替代节点是指正在更换受损节点的新节点。</block>
   <block id="537af5095a4992ae7e9026bd3ff008a6" category="list-text">运行正常的节点是运行正常的节点。</block>
   <block id="c704a060606b2944e3c331124aaaa743" category="doc">详细步骤—FAS9500</block>
-  <block id="babff6765c503db416f9aad69aec82a2" category="inline-image-macro">宽度= 85px</block>
-  <block id="6cb216de48e8994ccb0a6c7cbc427e02" category="cell"><block ref="6cb216de48e8994ccb0a6c7cbc427e02" category="inline-image-macro-rx" type="image"></block></block>
   <block id="32a6e642c9cd7b5239fed7deb8d11082" category="image-alt">OIE cable100 GbE QSFP28</block>
   <block id="9a7819d4ddc611b1438c0a7f4633f619" category="image-alt">OIE使用缆线将迷你SAS HD连接到迷你SAS HD</block>
   <block id="47138f998237cc4fa9d1dde4218e6a79" category="image-alt">OIE缆线微型USB</block>
@@ -6758,12 +6746,9 @@
   <block id="393993c9f7562f1a53d4d13744facd0e" category="paragraph">插槽A3和B3 (E3A和E3C)以及插槽A9和B9 (e9a和e9c)中的端口连接到32 Gb FC网络交换机。</block>
   <block id="7b49110d5bcbc4998964949bf1d4d386" category="paragraph">使用缆线连接25 GbE连接：</block>
   <block id="823c1d0595274590edabd782a377efc4" category="paragraph">使用缆线将插槽5和B5 (5a、5b、5c和5d)以及插槽A7和B7 (7a、7b、7c和7d)中的端口连接到25 GbE网络交换机。</block>
-  <block id="69b080eb9ee2f49ccb265903c6a2e0a9" category="list-text">将电源线连接到PSU并将其连接到不同的电源(未显示)。</block>
   <block id="67e68c155f62af046486d4818ab551b1" category="list-text">将缆线固定到缆线管理臂上(未显示)。</block>
   <block id="0815daeb3f5819b5b26f2d852a3480ed" category="video-title">动画—切换集群布线</block>
   <block id="ab4ba237fa2abf24783610d2c0f56a3a" category="image-alt">DRW 9500"交换网络布线"</block>
-  <block id="cc0952f55da6292c79f2dc5ff372d9af" category="paragraph">使用缆线连接25 GbE连接：</block>
-  <block id="0761555d16ac8203353f5bd7e80d3769" category="list-text">将电源线连接到PSU并将其连接到不同的电源(未显示)。</block>
   <block id="c88355c0ee4fee45dfc3a83996fea5ca" category="admonition">有关SAS布线的详细信息和工作表、请参见<block ref="a92f79530cc2a1794f52d1c1214e4c1c" category="inline-link-rx"></block></block>
   <block id="9d00a2e517a4069bd82955f8b1b02a18" category="list-text">填写适用于您系统的SAS布线工作表。请参见<block ref="a92f79530cc2a1794f52d1c1214e4c1c" category="inline-link-rx"></block>。</block>
   <block id="3e86e158b18295e17a62b9c2ae164933" category="list-text">使用以下动画或图将控制器连接到三个(一个驱动器架的一个堆栈和两个驱动器架的一个堆栈) DS224C驱动器架。</block>
@@ -7212,7 +7197,6 @@
   <block id="a5462faa34b6cf806cb49f24d84b02a7" category="list-text">如果您的系统配置为在40 GbE NIC上支持10 GbE集群互连和数据连接、请在维护模式下使用nicadmin convert命令将这些端口转换为10 GbE连接。请参见<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="c56809d9cff2ea190c6fb9d67e804b42" category="paragraph">更换机箱时、必须卸下机箱正面的六个风扇模块。</block>
   <block id="e9e9a6de5e421dfe8a5ccc0b156ecc94" category="admonition">如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后查找卡、然后按部件号在中查找卡<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 用于显示端口标签的挡板图形。可以使用查找卡部件号<block ref="432345ed72f5509f18312f01d4f08dff" prefix=" " category="inline-code"></block> 命令或。</block>
-  <block id="bea43746a1060b2b6af67fba31ca2890" category="paragraph">下图显示了典型系统的外观以及系统读取时主要组件所在位置：</block>
   <block id="2f50f96b8a95f8c73f9257ccd13d3c46" category="image-alt">机箱ID为IEOPS 856的DRW a900控制器</block>
   <block id="ea69d5fd5f06add244968ab4b689c261" category="image-alt">DRW a900 tnsc网络布线IEOPS 933</block>
   <block id="e1ed9dc03578bbf7dfdc44cf31220a86" category="image-alt">DRW a900交换机网络布线IEOPS 934</block>
@@ -7279,7 +7263,6 @@
   <block id="d034ad76bb5b20c4f0a1790c3665c3b2" category="paragraph"><block ref="d034ad76bb5b20c4f0a1790c3665c3b2" category="inline-link-rx"></block></block>
   <block id="7be2f40216e9676314a384c650694fed" category="admonition">请参见<block ref="17d46f7a995ead494ec7b2eb9caffda8" category="inline-link-rx"></block> for your version of ONTAP for more details.</block>
   <block id="1fad4d8ec174b60255a8febb2707e048" category="paragraph"><block ref="1fad4d8ec174b60255a8febb2707e048" category="inline-link-rx"></block></block>
-  <block id="8427b7c5bd63cec67b7bb2edba538972" category="list-text">重新启动节点：</block>
   <block id="8c2c8bc4e47d0ed180d7a321a6f45a30" category="paragraph">要更换NVRAM模块、请将其置于机箱中的插槽6中、并按照特定步骤顺序进行操作。</block>
   <block id="44e91a10c5fb9bc923eb6ca613b41106" category="list-text">按下带字母和编号的凸轮闩锁。</block>
   <block id="35ed901089030d76b9de29f7bb8d54ce" category="paragraph">凸轮闩锁从机箱中移出。</block>
@@ -7822,7 +7805,6 @@
   <block id="a39c8c38e51a42fcfaac22367dd19064" category="list-text">等待每个控制器暂停、然后显示加载程序提示符。</block>
   <block id="461bb1724a0adc2c975edfdd4b4923a1" category="list-text">如果没有PSU开/关开关、请关闭每个PSU或拔下电源插头。</block>
   <block id="e3dc6cc26ed03ba51ee4327edde1e1fc" category="list-text">从每个PSU拔下电源线。</block>
-  <block id="0042f27885e192c9ea879dde4ac34445" category="list-text">确认与集群关联的所有控制器、驱动器架和交换机均已关闭。</block>
   <block id="3f80193798fcbb08cbe99cbe0a3aff95" category="paragraph">更换机箱后、请按以下顺序启动集群组件：</block>
   <block id="f9604921fe40d48421b9ae74e9a50059" category="list-text">打开交换机电源</block>
   <block id="85ee83d55e3fb9b20f9f17b7fb773ca0" category="list-text">启动驱动器架</block>
@@ -7862,4 +7844,34 @@
   <block id="2a29b6abc01fa919029a6defab91ed09" category="list-text">使用下图将控制器连接到单个驱动器架。</block>
   <block id="cf05a1b835cc522d6ff312818c4655b5" category="image-alt">DRW C400单个ns224磁盘架IEOPS 1097</block>
   <block id="c8bb212781cb1ea1ac1f2bb19672260b" category="image-alt">DRW C400两个ns224磁盘架IEOPS 1098</block>
+  <block id="268f653b0107cd8d721a5e6a0707445b" category="list-text">验证受损机箱中的所有控制器是否均已关闭。</block>
+  <block id="34f608e31ee5d84e943cbacee3cc0d82" category="section-title">第2步：启动系统</block>
+  <block id="9169713781138720e26fc387a18b87c3" category="list-text">如果尚未将电源线重新插入PSU、请将其插入。</block>
+  <block id="3b6f7041bdbf002d5fb8118b3b66bbaf" category="list-text">通过将摇杆切换至*on*打开PSU，然后等待控制器完全通电。</block>
+  <block id="535e6a17cac4b6fcea21c21d76a16011" category="list-text">开机后、检查机箱和控制器的正面和背面是否有任何故障指示灯。</block>
+  <block id="0afb38135567f8e32b676b95fc3668b4" category="list-text">通过SSH连接到节点的SP或BMC IP地址。此地址与关闭节点时使用的地址相同。</block>
+  <block id="0591f6978e976aba7a11f848714b901b" category="inline-link">如何执行_A_cluster-HEATY_check_with _A_script_IN ONTAP</block>
+  <block id="8e9b999676299f8703c9070d3c2985ba" category="list-text">执行中所述的其他运行状况检查<block ref="a8cfb0bb1834e8ab349682b5fe5ed3dc" category="inline-link-rx"></block></block>
+  <block id="b2c28cfb1063bebf48b81ba9fd3469a6" category="list-text">重新打开AutoSupport (结束维护窗口消息)：<block ref="a0502e9e767995ecf84f499d84740634" prefix=" " category="inline-code"></block></block>
+  <block id="f971b80d6ee6fbc7ba9985b558e018b9" category="admonition">作为最佳实践、您应执行以下操作：</block>
+  <block id="8a06a71dc0414678e02aa06d157b18d2" category="list-text">解决任何问题<block ref="cacc50c31137316e6bcfe8c0ac368fe4" category="inline-link-rx"></block> (Active IQ 将需要一些时间来处理加电后AutoSupport—预期结果会有所延迟)</block>
+  <block id="0e0efc2721880275084eac2647e0e4b1" category="list-text">运行<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block></block>
+  <block id="8fa4ccfd1b4358e15e3bd7bf6f0b4aba" category="list-text">使用检查系统运行状况<block ref="a8cfb0bb1834e8ab349682b5fe5ed3dc" category="inline-link-rx"></block></block>
+  <block id="91c7c4ae839664f690723e2789ab84a4" category="list-text">从加载程序提示符处重新启动控制器：</block>
+  <block id="081944818ac324f5acfc520d79b9a4c8" category="list-text">检查控制器上的BMC版本：<block ref="1daf8ec1db284687c337b8dbbb963180" prefix=" " category="inline-code"></block></block>
+  <block id="e79808e4dee171c444f6adfbe515b914" category="list-text">根据需要更新BMC固件：<block ref="99e170b2382cf41dbeebf0111123db87" prefix=" " category="inline-code"></block></block>
+  <block id="8f6aa74b4b7066030daae45957f11b0b" category="list-text">重新启动节点：<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
+  <block id="23fc5004785b6c15e6a491f2e60db752" category="inline-link">BURT 1494308 -更换I/O模块期间可能触发环境关闭</block>
+  <block id="9da423ef0a315a657b7e20eabc035835" category="admonition">如果您在重新启动期间遇到问题描述 、请参见<block ref="260338bdea3a501a12c9c069b20553d1" category="inline-link-rx"></block></block>
+  <block id="58d38e899a80743b66bf79e2320b2606" category="list-text">将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。</block>
+  <block id="495cdce574c4e4b9dd48817e71a39cd2" category="image-alt">DRW a900FAS9500电源图标IEOPS 1142.</block>
+  <block id="1c34ed72998ddf83d183b82b4a5a4938" category="paragraph">使用缆线将DS212C或DS224C驱动器架连接到控制器。</block>
+  <block id="e5996620d0917580a63333b20b9454ef" category="list-text">打开两个节点电源上的电源开关。</block>
+  <block id="94f6805f56a12322f9f69e911a22d9b8" category="paragraph">下图显示了典型系统的外观以及主要组件位于系统背面的位置：</block>
+  <block id="fd39828687c1d928d80860408fbad6fe" category="paragraph">使用缆线将一个NS224驱动器架或两个NS224驱动器架连接到控制器。</block>
+  <block id="b10d0d290118effc922ad6f19fc77818" category="open-title">选项1：使用缆线将控制器连接到一个NS224驱动器架</block>
+  <block id="197dee836fa91f0bc10674f0b47382e3" category="image-alt">OIE图例图标2</block>
+  <block id="ac4fc8e93ed87aaf0d607c7594b760df" category="open-title">选项2：使用缆线将控制器连接到两个NS224驱动器架</block>
+  <block id="eab02c161618f87134d04b274c9ed0a9" category="image-alt">DRW a900 NS224 line art双磁盘架、为IEOPS 1147布线</block>
+  <block id="93d4151426ee3e46d52580ae98128972" category="list-text">Configure the system using the data you collected in the<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block></block>
 </blocks>
