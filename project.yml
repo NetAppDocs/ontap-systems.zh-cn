@@ -36,6 +36,7 @@ sidebar:
     - section: c250
     - section: c400
     - section: c800
+  - section: allsan
   - title: FAS 系统
     entries:
     - section: fas500f
@@ -51,8 +52,6 @@ sidebar:
     - section: fas2600
     - section: fas2700
     - section: fas8200
-  - section: allsan
-  - section: upgrade
   - title: 系统级诊断
     entries:
     - title: 简介
@@ -75,7 +74,6 @@ sidebar:
     entries:
     - section: ns224
     - section: sas3
-  - section: switch
   - title: 机柜和导轨套件
     entries:
     - title: SuperRail 套件

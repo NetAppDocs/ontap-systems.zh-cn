@@ -2,7 +2,7 @@
 permalink: get-up-and-run.html 
 sidebar: sidebar 
 keywords:  
-summary: 要启动并运行AFF 和FAS 系统、您需要在ONTAP 中安装硬件组件、配置交换机以及配置存储。 
+summary: 要启动并运行AFF 、FAS 和ASA 系统、您需要在ONTAP 中安装硬件组件、配置交换机和配置存储。 
 ---
 = 启动并运行AFF 和FAS 存储系统
 :allow-uri-read: 
@@ -19,7 +19,7 @@ summary: 要启动并运行AFF 和FAS 系统、您需要在ONTAP 中安装硬件
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 安装AFF/FAS控制器
 [role="quick-margin-para"]
-在机架或机柜中安装AFF/FAS控制器。访问适用于您的AFF/FAS平台型号的安装和设置说明。
+在机架或机柜中安装AFF/FAS控制器。访问适用于您的AF/FAS平台型号的安装和设置说明。对于全SAN阵列(ASA)系统、请按照适用于相应AFF A系列型号的安装说明进行操作。
 
 [cols="4,9,9,9"]
 |===
@@ -27,14 +27,20 @@ summary: 要启动并运行AFF 和FAS 系统、您需要在ONTAP 中安装硬件
 
  a| 
  a| 
-.AFF 系统
-* https://docs.netapp.com/us-en/ontap-systems/c190/install-setup.html["AFF C190"]
+.AFF A系列系统
 * https://docs.netapp.com/us-en/ontap-systems/fas2700/install-setup.html["AFF A220"]
 * https://docs.netapp.com/us-en/ontap-systems/a250/install-setup.html["AFF A250"]
 * https://docs.netapp.com/us-en/ontap-systems/a400/install-setup.html["AFF A400"]
 * https://docs.netapp.com/us-en/ontap-systems/fas9000/install-setup.html["AFF A700"]
 * https://docs.netapp.com/us-en/ontap-systems/a800/install-setup.html["AFF A800"]
 * https://docs.netapp.com/us-en/ontap-systems/a900/install_detailed_guide.html["AFF A900"]
+
+ a| 
+.AFF C系列系统
+* https://docs.netapp.com/us-en/ontap-systems/c190/install-setup.html["AFF C190"]
+* https://docs.netapp.com/us-en/ontap-systems/c250/install-setup.html["AFF C250"]
+* https://docs.netapp.com/us-en/ontap-systems/c400/install-setup.html["AFF C400"]
+* https://docs.netapp.com/us-en/ontap-systems/a800/install-setup.html["AFF C800"]
 
  a| 
 .FAS 系统
@@ -44,7 +50,6 @@ summary: 要启动并运行AFF 和FAS 系统、您需要在ONTAP 中安装硬件
 * https://docs.netapp.com/us-en/ontap-systems/fas9000/install-setup.html["FAS9000"]
 * https://docs.netapp.com/us-en/ontap-systems/fas9500/install_setup.html["FAS9500"]
 
- a| 
 
 |===
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 安装交换机硬件
@@ -153,7 +158,7 @@ AFF/FAS安装和设置说明介绍了如何使用缆线将控制器端口连接�
 |===
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"] 完成系统设置
 [role="quick-margin-para"]
-配置交换机并安装所需软件后、请访问适用于AFF/FAS平台型号的安装和设置说明以完成系统设置。
+配置交换机并安装所需软件后、请访问适用于AFF/FAS平台型号的安装和设置说明以完成系统设置。对于全SAN阵列(ASA)系统、请按照相应AFF A系列型号的安装说明进行操作。
 
 [cols="4,9,9,9"]
 |===
@@ -162,13 +167,19 @@ AFF/FAS安装和设置说明介绍了如何使用缆线将控制器端口连接�
  a| 
  a| 
 .AFF 系统
-* https://docs.netapp.com/us-en/ontap-systems/c190/install-setup.html["AFF C190"]
 * https://docs.netapp.com/us-en/ontap-systems/fas2700/install-setup.html["AFF A220"]
 * https://docs.netapp.com/us-en/ontap-systems/a250/install-setup.html["AFF A250"]
 * https://docs.netapp.com/us-en/ontap-systems/a400/install-setup.html["AFF A400"]
 * https://docs.netapp.com/us-en/ontap-systems/fas9000/install-setup.html["AFF A700"]
 * https://docs.netapp.com/us-en/ontap-systems/a800/install-setup.html["AFF A800"]
 * https://docs.netapp.com/us-en/ontap-systems/a900/install_detailed_guide.html["AFF A900"]
+
+ a| 
+.AFF C系列系统
+* https://docs.netapp.com/us-en/ontap-systems/c190/install-setup.html["AFF C190"]
+* https://docs.netapp.com/us-en/ontap-systems/c250/install-setup.html["AFF C250"]
+* https://docs.netapp.com/us-en/ontap-systems/c400/install-setup.html["AFF C400"]
+* https://docs.netapp.com/us-en/ontap-systems/a800/install-setup.html["AFF C800"]
 
  a| 
 .FAS 系统
@@ -178,7 +189,6 @@ AFF/FAS安装和设置说明介绍了如何使用缆线将控制器端口连接�
 * https://docs.netapp.com/us-en/ontap-systems/fas9000/install-setup.html["FAS9000"]
 * https://docs.netapp.com/us-en/ontap-systems/fas9500/install_setup.html["FAS9500"]
 
- a| 
 
 |===
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["七个"] 完成ONTAP 配置

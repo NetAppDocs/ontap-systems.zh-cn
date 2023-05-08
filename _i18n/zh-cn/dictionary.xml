@@ -2046,14 +2046,6 @@
   <block id="21ee2e5e51f0485744f531669814fed3" category="summary">您可以将这些链接用于其他交换机型号。</block>
   <block id="c65be06145c6932d272087d8bd0dc751" category="list-text">Nexus 5596</block>
   <block id="43f44eb6eab88bd3dd44d614bab79684" category="list-text">Nexus 3132Q-V</block>
-  <block id="dc562a84ed096c677cedf44a7c5df0bf" category="inline-link-macro">DS2246 磁盘架文档</block>
-  <block id="dd26152c70d312482c21516c3889b669" category="paragraph"><block ref="dd26152c70d312482c21516c3889b669" category="inline-link-macro-rx"></block></block>
-  <block id="06df42750628898d4d9028ca8a299fb0" category="inline-link-macro">DS4486 磁盘架文档</block>
-  <block id="025a6ebf2f90d8d6fbcf8bb51f3af731" category="paragraph"><block ref="025a6ebf2f90d8d6fbcf8bb51f3af731" category="inline-link-macro-rx"></block></block>
-  <block id="8e01fff6c6332a20292ce54b07e7f4a5" category="inline-link-macro">DS4246 磁盘架文档</block>
-  <block id="2a8c61005de5c4642cb8dbeba1544811" category="paragraph"><block ref="2a8c61005de5c4642cb8dbeba1544811" category="inline-link-macro-rx"></block></block>
-  <block id="97bf953b242f5f98851629db59e82601" category="inline-link-macro">DS4243 磁盘架文档</block>
-  <block id="b6d30e3dcd0ba2af54c33b3685aa4429" category="paragraph"><block ref="b42da6ebf9625c910c5d3ba150b439e5" category="inline-link-macro-rx"></block></block>
   <block id="f707961e750c3177d39579c3dd6298da" category="doc">完整的系统还原— AFF A220 和 FAS2700</block>
   <block id="4bbcc3f3d11202923e4c61604d535622" category="list-text"><block ref="4bbcc3f3d11202923e4c61604d535622" category="inline-link-macro-rx"></block></block>
   <block id="7c308c086b5e1b83f888d7cdb4ec7dfc" category="list-text"><block ref="7c308c086b5e1b83f888d7cdb4ec7dfc" category="inline-link-macro-rx"></block></block>
@@ -2734,10 +2726,6 @@
   <block id="3536220b5e80ece536e76091bbcde43f" category="doc">支持的 PDU 类型和规格</block>
   <block id="345f336ebbb6b879b90d461c9ead417e" category="paragraph">系统机柜支持不同的配电单元（ PDU ）类型。PDU 符合 NEMA 或 IEC 标准。</block>
   <block id="fa010c3e95aca618a783f3f5f398a8ba" category="paragraph">Hardware Universe 中列出了系统机柜中支持的 PDU 的最新信息。</block>
-  <block id="196d51ffdb0655e7b9a918439dedd197" category="summary">所有 SAN 阵列系统都使用与 AFF 系统相同的文档。</block>
-  <block id="13d49ffc5303b0e9712a07f256876cfe" category="doc">所有 SAN 阵列系统</block>
-  <block id="3233979b1af1dce6c734462f3925f9b6" category="paragraph">您可以在 ASA 系统中使用 AFF 文档。AFF 型号的信息用于适用场景相应的 ASA 系统。例如， AFF A400 系统的所有布线和其他信息也会对 ASA AFF A400 系统进行适用场景。</block>
-  <block id="979662532995c78363ce0af9f042dd14" category="inline-link">全 SAN 阵列软件配置</block>
   <block id="e13e49c4785459e877f9a59004d99ad4" category="summary">运行诊断可以帮助您确定访问特定设备的时间间隔为何或该设备在存储系统中变得不可用的原因。</block>
   <block id="7edb195b323657f9e058299134ada2f6" category="doc">运行设备故障诊断</block>
   <block id="f555e1e62ba962a8b766611eac63d72d" category="list-text">输入以下命令，对导致问题的设备运行诊断： `sldiag device run （ -dev devtype|MB_slotnum] （ -name 设备）`</block>
@@ -6458,7 +6446,6 @@
   <block id="ed6243b9da8cbb52d7ded5d7a78d3b37" category="paragraph">在 &lt;stdin&gt; 中未解析的指令 - 包括： ../_include/drive_hotswap_sas.adoc.adoc]]</block>
   <block id="2bed99b4660dcf909368c3a2ae62b513" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A800</block>
   <block id="ad451e1c6a6a584f53b88b5c73144db7" category="doc">其他型号</block>
-  <block id="7a31198e87ee2c9071d7bf63050a7088" category="section-title">磁盘架型号</block>
   <block id="03be12a0476133b21cb6c1c927956d23" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A220 和 FAS2700</block>
   <block id="24b3b18d4ae3c460037fb58156d310c6" category="doc">FAS2700 系统文档</block>
   <block id="7b8d355a80903af67d6bd3bd4c49f973" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A700s</block>
@@ -6994,7 +6981,6 @@
   <block id="a3fad5983ba1f7c61a46ffcf74ea359a" category="video-title">动画—FAS8300和FAS8700安装和设置说明</block>
   <block id="89f7a66402ba80464b2d8b21ad48be2c" category="video-title">动画-使用缆线将控制器连接到一个NS224驱动器架</block>
   <block id="63f87aaa5f633e2ee952b199ae093a26" category="video-title">动画-从更换用的控制器模块中删除空的提升板</block>
-  <block id="91bfce3375290d3731ff240e35f162fd" category="paragraph"><block ref="91bfce3375290d3731ff240e35f162fd" category="inline-link-rx"></block></block>
   <block id="44de44e43d612d76f985580ff643993b" category="video-title">动画—安装和设置FAS500f</block>
   <block id="35ad2589af7e420c375f4ec321cc850b" category="list-text">输入以下命令以清除状态日志：`sldiag device clearstatus [-dev _devtype_|MB_slotnum]`</block>
   <block id="d94c06e259f5d258e151a2fafa975b4a" category="list-text">输入以下命令以验证是否已清除日志：`sldiag device status [-dev _devtype_|MB_slotnum]`</block>
@@ -7535,7 +7521,6 @@
   <block id="71e3f3adc231b164f4f0837d133f2bc6" category="paragraph">如果您的存储系统未在MetroCluster 配置中设置、请使用以下工作流进行部署。</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一个</block>
   <block id="1488c7c37653a45223ebecdfabcefa04" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 安装AFF/FAS控制器</block>
-  <block id="edc4a76e22711e26f2e103a32108feb0" category="paragraph">在机架或机柜中安装AFF/FAS控制器。访问适用于您的AFF/FAS平台型号的安装和设置说明。</block>
   <block id="8e4eec704f9a8706e1a3cf96accb2c17" category="list-text"><block ref="8e4eec704f9a8706e1a3cf96accb2c17" category="inline-link-rx"></block></block>
   <block id="564ec135f22614fd51e7ace4addc3c82" category="list-text"><block ref="564ec135f22614fd51e7ace4addc3c82" category="inline-link-rx"></block></block>
   <block id="5173935e91aef44c51b8afd57f32f13f" category="list-text"><block ref="5173935e91aef44c51b8afd57f32f13f" category="inline-link-rx"></block></block>
@@ -7601,7 +7586,6 @@
   <block id="09ebf9105e3a0e85568481422cb709d1" category="list-text"><block ref="09ebf9105e3a0e85568481422cb709d1" category="inline-link-macro-rx"></block></block>
   <block id="e6fbc0b9673f8c86726688d7607fc8f5" category="inline-image-macro">六个</block>
   <block id="aea7345148c1589735242fc13ad81924" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> 完成系统设置</block>
-  <block id="8a19d1619bb8803d8a6b5d21556d87ad" category="paragraph">配置交换机并安装所需软件后、请访问适用于AFF/FAS平台型号的安装和设置说明以完成系统设置。</block>
   <block id="12e67aac3e7f9227cc35f8f047d7dc74" category="inline-image-macro">七个</block>
   <block id="8f5988d6d5abedb5da92f0fcbc79872d" category="paragraph-title"><block ref="36915574c413876eaa75cbd48f69fd00" category="inline-image-macro-rx" type="image"></block> 完成ONTAP 配置</block>
   <block id="f0a39bebe9f0d59f6fc97c14de8b2a1a" category="paragraph">安装并设置AFF/FAS控制器和交换机后、必须在ONTAP 中完成存储配置。根据您的部署配置访问以下说明。</block>
@@ -7874,4 +7858,22 @@
   <block id="ac4fc8e93ed87aaf0d607c7594b760df" category="open-title">选项2：使用缆线将控制器连接到两个NS224驱动器架</block>
   <block id="eab02c161618f87134d04b274c9ed0a9" category="image-alt">DRW a900 NS224 line art双磁盘架、为IEOPS 1147布线</block>
   <block id="93d4151426ee3e46d52580ae98128972" category="list-text">Configure the system using the data you collected in the<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block></block>
+  <block id="6129b7ac1ccc31146cb5299a148a51de" category="summary">要启动并运行AFF 、FAS 和ASA 系统、您需要在ONTAP 中安装硬件组件、配置交换机和配置存储。</block>
+  <block id="6d311090c29c1da16c7810703948cbe1" category="paragraph">在机架或机柜中安装AFF/FAS控制器。访问适用于您的AF/FAS平台型号的安装和设置说明。对于全SAN阵列(ASA)系统、请按照适用于相应AFF A系列型号的安装说明进行操作。</block>
+  <block id="a6857db3b19fb4b9bb2a3b1cad9a31f1" category="list-text"><block ref="a6857db3b19fb4b9bb2a3b1cad9a31f1" category="inline-link-rx"></block></block>
+  <block id="90a9e7415b88be6a0d94cebc7d4a7a57" category="list-text"><block ref="90a9e7415b88be6a0d94cebc7d4a7a57" category="inline-link-rx"></block></block>
+  <block id="7f5c0eb40943093a2da99c8caf6992b7" category="list-text"><block ref="7f5c0eb40943093a2da99c8caf6992b7" category="inline-link-rx"></block></block>
+  <block id="e7d43e43255aab7a6db982e220c4d532" category="paragraph">配置交换机并安装所需软件后、请访问适用于AFF/FAS平台型号的安装和设置说明以完成系统设置。对于全SAN阵列(ASA)系统、请按照相应AFF A系列型号的安装说明进行操作。</block>
+  <block id="17732d64911b83c1ef019e7ce301df3a" category="summary">您可以通过存储系统文档安装、设置和维护ASA 系统。</block>
+  <block id="229bebba45d7b570f882b8783f74558a" category="doc">全SAN阵列(ASA)系统</block>
+  <block id="3b062372339f68dd096ab95e8fe7ab07" category="sidebar">NetApp的全SAN阵列(ASA)可提供简化的专用SAN体验、为您企业的任务关键型数据库和其他SAN工作负载提供持续的数据可用性。All SAN array systems use the same documentation as the AFF systems.要安装和维护ASA 系统、请按照相应AFF 型号的说明进行操作。</block>
+  <block id="81bbbcbe6f96a1f4b6df7eeba9ab4c17" category="sidebar">ASA AFF 系统</block>
+  <block id="2ce90a39656cd7489bede7894c2a9943" category="sidebar">ASA AFF A250</block>
+  <block id="b5efaabac2b0776c5f0ca29587d418e4" category="sidebar">ASA AFF A400</block>
+  <block id="dbcea936b7738470872ff3cbf35ec7c3" category="sidebar">ASA AFF A700</block>
+  <block id="7ddb32a2b45e07e265f9e454f57d2eb0" category="sidebar">ASA AFF A800</block>
+  <block id="27562113eba41d0820398afd585cb267" category="sidebar">ASA 软件配置</block>
+  <block id="ff529c4d04327f7d20ae4d7b457bcd18" category="sidebar">ASA 产品规格</block>
+  <block id="30975d9ae55d85636f78d9b3e459df73" category="sidebar">ASA 解决方案 简介</block>
+  <block id="6c713e33f81bfdf294d75a585966fd05" category="sidebar">ASA 技术报告</block>
 </blocks>

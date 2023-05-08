@@ -1,0 +1,32 @@
+---
+indexpage:
+  lead: NetApp的全SAN阵列(ASA)可提供简化的专用SAN体验、为您企业的任务关键型数据库和其他SAN工作负载提供持续的数据可用性。All SAN
+    array systems use the same documentation as the AFF systems.要安装和维护ASA 系统、请按照相应AFF
+    型号的说明进行操作。
+  tiles:
+  - title: ASA AFF 系统
+    links:
+    - title: ASA AFF A250
+      url: "../a250/index.html"
+    - title: ASA AFF A400
+      url: "../a400/index.html"
+    - title: ASA AFF A700
+      url: "../a700/index.html"
+    - title: ASA AFF A800
+      url: "../a800/index.html"
+  - title: 可用性已终止的系统
+    links:
+    - title: AFF A220
+      url: "../a220/index.html"
+  - title: 更多文档资源
+    links:
+    - title: 系统硬件升级
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
+    - title: ASA 软件配置
+      url: https://docs.netapp.com/us-en/ontap/task_asa_software_configuration.html
+    - title: ASA 产品规格
+      url: https://www.netapp.com/data-storage/san-storage-area-network/
+    - title: ASA 解决方案 简介
+      url: https://www.netapp.com/pdf.html?item=/media/19466-SB-4081.pdf
+    - title: ASA 技术报告
+      url: https://www.netapp.com/pdf.html?item=/media/10379-tr4515.pdf
