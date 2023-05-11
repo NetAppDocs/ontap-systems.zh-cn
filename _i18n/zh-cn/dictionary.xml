@@ -7870,14 +7870,5 @@
   <block id="ff529c4d04327f7d20ae4d7b457bcd18" category="sidebar">ASA 产品规格</block>
   <block id="30975d9ae55d85636f78d9b3e459df73" category="sidebar">ASA 解决方案 简介</block>
   <block id="6c713e33f81bfdf294d75a585966fd05" category="sidebar">ASA 技术报告</block>
-  <block id="05a183c8bc1fc9522f554a0dcc45645f" category="paragraph">在机架或机柜中安装AFF/FAS控制器。访问适用于您的AFF/FAS平台型号的安装和设置说明。对于全SAN阵列(ASA)系统、请按照相应AFF A系列型号的安装说明进行操作。</block>
-  <block id="7877fbd25ecba999ab0a739fe29df547" category="paragraph">** AFF A系列系统**</block>
-  <block id="999865050c05a9851fa1100ea708f735" category="paragraph">** AFF C系列系统**</block>
-  <block id="fb4b827f429720ceefe590267f9978cf" category="paragraph">** FAS 系统**</block>
-  <block id="6eeacbfb54f0dd2b69ca25ccf7e621e3" category="paragraph">**集群交换机**</block>
-  <block id="05d287d05ed5025354b8f6c796c87491" category="paragraph">**存储交换机**</block>
-  <block id="aca0ddc3769e84e478caff604ad14594" category="paragraph">**共享交换机**</block>
-  <block id="4f4f401ca3cb71c1eacaf052eac321fb" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 使用缆线将交换机连接到控制器</block>
-  <block id="93a86d433d6f98e9a80d74b972237ee6" category="paragraph">** AFF 系统**</block>
   <block id="b47e2ddbcc7bf8a413f11a740b83ad50" category="sidebar">FAS 系统数据表</block>
 </blocks>

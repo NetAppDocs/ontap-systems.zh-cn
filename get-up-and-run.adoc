@@ -19,12 +19,15 @@ summary: 要启动并运行AFF 、FAS 和ASA 系统、您需要在ONTAP 中安�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"] 安装AFF/FAS控制器
 [role="quick-margin-para"]
-在机架或机柜中安装AFF/FAS控制器。访问适用于您的AFF/FAS平台型号的安装和设置说明。对于全SAN阵列(ASA)系统、请按照相应AFF A系列型号的安装说明进行操作。
+6d311090c29c1da16c7810703948cbe1
 
-[role="quick-margin-para"]
-** AFF A系列系统**
+[cols="4,9,9,9"]
+|===
 
-[role="quick-margin-list"]
+
+ a| 
+ a| 
+.AFF A系列系统
 * https://["AFF A220"]
 * https://["AFF A250"]
 * https://["AFF A400"]
@@ -32,21 +35,15 @@ summary: 要启动并运行AFF 、FAS 和ASA 系统、您需要在ONTAP 中安�
 * https://["AFF A800"]
 * https://["AFF A900"]
 
-
-[role="quick-margin-para"]
-** AFF C系列系统**
-
-[role="quick-margin-list"]
+ a| 
+.AFF C系列系统
 * https://["AFF C190"]
 * https://["AFF C250"]
 * https://["AFF C400"]
 * https://["AFF C800"]
 
-
-[role="quick-margin-para"]
-** FAS 系统**
-
-[role="quick-margin-list"]
+ a| 
+.FAS 系统
 * https://["FAS500f"]
 * https://["FAS8300"]
 * https://["FAS8700"]
@@ -54,126 +51,122 @@ summary: 要启动并运行AFF 、FAS 和ASA 系统、您需要在ONTAP 中安�
 * https://["FAS9500"]
 
 
+|===
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"] 安装交换机硬件
 [role="quick-margin-para"]
 将交换机安装在机架或机柜中。根据您的交换机型号访问以下说明。
 
-[role="quick-margin-para"]
-**集群交换机**
+[cols="2,9,9,9"]
+|===
 
-[role="quick-margin-list"]
+
+ a| 
+ a| 
+.f267a68fd1c8bddcc992701898021398
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/install-hardware-bes53248.html["安装BES-53248交换机"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/install-switch-9336c-cluster.html["安装Cisco Nexus 9336C-x2交换机"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/install-hardware-sn2100-cluster.html["安装NVIDIA SN2100交换机"]
 
-
-[role="quick-margin-para"]
-**存储交换机**
-
-[role="quick-margin-list"]
+ a| 
+.403284bd44beda112195a484c8a76421
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-storage/install-9336c-storage.html["安装Cisco Nexus 9336C-x2交换机"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/install-hardware-sn2100-storage.html["安装NVIDIA SN2100交换机"]
 
-
-[role="quick-margin-para"]
-**共享交换机**
-
-[role="quick-margin-list"]
+ a| 
+.bc8a2cd252a5beb1dbf4f209baea67eb
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/install-9336c-shared.html["安装Cisco Nexus 9336C-x2交换机"]
 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 使用缆线将交换机连接到控制器
+|===
+.a4ae5d0bd4e47ba267a8df1ceee51985
 [role="quick-margin-para"]
 AFF/FAS安装和设置说明介绍了如何使用缆线将控制器端口连接到交换机。但是、如果您需要受支持的缆线和收发器列表以及有关交换机主机端口的详细信息、请根据您的交换机型号访问以下说明。
 
-[role="quick-margin-para"]
-**集群交换机**
+[cols="2,9,9,9"]
+|===
 
-[role="quick-margin-list"]
+
+ a| 
+ a| 
+.f267a68fd1c8bddcc992701898021398
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-reqs-bes53248.html#configuration-requirements["为BES-53248交换机布线"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/setup-worksheet-9336c-cluster.html["使用缆线连接Cisco Nexus 9336C-x2交换机"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/cabling-considerations-sn2100-cluster.html["使用缆线连接NVIDIA SN2100交换机"]
 
-
-[role="quick-margin-para"]
-**存储交换机**
-
-[role="quick-margin-list"]
+ a| 
+.403284bd44beda112195a484c8a76421
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-storage/setup-worksheet-9336c-storage.html["使用缆线连接Cisco Nexus 9336C-x2交换机"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/cabling-considerations-sn2100-storage.html["使用缆线连接NVIDIA SN2100交换机"]
 
-
-[role="quick-margin-para"]
-**共享交换机**
-
-[role="quick-margin-list"]
+ a| 
+.bc8a2cd252a5beb1dbf4f209baea67eb
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/cable-9336c-shared.html["使用缆线连接Cisco Nexus 9336C-x2交换机"]
 
 
+|===
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]配置交换机
 [role="quick-margin-para"]
 对交换机执行初始设置。根据您的交换机型号访问以下说明。
 
-[role="quick-margin-para"]
-**集群交换机**
+[cols="2,9,9,9"]
+|===
 
-[role="quick-margin-list"]
+
+ a| 
+ a| 
+.f267a68fd1c8bddcc992701898021398
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-install-initial.html["配置BES-53248交换机"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/setup-switch-9336c-cluster.html["配置Cisco Nexus 9336C-x2交换机"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/configure-sn2100-cluster.html["配置NVIDIA SN2100交换机"]
 
-
-[role="quick-margin-para"]
-**存储交换机**
-
-[role="quick-margin-list"]
+ a| 
+.403284bd44beda112195a484c8a76421
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-storage/setup-switch-9336c-storage.html["配置Cisco Nexus 9336C-x2交换机"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/configure-sn2100-storage.html["配置NVIDIA SN2100交换机"]
 
-
-[role="quick-margin-para"]
-**共享交换机**
-
-[role="quick-margin-list"]
+ a| 
+.bc8a2cd252a5beb1dbf4f209baea67eb
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/setup-and-configure-9336c-shared.html["配置Cisco Nexus 9336C-x2交换机"]
 
 
+|===
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"] 安装交换机软件
 [role="quick-margin-para"]
 要在交换机上安装和配置软件、请按照适用于您的交换机型号的软件安装工作流进行操作。
 
-[role="quick-margin-para"]
-**集群交换机**
+[cols="2,9,9,9"]
+|===
 
-[role="quick-margin-list"]
+
+ a| 
+ a| 
+.f267a68fd1c8bddcc992701898021398
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-software-overview-bes53248.html["为BES-53248交换机安装软件"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-software-overview-9336c-cluster.html["为Cisco Nexus 9336C-x2交换机安装软件"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/configure-software-overview-sn2100-cluster.html["为NVIDIA SN2100交换机安装软件"]
 
-
-[role="quick-margin-para"]
-**存储交换机**
-
-[role="quick-margin-list"]
+ a| 
+.403284bd44beda112195a484c8a76421
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-storage/configure-software-overview-9336c-storage.html["为Cisco Nexus 9336C-x2交换机安装软件"]
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/configure-software-sn2100-storage.html["为NVIDIA SN2100交换机安装软件"]
 
-
-[role="quick-margin-para"]
-**共享交换机**
-
-[role="quick-margin-list"]
+ a| 
+.bc8a2cd252a5beb1dbf4f209baea67eb
 * link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-software-overview-9336c-shared.html["为Cisco Nexus 9336C-x2交换机安装软件"]
 
 
+|===
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"] 完成系统设置
 [role="quick-margin-para"]
 配置交换机并安装所需软件后、请访问适用于AFF/FAS平台型号的安装和设置说明以完成系统设置。对于全SAN阵列(ASA)系统、请按照相应AFF A系列型号的安装说明进行操作。
 
-[role="quick-margin-para"]
-** AFF 系统**
+[cols="4,9,9,9"]
+|===
 
-[role="quick-margin-list"]
+
+ a| 
+ a| 
+.f3585daa539c5917b4fedd0eb7efb3f2
 * https://["AFF A220"]
 * https://["AFF A250"]
 * https://["AFF A400"]
@@ -181,21 +174,15 @@ AFF/FAS安装和设置说明介绍了如何使用缆线将控制器端口连接�
 * https://["AFF A800"]
 * https://["AFF A900"]
 
-
-[role="quick-margin-para"]
-** AFF C系列系统**
-
-[role="quick-margin-list"]
+ a| 
+.AFF C系列系统
 * https://["AFF C190"]
 * https://["AFF C250"]
 * https://["AFF C400"]
 * https://["AFF C800"]
 
-
-[role="quick-margin-para"]
-** FAS 系统**
-
-[role="quick-margin-list"]
+ a| 
+.FAS 系统
 * https://["FAS500f"]
 * https://["FAS8300"]
 * https://["FAS8700"]
@@ -203,6 +190,7 @@ AFF/FAS安装和设置说明介绍了如何使用缆线将控制器端口连接�
 * https://["FAS9500"]
 
 
+|===
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["七个"] 完成ONTAP 配置
 [role="quick-margin-para"]
 安装并设置AFF/FAS控制器和交换机后、必须在ONTAP 中完成存储配置。根据您的部署配置访问以下说明。

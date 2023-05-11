@@ -40,7 +40,6 @@ sidebar:
   - title: FAS 系统
     entries:
     - section: fas500f
-    - section: fas2700
     - section: fas8300
     - section: fas9000
     - section: fas9500
@@ -51,6 +50,7 @@ sidebar:
     - section: a320
     - section: a700s
     - section: fas2600
+    - section: fas2700
     - section: fas8200
   - title: 系统级诊断
     entries:
