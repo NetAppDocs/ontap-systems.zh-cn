@@ -56,14 +56,14 @@ DHCP
  a| 
 * FAS2200 ， FAS2500 ， FAS3200 ， FAS6200 ， FAS/AFF8000 系列系统 *
  a| 
-` + 网络启动 http://web_server_ip/path_to_web-accessible_directory/netboot/kernel+`[]
+` + 网络启动 http://[]
 
 
 
  a| 
 * 所有其他系统 *
  a| 
-` + 网络启动 http://web_server_ip/path_to_web-accessible_directory/<ontap_version>_image.tgz+`[]
+` + 网络启动 http://[]
 
 |===
 +
@@ -97,10 +97,10 @@ The node must be rebooted to start using the newly installed software. Do you wa
 . 从启动菜单中，选择 * （ 5 ） Maintenance mode boot* 以访问维护模式。
 . 如有必要，更改节点上的 FC 或 CNA 端口，然后将节点重新启动至维护模式。
 +
-http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《 ONTAP 9 SAN 管理指南》"]
+http://["《 ONTAP 9 SAN 管理指南》"]
 
 +
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30092["查找适用于您的 Data ONTAP 8 版本的 SAN 管理指南"]
+http://["查找适用于您的 Data ONTAP 8 版本的 SAN 管理指南"]
 
 . 您应验证命令输出是否显示 ha ：
 +
@@ -117,10 +117,10 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30
 ha-config modify controller ha 命令用于为控制器设置配置 ha 。ha-config modify chassis ha 命令可为机箱设置配置 ha 。
 
 +
-http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["《 ONTAP 9 高可用性配置指南》"]
+http://["《 ONTAP 9 高可用性配置指南》"]
 
 +
-http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30092["查找适用于您的 Data ONTAP 8 版本的《高可用性配置指南》"]
+http://["查找适用于您的 Data ONTAP 8 版本的《高可用性配置指南》"]
 
 . 退出维护模式： `halt`
 +

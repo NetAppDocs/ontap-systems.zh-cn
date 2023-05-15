@@ -15,7 +15,7 @@ summary: 您可以更换系统机柜中发生故障的 PDU ，也可以将现有
 
 更换用的 PDU 必须由系统机柜支持，并且必须为已安装的设备提供足够的电源。
 
-https://hwu.netapp.com/["hwu.netapp.com"]
+https://["hwu.netapp.com"]
 
 . 关闭目标 PDU 上的断路器，然后从交流电源中拔下旧 PDU 的插头。
 . 将您自己接地到系统机柜，然后从每个系统组件和 PDU 上拔下电源线。

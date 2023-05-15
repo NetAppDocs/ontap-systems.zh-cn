@@ -218,7 +218,7 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 * 它必须具有与要安装的缓存模块对应的操作系统。
 * 它必须支持缓存容量。
-* 尽管缓存模块的内容已加密，但最好在更换模块之前擦除该模块的内容。有关详细信息，请参见 https://mysupport.netapp.com/info/web/ECMP1132988.html["易失性声明"] NetApp 支持站点上适用于您的系统的。
+* 尽管缓存模块的内容已加密，但最好在更换模块之前擦除该模块的内容。有关详细信息，请参见 https://["易失性声明"] NetApp 支持站点上适用于您的系统的。
 +
 
 NOTE: 您必须登录到 NetApp 支持站点，才能显示系统的 _statement of volatil性 _ 。
@@ -422,4 +422,4 @@ Remote: cluster_A configured      		normal
 
 == 第 8 步：完成更换过程
 
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://["部件退回和放大器；更换"] 第页，了解更多信息。

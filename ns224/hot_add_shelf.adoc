@@ -21,11 +21,11 @@ summary: 您可以在 HA 对满足特定要求后以及完成适用于 HA 对的
 
 * 您的平台型号和 ONTAP 版本必须支持您要热添加的 NS224 磁盘架和驱动器。
 +
-https://hwu.netapp.com["NetApp Hardware Universe"^]
+https://["NetApp Hardware Universe"^]
 
 * 要连接磁盘架，必须具有正确数量和类型的缆线。
 +
-https://hwu.netapp.com["NetApp Hardware Universe"^]
+https://["NetApp Hardware Universe"^]
 
 * HA 对必须具有足够的可用 RoCE 端口，以支持您要热添加的磁盘架数量。
 +
@@ -35,7 +35,7 @@ For each shelf you are hot-adding, you need a minimum of two RoCE capable ports 
 如果 HA 对没有足够的可用 RoCE 端口，并且您的平台型号支持使用支持 RoCE 的 PCIe 卡或 I/O 模块，则必须已将额外的卡或 I/O 模块安装到您的平台型号支持的正确控制器插槽中。
 
 +
-https://hwu.netapp.com["NetApp Hardware Universe"^]
+https://["NetApp Hardware Universe"^]
 
 +
 [NOTE]
@@ -54,14 +54,14 @@ link:../fas9000/caching-module-and-core-dump-module-replace.html["更换缓存�
 热添加磁盘架后，不能超过 HA 对支持的最大磁盘架数。
 
 +
-https://hwu.netapp.com["NetApp Hardware Universe"^]
+https://["NetApp Hardware Universe"^]
 
 * 如果要将磁盘架热添加到已具有 NS224 磁盘架的 HA 对，则 HA 对不能显示任何存储布线错误消息，并且必须将其作为多路径 HA 进行布线。
 +
 您可以运行 Active IQ Config Advisor 来查看任何存储布线错误消息以及应采取的更正操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+https://["NetApp 下载： Config Advisor"^]
 
 * 您需要一个带一端直发的回形针或一个窄尖圆头笔。
 +
@@ -81,21 +81,21 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 安装最新版本的 DQP 后，您的系统便可识别和使用新认证的驱动器。这样可以避免出现有关驱动器信息不最新以及由于无法识别驱动器而阻止驱动器分区的系统事件消息。DQP 还会通知您驱动器固件不是最新的。
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp 下载：磁盘认证包"^]
+https://["NetApp 下载：磁盘认证包"^]
 
 * * 最佳实践： * 最佳实践是在热添加磁盘架前后运行 Active IQ Config Advisor 。
 +
 在热添加磁盘架之前运行 Active IQ Config Advisor 可快速了解现有磁盘架以太网（ ENET ）连接，验证 NVMe 磁盘架模块（ NSM ）固件版本，并允许您验证 HA 对中已在使用的磁盘架 ID 。通过在热添加磁盘架后运行 Active IQ Config Advisor ，您可以验证磁盘架布线是否正确以及磁盘架 ID 在 HA 对中是否唯一。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+https://["NetApp 下载： Config Advisor"^]
 
 * * 最佳实践： * 最佳实践是，在添加新磁盘架之前，系统上应安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
+https://["NetApp 下载：磁盘架固件"^]
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
+https://["NetApp 下载：磁盘驱动器固件"^]
 
 +
 
@@ -350,7 +350,7 @@ AFF C400 HA对
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+https://["NetApp 下载： Config Advisor"^]
 
 
 
@@ -560,7 +560,7 @@ image::../media/drw_ns224_a900_4shelves.png[DRW nss224 a900 4 个磁盘架]
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://["NetApp 下载： Config Advisor"]
 
 . 如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
 +
@@ -612,7 +612,7 @@ image::../media/drw_ns224_a250_c250_f500f_1shelf_IEOPS-963.svg[DRW nss224 A250 c
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+https://["NetApp 下载： Config Advisor"^]
 
 . 如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
 +
@@ -713,7 +713,7 @@ image::../media/drw_ns224_a700_2shelves.png[DRW nss224 a700 2 个磁盘架]
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+https://["NetApp 下载： Config Advisor"^]
 
 . 如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
 +
@@ -818,7 +818,7 @@ image::../media/drw_ns224_a800_c800_2shelves_IEOPS-966.svg[DRW nss224 a800 c800 
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+https://["NetApp 下载： Config Advisor"^]
 
 . 如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
 +
@@ -909,7 +909,7 @@ image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[DRW nss224 a400 2个磁盘
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+https://["NetApp 下载： Config Advisor"^]
 
 . 如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
 +
@@ -1000,7 +1000,7 @@ image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[DRW nss224 c400 2个磁盘
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+https://["NetApp 下载： Config Advisor"^]
 
 . 如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
 +
@@ -1052,7 +1052,7 @@ image::../media/drw_ns224_a320_2shelves_direct_attached.png[DRW nss224 A320 2 �
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+https://["NetApp 下载： Config Advisor"^]
 
 . 如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
 +

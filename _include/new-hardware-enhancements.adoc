@@ -6,7 +6,7 @@ ONTAP 9.8 简化了硬件升级过程，引入了自动端口放置功能。升�
 
 查看下表，查看可用的升级过程。有关其他详细信息，请参见每个指南以确定操作步骤 是否合适。
 
-有关 MetroCluster 专用的其他过程，请参见 https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html["选择升级或刷新方法"]。
+有关 MetroCluster 专用的其他过程，请参见 https://["选择升级或刷新方法"]。
 
 [cols="4*"]
 |===
@@ -16,7 +16,7 @@ ONTAP 9.8 简化了硬件升级过程，引入了自动端口放置功能。升�
  a| 
 9.8 到 9.0.x
  a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["《控制器硬件升级快速指南》"] （移动现有物理存储）
+https://["《控制器硬件升级快速指南》"] （移动现有物理存储）
  a| 
 否
  a| 
@@ -25,7 +25,7 @@ https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-us
 
 
  a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["《控制器硬件升级快速指南》"] （将卷移动到新存储）
+https://["《控制器硬件升级快速指南》"] （将卷移动到新存储）
  a| 
 是的。
  a| 
@@ -36,7 +36,7 @@ https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-us
  a| 
 9.8
  a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["使用 `ssystem controller replace` 命令升级运行 ONTAP 9.8 的控制器硬件"]
+https://["使用 `ssystem controller replace` 命令升级运行 ONTAP 9.8 的控制器硬件"]
  a| 
 是的。
  a| 
@@ -47,7 +47,7 @@ https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-us
  a| 
 9.8
  a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual-app/index.html["使用聚合重新定位手动升级运行 ONTAP 9.8 或更高版本的控制器硬件"]
+https://["使用聚合重新定位手动升级运行 ONTAP 9.8 或更高版本的控制器硬件"]
  a| 
 是的。
  a| 
@@ -58,7 +58,7 @@ https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual-app/index
  a| 
 9.7 到 9.5
  a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto/index.html["使用 `ssystem controller replace` 命令将运行 ONTAP 9.5 的控制器硬件升级到 ONTAP 9.7"]
+https://["使用 `ssystem controller replace` 命令将运行 ONTAP 9.5 的控制器硬件升级到 ONTAP 9.7"]
  a| 
 是的。
  a| 
@@ -69,7 +69,7 @@ https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto/index.html[
  a| 
 9.7 及更早版本
  a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual/index.html["将具有聚合重新定位的控制器升级到手动升级运行 ONTAP 9.7 及更早版本的控制器硬件"]
+https://["将具有聚合重新定位的控制器升级到手动升级运行 ONTAP 9.7 及更早版本的控制器硬件"]
  a| 
 是的。
  a| 

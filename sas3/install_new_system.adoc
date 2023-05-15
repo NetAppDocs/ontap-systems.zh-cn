@@ -71,7 +71,7 @@ NOTE: 如果 HA 对至少包含两个堆栈，则包含第二个堆栈根聚合�
 安装当前版本的 DQP 后，您的系统便可识别和使用新认证的磁盘驱动器；因此，可以避免出现有关磁盘驱动器信息不是最新的系统事件消息。此外，您还可以避免由于无法识别磁盘驱动器而可能阻止磁盘分区。DQP 还会通知您磁盘驱动器固件不是最新的。
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp 下载：磁盘认证包"^]
+https://["NetApp 下载：磁盘认证包"^]
 
 * 最佳做法是，在安装新系统后下载并运行 Config Advisor 。
 +
@@ -84,7 +84,7 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/downloa
 要下载 Config Advisor ，您需要网络访问权限。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://["NetApp 下载： Config Advisor"]
 
 
 
@@ -409,7 +409,7 @@ NOTE: 在启动系统之前，最佳实践是借此机会验证布线是否正�
 如果生成任何 SAS 布线错误或重复的磁盘架 ID 错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://["NetApp 下载： Config Advisor"]
 
 +
 您也可以运行 `storage shelf show -fields shelf-id` 命令来查看系统中已在使用的磁盘架 ID 列表（如果存在重复项）。

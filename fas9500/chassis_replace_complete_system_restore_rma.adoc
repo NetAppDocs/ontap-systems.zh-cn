@@ -48,7 +48,7 @@ ha-state 的值可以是以下值之一：
 . 通过将摇杆切换至*on*打开PSU，然后等待控制器完全通电。
 . 开机后、检查机箱和控制器的正面和背面是否有任何故障指示灯。
 . 通过SSH连接到节点的SP或BMC IP地址。此地址与关闭节点时使用的地址相同。
-. 执行中所述的其他运行状况检查 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何执行_A_cluster-HEATY_check_with _A_script_IN ONTAP"^]
+. 执行中所述的其他运行状况检查 https://["如何执行_A_cluster-HEATY_check_with _A_script_IN ONTAP"^]
 . 重新打开AutoSupport (结束维护窗口消息)：
 `system node autosupport invoke -node * -type all -message MAINT=end`
 
@@ -58,9 +58,9 @@ ha-state 的值可以是以下值之一：
 
 NOTE: 作为最佳实践、您应执行以下操作：
 
-* 解决任何问题 https://activeiq.netapp.com/["Active IQ 健康提醒和风险"^] (Active IQ 将需要一些时间来处理加电后AutoSupport—预期结果会有所延迟)
-* 运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]
-* 使用检查系统运行状况 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何执行_A_cluster-HEATY_check_with _A_script_IN ONTAP"^]
+* 解决任何问题 https://["Active IQ 健康提醒和风险"^] (Active IQ 将需要一些时间来处理加电后AutoSupport—预期结果会有所延迟)
+* 运行 https://["Active IQ Config Advisor"^]
+* 使用检查系统运行状况 https://["如何执行_A_cluster-HEATY_check_with _A_script_IN ONTAP"^]
 
 
 ====
@@ -186,4 +186,4 @@ NOTE: 您必须在两个控制器上退出维护模式，然后再继续执行�
 
 == 第 4 步：将故障部件退回 NetApp
 
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://["部件退回和放大器；更换"] 第页，了解更多信息。

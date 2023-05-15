@@ -5154,7 +5154,6 @@
   <block id="c50fdb32ee76a4d77a2a4b76520e5bed" category="admonition">更换风扇模块后，警示 LED 将保持亮起（稳定琥珀色），而固件将检查风扇模块是否安装正确。此过程完成后，此 LED 将熄灭。</block>
   <block id="162c19cb0e58f8c6c83c319b91d9da12" category="paragraph">请通过联系技术支持<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果需要 RMA 编号）。</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
-  <block id="f3585daa539c5917b4fedd0eb7efb3f2" category="sidebar">AFF 系统</block>
   <block id="b6000f9eed7f8ea9ee4632bd2f77961a" category="sidebar">AFF C190</block>
   <block id="4fbc8445e0d6cdbbc8011982cd328f69" category="sidebar">AFF A200</block>
   <block id="8fd3ca5f66dff5be16e79560dd28171e" category="sidebar">AFF A220</block>
@@ -7536,20 +7535,16 @@
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
   <block id="d130f1dd19e93aaf9701cc968056061f" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 安装交换机硬件</block>
   <block id="26d2e0bd267361cc8916e7e16faebcbb" category="paragraph">将交换机安装在机架或机柜中。根据您的交换机型号访问以下说明。</block>
-  <block id="f267a68fd1c8bddcc992701898021398" category="list-title">集群交换机</block>
   <block id="8821c03ea98d1edaf4b4b82c0aaf59dc" category="inline-link-macro">安装BES-53248交换机</block>
   <block id="9000e67500cb5e61bcd3ec702237913b" category="list-text"><block ref="9000e67500cb5e61bcd3ec702237913b" category="inline-link-macro-rx"></block></block>
   <block id="f4f4adc3268a66380dfdff9b1a20bc7b" category="inline-link-macro">安装Cisco Nexus 9336C-x2交换机</block>
   <block id="ecdf11290d1440e9c1a6d4b9666ad878" category="list-text"><block ref="ecdf11290d1440e9c1a6d4b9666ad878" category="inline-link-macro-rx"></block></block>
   <block id="66e51b9ff1adb3e615b49ae8223869a4" category="inline-link-macro">安装NVIDIA SN2100交换机</block>
   <block id="459378c7b38e766a9c40673dc6b7d6b6" category="list-text"><block ref="459378c7b38e766a9c40673dc6b7d6b6" category="inline-link-macro-rx"></block></block>
-  <block id="403284bd44beda112195a484c8a76421" category="list-title">存储交换机</block>
   <block id="75ddd4263ff912af7be6b34b846062ec" category="list-text"><block ref="75ddd4263ff912af7be6b34b846062ec" category="inline-link-macro-rx"></block></block>
   <block id="617820a8b836e10d6f5146fc0f043112" category="list-text"><block ref="617820a8b836e10d6f5146fc0f043112" category="inline-link-macro-rx"></block></block>
-  <block id="bc8a2cd252a5beb1dbf4f209baea67eb" category="list-title">共享交换机</block>
   <block id="5e56acfb152f096818349fa67202b6f7" category="list-text"><block ref="5e56acfb152f096818349fa67202b6f7" category="inline-link-macro-rx"></block></block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三个</block>
-  <block id="a4ae5d0bd4e47ba267a8df1ceee51985" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>使用缆线将交换机连接到控制器</block>
   <block id="427748ed6a44d0d6126050507a461881" category="paragraph">AFF/FAS安装和设置说明介绍了如何使用缆线将控制器端口连接到交换机。但是、如果您需要受支持的缆线和收发器列表以及有关交换机主机端口的详细信息、请根据您的交换机型号访问以下说明。</block>
   <block id="497781401f115451ecac27f7f2933cb3" category="inline-link-macro">为BES-53248交换机布线</block>
   <block id="4762b908167d7cdf9e4a1c2789f3dc25" category="list-text"><block ref="4762b908167d7cdf9e4a1c2789f3dc25" category="inline-link-macro-rx"></block></block>
@@ -7859,7 +7854,6 @@
   <block id="eab02c161618f87134d04b274c9ed0a9" category="image-alt">DRW a900 NS224 line art双磁盘架、为IEOPS 1147布线</block>
   <block id="93d4151426ee3e46d52580ae98128972" category="list-text">Configure the system using the data you collected in the<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block></block>
   <block id="6129b7ac1ccc31146cb5299a148a51de" category="summary">要启动并运行AFF 、FAS 和ASA 系统、您需要在ONTAP 中安装硬件组件、配置交换机和配置存储。</block>
-  <block id="6d311090c29c1da16c7810703948cbe1" category="paragraph">在机架或机柜中安装AFF/FAS控制器。访问适用于您的AF/FAS平台型号的安装和设置说明。对于全SAN阵列(ASA)系统、请按照适用于相应AFF A系列型号的安装说明进行操作。</block>
   <block id="a6857db3b19fb4b9bb2a3b1cad9a31f1" category="list-text"><block ref="a6857db3b19fb4b9bb2a3b1cad9a31f1" category="inline-link-rx"></block></block>
   <block id="90a9e7415b88be6a0d94cebc7d4a7a57" category="list-text"><block ref="90a9e7415b88be6a0d94cebc7d4a7a57" category="inline-link-rx"></block></block>
   <block id="7f5c0eb40943093a2da99c8caf6992b7" category="list-text"><block ref="7f5c0eb40943093a2da99c8caf6992b7" category="inline-link-rx"></block></block>
@@ -7876,4 +7870,14 @@
   <block id="ff529c4d04327f7d20ae4d7b457bcd18" category="sidebar">ASA 产品规格</block>
   <block id="30975d9ae55d85636f78d9b3e459df73" category="sidebar">ASA 解决方案 简介</block>
   <block id="6c713e33f81bfdf294d75a585966fd05" category="sidebar">ASA 技术报告</block>
+  <block id="05a183c8bc1fc9522f554a0dcc45645f" category="paragraph">在机架或机柜中安装AFF/FAS控制器。访问适用于您的AFF/FAS平台型号的安装和设置说明。对于全SAN阵列(ASA)系统、请按照相应AFF A系列型号的安装说明进行操作。</block>
+  <block id="7877fbd25ecba999ab0a739fe29df547" category="paragraph">** AFF A系列系统**</block>
+  <block id="999865050c05a9851fa1100ea708f735" category="paragraph">** AFF C系列系统**</block>
+  <block id="fb4b827f429720ceefe590267f9978cf" category="paragraph">** FAS 系统**</block>
+  <block id="6eeacbfb54f0dd2b69ca25ccf7e621e3" category="paragraph">**集群交换机**</block>
+  <block id="05d287d05ed5025354b8f6c796c87491" category="paragraph">**存储交换机**</block>
+  <block id="aca0ddc3769e84e478caff604ad14594" category="paragraph">**共享交换机**</block>
+  <block id="4f4f401ca3cb71c1eacaf052eac321fb" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 使用缆线将交换机连接到控制器</block>
+  <block id="93a86d433d6f98e9a80d74b972237ee6" category="paragraph">** AFF 系统**</block>
+  <block id="b47e2ddbcc7bf8a413f11a740b83ad50" category="sidebar">FAS 系统数据表</block>
 </blocks>

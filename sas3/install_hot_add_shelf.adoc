@@ -28,14 +28,14 @@ summary: 您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添�
 
 * 您的系统和 ONTAP 版本必须支持您要热添加的磁盘架，包括 IOM ，磁盘驱动器和 SAS 缆线。
 +
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://["NetApp Hardware Universe"]
 
 * 您的系统必须小于支持的最大磁盘驱动器数，至少等于您计划热添加的磁盘架数。
 +
 热添加磁盘架后，您不能超过系统支持的最大磁盘驱动器数。
 
 +
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://["NetApp Hardware Universe"]
 
 * 如果要热添加一个或多个磁盘架的堆栈（直接添加到平台控制器），则系统必须具有足够的可用 PCI SAS HBA 或板载 SAS 端口，或者同时具有这两者的组合。
 +
@@ -54,7 +54,7 @@ https://hwu.netapp.com["NetApp Hardware Universe"]
 您必须使用错误消息提供的更正操作更正任何布线错误。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://["NetApp 下载： Config Advisor"]
 
 
 
@@ -110,7 +110,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 安装当前版本的 DQP 后，您的系统便可识别和使用新认证的磁盘驱动器；因此，可以避免出现有关磁盘驱动器信息不是最新的系统事件消息。此外，您还可以避免由于无法识别磁盘驱动器而可能阻止磁盘分区。DQP 还会通知您磁盘驱动器固件不是最新的。
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp 下载：磁盘认证包"^]
+https://["NetApp 下载：磁盘认证包"^]
 
 * 最佳做法是，在热添加磁盘架前后运行 Config Advisor 。
 +
@@ -123,17 +123,17 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/downloa
 要下载 Config Advisor ，您需要网络访问权限。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://["NetApp 下载： Config Advisor"]
 
 * 最佳实践是，在添加新磁盘架，磁盘架 FRU 组件或 SAS 缆线之前，应在系统上安装最新版本的磁盘架（ IOM ）固件和磁盘驱动器固件。
 +
 可以在 NetApp 支持站点上找到最新版本的固件。
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+https://["NetApp 下载：磁盘架固件"]
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+https://["NetApp 下载：磁盘驱动器固件"]
 
 
 
@@ -451,7 +451,7 @@ NOTE: 请确保在断开缆线连接并重新连接缆线之间至少等待70秒
 
 . 下载并运行 Config Advisor 以验证 SAS 连接是否已正确布线。
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://["NetApp 下载： Config Advisor"]
 
 +
 如果生成任何 SAS 布线错误，请按照提供的更正操作进行操作。

@@ -11,6 +11,6 @@ summary: 升级 AFF 和 FAS 控制器模块。
 
 
 [role="lead"]
-对于大多数 AFF 和 FAS 系统，请按照上的升级过程进行操作 https://docs.netapp.com/us-en/ontap-systems-upgrade/index.html["升级 AFF 和 FAS 系统文档站点"^]。
+对于大多数 AFF 和 FAS 系统，请按照上的升级过程进行操作 https://["升级 AFF 和 FAS 系统文档站点"^]。
 
-对于采用 MetroCluster 配置的系统，请按照上的升级过程进行操作 https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html["ONTAP MetroCluster 文档站点"^]。
+对于采用 MetroCluster 配置的系统，请按照上的升级过程进行操作 https://["ONTAP MetroCluster 文档站点"^]。

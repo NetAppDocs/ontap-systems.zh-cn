@@ -352,7 +352,7 @@ node2             node1             -            Waiting for giveback (HA mailbo
 NOTE: 如果交还被否决，您可以考虑覆盖此否决。
 
 +
-有关详细信息，请参见 https://docs.netapp.com/us-en/ontap/high-availability/ha_manual_giveback.html#if-giveback-is-interrupted["手动交还命令"^] 主题以覆盖否决。
+有关详细信息，请参见 https://["手动交还命令"^] 主题以覆盖否决。
 
 .. 交还完成后，确认 HA 对运行状况良好且可以接管： `storage failover show`
 +
@@ -389,7 +389,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 ** MetroCluster 配置处于切换状态。
 ** 替代控制器是灾难站点上磁盘的当前所有者。
 +
-请参见 https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html#disk-ownership-changes-during-ha-takeover-and-metrocluster-switchover-in-a-four-node-metrocluster-configuration["在四节点 MetroCluster 配置中，磁盘所有权会在 HA 接管和 MetroCluster 切换期间发生更改"] 有关详细信息 ...
+请参见 https://["在四节点 MetroCluster 配置中，磁盘所有权会在 HA 接管和 MetroCluster 切换期间发生更改"] 有关详细信息 ...
 
 
 
@@ -562,4 +562,4 @@ NOTE: 您可以使用 `security key-manager key query -key-type NSE-AK` 用于�
 
 == 第 7 步：将故障部件退回 NetApp
 
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://["部件退回和放大器；更换"] 第页，了解更多信息。

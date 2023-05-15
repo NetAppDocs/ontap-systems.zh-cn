@@ -76,7 +76,7 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 如果命令失败，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"]
+http://["mysupport.netapp.com"]
 
 .. 验证所有身份验证密钥的 `Restored` 列是否显示 `yes` ，以及所有密钥管理器是否显示 `Available` ： `sSecurity key-manager query`
 .. 关闭受损控制器。
@@ -98,7 +98,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"]
 *** 运行 key-manager 设置向导： `security key-manager setup -node target/impaired node name`
 +
 
-NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 http://mysupport.netapp.com/["mysupport.netapp.com"]
+NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 http://["mysupport.netapp.com"]
 
 *** 验证所有身份验证密钥 `ssecuritykey-manager key show -detail` 的 `restored` 列是否显示 `yes`
 *** 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
@@ -131,7 +131,7 @@ NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无�
 如果命令失败，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"]
+http://["mysupport.netapp.com"]
 
 .. 验证所有身份验证密钥的 `Restored` 列是否显示 `yes` ，以及所有密钥管理器是否显示 `Available` ： `sSecurity key-manager query`
 .. 关闭受损控制器。
@@ -153,7 +153,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"]
 *** 运行 key-manager 设置向导： `security key-manager setup -node target/impaired node name`
 +
 
-NOTE: 在提示符处输入客户的 OKM 密码短语。如果无法提供密码短语，请联系 http://mysupport.netapp.com/["mysupport.netapp.com"]
+NOTE: 在提示符处输入客户的 OKM 密码短语。如果无法提供密码短语，请联系 http://["mysupport.netapp.com"]
 
 *** 验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key show -detail`
 *** 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
@@ -222,7 +222,7 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 如果命令失败，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"^]
+http://["mysupport.netapp.com"^]
 
 .. 验证是否已 `Restored` 列等于 `yes` 对于所有身份验证密钥： `security key-manager key query`
 .. 关闭受损控制器。
@@ -233,7 +233,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"^]
 .. 输入板载 security key-manager sync 命令： `ssecurity key-manager on板 载同步`
 +
 
-NOTE: Enter the customer's onboard key management passphrase at the prompt.If the passphrase cannot be provided, contact NetApp Support. http://mysupport.netapp.com/["mysupport.netapp.com"^]
+NOTE: Enter the customer's onboard key management passphrase at the prompt.If the passphrase cannot be provided, contact NetApp Support. http://["mysupport.netapp.com"^]
 
 .. 验证 `Restored` 列显示 `yes` 对于所有身份验证密钥： `security key-manager key query`
 .. 验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。
@@ -278,7 +278,7 @@ NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。
 如果命令失败，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"^]
+http://["mysupport.netapp.com"^]
 
 .. 验证是否已 `Restored` 列等于 `yes` 对于所有身份验证密钥： `security key-manager key query`
 .. 您可以安全地关闭控制器。
@@ -291,7 +291,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"^]
 在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"^]
+http://["mysupport.netapp.com"^]
 
 .. 验证 `Restored` 列显示 `yes` 对于所有身份验证密钥： `security key-manager key query`
 .. 验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。

@@ -37,7 +37,7 @@
 如果命令失败，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"]
+http://["mysupport.netapp.com"]
 
 .. 验证所有身份验证密钥的 `Restored` 列是否显示 `yes` ，以及所有密钥管理器是否显示 `Available` ： `sSecurity key-manager query`
 .. 关闭受损控制器。
@@ -59,7 +59,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"]
 *** 运行 key-manager 设置向导： `security key-manager setup -node target/impaired node name`
 +
 
-NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 http://mysupport.netapp.com/["mysupport.netapp.com"]
+NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无法提供密码短语，请联系 http://["mysupport.netapp.com"]
 
 *** 验证所有身份验证密钥 `ssecuritykey-manager key show -detail` 的 `restored` 列是否显示 `yes`
 *** 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
@@ -92,7 +92,7 @@ NOTE: 在提示符处输入客户的板载密钥管理密码短语。如果无�
 如果命令失败，请联系 NetApp 支持部门。
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"]
+http://["mysupport.netapp.com"]
 
 .. 验证所有身份验证密钥的 `Restored` 列是否显示 `yes` ，以及所有密钥管理器是否显示 `Available` ： `sSecurity key-manager query`
 .. 关闭受损控制器。
@@ -114,7 +114,7 @@ http://mysupport.netapp.com/["mysupport.netapp.com"]
 *** 运行 key-manager 设置向导： `security key-manager setup -node target/impaired node name`
 +
 
-NOTE: 在提示符处输入客户的 OKM 密码短语。如果无法提供密码短语，请联系 http://mysupport.netapp.com/["mysupport.netapp.com"]
+NOTE: 在提示符处输入客户的 OKM 密码短语。如果无法提供密码短语，请联系 http://["mysupport.netapp.com"]
 
 *** 验证所有身份验证密钥的 `restored` 列是否显示 `yes` ： `security key-manager key show -detail`
 *** 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`

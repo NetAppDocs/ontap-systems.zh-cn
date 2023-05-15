@@ -43,9 +43,9 @@
 
 .. 执行其他系统运行状况检查：
 +
-... 解决任何问题 https://activeiq.netapp.com/["Active IQ 健康提醒和风险"]
-... 运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]
-... 按照中所述检查系统运行状况 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何在ONTAP 中使用脚本执行集群运行状况检查"]
+... 解决任何问题 https://["Active IQ 健康提醒和风险"]
+... 运行 https://["Active IQ Config Advisor"]
+... 按照中所述检查系统运行状况 https://["如何在ONTAP 中使用脚本执行集群运行状况检查"]
 
 
 .. 生成维护任务完成AutoSupport 消息：

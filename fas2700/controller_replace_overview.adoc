@@ -15,7 +15,7 @@ summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP �
 
 * 所有驱动器架都必须正常工作。
 * 如果您的系统位于 HA 对中，运行状况良好的控制器必须能够接管正在更换的控制器（在本操作步骤 中称为 "`受损控制器` " ）。
-* 如果您的系统采用 MetroCluster 配置，则必须查看一节 https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["选择正确的恢复操作步骤"] 以确定是否应使用此操作步骤。
+* 如果您的系统采用 MetroCluster 配置，则必须查看一节 https://["选择正确的恢复操作步骤"] 以确定是否应使用此操作步骤。
 +
 如果这是您应使用的操作步骤 ，请注意，四节点或八节点 MetroCluster 配置中的控制器的控制器替代操作步骤 与 HA 对中的控制器替代相同。No MetroCluster-specific steps are required because the failure is restricted to an HA pair and storage failover commands can be used to provide nondisruptive operation during the replacement.
 

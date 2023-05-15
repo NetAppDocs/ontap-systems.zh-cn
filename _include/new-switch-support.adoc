@@ -8,7 +8,7 @@
 
 
  a| 
-https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 ）"]
+https://["36 端口 100 GbE Cisco 交换机（ X190200 ）"]
  a| 
 支持在同一对 Cisco Nexus 9336C-x2 交换机上使用共享基础架构（集群， HA 和交换机连接存储），包括支持 MetroCluster IP 配置。
  a| 
@@ -17,7 +17,7 @@ ONTAP 9.9.1
 
 
  a| 
-https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 和 X190210 ）"]
+https://["36 端口 100 GbE Cisco 交换机（ X190200 和 X190210 ）"]
  a| 
 Cisco Nexus 9336C-f2 集群互连交换机和存储交换机支持 AFF/FAS 控制器以及前端数据连接。
  a| 
@@ -26,7 +26,7 @@ ONTAP 9.8
 
 
  a| 
-https://hwu.netapp.com/Switch/Index["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
+https://["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
  a| 
 Broadcom BES-53248 集群互连交换机支持使用 40/100GbE 端口的 AFF/FAS 控制器。
  a| 
@@ -35,7 +35,7 @@ ONTAP 9.8
 
 
  a| 
-https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 ）"] https://hwu.netapp.com/Switch/Index["32 端口 100 GbE Cisco 交换机（ X190100 和 X190100R ）"]
+https://["36 端口 100 GbE Cisco 交换机（ X190200 ）"] https://["32 端口 100 GbE Cisco 交换机（ X190100 和 X190100R ）"]
  a| 
 Cisco Nexus 100 GbE 交换机可用作专用存储交换机，用于将 NS224 NVMe 驱动器架连接到以下平台：
 
@@ -50,7 +50,7 @@ ONTAP 9.8
 
 
  a| 
-https://hwu.netapp.com/Switch/Index["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
+https://["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
  a| 
 Broadcom BES-53248 集群互连交换机支持使用 10/25GbE 端口的 AFF/FAS 控制器。
  a| 
