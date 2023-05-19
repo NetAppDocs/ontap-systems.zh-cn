@@ -135,7 +135,6 @@
   <block id="26718b15fb498b1c0fe0098a30392c8c" category="list-text">此操作步骤用于一次更换一个电源。</block>
   <block id="76c422e38c98bcea8a54ea2c31b96d23" category="admonition">最好在从机箱中卸下电源后两分钟内更换电源。系统仍可正常运行，但 ONTAP 会向控制台发送有关电源降级的消息，直到更换电源为止。</block>
   <block id="c79db5b63ba25f31c8edc40939a37d35" category="list-text">电源可自动进行范围设置。</block>
-  <block id="7f078b87c94f86a68825895095430993" category="paragraph">使用以下视频或表格中的步骤更换电源：</block>
   <block id="6d3e06f6307975945ccc1b05b8b5460b" category="list-text">根据控制台错误消息或通过电源上的红色故障 LED 确定要更换的电源。</block>
   <block id="bdf78208a16277bdf48a7e0c9bfa97a4" category="list-text">断开电源：</block>
   <block id="2c21bbc4fedbc89cf2641efbdb7149ec" category="list-text">打开电源线固定器，然后从电源拔下电源线。</block>
@@ -3000,25 +2999,14 @@
   <block id="c8ba643914db1664b5eb486f2f97cf94" category="doc">根据需要还原 OKM ， NSE 和 NVE — AFF C190</block>
   <block id="fc3fc335fe3d498e24675e2eff27cd4f" category="doc">关闭控制器 - AFF C190</block>
   <block id="d5d1d7f0ba452ea37dcd299489e09eff" category="doc">将故障部件退回给 NetApp - AFF C190</block>
-  <block id="537180ccf440446ad8816ed356c6cee9" category="paragraph">要安装 AFF C190 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="3fdd87b9e91d1f4dbea3152a3a2b8d0b" category="paragraph">X6566B-3-R6 （ 112-00300 ）， 3 米</block>
   <block id="2dbee959c43fd0b0e9eab0968ff31b96" category="image-alt">OIE 缆线光纤 LC 连接器</block>
   <block id="fea037cb34a319bd3b823395ee5fdd07" category="paragraph">SFP + FC 主机网络</block>
   <block id="490cb76fd3c75ff8166e251d789f799e" category="paragraph">以太网主机和管理网络</block>
-  <block id="b2566b1f021e42ed3c97e4c8d5548f0d" category="paragraph">控制器模块上的 UTA2 端口和管理端口连接到交换机。两个控制器模块上的集群互连端口均已布线。</block>
   <block id="fcca883f68c4e92b98d0f294614cda60" category="admonition">如果要连接到光纤交换机，请先将 SFP 插入控制器端口，然后再使用缆线连接到该端口。</block>
   <block id="73da34bccb5db786798534ea5b6eb1d6" category="image-alt">DRW C190 tnsc 统一网络布线动画 gif</block>
-  <block id="6ed1027d1da4974a15118c7e8afd7bd8" category="paragraph">使用以下电缆类型之一将 e0c/0c 和 e0d/0d * 或 * e0e/0e 和 e0f/0f 数据端口连接到主机网络：</block>
-  <block id="c173bd77464f3b04c0d7c6e0a540f514" category="section-title">选项 2 ：缆线交换集群，统一配置</block>
-  <block id="0e8ca1ea3d276eefedced94f4d995872" category="paragraph">控制器模块上的 UTA2 端口和管理端口连接到交换机。集群互连端口通过缆线连接到集群互连交换机。</block>
   <block id="d7d7ce9a70c375da7dd9edb7b21a9134" category="image-alt">DRW C190 交换式统一网络布线动画 gif</block>
-  <block id="61f1c61b5feaeb89fc7d9cba126122c7" category="section-title">选项 3 ：为双节点无交换机集群布线，以太网配置</block>
-  <block id="7964bdbe798b1e42df1039eee0ed4b7f" category="paragraph">控制器模块上的 RJ45 端口和管理端口连接到交换机。两个控制器模块上的集群互连端口均已布线。</block>
   <block id="0df32eef6f99f6d05877f5da86a45063" category="image-alt">DRW C190 tnsc 以太网网络布线动画 gif</block>
-  <block id="b96881a043916feb6b04e9d9d0e20a7f" category="paragraph">使用集群互连缆线将集群互连端口彼此相连 <block ref="6b6a40b68f5814cad1750bfff7e3b927" category="inline-image-macro-rx" type="image"></block>：</block>
-  <block id="f4d46ae73f467f92c060779d91e706f5" category="paragraph">使用 RJ45 缆线将 e0M 端口连接到管理网络交换机 <block ref="af9561bb1d24f4c26f5879aaf09a1c65" category="inline-image-macro-rx" type="image"></block>。</block>
-  <block id="0a9b2befdc7da9bfc8df73a2b240fae8" category="section-title">选项 4 ：为有交换机集群布线，以太网配置</block>
-  <block id="165f152c925d401aec3bdff9aed4cf96" category="paragraph">控制器模块上的 RJ45 端口和管理端口连接到交换机。集群互连端口通过缆线连接到集群互连交换机。</block>
   <block id="ac3d560a40b4d6d28fac097677ecaa8d" category="image-alt">DRW C190 交换式以太网网络布线动画</block>
   <block id="c148c3a234659fa32cba3b91e58f84d2" category="admonition">统一配置系统的默认端口配置为 CNA 模式；如果连接到 FC 主机网络，则必须修改 FC 模式的端口。</block>
   <block id="7ac22c07a9dcb85e963d9fbf1f27178a" category="summary">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换故障 DIMM 。</block>
@@ -5594,10 +5582,7 @@
   <block id="0e714115aae93f290bf1207a9c149283" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> 以找到缆线并确定其用途。</block>
   <block id="caaa8a847335f7164117894cfe79e731" category="paragraph"><block ref="caaa8a847335f7164117894cfe79e731" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9cce7e4c2aef0e645d2e38ae612c4ed8" category="list-text">下载并完成 <block ref="cb0390cbe2f3cf678134885ff143b6ba" category="inline-link-macro-rx"></block>。</block>
-  <block id="bb4dc882830ed15ff271077443be872e" category="section-title">选项 1 ：为双节点无交换机集群布线，统一配置</block>
-  <block id="099a72df2bea2f81469ee9e97fc608df" category="list-text">按照图或分步说明完成控制器与交换机之间的布线：</block>
   <block id="9bb6dc35b9c3cfb584e92ef6bf229185" category="list-text">To complete setting up your system, see <block ref="b9ddf35bfac2437b7499c5c6e18fd46e" category="inline-link-macro-rx"></block>。</block>
-  <block id="5142e76828492b8472d310125f7bdc52" category="list-text">按照图或分步说明完成控制器和交换机之间的布线：</block>
   <block id="e54c29276af1d0eb8b609db7484efd71" category="admonition">初始启动可能需要长达八分钟的时间。</block>
   <block id="423ba51655c4d8cf97fea5498fc8182b" category="list-text">单击左窗格中的 * 网络 * 。</block>
   <block id="52cc73fca17e9ee46a84b54fe8d9c8f2" category="list-text">右键单击并选择 * 刷新 * 。</block>
@@ -7075,7 +7060,6 @@
   <block id="e968d995195c5befd8e63072a29d7a87" category="paragraph">You can use the PDF poster to install and set up your new system.。 <block ref="7bcaada228bfef0bb9707c307be17530" category="inline-link-macro-rx"></block> 提供分步说明，并可通过实时链接访问其他内容。</block>
   <block id="b32a57c06a6b6572f324185a0b81d90c" category="paragraph"><block ref="b32a57c06a6b6572f324185a0b81d90c" category="inline-link-macro-rx"></block></block>
   <block id="0acd1668055811ba455a173f5b2007e1" category="inline-link-macro">《AFF C190安装和设置说明》</block>
-  <block id="78986e3198e620c9a4397bd93b083e68" category="paragraph">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。使用 <block ref="3eed3afb9edbfbab44cea22e18033b51" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="0112dd8e71f10fe869246a29836663d8" category="inline-link-macro">《AFF A320安装和设置说明》</block>
   <block id="70a2087c6fb473305a0e232844fd565f" category="paragraph"><block ref="70a2087c6fb473305a0e232844fd565f" category="inline-link-macro-rx"></block></block>
   <block id="8db94eb390aaecb9128a260b00e455e8" category="paragraph"><block ref="8db94eb390aaecb9128a260b00e455e8" category="inline-link-macro-rx"></block></block>
@@ -7258,7 +7242,6 @@
   <block id="49c230c702ed6b30a6efde8eba87e563" category="doc">将故障部件退回给NetApp - AFF A150</block>
   <block id="3dfa4c8dc7083d8d9bf2fb1fc402660a" category="doc">快速指南—AFF A150</block>
   <block id="6e0311a42e114c05c9779f6c830f1d97" category="inline-link-macro">《AFF A150系统安装和设置说明》</block>
-  <block id="2e869cac122e3063f7b418f03cb3fa26" category="paragraph"><block ref="2e869cac122e3063f7b418f03cb3fa26" category="inline-link-macro-rx"></block></block>
   <block id="b80ee1e7ed290f304dbaae444297a4fa" category="doc">根据需要还原OKM、NSE和NVE—AFF A150</block>
   <block id="e822ef8c7b4b17d3230b125760d56e76" category="doc">还原并验证系统配置—AFF A150</block>
   <block id="178a6a7a54abe615089fef92a8499c05" category="doc">启动恢复映像—AFF A150</block>
@@ -7272,13 +7255,7 @@
   <block id="9b6f6ecb6633d22a67cc6a982fc55841" category="paragraph">如果您使用的是MetroCluster 配置、请使用MetroCluster 安装内容。</block>
   <block id="7f4d4fbe08a8a895671d05c4a82b0c85" category="inline-link">MetroCluster 文档</block>
   <block id="c56326d51fd75802f2144766bd1e36d3" category="paragraph"><block ref="c56326d51fd75802f2144766bd1e36d3" category="inline-link-rx"></block></block>
-  <block id="11f6227d0571f4bf3fac6b6d821a60d1" category="paragraph">要安装AFF A150系统、您需要在NetApp 支持站点 上创建帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
-  <block id="dd1dcd1cd7a28bbfc3b5a581b055bce3" category="inline-link-macro">Cabling controllers to drive shelves</block>
-  <block id="6c9cda13d9d7d9f8f82d912175e78d9b" category="list-text">To cable your storage, see <block ref="42bf816180738dc1660363ee044d9786" category="inline-link-macro-rx"></block></block>
   <block id="ee44682d06dd8612d09f370d6f80069a" category="image-alt">DRW A150 HA存储布线IEOPS 1032</block>
-  <block id="a1770e5cf644990212f313f91eccb2d8" category="paragraph"><block ref="a1770e5cf644990212f313f91eccb2d8" category="inline-link-macro-rx"></block></block>
-  <block id="4402c8b8d6c489ed5617a151ffa90726" category="inline-link-macro">Completing system setup and configuration</block>
-  <block id="41e876cad607f9363190645026f4f818" category="list-text">To complete setting up your system, see <block ref="cf51f79f23f70e62c97013df347c6a0f" category="inline-link-macro-rx"></block></block>
   <block id="ab65dd4e976f1787737fc87ae65b8a6d" category="paragraph"><block ref="ab65dd4e976f1787737fc87ae65b8a6d" category="inline-link-rx"></block></block>
   <block id="c2df61cd54941946b9e1d41669228517" category="paragraph"><block ref="c2df61cd54941946b9e1d41669228517" category="inline-link-rx"></block></block>
   <block id="a7d0c7f24713f4f2e4432bb2b91f97d0" category="paragraph"><block ref="a7d0c7f24713f4f2e4432bb2b91f97d0" category="inline-link-rx"></block></block>
@@ -7355,7 +7332,6 @@
   <block id="4d8adba62be8512e84ae7825848692e9" category="doc">将故障部件退回给NetApp - AFF C400</block>
   <block id="28dd2419d5232cd5e390f590d7d76b55" category="doc">快速指南—AFF C400</block>
   <block id="bef061f2ba2a880a4d71960c6fb14a8f" category="inline-link-macro">《AFF C400安装和设置说明》</block>
-  <block id="1fb877c7c5a192a0f8712065429afd55" category="paragraph"><block ref="1fb877c7c5a192a0f8712065429afd55" category="inline-link-macro-rx"></block></block>
   <block id="dde11f85a430c37e085e56c530fa6482" category="doc">根据需要还原OKM、NSE和NVE—AFF C400</block>
   <block id="a637f1b4c2a1d9b5cb9f0347c7e77539" category="doc">还原并验证系统配置—AFF C400</block>
   <block id="b1c4aeeae550bfbe7c6574898398d781" category="doc">更换NVDIMM电池—AFF C400</block>
@@ -7499,13 +7475,8 @@
   <block id="f0167637a350c4dd2e81ce6e691cd9db" category="list-text">向下旋转手柄、使其无法正常运行。</block>
   <block id="f66f18cf0f377b83882ade5b0618dbe0" category="open-title">选项2：更换直流电源</block>
   <block id="75a2f242d94a472d387a461ee767e00c" category="paragraph">要更换直流电源、请完成以下步骤。</block>
-  <block id="de5c94ee80b23390308831ba0a74d44b" category="paragraph">下一步中的图和表显示了两个翼形螺钉(项目1)和D-sub直流电源线连接器(项目2)。</block>
-  <block id="75b8b67557750f13b0b08808f90f76e3" category="list-text">拧下电源线连接器上的两个翼形螺钉。</block>
-  <block id="37a0782c59ce799b3f0ac9f1fd300d95" category="list-text">从电源拔下电源线连接器并将其放在一旁。</block>
   <block id="dd59df5055ae64422d06dada9ff46511" category="admonition">The power supply is short.从NSM模块中取出时、请始终用双手托住它、以免它从NSM模块中自由转动并给您造成损害。</block>
   <block id="6e496e45275d9692038e8f0693a1ec58" category="paragraph">电源必须与内部连接器和锁定机制正确接合。如果您认为电源未正确就位、请重复此步骤。</block>
-  <block id="de1e769c433d3a929aaa6f6ee4b43fe2" category="list-text">将电源线连接器插入电源。</block>
-  <block id="a637e5d063c7b8dd7bfddc7608e9573e" category="list-text">拧紧将电源线连接器固定到电源的两个翼形螺钉。</block>
   <block id="89f1a7f8afce2b821a07ad90fa45719c" category="list-text">您可以使用以下动画或写入的步骤更换风扇。</block>
   <block id="3b3c879ba506df7489cfabd2dcff0ce2" category="list-text">如果电源是交流电源、请打开电源线固定器、或者如果是直流电源、请拧下两个翼形螺钉、然后从电源中拔下电源线、从而断开电源线与电源的连接。</block>
   <block id="2618c98d909106f2012ce83478a61e98" category="list-text">您可以使用以下动画或写入的步骤来更换NSM模块。</block>
@@ -7871,4 +7842,108 @@
   <block id="30975d9ae55d85636f78d9b3e459df73" category="sidebar">ASA 解决方案 简介</block>
   <block id="6c713e33f81bfdf294d75a585966fd05" category="sidebar">ASA 技术报告</block>
   <block id="b47e2ddbcc7bf8a413f11a740b83ad50" category="sidebar">FAS 系统数据表</block>
+  <block id="163a2ccd4200819af22c143525c2903e" category="list-text">拧下D-sub直流电源电缆连接器上的两颗指旋螺钉。</block>
+  <block id="d88c630155642b1c688f5784be9a1acf" category="paragraph">步骤4中的图示和表格显示了两个指旋螺钉(项目1)和D-sub直流电源电缆连接器(项目2)。</block>
+  <block id="3d95f3470ed102d015e07a1fbb7f7608" category="list-text">从电源设备上拔下D-sub直流电源线接头、并将其放在一旁。</block>
+  <block id="d28bc8f0e10f780bf01d0983424f02e4" category="list-text">将D-sub直流电源电缆连接器插入电源设备。</block>
+  <block id="538209f1ec1db21a865711f12301a29e" category="list-text">拧紧两颗指旋螺钉、将D-sub直流电源电缆连接器固定至电源设备。</block>
+  <block id="29e74344b0f8f3bb2a741f7b4a504193" category="list-text">PSU是冗余的可热插拔PSU。</block>
+  <block id="1510e50dd45e2c76b8244bd6a5fc56ab" category="list-text">PSU可自动调整范围。</block>
+  <block id="408c129c35367a646082d00e22485944" category="paragraph">使用以下视频或步骤更换PSU：</block>
+  <block id="96ebd81c649ce61228798b69731b39cc" category="list-text">旋转凸轮把手、以便在按下锁定卡舌的同时将PSU拉出控制器模块。</block>
+  <block id="041817816aadc0ac389510f06856eb73" category="list-text">用双手支撑PSU的边缘并将其与控制器模块中的开口对齐、然后将PSU轻轻推入控制器模块、直至锁定卡舌卡入到位。</block>
+  <block id="ecc8536d184ca3a7e451181d0f568d41" category="paragraph">PSU只能与内部连接器正确啮合并单向锁定到位。</block>
+  <block id="7d710ae6fae5f82131f5e646788f27a1" category="list-text">从PSU上拔下D-sub直流电源线连接器、并将其放在一旁。</block>
+  <block id="26cc3f70141c5f4b4f5a7a7c52321240" category="list-text">卸下PSU：</block>
+  <block id="25b0a4705669fa58bd671a04b5e34a7f" category="list-text">将PSU从控制器模块中拉出、同时用另一只手支撑其重量。</block>
+  <block id="0d8f690f8863cf6dd078f46fd151cce4" category="admonition">PSU较短。从控制器模块中卸下控制器时、请始终用双手支撑控制器模块、以免其从控制器模块中摆动而造成人员的任何人员的安全。</block>
+  <block id="8e7311e4f3b2e71464aaa1fa66388a4b" category="paragraph">PSU手柄</block>
+  <block id="6aaf2adda7ea3fae24f9570eb951048f" category="list-text">安装替代PSU：</block>
+  <block id="b323fb6f842e16e2eb1c10951fffbf3e" category="list-text">将PSU轻轻推入控制器模块、直至锁定装置卡入到位。</block>
+  <block id="b5ecda37046d685b93693e01ecb6e6fe" category="paragraph">PSU必须与内部连接器和锁定装置正确接合。如果您认为PSU未正确就位、请重复此步骤。</block>
+  <block id="049ea4245daefe1c9ce73d6a75dfbab1" category="list-text">将D-sub直流电源电缆连接器插入PSU。</block>
+  <block id="71c2f9602a7f71f9eab2a859d2e0f4ae" category="list-text">拧紧两颗指旋螺钉、将D-sub直流电源电缆连接器固定至PSU。</block>
+  <block id="05a183c8bc1fc9522f554a0dcc45645f" category="paragraph">在机架或机柜中安装AFF/FAS控制器。访问适用于您的AFF/FAS平台型号的安装和设置说明。对于全SAN阵列(ASA)系统、请按照相应AFF A系列型号的安装说明进行操作。</block>
+  <block id="7877fbd25ecba999ab0a739fe29df547" category="paragraph">** AFF A系列系统**</block>
+  <block id="999865050c05a9851fa1100ea708f735" category="paragraph">** AFF C系列系统**</block>
+  <block id="fb4b827f429720ceefe590267f9978cf" category="paragraph">** FAS 系统**</block>
+  <block id="6eeacbfb54f0dd2b69ca25ccf7e621e3" category="paragraph">**集群交换机**</block>
+  <block id="05d287d05ed5025354b8f6c796c87491" category="paragraph">**存储交换机**</block>
+  <block id="aca0ddc3769e84e478caff604ad14594" category="paragraph">**共享交换机**</block>
+  <block id="4f4f401ca3cb71c1eacaf052eac321fb" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 使用缆线将交换机连接到控制器</block>
+  <block id="93a86d433d6f98e9a80d74b972237ee6" category="paragraph">** AFF 系统**</block>
+  <block id="1688757a0e4a29ec41d21e63fcc98a90" category="paragraph">要安装AFF C190系统、请创建一个帐户并注册该系统。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
+  <block id="39bbc5176cba797f24070d78f90d0d5a" category="list-text">确保您有权访问 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> （ HWU ），了解有关站点要求以及已配置系统上的追加信息的信息。</block>
+  <block id="5dd03e8d039863e563e049be198c3fd3" category="inline-link-macro">发行说明</block>
+  <block id="09e00942626b9d2b5187768ea624369a" category="list-text">确保您有权访问 <block ref="9d7659179eb5b5c244263cabf30336a7" category="inline-link-macro-rx"></block> 有关此系统的详细信息，请参见您的 ONTAP 版本。</block>
+  <block id="841cf46b69a4b2c782c980b795074554" category="list-text">确保您的站点具有以下物品：</block>
+  <block id="85220111cf8764a6d5eefe427de4fbde" category="paragraph">将系统安装在四柱机架或NetApp系统机柜中(如果适用)。</block>
+  <block id="1ccb5aa93b58b2e0cbfd6015e33c6a90" category="paragraph">使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。</block>
+  <block id="22cf31ea4e88d1269c525c08a9c8fdff" category="paragraph">控制器模块上的UTA2端口、以太网数据网络和管理端口均连接到交换机。The cluster interconnect ports are cabled on both controller modules.</block>
+  <block id="434c44657e12928e06a65124dfb073b0" category="paragraph">了解如何为双节点无交换机集群布线。</block>
+  <block id="f7284f28e338cb3e10e42e8214151229" category="paragraph">您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络。在控制器和交换机之间布线时、请参见以下布线图。</block>
+  <block id="48114454330840b73674b4d456819a4e" category="list-text">UTA2数据网络配置</block>
+  <block id="e6746873d55c9a028bc3eae1ed6cd0db" category="list-text">以太网网络配置</block>
+  <block id="f9655777cbdbded95ebaf4fdc1ed1c83" category="paragraph">对每个控制器模块执行以下步骤。</block>
+  <block id="4b7d254b4cff665eba8f89aeb96e16cb" category="list-text">使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b。+<block ref="9a0e89c71564aa69ffecf67eb610bc96" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">执行以下操作之一：</block>
+  <block id="54254076225178d5782bc5158de2ffd3" category="list-text">使用以下缆线类型之一将e0c/0c和e0d/0d或e0e/0e和e0f/0f数据端口连接到主机网络。</block>
+  <block id="43083753a8bd4d126f4e9d226b24d42f" category="list-text">使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。在下图中。</block>
+  <block id="5cb31a934f99a854350d21ffae22067d" category="paragraph">了解如何为有交换机集群布线。</block>
+  <block id="3c82d1b8b75fddcd5945e9505cb93e2a" category="list-text">统一网络配置</block>
+  <block id="98632dc1c45ca0b18d4707328081c4e1" category="list-text">使用集群互连缆线将e0a和e0b连接到集群互连交换机。</block>
+  <block id="119bf83fa4465fb53f4c1cb409fbd677" category="list-text">使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。</block>
+  <block id="94ba17d1769cd415862a18057c1938b2" category="section-title">第4步：完成系统设置</block>
+  <block id="0b6ed16c1f9d9e2458c0f6738eb93288" category="paragraph">了解如何完成系统设置如果您在笔记本电脑上启用了网络发现。</block>
+  <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link-macro">ONTAP 文档</block>
+  <block id="fd69b335d8c511a8e881204822f8b6ef" category="list-text">After you have completed the initial configuration, go to the <block ref="a3e81585099d58285005c3431d208fd9" category="inline-link-macro-rx"></block> 有关在ONTAP 中配置其他功能的信息、请访问。</block>
+  <block id="b06876b5a3b23ef5cff05f5d0950ec0d" category="paragraph">了解在笔记本电脑上未启用网络发现时如何完成系统设置。</block>
+  <block id="a76d705a87cd7b7a1bea352a13c6cd65" category="inline-link-macro">ONTAP (&amp;A)；配置</block>
+  <block id="0c629d7be969a0c3ffa913473ff37b4b" category="list-text">After you have completed the initial configuration, go to the <block ref="be5377ebec3eac0b9e77b9246477ddd0" category="inline-link-macro-rx"></block> 有关在ONTAP 中配置其他功能的信息、请访问。</block>
+  <block id="02b3fd979029ff021f281b78fa7ccd20" category="paragraph">了解如何通过机架安装和布线以及初始系统启动来安装C190系统。使用 <block ref="3eed3afb9edbfbab44cea22e18033b51" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
+  <block id="1d4ac53db25f608efca8dafa3f3d6b43" category="paragraph">观看以下视频、了解如何将系统装入机架并进行布线以及执行初始系统配置。</block>
+  <block id="95a15694e7d6d23376f741970900ef8e" category="list-text">硬件安装和布线</block>
+  <block id="4657c74c0fa17e5f15e4a506f177b913" category="paragraph">以下视频显示了如何安装系统并为其布线。</block>
+  <block id="d4b6f94dadb3f20b9bf031b9b9983ce3" category="list-text">端到端软件配置</block>
+  <block id="314f8c912a6741218e22dc8ca5f7ee41" category="paragraph">了解如何安装AFF A150系统。</block>
+  <block id="119be031ef4485d20c7683d291d0e9f6" category="inline-link">MetroCluster 文档</block>
+  <block id="bfd53ea423739db497251aa14d8747cd" category="paragraph">如果您使用的是MetroCluster 配置、请使用<block ref="9b888d0bb3e87322cc68a0bb4a7ae515" category="inline-link-rx"></block>。</block>
+  <block id="f6387b34fb856500ccda4acb52336ff7" category="paragraph">要安装AFF A150系统、请在NetApp 支持站点 上创建一个帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
+  <block id="5d0ff6a06bf967bf825de2c2a610cc33" category="list-text">有关将系统连接到交换机的信息、请与网络管理员联系。</block>
+  <block id="bcce32e97ae0002c4edc1cc8b9245285" category="inline-link">注册您的系统</block>
+  <block id="1e074148aea327f834455c1f6ae99894" category="list-text"><block ref="2539e9179736696f68f1ba88f3812383" category="inline-link-rx"></block>。</block>
+  <block id="f9be17421d77a57baae245776004d9fc" category="inline-link">Config Advisor</block>
+  <block id="2e1859a63c8f237167580360c7882aca" category="list-text">下载并安装<block ref="56697f7f340a212f549439c89b0cabd2" category="inline-link-rx"></block> 在您的笔记本电脑上。</block>
+  <block id="a025f9bb5b185f275f929e4e427c7a26" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> 以找到缆线并确定其用途。</block>
+  <block id="e881b3bd9e158bdbe75952ecb742a95f" category="inline-link">下载并填写集群配置工作表</block>
+  <block id="738f95af1a0163cf0e1c5931095ae65f" category="list-text"><block ref="d3aebb99b149a14152b68ab3bc13a233" category="inline-link-rx"></block>。</block>
+  <block id="767d56519e2665f49f35713c1a1be451" category="section-title">第3步：使用缆线将控制器连接到网络</block>
+  <block id="32eaf8761a3db861b1156e2738e758c1" category="paragraph">使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。</block>
+  <block id="3760d11ceaf4a0fe32d1665068e04673" category="paragraph">管理网络、UTA2数据网络、以太网数据网络以及控制器上的管理端口均连接到交换机。The cluster interconnect ports are cabled on both controllers.</block>
+  <block id="6daf690bb435e2ddca90bbd25f4d0d4c" category="list-text">使用以下缆线类型之一将UTA2数据端口连接到主机网络。</block>
+  <block id="afb6c834a58331c6ea63436bbf5864c3" category="list-text">对于FC主机、请使用0c和0d *或* 0e和0f。</block>
+  <block id="0bd1e8e50111e01ba1604ade94902cca" category="list-text">对于10GbE系统、请使用e0c和e0d *或* e0e和e0f。</block>
+  <block id="1fc58e4765d0d92d238af8bdfc3ab370" category="list-text">统一网络布线</block>
+  <block id="b7f69837ac40254faa2741b926641a85" category="list-text">以太网网络布线</block>
+  <block id="d121c2dd9af112004d29375d7d7385ba" category="list-text">对于每个控制器模块、使用集群互连缆线将e0a和e0b连接到集群互连交换机。</block>
+  <block id="32f4bb165c35f300da46d2891dcd4591" category="list-text">对于FC主机、请使用0c和0d **或** 0e和0f。</block>
+  <block id="94a602afccb4ec515036eba24fdfed92" category="list-text">对于10GbE系统、请使用e0c和e0d **或** e0e和e0f。</block>
+  <block id="711382b326731ba29a44a7ecd4dacb3e" category="paragraph">使用板载存储端口将控制器连接到磁盘架。NetApp recommends MP-HA cabling for systems with external storage.</block>
+  <block id="0c8480de057f1244b5ab346faf4daf5d" category="paragraph">If you have a SAS tape drive, you can use single-path cabling.If you have no external shelves, MP-HA cabling to internal drives is optional (not shown) if the SAS cables are ordered with the system.</block>
+  <block id="3d8bab9b47da70efbcdca04a75fddf8e" category="list-text">使用缆线将HA对与外部驱动器架连接起来。</block>
+  <block id="f2f386197bbf8899460af5987fca456d" category="paragraph">以下示例显示了DS224C驱动器架的布线。此布线与其他受支持的驱动器架类似。</block>
+  <block id="1d775c632fba61d3af79e48b275d4b7e" category="paragraph">如果您有多个驱动器架堆栈、请参见 <block ref="a1770e5cf644990212f313f91eccb2d8" category="inline-link-macro-rx"></block> 适用于您的驱动器架类型。</block>
+  <block id="624bc3e7c8eadd32ac4d94ff03171ec7" category="section-title">第5步：完成系统设置</block>
+  <block id="60567d4e2a479c00e2c6513bd91d9cd1" category="list-text">Configure the system using the data you collected in the<block ref="492b1b89e16fbed782c0f28e34fb9371" category="inline-link-rx"></block>。</block>
+  <block id="23dc4039b6ba90f63944cca90e993ec5" category="inline-link">现有帐户或创建和帐户</block>
+  <block id="21371189181c93bc505633f5bb1729ea" category="list-text">登录到<block ref="87e6dd8e4f31a1e4060528f9a17ea003" category="inline-link-rx"></block>。</block>
+  <block id="0ba7583639a274c434bbe6ef797115a4" category="inline-link">注册</block>
+  <block id="d8f675889dd7611add24a5c35dbe0287" category="list-text"><block ref="dd5351a0b089c34796a2c16f455a15ef" category="inline-link-rx"></block> 您的系统。</block>
+  <block id="a70e700572fd5f3ed169ddc6b2f5473e" category="list-text">下载<block ref="4dfdca8e27abd55d1321fd9c213c69c3" category="inline-link-rx"></block>。</block>
+  <block id="b0ebe1326fcf7880c70950de144bb8b2" category="list-text">After you have completed the initial configuration, go to the<block ref="85236f9c87441cb975667a870e3c5acc" category="inline-link-rx"></block> 有关在ONTAP 中配置其他功能的信息、请访问。</block>
+  <block id="cdc4a8392b31dfb0d6f525f8b4bfb521" category="list-text">连接并配置您的笔记本电脑或控制台。</block>
+  <block id="f0e48b1c6152b408e3a17383284dfa34" category="paragraph">有关如何配置控制台端口的说明、请参见笔记本电脑或控制台的联机帮助。</block>
+  <block id="6266bb335022aad7813f5a92f40c41bb" category="list-text">在笔记本电脑或控制台上使用System Manager配置集群。</block>
+  <block id="b1e0a8fb86dde21901d58064a47983ae" category="paragraph">了解如何通过机架安装和布线以及初始系统启动来安装系统。使用 ... <block ref="2e869cac122e3063f7b418f03cb3fa26" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
+  <block id="78504a496ba3e0d8a682fe929b4d61d9" category="paragraph"><block ref="78504a496ba3e0d8a682fe929b4d61d9" category="inline-link-macro-rx"></block></block>
 </blocks>

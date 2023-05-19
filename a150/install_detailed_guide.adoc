@@ -11,31 +11,29 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 
 [role="lead"]
-本指南详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本指南。
+了解如何安装AFF A150系统。
 
-如果您使用的是MetroCluster 配置、请使用MetroCluster 安装内容。
-
-https://["MetroCluster 文档"^]
+如果您使用的是MetroCluster 配置、请使用 https://["MetroCluster 文档"^]。
 
 
 
 == 第 1 步：准备安装
 
 [role="lead"]
-要安装AFF A150系统、您需要在NetApp 支持站点 上创建帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
+要安装AFF A150系统、请在NetApp 支持站点 上创建一个帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
 
-您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。
+.开始之前
+* 确保您有权访问 link:https://hwu.netapp.com["NetApp Hardware Universe"^] （ HWU ），了解有关站点要求以及已配置系统上的追加信息的信息。
+* 确保您有权访问 link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["发行说明"^] 有关此系统的详细信息，请参见您的 ONTAP 版本。
+* 有关将系统连接到交换机的信息、请与网络管理员联系。
+* 确保您的站点具有以下物品：
++
+** 存储系统的机架空间
+** 2 号十字螺丝刀
+** 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
+** 具有 RJ-45 连接并可访问 Web 浏览器的笔记本电脑或控制台
 
-https://["NetApp Hardware Universe"^]
 
-http://["查找适用于您的 ONTAP 9 版本的发行说明"^]
-
-您需要在站点上提供以下内容：
-
-* 存储系统的机架空间
-* 2 号十字螺丝刀
-* 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
-* 具有 RJ-45 连接并可访问 Web 浏览器的笔记本电脑或控制台
 
 
 .步骤
@@ -47,22 +45,13 @@ image::../media/drw_ssn_label.png[DRW SSN 标签]
 . 设置您的帐户：
 +
 .. 登录到现有帐户或创建帐户。
-.. 注册您的系统。
-+
-https://["NetApp 产品注册"]
+.. https://["注册您的系统"]。
 
 
-
-. 在笔记本电脑上下载并安装 Config Advisor 。
-+
-https://["NetApp 下载： Config Advisor"]
-
+. 下载并安装 https://["Config Advisor"] 在您的笔记本电脑上。
 . 清点并记下收到的缆线数量和类型。
 +
-下表列出了您可能收到的电缆类型。如果您收到的电缆未在表中列出，请参见 Hardware Universe 以找到该电缆并确定其用途。
-
-+
-https://["NetApp Hardware Universe"]
+The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 https://["NetApp Hardware Universe"] 以找到缆线并确定其用途。
 
 +
 [cols="1,2,1,2"]
@@ -164,10 +153,7 @@ image:../media/oie_cable_power.png[""]
 启动系统
 
 |===
-. 下载并完成 _Cluster 配置工作表 _ 。
-+
-https://["集群配置工作表"]
-
+. https://["下载并填写集群配置工作表"]。
 
 
 
@@ -175,7 +161,7 @@ https://["集群配置工作表"]
 == 第 2 步：安装硬件
 
 [role="lead"]
-您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
+将系统安装在四柱机架或NetApp系统机柜中(如果适用)。
 
 .步骤
 . 根据需要安装导轨套件。
@@ -196,20 +182,20 @@ image::../media/drw_cable_management_arm_install.png[DRW 缆线管理臂安装]
 
 
 
-== 第 3 步：使用缆线将控制器连接到网络
+== 第3步：使用缆线将控制器连接到网络
 
 [role="lead"]
-您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
+使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。
 
+管理网络、UTA2数据网络、以太网数据网络以及控制器上的管理端口均连接到交换机。The cluster interconnect ports are cabled on both controllers.
 
+[role="tabbed-block"]
+====
+.选项 1 ：双节点无交换机集群
+--
+了解如何为双节点无交换机集群布线。
 
-=== 选项 1 ：为双节点无交换机集群布线，统一网络配置
-
-[role="lead"]
-控制器上的管理网络， UTA2 数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
-
-您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
-
+.开始之前
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
 image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
@@ -217,218 +203,66 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-.步骤
-. 您可以使用图形或分步说明完成控制器与交换机之间的布线：
+.关于此任务
+您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络。在控制器和交换机之间布线时、请参见以下布线图。
+
+UTA2数据网络配置::
 +
+--
 image::../media/drw_2700_tnsc_unified_network_cabling_animated_gif.png[DRW 2700 tnsc 统一网络布线动画 gif]
 
+--
+以太网网络配置::
 +
-[cols="1,3"]
-|===
-| 步骤 | 在每个控制器上执行 
-
-
- a| 
-image:../media/oie_legend_icon_1_lg.png[""]
- a| 
-使用集群互连缆线将集群互连端口彼此相连：
-
-** e0a 到 e0a
-** e0b 到 e0bimage:../media/drw_c190_u_tnsc_clust_cbling.png[""]
-
-
-
-
- a| 
-image:../media/oie_legend_icon_2_o.png[""]
- a| 
-使用以下电缆类型之一将 UTA2 数据端口连接到主机网络：
-
-FC 主机
-
-** 0c 和 0d
-** * 或 * 0e 和 0f 10GbE
-** e0c 和 e0d
-** * 或 * e0e 和 e0f
-
-
-
-NOTE: 您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
-
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
-
-
-
- a| 
-image:../media/oie_legend_icon_3_lp.png[""]
- a| 
-使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
-
-image:../media/drw_c190_u_mgmt_cbling.png[""]
-
-
-
- a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
- a| 
-此时请勿插入电源线。
-
-|===
-. To cable your storage, see link:install_detailed_guide.md#["Cabling controllers to drive shelves"]
-
-
-
-
-=== 选项 2 ：为交换集群布线，统一网络配置
-
-[role="lead"]
-控制器上的管理网络， UTA2 数据网络和管理端口连接到交换机。集群互连端口通过缆线连接到集群互连交换机。
-
-您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
-
-
-NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
-
-.步骤
-. 您可以使用图或分步说明完成控制器和交换机之间的布线：
-+
-image::../media/drw_2700_switched_unified_network_cabling_animated_gif.png[DRW 2700 交换式统一网络布线动画 gif]
-
-+
-[cols="1,3"]
-|===
-| 步骤 | 对每个控制器模块执行 
-
-
- a| 
-image:../media/oie_legend_icon_1_lg.png[""]
- a| 
-使用集群互连缆线将 e0a 和 e0b 连接到集群互连交换机：
-
-image:../media/drw_c190_u_switched_clust_cbling.png[""]
-
-
-
- a| 
-image:../media/oie_legend_icon_2_o.png[""]
- a| 
-使用以下电缆类型之一将 UTA2 数据端口连接到主机网络：
-
-FC 主机
-
-** 0c 和 0d
-** 0e 和 0f
-
-
-10GbE
-
-** e0c 和 e0d
-** 或 * e0e 和 e0f
-
-
-
-NOTE: 您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
-
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
-
-
-
- a| 
-image:../media/oie_legend_icon_3_lp.png[""]
- a| 
-使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
-
-image:../media/drw_c190_u_mgmt_cbling.png[""]
-
-
-
- a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
- a| 
-此时请勿插入电源线。
-
-|===
-. To cable your storage, see link:install_detailed_guide.md#["Cabling controllers to drive shelves"]
-
-
-
-
-=== 选项 3 ：为双节点无交换机集群布线，以太网网络配置
-
-[role="lead"]
-控制器上的管理网络，以太网数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
-
-您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
-
-
-NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
-
-.步骤
-. 您可以使用图形或分步说明完成控制器与交换机之间的布线：
-+
+--
 image::../media/drw_2700_tnsc_ethernet_network_cabling_animated_gif.png[DRW 2700 tnsc 以太网网络布线动画 gif]
 
+--
+
+
+对每个控制器模块执行以下步骤。
+
+.步骤
+. 使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b。+image:../media/drw_c190_u_tnsc_clust_cbling.png[""]
+. 执行以下操作之一：
 +
-[cols="1,3"]
-|===
-| 步骤 | 在每个控制器上执行 
+UTA2数据网络配置:: 使用以下缆线类型之一将UTA2数据端口连接到主机网络。
++
+--
+** 对于FC主机、请使用0c和0d *或* 0e和0f。
+** 对于10GbE系统、请使用e0c和e0d *或* e0e和e0f。
++
+image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
 
-
- a| 
-image:../media/oie_legend_icon_1_lg.png[""]
- a| 
-使用集群互连缆线将集群互连端口彼此相连：
-
-** e0a 到 e0a
-** e0b 到 e0bimage:../media/drw_c190_e_tnsc_clust_cbling.png[""]
-
++
+您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
 
 
 
- a| 
-image:../media/oie_legend_icon_2_o.png[""]
- a| 
-使用 Cat 6 RJ45 缆线将 e0c 通过 e0f 端口连接到主机网络：
-
+--
+以太网网络配置:: 使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。在下图中。
++
+--
 image:../media/drw_c190_e_rj45_cbling.png[""]
 
+--
 
 
- a| 
-image:../media/oie_legend_icon_3_lp.png[""]
- a| 
-使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
-
-image:../media/drw_c190_e_mgmt_cbling.png[""]
-
-
-
- a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
- a| 
-此时请勿插入电源线。
-
-|===
-. To cable your storage, see link:install_detailed_guide.md#["Cabling controllers to drive shelves"]
+. 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
++
+image:../media/drw_c190_u_mgmt_cbling.png[""]
 
 
 
 
-=== 选项 4 ：为有交换机集群布线，以太网网络配置
+IMPORTANT: 此时请勿插入电源线。
 
-[role="lead"]
-控制器上的管理网络，以太网数据网络和管理端口连接到交换机。集群互连端口通过缆线连接到集群互连交换机。
+--
+.选项 2 ：交换集群
+--
+了解如何为有交换机集群布线。
 
-您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
-
+.开始之前
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
 image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
@@ -436,65 +270,74 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-.步骤
-. 您可以使用图或分步说明完成控制器和交换机之间的布线：
+.关于此任务
+您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络。在控制器和交换机之间布线时、请参见以下布线图。
+
+统一网络布线::
 +
+--
+image::../media/drw_2700_switched_unified_network_cabling_animated_gif.png[DRW 2700 交换式统一网络布线动画 gif]
+
+--
+以太网网络布线::
++
+--
 image::../media/drw_2700_switched_ethernet_network_cabling_animated_gif.png[DRW 2700 交换式以太网布线动画 gif]
 
+--
+
+
+对每个控制器模块执行以下步骤。
+
+.步骤
+. 对于每个控制器模块、使用集群互连缆线将e0a和e0b连接到集群互连交换机。
 +
-[cols="1,2"]
-|===
-| 步骤 | 对每个控制器模块执行 
+image:../media/drw_c190_u_switched_clust_cbling.png[""]
+
+. 执行以下操作之一：
++
+UTA2数据网络配置:: 使用以下缆线类型之一将UTA2数据端口连接到主机网络。
++
+--
+** 对于FC主机、请使用0c和0d **或** 0e和0f。
+** 对于10GbE系统、请使用e0c和e0d **或** e0e和e0f。
++
+image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+
++
+您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
 
 
- a| 
-image:../media/oie_legend_icon_1_lg.png[""]
- a| 
-使用集群互连缆线将 e0a 和 e0b 连接到集群互连交换机：
 
-image:../media/drw_c190_e_switched_clust_cbling.png[""]
-
-
-
- a| 
-image:../media/oie_legend_icon_2_o.png[""]
- a| 
-使用 Cat 6 RJ45 缆线将 e0c 通过 e0f 端口连接到主机网络：
-
+--
+以太网网络配置:: 使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。
++
+--
 image:../media/drw_c190_e_rj45_cbling.png[""]
 
+--
 
 
- a| 
-image:../media/oie_legend_icon_3_lp.png[""]
- a| 
-使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
-
-image:../media/drw_c190_e_mgmt_cbling.png[""]
+. 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
++
+image:../media/drw_c190_u_mgmt_cbling.png[""]
 
 
 
- a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
- a| 
-此时请勿插入电源线。
 
-|===
-. To cable your storage, see link:install_detailed_guide.md#["Cabling controllers to drive shelves"]
+IMPORTANT: 此时请勿插入电源线。
 
-
+--
+====
 
 
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
-[role="lead"]
-您必须使用板载存储端口将控制器连接到磁盘架。NetApp 建议对具有外部存储的系统使用 MP-HA 布线。如果您使用的是 SAS 磁带驱动器，则可以使用单路径布线。如果没有外部磁盘架，则可选择使用 MP-HA 缆线连接到内部驱动器（未显示），前提是 SAS 缆线是随系统一起订购的。
+使用板载存储端口将控制器连接到磁盘架。NetApp recommends MP-HA cabling for systems with external storage.
 
+.关于此任务
+If you have a SAS tape drive, you can use single-path cabling.If you have no external shelves, MP-HA cabling to internal drives is optional (not shown) if the SAS cables are ordered with the system.
 
-
-=== 选项 1 ：使用缆线将 HA 对上的存储与外部驱动器架连接起来
-
-[role="lead"]
 您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到驱动器磁盘架。
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
@@ -502,25 +345,15 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
 .步骤
-. 使用缆线将 HA 对连接到外部驱动器架：
+. 使用缆线将HA对与外部驱动器架连接起来。
 +
-
-NOTE: 此示例使用 DS224C 。布线方式与其他受支持的驱动器架类似。
+以下示例显示了DS224C驱动器架的布线。此布线与其他受支持的驱动器架类似。
 
 +
 image::../media/drw_a150_ha_storage_cabling_IEOPS-1032.svg[DRW A150 HA存储布线IEOPS 1032]
 
+. 为磁盘架到磁盘架端口布线。
 +
-[cols="1,3"]
-|===
-| 步骤 | 在每个控制器上执行 
-
-
- a| 
-image:../media/oie_legend_icon_1_lo.png[""]
- a| 
-为磁盘架到磁盘架端口布线。
-
 ** IOM A 上的端口 3 连接到磁盘架正下方 IOM A 上的端口 1 。
 ** IOM B 上的端口 3 连接到磁盘架正下方 IOM B 上的端口 1 。
 +
@@ -528,13 +361,8 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] 迷你 SAS HD 到迷
 
 
 
-
-
- a| 
-image:../media/oie_legend_icon_2_mb.png[""]
- a| 
-将每个节点连接到堆栈中的 IOM A 。
-
+. 将每个节点连接到堆栈中的 IOM A 。
++
 ** 控制器 1 端口 0b 连接到堆栈中最后一个驱动器架上的 IOM A 端口 3 。
 ** 控制器 2 端口 0a 连接到堆栈中第一个驱动器架上的 IOM A 端口 1 。
 +
@@ -542,39 +370,27 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] 迷你 SAS HD 到迷
 
 
 
-
-
- a| 
-image:../media/oie_legend_icon_3_t.png[""]
- a| 
-将每个节点连接到堆栈中的 IOM B
-
+. 将每个节点连接到堆栈中的 IOM B
++
 ** 控制器 1 端口 0a 连接到堆栈中第一个驱动器架上的 IOM B 端口 1 。
 ** 控制器 2 端口 0b 连接到堆栈中最后一个驱动器架上的 IOM B 端口 3 。image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] 迷你 SAS HD 到迷你 SAS HD 缆线
 
 
-|===
-+
-如果您有多个驱动器架堆栈，请参见适用于您的驱动器架类型的 _Installation and Cabling Guide_ 。
 
-+
-link:../com.netapp.doc.hw-ds-sas3-icg/home.html["安装和布线"]
 
-. To complete setting up your system, see link:install_detailed_guide.md#["Completing system setup and configuration"]
+如果您有多个驱动器架堆栈、请参见 link:../com.netapp.doc.hw-ds-sas3-icg/home.html["安装和布线"] 适用于您的驱动器架类型。
 
 
 
-
-== 第 5 步：完成系统设置和配置
+== 第5步：完成系统设置
 
 [role="lead"]
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
 
-
-
-=== 选项 1 ：如果启用了网络发现，则完成系统设置
-
-[role="lead"]
+[role="tabbed-block"]
+====
+.选项 1 ：如果启用了网络发现
+--
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
 .步骤
@@ -617,44 +433,29 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 
 
-. 使用 System Manager 引导式设置，使用在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。
-+
-https://["《 ONTAP 配置指南》"]
-
+. Configure the system using the data you collected in the https://["《 ONTAP 配置指南》"]。
 . 设置您的帐户并下载 Active IQ Config Advisor ：
 +
-.. 登录到现有帐户或创建帐户。
-+
-https://["NetApp 支持注册"]
-
-.. 注册您的系统。
-+
-https://["NetApp 产品注册"]
-
-.. 下载 Active IQ Config Advisor 。
-+
-https://["NetApp 下载： Config Advisor"]
-
+.. 登录到 https://["现有帐户或创建和帐户"]。
+.. https://["注册"] 您的系统。
+.. 下载 https://["Active IQ Config Advisor"]。
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后，转到 https://["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+. After you have completed the initial configuration, go to the https://["ONTAP 文档"] 有关在ONTAP 中配置其他功能的信息、请访问。
 
 
-
-
-=== 选项 2 ：如果未启用网络发现，则完成系统设置和配置
-
-[role="lead"]
+--
+.选项 2 ：如果未启用网络发现
+--
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。
 
 .步骤
-. 为笔记本电脑或控制台布线并进行配置：
+. 连接并配置您的笔记本电脑或控制台。
 +
 .. 使用 N-8-1 将笔记本电脑或控制台上的控制台端口设置为 115200 波特。
 +
-
-NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或控制台的联机帮助。
+有关如何配置控制台端口的说明、请参见笔记本电脑或控制台的联机帮助。
 
 .. 将控制台缆线连接到笔记本电脑或控制台，并使用系统随附的控制台缆线连接控制器上的控制台端口。
 +
@@ -706,35 +507,26 @@ NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制�
 
 
 |===
-. 使用笔记本电脑或控制台上的 System Manager 配置集群：
+. 在笔记本电脑或控制台上使用System Manager配置集群。
 +
 .. 将浏览器指向节点管理 IP 地址。
 +
 
 NOTE: 此地址的格式为 https://[]。
 
-.. 使用您在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。
-+
-https://["《 ONTAP 配置指南》"]
-
+.. Configure the system using the data you collected in the https://["《 ONTAP 配置指南》"]。
 
 
 . 设置您的帐户并下载 Active IQ Config Advisor ：
 +
-.. 登录到现有帐户或创建帐户。
-+
-https://["NetApp 支持注册"]
-
-.. 注册您的系统。
-+
-https://["NetApp 产品注册"]
-
-.. 下载 Active IQ Config Advisor 。
-+
-https://["NetApp 下载： Config Advisor"]
-
+.. 登录到 https://["现有帐户或创建和帐户"]。
+.. https://["注册"] 您的系统。
+.. 下载 https://["Active IQ Config Advisor"]。
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后，转到 https://["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+. After you have completed the initial configuration, go to the https://["ONTAP 文档"] 有关在ONTAP 中配置其他功能的信息、请访问。
 
+
+--
+====
