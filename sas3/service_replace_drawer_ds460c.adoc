@@ -68,7 +68,7 @@ image::../media/dcm2.png[dcm2]
 可以在 NetApp 支持站点上找到最新版本的固件。
 
 +
-https://["NetApp 下载：磁盘架固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
 
 . 如果磁盘架包含来自HA对中任一控制器的根聚合、或者您选择暂停HA对(而不是保持HA对正常运行)、请完成以下子步骤；否则、请转至下一步。
 +
@@ -551,9 +551,9 @@ image:../media/legend_icon_01.png[""]
 . 如果已暂停HA对、请在两个控制器上启动ONTAP ；否则、请转至下一步。
 . 如果您已将数据从磁盘架移出并删除了数据聚合、则现在可以使用磁盘架中的备用磁盘来创建或扩展聚合。
 +
-https://["聚合创建工作流"]
+https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-creation-workflow-concept.html["聚合创建工作流"]
 
 +
-https://["聚合扩展工作流"]
+https://docs.netapp.com/us-en/ontap/disks-aggregates/aggregate-expansion-workflow-concept.html["聚合扩展工作流"]
 
 

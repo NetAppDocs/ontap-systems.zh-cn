@@ -23,7 +23,7 @@ summary: 了解 FAS 和 AFF 系统的新功能。
 
 
  a| 
-https://["X91148A"]
+https://hwu.netapp.com/adapter/index["X91148A"]
  a| 
 2 端口 100GbE RoCE QSFP28
  a| 
@@ -37,7 +37,7 @@ ONTAP 9.8
 
 
  a| 
-https://["X91122A"]
+https://hwu.netapp.com/adapter/index["X91122A"]
  a| 
 2 端口 25GbE RoCE QSFP28
  a| 
@@ -50,7 +50,7 @@ ONTAP 9.8
 
 
  a| 
-https://["X9170A"]
+https://hwu.netapp.com/adapter/index["X9170A"]
  a| 
 NVMe SSD 模块（ 1 TB ）
  a| 
@@ -69,7 +69,7 @@ ONTAP 9.8
 
 
  a| 
-https://["36 端口 100 GbE Cisco 交换机（ X190200 ）"]
+https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 ）"]
  a| 
 支持在同一对 Cisco Nexus 9336C-x2 交换机上使用共享基础架构（集群， HA 和交换机连接存储），包括支持 MetroCluster IP 配置。
  a| 
@@ -78,7 +78,7 @@ ONTAP 9.9.1
 
 
  a| 
-https://["36 端口 100 GbE Cisco 交换机（ X190200 和 X190210 ）"]
+https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 和 X190210 ）"]
  a| 
 Cisco Nexus 9336C-f2 集群互连交换机和存储交换机支持 AFF/FAS 控制器以及前端数据连接。
  a| 
@@ -87,7 +87,7 @@ ONTAP 9.8
 
 
  a| 
-https://["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
+https://hwu.netapp.com/Switch/Index["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
  a| 
 Broadcom BES-53248 集群互连交换机支持使用 40/100GbE 端口的 AFF/FAS 控制器。
  a| 
@@ -96,7 +96,7 @@ ONTAP 9.8
 
 
  a| 
-https://["36 端口 100 GbE Cisco 交换机（ X190200 ）"] https://["32 端口 100 GbE Cisco 交换机（ X190100 和 X190100R ）"]
+https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 ）"] https://hwu.netapp.com/Switch/Index["32 端口 100 GbE Cisco 交换机（ X190100 和 X190100R ）"]
  a| 
 Cisco Nexus 100 GbE 交换机可用作专用存储交换机，用于将 NS224 NVMe 驱动器架连接到以下平台：
 
@@ -111,7 +111,7 @@ ONTAP 9.8
 
 
  a| 
-https://["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
+https://hwu.netapp.com/Switch/Index["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
  a| 
 Broadcom BES-53248 集群互连交换机支持使用 10/25GbE 端口的 AFF/FAS 控制器。
  a| 
@@ -128,84 +128,84 @@ ONTAP 9.5P8
 
 
  a| 
-https://["FAS9500"]
+https://hwu.netapp.com/ProductSpecs/Index["FAS9500"]
  a| 
 ONTAP 9.10.1P3和9.11.1
 
 
 
  a| 
-https://["AFF A900"]
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A900"]
  a| 
 ONTAP 9.10.1
 
 
 
  a| 
-https://["AFF A250/AFF ASA A250"]
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A250/AFF ASA A250"]
  a| 
 ONTAP 9.8
 
 
 
  a| 
-https://["FAS500f"]
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS500f"]
  a| 
 ONTAP 9.8
 
 
 
  a| 
-https://["AFF ASA A800"]
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF ASA A800"]
  a| 
 ONTAP 9.8
 
 
 
  a| 
-https://["FAS8300"]
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8300"]
  a| 
 ONTAP 9.7
 
 
 
  a| 
-https://["FAS8700"]
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS8700"]
  a| 
 ONTAP 9.7
 
 
 
  a| 
-https://["AFF A400"]
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A400"]
  a| 
 ONTAP 9.7
 
 
 
  a| 
-https://["AFF ASA A220"]
+https://www.netapp.com/pdf.html?item=/media/17190-na-382.pdf["AFF ASA A220"]
  a| 
 ONTAP 9.7
 
 
 
  a| 
-https://["AFF ASA A700"]
+https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF ASA A700"]
  a| 
 ONTAP 9.7
 
 
 
  a| 
-https://["AFF C190"]
+https://www.netapp.com/us/media/ds-3989.pdf["AFF C190"]
  a| 
 ONTAP 9.6
 
 
 
  a| 
-https://["AFF A320"]
+https://www.netapp.com/pdf.html?item=/media/17190-na-382.pdf["AFF A320"]
  a| 
 ONTAP 9.6
 
@@ -254,7 +254,7 @@ ONTAP 9.8
  a| 
 现在，支持在 SAS 存储堆栈中从 6 Gb 到 12 Gb 的单速过渡。这样可以使用 12 Gb 磁盘架扩展现有 6 Gb 堆栈的存储。
 
-https://["将带有 IOM12 模块的磁盘架热添加到带有 IOM6 模块的磁盘架堆栈中"]
+https://docs.netapp.com/platstor/topic/com.netapp.doc.hw-ds-mix-hotadd/home.html["将带有 IOM12 模块的磁盘架热添加到带有 IOM6 模块的磁盘架堆栈中"]
  a| 
 ONTAP 9.7P4
 
@@ -271,7 +271,7 @@ ONTAP 9.8 简化了硬件升级过程，引入了自动端口放置功能。升�
 
 查看下表，查看可用的升级过程。有关其他详细信息，请参见每个指南以确定操作步骤 是否合适。
 
-有关 MetroCluster 专用的其他过程，请参见 https://["选择升级或刷新方法"]。
+有关 MetroCluster 专用的其他过程，请参见 https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html["选择升级或刷新方法"]。
 
 [cols="4*"]
 |===
@@ -281,7 +281,7 @@ ONTAP 9.8 简化了硬件升级过程，引入了自动端口放置功能。升�
  a| 
 9.8 到 9.0.x
  a| 
-https://["《控制器硬件升级快速指南》"] （移动现有物理存储）
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["《控制器硬件升级快速指南》"] （移动现有物理存储）
  a| 
 否
  a| 
@@ -290,7 +290,7 @@ https://["《控制器硬件升级快速指南》"] （移动现有物理存储�
 
 
  a| 
-https://["《控制器硬件升级快速指南》"] （将卷移动到新存储）
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["《控制器硬件升级快速指南》"] （将卷移动到新存储）
  a| 
 是的。
  a| 
@@ -301,7 +301,7 @@ https://["《控制器硬件升级快速指南》"] （将卷移动到新存储�
  a| 
 9.8
  a| 
-https://["使用 `ssystem controller replace` 命令升级运行 ONTAP 9.8 的控制器硬件"]
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["使用 `ssystem controller replace` 命令升级运行 ONTAP 9.8 的控制器硬件"]
  a| 
 是的。
  a| 
@@ -312,7 +312,7 @@ https://["使用 `ssystem controller replace` 命令升级运行 ONTAP 9.8 的�
  a| 
 9.8
  a| 
-https://["使用聚合重新定位手动升级运行 ONTAP 9.8 或更高版本的控制器硬件"]
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual-app/index.html["使用聚合重新定位手动升级运行 ONTAP 9.8 或更高版本的控制器硬件"]
  a| 
 是的。
  a| 
@@ -323,7 +323,7 @@ https://["使用聚合重新定位手动升级运行 ONTAP 9.8 或更高版本�
  a| 
 9.7 到 9.5
  a| 
-https://["使用 `ssystem controller replace` 命令将运行 ONTAP 9.5 的控制器硬件升级到 ONTAP 9.7"]
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto/index.html["使用 `ssystem controller replace` 命令将运行 ONTAP 9.5 的控制器硬件升级到 ONTAP 9.7"]
  a| 
 是的。
  a| 
@@ -334,7 +334,7 @@ https://["使用 `ssystem controller replace` 命令将运行 ONTAP 9.5 的控�
  a| 
 9.7 及更早版本
  a| 
-https://["将具有聚合重新定位的控制器升级到手动升级运行 ONTAP 9.7 及更早版本的控制器硬件"]
+https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual/index.html["将具有聚合重新定位的控制器升级到手动升级运行 ONTAP 9.7 及更早版本的控制器硬件"]
  a| 
 是的。
  a| 

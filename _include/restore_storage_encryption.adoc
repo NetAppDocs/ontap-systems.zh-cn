@@ -10,8 +10,8 @@ NOTE: 更换DIMM时不需要执行此步骤。
 .步骤
 . 根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：
 +
-** https://["还原板载密钥管理加密密钥"^]
-** https://["还原外部密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
 
 
 . 重置SED MSID

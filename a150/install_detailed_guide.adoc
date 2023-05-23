@@ -13,7 +13,7 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 [role="lead"]
 了解如何安装AFF A150系统。
 
-如果您使用的是MetroCluster 配置、请使用 https://["MetroCluster 文档"^]。
+如果您使用的是MetroCluster 配置、请使用 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]。
 
 
 
@@ -45,13 +45,13 @@ image::../media/drw_ssn_label.png[DRW SSN 标签]
 . 设置您的帐户：
 +
 .. 登录到现有帐户或创建帐户。
-.. https://["注册您的系统"]。
+.. https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["注册您的系统"]。
 
 
-. 下载并安装 https://["Config Advisor"] 在您的笔记本电脑上。
+. 下载并安装 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Config Advisor"] 在您的笔记本电脑上。
 . 清点并记下收到的缆线数量和类型。
 +
-The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 https://["NetApp Hardware Universe"] 以找到缆线并确定其用途。
+The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 https://hwu.netapp.com["NetApp Hardware Universe"] 以找到缆线并确定其用途。
 
 +
 [cols="1,2,1,2"]
@@ -153,7 +153,7 @@ image:../media/oie_cable_power.png[""]
 启动系统
 
 |===
-. https://["下载并填写集群配置工作表"]。
+. https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["下载并填写集群配置工作表"]。
 
 
 
@@ -433,16 +433,16 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 
 
-. Configure the system using the data you collected in the https://["《 ONTAP 配置指南》"]。
+. Configure the system using the data you collected in the https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]。
 . 设置您的帐户并下载 Active IQ Config Advisor ：
 +
-.. 登录到 https://["现有帐户或创建和帐户"]。
-.. https://["注册"] 您的系统。
-.. 下载 https://["Active IQ Config Advisor"]。
+.. 登录到 https://mysupport.netapp.com/site/user/registration["现有帐户或创建和帐户"]。
+.. https://mysupport.netapp.com/site/systems/register["注册"] 您的系统。
+.. 下载 https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]。
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. After you have completed the initial configuration, go to the https://["ONTAP 文档"] 有关在ONTAP 中配置其他功能的信息、请访问。
+. After you have completed the initial configuration, go to the https://docs.netapp.com/us-en/ontap-family/["ONTAP 文档"] 有关在ONTAP 中配置其他功能的信息、请访问。
 
 
 --
@@ -512,20 +512,20 @@ NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制�
 .. 将浏览器指向节点管理 IP 地址。
 +
 
-NOTE: 此地址的格式为 https://[]。
+NOTE: 此地址的格式为 https://x.x.x.x[]。
 
-.. Configure the system using the data you collected in the https://["《 ONTAP 配置指南》"]。
+.. Configure the system using the data you collected in the https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]。
 
 
 . 设置您的帐户并下载 Active IQ Config Advisor ：
 +
-.. 登录到 https://["现有帐户或创建和帐户"]。
-.. https://["注册"] 您的系统。
-.. 下载 https://["Active IQ Config Advisor"]。
+.. 登录到 https://mysupport.netapp.com/site/user/registration["现有帐户或创建和帐户"]。
+.. https://mysupport.netapp.com/site/systems/register["注册"] 您的系统。
+.. 下载 https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]。
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. After you have completed the initial configuration, go to the https://["ONTAP 文档"] 有关在ONTAP 中配置其他功能的信息、请访问。
+. After you have completed the initial configuration, go to the https://docs.netapp.com/us-en/ontap-family/["ONTAP 文档"] 有关在ONTAP 中配置其他功能的信息、请访问。
 
 
 --

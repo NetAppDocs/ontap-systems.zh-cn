@@ -19,10 +19,10 @@ summary: 此提供了有关安装典型 NetApp 系统的详细分步说明。
 
 要安装系统，您需要在 NetApp 支持站点上创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
 
-您需要有权访问 https://["NetApp Hardware Universe"^] 有关站点要求以及已配置系统上的追加信息的信息。
+您需要有权访问 https://hwu.netapp.com["NetApp Hardware Universe"^] 有关站点要求以及已配置系统上的追加信息的信息。
 
 .您需要的内容
-您可能还希望有权访问 http://["《 ONTAP 9 发行说明》"^] 有关此系统的详细信息，请参见您的 ONTAP 版本。
+您可能还希望有权访问 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["《 ONTAP 9 发行说明》"^] 有关此系统的详细信息，请参见您的 ONTAP 版本。
 
 您需要在站点上提供以下内容：
 
@@ -42,7 +42,7 @@ image::../media/drw_ssn_label.svg[DRW SSN 标签]
 下表列出了您可能收到的电缆类型。如果您收到的电缆未在表中列出，请参见 Hardware Universe 以找到该电缆并确定其用途。
 
 +
-https://["NetApp Hardware Universe"^]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 +
 [cols="1,2,1,2"]
@@ -178,7 +178,7 @@ image::../media/oie_cable_power.svg[OIE缆线电源]
 启动系统
 
 |===
-. 查看 https://["《 ONTAP 配置指南》"^] 并收集该指南中列出的所需信息。
+. 查看 https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^] 并收集该指南中列出的所需信息。
 
 
 
@@ -400,10 +400,10 @@ image::../media/drw_a900fas9500_power_source_icon_IEOPS-1142.svg[DRW a900FAS9500
 使用缆线将DS212C或DS224C驱动器架连接到控制器。
 
 
-NOTE: 有关SAS布线的详细信息和工作表、请参见 https://["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"^]
+NOTE: 有关SAS布线的详细信息和工作表、请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/overview-cabling-rules-examples.html["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"^]
 
 .开始之前
-* 填写适用于您系统的SAS布线工作表。请参见 https://["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"^]。
+* 填写适用于您系统的SAS布线工作表。请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/overview-cabling-rules-examples.html["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"^]。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 
 
@@ -554,25 +554,25 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 
 
-. 使用 System Manager 引导式设置使用中收集的数据配置系统 https://["《 ONTAP 配置指南》"^]。
+. 使用 System Manager 引导式设置使用中收集的数据配置系统 https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^]。
 . 设置您的帐户并下载 Active IQ Config Advisor ：
 +
 .. 登录到现有帐户或创建帐户。
 +
-https://["NetApp 支持注册"^]
+https://mysupport.netapp.com/eservice/public/now.do["NetApp 支持注册"^]
 
 .. 注册您的系统。
 +
-https://["NetApp 产品注册"^]
+https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]
 
 .. 下载 Active IQ Config Advisor 。
 +
-https://["NetApp 下载： Config Advisor"^]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. After you have completed the initial configuration, go to the https://["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
+. After you have completed the initial configuration, go to the https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
 
 
 --
@@ -691,27 +691,27 @@ NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制�
 
 NOTE: The format for the address is +https://x.x.x.x+.
 
-.. Configure the system using the data you collected in the https://["《 ONTAP 配置指南》"^] 。
+.. Configure the system using the data you collected in the https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^] 。
 
 
 . 设置您的帐户并下载 Active IQ Config Advisor ：
 +
 .. 登录到现有帐户或创建帐户。
 +
-https://["NetApp 支持注册"^]
+https://mysupport.netapp.com/eservice/public/now.do["NetApp 支持注册"^]
 
 .. 注册您的系统。
 +
-https://["NetApp 产品注册"^]
+https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]
 
 .. 下载 Active IQ Config Advisor 。
 +
-https://["NetApp 下载： Config Advisor"^]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. After you have completed the initial configuration, go to the https://["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
+. After you have completed the initial configuration, go to the https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
 
 
 --

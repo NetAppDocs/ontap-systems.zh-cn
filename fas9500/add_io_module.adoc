@@ -14,8 +14,8 @@ summary: 您可以将 I/O 模块添加到系统中，方法是在已完全填充
 您可以通过在已完全填充的系统中将 NIC 或存储适配器更换为新的 NIC 或存储适配器，或者将新的 NIC 或存储适配器添加到系统中的空机箱插槽中来向系统添加 I/O 模块。
 
 .开始之前
-* 检查 https://["NetApp Hardware Universe"] 确保新 I/O 模块与您正在运行的系统和 ONTAP 版本兼容。
-* 如果有多个可用插槽，请在中检查插槽优先级 https://["NetApp Hardware Universe"] 并使用适用于您的 I/O 模块的最佳配置。
+* 检查 https://hwu.netapp.com/["NetApp Hardware Universe"] 确保新 I/O 模块与您正在运行的系统和 ONTAP 版本兼容。
+* 如果有多个可用插槽，请在中检查插槽优先级 https://hwu.netapp.com/["NetApp Hardware Universe"] 并使用适用于您的 I/O 模块的最佳配置。
 * 要无中断地添加 I/O 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖或卸下现有 I/O 模块，添加新的或更换的 I/O 模块，然后交还目标控制器。
 * 确保所有其他组件均正常运行。
 
@@ -162,7 +162,7 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
 . 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
 . 如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _<node name>_ -port _<port name>__ -mode network` 命令转换插槽以供网络连接使用。
 . 对控制器 B 重复上述步骤
-. 如果您安装了存储I/O模块、请按照中所述安装SAS磁盘架并为其布线 https://["热添加SAS磁盘架"^]。
+. 如果您安装了存储I/O模块、请按照中所述安装SAS磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/sas3/install-hot-add-shelf.html["热添加SAS磁盘架"^]。
 
 
 
@@ -188,14 +188,14 @@ LIF 将在其控制器模块关闭时自动迁移。
  a| 
 NIC I/O 模块，端口更少
  a| 
-将受影响的 LIF 永久重新分配到其他主端口。请参见 https://["迁移 LIF"^] 有关使用 System Manager 永久移动 LIF 的信息，请参见。
+将受影响的 LIF 永久重新分配到其他主端口。请参见 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"^] 有关使用 System Manager 永久移动 LIF 的信息，请参见。
 
 
 
  a| 
 带有存储 I/O 模块的 NIC I/O 模块
  a| 
-使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述 https://["迁移 LIF"^]。
+使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"^]。
 
 |===
 
@@ -373,7 +373,7 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
 
 +
 
-NOTE: 如果您在重新启动期间遇到问题描述 、请参见 https://["BURT 1494308 -更换I/O模块期间可能触发环境关闭"]
+NOTE: 如果您在重新启动期间遇到问题描述 、请参见 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 -更换I/O模块期间可能触发环境关闭"]
 
 
 
@@ -396,7 +396,7 @@ NOTE: 如果您在重新启动期间遇到问题描述 、请参见 https://["BU
  a| 
 存储模块
  a| 
-安装SAS磁盘架并为其布线、如中所述https://["热添加SAS磁盘架"^]。
+安装SAS磁盘架并为其布线、如中所述https://docs.netapp.com/us-en/ontap-systems/sas3/install-hot-add-shelf.html["热添加SAS磁盘架"^]。
 
 |===
 . 对控制器 B 重复上述步骤

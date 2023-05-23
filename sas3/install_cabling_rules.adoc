@@ -280,7 +280,7 @@ image::../media/drw_fas2600_mpha_domain_example.png[DRW fas2600 mpha 域示例]
 
 * 您的 ONTAP 平台和版本必须支持使用迷你 SAS HD SAS 光缆：带迷你 SAS HD 到迷你 SAS HD 连接器的多模式活动光缆（ AOC ）缆线和带迷你 SAS HD 到 LC 连接器的多模式（ OM4 ）分支缆线。
 +
-https://["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"]
 
 * 带有迷你 SAS HD 到迷你 SAS HD 连接器的 SAS 多模式光纤 AOC 电缆可用于控制器到堆栈和磁盘架到磁盘架连接，其长度可达 50 米。
 * 如果您使用 SAS 光纤多模式（ OM4 ）分支缆线与迷你 SAS HD 到 LC 连接器（适用于配线板），则需遵循以下规则：

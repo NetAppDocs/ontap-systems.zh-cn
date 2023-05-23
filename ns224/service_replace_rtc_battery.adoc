@@ -16,7 +16,7 @@ summary: 您可以在已打开电源且正在执行 I/O 的 NS224 驱动器架�
 .开始之前
 * 磁盘架的配对 NSM 模块必须已启动且正在运行，并且已正确布线，以便在卸下出现故障的 FRU （目标 NSM 模块）的 NSM 模块时，磁盘架可以保持连接。
 +
-https://["NetApp 下载： Config Advisor"^]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 * 系统中的所有其他组件必须正常运行。
 
@@ -29,10 +29,10 @@ https://["NetApp 下载： Config Advisor"^]
 * 更换RTC电池、重新安装NSM模块并启动此模块后、ONTAP 将更新实时时钟时间。
 * * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
 +
-https://["NetApp 下载：磁盘架固件"^]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
 
 +
-https://["NetApp 下载：磁盘驱动器固件"^]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 +
 [NOTE]
@@ -49,7 +49,7 @@ https://["NetApp 下载：磁盘驱动器固件"^]
 
 * 拆开备用 RTC 电池的包装时，请保存所有包装材料，以便在退回发生故障的 RTC 电池时使用。
 +
-If you need the RMA number or additional help with the replacement procedure, contact technical support at https://["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
+If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
 * 您可以使用以下动画或写入的步骤更换RTC电池。
 +
@@ -149,6 +149,6 @@ NSM 模块重新启动后， NSM 模块警示 LED 将熄灭，并且不再检测
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://["NetApp 下载： Config Advisor"^]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 

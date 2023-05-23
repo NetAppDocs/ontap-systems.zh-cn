@@ -16,8 +16,8 @@ summary: 要关闭受损控制器，您必须确定控制器的状态，并在�
 .开始之前
 * 最佳实践是，在热插拔驱动器之前，安装最新版本的磁盘认证包（ DQP ）。
 * 通过在系统控制台中运行 `storage disk show -broken` 命令来识别故障磁盘驱动器。故障驱动器将显示在故障驱动器列表中。如果不是，则应等待，然后重新运行命令。
-* How you hot-swap the disk depends on how the disk drive is being used.如果启用了 SED 身份验证，则必须使用中的 SED 更换说明 https://["《 ONTAP 9 NetApp 加密高级指南》"]。这些说明介绍了在更换 SED 之前和之后必须执行的其他步骤。
-* The replacement drive must be supported by your platform.请参见 https://["NetApp Hardware Universe"]。
+* How you hot-swap the disk depends on how the disk drive is being used.如果启用了 SED 身份验证，则必须使用中的 SED 更换说明 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTAP 9 NetApp 加密高级指南》"]。这些说明介绍了在更换 SED 之前和之后必须执行的其他步骤。
+* The replacement drive must be supported by your platform.请参见 https://hwu.netapp.com["NetApp Hardware Universe"]。
 * 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 
 

@@ -232,7 +232,7 @@ image:../media/legend_icon_02.png[""]
 要更换NVDIMM、您必须使用通风管顶部的FRU映射或插槽1提升板顶部的FRU映射在控制器模块中找到它。
 
 * 在暂停系统后，在转存内容时， NVDIMM LED 会闪烁。目标值完成后，此 LED 将熄灭。
-* 尽管 NVDIMM 的内容已加密，但最好在更换 NVDIMM 之前先擦除其内容。有关详细信息，请参见 https://["易失性声明"] 在 NetApp 支持站点上。
+* 尽管 NVDIMM 的内容已加密，但最好在更换 NVDIMM 之前先擦除其内容。有关详细信息，请参见 https://mysupport.netapp.com/info/web/ECMP1132988.html["易失性声明"] 在 NetApp 支持站点上。
 +
 
 NOTE: 您必须登录到 NetApp 支持站点，才能显示系统的 _statement of volatil性 _ 。
@@ -426,4 +426,4 @@ Remote: cluster_A configured      		normal
 == 第 8 步：将故障部件退回 NetApp
 
 [role="lead"]
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://["部件退回和放大器；更换"] 第页，了解更多信息。
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

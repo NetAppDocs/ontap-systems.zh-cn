@@ -443,7 +443,7 @@ replacement_ 节点将收回其存储并完成启动。
 NOTE: 如果交还被否决，您可以考虑覆盖此否决。
 
 +
-http://["查找适用于您的 ONTAP 9 版本的《高可用性配置指南》"]
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的《高可用性配置指南》"]
 
 .. 交还完成后，确认 HA 对运行状况良好且可以接管： `storage failover show`
 +
@@ -480,7 +480,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 ** MetroCluster 配置处于切换状态。
 ** _replacement_ 节点是灾难站点上磁盘的当前所有者。
 +
-https://["在四节点 MetroCluster 配置中，磁盘所有权会在 HA 接管和 MetroCluster 切换期间发生更改"]
+https://docs.netapp.com/us-en/ontap-metrocluster/manage/concept_understanding_mcc_data_protection_and_disaster_recovery.html#disk-ownership-changes-during-ha-takeover-and-metrocluster-switchover-in-a-four-node-metrocluster-configuration["在四节点 MetroCluster 配置中，磁盘所有权会在 HA 接管和 MetroCluster 切换期间发生更改"]
 
 
 
@@ -610,7 +610,7 @@ dr-group-id            cluster node           configuration-state
 .. 确认 MetroCluster 已配置且处于正常模式： `MetroCluster show`
 .. 执行 MetroCluster 检查： `MetroCluster check run`
 .. 显示 MetroCluster 检查的结果： `MetroCluster check show`
-.. 运行 Config Advisor 。转到 NetApp 支持站点上的 Config Advisor 页面，网址为 http://["support.netapp.com/NOW/download/tools/config_advisor/"]。
+.. 运行 Config Advisor 。转到 NetApp 支持站点上的 Config Advisor 页面，网址为 http://support.netapp.com/NOW/download/tools/config_advisor/["support.netapp.com/NOW/download/tools/config_advisor/"]。
 +
 运行 Config Advisor 后，查看该工具的输出并按照输出中的建议解决发现的任何问题。
 
@@ -642,8 +642,8 @@ NOTE: 更换DIMM时不需要执行此步骤。
 .步骤
 . 根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：
 +
-** https://["还原板载密钥管理加密密钥"^]
-** https://["还原外部密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
 
 
 . 重置SED MSID
@@ -653,4 +653,4 @@ NOTE: 更换DIMM时不需要执行此步骤。
 
 == 第 7 步：将故障部件退回 NetApp
 
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://["部件退回和放大器；更换"] 第页，了解更多信息。
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

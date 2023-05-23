@@ -2,7 +2,7 @@
 permalink: a250/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: aff a250, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: '要将系统恢复到完全运行状态，您必须还原 NetApp 存储加密配置（如果需要），并为新控制器安装许可证，然后按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。' 
+summary: '要将系统恢复到完全运行状态，您必须还原 NetApp 存储加密配置（如果需要），并为新控制器安装许可证，然后按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。' 
 ---
 = 完成系统还原— AFF A250
 :allow-uri-read: 
@@ -28,7 +28,7 @@ To restore your system to full operation, you must restore the NetApp Storage En
 您有 90 天的宽限期来安装许可证密钥。宽限期过后，所有旧许可证将失效。安装有效的许可证密钥后，您可以在 24 小时内安装所有密钥，直到宽限期结束。
 
 .步骤
-. 如果需要新的许可证密钥，请在上获取替代许可证密钥 https://["NetApp 支持站点"] 在软件许可证下的我的支持部分中。
+. 如果需要新的许可证密钥，请在上获取替代许可证密钥 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持站点"] 在软件许可证下的我的支持部分中。
 +
 
 NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文件中的电子邮件地址。如果您未能在 30 天内收到包含许可证密钥的电子邮件，应联系技术支持。
@@ -56,7 +56,7 @@ NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文�
 . 向 NetApp 支持部门注册系统序列号。
 +
 ** 如果启用了 AutoSupport ，请发送 AutoSupport 消息以注册序列号。
-** 如果未启用 AutoSupport ，请调用 https://["NetApp 支持"] 注册序列号。
+** 如果未启用 AutoSupport ，请调用 https://mysupport.netapp.com["NetApp 支持"] 注册序列号。
 
 
 . 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
@@ -66,4 +66,4 @@ NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文�
 
 == 第 3 步：将故障部件退回 NetApp
 
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://["部件退回和放大器；更换"] 第页，了解更多信息。
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

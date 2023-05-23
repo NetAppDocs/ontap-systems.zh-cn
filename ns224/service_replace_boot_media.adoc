@@ -32,7 +32,7 @@ link:service-replace-nsm100.html["更换 NSM 模块— NS224 磁盘架"^]
 
 * 磁盘架的配对 NSM 模块必须已启动且正在运行，并且已正确布线，以便在卸下出现故障的 FRU （目标 NSM 模块）的 NSM 模块时，磁盘架可以保持连接。
 +
-https://["NetApp 下载： Config Advisor"^]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 * 系统中的所有其他组件必须正常运行。
 
@@ -55,7 +55,7 @@ https://["NetApp 下载： Config Advisor"^]
 
 * 更换启动介质后，您可以按照套件随附的 RMA 说明中所述将故障部件退回 NetApp 。
 +
-If you need the RMA number or additional help with the replacement procedure, contact technical support at https://["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
+If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
 * You can use the following animation or the written steps to replace the boot media.
 +
@@ -171,6 +171,6 @@ NSM 模块应完全插入磁盘架并与磁盘架边缘平齐。
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://["NetApp 下载： Config Advisor"^]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
 

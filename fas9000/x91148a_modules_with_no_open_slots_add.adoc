@@ -18,7 +18,7 @@ summary: 您必须删除系统中的一个或多个现有 NIC 或存储模块，
 * 如果要将 X91148A 模块添加为存储适配器，则必须将此模块安装在插槽 3 和 / 或 7 中。
 * 如果要将 X91148A 模块添加为 100GbE NIC ，则可以使用任何打开的插槽。但是，默认情况下，插槽 3 和 7 设置为存储插槽。如果您希望将这些插槽用作网络插槽，而不添加 NS224 磁盘架，则必须使用 `storage port modify -node _node name_ -port _port name_ -mode network` 命令修改用于网络连接的插槽。有关 X91148A 模块可用于网络连接的其他插槽，请参见 Hardware Universe 。
 +
-https://["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"]
 
 * 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 
@@ -30,7 +30,7 @@ https://["NetApp Hardware Universe"]
 要在已完全填充的系统中安装一个或多个 X91148A NIC 模块，您必须删除系统中的一个或多个现有 NIC 或存储模块。
 
 .步骤
-. 如果要将 X91148A 模块添加到一个插槽中，而该插槽中的 NIC 模块与 X91148A 模块具有相同数量的端口，则 LIF 将在其控制器模块关闭时自动迁移。如果要更换的 NIC 模块的端口数超过 X91148A 模块，则必须将受影响的 LIF 永久重新分配到其他主端口。请参见 https://["迁移 LIF"] 有关使用 System Manager 永久移动 LIF 的信息，请参见
+. 如果要将 X91148A 模块添加到一个插槽中，而该插槽中的 NIC 模块与 X91148A 模块具有相同数量的端口，则 LIF 将在其控制器模块关闭时自动迁移。如果要更换的 NIC 模块的端口数超过 X91148A 模块，则必须将受影响的 LIF 永久重新分配到其他主端口。请参见 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"] 有关使用 System Manager 永久移动 LIF 的信息，请参见
 . 关闭控制器 A ：
 +
 .. 禁用自动交还： `storage failover modify -node local -auto-giveback false`
@@ -104,7 +104,7 @@ I/O 凸轮闩锁完全解锁
 
 
 .步骤
-. 如果要将 X91148A 模块作为插槽 3 和 / 或 7 中的存储模块添加到插槽中具有现有 NIC 模块的插槽中，请使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述 https://["迁移 LIF"]。
+. 如果要将 X91148A 模块作为插槽 3 和 / 或 7 中的存储模块添加到插槽中具有现有 NIC 模块的插槽中，请使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"]。
 . 关闭控制器 A ：
 +
 .. 禁用自动交还： `storage failover modify -node local -auto-giveback false`
@@ -164,5 +164,5 @@ I/O 凸轮闩锁完全解锁
 . 从配对节点交还节点： `storage failover giveback -ofnode _target_node_name_`
 . 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
 . 对控制器 B 重复上述步骤
-. Install and cable your NS224 shelves, as described in https://["热添加 NS224 驱动器架"]。
+. Install and cable your NS224 shelves, as described in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["热添加 NS224 驱动器架"]。
 

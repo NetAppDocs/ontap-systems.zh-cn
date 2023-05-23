@@ -21,7 +21,7 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 .步骤
 . 重新对系统进行布线。
-. 使用验证布线是否正确 https://["Active IQ Config Advisor"]。
+. 使用验证布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
 +
 .. 下载并安装 Config Advisor 。
 .. 输入目标系统的信息，然后单击收集数据。
@@ -69,8 +69,8 @@ node2             node1             -            Waiting for giveback (HA mailbo
 
 . 如果您的存储系统配置了存储或卷加密、则必须根据您使用的是板载密钥管理还是外部密钥管理、通过以下过程之一还原存储或卷加密功能：
 +
-** https://["还原板载密钥管理加密密钥"^]
-** https://["还原外部密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
 +
 系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
 
@@ -99,7 +99,7 @@ _replacement_ 控制器将收回其存储并完成启动。
 NOTE: 如果交还被否决，您可以考虑覆盖此否决。
 
 +
-http://["查找适用于您的 ONTAP 9 版本的高可用性配置内容"]
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的高可用性配置内容"]
 
 .. 交还完成后，确认 HA 对运行状况良好且可以接管： `storage failover show`
 +
@@ -233,7 +233,7 @@ dr-group-id            cluster node           configuration-state
 .. 确认 MetroCluster 已配置且处于正常模式： `MetroCluster show`
 .. 执行 MetroCluster 检查： `MetroCluster check run`
 .. 显示 MetroCluster 检查的结果： `MetroCluster check show`
-.. 运行 Config Advisor 。转到 NetApp 支持站点上的 Config Advisor 页面，网址为 http://["support.netapp.com/NOW/download/tools/config_advisor/"]。
+.. 运行 Config Advisor 。转到 NetApp 支持站点上的 Config Advisor 页面，网址为 http://support.netapp.com/NOW/download/tools/config_advisor/["support.netapp.com/NOW/download/tools/config_advisor/"]。
 +
 运行 Config Advisor 后，查看该工具的输出并按照输出中的建议解决发现的任何问题。
 

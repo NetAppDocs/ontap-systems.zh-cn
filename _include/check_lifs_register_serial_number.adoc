@@ -12,7 +12,7 @@
 . 向 NetApp 支持部门注册系统序列号。
 +
 ** 如果启用了 AutoSupport ，请发送 AutoSupport 消息以注册序列号。
-** 如果未启用 AutoSupport ，请调用 https://["NetApp 支持"] 注册序列号。
+** 如果未启用 AutoSupport ，请调用 https://mysupport.netapp.com["NetApp 支持"] 注册序列号。
 
 
 . 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`

@@ -16,14 +16,14 @@ summary: 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 �
 .开始之前
 * NS224 磁盘架必须支持您要安装的驱动器。
 +
-https://["NetApp Hardware Universe"^]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 * 如果启用了 SED 身份验证，则必须使用 ONTAP 文档中的 SED 更换说明。
 +
 ONTAP 文档中的说明介绍了在更换 SED 之前和之后必须执行的其他步骤。
 
 +
-https://["使用命令行界面概述 NetApp 加密"^]
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"^]
 
 * 系统中的所有其他组件必须正常运行；否则，请联系技术支持。
 * 验证要删除的驱动器是否出现故障。
@@ -42,14 +42,14 @@ NOTE: 根据驱动器类型和容量，该驱动器可能需要长达数小时�
 安装最新版本的 DQP 后，您的系统便可识别和使用新认证的驱动器。这样可以避免出现有关驱动器信息不最新以及由于无法识别驱动器而阻止驱动器分区的系统事件消息。DQP 还会通知您驱动器固件不是最新的。
 
 +
-https://["NetApp 下载：磁盘认证包"^]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp 下载：磁盘认证包"^]
 
 * * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
 +
-https://["NetApp 下载：磁盘架固件"^]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
 
 +
-https://["NetApp 下载：磁盘驱动器固件"^]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 +
 [NOTE]
@@ -71,7 +71,7 @@ NOTE: 驱动器固件检查每两分钟进行一次。
 
 * 拆开备用驱动器的包装时，请保存所有包装材料，以便在退回故障驱动器时使用。
 +
-If you need the RMA number or additional help with the replacement procedure, contact technical support at https://["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
+If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
 * 以下动画简要介绍了驱动器热插拔操作步骤 的物理拆卸和插入部分。
 +

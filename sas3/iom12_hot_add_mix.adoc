@@ -39,19 +39,19 @@ NOTE: 有关网桥连接的 MetroCluster 配置，请参见 <<网桥连接 Metro
 
 ** 转到 Hardware Universe 并导航到您的平台信息。
 +
-https://["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"]
 
 
 
 * 如果要向 MetroCluster 配置添加磁盘架，则此配置必须满足《 MetroCluster 安装和配置指南》中的所有要求。
 +
-http://["《 MetroCluster IP 安装和配置指南》"]
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mcc-inst-cnfg-ip/home.html["《 MetroCluster IP 安装和配置指南》"]
 
 +
-http://["《 ONTAP 9 延伸型 MetroCluster 安装和配置指南》"]
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mcc-inst-cnfg-stretch/home.html["《 ONTAP 9 延伸型 MetroCluster 安装和配置指南》"]
 
 +
-http://["《 ONTAP 9 光纤连接 MetroCluster 安装和配置指南》"]
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mcc-inst-cnfg-fabric/home.html["《 ONTAP 9 光纤连接 MetroCluster 安装和配置指南》"]
 
 * 要热添加 IOM12 磁盘架的 IOM6 磁盘架堆栈必须使用 SAS 铜缆进行布线（适用于所有磁盘架到磁盘架和控制器到堆栈连接）。
 +
@@ -66,14 +66,14 @@ NOTE: 如果 IOM6 磁盘架堆栈使用任何 SAS 光缆进行布线，则不能
 热添加IOM12/IOM12B磁盘架后、您不能超过系统支持的最大驱动器数。
 
 +
-https://["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"]
 
 * 您的系统不能显示任何 SAS 布线错误消息。
 +
 您必须使用错误消息提供的更正操作更正任何布线错误。
 
 +
-https://["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
 
 * 您必须已订购并收到IOM12/IOM12B磁盘架以及适当数量和类型的SAS铜缆。
 +
@@ -105,16 +105,16 @@ IOM12 磁盘架使用迷你 SAS HD 连接器。IOM6 磁盘架使用 QSFP 连接�
 
 ** 转到 Hardware Universe 并导航到您的平台信息。
 +
-https://["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"]
 
 
 
 * 此配置必须满足《 MetroCluster 安装和配置指南》中的所有要求。
 +
-https://["安装和配置延伸型 MetroCluster 配置"]
+https://docs.netapp.com/us-en/ontap-metrocluster/install-stretch/index.html["安装和配置延伸型 MetroCluster 配置"]
 
 +
-https://["安装和配置光纤连接的 MetroCluster 配置"]
+https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/index.html["安装和配置光纤连接的 MetroCluster 配置"]
 
 * 要热添加IOM12/IOM12B磁盘架的IOM6磁盘架堆栈必须使用SAS铜缆进行布线(适用于所有磁盘架到磁盘架和控制器到堆栈连接)。
 +
@@ -176,10 +176,10 @@ NOTE: 固件更新可能需要长达 30 分钟。
 
 * * 最佳实践： * 最佳实践是，在热添加磁盘架之前，系统上应安装最新版本的磁盘架（ IOM ）固件和驱动器固件。
 +
-https://["NetApp 下载：磁盘架固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
 
 +
-https://["NetApp 下载：磁盘驱动器固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
 
 
 
@@ -191,14 +191,14 @@ NOTE: 请勿将固件还原到不支持您的磁盘架及其组件的版本。
 安装最新版本的 DQP 后，您的系统便可识别和使用新认证的驱动器。这样可以避免出现有关驱动器信息不最新以及由于无法识别驱动器而阻止驱动器分区的系统事件消息。DQP 还会通知您驱动器固件不是最新的。
 
 +
-https://["NetApp 下载：磁盘认证包"^]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp 下载：磁盘认证包"^]
 
 * * 最佳实践： * 最佳实践是在热添加磁盘架前后运行 Active IQ Config Advisor 。
 +
 在热添加磁盘架之前运行 Active IQ Config Advisor 可提供现有 SAS 连接的快照，验证磁盘架（ IOM ）固件版本，并允许您验证系统上已在使用的磁盘架 ID 。通过在热添加磁盘架后运行 Active IQ Config Advisor ，您可以验证磁盘架布线是否正确以及磁盘架 ID 在系统中是否唯一。
 
 +
-https://["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
 
 * * 最佳实践： * 最佳实践是在您的系统上运行带内 ACP （ IBACP ）。
 +
@@ -209,7 +209,7 @@ https://["NetApp 下载： Config Advisor"]
 
 ** 如果您的系统未运行 IBACP ，并且您的系统满足 IBACP 的要求，则可以在热添加 IOM12 磁盘架之前将系统迁移到 IBACP 。
 +
-https://["迁移到 IBACP 的说明"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/In-Band_ACP_Setup_and_Support["迁移到 IBACP 的说明"]
 
 +
 
@@ -369,7 +369,7 @@ CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒
 
 . 如果需要，请运行 Active IQ Config Advisor 来验证已在使用的磁盘架 ID 。
 +
-https://["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
 
 +
 您也可以运行 `storage shelf show -fields shelf-id` 命令来查看系统中已在使用的磁盘架 ID 列表（如果存在重复项）。
@@ -626,7 +626,7 @@ MetroCluster 配置中的网桥连接
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
-https://["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
 
 . 如果在准备此操作步骤时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。
 +

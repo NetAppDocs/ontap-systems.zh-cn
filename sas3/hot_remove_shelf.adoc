@@ -27,7 +27,7 @@ NOTE: 对于使用多路径连接对外部存储进行布线的 FAS2600 系列�
 您可以下载并运行 Active IQ Config Advisor 以查看任何 SAS 布线错误消息以及应采取的更正操作。
 
 +
-https://["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
 
 * HA 对配置不能处于接管状态。
 * 您必须已从要移除的磁盘架中的磁盘驱动器（磁盘驱动器必须为备用磁盘）中删除所有聚合。
@@ -52,7 +52,7 @@ NOTE: 如果尝试使用要删除的磁盘架上的聚合执行此操作步骤�
 ====
 用于从磁盘驱动器中删除所有权的操作步骤要求您禁用磁盘所有权自动分配。您可以在此操作步骤末尾重新启用磁盘所有权自动分配。
 
-https://["磁盘和聚合概述"]
+https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["磁盘和聚合概述"]
 
 ====
 * 对于双节点以上的集群模式 ONTAP 系统，最佳实践是将 epsilon 重新分配给正在进行计划内维护的 HA 对以外的 HA 对。

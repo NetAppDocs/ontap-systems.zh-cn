@@ -19,7 +19,7 @@ summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP �
 * 所有驱动器架都必须正常工作。
 * 如果您的系统是 FlexArray 系统或具有 V_StorageAttach 许可证，则在执行此操作步骤之前，必须参考所需的其他步骤。
 * 如果您的系统位于 HA 对中，则运行状况良好的节点必须能够接管要更换的节点（在此操作步骤中称为 "`受损节点` " ）。
-* If your system is in a MetroCluster configuration, you must review the section https://["选择正确的恢复操作步骤"^] to determine whether you should use this procedure.
+* If your system is in a MetroCluster configuration, you must review the section https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["选择正确的恢复操作步骤"^] to determine whether you should use this procedure.
 +
 如果这是您应使用的操作步骤，请注意，四节点或八节点 MetroCluster 配置中节点的控制器替代操作步骤与 HA 对中的控制器替代 相同。无需执行 MetroCluster 专用步骤，因为故障仅限于 HA 对，可以使用存储故障转移命令在更换期间实现无中断运行。
 

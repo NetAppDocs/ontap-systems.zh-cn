@@ -20,7 +20,7 @@ summary: 当 ONTAP 尚未运行或在将磁盘架连接到系统之前热添加�
 
 * 您可以运行 Active IQ Config Advisor 或使用 `storage shelf show -fields shelf-id` 命令验证系统中已在使用的磁盘架 ID 。
 +
-https://["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
 
 
 
