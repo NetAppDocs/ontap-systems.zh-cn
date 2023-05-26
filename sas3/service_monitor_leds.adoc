@@ -40,7 +40,7 @@ image:../media/drw_sas_power_icon.png[""]
 .2+| image:../media/drw_sas_fault_icon.png[""] .2+| 注意  a| 
 稳定琥珀色
  a| 
-多个 FRU 的功能发生错误：磁盘架，磁盘驱动器， IOM12 模块或电源。
+多个CRU之一的功能出现错误：磁盘架、磁盘驱动器、IOM12/IOM12B模块或电源。
 
 检查事件消息以确定要采取的更正操作。
 
@@ -64,7 +64,7 @@ image:../media/drw_sas3_location_icon.gif[""]
  a| 
 系统管理员已激活此 LED 功能，以帮助以物理方式查找需要维修的磁盘架。
 
-激活此 LED 功能后，操作员显示面板和两个 IOM12 模块上的位置 LED 将亮起。位置 LED 会在 30 分钟后自动关闭。
+激活此LED功能后、操作员显示面板和两个IOM12/IOM12B模块上的位置LED将亮起。Location LEDs automatically turn off after 30 minutes.
 
 |===
 根据您的磁盘架型号，操作员显示面板看起来不同；但是，三个 LED 的排列方式相同。
@@ -75,13 +75,13 @@ image::../media/drw_opd.gif[DRW 选项]
 
 
 
-== IOM12 模块 LED
+== IOM12/IOM12B模块LED
 
-IOM12 模块上的 LED 指示此模块是否正常运行，是否已为 I/O 流量做好准备，以及硬件是否存在任何问题。
+IOM12/IOM12B模块上的LED指示该模块是否正常运行、是否已准备好处理I/O流量以及硬件是否存在任何问题。
 
-下表介绍了与模块功能以及模块上每个 SAS 端口的功能相关的 IOM12 模块 LED 。
+下表介绍了与模块的功能以及模块上每个SAS端口的功能相关的IOM12/IOM12B模块LED。
 
-IOM12 模块用于 DS460C ， DS224C 和 DS212C 磁盘架。
+IOM12/IOM12B模块用于DS460C、DS224C和DS212C磁盘架。
 
 [cols="4*"]
 |===
@@ -95,7 +95,7 @@ image:../media/drw_sas_fault_icon.png[""]
  a| 
 稳定琥珀色
  a| 
-IOM12 模块功能： IOM12 模块的功能发生错误。
+IOM12/IOM12B模块功能：IOM12/IOM12B模块的功能发生错误。
 
 SAS 端口功能：少于所有四个 SAS 通道建立链路（与适配器或其他磁盘架）的数量。
 
@@ -121,14 +121,18 @@ image:../media/drw_sas3_location_icon.gif[""]
  a| 
 呈蓝色稳定亮起
  a| 
-系统管理员已激活此 LED 功能，以帮助以物理方式查找出现故障的 IOM12 模块的磁盘架。
+系统管理员激活了此LED功能、以帮助您以物理方式定位发生故障的IOM12/IOM12B模块所在的磁盘架。
 
-激活此 LED 功能后，操作员显示面板和两个 IOM12 模块上的位置 LED 将亮起。位置 LED 会在 30 分钟后自动关闭。
+激活此LED功能后、操作员显示面板和两个IOM12/IOM12B模块上的位置LED将亮起。Location LEDs automatically turn off after 30 minutes.
 
 |===
-下图显示了 IOM12 模块：
+下图适用于IOM12模块：
 
 image::../media/drw_iom12.gif[DRW iom12]
+
+IOM12B模块通过蓝色条带和"IOM12B"标签来区分：
+
+image::../media/iom12b.png[iom12b]
 
 
 

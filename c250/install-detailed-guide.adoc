@@ -13,9 +13,7 @@ summary: 本节详细介绍了安装AFF C250系统的分步说明。
 [role="lead"]
 本节详细介绍了安装AFF C250系统的分步说明。
 
-如果您使用的是MetroCluster 配置、请使用MetroCluster 安装内容。
-
-https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]
+如果您使用的是MetroCluster 配置、请使用 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]。
 
 
 
@@ -23,17 +21,19 @@ https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档
 
 要安装AFF C250系统、您需要创建一个帐户并注册该系统。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
 
-您需要有权访问 link:https://hwu.netapp.com["NetApp Hardware Universe"^] （ HWU ），了解有关站点要求以及已配置系统上的追加信息的信息。您可能还希望有权访问 link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["适用于您的 ONTAP 版本的发行说明"^] 有关此系统的详细信息，请参见。
+注意
+
+.开始之前
+* 确保您有权访问 link:https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU)以了解有关站点要求的信息。
+* 具有特定电源要求的客户必须进行检查 https://hwu.netapp.com["HWU"] 了解配置选项。
+* 确保您有权访问 link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["适用于您的 ONTAP 版本的发行说明"^] 有关此系统的详细信息，请参见。
+* 您需要在站点上提供以下内容：
++
+** 存储系统的机架空间
+** 2 号十字螺丝刀
+** 用于将系统连接到网络交换机以及带Web浏览器的笔记本电脑或控制台的附加网络缆线。
 
 
-NOTE: 具有特定电源要求的客户必须检查 HWU 以了解其配置选项。
-
-.您需要的内容
-您需要在站点上提供以下内容：
-
-* 存储系统的机架空间
-* 2 号十字螺丝刀
-* 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
 
 
 .步骤
@@ -165,222 +165,149 @@ image::../media/drw_affa250_weight_caution.png[DRW affa250 重量注意事项]
 
 
 
-== 第 3 步：为控制器布线
-
-需要使用双节点无交换机集群方法或集群互连网络方法为平台的集群布线。您可以选择使用缆线连接到光纤通道或 iSCSI 主机网络或直连存储。此布线并非独占的；您可以使用缆线连接到主机网络和存储。
-
-
-
-=== 所需布线：使用缆线将控制器连接到集群
+== 第3步：使用缆线将控制器连接到集群
 
 使用双节点无交换机集群方法或集群互连网络将控制器连接到集群。
 
-
-
-==== 选项 1 ：为双节点无交换机集群布线
-
+[role="tabbed-block"]
+====
+.选项 1 ：双节点无交换机集群
+--
 控制器模块上的管理，光纤通道和数据或主机网络端口连接到交换机。两个控制器模块上的集群互连端口均已布线。
 
 .开始之前
-有关将系统连接到交换机的信息，请与网络管理员联系。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
+* 有关将系统连接到交换机的信息，请与网络管理员联系。
+* 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
++
 image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
++
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-使用动画或表格中的步骤完成控制器和交换机之间的布线：
+
+
+.关于此任务
+使用动画或列表中的步骤完成控制器和交换机之间的布线。对每个控制器执行以下步骤。
 
 .动画—为双节点无交换机集群布线
 video::beec3966-0a01-473c-a5de-ac68017fbf29[panopto]
-[cols="10,90"]
-|===
-| 步骤 | 在每个控制器上执行 
+.步骤
+. 使用25GbE集群互连缆线将集群互连端口e0c连接到e0c、并将e0d连接到e0image:../media/oie_cable_sfp_gbe_copper.png[""]：
++
+image:../media/drw_affa250_tnsc_cabling.png[""]
 
-
- a| 
-image:../media/oie_legend_icon_1_lg.png[""]
- a| 
-使用 25GbE 集群互连缆线将集群互连端口彼此相连image:../media/oie_cable_sfp_gbe_copper.png[""]：
-
-* e0c 到 e0c
-* e0d 到 e0dimage:../media/drw_affa250_tnsc_cabling.png[""]
-
-
-
-
- a| 
-image:../media/oie_legend_icon_2_dr.png[""]
- a| 
-使用 RJ45 缆线将扳手端口连接到管理网络交换机。
-
+. 使用 RJ45 缆线将扳手端口连接到管理网络交换机。
++
 image::../media/drw_affa250_mgmt_cabling.png[DRW affa250 管理布线]
 
 
 
- a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
- a| 
-此时请勿插入电源线。
 
-|===
-To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+IMPORTANT: 此时请勿插入电源线。
 
-
-
-==== 选项 2 ：为有交换机的集群布线
-
+--
+.选项 2 ：交换集群
+--
 控制器上的所有端口都连接到交换机；集群互连，管理，光纤通道以及数据或主机网络交换机。
 
 .开始之前
-有关将系统连接到交换机的信息，请与网络管理员联系。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
+* 有关将系统连接到交换机的信息，请与网络管理员联系。
+* 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
++
 image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
++
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-使用动画或表格中的步骤完成控制器和交换机之间的布线：
+
+
+.关于此任务
+使用动画或列表中的步骤完成控制器和交换机之间的布线。对每个控制器执行以下步骤。
 
 .动画—为有交换机集群布线
 video::bf6759dc-4cbf-488e-982e-ac68017fbef8[panopto]
-[cols="10,90"]
-|===
-| 步骤 | 在每个控制器上执行 
+.步骤
+. 使用缆线将集群互连端口e0c和e0d连接到25 GbE集群互连交换机。
++
+image:../media/drw_affa250_switched_clust_cabling.png[""]
 
-
- a| 
-image:../media/oie_legend_icon_1_lg.png[""]
- a| 
-使用缆线将集群互连端口连接到 25 GbE 集群互连交换机。
-
-* e0c
-* e0dimage:../media/drw_affa250_switched_clust_cabling.png[""]
-
-
-
-
- a| 
-image:../media/oie_legend_icon_2_dr.png[""]
- a| 
-使用 RJ45 缆线将扳手端口连接到管理网络交换机。
-
+. 使用 RJ45 缆线将扳手端口连接到管理网络交换机。
++
 image::../media/drw_affa250_mgmt_cabling.png[DRW affa250 管理布线]
 
 
 
- a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
- a| 
-此时请勿插入电源线。
 
-|===
-To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+IMPORTANT: 此时请勿插入电源线。
+
+--
+====
 
 
-
-=== 可选布线：电缆配置相关选项
+== 第4步：使用缆线连接到主机网络或存储(可选)
 
 您可以通过与配置相关的可选布线方式连接到光纤通道或 iSCSI 主机网络或直连存储。此布线并非独占的；您可以使用缆线连接到主机网络和存储。
 
-
-
-==== 选项 1 ：使用缆线连接到光纤通道主机网络
-
+[role="tabbed-block"]
+====
+.选项1：使用缆线连接到光纤通道主机网络
+--
 控制器上的光纤通道端口连接到光纤通道主机网络交换机。
 
 .开始之前
-有关将系统连接到交换机的信息，请与网络管理员联系。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
+* 有关将系统连接到交换机的信息，请与网络管理员联系。
+* 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
++
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
++
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-[cols="10,90"]
-|===
-| 步骤 | 对每个控制器模块执行 
 
 
- a| 
-1.
- a| 
-使用缆线将端口 2a 至 2D 连接到 FC 主机交换机。image:../media/drw_affa250_fc_host_cabling.png[""]
+.关于此任务
+对每个控制器模块执行此步骤。
 
-
-
- a| 
-2.
- a| 
-要执行其他可选布线，请选择：
-
-* <<选项 2 ：使用缆线连接到 25GbE 数据或主机网络>>
-* <<选项 3 ：使用缆线将控制器连接到一个驱动器架>>
+.步骤
+. 使用缆线将端口 2a 至 2D 连接到 FC 主机交换机。
++
+image:../media/drw_affa250_fc_host_cabling.png[""]
 
 
 
-
- a| 
-3.
- a| 
-To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
-
-|===
-
-
-==== 选项 2 ：使用缆线连接到 25GbE 数据或主机网络
-
+--
+.选项 2 ：使用缆线连接到 25GbE 数据或主机网络
+--
 控制器上的 25GbE 端口连接到 25GbE 数据或主机网络交换机。
 
 .开始之前
-有关将系统连接到交换机的信息，请与网络管理员联系。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
+* 有关将系统连接到交换机的信息，请与网络管理员联系。
+* 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
++
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
++
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-[cols="10,90"]
-|===
-| 步骤 | 对每个控制器模块执行 
 
 
- a| 
-1.
- a| 
-使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。image:../media/drw_affa250_25gbe_host_cabling.png[""]
+.关于此任务
+对每个控制器模块执行此步骤。
 
-
-
- a| 
-2.
- a| 
-要执行其他可选布线，请选择：
-
-* <<选项 1 ：使用缆线连接到光纤通道主机网络>>
-* <<选项 3 ：使用缆线将控制器连接到一个驱动器架>>
+.步骤
+. 使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。
++
+image:../media/drw_affa250_25gbe_host_cabling.png[""]
 
 
 
-
- a| 
-3.
- a| 
-To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
-
-|===
-
-
-==== 选项 3 ：使用缆线将控制器连接到一个驱动器架
-
+--
+.选项3：使用缆线将控制器连接到单个驱动器架
+--
 使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。
 
 .开始之前
@@ -391,40 +318,34 @@ image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-使用动画或表格中的步骤完成控制器和单个磁盘架之间的布线：
+.关于此任务
+使用动画或列表中的步骤完成控制器与单个磁盘架之间的布线。对每个控制器模块执行以下步骤。
 
 .动画—使用缆线将控制器连接到一个NS224
 video::3f92e625-a19c-4d10-9028-ac68017fbf57[panopto]
-[cols="10,90"]
-|===
-| 步骤 | 对每个控制器模块执行 
+.步骤
+. 使用缆线将控制器A连接到磁盘架。
++
+image:../media/drw_affa250_1shelf_cabling_a.png[""]
 
-
- a| 
-image:../media/oie_legend_icon_1_mb.png[""]
- a| 
-使用缆线将控制器 A 连接到磁盘架： image:../media/drw_affa250_1shelf_cabling_a.png[""]
-
-
-
- a| 
-image:../media/oie_legend_icon_2_lo.png[""]
- a| 
-使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa250_1shelf_cabling_b.png[""]
-
-|===
-To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+. 使用缆线将控制器B连接到磁盘架。
++
+image:../media/drw_affa250_1shelf_cabling_b.png[""]
 
 
 
-== 第 4 步：完成系统设置和配置
+--
+====
+
+
+== 第5步：完成系统设置
 
 使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，或者直接连接到系统中的控制器，然后连接到管理交换机。
 
-
-
-=== 选项 1 ：如果启用了网络发现，则完成系统设置和配置
-
+[role="tabbed-block"]
+====
+.选项 1 ：如果启用了网络发现
+--
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
 .步骤
@@ -486,10 +407,9 @@ https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"]
 . After you have completed the initial configuration, go to the link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
 
 
-
-
-=== 选项 2 ：如果未启用网络发现，则完成系统设置和配置
-
+--
+.选项 2 ：如果未启用网络发现
+--
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。
 
 .步骤
@@ -556,20 +476,14 @@ NOTE: 此地址的格式为 +https://x.x.x.x+ 。
 
 . 设置您的帐户并下载 Active IQ Config Advisor ：
 +
-.. 登录到现有帐户或创建帐户。
-+
-https://mysupport.netapp.com/site/user/registration["NetApp 支持注册"]
-
-.. 注册您的系统。
-+
-https://mysupport.netapp.com/site/systems/register["NetApp 产品注册"]
-
-.. 下载 Active IQ Config Advisor 。
-+
-https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"]
-
+.. 登录到 https://mysupport.netapp.com/site/user/registration["现有帐户或创建帐户"]。
+.. https://mysupport.netapp.com/site/systems/register["注册"] 您的系统。
+.. 下载 https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]。
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
 . After you have completed the initial configuration, go to the link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
 
+
+--
+====
