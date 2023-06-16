@@ -6082,7 +6082,6 @@
   <block id="f6344d6f5f705ef72e5da86baf7ff342" category="doc">检查板载加密密钥 - AFF A320</block>
   <block id="1a44c6d683ab4458e8c10088dee0617d" category="doc">还原并验证配置— FAS8200</block>
   <block id="dd5eaf7a75785b4f26d6e9793b46ea6c" category="doc">机箱更换概述— FAS8200</block>
-  <block id="36db73d94b30571d5e78b69926c4ee10" category="doc">概述控制器模块更换— FAS8200</block>
   <block id="52a61ff1e81c104a11ce1a58a38dd667" category="doc">关闭控制器— FAS8200</block>
   <block id="a42edb5535752c77f564dff66261535b" category="doc">更换控制器模块硬件— FAS8200</block>
   <block id="8351404e0633e21cf67cb22047391a59" category="doc">启动介质更换概述— FAS8200</block>
@@ -7867,7 +7866,6 @@
   <block id="841cf46b69a4b2c782c980b795074554" category="list-text">确保您的站点具有以下物品：</block>
   <block id="85220111cf8764a6d5eefe427de4fbde" category="paragraph">将系统安装在四柱机架或NetApp系统机柜中(如果适用)。</block>
   <block id="1ccb5aa93b58b2e0cbfd6015e33c6a90" category="paragraph">使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。</block>
-  <block id="22cf31ea4e88d1269c525c08a9c8fdff" category="paragraph">控制器模块上的UTA2端口、以太网数据网络和管理端口均连接到交换机。The cluster interconnect ports are cabled on both controller modules.</block>
   <block id="434c44657e12928e06a65124dfb073b0" category="paragraph">了解如何为双节点无交换机集群布线。</block>
   <block id="f7284f28e338cb3e10e42e8214151229" category="paragraph">您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络。在控制器和交换机之间布线时、请参见以下布线图。</block>
   <block id="48114454330840b73674b4d456819a4e" category="list-text">UTA2数据网络配置</block>
@@ -7978,4 +7976,17 @@
   <block id="1ed7e5bc49edc6dcd82d94adaa712607" category="paragraph">IOM12/IOM12B模块功能：IOM12/IOM12B模块的功能发生错误。</block>
   <block id="661a269cef9bb91a2f8b4d733118a2eb" category="paragraph">系统管理员激活了此LED功能、以帮助您以物理方式定位发生故障的IOM12/IOM12B模块所在的磁盘架。</block>
   <block id="a78123fcf223e9fb14720d2a07e2ef85" category="paragraph">下图适用于IOM12模块：</block>
+  <block id="ab821717031a58a1a9d01409f017bf49" category="doc">控制器模块更换概述—FAS8200</block>
+  <block id="925bdd1d7aad5ef53490c52842590538" category="paragraph">下表列出了双节点无交换机集群网络布线和有交换机集群网络布线的插图中的缆线类型以及呼出编号和缆线颜色。</block>
+  <block id="d0afed67605524c7117536fe92ce3da8" category="cell">连接类型</block>
+  <block id="985b78c75a9bb79d8cb44d78a86e22a9" category="image-alt">OIE图例图标2 o</block>
+  <block id="73bfdf61f88c1cff337d81f80cb733d7" category="paragraph">用于托管数据网络交换机的控制器</block>
+  <block id="2ef47c54a75d2ffe153e57585c5ef8eb" category="image-alt">OIE图例图标3 LP</block>
+  <block id="3be4d8a4a3ae9d68dd7ac9118685e99e" category="paragraph">控制器连接到管理网络交换机</block>
+  <block id="c00351b5bbad5f2b55b1e523113b08ab" category="paragraph">在控制器和交换机之间布线时、请参见以下布线图。</block>
+  <block id="70c67999b75c623ee9876e398ee7ebb9" category="list-text">使用缆线将控制器连接到UTA2数据网络或以太网网络。</block>
+  <block id="4eb04196699d24394da6f4bdb0a6cd76" category="doc">更换实时时钟电池- AFF A220和FAS2700</block>
+  <block id="3529feb1f15a906788e97c962f5f18b5" category="doc">更换实时时钟电池- AFF A150</block>
+  <block id="74fef60bd66705310b79dcd3e46f4894" category="doc">更换SSD驱动器或HDD驱动器- AFF A150</block>
+  <block id="d646909dddf2c419f953113a67e04618" category="doc">更换DIMM - AFF A150</block>
 </blocks>
