@@ -364,10 +364,11 @@ video::c500e747-30f8-4763-9065-afbf00008e7f[panopto]
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用动画将笔记本电脑连接到管理交换机：
-+
-.动画—将笔记本电脑连接到管理交换机
-video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+. 将笔记本电脑连接到管理交换机：
+
+
+image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交换机]
+
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
@@ -420,11 +421,11 @@ https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"]
 
 NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或控制台的联机帮助。
 
-.. 将笔记本电脑或控制台连接到管理子网上的交换机。
+.. 将笔记本电脑或控制台连接到管理交换机。
 +
-image::../media/drw_console_client_mgmt_subnet_affa250.png[DRW 控制台客户端管理子网 affa250]
+image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交换机]
 
-.. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
+.. 使用管理交换机上的TCP/IP地址为笔记本电脑或控制台分配TCP/IP地址。
 
 
 . 使用以下动画打开一个或多个驱动器架的电源并设置其磁盘架ID：

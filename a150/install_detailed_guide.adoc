@@ -11,7 +11,7 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 
 [role="lead"]
-了解如何安装AFF A150系统。
+本节提供了安装AFF A150系统的详细分步说明。
 
 如果您使用的是MetroCluster 配置、请使用 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]。
 
@@ -19,8 +19,7 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 == 第 1 步：准备安装
 
-[role="lead"]
-要安装AFF A150系统、请在NetApp 支持站点 上创建一个帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
+要安装AFF A150系统、您需要在NetApp 支持站点 上创建一个帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
 
 .开始之前
 * 确保您有权访问 link:https://hwu.netapp.com["NetApp Hardware Universe"^] （ HWU ），了解有关站点要求以及已配置系统上的追加信息的信息。
@@ -160,8 +159,7 @@ image:../media/oie_cable_power.png[""]
 
 == 第 2 步：安装硬件
 
-[role="lead"]
-将系统安装在四柱机架或NetApp系统机柜中(如果适用)。
+您可以根据需要将系统安装在四柱机架或NetApp系统机柜中。
 
 .步骤
 . 根据需要安装导轨套件。
@@ -184,18 +182,43 @@ image::../media/drw_cable_management_arm_install.png[DRW 缆线管理臂安装]
 
 == 第3步：使用缆线将控制器连接到网络
 
-[role="lead"]
-使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。
+您可以使用双节点无交换机集群方法或有交换机集群方法将控制器连接到网络。
 
-管理网络、UTA2数据网络、以太网数据网络以及控制器上的管理端口均连接到交换机。The cluster interconnect ports are cabled on both controllers.
+.关于此任务
+下表列出了双节点无交换机集群网络布线和有交换机集群网络布线的插图中的缆线类型以及呼出编号和缆线颜色。
 
+[cols="20%,80%"]
+|===
+| 布线 | 连接类型 
+
+
+ a| 
+image::../media/oie_legend_icon_1_lg.svg[OIE图例图标1长]
+ a| 
+集群互连
+
+
+
+ a| 
+image::../media/oie_legend_icon_2_o.svg[OIE图例图标2 o]
+ a| 
+用于托管数据网络交换机的控制器
+
+
+
+ a| 
+image::../media/oie_legend_icon_3_lp.svg[OIE图例图标3 LP]
+ a| 
+控制器连接到管理网络交换机
+
+|===
 [role="tabbed-block"]
 ====
 .选项 1 ：双节点无交换机集群
 --
-了解如何为双节点无交换机集群布线。
+为双节点无交换机集群布线。
 
-.开始之前
+.关于此任务
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
 image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
@@ -203,28 +226,9 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-.关于此任务
-您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络。在控制器和交换机之间布线时、请参见以下布线图。
-
-UTA2数据网络配置::
-+
---
-image::../media/drw_2700_tnsc_unified_network_cabling_animated_gif.png[DRW 2700 tnsc 统一网络布线动画 gif]
-
---
-以太网网络配置::
-+
---
-image::../media/drw_2700_tnsc_ethernet_network_cabling_animated_gif.png[DRW 2700 tnsc 以太网网络布线动画 gif]
-
---
-
-
-对每个控制器模块执行以下步骤。
-
 .步骤
 . 使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b。+image:../media/drw_c190_u_tnsc_clust_cbling.png[""]
-. 执行以下操作之一：
+. 使用缆线将控制器连接到UTA2数据网络或以太网网络：
 +
 UTA2数据网络配置:: 使用以下缆线类型之一将UTA2数据端口连接到主机网络。
 +
@@ -260,9 +264,9 @@ IMPORTANT: 此时请勿插入电源线。
 --
 .选项 2 ：交换集群
 --
-了解如何为有交换机集群布线。
+为您的交换集群布线。
 
-.开始之前
+.关于此任务
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
 image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
@@ -270,31 +274,12 @@ image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
-.关于此任务
-您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络。在控制器和交换机之间布线时、请参见以下布线图。
-
-统一网络布线::
-+
---
-image::../media/drw_2700_switched_unified_network_cabling_animated_gif.png[DRW 2700 交换式统一网络布线动画 gif]
-
---
-以太网网络布线::
-+
---
-image::../media/drw_2700_switched_ethernet_network_cabling_animated_gif.png[DRW 2700 交换式以太网布线动画 gif]
-
---
-
-
-对每个控制器模块执行以下步骤。
-
 .步骤
 . 对于每个控制器模块、使用集群互连缆线将e0a和e0b连接到集群互连交换机。
 +
 image:../media/drw_c190_u_switched_clust_cbling.png[""]
 
-. 执行以下操作之一：
+. 您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络：
 +
 UTA2数据网络配置:: 使用以下缆线类型之一将UTA2数据端口连接到主机网络。
 +
@@ -336,13 +321,13 @@ IMPORTANT: 此时请勿插入电源线。
 使用板载存储端口将控制器连接到磁盘架。NetApp recommends MP-HA cabling for systems with external storage.
 
 .关于此任务
-If you have a SAS tape drive, you can use single-path cabling.If you have no external shelves, MP-HA cabling to internal drives is optional (not shown) if the SAS cables are ordered with the system.
-
-您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到驱动器磁盘架。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
+* If you have a SAS tape drive, you can use single-path cabling.If you have no external shelves, MP-HA cabling to internal drives is optional (not shown) if the SAS cables are ordered with the system.
+* 您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到驱动器磁盘架。
+* 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
++
 image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+
+
 
 .步骤
 . 使用缆线将HA对与外部驱动器架连接起来。
@@ -411,10 +396,10 @@ NOTE: 初始启动可能需要长达八分钟的时间。
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用以下动画将您的笔记本电脑连接到管理交换机。
+. 将笔记本电脑连接到管理交换机。
 +
-.动画—将笔记本电脑连接到管理交换机
-video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交换机]
+
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]

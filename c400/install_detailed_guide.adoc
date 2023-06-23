@@ -21,21 +21,23 @@ https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档
 
 == 第 1 步：准备安装
 
-[role="lead"]
 要安装系统，您需要创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
 
 .开始之前
-您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。
-
+* 您需要能够访问 Hardware Universe 以了解有关站点要求的信息，以及已配置系统上的追加信息。有关此系统的详细信息，您可能还希望能够访问适用于您的 ONTAP 版本的发行说明。
++
 https://hwu.netapp.com["NetApp Hardware Universe"]
 
++
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的发行说明"]
 
-您需要在站点上提供以下内容：
+* 您需要在站点上提供以下内容：
++
+** 存储系统的机架空间
+** 2 号十字螺丝刀
+** 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
 
-* 存储系统的机架空间
-* 2 号十字螺丝刀
-* 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
+
 
 
 .步骤
@@ -157,7 +159,6 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置�
 
 == 第 2 步：安装硬件
 
-[role="lead"]
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
 
 . 根据需要安装导轨套件。
@@ -180,24 +181,23 @@ image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
 
 == 第 3 步：使用缆线将控制器连接到网络
 
-[role="lead"]
-您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
+您可以使用双节点无交换机集群方法或有交换机集群方法将控制器连接到网络。
+
+.关于此任务
+* 如果卡上的端口标签不可见、您可以通过检查卡安装方向(对于C400、PCIe连接器插槽位于卡插槽的左侧)来识别端口、然后在NetApp Hardware Universe 中按部件号查找此卡。 其中显示了一个带端口标签的挡板图形。您可以使用sysconfig -a命令或在系统包装列表中查找卡部件号。
+* 如果要为MetroCluster IP配置布线、则端口e0a/e0b可用于托管数据LIF (通常在默认IP空间中)。
 
 
-NOTE: 如果卡上的端口标签不可见、您可以通过检查卡安装方向(对于C400、PCIe连接器插槽位于卡插槽的左侧)来识别端口、然后在NetApp Hardware Universe 中按部件号查找此卡。 其中显示了一个带端口标签的挡板图形。您可以使用sysconfig -a命令或在系统包装列表中查找卡部件号。
+[role="tabbed-block"]
+====
+.选项 1 ：为双节点无交换机集群布线
+--
+控制器模块的集群互连和HA端口通过缆线连接到其配对控制器模块。The optional data ports, optional NIC cards, and management ports on the controller modules are connected to switches.
 
-
-NOTE: 如果要为MetroCluster IP配置布线、则端口e0a/e0b可用于托管数据LIF (通常在默认IP空间中)。
-
-
-
-=== 选项 1 ：为双节点无交换机集群布线
-
-[role="lead"]
-控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。两个控制器模块上都使用缆线连接集群互连和 HA 端口。
-
+.开始之前
 您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
 
+.关于此任务
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有板载端口的缆线拉片均已启动，扩展（ NIC ）卡的缆线拉片已关闭。
 
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
@@ -215,15 +215,15 @@ image::../media/drw_c400_TNSC-networking-cabling_IEOPS-1095.svg[DRW C400 TNSC网
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
 
+--
+.选项 2 ：为有交换机的集群布线
+--
+控制器模块的集群互连和HA端口通过缆线连接到集群/HA交换机。可选数据端口、可选NIC卡、夹层卡和管理端口均连接到交换机。
 
-
-=== 选项 2 ：为有交换机的集群布线
-
-[role="lead"]
-控制器模块上的可选数据端口，可选 NIC 卡，夹层卡和管理端口均连接到交换机。集群互连和 HA 端口通过缆线连接到集群 /HA 交换机。
-
+.开始之前
 您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
 
+.关于此任务
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有板载端口的缆线拉片均已启动，扩展（ NIC ）卡的缆线拉片已关闭。
 
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
@@ -241,20 +241,21 @@ image::../media/drw_c400_switched_network_cabling_IEOPS-1096.svg[DRW C400交换�
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
 
+--
+====
 
 
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
-[role="lead"]
 以下选项显示了如何使用缆线将一个或两个NS224驱动器架连接到系统。
 
 
 
 === 选项 1 ：使用缆线将控制器连接到一个驱动器架
 
-[role="lead"]
 您必须使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。
 
+.关于此任务
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。NS224 的缆线拉片已启动。
 
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
@@ -274,9 +275,9 @@ image::../media/drw_c400_one_ns224_shelf_IEOPS-1097.svg[DRW C400单个ns224磁�
 
 === 选项 2 ：使用缆线将控制器连接到两个驱动器架
 
-[role="lead"]
 您必须使用缆线将每个控制器连接到两个 NS224 驱动器架上的 NSM 模块。
 
+.关于此任务
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。NS224 的缆线拉片已启动。
 
 image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
@@ -296,14 +297,12 @@ image::../media/drw_c400_two_ns224_shelves_IEOPS-1098.svg[DRW C400两个ns224磁
 
 == 第 5 步：完成系统设置和配置
 
-[role="lead"]
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
 
 
 
 === 选项 1 ：如果启用了网络发现，则完成系统设置和配置
 
-[role="lead"]
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
 
 . 使用以下动画打开一个或多个驱动器架的电源并设置其磁盘架ID：
@@ -318,10 +317,11 @@ video::c500e747-30f8-4763-9065-afbf00008e7f[panopto]
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用以下动画将您的笔记本电脑连接到管理交换机。
-+
-.动画—将笔记本电脑连接到管理交换机
-video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+. 将笔记本电脑连接到管理交换机。
+
+
+image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交换机]
+
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
@@ -368,7 +368,6 @@ https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"]
 
 === 选项 2 ：如果未启用网络发现，则完成系统设置和配置
 
-[role="lead"]
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。
 
 . 为笔记本电脑或控制台布线并进行配置：

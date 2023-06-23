@@ -349,10 +349,11 @@ NOTE: 初始启动可能需要长达八分钟的时间。
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用动画将笔记本电脑连接到管理交换机：
-+
-.动画—将笔记本电脑连接到管理交换机
-video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+. 将笔记本电脑连接到管理交换机：
+
+
+image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交换机]
+
 . 选择列出的 ONTAP 图标以发现：
 +
 image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]

@@ -7867,12 +7867,10 @@
   <block id="85220111cf8764a6d5eefe427de4fbde" category="paragraph">将系统安装在四柱机架或NetApp系统机柜中(如果适用)。</block>
   <block id="1ccb5aa93b58b2e0cbfd6015e33c6a90" category="paragraph">使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。</block>
   <block id="434c44657e12928e06a65124dfb073b0" category="paragraph">了解如何为双节点无交换机集群布线。</block>
-  <block id="f7284f28e338cb3e10e42e8214151229" category="paragraph">您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络。在控制器和交换机之间布线时、请参见以下布线图。</block>
   <block id="48114454330840b73674b4d456819a4e" category="list-text">UTA2数据网络配置</block>
   <block id="e6746873d55c9a028bc3eae1ed6cd0db" category="list-text">以太网网络配置</block>
   <block id="f9655777cbdbded95ebaf4fdc1ed1c83" category="paragraph">对每个控制器模块执行以下步骤。</block>
   <block id="4b7d254b4cff665eba8f89aeb96e16cb" category="list-text">使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b。+<block ref="9a0e89c71564aa69ffecf67eb610bc96" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">执行以下操作之一：</block>
   <block id="54254076225178d5782bc5158de2ffd3" category="list-text">使用以下缆线类型之一将e0c/0c和e0d/0d或e0e/0e和e0f/0f数据端口连接到主机网络。</block>
   <block id="43083753a8bd4d126f4e9d226b24d42f" category="list-text">使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。在下图中。</block>
   <block id="5cb31a934f99a854350d21ffae22067d" category="paragraph">了解如何为有交换机集群布线。</block>
@@ -7891,10 +7889,8 @@
   <block id="95a15694e7d6d23376f741970900ef8e" category="list-text">硬件安装和布线</block>
   <block id="4657c74c0fa17e5f15e4a506f177b913" category="paragraph">以下视频显示了如何安装系统并为其布线。</block>
   <block id="d4b6f94dadb3f20b9bf031b9b9983ce3" category="list-text">端到端软件配置</block>
-  <block id="314f8c912a6741218e22dc8ca5f7ee41" category="paragraph">了解如何安装AFF A150系统。</block>
   <block id="119be031ef4485d20c7683d291d0e9f6" category="inline-link">MetroCluster 文档</block>
   <block id="bfd53ea423739db497251aa14d8747cd" category="paragraph">如果您使用的是MetroCluster 配置、请使用<block ref="9b888d0bb3e87322cc68a0bb4a7ae515" category="inline-link-rx"></block>。</block>
-  <block id="f6387b34fb856500ccda4acb52336ff7" category="paragraph">要安装AFF A150系统、请在NetApp 支持站点 上创建一个帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
   <block id="5d0ff6a06bf967bf825de2c2a610cc33" category="list-text">有关将系统连接到交换机的信息、请与网络管理员联系。</block>
   <block id="bcce32e97ae0002c4edc1cc8b9245285" category="inline-link">注册您的系统</block>
   <block id="1e074148aea327f834455c1f6ae99894" category="list-text"><block ref="2539e9179736696f68f1ba88f3812383" category="inline-link-rx"></block>。</block>
@@ -7904,13 +7900,9 @@
   <block id="e881b3bd9e158bdbe75952ecb742a95f" category="inline-link">下载并填写集群配置工作表</block>
   <block id="738f95af1a0163cf0e1c5931095ae65f" category="list-text"><block ref="d3aebb99b149a14152b68ab3bc13a233" category="inline-link-rx"></block>。</block>
   <block id="767d56519e2665f49f35713c1a1be451" category="section-title">第3步：使用缆线将控制器连接到网络</block>
-  <block id="32eaf8761a3db861b1156e2738e758c1" category="paragraph">使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。</block>
-  <block id="3760d11ceaf4a0fe32d1665068e04673" category="paragraph">管理网络、UTA2数据网络、以太网数据网络以及控制器上的管理端口均连接到交换机。The cluster interconnect ports are cabled on both controllers.</block>
   <block id="6daf690bb435e2ddca90bbd25f4d0d4c" category="list-text">使用以下缆线类型之一将UTA2数据端口连接到主机网络。</block>
   <block id="afb6c834a58331c6ea63436bbf5864c3" category="list-text">对于FC主机、请使用0c和0d *或* 0e和0f。</block>
   <block id="0bd1e8e50111e01ba1604ade94902cca" category="list-text">对于10GbE系统、请使用e0c和e0d *或* e0e和e0f。</block>
-  <block id="1fc58e4765d0d92d238af8bdfc3ab370" category="list-text">统一网络布线</block>
-  <block id="b7f69837ac40254faa2741b926641a85" category="list-text">以太网网络布线</block>
   <block id="d121c2dd9af112004d29375d7d7385ba" category="list-text">对于每个控制器模块、使用集群互连缆线将e0a和e0b连接到集群互连交换机。</block>
   <block id="32f4bb165c35f300da46d2891dcd4591" category="list-text">对于FC主机、请使用0c和0d **或** 0e和0f。</block>
   <block id="94a602afccb4ec515036eba24fdfed92" category="list-text">对于10GbE系统、请使用e0c和e0d **或** e0e和e0f。</block>
@@ -7989,4 +7981,19 @@
   <block id="3529feb1f15a906788e97c962f5f18b5" category="doc">更换实时时钟电池- AFF A150</block>
   <block id="74fef60bd66705310b79dcd3e46f4894" category="doc">更换SSD驱动器或HDD驱动器- AFF A150</block>
   <block id="d646909dddf2c419f953113a67e04618" category="doc">更换DIMM - AFF A150</block>
+  <block id="833748c904af71a7ab422a33ad70be86" category="list-text">将笔记本电脑连接到管理交换机：</block>
+  <block id="482df54948cb0af45b9238ba8f7416dd" category="paragraph">您可以使用双节点无交换机集群方法或有交换机集群方法将控制器连接到网络。</block>
+  <block id="ff83054154392545e173589dbc5f0d6e" category="paragraph">控制器模块的集群互连和HA端口通过缆线连接到其配对控制器模块。The optional data ports, optional NIC cards, and management ports on the controller modules are connected to switches.</block>
+  <block id="d9a4d96ebe77470ef37b10a2002ee889" category="paragraph">控制器模块的集群互连和HA端口通过缆线连接到集群/HA交换机。可选数据端口、可选NIC卡、夹层卡和管理端口均连接到交换机。</block>
+  <block id="3794995e59166b895cc502ce8c1ba88e" category="list-text">将笔记本电脑连接到管理交换机。</block>
+  <block id="55d181b0e985bd01c76c600ee8e5436b" category="paragraph">本节提供了安装AFF A150系统的详细分步说明。</block>
+  <block id="07b84ded01d94786eac9600aeee34234" category="paragraph">要安装AFF A150系统、您需要在NetApp 支持站点 上创建一个帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
+  <block id="c82dff6dbb251f02ea9b21c5377c84b7" category="paragraph">您可以根据需要将系统安装在四柱机架或NetApp系统机柜中。</block>
+  <block id="c0f68275dba754d24cf8cd39cc11b441" category="paragraph">您可以使用双节点无交换机集群方法或有交换机集群方法将控制器连接到网络。</block>
+  <block id="5a579b0b54ae5d57e0aca1dfcffc421b" category="paragraph">为双节点无交换机集群布线。</block>
+  <block id="69516d110b779c64dceeed289ceff830" category="list-text">使用缆线将控制器连接到UTA2数据网络或以太网网络：</block>
+  <block id="9216554f447e636359d50545d5efdd16" category="paragraph">为您的交换集群布线。</block>
+  <block id="04924b20a91a5f5b238ee6721421d3cb" category="list-text">您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络：</block>
+  <block id="be838816a39a48461edd5a1e87b6d8e5" category="list-text">将笔记本电脑或控制台连接到管理交换机。</block>
+  <block id="fea0a68e925a0ae2df0aa5bbdbe7c891" category="list-text">使用管理交换机上的TCP/IP地址为笔记本电脑或控制台分配TCP/IP地址。</block>
 </blocks>
