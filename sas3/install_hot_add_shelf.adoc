@@ -28,14 +28,14 @@ summary: 您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添�
 
 * 您的系统和 ONTAP 版本必须支持您要热添加的磁盘架，包括 IOM ，磁盘驱动器和 SAS 缆线。
 +
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 * 您的系统必须小于支持的最大磁盘驱动器数，至少等于您计划热添加的磁盘架数。
 +
 热添加磁盘架后，您不能超过系统支持的最大磁盘驱动器数。
 
 +
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 * 如果要热添加一个或多个磁盘架的堆栈（直接添加到平台控制器），则系统必须具有足够的可用 PCI SAS HBA 或板载 SAS 端口，或者同时具有这两者的组合。
 +
@@ -54,7 +54,7 @@ https://hwu.netapp.com["NetApp Hardware Universe"]
 您必须使用错误消息提供的更正操作更正任何布线错误。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
 
 
 
@@ -84,13 +84,6 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 对于适用于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统的单路径 HA 和单路径配置，您可以将磁盘架热添加到堆栈的末尾，而该堆栈没有控制器连接。
 
 * 带有IOM12/IOM12B模块的磁盘架必须位于其自身唯一的堆栈中；不能将其添加到包含带有IOM6模块或IOM3模块的磁盘架的堆栈中。
-+
-此操作步骤 不会解决混合堆栈的问题：将具有IOM12/IOM12B模块的磁盘架热添加到具有IOM6模块的磁盘架堆栈中。
-
-* 一个系统可以具有多路径和四路径磁盘架堆栈以及IOM12B模块。
-+
-如果您有HA对、ONTAP 会将系统配置显示为`m多路径HA`。如果您使用的是单控制器配置、则ONTAP 会将系统配置显示为`m多路径`。
-
 * 此操作步骤假定您的配置使用带内 ACP 。
 +
 对于启用了带内 ACP 的配置，会在热添加磁盘架上自动启用带内 ACP 。对于未启用带内 ACP 的配置，热添加磁盘架在运行时不会使用任何 ACP 功能。
@@ -123,17 +116,17 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/downloa
 要下载 Config Advisor ，您需要网络访问权限。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
 
 * 最佳实践是，在添加新磁盘架，磁盘架 FRU 组件或 SAS 缆线之前，应在系统上安装最新版本的磁盘架（ IOM ）固件和磁盘驱动器固件。
 +
 可以在 NetApp 支持站点上找到最新版本的固件。
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 
 
@@ -291,7 +284,7 @@ CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒
 如果您的平台型号具有内部磁盘架、则磁盘架ID必须在内部磁盘架和外部连接的磁盘架之间是唯一的。
 
 +
-您可以使用以下子步骤更改磁盘架 ID ，或者有关更详细的说明，请使用 link:install-change-shelf-id.html["更改磁盘架 ID"]。
+You can use the following substeps to change shelf IDs, or for more detailed instructions, use link:install-change-shelf-id.html["更改磁盘架 ID"^]。
 
 +
 .. 如果需要，请运行 Config Advisor 来验证已在使用的磁盘架 ID 。
@@ -316,7 +309,7 @@ CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒
 
 == 使用缆线连接具有IOM12/IOM12B模块的磁盘架以进行热添加
 
-您可以根据热添加磁盘架的适用情况为 SAS 连接布线—磁盘架到磁盘架和控制器到堆栈，以便它们可以连接到系统。
+您可以根据需要为热添加磁盘架的SAS连接(磁盘架到磁盘架和控制器到堆栈)布线、以便它们可以连接到系统。
 
 .开始之前
 You must have met the requirements in link:install-hot-add-shelf.html#requirements-for-hot-adding-disk-shelves-with-iom12iom12b-modules["Requirements for hot-adding disk shelves with IOM12 modules"] and installed, powered on, and set shelf IDs for each disk shelf as instructed in link:install-hot-add-shelf.html#install-disk-shelves-with-iom12iom12b-modules-for-a-hot-add["安装具有IOM12模块的磁盘架以进行热添加"]。
@@ -363,7 +356,7 @@ NOTE: 固件更新可能需要长达 30 分钟。
 
 
  a| 
-您正在为具有多路径 HA ，多路径，单路径 HA 或单路径连接的堆栈布线，以连接到控制器
+您正在使用缆线将具有多路径HA、三路径HA、多路径、单路径HA或单路径连接的堆栈连接到控制器
  a| 
 使用缆线将磁盘架到磁盘架的连接设置为 `standard` 连接（使用 IOM 端口 3 和 1 ）：
 
@@ -386,10 +379,10 @@ NOTE: 固件更新可能需要长达 30 分钟。
 |===
 .. 查看控制器到堆栈的布线工作表和布线示例，了解是否存在适用于您的配置的完整工作表。
 +
-link:install-cabling-worksheets-examples-fas2600.html["适用于采用板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例"]
+link:install-cabling-worksheets-examples-fas2600.html["使用内部存储的平台的控制器到堆栈布线工作表和布线示例"]
 
 +
-link:install-cabling-worksheets-examples-multipath.html["常见多路径 HA 配置的控制器到堆栈布线工作表和布线示例"]
+link:install-cabling-worksheets-examples-multipath.html["多路径HA配置的控制器到堆栈布线工作表和布线示例"]
 
 +
 link:install-worksheets-examples-quadpath.html["具有两个四端口 SAS HBA 的四路径 HA 配置的控制器到堆栈布线工作表和布线示例"]
@@ -405,7 +398,7 @@ link:install-cabling-worksheet-template-quadpath.html["用于四路径连接的�
 .. 确认所有缆线均已牢固固定。
 
 
-. 如果要将一个或多个磁盘架热添加到现有堆栈的一端，即逻辑第一个或最后一个磁盘架，请完成适用于您的配置的子步骤；否则，请转至下一步。
+. 如果要将一个或多个磁盘架热添加到现有堆栈的一端(逻辑第一个或最后一个磁盘架)、请完成适用于您的配置的子步骤；否则、请转至下一步。
 +
 
 NOTE: 请确保在断开缆线连接并重新连接缆线之间至少等待70秒、如果要将缆线更换为较长的缆线、请务必等待。
@@ -417,7 +410,7 @@ NOTE: 请确保在断开缆线连接并重新连接缆线之间至少等待70秒
 
 
  a| 
-将磁盘架热添加到与控制器具有多路径 HA ，多路径，四路径 HA 或四路径连接的堆栈的一端
+将磁盘架热添加到与控制器具有多路径HA、三路径HA、多路径、四路径HA或四路径连接的堆栈末端
  a| 
 .. 断开与任何控制器相连的堆栈末端磁盘架 IOM A 的所有缆线；否则，请转至子步骤 E
 +
@@ -444,14 +437,14 @@ NOTE: 请确保在断开缆线连接并重新连接缆线之间至少等待70秒
 |===
 . 如果您使用迷你 SAS HD SAS 光缆将磁盘架热添加到使用 SAS 铜缆连接的磁盘架堆栈中，请更换 SAS 铜缆；否则，请转至下一步。
 +
-堆栈必须满足中所述的要求 <<Requirements for hot-adding disk shelves with IOM12 modules>> 部分操作步骤。
+The stack must meet the requirements stated in the <<使用IOM12/IOM12B模块热添加磁盘架的要求>> section of this procedure.
 
 +
 一次更换一根缆线、并确保在断开缆线与连接新缆线之间至少等待70秒。
 
 . 下载并运行 Config Advisor 以验证 SAS 连接是否已正确布线。
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
 
 +
 如果生成任何 SAS 布线错误，请按照提供的更正操作进行操作。

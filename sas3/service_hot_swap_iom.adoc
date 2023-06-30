@@ -35,7 +35,7 @@ IOM12B模块通过蓝色条带和"IOM12B"标签来区分：
 +
 image::../media/iom12b.png[iom12b]
 
-* 对于多路径(多路径HA或多路径)和四路径(四路径HA或四路径)配置、您可以热插拔磁盘架IOM (无中断更换已启动并提供数据的系统中的磁盘架IOM—I/O正在进行中)。
+* 对于多路径(多路径HA或多路径)、三路径HA和四路径(四路径HA或四路径)配置、您可以热插拔磁盘架IOM (无中断更换已启动且正在提供数据的系统中的磁盘架IOM—正在执行I/O操作)。
 * 对于FAS2600系列和FAS2700系列单路径HA配置、您必须执行接管和交还操作、以更换已启动并正在提供数据的系统中的磁盘架IOM。
 * 对于FAS2600系列单路径配置、您必须暂停系统以更换磁盘架IOM。
 +
@@ -47,10 +47,10 @@ NOTE: 如果您尝试使用单路径连接热插拔磁盘架上的磁盘架IOM�
 可以在 NetApp 支持站点上找到最新版本的固件。
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 * 在使用非最新固件版本的新磁盘架IOM上、磁盘架(IOM)固件会自动更新(无中断)。
 +
@@ -78,7 +78,7 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp
 
 
  a| 
-多路径 HA ，多路径，四路径 HA 或四路径配置
+多路径HA、三路径HA、多路径、四路径HA或四路径配置
  a| 
 转至下一步。
 
@@ -141,7 +141,7 @@ SAS 缆线连接器具有方向性；正确连接到 IOM 端口时，连接器�
 
 
  a| 
-多路径 HA ，多路径，四路径 HA 或四路径配置
+多路径HA、三路径HA、多路径、四路径HA或四路径配置
  a| 
 转至下一步。
 

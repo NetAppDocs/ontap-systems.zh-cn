@@ -1,0 +1,83 @@
+---
+section: fas2800
+title: FAS2800系统
+url: "/fas2800/index.html"
+entries:
+- title: 安装和设置
+  pdf-filename: FAS2800安装和设置
+  entries:
+  - title: 选择安装和设置体验
+    url: "/fas2800/install-setup.html"
+  - title: 快速步骤
+    url: "/fas2800/install-quick-guide.html"
+  - title: 视频步骤
+    url: "/fas2800/install-videos.html"
+  - title: 详细步骤
+    url: "/fas2800/install-detailed-guide.html"
+- title: 维护
+  pdf-filename: FAS2800维护
+  entries:
+  - title: 启动介质
+    pdf-filename: FAS2800启动介质
+    entries:
+    - title: 概述
+      url: "/fas2800/bootmedia-replace-overview.html"
+    - title: 检查板载加密密钥
+      url: "/fas2800/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭受损控制器
+      url: "/fas2800/bootmedia-impaired-controller-shutdown.html"
+    - title: 更换启动介质并传输启动映像
+      url: "/fas2800/bootmedia-replace.html"
+    - title: 启动恢复映像
+      url: "/fas2800/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: 还原 OKM ， NSE 和 NVE
+      url: "/fas2800/bootmedia-encryption-restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/fas2800/bootmedia-complete-rma.html"
+  - title: 缓存模块
+    pdf-filename: FAS2800缓存模块
+    url: "/fas2800/caching-module-replace.html"
+  - title: 机箱
+    pdf-filename: FAS2800机箱
+    entries:
+    - title: 概述
+      url: "/fas2800/chassis-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/fas2800/chassis-replace-shutdown.html"
+    - title: 更换硬件
+      url: "/fas2800/chassis-replace-move-hardware.html"
+    - title: 还原配置
+      url: "/fas2800/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器
+    pdf-filename: FAS2800控制器
+    entries:
+    - title: 概述
+      url: "/fas2800/controller-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/fas2800/controller-replace-shutdown.html"
+    - title: 更换控制器硬件
+      url: "/fas2800/controller-replace-move-hardware.html"
+    - title: 还原系统配置
+      url: "/fas2800/controller-replace-system-config-restore-and-verify.html"
+    - title: 可重新连接的系统
+      url: "/fas2800/controller-replace-recable-reassign-disks.html"
+    - title: 完成系统还原
+      url: "/fas2800/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    pdf-filename: FAS2800 DIMM
+    url: "/fas2800/dimm-replace.html"
+  - title: 驱动器
+    pdf-filename: FAS2800驱动器
+    url: "/fas2800/drive-replace.html"
+  - title: NVMEM 电池
+    pdf-filename: FAS2800 NVMEM电池
+    url: "/fas2800/nvmem-nvram-battery-replace.html"
+  - title: 夹层卡
+    pdf-filename: FAS2800夹层卡
+    url: "/fas2800/pci-cards-and-risers-replace.html"
+  - title: 电源
+    pdf-filename: FAS2800电源
+    url: "/fas2800/power-supply-swap-out.html"
+  - title: 实时时钟电池
+    pdf-filename: FAS2800实时时钟电池
+    url: "/fas2800/rtc-battery-replace.html"

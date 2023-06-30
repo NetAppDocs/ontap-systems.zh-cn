@@ -1,8 +1,8 @@
 ---
 permalink: sas3/install-cabling-worksheets-examples-fas2600.html 
 sidebar: sidebar 
-keywords: controller-to-stack, cabling, worksheet, aff, a200, a220, fas2600, fas2700, internal storage 
-summary: 您可以使用完整的控制器到堆栈布线工作表和布线示例为内部存储平台布线、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 和更高版本。 
+keywords: controller-to-stack, cabling, worksheet, aff, a200, a220, fas2600, fas2700, fas2800, internal storage 
+summary: 您可以使用完成的控制器到堆栈布线工作表和布线示例来为具有内部存储的平台布线。 
 ---
 = 使用内部存储的平台的控制器到堆栈布线工作表和布线示例—使用IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
@@ -11,15 +11,15 @@ summary: 您可以使用完整的控制器到堆栈布线工作表和布线示�
 
 
 [role="lead"]
-您可以使用完整的控制器到堆栈布线工作表和布线示例为内部存储平台布线、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 和更高版本。
+您可以使用完成的控制器到堆栈布线工作表和布线示例来为具有内部存储的平台布线。
 
 
 NOTE: 此信息不适用于 FAS25XX 平台。
 
-* If needed, you can refer to link:install-cabling-rules.html["SAS 布线规则"] 有关支持的配置，磁盘架到磁盘架连接以及控制器到磁盘架连接的信息。
-* 布线示例将控制器到堆栈的缆线显示为实心或虚线，以区分控制器 0b 端口连接与控制器 0a 端口连接。
+* If needed, you can refer to link:install-cabling-rules.html["SAS布线规则和概念"] 有关支持的配置，磁盘架到磁盘架连接以及控制器到磁盘架连接的信息。
+* 布线示例显示控制器到堆栈的缆线为实线或虚线、用于区分控制器0b/0b1端口连接与控制器0a端口连接。
 +
-image::../media/drw_fas2600_controller_to_stack_cable_type_key.png[DRW fas2600 控制器到堆栈缆线类型密钥]
+image::../media/drw_fas2600_controller_to_stack_cable_type_key_IEOPS-947.svg[DRW FAS2600控制器到堆栈电缆类型密钥IEOPS 949]
 
 * 布线示例显示了控制器到堆栈连接以及磁盘架到磁盘架连接的两种不同颜色，用于区分通过 IOM A （域 A ）和 IOM B （域 B ）进行的连接。
 +
@@ -29,13 +29,42 @@ image::../media/drw_fas2600_cable_color_key.png[DRW fas2600 电缆颜色密钥]
 
 
 
+== 采用多路径HA配置且无外部磁盘架的FAS2800平台
+
+以下示例显示、不需要布线即可实现多路径HA连接：
+
+image::../media/drw_fas2800_noshelf_mpha_IEOPS-954.svg[DRW fas2800螺旋式mpa iEOPS 954]
+
+
+
+== 采用三路径HA配置且无外部磁盘架的FAS2800平台
+
+以下布线示例显示了两个控制器之间实现三路径连接所需的布线：
+
+image::../media/drw_fas2800_noshelf_tpha_IEOPS-955.svg[DRW fas2800螺旋式TPHA IEOPS 955]
+
+
+
+== 采用三路径HA配置并具有一个多磁盘架堆栈的FAS2800平台
+
+以下工作表和布线示例使用端口对0a/0b1：
+
+image::../media/drw_fas2800_worksheet_IEOPS-948.svg[DRW FAS2800工作表IEOPS 948]
+
+image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[DRW FAS2800、带TPHA IEOPS 949架]
+
+
+
 == 采用多路径HA配置且具有一个多架堆栈的内部存储平台
 
 以下工作表和布线示例使用端口对 0A/0b ：
 
-image::../media/drw_fas2600_mpha_worksheet.png[DRW fas2600 mpha 工作表]
 
-image::../media/drw_fas2600_mpha.png[DRW fas2600 mpha]
+NOTE: 本节不适用于FAS2800或FAS25XX系统。
+
+image::../media/drw_fas2600_mpha_worksheet_IEOPS-1255.svg[DRW FAS2600 mpha工作表IEOPS 1255]
+
+image::../media/drw_fas2600_mpha_IEOPS-1256.svg[DRW FAS2600 mpha IEOPS 1256]
 
 
 

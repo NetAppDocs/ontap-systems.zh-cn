@@ -1,0 +1,260 @@
+---
+permalink: fas2800/dimm-replace.html 
+sidebar: sidebar 
+keywords: fas2800, replace, dimm, shut, down, impaired, controller, controller, metrocluster, replace, system, reinstall, diagnostics, module, filed, part, aggregates, 
+summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。 
+---
+= 更换DIMM - FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。
+
+系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+
+.动画-更换DIMM
+video::6c035199-9b79-494b-9c65-af9a015ffaf0[panopto]
+
+
+== 第 1 步：关闭受损控制器
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAIN=_number_of_hours_down_h`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 如果受损控制器属于 HA 对，请从运行正常的控制器的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至 "Remove controller module" 。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+
+
+== 第 2 步：卸下控制器模块
+
+从系统中卸下控制器模块、然后卸下控制器模块护盖。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
++
+将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
+
+. 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
+. 按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。
++
+image::../media/drw_2240_x_opening_cam_latch.svg[DRW 2240 x 打开凸轮闩锁]
+
+. 将控制器模块翻转，将其放在平稳的表面上。
+. 按下控制器模块两侧的蓝色按钮以松开护盖、然后向上旋转护盖、使其脱离控制器模块、从而打开护盖。
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[DRW 285控制器模块盖板打开IEOPS 695]
+
+
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[图例图标 01]
+ a| 
+控制器模块护盖释放按钮
+
+|===
+
+
+== 第 3 步：更换 DIMM
+
+找到控制器内的DIMM、将其卸下并更换。
+
+
+NOTE: 在更换DIMM之前、您需要从控制器模块中拔下NVMEM电池。
+
+.步骤
+. 如果您尚未接地，请正确接地。
++
+在更换系统组件之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM ）中未写入的数据。此 LED 位于控制器模块的背面。查找以下图标：
+
++
+image::../media/drw_hw_nvram_icon.svg[DRW 硬件 NVRAM 图标]
+
+. 如果 NVMEM LED 未闪烁，则 NVMEM 中没有任何内容；您可以跳过以下步骤并继续执行此操作步骤中的下一项任务。
+. 如果 NVMEM LED 闪烁，则 NVMEM 中存在数据，您必须断开电池以清除内存：
++
+.. 按控制器模块侧面的蓝色按钮、从控制器模块中取出电池。
+.. 向上滑动电池、直至其脱离固定支架、然后将电池从控制器模块中提出。
+.. 找到电池电缆、按下电池插头上的夹子以从插座中松开锁定夹、然后从插座中拔下电池电缆。
+.. 确认 NVMEM LED 不再亮起。
+.. 重新连接电池连接器、然后重新检查控制器背面的LED。
+.. 拔下电池电缆。
+
+
+. 找到控制器模块上的 DIMM 。
+. 记下DIMM在插槽中的方向和位置、以便可以按正确的方向插入更换用的DIMM。
+. 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。
++
+DIMM将向上旋转一点。
+
+. 将DIMM旋转到最远位置、然后将DIMM滑出插槽。
++
+
+NOTE: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
+
++
+image::../media/drw_2850_replace_dimms_IEOPS-699.svg[DRW 2800更换DIMM IEOPS 699]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[图例图标 01]
+ a| 
+NVRAM电池释放按钮
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[图例图标 02]
+ a| 
+NVRAM 电池插头
+
+
+
+ a| 
+image::../media/legend_icon_03.svg[图例图标 03]
+ a| 
+DIMM 弹出器卡舌
+
+
+
+ a| 
+image::../media/legend_icon_04.svg[图例图标04]
+ a| 
+DIMM
+
+|===
+. 从防静电运输袋中取出更换用的 DIMM ，拿住 DIMM 的边角并将其与插槽对齐。
++
+DIMM 插脚之间的缺口应与插槽中的突起对齐。
+
+. 将 DIMM 垂直插入插槽。
++
+DIMM 紧紧固定在插槽中，但应很容易插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。
+
++
+
+NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
+
+. 小心而稳固地推动 DIMM 的上边缘，直到弹出器卡舌卡入到位，卡入到位于 DIMM 两端的缺口上。
+. 重新连接NVMRM电池：
++
+.. 插入NVRAM电池。
++
+确保插头锁定在主板上的电池电源插座中。
+
+.. 将电池与金属板侧壁上的固定支架对齐。
+.. 向下滑动电池组、直至电池闩锁卡入到位并卡入侧壁的开口中。
+
+
+. 重新安装控制器模块外盖。
+
+
+
+
+== 第 4 步：重新安装控制器模块
+
+将控制器模块重新安装到机箱中。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 如果您尚未更换控制器模块上的外盖，请进行更换。
+. 翻转控制器模块、并将其端部与机箱中的开口对齐。
+. 将控制器模块轻轻推入系统的一半。将控制器模块的一端与机箱中的开口对齐、然后将控制器模块轻轻推入系统的一半。
++
+
+NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+
+. 根据需要重新对系统进行布线。
++
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
+
+. 完成控制器模块的重新安装：
++
+.. 在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。
++
+
+NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+
++
+控制器一旦固定在机箱中，就会开始启动。
+
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+.. 使用钩环带将缆线绑定到缆线管理设备。
+
+
+. 重新启动控制器模块。
++
+
+NOTE: 在启动过程中，您可能会看到以下提示：
+
++
+** 系统 ID 不匹配的提示警告，并要求覆盖系统 ID 。
+** 一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。You can safely respond `y` to these prompts.
+
+
+
+
+
+
+== 第5步：还原自动交还和AutSupport
+
+还原自动交还和AutoSupport (如果已禁用)。
+
+. 使用还原自动交还 `storage failover modify -node local -auto-giveback true` 命令：
+. 如果已触发AutoSupport维护窗口、请使用结束此窗口 `system node autosupport invoke -node * -type all -message MAINT=END` 命令：
+
+
+
+
+== 第 6 步：将故障部件退回 NetApp
+
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

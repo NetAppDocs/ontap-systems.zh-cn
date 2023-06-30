@@ -1,0 +1,82 @@
+---
+permalink: fas2800/controller-replace-system-config-restore-and-verify.html 
+sidebar: sidebar 
+keywords: fas2800, restore and verify the system configuration, verify and set the ha state of the controller module, run system-level diagnostics 
+summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
+---
+= 还原并验证系统配置—FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+完成硬件更换并启动替代控制器后、验证替代控制器的低级系统配置、并根据需要重新配置系统设置。
+
+
+
+== 第 1 步：在更换控制器后设置并验证系统时间
+
+您应对照 HA 对中运行状况良好的控制器模块或独立配置中可靠的时间服务器检查更换用的控制器模块上的时间和日期。如果时间和日期不匹配，则必须在更换控制器模块上重置这些值，以防止客户端可能因时间差异而中断。
+
+.关于此任务
+请务必在正确的系统上应用步骤中的命令：
+
+* _replacement_ 节点是此操作步骤中更换受损节点的新节点。
+* _health_ 节点是 _replacement_ 节点的 HA 配对节点。
+
+
+.步骤
+. 如果 _replacement_ 节点不在 LOADER 提示符处，请将系统暂停到 LOADER 提示符处。
+. 在_Healthy_node上、检查系统时间： `cluster date show`
++
+日期和时间基于配置的时区。
+
+. 在 LOADER 提示符处，检查 _replacement_ 节点上的日期和时间： `show date`
++
+日期和时间以 GMT 表示。
+
+. 如有必要，请在替代节点上以 GMT 格式设置日期： `set date _MM/dd/yyy_`
+. 如有必要，请在替代节点上设置 GMT 时间： `set time _hh ： mm ： ss_`
+. 在加载程序提示符处、确认_reender_节点上的日期和时间： `date`
++
+日期和时间以 GMT 表示。
+
+
+
+
+
+== Step 2: Verify and set the HA state of the controller module
+
+您必须验证控制器模块的 `HA` 状态，并在必要时更新此状态以匹配您的系统配置。
+
+. 在维护模式下，从新控制器模块验证所有组件是否显示相同的 `HA` 状态： `ha-config show`
++
+所有组件的 HA 状态都应相同。
+
+. 如果为控制器显示的系统状态与您的系统配置不匹配、请为替代控制器模块设置HA状态： `ha-config modify controller _HA-state_`
++
+ha-state 的值可以是以下值之一：
+
++
+** `ha`
+** `mcc`
+** `mcc-2n`
+** `mCCIP`
++
+... 确认设置已更改： `ha-config show`
+
+
+
+
+. 重新启动控制器模块。
++
+
+NOTE: 在启动过程中，您可能会看到以下提示：
+
++
+** 系统 ID 不匹配的提示警告，并要求覆盖系统 ID 。
+** 一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。You can safely respond `y` to these prompts.
+
+
+

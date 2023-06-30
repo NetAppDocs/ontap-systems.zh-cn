@@ -1,0 +1,49 @@
+---
+indexpage:
+  tiles:
+  - title: 安装和设置
+    links:
+    - title: 快速步骤
+      url: "/install-quick-guide.html"
+    - title: 视频步骤
+      url: "/install-videos.html"
+    - title: 详细步骤
+      url: "/install-detailed-guide.html"
+  - title: 维护
+    links:
+    - title: 启动介质
+      url: "/bootmedia-replace-overview.html"
+    - title: 缓存模块
+      url: "/caching-module-replace.html"
+    - title: 机箱
+      url: "/chassis-replace-overview.html"
+    - title: 控制器模块
+      url: "/controller-replace-overview.html"
+    - title: DIMM
+      url: "/dimm-replace.html"
+    - title: 驱动器
+      url: "/drive-replace.html"
+    - title: 夹层卡
+      url: "/pci-cards-and-risers-replace.html"
+    - title: NVMEM 电池
+      url: "/nvmem-nvram-battery-replace.html"
+    - title: 电源
+      url: "/power-supply-swap-out.html"
+    - title: RTC 电池
+      url: "/rtc-battery-replace.html"
+  - title: 支持的交换机
+    links:
+    - title: BES-53248
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
+    - title: Cisco Nexus 9336C-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
+    - title: 共享配置中的Cisco Nexus 9336C-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
+  - title: 更多文档资源
+    links:
+    - title: 系统硬件升级
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
+    - title: ONTAP 软件升级
+      url: https://docs.netapp.com/us-en/ontap/upgrade/index.html
+    - title: 更换内部磁盘驱动器(视频)
+      url: https://www.youtube.com/watch?v=Ziqg9HL8oYQ

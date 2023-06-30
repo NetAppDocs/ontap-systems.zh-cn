@@ -1,0 +1,191 @@
+---
+permalink: fas2800/pci-cards-and-risers-replace.html 
+sidebar: sidebar 
+keywords: fas2800, fas2800, replace, pcie, mezzanine, card, disconnect, cable, sfp, qsfp, module, fail, mezzanine, shut, down, impair, controller, pcie, switch, aggregate, two-node, metrocluster, complete, replacement, process, replace a pcie or mezzanine card, shut down the impaired controller, remove the controller module, replace a pcie card, replace the mezzanine card, install the controller module, switch back aggregates in a two-node metrocluster configuration, restore the controller module to operation after running diagnostics, complete the replacement process 
+summary: 要更换 PCIe 或夹层卡，您必须断开缆线以及所有 SFP 和 QSFP 模块与卡的连接，更换发生故障的 PCIe 或夹层卡，然后重新对卡进行布线。 
+---
+= 更换夹层卡- FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过断开电缆以及任何SFP和QSFP模块与夹层卡的连接来更换夹层卡、更换发生故障的夹层卡、然后对这些卡重新布线。
+
+* 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用
+* 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+
+.动画-更换夹层卡
+video::a8ec891d-f6f6-4479-9ca2-af47017254ff[panopto]
+
+
+== 第 1 步：关闭受损控制器
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAIN=_number_of_hours_down_h`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 如果受损控制器属于 HA 对，请从运行正常的控制器的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至 "Remove controller module" 。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+
+
+== 第 2 步：卸下控制器模块
+
+从系统中卸下控制器模块、然后卸下控制器模块的护盖。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
++
+将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
+
+. 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
+. 按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。
++
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[DRW 285 PCM拆卸、安装IEOPS 694]
+
+. 将控制器模块翻转，将其放在平稳的表面上。
+. 按下控制器模块两侧的蓝色按钮以松开护盖、然后向上旋转护盖、使其脱离控制器模块、从而打开护盖。
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[DRW 285控制器模块盖板打开IEOPS 695]
+
+
+
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[图例图标 01]
+ a| 
+控制器模块护盖释放按钮
+
+|===
+
+
+== 步骤3：更换夹层卡
+
+更换夹层卡。
+
+. 如果您尚未接地，请正确接地。
+. 按照下图或控制器模块上的FRU示意图卸下夹层卡：
++
+image::../media/drw_2850_replace_HIC_IEOPS-700.svg[DRW 2800更换HIC IEOPS 700]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[图例图标 01]
+ a| 
+提升板挡板
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[图例图标 02]
+ a| 
+PCIe夹层卡
+
+|===
++
+.. 通过将夹层卡挡板从控制器模块中直接滑出来卸下夹层卡挡板。
+.. 拧松夹层卡上的翼形螺钉、然后竖直提起夹层卡。
++
+
+NOTE: 您可以用手指或螺丝刀拧松翼形螺钉。如果您用手指、则可能需要向上旋转NV电池、以便在其旁边的指旋螺钉上购买更好的手指。
+
+
+
+. 重新安装夹层卡：
++
+.. 将替代夹层卡插头上的插槽与主板上的插槽对齐、然后将卡轻轻地垂直插入插槽中。
+.. 拧紧夹层卡上的三个翼形螺钉。
+.. 重新安装夹层挡板。
+
+
+. 重新安装控制器模块护盖并将其锁定到位。
+
+
+
+
+== 第 4 步：安装控制器模块
+
+重新安装控制器模块。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 如果您尚未更换控制器模块上的外盖，请进行更换。
+. 翻转控制器模块、并将其端部与机箱中的开口对齐。
+. 将控制器模块轻轻推入系统的一半。将控制器模块的一端与机箱中的开口对齐、然后将控制器模块轻轻推入系统的一半。
++
+
+NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+
+. 根据需要重新对系统进行布线。
++
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
+
+. 完成控制器模块的重新安装：
++
+.. 在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。
++
+
+NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+
++
+控制器一旦固定在机箱中，就会开始启动。
+
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+.. 使用钩环带将缆线绑定到缆线管理设备。
+
+
+. 交还控制器的存储，使其恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 使用还原自动交还 `storage failover modify -node local -auto-giveback true` 命令：
+. 如果已触发AutoSupport维护窗口、请使用结束此窗口 `system node autosupport invoke -node * -type all -message MAINT=END` 命令：
+
+
+
+
+== 第 5 步：将故障部件退回 NetApp
+
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

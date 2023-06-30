@@ -28,9 +28,9 @@ summary: 完成硬件更换并启动到维护模式后，您可以验证更换�
 
 .步骤
 . 如果 _replacement_ 节点不在 LOADER 提示符处，请将系统暂停到 LOADER 提示符处。
-. 在 _health_ 节点上，检查系统时间： `show date`
+. 在_Healthy_node上、检查系统时间： `cluster date show`
 +
-日期和时间以 GMT 表示。
+日期和时间基于配置的时区。
 
 . 在 LOADER 提示符处，检查 _replacement_ 节点上的日期和时间： `show date`
 +
@@ -38,7 +38,7 @@ summary: 完成硬件更换并启动到维护模式后，您可以验证更换�
 
 . 如有必要，请在替代节点上以 GMT 格式设置日期： `set date _MM/dd/yyy_`
 . 如有必要，请在替代节点上设置 GMT 时间： `set time _hh ： mm ： ss_`
-. 在 LOADER 提示符处，确认 _replacement_ 节点上的日期和时间： `show date`
+. 在加载程序提示符处、确认_reender_节点上的日期和时间： `date`
 +
 日期和时间以 GMT 表示。
 

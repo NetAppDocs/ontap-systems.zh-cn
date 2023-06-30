@@ -16,7 +16,7 @@ summary: 您可以热插拔 DS224C 或 DS212C 磁盘架中的故障磁盘驱动�
 .开始之前
 * DS224C 或 DS212C 磁盘架必须支持您要安装的磁盘驱动器。
 +
-https://hwu.netapp.com["NetApp Hardware Universe"]
+https://hwu.netapp.com["NetApp Hardware Universe"^]
 
 * 系统中的所有其他组件必须正常运行；否则，请联系技术支持。
 * 要删除的磁盘驱动器必须出现故障。
@@ -32,7 +32,7 @@ NOTE: 根据磁盘驱动器类型和容量，磁盘驱动器可能需要长达�
 ONTAP 文档中的说明介绍了在更换 SED 之前和之后必须执行的其他步骤。
 
 +
-https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"]
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"^]
 
 
 
@@ -79,10 +79,10 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/downloa
 可以在 NetApp 支持站点上找到最新版本的固件。
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
 
 +
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
 
 * 使用非最新固件版本的新磁盘驱动器上的磁盘驱动器固件会自动更新（无中断）。
 +
@@ -91,7 +91,7 @@ NOTE: 磁盘驱动器固件每两分钟检查一次。
 
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
-磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 IOM12 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令并使用 off 选项来将其关闭。
+一个磁盘架具有三个位置LED：一个位于操作员显示面板上、一个位于每个磁盘架IOM上。Location LEDs remain illuminated for 30 minutes.You can turn them off by entering the same command, but using the off option.
 
 * 如果需要，您可以参阅 " 监控磁盘架 LED " 一节，了解有关操作员显示面板和 FRU 组件上磁盘架 LED 的含义和位置的信息。
 

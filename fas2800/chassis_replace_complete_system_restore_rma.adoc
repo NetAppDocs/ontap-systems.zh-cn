@@ -1,0 +1,71 @@
+---
+permalink: fas2800/chassis-replace-complete-system-restore-rma.html 
+sidebar: sidebar 
+keywords: fas2800, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: 您必须验证机箱的 HA 状态，并运行系统级诊断，切回聚合并将故障部件退回给 NetApp ，如套件随附的 RMA 说明所述。 
+---
+= 还原并验证配置—FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+验证机箱的HA状态是否已启动系统、然后按照套件附带的RMA说明将故障部件退回给NetApp。
+
+
+
+== 第 1 步：验证并设置机箱的 HA 状态
+
+您必须验证机箱的 HA 状态，并在必要时更新此状态以匹配您的系统配置。
+
+. 在维护模式下，从任一控制器模块显示本地控制器模块和机箱的 HA 状态： `ha-config show`
++
+所有组件的 HA 状态都应相同。
+
+. 如果为机箱显示的系统状态与您的系统配置不匹配：
++
+.. 根据系统的现有配置设置机箱的HA状态： `ha-config modify chassis _ha-state_`
++
+ha-state 的值可以是以下值之一：
+
++
+*** `ha`
+*** `non-ha`
+
+
+.. 确认设置已更改： `ha-config show`
+
+
+. 如果尚未执行此操作，请重新对系统的其余部分进行布线。
+. 退出维护模式： `halt`。    The LOADER prompt appears.
+. 启动控制器模块。
+
+
+
+
+== 第2步：启动系统
+
+. 如果尚未将电源线重新插入PSU、请将其插入。
+. 通过将摇杆切换至*on*打开PSU，然后等待控制器完全通电。
+. 开机后、检查机箱和控制器的正面和背面是否有任何故障指示灯。
+. 通过SSH连接到节点的SP或BMC IP地址。此地址与关闭节点时使用的地址相同。
+. 执行中所述的其他运行状况检查 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何执行_A_cluster-HEATY_check_with _A_script_IN ONTAP"^]
+. 如果已触发AutoSupport维护窗口、请使用结束此窗口 `system node autosupport invoke -node * -type all -message MAINT=END` 命令：
+
+
+[]
+====
+
+NOTE: 作为最佳实践、您应执行以下操作：
+
+* 解决任何问题 https://activeiq.netapp.com/["Active IQ 健康提醒和风险"^] (Active IQ 将需要一些时间来处理加电后AutoSupport—预期结果会有所延迟)
+* 运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]
+* 使用检查系统运行状况 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何执行_A_cluster-HEATY_check_with _A_script_IN ONTAP"^]
+
+
+====
+
+
+== 第 3 步：将故障部件退回 NetApp
+
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

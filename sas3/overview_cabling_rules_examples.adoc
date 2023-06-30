@@ -13,19 +13,20 @@ summary: 您可以通过以下 SAS 布线规则，示例和工作表将带有 IO
 [role="lead"]
 为了帮助您将带有IOM12/IOM12B模块的SAS驱动器架连接到存储系统、您可以根据需要使用任何可用的SAS布线规则、工作表和示例内容。
 
-* SAS 布线规则 *
+*SAS布线规则和概念*
 
 * link:install-cabling-rules.html#configuration-rules["配置"]
 * link:install-cabling-rules.html#controller-slot-numbering-rules["控制器插槽编号"]
 * link:install-cabling-rules.html#shelf-to-shelf-connection-rules["磁盘架到磁盘架连接"]
 * link:install-cabling-rules.html#controller-to-stack-connection-rules["控制器到堆栈连接"]
 * link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["迷你 SAS HD SAS 光缆"]
+* link:install-cabling-rules.html#tri-path-ha-connectivity["三路径HA连接"]
 
 
 * 布线工作表和示例 *
 
-* link:install-cabling-worksheets-examples-multipath.html["常见多路径 HA 配置"]
-* link:install-cabling-worksheets-examples-fas2600.html["采用板载存储的 AFF 和 FAS 平台"]
+* link:install-cabling-worksheets-examples-multipath.html["多路径HA配置"]
+* link:install-cabling-worksheets-examples-fas2600.html["具有内部存储的平台"]
 * link:install-worksheets-examples-quadpath.html["四路径 HA 配置"]
 
 

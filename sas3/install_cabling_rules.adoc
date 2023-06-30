@@ -1,10 +1,10 @@
 ---
 permalink: sas3/install-cabling-rules.html 
 sidebar: sidebar 
-keywords: disk, shelves, shelf, iom12, module, single-controller, configuration, support, platform, sas, cabling, cable, rule, controller, shelf-to-shelf, connection, rule, controller-to-stack, mini-sas, hd, optical, cable, rule, sas cabling rules, iom12b 
+keywords: disk, shelves, shelf, iom12, module, single-controller, configuration, support, platform, sas, cabling, cable, rule, controller, shelf-to-shelf, connection, rule, controller-to-stack, mini-sas, hd, optical, cable, rule, sas cabling rules, iom12b, concepts 
 summary: '具有IOM12/IOM12B模块的磁盘架可以采用HA对和单控制器配置进行布线(适用于受支持的平台)。' 
 ---
-= SAS布线规则—带有IOM12/IOM12B模块的磁盘架
+= SAS布线规则和概念—具有IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: '具有IOM12/IOM12B模块的磁盘架可以采用HA对和单控制器�
 使用IOM12/IOM12B模块的磁盘架可以在HA对和单控制器配置中进行布线(适用于受支持的平台)、方法是应用SAS布线规则：配置规则、控制器插槽编号规则、磁盘架到磁盘架连接规则、控制器到堆栈连接规则以及迷你SAS HD SAS光缆规则(如果适用)。
 
 
-NOTE: 本指南中介绍的有关控制器插槽编号规则、磁盘架到磁盘架连接规则以及控制器到堆栈连接规则的SAS布线规则与适用于所有SAS磁盘架的规则相同、无论这些磁盘架是否具有IOM12/IOM12B、IOM6或IOM3模块。However, the information in this guide is specific to the unique characteristics of disk shelves with IOM12 modules and their use in supported configurations.
+NOTE: 本指南中介绍的有关控制器插槽编号规则、磁盘架到磁盘架连接规则以及控制器到堆栈连接规则的SAS布线规则与适用于所有SAS磁盘架的规则相同、无论这些磁盘架是否具有IOM12/IOM12B、IOM6或IOM3模块。但是、本指南中的信息专门介绍了具有IOM12/IOM12B模块的磁盘架的独特特征及其在受支持配置中的使用。
 
 本指南中介绍的有关配置规则和迷你SAS HD SAS光缆规则的SAS布线规则专用于具有IOM12/IOM12B模块的磁盘架。
 
@@ -32,20 +32,39 @@ NOTE: 本指南中介绍的有关控制器插槽编号规则、磁盘架到磁�
 
 == 配置规则
 
-特定类型的HA对和单控制器配置支持具有IOM12模块的磁盘架。
+[role="lead"]
+特定类型的HA对和单控制器配置支持具有IOM12/IOM12B模块的磁盘架。
 
 
 NOTE: 此内容不会介绍FAS25XX平台。
 
+[NOTE]
+====
+有关您的平台型号支持的布线配置的最新信息、请参见Hardware Universe。
+
+https://hwu.netapp.com["NetApp Hardware Universe"^]
+
+====
 * HA 对配置必须采用多路径 HA 或四路径 HA 配置的形式进行布线，但以下情况除外：
 +
-** 具有内部存储的平台、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、可以作为单路径HA配置进行布线、以支持连接到外部SAS磁带备份设备。
-** 具有内部存储的平台、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、不支持四路径HA连接。
+** 具有内部存储的平台不支持四路径HA连接。
+** FAS2800 HA对可以采用三路径HA的形式进行布线。
++
+有关FAS2800连接的信息、请参见 <<三路径HA连接>> 部分。
+
+** 具有内部存储的平台可以采用单路径HA配置进行布线(从端口0b/0b1到外部磁盘架)、以支持连接到外部SAS磁带备份设备(从端口0a)。
 
 
+
+
+[NOTE]
+====
+对于FAS2800 HA对、尽管使用缆线连接到外部磁盘架是单路径HA、但由于每个控制器将端口0b内部连接到其本地扩展器(IOM12G)、并将端口0c连接到其配对系统的扩展器、因此HA对配置为多路径HA。
+
+====
 * 单控制器配置必须采用多路径或四路径配置的形式进行布线，但以下情况除外：
 +
-** FAS2600 系列单控制器配置（带有外部磁盘架）可以作为单路径配置进行布线。
+** FAS2600系列单控制器配置可以采用单路径配置的形式进行布线。
 +
 由于内部存储使用单路径连接，因此 ONTAP 偶尔会发出警告，指出检测到混合路径。为了避免这些警告，您可以使用单路径连接到外部磁盘架。此外，在使用外部 SAS 磁带备份设备时，您可以使用单路径连接。
 
@@ -88,8 +107,10 @@ image::../media/slot0_rules.png[插槽 0 规则]
 
 === 标准磁盘架到磁盘架连接
 
-* 多路径 HA ，多路径，单路径 HA 和单路径配置使用标准磁盘架到磁盘架连接。
-* 标准磁盘架到磁盘架连接是使用 IOM3 和 IOM6 模块的现有 SAS 存储配置所使用的连接：每个域 A （ IOM A ）和域 B （ IOM B ）中的磁盘架之间需要一条缆线连接。
+* 包含多个磁盘架的任何磁盘架堆栈均会使用标准磁盘架到磁盘架连接。
++
+在每个域中的磁盘架-域A (IOM A)和域B (IOM B)之间需要一个缆线连接。
+
 * 最佳实践是使用 IOM 端口 3 和 1 实现标准磁盘架到磁盘架连接。
 +
 从堆栈中的第一个逻辑磁盘架到最后一个逻辑磁盘架，您需要将 IOM 端口 3 连接到域 A 和域 B 中下一个磁盘架的 IOM 端口 1
@@ -238,23 +259,23 @@ link:install-cabling-worksheet-template-quadpath.html["用于四路径连接的�
 
 
 
-=== 使用内部存储的平台的控制器0b和0a端口连接规则
+=== 具有内部存储的平台的控制器0b/0b1和0a端口连接规则
 
-具有内部存储的平台、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、具有一组唯一的连接规则、因为每个控制器必须在内部存储(端口0b)和堆栈之间保持相同的域连接。This means that when a controller is located in slot A of the chassis (controller 1) it is in domain A (IOM A) and therefore port 0b must connect to IOM A in the stack.When a controller is located in slot B of the chassis (controller 2) it is in domain B (IOM B) and therefore port 0b must connect to IOM B in the stack.
+具有内部存储的平台具有一组唯一的连接规则、因为每个控制器必须在内部存储(端口0b/0b1)和堆栈之间保持相同的域连接。这意味着、如果控制器位于机箱的插槽A中(控制器1)、则它位于域A (IOM A)中、因此端口0b/0b1必须连接到堆栈中的IOM A。如果某个控制器位于机箱的插槽B (控制器2)中、则该控制器位于域B (IOM B)中、因此端口0b/0b1必须连接到堆栈中的IOM B。
 
 
 NOTE: 此内容不会介绍FAS25XX平台。
 
 
-NOTE: 如果您未将 0b 端口连接到正确的域（交叉连接域），则会使系统面临故障恢复能力问题，从而无法安全地执行无中断过程。
+NOTE: 如果未将0b/0b1端口连接到正确的域(交叉连接域)、则会使系统面临故障恢复能力问题、从而使您无法安全地执行无中断过程。
 
-* 控制器 0b 端口（内部存储端口）：
+* 控制器0b/0b1端口(内部存储端口)：
 +
-** 控制器 1 0b 端口始终连接到 IOM A （域 A ）。
-** 控制器 2 0b 端口始终连接到 IOM B （域 B ）。
-** 端口 0b 始终是主路径。
-** 端口 0b 始终连接到堆栈中的最后一个逻辑磁盘架。
-** 端口 0b 始终连接到磁盘架 IOM 端口 3 。
+** 控制器1 0b/0b1端口始终连接到IOM A (域A)。
+** 控制器2 0b/0b1端口始终连接到IOM B (域B)。
+** 端口0b/0b1始终为主路径。
+** 端口0b/0b1始终连接到堆栈中的最后一个逻辑磁盘架。
+** 端口0b/0b1始终连接到磁盘架IOM端口3。
 
 
 * 控制器 0a 端口（内部 HBA 端口）：
@@ -268,9 +289,37 @@ NOTE: 如果您未将 0b 端口连接到正确的域（交叉连接域），则�
 
 
 
-下图突出显示了FAS2600系列、AFF A200、FAS2700系列、AFF A220及更高版本多路径HA配置的内部存储端口(0b)域连接：
+下图突出显示了内部存储端口(0b/0b1)与外部磁盘架堆栈的域连接：
 
-image::../media/drw_fas2600_mpha_domain_example.png[DRW fas2600 mpha 域示例]
+image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[DRW FAS2600 mpha域示例IEOPS 1172]
+
+
+
+=== 三路径HA连接
+
+FAS2800 HA对支持三路径HA连接。三路径HA连接在每个控制器与内部(IOM12G)和外部磁盘架之间具有三条路径：
+
+* 每个控制器将端口0b内部连接到其本地IOM12G并将端口0c内部连接到其配对节点的IOM12G、可提供HA对多路径HA连接。
+* 通过为每个控制器的外部存储端口0A和0b1布线、可以建立HA对三路径HA连接。
++
+如果没有外部磁盘架、则使用缆线将端口0A和0b1连接到两个控制器、或者使用缆线将其连接到外部磁盘架以实现三路径HA连接。
+
+
+
+下面显示了实现三路径HA连接的控制器内部连接和外部布线：
+
+image::../media/drw_fas2800_concept_tpha_IEOPS-950.svg[DRW FAS2800概念TPHA IEOPS 950]
+
+FAS2800外部SAS端口：
+
+* 0a端口来自内部HBA (与具有内部磁盘架的其他平台一样)。
+* 0b1端口来自内部磁盘架(与具有内部磁盘架的其他平台上的0b端口类似)。
+* 未使用0b2端口。已禁用。如果连接了电缆、则会生成错误消息。
+
+
+image::../media/drw_sas3_ports_on_fas2800_IEOPS-946 (1).svg[FAS2800 IEOPS 946上的DRW SAS3端口(1)]
+
+有关FAS2800 HA对布线示例、请参见 link:install-cabling-worksheets-examples-fas2600.html["使用内部存储的平台的控制器到堆栈布线工作表和布线示例"] 部分。
 
 
 

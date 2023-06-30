@@ -14,7 +14,7 @@ summary: 通过填写工作表模板、您可以定义控制器SAS端口对、�
 通过填写工作表模板、您可以定义控制器SAS端口对、以便使用缆线将控制器连接到具有IOM12/IOM12B模块的磁盘架堆栈、从而在HA对或单控制器配置中实现多路径连接。You can also use the completed worksheet to walk yourself through cabling the multipathed connections for your configuration.
 
 .开始之前
-如果您的平台具有内部存储、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、请使用以下内容(这些平台使用唯一的工作表)：
+如果您的平台具有内部存储、请使用以下工作表：
 
 link:install-cabling-worksheets-examples-fas2600.html["使用内部存储的平台的控制器到堆栈布线工作表和布线示例"]
 
@@ -27,7 +27,7 @@ link:install-cabling-worksheets-examples-fas2600.html["使用内部存储的平�
 工作表示例使用了一种配置、其中包含两个四端口SAS HBA和两个磁盘架堆栈以及IOM12B模块。
 
 * 此工作表模板最多支持六个堆栈；如果需要，您需要添加更多列。
-* 如果需要，您可以参考 link:install-cabling-rules.html["SAS 布线规则"] 有关支持的配置，控制器插槽编号约定，磁盘架到磁盘架连接以及控制器到磁盘架连接（包括端口对的使用）的信息。
+* If needed, you can refer to the link:install-cabling-rules.html["SAS布线规则和概念"] for information about supported configurations, the controller slot numbering convention, shelf-to-shelf connectivity, and controller-to-shelf connectivity (including use of port pairs).
 * 如果需要，请在完成工作表后参考 link:install-cabling-worksheets-how-to-read-multipath.html["如何阅读使用缆线连接控制器到堆栈连接以实现多路径连接的工作表"]
 
 

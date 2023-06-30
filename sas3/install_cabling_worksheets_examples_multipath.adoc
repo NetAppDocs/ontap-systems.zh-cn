@@ -1,10 +1,10 @@
 ---
 permalink: sas3/install-cabling-worksheets-examples-multipath.html 
 sidebar: sidebar 
-keywords: controller-to-stack, cabling, worksheet, cable, ha, pair, multipath, ha, configuration, controller-to-stack, cabling, controller-to-stack cabling worksheets and cabling examples for common multipath ha configuration 
+keywords: controller-to-stack, cabling, worksheet, cable, ha, pair, multipath, ha, configuration, controller-to-stack, cabling, controller-to-stack cabling worksheets and cabling examples for multipath ha configuration 
 summary: 您可以使用控制器到堆栈的布线工作表和布线示例将 HA 对作为多路径 HA 配置进行布线。 
 ---
-= 控制器到堆栈的布线工作表以及常见多路径HA配置的布线示例—具有IOM12/IOM12B模块的磁盘架
+= 多路径HA配置的控制器到堆栈布线工作表和布线示例—具有IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,10 @@ summary: 您可以使用控制器到堆栈的布线工作表和布线示例将 H
 [role="lead"]
 您可以使用控制器到堆栈的布线工作表和布线示例将 HA 对作为多路径 HA 配置进行布线。
 
-* 如果需要，可以参考 link:install-cabling-rules.html["SAS 布线规则"] 有关支持的配置，控制器插槽编号约定，磁盘架到磁盘架连接以及控制器到磁盘架连接（包括端口对的使用）的信息。
+
+NOTE: 此信息指的是没有内部存储的适用场景平台。
+
+* If needed, you can refer to link:install-cabling-rules.html["SAS布线规则和概念"] for information about supported configurations, the controller slot numbering convention, shelf-to-shelf connectivity, and controller-to-shelf connectivity (including the use of port pairs).
 * 如果需要，可以参考 link:install-cabling-worksheets-how-to-read-multipath.html["如何阅读使用缆线连接控制器到堆栈连接以实现多路径连接的工作表"]。
 * 布线示例将控制器到堆栈的缆线显示为实心或虚线，以区分控制器 A 和 C 端口连接与控制器 B 和 D 端口连接。
 +

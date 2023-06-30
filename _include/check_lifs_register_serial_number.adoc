@@ -7,7 +7,7 @@
 .步骤
 . 验证逻辑接口是否正在向其主服务器和端口报告： `network interface show -is-home false`
 +
-如果任何 LIF 列为 false ，请将其还原到其主端口： `network interface revert`
+如果任何LUN列为false、请将其还原到其主端口： `network interface revert -vserver * -lif *`
 
 . 向 NetApp 支持部门注册系统序列号。
 +
@@ -15,5 +15,6 @@
 ** 如果未启用 AutoSupport ，请调用 https://mysupport.netapp.com["NetApp 支持"] 注册序列号。
 
 
+. 如果已触发AutoSupport维护窗口、请使用结束此窗口 `system node autosupport invoke -node * -type all -message MAINT=END` 命令：
 . 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
 

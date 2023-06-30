@@ -1,0 +1,110 @@
+---
+permalink: fas2800/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: fas2800, how to recable the system, how to reassign disks 
+summary: 您必须重新配置存储并确认磁盘重新分配。 
+---
+= 重新对系统进行配置并重新分配磁盘—FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要完成替换操作步骤并将系统还原到完全运行状态，您必须重新配置存储，确认磁盘重新分配，还原 NetApp 存储加密配置（如果需要）并为新控制器安装许可证。您必须先完成一系列任务，然后才能将系统还原为完全正常运行。
+
+
+
+== 第 1 步：重新对系统进行布线
+
+重新对控制器模块的存储和网络连接进行配线。
+
+.步骤
+. 重新对系统进行布线。
+. 使用验证布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
++
+.. 下载并安装 Config Advisor 。
+.. 输入目标系统的信息，然后单击收集数据。
+.. 单击布线选项卡，然后检查输出。确保显示所有磁盘架且所有磁盘均显示在输出中，以更正您发现的任何布线问题。
+.. 单击相应的选项卡，然后检查 Config Advisor 的输出，以检查其他布线。
+
+
+
+
+
+
+== 第 2 步：重新分配磁盘
+
+您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。
+
+. 如果 _replacement_ 控制器处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`
+. 在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``
+. 请等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行正常的控制器中验证是否已自动分配新的配对系统 ID ： `storage failover show`
++
+在命令输出中，您应看到一条消息，指出受损控制器上的系统 ID 已更改，其中显示了正确的旧 ID 和新 ID 。In the following example, node2 has undergone replacement and has a new system ID of 151759706.
+
++
+[listing]
+----
+node1> `storage failover show`
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        System ID changed on partner (Old:
+                                                  151759755, New: 151759706), In takeover
+node2             node1             -            Waiting for giveback (HA mailboxes)
+----
+. 在运行正常的控制器中，验证是否已保存任何核心转储：
++
+.. 更改为高级权限级别： `set -privilege advanced`
++
+系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
+
+.. 保存任何核心转储： `ssystem node run -node _local-node-name_ partner savecore`
+.. 等待 `savecore` 命令以完成、然后再发出此返回命令。
++
+您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`
+
+.. 返回到管理权限级别： `set -privilege admin`
+
+
+. 交还控制器：
++
+.. 从运行正常的控制器中，交还更换的控制器的存储： `storage failover giveback -ofnode _replacement_node_name_`
++
+_replacement_ 控制器将收回其存储并完成启动。
+
++
+如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 `y` 。
+
++
+
+IMPORTANT: 如果此恢复被否决、请解析否决问题描述。如果否决对于解决不是至关重要的、您可以覆盖此否决。
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的高可用性配置内容"]
+
+.. 交还完成后，确认 HA 对运行状况良好且可以接管： `storage failover show`
++
+`storage failover show` 命令的输出不应包含 System ID changed on partner 消息。
+
+
+
+. 验证是否已正确分配磁盘： `storage disk show -ownership`
++
+属于 _replacement_ 控制器的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:
+
++
+[listing]
+----
+node1> `storage disk show -ownership`
+
+Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
+----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
+1.0.0  aggr0_1  node1 node1  -        1873775277 1873775277  -       1873775277 Pool0
+1.0.1  aggr0_1  node1 node1           1873775277 1873775277  -       1873775277 Pool0
+.
+.
+.
+----
+

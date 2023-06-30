@@ -91,7 +91,7 @@ NOTE: 磁盘驱动器固件每两分钟检查一次。
 
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
-磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 IOM12 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令并使用 off 选项来将其关闭。
+一个磁盘架具有三个位置LED：一个位于操作员显示面板上、一个位于每个磁盘架IOM上。Location LEDs remain illuminated for 30 minutes.You can turn them off by entering the same command, but using the off option.
 
 * 如果需要，您可以参阅 " 监控磁盘架 LED " 一节，了解有关操作员显示面板和 FRU 组件上磁盘架 LED 的含义和位置的信息。
 * DS460C 驱动器架包含五个驱动器抽盒（驱动器抽盒 1 位于顶部，驱动器抽盒 5 位于底部），每个抽盒包含 12 个驱动器插槽。

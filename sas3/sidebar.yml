@@ -18,13 +18,13 @@ entries:
     entries:
     - title: 概述
       url: "/sas3/overview-cabling-rules-examples.html"
-    - title: SAS 布线规则
+    - title: SAS布线规则和概念
       url: "/sas3/install-cabling-rules.html"
-    - title: 常见多路径 HA 配置的布线工作表和示例
+    - title: 多路径HA的布线工作表和示例
       url: "/sas3/install-cabling-worksheets-examples-multipath.html"
     - title: 使用内部存储的平台的布线工作表和示例
       url: "/sas3/install-cabling-worksheets-examples-fas2600.html"
-    - title: 具有两个四端口 SAS HBA 的四路径 HA 配置的布线工作表和示例
+    - title: 四路径HA的布线工作表和示例
       url: "/sas3/install-worksheets-examples-quadpath.html"
     - title: 多路径连接的布线工作表模板
       url: "/sas3/install-cabling-worksheet-template-multipath.html"

@@ -1,0 +1,221 @@
+---
+permalink: fas2800/nvmem-nvram-battery-replace.html 
+sidebar: sidebar 
+keywords: fas2800, replace, nvmem, battery, shut, down, impaired, controller, controller, system, aggregates, metrocluster, configuration, reinstall 
+summary: 要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。 
+---
+= 更换NVMEM电池- FAS2800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。
+
+系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+
+
+== 第 1 步：关闭受损控制器
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAIN=_number_of_hours_down_h`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 如果受损控制器属于 HA 对，请从运行正常的控制器的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至 "Remove controller module" 。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+
+
+== 步骤2：卸下并打开控制器模块
+
+卸下并打开控制器模块。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
++
+将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
+
+. 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
+. 按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。
++
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[DRW 285 PCM拆卸、安装IEOPS 694]
+
+. 将控制器模块翻转，将其放在平稳的表面上。
+. 按下控制器模块两侧的蓝色按钮以松开护盖、然后向上旋转护盖、使其脱离控制器模块、从而打开护盖。
++
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[DRW 285控制器模块盖板打开IEOPS 695]
+
+
+
+
+
+== 第 3 步：更换 NVMEM 电池
+
+从系统中取出发生故障的NVMEM电池、然后更换为新的NVMEM电池。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 检查 NVMEM LED ：
++
+** 如果您的系统采用 HA 配置，请转至下一步。
+** 如果您的系统采用独立配置，请完全关闭控制器模块，然后检查 NV 图标标识的 NVRAM LED 。
++
+image::../media/drw_hw_nvram_icon.svg[DRW 硬件 NVRAM 图标]
+
++
+
+NOTE: 在暂停系统时， NVRAM LED 会闪烁，同时将内容存入闪存。目标值完成后，此 LED 将熄灭。
+
++
+*** 如果在未完全关闭的情况下断电， NVMEM LED 将闪烁，直到目标完成，然后 LED 将熄灭。
+*** 如果 LED 亮起且电源打开，则未写入的数据将存储在 NVMEM 上。
++
+此问题通常发生在 ONTAP 成功启动后不受控制的关闭期间。
+
+
+
+
+
+. 在控制器模块中找到 NVMEM 电池。
++
+.动画-更换NV电池
+video::592217fb-4868-4294-a559-af4701725598[panopto]
++
+image::../media/drw_2850_replace_nvbattery_IEOPS-715.svg[DRW 2800更换nvBattery IEOPS 715]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[图例图标 01]
+ a| 
+电池释放卡舌
+
+
+
+ a| 
+image::../media/legend_icon_02.svg[图例图标 02]
+ a| 
+电池电源连接器
+
+|===
+. 从控制器模块中取出故障电池：
++
+.. 按下控制器模块侧面的蓝色按钮。
+.. 向上滑动电池、直至其脱离固定支架、然后将电池从控制器模块中提出。
+.. 从控制器模块中拔下电池
+
+
+. Remove the replacement battery from its package.
+安装更换电池：
++
+.. 将电池插头重新插入控制器模块上的插槽。
++
+确保插头锁定在主板上的电池插槽中。
+
+.. 将电池与金属板侧壁上的固定支架对齐。
+.. 向下滑动电池组、直至电池闩锁卡入到位并卡入侧壁的开口中。
+
+
+. 重新安装控制器模块护盖并将其锁定到位。
+
+
+
+
+== 第 4 步：重新安装控制器模块
+
+更换控制器模块中的组件后，将其重新安装到机箱中。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 如果您尚未更换控制器模块上的外盖，请进行更换。
+. 翻转控制器模块、并将其端部与机箱中的开口对齐。
+. 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
++
+
+NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+
+. 根据需要重新对系统进行布线。
++
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
+
+. 完成控制器模块的重新安装：
++
+.. 在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。
++
+
+NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+
++
+控制器一旦固定在机箱中，就会开始启动。
+
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+.. 使用钩环带将缆线绑定到缆线管理设备。
+
+
+. 重新启动控制器模块。
++
+
+NOTE: 在启动过程中，您可能会看到以下提示：
+
++
+** 系统 ID 不匹配的提示警告，并要求覆盖系统 ID 。
+** 一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。You can safely respond `y` to these prompts.
+
+
+
+
+
+
+== 第5步：还原自动交还和AutSupport
+
+还原自动交还和AutoSupport (如果已禁用)。
+
+. 使用还原自动交还 `storage failover modify -node local -auto-giveback true` 命令：
+. 如果已触发AutoSupport维护窗口、请使用结束此窗口 `system node autosupport invoke -node * -type all -message MAINT=END` 命令：
+
+
+
+
+== 第 6 步：将故障部件退回 NetApp
+
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

@@ -53,12 +53,12 @@ NOTE: 如果 HA 对至少包含两个堆栈，则包含第二个堆栈根聚合�
 
 * 包含根聚合的磁盘架可通过磁盘架箱和磁盘架机箱上的标签来标识。
 +
-标签显示堆栈编号；例如、*环路或堆栈编号：1*和*环路或堆栈编号：2*。Disk shelves that do not contain the root aggregates only show the disk shelf serial number is on the labels.
+标签显示堆栈编号；例如、*环路或堆栈编号：1*和*环路或堆栈编号：2*。不包含根聚合的磁盘架仅在标签上显示磁盘架序列号。
 
 * 如果在系统设置和配置时未将系统配置为使用自动磁盘所有权分配，则需要手动分配磁盘所有权。
-* 系统会自动启用带内备用控制路径（ In-band Alternate Control Path ， ACP ）。
+* 系统会自动启用带内备用控制路径(IBACP)。
 +
-单路径 HA 或单路径配置不支持带内 ACP 。
+单路径HA或单路径配置不支持IBACP。
 
 
 
@@ -84,7 +84,7 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/downloa
 要下载 Config Advisor ，您需要网络访问权限。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
 
 
 
@@ -242,7 +242,7 @@ NOTE: 此时请勿打开磁盘架的电源。
 使用缆线连接磁盘架 SAS 连接（磁盘架到磁盘架（如果适用）和控制器到磁盘架），以便为系统建立存储连接。
 
 .开始之前
-您必须已满足中的要求 <<Requirements for installing and cabling disk shelves with IOM12 modules for a new system installation>> 并将磁盘架安装在机架中。
+You must have met the requirements in <<为新系统安装安装安装使用IOM12/IOM12B模块的磁盘架并为其布线的要求>> and installed the disk shelves in the rack.
 
 .关于此任务
 在为磁盘架布线后，您可以打开其电源，设置磁盘架 ID 并完成系统设置和配置。
@@ -259,7 +259,7 @@ NOTE: 此时请勿打开磁盘架的电源。
 
 
  a| 
-您正在为多路径 HA ，多路径，单路径 HA 或单路径配置布线
+您要为多路径HA、三路径HA、多路径、单路径HA或单路径配置布线
  a| 
 使用缆线将磁盘架到磁盘架的连接设置为 `standard` 连接（使用 IOM 端口 3 和 1 ）：
 
@@ -286,10 +286,10 @@ NOTE: 此时请勿打开磁盘架的电源。
 +
 .. 查看控制器到堆栈的布线工作表和布线示例，了解是否存在适用于您的配置的完整工作表。
 +
-link:install-cabling-worksheets-examples-fas2600.html["适用于采用板载存储的 AFF 和 FAS 平台的控制器到堆栈布线工作表和布线示例"]
+link:install-cabling-worksheets-examples-fas2600.html["使用内部存储的平台的控制器到堆栈布线工作表和布线示例"]
 
 +
-link:install-cabling-worksheets-examples-multipath.html["常见多路径 HA 配置的控制器到堆栈布线工作表和布线示例"]
+link:install-cabling-worksheets-examples-multipath.html["多路径HA配置的控制器到堆栈布线工作表和布线示例"]
 
 +
 link:install-worksheets-examples-quadpath.html["具有两个四端口 SAS HBA 的四路径 HA 配置的控制器到堆栈布线工作表和布线示例"]
@@ -409,7 +409,7 @@ NOTE: 在启动系统之前，最佳实践是借此机会验证布线是否正�
 如果生成任何 SAS 布线错误或重复的磁盘架 ID 错误，请按照提供的更正操作进行操作。
 
 +
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
+https://https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
 
 +
 您也可以运行 `storage shelf show -fields shelf-id` 命令来查看系统中已在使用的磁盘架 ID 列表（如果存在重复项）。

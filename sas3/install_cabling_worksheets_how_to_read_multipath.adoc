@@ -14,7 +14,7 @@ summary: 您可以使用此示例指导您完成如何读取和应用已完成�
 您可以使用此示例来指导您完成如何读取和应用已完成的工作表、以便为具有IOM12/IOM12B模块的磁盘架使用缆线连接控制器到堆栈连接、从而实现多路径连接。
 
 .开始之前
-如果您的平台具有内部存储、包括FAS2600系列、AFF A200、FAS2700系列、AFF A220、 以及更高版本、请使用以下内容(这些平台使用唯一的工作表)：
+如果您的平台具有内部存储、请使用以下工作表：
 
 link:install-cabling-worksheets-examples-fas2600.html["使用内部存储的平台的控制器到堆栈布线工作表和布线示例"]
 
@@ -28,7 +28,7 @@ link:install-cabling-worksheets-examples-fas2600.html["使用内部存储的平�
 NOTE: 如果您的端口对数量超过了为系统中的堆栈布线所需的数量，则最佳做法是跳过端口对以优化系统上的 SAS 端口。通过优化 SAS 端口，您可以优化系统的性能。
 
 * 如果您使用的是单控制器配置，请跳过子步骤 b 和 d ，以便通过缆线连接到另一个控制器。
-* 如果需要，可以参考 link:install-cabling-rules.html["SAS 布线规则"] 有关控制器插槽编号约定，磁盘架到磁盘架连接和控制器到磁盘架连接（包括端口对的使用）的信息。
+* If needed, you can refer to link:install-cabling-rules.html["SAS布线规则和概念"] for information about the controller slot numbering convention, shelf-to-shelf connectivity, and controller-to-shelf connectivity (including the use of port pairs).
 
 
 这些端口对使用工作表中的每一个其他端口对进行布线： 1A/2b 和 11/2D 。

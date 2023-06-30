@@ -102,7 +102,7 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 
 . 在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主控制器和端口上的逻辑接口。
 +
-如果任何接口列为 `false` ，请使用 `net int revert` 命令将这些接口还原回其主端口。
+如果任何接口列为 `false`，使用将这些接口还原回其主端口 `net int revert -vserver Cluster -lif _nodename_` 命令：
 
 . 将控制台缆线移至目标控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
@@ -153,7 +153,7 @@ NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
 . 请等待 3 分钟，然后使用 `storage failover show` 命令检查故障转移状态。
 . 在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主控制器和端口上的逻辑接口。
 +
-如果任何接口列为 `false` ，请使用 `net int revert` 命令将这些接口还原回其主端口。
+如果任何接口列为 `false`，使用将这些接口还原回其主端口 `net int revert -vserver Cluster -lif _nodename_` 命令：
 
 . 将控制台缆线移至目标控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
