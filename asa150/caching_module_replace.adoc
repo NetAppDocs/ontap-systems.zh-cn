@@ -1,0 +1,266 @@
+---
+permalink: asa150/caching-module-replace.html 
+sidebar: sidebar 
+keywords: replace, caching, module, asa a150, a150, asa, shut, down, impaired, controller, controller, aggregates, metrocluster, configuration, replace, reinstall 
+summary: 如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控制器模块已脱机，则必须更换此缓存模块；否则会导致性能下降。 
+---
+= 更换缓存模块- ASA A150
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控制器模块已脱机，则必须更换此缓存模块；否则会导致性能下降。
+
+使用您从提供商处收到的替代FRU组件更换故障组件。
+
+
+
+== 第 1 步：关闭受损控制器
+
+[role="lead"]
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+您可能希望在更换缓存模块之前擦除其内容。
+
+.步骤
+. 尽管缓存模块上的数据已加密，但您可能希望擦除受损缓存模块中的所有数据，并验证缓存模块是否没有数据：
++
+.. 擦除缓存模块上的数据： `system controller flash-cache secure-erase run`
+.. 验证是否已从缓存模块中擦除数据： `system controller flash-cache secure-erase show -node node_name`
++
+The output should display the caching module status as erased.
+
+
+
+. 如果受损控制器属于 HA 对，请从运行正常的控制器的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+接管或暂停受损的控制器：
+
+** 对于 HA 对，从运行正常的控制器接管受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
++
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+** 对于独立系统： `ssystem node halt _impaired_node_name_`
+
+
+|===
+. 如果系统机箱中只有一个控制器模块，请关闭电源，然后从电源中拔下受损控制器的电源线。
+
+
+
+
+== 第 2 步：卸下控制器模块
+
+[role="lead"]
+要访问控制器内部的组件，您必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
++
+将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
+
+. 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
++
+image::../media/drw_25xx_cable_management_arm.png[DRW 25xx 缆线管理臂]
+
+. 按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。
++
+image::../media/drw_2240_x_opening_cam_latch.png[DRW 2240 x 打开凸轮闩锁]
+
+. 将控制器模块翻转，将其放在平稳的表面上。
+. 滑动蓝色卡舌以释放盖板，然后向上翻盖并打开，从而打开盖板。
++
+image::../media/drw_2600_opening_pcm_cover.png[DRW 2600 打开 PCM 盖板]
+
+
+
+
+
+== 第 3 步：更换缓存模块
+
+[role="lead"]
+要更换控制器上标签上称为 M.2 PCIe 卡的缓存模块，请找到控制器内的插槽并按照特定步骤顺序进行操作。
+
+您的存储系统必须满足特定条件，具体取决于您的情况：
+
+* 它必须具有与要安装的缓存模块对应的操作系统。
+* 它必须支持缓存容量。
+* 存储系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 找到控制器模块背面的缓存模块并将其卸下。
++
+.. 按释放卡舌。
+.. 卸下散热器。
+
+
++
+image::../media/drw_2600_fcache_repl_animated_gif.png[DRW 2600 fcache rel 动画 gif]
+
+. 将缓存模块竖直从外壳中轻轻拉出。
+. 将缓存模块的边缘与外壳中的插槽对齐，然后将其轻轻推入插槽。
+. 验证缓存模块是否已完全固定在插槽中。
++
+如有必要，请卸下缓存模块并将其重新插入插槽。
+
+. 重新拔插并向下推散热器，以接合缓存模块外壳上的锁定按钮。
+. 根据需要关闭控制器模块盖板。
+
+
+
+
+== 第 4 步：重新安装控制器模块
+
+[role="lead"]
+更换控制器模块中的组件后，将其重新安装到机箱中。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 如果您尚未更换控制器模块上的外盖，请进行更换。
+. 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
++
+
+NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+
+. 根据需要重新对系统进行布线。
++
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
+
+. 完成控制器模块的重新安装：
++
+[cols="1,2"]
+|===
+| 如果您的系统位于 ... | 然后执行以下步骤 ... 
+
+
+ a| 
+HA 对
+ a| 
+控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。
+
+.. 在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。
++
+
+NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+
++
+控制器一旦固定在机箱中，就会开始启动。
+
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+.. 使用钩环带将缆线绑定到缆线管理设备。
+
+
+
+
+ a| 
+一种独立配置
+ a| 
+.. 在凸轮把手处于打开位置的情况下，用力推入控制器模块，直到它与中板并完全就位，然后将凸轮把手合上到锁定位置。
++
+
+NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+.. 使用钩环带将缆线绑定到缆线管理设备。
+.. 将电源线重新连接到电源和电源、打开电源以启动启动过程。
+
+
+|===
+
+
+
+
+== 第 5 步：切回双节点 MetroCluster 配置中的聚合
+
+[role="lead"]
+在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine （ SVM ）现在处于活动状态，并从本地磁盘池提供数据。
+
+此任务仅限适用场景双节点 MetroCluster 配置。
+
+.步骤
+. 验证所有节点是否处于 `enabled` 状态： `MetroCluster node show`
++
+[listing]
+----
+cluster_B::>  metrocluster node show
+
+DR                           Configuration  DR
+Group Cluster Node           State          Mirroring Mode
+----- ------- -------------- -------------- --------- --------------------
+1     cluster_A
+              controller_A_1 configured     enabled   heal roots completed
+      cluster_B
+              controller_B_1 configured     enabled   waiting for switchback recovery
+2 entries were displayed.
+----
+. 验证所有 SVM 上的重新同步是否已完成： `MetroCluster SVM show`
+. 验证修复操作正在执行的任何自动 LIF 迁移是否已成功完成： `MetroCluster check lif show`
+. 在运行正常的集群中的任何节点上使用 `MetroCluster switchback` 命令执行切回。
+. 验证切回操作是否已完成： `MetroCluster show`
++
+当集群处于 `waiting for-switchback` 状态时，切回操作仍在运行：
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured       	switchover
+Remote: cluster_A configured       	waiting-for-switchback
+----
++
+当集群处于 `normal` 状态时，切回操作完成。：
+
++
+[listing]
+----
+cluster_B::> metrocluster show
+Cluster              Configuration State    Mode
+--------------------	------------------- 	---------
+ Local: cluster_B configured      		normal
+Remote: cluster_A configured      		normal
+----
++
+如果切回需要很长时间才能完成，您可以使用 `MetroCluster config-replication resync-status show` 命令检查正在进行的基线的状态。
+
+. 重新建立任何 SnapMirror 或 SnapVault 配置。
+
+
+
+
+== 第 6 步：将故障部件退回 NetApp
+
+[role="lead"]
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

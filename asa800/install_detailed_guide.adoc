@@ -1,0 +1,627 @@
+---
+permalink: asa800/install-detailed-guide.html 
+sidebar: sidebar 
+keywords: asa a800, detailed installation 
+summary: 本节提供了安装系统的详细分步说明。 
+---
+= 详细步骤—ASA A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此页面提供了有关安装ASA A800系统的详细分步说明。
+
+
+
+== 第 1 步：准备安装
+
+要安装系统、您需要创建帐户并注册系统。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
+
+您需要有权访问 link:https://hwu.netapp.com["NetApp Hardware Universe"^] （ HWU ），了解有关站点要求以及已配置系统上的追加信息的信息。您可能还希望有权访问 link:http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["适用于您的 ONTAP 版本的发行说明"^] 有关此系统的详细信息，请参见。
+
+.您需要的内容
+您需要在站点上提供以下内容：
+
+* 存储系统的机架空间
+* 2 号十字螺丝刀
+* 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
++
+.. 打开所有框内容的包装。
+.. 记录控制器的系统序列号。
++
+image::../media/drw_ssn_label.png[DRW SSN 标签]
+
+
+
+
+
+.步骤
+. 设置您的帐户：
++
+.. 登录到现有帐户或创建帐户。
+.. 注册（link:https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"^]）您的系统。
+
+
+. 下载并安装 link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^] 在您的笔记本电脑上。
+. 清点并记下收到的缆线数量和类型。
++
+The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 以找到缆线并确定其用途。
+
++
+[cols="1,2,1,2"]
+|===
+| 连接器类型 | 部件号和长度 | 缆线类型 ... | 针对 ... 
+
+
+ a| 
+100 GbE 缆线
+ a| 
+X6621A-05 （ 112-00595 ）， 0.5 米
+ a| 
+image:../media/oie_cable100_gbe_qsfp28.png[""]
+ a| 
+HA 互连
+
+
+
+ a| 
+X6621A-05 （ 112-00595 ）， 0.5 米；
+
+X66211-1 （ 112-00573 ）， 1 米
+ a| 
+集群互连网络
+
+
+
+ a| 
+X66211-2 （ 112-00574 ）， 2 米；
+
+X66211-5 （ 112-00576 ）， 5 米
+ a| 
+存储，数据
+
+
+
+ a| 
+10 GbE 缆线
+ a| 
+X6566B-3-R6 （ 112-00300 ）， 3 米；
+
+X6566B-5-R6 （ 112-00301 ）， 5 米
+ a| 
+数据
+
+
+
+ a| 
+25 GbE 缆线
+ a| 
+X66240A-2 （ 112-00598 ）， 2 米；
+
+X66240A-5 （ 112-00600 ）， 5 米
+ a| 
+数据
+
+
+
+ a| 
+RJ-45 （取决于订单）
+ a| 
+不适用
+ a| 
+image:../media/oie_cable_rj45.png[""]
+ a| 
+管理
+
+
+
+ a| 
+光纤通道
+ a| 
+X66250-2 （ 112-00342 ） 2 米；
+
+X66250-5 （ 112-00344 ） 5 米；
+
+X66250-15 （ 112-00346 ） 15 米；
+
+X66250-30 （ 112-00347 ） 30 米
+ a| 
+image:../media/oie_cable_fc_optical.png[""]
+ a| 
+
+
+
+ a| 
+微型 USB 控制台缆线
+ a| 
+不适用
+ a| 
+image:../media/oie_cable_micro_usb.png[""]
+ a| 
+软件设置期间的控制台连接
+
+
+
+ a| 
+电源线
+ a| 
+不适用
+ a| 
+image:../media/oie_cable_power.png[""]
+ a| 
+启动系统
+
+|===
+. 下载并完成 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工作表"^]。
+
+
+
+
+== 第 2 步：安装硬件
+
+您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
+
+.步骤
+. 根据需要安装导轨套件。
++
+https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-install.html["将 SuperRail 安装到四柱机架中"^]
+
+. 按照导轨套件附带的说明安装并固定系统。
++
+
+NOTE: 您需要了解与系统重量相关的安全问题。
+
++
+image::../media/drw_affa800_weight_caution.png[DRW affa800 重量注意事项]
+
+. 连接缆线管理设备（如图所示）。
++
+image::../media/drw_affa800_install_cable_mgmt.png[DRW affa800 安装缆线管理]
+
+. 将挡板放在系统正面。
+
+
+
+
+== 第 3 步：为控制器布线
+
+需要使用双节点无交换机集群方法或集群互连网络方法为平台的集群布线。您可以选择使用缆线连接到光纤通道或 iSCSI 主机网络或直连存储。此布线并非独占的；您可以使用缆线连接到主机网络和存储。
+
+
+
+=== 所需布线：使用缆线将控制器连接到集群
+
+使用双节点无交换机集群方法或集群互连网络将控制器连接到集群。
+
+
+
+==== 选项 1 ：为双节点无交换机集群布线
+
+控制器上的管理网络端口连接到交换机。HA 互连端口和集群互连端口都连接在两个控制器上。
+
+.开始之前
+有关将系统连接到交换机的信息，请与网络管理员联系。
+
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+.步骤
+. 使用动画或表格中的步骤完成控制器和交换机之间的布线：
++
+.动画—为双节点无交换机集群布线
+video::edc42447-f721-4cbe-b080-ab0c0123a139[panopto]
++
+[cols="10,90"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+image:../media/oie_legend_icon_1_dp.png[""]
+ a| 
+为 HA 互连端口布线：
+
+** e0b 到 e0b
+** e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
+
+
+
+
+ a| 
+image:../media/oie_legend_icon_2_lg.png[""]
+ a| 
+为集群互连端口布线：
+
+** e0a 到 e0a
+** e1a 到 e1aimage:../media/drw_affa800_tnsc_clust_cabling.png[""]
+
+
+
+
+ a| 
+image:../media/oie_legend_icon_3_lp.png[""]
+ a| 
+使用缆线将管理端口连接到管理网络交换机 image:../media/drw_affa800_mgmt_cabling.png[""]
+
+
+
+ a| 
+image:../media/oie_legend_icon_attn_symbol.png[""]
+ a| 
+此时请勿插入电源线。
+
+|===
+. 要执行可选布线，请参见：
++
+** <<Option 1: Connect to a Fibre Channel host>>
+** <<Option 2: Connect to a 10GbE host>>
+** <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
+** <<Option 4: Connect to two direct-attached NS224 drive shelves>>
+
+
+. To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+
+
+
+
+==== 选项 2 ：为有交换机的集群布线
+
+控制器上的集群互连和管理网络端口连接到交换机，而 HA 互连端口则连接到两个控制器上。
+
+.开始之前
+有关将系统连接到交换机的信息，请与网络管理员联系。
+
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+.步骤
+. 使用动画或表格中的步骤完成控制器和交换机之间的布线：
++
+.动画—为有交换机集群布线
+video::49e48140-4c5a-4395-a7d7-ab0c0123a10e[panopto]
++
+[cols="10,90"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+image:../media/oie_legend_icon_1_dp.png[""]
+ a| 
+为 HA 互连端口布线：
+
+** e0b 到 e0b
+** e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
+
+
+
+
+ a| 
+image:../media/oie_legend_icon_2_lg.png[""]
+ a| 
+使用缆线将集群互连端口连接到 100 GbE 集群互连交换机。* e0a * e1aimage:../media/drw_affa800_switched_clust_cabling.png[""]
+
+
+
+ a| 
+image:../media/oie_legend_icon_3_lp.png[""]
+ a| 
+使用缆线将管理端口连接到管理网络交换机 image:../media/drw_affa800_mgmt_cabling.png[""]
+
+
+
+ a| 
+image:../media/oie_legend_icon_attn_symbol.png[""]
+ a| 
+此时请勿插入电源线。
+
+|===
+. 要执行可选布线，请参见：
++
+** <<Option 1: Connect to a Fibre Channel host>>
+** <<Option 2: Connect to a 10GbE host>>
+** <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
+** <<Option 4: Connect to two direct-attached NS224 drive shelves>>
+
+
+. To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+
+
+
+
+=== 可选布线：电缆配置相关选项
+
+您可以通过与配置相关的可选布线方式连接到光纤通道或 iSCSI 主机网络或直连存储。此布线并非独占的；您可以使用缆线连接到主机网络和存储。
+
+
+
+==== 选项 1 ：使用缆线连接到光纤通道主机网络
+
+控制器上的光纤通道端口连接到光纤通道主机网络交换机。
+
+.开始之前
+有关将系统连接到交换机的信息，请与网络管理员联系。
+
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+[cols="10,90"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+1.
+ a| 
+使用缆线将端口 2a 至 2D 连接到 FC 主机交换机。image:../media/drw_affa800_fc_host_cabling.png[""]
+
+
+
+ a| 
+2.
+ a| 
+要执行其他可选布线，请选择：
+
+* <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
+* <<Option 4: Connect to two direct-attached NS224 drive shelves>>
+
+
+
+
+ a| 
+3.
+ a| 
+To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+
+|===
+
+
+==== 选项 2 ：使用缆线连接到 10GbE 主机网络
+
+控制器上的 10GbE 端口连接到 10GbE 主机网络交换机。
+
+.开始之前
+有关将系统连接到交换机的信息，请与网络管理员联系。
+
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+[cols="10,90"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+1.
+ a| 
+使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。image:../media/drw_affa800_10gbe_host_cabling.png[""]
+
+
+
+ a| 
+2.
+ a| 
+要执行其他可选布线，请选择：
+
+* <<Option 3: Connect to a single direct-attached NS224 drive shelf>>
+* <<Option 4: Connect to two direct-attached NS224 drive shelves>>
+
+
+
+
+ a| 
+3.
+ a| 
+To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+
+|===
+
+
+==== 选项 3 ：使用缆线将控制器连接到一个驱动器架
+
+您必须使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。
+
+.开始之前
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+使用动画或表格中的步骤将控制器连接到一个磁盘架：
+
+.动画-使用缆线将控制器连接到一个驱动器架
+video::09dade4f-00bd-4d41-97d7-ab0c0123a0b4[panopto]
+[cols="10,90"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+image:../media/oie_legend_icon_1_mb.png[""]
+ a| 
+使用缆线将控制器 A 连接到磁盘架： image:../media/drw_affa800_1shelf_cabling_a.png[""]
+
+
+
+ a| 
+image:../media/oie_legend_icon_2_lo.png[""]
+ a| 
+使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_1shelf_cabling_b.png[""]
+
+|===
+To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+
+
+
+==== 选项 4 ：使用缆线将控制器连接到两个驱动器架
+
+您必须使用缆线将每个控制器连接到两个 NS224 驱动器架上的 NSM 模块。
+
+.开始之前
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+
+
+NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
+
+使用动画或表格中的步骤将控制器连接到两个驱动器架：
+
+.动画-使用缆线将控制器连接到两个驱动器架
+video::fe50ac38-9375-4e6b-85af-ab0c0123a0e0[panopto]
+[cols="10,90"]
+|===
+| 步骤 | 对每个控制器模块执行 
+
+
+ a| 
+image:../media/oie_legend_icon_1_mb.png[""]
+ a| 
+使用缆线将控制器 A 连接到磁盘架： image:../media/drw_affa800_2shelf_cabling_a.png[""]
+
+
+
+ a| 
+image:../media/oie_legend_icon_2_lo.png[""]
+ a| 
+使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_2shelf_cabling_b.png[""]
+
+|===
+To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
+
+
+
+== 第 4 步：完成系统设置和配置
+
+使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，或者直接连接到系统中的控制器，然后连接到管理交换机。
+
+
+
+=== 选项 1 ：如果启用了网络发现，则完成系统设置和配置
+
+如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
+
+.步骤
+. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
++
+允许系统启动。Initial booting may take up to eight minutes.
+
+. 确保您的笔记本电脑已启用网络发现。
++
+有关详细信息，请参见笔记本电脑的联机帮助。
+
+. 使用动画将笔记本电脑连接到管理交换机：
++
+.动画—将笔记本电脑连接到管理交换机
+video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
+. 选择列出的 ONTAP 图标以发现：
++
+image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
+
++
+.. 打开文件资源管理器。
+.. 单击左窗格中的 * 网络 * 。
+.. 右键单击并选择 * 刷新 * 。
+.. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
++
+
+NOTE: XXXXX 是目标节点的系统序列号。
+
++
+此时将打开 System Manager 。
+
+
+
+. 使用 System Manager 引导式设置使用中收集的数据配置系统 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^]。
+. 运行 Config Advisor 以验证系统的运行状况。
+. After you have completed the initial configuration, go to the link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
+
+
+
+
+=== 选项 2 ：如果未启用网络发现，则完成系统设置和配置
+
+如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。
+
+.步骤
+. 为笔记本电脑或控制台布线并进行配置：
++
+.. 使用 N-8-1 将笔记本电脑或控制台上的控制台端口设置为 115200 波特。
++
+
+NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或控制台的联机帮助。
+
+.. 将控制台缆线连接到笔记本电脑或控制台，并使用系统随附的控制台缆线连接控制器上的控制台端口。
++
+image::../media/drw_console_connect_affa800.png[DRW 控制台连接 affa800]
+
+.. 将笔记本电脑或控制台连接到管理子网上的交换机。
++
+image::../media/drw_client_mgmt_subnet_affa800.png[DRW 客户端管理子网 affa800]
+
+.. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
+
+
+. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
++
+允许系统启动。Initial booting may take up to eight minutes.
+
+. 将初始节点管理 IP 地址分配给其中一个节点。
++
+[cols="1,2"]
+|===
+| 如果管理网络具有 DHCP... | 那么 ... 
+
+
+ a| 
+已配置
+ a| 
+记录分配给新控制器的 IP 地址。
+
+
+
+ a| 
+未配置
+ a| 
+.. 使用 PuTTY ，终端服务器或环境中的等效项打开控制台会话。
++
+
+NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制台的联机帮助。
+
+.. 在脚本提示时输入管理 IP 地址。
+
+
+|===
+. 使用笔记本电脑或控制台上的 System Manager 配置集群：
++
+.. 将浏览器指向节点管理 IP 地址。
++
+
+NOTE: 此地址的格式为 +https://x.x.x.x+ 。
+
+.. Configure the system using the data you collected in the link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^]。
+
+
+. 运行 Config Advisor 以验证系统的运行状况。
+. After you have completed the initial configuration, go to the link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
+

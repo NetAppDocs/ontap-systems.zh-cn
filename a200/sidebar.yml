@@ -1,7 +1,6 @@
 ---
 section: a200
 title: AFF A200 系统
-url: "/a200/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF A200 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF A200 维护
   entries:
+  - title: ''
+    url: "/a200/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A200 启动介质
     entries:

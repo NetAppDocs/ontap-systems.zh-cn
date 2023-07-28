@@ -1,0 +1,83 @@
+---
+section: asa900
+title: ASA A900系统
+entries:
+- title: 安装和设置
+  pdf-filename: ASA A900安装和设置
+  entries:
+  - title: 选择安装和设置体验
+    url: "/asa900/install_setup.html"
+  - title: 快速步骤
+    url: "/asa900/install_quick_guide.html"
+  - title: 视频步骤
+    url: "/asa900/install_videos.html"
+  - title: 详细步骤
+    url: "/asa900/install_detailed_guide.html"
+- title: 维护
+  pdf-filename: ASA A900维护
+  entries:
+  - title: 概述
+    url: "/asa900/index.html"
+  - title: 启动介质
+    pdf-filename: ASA A900启动介质
+    entries:
+    - title: 概述
+      url: "/asa900/bootmedia_replace_overview.html"
+    - title: 检查板载加密密钥
+      url: "/asa900/bootmedia_encryption_preshutdown_checks.html"
+    - title: 关闭受损控制器
+      url: "/asa900/bootmedia_impaired_controller_shutdown.html"
+    - title: 更换发生故障的启动介质
+      url: "/asa900/bootmedia_replace.html"
+    - title: 启动恢复映像
+      url: "/asa900/bootmedia_recovery_image.html"
+    - title: 还原 OKM ， NSE 和 NVE
+      url: "/asa900/bootmedia_encryption_restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/asa900/bootmedia_complete_rma.html"
+  - title: 机箱
+    pdf-filename: ASA A900机箱
+    entries:
+    - title: 概述
+      url: "/asa900/chassis_replace_overview.html"
+    - title: 关闭受损控制器
+      url: "/asa900/chassis_replace_shutdown.html"
+    - title: 更换机箱
+      url: "/asa900/chassis_replace_move_hardware.html"
+    - title: 还原并验证配置
+      url: "/asa900/chassis_replace_complete_system_restore_rma.html"
+  - title: 控制器
+    pdf-filename: ASA A900控制器模块
+    entries:
+    - title: 概述
+      url: "/asa900/controller_replace_overview.html"
+    - title: 关闭受损控制器
+      url: "/asa900/controller_replace_shutdown.html"
+    - title: 更换控制器
+      url: "/asa900/controller_replace.html"
+    - title: 还原并验证系统配置
+      url: "/asa900/controller_replace_system_config_restore_and_verify.html"
+    - title: 可重新连接的系统
+      url: "/asa900/controller_replace_recable_reassign_disks.html"
+    - title: 完成系统还原
+      url: "/asa900/controller_replace_complete_system_restoration_rma.html"
+  - title: DIMM
+    url: "/asa900/dimm_replace.html"
+  - title: DCPM
+    url: "/asa900/dcpm_NVRAM11_battery_replace.html"
+  - title: 风扇
+    url: "/asa900/fan_swap_out.html"
+  - title: I/O 模块
+    entries:
+    - title: 更换I/O模块
+      url: "/asa900/pci_cards_and_risers_replace.html"
+    - title: 添加 I/O 模块
+      url: "/asa900/add_io_module.html"
+  - title: LED USB
+    url: "/asa900/led_module_replace.html"
+  - title: NVRAM
+    url: "/asa900/nvram_module_or_nvram_dimm_replacement.html"
+  - title: 电源
+    url: "/asa900/power_supply_swap_out.html"
+  - title: 实时时钟电池
+    url: "/asa900/rtc_battery_replace.html"

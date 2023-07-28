@@ -1,7 +1,6 @@
 ---
 section: fas9000
 title: FAS9000 系统
-url: "/fas9000/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: FAS9000 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: FAS9000 维护
   entries:
+  - title: 概述
+    url: "/fas9000/maintain-overview.html"
   - title: 启动介质
     pdf-filename: FAS9000 启动介质
     entries:
@@ -51,7 +52,7 @@ entries:
       url: "/fas9000/chassis-replace-move-hardware.html"
     - title: 完成更换
       url: "/fas9000/chassis-replace-complete-system-restore-rma.html"
-  - title: 控制器模块
+  - title: 控制器
     pdf-filename: FAS9000 控制器
     entries:
     - title: 概述
@@ -74,20 +75,20 @@ entries:
     url: "/fas9000/fan-swap-out.html"
   - title: I/O 模块
     url: "/fas9000/pci-cards-and-risers-replace.html"
-  - title: LED USB 模块
+  - title: LED USB
     url: "/fas9000/led-module-replace.html"
   - title: NVRAM
     url: "/fas9000/nvram-module-or-nvram-dimm-replacement.html"
   - title: 电源
     url: "/fas9000/power-supply-swap-out.html"
-  - title: RTC 电池
+  - title: 实时时钟电池
     url: "/fas9000/rtc-battery-replace.html"
   - title: X91148A 模块
     pdf-filename: FAS9000 X91148A 模块
     entries:
     - title: 概述
       url: "/fas9000/x91148a-module-install-overview.html"
-    - title: AFF A700 系统，具有开放插槽
+    - title: 在具有打开插槽的系统中添加X91148A模块
       url: "/fas9000/x91148a-modules-with-open-slots-add.html"
-    - title: AFF A700 系统没有打开的插槽
+    - title: 在没有打开插槽的系统中添加带模块的X91148A
       url: "/fas9000/x91148a-modules-with-no-open-slots-add.html"

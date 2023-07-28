@@ -17,7 +17,6 @@ summary: 要更换控制器模块硬件，您必须卸下受损的控制器模�
 
 == 第 1 步：卸下控制器模块
 
-[role="lead"]
 更换控制器模块内部的组件时，必须从机箱中卸下控制器模块。
 
 请确保为这些缆线贴上标签，以便您知道这些缆线来自何处。
@@ -84,7 +83,6 @@ image::../media/drw_a250_remove_airduct_cover.png[DRW A250 拆下通风管盖]
 
 == 第 2 步：移动电源
 
-[role="lead"]
 更换控制器模块时，必须将受损控制器模块中的电源移至更换控制器模块。
 
 . 断开电源。
@@ -132,7 +130,6 @@ CAUTION: 为避免损坏内部连接器，请勿在将电源滑入系统时用�
 
 == 第 3 步：移动风扇
 
-[role="lead"]
 在更换发生故障的控制器模块时，您必须将受损控制器模块中的风扇移至更换模块。
 
 . 通过挤压风扇模块的侧面，然后将风扇模块竖直提出控制器模块来卸下风扇模块。
@@ -156,8 +153,7 @@ image:../media/legend_icon_01.png[""]
 
 == 第 4 步：移动启动介质
 
-[role="lead"]
-在AFF C250中、控制器模块的通风管下方有一个启动介质设备。You must move it from the impaired controller module to the replacement controller module.
+AFF A250 中控制器模块的通风管下方有一个启动介质设备。您必须将其从受损的控制器模块移至更换用的控制器模块。
 
 要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not lose it.
 
@@ -197,7 +193,6 @@ NOTE: 拧紧启动介质上的螺钉时请勿用力，否则可能会使其发�
 
 == 第 5 步：移动 DIMM
 
-[role="lead"]
 要移动 DIMM ，请找到 DIMM 并将其从受损控制器移至更换控制器，然后按照特定步骤顺序进行操作。
 
 image::../media/drw_a250_dimm_replace.png[更换 DRW A250 DIMM]
@@ -223,7 +218,6 @@ DIMM 紧紧固定在插槽中。如果没有，请重新插入 DIMM ，使其与
 
 == 第 6 步：移动夹层卡
 
-[role="lead"]
 要移动夹层卡，您必须从端口中拔下布线以及任何 QSFP 和 SFP ，将夹层卡移至更换用的控制器，将所有 QSFP 和 SFP 重新安装到端口上，并为端口布线。
 
 . 找到受损控制器模块中的夹层卡并将其移动。
@@ -277,7 +271,6 @@ NOTE: 拧紧夹层卡上的螺钉时请勿用力，否则可能会使其发生�
 
 == 第 7 步：移动 NV 电池
 
-[role="lead"]
 更换控制器模块时，必须将 NV 电池从受损控制器模块移至更换控制器模块。
 
 . 找到 NVMEM 电池并将其从受损控制器模块移至更换用的控制器模块。
@@ -326,7 +319,6 @@ image:../media/legend_icon_04.png[""]
 
 == 第 8 步：安装控制器模块
 
-[role="lead"]
 将所有组件从受损控制器模块移至更换控制器模块后，您必须将更换控制器模块安装到机箱中，然后将其启动至维护模式。
 
 您可以使用下图或写入的步骤在机箱中安装替代控制器模块。

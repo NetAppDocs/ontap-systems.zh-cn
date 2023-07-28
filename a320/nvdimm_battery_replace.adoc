@@ -1,7 +1,7 @@
 ---
 permalink: a320/nvdimm-battery-replace.html 
 sidebar: sidebar 
-keywords: aff, a320, aff a320, replace, nvdimm, battery, remove, controller, module, reinstall, shut, down, impair, diagnostic, operation, replace the nvdimm battery, shut down the impaired controller, remove the controller module, replace the nvdimm battery, install the controller module, run diagnostics, restore the controller module to operation after running diagnostics 
+keywords: aff, a320, aff a320, replace, nvdimm, battery, remove, controller, module, reinstall, shut, down, impair, operation, replace the nvdimm battery, shut down the impaired controller, remove the controller module, replace the nvdimm battery, install the controller module, restore the controller module to operation 
 summary: 要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。 
 ---
 = 更换 NVDIMM 电池— AFF A320
@@ -126,7 +126,7 @@ image::../media/drw_a320_nvbat_move_animated_gif.png[DRW A320 nvbat move 动画 
 
 == 第 4 步：安装控制器模块
 
-更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
+更换控制器模块中的组件后、必须将控制器模块重新安装到机箱中、然后启动它。
 
 . 如果尚未关闭控制器模块后部的通风管，请将盖板重新安装到 PCIe 卡上。
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
@@ -158,41 +158,15 @@ NOTE: 锁定机制臂滑入机箱。
 .. 释放闩锁，将控制器模块锁定到位。
 .. 已重新连接电源。
 .. 如果尚未重新安装缆线管理设备，请重新安装该设备。
-.. 按 `Ctrl-C` 以中断正常启动过程。
 
 
 
 
 
 
-== 第 5 步：运行诊断
+== Step 5: Restore the controller module to operation
 
-更换系统中的某个组件后，您应对该组件运行诊断测试。
-
-您的系统必须处于 LOADER 提示符处，才能启动诊断。
-
-诊断过程中的所有命令都是从要更换组件的控制器发出的。
-
-. 如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `ssystem node halt -node node_name`
-+
-问题描述命令后，您应等待系统停留在 LOADER 提示符处。
-
-. 在 LOADER 提示符处，访问专为系统级诊断而设计的特殊驱动程序以正常运行： `boot_diags`
-. 从显示的菜单中选择 * 扫描系统 * 以启用运行诊断测试。
-. 从显示的菜单中选择 * 测试系统 * 以运行诊断测试。
-. 根据上一步的结果继续操作：
-+
-** 如果扫描显示问题，请更正问题描述，然后重新运行扫描。
-** 如果扫描未报告任何故障，请从菜单中选择重新启动以重新启动系统。
-
-
-
-
-
-
-== 第 6 步：运行诊断后，将控制器模块还原为正常运行
-
-完成诊断后，您必须重新对系统进行配置，交还控制器模块，然后重新启用自动交还。
+您必须重新对系统进行数据恢复、交还控制器模块、然后重新启用自动交还。
 
 . 根据需要重新对系统进行布线。
 +
@@ -204,6 +178,6 @@ NOTE: 锁定机制臂滑入机箱。
 
 
 
-== 第 7 步：将故障部件退回 NetApp
+== 第 6 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

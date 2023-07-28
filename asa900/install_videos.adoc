@@ -1,0 +1,33 @@
+---
+permalink: asa900/install_videos.html 
+sidebar: sidebar 
+keywords: ASA A900 
+summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
+---
+= 视频步骤- ASA A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。
+
+
+
+== 视频：硬件安装和布线，共两个视频之一
+
+以下视频显示了如何安装新系统并为其布线。
+
+.动画—AFF A900安装和设置说明
+video::4c222e90-864b-4435-9405-adf200112f3e[panopto]
+
+NOTE: ASA A900使用与AFF A900系统相同的安装操作步骤。
+
+
+
+== 视频二：执行端到端软件配置
+
+以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
+
+video::WAE0afWhj1c?[youtube]

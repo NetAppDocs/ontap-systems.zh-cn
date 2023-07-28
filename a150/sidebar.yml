@@ -1,7 +1,6 @@
 ---
 section: a150
 title: AFF A150系统
-url: "/a150/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF A150安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF A150维护
   entries:
+  - title: 概述
+    url: "/a150/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A150启动介质
     entries:
@@ -44,7 +45,7 @@ entries:
       url: "/a150/chassis-replace-overview.html"
     - title: 关闭受损控制器
       url: "/a150/chassis-replace-shutdown.html"
-    - title: 更换硬件
+    - title: 更换机箱
       url: "/a150/chassis-replace-move-hardware.html"
     - title: 还原配置
       url: "/a150/chassis-replace-complete-system-restore-rma.html"
@@ -55,7 +56,7 @@ entries:
       url: "/a150/controller-replace-overview.html"
     - title: 关闭受损控制器
       url: "/a150/controller-replace-shutdown.html"
-    - title: 更换控制器硬件
+    - title: 更换控制器
       url: "/a150/controller-replace-move-hardware.html"
     - title: 还原系统配置
       url: "/a150/controller-replace-system-config-restore-and-verify.html"

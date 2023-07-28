@@ -1,7 +1,6 @@
 ---
 indexpage:
-  lead: NetApp's AFF and FAS storage systems provide leading-edge, enterprise-class,
-    scale-out all flash or hybrid storage with the industry's most advanced data management.使用此站点上的文档安装，扩展，升级和维护
+  lead: NetApp的AFF和FAS以及全SAN阵列存储系统提供行业最先进的数据管理功能、可提供领先的企业级横向扩展全闪存或混合存储。使用此站点上的文档安装，扩展，升级和维护
     AFF ， FAS 或所有 SAN 阵列系统。
   tiles:
   - title: 入门
@@ -10,103 +9,43 @@ indexpage:
       url: "/whats-new.html"
     - title: 快速入门
       url: "/get-up-and-run.html"
-    - title: AFF A系列系统数据表
-      url: https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf
-    - title: AFF C系列系统数据表
-      url: https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf
-    - title: FAS 系统数据表
-      url: https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf
-    - title: AFF 和FAS 存储数据表
-      url: https://www.netapp.com/data-storage/disk-shelves-storage-media/
     - title: "《 ONTAP 发行说明》"
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
-  - title: AFF A系列系统
+  - title: 存储平台
     links:
-    - title: AFF A150
-      url: "/a150/index.html"
-    - title: AFF A220
-      url: "/a220/index.html"
-    - title: AFF A250
-      url: "/a250/index.html"
-    - title: AFF A400
-      url: "/a400/index.html"
-    - title: AFF A700
-      url: "/a700/index.html"
-    - title: AFF A800
-      url: "/a800/index.html"
-    - title: AFF A900
-      url: "/a900/index.html"
-  - title: AFF C系列系统
+    - title: AFF A系列系统
+      url: "/aff-aseries/index.html"
+    - title: AFF C系列系统
+      url: "/aff-cseries/index.html"
+    - title: ASA A系列系统
+      url: "/allsan-a-series/index.html"
+    - title: FAS 系统
+      url: "/fas/index.html"
+    - title: 可用性已终止的系统
+      url: "/endofavail/index.html"
+  - title: 网络
     links:
-    - title: AFF C190
-      url: "/c190/index.html"
-    - title: AFF C250
-      url: "/c250/index.html"
-    - title: AFF C400
-      url: "/c400/index.html"
-    - title: AFF C800
-      url: "/c800/index.html"
-  - title: FAS 系统
-    links:
-    - title: FAS500f
-      url: "/fas500f/index.html"
-    - title: FAS2700
-      url: "/fas2700/index.html"
-    - title: FAS2800
-      url: "/fas2800/index.html"
-    - title: FAS8300
-      url: "/fas8300/index.html"
-    - title: FAS8700
-      url: "/fas8300/index.html"
-    - title: FAS9000
-      url: "/fas9000/index.html"
-    - title: FAS9500
-      url: "/fas9500/index.html"
-  - title: 可用性已终止的系统
-    links:
-    - title: AFF A200
-      url: "/a200/index.html"
-    - title: AFF A300
-      url: "/a300/index.html"
-    - title: AFF A320
-      url: "/a320/index.html"
-    - title: AFF A700s
-      url: "/a700s/index.html"
-    - title: FAS2600
-      url: "/fas2600/index.html"
-    - title: FAS8200
-      url: "/fas8200/index.html"
-  - title: 支持的交换机
-    links:
-    - title: Broadcom 支持的 BES-53248
-      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
-    - title: Cisco 9336C-x2
-      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
-    - title: 共享配置中的 Cisco 936-x2
-      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
-    - title: NVIDIA SN2100
-      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/configure-overview-sn2100-storage.html
-    - title: 可用性终止的交换机
-      url: https://docs.netapp.com/us-en/ontap-systems-switches/overview-eod.html
-  - title: 相关ONTAP 文档
+    - title: 驱动器架
+      url: "/drive-shelves/index.html"
+    - title: 交换机
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/index.html
+  - title: 文档资源
     links:
     - title: 平台升级(大多数系统)
       url: https://docs.netapp.com/us-en/ontap-systems-upgrade/index.html
     - title: 平台升级(MetroCluster 配置)
       url: https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html
-    - title: ONTAP 软件文档
+    - title: ONTAP 软件
       url: https://docs.netapp.com/us-en/ontap/index.html
+    - title: Digital Advisor
+      url: https://docs.netapp.com/us-en/active-iq/index.html
   - title: 工具和支持
     links:
-    - title: NetApp Hardware Universe
-      url: https://hwu.netapp.com/
-    - title: NetApp Active IQ Digital Advisor
-      url: https://docs.netapp.com/us-en/active-iq/index.html
-    - title: NetApp Active IQ 数字顾问
-      url: https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor
     - title: NetApp 互操作性表
       url: https://mysupport.netapp.com/matrix/#welcome
     - title: NetApp Hardware Universe
       url: https://hwu.netapp.com/
     - title: NetApp 知识库
       url: https://kb.netapp.com/
+    - title: Active IQ （需要登录）
+      url: https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor

@@ -1,7 +1,6 @@
 ---
 section: sas3
-title: 带有IOM12/IOM12B模块的SAS磁盘架
-url: "/sas3/index.html"
+title: SAS磁盘架
 entries:
 - title: 安装并布线
   pdf-filename: 使用IOM12/IOM2B模块的磁盘架安装和布线
@@ -22,17 +21,17 @@ entries:
       url: "/sas3/install-cabling-rules.html"
     - title: 多路径HA的布线工作表和示例
       url: "/sas3/install-cabling-worksheets-examples-multipath.html"
-    - title: 使用内部存储的平台的布线工作表和示例
+    - title: 使用内部存储的平台的布线工作表
       url: "/sas3/install-cabling-worksheets-examples-fas2600.html"
     - title: 四路径HA的布线工作表和示例
       url: "/sas3/install-worksheets-examples-quadpath.html"
-    - title: 多路径连接的布线工作表模板
+    - title: 多路径连接布线工作表
       url: "/sas3/install-cabling-worksheet-template-multipath.html"
-    - title: 四路径连接的布线工作表模板
+    - title: 四路径连接的布线工作表
       url: "/sas3/install-cabling-worksheet-template-quadpath.html"
-    - title: 如何读取多路径连接所需的工作表布线
+    - title: 如何阅读多路径连接工作表
       url: "/sas3/install-cabling-worksheets-how-to-read-multipath.html"
-    - title: 如何读取工作表以进行四路径连接
+    - title: 如何阅读四路径连接工作表
       url: "/sas3/install-cabling-worksheets-how-to-read-quadpath.html"
 - title: 维护
   pdf-filename: 具有IOM12/IOM12B模块的磁盘架会进行维护

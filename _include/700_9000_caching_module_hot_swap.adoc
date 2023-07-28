@@ -1,0 +1,133 @@
+= 
+:allow-uri-read: 
+
+
+NVMe SSD FlashCache 模块（ FlashCache 或缓存模块）仅位于 FAS9000 系统插槽 6 中 NVRAM10 模块的正面。从 ONTAP 9.4 开始，您可以从同一个或不同的受支持供应商热插拔具有相同容量的缓存模块。
+
+.开始之前
+您的存储系统必须满足特定条件，具体取决于您的情况：
+
+* 它必须具有与要安装的缓存模块对应的操作系统。
+* 它必须支持缓存容量。
+* 替换的缓存模块必须与发生故障的缓存模块具有相同的容量，但可以来自其他受支持的供应商。
+* 存储系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 通过缓存模块正面的琥珀色警示 LED ，在插槽 6 中找到故障缓存模块。
+. 按照以下步骤准备要更换的缓存模块插槽：
++
+.. 对于 ONTAP 9.7 及更早版本：
++
+... 记下目标节点上的缓存模块容量，部件号和序列号： `ssystem node run local sysconfig -av 6`
+... 在管理员权限级别中，准备要更换的目标 NVMe 插槽，在系统提示是否继续时回答 `y` ： `ssystem controller slot module replace -node _node_name -slot slot_number_` 以下命令会准备 node1 上的插槽 6-2 进行更换，并显示一条消息，指出可以安全更换：
++
+[listing]
+----
+::> system controller slot module replace -node node1 -slot 6-2
+
+Warning: NVMe module in slot 6-2 of the node node1 will be powered off for replacement.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully powered off.  It can now be safely replaced.
+After the replacement module is inserted, use the "system controller slot module insert" command to place the module into service.
+----
+... 使用 system controller slot module show 命令显示插槽状态。
++
+NVMe 插槽状态会在需要更换的缓存模块的屏幕输出中显示 Waiting for-replacement 。
+
+
+
+.. 对于 ONTAP 9.8 及更高版本：
++
+... 记下目标节点上的缓存模块容量，部件号和序列号： `ssystem node run local sysconfig -av 6`
+... 在管理权限级别中，准备要删除的目标 NVMe 插槽，并在系统提示是否继续时回答 `y` ： `ssystem controller slot module remove -node node_name -slot slot_number` 以下命令会准备 node1 上的插槽 6-2 以进行删除，并显示一条消息，指出可以安全删除：
++
+[listing]
+----
+::> system controller slot module remove -node node1 -slot 6-2
+
+Warning: SSD module in slot 6-2 of the node node1 will be powered off for removal.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+... 使用 `ssystem controller slot module show` 命令显示插槽状态。
++
+对于需要更换的缓存模块， NVMe 插槽状态会在屏幕输出中显示 `powed-off` 。
+
+
+
+
+
++
+
+NOTE: 请参见 https://docs.netapp.com/us-en/ontap-cli-9121/["命令手册页"^] for your version of ONTAP for more details.
+
+. 删除缓存模块：
++
+image::../media/drw_9000_remove_flashcache.png[DRW 9000 删除闪存]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+橙色释放按钮。
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+缓存模块凸轮把手。
+
+|===
++
+.. 按下缓存模块正面的橙色释放按钮。
++
+
+NOTE: 请勿使用带编号和字母的 I/O 凸轮闩锁弹出缓存模块。带编号和字母的 I/O 凸轮闩锁可弹出整个 NVRAM10 模块，而不是缓存模块。
+
+.. 旋转凸轮把手，直到缓存模块开始滑出 NVRAM10 模块。
+.. 将凸轮把手竖直轻轻拉向您，以从 NVRAM10 模块中卸下缓存模块。
++
+从 NVRAM10 模块中删除缓存模块时，请务必为其提供支持。
+
+
+
+. 安装缓存模块：
++
+.. 将缓存模块的边缘与 NVRAM10 模块中的开口对齐。
+.. 将缓存模块轻轻推入托架，直到凸轮把手啮合为止。
+.. 旋转凸轮把手，直到其锁定到位。
+
+
+. 使用 `ssystem controller slot module insert` 命令将替代缓存模块置于联机状态，如下所示：
++
+以下命令会为 node1 上的插槽 6-2 做好开机准备，并显示一条消息，指出已打开电源：
+
++
+[listing]
+----
+::> system controller slot module insert -node node1 -slot 6-2
+
+Warning: NVMe module in slot 6-2 of the node localhost will be powered on and initialized.
+Do you want to continue? (y|n): `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+. 使用 `ssystem controller slot module show` 命令验证插槽状态。
++
+确保命令输出将插槽 6-1 或 6-2 的状态报告为 `power-on` 并做好操作准备。
+
+. 确认替代缓存模块已联机并已识别，然后目视确认琥珀色警示 LED 未亮起： `ssysconfig -av slot_number`
++
+
+NOTE: 如果将缓存模块替换为其他供应商提供的缓存模块，则新的供应商名称将显示在命令输出中。
+
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"^] 第页，了解更多信息。
+

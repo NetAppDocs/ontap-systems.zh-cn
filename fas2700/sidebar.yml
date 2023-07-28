@@ -1,7 +1,6 @@
 ---
 section: fas2700
 title: FAS2700 系统
-url: "/fas2700/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: FAS2700 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: FAS2700 维护
   entries:
+  - title: 概述
+    url: "/fas2700/maintain-overview.html"
   - title: 启动介质
     pdf-filename: FAS2700 启动介质
     entries:

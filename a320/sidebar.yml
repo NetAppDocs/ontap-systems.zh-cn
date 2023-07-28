@@ -1,7 +1,6 @@
 ---
 section: a320
 title: AFF A320 系统
-url: "/a320/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF A320 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF A320 维护
   entries:
+  - title: 概述
+    url: "/a320/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A320 启动介质
     entries:

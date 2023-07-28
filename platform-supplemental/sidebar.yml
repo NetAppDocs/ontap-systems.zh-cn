@@ -2,24 +2,6 @@
 section: platform-supplemental
 title: 其他平台过程
 entries:
-- title: 系统级诊断
-  entries:
-  - title: 简介
-    url: "/platform-supplemental/sldiag-introduction.html"
-  - title: 要求
-    url: "/platform-supplemental/sldiag-requirements.html"
-  - title: 如何使用命令行帮助
-    url: "/platform-supplemental/sldiag-use-cli-help.html"
-  - title: 运行系统安装诊断
-    url: "/platform-supplemental/sldiag-system-installation-diagnostics.html"
-  - title: 运行系统崩溃诊断
-    url: "/platform-supplemental/sldiag-system-panic-diagnostics.html"
-  - title: 运行系统响应缓慢诊断
-    url: "/platform-supplemental/sldiag-slow-system-diagnostics.html"
-  - title: 运行硬件安装诊断
-    url: "/platform-supplemental/sldiag-hardware-installation-diagnostics.html"
-  - title: 运行设备故障诊断
-    url: "/platform-supplemental/sldiag-device-failure-diagnostics.html"
 - title: SuperRail 套件
   url: "/platform-supplemental/superrail-install.html"
 - title: AFF A700/FAS9000 双柱导轨套件

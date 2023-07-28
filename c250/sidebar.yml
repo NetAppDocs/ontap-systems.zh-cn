@@ -1,7 +1,6 @@
 ---
 section: c250
 title: AFF C250系统
-url: "/c250/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF C250安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF C250维护
   entries:
+  - title: 概述
+    url: "/c250/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF C250启动介质
     entries:

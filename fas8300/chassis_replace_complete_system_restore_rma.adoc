@@ -2,7 +2,7 @@
 permalink: fas8300/chassis-replace-complete-system-restore-rma.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, shut, chassis, controller, replace, remove, swap, verify, install, power, supply, metrocluster, aggregates, replacement, process, equipment, rack, ha, state, system 
-summary: 您必须验证机箱的 HA 状态，运行诊断并将故障部件退回给 NetApp ，如套件随附的 RMA 说明中所述。 
+summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。 
 ---
 = 完成还原和更换过程— FAS8300 和 FAS8700
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您必须验证机箱的 HA 状态，运行诊断并将故障部件退�
 
 
 [role="lead"]
-您必须验证机箱的 HA 状态，运行诊断并将故障部件退回给 NetApp ，如套件随附的 RMA 说明中所述。
+您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。
 
 
 
@@ -46,34 +46,7 @@ ha-state 的值可以是以下值之一：
 
 
 
-== 第 2 步：运行诊断
-
-更换系统中的某个组件后，您应对该组件运行诊断测试。
-
-您的系统必须处于 LOADER 提示符处，才能启动诊断。
-
-诊断过程中的所有命令都是从要更换组件的控制器发出的。
-
-.步骤
-. 如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `ssystem node halt -node _node_name_`
-+
-问题描述命令后，您应等待系统停留在 LOADER 提示符处。
-
-. 在 LOADER 提示符处，访问专为系统级诊断而设计的特殊驱动程序以正常运行： `boot_diags`
-. 从显示的菜单中选择 * 扫描系统 * 以启用运行诊断测试。
-. 从显示的菜单中选择 * 测试系统 * 以运行诊断测试。
-. 从各种子菜单中选择一个或多个测试。
-. 根据上一步的结果继续操作：
-+
-** 如果测试失败，请更正此故障，然后重新运行此测试。
-** 如果测试未报告任何故障，请从菜单中选择重新启动以重新启动系统。
-
-
-
-
-
-
-== 第 3 步：切回双节点 MetroCluster 配置中的聚合
+== 第2步：在双节点MetroCluster配置中切回聚合
 
 在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine （ SVM ）现在处于活动状态，并从本地磁盘池提供数据。
 
@@ -131,6 +104,6 @@ Remote: cluster_A configured      		normal
 
 
 
-== 第 4 步：完成更换过程
+== 第3步：完成更换过程
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

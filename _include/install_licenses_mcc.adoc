@@ -5,7 +5,9 @@
 如果受损节点正在使用需要标准（节点锁定）许可证的 ONTAP 功能，则必须为 _replacement_ 节点安装新许可证。对于具有标准许可证的功能，集群中的每个节点都应具有自己的功能密钥。
 
 .关于此任务
-在安装许可证密钥之前， _replacement_ 节点仍可使用需要标准许可证的功能。但是，如果受损节点是集群中唯一具有此功能许可证的节点，则不允许更改此功能的配置。此外，在节点上使用未经许可的功能可能会使您不符合您的许可协议，因此您应尽快在 _replacement_ 节点上安装替代许可证密钥。
+在安装许可证密钥之前，需要标准许可证的功能仍可供替代节点使用。但是，如果受损节点是集群中唯一具有此功能许可证的节点，则不允许更改此功能的配置。
+
+此外，在节点上使用未经许可的功能可能会使您不符合您的许可协议，因此您应尽快在替代节点上安装替代许可证密钥。
 
 许可证密钥必须采用 28 个字符的格式。
 
@@ -13,17 +15,12 @@
 
 如果节点采用 MetroCluster 配置，并且站点上的所有节点均已更换，则在切回之前，必须在 _replacement_ 节点上安装许可证密钥。
 
-. 如果您需要新的许可证密钥，请在 NetApp 支持站点的软件许可证下的我的支持部分中获取替代许可证密钥。
-+
-https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]
-
+.步骤
+. If you need new license keys, obtain replacement license keys on the https://mysupport.netapp.com/site/global/dashboard["NetApp 支持站点"] in the My Support section under Software licenses.
 +
 
 NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文件中的电子邮件地址。如果您未能在 30 天内收到包含许可证密钥的电子邮件，应联系技术支持。
 
-
-
-.步骤
 . 安装每个许可证密钥： ` + system license add -license-code license-key ， license-key...+`
 . 如果需要，删除旧许可证：
 +

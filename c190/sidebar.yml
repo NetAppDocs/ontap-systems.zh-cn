@@ -17,6 +17,8 @@ entries:
 - title: 维护
   pdf-filename: AFF C190 维护
   entries:
+  - title: 概述
+    url: "/c190/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF C190 启动介质
     entries:

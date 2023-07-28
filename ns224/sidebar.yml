@@ -1,7 +1,6 @@
 ---
 section: ns224
 title: NS224 磁盘架
-url: "/ns224/index.html"
 entries:
 - title: 安装并布线
   pdf-filename: NS224 磁盘架安装和布线
@@ -21,6 +20,8 @@ entries:
     url: "/ns224/service-replace-dimm.html"
   - title: 驱动器
     url: "/ns224/service-replace-drive.html"
+  - title: 驱动器架LED
+    url: "/ns224/service-monitor-leds.html"
   - title: 风扇
     url: "/ns224/service-replace-fan.html"
   - title: 热移除磁盘架

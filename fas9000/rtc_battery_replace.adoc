@@ -1,10 +1,10 @@
 ---
 permalink: fas9000/rtc-battery-replace.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, replace, real, time, battery, shut, down, impaired, node, controller, metrocluster, module, rtc, battery, reinstall, date, time, complete, process 
+keywords: fas9000, replace, real, time, battery, shut, down, impaired, node, controller, metrocluster, module, rtc, battery, reinstall, date, time, complete, process 
 summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。 
 ---
-= 更换实时时钟电池
+= 更换实时时钟电池- AFF 9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

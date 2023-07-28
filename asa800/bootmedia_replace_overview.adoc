@@ -1,0 +1,21 @@
+---
+permalink: a800/bootmedia-replace-overview.html 
+sidebar: sidebar 
+keywords: asa a800, replace the boot media 
+summary: 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。 
+---
+= 更换启动介质概述- ASA A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+* 请务必在正确的控制器上应用以下步骤中的命令：
++
+** 受损 _ 控制器是要在其中执行维护的控制器。
+** _health_ 控制器是受损控制器的 HA 配对控制器。
+
+
+

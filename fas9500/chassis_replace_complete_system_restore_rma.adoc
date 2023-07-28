@@ -1,8 +1,8 @@
 ---
 permalink: fas9500/chassis_replace_complete_system_restore_rma.html 
 sidebar: sidebar 
-keywords: aff fas9500, verify and set HA state, run diagnostics, complete the replacement process 
-summary: 您必须验证机箱的 HA 状态，运行诊断并将故障部件退回给 NetApp ，如套件随附的 RMA 说明中所述。 
+keywords: aff fas9500, verify and set HA state, complete the replacement process 
+summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。 
 ---
 = 还原并验证配置—FAS9500
 :allow-uri-read: 
@@ -66,124 +66,6 @@ NOTE: 作为最佳实践、您应执行以下操作：
 ====
 
 
-== 第 3 步：运行系统级诊断
-
-安装新机箱后，应运行互连诊断。
-
-.开始之前
-您的系统必须处于 LOADER 提示符处，才能启动系统级诊断。
-
-诊断过程中的所有命令都是从要更换组件的节点发出的。
-
-. 如果要服务的节点不在 LOADER 提示符处，请执行以下步骤：
-+
-.. 从显示的菜单中选择维护模式选项。
-.. 在节点启动至维护模式后，暂停节点： `halt`
-+
-问题描述命令后，您应等待系统停留在 LOADER 提示符处。
-
-+
-
-NOTE: 在启动过程中，您可以安全地响应 `y` 提示：
-
-
-
-. 如果采用 HA 配置，请在第二个节点上重复上述步骤。
-+
-
-NOTE: 两个控制器必须处于维护模式才能运行互连测试。
-
-. 在 LOADER 提示符处，访问专为系统级诊断而设计的特殊驱动程序以正常运行： `boot_diags`
-+
-在启动过程中，您可以安全地对提示 `y` 做出响应，直到显示维护模式提示符（ * > ）为止。
-
-. 从维护模式提示符处启用互连诊断测试： `sldiag device modify -dev interconnect -SEL enable`
-+
-默认情况下，互连测试处于禁用状态，必须启用才能单独运行。
-
-. 从维护模式提示符处运行互连诊断测试： `sldiag device run -dev interconnect`
-+
-您只需要从一个控制器运行互连测试。
-
-. 验证更换机箱是否未导致硬件问题： `sldiag device status -dev interconnect -long -state failed`
-+
-如果没有测试失败，则系统级诊断会返回到提示符，或者会列出因测试组件而导致的失败的完整状态。
-
-. 根据上一步的结果继续操作。
-
-
-|===
-| 如果系统级诊断测试 ... | 那么 ... 
-
-
- a| 
-已完成，无任何故障
- a| 
-. 清除状态日志： `sldiag device clearstatus`
-. 验证是否已清除日志： `sldiag device status`
-+
-此时将显示以下默认响应：
-
-+
-[listing]
-----
-SLDIAG: No log messages are present.
-----
-. 在两个控制器上退出维护模式： `halt`
-+
-系统将显示 LOADER 提示符。
-
-+
-
-NOTE: 您必须在两个控制器上退出维护模式，然后再继续执行任何操作。
-
-. 在 LOADER 提示符处对两个控制器输入以下命令： `bye`
-. 使节点恢复正常运行。
-
-
-|===
-|===
-| 如果您的系统运行的是 ONTAP | 那么 ... 
-
-
- a| 
-集群中有两个节点
- a| 
-问题描述 以下命令：`node：：> cluster ha modify -configured true``node：：> storage failover modify -node node0 -enabled true`
-
-
-
- a| 
-集群中的节点数超过两个
- a| 
-问题描述 此命令：``node：> storage failover modify -node node0 -enabled true``
-
-
-
- a| 
-在独立配置中
- a| 
-您在这项特定任务中没有其他步骤。您已完成系统级诊断。
-
-
-
- a| 
-导致某些测试失败
- a| 
-确定问题的发生原因。
-
-. 退出维护模式： `halt`
-. 执行完全关闭，然后断开电源。
-. 验证您是否已遵循在运行系统级诊断时确定的所有注意事项，缆线是否已牢固连接以及硬件组件是否已正确安装在存储系统中。
-. 重新连接电源，然后打开存储系统的电源。
-. 重新运行系统级诊断测试。
-+
- If the system-level diagnostics test fails again, contact link:http://mysupport.netapp.com/[mysupport.netapp.com^].
-
-
-|===
-
-
-== 第 4 步：将故障部件退回 NetApp
+== 第 3 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

@@ -1,7 +1,7 @@
 ---
 permalink: c250/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
-keywords: aff c250, restore and verify the system configuration, verify and set the ha state of the controller module, run system-level diagnostics 
+keywords: aff c250, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
 ---
 = 还原并验证系统配置—AFF C250
@@ -15,7 +15,7 @@ summary: 完成硬件更换并启动至维护模式后，您可以验证更换�
 
 
 
-== 更换控制器后，设置并验证系统时间
+== 第 1 步：在更换控制器后设置并验证系统时间
 
 您应对照 HA 对中运行状况良好的控制器模块或独立配置中可靠的时间服务器检查更换用的控制器模块上的时间和日期。如果时间和日期不匹配，则必须在更换控制器模块上重置这些值，以防止客户端可能因时间差异而中断。
 
@@ -67,38 +67,4 @@ ha-state 的值可以是以下值之一：
 
 . 如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller ha-state`
 . 确认设置已更改： `ha-config show`
-
-
-
-
-== 第 3 步：运行诊断
-
-更换系统中的某个组件后，您应对该组件运行诊断测试。
-
-您的系统必须处于 LOADER 提示符处，才能启动诊断。
-
-诊断过程中的所有命令都是从要更换组件的控制器发出的。
-
-. 如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `ssystem node halt -node node_name`
-+
-问题描述命令后，您应等待系统停留在 LOADER 提示符处。
-
-. 在 LOADER 提示符处，访问专为系统级诊断而设计的特殊驱动程序以正常运行： `boot_diags`
-. 从显示的菜单中选择 * 扫描系统 * 以启用运行诊断测试。
-. 从显示的菜单中选择 * 测试系统 * 。
-. 根据上一步的结果继续操作：
-+
-** 如果测试失败，请更正此故障，然后重新运行此测试。
-** 如果测试未报告任何故障，请从菜单中选择重新启动以重新启动系统。
-+
-
-NOTE: 在启动过程中，您可能会看到以下提示：
-
-+
-*** 系统 ID 不匹配的提示警告，并要求覆盖系统 ID 。
-*** 一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。You can safely respond `y` to these prompts.
-
-
-
-
 

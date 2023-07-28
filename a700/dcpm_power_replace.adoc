@@ -1,0 +1,50 @@
+---
+permalink: a700/dcpm-power-replace.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, replace, dcpm, module, fail 
+summary: 要更换系统中的 DCPM 模块，您必须从系统中卸下出现故障的 DCPM 模块，然后将其更换为新的 DCPM 模块。 
+---
+= 更换DCPM模块- AFF A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换系统中的 DCPM 模块，您必须从系统中卸下出现故障的 DCPM 模块，然后将其更换为新的 DCPM 模块。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 卸下系统正面的挡板并将其放在一旁。
+. 通过查看系统前面的警示 LED ，找到发生故障的 DCPM 模块。
++
+如果模块出现故障，此 LED 将呈稳定琥珀色。
+
++
+
+NOTE: 必须在卸下 DCPM 模块后五分钟内更换机箱中的 DCPM 模块，否则相关控制器将关闭。
+
+. 按下模块把手上的橙色锁定按钮，然后将 DCPM 模块滑出机箱。
++
+image::../media/drw_9000_remove_nv_battery.png[DRW 9000 取出 NV 电池]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+DCPM 模块橙色锁定按钮
+
+|===
+. 将 DCPM 模块的末端与机箱开口对齐，然后将其轻轻滑入机箱，直到其卡入到位。
++
+
+NOTE: 模块和插槽采用键控方式。请勿强行将模块插入开口。如果模块不易插入，请重新对齐模块并将其滑入机箱。
+
++
+当 DCPM 模块完全固定到机箱中时， DCPM 模块 LED 会亮起。
+
+

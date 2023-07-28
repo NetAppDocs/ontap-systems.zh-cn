@@ -1,0 +1,178 @@
+---
+permalink: a700/chassis-replace-shutdown.html 
+sidebar: sidebar 
+keywords: aff a700, fas9000, chassis replacement, shutdown 
+summary: 要更换机箱，必须关闭控制器。 
+---
+= 关闭控制器- AFF A700
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换机箱，必须关闭控制器。
+
+
+
+== 选项 1 ：关闭控制器
+
+此操作步骤 仅适用于双节点非MetroCluster配置。如果您的系统包含两个以上的节点、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["如何正常关闭和启动四节点集群中的一个HA对"^]。
+
+.开始之前
+您需要：
+
+* ONTAP 的本地管理员凭据。
+* NetApp板载密钥管理(OKM)集群范围的密码短语(如果使用存储加密)。
+* 每个控制器的SP/BMC访问能力。
+* 停止所有客户端/主机访问NetApp系统上的数据。
+* 暂停外部备份作业。
+* 更换所需的工具和设备。
+
+
+
+NOTE: 如果系统是用作FabricPool 云层的NetApp StorageGRID 或ONTAP S3、请参见 https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["《正常关闭和启动存储系统解决方案指南》"] 执行此操作步骤 之后。
+
+
+NOTE: 如果使用的是FlexArray 阵列LUN、请按照特定供应商的存储阵列文档执行此操作步骤 后要对这些系统执行的关闭操作步骤。
+
+
+NOTE: 如果使用SSD、请参见 https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490：(影响：关键) SSD最佳实践：避免关闭电源超过两个月后发生驱动器故障和数据丢失的风险"]
+
+作为关闭之前的最佳实践、您应：
+
+* 执行其他 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["系统运行状况检查"]。
+* 将ONTAP 升级到系统的建议版本。
+* 解决任何问题 https://activeiq.netapp.com/["Active IQ 健康提醒和风险"]。记下系统当前的任何故障、例如系统组件上的LED。
+
+
+.步骤
+. 通过SSH登录到集群、或者使用本地控制台缆线和笔记本电脑/控制台从集群中的任何节点登录。
+. 关闭AutoSupport 并指示系统预计脱机多长时间：
++
+`system node autosupport invoke -node * -type all -messages "MAINT=8h Power Maintenance"`
+
+. 确定所有节点的SP/BMC地址：
++
+`system service-processor show -node * -fields address`
+
+. 退出集群Shell： `exit`
+. 使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP/BMC。
++
+如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。
+
++
+
+NOTE: 打开与每个SP/BMC连接的SSH会话、以便监控进度。
+
+. 暂停集群中的所有节点：
++
+`system node halt -node * -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`。
+
++
+
+NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `system node halt -node * -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+
+. 如果看到、请为集群中的每个控制器输入* y * `_Warning: Are you sure you want to halt node "cluster name-controller number"?
+{y|n}:_`
+. 等待每个控制器暂停、然后显示加载程序提示符。
+. 如果没有PSU开/关开关、请关闭每个PSU或拔下电源插头。
+. 从每个PSU拔下电源线。
+. 验证受损机箱中的所有控制器是否均已关闭。
+
+
+
+
+== 选项 2 ：关闭双节点 MetroCluster 配置中的节点
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+* 如果您使用的是 NetApp 存储加密，则必须按照的 " 将 FIPS 驱动器或 SED 返回到未受保护的模式 " 一节中的说明重置 MSID link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["使用命令行界面概述 NetApp 加密"^]。
+* 您必须在此操作步骤 末尾保持电源处于打开状态，以便为运行正常的控制器供电。
+
+
+.步骤
+. 检查 MetroCluster 状态以确定受损控制器是否已自动切换到运行正常的控制器： `MetroCluster show`
+. 根据是否发生了自动切换，按照下表继续操作：
++
+[cols="1,2"]
+|===
+| 如果控制器受损 ... | 那么 ... 
+
+
+ a| 
+已自动切换
+ a| 
+继续执行下一步。
+
+
+
+ a| 
+未自动切换
+ a| 
+从运行正常的控制器执行计划内切换操作： `MetroCluster switchover`
+
+
+
+ a| 
+未自动切换，您尝试使用 `MetroCluster switchover` 命令进行切换，并且切换已被否决
+ a| 
+查看否决消息，如果可能，请解决问题描述并重试。如果无法解决问题描述问题，请联系技术支持。
+
+|===
+. 在运行正常的集群中运行 `MetroCluster heal -phase aggregates` 命令，以重新同步数据聚合。
++
+[listing]
+----
+controller_A_1::> metrocluster heal -phase aggregates
+[Job 130] Job succeeded: Heal Aggregates is successful.
+----
++
+如果修复被否决，您可以使用 ` override-vetoes` 参数重新发出 `MetroCluster heal` 命令。如果使用此可选参数，则系统将覆盖任何阻止修复操作的软否决。
+
+. 使用 MetroCluster operation show 命令验证操作是否已完成。
++
+[listing]
+----
+controller_A_1::> metrocluster operation show
+    Operation: heal-aggregates
+      State: successful
+Start Time: 7/25/2016 18:45:55
+   End Time: 7/25/2016 18:45:56
+     Errors: -
+----
+. 使用 `storage aggregate show` 命令检查聚合的状态。
++
+[listing]
+----
+controller_A_1::> storage aggregate show
+Aggregate     Size Available Used% State   #Vols  Nodes            RAID Status
+--------- -------- --------- ----- ------- ------ ---------------- ------------
+...
+aggr_b2    227.1GB   227.1GB    0% online       0 mcc1-a2          raid_dp, mirrored, normal...
+----
+. 使用 `MetroCluster heal -phase root-aggregates` 命令修复根聚合。
++
+[listing]
+----
+mcc1A::> metrocluster heal -phase root-aggregates
+[Job 137] Job succeeded: Heal Root Aggregates is successful
+----
++
+如果修复被否决，您可以使用 -override-vetoes 参数重新发出 `MetroCluster heal` 命令。如果使用此可选参数，则系统将覆盖任何阻止修复操作的软否决。
+
+. 在目标集群上使用 `MetroCluster operation show` 命令验证修复操作是否已完成：
++
+[listing]
+----
+
+mcc1A::> metrocluster operation show
+  Operation: heal-root-aggregates
+      State: successful
+ Start Time: 7/29/2016 20:54:41
+   End Time: 7/29/2016 20:54:42
+     Errors: -
+----
+. 在受损控制器模块上，断开电源。
+

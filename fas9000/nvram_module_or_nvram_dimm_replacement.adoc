@@ -4,14 +4,18 @@ sidebar: sidebar
 keywords: aff a700, fas9000, replace, nvram, module, dimm, manually, reassign, system, id, ha, system, disk, two, node, restore, storage, volume, encryption, functionality 
 summary: NVRAM 模块由 NVRAM10 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。 
 ---
-= 更换 NVRAM 模块或 NVRAM DIMM — AFF A700 和 FAS9000
+= 更换NVRAM模块或NVRAM DIMM - FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-NVRAM 模块由 NVRAM10 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。您可以更换发生故障的 NVRAM 模块或 NVRAM 模块中的 DIMM 。要更换发生故障的 NVRAM 模块，您必须将其从机箱中卸下，从 NVRAM 模块中卸下 FlashCache 模块，将 DIMM 移至更换模块，重新安装 FlashCache 模块，然后将更换的 NVRAM 模块安装到机箱中。由于系统 ID 源自 NVRAM 模块，因此，如果更换此模块，则属于此系统的磁盘将重新分配给新的系统 ID 。
+The NVRAM module consists of the NVRAM10 and DIMMs and up to two NVMe SSD Flash Cache modules (FlashCache or caching modules) per NVRAM module.You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.
+
+To replace a failed NVRAM module, you must remove it from the chassis, remove the FlashCache module or modules from the NVRAM module, move the DIMMs to the replacement module, reinstall the FlashCache module or modules, and install the replacement NVRAM module into the chassis.
+
+Because the system ID is derived from the NVRAM module, if replacing the module, disks belonging to the system are reassigned to the new system ID.
 
 * 开始之前 *
 

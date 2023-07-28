@@ -1,10 +1,10 @@
 ---
 permalink: fas9000/dcpm-nvram10-battery-replace.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, replace, destage, controller, power, module, nvram10, battery, dcpm, dispose, return, failed, part 
+keywords: fas9000, replace, destage, controller, power, module, nvram10, battery, dcpm, dispose, return, failed, part 
 summary: 要热插拔包含 NVRAM10 电池的降级控制器电源模块（ DCPM ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。 
 ---
-= 热插拔降级控制器电源模块（ DCPM ）— AFF A700 和 FAS9000
+= 热插拔降级控制器电源模块(DCPM)- FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,7 +17,7 @@ summary: 要热插拔包含 NVRAM10 电池的降级控制器电源模块（ DCPM
 
 
 
-== 更换 DCPM 模块
+== 第 1 步：更换 DCPM 模块
 
 要更换系统中的 DCPM 模块，您必须从系统中卸下出现故障的 DCPM 模块，然后将其更换为新的 DCPM 模块。
 
@@ -58,7 +58,7 @@ NOTE: 模块和插槽采用键控方式。请勿强行将模块插入开口。�
 
 
 
-== 处置电池
+== 第 2 步：处置电池
 
 您必须根据当地有关电池回收或处置的法规处置电池。如果您无法正确处置电池，则必须按照套件随附的 RMA 说明将电池退回 NetApp 。
 
@@ -66,6 +66,6 @@ https://library.netapp.com/ecm/ecm_download_file/ECMP12475945[]
 
 
 
-== 将故障部件退回 NetApp
+== 第 3 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

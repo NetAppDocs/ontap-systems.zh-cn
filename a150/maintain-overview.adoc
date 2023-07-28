@@ -1,0 +1,68 @@
+---
+permalink: a150/maintain-overview.html 
+sidebar: sidebar 
+keywords: aff A150 maintenance, maintenance, repairing a150, repairing aff a150, replace aff a150 components, replace aff a150 components 
+summary: 维护ASA A150硬件 
+---
+= 维护AFF A150硬件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于AFF A150存储系统、您可以对以下组件执行维护过程。
+
+
+
+== 启动介质
+
+启动介质用于存储系统在启动时使用的一组主启动映像文件和一组二级启动映像文件。
+
+
+
+== 缓存模块
+
+如果系统注册了一条AutoSupport (ASUP)消息、指出控制器的缓存模块已脱机、则必须更换该模块。
+
+
+
+== 机箱
+
+机箱是托管所有控制器组件(例如控制器/CPU单元、电源和I/O)的物理机箱
+
+
+
+== 控制器
+
+控制器由主板，固件和软件组成。它控制驱动器并实现ONTAP功能。
+
+
+
+== DIMM
+
+如果存在内存不匹配或 DIMM 发生故障，则必须更换 DIMM （双列直插式内存模块）。
+
+
+
+== 驱动器
+
+驱动器是为数据提供物理存储介质的设备。
+
+
+
+== NVEM电池
+
+控制器附带电池，如果交流电源发生故障，则会保留缓存的数据。
+
+
+
+== 电源
+
+电源可在控制器架中提供冗余电源。
+
+
+
+== 实时时钟电池
+
+实时时钟电池可在断电时保留系统日期和时间信息。

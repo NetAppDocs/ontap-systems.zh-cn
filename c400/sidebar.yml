@@ -1,7 +1,6 @@
 ---
 section: c400
 title: AFF C400系统
-url: "/c400/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF C400安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF C400维护
   entries:
+  - title: 概述
+    url: "/c400/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF C400启动介质
     entries:

@@ -1,0 +1,338 @@
+---
+permalink: a220/controller-replace-recable-reassign-disks.html 
+sidebar: sidebar 
+keywords: fas2700, aff a220, how to recable the system, how to reassign disks 
+summary: 您必须重新配置存储并确认磁盘重新分配。 
+---
+= 重新对系统进行配置并重新分配磁盘- AFF A220
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要完成替换操作步骤并将系统还原到完全运行状态，您必须重新配置存储，确认磁盘重新分配，还原 NetApp 存储加密配置（如果需要）并为新控制器安装许可证。您必须先完成一系列任务，然后才能将系统还原为完全正常运行。
+
+
+
+== 第 1 步：重新对系统进行布线
+
+重新对控制器模块的存储和网络连接进行配线。
+
+.步骤
+. 重新对系统进行布线。
+. 使用验证布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
++
+.. 下载并安装 Config Advisor 。
+.. 输入目标系统的信息，然后单击收集数据。
+.. 单击布线选项卡，然后检查输出。确保显示所有磁盘架且所有磁盘均显示在输出中，以更正您发现的任何布线问题。
+.. 单击相应的选项卡，然后检查 Config Advisor 的输出，以检查其他布线。
+
+
+
+
+
+
+== 第 2 步：重新分配磁盘
+
+如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。在独立系统中，必须手动将 ID 重新分配给磁盘。
+
+您必须为您的配置使用正确的操作步骤：
+
+[cols="1,2"]
+|===
+| 控制器冗余 | 然后使用此操作步骤 ... 
+
+
+ a| 
+HA 对
+ a| 
+<<选项 1 ：验证 HA 系统上的系统 ID 更改>>
+
+
+
+ a| 
+独立
+ a| 
+<<选项 2 ：在 ONTAP 中的独立系统上手动重新分配系统 ID>>
+
+
+
+ a| 
+双节点 MetroCluster 配置
+ a| 
+<<选项 3 ：在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID>>
+
+|===
+
+
+=== 选项 1 ：验证 HA 系统上的系统 ID 更改
+
+您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。
+
+此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
+
+. 如果 _replacement_ 控制器处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`
+. 在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``
+. 请等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行正常的控制器中验证是否已自动分配新的配对系统 ID ： `storage failover show`
++
+在命令输出中，您应看到一条消息，指出受损控制器上的系统 ID 已更改，其中显示了正确的旧 ID 和新 ID 。In the following example, node2 has undergone replacement and has a new system ID of 151759706.
+
++
+[listing]
+----
+node1> `storage failover show`
+                                    Takeover
+Node              Partner           Possible     State Description
+------------      ------------      --------     -------------------------------------
+node1             node2             false        System ID changed on partner (Old:
+                                                  151759755, New: 151759706), In takeover
+node2             node1             -            Waiting for giveback (HA mailboxes)
+----
+. 在运行正常的控制器中，验证是否已保存任何核心转储：
++
+.. 更改为高级权限级别： `set -privilege advanced`
++
+系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
+
+.. 保存任何核心转储： `ssystem node run -node _local-node-name_ partner savecore`
+.. 等待 `savecore`命令完成，然后再发出交还。
++
+您可以输入以下命令来监控 savecore 命令的进度： `ssystem node run -node _local-node-name_ partner savecore -s`
+
+.. 返回到管理权限级别： `set -privilege admin`
+
+
+. 如果您的存储系统配置了存储或卷加密、则必须根据您使用的是板载密钥管理还是外部密钥管理、通过以下过程之一还原存储或卷加密功能：
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
+
+
+. 交还控制器：
++
+.. 从运行正常的控制器中，交还更换的控制器的存储： `storage failover giveback -ofnode _replacement_node_name_`
++
+_replacement_ 控制器将收回其存储并完成启动。
+
++
+如果由于系统 ID 不匹配而提示您覆盖系统 ID ，则应输入 `y` 。
+
++
+
+NOTE: 如果交还被否决，您可以考虑覆盖此否决。
+
++
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["查找适用于您的 ONTAP 9 版本的高可用性配置内容"]
+
+.. 交还完成后，确认 HA 对运行状况良好且可以接管： `storage failover show`
++
+`storage failover show` 命令的输出不应包含 System ID changed on partner 消息。
+
+
+
+. 验证是否已正确分配磁盘： `storage disk show -ownership`
++
+属于 _replacement_ 控制器的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:
+
++
+[listing]
+----
+node1> `storage disk show -ownership`
+
+Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  Pool
+----- ------    ----- ------ -------- -------    -------    -------  ---------  ---
+1.0.0  aggr0_1  node1 node1  -        1873775277 1873775277  -       1873775277 Pool0
+1.0.1  aggr0_1  node1 node1           1873775277 1873775277  -       1873775277 Pool0
+.
+.
+.
+----
+
+
+
+
+=== 选项 2 ：在 ONTAP 中的独立系统上手动重新分配系统 ID
+
+在独立系统中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。
+
+.关于此任务
+
+NOTE: 此操作步骤仅适用于采用独立配置的系统。
+
+.步骤
+. 如果您尚未重新启动 _replacement_ 节点，按 Ctrl-C 中断启动过程，然后从显示的菜单中选择启动到维护模式的选项。
+. 由于系统 ID 不匹配，系统提示您覆盖系统 ID 时，您必须输入 `Y` 。
+. 查看系统 ID ： `disk show -a`
+. 您应记下旧的系统 ID ，此 ID 显示为磁盘所有者列的一部分。
++
+以下示例显示了旧系统 ID 118073209 ：
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK      OWNER                  POOL   SERIAL NUMBER  HOME
+--------    -------------          -----  -------------  -------------
+disk_name    system-1  (118073209)  Pool0  J8XJE9LC       system-1  (118073209)
+disk_name    system-1  (118073209)  Pool0  J8Y478RC       system-1  (118073209)
+.
+.
+.
+
+----
+. 使用从 disk show 命令获取的系统 ID 信息重新分配磁盘所有权： `disk reassign -s old system ID disk reassign -s 118073209`
+. 验证是否已正确分配磁盘： `disk show -a`
++
+属于替代节点的磁盘应显示新的系统 ID 。现在，以下示例将显示 system-1 所拥有的磁盘以及新的系统 ID 118065481 ：
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK      OWNER                  POOL   SERIAL NUMBER  HOME
+--------    -------------          -----  -------------  -------------
+disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
+disk_name    system-1  (118065481)  Pool0  J8Y0TDZC       system-1  (118065481)
+.
+.
+.
+
+----
+. 如果您的存储系统配置了存储或卷加密、则必须根据您使用的是板载密钥管理还是外部密钥管理、通过以下过程之一还原存储或卷加密功能：
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
+
+
+. 启动节点： `boot_ontap`
+
+
+
+
+=== 选项 3 ：在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID
+
+在运行 ONTAP 的双节点 MetroCluster 配置中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。
+
+.关于此任务
+此操作步骤仅适用于运行 ONTAP 的双节点 MetroCluster 配置中的系统。
+
+您必须确保问题描述在此操作步骤中的命令位于正确的节点上：
+
+* 受损节点是指要在其中执行维护的节点。
+* _replacement_ 节点是此操作步骤中更换受损节点的新节点。
+* _health_ 节点是受损节点的 DR 配对节点。
+
+
+.步骤
+. 如果尚未重新启动 _replacement_ 节点，输入 `Ctrl-C` 以中断启动过程，然后从显示的菜单中选择启动到维护模式的选项。
++
+由于系统 ID 不匹配，系统提示您覆盖系统 ID 时，您必须输入 `Y` 。
+
+. 从运行状况良好的节点查看旧系统 ID ： ``MetroCluster node show -fields node-systemID` ， dr-partner-systemID`
++
+在此示例中， Node_B_1 是旧节点，旧系统 ID 为 118073209 ：
+
++
+[listing]
+----
+dr-group-id cluster         node                 node-systemid dr-partner-systemid
+ ----------- --------------------- -------------------- ------------- -------------------
+ 1           Cluster_A             Node_A_1             536872914     118073209
+ 1           Cluster_B             Node_B_1             118073209     536872914
+ 2 entries were displayed.
+----
+. 在受损节点上的维护模式提示符处查看新的系统 ID ： `disk show`
++
+在此示例中，新系统 ID 为 118065481 ：
+
++
+[listing]
+----
+Local System ID: 118065481
+    ...
+    ...
+----
+. 使用从 disk show 命令获取的系统 ID 信息重新分配磁盘所有权（对于 FAS 系统）或 LUN 所有权（对于 FlexArray 系统）： `disk reassign -s old system ID`
++
+在上述示例中，命令为： `disk reassign -s 118073209`
+
++
+系统提示您继续时，您可以回答 `Y` 。
+
+. 验证是否已正确分配磁盘（或 FlexArray LUN ）： `disk show -a`
++
+验证属于 _replacement_ 节点的磁盘是否显示 _replacement_ 节点的新系统 ID 。在以下示例中， system-1 所拥有的磁盘现在显示新的系统 ID 118065481 ：
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK     OWNER                 POOL   SERIAL NUMBER  HOME
+-------    -------------         -----  -------------  -------------
+disk_name   system-1  (118065481) Pool0  J8Y0TDZC       system-1  (118065481)
+disk_name   system-1  (118065481) Pool0  J8Y09DXC       system-1  (118065481)
+.
+.
+.
+----
+. 从运行状况良好的节点中，验证是否已保存任何核心转储：
++
+.. 更改为高级权限级别： `set -privilege advanced`
++
+系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
+
+.. 验证核心转储是否已保存： `ssystem node run -node _local-node-name_ partner savecore`
++
+如果命令输出指示 savecore 正在进行中，请等待 savecore 完成，然后再发出交还。您可以使用 `ssystem node run -node _local-node-name_ partner savecore -s 命令` 监控 savecore 的进度。 </info>
+
+.. 返回到管理权限级别： `set -privilege admin`
+
+
+. 如果 _replacement_ 节点处于维护模式（显示 * > 提示符），请退出维护模式并转到加载程序提示符： `halt`
+. 启动 _replacement_ 节点： `boot_ontap`
+. 在 _replacement_ 节点完全启动后，执行切回： `MetroCluster switchback`
+. 验证 MetroCluster 配置： `MetroCluster node show - fields configuration-state`
++
+[listing]
+----
+node1_siteA::> metrocluster node show -fields configuration-state
+
+dr-group-id            cluster node           configuration-state
+-----------            ---------------------- -------------- -------------------
+1 node1_siteA          node1mcc-001           configured
+1 node1_siteA          node1mcc-002           configured
+1 node1_siteB          node1mcc-003           configured
+1 node1_siteB          node1mcc-004           configured
+
+4 entries were displayed.
+----
+. 在 Data ONTAP 中验证 MetroCluster 配置的运行情况：
++
+.. 检查两个集群上是否存在任何运行状况警报： `ssystem health alert show`
+.. 确认 MetroCluster 已配置且处于正常模式： `MetroCluster show`
+.. 执行 MetroCluster 检查： `MetroCluster check run`
+.. 显示 MetroCluster 检查的结果： `MetroCluster check show`
+.. 运行 Config Advisor 。转到 NetApp 支持站点上的 Config Advisor 页面，网址为 http://support.netapp.com/NOW/download/tools/config_advisor/["support.netapp.com/NOW/download/tools/config_advisor/"]。
++
+运行 Config Advisor 后，查看该工具的输出并按照输出中的建议解决发现的任何问题。
+
+
+
+. 模拟切换操作：
++
+.. 在任何节点的提示符处，更改为高级权限级别： `set -privilege advanced`
++
+当系统提示您继续进入高级模式并显示高级模式提示符（ * > ）时，您需要使用 `y` 进行响应。
+
+.. 使用 -simulate 参数执行切回操作： `MetroCluster switchover -simulate`
+.. 返回到管理权限级别： `set -privilege admin`
+
+
+

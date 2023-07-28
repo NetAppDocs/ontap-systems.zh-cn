@@ -1,0 +1,62 @@
+---
+indexpage:
+  lead: ''
+  tiles:
+  - title: 安装NS224磁盘架
+    links:
+    - title: 热添加磁盘架
+      url: "../ns224/hot-add-shelf.html"
+    - title: 更改磁盘架 ID
+      url: "../ns224/change-shelf-id.html"
+    - title: 将磁盘架作为交换机连接的存储进行布线
+      url: "../ns224/cable-as-switch-attached.html"
+  - title: 安装SAS磁盘架
+    links:
+    - title: 在新存储系统中安装磁盘架
+      url: "../sas3/install-new-system.html"
+    - title: 热添加磁盘架
+      url: "../sas3/install-hot-add-shelf.html"
+    - title: 更改磁盘架 ID
+      url: "../sas3/install-change-shelf-id.html"
+    - title: 将磁盘架热添加到IOM6磁盘架堆栈(混合堆栈)
+      url: "../sas3/iom12-hot-add-mix.html"
+    - title: SAS 布线规则，工作表和示例
+      url: "../sas3/overview-cabling-rules-examples.html"
+  - title: 维护NS224磁盘架
+    links:
+    - title: 启动介质
+      url: "../ns224/service-replace-boot-media.html"
+    - title: DIMM
+      url: "../ns224/service-replace-dimm.html"
+    - title: 驱动器
+      url: "../ns224/service-replace-drive.html"
+    - title: 驱动器架LED
+      url: "../ns224/service-monitor-leds.html"
+    - title: 风扇
+      url: "../ns224/service-replace-fan.html"
+    - title: 热移除磁盘架
+      url: "../ns224/hot-remove-shelf.html"
+    - title: NSM 模块
+      url: "../ns224/service-replace-nsm100.html"
+    - title: 电源
+      url: "../ns224/service-replace-power-supply.html"
+    - title: RTC 电池
+      url: "../ns224/service-replace-rtc-battery.html"
+  - title: 维护SAS磁盘架
+    links:
+    - title: DS224C 或 DS212C 磁盘架中的磁盘驱动器
+      url: "../sas3/service-hot-swap-drive-ds224c-ds212c.html"
+    - title: DS460C 磁盘架中的磁盘驱动器
+      url: "../sas3/service-hot-swap-drive-ds460c.html"
+    - title: DS460C 磁盘架中的驱动器抽盒
+      url: "../sas3/service-replace-drawer-ds460c.html"
+    - title: DS460C磁盘架中的风扇
+      url: "../sas3/service-replace-fan-ds460c.html"
+    - title: 热移除磁盘架
+      url: "../sas3/hot-remove-shelf.html"
+    - title: IOM12/IOM12B模块
+      url: "../sas3/service-hot-swap-iom.html"
+    - title: 电源
+      url: "../sas3/service-hot-swap-power-supply.html"
+    - title: 磁盘架 LED 状态条件
+      url: "../sas3/service-monitor-leds.html"

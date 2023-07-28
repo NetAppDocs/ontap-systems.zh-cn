@@ -1,0 +1,44 @@
+---
+indexpage:
+  lead: 终止提供的系统不再提供购买服务、但仍受支持。
+  tiles:
+  - title: 安装和设置
+    links:
+    - title: AFF A220
+      url: "../a220/install-setup.html"
+    - title: AFF A300
+      url: "../a300/install-setup.html"
+    - title: AFF A320
+      url: "../a320/install-setup.html"
+    - title: AFF A700s
+      url: "../a700s/install-setup.html"
+    - title: FAS8200
+      url: "../fas8200/install-setup.html"
+  - title: 维护您的系统
+    links:
+    - title: AFF A220
+      url: "../a220/maintain-overview.html"
+    - title: AFF A300
+      url: "../a300/maintain-overview.html"
+    - title: AFF A320
+      url: "../a320/maintain-overview.html"
+    - title: AFF A700s
+      url: "../a700s/maintain-overview.html"
+    - title: FAS2600
+      url: "../fas2600/maintain-overview.html"
+    - title: FAS8200
+      url: "../fas8200/maintain-overview.html"
+  - title: 支持的交换机
+    links:
+    - title: Broadcom 支持的 BES-53248
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
+    - title: Cisco 9336C-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
+    - title: 共享配置中的 Cisco 936-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
+  - title: 更多文档资源
+    links:
+    - title: 系统硬件升级
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
+    - title: ONTAP 软件升级
+      url: https://docs.netapp.com/us-en/ontap/upgrade/index.html

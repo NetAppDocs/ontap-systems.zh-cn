@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, boot, recovery, image, two, node, metrocluster, configuration 
 summary: 用于从恢复映像启动受损节点的操作步骤取决于系统是否采用双节点 MetroCluster 配置。 
 ---
-= 启动恢复映像— AFF A700 和 FAS9000
+= 启动恢复映像—FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ summary: 用于从恢复映像启动受损节点的操作步骤取决于系统�
 
 
 
-== 选项 1 在大多数系统中启动恢复映像
+== 选项1：在大多数系统中启动恢复映像
 
 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
 

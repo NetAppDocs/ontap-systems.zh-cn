@@ -1,7 +1,6 @@
 ---
 section: a300
 title: AFF A300 系统
-url: "/a300/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF A300 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF A300 维护
   entries:
+  - title: 概述
+    url: "/a300/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A300 启动介质
     entries:

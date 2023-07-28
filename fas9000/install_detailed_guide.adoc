@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, detailed, guide, prepare, install, hardware, two, node, switchless, cluster, cable, controller, ds212c, ds224c, ns224, drive, shelf, complete, system, setup, configuration, network, discovery 
 summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。 
 ---
-= 详细指南— AFF A700 和 FAS9000
+= 详细指南—FAS9000
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -323,11 +323,11 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png[""]
 
 
 
-=== 选项 2 ：在仅运行 ONTAP 9.8 及更高版本的 AFF A700 和 ASA AFF A700 系统中，使用缆线将控制器连接到一个 NS224 驱动器架
+=== 选项2：使用缆线将控制器连接到仅运行ONTAP 9.8及更高版本的ASA AFF A700系统中的单个NS224驱动器架
 
 必须使用缆线将每个控制器连接到运行系统 ONTAP 9.8 或更高版本的 AFF A700 或 ASA AFF A700 上 NS224 驱动器架上的 NSM 模块。
 
-* 此任务仅限运行 ONTAP 9.8 或更高版本的适用场景 AFF A700 和 ASA AFF A700 。
+* 此任务仅适用于运行ONTAP 9.8或更高版本的 适用场景 ASA AFF A700。
 * The systems must have at least one X91148A module installed in slots 3 and/or 7 for each controller.动画或插图显示了此模块同时安装在插槽 3 和 7 中。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 +
@@ -358,11 +358,11 @@ image::../media/single_NS224_shelf.png[一个 NS224 磁盘架]
 
 
 
-=== 选项 3 ：仅使用缆线将控制器连接到运行 ONTAP 9.8 及更高版本的 AFF A700 和 ASA AFF A700 系统中的两个 NS224 驱动器架
+=== 选项3：使用缆线将控制器连接到仅运行ONTAP 9.8及更高版本的ASA AFF A700系统中的两个NS224驱动器架
 
 必须使用缆线将每个控制器连接到运行系统 ONTAP 9.8 或更高版本的 AFF A700 或 ASA AFF A700 上 NS224 驱动器架上的 NSM 模块。
 
-* 此任务仅限运行 ONTAP 9.8 或更高版本的适用场景 AFF A700 和 ASA AFF A700 。
+* 此任务仅适用于运行ONTAP 9.8或更高版本的 适用场景 ASA AFF A700。
 * 系统必须在插槽 3 和 7 中为每个控制器安装两个 X91148A 模块。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 +

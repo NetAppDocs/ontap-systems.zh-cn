@@ -1,7 +1,6 @@
 ---
 section: fas8300
 title: FAS8300 和 FAS8700 系统
-url: "/fas8300/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF FAS8300 和 FAS8700 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF FAS8300 和 FAS8700 维护
   entries:
+  - title: 概述
+    url: "/fas8300/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF FAS8300 和 FAS8700 启动介质
     entries:

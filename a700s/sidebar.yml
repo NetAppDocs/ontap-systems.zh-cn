@@ -1,7 +1,6 @@
 ---
 section: a700s
 title: AFF A700s 系统
-url: "/a700s/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF A700s 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF A700s 维护
   entries:
+  - title: 概述
+    url: "/a700s/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A700s 启动介质
     entries:
@@ -86,5 +87,3 @@ entries:
   - title: 实时时钟电池
     pdf-filename: AFF A700s 实时时钟电池
     url: "/a700s/rtc-battery-replace.html"
-  - title: 系统级诊断
-    url: "/a700s/system-level-diags-linkout.html"

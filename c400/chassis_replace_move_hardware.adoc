@@ -1,7 +1,7 @@
 ---
 permalink: c400/chassis-replace-move-hardware.html 
 sidebar: sidebar 
-keywords: aff c400, aff, c400, component, system, function, properly, contact, technical, support, replace, chassis, shut, down, controller, replacing, remove, module, fan, equipment, rack, cabinet, ha, state, diagnostic, switch, back, aggregate, two-node, metrocluster, configuration, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, verify and set the ha state of the chassis, run diagnostics, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
+keywords: aff c400, aff, c400, component, system, function, properly, contact, technical, support, replace, chassis, shut, down, controller, replacing, remove, module, fan, equipment, rack, cabinet, ha, state, switch, back, aggregate, two-node, metrocluster, configuration, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, verify and set the ha state of the chassis, run, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
 summary: 将受损机箱中的风扇，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。 
 ---
 = 更换硬件—AFF C400
@@ -11,7 +11,7 @@ summary: 将受损机箱中的风扇，硬盘驱动器和控制器模块或模�
 
 
 [role="lead"]
-将受损机箱中的风扇，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。
+将风扇、硬盘驱动器和控制器模块从受损机箱移至新机箱、然后将受损机箱更换为与受损机箱型号相同的新机箱。
 
 
 
@@ -84,7 +84,7 @@ CAUTION: 风扇模块较短。请始终用您的空闲手托住风扇模块的�
 
 == 第 4 步：安装控制器模块
 
-将控制器模块安装到新机箱中后，您需要将其启动到可以运行诊断测试的状态。
+将控制器模块安装到新机箱后、需要启动它。
 
 对于在同一机箱中具有两个控制器模块的 HA 对，安装控制器模块的顺序尤为重要，因为一旦将其完全装入机箱，它就会尝试重新启动。
 

@@ -1,7 +1,6 @@
 ---
 section: fas500f
 title: FAS500f 系统
-url: "/fas500f/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: FAS500f 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: FAS500f 维护
   entries:
+  - title: 概述
+    url: "/fas500f/maintain-overview.html"
   - title: 启动介质
     pdf-filename: FAS500f 启动介质
     entries:

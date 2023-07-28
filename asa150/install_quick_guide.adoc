@@ -1,0 +1,17 @@
+---
+permalink: asa150/install-quick-guide.html 
+sidebar: sidebar 
+keywords: asa a150, a150, asa, quick, guide, graphic, instructions, install, rack, cable 
+summary: 本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。 
+---
+= 快速指南- ASA A150
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何通过机架安装和布线以及初始系统启动来安装系统。使用 ... link:../media/PDF/March_2023_Rev1_AFFA150_ISI.pdf["《AFF A150系统安装和设置说明》"^] 如果您熟悉 NetApp 系统的安装。
+
+
+NOTE: ASA A150使用与AFF A150系统相同的安装操作步骤。

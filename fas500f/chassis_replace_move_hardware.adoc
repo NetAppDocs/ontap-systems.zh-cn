@@ -108,7 +108,7 @@ Be sure to close the cam handle slowly so that it aligns correctly with the fron
 
 == 第 4 步：安装控制器模块
 
-将控制器模块安装到新机箱中后，您需要将其启动到可以运行诊断测试的状态。
+将控制器模块安装到新机箱后、需要启动它。
 
 对于在同一机箱中具有两个控制器模块的 HA 对，安装控制器模块的顺序尤为重要，因为一旦将其完全装入机箱，它就会尝试重新启动。
 

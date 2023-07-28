@@ -1,7 +1,6 @@
 ---
 section: fas8200
 title: FAS8200 系统
-url: "/fas8200/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: FAS8200 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: FAS8200 维护
   entries:
+  - title: 概述
+    url: "/fas8200/maintain-overview.html"
   - title: 启动介质
     pdf-filename: FAS8200 启动介质
     entries:

@@ -1,7 +1,6 @@
 ---
 section: c800
 title: AFF C800系统
-url: "/c800/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF C800安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF C800维护
   entries:
+  - title: 概述
+    url: "/c800/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF C800启动介质
     entries:

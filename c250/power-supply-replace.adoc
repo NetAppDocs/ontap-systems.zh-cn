@@ -13,38 +13,37 @@ summary: 更换电源包括断开目标电源的连接，拔下电源线，卸�
 [role="lead"]
 更换电源(PSU)包括断开目标PSU与电源的连接、拔下电源线、卸下旧PSU并安装替代PSU、然后将其重新连接到电源。
 
-* PSU是冗余的可热插拔PSU。
+* 电源为冗余且可热插拔。
 * 此操作步骤 是为一次更换一个PSU而编写的。
 +
 
 NOTE: 最佳做法是、在将PSU从机箱中卸下后两分钟内更换PSU。系统仍可正常运行、但ONTAP 会向控制台发送有关已降级的PSU的消息、直到更换PSU为止。
 
-* PSU可自动调整范围。
+* 电源可自动进行范围设置。
 +
 
 IMPORTANT: 请勿混用具有不同效率额定值的 PSU 。请始终像这样替换。
 
 
 
-请根据您的PSU类型使用相应的操作步骤 ：AC或DC。
+请根据您的PSU类型使用相应的操作步骤 ；AC或DC。
 
 [role="tabbed-block"]
 ====
 .选项1：更换交流PSU
 --
-使用以下视频或步骤更换PSU：
+使用以下视频或表格中的步骤更换PSU：
 
-.动画-更换电源
+.动画-更换交流PSU
 video::86487f5e-20ff-43e6-99ae-ac5b015c1aa5[panopto]
 . 如果您尚未接地，请正确接地。
 . 根据控制台错误消息或PSU上的红色故障LED确定要更换的PSU。
 . 断开PSU的连接：
 +
 .. 打开电源线固定器、然后从PSU拔下电源线。
-.. 从电源拔下电源线。
 
 
-. 旋转凸轮把手、以便在按下锁定卡舌的同时将PSU拉出控制器模块。
+. 向上旋转手柄、按下锁定卡舌、然后将PSU拉出控制器模块、以卸下PSU。
 +
 
 CAUTION: PSU较短。Always use two hands to support it when removing it from the controller module so that it does not suddenly swing free from the controller module and injure you.
@@ -58,7 +57,7 @@ image::../media/drw_a250_replace_psu.png[DRW A250 更换 PSU]
 
  a| 
 image:../media/legend_icon_01.png[""]
-| 蓝色电源锁定卡舌 
+| 蓝色PSU锁定卡舌 
 
 
  a| 
@@ -67,17 +66,22 @@ image:../media/legend_icon_02.png[""]
 电源
 
 |===
-. 用双手支撑PSU的边缘并将其与控制器模块中的开口对齐、然后将PSU轻轻推入控制器模块、直至锁定卡舌卡入到位。
+. 在控制器模块中安装替代PSU：
 +
-PSU只能与内部连接器正确啮合并单向锁定到位。
+.. 用双手支撑PSU的边缘并将其与控制器模块的开口对齐。
+.. 将PSU轻轻推入控制器模块、直到锁定卡舌卡入到位。
++
+电源只能与内部连接器正确接合并单向锁定到位。
 
 +
 
 NOTE: 为了避免损坏内部连接器、请勿在将PSU滑入系统时用力过大。
 
+
+
 . 重新连接PSU布线：
 +
-.. 将电源线重新连接到PSU和电源。
+.. 将电源线重新连接到PSU。
 .. 使用电源线固定器将电源线固定到PSU。
 
 
@@ -96,21 +100,14 @@ NOTE: 为了避免损坏内部连接器、请勿在将PSU滑入系统时用力�
 . 根据控制台错误消息或PSU上的红色故障LED确定要更换的PSU。
 . 断开PSU的连接：
 +
-.. 拧下D-sub直流电源电缆连接器上的两颗指旋螺钉。
-+
-步骤4中的图示和表格显示了两个指旋螺钉(项目1)和D-sub直流电源电缆连接器(项目2)。
-
-.. 从PSU上拔下D-sub直流电源线连接器、并将其放在一旁。
+.. 使用插头上的翼形螺钉拧下D-sub直流电源线连接器。
+.. 从PSU拔下电源线并将其放在一旁。
 
 
-. 卸下PSU：
-+
-.. 将手柄向上旋转到其水平位置、然后抓住它。
-.. 用拇指按下蓝色卡舌以释放锁定机制。
-.. 将PSU从控制器模块中拉出、同时用另一只手支撑其重量。
+. 向上旋转手柄、按下锁定卡舌、然后将PSU拉出控制器模块、以卸下PSU。
 +
 
-NOTE: PSU较短。从控制器模块中卸下控制器时、请始终用双手支撑控制器模块、以免其从控制器模块中摆动而造成人员的任何人员的安全。
+CAUTION: PSU较短。Always use two hands to support it when removing it from the controller module so that it does not suddenly swing free from the controller module and injure you.
 
 +
 image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[DRW dcpsu remove replace generic IEOPS 788]
@@ -137,7 +134,7 @@ D-sub直流电源线连接器
  a| 
 image:../media/legend_icon_03.svg["宽度= 10像素"]
  a| 
-PSU手柄
+电源手柄
 
 
 
@@ -147,29 +144,26 @@ image:../media/legend_icon_04.svg["宽度= 10像素"]
 蓝色PSU锁定卡舌
 
 |===
-
-
-. 安装替代PSU：
+. 在控制器模块中安装替代PSU：
 +
 .. 用双手支撑PSU的边缘并将其与控制器模块的开口对齐。
-.. 将PSU轻轻推入控制器模块、直至锁定装置卡入到位。
+.. 将PSU轻轻推入控制器模块、直到锁定卡舌卡入到位。
 +
-PSU必须与内部连接器和锁定装置正确接合。如果您认为PSU未正确就位、请重复此步骤。
+电源只能与内部连接器正确接合并单向锁定到位。
 
 +
 
-NOTE: 请勿用力过大，否则可能会损坏内部连接器。
+NOTE: 为了避免损坏内部连接器、请勿在将PSU滑入系统时用力过大。
 
-.. 向下旋转手柄、使其无法正常运行。
 
 
 . 重新连接D-sub DC电源线：
 +
+.. 将电源线连接器插入PSU。
+.. 使用翼形螺钉将电源线固定到PSU。
++
 在PSU恢复供电后、状态LED应为绿色。
 
-+
-.. 将D-sub直流电源电缆连接器插入PSU。
-.. 拧紧两颗指旋螺钉、将D-sub直流电源电缆连接器固定至PSU。
 
 
 . 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"^] 第页，了解更多信息。

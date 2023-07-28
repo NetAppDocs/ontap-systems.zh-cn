@@ -1,0 +1,17 @@
+---
+permalink: asa800/install-quick-guide.html 
+sidebar: sidebar 
+keywords: asa a800, quick steps 
+summary: 此页面提供了从机架安装和布线到初始系统启动的典型系统安装的图形说明。Use this guide if you are familiar with installing NetApp systems. 
+---
+= 快速步骤- ASA A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此页面提供了从机架安装和布线到初始系统启动的典型系统安装的图形说明。使用 link:../media/PDF/215-13082_2022-08_us-en_AFFA800_ISI.pdf["《AFF A800安装和设置说明》"^] 如果您熟悉 NetApp 系统的安装。
+
+
+NOTE: ASA A800使用与AFF A800系统相同的安装操作步骤。

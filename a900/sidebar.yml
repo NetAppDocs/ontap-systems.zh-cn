@@ -1,7 +1,6 @@
 ---
 section: a900
 title: AFF A900 系统
-url: "/a900/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF A900安装和设置
@@ -17,22 +16,22 @@ entries:
 - title: 维护
   pdf-filename: AFF A900维护
   entries:
-  - title: 添加 I/O 模块
-    url: "/a900/add_io_module.html"
+  - title: 概述
+    url: "/a900/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A900启动介质
     entries:
     - title: 概述
       url: "/a900/bootmedia_replace_overview.html"
-    - title: 预关闭检查板载加密密钥
+    - title: 检查板载加密密钥
       url: "/a900/bootmedia_encryption_preshutdown_checks.html"
-    - title: Shut down the impaired controller
+    - title: 关闭受损控制器
       url: "/a900/bootmedia_impaired_controller_shutdown.html"
     - title: 替换启动映像
       url: "/a900/bootmedia_replace.html"
     - title: 启动恢复映像
       url: "/a900/bootmedia_recovery_image.html"
-    - title: OKM ， NSE 和 NVE 的启动后介质更换步骤
+    - title: 还原 OKM ， NSE 和 NVE
       url: "/a900/bootmedia_encryption_restore.html"
     - title: 将故障部件退回 NetApp
       url: "/a900/bootmedia_complete_rma.html"
@@ -41,40 +40,44 @@ entries:
     entries:
     - title: 概述
       url: "/a900/chassis_replace_overview.html"
-    - title: Shut down the impaired controller
+    - title: 关闭受损控制器
       url: "/a900/chassis_replace_shutdown.html"
-    - title: 更换硬件
+    - title: 更换机箱
       url: "/a900/chassis_replace_move_hardware.html"
-    - title: 还原和验证配置
+    - title: 还原并验证配置
       url: "/a900/chassis_replace_complete_system_restore_rma.html"
-  - title: 控制器模块
+  - title: 控制器
     pdf-filename: AFF A900控制器模块
     entries:
     - title: 概述
       url: "/a900/controller_replace_overview.html"
-    - title: Shut down the impaired controller
+    - title: 关闭受损控制器
       url: "/a900/controller_replace_shutdown.html"
-    - title: 更换控制器模块硬件
+    - title: 更换控制器
       url: "/a900/controller_replace.html"
     - title: 还原并验证系统配置
       url: "/a900/controller_replace_system_config_restore_and_verify.html"
-    - title: 重新对系统进行布线
+    - title: 可重新连接的系统
       url: "/a900/controller_replace_recable_reassign_disks.html"
     - title: 完成系统还原
       url: "/a900/controller_replace_complete_system_restoration_rma.html"
   - title: DIMM
     url: "/a900/dimm_replace.html"
-  - title: 目标控制电源模块
+  - title: DCPM
     url: "/a900/dcpm_NVRAM11_battery_replace.html"
   - title: 风扇
     url: "/a900/fan_swap_out.html"
   - title: I/O 模块
-    url: "/a900/pci_cards_and_risers_replace.html"
-  - title: LED USB 模块
+    entries:
+    - title: 更换I/O模块
+      url: "/a900/pci_cards_and_risers_replace.html"
+    - title: 添加 I/O 模块
+      url: "/a900/add_io_module.html"
+  - title: LED USB
     url: "/a900/led_module_replace.html"
-  - title: NVRAM 模块和 / 或 NVRAM DIMM
+  - title: NVRAM
     url: "/a900/nvram_module_or_nvram_dimm_replacement.html"
   - title: 电源
     url: "/a900/power_supply_swap_out.html"
-  - title: RTC 电池
+  - title: 实时时钟电池
     url: "/a900/rtc_battery_replace.html"

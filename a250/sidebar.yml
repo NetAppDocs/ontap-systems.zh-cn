@@ -1,7 +1,6 @@
 ---
 section: a250
 title: AFF A250 系统
-url: "/a250/index.html"
 entries:
 - title: 安装和设置
   pdf-filename: AFF A250 安装和设置
@@ -17,6 +16,8 @@ entries:
 - title: 维护
   pdf-filename: AFF A250 维护
   entries:
+  - title: 概述
+    url: "/a250/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A250 启动介质
     entries:
@@ -41,9 +42,9 @@ entries:
       url: "/a250/chassis-replace-overview.html"
     - title: 关闭受损控制器
       url: "/a250/chassis-replace-shutdown.html"
-    - title: 更换硬件
+    - title: 更换机箱
       url: "/a250/chassis-replace-move-hardware.html"
-    - title: 完成更换
+    - title: 完成机箱更换
       url: "/a250/chassis-replace-complete-system-restore-rma.html"
   - title: 控制器
     pdf-filename: AFF A250 控制器模块
@@ -52,7 +53,7 @@ entries:
       url: "/a250/controller-replace-overview.html"
     - title: 关闭受损控制器
       url: "/a250/controller-replace-shutdown.html"
-    - title: 更换控制器模块
+    - title: 更换控制器
       url: "/a250/controller-replace-move-hardware.html"
     - title: 还原系统配置
       url: "/a250/controller-replace-system-config-restore-and-verify.html"

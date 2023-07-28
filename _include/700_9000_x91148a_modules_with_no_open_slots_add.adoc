@@ -1,0 +1,159 @@
+= 选项 1 ：在没有打开插槽的系统中，将 X91148A 模块作为 NIC 模块添加
+:allow-uri-read: 
+
+
+您必须删除系统中的一个或多个现有 NIC 或存储模块，才能将一个或多个 X91148A 存储模块安装到已完全填充的系统中。
+
+* 您的系统必须运行 ONTAP 9.8 及更高版本。
+* 要无中断地添加 X91148A 模块，您必须接管目标控制器，添加该模块，然后交还目标控制器。
+* 如果要将 X91148A 模块添加为存储适配器，则必须将此模块安装在插槽 3 和 / 或 7 中。
+* 如果要将 X91148A 模块添加为 100GbE NIC ，则可以使用任何打开的插槽。但是，默认情况下，插槽 3 和 7 设置为存储插槽。如果您希望将这些插槽用作网络插槽，而不添加 NS224 磁盘架，则必须使用 `storage port modify -node _node name_ -port _port name_ -mode network` 命令修改用于网络连接的插槽。有关 X91148A 模块可用于网络连接的其他插槽，请参见 Hardware Universe 。
++
+https://hwu.netapp.com["NetApp Hardware Universe"]
+
+* 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+
+
+
+== 选项 1 ：在没有打开插槽的系统中，将 X91148A 模块作为 NIC 模块添加
+
+要在已完全填充的系统中安装一个或多个 X91148A NIC 模块，您必须删除系统中的一个或多个现有 NIC 或存储模块。
+
+.步骤
+. 如果要将 X91148A 模块添加到一个插槽中，而该插槽中的 NIC 模块与 X91148A 模块具有相同数量的端口，则 LIF 将在其控制器模块关闭时自动迁移。如果要更换的 NIC 模块的端口数超过 X91148A 模块，则必须将受影响的 LIF 永久重新分配到其他主端口。请参见 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"] 有关使用 System Manager 永久移动 LIF 的信息，请参见
+. 关闭控制器 A ：
++
+.. 禁用自动交还： `storage failover modify -node local -auto-giveback false`
+.. 接管目标节点： `storage failover takeover -ofnode _target_node_name_`
++
+控制台连接显示，接管完成后，节点将进入 LOADER 提示符。
+
+
+
+. 如果您尚未接地，请正确接地。
+. 拔下目标 I/O 模块上的所有布线。
+. 从机箱中卸下目标 I/O 模块：
++
+.. 按下带字母和编号的凸轮按钮。
++
+凸轮按钮离开机箱。
+
+.. 向下旋转凸轮闩锁，直到其处于水平位置。
++
+I/O 模块从机箱中分离，并从 I/O 插槽中移出大约 1/2 英寸。
+
+.. 拉动 I/O 模块侧面的拉片，将 I/O 模块从机箱中卸下。
++
+确保跟踪 I/O 模块所在的插槽。
+
++
+image::../media/drw_9000_remove_pcie_module.png[DRW 9000 卸下 PCIe 模块]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+I/O 凸轮闩锁有字母和编号
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+I/O 凸轮闩锁完全解锁
+
+|===
+
+
+. 将 X91148A 模块安装到目标插槽中：
++
+.. 将 X91148A 模块与插槽边缘对齐。
+.. 将 X91148A 模块滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销啮合。
+.. 将 I/O 凸轮闩锁完全向上推，以将模块锁定到位。
+
+
+. 重复执行拆卸和安装步骤以更换控制器 A 的其他模块
+. 使用缆线将模块连接到数据交换机。
+. 重新启动控制器 A ： `boot_ontap`
+. 从配对节点交还节点： `storage failover giveback -ofnode target_node_name`
+. 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
+. 如果您在插槽 3 或 7 中将 X91148A 模块添加为 NIC 模块，则对于网络连接，请对每个端口使用 `storage port modify -node _node name_ -port _port name_ -mode network` 命令。
+. 对控制器 B 重复上述步骤
+
+
+
+
+== 选项 2 ：在没有空插槽的系统中将 X91148A 模块添加为存储模块
+
+要在已完全填充的系统中安装一个或多个 X91148A 存储模块，您必须删除系统中的一个或多个现有 NIC 或存储模块。
+
+* 此操作步骤假定您将 X91148A 模块安装到插槽 3 和 / 或 7 中。
+
+
+.步骤
+. 如果要将 X91148A 模块作为插槽 3 和 / 或 7 中的存储模块添加到插槽中具有现有 NIC 模块的插槽中，请使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"]。
+. 关闭控制器 A ：
++
+.. 禁用自动交还： `storage failover modify -node local -auto-giveback false`
+.. 接管目标节点： `storage failover takeover -ofnode target_node_name`
++
+控制台连接显示，接管完成后，节点将进入 LOADER 提示符。
+
+
+
+. 如果您尚未接地，请正确接地。
+. 拔下目标 I/O 模块上的所有布线。
+. 从机箱中卸下目标 I/O 模块：
++
+.. 按下带字母和编号的凸轮按钮。
++
+凸轮按钮离开机箱。
+
+.. 向下旋转凸轮闩锁，直到其处于水平位置。
++
+I/O 模块从机箱中分离，并从 I/O 插槽中移出大约 1/2 英寸。
+
+.. 拉动 I/O 模块侧面的拉片，将 I/O 模块从机箱中卸下。
++
+确保跟踪 I/O 模块所在的插槽。
+
++
+image::../media/drw_9000_remove_pcie_module.png[DRW 9000 卸下 PCIe 模块]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png[""]
+ a| 
+I/O 凸轮闩锁有字母和编号
+
+
+
+ a| 
+image:../media/legend_icon_02.png[""]
+ a| 
+I/O 凸轮闩锁完全解锁
+
+|===
+
+
+. 将 X91148A 模块安装到插槽 3 ：
++
+.. 将 X91148A 模块与插槽边缘对齐。
+.. 将 X91148A 模块滑入插槽，直到带字母和编号的 I/O 凸轮闩锁开始与 I/O 凸轮销啮合。
+.. 将 I/O 凸轮闩锁完全向上推，以将模块锁定到位。
+.. 如果要安装另一个 X91148A 模块进行存储，请对插槽 7 中的模块重复执行拆卸和安装步骤。
+
+
+. 重新启动控制器 A ： `boot_ontap`
+. 从配对节点交还节点： `storage failover giveback -ofnode _target_node_name_`
+. 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
+. 对控制器 B 重复上述步骤
+. Install and cable your NS224 shelves, as described in https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["热添加 NS224 驱动器架"]。
+

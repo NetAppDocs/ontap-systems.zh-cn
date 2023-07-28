@@ -1,7 +1,7 @@
 ---
 permalink: a700s/dimm-replace.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, replace, fimm, controller, module, system, register, increase, increasing, number, correctable, error, correction, code, ecc, failure, system, panic, dimm, shut, down, impair, diagnostic, complete, replacement, process, replace a dimmm, shut down the impaired controller, remove the controller module, replace a dimm, reinstall the controller module and booting the system, run diagnostics, complete the replacement process 
+keywords: aff a700s, aff, a700s, replace, fimm, controller, module, system, register, increase, increasing, number, correctable, error, correction, code, ecc, failure, system, panic, dimm, shut, down, impair, complete, replacement, process, replace a dimmm, shut down the impaired controller, remove the controller module, replace a dimm, reinstall the controller module and booting the system, complete the replacement process 
 summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。 
 ---
 = 更换 DIMM - AFF A700s
@@ -214,7 +214,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
-== 第 4 步：重新安装控制器模块并启动系统
+== 步骤4：重新安装控制器模块并启动系统
 
 更换控制器模块中的 FRU 后，您必须重新安装控制器模块并重新启动它。
 
@@ -243,43 +243,15 @@ NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这�
 NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
 
 +
-控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。
+控制器模块一旦完全固定在机箱中，就会开始启动。
 
 .. 向上旋转锁定闩锁，使其倾斜，以清除锁定销，然后将其降低到锁定位置。
-.. 出现 `Press Ctrl-C for Boot Menu` 时按 `Ctrl-C` 以中断启动过程。
-.. 从显示的菜单中选择启动至维护模式的选项。
 
 
 
 
 
 
-== 第 5 步：运行诊断
-
-更换系统中的某个组件后，您应对该组件运行诊断测试。
-
-您的系统必须处于 LOADER 提示符处，才能启动诊断。
-
-诊断过程中的所有命令都是从要更换组件的控制器发出的。
-
-.步骤
-. 如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `ssystem node halt -node node_name`
-+
-问题描述命令后，您应等待系统停留在 LOADER 提示符处。
-
-. 在 LOADER 提示符处，访问专为系统级诊断而设计的特殊驱动程序以正常运行： `boot_diags`
-. 从显示的菜单中选择 * 扫描系统 * 以启用运行诊断测试。
-. 从显示的菜单中选择 * 测试内存 * 。
-. 根据上一步的结果继续操作：
-+
-** 如果测试失败，请更正此故障，然后重新运行此测试。
-** 如果测试未报告任何故障，请从菜单中选择重新启动以重新启动系统。
-
-
-
-
-
-
-== 第6步：将故障部件退回NetApp
+== 第5步：将故障部件退回给NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

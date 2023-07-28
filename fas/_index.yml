@@ -1,0 +1,50 @@
+---
+indexpage:
+  lead: FAS存储系统可帮助您构建简单、智能且值得信赖的存储基础架构。
+  tiles:
+  - title: 入门
+    links:
+    - title: FAS产品规格
+      url: https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf
+    - title: FAS平台概述
+      url: https://www.netapp.com/data-storage/fas/
+  - title: 安装和设置
+    links:
+    - title: FAS500f
+      url: "../fas500f/install-setup.html"
+    - title: FAS2700
+      url: "../fas2700/install-setup.html"
+    - title: FAS9300和FAS8700
+      url: "../fas8300/install-setup.html"
+    - title: FAS9000
+      url: "../fas9000/install-setup.html"
+    - title: FAS9500
+      url: "../fas9500/install_setup.html"
+  - title: 维护您的系统
+    links:
+    - title: FAS500f
+      url: "../fas500f/maintain-overview.html"
+    - title: FAS2700
+      url: "../fas2700/maintain-overview.html"
+    - title: FAS9300和FAS8700
+      url: "../fas8300/maintain-overview.html"
+    - title: FAS9000
+      url: "../fas9000/maintain-overview.html"
+    - title: FAS9500
+      url: "../fas9500/maintain-overview.html"
+  - title: 支持的交换机
+    links:
+    - title: Broadcom 支持的 BES-53248
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
+    - title: Cisco 9336C-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
+    - title: 共享配置中的 Cisco 936-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
+  - title: 更多文档资源
+    links:
+    - title: 系统硬件升级
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
+    - title: ONTAP 软件升级
+      url: https://docs.netapp.com/us-en/ontap/upgrade/maintain-overview.html
+    - title: 更换内部磁盘驱动器(视频)
+      url: https://www.youtube.com/watch?v=Ziqg9HL8oYQ
