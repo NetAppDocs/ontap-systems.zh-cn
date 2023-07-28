@@ -8356,4 +8356,80 @@ SFP+(目标/启动程序)</block>
   <block id="9287ab39836157b975fad28f9782a821" category="sidebar">FAS2800电源</block>
   <block id="3dfd3fa9bee4e9b9ad14ec588c8e9ed4" category="sidebar">FAS2800实时时钟电池</block>
   <block id="f298a7570713e4b8f24128c2f7dcc05c" category="sidebar">工具和支持</block>
+  <block id="0a90cb9b1ee5610139d0e39856363c8c" category="summary">您可以通过了解驱动器架组件上LED的位置和状态条件来监控驱动器架的运行状况。</block>
+  <block id="039c72bbf63892ab7a9a7d88f01d9ef1" category="doc">监控驱动器架LED—NS224磁盘架</block>
+  <block id="4c1e87d961b7abad7899274630f1a96a" category="list-text">可以激活磁盘架操作员显示面板(ODP)和两个NSM模块上的位置(蓝色) LED、以帮助实际定位需要维修的磁盘架：<block ref="d6bcc7ed2edc5b8ad7e7188bba8189eb" prefix=" " category="inline-code"></block></block>
+  <block id="3417b5f666a273fe6204a90a40cd960a" category="paragraph">Location LEDs remain illuminated for 30 minutes.您可以输入相同的命令、但使用将其关闭<block ref="3262d48df5d75e3452f0f16b313b7808" prefix=" " category="inline-code"></block> 选项</block>
+  <block id="90c4ae9a3664954df72efa181f417914" category="list-text">LED状态可以是：</block>
+  <block id="5f77ac1006b54df5d09a24404a213642" category="list-text">"On"(开)：LED指示灯稳定亮起</block>
+  <block id="ca49a7e42f16a88fc179226bfe0edde8" category="list-text">"Off"(关)：LED未亮起</block>
+  <block id="117106b46f3b11e3bbfc40ae15a1f678" category="list-text">"闪烁"：LED会根据FRU状态以不同的间隔打开和关闭</block>
+  <block id="e3248bada0dd8141e2ab87552806328f" category="list-text">"any state"(任何状态)：LED可以是"on"(开)、"off"(关)或"Blink"(闪烁)</block>
+  <block id="6afbd49803e44c3aa6797e42828fd734" category="paragraph">驱动器架前操作员显示面板(ODP)上的LED指示驱动器架是否正常运行或硬件存在问题。</block>
+  <block id="98b358c9e04e87becfb72379a2b4c9d5" category="paragraph">下图和下表介绍了ODP上的三个LED：</block>
+  <block id="138149667750b6d9b839cc79c8d6b29a" category="image-alt">DRW ns224耗氧潜能值LED IEOPS 1262</block>
+  <block id="6984fd43f67a1bf48379d74906b421c0" category="cell">LED名称和颜色</block>
+  <block id="89a44a0e4b47aa8032cdb05ec66374e8" category="paragraph">电源(绿色)</block>
+  <block id="521c36a31c2762741cf0f8890cbe05e3" category="paragraph">开启</block>
+  <block id="7ab85b9335b729ddfdd50939907e5626" category="paragraph">一个或多个电源正在为驱动器架供电。</block>
+  <block id="7ad8ba1fe94fd72fd9f74d14e7037f4a" category="paragraph">注意(琥珀色)</block>
+  <block id="e83364f6cc636130c2c04e44b8f47f19" category="list-text">多个磁盘架CRU之一的功能出现错误。</block>
+  <block id="792a0f450d52c98560941fc89bf34430" category="list-text">如果两位数的磁盘架ID也在闪烁、则表示磁盘架ID处于待定状态。</block>
+  <block id="c71218e03c7b1d130d35a210073b7500" category="paragraph">关闭并重新启动驱动器架、以使磁盘架ID生效。</block>
+  <block id="fdb5296df84be4098a8bcf7a2eafe291" category="paragraph">位置(蓝色)</block>
+  <block id="fa5f455b4bf3d012d2777718991d0440" category="paragraph">系统管理员激活了此LED功能。</block>
+  <block id="745d735db3f2e8f31dbbfa30d77113d9" category="section-title">NSM模块LED</block>
+  <block id="2abced28d6da640242f441beadbf8ee0" category="paragraph">NSM模块上的LED指示该模块是否正常运行、是否已准备好处理I/O流量以及硬件是否存在任何问题。</block>
+  <block id="eb21c45722f5ff9bf64973b0ac209180" category="paragraph">下图和表格介绍了与模块功能以及模块上每个NVMe端口的功能相关的NSM模块LED。</block>
+  <block id="68f54317fa8b23ea7098189416f011eb" category="image-alt">DRW ns224 NSM LED IEOPS 1270</block>
+  <block id="a5b225465f65d6810c16d66ba3172319" category="cell">呼出</block>
+  <block id="cb5feb1b7314637725a2e73bdc9f7295" category="cell">颜色</block>
+  <block id="9594eec95be70e7b1710f730fdda33d9" category="paragraph">蓝色</block>
+  <block id="6d9957aa3906726ca4d7614d877977df" category="paragraph">NSM模块：位置</block>
+  <block id="88068e33c78eb72f1b371c7110846085" category="paragraph">琥珀色</block>
+  <block id="1903810490ad85ac105168a3e90068d0" category="paragraph">NSM模块：注意</block>
+  <block id="e5b3a965934bf3ca0a50c8cda04e1b3f" category="paragraph">NVMe端口/链路：状态</block>
+  <block id="e03b09748657a5b63a0374112f96cef8" category="paragraph">NVMe端口/链路：注意</block>
+  <block id="ec53a8c4f07baed5d8825072c89799be" category="cell">Status</block>
+  <block id="5767ccac8b9ab75a17e52eb709fb26e8" category="cell">NSM警示(琥珀色)</block>
+  <block id="a2164070412e695d73fc2ab64c01f149" category="cell">端口LNK (绿色)</block>
+  <block id="5a1dea4ae3ffb6c0ab8f9acbbf3c4fda" category="cell">端口警示(琥珀色)</block>
+  <block id="f7461aec7fcfa3f30f604927ef643ebc" category="paragraph">NSM正常</block>
+  <block id="d60fd197e540446192f328624ebc9be2" category="paragraph">任何状态</block>
+  <block id="956b8d84f48336f2a0e561c66edb7f07" category="paragraph">NSM故障</block>
+  <block id="7e5905b08296770ebd816f86cfb84b60" category="paragraph">NSM VPD错误</block>
+  <block id="ec280b965c05518ec9a4070c43b19c7f" category="paragraph">无主机端口连接</block>
+  <block id="1401dfc837785ee5fb45ba2c53fd991b" category="paragraph">主机端口连接链路处于活动状态</block>
+  <block id="923a074db98ee6d8f18ca11712164fff" category="paragraph">活动时亮起/闪烁</block>
+  <block id="25570bb9d9339942629f14699f8f977e" category="paragraph">主机端口连接出现故障</block>
+  <block id="4402fe228b0b8a78da9019341eb36b7f" category="paragraph">如果所有车道都发生故障、则打开/关闭</block>
+  <block id="ae56bf029d48aa72a5f72c3a20e780b9" category="paragraph">开机后从BIOS映像启动BIOS</block>
+  <block id="cfad0a7419f44ea0c64db24197abbf70" category="paragraph">闪烁</block>
+  <block id="6b6aa0b6d9b620cfef1de19db2c781e5" category="paragraph">交流或直流电源(PSU)上的LED指示PSU是否正常工作或存在硬件问题。</block>
+  <block id="ddf6d4204e991f952d5f65cedae767ce" category="paragraph">下图和表格介绍了PSU上的LED。(图中所示为交流PSU；但是、直流PSU上的LED位置相同)：</block>
+  <block id="cb64a8852ed883dfc686d51492e31bfa" category="image-alt">DRW ns224 PSU LED IEOPS 1261</block>
+  <block id="7609b319dac3aca8b9d7c805388fc5e6" category="paragraph">双色LED指示灯呈绿色时指示电源/活动、呈琥珀色时指示故障。</block>
+  <block id="0cb6b469a5da43eb5225c25fab0b5ff0" category="cell">电源/活动(绿色)</block>
+  <block id="cd5f6c10b859eea6eaed71a2e494c0db" category="paragraph">盘柜没有交流/直流电源</block>
+  <block id="aade40c62d1308360c2f119536da1c63" category="paragraph">PSU没有交流/直流电源</block>
+  <block id="cf335ef3413e902db7461d8f15450cae" category="paragraph">交流/直流电源打开、但PSU不在机箱中</block>
+  <block id="215c6f78a1c194e6228514ff7bdd71cd" category="paragraph">PSU运行正常</block>
+  <block id="3f01099f03de6897d7388ee1c31f6770" category="paragraph">PSU故障</block>
+  <block id="0da2a2ed379c0a511e6346492e61a8e8" category="paragraph">风扇故障</block>
+  <block id="d78c48ba978ed998f8c4aaf41f2003a1" category="paragraph">固件更新模式</block>
+  <block id="0485558d80ce3f9e356a60181cefb758" category="section-title">驱动器LED</block>
+  <block id="ec2086f8c8aa32f4039431accf799e7e" category="paragraph">NVMe驱动器上的LED指示灯可指示其是否正常运行或硬件是否存在问题。</block>
+  <block id="1789a93f2267580a7b3d61d32fd8de64" category="paragraph">下图和下表介绍了NVMe驱动器上的两个LED：</block>
+  <block id="82e7f0e876b2809cacccfffb630802cf" category="image-alt">DRW ns224驱动器LED IEOPS 1263</block>
+  <block id="31eef7712c15110e77d39c33fa6398b8" category="paragraph">电源/活动</block>
+  <block id="4f64599448fa0ed6d8c8631c9c782051" category="cell">电源/活动(绿色)</block>
+  <block id="d24aa27125c051e29098493eceace539" category="cell">关联的ODP LED</block>
+  <block id="73adb82b35cf9e200ec112cf75d968b7" category="paragraph">驱动器已安装且正常运行</block>
+  <block id="382b0f5185773fa0f67a8ed8056c7759" category="paragraph">不适用</block>
+  <block id="04e450c5eabdbe5208c912ed16aa5c5f" category="paragraph">驱动器故障</block>
+  <block id="81c36a08fce93b18a65d7e5214ab26cb" category="paragraph">SES设备标识集</block>
+  <block id="0adb6ff7f0bdadd155910f204b3330d5" category="paragraph">闪烁</block>
+  <block id="cc818334a12195812c946efa74959a44" category="paragraph">警示(琥珀色)熄灭</block>
+  <block id="830de589dead0df6a61213a5dc116efd" category="paragraph">SES设备故障位设置</block>
+  <block id="2475cae13a65975fd4da631c78689624" category="paragraph">电源控制电路故障</block>
 </blocks>
