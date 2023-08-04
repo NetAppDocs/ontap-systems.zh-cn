@@ -1,32 +1,25 @@
----
-permalink: a400/dimm-replace.html 
-sidebar: sidebar 
-keywords: aff a400, aff, a400, replace, dimm, controller, module, system, register, correctable, error, correction, code, ecc, system, panic, shut, down, impair, remove, controller, module, system, module, aggregate, two-node, metrocluster, configuration, replace a dimm, shut down the impaired controller, remove the controller module, replace system dimms, install the controller module, restore the controller module to operation, switch back aggregates in a two-node metrocluster configuration 
-summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。 
----
-= 更换 DIMM - AFF A400
+= 第 1 步：关闭受损控制器
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
-[role="lead"]
-如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。
+要更换 PCIe 或夹层卡，您必须断开缆线以及所有 SFP 和 QSFP 模块与卡的连接，更换发生故障的 PCIe 或夹层卡，然后重新对卡进行布线。
 
-系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+* 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用
+* 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 
-您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
 
 
 
 == 第 1 步：关闭受损控制器
 
-使用适用于您的配置的操作步骤 关闭或接管受损控制器。
+[role="lead"]
+根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。
 
 [role="tabbed-block"]
 ====
 .选项 1 ：大多数配置
 --
+[role="lead"]
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 .关于此任务
@@ -82,6 +75,7 @@ LOADER 提示符
 --
 .选项 2 ：控制器位于双节点 MetroCluster 中
 --
+[role="lead"]
 要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 .关于此任务
@@ -180,6 +174,7 @@ mcc1A::> metrocluster operation show
 
 == 第 2 步：卸下控制器模块
 
+[role="lead"]
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
 . 如果您尚未接地，请正确接地。
@@ -222,53 +217,97 @@ image:../media/legend_icon_02.png[""]
 
 
 
-== 第 3 步：更换系统 DIMM
+== 第 3 步：更换 PCIe 卡
 
-更换系统DIMM涉及通过相关错误消息识别目标DIMM、使用风管上的FRU映射查找目标DIMM、然后更换DIMM。
+[role="lead"]
+要更换 PCIe 卡，您必须找到发生故障的 PCIe 卡，从控制器模块中卸下包含此卡的提升板，更换此卡，然后在控制器模块中重新安装 PCIe 提升板。
 
-您可以使用以下动画，插图或写入的步骤来更换系统 DIMM 。
+您可以使用以下动画，插图或写入步骤更换 PCIe 卡。
 
+.动画-更换PCIe卡
+video::ed42334e-8eb2-48dd-b447-b0300189230f[panopto]
+image:../media/drw_c400_replace_PCIe_cards_IEOPS-1235.svg["宽度= 500像素"]
 
-NOTE: 动画和图中显示了不带 DIMM 的插槽的空插槽。These empty sockets are populated with blanks.
-
-.动画-更换系统DIMM
-video::93025369-2f61-46b1-bd51-b03100040fe6[panopto]
-image::../media/drw_A400_Replace-NVDIMM-DIMM.png[DRW A400 更换 NVDIMM DIMM]
-
-DIMM 位于插槽 2 ， 4 ， 13 和 15 中。NVDIMM 位于插槽 11 中。
-
-. 打开通风管：
+. 卸下包含要更换的卡的提升板：
 +
-.. 将通风管两侧的锁定片朝控制器模块中间按压。
-.. 将通风管滑向控制器模块的背面，然后将其向上旋转到完全打开的位置。
-
-
-. 找到控制器模块上的 DIMM 。
-. 记下插槽中 DIMM 的方向，以便可以按正确的方向插入更换用的 DIMM 。
-. 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。
+.. 按下通风管两侧的锁定片，将其滑向控制器模块背面，然后将其旋转到完全打开的位置，以打开通风管。
+.. 卸下 PCIe 卡中可能存在的所有 SFP 或 QSFP 模块。
+.. 将提升板左侧的提升板锁定闩锁向上旋转并朝通风管方向转动。
 +
+此竖板会从控制器模块中略微升高。
 
-NOTE: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
+.. 竖直向上提起竖板，并将其放在平稳的平面上，
 
-. 从防静电运输袋中取出更换用的 DIMM ，拿住 DIMM 的边角并将其与插槽对齐。
+
+. 从提升板中卸下 PCIe 卡：
 +
-DIMM 插脚之间的缺口应与插槽中的突起对齐。
+.. 转动提升板，以便可以访问 PCIe 卡。
+.. 按下 PCIe 提升板侧面的锁定支架，然后将其旋转到打开位置。
+.. 仅对于提升板 2 和 3 ，向上转动侧面板。
+.. 轻轻向上推支架，然后将 PCIe 卡从插槽中竖直提出，从而从提升板中卸下 PCIe 卡。
 
-. 确保连接器上的 DIMM 弹出器卡舌处于打开位置，然后将 DIMM 垂直插入插槽。
+
+. 将更换用的 PCIe 卡与插槽对齐，将此卡按入插槽中，然后合上此提升板上的侧面板（如果有）。
 +
-DIMM 紧紧固定在插槽中，但应很容易插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。
+确保将卡正确对齐在插槽中，并在插槽中插入卡时对卡施加均匀的压力。PCIe 卡必须完全均匀地固定在插槽中。
 
 +
 
-NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
+NOTE: 如果您要在底部插槽中安装卡，但无法正常看到卡插槽，请卸下顶部卡，以便可以看到卡插槽，安装卡，然后重新安装从顶部插槽中卸下的卡。
 
-. 小心而稳固地推动 DIMM 的上边缘，直到弹出器卡舌卡入到位，卡入到位于 DIMM 两端的缺口上。
-. 关闭通风管。
+. 重新安装此提升板：
++
+.. 将提升板与提升板插槽侧面的插脚对齐，将提升板向下放在插脚上。
+.. 将竖直推入主板上的插槽。
+.. 向下旋转闩锁，使其与竖板上的金属板保持平齐。
 
 
 
 
-== 第 4 步：安装控制器模块
+
+
+== 第 4 步：更换夹层卡
+
+[role="lead"]
+夹层卡位于提升板 3 （插槽 4 和 5 ）下。您必须卸下此竖板才能访问夹层卡，更换夹层卡，然后重新安装 3 号竖板。有关详细信息，请参见控制器模块上的 FRU 示意图。
+
+您可以使用以下动画，插图或写入的步骤来更换夹层卡。
+
+.动画-更换夹层卡
+video::e3fd32b6-bdbb-4c53-b666-b030018a5744[panopto]
+image::../media/drw_c400_replace-mezz-card_IEOPS-1236.svg[DRW C400更换夹层卡IEOPS 1236]
+
+. 卸下 3 号提升板（插槽 4 和 5 ）：
++
+.. 按下通风管两侧的锁定片，将其滑向控制器模块背面，然后将其旋转到完全打开的位置，以打开通风管。
+.. 卸下 PCIe 卡中可能存在的所有 SFP 或 QSFP 模块。
+.. 将提升板左侧的提升板锁定闩锁向上旋转并朝通风管方向转动。
++
+此竖板会从控制器模块中略微升高。
+
+.. 抬起竖板，然后将其放在平稳的平面上。
+
+
+. 更换夹层卡：
++
+.. 从卡中卸下所有 QSFP 或 SFP 模块。
+.. 松开夹层卡上的翼形螺钉，然后将卡直接从插槽中轻轻提起并放在一旁。
+.. 将更换用的夹层卡对准插槽和导销，然后将卡轻轻推入插槽。
+.. 拧紧夹层卡上的翼形螺钉。
+
+
+. 重新安装此提升板：
++
+.. 将提升板与提升板插槽侧面的插脚对齐，将提升板向下放在插脚上。
+.. 将竖直推入主板上的插槽。
+.. 向下旋转闩锁，使其与竖板上的金属板保持平齐。
+
+
+
+
+
+
+== 第 5 步：安装控制器模块
 
 更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
 
@@ -278,69 +317,43 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
 
-. 仅为管理和控制台端口布线，以便您可以访问系统以执行以下各节中的任务。
+. 根据需要重新对系统进行布线。
 +
-
-NOTE: 您将在此操作步骤中稍后将其余缆线连接到控制器模块。
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
 
 . 完成控制器模块的安装：
 +
 .. 将电源线插入电源，重新安装电源线锁定环，然后将电源连接到电源。
-.. 使用锁定闩锁将控制器模块牢牢推入机箱，直到锁定闩锁开始上升。
+.. 使用锁定闩锁将控制器模块牢牢推入机箱，直到它与中板相距并完全就位。
++
+控制器模块完全就位后，锁定闩锁会上升。
+
 +
 
 NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
 
-.. 将锁定闩锁向上旋转，使其倾斜以清除锁定销，将控制器模块完全推入机箱中，然后将锁定闩锁降至锁定位置。
 +
 控制器模块一旦完全固定在机箱中，就会开始启动。准备中断启动过程。
 
+.. 将锁定闩锁向上旋转，使其倾斜以清除锁定销，将控制器模块完全推入机箱中，然后将锁定闩锁降至锁定位置。
 .. 如果尚未重新安装缆线管理设备，请重新安装该设备。
 .. 按 `Ctrl-C` 中断正常启动过程并启动到 LOADER 。
 +
 
 NOTE: 如果系统停留在启动菜单处，请选择启动到 LOADER 选项。
 
-.. 在 LOADER 提示符处，输入 `bye` 以重新初始化 PCIe 卡和其他组件。
-.. 按 `Ctrl-C` 中断启动过程并启动到加载程序提示符。
-+
-如果系统停留在启动菜单处，请选择启动到 LOADER 选项。
+.. 在 LOADER 提示符处，输入 `bye` 以重新初始化 PCIe 卡和其他组件，并让控制器重新启动。
+
+
+. 交还控制器的存储，使其恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
 
 
 
 
+== 第 6 步：将控制器模块还原为正常运行
 
-
-
-== Step 5: Run diagnostics
-
-After you have replaced a system DIMM in your system, you should run diagnostic tests on that component.
-
-Your system must be at the LOADER prompt to start diagnostics.
-
-诊断过程中的所有命令都是从要更换组件的控制器发出的。
-
-. 如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `system node halt -node node_name`
-+
-问题描述命令后，请等待，直到系统停留在 LOADER 提示符处。
-
-. At the LOADER prompt, access the special drivers specifically designed for system-level diagnostics to function properly: `boot_diags`
-. Select *Scan System* from the displayed menu to enable running the diagnostics tests.
-. Select *Test Memory* from the displayed menu.
-. Select an option from the displayed sub-menu and run the test.
-. Proceed based on the result of the preceding step:
-+
-** If the test failed, correct the failure, and then rerun the test.
-** If the test reported no failures, select Reboot from the menu to reboot the system.
-
-
-
-
-
-
-== Step 6: Restore the controller module to operation after running diagnostics
-
-After completing diagnostics, you must recable the system, give back the controller module, and then reenable automatic giveback.
+要还原控制器，您必须重新对系统进行配置，交还控制器模块，然后重新启用自动交还。
 
 . 根据需要重新对系统进行布线。
 +

@@ -324,7 +324,7 @@ NOTE: 目视检查 NVDIMM ，确认其已均匀对齐并完全插入插槽。
 
 == 第 8 步：移动启动介质
 
-There is one boot media device in the AFF A800.您必须将其从受损控制器中移动并安装到 _replacement_ 控制器中。
+您必须从受损控制器移动启动介质设备、并将其安装在替代控制器中。
 
 启动介质位于提升板 3 下。
 

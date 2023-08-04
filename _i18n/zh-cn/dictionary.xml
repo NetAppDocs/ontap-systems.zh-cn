@@ -5435,8 +5435,6 @@
   <block id="10535f3c95548bd83d9b23d6567b98e4" category="doc">Hot-remove a shelf - NS224 shelves</block>
   <block id="2cc84b3be9e849adc2789fc0cd994e1b" category="doc">Replace the real-time clock battery - NS224 shelves</block>
   <block id="89d4335ef7ebbfe1db510925f09d4702" category="doc">Replace the boot media - NS224 shelves</block>
-  <block id="2f2c60dca423ec5715985231d7044062" category="doc">FAS 和 AFF 系统的新增功能</block>
-  <block id="426345b53ce830fc944ab03c4c6232df" category="paragraph">了解 FAS 和 AFF 系统的新功能。</block>
   <block id="302f8678c032e39790505ccc892157d6" category="section-title">新的适配器支持</block>
   <block id="24f29c7fbb4c8e016166824caf65cde6" category="cell">适配器部件号</block>
   <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">类别</block>
@@ -5535,7 +5533,6 @@
   <block id="425e1349202124b82f3764d0351df734" category="paragraph">此站点外提供了发行说明。系统将提示您使用 NetApp 支持站点凭据登录。</block>
   <block id="e43128f7c789cef4c5803c71a455e62b" category="inline-link">访问《 ONTAP 9 发行说明》</block>
   <block id="aee57c40ad1b8fc3b33e5e954861e270" category="paragraph"><block ref="aee57c40ad1b8fc3b33e5e954861e270" category="inline-link-rx"></block></block>
-  <block id="262434bb76bf9aa49a3efe7de43d9a4e" category="sidebar">AFF 和 FAS 系统文档</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="60786ac16439455c42ee2fbe23a16c06" category="doc">控制器模块更换概述— AFF A300</block>
   <block id="8f32b075b74f50db60cdc53341ea5195" category="doc">启动介质更换概述— AFF A300</block>
@@ -5816,7 +5813,6 @@
   <block id="ea22b9523724a1472e9a6474903abd69" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： `storage failover modify -node _replacement-node-name_ -onreboot true`</block>
   <block id="3b1cae4630f47c8bafa2138c896b9e8d" category="list-text">使用 `storage failover giveback -fromnode local` 命令交还控制器</block>
   <block id="1bab600dfeb5dd52557d4dc719a4016b" category="admonition">请勿降级 _replacement_ 控制器的 BIOS 版本以匹配配对控制器或旧控制器模块。</block>
-  <block id="59127b0f44ecf00024ded8cfe59f8f12" category="paragraph">There is one boot media device in the AFF A800.您必须将其从受损控制器中移动并安装到 _replacement_ 控制器中。</block>
   <block id="842e14e3a23f8c1d39234a2a722507d3" category="list-text">如果禁用了自动交还，请重新启用它： `storage failover modify -controller local -auto-giveback true`</block>
   <block id="03163c4d180c5b6d6482efa550043cd8" category="doc">关闭控制器 - AFF A800</block>
   <block id="f0623f3de563d7ac67a984a76c53803d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
@@ -5901,15 +5897,11 @@
   <block id="9858e62153c9fdbd94de20e9842ed9e8" category="doc">FAS9000 系统文档</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
-  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商标</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。</block>
-  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
-  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
-  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="e62f199edf5ce700e5ae74c377f48585" category="sidebar">所有 SAN 阵列系统</block>
@@ -6857,20 +6849,16 @@
   <block id="a5eed34e2848e5d8b4a2e7db6420eb0b" category="list-text">将DIMM从受损的NSM模块移至更换的NSM模块：</block>
   <block id="c09133f07e81aff9529fa7603192c4e6" category="list-text">将风扇从受损的NSM模块移至更换的NSM模块：</block>
   <block id="f5c149574e080653110f6de1e58f8a94" category="list-text">将电源从受损的NSM模块移至更换的NSM模块：</block>
-  <block id="c2e2567b93e54427d80c6e00b15817db" category="summary">要启动并运行AFF 和FAS 系统、您需要在ONTAP 中安装硬件组件、配置交换机以及配置存储。</block>
-  <block id="5ffdf920c790023dff209052146f3717" category="doc">启动并运行AFF 和FAS 存储系统</block>
   <block id="5580e672f0ec2eb7f97978674ab11acb" category="inline-link">MetroCluster 文档站点</block>
   <block id="1a4af28a3bbd2601782d5a7f4300eace" category="paragraph">如果您的系统采用MetroCluster 配置、请转至<block ref="7a41c0ceac7b7f46cc98ba334d076153" category="inline-link-rx"></block> 并按照适用于您的MetroCluster 配置类型的安装说明进行操作。</block>
   <block id="71e3f3adc231b164f4f0837d133f2bc6" category="paragraph">如果您的存储系统未在MetroCluster 配置中设置、请使用以下工作流进行部署。</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一个</block>
   <block id="1488c7c37653a45223ebecdfabcefa04" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 安装AFF/FAS控制器</block>
   <block id="8e4eec704f9a8706e1a3cf96accb2c17" category="list-text"><block ref="8e4eec704f9a8706e1a3cf96accb2c17" category="inline-link-rx"></block></block>
-  <block id="564ec135f22614fd51e7ace4addc3c82" category="list-text"><block ref="564ec135f22614fd51e7ace4addc3c82" category="inline-link-rx"></block></block>
   <block id="5173935e91aef44c51b8afd57f32f13f" category="list-text"><block ref="5173935e91aef44c51b8afd57f32f13f" category="inline-link-rx"></block></block>
   <block id="e06ad9290eff5c16396920aafb75091e" category="list-text"><block ref="e06ad9290eff5c16396920aafb75091e" category="inline-link-rx"></block></block>
   <block id="5cebcc95a2116e4839d188e34a24089c" category="list-text"><block ref="5cebcc95a2116e4839d188e34a24089c" category="inline-link-rx"></block></block>
   <block id="2f143cdae4fee80d6697460e215b8a02" category="list-text"><block ref="2f143cdae4fee80d6697460e215b8a02" category="inline-link-rx"></block></block>
-  <block id="5ac126eccd9cedace8ba8c1ea4723760" category="list-text"><block ref="5ac126eccd9cedace8ba8c1ea4723760" category="inline-link-rx"></block></block>
   <block id="266197ce8fb9d3417e159a8b375e04ef" category="list-text"><block ref="266197ce8fb9d3417e159a8b375e04ef" category="inline-link-rx"></block></block>
   <block id="9832cac218f9fee6c6d44a9f9b5e7d76" category="list-text"><block ref="9832cac218f9fee6c6d44a9f9b5e7d76" category="inline-link-rx"></block></block>
   <block id="4cd32923632a1028f1e64fee85335b39" category="list-text"><block ref="4cd32923632a1028f1e64fee85335b39" category="inline-link-rx"></block></block>
@@ -6973,9 +6961,6 @@
   <block id="253caa9c2eebe3748f90a07e4d0d1158" category="doc">完成系统还原—AFF C800</block>
   <block id="de76cd60441abcdc9d5a84858b3a0fad" category="sidebar">SAS磁盘架</block>
   <block id="ccd67995cab28bf139c1e242119020df" category="sidebar">支持的交换机</block>
-  <block id="6db27f68adde7b6578b513891108402f" category="sidebar">BES-53248</block>
-  <block id="5aec304982416461faa5bf9b3a0b2cf3" category="sidebar">Cisco Nexus 9336C-x2</block>
-  <block id="47b6f3be1213edd22611d686b390abda" category="sidebar">共享配置中的Cisco Nexus 9336C-x2</block>
   <block id="a7d3b6d16f07555f1105a7d1e5d0821b" category="sidebar">更多文档资源</block>
   <block id="cede59a3d2d42bc422e2a59b7efe9552" category="sidebar">更换内部磁盘驱动器(视频)</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">快速入门</block>
@@ -7177,11 +7162,8 @@
   <block id="ac4fc8e93ed87aaf0d607c7594b760df" category="open-title">选项2：使用缆线将控制器连接到两个NS224驱动器架</block>
   <block id="eab02c161618f87134d04b274c9ed0a9" category="image-alt">DRW a900 NS224 line art双磁盘架、为IEOPS 1147布线</block>
   <block id="93d4151426ee3e46d52580ae98128972" category="list-text">Configure the system using the data you collected in the<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block></block>
-  <block id="6129b7ac1ccc31146cb5299a148a51de" category="summary">要启动并运行AFF 、FAS 和ASA 系统、您需要在ONTAP 中安装硬件组件、配置交换机和配置存储。</block>
   <block id="a6857db3b19fb4b9bb2a3b1cad9a31f1" category="list-text"><block ref="a6857db3b19fb4b9bb2a3b1cad9a31f1" category="inline-link-rx"></block></block>
   <block id="90a9e7415b88be6a0d94cebc7d4a7a57" category="list-text"><block ref="90a9e7415b88be6a0d94cebc7d4a7a57" category="inline-link-rx"></block></block>
-  <block id="7f5c0eb40943093a2da99c8caf6992b7" category="list-text"><block ref="7f5c0eb40943093a2da99c8caf6992b7" category="inline-link-rx"></block></block>
-  <block id="e7d43e43255aab7a6db982e220c4d532" category="paragraph">配置交换机并安装所需软件后、请访问适用于AFF/FAS平台型号的安装和设置说明以完成系统设置。对于全SAN阵列(ASA)系统、请按照相应AFF A系列型号的安装说明进行操作。</block>
   <block id="17732d64911b83c1ef019e7ce301df3a" category="summary">您可以通过存储系统文档安装、设置和维护ASA 系统。</block>
   <block id="27562113eba41d0820398afd585cb267" category="sidebar">ASA 软件配置</block>
   <block id="ff529c4d04327f7d20ae4d7b457bcd18" category="sidebar">ASA 产品规格</block>
@@ -7192,7 +7174,6 @@
   <block id="3d95f3470ed102d015e07a1fbb7f7608" category="list-text">从电源设备上拔下D-sub直流电源线接头、并将其放在一旁。</block>
   <block id="d28bc8f0e10f780bf01d0983424f02e4" category="list-text">将D-sub直流电源电缆连接器插入电源设备。</block>
   <block id="538209f1ec1db21a865711f12301a29e" category="list-text">拧紧两颗指旋螺钉、将D-sub直流电源电缆连接器固定至电源设备。</block>
-  <block id="05a183c8bc1fc9522f554a0dcc45645f" category="paragraph">在机架或机柜中安装AFF/FAS控制器。访问适用于您的AFF/FAS平台型号的安装和设置说明。对于全SAN阵列(ASA)系统、请按照相应AFF A系列型号的安装说明进行操作。</block>
   <block id="7877fbd25ecba999ab0a739fe29df547" category="paragraph">** AFF A系列系统**</block>
   <block id="999865050c05a9851fa1100ea708f735" category="paragraph">** AFF C系列系统**</block>
   <block id="fb4b827f429720ceefe590267f9978cf" category="paragraph">** FAS 系统**</block>
@@ -7778,7 +7759,6 @@ SFP+(目标/启动程序)</block>
   <block id="b7cf9d5fc111cce87031b050032fe85f" category="list-text">插入NVRAM电池。</block>
   <block id="44e9bf23cac339f1a46833e07d1be621" category="list-text">将电池与金属板侧壁上的固定支架对齐。</block>
   <block id="cca6b082b0a0af8dfe622b365bd85350" category="section-title">第5步：将故障部件退回给NetApp - AFF A700s</block>
-  <block id="b1a2e879032b7693396d5911fdb9ee8f" category="sidebar">夹层卡</block>
   <block id="7655464c949e17f83cc9f89554f784e5" category="sidebar">多路径HA的布线工作表和示例</block>
   <block id="c2b6b3b554d53a9298b53bc5f03d3830" category="sidebar">四路径HA的布线工作表和示例</block>
   <block id="84f80d47c3a3934ba083c16827645698" category="sidebar">FAS2800系统</block>
@@ -8369,7 +8349,6 @@ You must replace the NVDIMM in the controller module when your system registers 
   <block id="ac8239cbe6a7d46c72f3e9111b7a640e" category="sidebar">维护SAS磁盘架</block>
   <block id="0d15b077865ff751c51f5dab813a9ea6" category="sidebar">DS460C磁盘架中的风扇</block>
   <block id="eaede3cca67a867c9e94c14b2f787088" category="sidebar">终止提供的系统不再提供购买服务、但仍受支持。</block>
-  <block id="505476a6b3e65663fca6229242e89d23" category="sidebar">NetApp的AFF和FAS以及全SAN阵列存储系统提供行业最先进的数据管理功能、可提供领先的企业级横向扩展全闪存或混合存储。使用此站点上的文档安装，扩展，升级和维护 AFF ， FAS 或所有 SAN 阵列系统。</block>
   <block id="1e5c40b1bf2557793e21f12b8450b6d8" category="sidebar">存储平台</block>
   <block id="66c2e7aa58c59d739dda76e6d38b06a4" category="sidebar">AFF A系列系统</block>
   <block id="41b3869a7c52f072660b62d2724ca1c7" category="sidebar">AFF C系列系统</block>
@@ -8457,4 +8436,66 @@ You must replace the NVDIMM in the controller module when your system registers 
   <block id="38a7a370db7e825d6ae11492a25bbf4c" category="sidebar">ASA A400 PCIe或夹层卡</block>
   <block id="4ad30ae349c6e2a00c505685283569c4" category="sidebar">ASA A400电源</block>
   <block id="a876a1a0c70aad6f175618bf59efec73" category="sidebar">ASA A400实时时钟电池</block>
+  <block id="5590b96dc59eb91eb51b7b3ea51d3fd8" category="image-alt">DRW C400卸下控制器IEOPS 1216</block>
+  <block id="771f4aeef9d68203f402ef43f2428c23" category="paragraph">控制器从机箱中略微移出</block>
+  <block id="8fd39c2eb9c2c19fb66fabb13ca5407d" category="image-alt">DRW C400 NVDIMM电源IEOPS 1227</block>
+  <block id="6eabe3dfd3272d314cbb0448ef86a7ca" category="section-title">Step 5: Run diagnostics</block>
+  <block id="794b73a50d9f5595ccb242091ccf6e88" category="paragraph">After you have replaced a component in your system, you should run diagnostic tests on that component.</block>
+  <block id="1292b9de6b55a89a9f27c917af53c51e" category="paragraph">Your system must be at the LOADER prompt to start diagnostics.</block>
+  <block id="1082bfd13ce3c25ccfc85ed699b54126" category="paragraph">诊断过程中的所有命令都是从要更换组件的控制器发出的。</block>
+  <block id="e7715fbdf353439bc04c101e641a6a00" category="list-text">如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器：<block ref="d9a3ee635a736b8059849c211af96e57" prefix=" " category="inline-code"></block></block>
+  <block id="cafeac4841bc727e191d8e441daae473" category="paragraph">问题描述命令后，请等待，直到系统停留在 LOADER 提示符处。</block>
+  <block id="14a78bce1fad359d61fd0d2e4a24c3f0" category="list-text">At the LOADER prompt, access the special drivers specifically designed for system-level diagnostics to function properly:<block ref="87ee09e2a5f76fd0b04e7f6e02d1e3ef" prefix=" " category="inline-code"></block></block>
+  <block id="4d0d7afa62744b6e8fc6dc6801b2da31" category="list-text">Select *Scan System* from the displayed menu to enable running the diagnostics tests.</block>
+  <block id="4c82586ad94f678fd41f1bb0af345849" category="list-text">Select *Test Memory* from the displayed menu to run diagnostics tests.</block>
+  <block id="62b108a49afeed7e7e1892a4157f8715" category="list-text">Proceed based on the result of the preceding step:</block>
+  <block id="9e1e2230ae8a4b73d9a6a3b77c93c501" category="list-text">If the scan show problems, correct the issue, and then rerun the scan.</block>
+  <block id="c46c5861f25b8f00cf91204cfc2402e9" category="list-text">If the scan reported no failures, select Reboot from the menu to reboot the system.</block>
+  <block id="88f619f79a466f76f35e017863a94304" category="section-title">Step 6: Restore the controller module to operation after running diagnostics</block>
+  <block id="9e70237e8106527e732b0c345e0d528e" category="paragraph">After completing diagnostics, you must recable the system, give back the controller module, and then reenable automatic giveback.</block>
+  <block id="6d9502ea6880092a4496782c893e3da2" category="image-alt">DRW C400 PSU IEOPS 1237</block>
+  <block id="f953d8cdae44d8d3483abb899a001088" category="image-alt">DRW C400更换PCIe卡IEOPS 1235 (1)</block>
+  <block id="8a8905b8ba33c894ca2404f3ecc9601d" category="image-alt">DRW C400露天风道IEOPS第1、第1、第1、第1、第4</block>
+  <block id="7f3e7059150c562376058a9c62805700" category="image-alt">DRW C400更换启动介质IEOPS第12.7节</block>
+  <block id="8f9d84ce0761e9cbbd0e69dc419011a6" category="paragraph"><block ref="8f9d84ce0761e9cbbd0e69dc419011a6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="80c14517a78070e49e0abac5d7f9ddbf" category="image-alt">DRW C400更换夹层卡IEOPS 1236</block>
+  <block id="ff0420a1b97d66a283e50773fa71f7ab" category="image-alt">DRW C400 RTC batt IEOPS 1239</block>
+  <block id="bd47a35792b075014fd52e08e307f334" category="paragraph">您可以使用下图以及书面步骤更换电源。</block>
+  <block id="6867fc910d131de047b47f8e69a79887" category="paragraph">After you have replaced a system DIMM in your system, you should run diagnostic tests on that component.</block>
+  <block id="627dae9b7fdce24278b6e4ff295eb7be" category="list-text">Select *Test Memory* from the displayed menu.</block>
+  <block id="ec0d0904d577b30f49df1757109008c2" category="list-text">Select an option from the displayed sub-menu and run the test.</block>
+  <block id="79934a1e2f37ff48405809bfef33e025" category="list-text">If the test failed, correct the failure, and then rerun the test.</block>
+  <block id="7795a0b926d5a3e9bb0b6489d5f08336" category="list-text">If the test reported no failures, select Reboot from the menu to reboot the system.</block>
+  <block id="319906493abbf4e43070e2a96baf7c1a" category="paragraph">After you have replaced the NVDIMM in your system, you should run diagnostic tests on that component.</block>
+  <block id="3c6a6919b7e370565fb312ed482c731f" category="list-text">Select *NVDIMM Test* from the displayed menu.</block>
+  <block id="b5775fd5494c53337ae6cdf9684c92bb" category="paragraph">您必须从受损控制器移动启动介质设备、并将其安装在替代控制器中。</block>
+  <block id="e1e22f74d03ae53f2b284cc33a49e335" category="paragraph">您必须将启动介质设备从受损控制器模块移至更换用的控制器模块。</block>
+  <block id="5f5c8582e186539c05898d22a8d895e8" category="paragraph">启动介质位于您先前在此操作步骤中卸下的空气管道盖板下方。</block>
+  <block id="52af7d4516c9a231debbc59d16540841" category="summary">维护FAS2800硬件</block>
+  <block id="a15b9605ee28854b0a879286a11a485d" category="doc">维护FAS2800硬件</block>
+  <block id="3bf4e15c5081d9414a6cd3448aae890e" category="paragraph">对于FAS2800存储系统、您可以对以下组件执行维护过程。</block>
+  <block id="1ddc1fb5b0cd55faae476600a06e1a0b" category="summary">要启动并运行AFF、ASA和FAS系统、您需要在ONTAP中安装硬件组件、配置交换机和配置存储。</block>
+  <block id="d90835a42340aac8a036ef710a1aa68a" category="doc">启动并运行AFF、ASA和FAS存储系统</block>
+  <block id="ced81397dd782da72bb7c38992c64be4" category="paragraph">在机架或机柜中安装AFF、ASA和FAS控制器。访问适用于您的平台型号的安装和设置说明。</block>
+  <block id="fe16224741a81fa9747d82d6dc05182c" category="list-text"><block ref="fe16224741a81fa9747d82d6dc05182c" category="inline-link-rx"></block></block>
+  <block id="ecd8dd92a7f4e8e4e42627b4e7b33118" category="list-text"><block ref="ecd8dd92a7f4e8e4e42627b4e7b33118" category="inline-link-rx"></block></block>
+  <block id="550e0f3f38fa7f062f0cd580e8ec9904" category="list-text"><block ref="550e0f3f38fa7f062f0cd580e8ec9904" category="inline-link-rx"></block></block>
+  <block id="52142476f2ac75ac73f5e40f09d0e6d4" category="list-text"><block ref="52142476f2ac75ac73f5e40f09d0e6d4" category="inline-link-rx"></block></block>
+  <block id="b9cc4cc5d585d56b19a0b0bf8c7ff71f" category="list-text"><block ref="b9cc4cc5d585d56b19a0b0bf8c7ff71f" category="inline-link-rx"></block></block>
+  <block id="0ac6aa3296c0437f3274277862d88d2b" category="list-text"><block ref="0ac6aa3296c0437f3274277862d88d2b" category="inline-link-rx"></block></block>
+  <block id="a334af0b164fc0db79711e89abe4cb0d" category="inline-link">FAS2800</block>
+  <block id="53e69397147d83b3fa253cab22a92a98" category="list-text"><block ref="53e69397147d83b3fa253cab22a92a98" category="inline-link-rx"></block></block>
+  <block id="842e9311855e597be1c8f81082e70046" category="paragraph">配置交换机并安装所需软件后、请访问适用于您的平台型号的安装和设置说明以完成系统设置。</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="7654764586a53c997b8c1df9098532f4" category="summary">了解AFF、ASA和FAS系统的新功能。</block>
+  <block id="3e2d1e468d09ac8c0d6588070ba9373f" category="doc">AFF、ASA和FAS系统的新增功能</block>
+  <block id="e0bcfdcb3cdb0fb1cf75064d4e0a8516" category="sidebar">NetApp的AFF、ASA和FAS存储系统提供行业最先进的数据管理功能、可提供领先的企业级横向扩展全闪存或混合存储。使用此站点上的文档安装、扩展、升级和维护您的系统。</block>
+  <block id="834c650e32073b55fedca10accbda908" category="sidebar">AFF、ASA和FAS系统文档</block>
 </blocks>
