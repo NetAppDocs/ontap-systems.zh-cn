@@ -11,8 +11,7 @@ summary: 如果系统记录闪存生命周期接近结束或已识别的 NVDIMM 
 
 
 [role="lead"]
-400_NVDIMM更换.adoc
-You must replace the NVDIMM in the controller module when your system registers that the flash lifetime is almost at an end or that the identified NVDIMM is not healthy in general; failure to do so causes a system panic.
+如果系统记录闪存生命周期接近结束或已识别的 NVDIMM 总体运行状况不佳，则必须更换控制器模块中的 NVDIMM ；否则会导致系统崩溃。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 

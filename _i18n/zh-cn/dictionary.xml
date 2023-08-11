@@ -2126,18 +2126,12 @@
   <block id="88cf45a15ad0d90bd6e19a24f810822a" category="paragraph">更换用的 PDU 必须由系统机柜支持，并且必须为已安装的设备提供足够的电源。</block>
   <block id="5404442a7ea7dc52ed099fdd23e4199c" category="inline-link">hwu.netapp.com</block>
   <block id="82e5aa4d5246e6a9e6a64d53e8aef6dc" category="paragraph"><block ref="82e5aa4d5246e6a9e6a64d53e8aef6dc" category="inline-link-rx"></block></block>
-  <block id="4fbff5b4dee9636bd56900af51fdd7a8" category="list-text">关闭目标 PDU 上的断路器，然后从交流电源中拔下旧 PDU 的插头。</block>
-  <block id="1989ca3bd819f1099182bcf6351ed5b4" category="list-text">将您自己接地到系统机柜，然后从每个系统组件和 PDU 上拔下电源线。</block>
   <block id="9ad9ea8490a641161f4adb6e3f2bc0ef" category="list-text">从 PDU 框架上卸下螺钉，首先拧下底部螺钉。</block>
   <block id="17de7c609b4fa11bfbd42b27506a7686" category="admonition">从 PDU 顶部卸下最后一个螺钉时，请确保用一只手支撑 PDU 。这样可以防止 PDU 在卸下螺钉后跌落或跌落至您的位置。</block>
-  <block id="3ac6263fbfd63ebfc4e426b2da956c22" category="list-text">从系统机柜中卸下旧 PDU 。</block>
   <block id="4dda4611a9de699220bc9f60e9d529c5" category="paragraph">请务必跟踪安装螺钉，以便在安装更换用的 PDU 时可以重复使用这些螺钉。</block>
-  <block id="420bae0ac211e6a209a8ca28f7ce8fed" category="list-text">从旧 PDU 中卸下支架，然后将其安装在替代 PDU 的背面。</block>
-  <block id="199516540a6f5c3cc527e2233f00e852" category="list-text">在支持替代 PDU 时，将 PDU 安装支架上的插槽与系统机柜内框架顶部的孔对齐，然后使用旧 PDU 中的安装螺钉将 PDU 固定到系统机柜框架上。</block>
   <block id="1663c81c2800071abb2416ac1f02af7b" category="list-text">将 PDU 的底部固定到系统机柜框架上，然后拧紧所有安装螺钉。</block>
   <block id="50557c0f929805d051808d32d02f4238" category="list-text">确认所有电源开关或断路器均处于 OFF 位置。</block>
   <block id="2198cda48b40760064274c533a0bb100" category="paragraph">如果断路器未处于 OFF 位置，请将一个小螺丝刀或直发的回形针推入 OFF 标签右侧的插槽，以使断路器跳闸并关闭电路。</block>
-  <block id="3f1c6da286f9a0a50c82f505309eac01" category="list-text">将系统电源线插入 PDU ，将每个组件直接插入组件对面的 PDU 插座。</block>
   <block id="c6a29e7ba231ff756ea033da9fcf39b0" category="admonition">最佳做法是，在 PDU 分支之间分布总负载，使每个分支的负载尽可能相等。</block>
   <block id="baaa322344b84f330d59cb629097f0f7" category="list-text">通过将缆线固定夹的弯曲边缘滑过插头肩，将每个组件的电源缆线插头用其上方的缆线固定夹锁定到位。</block>
   <block id="2f4e88c25cdf52e68455a1402fb5bf5b" category="list-text">将 PDU 电源线插入交流电源。</block>
@@ -2156,9 +2150,6 @@
   <block id="9682abea21a8105e25e53a664815f083" category="summary">您必须将系统组件连接到 PDU ，将 PDU 缆线连接到交流电源，将其连接到电源以及打开系统电源。</block>
   <block id="de377ff4f06113db5f03b6d5d7501baa" category="doc">打开系统机柜的电源</block>
   <block id="44626aa3377a470ee951473cc16b9064" category="paragraph">您必须为系统机柜中的每个 PDU 提供单独的电源电路。</block>
-  <block id="446a4e63e0c973838e08a5473045915d" category="list-text">将设备连接到 PDU ，确保将每个组件的电源连接到系统机柜两侧的 PDU 。</block>
-  <block id="8c74169b1ab62a22c3b2a90a3051cfd3" category="list-text">将 PDU 电源线穿过系统机柜中的开口。</block>
-  <block id="2965b9f0cdabb572eee3c29e940336c6" category="paragraph">使用以下开口之一：</block>
   <block id="43fd8e637b5fa8a0480393ffec052db1" category="list-text">系统机柜的顶部</block>
   <block id="845cc1d7e0e6e805d0656362d228ee19" category="list-text">位于系统机柜后盖底部和框架之间</block>
   <block id="5c04468bd8d9f11247b1e74c799efff1" category="list-text">通过落地窗和系统机柜下方</block>
@@ -4702,7 +4693,6 @@
   <block id="11d02190504093bd73e567dcb0e63a7b" category="sidebar">X91148A 模块</block>
   <block id="3b94033c8a5b93831bf0d7c1fa418f82" category="sidebar">在新存储系统中安装磁盘架</block>
   <block id="bb1befc9e7977eedfa3877ae4c91a4ac" category="sidebar">SAS 布线规则，工作表和示例</block>
-  <block id="711fec659e5c52bba32ca7f6f3439502" category="sidebar">磁盘架 LED 状态条件</block>
   <block id="e7fe78f29d2a12982128aa007f6851a6" category="sidebar">AFF A250 系统</block>
   <block id="0505c366cf2aa05ef59b3b78f4e74a9f" category="sidebar">AFF A250 安装和设置</block>
   <block id="b4de374d75b22d216e3867b88bd708e7" category="sidebar">选择安装和设置体验</block>
@@ -7743,7 +7733,6 @@ SFP+(目标/启动程序)</block>
   <block id="40ab4deb5c724a3e2d6c8f6d96a94554" category="doc">关闭控制器- FAS2800</block>
   <block id="5f81816799fe408c4f5d0d2b06be7dd0" category="doc">快速指南—FAS2800</block>
   <block id="b0f0e558d3522c3be05dd8c2dd0af1cc" category="inline-link-macro">《FAS2800系统安装和设置说明》</block>
-  <block id="dcd1fb87d1725e210ef205f9a1c5e788" category="paragraph"><block ref="dcd1fb87d1725e210ef205f9a1c5e788" category="inline-link-macro-rx"></block></block>
   <block id="30d72b7769d2368f3a2f7fcacca60c27" category="doc">更换DIMM - FAS2800</block>
   <block id="041e48089a1444bcdc82526d41790e40" category="paragraph">从系统中卸下控制器模块、然后卸下控制器模块护盖。</block>
   <block id="8caaa86fafbf22c9627e97fb31c1eea5" category="paragraph">找到控制器内的DIMM、将其卸下并更换。</block>
@@ -7873,12 +7862,8 @@ SFP+(目标/启动程序)</block>
   <block id="0ab7f92a68b16764d7667e3b826e3433" category="paragraph">在关闭受损控制器并检查板载加密密钥的状态之前、您必须先检查受损控制器的状态、禁用自动交还、并检查系统上正在运行的ONTAP版本。</block>
   <block id="28a80c9e2cd7e688ac36b9d1d600c170" category="summary">您必须按照套件附带的RMA说明中所述、验证机箱的HA状态、切回聚合并将故障部件退回给NetApp。</block>
   <block id="69f3a5a3fa19fee640389983d958d940" category="section-title">第2步：在双节点MetroCluster配置中切回聚合</block>
-  <block id="cd48288105e3b8975765f5dfc4eb68c6" category="paragraph">400_FAN_SWAP_OUT。adoc
-To swap out a fan module without interrupting service, you must perform a specific sequence of tasks.</block>
   <block id="341b682adfeb628f1bd1c2eb360fa9a4" category="paragraph">将风扇、硬盘驱动器和控制器模块从受损机箱移至新机箱、然后将受损机箱更换为与受损机箱型号相同的新机箱。</block>
   <block id="6b78a305de67da849895158b569b9d11" category="paragraph">将控制器模块安装到新机箱后、需要启动它。</block>
-  <block id="4971d1d0e646704442f36457f270bd80" category="paragraph">400_NVDIMM更换.adoc
-You must replace the NVDIMM in the controller module when your system registers that the flash lifetime is almost at an end or that the identified NVDIMM is not healthy in general; failure to do so causes a system panic.</block>
   <block id="bfce71371c42897290715d3a240df4ba" category="paragraph">更换控制器模块中的组件后、必须将控制器模块重新安装到机箱中、然后启动它。</block>
   <block id="f57ac97281a56eb21b6c67d6f8d23883" category="paragraph">您必须重新对系统进行数据恢复、交还控制器模块、然后重新启用自动交还。</block>
   <block id="0e7d06b3f50f9081b15d133e07f647b6" category="summary">维护ASA A400硬件</block>
@@ -8438,19 +8423,14 @@ You must replace the NVDIMM in the controller module when your system registers 
   <block id="a876a1a0c70aad6f175618bf59efec73" category="sidebar">ASA A400实时时钟电池</block>
   <block id="5590b96dc59eb91eb51b7b3ea51d3fd8" category="image-alt">DRW C400卸下控制器IEOPS 1216</block>
   <block id="771f4aeef9d68203f402ef43f2428c23" category="paragraph">控制器从机箱中略微移出</block>
-  <block id="8fd39c2eb9c2c19fb66fabb13ca5407d" category="image-alt">DRW C400 NVDIMM电源IEOPS 1227</block>
   <block id="6eabe3dfd3272d314cbb0448ef86a7ca" category="section-title">Step 5: Run diagnostics</block>
-  <block id="794b73a50d9f5595ccb242091ccf6e88" category="paragraph">After you have replaced a component in your system, you should run diagnostic tests on that component.</block>
   <block id="1292b9de6b55a89a9f27c917af53c51e" category="paragraph">Your system must be at the LOADER prompt to start diagnostics.</block>
   <block id="1082bfd13ce3c25ccfc85ed699b54126" category="paragraph">诊断过程中的所有命令都是从要更换组件的控制器发出的。</block>
   <block id="e7715fbdf353439bc04c101e641a6a00" category="list-text">如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器：<block ref="d9a3ee635a736b8059849c211af96e57" prefix=" " category="inline-code"></block></block>
   <block id="cafeac4841bc727e191d8e441daae473" category="paragraph">问题描述命令后，请等待，直到系统停留在 LOADER 提示符处。</block>
   <block id="14a78bce1fad359d61fd0d2e4a24c3f0" category="list-text">At the LOADER prompt, access the special drivers specifically designed for system-level diagnostics to function properly:<block ref="87ee09e2a5f76fd0b04e7f6e02d1e3ef" prefix=" " category="inline-code"></block></block>
   <block id="4d0d7afa62744b6e8fc6dc6801b2da31" category="list-text">Select *Scan System* from the displayed menu to enable running the diagnostics tests.</block>
-  <block id="4c82586ad94f678fd41f1bb0af345849" category="list-text">Select *Test Memory* from the displayed menu to run diagnostics tests.</block>
   <block id="62b108a49afeed7e7e1892a4157f8715" category="list-text">Proceed based on the result of the preceding step:</block>
-  <block id="9e1e2230ae8a4b73d9a6a3b77c93c501" category="list-text">If the scan show problems, correct the issue, and then rerun the scan.</block>
-  <block id="c46c5861f25b8f00cf91204cfc2402e9" category="list-text">If the scan reported no failures, select Reboot from the menu to reboot the system.</block>
   <block id="88f619f79a466f76f35e017863a94304" category="section-title">Step 6: Restore the controller module to operation after running diagnostics</block>
   <block id="9e70237e8106527e732b0c345e0d528e" category="paragraph">After completing diagnostics, you must recable the system, give back the controller module, and then reenable automatic giveback.</block>
   <block id="6d9502ea6880092a4496782c893e3da2" category="image-alt">DRW C400 PSU IEOPS 1237</block>
@@ -8461,9 +8441,7 @@ You must replace the NVDIMM in the controller module when your system registers 
   <block id="80c14517a78070e49e0abac5d7f9ddbf" category="image-alt">DRW C400更换夹层卡IEOPS 1236</block>
   <block id="ff0420a1b97d66a283e50773fa71f7ab" category="image-alt">DRW C400 RTC batt IEOPS 1239</block>
   <block id="bd47a35792b075014fd52e08e307f334" category="paragraph">您可以使用下图以及书面步骤更换电源。</block>
-  <block id="6867fc910d131de047b47f8e69a79887" category="paragraph">After you have replaced a system DIMM in your system, you should run diagnostic tests on that component.</block>
   <block id="627dae9b7fdce24278b6e4ff295eb7be" category="list-text">Select *Test Memory* from the displayed menu.</block>
-  <block id="ec0d0904d577b30f49df1757109008c2" category="list-text">Select an option from the displayed sub-menu and run the test.</block>
   <block id="79934a1e2f37ff48405809bfef33e025" category="list-text">If the test failed, correct the failure, and then rerun the test.</block>
   <block id="7795a0b926d5a3e9bb0b6489d5f08336" category="list-text">If the test reported no failures, select Reboot from the menu to reboot the system.</block>
   <block id="319906493abbf4e43070e2a96baf7c1a" category="paragraph">After you have replaced the NVDIMM in your system, you should run diagnostic tests on that component.</block>
@@ -8498,4 +8476,55 @@ You must replace the NVDIMM in the controller module when your system registers 
   <block id="3e2d1e468d09ac8c0d6588070ba9373f" category="doc">AFF、ASA和FAS系统的新增功能</block>
   <block id="e0bcfdcb3cdb0fb1cf75064d4e0a8516" category="sidebar">NetApp的AFF、ASA和FAS存储系统提供行业最先进的数据管理功能、可提供领先的企业级横向扩展全闪存或混合存储。使用此站点上的文档安装、扩展、升级和维护您的系统。</block>
   <block id="834c650e32073b55fedca10accbda908" category="sidebar">AFF、ASA和FAS系统文档</block>
+  <block id="ca31c0aa49625e7cda9cae921b597ddc" category="admonition">Ver2控制器的DIMM插槽较少。支持的DIMM数量没有减少、DIMM插槽编号也没有变化。将DIMM移至新控制器模块时、请将DIMM安装到与受损控制器模块相同的插槽编号/位置。  有关DIMM插槽位置、请参见Ver2控制器模块上的FRU示意图。</block>
+  <block id="41f70b901e92516347e56b1eee6fe77b" category="section-title">Step 5: Run system-level diagnostics</block>
+  <block id="2a075cce7e33313e84aaa96ceb86a4c8" category="paragraph">After installing a new DIMM, you should run diagnostics.</block>
+  <block id="df1e43716c35bc8d4504c85a27a53747" category="paragraph">Your system must be at the LOADER prompt to start System Level Diagnostics.</block>
+  <block id="a9aa9ee572e50473b1c62b2a894e2043" category="list-text">如果要维护的控制器不在 LOADER 提示符处，请执行以下步骤：</block>
+  <block id="a62ebd9a348c36c016869d6133f9d6a7" category="list-text">Select the Maintenance mode option from the displayed menu.</block>
+  <block id="2f550a4de949e9364b8ac6aefff7f6b7" category="list-text">控制器启动到维护模式后，暂停控制器：<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block></block>
+  <block id="c63722af0556df99585d9c4de88eb02d" category="admonition">在启动过程中、您可以安全地做出响应<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> 至提示符。</block>
+  <block id="92a410b1608886e36ab28b2f459ca694" category="list-text">如果显示一条提示，警告您在 HA 配置中进入维护模式时，必须确保运行正常的控制器保持关闭状态。</block>
+  <block id="7e3c65608f93c3fbf4ce1a591a4d2340" category="paragraph">在启动过程中、您可以安全地做出响应<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> 直到出现维护模式提示符(*&gt;)。</block>
+  <block id="e580ca306f46568a79f3f99e6ff00dd4" category="list-text">对系统内存运行诊断程序：<block ref="9cc327d245a3e2bf3cf969c94332f389" prefix=" " category="inline-code"></block></block>
+  <block id="0779a45c530b8731effd7061f49b82c5" category="list-text">验证更换DIMM是否未导致硬件问题：<block ref="0d54fb4fe6de512f295c58294a4c56a7" prefix=" " category="inline-code"></block></block>
+  <block id="5da59e51284514317dd89943fd6da2c6" category="paragraph">System-level diagnostics returns you to the prompt if there are no test failures, or lists the full status of failures resulting from testing the component.</block>
+  <block id="c444e1d5af673cd5dfdeb1085082e165" category="cell">If the system-level diagnostics tests...</block>
+  <block id="e51b992cacbc73ddca29fb6c03d6002d" category="paragraph">Were completed without any failures</block>
+  <block id="629e9741b680c5d2f9b826ad2827a093" category="list-text">Clear the status logs:<block ref="5337cb249c294f16f70e226d13832fe2" prefix=" " category="inline-code"></block></block>
+  <block id="b136ba63933bc4583a57c094dbaf6a54" category="list-text">Verify that the log was cleared:<block ref="ffcce1e10203a888408d6b38d996935b" prefix=" " category="inline-code"></block></block>
+  <block id="d83539fafeb4a565a2af47953e3b18ff" category="paragraph">The following default response is displayed:</block>
+  <block id="4b8070f17628f093b654845050b5340a" category="paragraph">SLDIAG: No log messages are present.</block>
+  <block id="9130288fde26913b149c87c0c3f09798" category="paragraph">控制器将显示 LOADER 提示符。</block>
+  <block id="e98eb54c273dabf46f95d865ffe06863" category="list-text">从加载程序提示符启动控制器：<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
+  <block id="72b23f149d410394a99402b17b524532" category="cell">如果控制器位于 ...</block>
+  <block id="beae2577508dff32956933c72e8af78a" category="paragraph">执行交还：<block ref="06b377d178eed8a76119920cc708363f" prefix=" " category="inline-code"></block>        *注意:*如果禁用了自动交还,请使用storage故障转移修改命令重新启用它。</block>
+  <block id="834caefd76621a278dc8eb267498ba4b" category="paragraph">Resulted in some test failures</block>
+  <block id="36b7b39e8866d307e74c69b213e9f048" category="paragraph">Determine the cause of the problem:</block>
+  <block id="723c3f20f55eb14062651aca6c8a7346" category="paragraph">问题描述命令后，请等待，直到系统停留在 LOADER 提示符处。</block>
+  <block id="cfc0c5504a92f839aa78f19ba2247644" category="list-text">Verify that you have observed all the considerations identified for running system-level diagnostics, that cables are securely connected, and that hardware components are properly installed in the storage system.</block>
+  <block id="8764a3167d4b2a62ad3ab1024610e8a0" category="list-text">启动您正在维护的控制器模块、按中断启动<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block> 当系统提示进入启动菜单时：</block>
+  <block id="c644e1bd6ef1c961f0ee51f0001a2a80" category="list-text">If you have two controller modules in the chassis, fully seat the controller module you are servicing in the chassis.</block>
+  <block id="c73474569fe6618d9069e1f3b42bbb62" category="paragraph">The controller module boots up when fully seated.</block>
+  <block id="cd344280bdd1b4c0a3bfe1c043079039" category="list-text">If you have one controller module in the chassis, connect the power supplies, and then turn them on.</block>
+  <block id="0a04c386b1c4aba682caa8fbe7cfe6a5" category="list-text">Select Boot to maintenance mode from the menu.</block>
+  <block id="b68d60431d57a95615f83d1a1fa1b999" category="list-text">输入以下命令以退出维护模式：<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block></block>
+  <block id="7de4082b4319513bf089f060127a9d55" category="list-text">Rerun the system-level diagnostic test.</block>
+  <block id="f7ed34876dbd3974ede0b50d2019fcc5" category="paragraph"><block ref="f7ed34876dbd3974ede0b50d2019fcc5" category="inline-link-macro-rx"></block></block>
+  <block id="cac76ada4fbfca68ed190eb21810e1af" category="inline-link">FAS2820</block>
+  <block id="d269857d9f0df177f932595366b187b5" category="paragraph"><block ref="d269857d9f0df177f932595366b187b5" category="inline-link-rx"></block></block>
+  <block id="b6e60011eab2ca1cf5d6c756a1bbfc5e" category="paragraph">ONTAP 9.13.1</block>
+  <block id="93f637af8ac5da333e550231ad3ba0fa" category="admonition">为防止PDU发生故障时系统中断、请勿将任何组件的两根电源线同时插入一个PDU。将负载分布在插入不同电路的分布在各个集成电路中、如图所示。</block>
+  <block id="c8d15ffad402fb5c47edd1a01fc0bddc" category="list-text">将设备连接到PDU：</block>
+  <block id="3ded18266b7e48e45601da3a7e439064" category="list-text">将控制器电源连接到连接到不同电源的不同PDU。</block>
+  <block id="0c634889e74dcc29e25f327dc059325d" category="list-text">将驱动器架电源连接到连接到不同电源的不同PDU。</block>
+  <block id="d62665e6ca42d66f7798a47b3de173c1" category="list-text">将所有交换机电源连接到连接到不同电源的不同PDU。</block>
+  <block id="491e0bd8633c24f663133d28bbca00b6" category="image-alt">机柜电源线IEOPS实现了第1.</block>
+  <block id="a8160b1047e34e32f29ffcef388142ae" category="paragraph">将PDU电源线穿过系统机柜中的以下一个开口：</block>
+  <block id="9f708794421d9c2f9fa55bb42915f824" category="list-text">关闭受损PDU上的断路器、然后从交流电源拔下受损PDU。</block>
+  <block id="16eadd18e8cd7dafc21fca24e9d774c0" category="list-text">接地至系统机柜、然后从每个系统组件和受损PDU上拔下电源线。</block>
+  <block id="c9144dd81d5fb57474d7493f00d69ad5" category="list-text">从系统机柜中卸下受损PDU。</block>
+  <block id="6693af315bf1c245b8a89cbbb645b36c" category="list-text">从受损PDU上卸下支架、然后将其安装在替代PDU的背面。</block>
+  <block id="0fa3e40fa136f7cfe1746d5ce1d7e9ee" category="list-text">支撑替代PDU时、将PDU固定支架上的插槽与系统机柜内侧机架顶部的孔对齐、然后使用受损PDU上的固定螺钉将PDU固定到系统机柜框架上。</block>
+  <block id="143d47d33d1ad99e226055b46abe364d" category="list-text">将从存储系统、交换机和驱动器架上拔下的电源线插入更换用的PDU中、将每个组件直接插入组件对面的PDU插座中。</block>
 </blocks>

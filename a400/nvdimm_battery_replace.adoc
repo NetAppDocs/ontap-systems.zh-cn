@@ -180,6 +180,12 @@ mcc1A::> metrocluster operation show
 
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
+您可以使用以下动画，插图或写入的步骤从机箱中删除控制器模块。
+
+.动画-删除控制器模块
+video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
+image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
+
 . 如果您尚未接地，请正确接地。
 . 释放电源线固定器，然后从电源中拔下缆线。
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
@@ -191,26 +197,6 @@ mcc1A::> metrocluster operation show
 +
 此控制器模块会从机箱中略微移出。
 
-+
-image::../media/drw_c400_remove_controller_IEOPS-1216.svg[DRW C400卸下控制器IEOPS 1216]
-
-+
-|===
-
-
- a| 
-image:../media/legend_icon_01.png[""]
- a| 
-锁定闩锁
-
-
-
- a| 
-image:../media/legend_icon_02.png[""]
- a| 
-控制器从机箱中略微移出
-
-|===
 . 将控制器模块滑出机箱。
 +
 将控制器模块滑出机箱时，请确保您支持控制器模块的底部。
@@ -229,8 +215,8 @@ image:../media/legend_icon_02.png[""]
 您可以使用以下动画，插图或写入的步骤更换 NVDIMM 电池。
 
 .动画-更换NVDIMM电池
-video::0521b0f4-8b58-4aa7-aaf2-b03100020356[panopto]
-image::../media/drw_c400_nvdimm_batt_IEOPS-1227.svg[DRW C400 NVDIMM电源IEOPS 1227]
+video::1f1425a8-5a91-4810-82da-aad9012efa4f[panopto]
+image::../media/drw_A400_nvdimm-batt_IEOPS-1004.svg[DRW A400 NVDIMM电池IEOPS 1004]
 
 . 打开通风管：
 +
@@ -250,7 +236,13 @@ image::../media/drw_c400_nvdimm_batt_IEOPS-1227.svg[DRW C400 NVDIMM电源IEOPS 1
 
 == 第 4 步：安装控制器模块
 
-更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
+更换控制器模块中的组件后、必须将控制器模块重新安装到机箱中、然后启动它。
+
+您可以使用以下动画，插图或写入的步骤在机箱中安装控制器模块。
+
+.动画-安装控制器模块
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
+image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
 
 . 如果尚未关闭此通风管，请关闭此通风管。
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
@@ -282,44 +274,15 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 NOTE: 如果系统停留在启动菜单处，请选择启动到 LOADER 选项。
 
 .. 在 LOADER 提示符处，输入 `bye` 以重新初始化 PCIe 卡和其他组件。
-.. 按 `Ctrl-C` 中断启动过程并启动到加载程序提示符。
-+
-如果系统停留在启动菜单处，请选择启动到 LOADER 选项。
 
 
 
 
 
 
+== Step 5: Restore the controller module to operation
 
-== Step 5: Run diagnostics
-
-After you have replaced a component in your system, you should run diagnostic tests on that component.
-
-Your system must be at the LOADER prompt to start diagnostics.
-
-诊断过程中的所有命令都是从要更换组件的控制器发出的。
-
-. 如果要维护的控制器不在 LOADER 提示符处，请重新启动控制器： `system node halt -node node_name`
-+
-问题描述命令后，请等待，直到系统停留在 LOADER 提示符处。
-
-. At the LOADER prompt, access the special drivers specifically designed for system-level diagnostics to function properly: `boot_diags`
-. Select *Scan System* from the displayed menu to enable running the diagnostics tests.
-. Select *Test Memory* from the displayed menu to run diagnostics tests.
-. Proceed based on the result of the preceding step:
-+
-** If the scan show problems, correct the issue, and then rerun the scan.
-** If the scan reported no failures, select Reboot from the menu to reboot the system.
-
-
-
-
-
-
-== Step 6: Restore the controller module to operation after running diagnostics
-
-After completing diagnostics, you must recable the system, give back the controller module, and then reenable automatic giveback.
+您必须重新对系统进行数据恢复、交还控制器模块、然后重新启用自动交还。
 
 . 根据需要重新对系统进行布线。
 +
@@ -331,7 +294,7 @@ After completing diagnostics, you must recable the system, give back the control
 
 
 
-== 第 7 步：切回双节点 MetroCluster 配置中的聚合
+== 第 6 步：切回双节点 MetroCluster 配置中的聚合
 
 在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine （ SVM ）现在处于活动状态，并从本地磁盘池提供数据。
 
@@ -389,6 +352,6 @@ Remote: cluster_A configured      		normal
 
 
 
-== 第 8 步：将故障部件退回 NetApp
+== 第 7 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
