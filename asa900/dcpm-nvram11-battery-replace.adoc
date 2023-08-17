@@ -1,10 +1,10 @@
 ---
-permalink: a900/dcpm_NVRAM11_battery_replace.html 
+permalink: asa900/dcpm-nvram11-battery-replace.html 
 sidebar: sidebar 
-keywords: AFF A900 
+keywords: ASA A900 
 summary: 要热插拔包含 NVRAM11 电池的降级控制器电源模块（ DCPM\ ），您必须找到发生故障的 DCPM 模块，将其从机箱中卸下，然后安装更换的 DCPM 模块。 
 ---
-= 更换包含 NVRAM11 电池的目标控制电源模块 - AFF A900
+= 更换包含NVRAM11电池的DCPM - ASA A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
