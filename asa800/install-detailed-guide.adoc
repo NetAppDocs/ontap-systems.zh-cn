@@ -31,7 +31,7 @@ summary: 本节提供了安装系统的详细分步说明。
 .. 打开所有框内容的包装。
 .. 记录控制器的系统序列号。
 +
-image::../media/drw_ssn_label.png[DRW SSN 标签]
+image::../media/drw_ssn_label.png[显示编号位置的系统序列号示例]
 
 
 
@@ -138,7 +138,7 @@ image:../media/oie_cable_fc_optical.png[""]
  a| 
 不适用
  a| 
-image:../media/oie_cable_micro_usb.png[""]
+image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 软件设置期间的控制台连接
 
@@ -247,7 +247,7 @@ image:../media/oie_legend_icon_2_lg.png[""]
  a| 
 image:../media/oie_legend_icon_3_lp.png[""]
  a| 
-使用缆线将管理端口连接到管理网络交换机 image:../media/drw_affa800_mgmt_cabling.png[""]
+Cable the management ports to the management network switches    image:../media/drw_affa800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
 
 
 
@@ -316,7 +316,7 @@ image:../media/oie_legend_icon_2_lg.png[""]
  a| 
 image:../media/oie_legend_icon_3_lp.png[""]
  a| 
-使用缆线将管理端口连接到管理网络交换机 image:../media/drw_affa800_mgmt_cabling.png[""]
+Cable the management ports to the management network switches    image:../media/drw_affa800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
 
 
 

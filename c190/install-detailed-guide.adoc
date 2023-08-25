@@ -36,7 +36,7 @@ summary: 本节详细介绍了安装 AFF C190 系统的分步说明。
 . 打开所有框内容的包装。
 . 记录控制器的系统序列号。
 +
-image::../media/drw_ssn_label.png[DRW SSN 标签]
+image::../media/drw_ssn_label.png[显示编号位置的系统序列号示例]
 
 . 设置您的帐户：
 +
@@ -114,7 +114,7 @@ image:../media/oie_cable_rj45.png[""]
  a| 
 不适用
  a| 
-image:../media/oie_cable_micro_usb.png[""]
+image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
 
@@ -234,7 +234,7 @@ image::../media/drw_c190_tnsc_ethernet_network_cabling_animated_gif.png[DRW C190
 UTA2数据网络配置:: 使用以下缆线类型之一将e0c/0c和e0d/0d或e0e/0e和e0f/0f数据端口连接到主机网络。
 +
 --
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
 
 --
 以太网网络配置:: 使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。在下图中。
@@ -301,7 +301,7 @@ image:../media/drw_c190_u_switched_clust_cbling.png[""]
 UTA2数据网络配置:: 使用以下缆线类型之一将e0c/0c和e0d/0d或e0e/0e和e0f/0f数据端口连接到主机网络。
 +
 --
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
 
 --
 以太网网络配置:: 使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。

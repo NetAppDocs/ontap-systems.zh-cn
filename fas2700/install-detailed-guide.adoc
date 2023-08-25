@@ -37,7 +37,7 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62
 . 打开所有框内容的包装。
 . 记录控制器的系统序列号。
 +
-image::../media/drw_ssn_label.png[DRW SSN 标签]
+image::../media/drw_ssn_label.png[显示编号位置的系统序列号示例]
 
 . 设置您的帐户：
 +
@@ -102,7 +102,7 @@ X6536-R6 （ 112-00090 ）， 5 米
 
 X6554-R6 （ 112-00189 ）， 15 米
  a| 
-image:../media/oie_cable_fiber_lc_connector.png[""]
+image:../media/oie_cable_fiber_lc_connector.png["显示光纤LC连接器的图示"]
  a| 
 FC 主机网络
 
@@ -143,7 +143,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""]
  a| 
 不适用
  a| 
-image:../media/oie_cable_micro_usb.png[""]
+image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
 
@@ -247,7 +247,7 @@ FC 主机
 
 NOTE: 您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
 
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
 
 
 
@@ -324,7 +324,7 @@ FC 主机
 
 NOTE: 您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
 
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
 
 
 
@@ -378,7 +378,8 @@ image:../media/oie_legend_icon_1_lg.png[""]
 使用集群互连缆线将集群互连端口彼此相连：
 
 ** e0a 到 e0a
-** e0b 到 e0bimage:../media/drw_c190_e_tnsc_clust_cbling.png[""]
+** e0b到e0b
+image:../media/drw_c190_e_tnsc_clust_cbling.png["图中显示了控制器背面端口之间的集群互连"]
 
 
 

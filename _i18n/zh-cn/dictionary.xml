@@ -82,9 +82,7 @@
   <block id="e73f79c9112f5779897d8c0a650b3b99" category="list-text">释放电源线固定器，然后从电源中拔下缆线。</block>
   <block id="1f9529736c8bd4ae7629be26ea8da34d" category="list-text">将前掌插入控制器模块两侧的锁定装置中，用拇指按下控制杆，然后将控制器轻轻拉出机箱几英寸。</block>
   <block id="0c7b55bb7aff6e5a8118717e6397155b" category="image-alt">DRW A250 PCM 拆卸安装</block>
-  <block id="bd017b464f7ccc6f05ea50c47d504548" category="paragraph"><block ref="bd017b464f7ccc6f05ea50c47d504548" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e045615354060a83511b41ee31db4ae9" category="cell">控制杆</block>
-  <block id="3964bc8d7e8eb5f4ac34dcc2de182743" category="paragraph"><block ref="3964bc8d7e8eb5f4ac34dcc2de182743" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a76de2660bc401a58fcb77534d4a42e0" category="paragraph">锁定机制</block>
   <block id="b73bf21f79f3c289f366daee581bf764" category="list-text">用双手抓住控制器模块两侧，将其轻轻拉出机箱，并将其放在平稳的表面上。</block>
   <block id="94d1159091c1890578647fdf6494e0c8" category="list-text">将控制器模块放在安全的位置，并对机箱中的另一个控制器模块重复这些步骤。</block>
@@ -296,7 +294,6 @@
   <block id="d69e481252f8954ecd0bb6e140318056" category="image-alt">DRW A250 更换夹层卡</block>
   <block id="1d1d15afbd88f7addf313fcbd144f3f5" category="cell">卸下控制器模块正面的螺钉。</block>
   <block id="af50fa410d1487d4dc2b1afd3f6755e5" category="paragraph">松开控制器模块中的螺钉。</block>
-  <block id="2a1d9e1c8fbe9821af4d757b86d8e1cd" category="paragraph"><block ref="2a1d9e1c8fbe9821af4d757b86d8e1cd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="52d353425f8ccedacb04b93cba007d8c" category="paragraph">移动夹层卡。</block>
   <block id="07908a8ed136fe75294dee34a1478fff" category="list-text">拔下与夹层卡关联的所有布线。</block>
   <block id="d4854e7a4329e705d371be59c5147642" category="list-text">卸下夹层卡中可能存在的所有 SFP 或 QSFP 模块并将其放在一旁。</block>
@@ -310,7 +307,6 @@
   <block id="bcb72abac7a1b4e5d62301236d2af4ff" category="cell">挤压电池插头正面的夹子。</block>
   <block id="500f80ee3331803cffc5e2e0bc81d371" category="paragraph">从插槽中拔下电池缆线。</block>
   <block id="d1ad3057377dd4a69559d9ed51d7a401" category="paragraph">抓住电池并按下标有推送的蓝色锁定卡舌。</block>
-  <block id="18d25796ccd152a3eb52ffda0bdd5349" category="paragraph"><block ref="18d25796ccd152a3eb52ffda0bdd5349" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a0e8078530fb464d62b45a04d73aefbd" category="paragraph">将电池从支架和控制器模块中取出。</block>
   <block id="83a08501295dc83fcb3afa8a12d1d9e9" category="list-text">找到电池插头，然后挤压电池插头正面的夹子，将插头从插槽中释放。</block>
   <block id="0d75945d13c2726bbe988d2cc4dc6254" category="list-text">抓住电池并按下标记为推送的蓝色锁定卡舌，然后将电池从电池架和控制器模块中提出。</block>
@@ -648,7 +644,6 @@
   <block id="e09cb337f16f3eb0696b405cbc2bce54" category="paragraph">X66250-30 （ 112-00347 ） 30 米</block>
   <block id="aa1a174912bdf6af0df4cc4027cdd0f4" category="paragraph"><block ref="aa1a174912bdf6af0df4cc4027cdd0f4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2daea530a029187535b9b6d53d920b9d" category="paragraph">微型 USB 控制台缆线</block>
-  <block id="3e355903f0d5a03e5fca13e0c7843fa2" category="paragraph"><block ref="3e355903f0d5a03e5fca13e0c7843fa2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ef46fcdc16d2411ced3c889283ec70f6" category="paragraph">软件设置期间的控制台连接</block>
   <block id="0d39f1b0a5cbdec5ccf74bfa4519fe8c" category="paragraph">电源线</block>
   <block id="ec58e6df26c7cd49356dbb0f54140310" category="paragraph"><block ref="ec58e6df26c7cd49356dbb0f54140310" category="inline-image-macro-rx" type="image"></block></block>
@@ -913,7 +908,6 @@
   <block id="f3be4d98894ffbfb83050debf5045c14" category="paragraph">提升板 1 锁定闩锁</block>
   <block id="ae936646ba28c5499caf8ff8a09c1158" category="paragraph">连接到 NVRAM 卡的 NVRAM 电池缆线插头</block>
   <block id="a5a2e7319e6511ec0e394434ba44783a" category="paragraph">卡锁定支架</block>
-  <block id="a62a9f240c2e969ad7bd26106db32a71" category="paragraph"><block ref="a62a9f240c2e969ad7bd26106db32a71" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2466ce84e0b8be725ba14bd0f97ac7cc" category="paragraph">NVRAM 卡</block>
   <block id="ee7b03fc3a7a71b260d0aafe602147c2" category="list-text">从提升板模块中卸下 NVRAM 卡：</block>
   <block id="e8a2db20fa90be5b9ee37724a4789aea" category="list-text">转动提升板模块，以便可以访问 NVRAM 卡。</block>
@@ -1398,7 +1392,6 @@
   <block id="e7e749fdb513f8650505d5c05ea4890c" category="paragraph">迷你 SAS HD 到迷你 SAS HD 缆线（取决于订单）</block>
   <block id="99e6a93356204a99615e29e4f73ced9b" category="paragraph">光缆</block>
   <block id="b8baf655ec765d5d983898664c9272aa" category="paragraph">X66250-2-N-C （ 112-00342 ）</block>
-  <block id="19f7a73218283f2f9c4f859568ba709b" category="paragraph"><block ref="19f7a73218283f2f9c4f859568ba709b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="13378a0df578c502443ae7f6cba29221" category="paragraph">用于夹层卡的 16 Gb FC 或 25GbE 缆线（取决于订单）</block>
   <block id="a3f60cc55d40e4b57781b7699be7bf60" category="paragraph">X6555-R6 （ 112-00291 ）， 3 米</block>
   <block id="7d0f1ce0ccc29eebb04f6a10e53463ef" category="paragraph">X6562-R6 （ 112-00196 ）， 5 米</block>
@@ -1861,7 +1854,6 @@
   <block id="4f6495d505dded911984524478da41af" category="list-text">e0a 到 e0a</block>
   <block id="9fb25d51d61d61c71697db66aff5e4f9" category="list-text">e1a 到 e1a<block ref="83b8377d063700297200cb5f90f60dd7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5defeb12e66d13c969cbb3bb31457701" category="paragraph"><block ref="5defeb12e66d13c969cbb3bb31457701" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="c58e9341c544dead8a0da7f9212aceb2" category="paragraph">使用缆线将管理端口连接到管理网络交换机 <block ref="5de506e6c2f74b959dcd2dc28930a80c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8318f7a477919801182a78d50d64dd67" category="list-text">要执行可选布线，请参见：</block>
   <block id="1cf474ea9658d4a6b7324feffa3967fd" category="list-text"><block ref="c9f609c3e828427f5688ee58753894e5" category="inline-xref-macro-rx"></block></block>
   <block id="0bb220d44bed0335a5dab4f4a0ed36a4" category="list-text"><block ref="8aad4abef45a2309ab3038b2b3e9ed79" category="inline-xref-macro-rx"></block></block>
@@ -2003,7 +1995,6 @@
   <block id="e38904d799c9886a80f28f3058df0f26" category="list-text">e0c 和 e0d</block>
   <block id="f8b677145fadd0e7b54924a472cde8af" category="list-text">* 或 * e0e 和 e0f</block>
   <block id="dd31aac3fb199e23ada1b2d6967181ec" category="admonition">您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。</block>
-  <block id="519c55b1abbe70db981fa64fb386a258" category="paragraph"><block ref="519c55b1abbe70db981fa64fb386a258" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c0a9eb11c9962c2eb967f53a4845bf1a" category="paragraph">使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：</block>
   <block id="f2333c38a5002ab3a3ce6f24b2d22d95" category="paragraph"><block ref="f2333c38a5002ab3a3ce6f24b2d22d95" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6d4bc3cf86318438b709fd5087158d59" category="section-title">选项 2 ：为交换集群布线，统一网络配置</block>
@@ -2018,7 +2009,6 @@
   <block id="e120ae24c5f3d479f881dd54a4a6a4f1" category="section-title">选项 3 ：为双节点无交换机集群布线，以太网网络配置</block>
   <block id="79a4975b8f78a863afedab1337e7a142" category="paragraph">控制器上的管理网络，以太网数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。</block>
   <block id="00e617034c3fb1b0698ef30fec708668" category="image-alt">DRW 2700 tnsc 以太网网络布线动画 gif</block>
-  <block id="fb201d3291ef220a70a2ca2508729abe" category="list-text">e0b 到 e0b<block ref="89b350cdba7fe4fe6fc5044b1844ae20" category="inline-image-macro-rx" type="image"></block></block>
   <block id="836e597d16643401627d14a351ba6a9c" category="paragraph">使用 Cat 6 RJ45 缆线将 e0c 通过 e0f 端口连接到主机网络：</block>
   <block id="97fa7018860cc17c4006609d9662603b" category="paragraph"><block ref="97fa7018860cc17c4006609d9662603b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="98fba69d64d87a6163f05e51141bb98d" category="paragraph"><block ref="98fba69d64d87a6163f05e51141bb98d" category="inline-image-macro-rx" type="image"></block></block>
@@ -8527,4 +8517,26 @@ SFP+(目标/启动程序)</block>
   <block id="6693af315bf1c245b8a89cbbb645b36c" category="list-text">从受损PDU上卸下支架、然后将其安装在替代PDU的背面。</block>
   <block id="0fa3e40fa136f7cfe1746d5ce1d7e9ee" category="list-text">支撑替代PDU时、将PDU固定支架上的插槽与系统机柜内侧机架顶部的孔对齐、然后使用受损PDU上的固定螺钉将PDU固定到系统机柜框架上。</block>
   <block id="143d47d33d1ad99e226055b46abe364d" category="list-text">将从存储系统、交换机和驱动器架上拔下的电源线插入更换用的PDU中、将每个组件直接插入组件对面的PDU插座中。</block>
+  <block id="9a3ab30d090ff0aedb700d0ce5d6d031" category="image-alt">显示编号位置的系统序列号示例</block>
+  <block id="3b225b9970f24711538cbdc2858aa8f3" category="inline-image-macro">图中显示了微型USB连接器</block>
+  <block id="e546054fa329764f66a36f52b11ff037" category="paragraph"><block ref="e546054fa329764f66a36f52b11ff037" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ed1d9c9a369cfdb87320f3c154526fd6" category="inline-image-macro">图中显示了周围文本中所述的数据端口连接</block>
+  <block id="499d9f30e515ad0fb1788e55c96baaf5" category="paragraph"><block ref="499d9f30e515ad0fb1788e55c96baaf5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eff9a2b0e485ca3fb80f96fc9995fb62" category="inline-image-macro">标注编号1</block>
+  <block id="37d1043ad7edc4ca679595837349fe13" category="paragraph"><block ref="37d1043ad7edc4ca679595837349fe13" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="746fda156f20e053f2c0e3b0e0ecab0e" category="inline-image-macro">标注编号2</block>
+  <block id="a570d61c2d80a17f29947ad16f824e87" category="paragraph"><block ref="a570d61c2d80a17f29947ad16f824e87" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5f695e51ae076dac62d244a3e86a2eae" category="inline-image-macro">标注编号3</block>
+  <block id="a058f3408f1f7a056c17e0ed8566b0a2" category="paragraph"><block ref="a058f3408f1f7a056c17e0ed8566b0a2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f92f448740bddae7b25ed117dcbd39ec" category="inline-image-macro">标注编号4</block>
+  <block id="d0950fde2571b3d284d4ea19bf58bb84" category="paragraph"><block ref="d0950fde2571b3d284d4ea19bf58bb84" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="140e6f3619a868d803ee4deb2e00c8d2" category="inline-image-macro">标注编号5</block>
+  <block id="5bd10f62d93ddba8f0c6422d119d22d6" category="paragraph"><block ref="5bd10f62d93ddba8f0c6422d119d22d6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="867e128c8464065dd00e34a790ece4bd" category="inline-image-macro">显示光纤LC连接器的图示</block>
+  <block id="dc8b7d90396767816d834ce67412e9d0" category="paragraph"><block ref="dc8b7d90396767816d834ce67412e9d0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6e511e082f09f049a4c7c1e36e35c9c3" category="inline-image-macro">此图显示了管理端口在系统背面的位置</block>
+  <block id="d439da4c3831de2165d4e3edbb6ad2de" category="paragraph">Cable the management ports to the management network switches    <block ref="5f7dc0c41e4463eda3eca8496148edc4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e598646ba49e0f0b7db709308a38bd0c" category="inline-image-macro">图中显示了控制器背面端口之间的集群互连</block>
+  <block id="d5fe92183ddfd6502c92a350a2928047" category="list-text">e0b到e0b
+<block ref="23c439b7ef31021d610e4d3b988f3cd1" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

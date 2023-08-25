@@ -40,7 +40,6 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 
 == 在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE
 
-[role="lead"]
 在关闭受损控制器之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.
 
 . 验证集群中的任何卷是否正在使用 NVE ： `volume show -is-encrypted true`

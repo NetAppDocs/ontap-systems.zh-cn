@@ -19,7 +19,6 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 == 第 1 步：准备安装
 
-[role="lead"]
 要安装系统、请在NetApp 支持站点 上创建帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
 
 .开始之前
@@ -40,7 +39,7 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 . 打开所有框内容的包装。
 . 记录控制器的系统序列号。
 +
-image::../media/drw_ssn_label.png[DRW SSN 标签]
+image::../media/drw_ssn_label.png[显示编号位置的系统序列号示例]
 
 . 设置您的帐户：
 +
@@ -96,7 +95,7 @@ X6536-R6 （ 112-00090 ）， 5 米
 
 X6554-R6 （ 112-00189 ）， 15 米
  a| 
-image:../media/oie_cable_fiber_lc_connector.png[""]
+image:../media/oie_cable_fiber_lc_connector.png["显示光纤LC连接器的图示"]
  a| 
 FC 主机网络
 
@@ -137,7 +136,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""]
  a| 
 不适用
  a| 
-image:../media/oie_cable_micro_usb.png[""]
+image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
 
@@ -160,7 +159,6 @@ image:../media/oie_cable_power.png[""]
 
 == 第 2 步：安装硬件
 
-[role="lead"]
 将系统安装在四柱机架或NetApp系统机柜中(如果适用)。
 
 .步骤
@@ -184,7 +182,6 @@ image::../media/drw_cable_management_arm_install.png[DRW 缆线管理臂安装]
 
 == 第3步：使用缆线将控制器连接到网络
 
-[role="lead"]
 使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。
 
 管理网络、UTA2数据网络、以太网数据网络以及控制器上的管理端口均连接到交换机。The cluster interconnect ports are cabled on both controllers.
@@ -232,7 +229,7 @@ UTA2数据网络配置:: 使用以下缆线类型之一将UTA2数据端口连接
 ** 对于FC主机、请使用0c和0d *或* 0e和0f。
 ** 对于10GbE系统、请使用e0c和e0d *或* e0e和e0f。
 +
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
 
 +
 您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
@@ -302,7 +299,7 @@ UTA2数据网络配置:: 使用以下缆线类型之一将UTA2数据端口连接
 ** 对于FC主机、请使用0c和0d **或** 0e和0f。
 ** 对于10GbE系统、请使用e0c和e0d **或** e0e和e0f。
 +
-image:../media/drw_c190_u_fc_10gbe_cbling.png[""]
+image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
 
 +
 您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
@@ -384,7 +381,6 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] 迷你 SAS HD 到迷
 
 == 第5步：完成系统设置
 
-[role="lead"]
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
 
 [role="tabbed-block"]

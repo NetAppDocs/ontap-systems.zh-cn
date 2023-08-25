@@ -17,7 +17,6 @@ summary: 要更换机箱，必须关闭控制器。
 
 == 选项 1 ：在更换机箱时关闭控制器
 
-[role="lead"]
 此操作步骤 仅适用于双节点非MetroCluster配置。如果您的系统包含两个以上的节点、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["如何正常关闭和启动四节点集群中的一个HA对"^]。
 
 .开始之前
@@ -86,7 +85,6 @@ NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `s
 
 == 选项 2 ：关闭双节点 MetroCluster 配置中的控制器
 
-[role="lead"]
 要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 .关于此任务

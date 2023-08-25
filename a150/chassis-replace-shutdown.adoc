@@ -17,7 +17,6 @@ summary: 要更换机箱，必须关闭控制器。
 
 == 选项 1 ：大多数配置
 
-[role="lead"]
 此操作步骤 仅适用于双节点非MetroCluster配置。如果您的系统包含两个以上的节点、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["如何正常关闭和启动四节点集群中的一个HA对"^]。
 
 .开始之前
