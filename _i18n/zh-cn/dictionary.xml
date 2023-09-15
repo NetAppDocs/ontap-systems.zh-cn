@@ -6479,7 +6479,6 @@
   <block id="e1d6265d5c32eb8c4e989291b8d72d20" category="list-text">将模块轻轻滑入插槽、直到带字母和编号的凸轮闩锁开始与I/O凸轮销啮合、然后将凸轮闩锁一直向上推、以将模块锁定到位。</block>
   <block id="bc62fa4bef9a4cd2a983ca01d5a5b1b3" category="paragraph">凸轮闩锁完全解锁</block>
   <block id="58e30dc94cdf372b64dac305fbb57bc0" category="section-title">第5步：重新分配磁盘</block>
-  <block id="7b0ac7dba1c185e5ac66482ca29488da" category="admonition">只有在更换NVRAM模块时才需要重新分配磁盘。</block>
   <block id="84bda9f97f27f63cc6fa0c4cac3ddcb4" category="list-text">如果更换用的控制器处于维护模式(显示<block ref="2cf8a3bab83c4d2618c18eeeca9ebc98" prefix=" " category="inline-code"></block> 提示符)、退出维护模式并转到LOADER提示符：<block ref="4a1bde0ea8bcda2a591f42646813c477" prefix=" " category="inline-code"></block></block>
   <block id="3cea6cd019ee970febca58bfe050e1cb" category="list-text">在替代控制器上的LOADER提示符处、启动控制器、如果系统因系统ID不匹配而提示您覆盖系统ID、请输入y。</block>
   <block id="40ef2970d7d205d6f0ba4ecddaec7b51" category="list-text">等待交还...控制器的控制台上会显示一条消息、其中包含更换模块、然后、在运行正常的控制器上、验证是否已自动分配新的配对系统ID：<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block></block>
@@ -8539,4 +8538,6 @@ SFP+(目标/启动程序)</block>
   <block id="e598646ba49e0f0b7db709308a38bd0c" category="inline-image-macro">图中显示了控制器背面端口之间的集群互连</block>
   <block id="d5fe92183ddfd6502c92a350a2928047" category="list-text">e0b到e0b
 <block ref="23c439b7ef31021d610e4d3b988f3cd1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="10fbfa6320d8e7c72e731fbd9a6e6c69" category="admonition">只有在更换NVRAM模块时才需要重新分配磁盘、而不适用于NVRAM DIMM更换。</block>
+  <block id="099f7b942e4e89631784891716949599" category="admonition">此步骤不适用于NVRAM DIMM更换。</block>
 </blocks>

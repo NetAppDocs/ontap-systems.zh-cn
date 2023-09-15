@@ -384,7 +384,8 @@ DIMM 和 DIMM 弹出器卡舌
 .Verify the system ID change on an HA system
 您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
 
-此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
+
+CAUTION: 只有在更换NVRAM模块时才需要重新分配磁盘、而不适用于NVRAM DIMM更换。
 
 .步骤
 . 如果替代节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`

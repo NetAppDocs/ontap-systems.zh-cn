@@ -305,10 +305,7 @@ DIMM 和 DIMM 弹出器卡舌
 您必须在启动替代控制器时确认系统 ID 更改，然后确认更改是否已实施。
 
 
-NOTE: 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
-
-
-CAUTION: 只有在更换NVRAM模块时才需要重新分配磁盘。
+CAUTION: 只有在更换NVRAM模块时才需要重新分配磁盘、而不适用于NVRAM DIMM更换。
 
 .步骤
 . 如果更换用的控制器处于维护模式(显示 `*>` 提示符)、退出维护模式并转到LOADER提示符： `halt`
@@ -408,6 +405,9 @@ dr-group-id            cluster node           configuration-state
 == 第 6 步：还原存储和卷加密功能
 
 如果已启用存储加密、请使用相应的操作步骤。
+
+
+IMPORTANT: 此步骤不适用于NVRAM DIMM更换。
 
 [role="tabbed-block"]
 ====
