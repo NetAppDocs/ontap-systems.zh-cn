@@ -1,30 +1,17 @@
 ---
 permalink: a800/install-videos.html 
 sidebar: sidebar 
-keywords: aff a800, hardware installation and cabling video, perform end-to-end software configuration video 
-summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
+keywords: aff a800, hardware installation and cabling video 
+summary: 以下视频显示了如何安装新系统并为其布线。 
 ---
-= 视频— AFF A800
+= 视频步骤- AFF A800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-有两个视频—一个视频介绍如何将系统装入机架并进行布线，另一个视频显示了使用 System Manager 引导式设置执行初始系统配置的示例。
-
-
-
-== 视频：硬件安装和布线，共两个视频之一
-
 以下视频显示了如何安装新系统并为其布线。
 
 ."Animation -安装和设置AFF A800
 video::2a61ed74-a0ce-46c3-86d2-ab4b013c0030[panopto]
-
-
-== 视频二：执行端到端软件配置
-
-以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
-
-video::WAE0afWhj1c?[youtube]

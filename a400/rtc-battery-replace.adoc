@@ -194,9 +194,10 @@ mcc1A::> metrocluster operation show
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_c400_remove_controller_IEOPS-1216.svg[DRW C400卸下控制器IEOPS 1216]
+image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 +
+[cols="10,90"]
 |===
 
 
@@ -229,9 +230,33 @@ image:../media/legend_icon_02.png["标注编号2"]
 您可以使用以下动画，插图或写入步骤更换 RTC 电池。
 
 .动画-更换RTC电池
-video::12ea4bc1-75e2-43e7-be91-b0310000fd34[panopto]
-image::../media/drw_c400_rtc_batt_IEOPS-1239.svg[DRW C400 RTC batt IEOPS 1239]
+video::80fe7a9b-de6f-46e0-a18b-aadb0157263d[panopto]
+image::../media/drw_A400_rtc-batt.png[DRW A400 RTC 电池]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+中间提升板
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+卸下RTC电池
+
+
+
+ a| 
+image:../media/legend_icon_03.png["标注编号3"]
+ a| 
+座椅RTC电池
+
+|===
 . 如果您尚未接地，请正确接地。
 . 打开通风管：
 +
@@ -261,6 +286,29 @@ NOTE: 从电池架中取出电池时，请注意电池的极性。电池标有�
 
 更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块，重置控制器上的时间和日期，然后启动它。
 
+您可以使用以下动画，插图或写入的步骤在机箱中安装控制器模块。
+
+.动画-安装控制器模块
+video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
+image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+控制器模块
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+控制器锁定闩锁
+
+|===
 . 如果尚未关闭通风管或控制器模块盖板，请将其关闭。
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
 +

@@ -173,12 +173,6 @@ mcc1A::> metrocluster operation show
 
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
-您可以使用以下动画，插图或写入的步骤从机箱中删除控制器模块。
-
-.动画-删除控制器模块
-video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
-image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
-
 . 如果您尚未接地，请正确接地。
 . 释放电源线固定器，然后从电源中拔下缆线。
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
@@ -190,6 +184,27 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 +
 此控制器模块会从机箱中略微移出。
 
++
+image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
+
++
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+锁定闩锁
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+控制器从机箱中略微移出
+
+|===
 . 将控制器模块滑出机箱。
 +
 将控制器模块滑出机箱时，请确保您支持控制器模块的底部。
@@ -207,8 +222,32 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 .动画-更换RTC电池
 video::80fe7a9b-de6f-46e0-a18b-aadb0157263d[panopto]
-image::../media/drw_A400_rtc-batt_IEOPS-1003.svg[DRW A400 RTC电池IEOPS 1003]
+image::../media/drw_A400_rtc-batt.png[DRW A400 RTC 电池]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+中间提升板
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+卸下RTC电池
+
+
+
+ a| 
+image:../media/legend_icon_03.png["标注编号3"]
+ a| 
+座椅RTC电池
+
+|===
 . 如果您尚未接地，请正确接地。
 . 打开通风管：
 +
@@ -244,6 +283,23 @@ NOTE: 从电池架中取出电池时，请注意电池的极性。电池标有�
 video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
 image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+控制器模块
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+控制器锁定闩锁
+
+|===
 . 如果尚未关闭通风管或控制器模块盖板，请将其关闭。
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
 +

@@ -47,7 +47,7 @@ NOTE: 如果使用SSD、请参见 https://kb.netapp.com/Support_Bulletins/Custom
 . 通过SSH登录到集群、或者使用本地控制台缆线和笔记本电脑/控制台从集群中的任何节点登录。
 . 关闭AutoSupport 并指示系统预计脱机多长时间：
 +
-`system node autosupport invoke -node * -type all -messages "MAINT=8h Power Maintenance"`
+`system node autosupport invoke -node * -type all -message "MAINT=8h Power Maintenance"`
 
 . 确定所有节点的SP/BMC地址：
 +

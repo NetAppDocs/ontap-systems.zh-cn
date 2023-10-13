@@ -1,34 +1,20 @@
 ---
 permalink: c400/install-videos.html 
 sidebar: sidebar 
-keywords: aff c400, aff, c400, video, rack, cable, system, manager, guide, setup, initial, configuration, hardware, installation, cabling, perform, end-to-end, software, configuration, hardware installation and cabling, perform end-to-end software configuration 
-summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
+keywords: aff c400, aff, c400, video, rack, cable, system, manager, guide, setup, initial, configuration, hardware, installation, cabling, configuration, hardware installation and cabling, perform end-to-end software configuration 
+summary: 以下视频显示了如何安装新系统并为其布线。 
 ---
-= 视频—AFF C400
+= 视频步骤- AFF C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。
-
-如果您使用的是MetroCluster 配置、请使用MetroCluster 安装内容。
-
-https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]
-
-
-
-== 视频：硬件安装和布线，共两个视频之一
-
 以下视频显示了如何安装新系统并为其布线。
 
 .动画—AFF C400安装和设置说明
 video::8e392453-beac-4db7-8088-aff1005e1f90[panopto]
+如果您使用的是MetroCluster 配置、请使用MetroCluster 安装内容。
 
-
-== 视频二：执行端到端软件配置
-
-以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
-
-video::WAE0afWhj1c?[youtube]
+https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]

@@ -173,12 +173,6 @@ mcc1A::> metrocluster operation show
 
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
-您可以使用以下动画，插图或写入的步骤从机箱中删除控制器模块。
-
-.动画-删除控制器模块
-video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
-image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
-
 . 如果您尚未接地，请正确接地。
 . 释放电源线固定器，然后从电源中拔下缆线。
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
@@ -190,6 +184,25 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 +
 此控制器模块会从机箱中略微移出。
 
+
+
+image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
+
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+锁定闩锁
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+| 控制器从机箱中略微移出 
+|===
 . 将控制器模块滑出机箱。
 +
 将控制器模块滑出机箱时，请确保您支持控制器模块的底部。
@@ -203,12 +216,39 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 要更换 PCIe 卡，您必须找到发生故障的 PCIe 卡，从控制器模块中卸下包含此卡的提升板，更换此卡，然后在控制器模块中重新安装 PCIe 提升板。
 
-您可以使用以下动画，插图或写入步骤更换 PCIe 卡。
+image:../media/drw_A400_Replace-PCIe-cards.png[""]
 
-.动画-更换PCIe卡
-video::84339f87-321c-400e-985e-aae10182cd24[panopto]
-image:../media/drw_A400_Replace-PCIe-cards_IEOPS-1008.svg["宽度= 500像素"]
+[cols="10,90"]
+|===
 
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+提升板锁定闩锁
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+PCI卡锁定闩锁
+
+
+
+ a| 
+image:../media/legend_icon_03.png["标注编号3"]
+ a| 
+PCI锁定板
+
+
+
+ a| 
+image:../media/legend_icon_04.png["标注编号4"]
+ a| 
+PCI卡
+
+|===
 . 卸下包含要更换的卡的提升板：
 +
 .. 按下通风管两侧的锁定片，将其滑向控制器模块背面，然后将其旋转到完全打开的位置，以打开通风管。
@@ -254,9 +294,31 @@ NOTE: 如果您要在底部插槽中安装卡，但无法正常看到卡插槽�
 您可以使用以下动画，插图或写入的步骤来更换夹层卡。
 
 .动画-更换夹层卡
-video::4e00f5b1-8ca5-4cd6-9881-aadb01578e52[panopto]
-image::../media/drw_A400_Replace-mezz-card_IEOPS-1006.svg[DRW A400更换夹层卡IEOPS 1006]
+video::e3fd32b6-bdbb-4c53-b666-b030018a5744[panopto]
+image::../media/drw_A400_Replace-mezz-card.png[DRW A400 更换夹层卡]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+PCI Riser卡
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+提升板翼形螺钉
+
+
+
+ a| 
+image:../media/legend_icon_03.png["标注编号3"]
+| 提升卡 
+|===
 . 卸下 3 号提升板（插槽 4 和 5 ）：
 +
 .. 按下通风管两侧的锁定片，将其滑向控制器模块背面，然后将其旋转到完全打开的位置，以打开通风管。
@@ -290,12 +352,6 @@ image::../media/drw_A400_Replace-mezz-card_IEOPS-1006.svg[DRW A400更换夹层�
 == 第 5 步：安装控制器模块
 
 更换控制器模块中的组件后，必须将控制器模块重新安装到机箱中，然后将其启动至维护模式。
-
-您可以使用以下动画，插图或写入的步骤在机箱中安装控制器模块。
-
-.动画-安装控制器模块
-video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
-image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
 
 . 如果尚未关闭此通风管，请关闭此通风管。
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。

@@ -2,29 +2,16 @@
 permalink: fas2800/install-videos.html 
 sidebar: sidebar 
 keywords: fas2800, video, rack, cable, system, manager, guided, setup, configuration 
-summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
+summary: 以下视频显示了如何安装新系统并为其布线。 
 ---
-= 视频—FAS2800
+= 视频步骤—FAS2800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。
-
-
-
-== 视频：硬件安装和布线，共两个视频之一
-
 以下视频显示了如何安装新系统并为其布线。
 
 .动画—FAS2800安装和设置说明
 video::3caea3f4-14fe-4c13-a324-afa3013a1e48[panopto]
-
-
-== 视频二：执行端到端软件配置
-
-以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
-
-video::WAE0afWhj1c?[youtube]

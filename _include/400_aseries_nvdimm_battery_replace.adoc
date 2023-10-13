@@ -177,6 +177,21 @@ mcc1A::> metrocluster operation show
 video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
 image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+锁定闩锁
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+| 控制器从机箱中略微移出 
+|===
 . 如果您尚未接地，请正确接地。
 . 释放电源线固定器，然后从电源中拔下缆线。
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
@@ -209,6 +224,30 @@ image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 video::1f1425a8-5a91-4810-82da-aad9012efa4f[panopto]
 image::../media/drw_A400_nvdimm-batt_IEOPS-1004.svg[DRW A400 NVDIMM电池IEOPS 1004]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+蓄电池插头
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+锁定卡舌
+
+
+
+ a| 
+image:../media/legend_icon_03.png["标注编号3"]
+ a| 
+NVDIMM 电池
+
+|===
 . 打开通风管：
 +
 .. 将通风管两侧的锁定片朝控制器模块中间按压。
@@ -235,6 +274,23 @@ image::../media/drw_A400_nvdimm-batt_IEOPS-1004.svg[DRW A400 NVDIMM电池IEOPS 1
 video::0310fe80-b129-4685-8fef-ab19010e720a[panopto]
 image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
 
+[cols="10,90"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+控制器模块
+
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+控制器锁定闩锁
+
+|===
 . 如果尚未关闭此通风管，请关闭此通风管。
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
 +

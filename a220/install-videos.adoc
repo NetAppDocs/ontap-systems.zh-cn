@@ -4,26 +4,13 @@ sidebar: sidebar
 keywords: aff a220, video, rack, cable, system, manager, guided, setup, configuration 
 summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
 ---
-= 视频- AFF A220
+= 视频步骤- AFF A220
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。
-
-
-
-== 视频：硬件安装和布线，共两个视频之一
-
 以下视频显示了如何安装新系统并为其布线。
 
 video::5g-34qxG9HA?[youtube]
-
-
-== 视频二：执行端到端软件配置
-
-以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
-
-video::WAE0afWhj1c?[youtube]

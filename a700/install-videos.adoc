@@ -2,7 +2,7 @@
 permalink: a700/install-videos.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, videos, rack, cable, system, system, manager, guided, setup 
-summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
+summary: 以下视频显示了如何安装新系统并为其布线。 
 ---
 = 视频步骤- AFF A700
 :allow-uri-read: 
@@ -11,20 +11,7 @@ summary: 有两个视频：一个视频介绍了如何将系统装入机架并�
 
 
 [role="lead"]
-有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。
-
-
-
-== 视频：硬件安装和布线，共两个视频之一
-
 以下视频显示了如何安装新系统并为其布线。
 
 .动画—安装和设置AFF A700或FAS9000
 video::b46575d4-0475-48bd-8772-ac5d012a4e06[panopto]
-
-
-== 视频二：执行端到端软件配置
-
-以下视频显示了运行 ONTAP 9.2 及更高版本的系统的端到端软件配置。
-
-video::WAE0afWhj1c?[youtube]
