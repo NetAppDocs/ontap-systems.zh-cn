@@ -1,0 +1,19 @@
+---
+permalink: asa-c250/install-videos.html 
+sidebar: sidebar 
+keywords: asa c250, hardware installation and cabling video, performing end-to-end software configuration video 
+summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
+---
+= 视频- ASA C250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以下视频显示了如何安装新系统并为其布线。
+
+.动画—安装和设置AFF A250
+video::fe6876d5-9332-4b2e-89be-ac6900027ba5[panopto]
+
+NOTE: ASA C250使用与AFF A250系统相同的安装操作步骤。

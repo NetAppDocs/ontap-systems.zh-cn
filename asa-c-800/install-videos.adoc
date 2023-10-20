@@ -1,0 +1,30 @@
+---
+permalink: asa-c800/install-videos.html 
+sidebar: sidebar 
+keywords: asa c800, hardware installation and cabling video, perform end-to-end software configuration video 
+summary: 有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。 
+---
+= 视频—ASA C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有两个视频—一个视频介绍如何将系统装入机架并进行布线，另一个视频显示了使用 System Manager 引导式设置执行初始系统配置的示例。
+
+
+
+== Video one of two: Hardware installation and cabling
+
+以下视频显示了如何安装新系统并为其布线。
+
+."动画- ASA C800的安装和设置
+video::2a61ed74-a0ce-46c3-86d2-ab4b013c0030[panopto]
+
+
+== Video two of two: Perform end-to-end software configuration
+
+The following video shows end-to-end software configuration for systems running ONTAP 9.2 and later.
+
+video::WAE0afWhj1c?[youtube]

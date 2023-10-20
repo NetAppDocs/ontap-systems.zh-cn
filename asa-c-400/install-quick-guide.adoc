@@ -1,0 +1,19 @@
+---
+permalink: asa-c400/install-quick-guide.html 
+sidebar: sidebar 
+keywords: asa c400, asa, c400, guide, graphic, instruction, installation, system, rack, cabling, cable, intitial, system, bring-up, guide, install, netapp, system, quick guide 
+summary: 本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。如果您熟悉 NetApp 系统的安装，请使用本指南。 
+---
+= 快速指南—ASA C400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安装和设置操作步骤提供了从机架安装和布线到初始系统启动的典型系统安装的图形说明。Use this guide if you are familiar with installing NetApp systems.
+
+访问 link:../media/PDF/March_2023_Rev1_AFFC400_ISI_IEOPS-1015.pdf["《AFF C400安装和设置说明》"^]。
+
+
+NOTE: ASA C400使用与AFF C400系统相同的安装操作步骤。

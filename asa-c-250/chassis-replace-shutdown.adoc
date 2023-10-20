@@ -1,0 +1,76 @@
+---
+permalink: asa-c250/chassis-replace-shutdown.html 
+sidebar: sidebar 
+keywords: asa c250, shutdown the controllers 
+summary: 要更换机箱，必须关闭控制器。 
+---
+= 关闭控制器- ASA C250
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此操作步骤 仅适用于双节点非MetroCluster配置。如果您的系统包含两个以上的节点、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["如何正常关闭和启动四节点集群中的一个HA对"^]。
+
+.开始之前
+您需要：
+
+* ONTAP 的本地管理员凭据。
+* NetApp板载密钥管理(OKM)集群范围的密码短语(如果使用存储加密)。
+* 每个控制器的SP/BMC访问能力。
+* 停止所有客户端/主机访问NetApp系统上的数据。
+* 暂停外部备份作业。
+* 更换所需的工具和设备。
+
+
+
+NOTE: 如果系统是用作FabricPool 云层的NetApp StorageGRID 或ONTAP S3、请参见 https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["《正常关闭和启动存储系统解决方案指南》"] 执行此操作步骤 之后。
+
+
+NOTE: 如果使用的是FlexArray 阵列LUN、请按照特定供应商的存储阵列文档执行此操作步骤 后要对这些系统执行的关闭操作步骤。
+
+
+NOTE: 如果使用SSD、请参见 https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490：(影响：关键) SSD最佳实践：避免关闭电源超过两个月后发生驱动器故障和数据丢失的风险"]
+
+作为关闭之前的最佳实践、您应：
+
+* 执行其他 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["系统运行状况检查"]。
+* 将ONTAP 升级到系统的建议版本。
+* 解决任何问题 https://activeiq.netapp.com/["Active IQ 健康提醒和风险"]。记下系统当前的任何故障、例如系统组件上的LED。
+
+
+.步骤
+. 通过SSH登录到集群、或者使用本地控制台缆线和笔记本电脑/控制台从集群中的任何节点登录。
+. 关闭AutoSupport 并指示系统预计脱机多长时间：
++
+`system node autosupport invoke -node * -type all -message "MAINT=8h Power Maintenance"`
+
+. 确定所有节点的SP/BMC地址：
++
+`system service-processor show -node * -fields address`
+
+. 退出集群Shell： `exit`
+. 使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP/BMC。
++
+如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。
+
++
+
+NOTE: 打开与每个SP/BMC连接的SSH会话、以便监控进度。
+
+. 暂停集群中的所有节点：
++
+`system node halt -node * -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`。
+
++
+
+NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `system node halt -node * -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+
+. 如果看到、请为集群中的每个控制器输入* y * `_Warning: Are you sure you want to halt node "cluster name-controller number"?
+{y|n}:_`
+. 等待每个控制器暂停、然后显示加载程序提示符。
+. 如果没有PSU开/关开关、请关闭每个PSU或拔下电源插头。
+. 从每个PSU拔下电源线。
+. 验证受损机箱中的所有控制器是否均已关闭。
+

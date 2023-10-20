@@ -1,0 +1,44 @@
+---
+indexpage:
+  lead: NetApp的全SAN阵列(ASA)可提供简化的专用SAN体验、为您企业的任务关键型数据库和其他SAN工作负载提供持续的数据可用性。
+  tiles:
+  - title: 入门
+    links:
+    - title: ASA 软件配置
+      url: https://docs.netapp.com/us-en/ontap/task_asa_software_configuration.html
+    - title: ASA 产品规格
+      url: https://www.netapp.com/data-storage/san-storage-area-network/
+    - title: ASA 解决方案 简介
+      url: https://www.netapp.com/pdf.html?item=/media/19466-SB-4081.pdf
+    - title: ASA 技术报告
+      url: https://www.netapp.com/pdf.html?item=/media/85671-tr-4968.pdf
+  - title: 安装和设置
+    links:
+    - title: ASA C250
+      url: "../asa-c250/install-setup.html"
+    - title: ASA C400
+      url: "../asa-c400/install-setup.html"
+    - title: ASA C800
+      url: "../asa-c800/install-setup.html"
+  - title: 维护您的系统
+    links:
+    - title: ASA C250
+      url: "../asa-c250/maintain-overview.html"
+    - title: ASA C400
+      url: "../asa-c400/maintain-overview.html"
+    - title: ASA C800
+      url: "../asa-c800/maintain-overview.html"
+  - title: 支持的交换机
+    links:
+    - title: Broadcom 支持的 BES-53248
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
+    - title: Cisco 9336C-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
+    - title: 共享配置中的 Cisco 936-x2
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
+  - title: 更多文档资源
+    links:
+    - title: 系统硬件升级
+      url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
+    - title: ONTAP 软件升级
+      url: https://docs.netapp.com/us-en/ontap/upgrade/maintain-overview.html

@@ -1,0 +1,206 @@
+---
+permalink: asa-c800/nvdimm-battery-replace.html 
+sidebar: sidebar 
+keywords: asa c800, replace the nvdimm battery 
+summary: 要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。 
+---
+= 更换NVDIMM电池- ASA C800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。
+
+系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+
+
+
+== 第 1 步：关闭受损控制器
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+* 如果您使用的是NetApp存储加密、则必须按照中的说明重置MSID link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["将SED恢复到未受保护的模式"]。
+* 如果您使用的是SAN系统、则必须已检查事件消息  `cluster kernel-service show`)。。 `cluster kernel-service show` command可显示节点名称、该节点的仲裁状态、该节点的可用性状态以及该节点的运行状态。
++
+每个 SCSI 刀片式服务器进程应与集群中的其他节点保持仲裁关系。在继续更换之前，必须先解决所有问题。
+
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下AutoSupport 消息禁止自动创建案例两小时： `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
++
+
+NOTE: 当您看到_Do you want to disable auto-giveback？_时、输入`y`。
+
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至 "Remove controller module" 。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+
+
+== 第 2 步：卸下控制器模块
+
+在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
+
+. 如果您尚未接地，请正确接地。
+. 从源拔下控制器模块电源。
+. 释放电源线固定器，然后从电源中拔下缆线。
+. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线以及 SFP 和 QSFP 模块（如果需要），并跟踪缆线的连接位置。松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线，跟踪缆线的连接位置。
++
+将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
+
+. 将缆线管理设备从控制器模块中取出并放在一旁。
+. 向下按两个锁定闩锁，然后同时向下旋转两个闩锁。
++
+此控制器模块会从机箱中略微移出。
+
++
+image::../media/drw_a800_pcm_remove.png[卸下 DRW a800 PCM]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+| 锁定闩锁 
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+锁定销
+
+|===
+. 将控制器模块滑出机箱。
++
+将控制器模块滑出机箱时，请确保您支持控制器模块的底部。
+
+. 将控制器模块放在一旁安全的地方。
+
+
+
+
+== 第 3 步：更换 NVDIMM 电池
+
+要更换 NVDIMM 电池，您必须从控制器模块中取出故障电池，然后将更换电池安装到控制器模块中。
+
+. 打开通风管盖并在提升板中找到 NVDIMM 电池。
++
+image::../media/drw_a800_nvdimm_battery_replace.png[更换 DRW a800 NVDIMM 电池]
+
++
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+| 通风管竖板 
+
+
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+ a| 
+NVDIMM 电池插头
+
+
+
+ a| 
+image:../media/legend_icon_03.png["标注编号3"]
+ a| 
+NVDIMM 电池组
+
+|===
++
+* 注意： * 在暂停系统时， NVDIMM 电池控制板 LED 会闪烁，同时将内容存入闪存。目标值完成后，此 LED 将熄灭。
+
+. 找到电池插头，然后挤压电池插头正面的夹子，将插头从插槽中释放，然后从插槽中拔下电池缆线。
+. 抓住电池并将电池从通风管和控制器模块中取出，然后将其放在一旁。
+. 从包装中取出更换用电池。
+. 将更换用电池组安装到 NVDIMM 通风管中：
++
+.. 将电池组插入插槽，然后用力向下按电池组，以确保其锁定到位。
+.. 将电池插头插入提升板插槽，并确保插头锁定到位。
+
+
+. 关闭 NVDIMM 通风管。
++
+确保插头锁定在插槽中。
+
+
+
+
+
+== 第 4 步：重新安装控制器模块并启动系统
+
+更换控制器模块中的 FRU 后，您必须重新安装控制器模块并重新启动它。
+
+. 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
++
+
+NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
+
+. 根据需要重新对系统进行布线。
++
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
+
+. 将电源线插入电源，重新安装电源线锁定环，然后将电源连接到电源。
+. 完成控制器模块的重新安装：
++
+.. 将控制器模块牢牢推入机箱，直到它与中板相距并完全就位。
++
+控制器模块完全就位后，锁定闩锁会上升。
+
++
+
+NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
+
++
+控制器模块一旦完全固定在机箱中，就会开始启动。
+
+.. 向上旋转锁定闩锁，使其倾斜，以清除锁定销，然后将其降低到锁定位置。
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+
+
+
+
+
+
+== 第 5 步：将故障部件退回 NetApp
+
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
