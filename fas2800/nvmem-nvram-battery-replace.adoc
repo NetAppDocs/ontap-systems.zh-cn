@@ -13,7 +13,7 @@ summary: 要更换系统中的 NVMEM 电池，您必须从系统中卸下控制�
 [role="lead"]
 要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。
 
-系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+系统中的所有其他组件都必须正常工作；否则、您必须与联系 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]。
 
 
 
@@ -73,14 +73,26 @@ LOADER 提示符
 将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
 
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
-. 按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。
+. 挤压凸轮把手上的闩锁、直到其释放、完全打开凸轮把手以从中板释放控制器模块、然后用双手将控制器模块从机箱中拉出一半。
 +
 image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[DRW 285 PCM拆卸、安装IEOPS 694]
 
-. 将控制器模块翻转，将其放在平稳的表面上。
-. 按下控制器模块两侧的蓝色按钮以松开护盖、然后向上旋转护盖、使其脱离控制器模块、从而打开护盖。
+. 检查控制器模块背面的NVMEM LED。  查找NV图标：
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[DRW 285控制器模块盖板打开IEOPS 695]
+image::../media/drw_hw_nvram_icon.svg[DRW 硬件 NVRAM 图标]
+
++
+
+NOTE: 如果系统处于"正在等待恢复"状态、或者系统未被正确接管或暂停(未提交的数据)、则在从控制器断开电源后、板上的绿色NV LED将开始闪烁。  如果受损控制器模块未被配对控制器模块成功接管、请联系 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]
+
++
+** 如果从机箱中卸下控制器模块后、绿色NV状态LED开始闪烁：
++
+*** 确认配对控制器模块已完全接管此控制器、或者受损控制器显示_waing for cep2ue_、可以忽略闪烁的LED、您可以从机箱中完成受损控制器的删除。
+
+
+** 如果绿色NV LED熄灭、则可以从机箱中完全卸下受损控制器。
+
 
 
 
@@ -92,26 +104,11 @@ image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[DRW 285控�
 
 .步骤
 . 如果您尚未接地，请正确接地。
-. 检查 NVMEM LED ：
+. 从机箱中卸下控制器模块。
+. 将控制器模块翻转，将其放在平稳的表面上。
+. 按下控制器模块两侧的蓝色按钮以松开护盖、然后向上旋转护盖、使其脱离控制器模块、从而打开护盖。
 +
-** 如果您的系统采用 HA 配置，请转至下一步。
-** 如果您的系统采用独立配置，请完全关闭控制器模块，然后检查 NV 图标标识的 NVRAM LED 。
-+
-image::../media/drw_hw_nvram_icon.svg[DRW 硬件 NVRAM 图标]
-
-+
-
-NOTE: 在暂停系统时， NVRAM LED 会闪烁，同时将内容存入闪存。目标值完成后，此 LED 将熄灭。
-
-+
-*** 如果在未完全关闭的情况下断电， NVMEM LED 将闪烁，直到目标完成，然后 LED 将熄灭。
-*** 如果 LED 亮起且电源打开，则未写入的数据将存储在 NVMEM 上。
-+
-此问题通常发生在 ONTAP 成功启动后不受控制的关闭期间。
-
-
-
-
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[DRW 285控制器模块盖板打开IEOPS 695]
 
 . 在控制器模块中找到 NVMEM 电池。
 +

@@ -117,7 +117,7 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30
 ha-config modify controller ha 命令用于为控制器设置配置 ha 。ha-config modify chassis ha 命令可为机箱设置配置 ha 。
 
 +
-http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["《 ONTAP 9 高可用性配置指南》"]
+https://docs.netapp.com/us-en/ontap/high-availability/index.html["HA对管理"^]
 
 +
 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30092["查找适用于您的 Data ONTAP 8 版本的《高可用性配置指南》"]

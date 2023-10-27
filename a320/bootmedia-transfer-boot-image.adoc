@@ -165,7 +165,7 @@ HA 对
 NOTE: 如果交还被否决，您可以考虑覆盖此否决。
 
 +
-http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html["《 ONTAP 9 高可用性配置指南》"]
+https://docs.netapp.com/us-en/ontap/high-availability/index.html["HA对管理"^]
 
 ... 使用 `storage failover show-giveback` 命令监控交还操作的进度。
 ... 交还操作完成后，使用 `storage failover show` 命令确认 HA 对运行状况良好，并且可以进行接管。

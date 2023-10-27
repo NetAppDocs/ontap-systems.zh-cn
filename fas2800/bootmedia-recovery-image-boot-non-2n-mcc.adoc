@@ -62,7 +62,7 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 
 . 下一个取决于您的系统配置：
 +
-** If your system has onboard keymanager, NSE or NVE configured, go to xref:bootmedia_encryption_restore.adoc[根据需要还原 OKM ， NSE 和 NVE]
+** 如果您的系统配置了板载密钥管理器， NSE 或 NVE ，请转至 xref:bootmedia-encryption-restore.adoc[根据需要还原 OKM ， NSE 和 NVE]
 ** 如果您的系统未配置板载密钥管理器， NSE 或 NVE ，请完成本节中的步骤。
 
 

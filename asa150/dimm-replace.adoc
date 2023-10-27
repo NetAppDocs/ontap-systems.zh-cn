@@ -129,7 +129,7 @@ image::../media/drw_2600_nvmem_battery_unplug.png[DRW 2600 nvmem 电池已拔下
 .. 重新连接电池连接器。
 
 
-. 返回到 link:dimm_replace.md["Replace the DIMMs"] of this procedure to recheck the NVMEM LED.
+. 返回到 <<第 3 步：更换 DIMM>> of this procedure to recheck the NVMEM LED.
 . 找到控制器模块上的 DIMM 。
 . 记下插槽中 DIMM 的方向，以便可以按正确的方向插入更换用的 DIMM 。
 . 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。

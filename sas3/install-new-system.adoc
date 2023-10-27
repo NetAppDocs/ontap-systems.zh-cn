@@ -84,7 +84,7 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/downloa
 要下载 Config Advisor ，您需要网络访问权限。
 
 +
-https://https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
+https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
 
 
 
@@ -409,7 +409,7 @@ NOTE: 在启动系统之前、最佳实践是借此机会验证布线是否正�
 如果生成任何 SAS 布线错误或重复的磁盘架 ID 错误，请按照提供的更正操作进行操作。
 
 +
-https://https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
+https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
 
 +
 您也可以运行 `storage shelf show -fields shelf-id` 命令来查看系统中已在使用的磁盘架 ID 列表（如果存在重复项）。

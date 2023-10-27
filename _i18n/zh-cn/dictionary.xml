@@ -16,7 +16,6 @@
   <block id="27af4227ca8acc558df96e2723ec9b37" category="inline-link-macro">在新控制器模块上设置存储加密</block>
   <block id="ac616410952c35e808a3c7ce4ea5b4a7" category="inline-link-macro">停用旧系统</block>
   <block id="a2539e65a13fda0a8ce497ac0baa63a7" category="inline-link-macro">《控制器硬件升级快速指南》</block>
-  <block id="3804b132271e47a4db7521e977b43625" category="inline-link-macro">《 ONTAP 9 高可用性配置指南》</block>
   <block id="1988e9c8cf124cb346a67d52ea613567" category="inline-link-macro">《 ONTAP 9 SAN 管理指南》</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp 支持站点</block>
   <block id="865e9b4ef52f3b0d3050c8b3c14eb660" category="inline-link-macro">Active IQ Config Advisor</block>
@@ -1024,7 +1023,6 @@
   <block id="e55f609f99ca89d1e0364e07cd66a1ac" category="paragraph">受损节点显示 `waiting for giveback...` 消息后，从运行正常的节点执行交还：</block>
   <block id="9829cc73f1aa57fe4c8f650070116d1b" category="list-text">从运行状况良好的节点： `storage failover giveback -ofnode partner_node_name`</block>
   <block id="6ccdc0e53e02a4d771ffb485d5c0df6c" category="paragraph">受损节点将收回其存储，完成启动，然后重新启动，并再次由运行正常的节点接管。</block>
-  <block id="08ca2eade8768d4ee7e1752168f719ac" category="paragraph"><block ref="08ca2eade8768d4ee7e1752168f719ac" category="inline-link-rx"></block></block>
   <block id="2e2dd412417cfab75b0340fc82c0c08b" category="list-text">交还操作完成后，使用 `storage failover show` 命令确认 HA 对运行状况良好，并且可以进行接管。</block>
   <block id="d2438a9a8b88afff0b59df6c125b3884" category="list-text">如果您使用 storage failover modify 命令禁用了自动交还，请将其还原。</block>
   <block id="d574c271d37aff5dfc97b6ecd338458f" category="doc">完成还原和更换过程— AFF A700s</block>
@@ -1734,8 +1732,6 @@
   <block id="b075a4576b5250274446097769fe8ec1" category="list-text">将替代启动介质安装到控制器模块中：</block>
   <block id="cece3275192f19a99192545e91b78506" category="list-text">将 EFI 文件夹复制到 USB 闪存驱动器上的顶部目录。+ USB 闪存驱动器应具有 EFI 文件夹，并且与受损控制器运行的服务映像（ BIOS ）版本相同。</block>
   <block id="055ce7154e7ea0261c8667a0d628ee36" category="image-alt">DRW a800 封闭通风管</block>
-  <block id="5fb89931e5b269129a2ad5936878a851" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.5 ，请转至 <block ref="b9f6f8746149f87def14842273c93bfe" category="inline-xref-macro-rx"></block>。</block>
-  <block id="70c3e5c6b05722334dd3cfb521d9e159" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至 <block ref="e0569187fa90a6ae4bbbe053355b82c8" category="inline-xref-macro-rx"></block>。</block>
   <block id="34cf3a43d39d8b0acc65bd578d7188da" category="doc">更换启动介质— AFF A800</block>
   <block id="56ea39f220f0f9a4e092906ae1b4e2a2" category="paragraph">在更换控制器模块时，您必须将受损控制器模块中的电源移至更换控制器模块。</block>
   <block id="79a34d0b71ca1ad3fdbbb6bb3a548146" category="image-alt">DRW a800 更换风扇</block>
@@ -3438,7 +3434,6 @@
   <block id="8394191e21f04380d08fe40ae8199691" category="summary">要更换机箱，必须关闭控制器。此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。</block>
   <block id="a5c7a7f72206c6b63d2ec6de862b1cfd" category="doc">关闭控制器— AFF A300</block>
   <block id="c1835b78219bf98dc8901ba1eb56866b" category="paragraph">在更换机箱之前，您必须关闭控制器。</block>
-  <block id="3746182c68f1f041a5f57979560a0566" category="list-text">转至 <block ref="1665eb69960f5979fe40ff23600bffd1" category="inline-xref-macro-rx"></block>。</block>
   <block id="8a73953f68f7fdf48a4b4ff53aac3e33" category="doc">重新配置系统并重新分配磁盘— AFF A300</block>
   <block id="534553d5e6c1df40c70ac7eb17fa2bee" category="doc">切回双节点 MetroCluster 配置中的聚合— AFF A300</block>
   <block id="22a0944cdb4fa603e25d6c2d3d91664d" category="doc">集群配置工作表— AFF A300</block>
@@ -6585,16 +6580,8 @@
   <block id="7befdc0c8cc35d0c1711e11bd7feb970" category="list-text">擦除缓存模块上的数据：<block ref="6daf7f4112fcf7c7be366c44ff70faf2" prefix=" " category="inline-code"></block></block>
   <block id="236dd84b9226dbf8dfd98a6c46b59972" category="list-text">验证是否已从缓存模块中擦除数据：<block ref="55030d884a341e8f95d06478b61fbec9" prefix=" " category="inline-code"></block></block>
   <block id="af41b619bf9d50ddae2454efc001e4dd" category="paragraph">The output should display the caching module status as erased.</block>
-  <block id="376b1cae869bbe8ab1cce68fdb30b696" category="inline-link-macro">Replace the DIMMs</block>
-  <block id="91e13f2779cb51174165fa30eaba7e5b" category="list-text">返回到 <block ref="cf268cc4bc5a73daf7348170b397c07d" category="inline-link-macro-rx"></block> of this procedure to recheck the NVMEM LED.</block>
   <block id="1a9ae2b5eb296d614bebfdc33f389268" category="doc">检查板载加密密钥- AFF A150</block>
   <block id="3bf6a2921f0e655ea4d2b6b2851e02df" category="doc">重新配置系统并重新分配磁盘—AFF A150</block>
-  <block id="91b91feeb88498e7be1c10bbbb6db4c2" category="inline-link-macro">Verifying the system ID change on an HA system</block>
-  <block id="4e87b3c0f415f46d36e8fa6bd32a6ff7" category="paragraph"><block ref="4e87b3c0f415f46d36e8fa6bd32a6ff7" category="inline-link-macro-rx"></block></block>
-  <block id="465740a443e85d455a90494615d629b9" category="inline-link-macro">Manually reassigning the system ID on a stand-alone system in ONTAP</block>
-  <block id="7070195bf98baff2e0462461db9cb074" category="paragraph"><block ref="7070195bf98baff2e0462461db9cb074" category="inline-link-macro-rx"></block></block>
-  <block id="734e28e3c6b715a48c7043347210471e" category="inline-link-macro">Manually reassigning the system ID on systems in a two-node MetroCluster configuration</block>
-  <block id="ca5a5e07d656cff35da2184538cfc5fb" category="paragraph"><block ref="ca5a5e07d656cff35da2184538cfc5fb" category="inline-link-macro-rx"></block></block>
   <block id="1cd8a39839471e937855a3c54b6b84d9" category="doc">启动介质更换概述—AFF A150</block>
   <block id="35db388e4e99e4a7488ab682126d7fa6" category="doc">更换NVMEM电池—AFF A150</block>
   <block id="2867a72512f6330f74fb93ac9f93f07d" category="doc">移动并更换硬件—AFF A150</block>
@@ -7372,7 +7359,6 @@
   <block id="60564c6a5dbb582ea0f8b967540d266c" category="paragraph">标签显示堆栈编号；例如、*环路或堆栈编号：1*和*环路或堆栈编号：2*。不包含根聚合的磁盘架仅在标签上显示磁盘架序列号。</block>
   <block id="e50b176d298cced2ec9cfd5bbe516332" category="list-text">系统会自动启用带内备用控制路径(IBACP)。</block>
   <block id="e5db155980df3ce33a16c9ed4af83e4e" category="paragraph">单路径HA或单路径配置不支持IBACP。</block>
-  <block id="ba809f57bc3e36546d8a47b82a5d995c" category="paragraph"><block ref="ba809f57bc3e36546d8a47b82a5d995c" category="inline-link-rx"></block></block>
   <block id="d37bef5353b917df46bc5ea30882b3a9" category="paragraph">You must have met the requirements in <block ref="45a94b67f53095b9a49e00311fb0216a" category="inline-xref-macro-rx"></block> and installed the disk shelves in the rack.</block>
   <block id="59e65b256ff4505ae2cefd9f9a823d8b" category="paragraph">您要为多路径HA、三路径HA、多路径、单路径HA或单路径配置布线</block>
   <block id="7e8bbc30dce4dc23bd053149c93370be" category="inline-link-macro">多路径HA配置的控制器到堆栈布线工作表和布线示例</block>
@@ -7383,7 +7369,6 @@
   <block id="a9965269fc2882517b2f7404230818ad" category="list-text">如果要将一个或多个磁盘架热添加到现有堆栈的一端(逻辑第一个或最后一个磁盘架)、请完成适用于您的配置的子步骤；否则、请转至下一步。</block>
   <block id="ca067501330c228a786fd00d17229575" category="paragraph">将磁盘架热添加到与控制器具有多路径HA、三路径HA、多路径、四路径HA或四路径连接的堆栈末端</block>
   <block id="fa3d4e5360018aa45e5104272d43148c" category="paragraph">The stack must meet the requirements stated in the <block ref="d7ead9d51e0253f97f9c0ae83a2ee9eb" category="inline-xref-macro-rx"></block> section of this procedure.</block>
-  <block id="2aaf80f49dd70b27832d7aa8d96090d0" category="list-text">如果命令输出中显示&lt;lno-DARE&gt;或&lt;1ONo-DARe&gt;、则系统不支持NVE、请继续执行 <block ref="89ef15e2cd441b6b5852f79de56e5549" category="inline-xref-macro-rx"></block>。</block>
   <block id="78fe270cb69c9ecda90d7e049a571c28" category="list-text">如果&lt;lno-DARE&gt;未显示在命令输出中、并且系统运行的是ONTAP 9.6或更高版本、请继续下一节。 <block ref="a913f4e8384864716d5146884ff27f0e" category="inline-xref-macro-rx"></block>。</block>
   <block id="d9b691280dde7c1805e39052719c9c29" category="list-text">从运行状况良好的控制器禁用自动交还：
 storage故障转移修改-node local -auto-G给予 恢复false`
@@ -7592,7 +7577,6 @@ storage故障转移修改-node local -auto-G给予 恢复false`
   <block id="0da3888f81e8e56d2de2a92a42b512a3" category="doc">启动恢复映像—FAS2800</block>
   <block id="c5ad83e174ba7727e76fc50c8366e589" category="list-text">恢复var文件系统：</block>
   <block id="e51ecd8f185715278ef737fd290e62f5" category="list-text">按<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> 提示还原配置副本时。</block>
-  <block id="17fb1354460acbac7ab4abe6c27a24a2" category="list-text">If your system has onboard keymanager, NSE or NVE configured, go to <block ref="4b98be10d46a75a522880bc01a177aa5" category="inline-xref-macro-rx"></block></block>
   <block id="1a037944aedbce3040a5314200246858" category="list-text">在集群提示符处、使用检查逻辑接口<block ref="55cf88a325a6e0574aef732566cc984c" prefix=" " category="inline-code"></block> 命令：</block>
   <block id="8c4cb494b75288cf3ce1e7ce1dee3c9d" category="paragraph">如果任何接口列为"false"、请使用将这些接口还原回其主端口<block ref="ffbe7d182280173cba10c83ec9992974" prefix=" " category="inline-code"></block> 命令：</block>
   <block id="fcb4d3b1f229bc036dc2280a7c1d29c4" category="list-text">如果不使用存储加密、请还原自动交还和AutoSupport：</block>
@@ -8694,4 +8678,19 @@ SFP+(目标/启动程序)</block>
   <block id="052bc2e859c31b84b04f42db7b60abff" category="sidebar">ASA C800启动介质</block>
   <block id="801fdf5b112137a107d3f17390e4042d" category="sidebar">ASA C800机箱</block>
   <block id="ca7dce9cd06f0f2ef6e548c8c26d54d9" category="sidebar">ASA C800控制器模块</block>
+  <block id="664f9c52f93e2fbf6e801148b0f573ad" category="inline-link">HA对管理</block>
+  <block id="665a2533bb5f8d55add7fd24df29e614" category="paragraph"><block ref="665a2533bb5f8d55add7fd24df29e614" category="inline-link-rx"></block></block>
+  <block id="8fa572d5dfdbff8c60e791d349eca279" category="list-text">如果命令输出中显示&lt;lno-DARE&gt;或&lt;1ONo-DARe&gt;、则系统不支持NVE、请继续执行<block ref="c2302bfb39f1e6b6fccfd9207e94da44" category="inline-link-rx"></block>。</block>
+  <block id="7d52b24114e5d676f50874574fb29878" category="paragraph">系统中的所有其他组件都必须正常工作；否则、您必须与联系<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>。</block>
+  <block id="6cca151867efbcb742b6e15efec51760" category="list-text">挤压凸轮把手上的闩锁、直到其释放、完全打开凸轮把手以从中板释放控制器模块、然后用双手将控制器模块从机箱中拉出一半。</block>
+  <block id="92edeac7b5b629f5e93e2de4ba2adf43" category="list-text">检查控制器模块背面的NVMEM LED。  查找NV图标：</block>
+  <block id="bb49ab711ab9d79c58c90ff674747f54" category="admonition">如果系统处于"正在等待恢复"状态、或者系统未被正确接管或暂停(未提交的数据)、则在从控制器断开电源后、板上的绿色NV LED将开始闪烁。  如果受损控制器模块未被配对控制器模块成功接管、请联系<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block></block>
+  <block id="fab80bc3fcd8eac48cd9c319017190f7" category="list-text">如果从机箱中卸下控制器模块后、绿色NV状态LED开始闪烁：</block>
+  <block id="db20b5f8713e5397c5c04ce0ebd834fd" category="list-text">确认配对控制器模块已完全接管此控制器、或者受损控制器显示_waing for cep2ue_、可以忽略闪烁的LED、您可以从机箱中完成受损控制器的删除。</block>
+  <block id="b3fb52770d8a327ed5d79c25e8d2d8fe" category="list-text">如果绿色NV LED熄灭、则可以从机箱中完全卸下受损控制器。</block>
+  <block id="30f4d9cc74028fcb25b044f8d09f0cdd" category="list-text">从机箱中卸下控制器模块。</block>
+  <block id="6476f2f5425248b422cb30658323cbae" category="list-text">返回到 <block ref="c67cdb63ab5b46180d9910dcb0f03689" category="inline-xref-macro-rx"></block> of this procedure to recheck the NVMEM LED.</block>
+  <block id="699b31ad01a325baded3de0b74220957" category="list-text"><block ref="56abd8a9e334744fb66750bee3a52178" category="inline-xref-macro-rx"></block></block>
+  <block id="74e404c1f33731e0a999a4fc54ab33df" category="list-text"><block ref="893f29ac32188f4c8d29836a3587e127" category="inline-xref-macro-rx"></block></block>
+  <block id="a192a372cc891c7f0839a86b1b42a3e2" category="list-text">转至 <block ref="39ef488856eb21b3aaabcded4bff7c5d" category="inline-xref-macro-rx"></block>。</block>
 </blocks>
