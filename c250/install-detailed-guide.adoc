@@ -11,8 +11,7 @@ summary: 本节详细介绍了安装AFF C250系统的分步说明。
 
 
 [role="lead"]
-<stdin>中未解析的指令- include：..//_include/C250_install-detice-gu导向.adoc[]
-本节详细介绍了安装AFF C250系统的分步说明。
+本操作步骤提供了有关安装AFF C250存储系统的详细分步说明。
 
 如果您使用的是MetroCluster 配置、请使用 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]。
 
@@ -21,8 +20,6 @@ summary: 本节详细介绍了安装AFF C250系统的分步说明。
 == 第 1 步：准备安装
 
 要安装AFF C250系统、您需要创建一个帐户并注册该系统。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
-
-注意
 
 .开始之前
 * 确保您有权访问 link:https://hwu.netapp.com["NetApp Hardware Universe"^] (HWU)以了解有关站点要求的信息。

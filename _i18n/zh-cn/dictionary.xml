@@ -4100,18 +4100,15 @@
   <block id="4c82db0a209f87ecd6fed6664e1ef758" category="cell">LED 图标</block>
   <block id="3999567db5b4a29bd6505aaadb3f807e" category="cell">LED name</block>
   <block id="46a2a41cc6e552044816a2d04634545d" category="cell">State</block>
-  <block id="f14917f9ec9b86a2d84112bf8ff01347" category="paragraph"><block ref="f14917f9ec9b86a2d84112bf8ff01347" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dd4fe0cc913f704600b97d1f5dd285de" category="paragraph">电源</block>
   <block id="31cb02e89902f67343e47bc70e628c6d" category="paragraph">呈绿色稳定亮起</block>
   <block id="ceee41d559bf6e4c8eec9d1995cd0b4c" category="paragraph">一个或多个电源为磁盘架供电。</block>
-  <block id="c61664b995859451c9b18dba9398d36e" category="cell"><block ref="c61664b995859451c9b18dba9398d36e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2aa97e44cace7cb882c9dcba32940f8f" category="cell">注意</block>
   <block id="75e6252bb5a504fc80a435f3c6fc7c82" category="paragraph">稳定琥珀色</block>
   <block id="42532600d34fb5884550b5ba06c71866" category="paragraph">检查事件消息以确定要采取的更正操作。</block>
   <block id="5bb2376fdbdd8b69f07ffed693784a70" category="paragraph">呈琥珀色闪烁</block>
   <block id="59ee562359b2b7e862570a57471bda07" category="paragraph">磁盘架 ID 处于待定状态。</block>
   <block id="8fcbf556597a139b46e7a7b6c6878f08" category="paragraph">重新启动磁盘架，以使磁盘架 ID 生效。</block>
-  <block id="965881f89ebf03830d8c6f3d7b4af499" category="paragraph"><block ref="965881f89ebf03830d8c6f3d7b4af499" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ce5bf551379459c1c61d2a204061c455" category="paragraph">位置</block>
   <block id="d4300cfa84e2e26784840198a0cbd030" category="paragraph">呈蓝色稳定亮起</block>
   <block id="dcef7e6e25f4d0285a65c6e2456b274e" category="paragraph">系统管理员已激活此 LED 功能，以帮助以物理方式查找需要维修的磁盘架。</block>
@@ -4141,7 +4138,6 @@
   <block id="a7d0fabb0e19581fdc7108acf3ea86ca" category="paragraph">下表介绍了 DS460C 磁盘架中使用的风扇上的 LED ：</block>
   <block id="7d74f3b92b19da5e606d737d339a9679" category="cell">项目</block>
   <block id="c850737320566d21e1b271caa9a83a80" category="paragraph">风扇功能出现错误。</block>
-  <block id="97fcf3382eccbc982589a926d4ab13ed" category="paragraph"><block ref="97fcf3382eccbc982589a926d4ab13ed" category="inline-image-macro-rx" type="image"></block></block>
   <block id="73ed5be94772342ead2304a505ea672f" category="section-title">磁盘驱动器 LED</block>
   <block id="556d06da2336f75dff1cbca3a26c81fa" category="paragraph">磁盘驱动器上的 LED 指示其运行正常还是硬件出现问题。</block>
   <block id="92baf731ccf3fd5eea26e98890d366d6" category="section-title">DS224C 和 DS212C 磁盘架的磁盘驱动器 LED</block>
@@ -6386,7 +6382,6 @@
   <block id="8db94eb390aaecb9128a260b00e455e8" category="paragraph"><block ref="8db94eb390aaecb9128a260b00e455e8" category="inline-link-macro-rx"></block></block>
   <block id="474b4646ba15883494cbfd9239d508ad" category="list-text">英语 <block ref="053faba884b41a351b336aa44c8075ff" category="inline-link-macro-rx"></block></block>
   <block id="42e8099baf01da8bcc3b8362f29f317c" category="inline-link-macro">《AFF A800安装和设置说明》</block>
-  <block id="08b9fb46f5aced4cd732b3ae62e9764f" category="paragraph">This guide gives graphic instructions for a typical installation of your system from racking and cabling, through initial system bring-up.使用 <block ref="0cdb4981396afec17d02c8ce5d1b8e06" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="3968cc9d2fa7f59d81661adbaf12cfac" category="paragraph"><block ref="3968cc9d2fa7f59d81661adbaf12cfac" category="inline-link-macro-rx"></block></block>
   <block id="b72bee50d170af9037bebf46f5eb89d7" category="paragraph">要更换NVDIMM、您必须使用通风管顶部的FRU映射或插槽1提升板顶部的FRU映射在控制器模块中找到它。</block>
   <block id="ad7f5333de2f76cfccc7ea7fa134c8a7" category="paragraph">更换系统DIMM涉及通过相关错误消息识别目标DIMM、使用风管上的FRU映射查找目标DIMM、然后更换DIMM。</block>
@@ -6618,7 +6613,6 @@
   <block id="1338d35acdb3c964dd3a62d00b16a635" category="doc">检查板载加密密钥- AFF C250</block>
   <block id="d667058635875eca097800e4379f58cd" category="doc">快速步骤—AFF C250</block>
   <block id="84918b89947f6a68e4b25fe4753c02bc" category="inline-link-macro">《AFF C250安装和设置说明》</block>
-  <block id="66e0597e25a38bc180d5270f4021127a" category="paragraph"><block ref="66e0597e25a38bc180d5270f4021127a" category="inline-link-macro-rx"></block></block>
   <block id="d3d5358ee829ec20cfebc87c86eed844" category="doc">根据需要还原OKM、NSE和NVE—AFF C250</block>
   <block id="64e5c97f01cbac1639343e8b0f670c20" category="list-text"><block ref="64e5c97f01cbac1639343e8b0f670c20" category="inline-link-macro-rx"></block></block>
   <block id="38471c9931ce26e5aeb8c80bf6483a48" category="list-text"><block ref="38471c9931ce26e5aeb8c80bf6483a48" category="inline-link-macro-rx"></block></block>
@@ -6858,7 +6852,6 @@
   <block id="a7d1c95d57e2d4d91562898a605711c2" category="doc">将故障部件退回给NetApp—AFF C800</block>
   <block id="c7567cf7dbf1c0e5da4f2ff1ced923ef" category="doc">快速步骤—AFF C800</block>
   <block id="f8eb42a3c2c9e8d82c874d7ccd6ef2a9" category="inline-link-macro">《AFF C800安装和设置说明》</block>
-  <block id="1b687c0cb9f5dcfa6fe0020541ed6d97" category="paragraph"><block ref="1b687c0cb9f5dcfa6fe0020541ed6d97" category="inline-link-macro-rx"></block></block>
   <block id="51e6f316a2e32ea2e86cbacf242892f6" category="doc">根据需要还原OKM、NSE和NVE—AFF C800</block>
   <block id="6d940c412bcfcdb76ebf095399d157ea" category="doc">还原并验证系统配置—AFF C800</block>
   <block id="83087c77244cbf7473481303d60706cd" category="doc">启动恢复映像—AFF C800</block>
@@ -7176,7 +7169,6 @@
   <block id="6266bb335022aad7813f5a92f40c41bb" category="list-text">在笔记本电脑或控制台上使用System Manager配置集群。</block>
   <block id="b1e0a8fb86dde21901d58064a47983ae" category="paragraph">了解如何通过机架安装和布线以及初始系统启动来安装系统。使用 ... <block ref="2e869cac122e3063f7b418f03cb3fa26" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="79386daaa48888ed81c00ef493d329e9" category="paragraph">如果您使用的是MetroCluster 配置、请使用<block ref="d4b6e949edad9293b177bc65e2892165" category="inline-link-rx"></block>。</block>
-  <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">注意</block>
   <block id="25ca1a1b0a04d8f5341dca5c9e9eed8a" category="list-text">确保您有权访问 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> (HWU)以了解有关站点要求的信息。</block>
   <block id="b00f162fad84edda46484fcada242a8c" category="inline-link">HWU</block>
   <block id="0b596d3b9a72deeb4bca2c3f00662c30" category="list-text">具有特定电源要求的客户必须进行检查<block ref="911e5b8f28f318acfdc1d057cd36b40e" category="inline-link-rx"></block> 了解配置选项。</block>
@@ -7581,11 +7573,7 @@ storage故障转移修改-node local -auto-G给予 恢复false`
   <block id="8c4cb494b75288cf3ce1e7ce1dee3c9d" category="paragraph">如果任何接口列为"false"、请使用将这些接口还原回其主端口<block ref="ffbe7d182280173cba10c83ec9992974" prefix=" " category="inline-code"></block> 命令：</block>
   <block id="fcb4d3b1f229bc036dc2280a7c1d29c4" category="list-text">如果不使用存储加密、请还原自动交还和AutoSupport：</block>
   <block id="fde9b148f6eb9655d65658597326b4ee" category="doc">详细步骤—FAS2800</block>
-  <block id="c507fc907e52c0d3d2a5b32d101a1559" category="paragraph">要安装FAS2800系统、您需要在NetApp 支持站点 上创建帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
   <block id="82374f90663d7205d26c38028c93cb8d" category="inline-link">适用于您的ONTAP 9版本的发行说明</block>
-  <block id="4afcf4b1bce6c3df1cc1e778d2d69e65" category="paragraph">您需要有权访问<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> 有关站点要求以及已配置系统上的追加信息的信息。您可能还希望有权访问<block ref="eaa168831c6fecf820d5605f3f5de542" category="inline-link-rx"></block> 有关此系统的详细信息，请参见您的 ONTAP 版本。</block>
-  <block id="94f11775f11fcb36a20933d06500449a" category="list-text">通过注册您的系统 <block ref="1cbd3811871137aa1e003e1ccae3894e" category="inline-link-rx"></block></block>
-  <block id="4aed417c4620186c402fe3b82713076b" category="list-text">下载并安装<block ref="56697f7f340a212f549439c89b0cabd2" category="inline-link-rx"></block> 在您的笔记本电脑上。</block>
   <block id="202c6b9676e6e0879f99a323aacdd76b" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> 以找到缆线并确定其用途。</block>
   <block id="21d9a13ac1bf780b5a88db05a215c05d" category="paragraph">10 GbE、SFP28缆线(因订单而异)</block>
   <block id="68ddfa29cb0d12a802225c5426557710" category="paragraph">X6566B-05-R6、.5、</block>
@@ -7609,15 +7597,11 @@ SFP+(目标/启动程序)</block>
   <block id="7176bca53e61f926de4367eb107ce7c8" category="paragraph">USB-C控制台电缆</block>
   <block id="34dc50315428bf6e6940b722c6a21ee9" category="paragraph">可选FC缆线</block>
   <block id="01b24af9f8a6b3efddd64ee9ab57a42e" category="paragraph">附加FC网络缆线</block>
-  <block id="3f23ceafafc807d2b7578916c6816fcb" category="inline-link">使用 ONTAP 命令行界面设置集群</block>
-  <block id="a41ad0c41b61aa6e16a86ba5e2432d9f" category="list-text">下载并填写中的工作表 <block ref="a7d19322be231451e03428c8b87e512f" category="inline-link-rx"></block>。</block>
   <block id="3157ab12e29c7ae731c3bbc36443b23f" category="image-alt">OIE FAS2800重量注意事项IEOPS 1070</block>
-  <block id="bb4787913f600ff690f937a7622bfef5" category="paragraph">使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。</block>
   <block id="9646d1820777de5269873d2317186ecb" category="paragraph">管理网络交换机</block>
   <block id="e80abcbf02cd3bed5561a16253c1dea0" category="paragraph">主机网络交换机</block>
   <block id="3b9d43c8f889d04a7e7e50ecc887f626" category="paragraph">为双节点无交换机集群的网络连接和集群互连端口布线。</block>
   <block id="724b63ff77d309630df65f6af09956a2" category="admonition">插入连接器时、您应感觉到它卡入到位；如果您没有感觉到它卡入到位、请将其卸下、将电缆头翻转并重试。</block>
-  <block id="b81e7d6a7be0cc8238b538c4b907282a" category="paragraph">您可以使用图形或分步说明完成控制器之间以及与交换机之间的布线。</block>
   <block id="43f3f164715da7f3368f26b28f4ef36f" category="video-title">动画—为双节点无交换机集群布线</block>
   <block id="00cdc1c050c54120647c95f8ac43e946" category="list-text">使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b：</block>
   <block id="64d64c32d62f821e30eb2ef5d4583099" category="paragraph">*集群互连缆线*</block>
@@ -7636,9 +7620,7 @@ SFP+(目标/启动程序)</block>
   <block id="e664a3bf047f98da138d06dd6bbecf60" category="list-text">2端口、10/C5Gb以太网(SFP28)+ 2端口32 Gb FC (SFP+)</block>
   <block id="c76e1890be7e78a7e7f8b44303d6f072" category="admonition">请勿插入电源线。</block>
   <block id="945919717a9a1b9de8896baef8c155a5" category="paragraph">为有交换机集群的网络连接和集群互连端口布线。</block>
-  <block id="4b3a23428d43b0cc1ea88affb10b1421" category="admonition">插入连接器时、您应感觉到它卡入到位；如果您没有感觉到它卡入到位、请将其卸下、然后将电缆头翻转过来并重试。</block>
   <block id="b6713b6dcccfb0ea851ac5892871d1ce" category="paragraph">使用缆线将控制器连接到外部存储。</block>
-  <block id="80ae6b7de29ff0be35e926815150d39e" category="paragraph">您可以使用图形或分步说明完成控制器之间以及驱动器架的布线。</block>
   <block id="3fc162aa6870cf22cf3e0a947b89615a" category="video-title">动画-驱动器架布线</block>
   <block id="2728bec52c30a9bf554b834ce8cfd335" category="admonition">请勿在FAS2800上使用端口0b2。ONTAP不使用此SAS端口、并且此端口始终处于禁用状态。请参见<block ref="6f4656a8b776447b5b4debad13e7a22e" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="936f11624ce65028d5f2861c02e343af" category="image-alt">OIE图例图标1</block>
@@ -7656,13 +7638,9 @@ SFP+(目标/启动程序)</block>
   <block id="49fefb8508936cb5a0f672b0146c0013" category="list-text">控制器B端口0a到堆栈中第一个驱动器架上的IOM A端口1。</block>
   <block id="0cbd55a3e4a33973ae5e025f7565fe75" category="list-text">控制器B端口0b1到堆栈中最后一个驱动器架上的IOM B端口3。</block>
   <block id="8f61138caddaadc30f99b723e123cf22" category="image-alt">DWR 2800控制器2到磁盘架IEOPS 897</block>
-  <block id="a63d383da174eddb392adcd87d936c44" category="paragraph">如果您的笔记本电脑启用了网络发现、请使用自动集群发现完成系统设置和配置。</block>
   <block id="17eddeb5ca42d640ce98ba7b90523804" category="image-alt">DWR 2800打开电源IEOPS 898</block>
-  <block id="9e4e9e3678bbed5f0d0698cff8427b61" category="list-text">使用 System Manager 引导式设置使用中收集的数据配置系统<block ref="492b1b89e16fbed782c0f28e34fb9371" category="inline-link-rx"></block></block>
   <block id="5725fc4af65adef1b57d4b7c9a365287" category="paragraph">如果您的笔记本电脑未启用网络发现、请手动完成配置和设置。</block>
-  <block id="3b1f7398f44c65a5f8ab979cc8757340" category="list-text">将控制台电缆连接到笔记本电脑或控制台、并使用系统附带的控制台电缆连接控制器上的控制台端口、然后c将 笔记本电脑或控制台连接到管理子网上的交换机。</block>
   <block id="6f196fc99c938b047a2dbbae60694da9" category="image-alt">DRW 2800笔记本电脑、用于切换到控制器IEOPS 1084</block>
-  <block id="1f61f05d390e702160f04da6c21786d5" category="list-text">完成初始配置后、请转至 <block ref="8203f64117389bb7bbdf8d4d70d36e4d" category="inline-link-rx"></block> 有关在ONTAP中配置其他功能的信息、请参见。</block>
   <block id="1063e487d045f7cd17b5712ab35a43b6" category="doc">FAS2800系统文档</block>
   <block id="40ab4deb5c724a3e2d6c8f6d96a94554" category="doc">关闭控制器- FAS2800</block>
   <block id="5f81816799fe408c4f5d0d2b06be7dd0" category="doc">快速指南—FAS2800</block>
@@ -7812,8 +7790,6 @@ SFP+(目标/启动程序)</block>
   <block id="8d468b5fdd20b5347cabd9609c9b129c" category="doc">全SAN阵列(ASA) A系列系统</block>
   <block id="9260991b91fdf449af1f97b5d09a9db6" category="summary">NS224和SAS磁盘架专为NetApp AFF和FAS系统而设计、可满足您多样化的业务和应用程序需求。</block>
   <block id="0add3a06a3c8079fac5caa294ad21965" category="doc">AFF和FAS系统的驱动器架</block>
-  <block id="681b1f89b87b1eb21b78d5ec326b22f7" category="paragraph">&lt;stdin&gt;中未解析的指令- include：..//_include/C250_install-detice-gu导向.adoc[]
-本节详细介绍了安装AFF C250系统的分步说明。</block>
   <block id="4de4b37af472f8b6bb5aa5b5732538f0" category="summary">维护ASA C250硬件</block>
   <block id="80b77aae28ed3360a8b704371f5188e1" category="doc">维护AFF C250硬件</block>
   <block id="ab253cf54adf6fdbb65cbb0ed70cb2cf" category="paragraph">对于AFF C250存储系统、您可以对以下组件执行维护过程。</block>
@@ -8503,7 +8479,6 @@ SFP+(目标/启动程序)</block>
   <block id="728c8b35a059c5debd8717ebc5eef9cc" category="doc">视频步骤- ASA A250</block>
   <block id="da8c100a35e67a4a9a03589f6afa9ddc" category="doc">视频步骤—FAS500f</block>
   <block id="0fc2bce08e8e93df5954329e4439b224" category="paragraph">安装操作步骤提供了从机架安装和布线到初始系统启动的典型系统安装的图形说明。如果您熟悉安装NetApp系统、请使用此操作步骤。</block>
-  <block id="658749712c1f894d4be0afd96a2e5f1d" category="paragraph">访问 <block ref="617bafb92e72c64d9d65b60de9aea456" category="inline-link-macro-rx"></block>。</block>
   <block id="0a5ad698c7446792fa1695e8ef9001ee" category="image-alt">DRW 2800交换式集群为IEOPS内容使用缆线</block>
   <block id="9bf3d28b6f86b0747100312dce20ff66" category="paragraph">ASA A400安装操作步骤提供了从机架安装和布线到初始系统启动的典型系统安装的图形说明。如果您熟悉NetApp系统的安装、请按照以下说明进行操作。</block>
   <block id="0117839c8787354fc8b23cefed0984e8" category="inline-link-macro">《ASA A400安装和设置说明》</block>
@@ -8693,4 +8668,69 @@ SFP+(目标/启动程序)</block>
   <block id="699b31ad01a325baded3de0b74220957" category="list-text"><block ref="56abd8a9e334744fb66750bee3a52178" category="inline-xref-macro-rx"></block></block>
   <block id="74e404c1f33731e0a999a4fc54ab33df" category="list-text"><block ref="893f29ac32188f4c8d29836a3587e127" category="inline-xref-macro-rx"></block></block>
   <block id="a192a372cc891c7f0839a86b1b42a3e2" category="list-text">转至 <block ref="39ef488856eb21b3aaabcded4bff7c5d" category="inline-xref-macro-rx"></block>。</block>
+  <block id="2866d26481b1c521c672b3cb60930e47" category="paragraph">访问 <block ref="130b74705762cd99c7dfbbbc83d14934" category="inline-link-macro-rx"></block>。</block>
+  <block id="7484b7e82acc4757b26226229997810e" category="summary">本过程提供了有关安装典型NetApp存储系统的详细分步说明。</block>
+  <block id="d9652a5ef2ee620cb0b558db1a0b0abd" category="paragraph">本操作步骤提供了有关安装典型NetApp存储系统的详细分步说明。如果需要更详细的安装说明、请使用此操作步骤。</block>
+  <block id="f4c3757c8a20a3155f18506671b4a147" category="list-text">电信机架或系统机柜中存储系统的机架空间。</block>
+  <block id="a7fe55285588ce3bc863c28bb05d4186" category="list-text">2U</block>
+  <block id="4051d118060db51dd307c06bb01d5c8a" category="list-text">系统中的每个驱动器架为2U或4U</block>
+  <block id="f4c8d594d87ccd7fe60c3c68ef97a3da" category="list-text">使用Web浏览器连接存储系统和网络交换机以及笔记本电脑或控制台的其他网络缆线</block>
+  <block id="79c640bc8c4f86920cd6b693e9a21456" category="list-text">访问<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> 有关站点要求以及已配置存储系统上的追加信息的信息。</block>
+  <block id="345d4ee16e4fd18df3bf44484bbebc45" category="list-text">您可能还希望有权访问<block ref="eaa168831c6fecf820d5605f3f5de542" category="inline-link-rx"></block> 有关此存储系统的详细信息、请参见您的ONTAP版本。</block>
+  <block id="902a58c29fa1a98185c0f23af51caade" category="list-text">打开所有包装箱的包装并清点物品。</block>
+  <block id="f77f28a461c720358d6020b852d2d688" category="admonition">具有特定电源要求的客户必须进行检查<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> 的配置选项。</block>
+  <block id="16b35791c547ec7b12d2d1bc88d72f59" category="inline-link">使用System Manager在新集群上配置ONTAP</block>
+  <block id="aae9567818a18efd162e71b32afe8898" category="list-text">访问<block ref="d606117105bd83c1b32ab081f09267a6" category="inline-link-rx"></block></block>
+  <block id="45c050678e91022d79d101d15217e470" category="list-text">查看要求和操作步骤步骤。</block>
+  <block id="13013f81efc98ccada60da62130b9fda" category="inline-link">设置工作表^(需要工作表的URL)</block>
+  <block id="941956b63246ffa79f1347062e5d39b0" category="list-text">通过完成收集有关存储系统的信息<block ref="346507d5ee7f653b48b0f3d6fc2965af" category="inline-link-rx"></block>。</block>
+  <block id="949db25fbbc3fc1f22a242c3944885b4" category="list-text">记录控制器中的存储系统序列号。</block>
+  <block id="0d6cee59f00c392fcb698e283937aa19" category="paragraph">无部件号标签</block>
+  <block id="521655e96e994a693d54321af1548de6" category="paragraph">启动存储系统</block>
+  <block id="3ec9117c12f43a6786d62d4287191808" category="paragraph">将存储系统安装在电信机架或NetApp存储系统机柜中(如果适用)。</block>
+  <block id="a13315633e3bd5a1b8934263ef3de247" category="list-text">按照导轨套件附带的说明安装并固定存储系统。</block>
+  <block id="6c686ee1cca98c427670aae5dfe576bf" category="admonition">您需要了解与存储系统重量相关的安全问题。</block>
+  <block id="084f071d7110f0c4d1fb187b85854586" category="list-text">将挡板放在存储系统正面。</block>
+  <block id="3d8c8d712263193f63b8949c3ee9c62c" category="paragraph">使用缆线将控制器作为双节点无交换机集群或有交换机集群连接到网络。</block>
+  <block id="1c893d208d4a91c970226886751e800d" category="paragraph">下表列出了双节点无交换机集群和有交换机集群的缆线类型以及插图中的呼出编号和缆线颜色。</block>
+  <block id="1ab7eafd757e6d1eae57d16228e5edc3" category="list-text">有关将存储系统连接到交换机的信息、请与网络管理员联系。</block>
+  <block id="089568b0e72f52eda465bac3d797022f" category="list-text">检查图示箭头、了解电缆连接器的推拉卡舌方向是否正确。</block>
+  <block id="cef25943b26eeebcaa1241ede0442fb2" category="paragraph">使用动画或分步说明完成控制器和交换机之间的布线。</block>
+  <block id="86ef3e62afc46d4fbce176cfff238447" category="paragraph">下表列出了将驱动器架连接到存储系统时插图中的缆线类型以及呼出编号和缆线颜色。</block>
+  <block id="225172475d1dd48d2f55426f1792f1b5" category="admonition">The example uses DS224C.Cabling is similar with other supported drive shelves.请参见<block ref="defd6f8cbcbf4438c52ada1e92d7a17f" category="inline-link-rx"></block> 有关详细信息 ...</block>
+  <block id="8a811c8bdca2987d299cfb24cf85ad86" category="paragraph">磁盘架到磁盘架布线</block>
+  <block id="3fa1bc4f962d0649f457ff7e994b46d8" category="paragraph">控制器A连接到驱动器架</block>
+  <block id="353960fbbf75aa5a4dd1042a20bf18dc" category="paragraph">控制器B连接到驱动器架</block>
+  <block id="a01af11c268599bde566d99055019251" category="paragraph">使用动画或分步说明完成控制器和驱动器架之间的布线。</block>
+  <block id="9aca62ddbd88e63be7ec9f9c2469acab" category="section-title">第5步：完成存储系统设置和配置</block>
+  <block id="b3308aded4f838607d118fa8281f0f4e" category="paragraph">使用选项1：(如果启用了网络发现)或选项2：(如果未启用网络发现)完成存储系统设置和配置。</block>
+  <block id="cc76013bd2ca10d4b55bab3a0f8d5331" category="paragraph">如果您的笔记本电脑上启用了网络发现、请使用自动集群发现完成存储系统设置和配置。</block>
+  <block id="89fb7289455abb973e1e1d1887a8172d" category="list-text">使用以下动画打开磁盘架电源并设置磁盘架ID。</block>
+  <block id="9be08f77b7ab4837ae1dadad63405dc2" category="list-text">Power on the controllers</block>
+  <block id="4a8d781d6ae79557515be034fcf4bd6e" category="list-text">使用图形或步骤发现要配置的存储系统节点：</block>
+  <block id="38c0c9e875391d2dc0f78f243ecc4f59" category="admonition">此目标节点的存储系统序列号为7本。</block>
+  <block id="9d2c2c7e4ecf1a64105e37b923e42295" category="list-text">使用System Manager引导式设置使用您在中收集的数据配置存储系统 <block ref="d0fb50e606c7cb2fa74e99fa5a3520a8" category="inline-xref-macro-rx"></block>。</block>
+  <block id="b9d390deee7ae9c55c02ce9081338f2c" category="list-text">创建帐户或登录到您的帐户。</block>
+  <block id="e53df79e8b12228ebe8ba9013009c4b6" category="list-text">单击<block ref="47d83efabc4122be28a80bdea228d0a5" category="inline-link-rx"></block></block>
+  <block id="d163335d3a2ab0b3365c69b66c8b8218" category="list-text">如果需要创建帐户或登录帐户、请单击_Create Account_。</block>
+  <block id="d636be81d2c6c9af66f5d43b321f4b3c" category="inline-link">Active IQ Config Advisor</block>
+  <block id="ded166a9ef25ba71c1c5b2cca6dfb3ac" category="list-text">下载并安装<block ref="67f241779d92e72fc906fdc854002c63" category="inline-link-rx"></block></block>
+  <block id="91c22f99c650eff9cfd4e3a5797f1276" category="list-text">运行Active IQ Config Advisor以验证存储系统的运行状况。</block>
+  <block id="70cdb4752e56964c8e382c73c4dad5a3" category="list-text">在注册您的系统<block ref="609ce97692648785b01245072a80d78d" category="inline-link-rx"></block>。</block>
+  <block id="6ef8afe0d08cfff8d7c63feeb46c3bbe" category="inline-link">NetApp ONTAP资源</block>
+  <block id="1e030dc8ef51cc0c3b7cfdf5b1fb31ef" category="list-text">After you have completed the initial configuration, go to the<block ref="0d9c07b12aa4e6262cc31099f94c22ac" category="inline-link-rx"></block> page for information about configuring additional features in ONTAP.</block>
+  <block id="c1abdda48959ad5305acdea9199b4083" category="list-text">将控制台缆线连接到笔记本电脑或控制台、使用存储系统附带的控制台缆线连接控制器上的控制台端口、然后cConnect将笔记本电脑或控制台连接到管理子网上的交换机。</block>
+  <block id="ea6092d42464dfafd164efeca17f02cc" category="list-text">使用您在中收集的数据配置存储系统 <block ref="d0fb50e606c7cb2fa74e99fa5a3520a8" category="inline-xref-macro-rx"></block>...</block>
+  <block id="6a1952da65ff3ad3728cd89ec078bfa2" category="paragraph">本操作步骤提供了有关安装AFF C250存储系统的详细分步说明。</block>
+  <block id="476542f0e09454bd6ccd672453fee1fd" category="paragraph"><block ref="476542f0e09454bd6ccd672453fee1fd" category="inline-link-macro-rx"></block></block>
+  <block id="79917755b07c1e2ce974040457996cd1" category="paragraph">This guide gives graphic instructions for a typical installation of your system from racking and cabling, through initial system bring-up.使用 <block ref="ce9d9eed382ae5ac1650ec89550136ac" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
+  <block id="bcf0b3352838b481d0374edbdb31f0a0" category="image-alt">DRW SAS电源图标</block>
+  <block id="f598000290b443eb531fea17b731ed46" category="image-alt">DRW SAS故障图标</block>
+  <block id="7b1f02d808dfc03ff26bec5de1c435de" category="image-alt">DRW SAS3位置图标</block>
+  <block id="5b090b2a445dc9d064841a86f8433483" category="paragraph"><block ref="5b090b2a445dc9d064841a86f8433483" category="inline-link-macro-rx"></block></block>
+  <block id="a2cb8617cb158198389b743ac2b50756" category="inline-image-macro">宽度=5个</block>
+  <block id="a28edc89fe8bb6fcbeda4a8c5427d04f" category="cell"><block ref="a28edc89fe8bb6fcbeda4a8c5427d04f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="df6fc52eeceab2497b885a798c538a6f" category="cell"><block ref="df6fc52eeceab2497b885a798c538a6f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3b6daa4c4df8e50b04c2ed3f923979e3" category="paragraph">访问 <block ref="1ede88745168187a218abc6fed7fade9" category="inline-link-macro-rx"></block>。</block>
+  <block id="69389a2dcdac250c7be80b621e53e8b6" category="list-text">英语 <block ref="69854c1d21b3991324c802c8a6aabc4a" category="inline-link-macro-rx"></block></block>
 </blocks>

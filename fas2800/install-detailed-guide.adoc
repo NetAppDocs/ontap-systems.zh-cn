@@ -1,8 +1,8 @@
 ---
 permalink: fas2800/install-detailed-guide.html 
 sidebar: sidebar 
-keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, setup, discovery 
-summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。 
+keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, storage system, setup, discovery 
+summary: 本过程提供了有关安装典型NetApp存储系统的详细分步说明。 
 ---
 = 详细步骤—FAS2800
 :allow-uri-read: 
@@ -11,42 +11,51 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 
 [role="lead"]
-本指南详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本指南。
+本操作步骤提供了有关安装典型NetApp存储系统的详细分步说明。如果需要更详细的安装说明、请使用此操作步骤。
 
 
 
 == 第 1 步：准备安装
 
-要安装FAS2800系统、您需要在NetApp 支持站点 上创建帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
-
-您需要有权访问 https://hwu.netapp.com["NetApp Hardware Universe"] 有关站点要求以及已配置系统上的追加信息的信息。您可能还希望有权访问 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["适用于您的ONTAP 9版本的发行说明"] 有关此系统的详细信息，请参见您的 ONTAP 版本。
-
+.开始之前
 您需要在站点上提供以下内容：
 
-* 存储系统的机架空间
+* 电信机架或系统机柜中存储系统的机架空间。
++
+** 2U
+** 系统中的每个驱动器架为2U或4U
+
+
 * 2 号十字螺丝刀
-* 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
+* 使用Web浏览器连接存储系统和网络交换机以及笔记本电脑或控制台的其他网络缆线
 * 具有 RJ-45 连接并可访问 Web 浏览器的笔记本电脑或控制台
++
+** 访问 https://hwu.netapp.com["NetApp Hardware Universe"] 有关站点要求以及已配置存储系统上的追加信息的信息。
+** 您可能还希望有权访问 http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["适用于您的ONTAP 9版本的发行说明"] 有关此存储系统的详细信息、请参见您的ONTAP版本。
+
+
 
 
 .步骤
-. 打开所有框内容的包装。
-. 记录控制器的系统序列号。
+. 打开所有包装箱的包装并清点物品。
++
+
+IMPORTANT: 具有特定电源要求的客户必须进行检查 https://hwu.netapp.com["NetApp Hardware Universe"] 的配置选项。
+
+. 访问 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html#assign-a-node-management-ip-address["使用System Manager在新集群上配置ONTAP"^]
++
+.. 查看要求和操作步骤步骤。
+.. 通过完成收集有关存储系统的信息 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["设置工作表^(需要工作表的URL)"]。
+.. 记录控制器中的存储系统序列号。
 +
 image::../media/drw_ssn_label.svg[DRW SSN 标签]
 
-. 设置您的帐户：
-+
-.. 登录到现有帐户或创建帐户。
-.. 通过注册您的系统  https://mysupport.netapp.com/eservice/registerSNoAction.do?moduleName=RegisterMyProduct["NetApp 产品注册"]
 
 
-. 下载并安装 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Config Advisor"] 在您的笔记本电脑上。
-. 清点并记下收到的缆线数量和类型。
-+
+
+
 The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 https://hwu.netapp.com["NetApp Hardware Universe"] 以找到缆线并确定其用途。
 
-+
 [cols="1,2,1,2"]
 |===
 | 缆线类型 ... | 部件号和长度 | 连接器类型 | 针对 ... 
@@ -127,7 +136,7 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷�
  a| 
 USB-C控制台电缆
  a| 
-不适用
+无部件号标签
  a| 
 image::../media/oie_cable_micro_usb.svg[OIE缆线微型USB]
  a| 
@@ -138,11 +147,11 @@ image::../media/oie_cable_micro_usb.svg[OIE缆线微型USB]
  a| 
 电源线
  a| 
-不适用
+无部件号标签
  a| 
 image::../media/oie_cable_power.svg[OIE缆线电源]
  a| 
-启动系统
+启动存储系统
 
 
 
@@ -156,21 +165,18 @@ image::../media/oie_cable_fiber_lc_connector.svg[OIE 缆线光纤 LC 连接器]
 附加FC网络缆线
 
 |===
-. 下载并填写中的工作表  https://docs.netapp.com/us-en/ontap/software_setup/concept_set_up_the_cluster.html#cluster-setup-worksheets["使用 ONTAP 命令行界面设置集群"^]。
-
-
 
 
 == 第 2 步：安装硬件
 
-您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
+将存储系统安装在电信机架或NetApp存储系统机柜中(如果适用)。
 
 .步骤
 . 根据需要安装导轨套件。
-. 按照导轨套件附带的说明安装并固定系统。
+. 按照导轨套件附带的说明安装并固定存储系统。
 +
 
-NOTE: 您需要了解与系统重量相关的安全问题。
+NOTE: 您需要了解与存储系统重量相关的安全问题。
 
 +
 image::../media/oie_fas2800_weight_caution_IEOPS-1070.svg[OIE FAS2800重量注意事项IEOPS 1070]
@@ -179,16 +185,16 @@ image::../media/oie_fas2800_weight_caution_IEOPS-1070.svg[OIE FAS2800重量注�
 +
 image::../media/drw_cable_management_arm_install.svg[DRW 缆线管理臂安装]
 
-. 将挡板放在系统正面。
+. 将挡板放在存储系统正面。
 
 
 
 
 == 第 3 步：使用缆线将控制器连接到网络
 
-使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。
+使用缆线将控制器作为双节点无交换机集群或有交换机集群连接到网络。
 
-下表列出了双节点无交换机集群网络布线和有交换机集群网络布线的插图中的缆线类型以及呼出编号和缆线颜色。
+下表列出了双节点无交换机集群和有交换机集群的缆线类型以及插图中的呼出编号和缆线颜色。
 
 [cols="20%,80%"]
 |===
@@ -215,27 +221,26 @@ image::../media/oie_legend_icon_3_o.svg[OIE 图例图标 3 o]
 主机网络交换机
 
 |===
+.开始之前
+* 有关将存储系统连接到交换机的信息、请与网络管理员联系。
+* 检查图示箭头、了解电缆连接器的推拉卡舌方向是否正确。
++
+** 插入连接器时、您应感觉到它卡入到位；如果您没有感觉到它卡入到位、请将其卸下、将电缆头翻转并重试。
+** 如果要连接到光纤交换机，请先将 SFP 插入控制器端口，然后再使用缆线连接到该端口。
+
+
+
+
+image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
+
 [role="tabbed-block"]
 ====
 .选项 1 ：为双节点无交换机集群布线
 --
 为双节点无交换机集群的网络连接和集群互连端口布线。
 
-.开始之前
-有关将系统连接到交换机的信息，请与网络管理员联系。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
-image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
-
-
-NOTE: 插入连接器时、您应感觉到它卡入到位；如果您没有感觉到它卡入到位、请将其卸下、将电缆头翻转并重试。
-
-
-NOTE: 如果要连接到光纤交换机，请先将 SFP 插入控制器端口，然后再使用缆线连接到该端口。
-
 .关于此任务
-您可以使用图形或分步说明完成控制器之间以及与交换机之间的布线。
+使用动画或分步说明完成控制器和交换机之间的布线。
 
 .动画—为双节点无交换机集群布线
 video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
@@ -315,18 +320,8 @@ IMPORTANT: 请勿插入电源线。
 --
 为有交换机集群的网络连接和集群互连端口布线。
 
-
-NOTE: 您必须已联系网络管理员，了解有关将系统连接到交换机的信息。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
-image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
-
-
-NOTE: 插入连接器时、您应感觉到它卡入到位；如果您没有感觉到它卡入到位、请将其卸下、然后将电缆头翻转过来并重试。
-
 .关于此任务
-您可以使用图形或分步说明完成控制器之间以及与交换机之间的布线。
+使用动画或分步说明完成控制器和交换机之间的布线。
 
 .动画—切换集群布线
 video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
@@ -403,22 +398,10 @@ IMPORTANT: 请勿插入电源线。
 
 使用缆线将控制器连接到外部存储。
 
+下表列出了将驱动器架连接到存储系统时插图中的缆线类型以及呼出编号和缆线颜色。
 
-NOTE: 此示例使用 DS224C 。布线方式与其他受支持的驱动器架类似。
 
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
-
-image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
-
-.关于此任务
-您可以使用图形或分步说明完成控制器之间以及驱动器架的布线。
-
-.动画-驱动器架布线
-video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
-
-NOTE: 请勿在FAS2800上使用端口0b2。ONTAP不使用此SAS端口、并且此端口始终处于禁用状态。请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["在新存储系统中安装磁盘架"^] 有关详细信息 ...
-
-下表列出了双节点无交换机集群网络布线和有交换机集群网络布线的插图中的缆线类型以及呼出编号和缆线颜色。
+NOTE: The example uses DS224C.Cabling is similar with other supported drive shelves.请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["为新系统安装安装安装磁盘架并为其布线—带有IOM12/IOM12B模块的磁盘架"^] 有关详细信息 ...
 
 [cols="20%,80%"]
 |===
@@ -428,23 +411,35 @@ NOTE: 请勿在FAS2800上使用端口0b2。ONTAP不使用此SAS端口、并且�
  a| 
 image::../media/oie_legend_icon_1_lo.svg[OIE图例图标1]
  a| 
-集群互连
+磁盘架到磁盘架布线
 
 
 
  a| 
 image::../media/oie_legend_icon_2_mb.svg[OIE图例图标2 MB]
  a| 
-管理网络交换机
+控制器A连接到驱动器架
 
 
 
  a| 
 image::../media/oie_legend_icon_3_t.svg[OIE图例图标3 t]
  a| 
-主机网络交换机
+控制器B连接到驱动器架
 
 |===
+请务必检查插图箭头以确定正确的缆线连接器拉片方向。
+
+image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
+
+.关于此任务
+使用动画或分步说明完成控制器和驱动器架之间的布线。
+
+
+IMPORTANT: 请勿在FAS2800上使用端口0b2。ONTAP不使用此SAS端口、并且此端口始终处于禁用状态。请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["在新存储系统中安装磁盘架"^] 有关详细信息 ...
+
+.动画-驱动器架布线
+video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
 .步骤
 . 为磁盘架到磁盘架端口布线。
 +
@@ -495,39 +490,40 @@ image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[DWR 2800控制器2
 
 
 
-== 第 5 步：完成系统设置和配置
+== 第5步：完成存储系统设置和配置
 
-您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
+使用选项1：(如果启用了网络发现)或选项2：(如果未启用网络发现)完成存储系统设置和配置。
 
 [role="tabbed-block"]
 ====
 .选项 1 ：如果启用了网络发现
 --
-如果您的笔记本电脑启用了网络发现、请使用自动集群发现完成系统设置和配置。
+如果您的笔记本电脑上启用了网络发现、请使用自动集群发现完成存储系统设置和配置。
 
 .步骤
-. Use the following animation to set one or more drive shelf IDs:
+. 使用以下动画打开磁盘架电源并设置磁盘架ID。
 +
 .动画—设置驱动器架ID
 video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
-. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
-. 打开两个节点的电源开关。
+. Power on the controllers
 +
-image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[DWR 2800打开电源IEOPS 898]
-
+.. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
+.. 打开两个节点的电源开关。
 +
 
 NOTE: 初始启动可能需要长达八分钟的时间。
+
++
+image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[DWR 2800打开电源IEOPS 898]
+
+
 
 . 确保您的笔记本电脑已启用网络发现。
 +
 有关详细信息，请参见笔记本电脑的联机帮助。
 
-. 使用以下动画将您的笔记本电脑连接到管理交换机。
-+
-.动画—将笔记本电脑连接到管理交换机
-video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
-. 选择列出的 ONTAP 图标以发现：
+. 将笔记本电脑连接到管理交换机。
+. 使用图形或步骤发现要配置的存储系统节点：
 +
 image::../media/drw_autodiscovery_controler_select.svg[DRW 自动发现控制器选择]
 
@@ -538,16 +534,27 @@ image::../media/drw_autodiscovery_controler_select.svg[DRW 自动发现控制器
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 
-NOTE: XXXXX 是目标节点的系统序列号。
+NOTE: 此目标节点的存储系统序列号为7本。
 
 +
 此时将打开 System Manager 。
 
 
 
-. 使用 System Manager 引导式设置使用中收集的数据配置系统 https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]
-. 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后，转到 https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+. 使用System Manager引导式设置使用您在中收集的数据配置存储系统 <<第 1 步：准备安装>>。
+. 创建帐户或登录到您的帐户。
++
+.. 单击 https://mysupport.netapp.com["mysupport.netapp.com"]
+.. 如果需要创建帐户或登录帐户、请单击_Create Account_。
+
+
+. 下载并安装 https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]
++
+.. 运行Active IQ Config Advisor以验证存储系统的运行状况。
+
+
+. 在注册您的系统 https://mysupport.netapp.com/site/systems/register[]。
+. After you have completed the initial configuration, go to the https://www.netapp.com/support-and-training/documentation/["NetApp ONTAP资源"] page for information about configuring additional features in ONTAP.
 
 
 --
@@ -563,7 +570,7 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或控制台的联机帮助。
 
-.. 将控制台电缆连接到笔记本电脑或控制台、并使用系统附带的控制台电缆连接控制器上的控制台端口、然后c将 笔记本电脑或控制台连接到管理子网上的交换机。
+.. 将控制台缆线连接到笔记本电脑或控制台、使用存储系统附带的控制台缆线连接控制器上的控制台端口、然后cConnect将笔记本电脑或控制台连接到管理子网上的交换机。
 +
 image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[DRW 2800笔记本电脑、用于切换到控制器IEOPS 1084]
 
@@ -616,11 +623,22 @@ NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制�
 
 NOTE: 此地址的格式为 https://x.x.x.x[]。
 
-.. Configure the system using the data you collected in the https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]。
+.. 使用您在中收集的数据配置存储系统 <<第 1 步：准备安装>>...
 
 
-. 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后、请转至  https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 有关在ONTAP中配置其他功能的信息、请参见。
+. 创建帐户或登录到您的帐户。
++
+.. 单击 https://mysupport.netapp.com["mysupport.netapp.com"]
+.. 如果需要创建帐户或登录帐户、请单击_Create Account_。
+
+
+. 下载并安装 https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]
++
+.. 运行Active IQ Config Advisor以验证存储系统的运行状况。
+
+
+. 在注册您的系统 https://mysupport.netapp.com/site/systems/register[]。
+. After you have completed the initial configuration, go to the https://www.netapp.com/support-and-training/documentation/["NetApp ONTAP资源"] page for information about configuring additional features in ONTAP.
 
 
 --
