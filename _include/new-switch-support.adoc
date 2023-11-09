@@ -2,9 +2,34 @@
 :allow-uri-read: 
 
 
-[cols="25h,~,~"]
+[cols="20,65,15"]
 |===
 | 交换机 | Description | 可从一开始使用 
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["NVIDIA IP SN2100交换机"]
+ a| 
+使用A900/FAS9500平台的MetroCluster IP配置支持NVIDIA IP SN2100存储交换机。
+ a| 
+ONTAP 9.12.1
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["NVIDIA IP SN2100交换机(X190006)"]
+ a| 
+使用以下平台的MetroCluster IP配置支持NVIDIA IP SN2100存储交换机：
+
+* FAS500F/AFA250
+* FAS8300/AFA400
+* FAS8700
+* FAS9000/AFA700
+* AFF A800
+
+ a| 
+ONTAP 9.10.1P3
+
 
 
  a| 

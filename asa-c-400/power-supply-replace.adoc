@@ -1,5 +1,5 @@
 ---
-permalink: asa-c400/power-supply-replace.html 
+permalink: asa-c-400/power-supply-replace.html 
 sidebar: sidebar 
 keywords: asa c400, asa, c400, replace, replacing, power, supply, psu, disconnect, target, psu, unplug, power, cable, removing, remove, replacement, source, replace a power supply 
 summary: 更换电源 \ （ PSU\ ）包括断开目标 PSU 与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将替代 PSU 重新连接到电源。 
@@ -27,7 +27,7 @@ IMPORTANT: 请勿混用具有不同效率额定值的 PSU 。请始终像这样�
 
 您可以使用下图以及书面步骤更换电源。
 
-image::../media/drw_A400_psu.png[DRW A400 PSU]
+image::../media/drw_c400_psu_IEOPS-1237.svg[DRW C400 PSU IEOPS 1237]
 
 [cols="10,90"]
 |===

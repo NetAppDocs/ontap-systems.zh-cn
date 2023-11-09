@@ -15,111 +15,6 @@ summary: 了解AFF、ASA和FAS系统的新功能。
 
 
 
-== 新的适配器支持
-
-[cols="4*"]
-|===
-| 适配器部件号 | Description | 类别 | 可从一开始使用 
-
-
- a| 
-https://hwu.netapp.com/adapter/index["X91148A"]
- a| 
-2 端口 100GbE RoCE QSFP28
- a| 
-* 存储
-* 网络
-* HA/MetroCluster
-
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/adapter/index["X91122A"]
- a| 
-2 端口 25GbE RoCE QSFP28
- a| 
-* 网络
-* HA/MetroCluster
-
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/adapter/index["X9170A"]
- a| 
-NVMe SSD 模块（ 1 TB ）
- a| 
-核心转储设备
- a| 
-ONTAP 9.8
-
-|===
-
-
-== 新交换机支持
-
-[cols="25h,~,~"]
-|===
-| 交换机 | Description | 可从一开始使用 
-
-
- a| 
-https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 ）"]
- a| 
-支持在同一对 Cisco Nexus 9336C-x2 交换机上使用共享基础架构（集群， HA 和交换机连接存储），包括支持 MetroCluster IP 配置。
- a| 
-ONTAP 9.9.1
-
-
-
- a| 
-https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 和 X190210 ）"]
- a| 
-Cisco Nexus 9336C-f2 集群互连交换机和存储交换机支持 AFF/FAS 控制器以及前端数据连接。
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/Switch/Index["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
- a| 
-Broadcom BES-53248 集群互连交换机支持使用 40/100GbE 端口的 AFF/FAS 控制器。
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 ）"] https://hwu.netapp.com/Switch/Index["32 端口 100 GbE Cisco 交换机（ X190100 和 X190100R ）"]
- a| 
-Cisco Nexus 100 GbE 交换机可用作专用存储交换机，用于将 NS224 NVMe 驱动器架连接到以下平台：
-
-* AFF A800/AFF ASA A800
-* AFF A700/AFF ASA A700
-* AFF A400/AFF ASA A400
-* AFF A320
-
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/Switch/Index["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
- a| 
-Broadcom BES-53248 集群互连交换机支持使用 10/25GbE 端口的 AFF/FAS 控制器。
- a| 
-ONTAP 9.5P8
-
-|===
-
-
 == 新平台支持
 
 [cols="2*"]
@@ -128,9 +23,102 @@ ONTAP 9.5P8
 
 
  a| 
-https://hwu.netapp.com/ProductSpecs/Index["FAS9500"]
+https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C250"]
  a| 
-ONTAP 9.10.1P3和9.11.1
+ONTAP 9.13.1P1
+
+
+
+ a| 
+https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C400"]
+ a| 
+ONTAP 9.13.1P1
+
+
+
+ a| 
+https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C800"]
+ a| 
+ONTAP 9.13.P11.
+
+
+
+ a| 
+https://hwu.netapp.com/ProductSpecs/Index["FAS2820"]
+ a| 
+ONTAP 9.13.1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A150"]
+ a| 
+ONTAP 9.13.1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A250"]
+ a| 
+ONTAP 9.13.1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A400"]
+ a| 
+ONTAP 9.13.1
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/85736-DS-4254-NetApp-ASA.pdf["ASA A900"]
+ a| 
+ONTAP 9.13.1
+
+
+
+ a| 
+* https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf["AFF C250"]
+* https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf["AFF C400"]
+* https://www.netapp.com/media/81583-da-4240-aff-c-series.pdf["AFF C800"]
+
+ a| 
+ONTAP 9.12.1P1
+
+ONTAP 9.13.1GA及更高版本的ONTAP
+
+[NOTE]
+====
+ONTAP 9.13.1RC1不支持这些平台。
+
+====
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A150"]
+
+[NOTE]
+====
+请勿尝试使用不受支持的ONTAP版本安装或启动AFF A150存储系统。如果您尝试使用不受支持的ONTAP版本安装或启动系统、ONTAP将允许安装或启动(ONTAP不会阻止尝试)。其结果是、您的AFF A150存储系统将作为FAS2750存储系统运行。
+
+==== a| 
+ONTAP 9.131及更高版本的ONTAP
+
+ONTAP 9.12.1P1
+
+ONTAP 9.11.1P8.
+
+ONTAP 9.10.1P12
+
+
+
+ a| 
+https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS9500"]
+ a| 
+ONTAP 9.11.1
+
+ONTAP 9.10.1P3
 
 
 
@@ -145,13 +133,6 @@ ONTAP 9.10.1
 https://www.netapp.com/pdf.html?item=/media/7828-ds-3582.pdf["AFF A250/AFF ASA A250"]
  a| 
 ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/ProductSpecs/Index["FAS2820"]
- a| 
-ONTAP 9.13.1
 
 
 
@@ -219,6 +200,136 @@ ONTAP 9.6
 |===
 
 
+== 新交换机支持
+
+[cols="20,65,15"]
+|===
+| 交换机 | Description | 可从一开始使用 
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["NVIDIA IP SN2100交换机"]
+ a| 
+使用A900/FAS9500平台的MetroCluster IP配置支持NVIDIA IP SN2100存储交换机。
+ a| 
+ONTAP 9.12.1
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["NVIDIA IP SN2100交换机(X190006)"]
+ a| 
+使用以下平台的MetroCluster IP配置支持NVIDIA IP SN2100存储交换机：
+
+* FAS500F/AFA250
+* FAS8300/AFA400
+* FAS8700
+* FAS9000/AFA700
+* AFF A800
+
+ a| 
+ONTAP 9.10.1P3
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 ）"]
+ a| 
+支持在同一对 Cisco Nexus 9336C-x2 交换机上使用共享基础架构（集群， HA 和交换机连接存储），包括支持 MetroCluster IP 配置。
+ a| 
+ONTAP 9.9.1
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 和 X190210 ）"]
+ a| 
+Cisco Nexus 9336C-f2 集群互连交换机和存储交换机支持 AFF/FAS 控制器以及前端数据连接。
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
+ a| 
+Broadcom BES-53248 集群互连交换机支持使用 40/100GbE 端口的 AFF/FAS 控制器。
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["36 端口 100 GbE Cisco 交换机（ X190200 ）"] https://hwu.netapp.com/Switch/Index["32 端口 100 GbE Cisco 交换机（ X190100 和 X190100R ）"]
+ a| 
+Cisco Nexus 100 GbE 交换机可用作专用存储交换机，用于将 NS224 NVMe 驱动器架连接到以下平台：
+
+* AFF A800/AFF ASA A800
+* AFF A700/AFF ASA A700
+* AFF A400/AFF ASA A400
+* AFF A320
+
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/Switch/Index["Broadcom BES-53248 交换机（ X190005 和 X190005R ）"]
+ a| 
+Broadcom BES-53248 集群互连交换机支持使用 10/25GbE 端口的 AFF/FAS 控制器。
+ a| 
+ONTAP 9.5P8
+
+|===
+
+
+== 新的适配器支持
+
+[cols="4*"]
+|===
+| 适配器部件号 | Description | 类别 | 可从一开始使用 
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X91148A"]
+ a| 
+2 端口 100GbE RoCE QSFP28
+ a| 
+* 存储
+* 网络
+* HA/MetroCluster
+
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X91122A"]
+ a| 
+2 端口 25GbE RoCE QSFP28
+ a| 
+* 网络
+* HA/MetroCluster
+
+ a| 
+ONTAP 9.8
+
+
+
+ a| 
+https://hwu.netapp.com/adapter/index["X9170A"]
+ a| 
+NVMe SSD 模块（ 1 TB ）
+ a| 
+核心转储设备
+ a| 
+ONTAP 9.8
+
+|===
+
+
 == 新磁盘架支持
 
 [cols="2*"]
@@ -268,83 +379,5 @@ ONTAP 9.7P4
 ONTAP 9.6P9
 
 ONTAP 9.5P14
-
-|===
-
-
-== 新增硬件升级增强功能
-
-ONTAP 9.8 简化了硬件升级过程，引入了自动端口放置功能。升级运行 ONTAP 9.8 的系统时，必须使用正确的操作步骤 来考虑端口放置功能。
-
-查看下表，查看可用的升级过程。有关其他详细信息，请参见每个指南以确定操作步骤 是否合适。
-
-有关 MetroCluster 专用的其他过程，请参见 https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html["选择升级或刷新方法"]。
-
-[cols="4*"]
-|===
-| ONTAP 版本 | 位置 | 无中断 | 支持 MetroCluster 
-
-
- a| 
-9.8 到 9.0.x
- a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["《控制器硬件升级快速指南》"] （移动现有物理存储）
- a| 
-否
- a| 
-否
-
-
-
- a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["《控制器硬件升级快速指南》"] （将卷移动到新存储）
- a| 
-是的。
- a| 
-否
-
-
-
- a| 
-9.8
- a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade/upgrade-decide-to-use-this-guide.html["使用 `ssystem controller replace` 命令升级运行 ONTAP 9.8 的控制器硬件"]
- a| 
-是的。
- a| 
-是（ FC ）
-
-
-
- a| 
-9.8
- a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual-app/index.html["使用聚合重新定位手动升级运行 ONTAP 9.8 或更高版本的控制器硬件"]
- a| 
-是的。
- a| 
-是（ FC ）
-
-
-
- a| 
-9.7 到 9.5
- a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto/index.html["使用 `ssystem controller replace` 命令将运行 ONTAP 9.5 的控制器硬件升级到 ONTAP 9.7"]
- a| 
-是的。
- a| 
-是（ FC ）
-
-
-
- a| 
-9.7 及更早版本
- a| 
-https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual/index.html["将具有聚合重新定位的控制器升级到手动升级运行 ONTAP 9.7 及更早版本的控制器硬件"]
- a| 
-是的。
- a| 
-是（ FC ）
 
 |===

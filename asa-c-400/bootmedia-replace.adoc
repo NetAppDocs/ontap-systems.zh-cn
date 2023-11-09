@@ -1,5 +1,5 @@
 ---
-permalink: asa-c400/bootmedia-replace.html 
+permalink: asa-c-400/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: asa c400, asa, c400, locate, boot, media, controller, module, fre, map, direction, replace, replace the boot media 
 summary: 您必须在控制器模块中找到启动介质（请参见控制器模块上的 FRU 映射），然后按照说明进行更换。 
@@ -19,10 +19,6 @@ summary: 您必须在控制器模块中找到启动介质（请参见控制器�
 
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
-您可以使用以下动画，插图或写入的步骤从机箱中卸下控制器模块。
-
-.动画-删除控制器模块
-video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
 .步骤
 . 如果您尚未接地，请正确接地。
 . 释放电源线固定器，然后从电源中拔下缆线。
@@ -36,7 +32,7 @@ video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
+image::../media/drw_c400_remove_controller_IEOPS-1216.svg[DRW C400卸下控制器IEOPS 1216]
 
 +
 [cols="10,90"]
@@ -53,7 +49,7 @@ image:../media/legend_icon_01.png["标注编号1"]
  a| 
 image:../media/legend_icon_02.png["标注编号2"]
  a| 
-将控制器滑出机箱
+控制器从机箱中略微移出
 
 |===
 . 将控制器模块滑出机箱。
@@ -78,11 +74,11 @@ NOTE: 您必须登录到 NetApp 支持站点，才能显示系统的 _statement 
 您可以使用以下动画，插图或写入的步骤来更换启动介质。
 
 .动画-更换启动介质
-video::e0825a97-c57d-47d7-b87d-aad9012efa12[panopto]
+video::034f21ac-da55-4129-aaaa-b030017e5b49[panopto]
 .步骤
 . 打开通风管：
 +
-image::../media/drw_A400_open-air-duct.png[DRW A400 开放式通风管]
+image::../media/drw_c400_open_air_duct_IEOPS-1215.svg[DRW C400露天风道IEOPS第1、第1、第1、第1、第4]
 
 +
 [cols="10,90"]
@@ -116,7 +112,7 @@ image::../media/legend_icon_03.png[图例图标 03]
 
 . 从控制器模块中找到并取出启动介质：
 +
-image::../media/drw_A400_Replace-boot_media_IEOPS-1007.svg[DRW A400更换启动介质IEOPS 1007]
+image::../media/drw_c400_replace_boot_media_IEOPS-1217.svg[DRW C400更换启动介质IEOPS第12.7节]
 
 +
 [cols="10,90"]

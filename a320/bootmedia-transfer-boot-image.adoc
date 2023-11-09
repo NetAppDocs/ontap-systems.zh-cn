@@ -92,7 +92,7 @@ NOTE: 锁定机制臂滑入机箱。
 **** `bootarg.init.boot_clustered`
 **** `partner-sysid`
 **** `bootarg.init.flash_optimized` ，适用于 AFF C190/AFF A220 （全闪存 FAS ）
-**** `bootarg.init.san_optimized` ，适用于 AFF A220 和全 SAN 阵列
+**** `bootarg.init.san_optimized` 适用于AFF A220和全闪存SAN阵列
 **** `bootarg.init.switchless_cluster.enable`
 
 

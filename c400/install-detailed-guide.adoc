@@ -170,9 +170,9 @@ NOTE: 您需要了解与系统重量相关的安全问题。
 +
 image::../media/drw_katana_lifting_restriction_icon.png[DRW katana 提升限制图标]
 
-. 连接缆线管理设备（如图所示）。
+. 将缆线管理设备连接到控制器背面(如图所示)。
 +
-image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
+image::../media/drw_c400_cable_tray_IEOPS-1208.svg[DRW C400电缆托架IEOPS 1208]
 
 . 将挡板放在系统正面。
 
@@ -210,7 +210,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .步骤
 . 按照图示完成控制器和交换机之间的布线：
 +
-image::../media/drw_c400_TNSC-networking-cabling_IEOPS-1095.svg[DRW C400 TNSC网络布线IEOPS 1095]
+image::../media/drw_c400_TNSC-networking-cabling_IEOPS-1189.svg[DRW C400 TNSC网络布线IEOPS 1189.]
 
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
@@ -236,7 +236,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .步骤
 . 按照图示完成控制器和交换机之间的布线：
 +
-image::../media/drw_c400_switched_network_cabling_IEOPS-1096.svg[DRW C400交换网络布线IEOPS 1096]
+image::../media/drw_c400_switched_network_cabling_IEOPS-1190.svg[DRW C400交换网络IEOPS 1190的布线]
 
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
@@ -266,7 +266,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .步骤
 . 使用下图将控制器连接到单个驱动器架。
 +
-image::../media/drw_c400_one_ns224_shelf_IEOPS-1097.svg[DRW C400单个ns224磁盘架IEOPS 1097]
+image::../media/drw_c400_one_ns224_shelf_IEOPS-1191.svg[DRW C400单个ns224磁盘架IEOPS 1191]
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
@@ -288,7 +288,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .步骤
 . 使用下图将控制器连接到两个驱动器架。
 +
-image::../media/drw_c400_two_ns224_shelves_IEOPS-1098.svg[DRW C400两个ns224磁盘架IEOPS 1098]
+image::../media/drw_c400_two_ns224_shelves_IEOPS-1192.svg[DRW C400两个ns224磁盘架IEOPS 1192]
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 

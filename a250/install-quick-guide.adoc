@@ -11,9 +11,12 @@ summary: 本节以图形方式说明了从机架安装和布线到系统初始�
 
 
 [role="lead"]
-本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。Use this guide if you are familiar with installing NetApp systems.
+安装和设置说明提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。Use this guide if you are familiar with installing NetApp systems.
 
-访问 _Installation and Setup Instructions_PDF 海报：
+
+NOTE: ASA A250和ASA C250使用与AFF A250系统相同的安装操作步骤。
+
+使用链接：
 
 * 英语 link:../media/PDF/215-14949_2023_09_en-us_AFFA250_ISI.pdf["《 AFF A250 安装和设置说明》"^]
 * Japanese: https://library.netapp.com/ecm/ecm_download_file/ECMLP2874690["《 AFF A250 系统安装和设置说明》"^]
