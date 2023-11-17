@@ -1,0 +1,75 @@
+---
+permalink: asa-c400/index.html 
+sidebar: sidebar 
+keywords: asa C400 maintenance, maintenance, repairing C400, repairing asa C400, replace asa C400 components, replace asa C400 components 
+summary: 维护ASA C400硬件 
+---
+= 维护ASA C400硬件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+对于ASA C400存储系统、您可以对以下组件执行维护过程。
+
+
+
+== 启动介质
+
+启动介质用于存储系统在启动时使用的一组主启动映像文件和一组二级启动映像文件。
+
+
+
+== 机箱
+
+机箱是托管所有控制器组件(例如控制器/CPU单元、电源和I/O)的物理机箱
+
+
+
+== 控制器
+
+控制器由主板，固件和软件组成。它控制驱动器并实现ONTAP功能。
+
+
+
+== DIMM
+
+如果存在内存不匹配或 DIMM 发生故障，则必须更换 DIMM （双列直插式内存模块）。
+
+
+
+== 风扇
+
+风扇用于冷却控制器。
+
+
+
+== NVDIMM 电池
+
+NVDIMM电池负责为NVDIMM模块供电。
+
+
+
+== NVDIMM
+
+ The NVDIMM (non-volatile dual in-line memory module) manages the data transfer from the volatile memory to the non-volatile storage, and maintains data integrity in the event of a power loss or system shutdown.
+
+
+== PCIe或夹层卡
+
+PCIe (外围组件互连Express)卡是一种插入主板上PCIe插槽的扩展卡。
+
+夹层卡是一种扩展卡、设计用于插入主板上的专用插槽。
+
+
+
+== 电源
+
+电源可在控制器架中提供冗余电源。
+
+
+
+== 实时时钟电池
+
+实时时钟电池可在断电时保留系统日期和时间信息。

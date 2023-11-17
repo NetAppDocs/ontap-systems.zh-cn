@@ -1,0 +1,79 @@
+---
+section: asa-c800
+title: ASA C800系统
+entries:
+- title: 安装和设置
+  pdf-filename: ASA C800安装和设置
+  entries:
+  - title: 选择安装和设置体验
+    url: "/asa-c800/install-setup.html"
+  - title: 快速步骤
+    url: "/asa-c800/install-quick-guide.html"
+  - title: 视频步骤
+    url: "/asa-c800/install-videos.html"
+  - title: 详细步骤
+    url: "/asa-c800/install-detailed-guide.html"
+- title: 维护
+  pdf-filename: ASA C800维护
+  entries:
+  - title: 概述
+    url: "/asa-c800/maintain-overview.html"
+  - title: 启动介质
+    pdf-filename: ASA C800启动介质
+    entries:
+    - title: 概述
+      url: "/asa-c800/bootmedia-replace-overview.html"
+    - title: 检查板载加密密钥
+      url: "/asa-c800/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭受损控制器
+      url: "/asa-c800/bootmedia-shutdown.html"
+    - title: 替换启动映像
+      url: "/asa-c800/bootmedia-replace.html"
+    - title: 启动恢复映像
+      url: "/asa-c800/bootmedia-recovery-image-boot-non-2n-mcc.html"
+    - title: 还原 OKM ， NSE 和 NVE
+      url: "/asa-c800/bootmedia-encryption-restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/asa-c800/bootmedia-complete-rma.html"
+  - title: 机箱
+    pdf-filename: ASA C800机箱
+    entries:
+    - title: 概述
+      url: "/asa-c800/chassis-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/asa-c800/chassis-replace-shutdown.html"
+    - title: 更换机箱
+      url: "/asa-c800/chassis-replace-move-hardware.html"
+    - title: 完成机箱更换
+      url: "/asa-c800/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器
+    pdf-filename: ASA C800控制器模块
+    entries:
+    - title: 概述
+      url: "/asa-c800/controller-replace-overview.html"
+    - title: 关闭受损控制器
+      url: "/asa-c800/controller-replace-shutdown.html"
+    - title: 更换控制器
+      url: "/asa-c800/controller-replace-move-hardware.html"
+    - title: 还原系统配置
+      url: "/asa-c800/controller-replace-system-config-restore-and-verify.html"
+    - title: 可重新连接的系统
+      url: "/asa-c800/controller-replace-recable-reassign-disks.html"
+    - title: 完成控制器更换
+      url: "/asa-c800/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/asa-c800/dimm-replace.html"
+  - title: 驱动器
+    url: "/asa-c800/drive-replace.html"
+  - title: 风扇
+    url: "/asa-c800/fan-replace.html"
+  - title: NVDIMM
+    url: "/asa-c800/nvdimm-replace.html"
+  - title: NVDIMM 电池
+    url: "/asa-c800/nvdimm-battery-replace.html"
+  - title: PCIe 卡
+    url: "/asa-c800/pci-cards-and-risers-replace.html"
+  - title: 电源
+    url: "/asa-c800/power-supply-replace.html"
+  - title: 实时时钟电池
+    url: "/asa-c800/rtc-battery-replace.html"

@@ -44,6 +44,8 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html
     - title: 共享配置中的 Cisco 936-x2
       url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
+    - title: NVIDIA SN2100
+      url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/configure-overview-sn2100-cluster.html
   - title: 更多文档资源
     links:
     - title: 系统硬件升级
