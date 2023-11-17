@@ -174,11 +174,11 @@ https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-inst
 NOTE: 您需要了解与系统重量相关的安全问题。
 
 +
-image::../media/drw_asac800_weight_caution.png[DRW asac800重量注意事项]
+image::../media/drw_affa800_weight_caution.png[DRW affa800 重量注意事项]
 
 . 连接缆线管理设备（如图所示）。
 +
-image::../media/drw_asac800_install_cable_mgmt.png[DRW asac800安装电缆管理]
+image::../media/drw_affc800_install_cable_mgmt.png[DRW affc800安装电缆管理]
 
 . 将挡板放在系统正面。
 
@@ -228,8 +228,7 @@ image:../media/oie_legend_icon_1_dp.png[""]
 为 HA 互连端口布线：
 
 ** e0b 到 e0b
-** e1b至e1b
-image:../media/drw_asac800_ha_pair_cabling.png[""]
+** e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
 
 
 
@@ -240,8 +239,7 @@ image:../media/oie_legend_icon_2_lg.png[""]
 为集群互连端口布线：
 
 ** e0a 到 e0a
-** e1a到e1a
-image:../media/drw_asac800_tnsc_clust_cabling.png[""]
+** e1a 到 e1aimage:../media/drw_affa800_tnsc_clust_cabling.png[""]
 
 
 
@@ -249,7 +247,7 @@ image:../media/drw_asac800_tnsc_clust_cabling.png[""]
  a| 
 image:../media/oie_legend_icon_3_lp.png[""]
  a| 
-Cable the management ports to the management network switches    image:../media/drw_asac800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
+Cable the management ports to the management network switches    image:../media/drw_affa800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
 
 
 
@@ -303,8 +301,7 @@ image:../media/oie_legend_icon_1_dp.png[""]
 为 HA 互连端口布线：
 
 ** e0b 到 e0b
-** e1b至e1b
-image:../media/drw_asac800_ha_pair_cabling.png[""]
+** e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
 
 
 
@@ -312,17 +309,14 @@ image:../media/drw_asac800_ha_pair_cabling.png[""]
  a| 
 image:../media/oie_legend_icon_2_lg.png[""]
  a| 
-使用缆线将集群互连端口连接到100 GbE集群互连交换机。
-** e0a
-** e1a.
-image:../media/drw_asac800_switched_clust_cabling.png[""]
+使用缆线将集群互连端口连接到 100 GbE 集群互连交换机。* e0a * e1aimage:../media/drw_affa800_switched_clust_cabling.png[""]
 
 
 
  a| 
 image:../media/oie_legend_icon_3_lp.png[""]
  a| 
-Cable the management ports to the management network switches    image:../media/drw_asac800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
+Cable the management ports to the management network switches    image:../media/drw_affa800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
 
 
 
@@ -373,7 +367,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 1.
  a| 
-Cable ports 2a through 2d to the FC host switches.image:../media/drw_asac800_fc_host_cabling.png[""]
+使用缆线将端口 2a 至 2D 连接到 FC 主机交换机。image:../media/drw_affa800_fc_host_cabling.png[""]
 
 
 
@@ -418,7 +412,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 1.
  a| 
-Cable ports e4a through e4d to the 10GbE host network switches.image:../media/drw_asac800_10gbe_host_cabling.png[""]
+使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。image:../media/drw_affa800_10gbe_host_cabling.png[""]
 
 
 
@@ -465,14 +459,14 @@ video::09dade4f-00bd-4d41-97d7-ab0c0123a0b4[panopto]
  a| 
 image:../media/oie_legend_icon_1_mb.png[""]
  a| 
-使用缆线将控制器 A 连接到磁盘架：    image:../media/drw_asac800_1shelf_cabling_a.png[""]
+使用缆线将控制器 A 连接到磁盘架： image:../media/drw_affa800_1shelf_cabling_a.png[""]
 
 
 
  a| 
 image:../media/oie_legend_icon_2_lo.png[""]
  a| 
-Cable controller B to the shelf:    image:../media/drw_asac800_1shelf_cabling_b.png[""]
+使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_1shelf_cabling_b.png[""]
 
 |===
 To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
@@ -503,14 +497,14 @@ video::fe50ac38-9375-4e6b-85af-ab0c0123a0e0[panopto]
  a| 
 image:../media/oie_legend_icon_1_mb.png[""]
  a| 
-Cable controller A to the shelves:    image:../media/drw_asac800_2shelf_cabling_a.png[""]
+使用缆线将控制器 A 连接到磁盘架： image:../media/drw_affa800_2shelf_cabling_a.png[""]
 
 
 
  a| 
 image:../media/oie_legend_icon_2_lo.png[""]
  a| 
-Cable controller B to the shelves:    image:../media/drw_asac800_2shelf_cabling_b.png[""]
+使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_2shelf_cabling_b.png[""]
 
 |===
 To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
@@ -579,11 +573,11 @@ NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或�
 
 .. 将控制台缆线连接到笔记本电脑或控制台，并使用系统随附的控制台缆线连接控制器上的控制台端口。
 +
-image::../media/drw_console_connect_asac800.png[DRW控制台连接asac800]
+image::../media/drw_console_connect_affa800.png[DRW 控制台连接 affa800]
 
 .. 将笔记本电脑或控制台连接到管理子网上的交换机。
 +
-image::../media/drw_client_mgmt_subnet_asac800.png[DRW客户端管理子网asac800]
+image::../media/drw_client_mgmt_subnet_affa800.png[DRW 客户端管理子网 affa800]
 
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 

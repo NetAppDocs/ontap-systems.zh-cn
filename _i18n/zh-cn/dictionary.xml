@@ -8558,25 +8558,6 @@ SFP+(目标/启动程序)</block>
   <block id="4a9663f34d974f62e97bc12e3339b829" category="summary">本节提供了有关安装ASA C800系统的详细分步说明。</block>
   <block id="785cd996138f338b507afb4b1a247f7a" category="doc">详细步骤—ASA C800</block>
   <block id="0638f850898c092d5e1fe72b87242595" category="paragraph">要安装ASA C800系统、您需要创建一个帐户并注册该系统。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
-  <block id="9c62e171f059c8600997ae4e0f96ab7d" category="image-alt">DRW asac800重量注意事项</block>
-  <block id="d2946c650fd878fb1382f852e7ae21f2" category="image-alt">DRW asac800安装电缆管理</block>
-  <block id="8f9611c57f280dcf3707a77790073f5e" category="list-text">e1b至e1b
-<block ref="15891b31f94aa5c1d8d701dc45f31a49" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e2ffd86efabaa66f6caa4720f826af5e" category="list-text">e1a到e1a
-<block ref="a384f044b9ce696d7af96248c96af5c1" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1ddae32aa15704bfdbaa2aab1a7d6dfe" category="paragraph">Cable the management ports to the management network switches    <block ref="006022f2d0575aac941d853d15f04b9e" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d6f4ba76330aa95c5eaaaf0d9035fea2" category="paragraph">使用缆线将集群互连端口连接到100 GbE集群互连交换机。
-** e0a
-** e1a.
-<block ref="f2a41a3e16faf723b039ff4278135de5" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8546314cef10b9e9e364344875d77237" category="paragraph">Cable ports 2a through 2d to the FC host switches.<block ref="4f1b9e5dfcbddf179a4286f1703ef51b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="607da72d58aff35499a7aec17d5e19bb" category="paragraph">Cable ports e4a through e4d to the 10GbE host network switches.<block ref="90048d1fb5dca95cfe62abfa6b205214" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="25f831637542d41012246381c8ca1ec9" category="paragraph">使用缆线将控制器 A 连接到磁盘架：    <block ref="f81613a889a36c93366a9575275b2581" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="335c41450f222d4ab520fa32b2542214" category="paragraph">Cable controller B to the shelf:    <block ref="678df8700f02a110e9ca97a297deb31d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="157dc2a3553e3f5202fbc40d49878754" category="paragraph">Cable controller A to the shelves:    <block ref="118747470262b69831582f8c5b0f6061" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="48d33cbc5ff82c101c057c7286bba92e" category="paragraph">Cable controller B to the shelves:    <block ref="f09535d2d5af9c437ea1775f9a22dea3" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="9f9162027a6469a02a5740c7a72369e3" category="image-alt">DRW控制台连接asac800</block>
-  <block id="6fe0915ad0c3735187132d7dfe2356b4" category="image-alt">DRW客户端管理子网asac800</block>
   <block id="3682f89576a4cb3869bd075b26450b14" category="doc">启动恢复映像- ASA C800</block>
   <block id="1a127c6545345af120647a9618b2e726" category="doc">视频—ASA C800</block>
   <block id="71eb59c59a42227ae8b45d0cfaf6f52f" category="paragraph">有两个视频—一个视频介绍如何将系统装入机架并进行布线，另一个视频显示了使用 System Manager 引导式设置执行初始系统配置的示例。</block>
@@ -8717,7 +8698,6 @@ SFP+(目标/启动程序)</block>
   <block id="e46b8c6d3d358d972a1fe516250dcf5d" category="paragraph">将控制器滑入机箱</block>
   <block id="ff0420a1b97d66a283e50773fa71f7ab" category="image-alt">DRW C400 RTC batt IEOPS 1239</block>
   <block id="d1ad021bd9b79ffa9323df56f68e4b22" category="paragraph">快速指南提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。如果您熟悉安装NetApp系统、请使用此操作步骤。</block>
-  <block id="e39f500ad07a270219bd21d82b87b157" category="paragraph">使用 <block ref="1ede88745168187a218abc6fed7fade9" category="inline-link-macro-rx"></block>。</block>
   <block id="e7f3c0051e6bc5cbd205f59b35151985" category="inline-image-macro">宽度= 500像素</block>
   <block id="8f9d84ce0761e9cbbd0e69dc419011a6" category="paragraph"><block ref="8f9d84ce0761e9cbbd0e69dc419011a6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="80c14517a78070e49e0abac5d7f9ddbf" category="image-alt">DRW C400更换夹层卡IEOPS 1236</block>
@@ -8785,4 +8765,6 @@ SFP+(目标/启动程序)</block>
   <block id="6d6d899023064067891b54808437adaa" category="sidebar">ASA A系列系统</block>
   <block id="be83f0f3d9e7cc4af05991e4976d2134" category="sidebar">ASA C系列系统</block>
   <block id="a46d5e85a24eb7f41987dc2fc02df2c1" category="sidebar">NetApp的全闪存SAN阵列(ASA)可提供简化的专用SAN体验、为您企业的任务关键型数据库和其他SAN工作负载提供持续的数据可用性。</block>
+  <block id="2b624e2e0f95b539d134f321667149d4" category="paragraph">使用 <block ref="327880446cd4829fe913aafea7a76fa5" category="inline-link-macro-rx"></block>。</block>
+  <block id="47fb299294c4db99aead2c933a5d0e45" category="image-alt">DRW affc800安装电缆管理</block>
 </blocks>
