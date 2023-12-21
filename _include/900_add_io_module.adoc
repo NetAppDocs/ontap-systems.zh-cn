@@ -179,7 +179,7 @@ LIF 将在其控制器模块关闭时自动迁移。
  a| 
 NIC I/O 模块，端口更少
  a| 
-将ASAected的生命周期管理器永久重新分配到其他主端口。请参见 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"^] 有关使用 System Manager 永久移动 LIF 的信息，请参见。
+将受影响的 LIF 永久重新分配到其他主端口。请参见 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"^] 有关使用 System Manager 永久移动 LIF 的信息，请参见。
 
 
 

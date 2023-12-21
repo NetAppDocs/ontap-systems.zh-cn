@@ -5338,7 +5338,6 @@
   <block id="67bbbac5bc6e3d667f32ac654b6a9d3a" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not loose it.</block>
   <block id="e65c4f5a39a793b014b217f53d825905" category="list-text">将控制器模块插入机箱。</block>
   <block id="04767794ed138df3aa3f519e53e96bcc" category="list-text">使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令仅交还 CFO 聚合。</block>
-  <block id="e2e8db7924e3d9318e09779273f259de" category="doc">更换风扇— AFF A250</block>
   <block id="bc6668cc9984ca2f625c085c1e7dbe6c" category="doc">更换风扇— FAS500f</block>
   <block id="3cb52a5c3c25dcd729403c0c723500bc" category="list-text">使用 ``storage failover show` -giveback` 命令监控交还操作的进度。</block>
   <block id="4cc5d765a3b2155ab803f6ce50c11747" category="paragraph">`storage failover show` 命令的输出不应包含 `Ssystem ID changed on partner` 消息。</block>
@@ -7986,7 +7985,6 @@ SFP+(目标/启动程序)</block>
   <block id="81af5da89fff345601f8e93f71e0ad35" category="doc">更换启动介质- ASA A900</block>
   <block id="0c37dcb25b5173e62412edae7cd5b2e5" category="doc">换用风扇- ASA A900</block>
   <block id="61cb2661b290495563ba9c588ff896ca" category="doc">添加I/O模块- ASA A900</block>
-  <block id="2f3095e4c2c969f1f9dca69963ff66c1" category="paragraph">将ASAected的生命周期管理器永久重新分配到其他主端口。请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> 有关使用 System Manager 永久移动 LIF 的信息，请参见。</block>
   <block id="0793e1a216dd4c3846c49cbc01994776" category="doc">更换NVRAM模块和NVRAM DIMM - ASA A900</block>
   <block id="c79b3bc974e85cc0c7daa3f518014cad" category="section-title">第4步：重新启动控制器</block>
   <block id="c69354394baa0a237e9976cdbc6f9861" category="doc">移动并更换硬件- ASA A900</block>
@@ -8506,7 +8504,6 @@ SFP+(目标/启动程序)</block>
   <block id="bc2311b6a715da1a660ee0a9afd2016e" category="doc">更换启动介质- ASA C250</block>
   <block id="7171d5f82a6b13d62d4f7f70326df021" category="doc">关闭受损控制器模块- ASA C250</block>
   <block id="b4609e09d3094c196af6ccbdb8c9afbf" category="doc">控制器模块更换概述- ASA C250</block>
-  <block id="42e2b7c9fbe6b6256660bb0bbb7a0962" category="doc">更换风扇—ASA c250</block>
   <block id="13a410359da23b13900f5c285e105e81" category="doc">更换控制器模块硬件- ASA C250</block>
   <block id="0c85f60a3a546be806bd89d1770b2cdb" category="doc">更换SSD驱动器或HDD驱动器- ASA C250</block>
   <block id="363dbb7bd38c3746663861884552a6ca" category="doc">启动介质更换概述- ASA C250</block>
@@ -8767,4 +8764,6 @@ SFP+(目标/启动程序)</block>
   <block id="a46d5e85a24eb7f41987dc2fc02df2c1" category="sidebar">NetApp的全闪存SAN阵列(ASA)可提供简化的专用SAN体验、为您企业的任务关键型数据库和其他SAN工作负载提供持续的数据可用性。</block>
   <block id="2b624e2e0f95b539d134f321667149d4" category="paragraph">使用 <block ref="327880446cd4829fe913aafea7a76fa5" category="inline-link-macro-rx"></block>。</block>
   <block id="47fb299294c4db99aead2c933a5d0e45" category="image-alt">DRW affc800安装电缆管理</block>
+  <block id="71b9da16d2c97302e30020688facb467" category="doc">更换风扇- AFF A250</block>
+  <block id="4419435d737554741ab61c9d91e5c332" category="doc">更换风扇- ASA C250</block>
 </blocks>
