@@ -42,12 +42,16 @@ entries:
     url: "/sas3/service-hot-swap-drive-ds460c.html"
   - title: DS460C 磁盘架中的驱动器抽盒
     url: "/sas3/service-replace-drawer-ds460c.html"
-  - title: 驱动器架LED
-    url: "/sas3/service-monitor-leds.html"
+  - title: 驱动器架
+    entries:
+    - title: 冷更换磁盘架
+      url: "/sas3/cold-replace-shelf.html"
+    - title: 热移除磁盘架
+      url: "/sas3/hot-remove-shelf.html"
+    - title: 监控磁盘架LED
+      url: "/sas3/service-monitor-leds.html"
   - title: DS460C 磁盘架中的风扇模块
     url: "/sas3/service-replace-fan-ds460c.html"
-  - title: 热移除磁盘架
-    url: "/sas3/hot-remove-shelf.html"
   - title: IOM12/IOM12B模块
     url: "/sas3/service-hot-swap-iom.html"
   - title: 电源

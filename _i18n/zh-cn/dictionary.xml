@@ -2767,7 +2767,6 @@
   <block id="5a6ec3ac63a7fb05de2686f31f690298" category="list-text">更换左端盖。</block>
   <block id="883c91c37ee151a81d34d6105afae5ea" category="summary">如果您的系统需要将 NS224 驱动器架作为交换机连接存储进行布线 \ （非直连存储），请使用提供的信息。</block>
   <block id="a94de468f363b57c8cc1ea1b7a532a9e" category="paragraph">如果您的系统需要将 NS224 驱动器架作为交换机连接存储（而不是直连存储）进行布线，请使用提供的信息。</block>
-  <block id="afb935b1a48a04ad288c97c7899d840d" category="inline-link">交换机连接的 NS224 驱动器架布线信息</block>
   <block id="97a30f090fd38397124788f1f0376eda" category="inline-link">AFF 和 FAS 交换机文档</block>
   <block id="acdfef9c5579ff3ba02ba954b42b0b9d" category="summary">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换发生故障的风扇。</block>
   <block id="ad469db4a94f773cb57ea851a2258c7d" category="list-text">系统中的所有其他组件，包括其他四个风扇，必须正常运行。</block>
@@ -4932,7 +4931,6 @@
   <block id="4ccbda321ca169104f4e4cac42fd679f" category="paragraph">If you need the RMA number or additional help with the replacement procedure, contact technical support at<block ref="9a6f401ca1e7e89d8a0c29fb0cbe81b7" category="inline-link-rx"></block>, 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).</block>
   <block id="3868a54921a81264bddb64b574765582" category="paragraph"><block ref="3868a54921a81264bddb64b574765582" category="inline-link-rx"></block></block>
   <block id="c69a1009359358cbb1f3e5d6483736fb" category="paragraph"><block ref="c69a1009359358cbb1f3e5d6483736fb" category="inline-link-macro-rx"></block></block>
-  <block id="9824994e3f8651cf2b6d695555bdc011" category="paragraph"><block ref="9824994e3f8651cf2b6d695555bdc011" category="inline-link-rx"></block></block>
   <block id="008b8867712161228bd794977fcd0d4b" category="paragraph"><block ref="008b8867712161228bd794977fcd0d4b" category="inline-link-rx"></block></block>
   <block id="35b669738c6a7d586d192e07cf910533" category="paragraph"><block ref="35b669738c6a7d586d192e07cf910533" category="inline-link-rx"></block></block>
   <block id="d444e316e4fbe4a790c7592f4ea0e4d7" category="paragraph"><block ref="d444e316e4fbe4a790c7592f4ea0e4d7" category="inline-link-macro-rx"></block></block>
@@ -8766,4 +8764,16 @@ SFP+(目标/启动程序)</block>
   <block id="47fb299294c4db99aead2c933a5d0e45" category="image-alt">DRW affc800安装电缆管理</block>
   <block id="71b9da16d2c97302e30020688facb467" category="doc">更换风扇- AFF A250</block>
   <block id="4419435d737554741ab61c9d91e5c332" category="doc">更换风扇- ASA C250</block>
+  <block id="ebd0dccffb1781aa1b03445f61d87344" category="summary">您可以使用IOM12模块冷更换磁盘架。</block>
+  <block id="407685da96fd9ced3310d7d46ae6df51" category="doc">使用IOM12/IOM12B模块冷更换磁盘架</block>
+  <block id="ec2ab707a85ae3f8634491d0876e34c6" category="paragraph">在使用磁盘的生产系统中更换驱动器架时、您需要执行冷架更换。这是一个有中断的操作步骤。它要求您暂停HA对中的控制器。</block>
+  <block id="b70986af2d94261df69e2141b1a928cf" category="inline-link">如何使用冷磁盘架拆卸操作步骤更换磁盘架机箱</block>
+  <block id="9bfe0b1ca930a33b763298ba44f6db91" category="paragraph">使用知识库文章<block ref="0ce7a268461a7f9e86d34962088e7dcd" category="inline-link-rx"></block>。</block>
+  <block id="3946a95173cf2872b6b6e8309352d61b" category="inline-link">《NS224 NVMe驱动器架布线指南》</block>
+  <block id="29c2f32397b266395d18c9814ee2c641" category="paragraph"><block ref="29c2f32397b266395d18c9814ee2c641" category="inline-link-rx"></block></block>
+  <block id="5932d352036c33399a3ddcba5a995002" category="summary">您可以冷更换NS224驱动器架。</block>
+  <block id="1aba95483fe95743e6b48b8708c5c514" category="doc">冷更换磁盘架—NS224磁盘架</block>
+  <block id="efc8f4d1076344beccb8353312cb002a" category="sidebar">驱动器架</block>
+  <block id="da98db34d10199077b14ab14b7e32c9f" category="sidebar">冷更换磁盘架</block>
+  <block id="674478ae995b81c552fa78ca38a62f55" category="sidebar">监控磁盘架LED</block>
 </blocks>
