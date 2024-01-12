@@ -30,12 +30,10 @@ indexpage:
       url: "../ns224/service-replace-dimm.html"
     - title: 驱动器
       url: "../ns224/service-replace-drive.html"
-    - title: 驱动器架LED
-      url: "../ns224/service-monitor-leds.html"
+    - title: 驱动器架
+      url: "../ns224/ns224-shelf-overview.html"
     - title: 风扇
       url: "../ns224/service-replace-fan.html"
-    - title: 热移除磁盘架
-      url: "../ns224/hot-remove-shelf.html"
     - title: NSM 模块
       url: "../ns224/service-replace-nsm100.html"
     - title: 电源
@@ -50,12 +48,10 @@ indexpage:
       url: "../sas3/service-hot-swap-drive-ds460c.html"
     - title: DS460C 磁盘架中的驱动器抽盒
       url: "../sas3/service-replace-drawer-ds460c.html"
-    - title: 驱动器架LED
-      url: "../sas3/service-monitor-leds.html"
+    - title: 驱动器架
+      url: "../sas3/sas3-shelf-overview.html"
     - title: DS460C磁盘架中的风扇
       url: "../sas3/service-replace-fan-ds460c.html"
-    - title: 热移除磁盘架
-      url: "../sas3/hot-remove-shelf.html"
     - title: IOM12/IOM12B模块
       url: "../sas3/service-hot-swap-iom.html"
     - title: 电源

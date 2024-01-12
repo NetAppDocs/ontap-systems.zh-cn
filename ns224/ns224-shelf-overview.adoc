@@ -1,0 +1,21 @@
+---
+permalink: ns224/ns224-shelf-overview.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, drive, aggregate, ha, pair, serving, data 
+summary: NS224磁盘架概述。 
+---
+= 概述—NS224磁盘架
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp NS224驱动器架是一个2U机架单元、最多可容纳24个驱动器。NS224驱动器架与2.5英寸小型驱动器兼容、并支持SAS和SATA接口。
+
+请执行以下操作来维护NS224驱动器架。
+
+* link:cold-replace-shelf.html["冷更换磁盘架"]
+* link:hot-remove-shelf.html["热移除磁盘架"]
+* link:service-monitor-leds.html["监控磁盘架LED"]
+

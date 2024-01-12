@@ -22,6 +22,8 @@ entries:
     url: "/ns224/service-replace-drive.html"
   - title: 驱动器架
     entries:
+    - title: NS224磁盘架概述
+      url: "/ns224/ns224-shelf-overview.html"
     - title: 冷更换磁盘架
       url: "/ns224/cold-replace-shelf.html"
     - title: 热移除磁盘架
