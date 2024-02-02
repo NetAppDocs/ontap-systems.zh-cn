@@ -3222,11 +3222,8 @@
   <block id="0be5556a6966ecc67209514eafe7b6da" category="list-text">您的系统必须运行 ONTAP 9.8 及更高版本。</block>
   <block id="70a9962b20f4b24e0fab99c887254705" category="list-text">要无中断地添加 X91148A 模块，您必须接管目标控制器，添加该模块，然后交还目标控制器。</block>
   <block id="845de0988ca520e09f1bb7580cdd03f0" category="list-text">如果要将 X91148A 模块添加为存储适配器，则必须将此模块安装在插槽 3 和 / 或 7 中。</block>
-  <block id="54f8a1122aab4b02cdf2c143f3a1f1f9" category="list-text">如果要将 X91148A 模块添加为 100GbE NIC ，则可以使用任何打开的插槽。但是，默认情况下，插槽 3 和 7 设置为存储插槽。如果您希望将这些插槽用作网络插槽，而不添加 NS224 磁盘架，则必须使用 `storage port modify -node _node name_ -port _port name_ -mode network` 命令修改用于网络连接的插槽。有关 X91148A 模块可用于网络连接的其他插槽，请参见 Hardware Universe 。</block>
-  <block id="42a4a7959a1a29706390c2084add532d" category="section-title">选项 1 ：在没有打开插槽的系统中，将 X91148A 模块作为 NIC 模块添加</block>
   <block id="ca18d102ed6aae999ffe4720f49391c8" category="paragraph">要在已完全填充的系统中安装一个或多个 X91148A NIC 模块，您必须删除系统中的一个或多个现有 NIC 或存储模块。</block>
   <block id="3dca69382eebe0e25d26be588bb3bb7c" category="inline-link">迁移 LIF</block>
-  <block id="57f2489f8872b94ea649e454360e1b69" category="list-text">如果要将 X91148A 模块添加到一个插槽中，而该插槽中的 NIC 模块与 X91148A 模块具有相同数量的端口，则 LIF 将在其控制器模块关闭时自动迁移。如果要更换的 NIC 模块的端口数超过 X91148A 模块，则必须将受影响的 LIF 永久重新分配到其他主端口。请参见<block ref="85291e79b86f275650bb0fb4e90a39e9" category="inline-link-rx"></block> 有关使用 System Manager 永久移动 LIF 的信息，请参见</block>
   <block id="1270e01f5b82a307cd267071e45adc4f" category="list-text">关闭控制器 A ：</block>
   <block id="e775b99f0018ec21dcdd858b620ec674" category="list-text">禁用自动交还： `storage failover modify -node local -auto-giveback false`</block>
   <block id="5f4c3f45fa6e79d9063cff9d43c26d47" category="list-text">接管目标节点： `storage failover takeover -ofnode _target_node_name_`</block>
@@ -3238,15 +3235,12 @@
   <block id="db62423ed3cd898c9928e9d1b02627aa" category="list-text">将 I/O 凸轮闩锁完全向上推，以将模块锁定到位。</block>
   <block id="9dbc737f0670b3590709580acb50117c" category="list-text">重复执行拆卸和安装步骤以更换控制器 A 的其他模块</block>
   <block id="e51a0e0ba467a86a8a56ce81fe5c02ac" category="list-text">使用缆线将模块连接到数据交换机。</block>
-  <block id="8bea63e772f248b4440fae6b7644a377" category="list-text">重新启动控制器 A ： `boot_ontap`</block>
   <block id="3f1037819d4403da837745fdf033eca9" category="list-text">从配对节点交还节点： `storage failover giveback -ofnode target_node_name`</block>
   <block id="646c0c0a2d342d0efa63a4e7c560611e" category="list-text">如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`</block>
   <block id="e47e2c044804e7ed8af436c465fbe130" category="list-text">如果您在插槽 3 或 7 中将 X91148A 模块添加为 NIC 模块，则对于网络连接，请对每个端口使用 `storage port modify -node _node name_ -port _port name_ -mode network` 命令。</block>
   <block id="d6c7a664e3819be9a0869782e685c75b" category="list-text">对控制器 B 重复上述步骤</block>
-  <block id="e85d85b01a7d653ecad94c8962d88a8c" category="section-title">选项 2 ：在没有空插槽的系统中将 X91148A 模块添加为存储模块</block>
   <block id="ad4d148ac595350c78d9c2efd6b02556" category="paragraph">要在已完全填充的系统中安装一个或多个 X91148A 存储模块，您必须删除系统中的一个或多个现有 NIC 或存储模块。</block>
   <block id="1cb9b3efa917390e5f072324eb2dea38" category="list-text">此操作步骤假定您将 X91148A 模块安装到插槽 3 和 / 或 7 中。</block>
-  <block id="46bbb084ae40b0369bddbcb13aac2bc4" category="list-text">如果要将 X91148A 模块作为插槽 3 和 / 或 7 中的存储模块添加到插槽中具有现有 NIC 模块的插槽中，请使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述<block ref="85291e79b86f275650bb0fb4e90a39e9" category="inline-link-rx"></block>。</block>
   <block id="074dd277824bef9c902209214f2118d7" category="list-text">接管目标节点： `storage failover takeover -ofnode target_node_name`</block>
   <block id="220db6473cc602ad3f31d5c33d7b32f6" category="list-text">将 X91148A 模块安装到插槽 3 ：</block>
   <block id="bee1f07b307186667ad005db1d21960d" category="list-text">如果要安装另一个 X91148A 模块进行存储，请对插槽 7 中的模块重复执行拆卸和安装步骤。</block>
@@ -3351,21 +3345,16 @@
   <block id="d760b63dfa4dbf3c9877c2c6851360b4" category="summary">您可以将 X91148A 模块作为 100GbE NIC 或 NS224 存储架的存储模块添加到系统中的空模块插槽中。</block>
   <block id="03aa604366f3326c3de048957b091102" category="list-text">要无中断地添加 X91148A 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖板，添加该模块，然后交还目标控制器。</block>
   <block id="ecc5d754663e73afe71158a26891b595" category="list-text">系统上必须有一个或多个可用的开放插槽。</block>
-  <block id="6b76b0ee2a036bc88bbc96b40f376caf" category="list-text">如果有多个插槽，请根据 Hardware Universe 中 X91148A 模块的插槽优先级表安装此模块。</block>
   <block id="55df7d04425206e548f1aa14d2aaf2a6" category="list-text">如果要将 X91148A 模块添加为存储模块，则必须安装模块插槽 3 和 / 或 7 。</block>
-  <block id="3accfd574dcbdb6df6fec9dfc0e19668" category="list-text">如果要将 X91148A 模块添加为 100GbE NIC ，则可以使用任何打开的插槽。但是，默认情况下，插槽 3 和 7 设置为存储插槽。如果您希望将这些插槽用作网络插槽，而不添加 NS224 磁盘架，则必须使用 `storage port modify -node _node name_ -port _port name_ -mode network` 命令修改用于网络连接的插槽。有关 X91148A 模块可用于网络连接的其他插槽，请参见 Hardware Universe 。</block>
-  <block id="efca24805658af657991e2ddd7494fa4" category="section-title">选项 1 ：将 X91148A 模块作为 NIC 模块添加到插槽已打开的系统中</block>
   <block id="cd616b24f9d5f5ea77c4c674cd676cdc" category="paragraph">要在插槽已打开的系统中将 X91148A 模块添加为 NIC 模块，您必须按照特定步骤顺序进行操作。</block>
   <block id="ff028db00edc198dd85f97eaa8795079" category="list-text">关闭控制器 A ：</block>
   <block id="f95919e2465ed77382efeba17c614808" category="list-text">卸下目标插槽空白盖：</block>
   <block id="c07593bfceec64f42a005d1a16af33f0" category="list-text">拆下空白盖板。</block>
   <block id="d8d9a4a45175fedf6217f6d58e2384e1" category="list-text">安装 X91148A 模块：</block>
   <block id="8c8b079ce3132b9c32998cf148264275" category="list-text">使用缆线将模块连接到数据交换机。</block>
-  <block id="0cc78f73ac736832a74effc12a1648b4" category="section-title">选项 2 ：在插槽打开的系统中，将 X91148A 模块作为存储模块添加</block>
   <block id="47ca5790bc9136484568813eaaef77c5" category="paragraph">要将 X91148A 模块作为存储模块添加到插槽已打开的系统中，您必须按照特定步骤顺序进行操作。</block>
   <block id="a995822127725d44db8de596bb8202d5" category="list-text">此操作步骤假定插槽 3 和 / 或 7 已打开。</block>
   <block id="642f6e57cb2cd65a42c4b04259516876" category="list-text">如果要安装第二个 X91148A 模块进行存储，请对插槽 7 中的模块重复此步骤。</block>
-  <block id="44323c30f0ec052e74f75c27940101f6" category="list-text">安装 NS224 磁盘架并为其布线，如中所述<block ref="1251716a2329bb7d9111adeba70973d6" category="inline-link-rx"></block>。</block>
   <block id="b223e7b739d071d1e94b262773fc5fc2" category="paragraph">要安装系统，您需要在 NetApp 支持站点上创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
   <block id="c1838f2c3da0bae81a7acbb7945a693d" category="paragraph">10 GbE 网络缆线</block>
   <block id="855bbe0db2cfd4d4df6b623ee2db0181" category="paragraph">X6566B-2-R6 ，（ 112-00299 ）， 2 米</block>
@@ -6528,7 +6517,6 @@
   <block id="ba17e519b189ae10cd004d12dcc5e44d" category="paragraph"><block ref="751c01f8467f96987ff97e3a647e9973" category="inline-xref-macro-rx"></block></block>
   <block id="c1918f58421ab69768df267ff2412c99" category="paragraph"><block ref="0b030be2689b90a40f49c456c91f18ec" category="inline-xref-macro-rx"></block></block>
   <block id="b102c1828cf53d9df33f622c2208da4c" category="paragraph"><block ref="6ac3340c69a46ee235155eba76c461d6" category="inline-xref-macro-rx"></block></block>
-  <block id="68495e0db11cd8c3fcd536c93ecb150b" category="list-text">Install and cable your NS224 shelves, as described in<block ref="8b1d41e5fd14f554e8b3490e0dfd47ae" category="inline-link-rx"></block>。</block>
   <block id="d034ad76bb5b20c4f0a1790c3665c3b2" category="paragraph"><block ref="d034ad76bb5b20c4f0a1790c3665c3b2" category="inline-link-rx"></block></block>
   <block id="7be2f40216e9676314a384c650694fed" category="admonition">请参见<block ref="17d46f7a995ead494ec7b2eb9caffda8" category="inline-link-rx"></block> for your version of ONTAP for more details.</block>
   <block id="1fad4d8ec174b60255a8febb2707e048" category="paragraph"><block ref="1fad4d8ec174b60255a8febb2707e048" category="inline-link-rx"></block></block>
@@ -8789,4 +8777,19 @@ SFP+(目标/启动程序)</block>
   <block id="d1d52714be599a75c470c1f0da3b1429" category="paragraph">请执行以下操作来维护NS224驱动器架。</block>
   <block id="30d9c3c67c8634f0507aed48fc4a0fc8" category="sidebar">SAS3磁盘架概述</block>
   <block id="e945a21b304f12950d5e1290c9cf7ddd" category="sidebar">NS224磁盘架概述</block>
+  <block id="e9f65f625c8dd881230c3cdeafc6df26" category="list-text">如果有多个可用插槽、请根据中X91148A模块的插槽优先级表安装该模块<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>。</block>
+  <block id="5aa66c58b75b8a0d61edc9384fcab2ba" category="list-text">If you are adding the X91148A module as a 100GbE NIC, you can use any open slot.However, by default, slots 3 and 7 are set as storage slots.如果要将这些插槽用作网络插槽、并且不会添加NS224磁盘架、则必须修改这些插槽、以便与联网<block ref="60578b38516b9ac929876fc9b1f357a0" prefix=" " category="inline-code"></block> 命令：请参见<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 用于X91148A模块可用于网络连接的其他插槽。</block>
+  <block id="5d185ebab5cfeafdf5ebd9bbbb7dcc5b" category="paragraph-title">选项1：将X91148A模块添加为NIC模块</block>
+  <block id="7cd5115a55fc2e4ae6c63151762a23cb" category="list-text">从加载程序提示符处重新启动控制器A：<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
+  <block id="f5a6f380280a117aabe553559cf8531d" category="open-title">选项2：添加X91148A模块作为存储模块</block>
+  <block id="5f068763bfd4a47a7dc3834c65546ec9" category="list-text">重新启动控制器A：</block>
+  <block id="f9b35dee9e3929b0b611c7ce18cf5603" category="list-text">如果替换模块与旧模块的型号不同，请重新启动BMC：</block>
+  <block id="80977faeee33db44f9c1823cc9e6015d" category="list-text">从加载程序提示符处、更改为高级权限模式：<block ref="0581d0d071ad835f74bf419081ce5d75" prefix=" " category="inline-code"></block></block>
+  <block id="53bdebcc4567a5d5fce995d39e71d6ed" category="list-text">如果替换模块与旧模块相同、请从加载程序提示符处启动：<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
+  <block id="602d60f17affd81a37150c1525267788" category="list-text">Install and cable your NS224 shelves, as described in<block ref="72e4379e9511740d20321904205a5f79" category="inline-link-rx"></block>。</block>
+  <block id="8cda93f56f29013f8b72c2c1f486d752" category="list-text">If you are adding the X91148A module as a 100GbE NIC, you can use any open slot.However, by default, slots 3 and 7 are set as storage slots.如果要将这些插槽用作网络插槽、并且不会添加NS224磁盘架、则必须修改这些插槽、以便与联网<block ref="60578b38516b9ac929876fc9b1f357a0" prefix=" " category="inline-code"></block> 命令。请参见<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 用于X91148A模块可用于网络连接的其他插槽。</block>
+  <block id="2c9095b91db2dc1432f4e86018a03639" category="list-text">If you are adding an X91148A module into a slot that contains a NIC module with the same number of ports as the X91148A module, the LIFs will automatically migrate when its controller module is shut down.If the NIC module being replaced has more ports than the X91148A module, you must permanently reassign the affected LIFs to a different home port.请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> for information about using System Manager to permanently move the LIFs</block>
+  <block id="f0770a756304b05e8fc4f321e0babe43" category="open-title">选项2：添加X91148A模块作为存储模块</block>
+  <block id="9e41ec46d0af5ba1b01d8b3bde9b4f52" category="list-text">If you are adding an X91148A module as a storage module in slots 3 and/or 7 into a slot that has an existing NIC module in it, use System Manager to permanently migrate the LIFs to different home ports, as described in<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block>。</block>
+  <block id="c81f78014b983d44adbb454f838c2ae9" category="list-text">Install and cable your NS224 shelves, as described in<block ref="a84558faf7b836b9db418a291f2462b5" category="inline-link-rx"></block>。</block>
 </blocks>
