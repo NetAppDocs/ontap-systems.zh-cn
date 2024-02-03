@@ -4844,7 +4844,6 @@
   <block id="4a848babffe3702bffe9efa29dd12c61" category="paragraph">您可以使用以下动画，插图或写入步骤来更换启动介质。</block>
   <block id="bb90eba065615f7ac639d1758ba84812" category="paragraph">您可以使用以下动画，插图或写入的步骤来更换缓存模块。</block>
   <block id="b8f99a879bdae690f650b2171355b5bb" category="image-alt">卸下 DRW 8300 空提升板</block>
-  <block id="ae17f8ad6d4ad0752e9da66715863b23" category="paragraph">您可以使用以下动画和插图。或者将 PCIe 提升板和夹层卡从受损控制器模块移至更换控制器模块的步骤。</block>
   <block id="1e6c27613480cee2fca639b93121fd62" category="paragraph">您可以使用以下动画，插图或写入步骤将缓存模块移动到新控制器模块。</block>
   <block id="eb248e4303d7cdcd9d37762008fe5713" category="list-text">使用以下动画或插图将驱动器架连接到控制器。</block>
   <block id="6bf14a7252e28dc753304577c4a9180c" category="list-text">The systems must have at least one X91148A module installed in slots 3 and/or 7 for each controller.动画或插图显示了此模块同时安装在插槽 3 和 7 中。</block>
@@ -8792,4 +8791,9 @@ SFP+(目标/启动程序)</block>
   <block id="f0770a756304b05e8fc4f321e0babe43" category="open-title">选项2：添加X91148A模块作为存储模块</block>
   <block id="9e41ec46d0af5ba1b01d8b3bde9b4f52" category="list-text">If you are adding an X91148A module as a storage module in slots 3 and/or 7 into a slot that has an existing NIC module in it, use System Manager to permanently migrate the LIFs to different home ports, as described in<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block>。</block>
   <block id="c81f78014b983d44adbb454f838c2ae9" category="list-text">Install and cable your NS224 shelves, as described in<block ref="a84558faf7b836b9db418a291f2462b5" category="inline-link-rx"></block>。</block>
+  <block id="68439e6a6b3d21f29b1f4c3391b0fc9d" category="admonition">在FAS9300中、Ver2控制器模块只有一个缓存模块插槽(插槽6)。FAS4700没有Ver2控制器模块。删除插槽不会影响缓存模块功能。</block>
+  <block id="c70a0b227334f67f05309732ae67641e" category="paragraph">您可以使用以下动画、图示、系统上的图解或写入的步骤将PCIe提升板和夹层卡从受损控制器模块移动到更换用的控制器模块。</block>
+  <block id="e0b36bb653f20c62f1b87229ea86e61e" category="admonition">您不必从提升板上卸下PCIe卡。将提升板(仍安装了PCIe卡)转移到更换用的控制器模块。</block>
+  <block id="569455efa28fef99f37a55bfd832334e" category="admonition">Ver2控制器模块在FAS9300中只有一个缓存模块插槽。FAS4700没有Ver2控制器模块。删除插槽不会影响缓存模块功能。</block>
+  <block id="f30c92bb3a7434fbf14bd27327ab95f7" category="admonition">插槽6仅适用于FAS9300 Ver2控制器。</block>
 </blocks>
