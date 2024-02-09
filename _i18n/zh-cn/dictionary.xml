@@ -5913,7 +5913,6 @@
   <block id="4ea7136415cb99f780a4177ea7ada9f4" category="doc">还原并验证系统配置—FAS9500</block>
   <block id="a7ed9ff4da75adb740c610eda185e598" category="doc">快速步骤—FAS9500</block>
   <block id="6c77c0963cc43d89befd25aeab2f805c" category="inline-link-macro">《FAS9500安装和设置说明》</block>
-  <block id="c0151088b8d16a7df5f5ceccf770a44b" category="paragraph"><block ref="c0151088b8d16a7df5f5ceccf770a44b" category="inline-link-macro-rx"></block></block>
   <block id="6b076d5e08feabcb936ff1fc2298c9cb" category="doc">更换机箱- FAS9500</block>
   <block id="0829d23216964b4cc2a11bb04c4cf143" category="summary">NVMe SSD FlashCache模块(FlashCache或缓存模块)仅位于FAS900系统插槽6中NVRAM11模块的正面。您可以从相同或不同的受支持供应商热插拔具有相同容量的缓存模块。</block>
   <block id="fb796745f1b93e7c27af0a928be9d5ae" category="doc">热插拔缓存模块— FAS9500</block>
@@ -7106,7 +7105,6 @@
   <block id="b06876b5a3b23ef5cff05f5d0950ec0d" category="paragraph">了解在笔记本电脑上未启用网络发现时如何完成系统设置。</block>
   <block id="a76d705a87cd7b7a1bea352a13c6cd65" category="inline-link-macro">ONTAP (&amp;A)；配置</block>
   <block id="0c629d7be969a0c3ffa913473ff37b4b" category="list-text">After you have completed the initial configuration, go to the <block ref="be5377ebec3eac0b9e77b9246477ddd0" category="inline-link-macro-rx"></block> 有关在ONTAP 中配置其他功能的信息、请访问。</block>
-  <block id="02b3fd979029ff021f281b78fa7ccd20" category="paragraph">了解如何通过机架安装和布线以及初始系统启动来安装C190系统。使用 <block ref="3eed3afb9edbfbab44cea22e18033b51" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="1d4ac53db25f608efca8dafa3f3d6b43" category="paragraph">观看以下视频、了解如何将系统装入机架并进行布线以及执行初始系统配置。</block>
   <block id="95a15694e7d6d23376f741970900ef8e" category="list-text">硬件安装和布线</block>
   <block id="4657c74c0fa17e5f15e4a506f177b913" category="paragraph">以下视频显示了如何安装系统并为其布线。</block>
@@ -8424,7 +8422,6 @@ SFP+(目标/启动程序)</block>
   <block id="997b68807482ea64cc9ef5f725f9309b" category="doc">视频步骤- AFF A400</block>
   <block id="be804c6631fd09c10e34c693ad05b79b" category="doc">视频步骤- AFF C190</block>
   <block id="f2f9e5e5861340b4511769cf5cb0c85c" category="doc">视频步骤—FAS2800</block>
-  <block id="94ca5512de5bd6bb38f58c383086a2a8" category="paragraph"><block ref="94ca5512de5bd6bb38f58c383086a2a8" category="inline-link-macro-rx"></block></block>
   <block id="110062ecc4941a387b27997f0c7ae5ef" category="doc">视频步骤- ASA A400</block>
   <block id="abc8a9a1aab13018556d024a5691afae" category="doc">视频步骤—FAS9300和FAS4700</block>
   <block id="57fcdb44384a01811b20cb55bd021011" category="doc">视频步骤- AFF A320</block>
@@ -8658,7 +8655,6 @@ SFP+(目标/启动程序)</block>
   <block id="a28edc89fe8bb6fcbeda4a8c5427d04f" category="cell"><block ref="a28edc89fe8bb6fcbeda4a8c5427d04f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="df6fc52eeceab2497b885a798c538a6f" category="cell"><block ref="df6fc52eeceab2497b885a798c538a6f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3e9ec063809ed35fdf77c6c261c6e205" category="paragraph">快速指南提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。如果您熟悉安装 NetApp 系统，请使用此内容。</block>
-  <block id="ef8131e94c652f303bc33244cff9df06" category="paragraph">使用链接： <block ref="1f35a49e1a9f3ad335b1add2e4080478" category="inline-link-macro-rx"></block></block>
   <block id="34da8131e3c849a4fd58c995ca7c8514" category="paragraph">安装和设置说明提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。Use this guide if you are familiar with installing NetApp systems.</block>
   <block id="5590b96dc59eb91eb51b7b3ea51d3fd8" category="image-alt">DRW C400卸下控制器IEOPS 1216</block>
   <block id="8a8905b8ba33c894ca2404f3ecc9601d" category="image-alt">DRW C400露天风道IEOPS第1、第1、第1、第1、第4</block>
@@ -8713,7 +8709,6 @@ SFP+(目标/启动程序)</block>
   <block id="39d6f05db05d22d23d38fd12cf4ae17a" category="list-text">FAS500F/AFA250</block>
   <block id="5cb9f94b0998b68d5e93b9f6e02b0e55" category="list-text">FAS8300/AFA400</block>
   <block id="36352a6adb1be8cb31e0076b03ed2125" category="list-text">FAS9000/AFA700</block>
-  <block id="3a049258c7d4f65591690530a2d71491" category="paragraph">使用链接： <block ref="2e869cac122e3063f7b418f03cb3fa26" category="inline-link-macro-rx"></block></block>
   <block id="c706be8edc4286046dcf6813e8dd8b18" category="summary">您可以通过存储系统文档安装、设置和维护ASA A系列系统。</block>
   <block id="b93d997895dde5ccf0b4ce2c7ea76b38" category="doc">全闪存SAN阵列(ASA) A系列系统</block>
   <block id="ca42e40f781122cb5a2d8f08cb50d450" category="summary">您可以通过存储系统文档安装、设置和维护ASA C系列系统。</block>
@@ -8796,4 +8791,9 @@ SFP+(目标/启动程序)</block>
   <block id="e0b36bb653f20c62f1b87229ea86e61e" category="admonition">您不必从提升板上卸下PCIe卡。将提升板(仍安装了PCIe卡)转移到更换用的控制器模块。</block>
   <block id="569455efa28fef99f37a55bfd832334e" category="admonition">Ver2控制器模块在FAS9300中只有一个缓存模块插槽。FAS4700没有Ver2控制器模块。删除插槽不会影响缓存模块功能。</block>
   <block id="f30c92bb3a7434fbf14bd27327ab95f7" category="admonition">插槽6仅适用于FAS9300 Ver2控制器。</block>
+  <block id="bcd681cc4aa56b9c1d3f83f1729660cb" category="paragraph">使用链接： <block ref="0e85fb8899763a058efca868ed40a959" category="inline-link-macro-rx"></block></block>
+  <block id="b9cdef2ad36df740ff8a9248d42a21f4" category="paragraph">使用链接： <block ref="00140fff913a08d4822c22694704a0d2" category="inline-link-macro-rx"></block></block>
+  <block id="738ad40a42e139ed29cebf62dfc05a11" category="paragraph"><block ref="738ad40a42e139ed29cebf62dfc05a11" category="inline-link-macro-rx"></block></block>
+  <block id="99ddf4d694dac695dfe3508f22a2764a" category="paragraph"><block ref="99ddf4d694dac695dfe3508f22a2764a" category="inline-link-macro-rx"></block></block>
+  <block id="2cff6532f0a35fcdab297942157a970e" category="paragraph">了解如何通过机架安装和布线以及初始系统启动来安装C190系统。使用 <block ref="861cf0a8c95d8b17a03c43773caa91e4" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
 </blocks>
