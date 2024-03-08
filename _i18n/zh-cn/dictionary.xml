@@ -1768,16 +1768,11 @@
   <block id="80257ad9b8e102e01f1a08f309c3eed0" category="doc">将启动映像传输到启动介质— AFF A800</block>
   <block id="fd1cff0abcf1ef0e075b330e2ee360fe" category="doc">完成还原和更换过程— AFF A800</block>
   <block id="2bb6eb6e274e403747742b20b6b76f1a" category="doc">更换实时时钟电池 - AFF A800</block>
-  <block id="63b8891414a2163d2135a858ac9d8576" category="section-title">第 3 步：卸下 PCIe 提升板</block>
-  <block id="0e402ea83f9434d19cbb58c56a2db717" category="paragraph">在更换控制器模块中的特定硬件组件时，必须卸下一个或多个 PCIe 提升板。</block>
   <block id="92a1e44c6fd05cd1ba8ab2abf944200f" category="paragraph">提升板 2 （中间提升板）锁定闩锁</block>
   <block id="5d32a38a1b041424ab4d21535c31e0b6" category="section-title">第 4 步：更换 RTC 电池</block>
   <block id="f8875cd0262026ed3fb8588a40cc1ddf" category="list-text">在提升板 2 下找到 RTC 电池。</block>
   <block id="f384f058a9e18cd94b2018353655dfd8" category="image-alt">更换 DRW a800 RTC 电池</block>
   <block id="5970ecf5a77095b830e5e2d378b5f67c" category="paragraph">提升板 2</block>
-  <block id="2ac4ac5667e74f34105113704c416ab4" category="section-title">第 5 步：安装 PCIe 提升板</block>
-  <block id="b7d2c15ba4d23a3704c6e0fa1cd09303" category="paragraph">在更换受损控制器中的硬件组件后，您可以重新安装 PCIe 提升板。</block>
-  <block id="5b6534f621851e68cd3102bd5d746226" category="section-title">第 6 步：重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期</block>
   <block id="12abc0287f5162e3fd98e6515d1cc063" category="doc">重新配置系统并重新分配磁盘— AFF A800</block>
   <block id="03009d063726425063c4f5d23d6de24b" category="summary">要更换 PCIe 卡，您必须断开卡的缆线连接，从卡中卸下 SFP 和 QSFP 模块，然后再卸下提升板，重新安装提升板，最后重新安装 SFP 和 QSFP 模块，最后再为卡布线。</block>
   <block id="b847555d08409368f0fef45554d04bc5" category="doc">更换 PCIe 卡 - AFF A800</block>
@@ -8796,4 +8791,9 @@ SFP+(目标/启动程序)</block>
   <block id="738ad40a42e139ed29cebf62dfc05a11" category="paragraph"><block ref="738ad40a42e139ed29cebf62dfc05a11" category="inline-link-macro-rx"></block></block>
   <block id="99ddf4d694dac695dfe3508f22a2764a" category="paragraph"><block ref="99ddf4d694dac695dfe3508f22a2764a" category="inline-link-macro-rx"></block></block>
   <block id="2cff6532f0a35fcdab297942157a970e" category="paragraph">了解如何通过机架安装和布线以及初始系统启动来安装C190系统。使用 <block ref="861cf0a8c95d8b17a03c43773caa91e4" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
+  <block id="6b94783b3a4b318de01cab9d3ec81247" category="open-title">原始控制器</block>
+  <block id="2790027947ff94fbf03f63a1df957821" category="list-text">从控制器模块中卸下PCIe提升板2 (中间提升板)：</block>
+  <block id="f24c160de87a570618194aa5d8b9c9de" category="open-title">Ver2控制器</block>
+  <block id="204438254dc5e5c9fbc69d974b0ec2ad" category="list-text">找到DIMM附近的RTC电池。</block>
+  <block id="71adfc8a5d09d16090dd4dd7ff8256f4" category="image-alt">DRW a800 RTC电池更换v2</block>
 </blocks>
