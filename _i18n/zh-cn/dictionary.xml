@@ -7213,7 +7213,6 @@
   <block id="1ccdd49d3b4e697ec664a985a5983b41" category="list-text">如果已使用禁用AutoSupport、则还原它<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block></block>
   <block id="657e1e449c74518bb94702c89e392c1b" category="list-text">在_Healthy_node上、检查系统时间：<block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix=" " category="inline-code"></block></block>
   <block id="6071c318b780c1f56da250b5fe0334d8" category="paragraph">日期和时间基于配置的时区。</block>
-  <block id="408525dec83104bf941d9a7d0a93d454" category="list-text">在加载程序提示符处、确认_reender_节点上的日期和时间：<block ref="5fc732311905cb27e82d67f4f6511f7f" prefix=" " category="inline-code"></block></block>
   <block id="598dc5e99f2a14bda43240b77ca40634" category="section-title">第2步：启动系统</block>
   <block id="a5878fdf6c8d3698ab74c4f473608246" category="paragraph">如果您的平台具有内部存储、请使用以下工作表：</block>
   <block id="e80602d70a12972f8bf4a77f853d5172" category="inline-link-macro">SAS布线规则和概念</block>
@@ -8544,7 +8543,6 @@ SFP+(目标/启动程序)</block>
   <block id="5d9efacb191134a47eddaca6b86550ef" category="doc">关闭控制器- ASA C800</block>
   <block id="2fb9d81c2751b72c6f0f19e7ab0e2e6b" category="doc">快速步骤- ASA C800</block>
   <block id="0a1b788d1099f65afcbd5d2617f3ed92" category="inline-link-macro">《ASA C800安装和设置说明》</block>
-  <block id="27e19165ae3633b64ea0d1e5828b6473" category="paragraph">This guide gives graphic instructions for a typical installation of your system from racking and cabling, through initial system bring-up.使用 <block ref="8e51076e81612ebc2edf3ef44ea3a905" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="2b9953635f286a5f88d8f368e0aa5465" category="sidebar">NetApp的ONTAP硬件存储系统提供行业最先进的数据管理功能、可提供领先的企业级横向扩展全闪存或混合存储。使用此站点上的文档安装、扩展、升级和维护您的系统。</block>
   <block id="ce75e61b074bab0c8e79b911972ddbf1" category="sidebar">磁盘架和交换机</block>
   <block id="efb7d807a9229170619783564ab9a186" category="sidebar">ASA C250</block>
@@ -8731,7 +8729,6 @@ SFP+(目标/启动程序)</block>
   <block id="6d6d899023064067891b54808437adaa" category="sidebar">ASA A系列系统</block>
   <block id="be83f0f3d9e7cc4af05991e4976d2134" category="sidebar">ASA C系列系统</block>
   <block id="a46d5e85a24eb7f41987dc2fc02df2c1" category="sidebar">NetApp的全闪存SAN阵列(ASA)可提供简化的专用SAN体验、为您企业的任务关键型数据库和其他SAN工作负载提供持续的数据可用性。</block>
-  <block id="47fb299294c4db99aead2c933a5d0e45" category="image-alt">DRW affc800安装电缆管理</block>
   <block id="71b9da16d2c97302e30020688facb467" category="doc">更换风扇- AFF A250</block>
   <block id="4419435d737554741ab61c9d91e5c332" category="doc">更换风扇- ASA C250</block>
   <block id="ebd0dccffb1781aa1b03445f61d87344" category="summary">您可以使用IOM12模块冷更换磁盘架。</block>
@@ -8750,7 +8747,6 @@ SFP+(目标/启动程序)</block>
   <block id="e3b9bfb6edad716593c6461ec6712579" category="list-text">英语 <block ref="816f3a719ab7027c9ff8309313bbfe66" category="inline-link-macro-rx"></block></block>
   <block id="3e7aa82d2d70031bc903abc14fcef228" category="paragraph">使用链接： <block ref="7c76049c7cc6b29a138ae1f21c8716c8" category="inline-link-macro-rx"></block>。</block>
   <block id="6febf85749247f2f22048a485869645e" category="paragraph">This guide gives graphic instructions for a typical installation of your system from racking and cabling, through initial system bring-up.使用 <block ref="85d66ca1788630be12ac9fc5ee2595a5" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
-  <block id="add36804e7e09c91c721643d36c96ccb" category="paragraph"><block ref="add36804e7e09c91c721643d36c96ccb" category="inline-link-macro-rx"></block></block>
   <block id="5ca723b9f3a38d51c5d8040a15ca7a8d" category="paragraph"><block ref="5ca723b9f3a38d51c5d8040a15ca7a8d" category="inline-link-macro-rx"></block></block>
   <block id="6053aed1bfbcc070d47989735b666d06" category="summary">SAS3磁盘架概述。</block>
   <block id="5b0bc6fa97d8d2e2dc4b4b0be078e8e2" category="doc">概述—SAS3磁盘架</block>
@@ -8796,4 +8792,8 @@ SFP+(目标/启动程序)</block>
   <block id="f24c160de87a570618194aa5d8b9c9de" category="open-title">Ver2控制器</block>
   <block id="204438254dc5e5c9fbc69d974b0ec2ad" category="list-text">找到DIMM附近的RTC电池。</block>
   <block id="71adfc8a5d09d16090dd4dd7ff8256f4" category="image-alt">DRW a800 RTC电池更换v2</block>
+  <block id="129717f48118cb8374cc8d6ecb1a3002" category="list-text">在加载程序提示符处、确认_reender_节点上的日期和时间：<block ref="7e17e2b336dbdd66c2f45405573b53de" prefix=" " category="inline-code"></block></block>
+  <block id="335c1f89cc948dbecd252495550db62d" category="paragraph">访问 <block ref="add36804e7e09c91c721643d36c96ccb" category="inline-link-macro-rx"></block></block>
+  <block id="1ba8725aca8dcca67731e32e2a39f77f" category="paragraph">快速入门提供了从机架安装和布线到初始系统启动的典型系统安装的图形说明。</block>
+  <block id="4169d3d04b863ba6044225d783c8511c" category="paragraph">使用 <block ref="760faf2edba83a3b2dfe198c423cd5ec" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
 </blocks>

@@ -38,7 +38,7 @@ summary: 完成硬件更换并启动至维护模式后、您需要验证替代�
 
 . 如有必要，请在替代节点上以 GMT 格式设置日期： `set date _MM/dd/yyy_`
 . 如有必要，请在替代节点上设置 GMT 时间： `set time _hh ： mm ： ss_`
-. 在加载程序提示符处、确认_reender_节点上的日期和时间： `date`
+. 在加载程序提示符处、确认_reender_节点上的日期和时间： `show date`
 +
 日期和时间以 GMT 表示。
 
