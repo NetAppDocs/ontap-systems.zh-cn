@@ -1,5 +1,8 @@
 ---
 indexpage:
+  title: ONTAP硬件系统文档
+  summary: NetApp的AFF、ASA和FAS存储系统提供行业最先进的数据管理功能、可提供领先的企业级横向扩展全闪存或混合存储。使用此站点上的文档安装、扩展、升级和维护AFF、ASA和FAS系统及其存储架和集群交换机。
+  keywords: aff, fas, asa
   lead: NetApp的ONTAP硬件存储系统提供行业最先进的数据管理功能、可提供领先的企业级横向扩展全闪存或混合存储。使用此站点上的文档安装、扩展、升级和维护您的系统。
   tiles:
   - title: 入门
