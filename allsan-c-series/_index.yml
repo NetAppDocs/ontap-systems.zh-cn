@@ -1,5 +1,9 @@
 ---
 indexpage:
+  title: 全闪存SAN阵列(ASA) C系列系统
+  summary: 您可以通过存储系统文档安装、设置和维护ASA C系列系统。
+  keywords: allsan, asa, flash, array, c-series, systems, configuration, asa-c250,
+    c-400, c-800
   lead: NetApp的全闪存SAN阵列(ASA)可提供简化的专用SAN体验、为您企业的任务关键型数据库和其他SAN工作负载提供持续的数据可用性。
   tiles:
   - title: 入门

@@ -6390,8 +6390,6 @@
   <block id="7d60346fb854755b0fc4b8486f2e5769" category="section-title">第1步：在ONTAP 中为_replacement_控制器安装许可证</block>
   <block id="541648f14089765ba6e8c3198be32507" category="section-title">Step 2: Replace the boot media</block>
   <block id="6fdf23777adc5b39f52f2829b69833e5" category="inline-link-macro">将节点与集群同步</block>
-  <block id="692418fcc9983296fd6b89b4072b99d2" category="inline-link-macro">将SED恢复到未受保护的模式</block>
-  <block id="aa641c641cc4509747c629778ceba1e6" category="list-text">如果您使用的是NetApp存储加密、则必须按照中的说明重置MSID <block ref="deeaf76d485e47e462d03c774bc2ca5e" category="inline-link-macro-rx"></block>。</block>
   <block id="dca9d9d34ff973dbf261373e223aa9e4" category="list-text">如果您使用的是SAN系统、则必须已检查事件消息 <block ref="090678c8ba0a25df800d3d4eeaf19522" prefix="(" category="inline-code"></block>)。。<block ref="090678c8ba0a25df800d3d4eeaf19522" prefix=" " category="inline-code"></block> command可显示节点名称、该节点的仲裁状态、该节点的可用性状态以及该节点的运行状态。</block>
   <block id="03733c422db2a03d86659ae5a1e923dc" category="paragraph">以下AutoSupport 消息禁止自动创建案例两小时：<block ref="387708b955ccf034fcf9197ad51ba879" prefix=" " category="inline-code"></block></block>
   <block id="f1f0ba04096d04407de2d15a11510ac1" category="paragraph">系统提示符或密码提示符</block>
@@ -7141,7 +7139,6 @@
   <block id="eba4465f65ac7360936f8f238b09999c" category="list-text">用于将系统连接到网络交换机以及带Web浏览器的笔记本电脑或控制台的附加网络缆线。</block>
   <block id="c7e4a9edbb9ec3bb0052efd3332763a3" category="section-title">第3步：使用缆线将控制器连接到集群</block>
   <block id="089103029c56ad66034dfe6bd70cfdcb" category="paragraph">使用动画或列表中的步骤完成控制器和交换机之间的布线。对每个控制器执行以下步骤。</block>
-  <block id="38e134ad6d648c53626268f8b6a82510" category="list-text">使用25GbE集群互连缆线将集群互连端口e0c连接到e0c、并将e0d连接到e0<block ref="6b6a40b68f5814cad1750bfff7e3b927" category="inline-image-macro-rx" type="image"></block>：</block>
   <block id="5d8d8fe980b572286e75db6ff18d3cbc" category="paragraph"><block ref="5d8d8fe980b572286e75db6ff18d3cbc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="84e68180cd83b83ca12149fed857f1ac" category="list-text">使用缆线将集群互连端口e0c和e0d连接到25 GbE集群互连交换机。</block>
   <block id="ee3f9d0ec20204c7d48b52d859e31c4d" category="paragraph"><block ref="ee3f9d0ec20204c7d48b52d859e31c4d" category="inline-image-macro-rx" type="image"></block></block>
@@ -7751,7 +7748,6 @@ SFP+(目标/启动程序)</block>
   <block id="fbc33e94068f7206fe1f29c2cdd767fe" category="paragraph">夹层卡是一种扩展卡、设计用于插入主板上的专用插槽。</block>
   <block id="e8bc49790ccdd5f485eb537cc7b3081d" category="summary">您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。</block>
   <block id="9260991b91fdf449af1f97b5d09a9db6" category="summary">NS224和SAS磁盘架专为NetApp AFF和FAS系统而设计、可满足您多样化的业务和应用程序需求。</block>
-  <block id="0add3a06a3c8079fac5caa294ad21965" category="doc">AFF和FAS系统的驱动器架</block>
   <block id="4de4b37af472f8b6bb5aa5b5732538f0" category="summary">维护ASA C250硬件</block>
   <block id="80b77aae28ed3360a8b704371f5188e1" category="doc">维护AFF C250硬件</block>
   <block id="ab253cf54adf6fdbb65cbb0ed70cb2cf" category="paragraph">对于AFF C250存储系统、您可以对以下组件执行维护过程。</block>
@@ -8792,4 +8788,8 @@ SFP+(目标/启动程序)</block>
   <block id="4169d3d04b863ba6044225d783c8511c" category="paragraph">使用 <block ref="760faf2edba83a3b2dfe198c423cd5ec" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="230fb764922530d0d527b96fb40d15f8" category="paragraph"><block ref="230fb764922530d0d527b96fb40d15f8" category="inline-link-macro-rx"></block></block>
   <block id="9e4682a37df843156979b712e93e942d" category="paragraph"><block ref="9e4682a37df843156979b712e93e942d" category="inline-link-macro-rx"></block></block>
+  <block id="370d65afeef540ea21d331a7da8675ec" category="list-text">使用25GbE集群互连缆线将集群互连端口e0c连接到e0c、并将e0d连接到e0d。</block>
+  <block id="45c0f160ca0efa09fc0b198986db5e31" category="image-alt">DRW affa250交换电缆</block>
+  <block id="5407ed45e4a9085a4f72a4611d202d7c" category="sidebar">NetApp的NS224磁盘架和SAS磁盘架有助于为您的数字化转型提供所需的性能、故障恢复能力和灵活性。</block>
+  <block id="432ba2d883505b11fa27f305c25abca9" category="sidebar">ONTAP硬件系统的驱动器架</block>
 </blocks>
