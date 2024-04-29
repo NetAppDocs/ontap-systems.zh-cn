@@ -99,7 +99,6 @@ LOADER 提示符
 要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 .关于此任务
-* 如果您使用的是 NetApp 存储加密，则必须按照的 " 将 FIPS 驱动器或 SED 返回到未受保护的模式 " 一节中的说明重置 MSID link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/return-seds-unprotected-mode-task.html["使用命令行界面概述 NetApp 加密"^]。
 * 您必须在此操作步骤 末尾保持电源处于打开状态，以便为运行正常的控制器供电。
 
 
@@ -636,25 +635,6 @@ dr-group-id            cluster node           configuration-state
 ====
 
 
-== 第 6 步：还原存储和卷加密功能
-
-对于先前配置为使用存储或卷加密的存储系统、您必须执行其他步骤以提供无中断加密功能。You can skip this task on storage systems that do not have Storage or Volume Encryption enabled.
-
-
-NOTE: 更换DIMM时不需要执行此步骤。
-
-.步骤
-. 根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：
-+
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
-
-
-. 重置SED MSID
-
-
-
-
-== 第 7 步：将故障部件退回 NetApp
+== 第 6 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

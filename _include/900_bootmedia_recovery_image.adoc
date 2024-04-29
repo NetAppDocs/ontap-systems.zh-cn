@@ -73,7 +73,7 @@ date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state
 +
 .. 将受损控制器显示为 LOADER 提示符。
 .. 使用 printenv 命令检查环境变量设置。
-.. 如果环境变量未按预期设置，请使用 setenvenenvironment_variable_name changed_value 命令对其进行修改。
+.. 如果未按预期设置环境变量，请使用 `setenv _environment_variable_name_ _changed_value_` 命令对其进行修改。
 .. 使用 saveenv 命令保存所做的更改。
 
 

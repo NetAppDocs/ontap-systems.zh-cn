@@ -44,26 +44,7 @@ NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文�
 
 
 
-== Step 2: Restore Storage and Volume Encryption functionality
-
-对于先前配置为使用存储或卷加密的存储系统、您必须执行其他步骤以提供无中断加密功能。You can skip this task on storage systems that do not have Storage or Volume Encryption enabled.
-
-
-NOTE: 更换DIMM时不需要执行此步骤。
-
-.步骤
-. 根据您使用的是板载密钥管理还是外部密钥管理，请执行以下过程之一：
-+
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
-
-
-. 重置SED MSID
-
-
-
-
-== Step 3: Verify LIFs and register the serial number
+== 第2步：验证LIF并注册序列号
 
 在将 _replacement_ 节点恢复使用之前，您应验证 LIF 是否位于其主端口上，如果启用了 AutoSupport ，则注册 _replacement_ 节点的序列号，并重置自动交还。
 
@@ -84,6 +65,6 @@ NOTE: 更换DIMM时不需要执行此步骤。
 
 
 
-== 第 4 步：将故障部件退回 NetApp
+== 第 3 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。

@@ -496,7 +496,6 @@
   <block id="a0f829e8eae692ba3841ace71f629760" category="list-text">确保环境变量按预期设置：</block>
   <block id="5220b264c38ecaf96c146e54b38d8093" category="list-text">使节点显示 LOADER 提示符。</block>
   <block id="eeed9c2f829091b08810156d7ed4433e" category="list-text">使用 `printenv` 命令检查环境变量设置。</block>
-  <block id="30748b1b116d9335e2b8cdb6ec3038d0" category="list-text">如果未按预期设置环境变量，请使用 `setenvenenvironment_variable_name changed_value` 命令对其进行修改。</block>
   <block id="414efa7edc26a4a7b5a28ac4965ea178" category="list-text">使用 `saveenv` 命令保存所做的更改。</block>
   <block id="b9eb862c5caa1201eee15d474b3217ef" category="list-text">下一个取决于您的系统配置：</block>
   <block id="7a7b698215037ec83cf3c3bc1f775001" category="inline-xref-macro">根据需要还原 OKM ， NSE 和 NVE</block>
@@ -3297,7 +3296,6 @@
   <block id="4f72f46e41b488e589d00c457c136571" category="paragraph">``boot_ontap bye``</block>
   <block id="0a777e4b645d66ac575356b85c16ed55" category="paragraph">如果设置了自动启动，则节点将重新启动。</block>
   <block id="554a23fbeb893ba3c6cb31c09b0d481f" category="paragraph">在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个节点将显示已配置状态，并启用 DR 镜像并显示正常模式。`MetroCluster node show -fields node-SystemID` 命令输出将显示旧系统 ID ，直到 MetroCluster 配置恢复正常状态为止。</block>
-  <block id="3bf4c288b20a882f54f61cd8cb0618a7" category="section-title">第 6 步：还原存储和卷加密功能</block>
   <block id="546213aeb2cbd4cabb4e9e5099416edd" category="summary">您可以在不中断服务的情况下更换 LED USB 模块。</block>
   <block id="9e3a9c661f6d65ead55d7e84a7cd5d37" category="paragraph">通过 FAS9000 或 AFF A700 LED USB 模块，可以连接到控制台端口和系统状态。更换此模块不需要工具。</block>
   <block id="6fc19b2ab7e603f08d79313f5c91b43f" category="list-text">卸下旧的 LED USB 模块：</block>
@@ -4878,7 +4876,6 @@
   <block id="1fc23df34c1ef373bc238879bf1082e5" category="list-text"><block ref="1fc23df34c1ef373bc238879bf1082e5" category="inline-link-macro-rx"></block></block>
   <block id="b8a901030a76c92bf9e4426d81439fa5" category="list-text"><block ref="b8a901030a76c92bf9e4426d81439fa5" category="inline-link-macro-rx"></block></block>
   <block id="3f98fa9dd0068de7a3158d3cefe04024" category="list-text"><block ref="3f98fa9dd0068de7a3158d3cefe04024" category="inline-link-macro-rx"></block></block>
-  <block id="518d2076bf387a28038f7558530bb987" category="inline-link">使用命令行界面概述 NetApp 加密</block>
   <block id="673f7a1f10ce14ef29b06ba53cf1e5d7" category="inline-link">使用命令行界面概述 NetApp 加密</block>
   <block id="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="paragraph"><block ref="ed20ee3e54ecf9b3b63f4e11ff820fb4" category="inline-link-rx"></block></block>
   <block id="459527cf1ec141d19f1b0f88f8c19905" category="inline-link">磁盘和聚合概述</block>
@@ -5157,7 +5154,6 @@
   <block id="1396dacdf561903f32c605f06d2cf5d8" category="list-text">当系统提示您确认还原备份是否成功时，按 `y` 。</block>
   <block id="c9ed271ea801891a1b5c1e6e048813b6" category="list-text">当系统提示您创建已还原的配置副本时，按 `Y` 。</block>
   <block id="2ddd54a208744ec5e2ccb1b7ac83aa05" category="list-text">使用 printenv 命令检查环境变量设置。</block>
-  <block id="edb5a1f64879356169f323de78b718be" category="list-text">如果环境变量未按预期设置，请使用 setenvenenvironment_variable_name changed_value 命令对其进行修改。</block>
   <block id="eeacd9b31ab0c2f60f1d13e5632f7f13" category="list-text">使用 saveenv 命令保存所做的更改。</block>
   <block id="29d4dec218aeaffabfed6dcc8fd1ad45" category="list-text">If your system has onboard keymanager, NSE or NVE configured, go to <block ref="39910b5f3ea1ee39d8059faae857cc98" category="inline-xref-macro-rx"></block></block>
   <block id="b52d8d1d987722da12d16df8a0a63541" category="list-text">在 LOADER 提示符处，输入 boot_ontap 命令。</block>
@@ -5295,7 +5291,6 @@
   <block id="74215317310e6608b7efcf980bd23ce9" category="list-text">注册（<block ref="3ae584b0f28c11edd6df40135d81b8ba" category="inline-link-macro-rx"></block>）您的系统。</block>
   <block id="f65880020d1427cb243e627e392ce6ef" category="section-title">第 1 步：卸下控制器模块</block>
   <block id="0cb8c95aa83d9b7ae853da12e5bb125c" category="paragraph">Be sure to close the cam handle slowly so that it aligns correctly with the front of the drive carrier.安全时，它会发出卡嗒声。</block>
-  <block id="063a6c27f42a062a6ece0163f4444fc3" category="list-text">如果您使用的是 NetApp 存储加密，则必须按照的 " 将 FIPS 驱动器或 SED 返回到未受保护的模式 " 一节中的说明重置 MSID <block ref="bb6c6af86c0c41920e9753bb15981800" category="inline-link-macro-rx"></block>。</block>
   <block id="d7330da3fefbffbe126bbfae916b2005" category="list-text">等待 `savecore`命令完成，然后再发出交还。</block>
   <block id="03a45c592eebddeaf80cccbc66213075" category="paragraph">To restore your system to full operation, you must restore the NetApp Storage Encryption configuration (if necessary), and install licenses for the new controller, and return the failed part to NetApp, as described in the RMA instructions shipped with the kit.</block>
   <block id="07bcf96175c4fb31a9a4900272f1bd18" category="list-text">在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。``boot_ontap``</block>
@@ -6441,12 +6436,6 @@
   <block id="1422875ceb77c2edc7c07474b11b3c6f" category="list-text">打开控制器模块通风管：</block>
   <block id="43ae4ee714a69574b12c2b05c54410b5" category="list-text">按下模块把手上的Terra cotta释放按钮、然后将DCPM模块滑出机箱。</block>
   <block id="0721343ac8e5e32a5122775fda62e4d0" category="doc">还原并验证配置—AFF A900</block>
-  <block id="2c35abfceaabbce6e9a2f24491d249c0" category="open-title">选项1：使用板载密钥管理器</block>
-  <block id="86b112e5aa1ced4fbffb09dded147e9f" category="list-text">将节点启动至启动菜单。</block>
-  <block id="e07ae2ef2fbd56f8a3ced5a2ab602ded" category="list-text">选择选项10、<block ref="cdca34dc3d7defb03d741a65d78de01c" prefix=" " category="inline-code"></block>。</block>
-  <block id="0a2404583aab34668c1c8004bddabbaa" category="list-text">选择选项1、<block ref="e6922a1788401c5ef431db829a2c387b" prefix=" " category="inline-code"></block></block>
-  <block id="c566d4828cd295258aa8097a90880602" category="open-title">选项2：使用外部管理器</block>
-  <block id="0a05a9975c9259ea331a85366e41d3ce" category="list-text">选择选项11、<block ref="0dd518498ab98fe1fd543910856e6153" prefix=" " category="inline-code"></block>。</block>
   <block id="a5462faa34b6cf806cb49f24d84b02a7" category="list-text">如果您的系统配置为在40 GbE NIC上支持10 GbE集群互连和数据连接、请在维护模式下使用nicadmin convert命令将这些端口转换为10 GbE连接。请参见<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="c56809d9cff2ea190c6fb9d67e804b42" category="paragraph">更换机箱时、必须卸下机箱正面的六个风扇模块。</block>
   <block id="e9e9a6de5e421dfe8a5ccc0b156ecc94" category="admonition">如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后查找卡、然后按部件号在中查找卡<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 用于显示端口标签的挡板图形。可以使用查找卡部件号<block ref="432345ed72f5509f18312f01d4f08dff" prefix=" " category="inline-code"></block> 命令或。</block>
@@ -6462,17 +6451,6 @@
   <block id="192e7ded6d54e3ac04596dc33b9c67cf" category="paragraph">您可以将I/O模块添加到系统中的空模块插槽中。</block>
   <block id="741ade379895992f2a574e8e60de1571" category="section-title">第2步：添加I/O模块</block>
   <block id="31ac56c0f673cbef254563f6a8a32626" category="paragraph">如果系统已完全填充、您可以通过删除现有I/O模块并将其更换为其他I/O模块来更改I/O插槽中的I/O模块。</block>
-  <block id="74458273e576f4b2da617a6e0e209a5f" category="paragraph">如果已启用存储加密、请使用相应的操作步骤。</block>
-  <block id="23620cc2fa7491aefb480afbef75dac2" category="list-text">输入您从客户处获取的板载密钥管理器的密码短语。</block>
-  <block id="15247f97704eb964c60d179c321c1370" category="list-text">在提示符处、粘贴输出中的备份密钥数据<block ref="6b6f6c1a8bc1fede794cda92ed140953" prefix=" " category="inline-code"></block> 或<block ref="32ba7af89b7557f6e3e6d80a922080ce" prefix=" " category="inline-code"></block> 命令：</block>
-  <block id="8726b2ef66dc0e734b269a3191597e11" category="paragraph">--------------- 开始备份———————</block>
-  <block id="328f6eaec3741c1d0f9558d6c40c1da4" category="paragraph">QABWIETLESBCbG9iAAAAAAAAAAAAAAAAAAEAAAACADID+bAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABvOlH0AAAMH7qDLIWAH1DBZ12PiVdy9ATSFMT0C0TlYAFASS4ADAAAAAAAAQAAAAAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQAAAQ。。。H4nPQM0nrDRYRa9SCv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAA</block>
-  <block id="1e4d7cab6ce42bcab6973efa42fc0b2c" category="list-text">运行安全密钥管理器板载同步：</block>
-  <block id="377fca3965b001b9bcc8843e1b287fe7" category="list-text">如果以前设置了MSID、并且此MSID是在此操作步骤 开头捕获的、请重置此MSID：</block>
-  <block id="a967d40ef247a202e5f1ce7a9626a0ca" category="list-text">使用为FIPS驱动器或SED分配数据身份验证密钥<block ref="8fc59e93e98503b6d1b1230269b06192" prefix=" " category="inline-code"></block> 命令：</block>
-  <block id="551eb7af7cdc6ae3394d506bd47a783d" category="admonition">您可以使用<block ref="eb3cf23f0c9c60ca759ddca34bbfbf56" prefix=" " category="inline-code"></block> 用于查看密钥ID的命令。</block>
-  <block id="6f44d6d36af2c0294f4e53a2e6947b94" category="list-text">使用确认已分配身份验证密钥<block ref="46353f4e0bb2c136591c37c9eeedcf40" prefix=" " category="inline-code"></block> 命令：</block>
-  <block id="960bc5d7d199e0e148cd3dd0e517250d" category="list-text">在提示符处输入管理证书信息。</block>
   <block id="037baf09c7ddcc7c38f81e7dbe35fa87" category="paragraph">您可以通过在插槽为空的系统中添加新的I/O节点或在已完全填充的系统中使用新的I/O模块来将I/O模块添加到系统中。</block>
   <block id="55f1569cdcfb82612fcf293f23db4f6f" category="list-text">检查<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> to make sure that the new I/O module is compatible with your system and version of ONTAP you're running.</block>
   <block id="6e4968851f4373ab9764e16cffb39389" category="list-text">If multiple slots are available, check the slot priorities in<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> and use the best one available for your I/O module.</block>
@@ -6496,9 +6474,6 @@
   <block id="85445cdcf89edd32e9cf4cb8554898a3" category="image-alt">DRW A400更换NVDIMM DIMM IEOPS 1009</block>
   <block id="f5a5a95a5282486c3989ed932401b693" category="image-alt">DRW A900缆线控制台交换机控制器IEOPS 953</block>
   <block id="0ea0d47e034118a7f063c35eaf67ebd2" category="list-text">如果启用了存储加密、则必须还原功能。</block>
-  <block id="718ea359d9cc2d2bff619909d16ec537" category="admonition">控制器将返回到启动菜单。</block>
-  <block id="a9cbabd3f42c5ad7f4796dbf5e384b08" category="list-text">将控制器启动至启动菜单。</block>
-  <block id="1e37c9a4ea44b0a302091f02c74564c1" category="admonition">管理证书信息完成后、控制器将返回到启动菜单。</block>
   <block id="34dbbed571bcfe30f4b9897172116b74" category="list-text">To cable your storage, see <block ref="4261ea2b75c295a1978f7924667f1c11" category="inline-xref-macro-rx"></block></block>
   <block id="90d49fcc83418b049803a1b2081f3c6b" category="list-text">To complete setting up your system, see <block ref="53346fef0c147b551f530d05bbad2e41" category="inline-xref-macro-rx"></block></block>
   <block id="14fa1a86493af188cbb574d402b31f1b" category="list-text">返回到 <block ref="c67cdb63ab5b46180d9910dcb0f03689" category="inline-xref-macro-rx"></block> 在此操作步骤 中重新检查NVMEM LED。</block>
@@ -7339,7 +7314,6 @@ storage故障转移修改-node local -auto-G给予 恢复false`
   <block id="ab18556462377223339c421c568ab231" category="paragraph"><block ref="ab18556462377223339c421c568ab231" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6b6e58fb741960f0300c7783438276a5" category="paragraph">启动介质锁定卡舌</block>
   <block id="fa8b2d8b91c1c89065d3652288dbddc1" category="list-text">按照下图或控制器模块上的FRU示意图卸下夹层卡：</block>
-  <block id="c684d6ba7251084d87edf6423b1ebd24" category="list-text">通过将夹层卡挡板从控制器模块中直接滑出来卸下夹层卡挡板。</block>
   <block id="d62aede9e33b9cbeca49d6fcc6de78c2" category="list-text">拧松夹层卡上的翼形螺钉。</block>
   <block id="db1a320c26dfcefe739a659ae4724890" category="admonition">您可以用手指或螺丝刀拧松翼形螺钉。如果您用手指、则可能需要向上旋转NV电池、以便在其旁边的指旋螺钉上购买更好的手指。</block>
   <block id="1a64138e0b66965c80b909462ba9543f" category="list-text">垂直向上提起夹层卡。</block>
@@ -7350,7 +7324,6 @@ storage故障转移修改-node local -auto-G给予 恢复false`
   <block id="d29b17eb668c51029bfa0626ffe7500f" category="list-text">重新安装夹层卡：</block>
   <block id="834f618686de8125c24ea965ba281757" category="list-text">将主板上的插槽与夹层卡上的插槽对齐、然后将卡轻轻地插入插槽中。</block>
   <block id="361016e8b59dfa6e2e2f28d3e38835e1" category="list-text">拧紧夹层卡上的三个翼形螺钉。</block>
-  <block id="31276a19caaffd6d8a485978edefcae8" category="list-text">重新安装夹层挡板。</block>
   <block id="eef513f5198b93971d313eb80e4da6fb" category="list-text">重新安装控制器模块护盖并将其锁定到位。</block>
   <block id="1aecc8a01c9fc90b26bed0f39865bc18" category="paragraph">使用已安装系统映像的USB闪存驱动器将系统映像安装在替代启动介质上。在此操作步骤期间、您必须还原var文件系统。</block>
   <block id="4c10168d5e2592171ac54097149079b0" category="list-text">您必须具有一个格式化为MBR/FAT32且容量至少为4 GB的USB闪存驱动器。</block>
@@ -7373,7 +7346,6 @@ storage故障转移修改-node local -auto-G给予 恢复false`
   <block id="cf6800eb49ae54456676c105c115a1fa" category="section-title">步骤3：更换夹层卡</block>
   <block id="6918dd1d1ecfa7a18a047a925c4f30ee" category="paragraph">更换夹层卡。</block>
   <block id="808ce573561d6717a3c0cc395df3a504" category="image-alt">DRW 2800更换HIC IEOPS 700</block>
-  <block id="b98f82c68dbd20395815986320582ec2" category="paragraph">提升板挡板</block>
   <block id="83b54898f0ac014b1e217ee413643205" category="paragraph">PCIe夹层卡</block>
   <block id="64016c063cf6b470fdcccc5a97f852b1" category="list-text">拧松夹层卡上的翼形螺钉、然后竖直提起夹层卡。</block>
   <block id="4bca5310f65e82fe5c4eec2c7a1c6c17" category="list-text">将替代夹层卡插头上的插槽与主板上的插槽对齐、然后将卡轻轻地垂直插入插槽中。</block>
@@ -7383,8 +7355,6 @@ storage故障转移修改-node local -auto-G给予 恢复false`
   <block id="d32890221c5529cefc96a956073d9844" category="list-text">使用还原自动交还<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block> 命令：</block>
   <block id="e2306cfc3634594ca9e5483d541a9eb2" category="doc">完整的系统恢复—FAS2800</block>
   <block id="954e375575b9fbd9370aa08dd503d453" category="paragraph">按照套件附带的RMA说明中的说明、还原NetApp存储加密或卷加密配置(如果需要)、安装更换用的控制器的许可证并将故障部件退回给NetApp、从而将系统还原到完全运行状态。</block>
-  <block id="ff3a1a304de699b15bd2a5a39798c5a8" category="section-title">Step 2: Restore Storage and Volume Encryption functionality</block>
-  <block id="332c846459ecae57b885b30c41482384" category="section-title">Step 3: Verify LIFs and register the serial number</block>
   <block id="458c640b6a96cac4ef20be523ebb7f89" category="doc">更换NVMEM电池- FAS2800</block>
   <block id="26e700524d9a1c0b6c28c8ad2d207679" category="section-title">步骤2：卸下并打开控制器模块</block>
   <block id="2a0805526339647b20ef0fc7df37dd6f" category="paragraph">卸下并打开控制器模块。</block>
@@ -7420,8 +7390,6 @@ storage故障转移修改-node local -auto-G给予 恢复false`
   <block id="2549b95d18de43d1c8602f07ed634585" category="list-text">将电池移至更换用的控制器模块并进行安装：</block>
   <block id="350a3cd01c92197375fa1dd80773199d" category="admonition">请勿插入电池。  将其余组件移至更换用的控制器模块后、将其插入。</block>
   <block id="ba9da6f2122b24c495dd034a4a5ec818" category="section-title">步骤3：卸下夹层卡</block>
-  <block id="853a9f16e976ca6346fa38e81f8476a8" category="paragraph">从受损控制器模块卸下夹层挡板和PCIe夹层卡。</block>
-  <block id="539df95ed4f8e5993f75e19be1a36f64" category="list-text">通过将夹层卡挡板从控制器模块中直接滑出来卸下夹层卡挡板。</block>
   <block id="7bb524aff91b85838c807523fc1e4828" category="admonition">您可以用手指或螺丝刀拧松翼形螺钉。</block>
   <block id="099cf7f6040f65b3c9d7fb3f7393d4c3" category="list-text">垂直向上提起夹层卡、将其放在防静电表面上。</block>
   <block id="3356d87e196ed94acd2635f8d405e53f" category="paragraph">从受损控制器模块中取出启动介质、然后将其安装在更换用的控制器模块中。</block>
@@ -7437,7 +7405,6 @@ storage故障转移修改-node local -auto-G给予 恢复false`
   <block id="a00bf690f9db0be90ea5ab9cde9db677" category="paragraph">在更换用的控制器模块中安装夹层卡。</block>
   <block id="507e7243ab4a1d0bdbfa4edd5c9733d3" category="list-text">将夹层卡与主板上的插槽对齐。</block>
   <block id="fc7fc35188ad3f7c32f3328839f4dff2" category="list-text">轻轻向下推插卡，将插卡插入插槽。</block>
-  <block id="803bc905348545eacfc8739f67ee6fc2" category="list-text">重新安装夹层卡挡板。</block>
   <block id="ec782fd2b49f0e4d6edd263c0d30d7f7" category="paragraph">从受损控制器模块中卸下DIMM、然后将其安装到更换用的控制器模块中。</block>
   <block id="64b66263e264f63be40a6135bb7e5f04" category="image-alt">DRW 2800更换DIMM IEOPS 699</block>
   <block id="2a7c25f4f62d559672aaa2da18086b65" category="paragraph">DIMM锁定闩锁</block>
@@ -8380,7 +8347,6 @@ SFP+(目标/启动程序)</block>
   <block id="d5fe92183ddfd6502c92a350a2928047" category="list-text">e0b到e0b
 <block ref="23c439b7ef31021d610e4d3b988f3cd1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="10fbfa6320d8e7c72e731fbd9a6e6c69" category="admonition">只有在更换NVRAM模块时才需要重新分配磁盘、而不适用于NVRAM DIMM更换。</block>
-  <block id="099f7b942e4e89631784891716949599" category="admonition">此步骤不适用于NVRAM DIMM更换。</block>
   <block id="ce75c7b2bf3b15b7659cc85a9c36c6f8" category="admonition">在提示符处输入客户的32个字符的字母数字板载密钥管理密码短语。If the passphrase cannot be provided, contact NetApp Support.<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block></block>
   <block id="2f061f16ff1dc3668b0b979718bcf140" category="paragraph">在提示符处输入客户的32个字符的字母数字板载密钥管理密码短语。If the passphrase cannot be provided, contact NetApp Support.</block>
   <block id="f44ae95a820a7e92672103acdefa1387" category="paragraph"><block ref="5e48dfc079c01fd7f817337abb01a320" prefix="" category="inline-code"></block></block>
@@ -8792,4 +8758,11 @@ SFP+(目标/启动程序)</block>
   <block id="45c0f160ca0efa09fc0b198986db5e31" category="image-alt">DRW affa250交换电缆</block>
   <block id="5407ed45e4a9085a4f72a4611d202d7c" category="sidebar">NetApp的NS224磁盘架和SAS磁盘架有助于为您的数字化转型提供所需的性能、故障恢复能力和灵活性。</block>
   <block id="432ba2d883505b11fa27f305c25abca9" category="sidebar">ONTAP硬件系统的驱动器架</block>
+  <block id="4ab265d37ededf839a389d0b0bedcb7f" category="paragraph">30厘米</block>
+  <block id="70f83c59fcbb747c1a869b38caf783e3" category="list-text">如果未按预期设置环境变量、请使用进行修改<block ref="ac4028a4cb48838c0a22ab27fa6e6920" prefix=" " category="inline-code"></block> 命令：</block>
+  <block id="f0c3921d8aabdebf1548d35d830083d9" category="list-text">将IO板从控制器模块中直接滑出、以将其卸下。</block>
+  <block id="4dfabb2b4515ceefb323f4a3eb8d4a32" category="list-text">重新安装IO板。</block>
+  <block id="ed991b7c3c7e4af5c89a603772f54dd1" category="paragraph">从受损控制器模块卸下IO板和PCIe夹层卡。</block>
+  <block id="eeb8f13cb25825752e216fedcd65a6b1" category="paragraph">IO板</block>
+  <block id="c746ae924024283281476c33315a4598" category="list-text">将IO板从控制器模块中竖直滑出、以将其卸下。</block>
 </blocks>
