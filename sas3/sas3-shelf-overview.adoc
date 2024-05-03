@@ -1,19 +1,17 @@
 ---
 permalink: sas3/sas3-shelf-overview.html 
 sidebar: sidebar 
-keywords: sas3, shelves, shelf, sas3 shelves, drive, aggregate, ha, pair, serving, data 
-summary: SAS3磁盘架概述。 
+keywords: sas3, shelves, shelf, sas3 shelves, drive, aggregate, shelf maintenance 
+summary: SAS3磁盘架维护概述。 
 ---
-= 概述—SAS3磁盘架
+= 磁盘架维护概述—SAS3磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-NetApp SAS3驱动器架使用SAS连接器连接到存储系统。
-
-请执行以下操作来维护SAS3驱动器架。
+您可以执行以下操作来维护SAS3磁盘架：
 
 * link:cold-replace-shelf.html["冷更换磁盘架"]
 * link:hot-remove-shelf.html["热移除磁盘架"]
