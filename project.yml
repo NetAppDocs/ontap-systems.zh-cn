@@ -13,13 +13,13 @@ sidebar:
   - title: ONTAP硬件系统文档
     url: "/index.html"
   - title: 发行说明
-    url: "/rel-notes.html"
-  - title: 入门
     entries:
     - title: 新增功能
       url: "/whats-new.html"
-    - title: 启动并运行
-      url: "/get-up-and-run.html"
+    - title: 停止支持
+      url: "/eoa-hardware.html"
+  - title: 入门
+    url: "/get-up-and-run.html"
   - title: AFF A系列系统
     url: "/aff-aseries/index.html"
     entries:

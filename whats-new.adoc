@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: new, features, fas, aff systems 
-summary: 了解AFF、ASA和FAS系统的新功能。 
+keywords: new, features,aff, asa,  fas, legacy, end-of-support 
+summary: 了解AFF、ASA和FAS系统的新功能以及不再支持的原有硬件。 
 ---
 = AFF、ASA和FAS系统的新增功能
 :allow-uri-read: 
@@ -12,6 +12,8 @@ summary: 了解AFF、ASA和FAS系统的新功能。
 
 [role="lead"]
 了解AFF、ASA和FAS系统的新功能。
+
+有关ONTAP 9版本中的已知问题、限制和升级注意事项的详细信息、请参阅 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 9 发行说明》"]。您必须使用NetApp帐户登录或创建帐户才能访问发行说明。
 
 
 

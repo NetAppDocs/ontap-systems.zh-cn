@@ -90,7 +90,7 @@ https://hwu.netapp.com["NetApp Hardware Universe"^]
 在本文档中，插槽和插槽端口如下所示：
 
 +
-image::../media/slot0_rules.png[插槽 0 规则]
+image::../media/slot0_rules.png[插槽和插槽[端口会议]
 
 
 
@@ -116,7 +116,7 @@ image::../media/slot0_rules.png[插槽 0 规则]
 
 
 
-image::../media/drw_shelf_to_shelf_standard.gif[标准 DRW 磁盘架到磁盘架]
+image::../media/drw_shelf_to_shelf_standard.gif[标准磁盘架到磁盘架连接]
 
 
 
@@ -132,7 +132,7 @@ image::../media/drw_shelf_to_shelf_standard.gif[标准 DRW 磁盘架到磁盘架
 
 
 
-image::../media/drw_shelf_to_shelf_double_wide.gif[DRW 磁盘架到磁盘架的宽度为双倍]
+image::../media/drw_shelf_to_shelf_double_wide.gif[双宽磁盘架到磁盘架连接]
 
 
 
@@ -164,7 +164,7 @@ IOM 端口 2 仅用于四路径 HA 和四路径配置。
 
 下图突出显示了控制器端口 A 和 C 如何在具有一个四端口 HBA 和两个磁盘架堆栈的多路径 HA 配置中进行连接。与堆栈 1 的连接显示为蓝色。与堆栈 2 的连接以橙色显示。
 
-image::../media/drw_controller_to_stack_rules_ports_a_and_c_example.gif[drw 控制器到堆栈规则端口 a 和 c 示例]
+image::../media/drw_controller_to_stack_rules_ports_a_and_c_example.gif[不带内部存储的平台的控制器A和C端口连接规则]
 
 
 
@@ -183,7 +183,7 @@ IOM 端口 4 仅用于四路径 HA 和四路径配置。
 
 下图突出显示了控制器端口 B 和 D 如何在具有一个四端口 HBA 和两个磁盘架堆栈的多路径 HA 配置中进行连接。与堆栈 1 的连接显示为蓝色。与堆栈 2 的连接以橙色显示。
 
-image::../media/drw_controller_to_stack_rules_ports_b_and_d_example.gif[drw 控制器到堆栈规则端口 b 和 d 示例]
+image::../media/drw_controller_to_stack_rules_ports_b_and_d_example.gif[不带内部存储的平台的控制器B和D端口连接规则]
 
 
 
@@ -211,7 +211,7 @@ A 和 C SAS 端口连接到堆栈中第一个逻辑磁盘架。B 和 D SAS 端�
 
 .. 重新写入 D 和 B 端口列表，以便将列表中的第一个端口移至列表末尾。
 +
-例如： image:../media/drw_gen_sas_cable_step2.png[""]
+例如： image:../media/drw_gen_sas_cable_step2.png["重新写入D和B端口列表"]
 
 +
 如果有多个 SAS 端口插槽可用，则通过一个将插槽顺序偏移来平衡多个插槽（物理 PCI 插槽和板载插槽）之间的端口对；因此，可以防止将堆栈连接到一个 SAS HBA 。
@@ -240,7 +240,7 @@ NOTE: 对于 HA 对，您为第一个控制器标识的端口对列表也适用�
 例如，如果您为系统确定了六个端口对，并且要使用三个堆栈作为多路径进行布线，则可以为列表中的其他每个端口对布线：
 
 +
-image::../media/drw_portpair_connection_rules_list_skip.gif[DRW 端口对连接规则列表跳过]
+image::../media/drw_portpair_connection_rules_list_skip.gif[可选择跳过端口对]
 
 +
 
@@ -290,7 +290,7 @@ NOTE: 如果未将0b/0b1端口连接到正确的域(交叉连接域)、则会使
 
 下图突出显示了内部存储端口(0b/0b1)与外部磁盘架堆栈的域连接：
 
-image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[DRW FAS2600 mpha域示例IEOPS 1172]
+image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[内部存储端口0b/0b1域连接]
 
 
 
@@ -307,7 +307,7 @@ FAS2800 HA对支持三路径HA连接。三路径HA连接在每个控制器与内
 
 下面显示了实现三路径HA连接的控制器内部连接和外部布线：
 
-image::../media/drw_fas2800_concept_tpha_IEOPS-950.svg[DRW FAS2800概念TPHA IEOPS 950]
+image::../media/drw_fas2800_concept_tpha_IEOPS-950.svg[三路径HA连接]
 
 FAS2800外部SAS端口：
 
@@ -316,7 +316,7 @@ FAS2800外部SAS端口：
 * 未使用0b2端口。已禁用。如果连接了电缆、则会生成错误消息。
 
 
-image::../media/drw_sas3_ports_on_fas2800_IEOPS-946 (1).svg[FAS2800 IEOPS 946上的DRW SAS3端口(1)]
+image::../media/drw-sas3-ports-on-fas2800.svg[FAS2800上的DRW SAS3端口]
 
 有关FAS2800 HA对布线示例、请参见 link:install-cabling-worksheets-examples-fas2600.html["使用内部存储的平台的控制器到堆栈布线工作表和布线示例"] 部分。
 
