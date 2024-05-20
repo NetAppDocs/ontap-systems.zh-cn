@@ -316,7 +316,7 @@ FAS2800外部SAS端口：
 * 未使用0b2端口。已禁用。如果连接了电缆、则会生成错误消息。
 
 
-image::../media/drw-sas3-ports-on-fas2800.svg[FAS2800上的DRW SAS3端口]
+image::../media/drw_sas3_ports_on_fas2800_IEOPS-946.svg[FAS2800外部SAS端口]
 
 有关FAS2800 HA对布线示例、请参见 link:install-cabling-worksheets-examples-fas2600.html["使用内部存储的平台的控制器到堆栈布线工作表和布线示例"] 部分。
 

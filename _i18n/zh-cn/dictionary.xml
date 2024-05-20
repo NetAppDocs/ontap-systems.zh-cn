@@ -8742,8 +8742,8 @@ SFP+(目标/启动程序)</block>
   <block id="bf7080fa51742670c142cfdf8d73846d" category="image-alt">可选择跳过端口对</block>
   <block id="c89ad601d530f2912af428762ab2c116" category="image-alt">内部存储端口0b/0b1域连接</block>
   <block id="d92309c4fbff10ebdb4237d6a87fe7b6" category="image-alt">三路径HA连接</block>
-  <block id="468bc64c7e6d21f618a8c0a4186b734c" category="image-alt">FAS2800上的DRW SAS3端口</block>
   <block id="a0bdeb39cc6a9364f3559ad9a77e2a71" category="summary">了解AFF、ASA和FAS系统的新功能以及不再支持的原有硬件。</block>
   <block id="5aa9a0e12c17de73e420b615315f7453" category="paragraph">有关ONTAP 9版本中的已知问题、限制和升级注意事项的详细信息、请参阅<block ref="84fe5db170ffeba3db16dd5c6d7a58db" category="inline-link-rx"></block>。您必须使用NetApp帐户登录或创建帐户才能访问发行说明。</block>
   <block id="d1f3a81423106ee57c19f4fc60f797ca" category="sidebar">停止支持</block>
+  <block id="3709879cf4b397082ed4cccaa4fc0561" category="image-alt">FAS2800外部SAS端口</block>
 </blocks>
