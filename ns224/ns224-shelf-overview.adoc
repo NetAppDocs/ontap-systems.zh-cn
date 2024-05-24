@@ -13,6 +13,7 @@ summary: NS224磁盘架维护概述。
 [role="lead"]
 您可以执行以下操作来维护NS224磁盘架：
 
+* link:hot-add-drive.html["热添加驱动器"]
 * link:cold-replace-shelf.html["冷更换磁盘架"]
 * link:hot-remove-shelf.html["热移除磁盘架"]
 * link:service-monitor-leds.html["监控磁盘架LED"]

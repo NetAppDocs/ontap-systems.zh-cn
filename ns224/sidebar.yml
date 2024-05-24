@@ -26,6 +26,8 @@ entries:
       url: "/ns224/ns224-shelf-overview.html"
     - title: 冷更换磁盘架
       url: "/ns224/cold-replace-shelf.html"
+    - title: 热添加驱动器
+      url: "/ns224/hot-add-drive.html"
     - title: 热移除磁盘架
       url: "/ns224/hot-remove-shelf.html"
     - title: 监控磁盘架LED
