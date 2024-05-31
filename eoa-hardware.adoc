@@ -7,7 +7,7 @@ summary: 了解不再支持的传统硬件。
 = 不再支持原有硬件
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
@@ -15,7 +15,7 @@ summary: 了解不再支持的传统硬件。
 
 
 
-=== AFF和FAS系统
+== AFF和FAS系统
 
 [cols="2*"]
 |===
@@ -43,7 +43,7 @@ ONTAP 9.9.1
 |===
 
 
-=== 交换机
+== 交换机
 
 [cols="2*"]
 |===
@@ -67,7 +67,7 @@ ONTAP 9.11.1
 |===
 
 
-=== 相关信息
+== 相关信息
 
 * https://mysupport.netapp.com/site/info/cisco-ethernet-switch["支持的Cisco以太网交换机"]
 * https://mysupport.netapp.com/site/info/netapp-cluster-switch["支持的NetApp以太网交换机"]

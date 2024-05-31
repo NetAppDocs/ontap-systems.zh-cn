@@ -195,7 +195,7 @@ mcc1A::> metrocluster operation show
 image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
 
 +
-[cols="10,90"]
+[cols="10a,90a"]
 |===
 
 
@@ -208,7 +208,9 @@ image:../media/legend_icon_01.png["标注编号1"]
 
  a| 
 image:../media/legend_icon_02.png["标注编号2"]
-| 控制器从机箱中略微移出 
+ a| 
+控制器从机箱中略微移出
+
 |===
 . 将控制器模块滑出机箱。
 +
@@ -304,7 +306,7 @@ NOTE: 如果您要在底部插槽中安装卡，但无法正常看到卡插槽�
 video::e3fd32b6-bdbb-4c53-b666-b030018a5744[panopto]
 image::../media/drw_A400_Replace-mezz-card.png[DRW A400 更换夹层卡]
 
-[cols="10,90"]
+[cols="10a,90a"]
 |===
 
 
@@ -324,7 +326,9 @@ image:../media/legend_icon_02.png["标注编号2"]
 
  a| 
 image:../media/legend_icon_03.png["标注编号3"]
-| 提升卡 
+ a| 
+提升卡
+
 |===
 . 卸下 3 号提升板（插槽 4 和 5 ）：
 +

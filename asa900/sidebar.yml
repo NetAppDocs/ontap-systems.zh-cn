@@ -68,6 +68,7 @@ entries:
   - title: 风扇
     url: "/asa900/fan_swap_out.html"
   - title: I/O 模块
+    pdf-filename: ASA A900 I/O模块
     entries:
     - title: 更换I/O模块
       url: "/asa900/pci_cards_and_risers_replace.html"

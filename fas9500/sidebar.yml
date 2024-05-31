@@ -70,6 +70,7 @@ entries:
   - title: 风扇
     url: "/fas9500/fan_swap_out.html"
   - title: I/O 模块
+    pdf-filename: FAS9500 I/O模块
     entries:
     - title: 替换
       url: "/fas9500/pci_cards_and_risers_replace.html"

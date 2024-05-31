@@ -5757,8 +5757,6 @@
   <block id="f24bbd8bd23b87a9a7d8b466f2edd685" category="list-text">最佳实践是，在热插拔驱动器之前，安装最新版本的磁盘认证包（ DQP ）。</block>
   <block id="38b15850492133a635d50ad8448e62b9" category="list-text">How you hot-swap the disk depends on how the disk drive is being used.如果启用了 SED 身份验证，则必须使用中的 SED 更换说明<block ref="fc87e4868a863f484cb32d2391c4aa0d" category="inline-link-rx"></block>。这些说明介绍了在更换 SED 之前和之后必须执行的其他步骤。</block>
   <block id="6e3d311e755c860fa8be4786c7ffe617" category="list-text">The replacement drive must be supported by your platform.请参见<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>。</block>
-  <block id="455e7132916e2cfdc2ed81e21742458e" category="paragraph">在 &lt;stdin&gt; 中未解析的指令 - 包括： ../_include/drive_hotswap_sas.adoc]]</block>
-  <block id="ed6243b9da8cbb52d7ded5d7a78d3b37" category="paragraph">在 &lt;stdin&gt; 中未解析的指令 - 包括： ../_include/drive_hotswap_sas.adoc.adoc]]</block>
   <block id="2bed99b4660dcf909368c3a2ae62b513" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A800</block>
   <block id="ad451e1c6a6a584f53b88b5c73144db7" category="doc">其他型号</block>
   <block id="03be12a0476133b21cb6c1c927956d23" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF A220 和 FAS2700</block>
@@ -8687,7 +8685,6 @@ SFP+(目标/启动程序)</block>
   <block id="5407ed45e4a9085a4f72a4611d202d7c" category="sidebar">NetApp的NS224磁盘架和SAS磁盘架有助于为您的数字化转型提供所需的性能、故障恢复能力和灵活性。</block>
   <block id="432ba2d883505b11fa27f305c25abca9" category="sidebar">ONTAP硬件系统的驱动器架</block>
   <block id="4ab265d37ededf839a389d0b0bedcb7f" category="paragraph">30厘米</block>
-  <block id="70f83c59fcbb747c1a869b38caf783e3" category="list-text">如果未按预期设置环境变量、请使用进行修改<block ref="ac4028a4cb48838c0a22ab27fa6e6920" prefix=" " category="inline-code"></block> 命令：</block>
   <block id="f0c3921d8aabdebf1548d35d830083d9" category="list-text">将IO板从控制器模块中直接滑出、以将其卸下。</block>
   <block id="4dfabb2b4515ceefb323f4a3eb8d4a32" category="list-text">重新安装IO板。</block>
   <block id="ed991b7c3c7e4af5c89a603772f54dd1" category="paragraph">从受损控制器模块卸下IO板和PCIe夹层卡。</block>
@@ -8754,4 +8751,9 @@ SFP+(目标/启动程序)</block>
   <block id="3336aa3ff360375747634c1e3385684b" category="paragraph">您可以执行以下操作来维护SAS磁盘架：</block>
   <block id="db84f3feadfa946e6f025822cc6bb942" category="doc">热添加驱动器—SAS磁盘架</block>
   <block id="532733c728150f3f848affd8d9840374" category="sidebar">热添加驱动器</block>
+  <block id="0a2a423f4439c54ecca356a8fb8eb51a" category="sidebar">ASA A900 I/O模块</block>
+  <block id="dc0e78bb347a9452f2f910586b57cb0e" category="sidebar">FAS9000 I/O模块</block>
+  <block id="774c0226814e0f61e839b7a7ba1bf4ee" category="sidebar">FAS9500 I/O模块</block>
+  <block id="1f07f30ffd2c12b9cf3727d864face5b" category="sidebar">AFF A700 I/O模块</block>
+  <block id="7c5471ad0d8503f56474b0e9d10bff2a" category="sidebar">AFF A900 I/O模块</block>
 </blocks>
