@@ -82,7 +82,7 @@ LOADER 提示符
 . 从电源拔下控制器模块电源。
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
 +
-image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
+image::../media/drw_a320_cable_management_arms.png[卸下或安装缆线管理臂]
 
 +
 将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
@@ -91,7 +91,7 @@ image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
 . 从机箱中卸下控制器模块：
 
 
-image::../media/drw_a320_controller_remove_animated_gif.png[DRW A320 控制器删除动画 gif]
+image::../media/drw_a320_controller_remove_animated_gif.png[删除控制器]
 
 . 将前掌插入控制器模块两侧的锁定装置。
 . 向下按压闩锁装置顶部的橙色卡舌，直到其脱离机箱上的闩锁销。
@@ -167,7 +167,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 . 如果尚未关闭控制器模块后部的通风管，请将盖板重新安装到 PCIe 卡上。
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
 +
-image::../media/drw_a320_controller_install_animated_gif.png[DRW A320 控制器安装动画 gif]
+image::../media/drw_a320_controller_install_animated_gif.png[安装控制器]
 
 +
 

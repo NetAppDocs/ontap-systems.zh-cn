@@ -26,12 +26,12 @@ summary: 要更换控制器模块硬件，您必须卸下受损的控制器，�
 
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 +
-image::../media/drw_32xx_cbl_mgmt_arm.png[DRW 32xx 电缆管理臂]
+image::../media/drw_32xx_cbl_mgmt_arm.png[卸下缆线管理臂][]
 
 . 如果您在拔下缆线后将 SFP 模块留在系统中，请将其移至新控制器模块。
 . 松开控制器模块凸轮把手上的翼形螺钉。
 +
-image::../media/drw_8020_cam_handle_thumbscrew.png[DRW 8020 凸轮把手翼形螺钉]
+image::../media/drw_8020_cam_handle_thumbscrew.png[拧松翼形螺钉以打开凸轮把手]
 
 +
 |===
@@ -62,7 +62,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 
 . 使用下图或控制器模块上的 FRU 映射找到启动介质：
 +
-image::../media/drw_rxl_boot_media.png[DRW rxl 启动介质]
+image::../media/drw_rxl_boot_media.png[正在删除启动介质]
 
 . 按启动介质外壳上的蓝色按钮，将启动介质从其外壳中释放，然后将其竖直拉出启动介质插槽。
 +
@@ -88,7 +88,7 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 ** 如果您的系统采用 HA 配置，请转至下一步。
 ** 如果您的系统采用独立配置，请完全关闭控制器模块，然后检查 NV 图标标识的 NVRAM LED 。
 +
-image::../media/drw_hw_nvram_icon.png[DRW 硬件 NVRAM 图标]
+image::../media/drw_hw_nvram_icon.png[NV LED]
 
 +
 
@@ -106,7 +106,7 @@ NOTE: 在暂停系统时， NVRAM LED 会闪烁，同时将内容存入闪存。
 
 . 打开 CPU 通风管并找到 NVMEM 电池。
 +
-image::../media/drw_rxl_nvmem_battery.png[DRW rxl nvmem 电池]
+image::../media/drw_rxl_nvmem_battery.png[Replacing the NVMEM battery]
 
 +
 |===
@@ -147,7 +147,7 @@ NOTE: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施�
 下图显示了系统 DIMM 的位置：
 
 +
-image::../media/drw_rxl_dimms.png[DRW rxl DIMM]
+image::../media/drw_rxl_dimms.png[更换DIMM]
 
 . 找到要安装 DIMM 的插槽。
 . 确保连接器上的 DIMM 弹出器卡舌处于打开位置，然后将 DIMM 垂直插入插槽。
@@ -174,7 +174,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 . 松开控制器模块侧面板上的翼形螺钉。
 . 将侧面板从控制器模块上摆动。
 +
-image::../media/drw_rxl_pcie.png[DRW rxl PCIe]
+image::../media/drw_rxl_pcie.png[卸下或安装PCIe卡]
 
 +
 |===

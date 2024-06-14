@@ -70,7 +70,7 @@ X6621A-2 （ 112-00574 ）， 2 米
 
 X6621A-5 （ 112-00574 ）， 5 米
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFP28连接器"]
  a| 
 存储，集群互连 /HA 和以太网数据（取决于订单）
 
@@ -83,7 +83,7 @@ X66240-2 （ 112-00598 ）， 2 米
 
 X66240-5 （ 112-00639 ）， 5 米
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]
  a| 
 GbE 网络连接（取决于订单）
 
@@ -98,7 +98,7 @@ X66250-5 （ 112-00344 ）， 5 米
 
 X66250-15 （ 112-00346 ）， 15 米
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]
  a| 
 FC 网络连接
 
@@ -122,7 +122,7 @@ X6555-R6 （ 112-00291 ）， 3 米
 
 X6562-R6 （ 112-00196 ）， 5 米
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
  a| 
 管理网络
 
@@ -144,7 +144,7 @@ image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 不适用
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["电源线"]
  a| 
 启动系统
 
@@ -168,7 +168,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置�
 NOTE: 您需要了解与系统重量相关的安全问题。
 
 +
-image::../media/drw_katana_lifting_restriction_icon.png[DRW katana 提升限制图标]
+image::../media/drw_katana_lifting_restriction_icon.png[两人举升小心]
 
 . 将缆线管理设备连接到控制器背面(如图所示)。
 +
@@ -200,9 +200,9 @@ image::../media/drw_c400_cable_tray_IEOPS-1208.svg[DRW C400电缆托架IEOPS 120
 .关于此任务
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有板载端口的缆线拉片均已启动，扩展（ NIC ）卡的缆线拉片已关闭。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -226,9 +226,9 @@ image::../media/drw_c400_TNSC-networking-cabling_IEOPS-1189.svg[DRW C400 TNSC网
 .关于此任务
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有板载端口的缆线拉片均已启动，扩展（ NIC ）卡的缆线拉片已关闭。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -258,7 +258,7 @@ image::../media/drw_c400_switched_network_cabling_IEOPS-1190.svg[DRW C400交换�
 .关于此任务
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。NS224 的缆线拉片已启动。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -280,7 +280,7 @@ image::../media/drw_c400_one_ns224_shelf_IEOPS-1191.svg[DRW C400单个ns224磁�
 .关于此任务
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。NS224 的缆线拉片已启动。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -324,7 +324,7 @@ image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交
 
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
+image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。

@@ -204,7 +204,7 @@ NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）是单独的模块�
 NOTE: 如果要向系统添加另一个缓存模块，请删除此空模块并转至下一步。
 
 +
-image::../media/drw_9000_remove_flashcache.png[DRW 9000 删除闪存]
+image::../media/drw_9000_remove_flashcache.png[缓存模块删除]
 
 +
 |===
@@ -257,7 +257,7 @@ NOTE: 请勿使用带编号和字母的 I/O 凸轮闩锁弹出缓存模块。带
 . 如果您尚未接地，请正确接地。
 . 如果要更换发生故障的核心转储模块，请找到并删除它：
 +
-image::../media/drw_9000_remove_flashcache.png[DRW 9000 删除闪存]
+image::../media/drw_9000_remove_flashcache.png[缓存模块删除]
 
 +
 [cols="1,3"]

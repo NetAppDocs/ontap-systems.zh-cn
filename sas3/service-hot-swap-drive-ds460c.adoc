@@ -96,11 +96,11 @@ NOTE: 磁盘驱动器固件每两分钟检查一次。
 * 如果需要，您可以参阅 " 监控磁盘架 LED " 一节，了解有关操作员显示面板和 FRU 组件上磁盘架 LED 的含义和位置的信息。
 * DS460C 驱动器架包含五个驱动器抽盒（驱动器抽盒 1 位于顶部，驱动器抽盒 5 位于底部），每个抽盒包含 12 个驱动器插槽。
 +
-image::../media/28_dwg_e2860_de460c_front_no_callouts.gif[28 dwg e2860 de460c 正面无标注]
+image::../media/28_dwg_e2860_de460c_front_no_callouts.gif[驱动器架正面图]
 
 * 下图显示了如何在磁盘架中的每个驱动器抽盒中将驱动器编号为 0 到 11 。
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[带有 HDD 标注的 Dwg Trafford 抽屉]
+image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[驱动器编号]
 
 
 
@@ -173,7 +173,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 .. 等待 30 秒。
 .. 使用凸轮把手将驱动器从磁盘架中提出。
 +
-image::../media/92_dwg_de6600_install_or_remove_drive.gif[92 dwg de6600 安装或删除驱动器]
+image::../media/92_dwg_de6600_install_or_remove_drive.gif[安装或删除驱动器]
 
 .. 将驱动器放在防静电的缓冲表面上，使其远离磁场。
 
@@ -183,7 +183,7 @@ image::../media/92_dwg_de6600_install_or_remove_drive.gif[92 dwg de6600 安装�
 .. 将新驱动器上的凸轮把手提起至垂直位置。
 .. 将驱动器托架两侧的两个凸起按钮与驱动器抽屉上驱动器通道中的匹配间隙对齐。
 +
-image::../media/28_dwg_e2860_de460c_drive_cru.gif[28 dwg e2860 de460c 驱动器 cru]
+image::../media/28_dwg_e2860_de460c_drive_cru.gif[驱动器上凸起的按钮的位置]
 
 +
 [cols="1,3"]
@@ -197,7 +197,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 .. 竖直向下放下驱动器，然后向下旋转凸轮把手，直到驱动器在橙色释放闩锁下卡入到位。
 .. 小心地将驱动器抽盒推回机箱。
 +
-image:../media/2860_dwg_e2860_de460c_gentle_close.gif[""]
+image:../media/2860_dwg_e2860_de460c_gentle_close.gif["轻轻合上抽盒"]
 
 +
 

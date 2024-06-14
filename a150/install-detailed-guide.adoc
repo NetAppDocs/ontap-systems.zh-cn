@@ -65,7 +65,7 @@ X6566B-05-R6 （ 112-00297 ）， 0.5 米
 
 X6566B-2-R6 （ 112-00299 ）， 2 米
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]
  a| 
 集群互连网络
 
@@ -80,7 +80,7 @@ image:../media/oie_cable_sfp_gbe_copper.png[""]
 
 X6566B-5-R6 （ 112-00301 ）， 5 米
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]
  a| 
 数据
 
@@ -108,7 +108,7 @@ FC 主机网络
 
 X6562-R6 （ 112-00196 ）， 5 米
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
  a| 
 管理网络和以太网数据
 
@@ -125,7 +125,7 @@ X66032A （ 112-00437 ）， 2 米
 
 X66033A （ 112-00438 ）， 3 米
  a| 
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""]
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS连接器"]
  a| 
 存储
 
@@ -147,7 +147,7 @@ image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 不适用
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["电源线"]
  a| 
 启动系统
 
@@ -169,11 +169,11 @@ image:../media/oie_cable_power.png[""]
 NOTE: 您需要了解与系统重量相关的安全问题。
 
 +
-image::../media/drw_oie_fas2700_weight_caution.png[DRW OIE fas2700 重量注意事项]
+image::../media/drw_oie_fas2700_weight_caution.png[两人举升小心]
 
 . 连接缆线管理设备（如图所示）。
 +
-image::../media/drw_cable_management_arm_install.png[DRW 缆线管理臂安装]
+image::../media/drw_cable_management_arm_install.png[正在连接电缆管理设备]
 
 . 将挡板放在系统正面。
 
@@ -221,13 +221,15 @@ image::../media/oie_legend_icon_3_lp.svg[OIE图例图标3 LP]
 .关于此任务
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
 
 .步骤
-. 使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b。+image:../media/drw_c190_u_tnsc_clust_cbling.png[""]
+. 使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b。
+ +
+image:../media/drw_c190_u_tnsc_clust_cbling.png["集群互连布线"]
 . 使用缆线将控制器连接到UTA2数据网络或以太网网络：
 +
 UTA2数据网络配置:: 使用以下缆线类型之一将UTA2数据端口连接到主机网络。
@@ -247,14 +249,14 @@ image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所
 以太网网络配置:: 使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。在下图中。
 +
 --
-image:../media/drw_c190_e_rj45_cbling.png[""]
+image:../media/drw_c190_e_rj45_cbling.png["主机网络布线"]
 
 --
 
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 +
-image:../media/drw_c190_u_mgmt_cbling.png[""]
+image:../media/drw_c190_u_mgmt_cbling.png["管理端口布线"]
 
 
 
@@ -269,7 +271,7 @@ IMPORTANT: 此时请勿插入电源线。
 .关于此任务
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -277,7 +279,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .步骤
 . 对于每个控制器模块、使用集群互连缆线将e0a和e0b连接到集群互连交换机。
 +
-image:../media/drw_c190_u_switched_clust_cbling.png[""]
+image:../media/drw_c190_u_switched_clust_cbling.png["集群互连布线"]
 
 . 您可以使用UTA2数据网络端口或以太网数据网络端口将控制器连接到主机网络：
 +
@@ -298,14 +300,14 @@ image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所
 以太网网络配置:: 使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。
 +
 --
-image:../media/drw_c190_e_rj45_cbling.png[""]
+image:../media/drw_c190_e_rj45_cbling.png["主机网络布线"]
 
 --
 
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 +
-image:../media/drw_c190_u_mgmt_cbling.png[""]
+image:../media/drw_c190_u_mgmt_cbling.png["管理端口布线"]
 
 
 
@@ -325,7 +327,7 @@ IMPORTANT: 此时请勿插入电源线。
 * 您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到驱动器磁盘架。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 +
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 
 
@@ -342,7 +344,7 @@ image::../media/drw_a150_ha_storage_cabling_IEOPS-1032.svg[DRW A150 HA存储布�
 ** IOM A 上的端口 3 连接到磁盘架正下方 IOM A 上的端口 1 。
 ** IOM B 上的端口 3 连接到磁盘架正下方 IOM B 上的端口 1 。
 +
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] 迷你 SAS HD 到迷你 SAS HD 缆线
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS连接器"]     mini-SAS HD to mini-SAS HD cables
 
 
 
@@ -351,14 +353,15 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] 迷你 SAS HD 到迷
 ** 控制器 1 端口 0b 连接到堆栈中最后一个驱动器架上的 IOM A 端口 3 。
 ** 控制器 2 端口 0a 连接到堆栈中第一个驱动器架上的 IOM A 端口 1 。
 +
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] 迷你 SAS HD 到迷你 SAS HD 缆线
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS连接器"]     mini-SAS HD to mini-SAS HD cables
 
 
 
 . 将每个节点连接到堆栈中的 IOM B
 +
 ** 控制器 1 端口 0a 连接到堆栈中第一个驱动器架上的 IOM B 端口 1 。
-** 控制器 2 端口 0b 连接到堆栈中最后一个驱动器架上的 IOM B 端口 3 。image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""] 迷你 SAS HD 到迷你 SAS HD 缆线
+** Controller 2 port 0b to IOM B port 3 on the last drive shelf in the stack.
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS连接器"]     mini-SAS HD to mini-SAS HD cables
 
 
 
@@ -385,7 +388,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 打开两个节点的电源开关。
 +
-image::../media/drw_turn_on_power_switches_to_psus.png[DRW 打开 PSU 的电源开关]
+image::../media/drw_turn_on_power_switches_to_psus.png[打开电源]
 
 +
 
@@ -401,7 +404,7 @@ image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交
 
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
+image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。
@@ -443,11 +446,11 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 .. 将控制台缆线连接到笔记本电脑或控制台，并使用系统随附的控制台缆线连接控制器上的控制台端口。
 +
-image::../media/drw_console_connect_fas2700_affa200.png[DRW 控制台连接 fas2700 affa200]
+image::../media/drw_console_connect_fas2700_affa200.png[正在连接到控制台端口]
 
 .. 将笔记本电脑或控制台连接到管理子网上的交换机。
 +
-image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[从 DRW 客户端到管理子网 fas2700 affa220]
+image::../media/drw_client_to_mgmt_subnet_fas2700_affa220.png[正在连接到管理子网]
 
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 
@@ -459,7 +462,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 打开两个节点的电源开关。
 +
-image::../media/drw_turn_on_power_switches_to_psus.png[DRW 打开 PSU 的电源开关]
+image::../media/drw_turn_on_power_switches_to_psus.png[打开电源]
 
 +
 
@@ -496,7 +499,7 @@ NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制�
 .. 将浏览器指向节点管理 IP 地址。
 +
 
-NOTE: 此地址的格式为 https://x.x.x.x[]。
+NOTE: 此地址的格式为 +https://x.x.x.x.+
 
 .. Configure the system using the data you collected in the https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"]。
 

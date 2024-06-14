@@ -469,7 +469,7 @@ You cable each NS224 drive shelf you are hot-adding so that each shelf has two c
 连接缆线的两端后，磁盘架和控制器端口 LNK （绿色） LED 将亮起。如果端口 LNK LED 不亮，请重新拔插缆线。
 
 +
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 * 您可以使用下图帮助您以物理方式识别磁盘架 NSM 端口 e0a 和 e0b ：
 +
@@ -662,7 +662,7 @@ NOTE: 此步骤假定您在每个控制器模块上的插槽 3 中安装了支�
 下图显示了在每个控制器模块中使用一个支持 RoCE 的 I/O 模块为一个热添加磁盘架布线：
 
 +
-image::../media/drw_ns224_a700_1shelf.png[DRW nss224 a700 1 个磁盘架]
+image::../media/drw_ns224_a700_1shelf.png[使用缆线将HA对连接到单个驱动器架]
 
 
 
@@ -706,7 +706,7 @@ NOTE: 这些子步骤假定您开始布线时使用的是将磁盘架端口 e0a 
 下图显示了第一个和第二个热添加磁盘架的布线：
 
 +
-image::../media/drw_ns224_a700_2shelves.png[DRW nss224 a700 2 个磁盘架]
+image::../media/drw_ns224_a700_2shelves.png[使用缆线将HA对连接到两个驱动器架]
 
 . 验证热添加磁盘架的布线是否正确。
 +

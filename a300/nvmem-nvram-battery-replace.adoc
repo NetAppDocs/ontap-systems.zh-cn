@@ -185,11 +185,11 @@ mcc1A::> metrocluster operation show
 
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 +
-image::../media/drw_32xx_cbl_mgmt_arm.png[DRW 32xx 电缆管理臂]
+image::../media/drw_32xx_cbl_mgmt_arm.png[卸下缆线管理臂][]
 
 . 松开控制器模块凸轮把手上的翼形螺钉。
 +
-image::../media/drw_8020_cam_handle_thumbscrew.png[DRW 8020 凸轮把手翼形螺钉]
+image::../media/drw_8020_cam_handle_thumbscrew.png[拧松翼形螺钉以打开凸轮把手]
 
 +
 |===
@@ -224,7 +224,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 ** 如果您的系统采用 HA 配置，请转至下一步。
 ** 如果您的系统采用独立配置，请完全关闭控制器模块，然后检查 NV 图标标识的 NVRAM LED 。
 +
-image::../media/drw_hw_nvram_icon.png[DRW 硬件 NVRAM 图标]
+image::../media/drw_hw_nvram_icon.png[NV LED]
 
 +
 
@@ -242,7 +242,7 @@ NOTE: 在暂停系统时， NVRAM LED 会闪烁，同时将内容存入闪存。
 
 . 打开 CPU 通风管并找到 NVMEM 电池。
 +
-image::../media/drw_rxl_nvmem_battery.png[DRW rxl nvmem 电池]
+image::../media/drw_rxl_nvmem_battery.png[Replacing the NVMEM battery]
 
 +
 |===

@@ -192,7 +192,7 @@ mcc1A::> metrocluster operation show
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
+image::../media/drw_A400_Remove_controller.png[释放控制器模块]
 
 +
 [cols="10a,90a"]
@@ -225,7 +225,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 
 要更换 PCIe 卡，您必须找到发生故障的 PCIe 卡，从控制器模块中卸下包含此卡的提升板，更换此卡，然后在控制器模块中重新安装 PCIe 提升板。
 
-image:../media/drw_A400_Replace-PCIe-cards.png[""]
+image:../media/drw_A400_Replace-PCIe-cards.png["卸下PCIe卡"]
 
 [cols="10,90"]
 |===
@@ -304,7 +304,7 @@ NOTE: 如果您要在底部插槽中安装卡，但无法正常看到卡插槽�
 
 .动画-更换夹层卡
 video::e3fd32b6-bdbb-4c53-b666-b030018a5744[panopto]
-image::../media/drw_A400_Replace-mezz-card.png[DRW A400 更换夹层卡]
+image::../media/drw_A400_Replace-mezz-card.png[卸下夹层卡]
 
 [cols="10a,90a"]
 |===

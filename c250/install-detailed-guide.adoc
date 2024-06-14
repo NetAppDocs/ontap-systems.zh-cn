@@ -64,7 +64,7 @@ X66240A-05 （ 112-00595 ）， 0.5 米；
 
 X66240-2 （ 112-00573 ）， 2 米
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFP28连接器"]
  a| 
 集群互连网络
 
@@ -95,7 +95,7 @@ RJ-45 （取决于订单）
  a| 
 不适用
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
  a| 
 管理网络（ BMC 和扳手端口）和以太网数据（ e0a 和 e0b ）
 
@@ -112,7 +112,7 @@ X66250-15 （ 112-00346 ） 15 米；
 
 X66250-30 （ 112-00347 ） 30 米
  a| 
-image:../media/oie_cable_fc_optical.png[""]
+image:../media/oie_cable_fc_optical.png["OIE光纤通道光缆"]
  a| 
 
 
@@ -133,7 +133,7 @@ image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 不适用
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["电源线"]
  a| 
 启动系统
 
@@ -155,7 +155,7 @@ image:../media/oie_cable_power.png[""]
 NOTE: 您需要了解与系统重量相关的安全问题。
 
 +
-image::../media/drw_affa250_weight_caution.png[DRW affa250 重量注意事项]
+image::../media/drw_affa250_weight_caution.png[两人举升小心]
 
 . 识别并管理缆线，因为此系统没有缆线管理设备。
 . 将挡板放在系统正面。
@@ -177,7 +177,7 @@ image::../media/drw_affa250_weight_caution.png[DRW affa250 重量注意事项]
 * 有关将系统连接到交换机的信息，请与网络管理员联系。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 +
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 +
 
@@ -193,14 +193,14 @@ video::beec3966-0a01-473c-a5de-ac68017fbf29[panopto]
 .步骤
 . 使用25GbE集群互连缆线将集群互连端口e0c连接到e0c、并将e0d连接到e0d。
 +
-image:../media/oie_cable_sfp_gbe_copper.png[""]：
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]：
 
 +
-image:../media/drw_affa250_tnsc_cabling.png[""]
+image:../media/drw_affa250_tnsc_cabling.png["在双节点无交换机集群中进行集群互连布线"]
 
 . 使用 RJ45 缆线将扳手端口连接到管理网络交换机。
 +
-image::../media/drw_affa250_mgmt_cabling.png[DRW affa250 管理布线]
+image::../media/drw_affa250_mgmt_cabling.png[管理端口布线]
 
 
 
@@ -216,7 +216,7 @@ IMPORTANT: 此时请勿插入电源线。
 * 有关将系统连接到交换机的信息，请与网络管理员联系。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 +
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 +
 
@@ -232,11 +232,11 @@ video::bf6759dc-4cbf-488e-982e-ac68017fbef8[panopto]
 .步骤
 . 使用缆线将集群互连端口e0c和e0d连接到25 GbE集群互连交换机。
 +
-image::../media/drw_affa250_switched_clust_cabling.png[DRW affa250交换电缆]
+image::../media/drw_affa250_switched_clust_cabling.png[集群互连布线]
 
 . 使用 RJ45 缆线将扳手端口连接到管理网络交换机。
 +
-image::../media/drw_affa250_mgmt_cabling.png[DRW affa250 管理布线]
+image::../media/drw_affa250_mgmt_cabling.png[管理端口布线]
 
 
 
@@ -264,7 +264,7 @@ NOTE: link:https://hwu.netapp.com["NetApp Hardware Universe"^] 主机网卡(光�
 * 有关将系统连接到交换机的信息，请与网络管理员联系。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 +
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 +
 
@@ -278,7 +278,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .步骤
 . 使用缆线将端口 2a 至 2D 连接到 FC 主机交换机。
 +
-image:../media/drw_affa250_fc_host_cabling.png[""]
+image:../media/drw_affa250_fc_host_cabling.png["光纤通道主机布线"]
 
 
 
@@ -291,7 +291,7 @@ image:../media/drw_affa250_fc_host_cabling.png[""]
 * 有关将系统连接到交换机的信息，请与网络管理员联系。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 +
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 +
 
@@ -305,7 +305,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .步骤
 . 使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。
 +
-image:../media/drw_affa250_25gbe_host_cabling.png[""]
+image:../media/drw_affa250_25gbe_host_cabling.png["25 GbE布线"]
 
 
 
@@ -317,7 +317,7 @@ image:../media/drw_affa250_25gbe_host_cabling.png[""]
 .开始之前
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -330,11 +330,11 @@ video::3f92e625-a19c-4d10-9028-ac68017fbf57[panopto]
 .步骤
 . 使用缆线将控制器A连接到磁盘架。
 +
-image:../media/drw_affa250_1shelf_cabling_a.png[""]
+image:../media/drw_affa250_1shelf_cabling_a.png["控制器A布线"]
 
 . 使用缆线将控制器B连接到磁盘架。
 +
-image:../media/drw_affa250_1shelf_cabling_b.png[""]
+image:../media/drw_affa250_1shelf_cabling_b.png["控制器B布线"]
 
 
 
@@ -375,7 +375,7 @@ image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交
 
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
+image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。

@@ -230,7 +230,7 @@ dr-group-id            cluster node           configuration-state
 .. 确认 MetroCluster 已配置且处于正常模式： `MetroCluster show`
 .. 执行 MetroCluster 检查： `MetroCluster check run`
 .. 显示 MetroCluster 检查的结果： `MetroCluster check show`
-.. 运行 Config Advisor 。转到 NetApp 支持站点上的 Config Advisor 页面，网址为 http://support.netapp.com/NOW/download/tools/config_advisor/["support.netapp.com/NOW/download/tools/config_advisor/"]。
+.. 运行 Config Advisor 。转到NetApp 支持站点 上的Config Advisor页面、网址为 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/["support.netapp.com/NOW/download/tools/config_advisor/"]。
 +
 运行 Config Advisor 后，查看该工具的输出并按照输出中的建议解决发现的任何问题。
 

@@ -23,11 +23,11 @@ summary: 要更换控制器模块硬件，您必须卸下受损的控制器，�
 
 下图显示了如何从受损控制器模块中卸下缆线和缆线管理臂：
 
-image::../media/drw_a320_controller_cable_unplug_animated_gif.png[DRW A320 控制器缆线拔下动画 gif]
+image::../media/drw_a320_controller_cable_unplug_animated_gif.png[卸下缆线管理设备]
 
 下图显示了如何从机箱中卸下受损的控制器模块：
 
-image::../media/drw_a320_controller_remove_animated_gif.png[DRW A320 控制器删除动画 gif]
+image::../media/drw_a320_controller_remove_animated_gif.png[删除控制器]
 
 . 如果您尚未接地，请正确接地。
 . 从电源拔下控制器模块电源。
@@ -228,7 +228,7 @@ image::../media/drw_a320_pci_riser_move_animated_gif.png[DRW A320 PCI 提升板�
 
 您可以使用下图或写入的步骤在机箱中安装替代控制器模块。
 
-image::../media/drw_a320_controller_install_animated_gif.png[DRW A320 控制器安装动画 gif]
+image::../media/drw_a320_controller_install_animated_gif.png[安装控制器]
 
 . 如果尚未关闭控制器模块后部的通风管，请将盖板重新安装到 PCIe 卡上。
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。

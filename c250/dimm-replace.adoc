@@ -90,7 +90,7 @@ LOADER 提示符
 NOTE: 如果在卸下控制器模块时遇到困难，请将食指从内部穿过指孔（通过跨越臂）。
 
 +
-image::../media/drw_a250_pcm_remove_install.png[DRW A250 PCM 拆卸安装]
+image::../media/drw_a250_pcm_remove_install.png[打开闩锁装置]
 
 +
 [cols="1,3"]
@@ -111,7 +111,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 . 用双手抓住控制器模块两侧，将其轻轻拉出机箱，并将其放在平稳的表面上。
 . 逆时针转动控制器模块正面的翼形螺钉，然后打开控制器模块盖板。
 +
-image::../media/drw_a250_open_controller_module_cover.png[DRW A250 打开控制器模块盖板]
+image::../media/drw_a250_open_controller_module_cover.png[打开控制器模块护盖]
 
 +
 [cols="1,3"]
@@ -131,7 +131,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 |===
 . 取下通风管盖。
 +
-image::../media/drw_a250_remove_airduct_cover.png[DRW A250 拆下通风管盖]
+image::../media/drw_a250_remove_airduct_cover.png[提起空气管道盖]
 
 
 
@@ -150,7 +150,7 @@ video::fa6b8107-86fb-4332-aa57-ac5b01605e52[panopto]
 DIMM 位于主板上的插槽 3 或 1 中。插槽 2 和 4 为空。请勿尝试在这些插槽中安装 DIMM 。
 
 +
-image::../media/drw_a250_dimm_replace.png[更换 DRW A250 DIMM]
+image::../media/drw_a250_dimm_replace.png[更换DIMM]
 
 . 记下插槽中 DIMM 的方向，以便可以按正确的方向插入更换用的 DIMM 。
 . 缓慢地将 DIMM 两侧的 DIMM 弹出卡舌分开，然后将 DIMM 滑出插槽。
@@ -177,11 +177,11 @@ DIMM 紧紧固定在插槽中。如果没有，请重新插入 DIMM ，使其与
 
 . 如果尚未安装此通风管，请安装此通风管。
 +
-image::../media/drw_a250_install_airduct_cover.png[DRW A250 安装通风管盖]
+image::../media/drw_a250_install_airduct_cover.png[安装空气管道]
 
 . 合上控制器模块盖并拧紧翼形螺钉。
 +
-image::../media/drw_a250_close_controller_module_cover.png[DRW A250 合上控制器模块盖]
+image::../media/drw_a250_close_controller_module_cover.png[合上控制器模块护盖]
 
 +
 [cols="1,3"]

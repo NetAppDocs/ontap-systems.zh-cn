@@ -17,16 +17,16 @@
 
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 +
-image::../media/drw_25xx_cable_management_arm.png[DRW 25xx 缆线管理臂]
+image::../media/drw_25xx_cable_management_arm.png[插入或卸下缆线管理ARM]
 
 . 按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。
 +
-image::../media/drw_2240_x_opening_cam_latch.png[DRW 2240 x 打开凸轮闩锁]
+image::../media/drw_2240_x_opening_cam_latch.png[打开凸轮把手闩锁]
 
 . 将控制器模块翻转，将其放在平稳的表面上。
 . 滑动蓝色卡舌以释放盖板，然后向上翻盖并打开，从而打开盖板。
 +
-image::../media/drw_2600_opening_pcm_cover.png[DRW 2600 打开 PCM 盖板]
+image::../media/drw_2600_opening_pcm_cover.png[打开或关闭控制器模块]
 
 
 
@@ -40,7 +40,7 @@ image::../media/drw_2600_opening_pcm_cover.png[DRW 2600 打开 PCM 盖板]
 . 如果您尚未接地，请正确接地。
 . 使用下图或控制器模块上的 FRU 映射找到启动介质：
 +
-image::../media/drw_2600_boot_media_move_aminated_gif.png[DRW 2600 启动介质移动已禁用 gif]
+image::../media/drw_2600_boot_media_move_aminated_gif.png[查找启动介质]
 
 . 按启动介质外壳上的蓝色按钮，将启动介质从其外壳中释放，然后将其竖直拉出启动介质插槽。
 +

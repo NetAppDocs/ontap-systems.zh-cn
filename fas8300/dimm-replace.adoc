@@ -184,7 +184,7 @@ mcc1A::> metrocluster operation show
 
 .动画-删除控制器模块
 video::75b6fa91-96b9-4323-b156-aae10007c9a5[panopto]
-image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
+image::../media/drw_A400_Remove_controller.png[释放控制器模块]
 
 .步骤
 . 如果您尚未接地，请正确接地。
@@ -218,7 +218,7 @@ NOTE: 动画和图中显示了不带 DIMM 的插槽的空插槽。These empty so
 
 .动画-更换系统DIMM
 video::175c6597-449e-4dc8-8c02-aad9012f08b5[panopto]
-image::../media/drw_A400_Replace-NVDIMM-DIMM.png[DRW A400 更换 NVDIMM DIMM]
+image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Moving the DIMMs]
 
 系统中 DIMM 的数量和位置取决于系统的型号。有关详细信息，请参见通风管上的 FRU 示意图。
 
@@ -267,7 +267,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 .动画-安装控制器模块
 video::9249fdb8-1522-437d-9280-aae10007c97b[panopto]
-image::../media/drw_A400_Install_controller_source.png[DRW A400 安装控制器源]
+image::../media/drw_A400_Install_controller_source.png[安装控制器]
 
 .步骤
 . 如果尚未关闭此通风管，请关闭此通风管。

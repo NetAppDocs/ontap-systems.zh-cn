@@ -34,7 +34,7 @@ video::ab0ebe6b-e891-489c-aab4-ac5b015c8f01[panopto]
 NOTE: 如果在卸下控制器模块时遇到困难，请将食指从内部穿过指孔（通过跨越臂）。
 
 +
-image::../media/drw_a250_pcm_remove_install.png[DRW A250 PCM 拆卸安装]
+image::../media/drw_a250_pcm_remove_install.png[打开闩锁装置]
 
 +
 |===
@@ -54,7 +54,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 . 用双手抓住控制器模块两侧，将其轻轻拉出机箱，并将其放在平稳的表面上。
 . 逆时针转动控制器模块正面的翼形螺钉，然后打开控制器模块盖板。
 +
-image::../media/drw_a250_open_controller_module_cover.png[DRW A250 打开控制器模块盖板]
+image::../media/drw_a250_open_controller_module_cover.png[打开控制器模块护盖]
 
 +
 |===
@@ -73,7 +73,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 |===
 . 取下通风管盖。
 +
-image::../media/drw_a250_remove_airduct_cover.png[DRW A250 拆下通风管盖]
+image::../media/drw_a250_remove_airduct_cover.png[提起空气管道盖]
 
 
 
@@ -92,7 +92,7 @@ image::../media/drw_a250_remove_airduct_cover.png[DRW A250 拆下通风管盖]
 CAUTION: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
 
 +
-image::../media/drw_a250_replace_psu.png[DRW A250 更换 PSU]
+image::../media/drw_a250_replace_psu.png[卸下电源设备]
 
 +
 |===
@@ -128,7 +128,7 @@ IMPORTANT: 为避免损坏内部连接器，请勿在将电源滑入系统时用
 
 . 通过挤压风扇模块的侧面，然后将风扇模块竖直提出控制器模块来卸下风扇模块。
 +
-image::../media/drw_a250_replace_fan.png[DRW A250 更换风扇]
+image::../media/drw_a250_replace_fan.png[卸下风扇模块]
 
 +
 |===
@@ -152,7 +152,7 @@ AFF A250 中控制器模块的通风管下方有一个启动介质设备。您�
 
 . 找到受损控制器模块中的启动介质并将其移至替代控制器模块。
 +
-image::../media/drw_a250_replace_boot_media.png[DRW A250 更换启动介质]
+image::../media/drw_a250_replace_boot_media.png[Replacing the boot media]
 
 +
 |===
@@ -187,7 +187,7 @@ NOTE: 拧紧启动介质上的螺钉时请勿用力，否则可能会使其发�
 
 要移动 DIMM ，请找到 DIMM 并将其从受损控制器移至更换控制器，然后按照特定步骤顺序进行操作。
 
-image::../media/drw_a250_dimm_replace.png[更换 DRW A250 DIMM]
+image::../media/drw_a250_dimm_replace.png[更换DIMM]
 
 
 IMPORTANT: Install each DIMM into the same slot it occupied in the impaired controller module.
@@ -214,7 +214,7 @@ DIMM 紧紧固定在插槽中。如果没有，请重新插入 DIMM ，使其与
 
 . 找到受损控制器模块中的夹层卡并将其移动。
 +
-image::../media/drw_a250_replace_mezz_card.png[DRW A250 更换夹层卡]
+image::../media/drw_a250_replace_mezz_card.png[卸下夹层卡]
 
 +
 |===
@@ -266,7 +266,7 @@ NOTE: 拧紧夹层卡上的螺钉时请勿用力，否则可能会使其发生�
 
 . 找到 NVMEM 电池并将其从受损控制器模块移至更换用的控制器模块。
 +
-image::../media/drw_a250_replace_nvmem_batt.png[DRW A250 更换 nvmem 电池]
+image::../media/drw_a250_replace_nvmem_batt.png[卸下NVMEM电池]
 
 +
 |===
@@ -315,11 +315,11 @@ image:../media/legend_icon_04.png["标注编号4"]
 
 . 如果尚未安装此通风管，请安装此通风管。
 +
-image::../media/drw_a250_install_airduct_cover.png[DRW A250 安装通风管盖]
+image::../media/drw_a250_install_airduct_cover.png[安装空气管道]
 
 . 合上控制器模块盖并拧紧翼形螺钉。
 +
-image::../media/drw_a250_close_controller_module_cover.png[DRW A250 合上控制器模块盖]
+image::../media/drw_a250_close_controller_module_cover.png[合上控制器模块护盖]
 
 +
 |===

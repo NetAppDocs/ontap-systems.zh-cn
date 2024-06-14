@@ -61,7 +61,7 @@ X6566B-3-R6 ， 112-00300 ， 3 米
 
 X6566B-5-R6 ， 112-00301 ， 5 米
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]
  a| 
 网络缆线
 
@@ -76,7 +76,7 @@ X66100-1 ， 112-00542 ， 1 米
 
 X66100-3 ， 112-00543 ， 3 米
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFP28连接器"]
  a| 
 40 GbE 网络
 
@@ -97,7 +97,7 @@ X6621A-2 （ 112-00574 ）， 2 米
 
 X6621A-5 （ 112-00574 ）， 5 米
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFP28连接器"]
  a| 
 网络缆线
 
@@ -128,7 +128,7 @@ FC 主机网络
 
 X6562-R6 （ 112-00196 ）， 5 米
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
  a| 
 管理网络和以太网数据
 
@@ -143,7 +143,7 @@ X66032A （ 112-00437 ）， 2 米
 
 X66033A （ 112-00438 ）， 3 米
  a| 
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""]
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS连接器"]
  a| 
 存储
 
@@ -165,7 +165,7 @@ image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 不适用
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["电源线"]
  a| 
 启动系统
 
@@ -220,7 +220,7 @@ image::../media/drw_9000_cable_management_arms.png[DRW 9000 缆线管理臂]
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -247,7 +247,7 @@ image::../media/drw_9000_TNSC_composite_cabling.png[DRW 9000 TNSC 复合布线]
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -278,9 +278,9 @@ image:../media/drw_9000_switched_cluster_cabling.png[""]
 
 将缆线插入驱动器架，拉片朝下，而将缆线的另一端插入控制器存储模块，拉片朝上。
 
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 .步骤
 . 使用以下动画或插图将驱动器架连接到控制器。
@@ -296,7 +296,7 @@ NOTE: 这些示例使用 DS224C 磁盘架。布线与其他受支持的 SAS 驱�
 .动画—为ONTAP 9.7及更早版本的SAS存储布线
 video::a312e09e-df56-47b3-9b5e-ab2300477f67[panopto]
 +
-image:../media/SAS_storage_ONTAP_9.7_and_earlier.png[""]
+image:../media/SAS_storage_ONTAP_9.7_and_earlier.png["适用于ONTAP 9.7及更早版本的SAS存储布线"]
 
 +
 ** 在 FAS9000 ， AFF A700 和 ASA AFF A700 ， ONTAP 9.8 及更高版本中为 SAS 磁盘架布线：
@@ -306,7 +306,7 @@ image:../media/SAS_storage_ONTAP_9.7_and_earlier.png[""]
 .动画—为SAS存储布线—ONTAP 9.8及更高版本
 video::61d23302-9526-4a2b-9335-ac5b0032eafd[panopto]
 +
-image:../media/SAS_storage_ONTAP_9.8_and_later.png[""]
+image:../media/SAS_storage_ONTAP_9.8_and_later.png["适用于ONTAP 9.8及更高版本的SAS存储布线"]
 
 +
 
@@ -316,7 +316,7 @@ NOTE: 如果您有多个驱动器架堆栈，请参见适用于您的驱动器�
 https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["安装新系统安装的磁盘架并为其布线—带有 IOM12 模块的磁盘架"]
 
 +
-image:../media/Cable_shelves_new_system_IOM12_shelves.png[""]
+image:../media/Cable_shelves_new_system_IOM12_shelves.png["使用SAS磁盘架进行存储系统布线"]
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
@@ -331,10 +331,10 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png[""]
 * The systems must have at least one X91148A module installed in slots 3 and/or 7 for each controller.动画或插图显示了此模块同时安装在插槽 3 和 7 中。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 +
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 +
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 +
 
@@ -348,10 +348,10 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .动画—为单个NS224磁盘架布线—ONTAP 9.8及更高版本
 video::6520eb01-87b3-4520-9109-ac5b0032ea4e[panopto]
 +
-image::../media/drw_ns224_a700_1shelf.png[DRW nss224 a700 1 个磁盘架]
+image::../media/drw_ns224_a700_1shelf.png[使用缆线将HA对连接到单个驱动器架]
 
 +
-image::../media/single_NS224_shelf.png[一个 NS224 磁盘架]
+image::../media/single_NS224_shelf.png[单磁盘架布线]
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
@@ -366,10 +366,10 @@ image::../media/single_NS224_shelf.png[一个 NS224 磁盘架]
 * 系统必须在插槽 3 和 7 中为每个控制器安装两个 X91148A 模块。
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 +
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 +
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 +
 
@@ -383,10 +383,10 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .动画—用缆线连接两个NS224磁盘架—ONTAP 9.8及更高版本
 video::34098e39-73ad-45de-9af7-ac5b0032ea9a[panopto]
 +
-image::../media/drw_ns224_a700_2shelves.png[DRW nss224 a700 2 个磁盘架]
+image::../media/drw_ns224_a700_2shelves.png[使用缆线将HA对连接到两个驱动器架]
 
 +
-image::../media/two_NS224_shelves.png[两个 NS224 磁盘架]
+image::../media/two_NS224_shelves.png[双磁盘架布线]
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
@@ -430,7 +430,7 @@ NOTE: 初始启动可能需要长达八分钟的时间。
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
+image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。
@@ -486,7 +486,7 @@ NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或�
 
 .. 使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台，然后将此笔记本电脑连接到管理子网上的管理交换机。
 +
-image::../media/drw_9000_cable_console_switch_controller.png[DRW 9000 缆线控制台交换机控制器]
+image::../media/drw_9000_cable_console_switch_controller.png[控制台布线]
 
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 

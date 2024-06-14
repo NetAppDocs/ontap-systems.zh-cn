@@ -60,7 +60,7 @@ The following table identifies the types of cables you might receive.如果您�
  a| 
 X6621A-05 （ 112-00595 ）， 0.5 米
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFP28连接器"]
  a| 
 HA 互连
 
@@ -111,7 +111,7 @@ RJ-45 （取决于订单）
  a| 
 不适用
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
  a| 
 管理
 
@@ -128,7 +128,7 @@ X66250-15 （ 112-00346 ） 15 米；
 
 X66250-30 （ 112-00347 ） 30 米
  a| 
-image:../media/oie_cable_fc_optical.png[""]
+image:../media/oie_cable_fc_optical.png["OIE光纤通道光缆"]
  a| 
 
 
@@ -149,7 +149,7 @@ image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 不适用
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["电源线"]
  a| 
 启动系统
 
@@ -174,11 +174,11 @@ https://docs.netapp.com/us-en/ontap-systems/platform-supplemental/superrail-inst
 NOTE: 您需要了解与系统重量相关的安全问题。
 
 +
-image::../media/drw_affa800_weight_caution.png[DRW affa800 重量注意事项]
+image::../media/drw_affa800_weight_caution.png[四人举升小心]
 
 . 连接缆线管理设备（如图所示）。
 +
-image::../media/drw_affa800_install_cable_mgmt.png[DRW affa800 安装缆线管理]
+image::../media/drw_affa800_install_cable_mgmt.png[正在连接缆线管理设备]
 
 . 将挡板放在系统正面。
 
@@ -206,7 +206,7 @@ image::../media/drw_affa800_install_cable_mgmt.png[DRW affa800 安装缆线管�
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -223,36 +223,38 @@ video::edc42447-f721-4cbe-b080-ab0c0123a139[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_dp.png[""]
+image:../media/oie_legend_icon_1_dp.png["标注编号1"]
  a| 
 为 HA 互连端口布线：
 
 ** e0b 到 e0b
-** e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
+** e1b至e1b
+image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lg.png[""]
+image:../media/oie_legend_icon_2_lg.png["标注编号2"]
  a| 
 为集群互连端口布线：
 
 ** e0a 到 e0a
-** e1a 到 e1aimage:../media/drw_affa800_tnsc_clust_cabling.png[""]
+** e1a到e1a
+image:../media/drw_affa800_tnsc_clust_cabling.png["在双节点无交换机集群中进行集群互连布线"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png[""]
+image:../media/oie_legend_icon_3_lp.png["步骤3."]
  a| 
 Cable the management ports to the management network switches    image:../media/drw_affa800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
 
 
 
  a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
+image:../media/oie_legend_icon_attn_symbol.png["注意符号"]
  a| 
 此时请勿插入电源线。
 
@@ -279,7 +281,7 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -296,32 +298,36 @@ video::49e48140-4c5a-4395-a7d7-ab0c0123a10e[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_dp.png[""]
+image:../media/oie_legend_icon_1_dp.png["标注编号1"]
  a| 
 为 HA 互连端口布线：
 
 ** e0b 到 e0b
-** e1b 到 e1bimage:../media/drw_affa800_ha_pair_cabling.png[""]
+** e1b至e1b
+image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lg.png[""]
+image:../media/oie_legend_icon_2_lg.png["标注编号2"]
  a| 
-使用缆线将集群互连端口连接到 100 GbE 集群互连交换机。* e0a * e1aimage:../media/drw_affa800_switched_clust_cabling.png[""]
+使用缆线将集群互连端口连接到100 GbE集群互连交换机。
+** e0a
+** e1a.
+image:../media/drw_affa800_switched_clust_cabling.png["集群互连布线"]
 
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png[""]
+image:../media/oie_legend_icon_3_lp.png["步骤3."]
  a| 
 Cable the management ports to the management network switches    image:../media/drw_affa800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
 
 
 
  a| 
-image:../media/oie_legend_icon_attn_symbol.png[""]
+image:../media/oie_legend_icon_attn_symbol.png["注意符号"]
  a| 
 此时请勿插入电源线。
 
@@ -354,7 +360,7 @@ image:../media/oie_legend_icon_attn_symbol.png[""]
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -367,7 +373,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 1.
  a| 
-使用缆线将端口 2a 至 2D 连接到 FC 主机交换机。image:../media/drw_affa800_fc_host_cabling.png[""]
+Cable ports 2a through 2d to the FC host switches.image:../media/drw_affa800_fc_host_cabling.png["光纤通道主机网络布线"]
 
 
 
@@ -399,7 +405,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -412,7 +418,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
  a| 
 1.
  a| 
-使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。image:../media/drw_affa800_10gbe_host_cabling.png[""]
+Cable ports e4a through e4d to the 10GbE host network switches.image:../media/drw_affa800_10gbe_host_cabling.png["主机网络布线"]
 
 
 
@@ -442,7 +448,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 .开始之前
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -457,16 +463,16 @@ video::09dade4f-00bd-4d41-97d7-ab0c0123a0b4[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png[""]
+image:../media/oie_legend_icon_1_mb.png["标注编号1"]
  a| 
-使用缆线将控制器 A 连接到磁盘架： image:../media/drw_affa800_1shelf_cabling_a.png[""]
+使用缆线将控制器 A 连接到磁盘架：    image:../media/drw_affa800_1shelf_cabling_a.png["使用缆线将控制器连接到单个磁盘架"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png[""]
+image:../media/oie_legend_icon_2_lo.png["标注编号2"]
  a| 
-使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_1shelf_cabling_b.png[""]
+Cable controller B to the shelf:    image:../media/drw_affa800_1shelf_cabling_b.png["使用缆线将控制器B连接到单个磁盘架"]
 
 |===
 To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
@@ -480,7 +486,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 .开始之前
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -495,16 +501,16 @@ video::fe50ac38-9375-4e6b-85af-ab0c0123a0e0[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png[""]
+image:../media/oie_legend_icon_1_mb.png["标注编号1"]
  a| 
-使用缆线将控制器 A 连接到磁盘架： image:../media/drw_affa800_2shelf_cabling_a.png[""]
+Cable controller A to the shelves:    image:../media/drw_affa800_2shelf_cabling_a.png["使用缆线将控制器A连接到两个磁盘架"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png[""]
+image:../media/oie_legend_icon_2_lo.png["标注编号2"]
  a| 
-使用缆线将控制器 B 连接到磁盘架： image:../media/drw_affa800_2shelf_cabling_b.png[""]
+Cable controller B to the shelves:    image:../media/drw_affa800_2shelf_cabling_b.png["使用缆线将控制器B连接到两个磁盘架"]
 
 |===
 To complete setting up your system, see link:install-detailed-guide.html#step-4-complete-system-setup-and-configuration["第 4 步：完成系统设置和配置"]。
@@ -536,7 +542,7 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
+image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。
@@ -573,11 +579,11 @@ NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或�
 
 .. 将控制台缆线连接到笔记本电脑或控制台，并使用系统随附的控制台缆线连接控制器上的控制台端口。
 +
-image::../media/drw_console_connect_affa800.png[DRW 控制台连接 affa800]
+image::../media/drw_console_connect_affa800.png[正在连接到控制台端口]
 
 .. 将笔记本电脑或控制台连接到管理子网上的交换机。
 +
-image::../media/drw_client_mgmt_subnet_affa800.png[DRW 客户端管理子网 affa800]
+image::../media/drw_client_mgmt_subnet_affa800.png[连接笔记本电脑或控制台以打开管理子网]
 
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 

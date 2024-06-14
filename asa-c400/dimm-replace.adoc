@@ -200,14 +200,14 @@ image::../media/drw_c400_remove_controller_IEOPS-1216.svg[DRW C400卸下控制�
 
 
  a| 
-image:../media/legend_icon_01.png[""]
+image:../media/legend_icon_01.png["标注编号1"]
  a| 
 锁定闩锁
 
 
 
  a| 
-image:../media/legend_icon_02.png[""]
+image:../media/legend_icon_02.png["标注编号2"]
  a| 
 控制器从机箱中略微移出
 
@@ -232,7 +232,7 @@ NOTE: 动画和图中显示了不带 DIMM 的插槽的空插槽。These empty so
 
 .动画-更换系统DIMM
 video::93025369-2f61-46b1-bd51-b03100040fe6[panopto]
-image::../media/drw_A400_Replace-NVDIMM-DIMM.png[DRW A400 更换 NVDIMM DIMM]
+image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Moving the DIMMs]
 
 [cols="10,90"]
 |===

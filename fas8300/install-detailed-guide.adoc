@@ -59,7 +59,7 @@ X6621A-2 （ 112-00574 ）， 2 米
 
 X6621A-5 （ 112-00574 ）， 5 米
  a| 
-image:../media/oie_cable100_gbe_qsfp28.png[""]
+image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFP28连接器"]
  a| 
 存储，集群互连 /HA 和以太网数据（取决于订单）
 
@@ -72,7 +72,7 @@ X66240-2 （ 112-00598 ）， 2 米
 
 X66240-5 （ 112-00639 ）， 5 米
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]
  a| 
 GbE 网络连接（取决于订单）
 
@@ -87,7 +87,7 @@ X66250-5 （ 112-00344 ）， 5 米
 
 X66250-15 （ 112-00346 ）， 15 米
  a| 
-image:../media/oie_cable_sfp_gbe_copper.png[""]
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]
  a| 
 FC 网络连接
 
@@ -104,7 +104,7 @@ X66032A （ 112-00437 ）， 2 米
 
 X66033A （ 112-00438 ）， 3 米
  a| 
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png[""]
+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS连接器"]
  a| 
 迷你 SAS HD 到迷你 SAS HD 缆线（取决于订单）
 
@@ -128,7 +128,7 @@ X6555-R6 （ 112-00291 ）， 3 米
 
 X6562-R6 （ 112-00196 ）， 5 米
  a| 
-image:../media/oie_cable_rj45.png[""]
+image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
  a| 
 管理网络
 
@@ -150,7 +150,7 @@ image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
  a| 
 不适用
  a| 
-image:../media/oie_cable_power.png[""]
+image:../media/oie_cable_power.png["电源线"]
  a| 
 启动系统
 
@@ -175,11 +175,11 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置�
 NOTE: 您需要了解与系统重量相关的安全问题。
 
 +
-image::../media/drw_katana_lifting_restriction_icon.png[DRW katana 提升限制图标]
+image::../media/drw_katana_lifting_restriction_icon.png[两人举升小心]
 
 . 连接缆线管理设备（如图所示）。
 +
-image::../media/drw_a320_cable_management_arms.png[DRW A320 缆线管理臂]
+image::../media/drw_a320_cable_management_arms.png[卸下或安装缆线管理臂]
 
 . 将挡板放在系统正面。
 
@@ -203,9 +203,9 @@ NOTE: 如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有板载端口的缆线拉片均已启动，扩展（ NIC ）卡的缆线拉片已关闭。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -231,9 +231,9 @@ image::../media/drw_fas8300_TNSC_network_cabling.png[DRW fas8300 TNSC 网络布�
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有板载端口的缆线拉片均已启动，扩展（ NIC ）卡的缆线拉片已关闭。
 
-image::../media/oie_cable_pull_tab_up.png[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.png[电缆连接器，顶部带有推拉卡舌]
 
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -261,7 +261,7 @@ image::../media/drw_fas8300_switched_network_cabling.png[DRW fas8300 交换网�
 
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。DS224-C 的缆线拉片已关闭。
 
-image::../media/oie_cable_pull_tab_down.png[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -305,7 +305,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[DRW 自动发现控制器选择]
+image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。

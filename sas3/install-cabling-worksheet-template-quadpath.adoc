@@ -68,7 +68,7 @@ image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_set1_c
 以下示例将端口对 1c/2D 用于多路径布线，并将端口对 2c/1b 用于到堆栈 2 的四路径布线。
 
 +
-image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[DRW 工作表 qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 NAU]
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[四路径HA布线工作表]
 
 . 如果您使用的是四路径（单控制器）配置，请交叉显示控制器 2 的信息；您只需要控制器 1 信息即可为控制器到堆栈的连接布线。
 +

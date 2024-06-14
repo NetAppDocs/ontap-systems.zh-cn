@@ -1,16 +1,7 @@
----
-permalink: a700/caching-module-hot-swap.html 
-sidebar: sidebar 
-keywords: aff a700, fas9000, hot swap, replace, FlashCache 
-summary: NVMe SSD FlashCache 模块（ FlashCache 或缓存模块）仅位于 FAS9000 系统插槽 6 中 NVRAM10 模块的正面。从 ONTAP 9.4 开始，您可以从同一个或不同的受支持供应商热插拔具有相同容量的缓存模块。 
----
-= 热插拔缓存模块- AFF A700
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
-[role="lead"]
 NVMe SSD FlashCache 模块（ FlashCache 或缓存模块）仅位于 FAS9000 系统插槽 6 中 NVRAM10 模块的正面。从 ONTAP 9.4 开始，您可以从同一个或不同的受支持供应商热插拔具有相同容量的缓存模块。
 
 .开始之前
@@ -76,7 +67,7 @@ NOTE: 请参见 https://docs.netapp.com/us-en/ontap-cli-9121/["命令手册页"^
 
 . 删除缓存模块：
 +
-image::../media/drw_9000_remove_flashcache.png[DRW 9000 删除闪存]
+image::../media/drw_9000_remove_flashcache.png[Replacing the caching module]
 
 +
 |===

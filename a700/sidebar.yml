@@ -37,10 +37,6 @@ entries:
       url: "/a700/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/a700/bootmedia-complete-rma.html"
-  - title: 缓存模块
-    url: "/a700/caching-module-and-core-dump-module-replace.html"
-  - title: 缓存模块（热插拔）
-    url: "/a700/caching-module-hot-swap.html"
   - title: 机箱
     pdf-filename: AFF A700 机箱
     entries:

@@ -184,7 +184,7 @@ mcc1A::> metrocluster operation show
 
 .动画-删除控制器模块
 video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
-image::../media/drw_A400_Remove_controller.png[DRW A400 删除控制器]
+image::../media/drw_A400_Remove_controller.png[释放控制器模块]
 
 [cols="10a,90a"]
 |===
@@ -242,7 +242,7 @@ NOTE: 此动画显示了没有 DIMM 的插槽中的空插槽。这些空插槽�
 
 .动画-更换NVDIMM
 video::2d407c98-e925-4099-a222-afcf01683d4d[panopto]
-image::../media/drw_A400_Replace-NVDIMM-DIMM.png[DRW A400 更换 NVDIMM DIMM]
+image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Moving the DIMMs]
 
 [cols="10,90"]
 |===

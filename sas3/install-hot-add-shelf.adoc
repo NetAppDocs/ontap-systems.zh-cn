@@ -202,7 +202,7 @@ CAUTION: 建议您使用一个机械升降机或四个人使用升降机把手�
 您的DS460C发货随附了四个可拆卸的升降把手(每侧两个)。要使用提升把手、请将把手的卡舌插入磁盘架侧面的插槽并向上推、直到其卡入到位、以安装提升把手。然后、在将磁盘架滑入导轨时、一次使用拇指闩锁断开一组手柄。下图显示了如何连接提升把手。
 
 +
-image::../media/drw_ds460c_handles.gif[DRW ds460c 句柄]
+image::../media/drw_ds460c_handles.gif[安装提升手柄]
 
 . 重新安装在将磁盘架安装到机架之前卸下的所有电源和 IOM 。
 . 如果要安装DS460C磁盘架、请将驱动器安装到驱动器抽盒中；否则、请转至下一步。
@@ -228,7 +228,7 @@ NOTE: *设备故障风险：*为了确保气流正常并防止过热、请始终
 下图显示了如何在磁盘架中的每个驱动器抽盒中将驱动器编号为 0 到 11 。
 
 +
-image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[带有 HDD 标注的 Dwg Trafford 抽屉]
+image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[驱动器编号]
 
 +
 ... 打开磁盘架的顶部抽盒。
@@ -236,7 +236,7 @@ image::../media/dwg_trafford_drawer_with_hdds_callouts.gif[带有 HDD 标注的 
 ... 将驱动器上的凸轮把手提起至垂直位置。
 ... 将驱动器托架两侧的两个凸起按钮与驱动器抽屉上驱动器通道中的匹配间隙对齐。
 +
-image::../media/28_dwg_e2860_de460c_drive_cru.gif[28 dwg e2860 de460c 驱动器 cru]
+image::../media/28_dwg_e2860_de460c_drive_cru.gif[驱动器上凸起的按钮的位置]
 
 +
 [cols="10,90"]
@@ -256,7 +256,7 @@ image::../media/28_dwg_e2860_de460c_drive_cru.gif[28 dwg e2860 de460c 驱动器 
 
 
  a| 
-image:../media/2860_dwg_e2860_de460c_gentle_close.gif[""]
+image:../media/2860_dwg_e2860_de460c_gentle_close.gif["轻轻合上抽盒"]
 
 
 

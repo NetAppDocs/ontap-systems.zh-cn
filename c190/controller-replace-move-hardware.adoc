@@ -26,17 +26,17 @@ summary: 要更换控制器模块硬件，您必须卸下受损的控制器，�
 
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 +
-image::../media/drw_25xx_cable_management_arm.png[DRW 25xx 缆线管理臂]
+image::../media/drw_25xx_cable_management_arm.png[插入或卸下缆线管理ARM]
 
 . 如果您在拔下缆线后将 SFP 模块留在系统中，请将其移至新控制器模块。
 . 按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。
 +
-image::../media/drw_2240_x_opening_cam_latch.png[DRW 2240 x 打开凸轮闩锁]
+image::../media/drw_2240_x_opening_cam_latch.png[打开凸轮把手闩锁]
 
 . 将控制器模块翻转，将其放在平稳的表面上。
 . 滑动蓝色卡舌以释放盖板，然后向上翻盖并打开，从而打开盖板。
 +
-image::../media/drw_2600_opening_pcm_cover.png[DRW 2600 打开 PCM 盖板]
+image::../media/drw_2600_opening_pcm_cover.png[打开或关闭控制器模块]
 
 
 
@@ -48,7 +48,7 @@ image::../media/drw_2600_opening_pcm_cover.png[DRW 2600 打开 PCM 盖板]
 
 . 使用下图或控制器模块上的 FRU 映射找到启动介质：
 +
-image::../media/drw_2600_boot_media_repl_animated_gif.png[DRW 2600 启动介质 rel 动画 gif]
+image::../media/drw_2600_boot_media_repl_animated_gif.png[Replacing the boot media]
 
 . 按启动介质外壳上的蓝色按钮，将启动介质从其外壳中释放，然后将其竖直拉出启动介质插槽。
 +
@@ -74,7 +74,7 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 ** 如果您的系统采用 HA 配置，请转至下一步。
 ** 如果您的系统采用独立配置，请完全关闭控制器模块，然后检查 NV 图标标识的 NVRAM LED 。
 +
-image::../media/drw_hw_nvram_icon.png[DRW 硬件 NVRAM 图标]
+image::../media/drw_hw_nvram_icon.png[NV LED]
 
 +
 
@@ -92,7 +92,7 @@ NOTE: 在暂停系统时， NVRAM LED 会闪烁，同时将内容存入闪存。
 
 . 在控制器模块中找到 NVMEM 电池。
 +
-image::../media/drw_2600_nvmem_battery_move_animated_gif.png[DRW 2600 nvmem 电池移动动画 gif]
+image::../media/drw_2600_nvmem_battery_move_animated_gif.png[Replacing the NVMEM battery]
 
 . 找到电池插头，然后挤压电池插头正面的夹子，将插头从插槽中释放，然后从插槽中拔下电池缆线。
 . 抓住电池并按下标记为推送的蓝色锁定卡舌，然后将电池从电池架和控制器模块中提出。
@@ -124,7 +124,7 @@ NOTE: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施�
 下图显示了系统 DIMM 的位置：
 
 +
-image::../media/drw_2600_dimms.png[DRW 2600 DIMM]
+image::../media/drw_2600_dimms.png[系统DIMM的位置]
 
 . 重复上述步骤，根据需要删除其他 DIMM 。
 . 验证 NVMEM 电池是否未插入新控制器模块。
