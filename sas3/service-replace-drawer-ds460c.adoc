@@ -51,7 +51,7 @@ image::../media/28_dwg_e2860_de460c_front_no_callouts.gif[驱动器架正面图]
 DCM2驱动器抽盒采用蓝色条带和"DCM2"标签来区分：
 
 +
-image::../media/dcm2.png[dcm2]
+image::../media/dcm2.png[DCM2驱动器抽盒]
 
 
 
@@ -176,7 +176,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 此图显示了已卸下风扇模块的驱动器架右侧。卸下风扇模块后，您可以看到五个缆线链以及每个抽盒的垂直和水平连接器。提供了驱动器抽盒 1 的标注。
 
 +
-image::../media/2860_dwg_full_back_view_chain_connectors.gif[2860 dwg 全背面图链连接器]
+image::../media/2860_dwg_full_back_view_chain_connectors.gif[五条电缆链以及每个抽盒的垂直和水平连接器视图]
 
 +
 [cols="10,90"]
@@ -209,7 +209,7 @@ image:../media/legend_icon_03.png["标注编号3"]
 +
 .. 使用手电筒找到连接到机箱中垂直支架的缆线链末端的橙色环。
 +
-image::../media/2860_dwg_vertical_ring_for_chain.gif[用于链的 2860 dwg 垂直环]
+image::../media/2860_dwg_vertical_ring_for_chain.gif[电缆链末端的橙色环]
 
 +
 [cols="10,90"]
@@ -231,7 +231,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 此图显示了右侧的水平连接器，左侧的缆线链已断开并部分拉出。
 
 +
-image::../media/2860_dwg_horiz_ring_for_chain.gif[2860 dwg 链的水平环]
+image::../media/2860_dwg_horiz_ring_for_chain.gif[电缆链和橙色环]
 
 +
 [cols="10,90"]
@@ -287,7 +287,7 @@ After removing the right and left cable chains, you can remove the drive drawer 
 +
 .. 轻轻向后拉每个驱动器前部中央可见的橙色释放闩锁。下图显示了每个驱动器的橙色释放闩锁。
 +
-image::../media/28_dwg_e2860_drive_latches_top_view.gif[28 dwg e2860 驱动器闩锁顶视图]
+image::../media/28_dwg_e2860_drive_latches_top_view.gif[驱动器释放闩锁]
 
 .. 将驱动器把手提起至垂直位置。
 .. 使用手柄将驱动器从驱动器抽屉中提起。
@@ -305,7 +305,7 @@ NOTE: * 可能的数据访问丢失： * 磁场会破坏驱动器上的所有数
 +
 .. 找到驱动器抽盒两侧的塑料释放杆。
 +
-image::../media/92_pht_de6600_drive_drawer_release_lever.gif[92 PHT de6600 驱动器抽屉释放拉杆]
+image::../media/92_pht_de6600_drive_drawer_release_lever.gif[抽屉释放拉杆]
 
 +
 [cols="10,90"]
@@ -344,7 +344,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 锁定式转储器组件是一项安全功能，可防止您一次打开多个驱动器抽盒。
 
 +
-image::../media/92_pht_de6600_lock_out_tumbler_detail.gif[92 PHT de6600 锁定了转鼓器细节]
+image::../media/92_pht_de6600_lock_out_tumbler_detail.gif[锁定滚筒和抽屉导轨的位置]
 
 +
 [cols="10,90"]
@@ -430,7 +430,7 @@ NOTE: * 设备故障的风险： * 请确保通过推动两个控制杆完全关
 * 您有两个替代缆线链，分别标记为左侧和右侧（位于驱动器抽盒旁边的水平连接器上）。
 
 
-image::../media/28_dwg_e2860_de460c_cable_chain_left.gif[左侧 28 个 dwg e2860 de460c 缆线链]
+image::../media/28_dwg_e2860_de460c_cable_chain_left.gif[左侧更换电缆链]
 
 [cols="4*"]
 |===
@@ -456,7 +456,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 驱动器抽屉
 
 |===
-image:../media/28_dwg_e2860_de460c_cable_chain_right.gif[""]
+image:../media/28_dwg_e2860_de460c_cable_chain_right.gif["右侧更换电缆链"]
 
 [cols="4*"]
 |===
@@ -492,7 +492,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 此图显示了机箱中第二个驱动器抽盒的左侧导轨。
 
 +
-image::../media/2860_dwg_guide_rail.gif[2860 dwg 导轨]
+image::../media/2860_dwg_guide_rail.gif[导轨]
 
 +
 [cols="10,90"]
