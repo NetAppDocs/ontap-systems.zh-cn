@@ -185,7 +185,7 @@ mcc1A::> metrocluster operation show
 . 从受损控制器模块拔下缆线，并跟踪缆线的连接位置。
 . 向下滑动凸轮把手上的橙色按钮，直到其解锁为止。
 +
-image::../media/drw_9000_remove_pcm.png[Removing the controller module]
+image::../media/drw_9000_remove_pcm.png[Remove the controller module]
 
 +
 [cols="1,3"]
@@ -236,7 +236,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 . 如果您尚未接地，请正确接地。
 . 找到 RTC 电池。
 +
-image::../media/drw_9000_remove_rtc_battery.png[DRW 9000 取出 RTC 电池]
+image::../media/drw_9000_remove_rtc_battery.png[卸下或更换RTC电池]
 
 +
 [cols="1,3"]

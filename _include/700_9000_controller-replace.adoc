@@ -16,16 +16,14 @@
 . 向下滑动凸轮把手上的橙色按钮，直到其解锁为止。
 
 
-image::../media/drw_9000_remove_pcm.png[Removing the controller module]
+image::../media/drw_9000_remove_pcm.png[Remove the controller module]
 
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-
-
-
  a| 
 凸轮把手释放按钮
 
@@ -33,9 +31,6 @@ image:../media/legend_icon_01.png["标注编号1"]
 
  a| 
 image:../media/legend_icon_02.png["标注编号2"]
-
-
-
  a| 
 凸轮把手
 
@@ -48,21 +43,18 @@ image:../media/legend_icon_02.png["标注编号2"]
 +
 image::../media/drw_9000_pcm_open.png[打开或关闭控制器模块]
 
-+
+
+
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-
-
-
  a| 
 控制器模块盖锁定按钮
 
 |===
-
-
 
 
 == 第 2 步：移动启动介质
@@ -72,17 +64,15 @@ image:../media/legend_icon_01.png["标注编号1"]
 .步骤
 . 提起控制器模块背面的黑色通风管，然后使用以下示意图或控制器模块上的 FRU 示意图找到启动介质：
 +
-image::../media/drw_9000_remove_boot_dev.gif[DRW 9000 删除启动开发]
+image::../media/drw_9000_remove_boot_dev.gif[删除启动设备]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-
-
-
  a| 
 按释放卡舌
 
@@ -90,9 +80,6 @@ image:../media/legend_icon_01.png["标注编号1"]
 
  a| 
 image:../media/legend_icon_02.png["标注编号2"]
-
-
-
  a| 
 启动介质
 
@@ -126,17 +113,15 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 NOTE: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
 
 +
-image::../media/drw_9000_replace_pcm_dimms.png[DRW 9000 可更换 PCM DIMM]
+image::../media/drw_9000_replace_pcm_dimms.png[卸下控制器DIMM]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-
-
-
  a| 
 DIMM 弹出器卡舌
 
@@ -144,9 +129,6 @@ DIMM 弹出器卡舌
 
  a| 
 image:../media/legend_icon_02.png["标注编号2"]
-
-
-
  a| 
 DIMM
 

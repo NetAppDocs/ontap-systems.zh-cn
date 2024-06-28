@@ -91,7 +91,7 @@ LOADER 提示符
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_a800_pcm_remove.png[释放控制器模块]
+image::../media/drw_a800_pcm_remove.png[松开控制器模块]
 
 +
 [cols="1,4"]
@@ -100,7 +100,9 @@ image::../media/drw_a800_pcm_remove.png[释放控制器模块]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 锁定闩锁 
+ a| 
+锁定闩锁
+
 
 
  a| 
@@ -127,7 +129,9 @@ image::../media/drw_a800_open_air_duct.png[打开空气管道]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管锁定卡舌 
+ a| 
+通风管锁定卡舌
+
 
 
  a| 
@@ -168,7 +172,7 @@ image:../media/legend_icon_03.png["标注编号3"]
 
 .. 抬起竖板，将其移向风扇，使竖板上的金属片边缘脱离控制器模块的边缘，将其从控制器模块中提出，然后将其放在平稳的平面上。
 +
-image::../media/drw_a800_pcie_1_replace.png[DRW a800 PCIe 1 更换]
+image::../media/drw_a800_pcie_1_replace.png[更换Riser卡1中的PCI卡]
 
 +
 [cols="1,4"]
@@ -177,7 +181,9 @@ image::../media/drw_a800_pcie_1_replace.png[DRW a800 PCIe 1 更换]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管 
+ a| 
+通风管
+
 
 
  a| 
@@ -218,7 +224,7 @@ image:../media/legend_icon_04.png["标注编号4"]
 
 .. 抬起竖板，将其移向风扇，使竖板上的金属片边缘脱离控制器模块的边缘，将其从控制器模块中提出，然后将其放在平稳的平面上。
 +
-image::../media/drw_a800_pcie_2_5_replace.gif[DRW a800 PCIe 2 5 更换]
+image::../media/drw_a800_pcie_2_5_replace.gif[更换中间和右侧Riser卡中的PCI卡2至5]
 
 +
 [cols="1,4"]
@@ -227,7 +233,9 @@ image::../media/drw_a800_pcie_2_5_replace.gif[DRW a800 PCIe 2 5 更换]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管 
+ a| 
+通风管
+
 
 
  a| 
@@ -312,7 +320,9 @@ image::../media/drw_a800_close_air_duct.png[关闭空气管道]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 锁定卡舌 
+ a| 
+锁定卡舌
+
 
 
  a| 

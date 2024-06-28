@@ -188,6 +188,7 @@ mcc1A::> metrocluster operation show
 image::../media/drw_9000_remove_pcm.png[Removing the controller module]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -213,6 +214,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 image::../media/drw_9000_pcm_open.png[打开或关闭控制器模块]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -235,7 +237,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 . 找到控制器模块上的 DIMM 。
 
 
-image::../media/drw_9000_dimm_map.png[DRW 9000 DIMM 映射]
+image::../media/drw_9000_dimm_map.png[DIMM映射]
 
 . 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。
 +
@@ -243,7 +245,7 @@ image::../media/drw_9000_dimm_map.png[DRW 9000 DIMM 映射]
 NOTE: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
 
 +
-image::../media/drw_9000_replace_pcm_dimms.png[DRW 9000 可更换 PCM DIMM]
+image::../media/drw_9000_replace_pcm_dimms.png[更换DCPM DIMM]
 
 +
 [cols="1,3"]

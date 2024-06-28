@@ -27,7 +27,7 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[DRW a800驱动器已就位IE
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_a800_pcm_remove.png[释放控制器模块]
+image::../media/drw_a800_pcm_remove.png[松开控制器模块]
 
 +
 [cols="1,4"]
@@ -36,7 +36,9 @@ image::../media/drw_a800_pcm_remove.png[释放控制器模块]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 锁定闩锁 
+ a| 
+锁定闩锁
+
 
 
  a| 
@@ -98,7 +100,7 @@ image:../media/legend_icon_03.png["标注编号3"]
 CAUTION: 电源不足。从控制器模块中取出时，请始终用双手托住它，以免它突然从控制器模块中自由转动并给您造成损害。
 
 +
-image::../media/drw_a800_replace_psu.png[DRW a800 更换 PSU]
+image::../media/drw_a800_replace_psu.png[卸下或更换电源]
 
 +
 [cols="1,4"]
@@ -107,7 +109,9 @@ image::../media/drw_a800_replace_psu.png[DRW a800 更换 PSU]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 蓝色电源锁定卡舌 
+ a| 
+蓝色电源锁定卡舌
+
 
 
  a| 
@@ -143,11 +147,19 @@ image::../media/drw_a800_replace_fan.png[卸下风扇]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 风扇锁定卡舌 
+
+
+
+ a| 
+风扇锁定卡舌
+
 
 
  a| 
 image:../media/legend_icon_02.png["标注编号2"]
+
+
+
  a| 
 风扇模块
 
@@ -164,7 +176,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 
 . 打开通风管盖并在提升板中找到 NVDIMM 电池。
 +
-image::../media/drw_a800_nvdimm_battery_replace.png[更换 DRW a800 NVDIMM 电池]
+image::../media/drw_a800_nvdimm_battery_replace.png[更换NVDIMM电池]
 
 +
 [cols="1,4"]
@@ -173,7 +185,9 @@ image::../media/drw_a800_nvdimm_battery_replace.png[更换 DRW a800 NVDIMM 电�
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管竖板 
+ a| 
+通风管竖板
+
 
 
  a| 
@@ -217,7 +231,7 @@ NVDIMM 电池组
 
 .. 抬起竖板，将其移向风扇，使竖板上的金属片边缘脱离控制器模块的边缘，将其从控制器模块中提出，然后将其放在平稳的平面上。
 +
-image::../media/drw_a800_riser_2_3_remove.png[DRW a800 提升板 2 3 拆卸]
+image::../media/drw_a800_riser_2_3_remove.png[卸下Riser卡2和3]
 
 +
 [cols="1,4"]
@@ -226,7 +240,9 @@ image::../media/drw_a800_riser_2_3_remove.png[DRW a800 提升板 2 3 拆卸]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管 
+ a| 
+通风管
+
 
 
  a| 
@@ -274,7 +290,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 . 找到控制器模块上的 NVDIMM 。
 +
-image::../media/drw_a800_no_risers_nvdimm_move.png[DRW a800 无提升板 NVDIMM 移动]
+image::../media/drw_a800_no_risers_nvdimm_move.png[移动NVDIMM]
 
 +
 [cols="1,4"]
@@ -283,7 +299,9 @@ image::../media/drw_a800_no_risers_nvdimm_move.png[DRW a800 无提升板 NVDIMM 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管 
+ a| 
+通风管
+
 
 
  a| 
@@ -321,7 +339,7 @@ NOTE: 目视检查 NVDIMM ，确认其已均匀对齐并完全插入插槽。
 
 . 找到启动介质：
 +
-image::../media/drw_a800_pcm_replace_only_boot_media.png[DRW a800 PCM 仅更换启动介质]
+image::../media/drw_a800_pcm_replace_only_boot_media.png[取出启动介质]
 
 +
 [cols="1,4"]
@@ -330,7 +348,9 @@ image::../media/drw_a800_pcm_replace_only_boot_media.png[DRW a800 PCM 仅更换�
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管 
+ a| 
+通风管
+
 
 
  a| 
@@ -419,7 +439,9 @@ image::../media/drw_a700s_close_air_duct.png[关闭空气管道]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 锁定卡舌 
+ a| 
+锁定卡舌
+
 
 
  a| 

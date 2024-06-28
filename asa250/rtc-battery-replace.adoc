@@ -92,12 +92,15 @@ NOTE: 如果在卸下控制器模块时遇到困难，请将食指从内部穿�
 image::../media/drw_a250_pcm_remove_install.png[打开闩锁装置]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 控制杆 
+ a| 
+控制杆
+
 
 
  a| 
@@ -112,6 +115,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 image::../media/drw_a250_open_controller_module_cover.png[打开控制器模块护盖]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -144,15 +148,18 @@ image::../media/drw_a250_remove_airduct_cover.png[提起空气管道盖]
 video::6ed27f71-d3a7-4cee-8d9f-ac5b016c982d[panopto]
 . 找到散热器和中板之间的 RTC 电池，然后完全按照图中所示取出。
 +
-image::../media/drw_a250_remove_rtc_batt.png[DRW A250 删除 RTC 电池]
+image::../media/drw_a250_remove_rtc_batt.png[卸下RTC电池]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| Gently pull tab away from the battery housing.*Attention:* Pulling it away aggressively might displace the tab. 
+ a| 
+Gently pull tab away from the battery housing.*Attention:* Pulling it away aggressively might displace the tab.
+
 
 
  a| 

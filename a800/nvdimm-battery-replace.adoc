@@ -89,15 +89,18 @@ LOADER 提示符
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_a800_pcm_remove.png[释放控制器模块]
+image::../media/drw_a800_pcm_remove.png[松开控制器模块]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 锁定闩锁 
+ a| 
+锁定闩锁
+
 
 
  a| 
@@ -121,15 +124,18 @@ image:../media/legend_icon_02.png["标注编号2"]
 
 . 打开通风管盖并在提升板中找到 NVDIMM 电池。
 +
-image::../media/drw_a800_nvdimm_battery_replace.png[更换 DRW a800 NVDIMM 电池]
+image::../media/drw_a800_nvdimm_battery_replace.png[更换NVDIMM电池]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管竖板 
+ a| 
+通风管竖板
+
 
 
  a| 
@@ -145,7 +151,8 @@ image:../media/legend_icon_03.png["标注编号3"]
 NVDIMM 电池组
 
 |===
-+
+
+
 * 注意： * 在暂停系统时， NVDIMM 电池控制板 LED 会闪烁，同时将内容存入闪存。目标值完成后，此 LED 将熄灭。
 
 . 找到电池插头，然后挤压电池插头正面的夹子，将插头从插槽中释放，然后从插槽中拔下电池缆线。

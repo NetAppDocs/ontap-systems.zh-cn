@@ -71,7 +71,7 @@ image::../media/drw_sas3_location_icon.svg[DRW SAS3位置图标]
 
 下图显示了一个端盖位于上的 DS224C 磁盘架操作员显示面板：
 
-image::../media/drw_opd.gif[DRW 选项]
+image::../media/drw_opd.gif[端盖操作员显示屏]
 
 
 
@@ -128,11 +128,11 @@ image::../media/drw_sas3_location_icon.svg[DRW SAS3位置图标]
 |===
 下图适用于IOM12模块：
 
-image::../media/drw_iom12.gif[DRW iom12]
+image::../media/drw_iom12.gif[IOM12模块]
 
 IOM12B模块通过蓝色条带和"IOM12B"标签来区分：
 
-image::../media/iom12b.png[iom12b]
+image::../media/iom12b.png[IOM12B模块]
 
 
 
@@ -181,11 +181,11 @@ image::../media/drw_sas_fault_icon.svg[DRW SAS故障图标]
 
 两个 LED 图标充当标签和 LED ，这意味着图标本身会亮起，没有相邻的 LED 。
 
-image::../media/28_dwg_e2860_de460c_psu.gif[28 dwg e2860 de460c PSU]
+image::../media/28_dwg_e2860_de460c_psu.gif[LED图标]
 
 下图显示了 DS224C 或 DS212C 磁盘架中使用的电源：
 
-image::../media/drw_powersupply_913w_vsd.gif[DRW 电源 913w VSD]
+image::../media/drw_powersupply_913w_vsd.gif[LED图标]
 
 
 
@@ -263,13 +263,13 @@ image:../media/legend_icon_02.png["标注编号2"]
 
 DS224C 磁盘架使用垂直放置在磁盘架中的 2.5 英寸磁盘驱动器。
 
-image::../media/drw_diskdrive_ds224c.gif[DRW 磁盘驱动器 ds224c]
+image::../media/drw_diskdrive_ds224c.gif[驱动器托架垂直排列]
 
 下图显示了 DS212C 磁盘架中使用的磁盘驱动器。
 
 DS212C 磁盘架在磁盘架中水平排列的托架中使用 3.5 英寸磁盘驱动器或 2.5 英寸磁盘驱动器。
 
-image::../media/drw_diskdrive_ds212c.gif[DRW 磁盘驱动器 ds212c]
+image::../media/drw_diskdrive_ds212c.gif[驱动器托架水平排列]
 
 
 
@@ -277,7 +277,7 @@ image::../media/drw_diskdrive_ds212c.gif[DRW 磁盘驱动器 ds212c]
 
 下图和表介绍了驱动器抽盒上的驱动器活动 LED 及其运行状态：
 
-image::../media/2860_dwg_drive_drawer_leds.gif[2860 个 dwg 驱动器抽盒 LED]
+image::../media/2860_dwg_drive_drawer_leds.gif[驱动器活动LED]
 
 [cols="4*"]
 |===
@@ -327,7 +327,7 @@ image::../media/2860_dwg_drive_drawer_leds.gif[2860 个 dwg 驱动器抽盒 LED]
 |===
 打开驱动器抽盒后，每个驱动器前面都会显示警示 LED 。
 
-image::../media/2860_dwg_amber_on_drive.gif[驱动器上为 2860 dwg 琥珀色]
+image::../media/2860_dwg_amber_on_drive.gif[驱动器警示LED]
 
 [cols="10,90"]
 |===

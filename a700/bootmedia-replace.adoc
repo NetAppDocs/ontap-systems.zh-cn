@@ -24,7 +24,7 @@ summary: 要访问控制器内部的组件，您必须先从系统中卸下控�
 . 从受损控制器模块拔下缆线，并跟踪缆线的连接位置。
 . 向下滑动凸轮把手上的橙色按钮，直到其解锁为止。
 +
-image::../media/drw_9000_remove_pcm.png[Removing the controller module]
+image::../media/drw_9000_remove_pcm.png[Remove the controller module]
 
 +
 |===
@@ -32,6 +32,9 @@ image::../media/drw_9000_remove_pcm.png[Removing the controller module]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
+
+
+
  a| 
 凸轮把手释放按钮
 
@@ -39,6 +42,9 @@ image:../media/legend_icon_01.png["标注编号1"]
 
  a| 
 image:../media/legend_icon_02.png["标注编号2"]
+
+
+
  a| 
 凸轮把手
 
@@ -58,6 +64,9 @@ image::../media/drw_9000_pcm_open.png[打开或关闭控制器模块]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
+
+
+
  a| 
 控制器模块盖锁定按钮
 
@@ -68,13 +77,16 @@ image:../media/legend_icon_01.png["标注编号1"]
 
 使用下图或控制器模块上的 FRU 映射找到启动介质：
 
-image:../media/drw_9000_remove_boot_dev.svg[""]
+image:../media/drw_9000_remove_boot_dev.svg["删除启动设备"]
 
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
+
+
+
  a| 
 按释放卡舌
 
@@ -82,6 +94,9 @@ image:../media/legend_icon_01.png["标注编号1"]
 
  a| 
 image:../media/legend_icon_02.png["标注编号2"]
+
+
+
  a| 
 启动介质
 

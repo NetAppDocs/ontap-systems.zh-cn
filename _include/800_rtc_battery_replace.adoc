@@ -82,16 +82,19 @@ LOADER 提示符
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_a800_pcm_remove.png[释放控制器模块]
+image::../media/drw_a800_pcm_remove.png[松开控制器模块]
 
 
 
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 锁定闩锁 
+ a| 
+锁定闩锁
+
 
 
  a| 
@@ -118,7 +121,9 @@ image::../media/drw_a800_open_air_duct.png[打开空气管道]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管锁定卡舌 
+ a| 
+通风管锁定卡舌
+
 
 
  a| 
@@ -155,7 +160,7 @@ image:../media/legend_icon_03.png["标注编号3"]
 
 .. 抬起竖板，将其移向风扇，使竖板上的金属片边缘脱离控制器模块的边缘，将其从控制器模块中提出，然后将其放在平稳的平面上。
 +
-image::../media/drw_a800_riser_2_3_remove.png[DRW a800 提升板 2 3 拆卸]
+image::../media/drw_a800_riser_2_3_remove.png[卸下提升板2]
 
 +
 [cols="1,4"]
@@ -164,7 +169,9 @@ image::../media/drw_a800_riser_2_3_remove.png[DRW a800 提升板 2 3 拆卸]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管 
+ a| 
+通风管
+
 
 
  a| 
@@ -177,7 +184,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 
 . 在提升板 2 下找到 RTC 电池。
 +
-image::../media/drw_a800_rtc_battery_replace.png[更换 DRW a800 RTC 电池]
+image::../media/drw_a800_rtc_battery_replace.png[卸下并更换RTC电池]
 
 +
 [cols="1,4"]
@@ -186,7 +193,9 @@ image::../media/drw_a800_rtc_battery_replace.png[更换 DRW a800 RTC 电池]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管 
+ a| 
+通风管
+
 
 
  a| 
@@ -228,7 +237,7 @@ NOTE: 从电池架中取出电池时，请注意电池的极性。电池标有�
 --
 . 找到DIMM附近的RTC电池。
 +
-image::../media/drw_a800_rtc_battery_replace_v2.png[DRW a800 RTC电池更换v2]
+image::../media/drw_a800_rtc_battery_replace_v2.png[卸下并更换RTC电池]
 
 +
 [cols="1,4"]
@@ -237,7 +246,9 @@ image::../media/drw_a800_rtc_battery_replace_v2.png[DRW a800 RTC电池更换v2]
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 通风管 
+ a| 
+通风管
+
 
 
  a| 

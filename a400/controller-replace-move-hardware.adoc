@@ -35,7 +35,7 @@ video::ca74d345-e213-4390-a599-aae10019ec82[panopto]
 此控制器模块会从机箱中略微移出。
 
 +
-image:../media/drw_A400_Remove_controller.png["释放控制器模块"]
+image:../media/drw_A400_Remove_controller.png["松开控制器模块"]
 
 +
 [cols="10a,90a"]
@@ -66,7 +66,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 video::49053752-e813-4c15-a917-ab190147fa6e[panopto]
 
 
-image::../media/drw_a400_empty_riser_remove.png[卸下 DRW a400 空提升板]
+image::../media/drw_a400_empty_riser_remove.png[卸下空的提升板]
 
 [cols="10,90"]
 |===
@@ -96,7 +96,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 video::92060115-1967-475b-b517-aad9012f130c[panopto]
 . 卸下电源：
 +
-image::../media/drw_A400_psu.png[Replacing the power supply]
+image::../media/drw_A400_psu.png[更换电源]
 
 +
 [cols="10,90"]
@@ -197,7 +197,7 @@ NOTE: 除非系统指示，否则请勿将电池缆线重新插入主板。
 
 .动画—移动启动介质
 video::2a14099c-85de-4a84-867c-aad9012efac8[panopto]
-image::../media/drw_A400_Replace-boot_media.png[删除启动介质]
+image::../media/drw_A400_Replace-boot_media.png[取出启动介质]
 
 [cols="10,90"]
 |===
@@ -324,7 +324,7 @@ PCI卡
 
 .动画-移动DIMM
 video::717b52fa-f236-4f3d-b07d-aad9012f51a3[panopto]
-image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Moving the DIMMs]
+image::../media/drw_A400_Replace-NVDIMM-DIMM.png[移动DIMM]
 
 [cols="10,90"]
 |===

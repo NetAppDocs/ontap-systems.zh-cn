@@ -24,7 +24,7 @@ video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
 image::../media/drw_a900_remove_PCM.png[释放控制器]
 
 +
-[cols="10,90"]
+[cols="1,4"]
 |===
 
 
@@ -47,11 +47,11 @@ image:../media/legend_icon_02.png["标注编号2"]
 
 . 将控制器模块的盖板朝上放在平稳的平面上，按下盖板上的蓝色按钮，将盖板滑至控制器模块的背面，然后向上转动盖板并将其从控制器模块中提出。
 +
-image::../media/drw_a900_PCM_open.png[提起控制器模块的外盖]
+image::../media/drw_a900_PCM_open.png[将护盖提离控制器模块]
 
 
 
-[cols="10,90"]
+[cols="1,4"]
 |===
 
 
@@ -69,10 +69,10 @@ image:../media/legend_icon_01.png["标注编号1"]
 
 . 使用下图或控制器模块上的 FRU 映射找到启动介质：
 +
-image::../media/drw_a900_remove_boot_dev.png[DRW a900 删除启动开发]
+image::../media/drw_a900_remove_boot_dev.png[取出启动介质]
 
 +
-[cols="10,90"]
+[cols="1,4"]
 |===
 
 
@@ -123,7 +123,7 @@ IMPORTANT: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件
 image::../media/drw_a900_replace_PCM_dimms.png[卸下DIMM]
 
 +
-[cols="10,90"]
+[cols="1,4"]
 |===
 
 
@@ -182,7 +182,7 @@ video::099237f3-d7f2-4749-86e2-adf2000df53c[panopto]
 image::../media/drw_a900_remove_PCM.png[释放控制器]
 
 +
-[cols="10,90"]
+[cols="1,4"]
 |===
 
 

@@ -8,8 +8,7 @@ To replace a failed NVRAM module, you must remove it from the chassis, remove th
 
 Because the system ID is derived from the NVRAM module, if replacing the module, disks belonging to the system are reassigned to the new system ID.
 
-* 开始之前 *
-
+.开始之前
 * 所有磁盘架都必须正常工作。
 * 如果您的系统位于 HA 对中，则配对节点必须能够接管与要更换的 NVRAM 模块关联的节点。
 * 此操作步骤使用以下术语：
@@ -190,9 +189,10 @@ mcc1A::> metrocluster operation show
 . 如果您尚未接地，请正确接地。
 . 将 FlashCache 模块从旧 NVRAM 模块移至新 NVRAM 模块：
 +
-image::../media/drw_9000_remove_flashcache.png[Replacing the caching module]
+image::../media/drw_9000_remove_flashcache.png[更换缓存模块]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -232,9 +232,10 @@ NVRAM 模块从机箱中分离并移出几英寸。
 
 .. 拉动 NVRAM 模块侧面的拉片，将其从机箱中卸下。
 +
-image::../media/drw_9000_move_remove_nvram_module.png[DRW 9000 移动删除 NVRAM 模块]
+image::../media/drw_9000_move_remove_nvram_module.png[卸下 NVRAM 模块]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -255,9 +256,10 @@ I/O 闩锁完全解锁
 
 . 将 NVRAM 模块放在一个稳定的表面上，向下按压 NVRAM 模块上的蓝色锁定按钮，然后在按住蓝色按钮的同时，将盖从 NVRAM 模块上滑出。
 +
-image::../media/drw_9000_remove_nvram_module_contents.png[DRW 9000 删除 NVRAM 模块内容]
+image::../media/drw_9000_remove_nvram_module_contents.png[卸下NVRAM模块内容]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -304,9 +306,10 @@ NVRAM 模块从机箱中分离并移出几英寸。
 
 .. 拉动 NVRAM 模块侧面的拉片，将其从机箱中卸下。
 +
-image::../media/drw_9000_move_remove_nvram_module.png[DRW 9000 移动删除 NVRAM 模块]
+image::../media/drw_9000_move_remove_nvram_module.png[卸下 NVRAM 模块]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -327,9 +330,10 @@ I/O 闩锁完全解锁
 
 . 将 NVRAM 模块放在一个稳定的表面上，向下按压 NVRAM 模块上的蓝色锁定按钮，然后在按住蓝色按钮的同时，将盖从 NVRAM 模块上滑出。
 +
-image::../media/drw_9000_remove_nvram_module_contents.png[DRW 9000 删除 NVRAM 模块内容]
+image::../media/drw_9000_remove_nvram_module_contents.png[卸下NVRAM模块内容]
 
 +
+[cols="1,4"]
 |===
 
 
