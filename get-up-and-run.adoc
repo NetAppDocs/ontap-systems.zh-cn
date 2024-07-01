@@ -53,6 +53,9 @@ summary: 要启动并运行AFF、ASA和FAS系统、您需要在ONTAP中安装硬
 ** AFF A系列系统**
 
 [role="quick-margin-list"]
+* https://docs.netapp.com/us-en/ontap-systems/a1k/install-overview.html["AFF A1K"]
+* https://docs.netapp.com/us-en/ontap-systems/a70-90/install-overview.html["AFF A70"]
+* https://docs.netapp.com/us-en/ontap-systems/a70-90/install-overview.html["AFF A90"]
 * https://docs.netapp.com/us-en/ontap-systems/a150/install-setup.html["AFF A150"]
 * https://docs.netapp.com/us-en/ontap-systems/a250/install-setup.html["AFF A250"]
 * https://docs.netapp.com/us-en/ontap-systems/a400/install-setup.html["AFF A400"]

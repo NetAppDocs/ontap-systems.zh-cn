@@ -1,0 +1,60 @@
+---
+permalink: ns224/requirements-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, requirement 
+summary: 要热添加NS224驱动器架、HA对必须满足特定要求。 
+---
+= 热添加—NS224磁盘架的要求和最佳实践
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在热添加磁盘架之前、请务必查看相关要求和最佳实践。
+
+
+
+== 要求
+
+要热添加NS224磁盘架、HA对必须满足特定要求。
+
+* *支持的ONTAP版本*：您的平台型号和ONTAP版本必须支持要热添加的NS224磁盘架和驱动器。请参见 https://hwu.netapp.com["NetApp Hardware Universe"^]
+* *磁盘架数量*：HA对的磁盘架数量必须小于支持的最大磁盘架数量、至少等于您计划热添加的磁盘架数量。
++
+You cannot have exceeded the maximum number of shelves supported by your HA pair after hot-adding shelves.请参阅。 https://hwu.netapp.com["NetApp Hardware Universe"^]
+
+* *布线*：
++
+** 确保您具有正确数量和类型的缆线来连接磁盘架。请参阅。 https://hwu.netapp.com["NetApp Hardware Universe"^]
+** 如果要将磁盘架热添加到已具有 NS224 磁盘架的 HA 对，则 HA 对不能显示任何存储布线错误消息，并且必须将其作为多路径 HA 进行布线。
++
+您可以运行  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] 来查看任何存储布线错误消息以及应采取的更正操作。
+
+
+
+
+
+
+
+== 最佳实践
+
+在热添加NS224磁盘架之前、请熟悉以下最佳实践。
+
+* *最佳实践：*最佳实践是在热添加磁盘架之前安装的最新版本 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["磁盘认证包"^] 。
++
+安装最新版本的 DQP 后，您的系统便可识别和使用新认证的驱动器。这样可以避免出现有关驱动器信息不最新以及由于无法识别驱动器而阻止驱动器分区的系统事件消息。DQP 还会通知您驱动器固件不是最新的。
+
+* *最佳实践：*最佳实践是在热添加磁盘架前后运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] 。
++
+Running Active IQ Config Advisor before hot-adding a shelf provides a snap shot of the existing shelf Ethernet (ENET) connectivity, verifies NVMe shelf module (NSM) firmware versions, and allows you to verify a shelf ID already in use in the HA pair.
+
++
+Running Active IQ Config Advisor after hot-adding a shelf allows you to verify shelves are cabled correctly and that shelf IDs are unique within the HA pair.
+
+* *最佳实践：*最佳实践是在添加新磁盘架之前、在存储系统上安装和的最新版本 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NVMe磁盘架模块(NSM)固件"^] https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["驱动器固件"^] 。
++
+
+NOTE: 请勿将固件还原到不支持您的磁盘架及其组件的版本。
+
+

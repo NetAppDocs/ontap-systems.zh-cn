@@ -1,0 +1,153 @@
+---
+permalink: a70-90/install-prepare.html 
+sidebar: sidebar 
+keywords: aff a70-90k, prepare installation 
+summary: 准备安装AFF A70、AFF A90平台。 
+---
+= 准备安装- AFF A70、AFF A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+准备安装平台。
+
+.开始之前
+* 使用记录时所需的 https://docs.netapp.com/us-en/ontap/software_setup/index.html["集群设置工作表"] 值 link:complete-install.html#step-3-configure-your-cluster["配置集群"]。如果提供了默认值，则可以使用该值，或者输入您自己的值。
+* 确认您已具备完成硬件安装所需的所有附加设备和工具。
++
+** 2 号十字螺丝刀
+** 手电筒
+** ESD 腕带
+** 用于设置NS224磁盘架ID的回形针或窄尖头圆珠笔
+** 具有USB/串行连接的笔记本电脑或控制台
+** 访问Web浏览器以配置存储系统
+
+
+* 您应了解与平台重量相关的安全问题。
++
+满载的A70-90平台的重量可达151.68磅(68.8千克)、需要四个人来提升或使用液压提升装置。
+
++
+image::../media/drw_a70-90_weight_icon_ieops-1730.svg[AFF A90]
+
+* 您应了解与磁盘架重量相关的安全问题。
++
+满载的搁架重量可达66.78磅(30.29千克)、需要两个人来提升或使用液压提升装置。Avoid removing shelf components (from the front or rear of the shelf) to reduce the shelf weight, because shelf weight will become unbalanced.
+
++
+image::../media/drw_ns224_lifting_weight_ieops-1716.svg[NS224举升注意事项]
+
+* 流经存储系统的气流从安装挡板或端盖的前部进入、然后从端口所在的后部排气。
+
+
+
+
+== 第1步：准备站点
+
+确保您计划使用的站点和机柜或机架符合存储系统的规格。
+
+.步骤
+. 确认您的站点符合平台的环境和电气要求，如所示 https://hwu.netapp.com["NetApp Hardware Universe"^]。
+. 确保您有足够的机架空间：
++
+** 对于平台机箱、为4U
+** 每个NS224磁盘架占用2U空间
+
+
+. 在平台附近安装任何所需的网络交换机。
++
+有关安装说明和兼容性信息、请参见 https://docs.netapp.com/us-en/ontap-systems-switches/index.html["交换机文档"^] link:https://hwu.netapp.com["NetApp Hardware Universe"^] 。
+
+
+
+
+
+== 第2步：打开包装箱
+
+打开所有包装箱的包装、并将物品与装箱单上的物品进行比较。
+
+. 小心地打开所有箱子、并有序地布置物品。
+. 将您已解包装的内容与装箱单上的列表进行比较。
++
+
+NOTE: 您可以通过扫描装运箱侧面的QR码来获取装箱单。
+
++
+以下项目是您可能会在框中看到的一些内容。
+
++
+确保包装箱中的所有物品均与装箱单上的列表匹配。如果存在任何差异、请记下这些差异以供进一步操作。
+
++
+[cols="12,9,4"]
+|===
+
+
+| * 硬件 * | *电缆* |  
+
+
+ a| 
+** 安装了板载驱动器的平台
+** 磁盘架(可选)
+** 带说明的导轨套件(可选)
+** 两个电缆管理设备
+** 挡板
+
+ a| 
+** 电源线
+** 网络缆线
+** 管理以太网缆线(RJ-45缆线)
+** USB－C串行端口电缆
+** 存储缆线(如果订购了额外的存储)
+
+|  
+|===
+
+
+
+
+== 第3步：注册硬件
+
+注册您的平台以获得支持优势。
+
+.步骤
+. 找到您的平台的系统序列号。
++
+您可以在装箱单、确认电子邮件或打开包装后的控制器上找到该号码。
+
++
+image::../media/drw_ssn_label.svg[显示编号位置的系统序列号示例]
+
+. 访问NetApp支持站点，网址为 http://mysupport.netapp.com/["mysupport.netapp.com"^]。
+. 注册硬件：
++
+[cols="1a,2a"]
+|===
+| 如果您是 ... | 请按照以下步骤操作 ... 
+
+
+ a| 
+现有 NetApp 客户
+ a| 
+.. 使用您的用户名和密码登录。
+.. 选择*系统*>*我的系统*。
+.. 确认已列出新系统序列号。
+.. 如果不是，请按照适用于新 NetApp 客户的说明进行操作。
+
+
+
+
+ a| 
+NetApp 新客户
+ a| 
+.. 单击 * 立即注册 * ，然后创建帐户。
+.. 选择*系统*>*注册系统*。
+.. 输入系统序列号和请求的详细信息。
+
+
+注册获得批准后，您可以下载所需的任何软件。审批过程可能需要长达 24 小时。
+
+|===
+

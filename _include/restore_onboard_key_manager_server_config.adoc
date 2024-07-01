@@ -1,0 +1,165 @@
+= 
+:allow-uri-read: 
+
+
+从ONATp启动菜单还原板载密钥管理器配置。
+
+.开始之前
+还原OKM配置时、需要以下信息：
+
+* 已输入集群范围的密码短语 https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-onboard-key-management-96-later-nse-task.html["同时启用板载密钥管理"]。
+* https://docs.netapp.com/us-en/ontap/encryption-at-rest/backup-key-management-information-manual-task.html["板载密钥管理器的备份信息"](英文)
+* 请先执行此 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_verify_onboard_key_management_backup_and_cluster-wide_passphrase["如何验证板载密钥管理备份和集群范围的密码短语"] 过程、然后再继续。
+
+
+.步骤
+. 从ONTAP启动菜单中选择选项10：
++
+[listing]
+----
+
+Please choose one of the following:
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? _10_
+
+----
+. 确认此过程是否继续。
+`This option must be used only in disaster recovery procedures. Are you sure? (y or n):`_y_
+. 输入集群范围的密码短语两次。
++
+
+NOTE: 输入密码短语时、控制台不会显示任何输入。
+
++
+`Enter the passphrase for onboard key management:`
+
++
+`Enter the passphrase again to confirm:`
+
+. 输入备份信息。将整个内容从开始备份行粘贴到结束备份行。
++
+在输入末尾按两次回车键。
+
++
+[listing]
+----
+
+
+Enter the backup data:
+
+--------------------------BEGIN BACKUP--------------------------
+0123456789012345678901234567890123456789012345678901234567890123
+1234567890123456789012345678901234567890123456789012345678901234
+2345678901234567890123456789012345678901234567890123456789012345
+3456789012345678901234567890123456789012345678901234567890123456
+4567890123456789012345678901234567890123456789012345678901234567
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+0123456789012345678901234567890123456789012345678901234567890123
+1234567890123456789012345678901234567890123456789012345678901234
+2345678901234567890123456789012345678901234567890123456789012345
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+---------------------------END BACKUP---------------------------
+
+----
+. 恢复过程将完成。
++
+[listing]
+----
+
+Trying to recover keymanager secrets....
+Setting recovery material for the onboard key manager
+Recovery secrets set successfully
+Trying to delete any existing km_onboard.wkeydb file.
+
+Successfully recovered keymanager secrets.
+
+***********************************************************************************
+* Select option "(1) Normal Boot." to complete recovery process.
+*
+* Run the "security key-manager onboard sync" command to synchronize the key database after the node reboots.
+***********************************************************************************
+
+----
++
+
+WARNING: 如果显示的输出不是，请勿继续 `Successfully recovered keymanager secrets`。执行故障排除以更正错误。
+
+. 从启动菜单中选择选项1以继续启动至ONTAP。
++
+[listing]
+----
+
+***********************************************************************************
+* Select option "(1) Normal Boot." to complete the recovery process.
+*
+***********************************************************************************
+
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+Selection (1-11)? 1
+
+----
+. 确认控制器的控制台显示 `Waiting for giveback...(Press Ctrl-C to abort wait)`
+. 从配对节点交还配对控制器：_storage故障转移交还-frofnode local -only—cfo-Aggregates true _
+. 仅使用CFO聚合启动后、运行_security key-manager onboard sync​​​​​​​_命令：
+. 输入板载密钥管理器的集群范围密码短语：
++
+[listing]
+----
+
+Enter the cluster-wide passphrase for the Onboard Key Manager:
+
+All offline encrypted volumes will be brought online and the corresponding volume encryption keys (VEKs) will be restored automatically within 10 minutes. If any offline encrypted volumes are not brought online automatically, they can be brought online manually using the "volume online -vserver <vserver> -volume <volume_name>" command.
+
+----
+. 确保所有密钥均已同步：_security key-manager key query-reRestored false_
++
+`There are no entries matching your query.`
+
++
+
+NOTE: 在reved参数中筛选false时、不应显示任何结果。
+
+. 从配对节点进行节点恢复：_storage故障转移-from node local_
+

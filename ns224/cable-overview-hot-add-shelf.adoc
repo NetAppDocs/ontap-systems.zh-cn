@@ -1,0 +1,61 @@
+---
+permalink: ns224/cable-overview-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, cable, hot-add an ns224 drive shelf 
+summary: 为要热添加的每个NS224磁盘架布线、以便每个磁盘架都有两个连接、连接到HA对中的每个控制器。 
+---
+= 热添加—NS224磁盘架布线概述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+为要热添加的每个NS224磁盘架布线、以便每个磁盘架都有两个连接、连接到HA对中的每个控制器。
+
+本布线部分介绍如何使用缆线将NS224磁盘架连接到以下存储系统：
+
+* link:cable-aff-systems-hot-add-shelf.html["连接到AFF系统的缆线"]
+* link:cable-asa-systems-hot-add-shelf.html["连接到ASA系统的缆线"]
+* link:cable-eoa-systems-hot-add-shelf.html["使用缆线连接到EOA系统"]
+
+
+
+
+== 关于此任务
+
+* 熟悉正确的缆线连接器方向以及NS224 NSM100磁盘架模块上的端口位置和标签。
++
+** 插入缆线时，连接器拉片朝上。
++
+正确插入缆线后，它会卡入到位。
+
++
+连接缆线的两端后，磁盘架和控制器端口 LNK （绿色） LED 将亮起。如果端口 LNK LED 不亮，请重新拔插缆线。
+
++
+image::../media/oie_cable_pull_tab_up.png[插入电缆时，连接器推拉卡舌朝上]
+
+** 您可以使用下图帮助您以物理方式识别磁盘架NSM100端口e0a和e0b。
++
+NS224磁盘架包含两个NSM100模块。顶部模块插入插槽A (NSM A)、底部模块插入插槽B (NSM B)。
+
++
+每个NSM100模块包括2个100GbE QSFP28端口：e0a和e0b。
+
++
+image::../media/drw_ns224_back_ports.png[NS224 NSM100模块端口e0a和e0b]
+
+
+
+* 为热添加的磁盘架布线后， ONTAP 将识别该磁盘架：
++
+** 如果启用了自动驱动器分配，则会分配驱动器所有权。
+** 如果需要，应自动更新 NSM 磁盘架固件和驱动器固件。
++
+
+NOTE: 固件更新可能需要长达 30 分钟。
+
+
+
+

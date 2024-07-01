@@ -1,0 +1,34 @@
+---
+permalink: a1k/install-overview.html 
+sidebar: sidebar 
+keywords: Installation, deployment, Install, deploy, Installing, deploying, a1k 
+summary: 按照以下简要步骤安装和设置AFF A1K存储系统、并将其部署为ONTAP系统中的节点。 
+---
+= 安装设置工作流- AFF A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+按照以下工作流步骤安装、设置和部署AFF A1K存储系统。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:install-prepare.html["准备安装"]
+[role="quick-margin-para"]
+要准备安装、您需要准备好站点、检查环境和电气要求、并确保有足够的机架空间。然后、打开设备包装、将其内容与装箱单进行比较、并注册硬件以获得支持优势。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:install-hardware.html["安装硬件"]
+[role="quick-margin-para"]
+要安装硬件、请为您的平台和磁盘架安装导轨套件、然后在机柜或电信机架中安装并固定您的平台。接下来、将磁盘架滑入导轨上。最后、将缆线管理设备连接到平台背面、以便有条理地进行缆线布线。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:install-cable.html["电缆硬件"]
+[role="quick-margin-para"]
+要使用缆线连接硬件、请先用缆线将控制器连接到网络、然后使用缆线将控制器连接到磁盘架。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:install-power-hardware.html["启动存储系统"]
+[role="quick-margin-para"]
+要打开系统电源、请首先打开每个NS224磁盘架的电源、并分配一个唯一的磁盘架ID、以确保每个磁盘架在设置中都是不同的。然后、打开控制器的电源。最后、使用随附的固定设备将电源线固定在每个电源上。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:install-complete.html["完成存储系统设置"]
+[role="quick-margin-para"]
+要完成系统设置、请通过浏览器指向控制器的IP地址来访问基于Web的界面System Manager。设置向导可帮助您开始集群配置。此外，您还可以使用命令行界面（ CLI ）。

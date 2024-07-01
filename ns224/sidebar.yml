@@ -6,7 +6,27 @@ entries:
   pdf-filename: NS224 磁盘架安装和布线
   entries:
   - title: 热添加磁盘架
-    url: "/ns224/hot-add-shelf.html"
+    entries:
+    - title: 热添加工作流
+      url: "/ns224/hot-add-shelf-overview.html"
+    - title: 要求和最佳实践
+      url: "/ns224/requirements-hot-add-shelf.html"
+    - title: 准备热添加
+      url: "/ns224/prepare-hot-add-shelf.html"
+    - title: 安装用于热添加的磁盘架
+      url: "/ns224/install-hot-add-shelf.html"
+    - title: 用于热添加的缆线架
+      entries:
+      - title: 布线概述
+        url: "/ns224/cable-overview-hot-add-shelf.html"
+      - title: AFF 系统
+        url: "/ns224/cable-aff-systems-hot-add-shelf.html"
+      - title: ASA 系统
+        url: "/ns224/cable-asa-systems-hot-add-shelf.html"
+      - title: 可用性已终止的系统
+        url: "/ns224/cable-eoa-systems-hot-add-shelf.html"
+    - title: 完成热添加
+      url: "/ns224/complete-hot-add-shelf.html"
   - title: 更改磁盘架 ID
     url: "/ns224/change-shelf-id.html"
   - title: 将磁盘架作为交换机连接的存储进行布线

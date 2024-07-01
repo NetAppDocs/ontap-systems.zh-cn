@@ -64,7 +64,6 @@ NOTE: 数据是从 `security key-manager backup show` 或 `security key-manager 
 +
 系统将启动并显示 Waiting for giveback... 提示符。
 
-. 将控制台缆线移至配对控制器，然后以 "admin" 身份登录。
 . 使用 `storage failover show` 命令确认目标控制器已准备好进行交还。
 . 仅使用 `storage failover giveback -fromnode local -only-cfo-aggregates true` 命令交还 CFO 聚合。
 +

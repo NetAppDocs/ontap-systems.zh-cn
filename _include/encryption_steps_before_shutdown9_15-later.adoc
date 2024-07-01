@@ -1,0 +1,33 @@
+= 
+:allow-uri-read: 
+
+
+在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查正在运行的 ONTAP 版本。
+
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+.步骤
+. 检查受损控制器的状态：
++
+** 如果受损控制器处于登录提示符处，请以 `admin` 身份登录。
+** 如果受损控制器位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的控制器上。
+
+
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下AutoSupport消息会禁止自动创建案例两小时：`集群1：*> system node AutoSupport invoke -node *-type all -message Maint=2h
+
+. 使用 `version -v` 命令检查受损控制器（如果已启动）或配对控制器（如果受损控制器已关闭）上运行的 ONTAP 版本：
++
+** 如果命令输出中显示<lno-DARE>或<1ONo-DARe>、则系统不支持NVE、请继续执行 https://docs.netapp.com/us-en/ontap-systems/fas2800/bootmedia-impaired-controller-shutdown.html["Shut down the impaired controller"]。
+** 如果<lno-DARE>未显示在命令输出中、并且系统运行的是ONTAP 9.6或更高版本、请继续下一节。 <<在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE>>。
+
+
+. 从运行状况良好的控制器禁用自动交还：
++
+....
+`storage failover modify -node local -auto-giveback false`
+or
+`storage failover modify -node local -auto-giveback-after-panic false`
+....
+

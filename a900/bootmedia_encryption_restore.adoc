@@ -23,6 +23,7 @@ summary: 检查环境变量后，您必须完成特定于已启用板载密钥�
 
 == 启用板载密钥管理器后还原 NVE 或 NSE
 
+.步骤
 . 将控制台缆线连接到目标控制器。
 . 在 LOADER 提示符处使用 boot_ontap 命令启动控制器。
 . 检查控制台输出：
@@ -110,7 +111,7 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 
 . 在 clustershell 提示符处，输入 net int show -is-home false 命令以列出不在其主控制器和端口上的逻辑接口。
 +
-如果任何接口列为 `false` ，请使用 net int revert 命令将这些接口还原回其主端口。
+如果任何接口列为 `false`，使用将这些接口还原回其主端口 `net int revert -vserver Cluster -lif _nodename_` 命令：
 
 . 将控制台缆线移至目标控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
@@ -120,6 +121,7 @@ NOTE: 如果 `Restored` 列 = `yes/true` 以外的任何内容，请联系客户
 
 == 在运行 ONTAP 9.6 及更高版本的系统上还原 NSE/NVE
 
+.步骤
 . 将控制台缆线连接到目标控制器。
 . 在 LOADER 提示符处使用 boot_ontap 命令启动控制器。
 . 检查控制台输出：
@@ -159,7 +161,7 @@ NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
 . 等待 3 分钟，然后使用 storage failover show 命令检查故障转移状态。
 . 在 clustershell 提示符处，输入 `net int show -is-home false` 命令以列出不在其主控制器和端口上的逻辑接口。
 +
-如果任何接口列为 `false` ，请使用 `net int revert` 命令将这些接口还原回其主端口。
+如果任何接口列为 `false`，使用将这些接口还原回其主端口 `net int revert -vserver Cluster -lif _nodename_` 命令：
 
 . 将控制台缆线移至目标控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
@@ -167,12 +169,12 @@ NOTE: 终止 CIFS 可能会导致数据发生原因丢失。
 . 使用 `security key-manager key-query` 命令显示存储在密钥管理服务器上的加密和身份验证密钥。
 +
 ** 如果 `restored` column = `yes/true` ，则表示您已完成更换过程，并可继续完成更换过程。
-** 如果 `密钥管理器类型` = `external` 和 `restored` 列 = 除 `yes/true` 以外的任何其他内容，请使用 security key-manager external restore 命令还原身份验证密钥的密钥 ID 。
+** 如果 `Key Manager type` = `external` and the `restored` column = anything other than `yes/true` ，请使用 `security key-manager external restore` 命令还原身份验证密钥的密钥 ID 。
 +
 
 NOTE: 如果命令失败，请联系客户支持。
 
-** 如果 `密钥管理器类型` = `板载` 和 `还原` 列 = `是 / 真` 以外的任何内容，请使用 security key-manager 板载同步命令重新同步密钥管理器类型。
+** 如果 `密钥管理器类型` = `板载` 和 `还原` 列 = 除 `yes/true` 以外的任何其他内容，请使用 `security key-manager on板 载同步` 命令重新同步密钥管理器类型。
 +
 使用 `security key-manager key-query` 命令验证所有身份验证密钥的 `restored` column = `yes/true` 。
 

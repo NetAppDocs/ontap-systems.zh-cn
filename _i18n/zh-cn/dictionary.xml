@@ -2707,27 +2707,17 @@
   <block id="9c421700c0f93ff32ed586c9cde9ac20" category="paragraph">如果 HA 对运行的是 ONTAP 9.8 或更高版本，则非专用端口在 `Mode` 列中显示 `storage` 。</block>
   <block id="1a0894ce06ca64ffb7715de304b85900" category="paragraph">如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？` 中显示 `false` 列中，也会在 `State` 列中显示 `enabled` 。</block>
   <block id="d0d1f0809de877f29fd0a846c8876708" category="list-text">如果配置了非专用端口以供存储使用，则可以使用此操作步骤。</block>
-  <block id="577d23be077627bcf451d00d32ee44b3" category="paragraph">否则，您需要完成步骤 3 到步骤 6 来配置端口。</block>
   <block id="07d80afbccd38f7712fa336226de0865" category="paragraph">如果未配置非专用端口以供存储使用，则命令输出将显示以下内容：</block>
   <block id="a71b3231969443f43b88fb3f3997c11b" category="list-text">在其中一个控制器模块上配置非专用端口以供存储使用：</block>
   <block id="1529765b6b367d0e6b6e265150953287" category="paragraph">您必须对要配置的每个端口重复适用的命令。</block>
-  <block id="97b8f6a880b769e0f35c2c8fb10fed3c" category="paragraph">`storage port modify -node node name -port port name -mode storage`</block>
   <block id="5bf92b0f5dcba33ceffc7fde775fa3ac" category="paragraph">ONTAP 9.7 或 9.6</block>
-  <block id="00f9e81cfbd27645415ec70f385a34a4" category="paragraph">`storage port enable -node node name -port port port name`</block>
-  <block id="cf4916008e4b27e26bdeecc5dc5b330f" category="list-text">如果 HA 对运行的是 ONTAP 9.6 ，请重新启动控制器模块以使端口更改生效： `ssystem node reboot -node node name -reason reason for the reboot`</block>
   <block id="bb38aa03e396afd98be51523e1304b09" category="admonition">重新启动可能需要长达 15 分钟。</block>
   <block id="2af8713b29d92440aed549d35fa1f9a3" category="list-text">对第二个控制器模块重复步骤：</block>
   <block id="fc4a6c2a954652ed60c43c56910ae75a" category="paragraph">ONTAP 9.7 或更高版本</block>
-  <block id="0c1f0f96805df0c678d18efaf7b64931" category="list-text">重复步骤 3 。</block>
-  <block id="dffe770e475bdd7497db0437af0f3e38" category="list-text">转至步骤 6. 。</block>
   <block id="7dd2a92fd3f41a5334edf46f95d77e71" category="paragraph">ONTAP 9.6</block>
-  <block id="b5b0f2dff5bdcc9e85cf639a6245b998" category="list-text">重复步骤 3 和 4 。</block>
   <block id="97e5b69d6a085b09c71789a6b191bdbd" category="admonition">第一个控制器必须已完成重新启动。</block>
   <block id="b4c2dd2542e47ff1364abd95f6610ff8" category="list-text">验证是否已为两个控制器模块上的非专用端口配置用于存储： `storage port show`</block>
   <block id="5f73e21cfc57f9099894052fde4bfc56" category="list-text">如果您的磁盘架具有多路径 HA 连接，则为端口连接重新布线是一种无中断操作步骤。</block>
-  <block id="00fb5d894e369d181617f17a9dec8a1b" category="paragraph">您可以在每个控制器上的两组端口之间重新对第一个磁盘架进行布线，以便在热添加第二个磁盘架时，这两个磁盘架的连接弹性都更高。</block>
-  <block id="4a681792f044e81503a327f4c48db609" category="list-text">在此操作步骤期间，一次移动一根缆线，以始终保持与磁盘架的连接。</block>
-  <block id="0077637f8f5fcac1587cab5699dba4dc" category="list-text">根据您的平台型号，在每个控制器上的两组端口之间重新连接现有磁盘架的连接。</block>
   <block id="7e273a22e6f4b495323284cd54002213" category="admonition">移动缆线无需等待从一个端口拔下缆线与将缆线插入另一个端口之间的时间。</block>
   <block id="7e4c7e7366de7251794bd2cee31785b8" category="cell">如果您有 ...</block>
   <block id="ce2468b66455462f68b8eef51607d931" category="paragraph">如果需要，您可以参考两个磁盘架配置中显示现有单个磁盘架和已重新布线的磁盘架的布线图。</block>
@@ -2735,9 +2725,6 @@
   <block id="d39331f2882996e7bd91bd33be8e8eda" category="list-text">验证重新连接的磁盘架是否已正确布线。</block>
   <block id="f585cc2236674d2428b635421c54ecfc" category="section-title">准备手动分配驱动器所有权以进行热添加</block>
   <block id="b72b3c2205cb08a656771ba6697f52d1" category="paragraph">如果要为要热添加的 NS224 驱动器架手动分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。</block>
-  <block id="041191b425581424d1dade4249a5421e" category="paragraph">如果磁盘架中的驱动器将由 HA 对中的两个控制器模块拥有，则需要手动分配驱动器所有权。</block>
-  <block id="5b2a9da67a0934c316ba7d6f17cb36b6" category="section-title">安装驱动器架以进行热添加</block>
-  <block id="26f90712b783e9cc3ac80d0bd0ba6246" category="paragraph">安装新的 NS224 驱动器架涉及到将磁盘架安装到机架或机柜中，连接电源线（自动打开磁盘架电源），然后设置磁盘架 ID 。</block>
   <block id="98a23f93a2146d0c96053cc9158120a2" category="list-text">您必须已完成适用的准备过程。</block>
   <block id="4dc0b17b937c12129ebe893f11113096" category="paragraph"><block ref="b033791636e3890ff7903341ce0a7906" category="inline-xref-macro-rx"></block></block>
   <block id="738a7d32562c5557c170a7a1bacec3f1" category="admonition">请勿使用法兰安装磁盘架。</block>
@@ -2754,14 +2741,10 @@
   <block id="a1a7af675ea23b3ddcdf9cf5e4355669" category="paragraph">大约 5 秒钟后，两个数字开始闪烁，并且耗时值上的琥珀色 LED 亮起。</block>
   <block id="7cd532a90215f8cff1bce2eea092415d" category="paragraph">您必须从磁盘架上拔下两根电源线，等待 10 秒，然后重新插入。</block>
   <block id="24e10780f209a577c697057f12f64f10" category="paragraph">电源恢复供电后，其双色 LED 将呈绿色亮起。</block>
-  <block id="be355dee9f72986f0aafd260106ee987" category="section-title">为驱动器架布线以进行热添加</block>
   <block id="d84d97bfca6c6a7d47f929c1b0ee1fb3" category="section-title">为热添加布线时的注意事项</block>
-  <block id="00d2619e88b97f1c37f53ab4557be753" category="paragraph">在为热添加的磁盘架布线之前，熟悉正确的缆线连接器方向以及 NS224 NSM 驱动器磁盘架模块上端口的位置和标记会很有帮助。</block>
   <block id="52aad3ff52241a2e329ba14ca2b495ec" category="list-text">插入缆线时，连接器拉片朝上。</block>
   <block id="546b03f9ca211c30f5975ab99dd93ce8" category="paragraph">正确插入缆线后，它会卡入到位。</block>
   <block id="36dad54a495121233a847704d6bf5a6b" category="paragraph">连接缆线的两端后，磁盘架和控制器端口 LNK （绿色） LED 将亮起。如果端口 LNK LED 不亮，请重新拔插缆线。</block>
-  <block id="d337e0e180d9a5b8e29fe40b9935de95" category="list-text">您可以使用下图帮助您以物理方式识别磁盘架 NSM 端口 e0a 和 e0b ：</block>
-  <block id="a73fdad937d5d9186c5991210a3247b5" category="image-alt">DRW nss224 后端端口</block>
   <block id="6c4ae44d1114274bf4744f7a456ce07c" category="list-text">您必须已安装磁盘架，打开其电源并设置磁盘架 ID 。</block>
   <block id="373a35978efc6b28d1b1d225b662f5db" category="paragraph"><block ref="4688946b74942e3697fd11a0bd3e0972" category="inline-xref-macro-rx"></block></block>
   <block id="6636323e0aff4f454f3b81527e703c2b" category="list-text">为磁盘架连接布线：</block>
@@ -4668,9 +4651,7 @@
   <block id="a5d68caf62cce2afa4e8ca12ce07943a" category="open-title">选项 2 ：重新分配 ID （ MetroCluster 配置）</block>
   <block id="c86ca2ad8b18f1b66eec5105c703ce0a" category="list-text">如果您有 AFF A700 HA 对，并且要热添加初始 NS224 驱动器架（ HA 对中不存在 NS224 驱动器架），则必须在每个控制器中安装核心转储模块（ X9170A ， NVMe 1 TB SSD ）以支持核心转储（存储核心文件）。</block>
   <block id="b979e87e6bde70f013c6af59e1fa73aa" category="list-text">如果您的 ASA HA 对支持 NS224 磁盘架，则可以使用此操作步骤。</block>
-  <block id="7e874a7e7fce6d08319e452556499a17" category="paragraph">AFF A700 HA 对</block>
   <block id="863ee9a0c8ca40928975158c8441cb3e" category="paragraph"><block ref="8b0dd5f6450b331119d433eade9d39d0" category="inline-xref-macro-rx"></block></block>
-  <block id="299be2017fe243bf0cb27752cb61cba4" category="paragraph">AFF A400 HA 对</block>
   <block id="35abee2b20175ae748c82f6ba4453ac1" category="paragraph"><block ref="2d20d554d868477c9c895109bac068ae" category="inline-xref-macro-rx"></block></block>
   <block id="075ac783ee242c66ec7ef26475fd212b" category="section-title">为 AFF A700 HA 对的热添加磁盘架布线</block>
   <block id="873efd8427437501798d979ea439809c" category="section-title">为 AFF A400 HA 对的热添加磁盘架布线</block>
@@ -4720,26 +4701,20 @@
   <block id="c9d9e9c98bea821ee3130955cb98a54c" category="list-text">Chinese:<block ref="d495a553b62dffb464c7810acf543358" category="inline-link-rx"></block></block>
   <block id="839439b189cfb3960dee96d5900594f7" category="list-text">您需要一个带一端直发的回形针或一个窄尖圆头笔。</block>
   <block id="6de535d32c5294ec13b8cdaefbdfcd96" category="list-text">在固件版本不是最新的新驱动器上，驱动器固件会自动更新（无中断）。</block>
-  <block id="700841889ff35bf8741ce3731cbe8278" category="list-text">HA 对必须具有足够的可用 RoCE 端口，以支持您要热添加的磁盘架数量。</block>
-  <block id="3130d58fd4980df36a53d47d41873fc3" category="paragraph">For each shelf you are hot-adding, you need a minimum of two RoCE capable ports on each controller.这些端口可以位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合，也可以位于支持 RoCE 的 I/O 模块上，这一点受您的平台型号支持。</block>
   <block id="149bd884ff7361ec4900f148e94264c1" category="paragraph">如果 HA 对没有足够的可用 RoCE 端口，并且您的平台型号支持使用支持 RoCE 的 PCIe 卡或 I/O 模块，则必须已将额外的卡或 I/O 模块安装到您的平台型号支持的正确控制器插槽中。</block>
   <block id="bf9e404e3724ecf929670f95275b884e" category="paragraph">必须配置不支持 RoCE 的专用端口以供存储使用（而不是用于网络连接）。</block>
   <block id="3a0537bc074963c8c7b8afdfa7851872" category="paragraph"><block ref="cd0ec4d1059266e2eb6b1658ce353e50" category="inline-xref-macro-rx"></block></block>
   <block id="2a8cd3ca573de9451e94751347275dc3" category="inline-link-macro">更换缓存模块或添加 / 更换核心转储模块— AFF A700 和 FAS9000</block>
   <block id="475cacc4c4d3f4ca67cc021d7e76f4ce" category="paragraph"><block ref="475cacc4c4d3f4ca67cc021d7e76f4ce" category="inline-link-macro-rx"></block></block>
-  <block id="6e74f4b097338a6fbcb3d84b0a803fde" category="section-title">准备不支持 RoCE 的专用端口以进行热添加</block>
-  <block id="cd7573270f8cd38c56d1bb74eb86d8c6" category="paragraph">如果您的 HA 对具有不支持 RoCE 的专用端口，而您要使用这些端口热添加 NS224 驱动器架，则必须确保这些端口已配置为用于存储（而不是用于网络连接）。根据您的平台型号，支持 RoCE 的端口位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上。</block>
   <block id="204c25542c5d660c031ae735415785bc" category="list-text">对于某些平台型号，如果在控制器上受支持的插槽中安装了支持 RoCE 的 PCIe 卡或 I/O 模块，则这些端口会自动默认为存储使用（而不是网络连接）；但是，建议您完成此操作步骤以验证是否已将支持 RoCE 的端口配置为存储使用。</block>
   <block id="2cd678bb1387e05d5c4dd3461278cff2" category="list-text">如果您确定 HA 对中不支持 RoCE 的专用端口未配置为存储使用，则配置这些端口是无中断操作步骤。</block>
   <block id="622e2c1e48cbf4234cb8c28434a52588" category="list-text">验证 HA 对中的非专用端口是否已配置为存储使用： `storage port show`</block>
-  <block id="9dd4670d3c797341bf0b1649ee18743f" category="list-text">您必须已启用您安装的支持 RoCE 的 PCIe 卡或 I/O 模块上的端口。</block>
   <block id="2f37a5aa23cfb87abad4097db5d8b5ee" category="admonition">这些子步骤假定已将现有磁盘架连接到每个控制器上插槽 3 中支持 RoCE 的 I/O 模块。</block>
   <block id="336f4ce595af8dfded4dff3e6c2d2dbe" category="list-text">在控制器 A 上，将缆线从插槽 3 端口 b （ e3b ）移至插槽 7 端口 b （ e7b ）。</block>
   <block id="97db9d4f6a8cf0456ad92952a384cb79" category="admonition">这些子步骤假定已将现有磁盘架连接到每个控制器上插槽 5 中支持 RoCE 的 PCIe 卡。</block>
   <block id="f6eccf676a12f3899de1b6cd792b9d6f" category="list-text">在控制器 A 上，将缆线从插槽 5 端口 b （ e5b ）移至插槽 3 端口 b （ e3b ）。</block>
   <block id="077cb21f670cc68aea4bf00f1abd4745" category="list-text">在控制器 A 上，将缆线从端口 e0d 移至插槽 5 端口 b （ e5b ）。</block>
   <block id="0d42cbc8b21edd5f33f740bf5b14d10d" category="list-text">使用磁盘架随附的安装宣传单安装磁盘架随附的导轨安装套件。</block>
-  <block id="52f4904b9873d65908b7d22ca910291e" category="paragraph">You cable each NS224 drive shelf you are hot-adding so that each shelf has two connections to each controller module in the HA pair.根据您要热添加的磁盘架数量以及您的平台型号，您可以在控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合或支持 RoCE 的 I/O 模块上使用支持 RoCE 的端口。</block>
   <block id="fa9763a154ca61da241ba542f9d894f7" category="paragraph">从平台机箱背面看，左侧支持 RoCE 的卡端口为端口 "A" （ e1a ），右侧端口为端口 "b" （ e1b ）。</block>
   <block id="544773fca9e8ae07d62dcf4db5a7cb78" category="list-text">如果要在每个控制器模块上使用一组支持 RoCE 的端口（一个支持 RoCE 的 I/O 模块）热添加一个磁盘架，而这是 HA 对中唯一的 NS224 磁盘架，请完成以下子步骤。</block>
   <block id="fec7dbe822daa329031be7af970538e7" category="admonition">此步骤假定您在每个控制器模块上的插槽 3 中安装了支持 RoCE 的 I/O 模块，而不是插槽 7 。</block>
@@ -5003,11 +4978,8 @@
   <block id="56b9aa57eb07c87d93d8f36e42537891" category="list-text">如果命令因 CIFS 会话打开而失败，请与客户确认如何关闭 CIFS 会话。</block>
   <block id="99cf22e04f567c5375349f8aa14becd4" category="list-text">如果命令因配对节点 " 未就绪 " 而失败，请等待 5 分钟，使 NVRAM 同步。</block>
   <block id="4d2b3834d59169dcbb17afc3c699e3ac" category="list-text">If the command fails because of an NDMP, SnapMirror, or SnapVault process, disable the process.有关详细信息，请参见相应的内容。</block>
-  <block id="01644ff2aec9678b64ae01d076703f1a" category="paragraph">如果任何接口列为 `false` ，请使用 net int revert 命令将这些接口还原回其主端口。</block>
   <block id="681ec8b91432585ef548a814edeadbb6" category="paragraph">转至第 7 步。</block>
   <block id="b17e311ccd8e21ff73506e54f24b6cfd" category="list-text">等待 3 分钟，然后使用 storage failover show 命令检查故障转移状态。</block>
-  <block id="5af23d53e03e2919ad84a3f9112823ac" category="list-text">如果 `密钥管理器类型` = `external` 和 `restored` 列 = 除 `yes/true` 以外的任何其他内容，请使用 security key-manager external restore 命令还原身份验证密钥的密钥 ID 。</block>
-  <block id="3796dde1eb4771fdc94b7b6dd6b04cbf" category="list-text">如果 `密钥管理器类型` = `板载` 和 `还原` 列 = `是 / 真` 以外的任何内容，请使用 security key-manager 板载同步命令重新同步密钥管理器类型。</block>
   <block id="6012de004f4bd50d98163ac921889523" category="doc">更换 LED USB 模块 - AFF A900</block>
   <block id="6f2af58da87b0cd7d98ca72ff52c9044" category="paragraph">LED USB 模块可连接到控制台端口和系统状态。更换此模块不需要工具，也不会中断服务。</block>
   <block id="807c4e7b40aa97c700fd63bd5a5477a6" category="section-title">第 1 步：更换 LED USB 模块</block>
@@ -5405,7 +5377,6 @@
   <block id="1cd605139bf377c8532c404fdbca04f0" category="paragraph">属于 _replacement_ 控制器的磁盘应显示新的系统 ID 。In the following example, the disks owned by node1 now show the new system ID, 1873775277:</block>
   <block id="10f72301134f1f2b78e11983dd3c4654" category="list-text">验证每个控制器是否存在所需的卷： `vol show -node node-name`</block>
   <block id="e5fb91f466e4f9bded3cae7f56b2a15e" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： `storage failover modify -node replacement-node-name -onreboot true`</block>
-  <block id="71f1fa980323b48bfcd7c23a6851e346" category="list-text">将控制台缆线移至配对控制器，然后以 "admin" 身份登录。</block>
   <block id="6fb459fd46b17c9a37607abf2db84056" category="section-title">第 1 步：在 ONTAP 中为替代控制器安装许可证</block>
   <block id="51e6a2fb5c6f27756e90e2666efd984d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。完成 NVE 或 NSE 任务后，您需要关闭受损控制器。</block>
   <block id="d1342671e7a1aeffea6df3cd0214be86" category="list-text">此操作步骤会造成系统中断。对于双控制器集群，多节点集群中的服务将完全中断，部分中断将会发生。</block>
@@ -6137,7 +6108,6 @@
   <block id="7d60346fb854755b0fc4b8486f2e5769" category="section-title">第1步：在ONTAP 中为_replacement_控制器安装许可证</block>
   <block id="541648f14089765ba6e8c3198be32507" category="section-title">Step 2: Replace the boot media</block>
   <block id="6fdf23777adc5b39f52f2829b69833e5" category="inline-link-macro">将节点与集群同步</block>
-  <block id="dca9d9d34ff973dbf261373e223aa9e4" category="list-text">如果您使用的是SAN系统、则必须已检查事件消息 <block ref="090678c8ba0a25df800d3d4eeaf19522" prefix="(" category="inline-code"></block>)。。<block ref="090678c8ba0a25df800d3d4eeaf19522" prefix=" " category="inline-code"></block> command可显示节点名称、该节点的仲裁状态、该节点的可用性状态以及该节点的运行状态。</block>
   <block id="03733c422db2a03d86659ae5a1e923dc" category="paragraph">以下AutoSupport 消息禁止自动创建案例两小时：<block ref="387708b955ccf034fcf9197ad51ba879" prefix=" " category="inline-code"></block></block>
   <block id="f1f0ba04096d04407de2d15a11510ac1" category="paragraph">系统提示符或密码提示符</block>
   <block id="639008d04bbddd83a85cafeeb0a39a18" category="paragraph">对于先前配置为使用存储或卷加密的存储系统、您必须执行其他步骤以提供无中断加密功能。You can skip this task on storage systems that do not have Storage or Volume Encryption enabled.</block>
@@ -6399,11 +6369,7 @@
   <block id="413763831143110464ea32cf926646ff" category="list-text">将电源线重新连接到电源、如果电源为交流电源、请使用电源线固定器固定电源线、如果是直流电源、则拧紧两个翼形螺钉、然后从电源中拔下电源线。</block>
   <block id="fc2b3ed430cb8c91e352b492f909df0e" category="list-text">以下动画简要介绍了驱动器热插拔操作步骤 的物理拆卸和插入部分。</block>
   <block id="a5296c0167e1a9e0e79d0ac90763897a" category="list-text">您可以使用以下动画或写入的步骤来更换DIMM。</block>
-  <block id="4be5ffb0248a7f7fbd958f1cda061f7a" category="section-title">准备AFF A700、AFF A800、AFF C800、AFF A400或AFF C400 HA对以热添加第二个磁盘架</block>
-  <block id="c574e5a033e5460323e267b83b04dfe1" category="paragraph">如果您的AFF A700、AFF A800、AFF C800、AFF A400或AFF C400 HA对具有一个NS224驱动器架、并通过缆线连接到每个控制器上一组支持RoCE的端口、则必须对该架重新布线 (在为每个控制器上的两组端口安装了支持RoCE的额外PCIe卡或I/O模块之后)、然后热添加第二个磁盘架。</block>
-  <block id="20b6f43af9fa83cc4fb91fe544ed870c" category="paragraph">AFF A800或AFF C800 HA对</block>
   <block id="39d970461581cdbd7cd52a0c942e09cc" category="paragraph"><block ref="4c1ac301fada9548f6ad2acaf0e467d2" category="inline-xref-macro-rx"></block></block>
-  <block id="f3d5d75e576e887e5cc38744e9413dea" category="paragraph">AFF C400 HA对</block>
   <block id="d83f6d97e759c5156f389e1bbaca2e46" category="paragraph"><block ref="b415fb6b993cf20b1b9d3f6c50f3ab17" category="inline-xref-macro-rx"></block></block>
   <block id="08755d45823cf538e7c3e95cdbf3232d" category="list-text">在控制器A上、将缆线从插槽4端口A (E4A)移至插槽5端口b (e5b)。</block>
   <block id="2714efafc88a564eeaaee969d028a550" category="list-text">将电源线连接到磁盘架、如果是交流电源、请使用电源线固定器将其固定到位；如果是直流电源、则使用两个拇指螺钉将其固定到位、然后将电源线连接到不同的电源以提高故障恢复能力。</block>
@@ -6629,14 +6595,11 @@
   <block id="3f7ee1fb6cfdfd18c49f8e060fa8f9c9" category="paragraph">此操作步骤 仅适用于双节点非MetroCluster配置。如果您的系统包含两个以上的节点、请参见<block ref="681b47fbe1cebc545a75e77efd420ec0" category="inline-link-rx"></block>。</block>
   <block id="36ee27bc3fc7c617977b35534609c979" category="paragraph">您需要：</block>
   <block id="68d685ddbaa25f1a411d5e93d6f91913" category="list-text">ONTAP 的本地管理员凭据。</block>
-  <block id="ac1036c822296c33d140ef7ba7cd246d" category="list-text">NetApp板载密钥管理(OKM)集群范围的密码短语(如果使用存储加密)。</block>
-  <block id="93e6bf3fa29a7ebd2a4bb235a54deb94" category="list-text">每个控制器的SP/BMC访问能力。</block>
   <block id="d6562c849f41b9038124f0c304aed030" category="list-text">停止所有客户端/主机访问NetApp系统上的数据。</block>
   <block id="d61b46d9cd719b77efb76269147aa377" category="list-text">暂停外部备份作业。</block>
   <block id="527f18fb3f8ac4bca4ae01901a2c9317" category="list-text">更换所需的工具和设备。</block>
   <block id="3b6fc5695f8237510131da824ce788d0" category="inline-link">《正常关闭和启动存储系统解决方案指南》</block>
   <block id="03f7958d5b1fc7636429e97368e2f97f" category="admonition">如果系统是用作FabricPool 云层的NetApp StorageGRID 或ONTAP S3、请参见<block ref="6db187057e0b0e01589d1a1a7f510469" category="inline-link-rx"></block> 执行此操作步骤 之后。</block>
-  <block id="ec965df16952820cbea39156c0dfe2f0" category="admonition">如果使用的是FlexArray 阵列LUN、请按照特定供应商的存储阵列文档执行此操作步骤 后要对这些系统执行的关闭操作步骤。</block>
   <block id="ad8a5006901db5ea8481166a34f27929" category="inline-link">SU490：(影响：关键) SSD最佳实践：避免关闭电源超过两个月后发生驱动器故障和数据丢失的风险</block>
   <block id="7d140f8b4464f9a8684a7943df8e74d9" category="admonition">如果使用SSD、请参见<block ref="13eec713a6c81535d5709aa561195b7a" category="inline-link-rx"></block></block>
   <block id="356bf392971487f892daba5338258571" category="paragraph">作为关闭之前的最佳实践、您应：</block>
@@ -6646,20 +6609,13 @@
   <block id="9f4d2068e7b3d206efc0252b3da597a5" category="inline-link">Active IQ 健康提醒和风险</block>
   <block id="c5df4dcae9a001142a36959487445ff6" category="list-text">解决任何问题<block ref="31b25beca26cb366eeb0665e3c0d7cbf" category="inline-link-rx"></block>。记下系统当前的任何故障、例如系统组件上的LED。</block>
   <block id="3923b7d5100131c85be2160c8b680704" category="list-text">通过SSH登录到集群、或者使用本地控制台缆线和笔记本电脑/控制台从集群中的任何节点登录。</block>
-  <block id="d9e8189e14354652821e1f0f10f12dfe" category="list-text">关闭AutoSupport 并指示系统预计脱机多长时间：</block>
   <block id="ac2a6618449930e8abeb32fd078d7716" category="list-text">确定所有节点的SP/BMC地址：</block>
   <block id="0d16db60da2c01b63ef84ee8d616c2fb" category="paragraph"><block ref="b206d268f79aeaa7c4f1e44684d2f080" prefix="" category="inline-code"></block></block>
   <block id="a0fd5b31be719aeb26e2fc9c6991da9f" category="list-text">退出集群Shell：<block ref="f24f62eeb789199b9b2e467df3b1876b" prefix=" " category="inline-code"></block></block>
   <block id="cf814f480a03329076e1d0cf2f71d7e3" category="list-text">使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP/BMC。</block>
   <block id="aed4c23042b5f25dad252449f4ddcc59" category="paragraph">如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。</block>
   <block id="a3dcd96fdc725fa51c4161c8a03146ab" category="admonition">打开与每个SP/BMC连接的SSH会话、以便监控进度。</block>
-  <block id="e2cba6e644aeaf95f80f688b880746da" category="list-text">暂停集群中的所有节点：</block>
-  <block id="02e0d9b5c39d838c007bfad7b6e34196" category="paragraph"><block ref="b89a38fd8ae1ad809e5b3560be211bfa" prefix="" category="inline-code"></block>。</block>
-  <block id="aba2c36fe67a0528d4417c7e5c4da8a1" category="admonition">对于使用在StrictSync模式下运行的同步SnapMirror的集群：<block ref="03e2e719454253f2db864fa560da7899" prefix=" " category="inline-code"></block></block>
-  <block id="3171aeb3fa199cec60349b4529cc0178" category="list-text">如果看到、请为集群中的每个控制器输入* y *<block ref="25cae4cb08eccf660db87cfb99a959d7" prefix=" " category="inline-code"></block></block>
   <block id="a39c8c38e51a42fcfaac22367dd19064" category="list-text">等待每个控制器暂停、然后显示加载程序提示符。</block>
-  <block id="461bb1724a0adc2c975edfdd4b4923a1" category="list-text">如果没有PSU开/关开关、请关闭每个PSU或拔下电源插头。</block>
-  <block id="e3dc6cc26ed03ba51ee4327edde1e1fc" category="list-text">从每个PSU拔下电源线。</block>
   <block id="3f80193798fcbb08cbe99cbe0a3aff95" category="paragraph">更换机箱后、请按以下顺序启动集群组件：</block>
   <block id="f9604921fe40d48421b9ae74e9a50059" category="list-text">打开交换机电源</block>
   <block id="85ee83d55e3fb9b20f9f17b7fb773ca0" category="list-text">启动驱动器架</block>
@@ -6699,7 +6655,6 @@
   <block id="2a29b6abc01fa919029a6defab91ed09" category="list-text">使用下图将控制器连接到单个驱动器架。</block>
   <block id="cf05a1b835cc522d6ff312818c4655b5" category="image-alt">DRW C400单个ns224磁盘架IEOPS 1097</block>
   <block id="c8bb212781cb1ea1ac1f2bb19672260b" category="image-alt">DRW C400两个ns224磁盘架IEOPS 1098</block>
-  <block id="268f653b0107cd8d721a5e6a0707445b" category="list-text">验证受损机箱中的所有控制器是否均已关闭。</block>
   <block id="9169713781138720e26fc387a18b87c3" category="list-text">如果尚未将电源线重新插入PSU、请将其插入。</block>
   <block id="3b6f7041bdbf002d5fb8118b3b66bbaf" category="list-text">通过将摇杆切换至*on*打开PSU，然后等待控制器完全通电。</block>
   <block id="535e6a17cac4b6fcea21c21d76a16011" category="list-text">开机后、检查机箱和控制器的正面和背面是否有任何故障指示灯。</block>
@@ -6873,7 +6828,6 @@
   <block id="5f9489878c0e21ab14f2c4768367bc39" category="list-text">如果已触发AutoSupport维护窗口、请使用结束此窗口<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block> 命令：</block>
   <block id="fe5bb47bbec2cc6ab51288fa7ec602da" category="paragraph">重新对控制器模块的存储和网络连接进行配线。</block>
   <block id="8f71288719d23ae490bd8fa8ba6d2988" category="paragraph">如果任何接口列为<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>，使用将这些接口还原回其主端口<block ref="71c4baf0f55b5bfce2627ab279a13043" prefix=" " category="inline-code"></block> 命令：</block>
-  <block id="1ccdd49d3b4e697ec664a985a5983b41" category="list-text">如果已使用禁用AutoSupport、则还原它<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block></block>
   <block id="657e1e449c74518bb94702c89e392c1b" category="list-text">在_Healthy_node上、检查系统时间：<block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix=" " category="inline-code"></block></block>
   <block id="6071c318b780c1f56da250b5fe0334d8" category="paragraph">日期和时间基于配置的时区。</block>
   <block id="598dc5e99f2a14bda43240b77ca40634" category="section-title">第2步：启动系统</block>
@@ -8800,4 +8754,1249 @@ SFP+(目标/启动程序)</block>
   <block id="e84bd7a7cafaabc7b1743876dcc73c70" category="image-alt">双节点无交换机集群复合布线图</block>
   <block id="0372c9caab5ee11faf1ffac3ef3c46fa" category="inline-image-macro">交换集群复合布线图</block>
   <block id="009e65f17aa2f40deb1c718bea3bf98b" category="paragraph"><block ref="009e65f17aa2f40deb1c718bea3bf98b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="586605376a36631b68766c450645ce95" category="list-text">将控制器模块重新连接到存储和网络连接。</block>
+  <block id="3787a827ea9c976e2c93c9193d615b97" category="list-text">如果您使用的是SAN系统，则必须已检查受损控制器SCSI刀片的事件消息 <block ref="090678c8ba0a25df800d3d4eeaf19522" prefix="(" category="inline-code"></block>。<block ref="090678c8ba0a25df800d3d4eeaf19522" prefix=" " category="inline-code"></block>命令(在priv高级模式下)可显示节点名称、该节点的仲裁状态、该节点的可用性状态以及该节点的运行状态。</block>
+  <block id="c8f595ad6dcf30f27e5e610fae364875" category="list-text">如果启用了AutoSupport、则通过调用AutoSupport消息禁止自动创建案例：<block ref="fa00b95aa82b5506a4c27cc4a50f05d7" prefix=" " category="inline-code"></block></block>
+  <block id="a6efff0cc5b19d4c49cb4467336db466" category="list-text">如果启用了AutoSupport、则通过调用AutoSupport消息命令禁止自动创建案例：<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
+  <block id="61612a74be5170dd342eb619d607d9a0" category="paragraph">以下AutoSupport命令将禁止自动创建案例两小时：<block ref="6cf51b10a85b7bdc2a6698400ee841b7" prefix=" " category="inline-code"></block></block>
+  <block id="ab859514fa976f71299cd0d5366c702d" category="paragraph">暂停受损控制器或从运行正常的控制器接管此控制器：<block ref="64d2ac6bbd59fb854ec2bed7b2dbe259" prefix=" " category="inline-code"></block></block>
+  <block id="fd9366185c7040d2814e95fefcce2264" category="list-text">如果启用了AutoSupport、则通过调用AutoSupport命令禁止自动创建案例：<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
+  <block id="9f496d341d66d79304a55547445c00a2" category="doc">选项1：将I/O模块添加到具有空插槽的存储系统</block>
+  <block id="c4b17ef982ae644ec1d2b995fa1534a8" category="paragraph">您可以通过向具有空插槽的存储系统添加新I/O模块或在完全填充的存储系统中将新I/O模块更换为新I/O模块来向存储系统添加I/O模块。</block>
+  <block id="656450ae55843844fdfca7b44cbc5678" category="list-text">检查<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 以确保新的I/O模块与您的存储系统和您正在运行的ONTAP版本兼容。</block>
+  <block id="9808a3e490e0cd81c2fab70cb489f958" category="paragraph">您可以将I/O模块添加到存储系统中的空模块插槽中。</block>
+  <block id="f9c9ac20332a969e865def6eb6464e99" category="list-text">从控制器的PSU上拔下电源设备(PSU)电缆。</block>
+  <block id="5f8429d099b5837b4b0f8245a6e25659" category="admonition">如果存储系统具有直流PSU、请断开电源电缆块与PSU的连接。</block>
+  <block id="78263f5226743bdd204519f0e9bd22d2" category="list-text">向下旋转缆线管理托架、方法是拉动缆线管理托架内部的按钮、然后向下旋转。</block>
+  <block id="72e0b58a2d456f6ab89ca8d83859264d" category="list-text">从托架上卸下目标插槽空白模块：</block>
+  <block id="abca9f9a7ffb3d4afa15f947303b1c4c" category="admonition">下图显示了如何卸下水平和垂直I/O模块。通常、您只会卸下一个I/O模块。</block>
+  <block id="b0fe3ad00c115ca25f49fb3d48769b0b" category="image-alt">卸下AFF A1K I/O模块</block>
+  <block id="243dd5ebf726e6d6a9762938953c1a6a" category="cell">凸轮锁定按钮</block>
+  <block id="3939b3c4c6e868d0268fd9a75f3b3805" category="list-text">按下目标插槽中空白模块上的凸轮闩锁。</block>
+  <block id="c053808d9acb931bed74754155a6e86f" category="list-text">将凸轮闩锁向下旋转到最远位置。对于水平模块、将凸轮尽可能远离模块。</block>
+  <block id="8321467648a8b1839622d0c940ffc054" category="list-text">将手指插入凸轮拉杆开口中、然后将模块拉出机箱、从而将模块从机箱中卸下。</block>
+  <block id="f47dbf934d7d51340a5c58741715b2d5" category="list-text">将I/O模块与机柜插槽开口的边缘对齐。</block>
+  <block id="b3fe1b3e8557371fcb101f90a1a32fd0" category="list-text">将模块轻轻地滑入插槽，直至完全滑入机箱，然后将凸轮闩锁一直向上旋转，以将模块锁定到位。</block>
+  <block id="be9dc0332662b913cef88d5dcde78acd" category="list-text">为I/O模块布线。</block>
+  <block id="040f840d8fdf859359eb680be25e8992" category="paragraph">如果I/O模块是NIC、请使用缆线将此模块连接到数据交换机。</block>
+  <block id="3072040b83655039de255184380a9271" category="paragraph">如果I/O模块是存储模块、请使用缆线将其连接到NS224磁盘架。</block>
+  <block id="9056e6b74b2e2b546abd76b6e7408f4d" category="list-text">将缆线管理托架向上旋转到关闭位置。</block>
+  <block id="a0a7e707ad35c210d4582fab4069c223" category="list-text">从配对控制器交还控制器：_storage故障转移g交还-ofnode target_ne_name_</block>
+  <block id="6c91356d53993ce0d1f0c1af28c7a48b" category="list-text">如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block> 。</block>
+  <block id="b5428794115862895177c132452bd21f" category="inline-link">Hot-add a shelf</block>
+  <block id="7656f6417cf0159238db8844dd418859" category="list-text">如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为其布线<block ref="82ab472144cf8d8775c0f52eabd5ed87" category="inline-link-rx"></block>。</block>
+  <block id="026bf593d893e27d6f090dc74e403a75" category="section-title">选项2：在没有空插槽的存储系统中添加I/O模块</block>
+  <block id="a06ddc697cce62226c19e353e0f2eeba" category="paragraph">您可以通过卸下现有I/O模块并将其更换为其他I/O模块来更改完全填充的系统中I/O插槽中的I/O模块。</block>
+  <block id="47ab52c1da07a0c00e2b876e54778a95" category="paragraph">将选定的生命周期重新分配到其他主端口。有关使用System Manager永久移动这些LUN的信息、请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> 。</block>
+  <block id="8f6ea8b644b16793208bc55e27bc7669" category="section-title">第2步：更换I/O模块</block>
+  <block id="beb24afcb0e8b318a6d1dcdd39cadd0e" category="list-text">从控制器的PSU上拔下PSU电缆。</block>
+  <block id="900056c17f40fb1a034e134a72eca912" category="image-alt">卸下AFF A1K I/O模块</block>
+  <block id="8181d3a6b1640b5868632cfe5589a05d" category="list-text">按下凸轮闩锁按钮。</block>
+  <block id="0cfc07520b64c5be4e64fac899e6eaa9" category="list-text">将I/O模块安装到机柜中的目标插槽中：</block>
+  <block id="7b71c8c5341c95139930e1f1748956d7" category="list-text">将模块与机柜插槽开口的边缘对齐。</block>
+  <block id="0169e44348295d5766b174aa4c296a62" category="list-text">重复拆卸和安装步骤以更换控制器的其他模块。</block>
+  <block id="eae4ce64858efbf6f1946bcf1cacd2bc" category="list-text">重新连接PSU。</block>
+  <block id="7c99497119e4bb81fd50dbd906dfde72" category="list-text">从加载程序提示符：_BYE_重新启动控制器</block>
+  <block id="270bbec39f8392e251637a1b86bbf5c3" category="list-text">检查控制器上的BMC版本：_system service-processor show_</block>
+  <block id="d6b96e8ac8bc341aa87626c9a7f76ffd" category="list-text">根据需要更新BMC固件：_system service-processor image update_</block>
+  <block id="3ff703e913550c7687a9cef2aa4f646d" category="list-text">重新启动节点：_BYE_</block>
+  <block id="db89594b0a0cbb483395a2641220f1fe" category="list-text">如果已禁用自动交还、请启用此功能：_storage故障转移修改-node local -auto-交还true _</block>
+  <block id="4e0b6dc04aaa383038bc23130a17cb25" category="cell">如果I/O模块是...</block>
+  <block id="09c2cf2531a14305542e6aff93e691c5" category="paragraph">NIC模块</block>
+  <block id="b621b364024bc001c97686b6636931c3" category="paragraph">按照中所述安装NS224磁盘架并为其布线 <block ref="59465119b0c6c62b3fb598004d7a9a24" category="inline-link-rx"></block>。</block>
+  <block id="b20dcdb6484b6a4d5293d5d3de29ee0e" category="doc">Check NVE or NSE on systems running ONTAP 9.15 and later</block>
+  <block id="f4247136ba1a68a91a49f4e715963146" category="paragraph">在关闭受损控制器之前、您需要验证系统是否已启用安全密钥管理器或已加密磁盘。</block>
+  <block id="ee3b489243bdd4fdcc48ef1ad422f531" category="section-title">验证安全密钥管理器配置</block>
+  <block id="19033065ab73d137563560b1fc6895b0" category="inline-link">security key-manager keyStore show手册页</block>
+  <block id="a816d953401f2846877f62bed4fdd27b" category="list-text">使用_security key-manager keyStore show_命令确定密钥管理器是否处于活动状态。有关详细信息、请参见<block ref="4b8f2aeacb1514195535ef615c2cae4a" category="inline-link-rx"></block></block>
+  <block id="71f479ec4da1fa9d5c9be25ad13a546d" category="admonition">您可能还有其他密钥管理器类型。类型包括<block ref="5a2c55bb167f4f0fcfe52384fe7a4f0b" prefix=" " category="inline-code"></block>、<block ref="15460966dfd5d819470e51c2381536a3" prefix=" " category="inline-code"></block>和<block ref="c731f72e1d22a7c5e01a7cb789a8885e" prefix=" " category="inline-code"></block>。确认这些类型的过程与确认或密钥管理器类型的过程相同<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block><block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> 。</block>
+  <block id="a286fff38dd07b679c8ce3d88b6f2962" category="inline-link-macro">关闭受损控制器</block>
+  <block id="367826db12be5d0f5fa3825090445002" category="list-text">如果未显示任何输出、请转至 <block ref="eee94cfaa2087b0a7525f83880646105" category="inline-link-macro-rx"></block> 以关闭受损节点。</block>
+  <block id="d59c3f1076a11584ab7756dc397ac53d" category="list-text">如果命令显示输出、则表示系统<block ref="3e5d9bfa91fefbf6ef9dcbbf78fad776" prefix=" " category="inline-code"></block> 处于活动状态、您需要显示<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 类型和状态。</block>
+  <block id="9c6ad91fc60690c917a5cd6ed6cd7a33" category="list-text">使用_security key-manager key query_命令 显示活动的信息<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 。</block>
+  <block id="d4d54422637dc235d95476cfe54ea635" category="list-text">如果<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 类型显示<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block> 且列显示，<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block><block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>则可以安全地关闭受损控制器。</block>
+  <block id="70a67dee5ee1d1759bf1a2c010c1e811" category="list-text">如果<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 显示类型<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> ，并且<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>，则需要完成一些附加步骤。</block>
+  <block id="a2bb34c9514c6e80246f4c62ebc228ba" category="list-text">如果<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 显示类型<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block> ，而<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列显示除以外的任何内容<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>，则需要完成一些附加步骤。</block>
+  <block id="9c33fca9f2622d604fc8874a364353ac" category="list-text">如果<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 显示类型<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> ，而<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列显示除以外的任何内容<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>，则需要完成一些附加步骤。</block>
+  <block id="74604182978b167f63843f1b5103e2fc" category="list-text">如果<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 类型显示<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> 且<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>，则手动备份OKM信息：</block>
+  <block id="2f860acdf6b26736b405ca465ba26aa8" category="list-text">在系统提示您继续时输入<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> ：<block ref="8d2cf87827d8c4c105b70542cc18077d" prefix=" " category="inline-code"></block></block>
+  <block id="4c94e967d32d6a5e4a0ee6ac899694ef" category="list-text">输入命令以显示密钥管理信息：_security key-manager onboard show-backup_</block>
+  <block id="20ae1bfb7c7e894e8452d6455767525e" category="list-text">您可以安全地关闭受损控制器。</block>
+  <block id="557f328fcef62c2d64ceebcbd641d6c9" category="list-text">如果<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 显示类型<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> ，并且<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列显示除以外的任何内容<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>：</block>
+  <block id="8df76dc1d3bd7d69bf652ac978436153" category="list-text">输入板载security key-manager sync命令：_security key-manager onboard sync_</block>
+  <block id="2f7724b07e3bd024392416fca683c713" category="admonition">在提示符处输入32个字符的字母数字板载密钥管理密码短语。如果无法提供密码短语、请联系NetApp支持部门。<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block></block>
+  <block id="00aae9c1b73fd095e6e3a0c8e04cc543" category="list-text">验证<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 所有身份验证密钥的列显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block> ：<block ref="c9b37f9017fc101cecef415e707e7b5f" prefix=" " category="inline-code"></block></block>
+  <block id="4332aa8c798bac1ec6c0f4c83e0df305" category="list-text">验证类型是否<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 显示<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block>，然后手动备份OKM信息。</block>
+  <block id="ad7a7ba5e951e1f95f031b922654b81d" category="list-text">输入命令以显示密钥管理备份信息：_security key-manager onboard show-backup_</block>
+  <block id="f460d19ca5b84d519df411e9bc1309e8" category="list-text">如果<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 显示类型<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block> ，并且<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列显示除以外的任何内容<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>：</block>
+  <block id="bd978885d127d957b96043955d436bad" category="paragraph">如果命令失败，请通过联系NetApp支持部门<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>。</block>
+  <block id="0fc2888b577a950f06774de71be916c1" category="list-text">验证是否<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 为所有身份验证密钥显示列<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block> ：_security key-manager key query_</block>
+  <block id="7f1dab55b896652272852d94aadf9413" category="list-text">从加载程序提示符处、从USB闪存驱动器启动恢复映像：_boot_recovery _</block>
+  <block id="66e5f5f877412d7578e6bec4d8f933b5" category="list-text">在受损控制器上、看到时按_Y_<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
+  <block id="3578391379ba5c5411207a0793afef71" category="list-text">在受损控制器上，当系统提示覆盖时按_Y_<block ref="295b4ac77f4e1c5f93c6894df85fd86d" prefix=" " category="inline-code"></block>。</block>
+  <block id="496e1cf89cb904a9a2ceccd873c325c5" category="list-text">在运行状况良好的配对控制器上、将受损控制器设置为高级权限级别：_set -PRILEGE advanced_。</block>
+  <block id="f0cfaabee28943cffa398d23cd5ca41f" category="list-text">在运行状况良好的配对控制器上、运行restore backup命令：_system node reRestore -backup -node local -target-address受损_none_ip_address_。</block>
+  <block id="1c1f324db7646bade3d65840670981d5" category="admonition">如果您看到除成功还原以外的任何消息，请联系<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block>。</block>
+  <block id="271ca74eba5af203102f7ab7c6dd3191" category="list-text">在运行正常的配对控制器上、将受损控制器恢复为管理级别：_set -PRILEGE ADMIN_。</block>
+  <block id="61dad7d5cf7f4e4b7469b097ac35485f" category="list-text">在受损控制器上，看到时按_y_<block ref="dff08971c5acbbdac6642922fde20608" prefix=" " category="inline-code"></block>。</block>
+  <block id="e9636d3f8e24f08b43c5d1ed71e065ea" category="list-text">在受损控制器上，看到时按_y_<block ref="396e369cf75815ba643925818d3ec37e" prefix=" " category="inline-code"></block>。</block>
+  <block id="976af5aa217f6c1b1dbf16e0ed0a4bde" category="list-text">在受损控制器上、在系统提示重新启动受损控制器时按_y_、然后按_Ctrl-c_进入启动菜单。</block>
+  <block id="29d550bee6b8b18ca38f7642778d8dad" category="inline-link-macro">还原密钥管理器</block>
+  <block id="88045ffbfc0d9ef09cd470c545082621" category="list-text">如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。 <block ref="f2abf47fd75193a34b6b143e08f5b248" category="inline-link-macro-rx"></block></block>
+  <block id="55f7c3a98a49a2f2d96cb2d21b95d947" category="list-text">使用_storage故障转移交还-from node local_命令交还控制器。</block>
+  <block id="4c6b53c8ce9f5900a70a994f21a32c6b" category="list-text">如果已使用_storage故障转移修改-node local -auto-交还true命令禁用自动交还、则还原自动交还。</block>
+  <block id="85ef34c14131c3f446c3d96330659ce7" category="list-text">如果启用了AutoSupport、请使用_system node AutoSupport invoke -node *-type all -message Maint=end_命令还原/取消禁止自动创建案例。</block>
+  <block id="1d5e6fb63cdc1edb63d6a40f348b2dff" category="paragraph">联系。<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block></block>
+  <block id="4e3d3d75dd1d92ce7fd5a7cb8fbca06f" category="doc">Step 1: Replace the boot media</block>
+  <block id="cfb8d631ef0909ee2cb18c2966215fcc" category="paragraph">要更换启动介质、您必须从系统背面卸下系统管理模块、卸下受损的启动介质、在系统管理模块中安装替代启动介质、并将ONTAP映像从USB闪存驱动器传输到替代启动介质。</block>
+  <block id="40137b2ef5d6219999ccbff7acc4080e" category="paragraph">启动介质位于系统管理模块内部、可通过从系统中卸下模块来访问。</block>
+  <block id="c7e42b88c75788e5a4dd44ffee425837" category="image-alt">启动介质更换图</block>
+  <block id="65c48f838cd0d6bef4f7f9dfeffa6c20" category="paragraph">系统管理模块凸轮闩锁</block>
+  <block id="8805d2e1601760a201715748ea07f6ee" category="paragraph">启动介质锁定按钮</block>
+  <block id="69d4901c403551aafed499a69f6a6854" category="list-text">从控制器的PSU上拔下电源线。</block>
+  <block id="8f95aa0a30128c64f675b79156365155" category="admonition">如果存储系统具有直流电源、请断开电源电缆块与电源设备(PSU)的连接。</block>
+  <block id="f1f9e5f6b36ebaca49f1a330347ef511" category="list-text">拔下连接到系统管理模块的所有电缆。请务必在电缆的连接位置贴上标签、以便在重新安装模块时将其连接到正确的端口。</block>
+  <block id="ef59e6e115d6a402e96debfbcf2d43a4" category="list-text">向下旋转缆线管理托架、方法是拉动缆线管理托架内侧两侧的按钮、然后向下旋转托架。</block>
+  <block id="4de74279b34bc439bb927ff19c3f2635" category="list-text">按下System Management (系统管理)凸轮按钮。凸轮拉杆移离机箱。</block>
+  <block id="8c124a15e8ff5fddc697411c217c8f3e" category="list-text">将凸轮闩锁向下旋转到最远位置。</block>
+  <block id="446d736b3461ada66026e254d8004909" category="list-text">通过将手指插入凸轮拉杆开口并将系统管理模块拉出机柜、从机柜中卸下系统管理模块。</block>
+  <block id="0c04e9069213a3f01693dfea6d29cdea" category="list-text">将系统管理模块放在防静电垫上、以便可以访问启动介质。</block>
+  <block id="ba3a3b56428ecfc8ebf41d52ae4ed44f" category="list-text">从管理模块中删除启动介质：</block>
+  <block id="9311c748da20953e872f62a07f2f146a" category="list-text">按下蓝色锁定按钮。</block>
+  <block id="ad748b83f8069d8ce4bf1f2c768d755b" category="list-text">向上旋转启动介质、将其从插槽中滑出、然后放在一旁。</block>
+  <block id="11b547b96ac77ea198ea4fcd9a73eacd" category="list-text">将替代启动介质安装到系统管理模块中：</block>
+  <block id="e8d309e430c2817195ddb3d32206d6a5" category="list-text">朝锁定按钮方向向下旋转启动介质。</block>
+  <block id="20247ab102e351fac25284d50f4dada7" category="list-text">按下锁定按钮、向下旋转行李箱介质、然后松开锁定按钮。</block>
+  <block id="4b2ac8ffad2e17ce1b138e4a3264ab6b" category="list-text">重新安装系统管理模块。</block>
+  <block id="eb765d2015d11e6c71f74bca03b12008" category="list-text">重新对系统管理模块进行配置。</block>
+  <block id="abc1667423446f22a4eac1d73495d6f2" category="section-title">第2步：将ONTAP映像传输到启动介质</block>
+  <block id="4c04528cd15c6862246747e51ea5163a" category="paragraph">您安装的替代启动介质没有ONTAP映像、因此您需要使用USB闪存驱动器传输ONTAP映像。</block>
+  <block id="01850306ed8f10853a5c93880928f943" category="list-text">您必须有一个空的USB闪存驱动器、格式化为FAT32、容量至少为4 GB。</block>
+  <block id="c20c35ef53bf1b70789ce94e66800147" category="inline-link">下载</block>
+  <block id="4483cf253c00ede642b7a63aa3d2b81d" category="list-text">您必须拥有与受损控制器正在运行的ONTAP映像版本相同的副本。您可以从NetApp支持站点上的部分下载相应的映像<block ref="f61be463ec1c2ded1b2e4929c0dfce17" category="inline-link-rx"></block></block>
+  <block id="aca106b8f189624bfd486237c3a81fcb" category="list-text">如果支持NVE、请按照下载按钮中的说明、使用NetApp卷加密下载映像。</block>
+  <block id="aa25abaefb58698a9aea7bafb0a15058" category="list-text">如果不支持NVE、请按照下载按钮中的说明下载不带NetApp卷加密的映像。</block>
+  <block id="6915dfe0929824fbf5ea71fa2e56edf2" category="list-text">如果您的系统是HA对、则必须在控制器的节点管理端口(通常为e0M接口)之间建立网络连接。</block>
+  <block id="0968f5229befb788e281eee2fe891623" category="list-text">从下载相应的服务映像并将其复制<block ref="0ecdd602ef5a1e7a11a81dad2433ccb0" category="inline-link-rx"></block> 到USB闪存驱动器。</block>
+  <block id="f74da9d158e4ceafc0b4ed6073d99fcd" category="list-text">从页面上的"Downloads"(下载)链接将服务映像下载到笔记本电脑上的工作空间。</block>
+  <block id="4f27bf76519571ba037a32b1c4a00e10" category="paragraph">USB闪存驱动器应具有受损控制器正在运行的相应ONTAP映像。</block>
+  <block id="502b19f0923675ac37953f046d92661c" category="list-text">将USB闪存驱动器插入系统管理模块上的USB插槽。</block>
+  <block id="54d19c7d0de44aef2c43e3480794f731" category="list-text">将电源线插入电源设备、然后重新安装电源线固定器。</block>
+  <block id="beab314ce8e147a2186f06e70152d37b" category="paragraph">将电源重新连接到系统后、控制器将立即启动。</block>
+  <block id="023f9d7e0e4f25a5ac2fefbe339b9d2a" category="list-text">如果要配置DHCP：<block ref="910e8145592a2ef4eaf5e3c21b90a5e1" prefix=" " category="inline-code"></block></block>
+  <block id="be7a3d5eb4dec2257326a1191d508e3f" category="list-text">如果要配置手动连接：<block ref="0cfd36fa2f6970c4256c7587d6c9730f" prefix=" " category="inline-code"></block></block>
+  <block id="1db37c7c622a5ec1ab0be3b691e2c1f6" category="image-alt">关闭控制器模块空气管道图AFF A70-90</block>
+  <block id="740236aa24dec4fe92ea505b4ce4484b" category="inline-image-macro">标注编号1、Wides=30bex</block>
+  <block id="9e3f037b41b2f04bd48e1435a560c2b5" category="paragraph"><block ref="9e3f037b41b2f04bd48e1435a560c2b5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4e01fe5ae3d3d5a778b912fa1ed7c886" category="inline-image-macro">标注编号2、宽度=30个</block>
+  <block id="22145a28e449ee345dafd03a944a6931" category="paragraph"><block ref="22145a28e449ee345dafd03a944a6931" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="814c3874029ed6ca8ad80dd3b7be6a3b" category="list-text"><block ref="d7c37365844b6be16568f626fb19383d" prefix="" category="inline-code"></block> 适用于AFF A220和全SAN阵列</block>
+  <block id="2544230e60d1b55358bdfdcb8dc88d1a" category="paragraph">重新安装并启动控制器模块。</block>
+  <block id="4b4f05880c9e59004f4d9737b616f786" category="list-text">将控制器模块的一端与机柜中的开口对齐、然后将控制器模块滑入机箱、使拉杆从系统正面转开。</block>
+  <block id="7eeaf0c972303a1c59af784bd3e8da0b" category="list-text">一旦控制器模块阻止您进一步滑动、请向内旋转凸轮把手、直到它们在风扇下锁紧</block>
+  <block id="8a49bfce6bcdffbbf61b9e5ceea826b0" category="admonition">将控制器模块滑入机箱时、请勿用力过度、以免损坏连接器。</block>
+  <block id="fd89795a6400fed6df7a2b36f87b64f7" category="paragraph">控制器模块在盘柜中完全就位后、即开始启动。</block>
+  <block id="57732d0a6edf6ce7cb291eba7fb6006d" category="paragraph">在更换控制器模块或更换控制器模块内部的组件时、您必须从机柜中卸下控制器模块。</block>
+  <block id="9a9295f640bbff8ee0d2001b1f08195e" category="list-text">检查系统插槽4/5中的NVRAM状态指示灯。控制器模块的前面板上还有一个NVRAM LED。查找NV图标：</block>
+  <block id="883e97ce0fc5299b4c253bfe7422df99" category="image-alt">NVRAM警示和状态LED位置图</block>
+  <block id="fb3e042908dc833eeb938bc1847b7c47" category="inline-image-macro">标注编号1、宽度=30制</block>
+  <block id="476432aae4cbe8e2198de9a114b9c8b8" category="paragraph"><block ref="476432aae4cbe8e2198de9a114b9c8b8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e752b86e927b89b7fc1a7d0c5e13ef64" category="paragraph">NVRAM 状态 LED</block>
+  <block id="bd461ff11b9415fa200815bf50691a35" category="paragraph"><block ref="bd461ff11b9415fa200815bf50691a35" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3e0d1dbbb8d79c619401e691855e6d04" category="paragraph">NVRAM警示LED</block>
+  <block id="5dc97b940d2a0a8bf57b3743911070b2" category="admonition">如果NVRAM状态LED闪烁、则可能表示控制器模块未被接管或正常暂停(未提交的数据)。如果受损控制器模块未被配对控制器模块成功接管、请先联系、<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block> 然后再继续此过程。</block>
+  <block id="4e0f18112e412988fc61a484d32624af" category="paragraph">受损控制器模块上的NVRAM状态LED的一般行为如下：</block>
+  <block id="6c521503338c94e4dc5bf3d3eeb13d8b" category="list-text">当控制器模块断电且控制器模块处于"正在等待恢复"状态、或者控制器模块未被正确接管或暂停(未提交的数据)时、NVRAM状态LED会闪烁。</block>
+  <block id="1fc34159d945428767817ea4688dbeb4" category="list-text">从机柜中卸下控制器模块后、NVRAM状态LED会闪烁、这可能意味着控制器模块未被接管或暂停(未提交的数据)。确认此控制器模块已被配对控制器模块完全接管，或者受损控制器模块显示<block ref="cbd30655d53ec6ae9cc96680b3199b33" prefix=" " category="inline-code"></block>。然后、可以忽略闪烁的LED指示灯(并且可以从机柜中卸下控制器)。</block>
+  <block id="cca9ed5787e1c9e8e02cd46db907ea96" category="list-text">在设备正面、将手指钩入锁定凸轮上的孔中、挤压凸轮杆上的卡舌、然后同时朝您的方向轻轻而稳固地旋转两个闩锁。</block>
+  <block id="f496c685f16af1d79af2853eb1f4f094" category="paragraph">控制器模块会稍微移出机柜。</block>
+  <block id="6e7081198e310340fdbd7ee3575a92db" category="image-alt">控制器删除图形</block>
+  <block id="537f891f06a3ecc3188c33c8f8c77e26" category="cell">A锁定凸轮锁扣</block>
+  <block id="1dc32853fd03864e0537b3ae1ad7ef3b" category="list-text">将控制器模块滑出机箱、然后将其放在平稳的表面上。</block>
+  <block id="33fdb32302198e8a827003b4173b5eb0" category="paragraph">将控制器模块滑出机柜时、请确保支撑好其底部。</block>
+  <block id="ad2e93db0fd7faf8c4c39a6cd5326275" category="doc">步骤1卸下控制器模块</block>
+  <block id="75a5f080add11b67917840158e6bbd4b" category="paragraph">要更换控制器、您必须卸下受损控制器、将FRU组件移至更换用的控制器模块、在机箱中安装更换用的控制器模块、然后将系统启动至维护模式。</block>
+  <block id="946c9f8702013d89a2409f6409b3b2c1" category="paragraph">您必须将受损控制器模块中的五个风扇模块卸下到更换用的控制器模块。</block>
+  <block id="ba353b9db22f76b4888d654901cd45fb" category="list-text">按下风扇模块上的灰色锁定按钮、然后将风扇模块从机箱中竖直拉出、确保您用空闲的手支撑它。</block>
+  <block id="4bc3c3e0bb0fe52395c42198e6c403bd" category="image-alt">风扇拆卸AFF A1K</block>
+  <block id="f3f11142b3f1ba3290db4a0e2e633cfd" category="paragraph">黑色锁定按钮</block>
+  <block id="debe0f6d6dc114b1f0cef960df854815" category="list-text">在更换用的控制器模块中安装风扇：</block>
+  <block id="45df54a2b26bf4a42f1390b3c6ef9772" category="list-text">将风扇壳体的边缘与更换用的控制器模块前部的开口对齐。</block>
+  <block id="e686f2a2ce224ff59a379a8809414e0a" category="list-text">将风扇模块轻轻地滑入更换用的控制器模块、直至其锁定到位。</block>
+  <block id="d79f0dd315cf97c251e1a6c09d067105" category="list-text">对其余风扇模块重复上述步骤。</block>
+  <block id="46810735002ef647c47c737b1c841a61" category="section-title">Step 3: Move the NV battery</block>
+  <block id="febcb77a862bc52409a4f8f740402587" category="paragraph">将NV电池移至更换用的控制器。</block>
+  <block id="7ceb4e46e4149d02704a9f5392162d68" category="list-text">打开NV蓄电池空气管道盖并找到NV蓄电池。</block>
+  <block id="5d0ae38b4c8434b70d17efcba4dd5330" category="image-alt">NV电池拆卸AFF A1K</block>
+  <block id="a3e0153f76677675f8bb1342adde5264" category="cell">NV蓄电池空气管道盖</block>
+  <block id="70556b2459b07072e084ca4716e15404" category="paragraph">NV电池插头</block>
+  <block id="c8b33a78e910858963b37c7abd687001" category="paragraph">NV battery pack</block>
+  <block id="7ed467d4bdf9c9367883e89d279e4fac" category="list-text">向上提起蓄电池以接触蓄电池插头。</block>
+  <block id="61b3ca5b853eb0d7f19e9f3ca01cbc8f" category="list-text">挤压电池插头表面的夹子以从插座中释放插头、然后从插座中拔下电池电缆。</block>
+  <block id="f4da51bbb625e23b85fef74383c71629" category="list-text">将电池从空气管道和控制器模块中提出。</block>
+  <block id="8a6a55f57710316dc7c5a91b8adaf000" category="list-text">将电池组移至更换用的控制器模块、然后将其安装在NV电池通风管中：</block>
+  <block id="2d51009dce4886c2f7688130ca476ffe" category="list-text">打开备用控制器模块中的NV电池通风管。</block>
+  <block id="fb45242a415dec0639b84df3fc0d1ced" category="list-text">将电池插头插入插座、并确保插头锁定到位。</block>
+  <block id="c95499dcf2b14dcf082a1fa5c88623e8" category="list-text">关闭空气管道盖。</block>
+  <block id="c1916c940fc91e59ba9f2dc4c12d33a9" category="section-title">Step 4: Move system DIMMs</block>
+  <block id="9635576fe94c98878df92769aa04942e" category="paragraph">将DIMM移至更换用的控制器模块。</block>
+  <block id="678958dabd5cd5624ccb0372fbfb21dd" category="list-text">打开主板通风管并找到DIMM。</block>
+  <block id="1f00fb8fdfbb9b6cb0eec8b6368009cd" category="image-alt">DIMM卸下AFF A1K</block>
+  <block id="a9638d4d52688cbe2f6d101cb55be3b8" category="paragraph">系统DIMM</block>
+  <block id="ed3f8b7cf16a504e6873c49f3ad8c721" category="list-text">找到要在更换用的控制器模块中安装DIMM的插槽。</block>
+  <block id="3874bbf004c50eed71c2b06f7ce4e648" category="list-text">Repeat these steps for the remaining DIMMs.关闭主板通风管。</block>
+  <block id="d20809d05af81f52d71c6d3d4f4fe771" category="list-text">由于启动设备位于安装在系统背面的系统管理模块上、因此在更换控制器模块时无需移动启动设备。</block>
+  <block id="c78805aa63e8c47c7cae0cdebcc54f64" category="list-text">您必须始终将控制器的控制台输出捕获到文本日志文件中。</block>
+  <block id="564469f8ea8458a513637b3b059f6404" category="doc">第1步：交还控制器</block>
+  <block id="3342bfb4c028e1d77e8b0ab8a0dce560" category="paragraph">交还控制器以继续执行更换过程。</block>
+  <block id="f9d9eff2772e16e9135d964e4533138c" category="list-text">如果您的存储系统配置了加密、则必须使用以下过程还原存储或卷加密功能以重新启动系统：</block>
+  <block id="c380f4d06afd36dcee7654a86545b95b" category="list-text">引导至菜单并运行选项10</block>
+  <block id="1cd2c681f4d255665595108ab57cef94" category="list-text">输入密码短语并备份数据，然后执行正常启动请参阅。<block ref="1ab4828979a21de09829a9c51e95a6df" category="inline-link-rx"></block></block>
+  <block id="96a3368c4eb24da6086771ab60d2ecd4" category="list-text">仅执行CFO交还</block>
+  <block id="a049cbbca5d1ded27d17b5360d6af4f8" category="inline-link">在MB替换失败后进行恢复—操作被keymanager否决</block>
+  <block id="29e750a9b823df60ddab27630a086eb0" category="list-text">执行板载同步并验证SVM-KEK是否设置为true、请参见<block ref="c73f7aa01fb003f53b587770aef9410a" category="inline-link-rx"></block></block>
+  <block id="137461f81303a8e99562914dc4aead7e" category="list-text">SFo、(无强制)</block>
+  <block id="54e470877c32b61b020326e0bd9815fd" category="list-text">如果您的系统未配置加密、请完成以下过程以重新启动系统：</block>
+  <block id="da9ac1c91f37b4e5f63555337c4e5a28" category="list-text">引导至菜单并运行选项1。</block>
+  <block id="ec77e5f87d39009b586c11431b08f2df" category="paragraph">完成硬件更换后、您可以验证替代控制器的低级系统配置、并根据需要重新配置系统设置。</block>
+  <block id="19b66ea26285ab6907d553e575e1e598" category="list-text">在更换用的控制器模块上启动至维护模式、并验证所有组件是否显示相同的<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block> 状态：<block ref="fb4e6c2e33b945c3ff4d042cb66d2ed4" prefix=" " category="inline-code"></block></block>
+  <block id="5ce635c93ed7a2d51e30b917452c6ec7" category="list-text"><block ref="f46f944e351f8b92e40c3308318738a3" prefix="" category="inline-code"></block> (不支持)</block>
+  <block id="221f15e39f2382e44ef4321b5b0e4320" category="list-text"><block ref="524b78f7770e94479dc70b1b445c5cf3" prefix="" category="inline-code"></block> (不支持)</block>
+  <block id="a540c64e6896cd0fc3bf3d5fb82d4719" category="paragraph">如果系统报告DIMM出现永久故障、则必须更换该DIMM。</block>
+  <block id="af1d9d834ef798d564fea05edab6f5ce" category="list-text">打开控制器顶部的控制器通风管。</block>
+  <block id="8678f7271dde2bbb03d6fae2cd581f74" category="list-text">将手指插入空气管道远端的凹槽中。</block>
+  <block id="61d83846d2595cc8a4ddba0b92ac1f5f" category="list-text">提起空气管道、将其向上旋转至最远位置。</block>
+  <block id="c91b6f7be7626aeee99aefaf9c8d08bd" category="list-text">找到控制器模块上的DIMM并确定要更换的DIMM。</block>
+  <block id="9f6b3b55748dc3abdda6a24404bc0981" category="image-alt">更换DIMM</block>
+  <block id="5ad0bee4781dc71ce545ac6a5192bb27" category="list-text">关闭控制器空气管道。</block>
+  <block id="1269042d0106261911211f79eb6bd615" category="paragraph">要在不中断服务的情况下更换风扇模块、您必须执行一系列特定的任务。</block>
+  <block id="36c158f4fa724abf128192885ff5d304" category="paragraph">面向控制器模块、风扇模块从左到右编号为1到5。</block>
+  <block id="565ca033dd00cf8e99e85b5be9d0426f" category="admonition">每个风扇都有一个LED指示灯。风扇正常工作时呈绿色亮起、未正常工作时呈琥珀色亮起。</block>
+  <block id="c073b9a839d8979c2b08d95b28ded9fe" category="list-text">按下风扇模块上的黑色按钮、然后将风扇模块从机箱中竖直拉出、确保您用空闲的手支撑它。</block>
+  <block id="4cad152e4a8c970b1849e94a2254d195" category="image-alt">更换风扇</block>
+  <block id="18c14c604d7ac7c5d0494811693b9110" category="paragraph">黑色释放按钮</block>
+  <block id="9e52fd318e1e9fdec71287f49c3f8ace" category="paragraph">插入带电的系统后、当该系统识别风扇后、琥珀色警示LED将熄灭。</block>
+  <block id="a82008765c43ce8690a1d600f8b18c57" category="paragraph">您可以将存储系统中发生故障的I/O模块更换为相同类型的I/O模块或不同类型的I/O模块。您还可以将I/O模块添加到具有空插槽的系统中。</block>
+  <block id="1ceae8e0ff0bec3c4a785784e13c38e0" category="paragraph">使用此过程更换发生故障的I/O模块。</block>
+  <block id="e17459e86046e44229fbebc069407c9c" category="list-text">您可以对存储系统支持的所有ONTAP版本使用此过程。</block>
+  <block id="8cc2ff9ddd81637d4ad2b7ee220a7774" category="section-title">第2步：更换发生故障的I/O模块</block>
+  <block id="2de111d6117fc7e01d3fbeb75aed3c88" category="paragraph">要更换I/O模块、请在机箱中找到该模块、然后按照特定步骤顺序进行操作。</block>
+  <block id="d65ea709db708c195e73f1f8f5f75781" category="list-text">从控制器的PSU上拔下PSU电缆。</block>
+  <block id="0af6fe064800da7d11e3417d85012213" category="inline-image-macro">卸下I/O模块</block>
+  <block id="1ac0ca437900f8bc507ae669a832b4dd" category="paragraph"><block ref="1ac0ca437900f8bc507ae669a832b4dd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d09aea2ff4780e8e31df238e5b9f5161" category="paragraph">I/O凸轮闩锁</block>
+  <block id="9a3f7fa88970e2acddf04471a151ec80" category="list-text">从机柜中卸下目标I/O模块：</block>
+  <block id="2f4150c3867bbf0ce9e1aa56330f576b" category="list-text">按下目标模块上的凸轮按钮。</block>
+  <block id="53843c5eb3759758de138cf301af27c3" category="paragraph">凸轮按钮移离机柜。</block>
+  <block id="cb6d0d31a2a110b0d07c657262474a40" category="list-text">将更换用的I/O模块安装到机柜中：</block>
+  <block id="1ac1a67458bf621b04e5e87511601b9c" category="list-text">从加载程序提示符处、更改为高级权限模式：_set PRILEGE advanced_</block>
+  <block id="10c3a425fded9589c238301aa82be35e" category="list-text">重新启动BMC：_sp reboot</block>
+  <block id="8c2fb795497456b969ba9307ef6f84c8" category="list-text">在 LOADER 提示符处，重新启动节点： _bybye</block>
+  <block id="7abd890d238c51ed2801454d1144b6c2" category="admonition">此操作将重新初始化I/O卡和其他组件、然后重新启动节点。</block>
+  <block id="f39bcef8471a9193d70395e440c5c30f" category="list-text">将节点恢复正常运行：_storage故障转移g交还-ofnode受损_ne_name_</block>
+  <block id="f2c34b40606f74a0c5a165e98e56be18" category="list-text">如果已禁用自动交还、请重新启用它：_storage故障转移修改-node local -auto-交还true _</block>
+  <block id="6e841026c8e0f5dd3c837c24875db96c" category="paragraph">To replace the NV battery, you must remove the controller module, remove the battery, replace the battery, and then reinstall the controller module.</block>
+  <block id="301c48aa12dd5949431fa0e966cbc5fd" category="section-title">第3步：更换NV电池</block>
+  <block id="f851a35105a1b833fdaa09454b949379" category="paragraph">从控制器模块中取出发生故障的NV电池、然后安装更换用的NV电池。</block>
+  <block id="fb5007e49932b0f6efe4ea8898b9e979" category="list-text">打开空气管道盖、找到NV电池。</block>
+  <block id="f302136d7678e9c48ab4915051de2822" category="image-alt">重新调整NV电池的速度</block>
+  <block id="24047a6db7d76f066348eb7ec600f329" category="list-text">将电池从空气管道和控制器模块中提出、然后放在一旁。</block>
+  <block id="711984feeea728e6125e2dc423e3fac6" category="list-text">将更换用的电池组安装到控制器中：</block>
+  <block id="be9a1fd60aae57036d44ee7248eef782" category="list-text">合上NV空气管道盖。</block>
+  <block id="d9086fba38bd40ec38280d2251574230" category="paragraph">NVRAM模块由NVRAM12硬件和现场可更换DIMM组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.要更换发生故障的NVRAM模块、您必须从机柜中卸下该模块、将DIMM移至更换模块、然后将更换用的NVRAM模块安装到机柜中。</block>
+  <block id="4241925b317fc8692e52a8a332fb8340" category="paragraph">系统中的所有其它组件必须正常工作；如果不能正常工作，则必须与联系<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block>。</block>
+  <block id="eaf77e551d9134f3614ee70624c0542a" category="paragraph">要更换NVRAM模块、请在机箱的插槽4/5中找到该模块、然后按照特定步骤顺序进行操作。</block>
+  <block id="f7a22033f03f49d91738ef92b897c094" category="list-text">从两个PSU上拔下电源线。</block>
+  <block id="37482fa38231232549f86b1d6fa25993" category="list-text">轻轻拉动缆线管理托架两端的插销并向下旋转托架、向下旋转该托架。</block>
+  <block id="5aaa2c1d195fa72e1355d04b3f634478" category="list-text">从机柜中卸下受损NVRAM模块：</block>
+  <block id="61aaaaab1400d8b97407614db657600d" category="list-text">按下锁定凸轮按钮。</block>
+  <block id="dbcee7480d150359f0c4b33876b00276" category="list-text">通过将手指插入凸轮拉杆开口并将受损NVRAM模块拉出机柜、从机柜中卸下受损NVRAM模块。</block>
+  <block id="eee27535abf73df12252e1f6eacb1f66" category="image-alt">卸下NVRAM12模块和DIMM</block>
+  <block id="33c6ad62c17f0ff7f37b0d9884d0ae0b" category="list-text">将NVRAM模块放在稳定的表面上。</block>
+  <block id="062fb969c20058ecacc90814782d6ba8" category="list-text">从受损NVRAM模块中逐一卸下DIMM、然后将其安装到更换用的NVRAM模块中。</block>
+  <block id="f5f476104a659f15b01240f0164f088e" category="list-text">将更换用的NVRAM模块安装到机柜中：</block>
+  <block id="fe45f09f3d38a42012d52bda47bfdcc7" category="list-text">将模块与插槽4/5中机箱开口的边缘对齐。</block>
+  <block id="4d4167eb18e956b44d723ceeede0193f" category="list-text">将模块轻轻滑入插槽中、然后将凸轮闩锁一直向上旋转、以将模块锁定到位。</block>
+  <block id="6e2989415e40098a560eebad3e205116" category="list-text">重新对PSU进行分组。</block>
+  <block id="eec63a2949571c6f6cf1da1163be920f" category="paragraph">要更换NVRAM模块中的NVRAM DIMM、必须先卸下NVRAM模块、然后再更换目标DIMM。</block>
+  <block id="1b81b67438951134b0a7dce78f9425b9" category="list-text">从机柜中卸下目标NVRAM模块。</block>
+  <block id="188502f3235b53927f05d5c460e5dffa" category="image-alt">卸下NVRAM 12模块和DIMM</block>
+  <block id="930706c0e38089f0a1ce36e5fdf6b4d7" category="list-text">找到NVRAM模块内要更换的DIMM。</block>
+  <block id="b08d4fe4a5c8c03e9ec06803ec81f949" category="admonition">请参阅NVRAM模块侧面的FRU示意图标签、以确定DIMM插槽1和2的位置。</block>
+  <block id="f1605e83555ac6fff25674a90928b3e7" category="list-text">向下按DIMM锁定卡舌并将DIMM从插槽中提出、以卸下DIMM。</block>
+  <block id="23f5629213f6fe0e6f15f79ecad3b590" category="list-text">将NVRAM模块安装到机柜中：</block>
+  <block id="566acb9aca693613465c9963de07cf2d" category="list-text">将模块轻轻滑入插槽、直到凸轮闩锁开始与I/O凸轮销啮合、然后一直向上旋转凸轮闩锁以将模块锁定到位。</block>
+  <block id="8c7bd045108e1c5b78c97e914b17c504" category="list-text">要从加载程序提示符处启动ONTAP、请输入_BYE_。</block>
+  <block id="92c80dd5462d9ebbe458a4d5574a0bcd" category="paragraph">您必须在启动控制器时确认系统ID更改、然后验证是否已实施此更改。</block>
+  <block id="4809a5131531611e176d418579ff2bce" category="list-text">如果控制器处于维护模式(显示<block ref="2cf8a3bab83c4d2618c18eeeca9ebc98" prefix=" " category="inline-code"></block> 提示符)、请退出维护模式并转到加载程序提示符：_halt _</block>
+  <block id="98848d6f640c1b9d9ad1cab89e0b0a13" category="list-text">从控制器上的加载程序提示符处、启动控制器、并在系统因系统ID不匹配而提示覆盖系统ID时输入_y_。</block>
+  <block id="4e5f4ae21b25e767c4cce37a6162f267" category="list-text">等待直到等待返回... 消息、然后从运行状况良好的控制器确认已自动分配新的配对系统ID：_storage Failover show_</block>
+  <block id="7fea4b03ba1069ae857e3bf99659e212" category="list-text">从运行状况良好的控制器中、交还更换后的控制器的存储：_storage故障转移gi交还-ofnode re更换 节点名称_</block>
+  <block id="67a849a4d7dbba4f1483601cbb852e97" category="paragraph">控制器将收回其存储并完成启动。</block>
+  <block id="3f9b10525f2631d5b41e860b9e7e89eb" category="paragraph">如果由于系统ID不匹配而提示您覆盖系统ID、则应输入_y_。</block>
+  <block id="06ce7a49ca4ff2a756ef3ac25493e20e" category="list-text">完成交还后、确认HA对运行状况良好且可以进行接管：_storage Failover show_</block>
+  <block id="a0dd90115e7c76849c98c9962018407e" category="paragraph">属于控制器的磁盘应显示新的系统ID。在以下示例中、node1拥有的磁盘现在显示新的系统ID 151759706：</block>
+  <block id="650a68a05410f236496a28baccfa4727" category="list-text">如果系统采用MetroCluster配置、请监控控制器的状态：_nnode show_ MetroCluster</block>
+  <block id="ed60c71388c93567b70f2c648568f43e" category="paragraph">在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个控制器将显示已配置状态，并启用 DR 镜像并显示正常模式。命令输出将<block ref="3a430417b055bb7642531def2eebffec" prefix=" " category="inline-code"></block> 显示受损的系统ID、直到MetroCluster配置恢复正常状态为止。</block>
+  <block id="df52882bdb0f8ccab117b27b8ad08f11" category="list-text">控制器是灾难站点上磁盘的当前所有者。</block>
+  <block id="dbdb9c1ac216db7c2a5488c988607c9b" category="list-text">如果您的系统采用MetroCluster配置、请验证是否已配置每个控制器：_nnode MetroCluster show - fields configure-state_</block>
+  <block id="1964518eff1cbd81e89b8431963a7b3a" category="list-text">如果您禁用了重新启动时自动接管、请从运行状况良好的控制器启用该功能：_storage故障转移修改-node repender-n节点 名称-onreboot true _</block>
+  <block id="71bca665257574bbbda30f9d50e92e47" category="list-text">打开电源线固定器、断开PSU的连接、然后从PSU上拔下电源线。</block>
+  <block id="f83defba1f467eab098c839b34ecd50f" category="image-alt">更换PSU</block>
+  <block id="dc77af39a42fc8bba7b24ca9686dfb67" category="paragraph">Terrac兵马俑PSU锁定卡舌</block>
+  <block id="e1335ae9dd3c981060cb7896ec1cad9f" category="paragraph">卸下发生故障的RTC电池、然后安装更换的RTC电池。</block>
+  <block id="566292be87714518ecb8c7c29be8ec9f" category="list-text">找到空气管道下方的RTC电池。</block>
+  <block id="64b63ecd89f955eb06b5c08086727967" category="section-title">第5步：重置控制器上的时间和日期</block>
+  <block id="33260d772cd05a0b795ab3645a9eb2a0" category="admonition">在更换RTC电池、插入控制器并首次启动BIOS重置后、您将看到以下错误消息：<block ref="049ec00df3ddcbe28d63cf4fa733682c" prefix=" " category="inline-code"></block><block ref="6c8ad83004cc8bc224a596f5f1682744" prefix=" " category="inline-code"></block> 这些消息已被排除、您可以继续此过程。</block>
+  <block id="fab17b330ab320e5b8c5e1a66099e261" category="list-text">使用_cluster date show_命令检查运行正常的控制器上的日期和时间。</block>
+  <block id="48114951ad024ff5ccb330a34fc42135" category="admonition">如果系统停留在启动菜单处、请选择选项 <block ref="6390b97950613f587497b26c5800a6d6" prefix=" " category="inline-code"></block> 并在出现提示时回答_y_、然后按_Ctrl-C_启动到加载程序</block>
+  <block id="6d4f67c4e68f24ae46019161fd1dc11f" category="list-text">在目标控制器上的加载程序提示符处、使用命令检查时间和日期<block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix=" " category="inline-code"></block> 。</block>
+  <block id="50eff6815804791e40e2b69b309b1d1d" category="list-text">在加载程序提示符处、输入_BYE_重新初始化PCIe卡和其他组件、然后重新启动控制器。</block>
+  <block id="16521cf1f70c4395939dda4bddea2b5d" category="list-text">通过交还控制器的存储、使其恢复正常运行：_storage Failover gi交还-ofnode _d受损_ne_name_</block>
+  <block id="0893a47f6bcd823d484b5a31753ffc12" category="paragraph">系统管理模块位于控制器背面的插槽8中、包含用于系统管理的板载组件以及用于外部管理的端口。要更换受损的系统管理模块或更换启动介质、必须关闭目标控制器。</block>
+  <block id="0328ebde7a1dc0b9e859680eb6f7816a" category="paragraph">系统管理模块具有以下板载组件：</block>
+  <block id="df6080323c2768a86da55883d49a16d8" category="list-text">启动介质、无需卸下控制器模块即可更换启动介质。</block>
+  <block id="396262ee936f3d3e26ff0e60bea6cae0" category="list-text">BMC</block>
+  <block id="6bed21c5dc5eaffdda7e98b265ae1c86" category="list-text">管理交换机</block>
+  <block id="44de79bdf062cb05ac4b573615e664a4" category="paragraph">系统管理模块还包含以下用于外部管理的端口：</block>
+  <block id="4baaa91502c35d44bf3b938e8962f6d5" category="list-text">RJ45串行</block>
+  <block id="734233c07fafca68d078ca506f9ceba6" category="list-text">USB串行(C型)</block>
+  <block id="69381ed751e9fb1eeb4c93152247e3d7" category="list-text">USB Type-A (启动恢复)</block>
+  <block id="198fa86a9c542f1a61c0f6a62120cad4" category="list-text">e0M RJ45以太网</block>
+  <block id="1db6096e898c7b22a21f2204a6c1393e" category="paragraph">要更换系统管理模块或或启动介质、必须关闭受损控制器。</block>
+  <block id="f744d4ede8531b24b196b4678a6fdfce" category="list-text">所有其他系统组件必须正常工作。</block>
+  <block id="8071fa49d4debf76dea275eb3c85adf2" category="list-text">配对控制器必须能够接管受损控制器。</block>
+  <block id="4fbb43a9c47d6d76253729e7d93c5f55" category="section-title">第2步：更换受损的系统管理模块</block>
+  <block id="c47bf9b7aee8dbcdf5cb1d3159433af1" category="paragraph">更换受损的系统管理模块。</block>
+  <block id="c03e55a0c29d0a74f43acf5542d00ef3" category="list-text">删除系统管理模块：</block>
+  <block id="b7e0d509eb2461d427f3833f801dc8f3" category="admonition">确保NVRAM已完成减载、然后再继续。</block>
+  <block id="066580f9b652d10cecee2396c264bd1b" category="image-alt">更换系统管理模块</block>
+  <block id="8150fa37baf490f5e9dea5f5d1970825" category="list-text">拔下连接到系统管理模块的所有电缆。确保在电缆的连接位置贴上标签、以便在重新安装模块时将其连接到正确的端口。</block>
+  <block id="c69ab679bbecef08bc0a49a10e95d6bd" category="list-text">从受损控制器的PSU上拔下电源线。</block>
+  <block id="bdb3ce65576e6e5ccbbae08a6a0756d9" category="list-text">按下系统管理模块上的凸轮按钮。</block>
+  <block id="dadbb19fc9d1e5a6ec5b0bc9cc8cf2f3" category="list-text">将凸轮杆向下旋转至最远位置。</block>
+  <block id="31b39fac52ec77b69cbfefb3a072f4fc" category="list-text">将手指环入凸轮杆上的孔中、然后将模块直接拉出系统。</block>
+  <block id="c978c6b00ecd54798f9668f867b1913f" category="list-text">将启动介质移至替代系统管理模块：</block>
+  <block id="9a750a7e2598efecb70a139da9f7d6cc" category="image-alt">启动介质更换</block>
+  <block id="29e212eedf2877738d87eea2f281d3b9" category="list-text">按下受损系统管理模块中的蓝色启动介质锁定按钮。</block>
+  <block id="c1d988e4a01f99542e0e3e683559a958" category="list-text">向上旋转启动介质并将其滑出插槽。</block>
+  <block id="7755345d457638b790820574c6f32ae1" category="list-text">在替代系统管理模块中安装启动介质：</block>
+  <block id="bba0658767c4f219720b8059eb351003" category="list-text">向下旋转行李箱介质、直至其接触到锁定按钮。</block>
+  <block id="7110121461eafcee8f9f5638f6f98768" category="list-text">按下蓝色锁定按钮、将行李箱介质一直向下旋转、然后松开蓝色锁定按钮。</block>
+  <block id="58c0901068a2e0126819b27bfadaba76" category="list-text">将更换用的系统管理模块安装到机柜中：</block>
+  <block id="74f39d10e6192c13072375a409227742" category="list-text">将更换用的系统管理模块的边缘与系统开口对齐、然后将其轻轻推入控制器模块。</block>
+  <block id="c5636b2c060822d9237c298c9b4ed296" category="list-text">将缆线管理ARM向上旋转到关闭位置。</block>
+  <block id="d1e3991136db3d982ab25f6e5eeec67c" category="section-title">第3步：重新启动控制器模块</block>
+  <block id="87faf0594e9a4ac1e4ad3b090942d772" category="list-text">将电源线重新插入PSU。</block>
+  <block id="5cf314d7d9b8c453e8f6d5ee28dc576f" category="paragraph">系统将开始重新启动、通常会显示加载程序提示符。</block>
+  <block id="61f88778bfaaa034c04052c8ec25d964" category="list-text">在加载程序提示符处输入_BYE_。</block>
+  <block id="4ea15f830f2e664204a3efb99fb72b4d" category="section-title">第4步：安装许可证并注册序列号</block>
+  <block id="05dceffd3c31a9d53e9b23ec48d1bf77" category="paragraph">如果受损节点正在使用需要标准(节点锁定)许可证的ONTAP功能、则必须为此节点安装新许可证。对于具有标准许可证的功能，集群中的每个节点都应具有自己的功能密钥。</block>
+  <block id="d498932449bd1680afbe5aad136fb7e3" category="paragraph">在安装许可证密钥之前、需要标准许可证的功能仍可供节点使用。但是、如果此节点是集群中唯一具有此功能许可证的节点、则不允许对此功能进行配置更改。此外、在节点上使用未经许可的功能可能会使您违反许可协议、因此您应尽快在上为此节点安装替代许可证密钥。</block>
+  <block id="3e508eeaedfdae09fad57a764b5e2b73" category="section-title">步骤1：关闭受损控制器模块</block>
+  <block id="6f13230d5681e1c88b50f5ecbce62637" category="paragraph">使用以下选项之一关闭或接管受损控制器模块。</block>
+  <block id="ac3e2454340641f4dc863ba7de892571" category="list-text">通过将控制器模块拉出大约三英寸来断开电源：</block>
+  <block id="5d053cb0e109f37b3c9cfa31e957c2bc" category="list-text">将控制器模块从机箱中拉出约3英寸以断开电源。</block>
+  <block id="d9d1de25706aa51c5367e4dafd60898e" category="list-text">从机箱中卸下目标插槽空白模块：</block>
+  <block id="192d3ce6854b267e65d46222f8f3a24f" category="image-alt">卸下I/O模块</block>
+  <block id="75fa26086844dfcbf14f35086518217a" category="list-text">拆下挡板模块。</block>
+  <block id="2b6adb50592127273fdb4bb2b68918d5" category="list-text">将I/O模块与控制器模块插槽开口的边缘对齐。</block>
+  <block id="97366bfb1dcb5b97156c347c8ad89d9a" category="list-text">将模块轻轻滑入插槽中、然后将凸轮闩锁一直向上旋转、以将模块锁定到位。</block>
+  <block id="7e0cc13ccecee19c414070713bc932cd" category="admonition">如果您有直流PSU、请将电缆块重新连接到PSU。</block>
+  <block id="f0a953cf8667ec627e4c74a13844c3d6" category="inline-link">热添加磁盘架</block>
+  <block id="2a6ebde871b7a14ea9937c0b77f288c1" category="list-text">如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为其布线<block ref="b6d396abfa2f33a744444ad20ba7003c" category="inline-link-rx"></block>。</block>
+  <block id="2f3095e4c2c969f1f9dca69963ff66c1" category="paragraph">将ASAected的生命周期管理器永久重新分配到其他主端口。有关使用System Manager永久移动这些LUN的信息、请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> 。</block>
+  <block id="6181ce929bc404494408989e6b8a9b52" category="paragraph">要更换I/O模块、请在控制器模块中找到该模块、然后按照特定的步骤顺序进行操作。</block>
+  <block id="5cdf632bde34078b63091a6513a92902" category="admonition">如果存储系统具有直流电源、请断开电源电缆块与PSU的连接。</block>
+  <block id="8a9a8a0db84d9dd59b0f006930b47193" category="list-text">按下凸轮闩锁按钮。</block>
+  <block id="422e2aa4ec97de509f54db9d23618f37" category="list-text">将手指插入凸轮拉杆开口并将模块拉出机箱、从而将模块从机箱中卸下。</block>
+  <block id="ce8b63d25565a610d1f9564150f85914" category="list-text">将模块轻轻地滑入插槽，一直滑入机箱中，然后将凸轮闩锁一直向上旋转，以将模块锁定到位。</block>
+  <block id="fb2068c184d4dbf1c0e520d9e9b173b2" category="list-text">重复拆卸和安装步骤以更换控制器模块的其他模块。</block>
+  <block id="ed5714a7b9709284c56117bd6dc4e081" category="list-text">将缆线管理托架旋转到锁定位置。</block>
+  <block id="268bccb6c35b538d967467b5d2935b49" category="list-text">从加载程序提示符：_BYE_重新启动控制器模块</block>
+  <block id="253b24d74d0517388c6e5b078713c86a" category="inline-link">BURT 1494308 -更换I/O模块期间可能触发环境关闭</block>
+  <block id="fc5ee1a4ca46ff0160eeada84fe673fc" category="admonition">如果您在重新启动期间遇到问题、请参见<block ref="5f4b19e33781d4df6c59a005be26e607" category="inline-link-rx"></block></block>
+  <block id="cfedf0b233356261eb909e7add24bded" category="list-text">从配对控制器模块交还控制器模块。_storage故障转移gi故障 恢复-ofnode target_ne_name_</block>
+  <block id="50452a92c8429276ad6b40b6a483c0dc" category="paragraph">要更换启动介质、您必须从系统背面卸下系统管理模块、卸下受损的启动介质、在系统管理模块中安装替代启动介质、并将启动映像传输到USB闪存驱动器。</block>
+  <block id="43d656a7b2fb92dbbe5e13b8f00a00b8" category="list-text">按下系统管理凸轮按钮。凸轮杆移离机箱。</block>
+  <block id="f0d27e50eb41ec006d18a96b5254063e" category="list-text">将凸轮拉杆一直向下旋转、然后从控制器模块中卸下系统管理模块。</block>
+  <block id="d090349173c11be6a6275698aa2404cd" category="list-text">重新安装系统管理模块：</block>
+  <block id="54a53a09772d42f23357a9952d2d46a1" category="section-title">Step 2: Transfer the boot image to the boot media</block>
+  <block id="ba6a859a07959f14e93fa82e7da1233e" category="image-alt">关闭控制器模块空气管道图AFF A1K</block>
+  <block id="51f2f04b22eba49bd6c9066a5648bd67" category="list-text">检查受损控制器模块背面插槽4/5中的琥珀色NVRAM状态指示灯是否熄灭。查找NV图标。</block>
+  <block id="da5f7089cdcd7902b7086f24a299a313" category="list-text">当控制器模块断电、存储系统处于"正在等待恢复"状态、或者控制器模块未被正确接管或暂停(未提交的数据)时、NVRAM状态LED会闪烁。</block>
+  <block id="997ed926bb92f58aed3a035708bb70c0" category="list-text">从机箱中卸下控制器模块后、NVRAM状态LED会闪烁、这可能意味着控制器模块未被接管或暂停(未提交的数据)。确认此控制器模块已被配对控制器模块完全接管，或者受损控制器模块显示<block ref="cbd30655d53ec6ae9cc96680b3199b33" prefix=" " category="inline-code"></block>。然后、可以忽略闪烁的LED指示灯(并且可以从机箱中卸下控制器模块)。</block>
+  <block id="deb4147b46ea2ebcf52f58598b90e46b" category="list-text">从控制器模块电源(PSU)上拔下控制器模块电源线。</block>
+  <block id="6233363b0d15d7066ec85e296a99f7eb" category="admonition">如果您的系统使用直流电源、请断开电源块与PSU的连接。</block>
+  <block id="afba20d4eb44e94103854196f1d30cbf" category="list-text">从控制器模块拔下系统缆线以及SFP和QSFP模块(如果需要)、并记录缆线的连接位置。</block>
+  <block id="a5fd25bf69ec23e5f23fbe3cc38a7e54" category="list-text">从控制器模块中卸下缆线管理设备。</block>
+  <block id="942fdbfcbfd61f0c694784bf520773d4" category="cell">A锁定闩锁</block>
+  <block id="645034a4c73a4f25d79cfc0892d91937" category="inline-image-macro">标注编号2、宽度=30制</block>
+  <block id="ebce31788a3f5b7c47411e09ce8c4f30" category="paragraph"><block ref="ebce31788a3f5b7c47411e09ce8c4f30" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="32dde6c192b854cc5ef8fbf9965197f3" category="list-text">将控制器模块滑出机箱、然后将其放在平稳的表面上。</block>
+  <block id="3a35b79f6cdc064e1fd8bae199bb7cc1" category="list-text">跟踪每个驱动器的驱动器托架、并将驱动器放在无静电的手推车或桌子上。</block>
+  <block id="bbad437d407ac0dc494f22cf01d36f95" category="section-title">第3步：从设备机架或系统机柜中更换机箱</block>
+  <block id="f5a29541ab8c131d31027f615587c55c" category="list-text">将旧机箱中的驱动器安装到更换机箱中：</block>
+  <block id="d19c9b117b9744b2968c6a7a29cf682c" category="list-text">将驱动器的其余部分用力推入机箱、然后向上推凸轮把手并顶住驱动器托架以锁定凸轮把手。</block>
+  <block id="f3b97d340b8389ddeabbcf54ce084292" category="section-title">步骤4：重新安装控制器模块</block>
+  <block id="48f5f398094b93996cc2a11416b14ee9" category="paragraph">重新安装控制器模块并重新启动。</block>
+  <block id="efcc254ceb718ef7e8b881f466009928" category="list-text">将空气管道向下旋转到可以移动的位置、确保空气管道完全关闭。</block>
+  <block id="0ccceedf0ba73e89727474e882e1b520" category="paragraph">它必须与控制器模块金属板平齐。</block>
+  <block id="1a3dc6e4b0a5fba85d4b38f8ec0323b7" category="paragraph">如果您删除了收发器(QSFP或SFP)、请记得在使用光缆时重新安装它们。</block>
+  <block id="e1e5cf3c178b5500c9ca99734851f088" category="list-text">将锁定闩锁向上旋转到锁定位置。</block>
+  <block id="2e642e4a5011ff5ac26769f55b9fb111" category="list-text">将电源线插入电源。</block>
+  <block id="73bf3c5901e8959909093f245da79b5c" category="admonition">如果您有直流电源、请在控制器模块完全固定在机箱中后、将电源块重新连接到电源。</block>
+  <block id="7cb60d31286d9a356a9f1d81c01d5d76" category="paragraph">电源恢复后、控制器模块将启动。如果启动到加载程序提示符、请使用命令重新启动控制器<block ref="ce54ef17bebf280339d340bd40dff593" prefix=" " category="inline-code"></block> 。</block>
+  <block id="c90c2ae11fe917d8b5a1debf0e0a1a26" category="list-text">*此过程会造成系统中断。*For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.</block>
+  <block id="7ae4c88c0c1f1ed7c8b6a312fdab75ab" category="paragraph">要更换控制器、您必须卸下受损控制器、将FRU组件从受损控制器模块移至更换用的控制器模块、在机箱中安装更换用的控制器模块、然后将系统启动至维护模式。</block>
+  <block id="2fb967de668a2d809970dd0ee11a24ab" category="paragraph">将电源移至更换用的控制器。</block>
+  <block id="2a7480039bddad1197a5ab3ef2e9c642" category="image-alt">卸下PSU</block>
+  <block id="d064a3d94819a3fa5dab2f305999e373" category="paragraph">将风扇模块移至更换用的控制器模块。</block>
+  <block id="4f42b1d0608fb1685f8d72748eac26b7" category="section-title">Step 4: Move the NV battery</block>
+  <block id="14d784154f4aa3f57f9c9dfbbeaeb34f" category="paragraph">Move the NV battery to the replacement controller module.</block>
+  <block id="e71823c1e743186a0666f6927e650467" category="list-text">打开控制器模块中间的通风管盖、找到NV电池。</block>
+  <block id="62b84ce1ed8f33077fd9cc685a96482f" category="image-alt">移动NV电池</block>
+  <block id="87b314771bccd0b0dc0e6412487e2fb9" category="cell">NV蓄电池空气管道</block>
+  <block id="b235fe0d197181d860d1e9566dae0bf7" category="paragraph">NV电池组插头</block>
+  <block id="a78a80d2da92de4642ea63dd1541f1f7" category="paragraph">*注意：*暂停系统后，将内容转存到闪存时，NV模块LED会闪烁。After the destage is complete, the LED turns off.</block>
+  <block id="f8f7c1045b42c3c72f377477b544d2c0" category="list-text">将电池组移至更换用的控制器模块、然后将其安装在更换用的控制器模块中：</block>
+  <block id="326322113ec6d7afd516677c70a620ba" category="list-text">关闭NV蓄电池空气管道。</block>
+  <block id="27f35b27313c8e5ab77d19b60ae6e137" category="section-title">Step 5: Move system DIMMs</block>
+  <block id="694d7036e292f7957abb19acc5e9b758" category="list-text">找到主板上的系统DIMM。</block>
+  <block id="039f58bd987ef88313145c074df5d70a" category="list-text">在更换用的控制器模块上找到要安装DIMM的插槽。</block>
+  <block id="c37a4d7725ea260112e56edceaf5e4d1" category="section-title">第6步：移动I/O模块</block>
+  <block id="6744bc76d019e9b71a7aa664d4ed7127" category="paragraph">将I/O模块移至更换用的控制器模块。</block>
+  <block id="24418166f8dead9d275ddfdbc74a4cd7" category="cell">I/O模块凸轮拉杆</block>
+  <block id="c9551b0fc75e2c8508231fd6835ef674" category="list-text">向下旋转缆线管理ARM、方法是拉动缆线管理ARM内侧的按钮、然后向下旋转它。</block>
+  <block id="ab7f57bf2d31f89a07c8be533fdaddec" category="list-text">从控制器模块中卸下I/O模块：</block>
+  <block id="f3d88c3c810af1cdb84d313cc4275953" category="list-text">按下目标I/O模块凸轮闩锁按钮。</block>
+  <block id="7c6e6d55849c69a2b7dab4c3fb9da90d" category="paragraph">凸轮杆移离控制器模块。</block>
+  <block id="9845fc7da7211da718a847b9a731f5b8" category="list-text">将手指插入凸轮拉杆开口处、然后将模块拉出控制器模块、从而将模块从控制器模块中卸下。</block>
+  <block id="f849da379b8d83f31d348b3d693cc638" category="list-text">将更换用的I/O模块安装到更换用的控制器模块中、方法是将I/O模块轻轻滑入插槽、直到I/O凸轮闩锁开始与I/O凸轮销啮合、然后将I/O凸轮闩锁一直向上推、以将模块锁定到位。</block>
+  <block id="4af3919f928bd4d197aed63e4bc600d5" category="list-text">重复上述步骤、将其余I/O模块(插槽6和7中的模块除外)移至更换用的控制器模块。</block>
+  <block id="11fbadf7448d1ecaf73c923529479716" category="admonition">要从插槽6和7移动I/O模块、必须将包含这些I/O模块的托架从受损控制器模块移动到更换用的控制器模块。</block>
+  <block id="b401db8e87b7b803acaf5a09680163d0" category="list-text">将插槽6和7中包含I/O模块的托架移至更换用的控制器模块：</block>
+  <block id="74f230000179ad1d679ddad3d5bdf7b0" category="list-text">按下托架手柄最右侧手柄上的按钮。..将托架从受损控制器模块中滑出、将其以在受损控制器模块中的相同位置插入更换用的控制器模块。</block>
+  <block id="aa0bcb347c0d996ed6d3094ca9407905" category="list-text">轻轻地将托架完全推入更换用的控制器模块、直到其锁定到位。</block>
+  <block id="e156abc6c55d67bc52379c9afbf08a38" category="section-title">第7步：移动系统管理模块</block>
+  <block id="0970f7cff19d17cbcf6cda476c075ee2" category="paragraph">将系统管理模块移至更换用的控制器模块。</block>
+  <block id="94b3eb3106138f7bc53935ffbe690cbf" category="paragraph">更换系统管理模块</block>
+  <block id="18dd6244b942460d88413f477ea1a813" category="list-text">从受损控制器模块中卸下系统管理模块：</block>
+  <block id="953f96c587cb69d7c4ffdd62048a1067" category="list-text">向下旋转凸轮杆。</block>
+  <block id="d02b3bf2c9834e1200fb66a2408e400a" category="list-text">将手指环入凸轮杆、然后将模块直接拉出系统。</block>
+  <block id="ab3626fcfbaeea815fd23f550fd13062" category="list-text">将系统管理模块安装到受损控制器模块上的同一插槽中的替代控制器模块中：</block>
+  <block id="3d097b51b3e4ea6203013f7839213333" category="list-text">将系统管理模块的边缘与系统开口对齐、然后将其轻轻推入控制器模块。</block>
+  <block id="93d8a200b2cc8e970b5193d83e374359" category="section-title">第8步：移动NVRAM模块</block>
+  <block id="728a43e0558b95abf033f81cd70a4b11" category="paragraph">将NVRAM模块移至更换用的控制器模块。</block>
+  <block id="e50a7c739fc2316f761a6625cccf1d7b" category="paragraph">DIMM锁定卡舌</block>
+  <block id="61979a24638dee7b1c411448ac9c41f1" category="list-text">从受损控制器模块中卸下NVRAM模块：</block>
+  <block id="c1039369bd751ebbfacb4f5e49909936" category="list-text">将凸轮闩锁旋转到最远位置。</block>
+  <block id="a06af58b2429096e2a27101cacada83a" category="list-text">通过将手指插入凸轮拉杆开口并将NVRAM模块拉出机柜、从机柜中卸下NVRAM模块。</block>
+  <block id="5e2cf5b700caea63b803a11d6bd14c72" category="list-text">将NVRAM模块安装到替代控制器模块的插槽4/5中：</block>
+  <block id="54f74a217055779c9d05e10acdb2101f" category="list-text">将模块与插槽4/5中机箱开口的边缘对齐。</block>
+  <block id="a34f5d7448ca509b8fdfe99eb0258923" category="list-text">将模块轻轻滑入插槽中、然后将凸轮闩锁一直向上推、以将模块锁定到位。</block>
+  <block id="3da6ea6cfd2a784b8a10d3a2f614c9f8" category="section-title">Step 9: Install the controller module</block>
+  <block id="b7dcc5448a06ec706832cdeab132792c" category="list-text">如果尚未重新安装缆线管理设备并对控制器重新布线、请执行此操作。</block>
+  <block id="bb5b089c7f5c4d10ebe7f2948ffd4a76" category="paragraph">通过重新为存储、网络连接和交还控制器来继续执行更换过程。</block>
+  <block id="eceb1e51c26ea3e966510ccb24feafbc" category="section-title">第2步：交还控制器</block>
+  <block id="cd857ff122008e8c33281aac10c4a797" category="list-text">找到控制器模块上的DIMM并确定目标DIMM。</block>
+  <block id="8a682c66646ec7954594a9800184dc7d" category="inline-link">NetApp Hardware Universe</block>
+  <block id="bbd2b770350c6f52732f68cd939d17e5" category="admonition">有关AFF A70或AFF A90的DIMM的确切位置、请查阅<block ref="4e43c3b83d98d9534ba258422aad47e3" category="inline-link-rx"></block> 控制器模块上的或FRU示意图。</block>
+  <block id="610add0822408300fa8ad516407472f4" category="section-title">步骤3：更换风扇</block>
+  <block id="46d9d4074dd716b11379b5c6b5eecbdd" category="admonition">如果存储系统具有直流电源设备(PSU)、请断开电源电缆块与PSU的连接。</block>
+  <block id="fc6665e9f1b6162e5d38bd8eb567b787" category="list-text">从控制器模块中卸下I/O模块：</block>
+  <block id="43bdfcb23a758397ea6517f635aacc1d" category="paragraph">凸轮闩锁移离控制器模块。</block>
+  <block id="e7a88b07d0fe11e52b015a7a07b1b7ee" category="list-text">将更换用的I/O模块安装到目标插槽中：</block>
+  <block id="a3106006bcbd6b01107844abf97f1800" category="list-text">将模块轻轻地滑入插槽、直至完全滑入控制器模块、然后将凸轮闩锁一直向上旋转、以将模块锁定到位。</block>
+  <block id="6ba2e9eb4c2829dc2017284892829c45" category="admonition">如果您有直流电源、请将电缆块重新连接到PSU。</block>
+  <block id="1089c3637780c1a22ad88c3e30e3eaa6" category="image-alt">Replace the NV battery</block>
+  <block id="f5844b9beff2dd81e52b9a5d98082467" category="paragraph">NVRAM模块由NVRAM12硬件和现场可更换DIMM组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.要更换发生故障的NVRAM模块、您必须从机箱中卸下该模块、将DIMM移至更换模块、然后将更换用的NVRAM模块安装到机箱中。</block>
+  <block id="f7de4e424b34170ef3a103ee0f882402" category="paragraph">要更换NVRAM模块、请在机箱的插槽4/5中找到该模块、然后按照特定步骤顺序进行操作。</block>
+  <block id="25bc068a4c7f7f5d040abc107e9b53e7" category="admonition">如果您的系统使用直流电源、请断开电源电缆块与PSU的连接。</block>
+  <block id="b9c07f9700f6e60517bd8e8c52b698d0" category="list-text">从机箱中卸下受损NVRAM模块、方法是将手指插入凸轮拉杆开口并将模块拉出机箱。</block>
+  <block id="380b4a9b7635aab20565f10313ad18ca" category="list-text">重新对PSU进行电源恢复。</block>
+  <block id="6cc4600854ca82a2aad4bc0932afe89b" category="admonition">如果您的系统使用直流电源、请将电源线块重新连接到PSU。</block>
+  <block id="95202d1c51ddd04e5c7ee2a579109553" category="list-text">按下凸轮按钮。</block>
+  <block id="eea43b1f9f4191af441ec7f1515ffd01" category="list-text">从机箱中卸下NVRAM模块、方法是将手指插入凸轮拉杆开口并将模块拉出机箱。</block>
+  <block id="586cd1de26648f3c3aa70dbd61199e65" category="image-alt">卸下直流PSU</block>
+  <block id="c9ac10817b7d9d9b4a84ded99fbd1d9b" category="inline-image-macro">标注编号3、Wides=30bex</block>
+  <block id="a00672aef070452de050862fe1451fe1" category="paragraph"><block ref="a00672aef070452de050862fe1451fe1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="119b8386395af0270a4cad663d460ae6" category="inline-image-macro">标注编号4，宽度=30x</block>
+  <block id="67ad3a060e2655b765af597f395aa7d3" category="paragraph"><block ref="67ad3a060e2655b765af597f395aa7d3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5862e3059693b0ae5802e65d68b3df4c" category="list-text">使用命令检查运行正常的控制器上的日期和时间<block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix=" " category="inline-code"></block> 。</block>
+  <block id="84d381361973ac3871949fc5ba34d24f" category="list-text">按下蓝色锁定按钮。启动介质稍微向上旋转。</block>
+  <block id="59073837e9444bf2400f497219e938ff" category="list-text">向上旋转启动介质、将其滑出插槽。</block>
+  <block id="39ae5f56527ba81d40a11f9ee81d3594" category="list-text">向下旋转行李箱介质、直至其与锁定按钮啮合。如有必要、按下蓝色锁定。</block>
+  <block id="31b44b2bbf802ac2ba72cd5f64a91a73" category="list-text">安装系统管理模块：</block>
+  <block id="ca97995b5e50e8b10ac1fc3b62cf50d1" category="paragraph">如果需要为一个AFF A70或AFF A90 HA对热添加更多存储(到内部磁盘架)、则最多可以将两个NS224磁盘架添加到其中。</block>
+  <block id="c8eac505350cb0f1af11cd259653ff42" category="inline-link-macro">热添加要求和最佳实践</block>
+  <block id="41f1f5d5c9c84b4192d60dae68221e74" category="list-text">您必须已查看 <block ref="4ce128836e76285f9c9ed40b724d2cac" category="inline-link-macro-rx"></block>。</block>
+  <block id="132e9fc46dcb8ce0ada8aaba479842e1" category="inline-link-macro">准备热添加磁盘架</block>
+  <block id="4cff528eaaa2c2b349b730fbd0fcabe9" category="list-text">您必须已完成中的适用过程 <block ref="f3f64106bbfa74e473b00e3a56614cbe" category="inline-link-macro-rx"></block>。</block>
+  <block id="bd9bb82cb12ed85b385001364772cc79" category="inline-link-macro">安装用于热添加的磁盘架</block>
+  <block id="7767ac26e2b3cd3f28d8d69583317704" category="list-text">您必须已安装磁盘架并为其通电，然后按照中所述设置磁盘架ID <block ref="68c2828044dd0dd776e961af4615948f" category="inline-link-macro-rx"></block>。</block>
+  <block id="6c5978baa311721c1879e0b7bc95d1af" category="list-text">此过程假设HA对只有内部存储(无外部磁盘架)、并且您要在每个控制器中热添加最多两个额外磁盘架和两个支持RoCE的I/O模块。</block>
+  <block id="693d178bd7e316e4b461a6475eabb0f5" category="list-text">此过程可解决以下热添加情形：</block>
+  <block id="0b58f7350d7c6e30945be789846ad507" category="list-text">在每个控制器中使用一个支持RoCE的I/O模块将第一个磁盘架热添加到HA对。</block>
+  <block id="b5c973de929d19f312e40bec11aa04c2" category="list-text">在每个控制器中使用两个支持RoCE的I/O模块将第一个磁盘架热添加到HA对。</block>
+  <block id="4367e3d6fa33a8e5340bcdfaf20e76b1" category="list-text">热-将第二个磁盘架添加到每个控制器中具有两个支持RoCE的I/O模块的HA对中。</block>
+  <block id="bd7b27778a055163b7315acc047708fd" category="list-text">如果要在每个控制器模块中使用一组支持RoCE的端口(一个支持RoCE的I/O模块)热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
+  <block id="7326450dfaf2d352b15c1dbb36a9010e" category="admonition">此步骤假定您已将支持RoCE的I/O模块安装在插槽11中。</block>
+  <block id="f9ba636c0d9fc6353c91cac13fe6290c" category="image-alt">使用缆线连接具有一个磁盘架和一个IO模块的AFF A70或A90</block>
+  <block id="1d99994321fcf88aba221cbb6612805a" category="admonition">此步骤假定您已在插槽11和8中安装了支持RoCE的I/O模块。</block>
+  <block id="220b4e5517a1a5b99f0642ce282c3975" category="list-text">使用缆线将NSM A端口e0a连接到控制器A插槽11端口A (e11a)。</block>
+  <block id="635ff36fada70d6b9a46124ec04022cf" category="list-text">使用缆线将NSM A端口e0b连接到控制器B插槽8端口b (e8b)。</block>
+  <block id="3adcb5d3f00489780b17f91dbcf4c8b6" category="list-text">使用缆线将NSM B端口e0a连接到控制器B插槽11端口A (e11a)。</block>
+  <block id="fed38315c77f3f617a7a61ed019eb467" category="list-text">使用缆线将NSM B端口e0b连接到控制器A插槽8端口b (e8b)。</block>
+  <block id="8b2cc73a271f9ec9f419e138f66cb109" category="paragraph">下图显示了如何在每个控制器模块中使用两个支持RoCE的I/O模块为一个热添加磁盘架布线：</block>
+  <block id="0fd5a3b540c1af5ae188f141b2f40c24" category="image-alt">使用缆线连接具有一个磁盘架和两个IO模块的AFF A70或A90</block>
+  <block id="efd179e747ea06abffaa97721b0cc372" category="list-text">使用缆线将NSM A端口e0a连接到控制器A插槽8端口A (E8a)。</block>
+  <block id="9db08de14bb838886cf8eaaee8575093" category="list-text">使用缆线将NSM A端口e0b连接到控制器B插槽11端口b (e11b)。</block>
+  <block id="e227bb2c8482a8ac7a342596ddc812fe" category="list-text">使用缆线将NSM B端口e0a连接到控制器B插槽8端口A (E8a)。</block>
+  <block id="6d4a579eaf72f5aec95723d499d76fe9" category="list-text">使用缆线将NSM B端口e0b连接到控制器A插槽11端口b (e11b)。</block>
+  <block id="ae14ce538d268aca5ec54fbb093b2156" category="paragraph">下图显示了在每个控制器模块中使用两个支持RoCE的I/O模块为两个热添加磁盘架布线：</block>
+  <block id="25862846eedff523b089999508c204b1" category="image-alt">为具有两个磁盘架和两个IO模块的AFF A70或A90布线</block>
+  <block id="14ac662b33a52d48f6573c07b50e5b8f" category="list-text">使用验证热添加磁盘架的布线是否正确<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block>。</block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">下一步是什么？</block>
+  <block id="8d39c366d0f2a2847eeab7a904800822" category="paragraph">If you disabled automatic drive assignment as part of the preparation for this procedure, you need to manually assign drive ownership and then reenable automatic drive assignment, if needed.转到。 <block ref="27f0c709ab4d9ea809b0da6fd9c1c251" category="inline-link-macro-rx"></block></block>
+  <block id="0e3d081c008c032c73e41d141ef3e8f2" category="paragraph">否则、您将完成热添加磁盘架过程。</block>
+  <block id="8043797db2626f941c758e70e51c6421" category="paragraph">您可以将最多三个额外的NS224磁盘架热添加到一个AFF A1K HA对中(总共四个磁盘架)。</block>
+  <block id="d2ac780b2e8141b11e4649760187228e" category="inline-link-macro">准备热添加磁盘架</block>
+  <block id="ee6f36975e23e964b7700e9186519410" category="list-text">您必须已完成中的适用过程 <block ref="93c25ff2c1ab57827ce49b9c5fd4ddeb" category="inline-link-macro-rx"></block>。</block>
+  <block id="1bab1cfda6fee5cde83d1380c3e5b9ab" category="list-text">此过程假设HA对至少有一个现有NS224磁盘架。</block>
+  <block id="9d83d849a4156a45c99412990ea0e5ec" category="list-text">将第二个磁盘架热添加到每个控制器中具有两个支持RoCE的I/O模块的HA对。(您已安装第二个I/O模块并将第一个磁盘架重新布线到两个I/O模块、或者已将第一个磁盘架布线到两个I/O模块。您将使用缆线将第二个磁盘架连接到两个I/O模块)。</block>
+  <block id="e16364738058258c38c3fd4625d05ec4" category="list-text">在每个控制器中使用三个支持RoCE的I/O模块将第三个磁盘架热添加到HA对。(您已安装第三个I/O模块、并将使用缆线将第三个磁盘架仅连接到第三个I/O模块)。</block>
+  <block id="244addd6f2bc2e043852c2e18eeb5621" category="list-text">将第三个磁盘架热添加到每个控制器中具有四个支持RoCE的I/O模块的HA对。(您已安装第三个和第四个I/O模块、并将使用缆线将第三个磁盘架连接到第三个和第四个I/O模块)。</block>
+  <block id="72cdf939e98d17baf87d0a5a64dfcea8" category="list-text">在每个控制器中使用四个支持RoCE的I/O模块将第四个磁盘架热添加到HA对。(您已安装第四个I/O模块并将第三个磁盘架重新布线到第三个和第四个I/O模块、或者已将第三个磁盘架布线到第三个和第四个I/O模块。您将使用缆线将第四个磁盘架同时连接到第三个和第四个I/O模块)。</block>
+  <block id="b5fb112065a7304ad93afe5e3c7fa849" category="paragraph">下图突出显示了HA对中第二个磁盘架的布线、其中每个控制器具有两个支持RoCE的I/O模块：</block>
+  <block id="ea0cc2be4039f5636ca9de5e2c7a3940" category="image-alt">为具有两个磁盘架和两个IO模块的AFF A1K布线</block>
+  <block id="7190ee5c0c8079e24da44f24c6b7abbc" category="list-text">如果要热添加的NS224磁盘架是HA对中的第三个NS224磁盘架、并且每个控制器中有三个支持RoCE的I/O模块、请完成以下子步骤。否则，请继续执行下一步。</block>
+  <block id="67a32de8a36abcac3887051fb422a5f5" category="list-text">使用缆线将磁盘架NSM A端口e0a连接到控制器A插槽9端口A (e9a)。</block>
+  <block id="b94b22c566c53666c9eb824858482f94" category="list-text">使用缆线将磁盘架NSM A端口e0b连接到控制器B插槽9端口b (e9b)。</block>
+  <block id="daa2e224b274ef312de5853c6cbffaf6" category="list-text">使用缆线将磁盘架NSM B端口e0a连接到控制器B插槽9端口A (e9a)。</block>
+  <block id="3a8f2e391b6044dec7d6ef6c3e9dda69" category="list-text">使用缆线将磁盘架NSM B端口e0b连接到控制器A插槽9端口b (e9b)。</block>
+  <block id="6c6e97e4c29594c5856e13f4b1a8be0c" category="paragraph">下图突出显示了HA对中第三个磁盘架的布线、其中每个控制器具有三个支持RoCE的I/O模块：</block>
+  <block id="94213ae2609c82c94807004beab91de1" category="image-alt">为具有三个磁盘架和三个IO模块的AFF A1K布线</block>
+  <block id="46e04d93b6d495a5235036857998eae9" category="list-text">如果要热添加的NS224磁盘架是HA对中的第三个NS224磁盘架、并且每个控制器中有四个支持RoCE的I/O模块、请完成以下子步骤。否则，请继续执行下一步。</block>
+  <block id="abb0dbc2abeae0d456ed2095b4c9ed12" category="list-text">使用缆线将磁盘架NSM A端口e0b连接到控制器B插槽8端口b (e8b)。</block>
+  <block id="8ff8aa3f78832bf6ceceeea539763fec" category="list-text">使用缆线将磁盘架NSM B端口e0b连接到控制器A插槽8端口b (e8b)。</block>
+  <block id="863764690b094c2d6a28b8edc2afba72" category="paragraph">下图突出显示了HA对中第三个磁盘架的布线、其中每个控制器具有四个支持RoCE的I/O模块：</block>
+  <block id="f9d0d9976d1ff7ee0097da8e1b7fb3c2" category="image-alt">为具有三个磁盘架和四个IO模块的AFF A1K布线</block>
+  <block id="3bd0afb8978e34368879d152c8aec251" category="list-text">如果要热添加的NS224磁盘架是HA对中的第四个NS224磁盘架、并且每个控制器中有四个支持RoCE的I/O模块、请完成以下子步骤。</block>
+  <block id="d10794f4d3cca7a2993e8d2d6a12cd28" category="list-text">使用缆线将磁盘架NSM A端口e0a连接到控制器A插槽8端口A (e8a)。</block>
+  <block id="ed24faf41d7d53c3a668df6e070aca6d" category="list-text">使用缆线将磁盘架NSM B端口e0a连接到控制器B插槽8端口A (e8a)。</block>
+  <block id="551d2fc9e8e1159b84b9c23da6d27984" category="paragraph">下图突出显示了HA对中第四个磁盘架的布线、其中每个控制器具有四个支持RoCE的I/O模块：</block>
+  <block id="40d57aad6b502bb35f6aa64821041f6a" category="image-alt">为具有四个磁盘架和四个IO模块的AFF A1K布线</block>
+  <block id="8f5d4ff45922bd2a0a4b4ca26b784653" category="paragraph">如果需要更多存储、您最多可以将一个NS224磁盘架热添加到一个AFF A250或AFF C250 HA对中。</block>
+  <block id="674639f981420a300672aa48922e8167" category="image-alt">为AFF A250布线</block>
+  <block id="3c8f15ce2288517ffd28cbab07b4cd4f" category="paragraph">如何为NS224磁盘架布线以进行热添加取决于您拥有的是AFF A400还是AFF C400 HA对。</block>
+  <block id="95e9c90f47d7134271c5de6f5d8d41f5" category="paragraph">*用电缆将磁盘架连接到AFF A400 HA对*</block>
+  <block id="e47d066c3638efab14a13923e89b312a" category="paragraph">对于AFF A400 HA对、您可以根据需要热添加最多两个磁盘架、并使用板载端口e0c/e0d和插槽5中的端口。</block>
+  <block id="d4e171bee30acee3b4097e177f087224" category="list-text">如果要在每个控制器上使用一组支持RoCE的端口(板载支持RoCE的端口)热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
+  <block id="4df6de3fb6b5eece4bd1d42f75e5ae3d" category="paragraph">下图显示了如何在每个控制器上使用一组支持RoCE的端口为一个热添加磁盘架布线：</block>
+  <block id="672cc22dbbc7622be2f56d3dce98ffcd" category="image-alt">为具有一个NS224磁盘架和一组板载端口的AFF A400布线</block>
+  <block id="306fa6b2ff7e9909c6a2a302a380875a" category="list-text">如果要在每个控制器上使用两组支持RoCE的端口(板载端口和支持RoCE的PCIe卡端口)热添加一个或两个磁盘架、请完成以下子步骤。</block>
+  <block id="303de4b6b1481e40bb1b8e2368a123b6" category="image-alt">为具有两个NS224磁盘架、一组板载端口和一组PCIe卡端口的AFF A400布线</block>
+  <block id="41132f8bc7d00935b8687c18c2c9e35d" category="list-text">If you disabled automatic drive assignment as part of the preparation for this procedure, you need to manually assign drive ownership and then re enable automatic drive assignment, if needed.请参阅。 <block ref="27f0c709ab4d9ea809b0da6fd9c1c251" category="inline-link-macro-rx"></block></block>
+  <block id="406a6a05dc05bb651919c02b9570c743" category="paragraph">*用电缆将磁盘架连接到AFF C400 HA对*</block>
+  <block id="9d6636aae443fd88eb415b0a814eb7ed" category="paragraph">对于AFF C400 HA对、您最多可以热添加两个磁盘架、并根据需要使用插槽4和5中的端口。</block>
+  <block id="b6c9c1f2bae5bda1b2ec0ca34865478a" category="list-text">如果要在每个控制器上使用一组支持RoCE的端口热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
+  <block id="a3c44bf0089bcb64a39869e3500ee7be" category="image-alt">为具有一个NS224磁盘架和一组PCIe卡端口的AFF C400布线</block>
+  <block id="c4dcb8322178395823ac67e2ea704340" category="list-text">如果要在每个控制器上使用两组支持RoCE的端口热添加一个或两个磁盘架、请完成以下子步骤。</block>
+  <block id="8e60b7b6a9c9e9483da2fb013ea4987b" category="image-alt">为具有两个NS224磁盘架和两组PCIe卡端口的AFF C400布线</block>
+  <block id="8b27019cea28c7866ff81a933ac7c02c" category="paragraph">如何在AFF A800或AFF C800 HA对中为NS224磁盘架布线取决于要热添加的磁盘架数量以及控制器上使用的支持RoCE的端口集(一个或两个)数量。</block>
+  <block id="e6960ae3a6a92d53555f3471da322c41" category="list-text">如果要在每个控制器上使用一组支持RoCE的端口(一个支持RoCE的PCIe卡)热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
+  <block id="c55555ebd43bc616a6c859bbbad79ac8" category="paragraph">下图显示了在每个控制器上使用一个支持RoCE的PCIe卡为一个热添加磁盘架布线：</block>
+  <block id="e21205a57cd96b3d3b2ad37564df9874" category="image-alt">为具有一个NS224磁盘架和一个PCIe卡的AFF A800或AFF C800布线</block>
+  <block id="6f313b51958d9ef2aa65c80a9b64de6b" category="list-text">如果要在每个控制器上使用两组支持RoCE的端口(两个支持RoCE的PCIe卡)热添加一个或两个磁盘架、请完成相应的子步骤。</block>
+  <block id="b44d424c15322ecb36a077b677527005" category="image-alt">为具有两个NS224磁盘架和两个IO模块的AFF A900布线</block>
+  <block id="e896f649bc7a69947f85c288e5cb0b96" category="image-alt">为具有三个NS224磁盘架和四个IO模块的AFF A900布线</block>
+  <block id="325058948df9e92ff2c1577aeb745fc0" category="image-alt">为具有四个NS224磁盘架和四个IO模块的AFF A900布线</block>
+  <block id="40e6ceebb2eb1677b588bd7f52f95206" category="paragraph">磁盘架ID编号</block>
+  <block id="42a63d570d38a93d3cbaddcfd266a58c" category="paragraph">磁盘架ID访问按钮</block>
+  <block id="326dcf3a777a5d77ced1cd01fc928869" category="paragraph">在将_re更换_节点恢复服务之前、您应验证LIFs是否位于其主端口上、检查集群运行状况并重置自动交还。</block>
+  <block id="d6f7de8608837079f0d0dd7fa668c457" category="list-text">检查集群的运行状况。有关详细信息、请参见<block ref="9f193d2818f839c9575e0a6969820fd9" category="inline-link-rx"></block> 知识库文章。</block>
+  <block id="92a8f4f22e2adcc65ead3e4c5a1435db" category="list-text">合上凸轮把手、使驱动器完全固定在中板中、并且把手卡入到位。</block>
+  <block id="ccb7122523ff13a861d44c2bcdc45f81" category="list-text">分配每个驱动器：<block ref="e546c7c0f19a803f32f47d3907849b62" prefix=" " category="inline-code"></block></block>
+  <block id="3774ddca34a7ba4f3e245f00869ad3d4" category="paragraph">更换多个磁盘驱动器时、在移除每个故障磁盘驱动器与插入更换磁盘驱动器之间、必须等待70秒、以使存储系统能够识别是否存在每个新磁盘。</block>
+  <block id="9f8cb0e8a48411f934bc97473df58706" category="list-text">如果启用了AutoSupport、则使用还原/取消禁止自动创建案例<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block></block>
+  <block id="a93d77f6df5e06d389505b064ee465e0" category="doc">完成启动介质更换</block>
+  <block id="9cdea9bbd0e16c22fc991522b7972ed5" category="paragraph">您必须使用在此过程开始时捕获的设置完成特定于启用了板载密钥管理器(OKM)、NetApp存储加密(NSE)或NetApp卷加密(NVE)的系统的步骤。</block>
+  <block id="7b2bdafe064028eef5977d05150f12ac" category="admonition">如果启用了NSE或NVE以及板载或外部密钥管理器、则必须还原在此过程开始时捕获的设置。</block>
+  <block id="63a4de1bcedff077618555275f624f08" category="open-title">选项1：具有板载密钥管理器服务器配置的系统</block>
+  <block id="da8f6d618f55e4068dea90bc98f1254e" category="paragraph">从ONATp启动菜单还原板载密钥管理器配置。</block>
+  <block id="89cb88c9bc1bb6b7dcae6435585c0324" category="paragraph">还原OKM配置时、需要以下信息：</block>
+  <block id="7000494e61efaf925f6df5293a176456" category="inline-link">同时启用板载密钥管理</block>
+  <block id="da204d9262b182aa6636ef0f759e2181" category="list-text">已输入集群范围的密码短语<block ref="45fc92ed2fd28afadf25f8be26cb5500" category="inline-link-rx"></block>。</block>
+  <block id="f295be867ed42957086669bda6d018d8" category="inline-link">板载密钥管理器的备份信息</block>
+  <block id="0d8f4216b1a686595d00ee0b5d71392f" category="list-text"><block ref="2ee0908f9e5223d6e83d8a800aaafc05" category="inline-link-rx"></block>(英文)</block>
+  <block id="a631c4c4852d87f0373a4ceef554cd55" category="inline-link">如何验证板载密钥管理备份和集群范围的密码短语</block>
+  <block id="e1136da7593260e34ba5b2ed856ccd05" category="list-text">请先执行此<block ref="aaf4edeb3b26d690deb5096fe7a1d65f" category="inline-link-rx"></block> 过程、然后再继续。</block>
+  <block id="299ca460e09d443253eaddad0c22b9a6" category="list-text">从ONTAP启动菜单中选择选项10：</block>
+  <block id="e5aa840dde8194d8d6df61253c09f357" category="list-text">确认此过程是否继续。<block ref="9c14d4f8d14519ea4ded790c9f9cd146" prefix=" " category="inline-code"></block>_y_</block>
+  <block id="c6e69b2f1336dfec071685d57a03c518" category="list-text">输入集群范围的密码短语两次。</block>
+  <block id="f9bffba0a703b49e4849f916f5e0b86a" category="admonition">输入密码短语时、控制台不会显示任何输入。</block>
+  <block id="13919b42be0dc9d06cf38142917f4b9e" category="paragraph"><block ref="2b673e138bf62e9f201d2fe3f4e48e85" prefix="" category="inline-code"></block></block>
+  <block id="0784a1581386529d37ed702d7c0c6404" category="paragraph"><block ref="7c93709ee00a5bf88772022db8bfa591" prefix="" category="inline-code"></block></block>
+  <block id="de5132c93b5d93a59d85652f38a4c1be" category="list-text">输入备份信息。将整个内容从开始备份行粘贴到结束备份行。</block>
+  <block id="23f31e8486de5b0c9919cdb1d6f7bb1f" category="paragraph">在输入末尾按两次回车键。</block>
+  <block id="17f4c7292b19bfcfe3d4c928df22bc3c" category="list-text">恢复过程将完成。</block>
+  <block id="25a669068aaab50a7c2fd5bce904c674" category="admonition">如果显示的输出不是，请勿继续<block ref="3f52dc951949a3041638d54635d71099" prefix=" " category="inline-code"></block>。执行故障排除以更正错误。</block>
+  <block id="4ca210717c7b74a5849140e091b8b172" category="list-text">从启动菜单中选择选项1以继续启动至ONTAP。</block>
+  <block id="de52f5c2d18fad1d9bb02f99ec8dadf5" category="list-text">确认控制器的控制台显示<block ref="22714968f3c097ea3249c9d4b9e8119f" prefix=" " category="inline-code"></block></block>
+  <block id="999c46a3c0b0be09d2315b772cef93f4" category="list-text">从配对节点交还配对控制器：_storage故障转移交还-frofnode local -only—cfo-Aggregates true _</block>
+  <block id="6ede7407442dd193a49f8d2d41499d14" category="list-text">仅使用CFO聚合启动后、运行_security key-manager onboard sync​​​​​​​_命令：</block>
+  <block id="df09cb8ebed3f1cee6a949f0db88f478" category="list-text">输入板载密钥管理器的集群范围密码短语：</block>
+  <block id="34872b906ccadd846f8c009d5dae06d3" category="list-text">确保所有密钥均已同步：_security key-manager key query-reRestored false_</block>
+  <block id="36127ab42d959b7fd1802bde97fbbebd" category="paragraph"><block ref="ff552bb89260932a935c259f2e059d29" prefix="" category="inline-code"></block></block>
+  <block id="1a397feeabbac5c761b3d1f336523079" category="admonition">在reved参数中筛选false时、不应显示任何结果。</block>
+  <block id="3b26794816c291bf36128e61d0be91bd" category="list-text">从配对节点进行节点恢复：_storage故障转移-from node local_</block>
+  <block id="612c478fd861d23534a26dd856605b43" category="open-title">选项2：具有外部密钥管理器服务器配置的系统</block>
+  <block id="179622516286b14a2256b085ee45c10a" category="paragraph">从ONATp启动菜单还原外部密钥管理器配置。</block>
+  <block id="075c44463f07a0ee059a3e5089c43ca5" category="paragraph">要还原外部密钥管理器(EKM)配置、您需要以下信息：</block>
+  <block id="751a65070ef8776fe1f50db7fd7774ef" category="list-text">您需要另一个集群节点上的/cfcard/kmip/servers.cfg文件的副本、或者以下信息：</block>
+  <block id="d60b517023845eb33535660ac501cf18" category="list-text">KMIP服务器地址。</block>
+  <block id="70b8d21a07e70130ed6b262a91c18626" category="list-text">KMIP端口。</block>
+  <block id="08abc77c04d9685a10837fbb9135a705" category="list-text">另一个集群节点或客户端证书中的/cfcard/kmip/certs/client.crt文件的副本。</block>
+  <block id="db1b600b813d1f6f50a04eba824c70ab" category="list-text">另一个集群节点或客户端密钥上的/cfcard/kmip/certs client.key文件的副本。</block>
+  <block id="dbf0b245d6b63885207c70d983243a7b" category="list-text">另一个集群节点或KMIP服务器CA的/cfcard/kmip/certs /CA.pm文件的副本。</block>
+  <block id="e43680b19a57600cbf0bc788265754c7" category="list-text">从ONTAP启动菜单中选择选项11。</block>
+  <block id="a2a02d01ac6ca6a677201d0767b02f34" category="list-text">出现提示时、确认您已收集所需信息：</block>
+  <block id="91edae04cf5f805055ec3dac6c3b7f8c" category="list-text"><block ref="b19458ff12859c393f2fd46d02cb24d4" prefix="" category="inline-code"></block> _y_</block>
+  <block id="635db4ba4393f4aa6637dd02dc8cabae" category="list-text"><block ref="05ac7348459861360c86dc5851e1ab0b" prefix="" category="inline-code"></block> _y_</block>
+  <block id="1ea0f8ccc55c1aaa4b40e778eca7d203" category="list-text"><block ref="0daafd01a5c78aa4cf52e57febc9c7d9" prefix="" category="inline-code"></block> _y_</block>
+  <block id="7edfa6272c16cc3e1b7ef52bbf985294" category="list-text"><block ref="05f6b998dcdacf2a7e5882ef776dfa8e" prefix="" category="inline-code"></block> _y_</block>
+  <block id="66b0e02903c6c36ff4685952e8a46ec1" category="paragraph">您也可以使用以下提示：</block>
+  <block id="db7e8e2b0c1ff16e7d69c69fa0d6a061" category="list-text"><block ref="05f6b998dcdacf2a7e5882ef776dfa8e" prefix="" category="inline-code"></block> _n_</block>
+  <block id="ca2e8c6e7a166833a27d9755f814672b" category="list-text"><block ref="9254f5a10bf0e4d18aa18a91a9321bea" prefix="" category="inline-code"></block> _y_</block>
+  <block id="d0d46e5c203e3a92bef26e001a5e623d" category="list-text"><block ref="616aa2e195f429a92684489246e90f34" prefix="" category="inline-code"></block> _y_</block>
+  <block id="83b207edf8a800f4f88cf102b88cf241" category="list-text">为每个提示提供相关信息：</block>
+  <block id="f34776f2862555d0fd11d0991ff286ff" category="list-text"><block ref="62188abb740b08015af98427fc26ea8c" prefix="" category="inline-code"></block></block>
+  <block id="c74003b43b828d213916b7196bc60c50" category="list-text"><block ref="9f3c7fcbc9851c468adda9a0e9abe4f2" prefix="" category="inline-code"></block></block>
+  <block id="dc67dd4e83bd586a50c17ea2c94c00d5" category="list-text"><block ref="3b8595d627306d8980fff3bd262d05b2" prefix="" category="inline-code"></block></block>
+  <block id="536aadfad0128887672b66e929f02fcb" category="list-text"><block ref="a6dd61fa165deef585a79e05f8de73b0" prefix="" category="inline-code"></block></block>
+  <block id="a242b56bad1d07089dce8ccb795966f2" category="list-text">恢复过程将完成：</block>
+  <block id="4730255e1152aa0891d10726285854f6" category="paragraph">在正常启动后、通过完成最终检查并交还存储来完成启动介质更换过程。</block>
+  <block id="3bac3ae452491bc05a59b99b3d2476d6" category="paragraph">转至步骤6。</block>
+  <block id="070dd7606e33a466d7a8bb82a9a64b17" category="list-text">使用_storage故障转移show_命令确认目标控制器已准备好进行恢复。</block>
+  <block id="378fa36f6e90b3bf6ddbb070e35b0388" category="list-text">使用_storage故障转移交还-fronode local -only -cfo-Aggregates true命令将控制台缆线移至配对控制器并交还目标控制器存储。</block>
+  <block id="bd7b047ae429d755acf6b20e1064e5ce" category="list-text">如果此命令因配对节点"未就绪"而失败、请等待5分钟、以便HA子系统在配对节点之间同步。</block>
+  <block id="1bcf977583274fe2567618999a9b0c90" category="list-text">等待3分钟、然后使用_storage故障转移show_命令检查故障转移状态。</block>
+  <block id="d92dd32085afaf328cc7fcda13198cc8" category="list-text">在cluster-shell提示符处、输入_network interface show -is-home false_命令、列出不在其主控制器和端口上的逻辑接口。</block>
+  <block id="e396be98bc8257ac03b57843c10e38b9" category="paragraph">如果列出了任何接口<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>，请使用_net int revserver cluster -lif _nokename_命令 将这些接口还原回其主端口。</block>
+  <block id="62de7d9b4c53e76eb0aa2abbb0821ccd" category="list-text">将控制台缆线移至目标控制器、然后运行_version -v_命令以检查ONTAP版本。</block>
+  <block id="63d74ff14d34f13a62e8eb172d26a62f" category="list-text">使用<block ref="46353f4e0bb2c136591c37c9eeedcf40" prefix=" " category="inline-code"></block> 查看输出。</block>
+  <block id="d9432d5d4d3a21bdc03aa318c2cfdb11" category="list-text">使用_security key-manager key query_命令 显示密钥管理服务器上存储的身份验证密钥的密钥ID。</block>
+  <block id="8064cac27c9219c213e029af9a5800db" category="list-text">如果<block ref="aac34f614f4514a3f670bae971a30369" prefix=" " category="inline-code"></block> =<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block> 和<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列=以外的任何内容<block ref="0f456cd0d7a5ae4a393a7b207a83284e" prefix=" " category="inline-code"></block>，请使用_security key-manager External Restore_命令 还原身份验证密钥的密钥ID。</block>
+  <block id="8b6a11a09054c203c222c056a501059f" category="list-text">如果<block ref="aac34f614f4514a3f670bae971a30369" prefix=" " category="inline-code"></block> =<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> 和<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列=以外的任何内容<block ref="0f456cd0d7a5ae4a393a7b207a83284e" prefix=" " category="inline-code"></block>，请使用_security key-manager onboard sync_命令同步修复后节点上缺少的板载密钥。</block>
+  <block id="27b0a5d00d58f515ceda3d56b392bdf7" category="paragraph">使用_security key-manager key query_命令 验证所有身份验证<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 密钥的列=<block ref="0f456cd0d7a5ae4a393a7b207a83284e" prefix=" " category="inline-code"></block> 。</block>
+  <block id="4f95ab1472771ae8e2475d26cfccfefd" category="paragraph">以下AutoSupport消息会禁止自动创建案例两小时：`集群1：*&gt; system node AutoSupport invoke -node *-type all -message Maint=2h</block>
+  <block id="46bbc90a4740f73d85b026da0e0ba4db" category="list-text">从运行状况良好的控制器禁用自动交还：</block>
+  <block id="b719e721c62569ed8b97aaf7ac03691a" category="paragraph">多集群互连交换机</block>
+  <block id="237cf241ea2c39cca38863cb459577d8" category="paragraph">多集群配置允许多个集群共享同一个集群交换机、这是通过两个适用于4x4和2x8节点配置的新参考配置文件提供的。</block>
+  <block id="8020ad245e7cbc2ac49c84b7f4ace684" category="paragraph">ONTAP 9.14.1.</block>
+  <block id="0be7ecaeb710959e64858a36fa1f8783" category="inline-link">AFF A1K</block>
+  <block id="c2a8d2daab462dc4e111773660175634" category="list-text"><block ref="c2a8d2daab462dc4e111773660175634" category="inline-link-rx"></block></block>
+  <block id="c61e96543ff55077f64d8dd03940c2c6" category="inline-link">AFF A70</block>
+  <block id="42c132c69bb240c16653198af04a6c29" category="list-text"><block ref="42c132c69bb240c16653198af04a6c29" category="inline-link-rx"></block></block>
+  <block id="1db440d0ff148102407f3995eb4ce33b" category="inline-link">AFF A90</block>
+  <block id="c1e138890e8b119b56757505431c6b24" category="list-text"><block ref="c1e138890e8b119b56757505431c6b24" category="inline-link-rx"></block></block>
+  <block id="8cd7d5cbedf290a9b729cc263d9b289c" category="paragraph">ONTAP 9.15.1.</block>
+  <block id="749d1dbcf19baa47625663e5476ad9f4" category="list-text">如果使用存储加密或NVE/NAE、则为NetApp板载密钥管理(OKM)集群范围的密码短语。</block>
+  <block id="3fa7c0866aba2253b800fb8f1b9d08dc" category="list-text">每个控制器的BMC可访问性。</block>
+  <block id="8dc1996b26821772c990ddda1d27158c" category="list-text">关闭AutoSupport并指示系统预计脱机多长时间：</block>
+  <block id="f25d35773ff0f2436be7da8b7c0afbcf" category="list-text">暂停受损机箱中的2个节点：</block>
+  <block id="a775efd15ce512c43b877e33a7f4e2ed" category="paragraph"><block ref="b6619702dec8da7cf250a9139ef9b0f0" prefix="" category="inline-code"></block></block>
+  <block id="70072850ad1f4d17d4786c385e8f20b9" category="admonition">对于使用在StrictSync模式下运行的同步SnapMirror的集群：<block ref="aaef8b07a47365ee6d9bf14ea36ad5d1" prefix=" " category="inline-code"></block></block>
+  <block id="2990a44118615c0a3bf6cce4a7382d56" category="list-text">如果看到、请为集群中的每个控制器输入* y *<block ref="e50c9785a9a600201730c59602a210ab" prefix=" " category="inline-code"></block></block>
+  <block id="889f830bf501de78eaa854a4c956e927" category="doc">将故障部件退回给NetApp - AFF A1K</block>
+  <block id="66ed54e044d464902b4fc84eae0aaebf" category="doc">检查板载加密密钥- AFF A1K</block>
+  <block id="0af39fad029d8a54529403cecac5dfcd" category="doc">加密恢复—AFF A1K</block>
+  <block id="1ab064b6602aa76e09ccae7297651215" category="doc">启动恢复映像- AFF A1K</block>
+  <block id="b32c820e9a6b0c19e598a90100f6ede2" category="doc">启动介质更换概述- AFF A1K</block>
+  <block id="59b85bf8d1d726d67312a9425f7cabac" category="doc">更换启动介质- AFF A1K</block>
+  <block id="ac632c351c050929564cd7a72c3d383a" category="doc">关闭受损控制器- AFF A1K</block>
+  <block id="c0fbab8ec26a74970b48b956b885d93b" category="doc">更换控制器模块硬件- AFF A1K</block>
+  <block id="62eb40be1c65593a3462e6f5ba4a05a0" category="doc">控制器模块更换概述—AFF A1K</block>
+  <block id="a4fbb291103a5430eb9ece2393c095a4" category="doc">交还控制器- AFF A1K</block>
+  <block id="fb829c49a3a2da88fb46330449bb960d" category="summary">要将系统还原到完全运行状态、您必须验证NetApp、检查集群运行状况并将故障部件返回给LUN。如果您需要RMA编号或有关更换过程的其他帮助，请通过以下网址与技术支持联系：<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>、888-463-8277 (北美)、00-800-44-638277 (欧洲)或+800-80-800 (亚太地区)。</block>
+  <block id="8993dc7b76f8cb7fa94fec3534c4c210" category="doc">完整的系统还原—AFF A1K</block>
+  <block id="5f0eff5741eb1b44c778897a8674fa87" category="paragraph">要将系统还原到完全运行状态、您必须验证NetApp、检查集群运行状况并将故障部件返回给LUN。</block>
+  <block id="6bcc49329cd2b052a2bddab981fec2e3" category="section-title">第1步：验证SIFs和并检查集群运行状况</block>
+  <block id="61ec4d4962d0f24c38b731c335dcb259" category="doc">还原并验证系统配置- AFF A1K</block>
+  <block id="8eed652f60c06861a89907936cca366c" category="doc">更换DIMM - AFF A1K</block>
+  <block id="ef8131c8fab80a7f6810536e7b19d76a" category="doc">更换风扇- AFF A1K</block>
+  <block id="60a0f60c6fda9ab961400c0ed3ca97d6" category="summary">维护AFF A1K硬件</block>
+  <block id="bb7a55741482c8e763010707020f23d9" category="doc">维护AFF A1K硬件</block>
+  <block id="329f086bc28e08fd5ac2e1779761b32a" category="paragraph">对于AFF A1K存储系统、您可以对以下组件执行维护过程。</block>
+  <block id="35c8cbb9ef12137ad48ef7364ffcd530" category="section-title">系统管理模块</block>
+  <block id="f424eb06e28282360201a36ab719f6c7" category="paragraph">系统管理模块提供控制器与控制台或笔记本电脑之间的接口、用于控制器或系统维护。系统管理模块包含启动介质并存储系统序列号(SSN)。</block>
+  <block id="3fb7b4296088420fb4e0b9343835ec5f" category="summary">Management network ports on the controllers are connected to switches.The HA interconnect and cluster interconnect ports are cabled on both controllers.控制器模块连接到外部存储(如果已订购)。</block>
+  <block id="b1e60e9c8e3b79ce7200aaa962a901d0" category="doc">连接硬件- AFF A1K</block>
+  <block id="0d47251cb5a40d7e8fdd90893a890cb5" category="paragraph">根据您的特定存储系统配置为控制器和磁盘架布线。</block>
+  <block id="403075fa89afdf5689d3f155524d9e1b" category="paragraph">检查布线图中的图示箭头、了解电缆连接器推拉卡舌的正确方向。</block>
+  <block id="04c6391623d6bd5d0ac0d7df563f74dc" category="image-alt">电缆推拉卡舌方向示例</block>
+  <block id="35bd3e31ed449ec51ffdc43a42bdcd8f" category="list-text">如果要连接到光纤和交换机、请先将SFP插入控制器端口、然后再使用缆线连接到此端口。</block>
+  <block id="e8dcbbdb0b0cc30021cdb1772e14a12d" category="section-title">Step 1: Cable controllers to your network</block>
+  <block id="6df54967c5941126ef71ad521ce71f57" category="paragraph">以下过程显示了常见配置。请注意、具体布线取决于为存储系统订购的组件。有关全面的配置和插槽优先级详细信息，请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="774fc771cbe0562cf589e2e5571e543c" category="open-title">选项1：使用缆线连接无交换机集群</block>
+  <block id="ab3e6f854653e79b55b1aef74734d66a" category="paragraph">为无交换机集群连接布线。</block>
+  <block id="0ce6d01af755d7d63a1db543cd42ef01" category="list-text">使用集群/HA互连缆线将集群/HA互连端口e1a连接到e1a、并将e7a连接到e7a。</block>
+  <block id="883f8ccaa3b7bb186f5d85df551292e7" category="admonition">集群互连流量和HA流量共享相同的物理端口。</block>
+  <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">集群HA缆线</block>
+  <block id="8c1f3262727530ad8d4652a5b107e167" category="paragraph">*集群/HA互连缆线*</block>
+  <block id="23fb563ac26a205349d9c7cce9636f14" category="list-text">使用缆线将以太网模块端口连接到主机网络。</block>
+  <block id="e5878ec206640d3f0489cbe562e56856" category="paragraph">以下是一些典型的主机网络布线示例。有关您的特定系统配置、请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> 。</block>
+  <block id="d6971cc4d66c44424c9f79edd62c87a4" category="list-text">如图所示、使用缆线将端口e9a和e9b连接到以太网数据网络交换机。</block>
+  <block id="4f223663358c0dcb4aac038f73fdf58d" category="admonition">为了最大程度地提高集群和HA流量的系统性能、最好不要使用端口e1b和e7b端口进行主机网络连接。使用单独的主机卡以最大程度地提高性能。</block>
+  <block id="d2163ed76fe91108f8a1e58f08924448" category="paragraph">*100 GbE电缆*</block>
+  <block id="dca4917cf460ca0094ae46e8d7178c17" category="image-alt">100 Gb以太网电缆</block>
+  <block id="63498c78e69ef7b5cc7cd5a1c0c3b724" category="image-alt">使用缆线连接到100 Gb以太网网络</block>
+  <block id="eddbc7579882e3cdebc0716bd1a883cb" category="list-text">为1025 GbE主机网络交换机布线。</block>
+  <block id="fbb2ead6e1dba22c64b785b1864b9809" category="paragraph">*1025 GbE主机*</block>
+  <block id="e6db43427a500d394f1d34dcfecf3b50" category="image-alt">1025Gb以太网电缆</block>
+  <block id="204d53c0ad48ec9abe6f3cde34241579" category="image-alt">使用缆线连接到1025Gb以太网网络</block>
+  <block id="23b5c21ed8d6bd3d9626d882b8ed5b76" category="list-text">使用1000BASE-T RJ-45缆线将控制器管理(扳手)端口连接到管理网络交换机。</block>
+  <block id="1107155d6b0c900a6485f06681854862" category="image-alt">RJ-45电缆</block>
+  <block id="9c29eb35e98929529d99ca71cd855f4e" category="paragraph">*1000BASE-T RJ-45电缆*</block>
+  <block id="a8536d671676b42d7c49328e04123a96" category="image-alt">连接到管理网络</block>
+  <block id="c67ade60c9405661826821f009653f29" category="admonition">请勿插入电源线。</block>
+  <block id="09e9d41a74e65e2200df2359e0c54806" category="open-title">选项2：用缆线连接交换集群</block>
+  <block id="0b7f474dc87a04642d4a17b892a87553" category="paragraph">为交换集群连接布线。</block>
+  <block id="fe1ed4b5e6a760085b2af448921f0d53" category="list-text">进行以下布线连接：</block>
+  <block id="6166cb0eddbc000f8b888922799ec0c0" category="list-text">使用缆线将控制器A上的端口e1a和控制器B上的端口e1a连接到集群网络交换机A</block>
+  <block id="c1634d34779ed3f630d8561f06954738" category="list-text">使用缆线将控制器A上的端口e7a和控制器B上的端口e7a连接到集群网络交换机B</block>
+  <block id="b222cca23840b6a495e76b8c300b08f2" category="image-alt">100 Gb缆线</block>
+  <block id="f1d133e33e29362e931a34312a961d0b" category="image-alt">使用缆线将集群连接到集群网络</block>
+  <block id="5a8b74659281e9e3495bfc29767b645c" category="paragraph">*4端口，1025 GbE主机*</block>
+  <block id="ff54d299af9abd1be5b8082a790261aa" category="section-title">第2步：使用缆线将控制器连接到磁盘架</block>
+  <block id="071bf81b7a0d7e66c24dfdb5f3604a4c" category="paragraph">使用缆线将控制器连接到一个或多个磁盘架。</block>
+  <block id="8cf6a83f767cc36c3f339af205b3e7d0" category="paragraph">以下过程显示了如何使用缆线将控制器连接到一个磁盘架和两个磁盘架。您最多可以将四个磁盘架直接连接到控制器。</block>
+  <block id="d5a4ec7e98f94395b8939b8bc64155e0" category="open-title">选项1：使用缆线连接到一个NS224磁盘架</block>
+  <block id="ffa3c6d2c04b126c7ca74f9a656eb36e" category="paragraph">使用缆线将每个控制器连接到NS224磁盘架上的NSM模块。图中显示了每个控制器的布线：蓝色的控制器A布线和黄色的控制器B布线。</block>
+  <block id="56af31a9320e84a6619ac8ae861b165a" category="list-text">在控制器A上、为以下连接布线：</block>
+  <block id="f316f1854f33785f42807636a3284714" category="list-text">将端口e11a连接到NSM A端口e0a。</block>
+  <block id="7fd21be5068998e5aac33f1cffcff76c" category="list-text">将端口e11b连接到端口NSM B端口e0b。</block>
+  <block id="2bc2dbfb240bdfb79a6c1bb80f34be8a" category="inline-image-macro">控制器A e11a和e11b连接到一个NS224磁盘架</block>
+  <block id="e8e2e70664d58c738dc5f3e73dd79bbb" category="paragraph"><block ref="e8e2e70664d58c738dc5f3e73dd79bbb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f47ceff0e36392d25c7ff7cd39860ec6" category="list-text">在控制器B上、为以下连接布线：</block>
+  <block id="a34418430d19dabd71e89f00a9e8e782" category="list-text">将端口e11a连接到NSM B端口e0a。</block>
+  <block id="3a95f3cf99705bbbd01d1dd74336e9fd" category="list-text">将端口e11b连接到NSM A端口e0b。</block>
+  <block id="182824a7bd82a321df1a100637995a19" category="inline-image-macro">使用缆线将控制器B端口e11a和e11b连接到一个NS224磁盘架</block>
+  <block id="86ab7b5fab8b30fc8e3619226fb66002" category="paragraph"><block ref="86ab7b5fab8b30fc8e3619226fb66002" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="08c7b8b999017a30f27de344bfc6beb2" category="open-title">选项2：使用缆线连接到两个NS224磁盘架</block>
+  <block id="2aec08b694d0f04216b731c2d38eff0a" category="paragraph">使用缆线将每个控制器连接到两个NS224磁盘架上的NSM模块。图中显示了每个控制器的布线：蓝色的控制器A布线和黄色的控制器B布线。</block>
+  <block id="4b079ba797f88f932136bdbd1aa314a0" category="list-text">将端口e11a连接到磁盘架1 NSM A端口e0a。</block>
+  <block id="486d7e107c3f396974308ba4cc20a5f9" category="list-text">将端口e11b连接到磁盘架2 NSM B端口e0b。</block>
+  <block id="2eaa4fb60d669ed2bf97809a07457f81" category="list-text">将端口E10A连接到磁盘架2 NSM A端口e0a。</block>
+  <block id="910336e4e301588a648d82f197dcbad1" category="list-text">将端口e10b连接到磁盘架1 NSM A端口e0b。</block>
+  <block id="0f55271b4c6ea651f102c7fc3cd0c694" category="inline-image-macro">控制器A的控制器到磁盘架连接</block>
+  <block id="35300d156e654cc20e9c29eb06999674" category="paragraph"><block ref="35300d156e654cc20e9c29eb06999674" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4a23f98c3274066686b18c28bfdbf7b2" category="list-text">将端口e11a连接到磁盘架1 NSM B端口e0a。</block>
+  <block id="5e82af64ee793cb8b1b3d10f8e325bed" category="list-text">将端口e11b连接到磁盘架2 NSM A端口e0b。</block>
+  <block id="2f6df380cd83e22784e9ab6e56edd84d" category="list-text">将端口E10A连接到磁盘架2 NSM B端口e0a。</block>
+  <block id="cd510ec7974b62b233e62a6e6a5c727e" category="inline-image-macro">控制器B的控制器到磁盘架连接</block>
+  <block id="462dd5d60871bb2319eb46e1da38c42d" category="paragraph"><block ref="462dd5d60871bb2319eb46e1da38c42d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d5bec2eb0018e8e254a2426f768cf678" category="summary">通过仅连接到交换机和笔记本电脑的集群发现、或者直接连接到存储系统中的控制器、然后连接到管理交换机、完成平台设置和配置。</block>
+  <block id="e0c6d59cdb58b213183cb0fc7534ee18" category="doc">完成存储系统设置和配置—AFF A1K</block>
+  <block id="897dc3c4dc954f5e16e901f1eab0854c" category="paragraph">安装硬件后、请使用ONTAP软件配置和管理存储系统。</block>
+  <block id="4ba7257f41527371f7a52420787c1085" category="section-title">第1步：收集集群信息</block>
+  <block id="e13a4e2099510963f792c4fc1ef4fced" category="paragraph">如果您尚未收集配置集群所需的信息、例如集群管理接口端口和IP地址、请执行此操作。</block>
+  <block id="8c468ee786068bf98fe0b8a71cf946fa" category="inline-link">集群设置工作表</block>
+  <block id="34c4c0a38a5ca0192ee4865cdbb0a29c" category="paragraph">使用<block ref="21429355d1404c86c4038169e7df91bc" category="inline-link-rx"></block> 记录集群设置过程中所需的值。如果提供了默认值，则可以使用该值，或者输入您自己的值。</block>
+  <block id="4616f779d40b2ecdf1191d9d79c0a350" category="section-title">第2步：发现集群网络</block>
+  <block id="b4e52cacc81413e852d2fa47a578fb04" category="paragraph">通过发现过程、您可以发现网络上的存储系统控制器。</block>
+  <block id="87d44868bcfa03f5ad272605d74737c1" category="open-title">选项1：已启用网络发现</block>
+  <block id="604f01e847e2c4e9cd0b9906a9ff2140" category="paragraph">如果您在笔记本电脑上启用了网络发现、则可以使用自动集群发现完成平台设置和配置。</block>
+  <block id="13a5c797fb82f415ef3d13e5c012faf4" category="list-text">将笔记本电脑连接到管理交换机并访问网络计算机和设备。</block>
+  <block id="f221a54fe8a1d6ecf7668d526c93b0aa" category="image-alt">如何使用Windows文件资源管理器发现控制器</block>
+  <block id="4aec97d731539f50b200414275b82dd7" category="admonition">此目标节点的平台序列号为7本。</block>
+  <block id="330cfe945ce3f586f079ea386fb67cff" category="open-title">选项2：未启用网络发现</block>
+  <block id="688aa74b62c0c2511666ad96b9dc3726" category="paragraph">如果您的笔记本电脑未启用网络发现、请使用ONTAP命令行界面(CLI)集群设置向导完成配置和设置。</block>
+  <block id="236a4f95ac53e773b32d5263f4f3c76f" category="paragraph">确保您的笔记本电脑已连接到串行控制台端口、并且控制器已打开电源。有关说明、请参见。 <block ref="31d9c8c23bc40252f42cad2b21229cbd" category="inline-link-macro-rx"></block></block>
+  <block id="b2fee2229d33fcf0b97717446435f7bb" category="list-text">连接到第一个节点的控制台。</block>
+  <block id="00a2f26d65c63976ed98d9b8d38880f3" category="paragraph">节点将启动，然后在控制台上启动集群设置向导。</block>
+  <block id="f85417ae10b7f79bccdb3735a79b7ec3" category="list-text">在集群设置向导提示时、输入节点的管理IP地址。</block>
+  <block id="932ce8b8d60e3730c547081f25cce2e6" category="section-title">第3步：配置集群</block>
+  <block id="b265770b187e4a8451ddd37476001903" category="paragraph">NetApp建议您使用System Manager设置新集群。有关设置说明、请参见。<block ref="76a0ad9e6d9605be893ded0930762dd1" category="inline-link-rx"></block></block>
+  <block id="1557b8ad03da8f6954c03ccd61005ac5" category="paragraph">System Manager为集群设置和配置提供了一个简单易行的工作流、其中包括分配节点管理IP地址、初始化集群、创建本地层、配置协议以及初始配置连接的存储。</block>
+  <block id="2ce1349fe67fa0e027bf3526a78ebb93" category="admonition">初始化集群后、下载并运行 <block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block> 以确认设置。</block>
+  <block id="ed198c6c65dda3bfcee47cc329346a10" category="summary">将存储系统安装在机柜或电信机架中。</block>
+  <block id="94ebd1127cf45d2e2e1f6f1b0cd35269" category="doc">安装硬件- AFF A1K</block>
+  <block id="7acdb30933a12f95dfea26017bada1f5" category="paragraph">以下说明介绍了如何在空机柜或电信机架中安装硬件。如果机柜已预先填充、请跳过此步骤。</block>
+  <block id="dfdc73d42700a9c3fdaeacd939a51a4f" category="inline-link">安全通知</block>
+  <block id="ab68982517ac3ad46c0076188c40b44c" category="list-text">您应查看本<block ref="cf650561cfd1ad2dfbe54c8781566683" category="inline-link-rx"></block> 文档、了解移动和安装硬件的预防措施。</block>
+  <block id="ba4a0871133faabe4aa77db489cdd95f" category="list-text">导轨套件应附带说明。</block>
+  <block id="8e1aabd1c656abc178babd71f8776b44" category="list-text">您应了解与平台和磁盘架重量相关的安全问题。</block>
+  <block id="e55a9011c423c880adfcc3c86f8853a4" category="list-text">根据需要、按照导轨套件随附的说明为平台和磁盘架安装导轨套件。</block>
+  <block id="5fa8d497851dfe0abacec979a3120dc8" category="list-text">在机柜或电信机架中安装并固定您的平台：</block>
+  <block id="880290b720b791ab429f09f225910ebf" category="list-text">将平台定位到机柜或电信机架中间的导轨上、然后从底部支撑平台并将其滑入到位。</block>
+  <block id="7ff61639824e703bd4a303ea89a779de" category="list-text">使用随附的安装螺钉将平台固定到机柜或电信机架上。</block>
+  <block id="a21ee0e1df8582726afc6306cc99ef3b" category="list-text">安装一个或多个磁盘架：</block>
+  <block id="41d0162b829c86f804973e362022ee25" category="list-text">将磁盘架的背面置于导轨上、然后从底部支撑磁盘架、并将其滑入机柜或电信机架。</block>
+  <block id="f27419cb0b36bb39cc7c4466769ccdbf" category="paragraph">如果要安装多个磁盘架、请将第一个磁盘架直接置于控制器上方。将第二个磁盘架直接放在控制器下方。对任何其他驱动器架重复此模式。</block>
+  <block id="6bbef5157a3a6aedb6bc6c893061aafc" category="list-text">使用随附的安装螺钉将磁盘架固定到机柜或电信机架上。</block>
+  <block id="9befb49ff1b56070c1ef21476a709671" category="list-text">将缆线管理设备连接到平台背面。</block>
+  <block id="6b7aa880220c7f598440de8d8a0f944b" category="image-alt">安装缆线管理设备</block>
+  <block id="b647ec81f6bfcb450169641046ccaaca" category="list-text">将挡板连接到平台前部。</block>
+  <block id="0e0e2b2ed8789596071dfbf76e75f335" category="summary">按照以下简要步骤安装和设置AFF A1K存储系统、并将其部署为ONTAP系统中的节点。</block>
+  <block id="49879e1937eb584d6d1329cf32f36c17" category="doc">安装设置工作流- AFF A1K</block>
+  <block id="9eda15b0c07f5fb1e2490feec4e5ae37" category="paragraph">按照以下工作流步骤安装、设置和部署AFF A1K存储系统。</block>
+  <block id="2be710d107cc8e46959e3e62e4dd4ce3" category="inline-link-macro">准备安装</block>
+  <block id="9043ab3a65cd1350dbda4be47f21ec5c" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="5011908086784bfaa4525017596fbe2f" category="inline-link-macro-rx"></block></block>
+  <block id="ae37677074f9ff9d8928c0f76565c1f8" category="paragraph">要准备安装、您需要准备好站点、检查环境和电气要求、并确保有足够的机架空间。然后、打开设备包装、将其内容与装箱单进行比较、并注册硬件以获得支持优势。</block>
+  <block id="543e6a3c9b07a3642afb462fba582642" category="inline-link-macro">安装硬件</block>
+  <block id="0daf67323f6374a80f12afc31c54ae52" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="3068911acb0b71d1c5f064869e9b802c" category="inline-link-macro-rx"></block></block>
+  <block id="3a172b938ebc0bcb033a917bc78949f3" category="paragraph">要安装硬件、请为您的平台和磁盘架安装导轨套件、然后在机柜或电信机架中安装并固定您的平台。接下来、将磁盘架滑入导轨上。最后、将缆线管理设备连接到平台背面、以便有条理地进行缆线布线。</block>
+  <block id="ea6245a5aad1d347d3bfd8727ccbe15c" category="inline-link-macro">电缆硬件</block>
+  <block id="edbddbe119f4ad198500b1c1e7ba4f52" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="126f36101e06fcd4dd487e889fcb7145" category="inline-link-macro-rx"></block></block>
+  <block id="dfdac243a395e5b1ba82e312c215986f" category="paragraph">要使用缆线连接硬件、请先用缆线将控制器连接到网络、然后使用缆线将控制器连接到磁盘架。</block>
+  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="inline-image-macro">四个</block>
+  <block id="b2b76e77a7b6cf193e3439cb4a6ff4cc" category="inline-link-macro">启动存储系统</block>
+  <block id="b6180a89c068535cbdcabc203f7dfa6a" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="1404b70315f2fceae786975a12b854e5" category="inline-link-macro-rx"></block></block>
+  <block id="046a5bc73524f6b601e10aac7dad5c7c" category="paragraph">要打开系统电源、请首先打开每个NS224磁盘架的电源、并分配一个唯一的磁盘架ID、以确保每个磁盘架在设置中都是不同的。然后、打开控制器的电源。最后、使用随附的固定设备将电源线固定在每个电源上。</block>
+  <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">五个</block>
+  <block id="32faffb9b7b89515bab5605b39a5c57d" category="inline-link-macro">完成存储系统设置</block>
+  <block id="6e64cb3fdf6eb566ca2c753432f1247f" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="ed796137dcbf61e6432604e7b2936e62" category="inline-link-macro-rx"></block></block>
+  <block id="aae7e85311563575e46976e45988721f" category="paragraph">要完成系统设置、请通过浏览器指向控制器的IP地址来访问基于Web的界面System Manager。设置向导可帮助您开始集群配置。此外，您还可以使用命令行界面（ CLI ）。</block>
+  <block id="079541787256810512e79fe819711d61" category="summary">连接电源线并打开磁盘架和控制器的电源。</block>
+  <block id="c2b963a7671a8f77c637646d3e8c76a5" category="doc">启动存储系统- AFF A1K</block>
+  <block id="334084b3d6aab4c485e6aeead3639ada" category="paragraph">连接网络和任何磁盘架缆线后、您可以为控制器和磁盘架供电。</block>
+  <block id="0b5c1681fb8f009a141f0c7d0f2d8f64" category="section-title">第1步：打开磁盘架电源并分配磁盘架ID</block>
+  <block id="8d24ecb081b813a63dd1dda9aad1d93c" category="paragraph">在ONTAP存储系统中、每个NS224磁盘架都有一个唯一的磁盘架ID来区分。此ID可确保存储架在存储系统设置中是不同的。默认情况下、磁盘架ID分配为‘00 '和‘01 '、但您可能需要调整这些ID、以便在存储系统中保持唯一性。</block>
+  <block id="4acf2e1827dc9d94e8643d89bb45be93" category="list-text">您必须重新启动磁盘架(拔下两根电源线、等待适当的时间、然后重新插入)、以使磁盘架ID生效。</block>
+  <block id="90b5c3b3e8b76a473c431858d638eccb" category="list-text">首先将电源线连接到磁盘架、使用电源线固定器将其固定到位、然后将电源线连接到不同电路上的电源、以此为磁盘架通电。</block>
+  <block id="aa4d119638bea60a8850d8c9e0b57b86" category="paragraph">插入电源后、磁盘架将自动启动。</block>
+  <block id="67cfcbdbfb87a54aadf338e218c38216" category="list-text">卸下左端盖、以便接触面板后面的磁盘架ID按钮。</block>
+  <block id="f044e75ec5037aabefb204d1365ba96b" category="image-alt">更改NS224磁盘架ID</block>
+  <block id="d8147b4a0f272144c59f006b412b8290" category="image-alt">[插图编号2</block>
+  <block id="8c5529e435c4992332c3afef54410f4e" category="image-alt">[插图编号3</block>
+  <block id="1e7068fa54071c2235730ac32aea59df" category="image-alt">[插图编号4</block>
+  <block id="7d080ef2a38b64e6cac5c0ae019e1a04" category="list-text">将回形针或窄尖头圆珠笔的伸直端插入小孔。</block>
+  <block id="6344f7fd68670da7ea2e25f860ab47c7" category="list-text">重新启动磁盘架至少10秒钟、以使磁盘架ID生效。</block>
+  <block id="8dd5b39a083288c66f9b37e4b47571ed" category="list-text">从磁盘架上的两个电源拔下电源线。</block>
+  <block id="2fd334af24d7f85b4be7ae87f6cc3fd5" category="list-text">Wait 10 seconds.</block>
+  <block id="f4eba532dc9721310c35cdad2e0831ac" category="list-text">将电源线重新插入磁盘架电源以完成重新启动。</block>
+  <block id="b1ea51baf980ec6bb00ca1b7b419d506" category="section-title">第2步：打开控制器的电源</block>
+  <block id="da22bb3ea79ddb2366d539465852f273" category="list-text">将笔记本电脑连接到串行控制台端口、以便在控制器接通电源后监控启动顺序。</block>
+  <block id="943e3a7c8a0476b63130b5a3dfab2ef1" category="list-text">使用N-8-1将笔记本电脑上的串行控制台端口设置为115、200波特。</block>
+  <block id="04112f6af1c35028ff6da3640556c14c" category="admonition">有关如何配置串行控制台端口的说明，请参阅便携式计算机的联机帮助。</block>
+  <block id="c7d14c04a57d9e31aaae62ee110f2cd9" category="list-text">将控制台电缆连接到笔记本电脑、然后使用平台随附的控制台电缆连接控制器上的串行控制台端口。</block>
+  <block id="dc4cb3e8c6b9abe025aa10b2d8d4b6f5" category="list-text">将笔记本电脑连接到管理子网上的交换机。</block>
+  <block id="5dc15886a7be0b02974c471249fd2702" category="image-alt">控制台连接</block>
+  <block id="9e7e8b48adc159107d0baf9021253c61" category="list-text">使用管理子网上的TCP/IP地址为笔记本电脑分配TCP/IP地址。</block>
+  <block id="d4b97f0234af8d33d5ad6190a7930ff4" category="image-alt">通用电源连接图</block>
+  <block id="1231fe933f3b46c84db2f5066eca43a5" category="list-text">平台开始启动。Initial booting may take up to eight minutes.</block>
+  <block id="71abffb89587fc128eb09ec9ef2dd7e1" category="list-text">LED指示灯闪烁且风扇启动、这表示控制器正在通电。</block>
+  <block id="5e90eef3467966790ef48f7bc66eaea8" category="list-text">风扇在首次启动时可能会发出很大的声音。启动期间风扇噪音较大是正常现象。</block>
+  <block id="671754b07475807f952083aca6f98a97" category="list-text">使用每个电源设备上的固定设备固定电源线。</block>
+  <block id="b20f6daaff695ed207299929a85ec2f0" category="summary">准备安装AFF A1K平台。</block>
+  <block id="7322abed84a9319ae754d84788be0a04" category="doc">准备安装- AFF A1K</block>
+  <block id="b08289f100b75f4c534e1d2f7b065d98" category="inline-link-macro">配置集群</block>
+  <block id="4df010254bccca3ca04b1ea2f27bc98d" category="list-text">使用记录时所需的<block ref="21429355d1404c86c4038169e7df91bc" category="inline-link-rx"></block> 值 <block ref="5fecf2f883e4e59df3d0a6a1bcd5e808" category="inline-link-macro-rx"></block>。如果提供了默认值，则可以使用该值，或者输入您自己的值。</block>
+  <block id="4157e2eb4dd8641bf3242a14b2dfed09" category="list-text">确认您已具备完成硬件安装所需的所有附加设备和工具。</block>
+  <block id="d9a73103885ae8b7024a16f9b7de34b7" category="list-text">ESD 腕带</block>
+  <block id="1cf76f3395dbf84a39ec8781dc375709" category="list-text">用于设置NS224磁盘架ID的回形针或窄尖头圆珠笔</block>
+  <block id="32271edc7814b81370e65a0b9ea22010" category="list-text">具有USB/串行连接的笔记本电脑或控制台</block>
+  <block id="5c454c254f4e346b0d54dac30e743b57" category="list-text">访问Web浏览器以配置存储系统</block>
+  <block id="97c8363ab8f2bf90b40d701079ee1b9b" category="list-text">您应了解与平台重量相关的安全问题。</block>
+  <block id="ce20e4d335b040b9531723f1ead004ab" category="paragraph">满载A1K平台的重量可达62.83磅(28.5千克)、需要两个人来提升或使用液压提升装置。</block>
+  <block id="00db13616a21c862d199d7fae938549d" category="image-alt">AFF A1K提升注意图标</block>
+  <block id="4e170b28ebb6850991292afb9c2051de" category="list-text">您应了解与磁盘架重量相关的安全问题。</block>
+  <block id="e3c1fd502d61f3f93d6f9ebbb32ced79" category="paragraph">满载的搁架重量可达66.78磅(30.29千克)、需要两个人来提升或使用液压提升装置。Avoid removing shelf components (from the front or rear of the shelf) to reduce the shelf weight, because shelf weight will become unbalanced.</block>
+  <block id="c55a46464ae8350cc2bff0a097df93e1" category="image-alt">NS224举升注意事项</block>
+  <block id="935ac3c2bb6566a5dc2ab9114aec6183" category="list-text">流经存储系统的气流从安装挡板或端盖的前部进入、然后从端口所在的后部排气。</block>
+  <block id="92c8397408f55d9526d554c55cde3d22" category="section-title">第1步：准备站点</block>
+  <block id="0409fe2e24b1b8f51df857a1319fa881" category="paragraph">确保您计划使用的站点和机柜或机架符合存储系统的规格。</block>
+  <block id="0e2d8e6b1b2e831a550a22ebf28da119" category="list-text">确认您的站点符合平台的环境和电气要求，如所示<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>。</block>
+  <block id="0b75c01928f08a952353b4ed76796fb5" category="list-text">确保您有足够的机架空间：</block>
+  <block id="588fcd6ecf982925ddac393983abe360" category="list-text">在适用于平台的HA配置中为4U</block>
+  <block id="da3fb29b9c49b56a1258104d41af01b0" category="list-text">每个NS224磁盘架占用2U空间</block>
+  <block id="58289cba8eae4ebda5681e0e7e10f324" category="list-text">在平台附近安装任何所需的网络交换机。</block>
+  <block id="11b5963f8c4ca653ab5f43bc4b9828df" category="inline-link">交换机文档</block>
+  <block id="f2f64ae8a8810988ba30737729696726" category="paragraph">有关安装说明和兼容性信息、请参见<block ref="664f8ad712a885ab177a41fa3298f95f" category="inline-link-rx"></block> <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> 。</block>
+  <block id="6630a85163683d2127a4b50c91d77093" category="section-title">第2步：打开包装箱</block>
+  <block id="8214ba6045bea7b27c21955011903997" category="paragraph">打开所有包装箱的包装、并将物品与装箱单上的物品进行比较。</block>
+  <block id="82174a976e9a37564a41e6138a110eb6" category="list-text">小心地打开所有箱子、并有序地布置物品。</block>
+  <block id="d6aed2118da6ba77f55936d16677727f" category="list-text">将您已解包装的内容与装箱单上的列表进行比较。</block>
+  <block id="6056345394434bf38ce0cd6fc7155a3e" category="admonition">您可以通过扫描装运箱侧面的QR码来获取装箱单。</block>
+  <block id="1726196375cd4d9085528facd587a31e" category="paragraph">以下项目是您可能会在框中看到的一些内容。</block>
+  <block id="3a5ea134befe8869fed079290f956fd1" category="paragraph">确保包装箱中的所有物品均与装箱单上的列表匹配。如果存在任何差异、请记下这些差异以供进一步操作。</block>
+  <block id="958c530ea1ae0e18b942f8784148734c" category="cell">* 硬件 *</block>
+  <block id="09ff86ce1246a36d79f5d417bc9fb6be" category="cell">*电缆*</block>
+  <block id="419f3742e6de8e0ec4b22cce005e7630" category="list-text">平台</block>
+  <block id="27369e02201cfd95107ef7fe0fe1a46c" category="list-text">磁盘架</block>
+  <block id="45e29b9394f4cac59a4b24854556dec2" category="list-text">带说明的导轨套件(可选)</block>
+  <block id="680d900a0d52fdf0778ee2a5588f6f69" category="list-text">缆线管理设备</block>
+  <block id="efb4c0c41cf8767bf0f9361a8c61a50a" category="list-text">挡板</block>
+  <block id="7ceeb9e2de47574891152d45e033aea1" category="list-text">电源线</block>
+  <block id="b2cdf9589096f203f816541f43a15f6c" category="list-text">网络缆线</block>
+  <block id="06d2646a8077631818b55a12dc3c58ac" category="list-text">管理以太网缆线(RJ-45缆线)</block>
+  <block id="3ad4852daca6060d9a43783d0d67578c" category="list-text">USB－C串行端口电缆</block>
+  <block id="8fb8b901c9406f66b944ce69ca368bef" category="list-text">存储缆线(如果订购了额外的存储)</block>
+  <block id="a824ea8f6ce3f1963a3ab81dff178919" category="section-title">第3步：注册硬件</block>
+  <block id="885791cdc23c6886e9b36f9ec6e17613" category="paragraph">注册您的平台可提供支持优势。</block>
+  <block id="23a47645f6fbd975494d974f8b3133df" category="list-text">找到您的平台的系统序列号。</block>
+  <block id="501009762675d8b94f6d05080102eaa1" category="paragraph">打开包装后、您可以在装箱单、确认电子邮件或控制器的系统管理模块上找到此编号。</block>
+  <block id="8a7ac8ffae90ca0a1caaddb0f33069c2" category="list-text">访问NetApp支持站点，网址为<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>。</block>
+  <block id="d1cc88bda5b2251b480ce496987d8474" category="list-text">注册硬件：</block>
+  <block id="8f45a9f1fcb944bee42c078bdeacd8ac" category="cell">如果您是 ...</block>
+  <block id="e3df4624e4d36502b5d044730eab97cc" category="cell">请按照以下步骤操作 ...</block>
+  <block id="d3f2dc7623074c370346f082b621f2db" category="paragraph">现有 NetApp 客户</block>
+  <block id="8a55a5b89690f6046e6de8dd649ff837" category="list-text">使用您的用户名和密码登录。</block>
+  <block id="5c83cedabfd78baf337988a092bcf317" category="list-text">选择*系统*&gt;*我的系统*。</block>
+  <block id="1f122c4c30234dec74d765075fd1f45f" category="list-text">确认已列出新系统序列号。</block>
+  <block id="d193a53b34315bee1bed499f665686ce" category="list-text">如果不是，请按照适用于新 NetApp 客户的说明进行操作。</block>
+  <block id="daee797d0bf63a91fe069e1df88d7923" category="paragraph">NetApp 新客户</block>
+  <block id="12dc2a66a130388ec482398caa6ce95b" category="list-text">单击 * 立即注册 * ，然后创建帐户。</block>
+  <block id="89cc8de091278e0fb0686833ac6a7982" category="list-text">选择*系统*&gt;*注册系统*。</block>
+  <block id="c04746c1c8deb45f0567d25441428d64" category="list-text">输入产品系统序列号和请求的详细信息。</block>
+  <block id="9fcab783d1ffadeafb84de00efe883d9" category="paragraph">注册获得批准后，您可以下载所需的任何软件。审批过程可能需要长达 24 小时。</block>
+  <block id="43322d1e43d632d017f923484e7efa80" category="summary">要更换PCIe卡、您必须先断开卡上的电缆连接、从卡上卸下SFP和QSFP模块、然后重新安装SFP和QSFP模块、然后再为卡布线。</block>
+  <block id="240a5f8ed7bc82e0c089904a09102a91" category="doc">添加I/O模块- AFF A1K</block>
+  <block id="165e0559b98c0c22e37b61a08f8854d6" category="summary">您必须使用提供商提供的更换现场可更换单元(FRU)组件来更换故障组件。</block>
+  <block id="6b3ba57eee03f197f451232d78a67ae7" category="doc">添加和更换I/O模块概述- AFF A1K</block>
+  <block id="15b6d818d073c06a42ebd390b182c2c8" category="doc">更换I/O模块- AFF A1K</block>
+  <block id="58a851f6216724f76b5a14d7c8fad39c" category="paragraph">启动介质用于存储系统在启动时使用的一组主和二级ONTAP映像文件。</block>
+  <block id="be5d336a89e5897803fb4f7e791dafd6" category="paragraph">控制器由主板，固件和软件组成。它控制驱动器并运行ONTAP操作系统软件。</block>
+  <block id="577d2d3976799dbcd1fc23ee08a572cc" category="paragraph">双列直插式内存模块(DIMM)是一种计算机内存。安装它们是为了向控制器主板添加系统内存。</block>
+  <block id="83ec06d2d85deb94568cf05665746cc6" category="paragraph">风扇冷却控制器。</block>
+  <block id="f7ce037e5340ee9ac2b2cd474ee29778" category="paragraph">NVRAM (非易失性随机存取存储器)是一个模块、可使控制器在系统断电时保护和保存传输中的数据。系统ID位于NVRAM模块中。更换后、控制器将从更换的NVRAM模块获取新的系统ID。</block>
+  <block id="d138e90428f37a60387c8577b6e009b8" category="section-title">NV电池</block>
+  <block id="971b00f795c3753e8fa0422eed0b0d3e" category="paragraph">NVRAM电池负责在断电后将传输中的数据转存到闪存时为NVRAM模块供电。</block>
+  <block id="807b26d7111f209057a30d265b88f6ae" category="paragraph">I/O模块(输入/输出模块)是一个硬件组件、充当控制器与需要与控制器交换数据的各种设备或系统之间的媒介。</block>
+  <block id="517e65cbfa02ca306eec69200485822d" category="paragraph">电源设备在控制器中提供冗余电源。</block>
+  <block id="aebd84aedf30ca3854097975c59229ed" category="doc">更换NV电池- AFF A1K</block>
+  <block id="ef0c1c9390131a9f1f9560791151e3fd" category="summary">NVRAM 模块由 NVRAM12 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。</block>
+  <block id="f133a8ed8a0b7a76b6c1b28bc00b0fb1" category="doc">更换NVRAM - AFF A1K</block>
+  <block id="6794ac4e17218aaa4a21099cb6c428a5" category="doc">更换电源- AFF A1K</block>
+  <block id="5dae7574a50de0a82f041d98e2b363d4" category="doc">更换实时时钟电池- AFF A1K</block>
+  <block id="7a0d50897c7e82eeae5a76e821ede64f" category="summary">必须替换。</block>
+  <block id="8696c3a11bb55bf4544256cfb1b2bd94" category="doc">更换系统管理模块- AFF A1K</block>
+  <block id="cca32d9f7020830ce64904a8c1aecba9" category="doc">将故障部件退回给NetApp - AFF A70、AFF A90</block>
+  <block id="24adca74cd4521b9f4f4a8ab1033a6d8" category="doc">检查板载加密密钥- AFF A70、AFF A90</block>
+  <block id="ce327d04876efb8d4a59808bf378cece" category="doc">加密恢复- AFF A70、AFF A90</block>
+  <block id="a79b7b4459526eba247c33a94309858e" category="doc">启动恢复映像- AFF A70、AFF A90</block>
+  <block id="1123346d505790a2a7f4001b490d0c4c" category="doc">启动介质更换概述- AFF A70、AFF A90</block>
+  <block id="b565c8083612023ff18332e3f18570fb" category="doc">更换启动介质- AFF A70、AFF A90</block>
+  <block id="7a78f14a4a6a79a25fb9d91deac29f7f" category="doc">关闭控制器- AFF A70、AFF A90</block>
+  <block id="c51acb19ea5c85f590681561a6632ee7" category="doc">完成还原和更换过程- AFF A70、AFF A90</block>
+  <block id="1f6784a27e692a917bbc139bcab6f062" category="doc">移动并更换硬件- AFF A70、AFF A90</block>
+  <block id="3fd2ece46b2cae70b208d459839b7ea6" category="doc">更换机箱- AFF A70、AFF A90</block>
+  <block id="47cc53453bdbc0a412f7d6260da64a94" category="doc">关闭控制器- AFF A70、AFF A90</block>
+  <block id="ea75031f570b7a55db89689259c07998" category="doc">更换控制器模块硬件- AFF A70、AFF A90</block>
+  <block id="b5c682512ae7ddb81d1086428c97af49" category="doc">控制器模块更换概述- AFF A70、AFF A90</block>
+  <block id="729f102b3131803a07803cd2f223d3c3" category="summary">您必须重新设置存储的可重新启动控制器。</block>
+  <block id="5026bf36473d8bd98b2f832968a63c84" category="doc">重新恢复并交还控制器- AFF A70、AFF A90</block>
+  <block id="e01e42ef6a8116389e0f89dad6068e42" category="doc">完整的系统还原- AFF A70、AFF A90</block>
+  <block id="7b78a43d2ef1cd56888972224b322cba" category="section-title">第1步：验证SIFs并检查集群运行状况</block>
+  <block id="44e04fa20bc233bee93d06b7b58ece31" category="doc">关闭受损控制器- AFF A70、AFF A90</block>
+  <block id="9a05f1c61c530c04ac5d33357330d517" category="doc">还原并验证系统配置- AFF A70、AFF A90</block>
+  <block id="71a75f66de0b5a1e6f82e2ce5d803726" category="doc">更换DIMM - AFF A70、AFF A90</block>
+  <block id="dbdf350afb243fd4cd0befedfd1602f1" category="doc">更换SSD驱动器- AFF A70、AFF A90</block>
+  <block id="9e2c31d5c46d92fa7a0e1d87de2b8f61" category="doc">更换风扇模块- AFF A70、AFF A90</block>
+  <block id="8764eb166fd4f85322158239bc87e88c" category="summary">维护AFF A70、AFF A90硬件</block>
+  <block id="c79fbe33ba055331bbb64ae5c44ca6e3" category="doc">维护AFF A70、AFF A90硬件</block>
+  <block id="6f088e5455bf9d5415570fed055240bc" category="paragraph">对于AFF A70和A90存储系统、您可以对以下组件执行维护过程。</block>
+  <block id="fd49219a793e799e8711a9d83ceab53e" category="doc">为硬件布线- AFF A70、AFF A90</block>
+  <block id="1fba4a247f94ae0adebcaa57fd54e768" category="image-alt">电缆拉片方向示例</block>
+  <block id="261ca3ab85aacb02f4f06f9776818d57" category="paragraph">以下过程显示了常见配置。请注意、具体布线取决于为存储系统订购的组件。有关全面的配置和插槽优先级详细信息，请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="d4f534f2d370cb0f29178f31331b3536" category="image-alt">使用缆线连接到100 Gb以太网网络</block>
+  <block id="06d20f31fccdd7b31221a7b1e1ed37d1" category="image-alt">1025 GB电缆</block>
+  <block id="95b007a39e5ec5c4d9b8e17f2ec0424d" category="image-alt">RJ45电缆</block>
+  <block id="fffbddfa6c26d83bdcb33f97eb7e513d" category="paragraph">以下过程显示了如何使用缆线将控制器连接到一个磁盘架和两个磁盘架。您最多可以将控制器连接到四个磁盘架。</block>
+  <block id="9dcc8dc3a558729dc61c31c84e00c3e4" category="list-text">将控制器A端口e11a连接到NSM A端口e0a。</block>
+  <block id="918349807746744597338bfd03ce241f" category="list-text">将控制器A端口e11b连接到端口NSM B端口e0b。</block>
+  <block id="956aab6b8733f2140ed524c12e37f4bd" category="paragraph"><block ref="956aab6b8733f2140ed524c12e37f4bd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a8861b3a8d06aef3022e3d2cfa014512" category="list-text">将控制器B端口e11a连接到NSM B端口e0a。</block>
+  <block id="6a5052a8c54e3e46dc1452dcb9c98eaa" category="list-text">将控制器B端口e11b连接到NSM A端口e0b。</block>
+  <block id="a35e9f25f382abbe5abcfeab4b53167c" category="inline-image-macro">控制器B e11a和e11b连接到一个NS224磁盘架</block>
+  <block id="7f958fb1f7822d334698802022ec3956" category="paragraph"><block ref="7f958fb1f7822d334698802022ec3956" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca923df64a292d4c64ae8ba3bd1fa16d" category="list-text">在控制器A上、为以下连接布线：</block>
+  <block id="622567f759d81c4e71f74d57546ee33a" category="list-text">将端口e11a连接到磁盘架1的NSM A端口e0a。</block>
+  <block id="fa65b92c92e4c6583d514be0324b7aae" category="list-text">将端口e11b连接到磁盘架2的NSM B端口e0b。</block>
+  <block id="884b219f88a01bf8fe5bf55db135e450" category="list-text">将端口E8a连接到磁盘架2的NSM A端口e0a。</block>
+  <block id="3d76afb25e68cbf6ec448ba97c8d77a4" category="list-text">将端口e8b连接到磁盘架1的NSM B端口e0b。</block>
+  <block id="f574117739b3e8dc40831cbb75e78d7f" category="paragraph"><block ref="f574117739b3e8dc40831cbb75e78d7f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7c74d901dd29a71ee51992bf6462dd04" category="list-text">将端口e11a连接到磁盘架1的NSM B端口e0a。</block>
+  <block id="1e063e8299a01fcdf8268f46edf62dfe" category="list-text">将端口e11b连接到磁盘架2的NSM A端口e0b。</block>
+  <block id="a032a8830d9e7689c545a9f5d436568b" category="list-text">将端口E8a连接到磁盘架2的NSM B端口e0a。</block>
+  <block id="a7ac225913423b42ae7801d894de31c8" category="list-text">将端口e8b连接到磁盘架1的NSM A端口e0b。</block>
+  <block id="bf1f9977d76210449a57d0b526df80f9" category="paragraph"><block ref="bf1f9977d76210449a57d0b526df80f9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="04906a53d5026b5fceb0bb70b93770cf" category="doc">完成存储系统设置和配置—AFF A70、AFF A90</block>
+  <block id="c6a553b8b8155340301e1d96a324e013" category="doc">安装硬件- AFF A70、AFF A90</block>
+  <block id="88e6081ee98670cab8a3fe0dfaf9ba6d" category="list-text">将两个缆线管理设备连接到控制器背面。</block>
+  <block id="a55683ab467b68505d4d77b810a9a29c" category="summary">按照以下简要步骤安装和设置AFF A70或A90存储系统、并将其部署为ONTAP系统中的节点。</block>
+  <block id="85b0f2fed3866ab2961a3f0674e32d0e" category="doc">安装设置工作流- AFF A70、AFF A90</block>
+  <block id="bea6c678d4039f6fab5dc48633437381" category="paragraph">按照以下工作流步骤安装、设置和部署AFF A70、AFF A90存储系统。</block>
+  <block id="e1bca12013dce14bfb0c72dc412b9321" category="doc">打开存储系统的电源- AFF A70、AFF A90</block>
+  <block id="7b6f0d636b997b079dfb8b56de6e6f86" category="paragraph">连接网络和任何磁盘架缆线后、您可以为控制器和任何其他磁盘架供电。</block>
+  <block id="81e99160d9d8d2511e0e1db54531167e" category="admonition">外部NS224磁盘架是可选的。</block>
+  <block id="8f176870ac6c4361a1f6d7201cca260f" category="paragraph">在ONTAP存储系统中、每个NS224磁盘架都有一个唯一的磁盘架ID来区分。此ID可确保存储架在存储系统设置中是不同的。默认情况下、磁盘架ID通常分配为‘00 '和‘01 '、但您可能需要调整这些ID、以便在存储系统中保持唯一性。</block>
+  <block id="4de17b4fab9ee69108776ab9c4aaa0c6" category="admonition">控制器机箱磁盘架ID硬编码为"00"。请勿对连接到平台的任何NS224磁盘架使用磁盘架ID "00"。</block>
+  <block id="8e6cf8027b121504bad8e5f00fe274bd" category="summary">准备安装AFF A70、AFF A90平台。</block>
+  <block id="6ac7ef3cf74f3edcc05e92fb62092d4a" category="doc">准备安装- AFF A70、AFF A90</block>
+  <block id="45fa7acb63053c31c5ae0a83dd4b3618" category="paragraph">准备安装平台。</block>
+  <block id="62ca0ae61a6f061f90175c671563df84" category="list-text">访问Web浏览器以配置存储系统</block>
+  <block id="bcaac0b69edbeb6d6ebf55df173a989d" category="paragraph">满载的A70-90平台的重量可达151.68磅(68.8千克)、需要四个人来提升或使用液压提升装置。</block>
+  <block id="50c089c00eacadfe94238545067e1673" category="image-alt">AFF A90</block>
+  <block id="129270e102c6ee2c4b9e965303a8486f" category="list-text">对于平台机箱、为4U</block>
+  <block id="fa2548c5f212acd29e45e9296579f088" category="paragraph">有关安装说明和兼容性信息、请参见<block ref="512a1f6ca3554ab9c3f8be1627b41678" category="inline-link-rx"></block> <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> 。</block>
+  <block id="4d3c32f3b37fe2830b654fcd25daa841" category="list-text">安装了板载驱动器的平台</block>
+  <block id="c466a56afb5075d2e82e969f860401ee" category="list-text">磁盘架(可选)</block>
+  <block id="6e6faa41850da2cbf2fba1981d46dbf5" category="list-text">两个电缆管理设备</block>
+  <block id="a960b1448ee5bc8431d64797103ff6f9" category="paragraph">注册您的平台以获得支持优势。</block>
+  <block id="9ddae9a7519b413c3e002aaa6578c11b" category="paragraph">您可以在装箱单、确认电子邮件或打开包装后的控制器上找到该号码。</block>
+  <block id="321d330a3500c9aa223bf5d134d0886b" category="list-text">输入系统序列号和请求的详细信息。</block>
+  <block id="9693b6a52f0ee9092f8116f36e38a969" category="summary">要更换I/O模块、您必须断开模块的缆线、从模块中卸下SFP和QSFP模块、卸下模块、安装更换模块、重新安装SFP和QSFP模块、然后为I/O模块布线。</block>
+  <block id="2224bc58afd68539e0dea6bf9e50c3d6" category="doc">添加I/O模块- AFF A70、AFF A90</block>
+  <block id="24ca01289b896c334109ba7e14ec004f" category="doc">添加和更换I/O模块概述- AFF A70-90K</block>
+  <block id="924c37fc9153e68527b7be3c003bb435" category="doc">更换I/O模块- AFF A70、AFF A90</block>
+  <block id="1f6a084d4572b01747b6b088d9e0ee43" category="paragraph">对于AFF A70、AFF A90存储系统、您可以对以下组件执行维护过程。</block>
+  <block id="f99a621b951fd2b537d7a091c6b754fd" category="doc">更换NV电池- AFF A70、AFF A90</block>
+  <block id="64adf1ea4c1f4c02f038823429bd4c66" category="doc">更换NVRAM - AFF A70、AFF A90</block>
+  <block id="9020c560951313547d9b00a00f95d818" category="doc">更换电源- AFF A70、AFF A90</block>
+  <block id="866b7e69a0fb0f745608a59b2a02f1ca" category="doc">更换实时时钟电池- AFF A70、AFF A90</block>
+  <block id="a1bdc631ad485f9356bc93d7ccbb7e85" category="doc">更换系统管理模块- AFF A70、AFF A90</block>
+  <block id="47213676da315290cbc4f8dbfd4c19b1" category="list-text"><block ref="47213676da315290cbc4f8dbfd4c19b1" category="inline-link-rx"></block></block>
+  <block id="0f8eba0b4d4003961e911a8b87c8c645" category="list-text"><block ref="0f8eba0b4d4003961e911a8b87c8c645" category="inline-link-rx"></block></block>
+  <block id="afadad86a19bc1f3f4145429ab25f587" category="list-text"><block ref="afadad86a19bc1f3f4145429ab25f587" category="inline-link-rx"></block></block>
+  <block id="f710bde9f928341df6ff92fee79cb81a" category="summary">为要热添加的每个NS224磁盘架布线、以便每个磁盘架都有两个连接、连接到HA对中的每个控制器。</block>
+  <block id="567fab43047b0960ce69a80b4d3eeef2" category="doc">使用缆线将磁盘架连接到AFF系统—NS224磁盘架</block>
+  <block id="62415c5f208498fa7a928f2f3d1ce337" category="example-title">将电缆架连接到AFF A1K</block>
+  <block id="4c1a38701cdd1b85c2cc3396c3cda1ba" category="example-title">使用缆线将磁盘架连接到AFF A70或AFF A90</block>
+  <block id="97a5530ac5ff8544a3e1b76f2a7c829b" category="example-title">用电缆将磁盘架连接到AFF A250或AFF C250</block>
+  <block id="4631b1a60ba4b9c98b792c04ede40e3e" category="example-title">用缆线将磁盘架连接到AFF A400或AFF C400</block>
+  <block id="2c4de459c86fa6d0fcf85f5f54f925ea" category="example-title">用缆线将磁盘架连接到AFF A800或AFF C800</block>
+  <block id="faf33e342e418597ef26218d26be2eb3" category="example-title">用电缆将磁盘架连接到AFF A900</block>
+  <block id="101e83bd64f471fa9ab9ec831ae79bf5" category="doc">使用缆线将磁盘架连接到ASA系统—NS224磁盘架</block>
+  <block id="14e93bfe999bd26d30efe27bc42d4e33" category="example-title">用电缆将磁盘架连接到ASA A250或ASA C250</block>
+  <block id="8249cdd39950bcc8dcd2742ed885f569" category="example-title">用缆线将磁盘架连接到ASA A400或ASA C400</block>
+  <block id="7702b4b78c879b561068c08066c8216e" category="example-title">用缆线将磁盘架连接到ASA A800或ASA C800</block>
+  <block id="5988254c8d26b61e1a07c6a096e63ce5" category="example-title">用电缆将磁盘架连接到ASA A900</block>
+  <block id="58b21538405eea98ef7b8d327aac34fc" category="doc">使用缆线将磁盘架连接到终止提供的系统—NS224磁盘架</block>
+  <block id="93d30e9f000936c1ea0bb870a06b4bfa" category="example-title">用电缆将磁盘架连接到AFF A320</block>
+  <block id="3a3fd2c18ea2486ea238ad698e2db584" category="paragraph">如果需要更多存储、您可以向现有HA对热添加第二个磁盘架。</block>
+  <block id="e1661f98263e8ce47be51e134d3c36d0" category="list-text">使用缆线将磁盘架连接到控制器。</block>
+  <block id="1cfaf56b497f5a10023e79e4fb9c1fbb" category="image-alt">为具有两个NS224磁盘架和三组板载端口的AFF A320布线</block>
+  <block id="4cae9c36555adc7405cb65350569cc5b" category="example-title">用缆线将磁盘架连接到AFF A700</block>
+  <block id="6d74e474495b3177dfbf319429b6127e" category="paragraph">如何使用缆线将NS224磁盘架连接到AFF A700 HA对取决于要热添加的磁盘架数量以及控制器上使用的支持RoCE的端口集数量(一个或两个)。</block>
+  <block id="efa6ea2ea99c7e90eec9ccd6f7a76146" category="list-text">如果要热添加初始NS224磁盘架(HA对中不存在NS224磁盘架)、则必须在每个控制器中安装一个核心转储模块(X9170A、NVMe 1TB SSD)、以支持核心转储(存储核心文件)。</block>
+  <block id="b2482d207d76c39d02b23b924006d57a" category="paragraph">请参阅。 <block ref="475cacc4c4d3f4ca67cc021d7e76f4ce" category="inline-link-macro-rx"></block></block>
+  <block id="08580c56ffbd5745597395d8d6e0d742" category="list-text">如果要在每个控制器上使用一组支持RoCE的端口(一个支持RoCE的I/O模块)热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
+  <block id="499e8a65f6cfb0d93ad414f0ec885567" category="admonition">此步骤假定您已将支持RoCE的I/O模块安装在每个控制器的插槽3 (而不是插槽7)中。</block>
+  <block id="d39664dd0d35fc68dbbe8654914c8ddf" category="paragraph">下图显示了如何在每个控制器中使用一个支持RoCE的I/O模块为一个热添加磁盘架布线：</block>
+  <block id="7981040959b8ff518083d65eb7cbd0d8" category="image-alt">为具有一个NS224磁盘架和一组IO模块端口的AFF A700布线</block>
+  <block id="c7ecb88c8abf3772dd901d707c09f414" category="list-text">如果要在每个控制器中使用两组支持RoCE的端口(两个支持RoCE的I/O模块)热添加一个或两个磁盘架、请完成相应的子步骤。</block>
+  <block id="84d0e0babe795476f7ae8da0b8e585f1" category="image-alt">为具有两个NS224磁盘架和两组IO模块端口的AFF A700布线</block>
+  <block id="f4bf409b84e11d30249909dc7746ba6d" category="example-title">使用缆线将磁盘架连接到FAS500f</block>
+  <block id="a89eecfaa6455eb7bc4017895b259e99" category="paragraph">如果需要更多存储、您可以将一个NS224磁盘架热添加到FAS500f HA对中。</block>
+  <block id="a372a75abe895e1d1df66a7346836990" category="image-alt">为具有一个NS224磁盘架和一组端口的FAS500f AFF A250或AFF C250布线</block>
+  <block id="f890bb9917c8ebad074582718fe97720" category="doc">使用缆线将磁盘架连接到FAS系统—NS224磁盘架</block>
+  <block id="833d8fad165a38386db2f5d83d561178" category="doc">热添加—NS224磁盘架布线概述</block>
+  <block id="46f11d99d5f59f4aa316ba3db790a179" category="paragraph">本布线部分介绍如何使用缆线将NS224磁盘架连接到以下存储系统：</block>
+  <block id="a392e2560dc5e657e918caf1331842b5" category="inline-link-macro">连接到AFF系统的缆线</block>
+  <block id="e486dfdb295c50313a841301bdff1252" category="list-text"><block ref="e486dfdb295c50313a841301bdff1252" category="inline-link-macro-rx"></block></block>
+  <block id="67ae7265d01a10fd7ba93405485a9bd6" category="inline-link-macro">连接到ASA系统的缆线</block>
+  <block id="2f658f93ae23965e7c42c3eb6ac41a06" category="list-text"><block ref="2f658f93ae23965e7c42c3eb6ac41a06" category="inline-link-macro-rx"></block></block>
+  <block id="71ccc93af9bf68a63dfe7bea83d57067" category="inline-link-macro">使用缆线连接到EOA系统</block>
+  <block id="63ff153655ced66df13d8b44311364cb" category="list-text"><block ref="63ff153655ced66df13d8b44311364cb" category="inline-link-macro-rx"></block></block>
+  <block id="612f3ba3d7c921e4e9a9699a946fa2ee" category="list-text">熟悉正确的缆线连接器方向以及NS224 NSM100磁盘架模块上的端口位置和标签。</block>
+  <block id="c9901d05aa53a48d550152e6d189ffc4" category="image-alt">插入电缆时，连接器推拉卡舌朝上</block>
+  <block id="aed40018e03baa0cb0ff1fc2ac8a3a01" category="list-text">您可以使用下图帮助您以物理方式识别磁盘架NSM100端口e0a和e0b。</block>
+  <block id="175008e225c4f0b4f43ff24af0d85656" category="paragraph">NS224磁盘架包含两个NSM100模块。顶部模块插入插槽A (NSM A)、底部模块插入插槽B (NSM B)。</block>
+  <block id="3ec82f450cefc3cf550494e5fe235a93" category="paragraph">每个NSM100模块包括2个100GbE QSFP28端口：e0a和e0b。</block>
+  <block id="a7a068010129cb64bdcd94f83548eaa2" category="image-alt">NS224 NSM100模块端口e0a和e0b</block>
+  <block id="0a8cb3c38ccd084a10c6299732a71520" category="doc">完成热添加NS224磁盘架</block>
+  <block id="c2ea2e55d65331d8bcef52bb3b64c92d" category="paragraph">如果在准备NS224磁盘架热添加过程中禁用了自动驱动器分配、则需要手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。</block>
+  <block id="d83a83fb9fe927923ea18a2ee6b6a97e" category="inline-link-macro">热添加布线概述</block>
+  <block id="d3f2a9416871f3005be3d67b52def753" category="paragraph">You must have already cabled your shelf as instructed for your HA pair.请参阅。 <block ref="9022d9944a90d9c35d6825c9076441c8" category="inline-link-macro-rx"></block></block>
+  <block id="cb765b2f357801af3e06c0ea438901c4" category="paragraph">您可以在任一控制器上输入命令。</block>
+  <block id="8727882f7d3942a12771df67450a7f2a" category="paragraph">您必须在两个控制器上重新启用自动驱动器分配。</block>
+  <block id="564ffc14604e000bfeb97b6018c52095" category="summary">要热添加NS224驱动器架、HA对必须满足特定要求。</block>
+  <block id="447174728e5129c9b8c53342c0264116" category="doc">热添加工作流—NS224磁盘架</block>
+  <block id="053409ab39417f68b55ff02091cdc8a8" category="paragraph">按照以下工作流步骤热添加NS224磁盘架。</block>
+  <block id="be1a34deed7e0574ef6cd0ac74fb0fff" category="paragraph">要热添加NS224磁盘架、HA对必须满足特定要求。查看 <block ref="4ce128836e76285f9c9ed40b724d2cac" category="inline-link-macro-rx"></block>。</block>
+  <block id="1a5e345c0f17016fde10413b2819068b" category="inline-link-macro">准备热添加磁盘架</block>
+  <block id="549ca2ce1f0bb7709065c93991fbf32d" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="23e7b17e935955a0ced3a866a7d3f994" category="inline-link-macro-rx"></block></block>
+  <block id="3c8cdaceb2d0f43fc2d3506231f63b93" category="paragraph">根据您的平台型号、您可能需要安装其他支持RoCE的PCIe卡或I/O模块、配置非专用的支持RoCE的以太网端口以供存储使用、跨不同插槽中的两组端口重新对现有磁盘架进行插槽故障恢复能力、 如果要手动分配驱动器所有权、请禁用自动驱动器分配。</block>
+  <block id="7a0deab7173e7204e2e4459ffd121ad6" category="inline-link-macro">安装磁盘架</block>
+  <block id="775c6030e9743bbed8a852b3e8a20bcd" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="a6b180b7d344b08e449360b1fc8e7912" category="inline-link-macro-rx"></block></block>
+  <block id="f9c593fc474bf3ae98144f9c167660d5" category="paragraph">要安装磁盘架、请安装磁盘架的导轨套件、然后将磁盘架安装并固定到Telco机架或机柜中。接下来、将电源线连接到磁盘架电源、然后分配一个唯一的磁盘架ID、以确保磁盘架在HA对中是不同的。</block>
+  <block id="d27ec3c6554e9ab2b8d0207fb25f4f21" category="inline-link-macro">为磁盘架布线</block>
+  <block id="c6fb67d510dc1d5618e70b4dc334b6f5" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="c9298aba701f0349a6aafcc92942d939" category="inline-link-macro-rx"></block></block>
+  <block id="e9a05c30d154bcc11825c7c6f620c2b7" category="paragraph">为要热添加的磁盘架布线、使其与HA对中的每个控制器具有两个连接。</block>
+  <block id="b234edf4e69ffb2b833a8efb85ba5ee7" category="inline-link-macro">完成热添加</block>
+  <block id="a03ae9a3c924d10a64e97ade6d86ee2b" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="49e34f6a53fbd8084ac48e4e6738a264" category="inline-link-macro-rx"></block></block>
+  <block id="6cfe7f4574d90cb894d56246a1414fa2" category="paragraph">如果在准备热添加时禁用了自动驱动器分配、则需要手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。</block>
+  <block id="047de0ebf31d4be4fc5eb6722a69201e" category="list-text">HA对必须具有足够的可用RoCE以太网端口、以支持要热添加的磁盘架数量。</block>
+  <block id="2ab4e0b94726eca79e1aeeb2f1e8ceb5" category="paragraph">对于要热添加的每个磁盘架、每个控制器上需要两个支持RoCE的端口。这些端口可以位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合，也可以位于支持 RoCE 的 I/O 模块上，这一点受您的平台型号支持。</block>
+  <block id="463315a2a8c1964ff9259e984ef43a7c" category="list-text">确定适用于您的平台型号的正确控制器插槽。</block>
+  <block id="132976e79206d2260fc5308469634e7a" category="list-text">有关PCIe卡或I/O模块的安装说明、请参见您的平台型号文档。</block>
+  <block id="088ddb10f92e4aec09d8bccaa095dbe7" category="paragraph"><block ref="088ddb10f92e4aec09d8bccaa095dbe7" category="inline-link-rx"></block></block>
+  <block id="bf06bfbbc1d29234d918a086f98a4c2c" category="section-title">准备支持RoCE的非专用以太网端口以进行热添加</block>
+  <block id="c62d22065cef5eaab1771562c4464853" category="paragraph">如果HA对具有非专用的RoCE以太网端口、而您要使用这些端口热添加NS224驱动器架、则必须确保将这些端口配置为用于存储(而不是网络连接)。</block>
+  <block id="2d957a99f7e946ae3806773ee52b1821" category="paragraph">您必须满足存储系统要求、包括在每个控制器中安装任何其他支持RoCE的I/O模块PCIe卡。</block>
+  <block id="b3af01e20201c67551f5dc6511b19431" category="admonition">要将端口从存储用途更改为网络用途，请输入命令<block ref="9a677bf17da6cbfa9b6a63efbc67d3f2" prefix=" " category="inline-code"></block>。</block>
+  <block id="21e6d0e9cee07588109c3bca9e4f33a8" category="list-text">使用SSH或串行控制台端口登录到集群。</block>
+  <block id="5fc0fcdc83b05fb4f062a9fa1fe851d9" category="paragraph">Otherwise, you need to configure the ports by completing steps 4 through 7.</block>
+  <block id="9db058e565a88604b6d87108ed139c51" category="paragraph"><block ref="6e972b196ebbc48e0575e24a92c8720d" prefix="" category="inline-code"></block></block>
+  <block id="eb3110f9f105714e88d250d436520c1d" category="paragraph"><block ref="91bc4c8d50e9272a27ce62a39b4bf1a6" prefix="" category="inline-code"></block></block>
+  <block id="7c09109da9baa17bbe92aa7b509456d7" category="list-text">如果HA对运行的是ONTAP 9.6，请重新启动控制器模块，以便端口更改生效：<block ref="6751ed4c60ef0a0b22c8f041a5e5cf3d" prefix=" " category="inline-code"></block>。</block>
+  <block id="6f5a1f5a085ff35b3e9c182f13e6c8a8" category="list-text">Repeat step 4.</block>
+  <block id="83d3292b963da6451d1d0d83b537c8e3" category="list-text">重复步骤4和5。</block>
+  <block id="7142ab39fb3d18d24163683bfd871b22" category="section-title">在热添加其他磁盘架之前、请准备现有磁盘架连接</block>
+  <block id="a61cf40b2e5406ed295d4e38c35656df" category="paragraph">在热添加其他磁盘架之前、根据您的平台型号、您可能需要在不同插槽中的两组端口之间重新对现有磁盘架进行故障恢复(在安装了支持RoCE的其他PCIe卡或I/O模块之后)、以防止插槽故障。</block>
+  <block id="74b8df0719b21a5aee599f46d92e870d" category="list-text">您必须满足系统要求、包括在每个控制器中安装任何其他支持RoCE的PCIe卡或I/O模块。</block>
+  <block id="b3aa8ef8d86d2e03895965e9958978a7" category="list-text">您必须已验证所安装的具有RoCE功能的PCIe卡或I/O模块上的非专用端口是否配置为可用于存储。</block>
+  <block id="bac6096d635a78bfc7662e151ab39559" category="list-text">在此过程中、您一次移动一根缆线、以始终保持与磁盘架的连接。</block>
+  <block id="51b7d26dc4977295bdc15e4ceffe3a84" category="list-text">如果您有一个AFF A1K HA对、并且要热添加第三个磁盘架、并在每个控制器中安装第三个或第四个支持RoCE的I/O模块、则第三个磁盘架仅连接到第三个或第三个和第四个I/O模块。您无需重新对任何现有磁盘架进行配置。</block>
+  <block id="e87dec4c82a6131b352eff5116f7fab8" category="list-text">根据您的平台型号、在不同插槽中的两组支持RoCE的端口之间重新对现有磁盘架的连接进行转换。</block>
+  <block id="5c8e2a1729140c2319ea38bc38c671ba" category="paragraph">AFF A70或AFF A90 HA对、并且您要热添加另一个磁盘架</block>
+  <block id="815887f62fd8f7be15e3424efc32b20c" category="paragraph">在两个支持RoCE的I/O模块之间重新对第一个磁盘架执行数据传输：</block>
+  <block id="3dbc71070033db4d4c05e736c6f4075a" category="admonition">子步骤假定已将现有磁盘架连接到每个控制器上插槽11中支持RoCE的I/O模块。</block>
+  <block id="b73b81430a005b6489a33cd21955e985" category="list-text">在控制器 A 上，将缆线从插槽 11 端口 b （ e11b ）移至插槽 8 端口 b （ e8b ）。</block>
+  <block id="5df57c3b9f444d48109943fb05d242b0" category="paragraph">如果需要、您可以参考显示双架配置中现有单架和重新布线的磁盘架的布线图示。</block>
+  <block id="a935e388e4de5cd04b8314123fe7074d" category="paragraph"><block ref="a8947d9a1a575b89ffe8fcb06a161750" category="inline-xref-macro-rx"></block></block>
+  <block id="a36b1e64cc692b8ab8d3df36996375fb" category="paragraph">AFF A1K HA对、正在热添加第二个磁盘架</block>
+  <block id="04c18e5cb17496cb3b9f53a5b07c76b4" category="list-text">在控制器 A 上，将缆线从插槽 11 端口 b （ e11b ）移至插槽 10 端口 b （ e10b ）。</block>
+  <block id="ceab97c7abf1d0009b8f39e726984b0e" category="paragraph"><block ref="6bc0eba2df9bed360cea4cf9b0a3cb3d" category="inline-xref-macro-rx"></block></block>
+  <block id="1392119f637fc041996b3a606abe7bdd" category="paragraph">AFF A1K HA对、您要热添加第四个磁盘架</block>
+  <block id="787c328c7045406142342c912caafa3c" category="paragraph">在每个控制器的插槽9中的支持R0CE的I/O模块之间重新对第三个磁盘架进行缆线连接：</block>
+  <block id="59a884f424ff6cf6eadda8a43ad15c18" category="list-text">在控制器 A 上，将缆线从插槽 9 端口 b （ e9b ）移至插槽 8 端口 b （ e8b ）。</block>
+  <block id="f6f7bd955e18a236aa6bd00bbe5b99b4" category="paragraph">AFF C400 HA对、您要热添加第二个磁盘架</block>
+  <block id="97c77af9ebe44ea3e03f2f6517b0a3d3" category="paragraph">在每个控制器上的两组支持RoCE的端口之间重新对第一个磁盘架进行连接：</block>
+  <block id="2ddae5c7aeab2acbf79374a7699a0e6b" category="paragraph">AFF A800或AFF C800 HA对、并且您要热添加第二个磁盘架</block>
+  <block id="82d1c3d2c1369a3c0cf17eefbe0771e3" category="paragraph">AFF A400 HA对、您要热添加第二个磁盘架</block>
+  <block id="b517525ed52282a89cb1f6c210c70b1a" category="paragraph">AFF A700 HA对、并且您要热添加第二个磁盘架</block>
+  <block id="6ffd935255573ad4570c6a3b3450e0f9" category="inline-link">关于磁盘所有权的自动分配</block>
+  <block id="57c73fa2509bcf1d4b22913e1dd561cf" category="paragraph">如果您不确定是否应手动分配驱动器所有权、或者希望了解存储系统的驱动器所有权策略自动分配、请参见<block ref="7cf2c47025b8136f811da5dc672735ee" category="inline-link-rx"></block></block>
+  <block id="53c2f27803aec3d938e33bbae4de6b05" category="paragraph">您可以在任一节点上输入命令。</block>
+  <block id="5aa025a6412a09854e833ab5ef7bad16" category="paragraph">如果启用了自动驱动器分配、则输出将显示<block ref="ed2b5c0139cec8ad2873829dc1117d50" prefix=" " category="inline-code"></block> 在列中<block ref="36dcdb9f764aaa4313fab85a6eb8d6a6" prefix=" " category="inline-code"></block> (对于每个节点)。</block>
+  <block id="76252ddf99e749110059e04910646005" category="paragraph">您必须在两个节点上禁用自动驱动器分配。</block>
+  <block id="dcd988efa9773d6784cd82af7e72fc28" category="paragraph">安装新的NS224磁盘架需要将磁盘架安装到机架或机柜中、连接电源线(自动为磁盘架供电)、然后设置磁盘架ID。</block>
+  <block id="c44506a424da54e7a512c3fe58befda4" category="list-text">请确保您的回形针一侧拉直或使用窄尖的圆珠笔。</block>
+  <block id="d6f9c5ee662e9a54b98d8ab3c1fbbe0c" category="paragraph">在更改磁盘架ID步骤中、您可以使用回形针或圆珠笔访问操作员显示面板(ODP)后面的磁盘架ID按钮。</block>
+  <block id="7834fa1dae5baa351b43df3825d7c51e" category="section-title">为磁盘架布线以进行热添加</block>
+  <block id="0198adb183966b6a1cec77414f7184cf" category="paragraph">在为热添加的磁盘架布线之前、熟悉正确的缆线连接器方向以及NS224 NSM磁盘架模块上的端口位置和标签会很有帮助。</block>
+  <block id="403cdeaa74f4f7d57300e7cfb63e3508" category="section-title">为AFF A70或AFF A90 HA对的热添加磁盘架布线</block>
+  <block id="4b2cba344589a212fe317976558dad4a" category="list-text">您必须满足存储系统要求。</block>
+  <block id="feadc282c1b706313d9abaf2e604fa56" category="paragraph"><block ref="8c3173c57b196b7c4ca9e3e232f3a310" category="inline-xref-macro-rx"></block></block>
+  <block id="6e76b79ceb1c0834e1d6d42376d001b2" category="section-title">为AFF A1K HA对的热添加磁盘架布线</block>
+  <block id="96ef72d95f222f00433291a58b6b8744" category="doc">为热添加—NS224磁盘架安装磁盘架</block>
+  <block id="3e7bc606456977aca4460d0843a5999b" category="paragraph">您需要在机柜或电信机架中安装NS224磁盘架、连接电源线(自动为磁盘架供电)并设置磁盘架ID。</block>
+  <block id="ed86a7d5c45c5290afeff3be20438da8" category="paragraph">要更改磁盘架ID、请使用回形针或圆珠笔访问操作员显示面板(ODP)后面的磁盘架ID按钮以执行更改磁盘架ID步骤。</block>
+  <block id="66570bf97ccd535a1a7ed18220e5a243" category="list-text">请注意、满载的NS224架的重量可达66.78磅(30.29千克)、需要两个人来提升或使用液压提升装置。Avoid removing shelf components (from the front or rear of the shelf) to reduce the shelf weight, because shelf weight will become unbalanced.</block>
+  <block id="da0aca2ea4c0e9ba2b05f533db2f5bc8" category="list-text">根据需要、按照套件附带的说明安装磁盘架导轨套件。</block>
+  <block id="707f1d6805c820b56046e8ac294bd1c0" category="list-text">安装磁盘架：</block>
+  <block id="42ad81bfc37998d9d772238e0973f213" category="paragraph">如果要安装多个磁盘架、请将第一个磁盘架直接置于控制器上方。将第二个磁盘架直接放在控制器下方。对任何其他磁盘架重复此模式。</block>
+  <block id="a7f349e031998a4bbf68e83d92f1c162" category="list-text">使用套件中提供的安装螺钉将磁盘架固定到机柜或电信机架上。</block>
+  <block id="bb3722846e62a502c273544475700df9" category="list-text">连接电源：</block>
+  <block id="61c2a23ab7de542a166a4abf9dcc6ee8" category="list-text">将电源线连接到磁盘架并将其固定到位。</block>
+  <block id="97511945d44e34fdc26e7a5083ebd20d" category="paragraph">如果是交流电源、请使用电源线固定器将其固定到位。</block>
+  <block id="081d25588bc0e416dcb90117515e0162" category="paragraph">如果是直流电源、请使用两颗指旋螺钉将其固定到位。</block>
+  <block id="0c2a365669993e8b6749e4053a2ea454" category="list-text">将电源线连接到不同的电源以实现故障恢复能力。</block>
+  <block id="62867ffe0beeac6153809460aa6adcfc" category="paragraph">有关详细说明，请参见 <block ref="c69a1009359358cbb1f3e5d6483736fb" category="inline-link-macro-rx"></block>。</block>
+  <block id="98be19dba1a369d902405986d602e7c9" category="paragraph">为热添加磁盘架布线。转到。 <block ref="9022d9944a90d9c35d6825c9076441c8" category="inline-link-macro-rx"></block></block>
+  <block id="aecdb59befc0746a8105963d6c8096af" category="doc">准备热添加—NS224磁盘架</block>
+  <block id="ecfa7406eca9294b8db5d3a07d57ef49" category="paragraph">在热添加NS224磁盘架之前、完成适用于HA对的准备任务。</block>
+  <block id="75fafab48d351db2b919a6a10431f31b" category="paragraph">完成适用的准备任务后，请转至 <block ref="68c2828044dd0dd776e961af4615948f" category="inline-link-macro-rx"></block>。</block>
+  <block id="42635b3d9723bd789b225319be56c7c8" category="section-title">安装支持RoCE的PCIe卡或I/O模块</block>
+  <block id="31ff39468f998e23e617383291720b0f" category="paragraph">如果您的平台型号支持使用支持RoCE的PCIe卡或I/O模块、则HA对必须具有足够的支持RoCE的可用以太网端口、以支持要热添加的磁盘架数量。</block>
+  <block id="1b27049efde6cac780da715f0b01bc98" category="list-text">对于要热添加的每个磁盘架、验证每个控制器上是否有两个支持RoCE的端口。</block>
+  <block id="a50ddb4ae65653aca8601897505aa60f" category="paragraph">这些端口可以位于控制器板上，支持 RoCE 的 PCIe 卡上，两者的组合，也可以位于支持 RoCE 的 I/O 模块上，这一点受您的平台型号支持。</block>
+  <block id="6ac3e8a30409115d5b79db8603f51706" category="list-text">如果HA对没有足够的支持RoCE的可用端口、请根据您的平台型号将其他PCIe卡或I/O模块安装到正确的控制器插槽中。</block>
+  <block id="9e9a9898b5abe5f31eb65bf39449aef9" category="list-text">确定适用于您的平台型号的正确控制器插槽。请参阅。<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block></block>
+  <block id="e29034f589384eef13baae824e82b481" category="section-title">配置支持RoCE的端口以供存储使用</block>
+  <block id="8d40e879b78362d010921b5b0212222e" category="paragraph">如果HA对具有非专用的RoCE以太网端口、而您要使用这些端口热添加NS224磁盘架、则必须将这些端口配置为用于存储(而不是用于网络连接)。</block>
+  <block id="8b2e5af852d259b533001cadde1a0ca8" category="list-text">确保在每个控制器中安装了任何其他支持RoCE的PCIe卡或I/O模块。</block>
+  <block id="72146225175efd85ba944f5ac7575176" category="list-text">对于某些平台型号、如果将支持RoCE的PCIe卡或I/O模块安装在控制器上受支持的插槽中、则这些端口会自动默认为storage use (而不是连网)； 但是、建议您完成以下过程、以验证是否已为存储配置支持RoCE的端口。</block>
+  <block id="45b68273c86f9462a44eefdf969f3222" category="paragraph">根据HA对运行的ONTAP版本、您可能需要重新启动控制器：</block>
+  <block id="2ea18967d5aa61c347f7083b24fa762a" category="list-text">如果将来需要将端口从存储更改为网络连接，请输入命令<block ref="9a677bf17da6cbfa9b6a63efbc67d3f2" prefix=" " category="inline-code"></block>。</block>
+  <block id="d5c6e08c6eebf8adfb34dc24756d570f" category="list-text">使用SSH或串行控制台端口登录到集群。</block>
+  <block id="3e4a94904f41cf118e77a622f36547e9" category="list-text">输入以下命令以验证是否已为HA对中的非专用端口配置存储使用：</block>
+  <block id="d75813e35497e6772c951cd78d3c71cb" category="paragraph"><block ref="90e0991b70398b08e4e3eb0ae46c4163" prefix="" category="inline-code"></block></block>
+  <block id="cac946705a8c279083094c886d6e736a" category="list-text">在其中一个控制器上配置用于存储的非专用端口：</block>
+  <block id="394247ac369fff4729d586172906244e" category="cell">使用的命令</block>
+  <block id="587c08539bc557ccc5bb76a807d3ef9a" category="list-text">如果HA对运行的是ONTAP 9.6，请重新启动控制器，以使端口更改生效：<block ref="6751ed4c60ef0a0b22c8f041a5e5cf3d" prefix=" " category="inline-code"></block>。</block>
+  <block id="3bea88e8a94c2069d98a1678de188c82" category="list-text">对第二个控制器重复上述步骤：</block>
+  <block id="acc2bb851ead4ba06a525f898fa9d757" category="list-text">验证是否已为两个控制器上的非专用端口配置存储使用：<block ref="90e0991b70398b08e4e3eb0ae46c4163" prefix=" " category="inline-code"></block></block>
+  <block id="dff6b8783c45aa76125a2603fbfe43bf" category="section-title">可重新对现有磁盘架进行配置</block>
+  <block id="afd2be08ff66ef180fcc2f0cc5cf1fd7" category="list-text">确保您安装的具有RoCE功能的PCIe卡或I/O模块上的非专用端口已配置为可用于存储。</block>
+  <block id="692f3fd736128335341ec9c447ca8376" category="list-text">如果需要，请参阅中适用于您的平台型号的磁盘架布线图 <block ref="9022d9944a90d9c35d6825c9076441c8" category="inline-link-macro-rx"></block>。</block>
+  <block id="54f937d3a20d54ade33be7b557487bde" category="paragraph">如果要热添加第二个或第四个磁盘架、请执行以下操作之一。</block>
+  <block id="899adf8ecd6aef37ec53e5c48663013b" category="admonition">如果您有一个AFF A1K HA对、并且要热添加第三个磁盘架、并在每个控制器中安装第三个或第四个支持RoCE的I/O模块、则第三个磁盘架仅连接到第三个或第三个和第四个I/O模块。您无需重新对任何现有磁盘架进行配置。</block>
+  <block id="f191cdb40a12349ee1f8c533f07dc92c" category="list-text">如果要热添加第二个磁盘架、请在每个控制器上的插槽11和插槽10中的支持RoCE的I/O模块之间重新对第一个磁盘架进行配缆线。</block>
+  <block id="b0f7f259d069071edc40fb8d3e8a652c" category="list-text">如果要热添加第四个磁盘架、请在每个控制器上的插槽9和插槽8中的支持RoCE的I/O模块之间重新对第三个磁盘架进行配缆线。</block>
+  <block id="c5ee181c89508f48f2ee4f481db306ee" category="paragraph">子步骤假定第三个磁盘架已连接到每个控制器上插槽9中支持RoCE的I/O模块。</block>
+  <block id="7a3b05b130c9ce12ac95ac076b53bfcf" category="open-title">AFF A70或AFF A90</block>
+  <block id="cdf1c0270479d0a5ad04f2c74c0c4833" category="paragraph">如果要热添加第二个磁盘架、请在每个控制器上的插槽11和插槽8中的支持RoCE的I/O模块之间重新对第一个磁盘架进行配缆线。</block>
+  <block id="651656ace2aedb3df5c7638a857b529b" category="open-title">AFF A800或AFF C800</block>
+  <block id="ddb435164ec15edba58659109e9b1ed3" category="paragraph">如果要热添加第二个磁盘架、请在每个控制器的插槽5和插槽3中的两组支持RoCE的端口之间重新对第一个磁盘架进行缆线连接。</block>
+  <block id="87c636a063da18092d1205f20f872dc3" category="paragraph">如果要热添加第二个磁盘架、请在每个控制器的插槽3和插槽7中的两组支持RoCE的端口之间重新对第一个磁盘架进行缆线连接。</block>
+  <block id="0403e095c309b62ff7c6b736fe5f1b0f" category="open-title">AFF A400或AFF C400</block>
+  <block id="f60c054fab21a0c7ab3a2990f06f3918" category="paragraph">如果要热添加第二个磁盘架、请根据您的平台型号执行以下操作之一：</block>
+  <block id="165b58213f3001efb531a140285078b3" category="list-text">在AFF A400上：</block>
+  <block id="2eef41081d0f91ffdb6457ede9f4cb73" category="paragraph">在每个控制器上的两组支持RoCE的端口(板载e0c/e0d和插槽5)之间重新对第一个磁盘架进行缆线连接。</block>
+  <block id="9ea7d3176d7e42bb894c7dfc4a047f98" category="paragraph">子步骤假定已将现有磁盘架连接到每个控制器上支持RoCE的板载端口e0c/e0d。</block>
+  <block id="d69878207b35b21781b0b0d31559655d" category="list-text">在AFF C400上：</block>
+  <block id="04853e3291e216091e8f7c8d858186d5" category="paragraph">在每个控制器的插槽4和插槽5中的两组支持RoCE的端口之间重新对第一个磁盘架进行缆线连接。</block>
+  <block id="7227ec552cdc231f47c1e1a1851c0e84" category="paragraph">子步骤假定已将现有磁盘架连接到每个控制器上插槽4中支持RoCE的端口。</block>
+  <block id="0219958df85d229cc47655b01271068a" category="list-text">使用验证重新布线的磁盘架是否已正确布线<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block>。</block>
+  <block id="9d21aacca1510ddef8de552b2390d5c8" category="section-title">禁用自动驱动器分配</block>
+  <block id="8aadf4d491c9afd936a2737677005583" category="paragraph">如果要为热添加的NS224磁盘架手动分配驱动器所有权、则需要禁用自动驱动器分配(如果已启用)。</block>
+  <block id="e5eccc451484bc421d9afd96e1a5fba3" category="paragraph">如果您不确定是否应手动分配驱动器所有权，或者要了解存储系统的驱动器所有权策略的自动分配，请转至<block ref="7cf2c47025b8136f811da5dc672735ee" category="inline-link-rx"></block>。</block>
+  <block id="1e0acb33e6ab3e22b4a9fb3ca7e493f9" category="doc">热添加—NS224磁盘架的要求和最佳实践</block>
+  <block id="388fa08176ec0787504660c971afb5ce" category="paragraph">在热添加磁盘架之前、请务必查看相关要求和最佳实践。</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">要求</block>
+  <block id="363158f1a7b77877e830ff40750ea599" category="paragraph">要热添加NS224磁盘架、HA对必须满足特定要求。</block>
+  <block id="d5b2dc488bc34a9addcea2215df132cb" category="list-text">*支持的ONTAP版本*：您的平台型号和ONTAP版本必须支持要热添加的NS224磁盘架和驱动器。请参见<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block></block>
+  <block id="803860583bfa2665bad301bcd365c743" category="list-text">*磁盘架数量*：HA对的磁盘架数量必须小于支持的最大磁盘架数量、至少等于您计划热添加的磁盘架数量。</block>
+  <block id="0500cc21f1d9baac1c3bf93ce1d9c6df" category="paragraph">You cannot have exceeded the maximum number of shelves supported by your HA pair after hot-adding shelves.请参阅。<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block></block>
+  <block id="cc50eb33da36b3b2dc0375c9859ba991" category="list-text">*布线*：</block>
+  <block id="1b1694d3f7a5f1dca21b2fd8b938a575" category="list-text">确保您具有正确数量和类型的缆线来连接磁盘架。请参阅。<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block></block>
+  <block id="9f69034c3015816e0c4ed00c6f13a51a" category="paragraph">您可以运行 <block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block> 来查看任何存储布线错误消息以及应采取的更正操作。</block>
+  <block id="c2ffe02d76c4f089648f1647b43e4ee5" category="section-title">最佳实践</block>
+  <block id="c4d5d39d9de05fa063bc3710cce88d43" category="paragraph">在热添加NS224磁盘架之前、请熟悉以下最佳实践。</block>
+  <block id="b0af51fce4a966624ca8dbbb18556393" category="inline-link">磁盘认证包</block>
+  <block id="fc229f016899e45241a8132e54e09068" category="list-text">*最佳实践：*最佳实践是在热添加磁盘架之前安装的最新版本<block ref="2e664cd4eb21331de01544565a2d83a5" category="inline-link-rx"></block> 。</block>
+  <block id="98321f616aed394d511784263fe8c7fb" category="list-text">*最佳实践：*最佳实践是在热添加磁盘架前后运行<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block> 。</block>
+  <block id="7f6edac9921630c5438c29ec64337ded" category="paragraph">Running Active IQ Config Advisor before hot-adding a shelf provides a snap shot of the existing shelf Ethernet (ENET) connectivity, verifies NVMe shelf module (NSM) firmware versions, and allows you to verify a shelf ID already in use in the HA pair.</block>
+  <block id="9f24cdc2b556e4f7c914bbbf091868aa" category="paragraph">Running Active IQ Config Advisor after hot-adding a shelf allows you to verify shelves are cabled correctly and that shelf IDs are unique within the HA pair.</block>
+  <block id="3ddbd0df27907810ff1b446086cf9a21" category="inline-link">NVMe磁盘架模块(NSM)固件</block>
+  <block id="9a29657c935c0df841655f534d7ab2f2" category="inline-link">驱动器固件</block>
+  <block id="b8f81eee7a525fe28574a64eeb1b3cd6" category="list-text">*最佳实践：*最佳实践是在添加新磁盘架之前、在存储系统上安装和的最新版本<block ref="2e6e5b670045aa9f131e153e1b997791" category="inline-link-rx"></block><block ref="fdb117163130a37cd01d2ae31eb75969" category="inline-link-rx"></block> 。</block>
+  <block id="504b2d1c5d5c40ae68d5ac067b2214ed" category="sidebar">AFF A70和A90</block>
+  <block id="79a4da7f1ec39f638870f54388dd033e" category="sidebar">AFF A1K系统</block>
+  <block id="1359f19561173d7123369e0c8f9fb141" category="sidebar">AFF A1K安装和设置</block>
+  <block id="6f550466a69bad21f11ab99fc12db497" category="sidebar">安装工作流</block>
+  <block id="7b2ca066e862da1c95471b425468af14" category="sidebar">打开系统电源</block>
+  <block id="fad3eebd1aa676638de5e9e932b52f40" category="sidebar">完成系统设置</block>
+  <block id="cdea6179c22763aadc0ee6a4b14f5f21" category="sidebar">AFF A1K维护</block>
+  <block id="5881b108517b27e7011c12b72fab1eb6" category="sidebar">AFF A1K启动介质</block>
+  <block id="316c8b53d0bf94b7eb89217eff43484f" category="sidebar">启动介质更换概述</block>
+  <block id="96be37c346f6ee6fa03e35cdcf3a0159" category="sidebar">加密还原</block>
+  <block id="2df31b353db26ab75397dd256071bb0f" category="sidebar">AFF A1K控制器模块</block>
+  <block id="f2113978e313a35c71164bd53785fe54" category="sidebar">控制器模块更换概述</block>
+  <block id="2dc5b9299e6c112139901723adb67ed0" category="sidebar">交还控制器</block>
+  <block id="5a34816c99c709c3123cc893c23aa8de" category="sidebar">NV电池</block>
+  <block id="9e76982e92861bfe7b8b9a2c95380f48" category="sidebar">I/O模块添加或更换概述</block>
+  <block id="4d5d9ed8cd3daf7e0f60b7f56524d07a" category="sidebar">添加I/O模块</block>
+  <block id="00015974de1f6f69c16403a005f48582" category="sidebar">更换I/O模块</block>
+  <block id="8c62ca0981c296824eceba9a38d6aa19" category="sidebar">AFF A70和AFF A90系统</block>
+  <block id="e6c9d67e322d32a62190a7360e1ce738" category="sidebar">AFF A70、AFF A90安装和设置</block>
+  <block id="8431b3d07718f99a71910529288bfbef" category="sidebar">AFF A70、AFF A90维护</block>
+  <block id="0961888a0db0b2456e0301cb7e70997c" category="sidebar">AFF A70、AFF A90启动介质</block>
+  <block id="bae3b9c4dc4ef01c1c3e52131996d15d" category="sidebar">AFF A70、AFF A90机箱</block>
+  <block id="6895ff697457a497cc096ed423a7f5f7" category="sidebar">机箱更换概述</block>
+  <block id="12a66472ea6e6007bdd278fb5f5f4773" category="sidebar">AFF A70、AFF A90控制器模块</block>
+  <block id="be9c2c89d042ee7f71b10024f37a31ce" category="sidebar">热添加工作流</block>
+  <block id="9671268467391e7f925a038c0f83e411" category="sidebar">要求和最佳实践</block>
+  <block id="df10384110caadaab35322c6cb194231" category="sidebar">准备热添加</block>
+  <block id="62a10800dc4fe510c56d94d676f237a7" category="sidebar">安装用于热添加的磁盘架</block>
+  <block id="4f3c2a2682e905ecf93df0cc8b4bb7c8" category="sidebar">用于热添加的缆线架</block>
+  <block id="3b1d6e6330ca5bf54a0c22beaa407de9" category="sidebar">布线概述</block>
+  <block id="f3585daa539c5917b4fedd0eb7efb3f2" category="sidebar">AFF 系统</block>
+  <block id="6476573ba5b973ad8ea01c57f5b30267" category="sidebar">ASA 系统</block>
+  <block id="9aaba65702056e024efc0836758c1538" category="sidebar">完成热添加</block>
 </blocks>

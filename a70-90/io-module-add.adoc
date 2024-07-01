@@ -1,0 +1,453 @@
+---
+permalink: a70-90/io-module-add.html 
+sidebar: sidebar 
+keywords: aff a70, aff a90, add I/O module 
+summary: 要更换I/O模块、您必须断开模块的缆线、从模块中卸下SFP和QSFP模块、卸下模块、安装更换模块、重新安装SFP和QSFP模块、然后为I/O模块布线。 
+---
+= 添加I/O模块- AFF A70、AFF A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过向具有空插槽的存储系统添加新I/O模块或在完全填充的存储系统中将新I/O模块更换为新I/O模块来向存储系统添加I/O模块。
+
+.开始之前
+* 检查 https://hwu.netapp.com/["NetApp Hardware Universe"^] 以确保新的I/O模块与您的存储系统和您正在运行的ONTAP版本兼容。
+* If multiple slots are available, check the slot priorities in https://hwu.netapp.com/["NetApp Hardware Universe"^] and use the best one available for your I/O module.
+* 确保所有其他组件均正常运行。
+
+
+
+
+== 选项1：将I/O模块添加到具有空插槽的存储系统
+
+您可以将I/O模块添加到存储系统中的空模块插槽中。
+
+
+
+=== 步骤1：关闭受损控制器模块
+
+使用以下选项之一关闭或接管受损控制器模块。
+
+[role="tabbed-block"]
+====
+.选项 1 ：大多数系统
+--
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+.步骤
+. 如果启用了AutoSupport、则通过调用AutoSupport消息命令禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下AutoSupport命令将禁止自动创建案例两小时： `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+`正在等待交还 ...`
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+暂停受损控制器或从运行正常的控制器接管此控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+--
+.选项 2 ：控制器位于 MetroCluster 中
+--
+
+NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+* 如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（`MetroCluster node show` ）。
+
+
+.步骤
+. 如果启用了AutoSupport、则通过调用AutoSupport命令禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下AutoSupport命令将禁止自动创建案例两小时： `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+暂停受损控制器或从运行正常的控制器接管此控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+--
+====
+
+
+=== 第2步：添加I/O模块
+
+. 在机箱正面、用拇指用力推入每个驱动器、直到您感觉到有一定的停机。这样可确保驱动器牢固地固定在机箱中板上。
++
+
+NOTE: 确保NVRAM已完成减载、然后再继续。
+
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[DRW a800驱动器已就位IEOPS960]
+
+. 转至机箱背面。如果您尚未接地，请正确接地。
+. 通过将控制器模块拉出大约三英寸来断开电源：
++
+.. 向下按两个锁定闩锁，然后同时向下旋转两个闩锁。
+.. 将控制器模块从机箱中拉出约3英寸以断开电源。
+
+
+. 向下旋转缆线管理托架、方法是拉动缆线管理托架内侧两侧的按钮、然后向下旋转托架。
+. 从机箱中卸下目标插槽空白模块：
++
+
+NOTE: 下图显示了如何卸下水平和垂直I/O模块。通常、您只会卸下一个I/O模块。
+
++
+image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[卸下I/O模块]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+ a| 
+凸轮锁定按钮
+
+|===
++
+.. 按下目标插槽中空白模块上的凸轮闩锁。
+.. 将凸轮闩锁向下旋转到最远位置。对于水平模块、将凸轮尽可能远离模块。
+.. 拆下挡板模块。
+
+
+. 安装 I/O 模块：
++
+.. 将I/O模块与控制器模块插槽开口的边缘对齐。
+.. 将模块轻轻滑入插槽中、然后将凸轮闩锁一直向上旋转、以将模块锁定到位。
+
+
+. 为I/O模块布线。
++
+如果I/O模块是NIC、请使用缆线将此模块连接到数据交换机。
+
++
+如果I/O模块是存储模块、请使用缆线将其连接到NS224磁盘架。
+
++
+
+NOTE: 确保所有未使用的 I/O 插槽都安装了空格，以防止可能出现散热问题。
+
+. 将控制器模块重新安装到机箱中。
++
+
+NOTE: 如果您有直流PSU、请将电缆块重新连接到PSU。
+
+. 将缆线管理托架向上旋转到关闭位置。
+. 从 LOADER 提示符 _bybye 重新启动控制器
++
+
+NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点。
+
+. 从配对控制器交还控制器：_storage故障转移g交还-ofnode target_ne_name_
+. 对控制器 B 重复上述步骤
+. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+. 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
+. 如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["热添加磁盘架"^]。
+
+
+
+
+== 选项2：在没有空插槽的存储系统中添加I/O模块
+
+您可以通过卸下现有I/O模块并将其更换为其他I/O模块来更改完全填充的系统中I/O插槽中的I/O模块。
+
+. 如果您是：
++
+[cols="1,2"]
+|===
+| 替换 ... | 那么 ... 
+
+
+ a| 
+具有相同端口数的 NIC I/O 模块
+ a| 
+LIF 将在其控制器模块关闭时自动迁移。
+
+
+
+ a| 
+NIC I/O 模块，端口更少
+ a| 
+将ASAected的生命周期管理器永久重新分配到其他主端口。有关使用System Manager永久移动这些LUN的信息、请参见 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"^] 。
+
+
+
+ a| 
+带有存储 I/O 模块的 NIC I/O 模块
+ a| 
+使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"^]。
+
+|===
+
+
+
+
+=== 步骤1：关闭受损控制器模块
+
+使用以下选项之一关闭或接管受损控制器模块。
+
+[role="tabbed-block"]
+====
+.选项 1 ：大多数系统
+--
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+.步骤
+. 如果启用了AutoSupport、则通过调用AutoSupport消息命令禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下AutoSupport命令将禁止自动创建案例两小时： `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+`正在等待交还 ...`
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+暂停受损控制器或从运行正常的控制器接管此控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+--
+.选项 2 ：控制器位于 MetroCluster 中
+--
+
+NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+* 如果您使用的是 MetroCluster 配置，则必须确认已配置 MetroCluster 配置状态，并且节点处于已启用且正常的状态（`MetroCluster node show` ）。
+
+
+.步骤
+. 如果启用了AutoSupport、则通过调用AutoSupport命令禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下AutoSupport命令将禁止自动创建案例两小时： `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+暂停受损控制器或从运行正常的控制器接管此控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+--
+====
+
+
+=== 第2步：更换I/O模块
+
+要更换I/O模块、请在控制器模块中找到该模块、然后按照特定的步骤顺序进行操作。
+
+. 在机箱正面、用拇指用力推入每个驱动器、直到您感觉到有一定的停机。这样可确保驱动器牢固地固定在机箱中板上。
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[DRW a800驱动器已就位IEOPS960]
+
+. 转至机箱背面。如果您尚未接地，请正确接地。
+. 通过将控制器模块拉出大约三英寸来断开电源：
++
+
+NOTE: 如果存储系统具有直流电源、请断开电源电缆块与PSU的连接。
+
++
+.. 向下按两个锁定闩锁，然后同时向下旋转两个闩锁。
+.. 将控制器模块从机箱中拉出约3英寸以断开电源。
+
+
+. 拔下目标 I/O 模块上的所有布线。
+. 向下旋转缆线管理托架、方法是拉动缆线管理托架内部的按钮、然后向下旋转。
+. 从机箱中卸下目标 I/O 模块：
++
+
+NOTE: 下图显示了如何卸下水平和垂直I/O模块。通常、您只会卸下一个I/O模块。
+
++
+image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[卸下I/O模块]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.png["标注编号1"]
+| 凸轮锁定按钮 
+|===
++
+.. 按下凸轮闩锁按钮。
++
+凸轮闩锁从机箱中移出。
+
+.. 将凸轮闩锁向下旋转到最远位置。对于水平模块、将凸轮尽可能远离模块。
+.. 将手指插入凸轮拉杆开口并将模块拉出机箱、从而将模块从机箱中卸下。
++
+确保跟踪 I/O 模块所在的插槽。
+
+
+
+. 将 I/O 模块安装到目标插槽中：
++
+.. 将 I/O 模块与插槽边缘对齐。
+.. 将模块轻轻地滑入插槽，一直滑入机箱中，然后将凸轮闩锁一直向上旋转，以将模块锁定到位。
+
+
+. 为I/O模块布线。
+. 重复拆卸和安装步骤以更换控制器模块的其他模块。
+. 将控制器模块重新安装到机箱中。
++
+
+NOTE: 如果您有直流PSU、请将电缆块重新连接到PSU。
+
+. 将缆线管理托架旋转到锁定位置。
+. 从加载程序提示符：_BYE_重新启动控制器模块
++
+.. 检查控制器上的BMC版本：_system service-processor show_
+.. 根据需要更新BMC固件：_system service-processor image update_
+.. 重新启动节点：_BYE_
++
+
+NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点。
+
++
+
+NOTE: 如果您在重新启动期间遇到问题、请参见 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 -更换I/O模块期间可能触发环境关闭"]
+
+
+
+. 从配对控制器模块交还控制器模块。_storage故障转移gi故障 恢复-ofnode target_ne_name_
+. 如果已禁用自动交还、请启用此功能：_storage故障转移修改-node local -auto-交还true _
+. 如果您添加了：
++
+[cols="1,2"]
+|===
+| 如果 I/O 模块为 ... | 那么 ... 
+
+
+ a| 
+NIC模块
+ a| 
+对每个端口使用 `storage port modify -node *_< 节点名称 >_ -port *_< 端口名称 >__ -mode network` 命令。
+
+
+
+ a| 
+存储模块
+ a| 
+按照中所述安装NS224磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["Hot-add a shelf"^]。
+
+|===
+. 对控制器 B 重复上述步骤
+

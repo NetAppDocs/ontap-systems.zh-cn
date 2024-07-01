@@ -271,5 +271,5 @@ NOTE: 如果命令失败，请联系客户支持。
 . 将控制台缆线连接到配对控制器。
 . 使用 `storage failover giveback -fromnode local` 命令交还控制器。
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
-. 如果已使用禁用AutoSupport、则还原它 `system node autosupport invoke -node * -type all -message MAINT=END`
+. 如果启用了AutoSupport、则使用还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END`
 

@@ -1,0 +1,19 @@
+= 
+:allow-uri-read: 
+
+
+重新安装并启动控制器模块。
+
+. 如果尚未关闭此通风管，请关闭此通风管。
+. 将控制器模块的一端与机柜中的开口对齐、然后将控制器模块滑入机箱、使拉杆从系统正面转开。
+. 一旦控制器模块阻止您进一步滑动、请向内旋转凸轮把手、直到它们在风扇下锁紧
++
+
+NOTE: 将控制器模块滑入机箱时、请勿用力过度、以免损坏连接器。
+
++
+控制器模块在盘柜中完全就位后、即开始启动。
+
+. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+. 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
+

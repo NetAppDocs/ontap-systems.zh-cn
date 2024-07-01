@@ -1,0 +1,35 @@
+---
+permalink: ns224/complete-hot-add-shelf.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, complete, drive, hot-add an ns224 drive shelf 
+summary: 如果在准备 NS224 驱动器架热添加时禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配。 
+---
+= 完成热添加NS224磁盘架
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果在准备NS224磁盘架热添加过程中禁用了自动驱动器分配、则需要手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。
+
+.开始之前
+You must have already cabled your shelf as instructed for your HA pair.请参阅。 link:cable-overview-hot-add-shelf.html["热添加布线概述"]
+
+.步骤
+. 显示所有未分配的驱动器： `storage disk show -container-type unassigned`
++
+您可以在任一控制器上输入命令。
+
+. 分配每个驱动器： `s存储磁盘 assign -disk _disk_name_ -owner _owner_name_`
++
+您可以在任一控制器上输入命令。
+
++
+您可以使用通配符一次分配多个驱动器。
+
+. 如果需要，请重新启用自动驱动器分配： `storage disk option modify -node _node_name_ -autodassign on`
++
+您必须在两个控制器上重新启用自动驱动器分配。
+
+

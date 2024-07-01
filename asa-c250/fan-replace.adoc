@@ -20,7 +20,7 @@ summary: 要更换风扇，请卸下发生故障的风扇模块并将其更换�
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 .关于此任务
-* 如果您使用的是SAN系统、则必须已检查事件消息  `cluster kernel-service show`)。。 `cluster kernel-service show` command可显示节点名称、该节点的仲裁状态、该节点的可用性状态以及该节点的运行状态。
+* 如果您使用的是SAN系统，则必须已检查受损控制器SCSI刀片的事件消息  `cluster kernel-service show`。 `cluster kernel-service show`命令(在priv高级模式下)可显示节点名称、该节点的仲裁状态、该节点的可用性状态以及该节点的运行状态。
 +
 每个 SCSI 刀片式服务器进程应与集群中的其他节点保持仲裁关系。在继续更换之前，必须先解决所有问题。
 
@@ -28,7 +28,7 @@ summary: 要更换风扇，请卸下发生故障的风扇模块并将其更换�
 
 
 .步骤
-. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
+. 如果启用了AutoSupport、则通过调用AutoSupport消息禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
 +
 以下AutoSupport 消息禁止自动创建案例两小时： `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
 

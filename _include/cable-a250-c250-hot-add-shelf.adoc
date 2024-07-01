@@ -1,0 +1,37 @@
+= 
+:allow-uri-read: 
+
+
+如果需要更多存储、您最多可以将一个NS224磁盘架热添加到一个AFF A250或AFF C250 HA对中。
+
+.开始之前
+* 您必须已查看 link:requirements-hot-add-shelf.html["热添加要求和最佳实践"]。
+* 您必须已完成中的适用过程 link:prepare-hot-add-shelf.html["准备热添加磁盘架"]。
+* 您必须已安装磁盘架并为其通电，然后按照中所述设置磁盘架ID link:prepare-hot-add-shelf.html["安装用于热添加的磁盘架"]。
+
+
+.关于此任务
+从平台机箱背面看，左侧支持 RoCE 的卡端口为端口 "A" （ e1a ），右侧端口为端口 "b" （ e1b ）。
+
+.步骤
+. 为磁盘架连接布线：
++
+.. 使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 1 端口 A （ e1a ）。
+.. 使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 1 端口 b （ e1b ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 1 端口 A （ e1a ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 1 端口 b （ e1b ）。+ 下图显示了完成后的磁盘架布线。
++
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为AFF A250布线]
+
+
+
+. 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
+
+
+.下一步是什么？
+If you disabled automatic drive assignment as part of the preparation for this procedure, you need to manually assign drive ownership and then reenable automatic drive assignment, if needed.转到。 link:complete-hot-add-shelf.html["完成热添加"]
+
+否则、您将完成热添加磁盘架过程。

@@ -25,6 +25,16 @@ summary: 了解AFF、ASA和FAS系统的新功能以及不再支持的原有硬�
 
 
  a| 
+* https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A1K"]
+* https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A70"]
+* https://www.netapp.com/pdf.html?item=/media/7828-DS-3582-AFF-A-Series.pdf["AFF A90"]
+
+ a| 
+ONTAP 9.15.1.
+
+
+
+ a| 
 https://www.netapp.com/data-storage/all-flash-san-storage-array/["ASA C250"]
  a| 
 ONTAP 9.13.1P1
@@ -352,6 +362,15 @@ ONTAP 9.6
 [cols="25h,~,~"]
 |===
 | 功能 | 问题描述 以及从何处了解更多信息 | 可从一开始使用 
+
+
+ a| 
+多集群互连交换机
+ a| 
+多集群配置允许多个集群共享同一个集群交换机、这是通过两个适用于4x4和2x8节点配置的新参考配置文件提供的。
+ a| 
+ONTAP 9.14.1.
+
 
 
  a| 
