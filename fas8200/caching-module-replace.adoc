@@ -198,19 +198,22 @@ mcc1A::> metrocluster operation show
 
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 +
-image::../media/drw_32xx_cbl_mgmt_arm.png[卸下缆线管理臂][]
+image::../media/drw_32xx_cbl_mgmt_arm.png[卸下缆线管理臂]
 
 . 松开控制器模块凸轮把手上的翼形螺钉。
 +
 image::../media/drw_8020_cam_handle_thumbscrew.png[拧松翼形螺钉以打开凸轮把手]
 
 +
+[cols="1,4"]
 |===
 
 
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
-| 翼形螺钉 
+ a| 
+翼形螺钉
+
 
 
  a| 
@@ -245,7 +248,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 存储系统为缓存模块提供了两个插槽，默认情况下，只有一个插槽处于占用状态。
 
 +
-image::../media/drw_rxl_fcache.png[DRW rxl fcache]
+image::../media/drw_rxl_fcache.png[缓存模块拆卸或更换]
 
 
 

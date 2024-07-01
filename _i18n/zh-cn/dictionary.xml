@@ -779,7 +779,6 @@
   <block id="72188531636fc5815089233196e1ec35" category="paragraph">提升板</block>
   <block id="8d669e84d5ccc297894b17bd6469d12d" category="paragraph">通风管</block>
   <block id="9de291eec146aa309ed46727b945c6d4" category="list-text">卸下适用的提升板。</block>
-  <block id="36ac39cea070e713b0fb0a0f54db88b7" category="image-alt">更换 DRW a700s DIMM</block>
   <block id="a4e4695daf3bcdb3f2c31bf35c0a5950" category="paragraph">通风管盖</block>
   <block id="ce1a3d7dcbc5b34bf0ed36bacde61766" category="paragraph">提升板 1 和 DIMM 插槽 1-4</block>
   <block id="526b2479f6412e63d5f244b19de1b2d9" category="paragraph">提升板 2 和 DIMM 插槽 5-8 和 9-12</block>
@@ -806,7 +805,6 @@
   <block id="25b17a241b7878627647c78d24614092" category="paragraph">更换电源涉及断开目标电源（ PSU ）与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。</block>
   <block id="ea0af08f58acd216c0cdbf8f9611bc62" category="list-text">系统中的电源数量取决于型号。</block>
   <block id="a5c83d1259ea5fcd94515dacb438e884" category="list-text">根据控制台错误消息或通过电源上的 LED 确定要更换的电源。</block>
-  <block id="c27a73d454940b40747d6959d070735e" category="image-alt">DRW a700s 更换 PSU</block>
   <block id="667ec5d2e7ff49916ac90c31eb178520" category="list-text">将凸轮把手尽可能向下旋转，以将其关闭。</block>
   <block id="e5869c3e3552c60a1a151cf93d8bdbee" category="summary">您必须在控制器模块中找到故障启动介质，方法是卸下控制器模块上的中间 PCIe 模块，通过启动介质附近的亮起 LED 找到故障启动介质，然后更换启动介质。</block>
   <block id="e9e66c1bd59e20ff8acce6fb41f94461" category="paragraph">您必须从机箱中卸下控制器模块并将其打开，然后更换出现故障的启动介质。</block>
@@ -814,7 +812,6 @@
   <block id="d49fe2e5280db996ef1801aa2312cf51" category="list-text">找到启动介质：</block>
   <block id="ea47f8c3d75d0ae8c63333493732e287" category="list-text">如果需要，打开通风管。</block>
   <block id="95b0ed2bf52614c4803a52c7bfbc4da6" category="list-text">如果需要，请解锁锁定闩锁，然后从控制器模块中卸下提升板，以卸下中间 PCIe 模块提升板 2 。</block>
-  <block id="c5f3456e0fd8df43b4786bdc636b23b4" category="image-alt">DRW a700s 启动介质更换</block>
   <block id="3e4e796f89697f9552e6f9741f53026c" category="paragraph">提升板 2 （中间 PCIe 模块）</block>
   <block id="10cacafa178fdb6b46f50bea9be0d8cf" category="paragraph">启动介质螺钉</block>
   <block id="c6a69d731488373ecdb2d591b1a85654" category="paragraph">启动介质</block>
@@ -865,7 +862,6 @@
   <block id="5cee811338d57ecf44d6f22dca7fcd4b" category="list-text">将提升板左侧的提升板锁定闩锁向上旋转并朝风扇方向旋转。</block>
   <block id="62b41ad108afe6b4d651d8da18394eea" category="paragraph">NVRAM 提升板从控制器模块略微升高。</block>
   <block id="d3110f91324e5f8cfcd28600df5ac2d9" category="list-text">提起 NVRAM 提升板，将其移向风扇，以使提升板上的金属板边缘脱离控制器模块的边缘，然后将提升板竖直向上提出控制器模块。 然后，将其放在平稳的平面上，以便可以访问 NVRAM 卡。</block>
-  <block id="2d0b5667d44ad59ef139c09efe0999d0" category="image-alt">DRW a700s NVMe 更换</block>
   <block id="f3be4d98894ffbfb83050debf5045c14" category="paragraph">提升板 1 锁定闩锁</block>
   <block id="ae936646ba28c5499caf8ff8a09c1158" category="paragraph">连接到 NVRAM 卡的 NVRAM 电池缆线插头</block>
   <block id="a5a2e7319e6511ec0e394434ba44783a" category="paragraph">卡锁定支架</block>
@@ -888,7 +884,6 @@
   <block id="25e84b8b11804a262c8f96f5c0494341" category="list-text">将提升板左侧的模块锁定闩锁向上旋转并朝风扇模块方向旋转。</block>
   <block id="9b87501921d55169b6d5df97c4ac5eff" category="paragraph">PCIe 提升板从控制器模块略微升高。</block>
   <block id="2995e2f5de5ab5f7e237aaaca60f083f" category="list-text">提起 PCIe 提升板，将其移向风扇，使提升板上的金属板边缘脱离控制器模块的边缘，将提升板从控制器模块中提出，然后将其放在平稳的平面上。</block>
-  <block id="8301780f2b7742ba6677d0c2900a7256" category="image-alt">更换 DRW a700s PCIe</block>
   <block id="8adcba29860559485059fb792f38322a" category="paragraph">提升板锁定闩锁</block>
   <block id="2bc8b7df71c8cc78b90710217056fad5" category="paragraph">提升板 2 （中间提升板）和提升板插槽 2 和 3 中的 PCI 卡。</block>
   <block id="fb379bac7a8e7aac40472cfecc7165aa" category="list-text">从提升板中卸下 PCIe 卡：</block>
@@ -909,7 +904,6 @@
   <block id="94e65bd9e374f956bd264382aa908f8c" category="paragraph">请勿过度拧紧螺钉，否则可能会损坏启动介质。</block>
   <block id="db804e965118c7ddc7ce55f19a1af1bc" category="section-title">第 5 步：移动风扇</block>
   <block id="913828212c34150e0ba19cde9f31f04f" category="list-text">通过挤压风扇模块侧面的锁定卡舌，然后将风扇模块直接从控制器模块中提出来卸下风扇模块。</block>
-  <block id="fe45ee98537552d5aae5b293496a5f0f" category="image-alt">DRW a700s 更换风扇</block>
   <block id="a1502c1dce561f00d4aba662f80c5fa3" category="cell">风扇锁定卡舌</block>
   <block id="219dba91289309b728804e9ddd5f60be" category="list-text">将风扇模块移至更换用的控制器模块，然后通过将风扇模块的边缘与控制器模块中的开口对齐来安装此风扇模块，然后将此风扇模块滑入控制器模块，直到锁定闩锁卡入到位为止。</block>
   <block id="2dc8b6264a38dd08bad002bfa0761258" category="section-title">第 6 步：移动系统 DIMM</block>
@@ -930,7 +924,6 @@
   <block id="2a5bbbb0357d478c8456cba18161381d" category="section-title">第 8 步：移动 NVRAM 电池</block>
   <block id="560436f88c77589bdf79ac4ac71c2bd3" category="paragraph">更换控制器模块时，必须将 NVRAM 电池从受损控制器模块移至更换用的控制器模块</block>
   <block id="50596866677de4b15c95c4f2ac253894" category="list-text">找到提升板模块左侧的 NVRAM 电池提升板 1 。</block>
-  <block id="cad0b5b8d9a3a648fed2d2cf9843ff68" category="image-alt">DRW a700s NVMe 电池更换</block>
   <block id="5a66fe4f16ba9a8ec80a9b48be30d41b" category="cell">NVRAM 电池插头</block>
   <block id="8e50b634b9172df00520f757e65899a2" category="paragraph">蓝色 NVRAM 电池锁定选项卡</block>
   <block id="8102785ce5a527a51011651cf58773d3" category="list-text">找到电池插头，然后挤压电池插头正面的夹子，将插头从插槽中释放，然后从插槽中拔下电池缆线。</block>
@@ -995,7 +988,6 @@
   <block id="d574c271d37aff5dfc97b6ecd338458f" category="doc">完成还原和更换过程— AFF A700s</block>
   <block id="28746dbce7c4fc8053d035e3b2295bde" category="doc">更换实时时钟电池— AFF A700s</block>
   <block id="65c45f25b11ef516aa4180bd435460a0" category="list-text">找到 RTC 电池。</block>
-  <block id="6199e9ac737bb64b5d2e7bfb2a3da5a0" category="image-alt">更换 DRW a700s RTC 电池</block>
   <block id="a7f375a810d73a673cfac8d89305ccac" category="paragraph">RTC 电池和外壳</block>
   <block id="e789dadff6ab02fe418b101bca452d66" category="list-text">将电池轻轻推离电池架，将其旋转出电池架，然后将其从电池架中取出。</block>
   <block id="9e5b0cf96e39c07e340d8e7e3f98141d" category="admonition">从电池架中取出电池时，请注意电池的极性。电池标有加号，必须正确放置在支架中。电池座旁边的加号用于指示电池的位置。</block>
@@ -1249,7 +1241,6 @@
   <block id="9d2a810337a7aa9c3699cd8746f6d93e" category="section-title">第 3 步：切回双节点 MetroCluster 配置中的聚合</block>
   <block id="a6c279177bd30a0d3ee3363a3679bffa" category="doc">更换实时时钟电池 - AFF A400</block>
   <block id="4f4fd54acab309f1a5e65fa28f282bda" category="paragraph">您需要找到控制器模块中的 RTC 电池，然后按照特定步骤顺序进行操作。有关 RTC 电池的位置，请参见控制器模块内部的 FRU 示意图。</block>
-  <block id="ec83112a8c30bb826b259d5c77a3c3ca" category="image-alt">DRW A400 RTC 电池</block>
   <block id="373905f2383b6a7f8d43c02143d4933e" category="list-text">找到，取出然后更换 RTC 电池：</block>
   <block id="a4d0ae56587a2cd3019212721f46adfa" category="list-text">使用 FRU 示意图，找到控制器模块上的 RTC 电池。</block>
   <block id="144c419e3dcef5763e6e9018f63fe3f4" category="list-text">使用锁定闩锁将控制器模块牢牢推入机箱，直到它与中板相距并完全就位。</block>
@@ -1468,7 +1459,6 @@
   <block id="bea349f51fb4fb1a5633e236822fa5b4" category="list-text">按释放卡舌。</block>
   <block id="c9b10c926499cf0c03511222cfe41c81" category="list-text">卸下散热器。</block>
   <block id="72899bf5d7c3e86a01a078b9f3c1b933" category="paragraph">存储系统为缓存模块提供了两个插槽，默认情况下，只有一个插槽处于占用状态。</block>
-  <block id="407e11715a937f08e831c6ea7ba60d89" category="image-alt">DRW rxl fcache</block>
   <block id="d1b3169b8a82a003cbb0a0bdd1d56fde" category="list-text">如果要添加缓存模块，请转至下一步；如果要更换缓存模块，请将其竖直拉出外壳。</block>
   <block id="8b70ff461d015cb15798b71a827488de" category="list-text">将缓存模块的边缘与外壳中的插槽对齐，然后将其轻轻推入插槽。</block>
   <block id="a781ea6900e45102f1a4339df14baa30" category="list-text">验证缓存模块是否已完全固定在插槽中。</block>
@@ -1811,7 +1801,6 @@
   <block id="05c119840c0702d753743c08941c9b5f" category="section-title">第 3 步：将驱动器移至新机箱</block>
   <block id="41fc2e794f85d8118c2ed7ccc20c671a" category="section-title">第 5 步：安装控制器</block>
   <block id="fd0db0c0a8315e064601a11ecc8c2b49" category="doc">更换实时时钟电池</block>
-  <block id="78cdea792972b347c50369463c3d2407" category="image-alt">DRW 2600 RTC 电池</block>
   <block id="dc298218cd8d376ae5e0ca1a1c66832b" category="section-title">第 4 步：重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期</block>
   <block id="ac5b5b75bd82572e4d052c9c0ed18250" category="paragraph">要完成替换操作步骤并将系统还原到完全运行状态，您必须重新配置存储，确认磁盘重新分配，还原 NetApp 存储加密配置（如果需要）并为新控制器安装许可证。您必须先完成一系列任务，然后才能将系统还原为完全正常运行。</block>
   <block id="9c35eb9cc1848b17dc8df9f76cc3d6cf" category="paragraph">如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。在独立系统中，必须手动将 ID 重新分配给磁盘。</block>
@@ -2316,7 +2305,6 @@
   <block id="05da715fdd840e7fc27dd764386018bc" category="doc">更换缓存模块— FAS8300 和 FAS8700</block>
   <block id="8a653be38ee9a052d5a08a28a70c1d9e" category="paragraph">要更换控制器标签上的缓存模块（称为 Flash Cache ），请找到控制器中的插槽并按照特定步骤顺序进行操作。有关 Flash Cache 的位置，请参见控制器模块上的 FRU 映射。</block>
   <block id="70edce28424200208b28981e9b221707" category="list-text">尽管缓存模块的内容已加密，但最好在更换模块之前擦除该模块的内容。有关详细信息，请参见<block ref="89de74d6a86df9137b0ef3fb03a43036" category="inline-link-rx"></block> NetApp 支持站点上适用于您的系统的。</block>
-  <block id="540a3a140ba4c7da7729d8bbfbe06861" category="image-alt">DRW 8300 更换闪存</block>
   <block id="b08a9c5bee019bb00ec5f4f00b59819e" category="list-text">使用控制器模块上的 FRU 映射，找到故障缓存模块并将其卸下：</block>
   <block id="58a5256eec02e1fef80c02b3deffc3f5" category="list-text">按蓝色释放卡舌。</block>
   <block id="3b9dfc19fe13a88ce4bf85240df578ae" category="paragraph">缓存模块端部不会从释放选项卡中升起。</block>
@@ -2330,7 +2318,6 @@
   <block id="9fd188207b0f7e77aa563d18053142c8" category="section-title">第 8 步：完成更换过程</block>
   <block id="ed8e6ac65f869dd5cec262d6da357514" category="doc">完成更换流程— FAS8300 和 FAS8700</block>
   <block id="6976de191bb895bccff42aea7f5ef312" category="section-title">第 6 步：移动缓存模块</block>
-  <block id="98e31120864bf3bc3ac05e5585fc2718" category="image-alt">DRW A400 更换闪存</block>
   <block id="6ce420982732936565ee6cdc23281310" category="list-text">将缓存模块从受损控制器模块移至替代控制器模块：</block>
   <block id="37532f61023625948a2dff3e87ad659d" category="list-text">按下缓存模块末端的蓝色释放卡舌，向上旋转模块，然后从插槽中取出该模块。</block>
   <block id="d84a3f8a48a291e94be45b2446ab30e1" category="list-text">将缓存模块移至替代控制器模块上的同一插槽。</block>
@@ -2458,10 +2445,6 @@
   <block id="fea037cb34a319bd3b823395ee5fdd07" category="paragraph">SFP + FC 主机网络</block>
   <block id="490cb76fd3c75ff8166e251d789f799e" category="paragraph">以太网主机和管理网络</block>
   <block id="fcca883f68c4e92b98d0f294614cda60" category="admonition">如果要连接到光纤交换机，请先将 SFP 插入控制器端口，然后再使用缆线连接到该端口。</block>
-  <block id="73da34bccb5db786798534ea5b6eb1d6" category="image-alt">DRW C190 tnsc 统一网络布线动画 gif</block>
-  <block id="d7d7ce9a70c375da7dd9edb7b21a9134" category="image-alt">DRW C190 交换式统一网络布线动画 gif</block>
-  <block id="0df32eef6f99f6d05877f5da86a45063" category="image-alt">DRW C190 tnsc 以太网网络布线动画 gif</block>
-  <block id="ac3d560a40b4d6d28fac097677ecaa8d" category="image-alt">DRW C190 交换式以太网网络布线动画</block>
   <block id="c148c3a234659fa32cba3b91e58f84d2" category="admonition">统一配置系统的默认端口配置为 CNA 模式；如果连接到 FC 主机网络，则必须修改 FC 模式的端口。</block>
   <block id="7ac22c07a9dcb85e963d9fbf1f27178a" category="summary">您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断地更换故障 DIMM 。</block>
   <block id="da58b6d3bd8d2396e076938c32c0ab3c" category="list-text">磁盘架的配对 NSM 模块必须已启动且正在运行，并且已正确布线，以便在卸下出现故障的 FRU （目标 NSM 模块）的 NSM 模块时，磁盘架可以保持连接。</block>
@@ -4631,7 +4614,6 @@
   <block id="48a1bad510a4b6f7d4c6adc4ace692d6" category="admonition">动画和图中显示了不带 DIMM 的插槽的空插槽。These empty sockets are populated with blanks.</block>
   <block id="4a848babffe3702bffe9efa29dd12c61" category="paragraph">您可以使用以下动画，插图或写入步骤来更换启动介质。</block>
   <block id="bb90eba065615f7ac639d1758ba84812" category="paragraph">您可以使用以下动画，插图或写入的步骤来更换缓存模块。</block>
-  <block id="b8f99a879bdae690f650b2171355b5bb" category="image-alt">卸下 DRW 8300 空提升板</block>
   <block id="1e6c27613480cee2fca639b93121fd62" category="paragraph">您可以使用以下动画，插图或写入步骤将缓存模块移动到新控制器模块。</block>
   <block id="eb248e4303d7cdcd9d37762008fe5713" category="list-text">使用以下动画或插图将驱动器架连接到控制器。</block>
   <block id="6bf14a7252e28dc753304577c4a9180c" category="list-text">The systems must have at least one X91148A module installed in slots 3 and/or 7 for each controller.动画或插图显示了此模块同时安装在插槽 3 和 7 中。</block>
@@ -4784,7 +4766,6 @@
   <block id="3ad26beab00b6ba09b9cf5af096d7c99" category="paragraph">您需要有权访问 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> （ HWU ），了解有关站点要求以及已配置系统上的追加信息的信息。您可能还希望有权访问 <block ref="515d1814cb0f36c56a64a6574d93c9df" category="inline-link-macro-rx"></block> 有关此系统的详细信息，请参见。</block>
   <block id="130628ef0f789f37dc905db5315a3573" category="list-text">下载并安装 <block ref="06852f9fb3ab1a889a409e24c5a20330" category="inline-link-macro-rx"></block> 在您的笔记本电脑上。</block>
   <block id="0e714115aae93f290bf1207a9c149283" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> 以找到缆线并确定其用途。</block>
-  <block id="caaa8a847335f7164117894cfe79e731" category="paragraph"><block ref="caaa8a847335f7164117894cfe79e731" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9cce7e4c2aef0e645d2e38ae612c4ed8" category="list-text">下载并完成 <block ref="cb0390cbe2f3cf678134885ff143b6ba" category="inline-link-macro-rx"></block>。</block>
   <block id="9bb6dc35b9c3cfb584e92ef6bf229185" category="list-text">To complete setting up your system, see <block ref="b9ddf35bfac2437b7499c5c6e18fd46e" category="inline-link-macro-rx"></block>。</block>
   <block id="e54c29276af1d0eb8b609db7484efd71" category="admonition">初始启动可能需要长达八分钟的时间。</block>
@@ -5518,9 +5499,6 @@
   <block id="e935849faf7cd25a183a726f34797bb7" category="doc">Replace the controller module - AFF A300</block>
   <block id="75a0d3caeb66a7c3aca3b7bc0f0c5985" category="image-alt">DRW A320 交换网络布线复合动画 GIF</block>
   <block id="82430a05d3820aeaeb756230e94ee643" category="doc">检查板载加密— FAS8200</block>
-  <block id="0082203fcfff94aab099c16763176076" category="image-alt">DRW fas8300 TNSC 网络布线</block>
-  <block id="507f9f4c8680d2c9a9bcba815a7976e8" category="image-alt">DRW fas8300 交换网络布线</block>
-  <block id="56cbc310abb53560871f37318fe0636d" category="image-alt">DRW fas8300 三个 ds224c 磁盘架</block>
   <block id="a28455bf2eecf6cc499c335ee152cd75" category="paragraph">使用以下选项之一关闭或接管受损控制器。</block>
   <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">Replace the boot media - FAS500f</block>
   <block id="af844de12c61a1b2d86c05934c317256" category="summary">如果平台向系统控制台记录一条警告消息，指出驱动器出现故障，则必须更换驱动器。In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.</block>
@@ -8790,4 +8768,36 @@ SFP+(目标/启动程序)</block>
   <block id="360e760cf4c2611f24bef9936525c878" category="image-alt">驱动器托架水平排列</block>
   <block id="9302993f1cbe0a62b1c08bac8ff42e30" category="image-alt">驱动器活动LED</block>
   <block id="6daeeb8640b388bf728f2d3fa2ceac68" category="image-alt">驱动器警示LED</block>
+  <block id="3d01b4425d5fa4915f6e209ff5ebc5fa" category="image-alt">更换NVRAM卡</block>
+  <block id="1471ac39cb9785883e4f8e0156141768" category="image-alt">Replace a PCIe card</block>
+  <block id="d41ba6049ada491c1bedd4e982b5a12a" category="image-alt">更换风扇</block>
+  <block id="732cb0105e10dcf3046c4f8dd9a5a991" category="image-alt">更换NVRAM电池</block>
+  <block id="ca80c728e158c474fa562e4e6fe53868" category="image-alt">更换PSU</block>
+  <block id="ba465a4963e9d81b0df00697f6765e53" category="image-alt">Replace the RTC battery</block>
+  <block id="b64d12e71baab796101791fd15a05a3d" category="image-alt">双节点无交换机集群</block>
+  <block id="9405a4b49345c23900c5d7b5d872d67a" category="image-alt">交换集群网络布线</block>
+  <block id="2808a423f10e955f0c8304464c9f2414" category="image-alt">使用缆线将NS224磁盘架连接到控制器</block>
+  <block id="c0ec9acb24ae98cfebde995d130a61a6" category="image-alt">使用缆线将三个NS224磁盘架连接到控制器</block>
+  <block id="92f7f93ee79f5a69c599aa1657e9464d" category="inline-image-macro">网络光缆SFP</block>
+  <block id="2fd2c03db6de3bb625cb5f3d864f2dc0" category="paragraph"><block ref="2fd2c03db6de3bb625cb5f3d864f2dc0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40583e3c9e34e396cefb248dc9173b2d" category="image-alt">光纤通道网络LC电缆</block>
+  <block id="c81e616187fdaca7623c438cb82e7556" category="image-alt">双节点无交换机集群统一网络布线动画</block>
+  <block id="44fd0bb5c642a9c9019ef389713404b7" category="image-alt">双节点无交换机集群Eternet网络布线动画</block>
+  <block id="ed839f063b04ef2bf205198607e99c45" category="image-alt">交换集群统一网络布线动画</block>
+  <block id="9aa93e3b751066980500f1c3a9b9a3ad" category="image-alt">交换集群以太网网络布线动画</block>
+  <block id="a288981c3d3562c19205360c4a1975aa" category="image-alt">更换RTC电池</block>
+  <block id="080a22aca65cc690a4adc58019e01c5b" category="image-alt">卸下缆线管理臂</block>
+  <block id="415d68191d2fba8f12396142cd83b078" category="image-alt">缓存模块拆卸或更换</block>
+  <block id="fc29ed0d741870e4e8c36ca82510cf9a" category="image-alt">卸下并装好缓存模块</block>
+  <block id="6bc6ce8422771329317122532e3badfd" category="image-alt">卸下并更换缓存模块</block>
+  <block id="88d9a1b17863a743c5d31333c8bd6c82" category="image-alt">卸下空的提升板</block>
+  <block id="8edb2beda5152e63e95d47b37fce7aa7" category="image-alt">卸下夹层卡</block>
+  <block id="3e86dd6511e223ecedd044d86cd934bf" category="image-alt">双节点无交换机集群布线图</block>
+  <block id="2d2cf47916959433721b7cc7d46cdea2" category="image-alt">交换集群网络布线图</block>
+  <block id="f9fdbcb98f873b6faf3dd8bc1752740e" category="image-alt">三张DS224C磁盘架布线图</block>
+  <block id="4af594348d1cc40a4fa6849ea04fd49a" category="image-alt">起重重量小心标签</block>
+  <block id="3f4027780297605ef158a649078063e9" category="image-alt">连接缆线管理臂</block>
+  <block id="e84bd7a7cafaabc7b1743876dcc73c70" category="image-alt">双节点无交换机集群复合布线图</block>
+  <block id="0372c9caab5ee11faf1ffac3ef3c46fa" category="inline-image-macro">交换集群复合布线图</block>
+  <block id="009e65f17aa2f40deb1c718bea3bf98b" category="paragraph"><block ref="009e65f17aa2f40deb1c718bea3bf98b" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>

@@ -35,7 +35,7 @@ video::75b6fa91-96b9-4323-b156-aae10007c9a5[panopto]
 . 将缆线管理设备从控制器模块中取出并放在一旁。
 . 向下按两个锁定闩锁，然后同时向下旋转两个闩锁。
 +
-image::../media/drw_A400_Remove_controller.png[释放控制器模块]
+image::../media/drw_A400_Remove_controller.png[松开控制器模块]
 
 +
 此控制器模块会从机箱中略微移出。
@@ -51,7 +51,7 @@ https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=49053752-e813-4c1
 
 
 
-image::../media/drw_8300_empty_riser_remove.png[卸下 DRW 8300 空提升板]
+image::../media/drw_8300_empty_riser_remove.png[卸下空的提升板]
 
 . 将通风管两侧的锁定片朝控制器模块中间按压。
 . 将通风管滑向控制器模块的背面，然后将其向上旋转到完全打开的位置。
@@ -69,7 +69,7 @@ image::../media/drw_8300_empty_riser_remove.png[卸下 DRW 8300 空提升板]
 
 .动画-移动电源
 video::92060115-1967-475b-b517-aad9012f130c[panopto]
-image::../media/drw_A400_psu.png[Replacing the power supply]
+image::../media/drw_A400_psu.png[更换电源]
 
 . 卸下电源：
 +
@@ -131,7 +131,7 @@ NOTE: 除非系统指示，否则请勿将电池缆线重新插入主板。
 
 .动画—移动启动介质
 video::2a14099c-85de-4a84-867c-aad9012efac8[panopto]
-image::../media/drw_A400_Replace-boot_media.png[删除启动介质]
+image::../media/drw_A400_Replace-boot_media.png[取出启动介质]
 
 . 从控制器模块中找到并取出启动介质：
 +
@@ -216,7 +216,7 @@ NOTE: Ver2控制器模块在FAS9300中只有一个缓存模块插槽。FAS4700�
 
 .动画—移动缓存模块
 video::d6a43902-0e78-40c3-a2bd-aad9012f5b94[panopto]
-image::../media/drw_A400_Replace-flashcache.png[DRW A400 更换闪存]
+image::../media/drw_A400_Replace-flashcache.png[卸下并更换缓存模块]
 
 . 如果您尚未接地，请正确接地。
 . 将缓存模块从受损控制器模块移至替代控制器模块：
@@ -242,7 +242,7 @@ image::../media/drw_A400_Replace-flashcache.png[DRW A400 更换闪存]
 
 .动画-移动DIMM
 video::717b52fa-f236-4f3d-b07d-aad9012f51a3[panopto]
-image::../media/drw_A400_Replace-NVDIMM-DIMM.png[Moving the DIMMs]
+image::../media/drw_A400_Replace-NVDIMM-DIMM.png[移动DIMM]
 
 . 找到控制器模块上的 DIMM 。
 . 记下插槽中 DIMM 的方向，以便可以按正确的方向将 DIMM 插入更换用的控制器模块中。

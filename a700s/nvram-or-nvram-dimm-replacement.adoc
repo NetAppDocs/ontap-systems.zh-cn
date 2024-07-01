@@ -98,7 +98,7 @@ https://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html["《 ONTA
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_a700s_pcm_remove.png[释放控制器模块]
+image::../media/drw_a700s_pcm_remove.png[松开控制器模块]
 
 +
 [cols="1,4"]
@@ -127,7 +127,7 @@ image:../media/legend_icon_02.png["标注编号2"]
 .. 朝控制器模块中间按下通风管两侧的锁定片。
 .. 将通风管滑向风扇模块，然后将其向上旋转到完全打开的位置。
 +
-image::../media/drw_a700s_open_air_duct.png[排空空气管道]
+image::../media/drw_a700s_open_air_duct.png[打开空气管道]
 
 +
 [cols="1,4"]
@@ -173,7 +173,7 @@ NVRAM 提升板从控制器模块略微升高。
 
 .. 提起 NVRAM 提升板，将其移向风扇，以使提升板上的金属板边缘脱离控制器模块的边缘，然后将提升板竖直向上提出控制器模块。 然后，将其放在平稳的平面上，以便可以访问 NVRAM 卡。
 +
-image::../media/drw_a700s_nvme_replace.png[DRW a700s NVMe 更换]
+image::../media/drw_a700s_nvme_replace.png[更换NVRAM卡]
 
 +
 [cols="1,4"]

@@ -88,9 +88,9 @@ X6536-R6 （ 112-00090 ）， 5 米
 
 X6554-R6 （ 112-00189 ）， 15 米
  a| 
-image:../media/oie_sfp_optical.png[""]
+image:../media/oie_sfp_optical.png["网络光缆SFP"]
 
-image::../media/oie_cable_fiber_lc_connector.png[OIE 缆线光纤 LC 连接器]
+image::../media/oie_cable_fiber_lc_connector.png[光纤通道网络LC电缆]
  a| 
 SFP + FC 主机网络
 
@@ -214,13 +214,13 @@ NOTE: 如果要连接到光纤交换机，请先将 SFP 插入控制器端口，
 UTA2数据网络配置::
 +
 --
-image::../media/drw_c190_tnsc_unified_network_cabling_animated_gif.png[DRW C190 tnsc 统一网络布线动画 gif]
+image::../media/drw_c190_tnsc_unified_network_cabling_animated_gif.png[双节点无交换机集群统一网络布线动画]
 
 --
 以太网网络配置::
 +
 --
-image::../media/drw_c190_tnsc_ethernet_network_cabling_animated_gif.png[DRW C190 tnsc 以太网网络布线动画 gif]
+image::../media/drw_c190_tnsc_ethernet_network_cabling_animated_gif.png[双节点无交换机集群Eternet网络布线动画]
 
 --
 
@@ -280,13 +280,13 @@ NOTE: 如果要连接到光纤交换机，请先将 SFP 插入控制器端口，
 统一网络配置::
 +
 --
-image::../media/drw_c190_switched_unified_network_cabling_animated_gif.png[DRW C190 交换式统一网络布线动画 gif]
+image::../media/drw_c190_switched_unified_network_cabling_animated_gif.png[交换集群统一网络布线动画]
 
 --
 以太网网络配置::
 +
 --
-image::../media/drw_c190_switched_ethernet_network_cabling_animated.png[DRW C190 交换式以太网网络布线动画]
+image::../media/drw_c190_switched_ethernet_network_cabling_animated.png[交换集群以太网网络布线动画]
 
 --
 

@@ -222,7 +222,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .动画—双节点无交换机集群布线
 video::48552ddf-0925-4f88-8e93-ab1b00666489[panopto]
 +
-image::../media/drw_A400_TNSC-network-cabling.png[DRW A400 TNSC 网络布线]
+image::../media/drw_A400_TNSC-network-cabling.png[双节点无交换机集群]
 
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
@@ -250,7 +250,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .动画—切换集群布线
 video::8fefba75-f395-4cf2-ba3c-ab1b00665870[panopto]
 +
-image::../media/drw_a400_switched_network_cabling.png[DRW a400 交换网络布线]
+image::../media/drw_a400_switched_network_cabling.png[交换集群网络布线]
 
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
 
@@ -304,7 +304,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .动画-使用缆线将控制器连接到一个NS224驱动器架
 video::5501c7bf-8b74-49e8-8067-ab1b00668804[panopto]
 +
-image::../media/drw_a400_two_ns224_shelves.png[DRW a400 两个 nss224 磁盘架]
+image::../media/drw_a400_two_ns224_shelves.png[使用缆线将NS224磁盘架连接到控制器]
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
@@ -328,7 +328,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .动画-使用缆线将控制器连接到SAS驱动器架
 video::cbb0280e-708d-4365-92b6-ab1b006677ef[panopto]
 +
-image::../media/drw_a400_three_ds224c_shelves.png[DRW a400 三个 ds224c 磁盘架]
+image::../media/drw_a400_three_ds224c_shelves.png[使用缆线将三个NS224磁盘架连接到控制器]
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
