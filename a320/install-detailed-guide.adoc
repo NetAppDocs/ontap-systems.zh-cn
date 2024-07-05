@@ -100,7 +100,7 @@ X66250-5 （ 112-00328 ）， 5 米
 
 X66250-30 （ 112-00331 ）， 30 米
  a| 
-image:../media/oie_cable_etherned_mpo.png[""]
+image:../media/oie_cable_etherned_mpo.png["以太网缆线— MPO"]
  a| 
 以太网缆线（取决于订单）
 
@@ -186,7 +186,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工�
 NOTE: 您需要了解与系统重量相关的安全问题。
 
 +
-image::../media/drw_a320_weight_label.png[DRW A320 重量标签]
+image::../media/drw_a320_weight_label.png[系统提升重量小心]
 
 . 连接缆线管理设备（如图所示）。
 +
@@ -218,7 +218,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 您可以使用插图或分步说明完成控制器与交换机之间的布线：
 +
-image::../media/drw_a320_tnsc_network_cabling_composite_animated_gif.png[DRW A320 tnsc 网络布线复合动画 gif]
+image::../media/drw_a320_tnsc_network_cabling_composite_animated_gif.png[双节点无交换机集群复合布线]
 
 +
 [cols="1,2"]
@@ -232,7 +232,7 @@ image:../media/oie_legend_icon_1_lg.png["第 1 步"]
 使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口彼此相连：
 
 ** e0a 到 e0a
-** e0d 到 e0dimage:../media/drw_a320_tnsc_cluster_ha_connection_step1a.png[""]
+** e0d到e0d image:../media/drw_a320_tnsc_cluster_ha_connection_step1a.png["双节点无交换机集群用于连接cluster-HA连接"]
 
 
 
@@ -242,7 +242,7 @@ image:../media/oie_legend_icon_2_o.png["步骤2."]
  a| 
 如果您使用板载端口进行数据网络连接，请将 100GbE 或 40GbE 缆线连接到相应的数据网络交换机：
 
-** e0g 和 e0himage:../media/drw_a320_onboard_data_connection_step2.png[""]
+** e0g和e0h image:../media/drw_a320_onboard_data_connection_step2.png["连接板载数据网络连接"]
 
 
 
@@ -252,7 +252,7 @@ image:../media/oie_legend_icon_3_dr.png["步骤3."]
  a| 
 如果要使用 NIC 卡进行以太网或 FC 连接，请将 NIC 卡连接到相应的交换机：
 
-image::../media/drw_a320_nic_connections_step3.png[DRW A320 NIC 连接步骤 3]
+image::../media/drw_a320_nic_connections_step3.png[双节点无交换机集群用于连接NIC]
 
 
 
@@ -261,7 +261,7 @@ image:../media/oie_legend_icon_4_lp.png["步骤4."]
  a| 
 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 
-image:../media/drw_a320_management_port_connection_step4.png[""]
+image:../media/drw_a320_management_port_connection_step4.png["连接管理端口"]
 
 
 
@@ -291,7 +291,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 您可以使用插图或分步说明完成控制器与交换机之间的布线：
 +
-image::../media/drw_a320_switched_network_cabling_composite_animated_GIF.png[DRW A320 交换网络布线复合动画 GIF]
+image::../media/drw_a320_switched_network_cabling_composite_animated_GIF.png[有交换机集群复合布线]
 
 +
 [cols="1,3"]
@@ -305,7 +305,7 @@ image:../media/oie_legend_icon_1_lg.png["第 1 步"]
 使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口连接到集群 /HA 交换机：
 
 ** 两个控制器上的 e0a 连接到集群 /HA 交换机
-** 两个控制器上的 e0d 连接到集群 /HA 交换机image:../media/drw_a320_switched_cluster_ha_connection_step1b.png[""]
+** 两个控制器上的e0d连接到集群/HA交换机 image:../media/drw_a320_switched_cluster_ha_connection_step1b.png["有交换机集群集群集群集群-HA连接"]
 
 
 
@@ -315,7 +315,7 @@ image:../media/oie_legend_icon_2_o.png["步骤2."]
  a| 
 如果您使用板载端口进行数据网络连接，请将 100GbE 或 40GbE 缆线连接到相应的数据网络交换机：
 
-** e0g 和 e0himage:../media/drw_a320_onboard_data_connection_step2.png[""]
+** e0g和e0h image:../media/drw_a320_onboard_data_connection_step2.png["有交换机集群板载网络连接"]
 
 
 
@@ -325,7 +325,7 @@ image:../media/oie_legend_icon_3_dr.png["步骤3."]
  a| 
 如果要使用 NIC 卡进行以太网或 FC 连接，请将 NIC 卡连接到相应的交换机：
 
-image::../media/drw_a320_nic_connections_step3.png[DRW A320 NIC 连接步骤 3]
+image::../media/drw_a320_nic_connections_step3.png[有交换机集群网络连接]
 
 
 
@@ -334,7 +334,7 @@ image:../media/oie_legend_icon_4_lp.png["步骤4."]
  a| 
 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 
-image:../media/drw_a320_management_port_connection_step4.png[""]
+image:../media/drw_a320_management_port_connection_step4.png["交换集群管理网络连接"]
 
 
 
@@ -368,7 +368,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 您可以使用插图或分步说明将控制器连接到一个磁盘架。
 +
-image::../media/drw_a320_single_shelf_connections_animated_gif.png[DRW A320 单磁盘架连接动画 gif]
+image::../media/drw_a320_single_shelf_connections_animated_gif.png[复合式单驱动器架布线]
 
 +
 [cols="1,3"]
@@ -379,14 +379,14 @@ image::../media/drw_a320_single_shelf_connections_animated_gif.png[DRW A320 单�
  a| 
 image:../media/oie_legend_icon_1_mb.png["标注编号1"]
  a| 
-使用缆线将控制器 A 连接到磁盘架 image:../media/drw_a320_storage_cabling_controller_a_single_shelf.png[""]
+使用缆线将控制器A连接到磁盘架 image:../media/drw_a320_storage_cabling_controller_a_single_shelf.png["Cable controller A to the shelf"]
 
 
 
  a| 
 image:../media/oie_legend_icon_2_lo.png["标注编号2"]
  a| 
-使用缆线将控制器 B 连接到磁盘架： image:../media/drw_a320_storage_cabling_controller_b_single_shelf.png[""]
+使用缆线将控制器B连接到磁盘架： image:../media/drw_a320_storage_cabling_controller_b_single_shelf.png["将控制器B连接到单个磁盘架"]
 
 |===
 . To complete setting up your system, see <<完成系统设置和配置>>
@@ -407,7 +407,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 
 . 您可以使用下图或写入的步骤将控制器连接到两个驱动器架。
 +
-image::../media/drw_a320_2_shevles_cabling_animated_gif.png[DRW A320 2 可通过动画 gif 显示布线]
+image::../media/drw_a320_2_shevles_cabling_animated_gif.png[为两个磁盘架布线动画]
 
 +
 [cols="1-3"]
@@ -418,14 +418,14 @@ image::../media/drw_a320_2_shevles_cabling_animated_gif.png[DRW A320 2 可通过
  a| 
 image:../media/oie_legend_icon_1_mb.png["标注编号1"]
  a| 
-使用缆线将控制器 A 连接到磁盘架： image:../media/drw_a320_2_shelves_cabling_controller_a.png[""]
+使用缆线将控制器A连接到磁盘架： image:../media/drw_a320_2_shelves_cabling_controller_a.png["使用缆线将两个磁盘架连接到控制器A"]
 
 
 
  a| 
 image:../media/oie_legend_icon_2_lo.png["标注编号2"]
  a| 
-使用缆线将控制器 B 连接到磁盘架： image:../media/drw_a320_2_shelves_cabling_controller_b.png[""]
+使用缆线将控制器B连接到磁盘架： image:../media/drw_a320_2_shelves_cabling_controller_b.png["使用缆线将磁盘架连接到控制器b"]
 
 |===
 . To complete setting up your system, see <<完成系统设置和配置>>
@@ -496,7 +496,7 @@ NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或�
 
 .. 使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台，然后将此笔记本电脑连接到管理子网上的管理交换机。
 +
-image::../media/drw_a320_laptop_to_switch_and_controller.png[从 DRW A320 笔记本电脑连接到交换机和控制器]
+image::../media/drw_a320_laptop_to_switch_and_controller.png[使用缆线将笔记本电脑连接到管理子网交换机]
 
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 

@@ -90,7 +90,7 @@ image::../media/drw_a320_controller_cable_unplug_animated_gif.png[卸下缆线�
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 . 从机箱中卸下控制器模块：
 +
-image::../media/drw_a320_controller_remove_animated_gif.png[删除控制器]
+image::../media/drw_a320_controller_remove_animated_gif.png[卸下控制器]
 
 +
 .. 将前掌插入控制器模块两侧的锁定装置。
@@ -113,7 +113,7 @@ image::../media/drw_a320_controller_remove_animated_gif.png[删除控制器]
 
 您必须从控制器模块中卸下包含故障 PCIe 卡的 PCIe 提升板，从提升板中卸下故障 PCIe 卡，在提升板中安装替代 PCIe 卡，然后将此提升板重新安装到控制器模块中。
 
-image::../media/drw_a320_pci_card_replace_animated_gif.png[DRW A320 PCI 卡更换动画 gif]
+image::../media/drw_a320_pci_card_replace_animated_gif.png[更换PCI卡]
 
 . 拧下 PCIe 提升板上的蓝色翼形螺钉，将盖板滑向您的方向，向上旋转盖板，将其从控制器模块上取下，然后将其放在一旁。
 . 卸下具有故障 PCIe 卡的提升板：

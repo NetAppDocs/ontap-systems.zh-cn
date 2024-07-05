@@ -90,7 +90,7 @@ image::../media/drw_a320_cable_management_arms.png[卸下或安装缆线管理�
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 . 从机箱中卸下控制器模块：
 +
-image::../media/drw_a320_controller_remove_animated_gif.png[删除控制器]
+image::../media/drw_a320_controller_remove_animated_gif.png[卸下控制器]
 
 +
 .. 将前掌插入控制器模块两侧的锁定装置。
@@ -113,7 +113,7 @@ image::../media/drw_a320_controller_remove_animated_gif.png[删除控制器]
 
 要更换NVDIMM、您必须使用通风管顶部的NVDIMM映射标签在控制器模块中找到它、然后按照特定步骤顺序进行更换。
 
-image::../media/drw_a320_nvdimm_replace_animated_gif.png[DRW A320 NVDIMM 更换动画 gif]
+image::../media/drw_a320_nvdimm_replace_animated_gif.png[Replace the NVDIMM]
 
 . 打开通风管，然后在控制器模块的插槽 11 中找到 NVDIMM 。
 +

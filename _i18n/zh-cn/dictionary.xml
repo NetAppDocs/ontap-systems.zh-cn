@@ -1338,10 +1338,8 @@
   <block id="19026798e40f3d682dde87cbb940fc1b" category="paragraph">控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。两个控制器模块上都使用缆线连接集群互连和 HA 端口。</block>
   <block id="b0f36369923404e3d59d32e54263eb35" category="paragraph">您必须已联系网络管理员，了解有关将系统连接到交换机的信息。</block>
   <block id="3d6d824132e6ea9215d5f55aab2c487b" category="paragraph">在端口中插入缆线时，请务必检查缆线拉片的方向。所有板载端口的缆线拉片均已启动，扩展（ NIC ）卡的缆线拉片已关闭。</block>
-  <block id="89022c411a82a2fd505bed4d053014b2" category="image-alt">DRW A400 TNSC 网络布线</block>
   <block id="cdb5f9fd7bdb37f00fbde22fc433f594" category="list-text">转至 <block ref="4261ea2b75c295a1978f7924667f1c11" category="inline-xref-macro-rx"></block> 有关驱动器架布线说明。</block>
   <block id="1e156599489dd8cc844095b452c708a0" category="paragraph">控制器模块上的可选数据端口，可选 NIC 卡，夹层卡和管理端口均连接到交换机。集群互连和 HA 端口通过缆线连接到集群 /HA 交换机。</block>
-  <block id="1183b63959875b4b1d4b622707e3bdb2" category="image-alt">DRW a400 交换网络布线</block>
   <block id="3791be63815c8fbe248b161feeb8b6cd" category="section-title">第 4 步：使用缆线将控制器连接到驱动器架</block>
   <block id="23b4387b0bd437fdde9fbf6ab72eb30b" category="paragraph">您可以使用缆线将 NSS224 或 SAS 磁盘架连接到系统。</block>
   <block id="44545bc0051cf1d567b013be4fbb64b8" category="section-title">选项 1 ：使用缆线将控制器连接到一个驱动器架</block>
@@ -1350,11 +1348,9 @@
   <block id="f3e065129fb4cb88ba99260c70d8c054" category="list-text">转至 <block ref="53346fef0c147b551f530d05bbad2e41" category="inline-xref-macro-rx"></block> 完成系统设置和配置。</block>
   <block id="e47141e6c8fccf9bfe115e4e18090b8e" category="section-title">选项 2 ：使用缆线将控制器连接到两个驱动器架</block>
   <block id="a496c0eee37cdb410fb5999f04b37d60" category="paragraph">您必须使用缆线将每个控制器连接到两个 NS224 驱动器架上的 NSM 模块。</block>
-  <block id="28a5b6c12bed824c9983c41c17b4e08c" category="image-alt">DRW a400 两个 nss224 磁盘架</block>
   <block id="2d30f0e7d0bd139e4aadac367a22367c" category="section-title">选项 3 ：使用缆线将控制器连接到 SAS 驱动器架</block>
   <block id="3368a061a42c179bf8e803509b06906f" category="paragraph">您必须使用缆线将每个控制器连接到两个 SAS 驱动器架上的 IOM 模块。</block>
   <block id="22b99956f40dddc5bacbbde3d6214bfb" category="paragraph">请务必检查插图箭头以确定正确的缆线连接器拉片方向。DS224-C 的缆线拉片已关闭。</block>
-  <block id="f2a5deba6280f91d25f9842359122210" category="image-alt">DRW a400 三个 ds224c 磁盘架</block>
   <block id="591a460534c5cea6a44feabf56c126fc" category="section-title">第 5 步：完成系统设置和配置</block>
   <block id="f5db8a467b7fb8d7cf073d921c784267" category="paragraph">您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。</block>
   <block id="1001f289121bc2aaf60e874b29a86ac9" category="section-title">选项 1 ：如果启用了网络发现，则完成系统设置和配置</block>
@@ -1550,7 +1546,6 @@
   <block id="13fa4776dd3902d644b4c8c6e4086d8d" category="doc">更换实时时钟电池— FAS8200</block>
   <block id="6ffcd61574f4970c28c0b71a5611ad7c" category="section-title">第 3 步：更换 RTC 电池</block>
   <block id="12567249cf52e7754ded20b52b9cb150" category="paragraph">要更换 RTC 电池，请在控制器中找到并按照特定步骤顺序进行操作。</block>
-  <block id="b7d5be6336dc1e791cd4f528bc0ef57a" category="image-alt">DRW rxl RTC 电池</block>
   <block id="b1288294c924e966dd5f1e52dc50d8fa" category="list-text">找到控制器模块中的空电池支架。</block>
   <block id="e62b4750e70bd7d70bffad33b5e2a973" category="list-text">将电源线重新连接到电源和电源，然后打开电源以启动启动过程。</block>
   <block id="70fa93bebd0670b231da3d1406a94a24" category="doc">重新配置系统并重新分配磁盘— FAS8200</block>
@@ -3273,30 +3268,24 @@
   <block id="1e98034375ef52d4a4529ac291edcded" category="list-text">当您看到确认备份操作步骤成功时，按 `y` ，然后在系统提示您重新启动节点时按 `y` 。</block>
   <block id="2ca9575466d40889a9a6e4de0788d9d5" category="doc">完成系统还原— AFF A320</block>
   <block id="e944774dbb716679ef719542153680f0" category="doc">更换电源— AFF A320</block>
-  <block id="4cc9071129241d95215f35c3a4e731ef" category="image-alt">DRW A320 PSU 更换动画 gif</block>
   <block id="3f579d2ca9602742163eac8ab6869d34" category="list-text"><block ref="3f579d2ca9602742163eac8ab6869d34" category="inline-link-macro-rx"></block></block>
   <block id="a6eeb39ae43e2e8a39fd17df76bf38bf" category="list-text"><block ref="a6eeb39ae43e2e8a39fd17df76bf38bf" category="inline-link-macro-rx"></block></block>
   <block id="22d17da6d44d1c72d2415ed45b62cc6e" category="list-text"><block ref="22d17da6d44d1c72d2415ed45b62cc6e" category="inline-link-macro-rx"></block></block>
   <block id="f18d3ce1458eacbbf20206e503ce6dcf" category="doc">更换 DIMM - AFF A320</block>
   <block id="952c945c9a5a59d3bdaefb09fa3c158c" category="list-text">从电源拔下控制器模块电源。</block>
   <block id="314e31cf4cbebcf3a827e9ba64a1e005" category="list-text">将通风管旋转到打开位置。</block>
-  <block id="05e409ce8812fcbb841a7e4fffcaacac" category="image-alt">DRW A320 DIMM 映射</block>
   <block id="81991fce0a133e64dc7f5bd7f590afbd" category="list-text">系统 DIMM 插槽： 2 ， 4 ， 7 ， 9 ， 13 ， 15 ， 18 和 20</block>
   <block id="42fedd56824cc1ddf6aa00c30e53255e" category="list-text">NVDIMM 插槽： 11</block>
   <block id="b5625ff9a6be11130311547598e19f4d" category="list-text">如果尚未关闭控制器模块后部的通风管，请将盖板重新安装到 PCIe 卡上。</block>
   <block id="3e3ba2d775216becefab028bffec753a" category="doc">快速指南— AFF A320</block>
   <block id="8041c469e6d9bb1d2588be103ea09ab6" category="doc">更换 NVDIMM 电池— AFF A320</block>
-  <block id="7a7bd9d285c26c52e7363905c161c15e" category="image-alt">DRW A320 nvbat move 动画 gif</block>
   <block id="ddd5abc1f11eb7170e1eeacbd5acc236" category="list-text">打开通风管并找到 NVDIMM 电池。</block>
   <block id="e9ca370a0e8565dd4c2f659637e04cda" category="doc">关闭控制器— AFF A320</block>
   <block id="b6b9806df3f9a4e627587365674eb890" category="doc">关闭节点— AFF A320</block>
   <block id="1f80cfc7ce17ecb96321179e76fe8285" category="list-text">旋转凸轮把手，以便在按下蓝色锁定卡舌的同时，可以将电源从控制器模块中拉出。</block>
-  <block id="688801a2df2e8d7d87f1b2c5de917ce1" category="image-alt">DRW A320 启动介质移动动画 gif</block>
   <block id="11eb9c8c2de064eb9f7977a655de2097" category="list-text">打开通风管，并使用下图或控制器模块上的 FRU 示意图找到启动介质：</block>
-  <block id="2f486cec6da5b4ab5646e87394d2a4a2" category="image-alt">DRW A320 DIMM 移动动画 gif</block>
   <block id="f7201b424e63db1eb201784a41831c5b" category="section-title">第 6 步：移动 PCIe 提升板</block>
   <block id="09a031229040acdcc93835464607987d" category="paragraph">您必须将安装有 PCIe 卡的 PCIe 提升板从受损控制器模块移至更换用的控制器模块。</block>
-  <block id="eb05cd11b7228336d5c9c6b4b1189e9b" category="image-alt">DRW A320 PCI 提升板移动动画 gif</block>
   <block id="e3c377eeac98c2c7c22ab039e765483b" category="list-text">拧下 PCIe 提升板上的蓝色翼形螺钉，将盖板滑向您的方向，向上旋转盖板，将其从控制器模块上取下，然后将其放在一旁。</block>
   <block id="64e10ab629fdd5f98070e4ba4cbc9431" category="list-text">从更换用的控制器模块中卸下空的提升板。</block>
   <block id="fb2259bf7b24733032c36ee5d7b47fc1" category="list-text">将前掌放在竖板模块左侧的孔中，然后用拇指抓住竖板。</block>
@@ -3318,11 +3307,9 @@
   <block id="f473b09529c17581896f9b2f1166ce88" category="section-title">第 1 步：设置并验证更换控制器模块后的系统时间</block>
   <block id="acd5b7a742e22209bb792b093caff068" category="doc">更换启动介质— AFF A320</block>
   <block id="7b346c654ccdab10fc593c01f0c7232e" category="doc">关闭受损控制器 - AFF A320</block>
-  <block id="e6b7941c3f8bfc56083e6d96c76bea05" category="image-alt">DRW A320 启动介质更换动画图像 gif</block>
   <block id="e7ee072a3e06310afcc412655144e84b" category="section-title">第 3 步：使用 USB 闪存驱动器将启动映像传输到启动介质</block>
   <block id="bff69c64ca9124fefc1120a9526e1c86" category="doc">更换实时时钟电池— AFF A320</block>
   <block id="85197942c26926cbc965c61326a19f17" category="paragraph">您需要找到控制器模块中的 RTC 电池，然后按照特定步骤顺序进行操作。</block>
-  <block id="ca57ca907ae8206b83c7ddff6d0710d5" category="image-alt">DRW A320 RTC 电池更换动画 gif</block>
   <block id="f443567234fee382feed95c62b71f4ac" category="list-text">卸下 PCIe 盖板。</block>
   <block id="098c84ebcbcf1abdb1b6be280f983f02" category="list-text">拧下控制器模块背面板载端口上方的蓝色翼形螺钉。</block>
   <block id="c7705a8f2e7cd22c3c497bc8bdc6a22e" category="list-text">向您的方向滑动外盖，然后向上旋转外盖。</block>
@@ -3331,7 +3318,6 @@
   <block id="eca300a6c6eda57ea2fabc4bee898f5f" category="doc">重新配置系统并重新分配磁盘— AFF A320</block>
   <block id="f1483589a16ee2a87f4946990ed1464b" category="doc">更换 PCIe 卡— AFF A320</block>
   <block id="c6835c4571228046430ed6bbb1f8c06a" category="paragraph">您必须从控制器模块中卸下包含故障 PCIe 卡的 PCIe 提升板，从提升板中卸下故障 PCIe 卡，在提升板中安装替代 PCIe 卡，然后将此提升板重新安装到控制器模块中。</block>
-  <block id="d53dfbdb1355f3674e5de636f87c5be0" category="image-alt">DRW A320 PCI 卡更换动画 gif</block>
   <block id="618712f4c03b5acbe994f7deb8579ad4" category="list-text">卸下具有故障 PCIe 卡的提升板：</block>
   <block id="8da48c6dbfa1b11e1b02a674f7016444" category="list-text">将竖板竖直提出插槽并放在一旁。</block>
   <block id="5169071c932e7f4d8cc43bbb05704441" category="list-text">更换提升板中的卡：</block>
@@ -3350,7 +3336,6 @@
   <block id="d2f83f17d591f35e8d5d48e486cff011" category="inline-xref-macro">OKM ， NSE 和 NVE 的启动后介质更换步骤</block>
   <block id="59e7bbfb26b1aae893409c7595a54f49" category="list-text">如果您的系统配置了板载密钥管理器， NSE 或 NVE ，请转至 <block ref="f25b9cd2e6d3a23c42a52b7461eadaf7" category="inline-xref-macro-rx"></block></block>
   <block id="72e762fb9ea8e85f3b69ae72fd4dc171" category="doc">更换 NVDIMM - AFF A320</block>
-  <block id="a28d1d59ce7973c59f7c8fb5eb3f42b3" category="image-alt">DRW A320 NVDIMM 更换动画 gif</block>
   <block id="611cf47f3569074932e1d1554c9dcfdd" category="doc">将故障部件退回给 NetApp - AFF A320</block>
   <block id="770d6678fb5416b05c67128a9e4fed01" category="doc">完成还原和更换过程— AFF A320</block>
   <block id="3672b64d07583e651fa9761c4dd84ce8" category="list-text">如果命令输出中未显示 &lt;lno-dur&gt; ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至下一节。</block>
@@ -3365,7 +3350,6 @@
   <block id="9acce39f034b56b5a36d798f9b54c493" category="paragraph">X66200-2 （ 112-00326 ）， 2 米</block>
   <block id="36789c9401bff1c7c561e68fd452d624" category="paragraph">X66250-5 （ 112-00328 ）， 5 米</block>
   <block id="638d6c29f972d003a7c9bce0be1075c0" category="paragraph">X66250-30 （ 112-00331 ）， 30 米</block>
-  <block id="ee2a005a5fff47af39846bc52215856a" category="paragraph"><block ref="ee2a005a5fff47af39846bc52215856a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6d03b2201d103d5ae1263174b93ad00d" category="paragraph">以太网缆线（取决于订单）</block>
   <block id="a0e077807aa1ab474e20633b71f65adc" category="paragraph">SR ：</block>
   <block id="b035e4657fbd3c974d6c165b266864f8" category="paragraph">X6554-R6 （ 112-00189 ）， 15 米</block>
@@ -3376,34 +3360,20 @@
   <block id="3716ec01119458ed21a566c68a371d3e" category="paragraph">X66260-30 （ 112-00354 ）， 30 米</block>
   <block id="c90da43ea678ffdb52edc15af33e2c8e" category="paragraph">FC 配置（取决于订单）</block>
   <block id="923a86c9f908f09f61d33d7831905371" category="section-title">安装硬件</block>
-  <block id="36038ef1dbb81cac29095e7ec102e15e" category="image-alt">DRW A320 重量标签</block>
   <block id="6c9822a6a6265e0e6627098c357cfe2d" category="section-title">使用缆线将控制器连接到网络</block>
   <block id="a766258e1cfb1ce4e72917121f65a74d" category="paragraph">控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。集群互连 /HA 端口通过缆线连接到两个控制器模块上。</block>
-  <block id="013322a8027b639585538fe290718386" category="image-alt">DRW A320 tnsc 网络布线复合动画 gif</block>
   <block id="e5cd602ca5c03c391e8dfac3c307e06c" category="paragraph">使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口彼此相连：</block>
-  <block id="4f8f8380e5597e92380de812b879c5d1" category="list-text">e0d 到 e0d<block ref="5ea5295965a00406899d4b7460801661" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1ec377d11568067a729ee6f50dee77c8" category="paragraph">如果您使用板载端口进行数据网络连接，请将 100GbE 或 40GbE 缆线连接到相应的数据网络交换机：</block>
-  <block id="3c04babfe00a81e06f8982d93dd90179" category="list-text">e0g 和 e0h<block ref="6fafbcd677ceba87d8c48de1a29a3bf5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cc74cb2d1e5f9750b5812faaf036676e" category="paragraph">如果要使用 NIC 卡进行以太网或 FC 连接，请将 NIC 卡连接到相应的交换机：</block>
-  <block id="becd6fe246f05c450f5f6f1ff59f10ab" category="image-alt">DRW A320 NIC 连接步骤 3</block>
   <block id="9dfe7ca4d480fd4e10a0954286489a0f" category="paragraph">使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。</block>
-  <block id="5d86a652667b386e0b98042631990c02" category="paragraph"><block ref="5d86a652667b386e0b98042631990c02" category="inline-image-macro-rx" type="image"></block></block>
   <block id="eb9634f2ea796139d7f0aeca3f6ce2d4" category="section-title">选项 2 ：为有交换机集群布线</block>
   <block id="5b2974409018c6d4642074b9be18209d" category="paragraph">控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。集群互连 /HA 端口通过缆线连接到集群 /HA 交换机。</block>
   <block id="f5412d7277a9aad4f1e320bf63f0582b" category="paragraph">使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口连接到集群 /HA 交换机：</block>
   <block id="840e60c4749a688bca9fc657aaff1710" category="list-text">两个控制器上的 e0a 连接到集群 /HA 交换机</block>
-  <block id="c59f62b950bdb48bdd4229f438a8c8a8" category="list-text">两个控制器上的 e0d 连接到集群 /HA 交换机<block ref="15e7674fee3b32b30f565083329e5ce8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="60e821d2b0d80835cf4d935eb3557760" category="section-title">使用缆线将控制器连接到驱动器架</block>
   <block id="ea4a0ef865c900d0ce0d6485667ba790" category="paragraph">您必须使用板载存储端口将控制器连接到磁盘架。</block>
-  <block id="d49bb9b3f4ea10bb2faedd5805957881" category="image-alt">DRW A320 单磁盘架连接动画 gif</block>
-  <block id="fcc21d6aa5ce2f3d80b7b15b3efd7622" category="paragraph">使用缆线将控制器 A 连接到磁盘架 <block ref="97ef6a28616ee1b44c8e319d2e09ad63" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="cf09fa2cd4cedb36165538f6f6133b7f" category="paragraph">使用缆线将控制器 B 连接到磁盘架： <block ref="adad54de70c837652052dc8fbe20179a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e49f4a89e69b410e9fd76acc797854aa" category="image-alt">DRW A320 2 可通过动画 gif 显示布线</block>
-  <block id="1fd24d2bc89f56e2b5b986eb7d944870" category="paragraph">使用缆线将控制器 A 连接到磁盘架： <block ref="dc30c6795d4eccef24ec9e4cbd9f34a9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="64cd25defcb831725e6dbd4eeb07cec0" category="paragraph">使用缆线将控制器 B 连接到磁盘架： <block ref="fcd3de865e51763ca7c18796d9eecca6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="29507e337f4599b17e78b1e81c219e26" category="section-title">完成系统设置和配置</block>
   <block id="7a2b8204791fefff118f35cda4159e64" category="list-text">使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台，然后将此笔记本电脑连接到管理子网上的管理交换机。</block>
-  <block id="80b38fbcbc6122c93f20a23f0edcacc5" category="image-alt">从 DRW A320 笔记本电脑连接到交换机和控制器</block>
   <block id="c8fe385a2d49c957811553fa2c507091" category="summary">您可以使用完整的控制器到堆栈布线工作表和布线示例为具有两个四端口 SAS HBA 的四路径 HA 配置布线。</block>
   <block id="129ad208c03826aef81ff147b924ba05" category="inline-link-macro">SAS 布线规则</block>
   <block id="26ba4644ea5bc8f16212e97ddf32d634" category="list-text">如果需要，可以参考 <block ref="db31d33614fd87795381d5ac14be04aa" category="inline-link-macro-rx"></block> 有关支持的配置，控制器插槽编号约定，磁盘架到磁盘架连接以及控制器到磁盘架连接（包括端口对的使用）的信息。</block>
@@ -4657,7 +4627,6 @@
   <block id="873efd8427437501798d979ea439809c" category="section-title">为 AFF A400 HA 对的热添加磁盘架布线</block>
   <block id="b994ebf3b12ef21aee27b63036342d83" category="section-title">为 AFF A320 HA 对的热添加磁盘架布线</block>
   <block id="0d0422686a7d332d6a719d1fb6e38772" category="paragraph">此操作步骤假定您的 AFF A320 HA 对具有现有 NS224 磁盘架，并且您要热添加第二个磁盘架。</block>
-  <block id="18537f27e3c57fa7095de2a3bbea83b2" category="image-alt">drw A320 Replace fan</block>
   <block id="75ce955e15fef4cd5f15ecc0c7c15370" category="list-text">查看系统 ID ： `disk show -a`</block>
   <block id="0feb65e4d7bce1a53eb4047a827c8e55" category="list-text">使用从 disk show 命令获取的系统 ID 信息重新分配磁盘所有权： `disk reassign -s old system ID disk reassign -s 118073209`</block>
   <block id="8c66ad63be6016fb310ce930e9943285" category="list-text">验证是否已正确分配磁盘： `disk show -a`</block>
@@ -5468,7 +5437,6 @@
   <block id="03163c4d180c5b6d6482efa550043cd8" category="doc">关闭控制器 - AFF A800</block>
   <block id="f0623f3de563d7ac67a984a76c53803d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
   <block id="e935849faf7cd25a183a726f34797bb7" category="doc">Replace the controller module - AFF A300</block>
-  <block id="75a0d3caeb66a7c3aca3b7bc0f0c5985" category="image-alt">DRW A320 交换网络布线复合动画 GIF</block>
   <block id="82430a05d3820aeaeb756230e94ee643" category="doc">检查板载加密— FAS8200</block>
   <block id="a28455bf2eecf6cc499c335ee152cd75" category="paragraph">使用以下选项之一关闭或接管受损控制器。</block>
   <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">Replace the boot media - FAS500f</block>
@@ -8711,7 +8679,6 @@ SFP+(目标/启动程序)</block>
   <block id="0fc16b203bddbfc834dc54c640fc1fd2" category="image-alt">卸下LED USB模块</block>
   <block id="e5247af1b25811b19243276e67aa7b9b" category="image-alt">卸下NVRAM模块</block>
   <block id="11d45af041bcae71c4e4d631ead36642" category="image-alt">删除NVRAM模块内容</block>
-  <block id="99a4fad8e3a9e518a4c8e3984c45a020" category="image-alt">卸下或安装PSU模块</block>
   <block id="38d3a35ba6c4b54bcaa647b5f49f15bf" category="image-alt">卸下并安装RTC电池</block>
   <block id="c591c62ae89f72b00936f85341489306" category="image-alt">打开电源凸轮把手</block>
   <block id="0709513deb20f95d7151fe2b5265dec7" category="image-alt">端盖操作员显示屏</block>
@@ -8808,7 +8775,6 @@ SFP+(目标/启动程序)</block>
   <block id="f4247136ba1a68a91a49f4e715963146" category="paragraph">在关闭受损控制器之前、您需要验证系统是否已启用安全密钥管理器或已加密磁盘。</block>
   <block id="ee3b489243bdd4fdcc48ef1ad422f531" category="section-title">验证安全密钥管理器配置</block>
   <block id="19033065ab73d137563560b1fc6895b0" category="inline-link">security key-manager keyStore show手册页</block>
-  <block id="a816d953401f2846877f62bed4fdd27b" category="list-text">使用_security key-manager keyStore show_命令确定密钥管理器是否处于活动状态。有关详细信息、请参见<block ref="4b8f2aeacb1514195535ef615c2cae4a" category="inline-link-rx"></block></block>
   <block id="71f479ec4da1fa9d5c9be25ad13a546d" category="admonition">您可能还有其他密钥管理器类型。类型包括<block ref="5a2c55bb167f4f0fcfe52384fe7a4f0b" prefix=" " category="inline-code"></block>、<block ref="15460966dfd5d819470e51c2381536a3" prefix=" " category="inline-code"></block>和<block ref="c731f72e1d22a7c5e01a7cb789a8885e" prefix=" " category="inline-code"></block>。确认这些类型的过程与确认或密钥管理器类型的过程相同<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block><block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> 。</block>
   <block id="a286fff38dd07b679c8ce3d88b6f2962" category="inline-link-macro">关闭受损控制器</block>
   <block id="367826db12be5d0f5fa3825090445002" category="list-text">如果未显示任何输出、请转至 <block ref="eee94cfaa2087b0a7525f83880646105" category="inline-link-macro-rx"></block> 以关闭受损节点。</block>
@@ -9029,7 +8995,6 @@ SFP+(目标/启动程序)</block>
   <block id="8c7bd045108e1c5b78c97e914b17c504" category="list-text">要从加载程序提示符处启动ONTAP、请输入_BYE_。</block>
   <block id="92c80dd5462d9ebbe458a4d5574a0bcd" category="paragraph">您必须在启动控制器时确认系统ID更改、然后验证是否已实施此更改。</block>
   <block id="4809a5131531611e176d418579ff2bce" category="list-text">如果控制器处于维护模式(显示<block ref="2cf8a3bab83c4d2618c18eeeca9ebc98" prefix=" " category="inline-code"></block> 提示符)、请退出维护模式并转到加载程序提示符：_halt _</block>
-  <block id="98848d6f640c1b9d9ad1cab89e0b0a13" category="list-text">从控制器上的加载程序提示符处、启动控制器、并在系统因系统ID不匹配而提示覆盖系统ID时输入_y_。</block>
   <block id="4e5f4ae21b25e767c4cce37a6162f267" category="list-text">等待直到等待返回... 消息、然后从运行状况良好的控制器确认已自动分配新的配对系统ID：_storage Failover show_</block>
   <block id="7fea4b03ba1069ae857e3bf99659e212" category="list-text">从运行状况良好的控制器中、交还更换后的控制器的存储：_storage故障转移gi交还-ofnode re更换 节点名称_</block>
   <block id="67a849a4d7dbba4f1483601cbb852e97" category="paragraph">控制器将收回其存储并完成启动。</block>
@@ -9376,7 +9341,6 @@ SFP+(目标/启动程序)</block>
   <block id="dc67dd4e83bd586a50c17ea2c94c00d5" category="list-text"><block ref="3b8595d627306d8980fff3bd262d05b2" prefix="" category="inline-code"></block></block>
   <block id="536aadfad0128887672b66e929f02fcb" category="list-text"><block ref="a6dd61fa165deef585a79e05f8de73b0" prefix="" category="inline-code"></block></block>
   <block id="a242b56bad1d07089dce8ccb795966f2" category="list-text">恢复过程将完成：</block>
-  <block id="4730255e1152aa0891d10726285854f6" category="paragraph">在正常启动后、通过完成最终检查并交还存储来完成启动介质更换过程。</block>
   <block id="3bac3ae452491bc05a59b99b3d2476d6" category="paragraph">转至步骤6。</block>
   <block id="070dd7606e33a466d7a8bb82a9a64b17" category="list-text">使用_storage故障转移show_命令确认目标控制器已准备好进行恢复。</block>
   <block id="378fa36f6e90b3bf6ddbb070e35b0388" category="list-text">使用_storage故障转移交还-fronode local -only -cfo-Aggregates true命令将控制台缆线移至配对控制器并交还目标控制器存储。</block>
@@ -9438,7 +9402,6 @@ SFP+(目标/启动程序)</block>
   <block id="04c6391623d6bd5d0ac0d7df563f74dc" category="image-alt">电缆推拉卡舌方向示例</block>
   <block id="35bd3e31ed449ec51ffdc43a42bdcd8f" category="list-text">如果要连接到光纤和交换机、请先将SFP插入控制器端口、然后再使用缆线连接到此端口。</block>
   <block id="e8dcbbdb0b0cc30021cdb1772e14a12d" category="section-title">Step 1: Cable controllers to your network</block>
-  <block id="6df54967c5941126ef71ad521ce71f57" category="paragraph">以下过程显示了常见配置。请注意、具体布线取决于为存储系统订购的组件。有关全面的配置和插槽优先级详细信息，请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
   <block id="774fc771cbe0562cf589e2e5571e543c" category="open-title">选项1：使用缆线连接无交换机集群</block>
   <block id="ab3e6f854653e79b55b1aef74734d66a" category="paragraph">为无交换机集群连接布线。</block>
   <block id="0ce6d01af755d7d63a1db543cd42ef01" category="list-text">使用集群/HA互连缆线将集群/HA互连端口e1a连接到e1a、并将e7a连接到e7a。</block>
@@ -9460,7 +9423,6 @@ SFP+(目标/启动程序)</block>
   <block id="1107155d6b0c900a6485f06681854862" category="image-alt">RJ-45电缆</block>
   <block id="9c29eb35e98929529d99ca71cd855f4e" category="paragraph">*1000BASE-T RJ-45电缆*</block>
   <block id="a8536d671676b42d7c49328e04123a96" category="image-alt">连接到管理网络</block>
-  <block id="c67ade60c9405661826821f009653f29" category="admonition">请勿插入电源线。</block>
   <block id="09e9d41a74e65e2200df2359e0c54806" category="open-title">选项2：用缆线连接交换集群</block>
   <block id="0b7f474dc87a04642d4a17b892a87553" category="paragraph">为交换集群连接布线。</block>
   <block id="fe1ed4b5e6a760085b2af448921f0d53" category="list-text">进行以下布线连接：</block>
@@ -9523,7 +9485,6 @@ SFP+(目标/启动程序)</block>
   <block id="2ce1349fe67fa0e027bf3526a78ebb93" category="admonition">初始化集群后、下载并运行 <block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block> 以确认设置。</block>
   <block id="ed198c6c65dda3bfcee47cc329346a10" category="summary">将存储系统安装在机柜或电信机架中。</block>
   <block id="94ebd1127cf45d2e2e1f6f1b0cd35269" category="doc">安装硬件- AFF A1K</block>
-  <block id="7acdb30933a12f95dfea26017bada1f5" category="paragraph">以下说明介绍了如何在空机柜或电信机架中安装硬件。如果机柜已预先填充、请跳过此步骤。</block>
   <block id="dfdc73d42700a9c3fdaeacd939a51a4f" category="inline-link">安全通知</block>
   <block id="ab68982517ac3ad46c0076188c40b44c" category="list-text">您应查看本<block ref="cf650561cfd1ad2dfbe54c8781566683" category="inline-link-rx"></block> 文档、了解移动和安装硬件的预防措施。</block>
   <block id="ba4a0871133faabe4aa77db489cdd95f" category="list-text">导轨套件应附带说明。</block>
@@ -9591,7 +9552,6 @@ SFP+(目标/启动程序)</block>
   <block id="5e90eef3467966790ef48f7bc66eaea8" category="list-text">风扇在首次启动时可能会发出很大的声音。启动期间风扇噪音较大是正常现象。</block>
   <block id="671754b07475807f952083aca6f98a97" category="list-text">使用每个电源设备上的固定设备固定电源线。</block>
   <block id="b20f6daaff695ed207299929a85ec2f0" category="summary">准备安装AFF A1K平台。</block>
-  <block id="7322abed84a9319ae754d84788be0a04" category="doc">准备安装- AFF A1K</block>
   <block id="b08289f100b75f4c534e1d2f7b065d98" category="inline-link-macro">配置集群</block>
   <block id="4df010254bccca3ca04b1ea2f27bc98d" category="list-text">使用记录时所需的<block ref="21429355d1404c86c4038169e7df91bc" category="inline-link-rx"></block> 值 <block ref="5fecf2f883e4e59df3d0a6a1bcd5e808" category="inline-link-macro-rx"></block>。如果提供了默认值，则可以使用该值，或者输入您自己的值。</block>
   <block id="4157e2eb4dd8641bf3242a14b2dfed09" category="list-text">确认您已具备完成硬件安装所需的所有附加设备和工具。</block>
@@ -9640,14 +9600,9 @@ SFP+(目标/启动程序)</block>
   <block id="501009762675d8b94f6d05080102eaa1" category="paragraph">打开包装后、您可以在装箱单、确认电子邮件或控制器的系统管理模块上找到此编号。</block>
   <block id="8a7ac8ffae90ca0a1caaddb0f33069c2" category="list-text">访问NetApp支持站点，网址为<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>。</block>
   <block id="d1cc88bda5b2251b480ce496987d8474" category="list-text">注册硬件：</block>
-  <block id="8f45a9f1fcb944bee42c078bdeacd8ac" category="cell">如果您是 ...</block>
-  <block id="e3df4624e4d36502b5d044730eab97cc" category="cell">请按照以下步骤操作 ...</block>
-  <block id="d3f2dc7623074c370346f082b621f2db" category="paragraph">现有 NetApp 客户</block>
   <block id="8a55a5b89690f6046e6de8dd649ff837" category="list-text">使用您的用户名和密码登录。</block>
   <block id="5c83cedabfd78baf337988a092bcf317" category="list-text">选择*系统*&gt;*我的系统*。</block>
   <block id="1f122c4c30234dec74d765075fd1f45f" category="list-text">确认已列出新系统序列号。</block>
-  <block id="d193a53b34315bee1bed499f665686ce" category="list-text">如果不是，请按照适用于新 NetApp 客户的说明进行操作。</block>
-  <block id="daee797d0bf63a91fe069e1df88d7923" category="paragraph">NetApp 新客户</block>
   <block id="12dc2a66a130388ec482398caa6ce95b" category="list-text">单击 * 立即注册 * ，然后创建帐户。</block>
   <block id="89cc8de091278e0fb0686833ac6a7982" category="list-text">选择*系统*&gt;*注册系统*。</block>
   <block id="c04746c1c8deb45f0567d25441428d64" category="list-text">输入产品系统序列号和请求的详细信息。</block>
@@ -9735,7 +9690,6 @@ SFP+(目标/启动程序)</block>
   <block id="8f176870ac6c4361a1f6d7201cca260f" category="paragraph">在ONTAP存储系统中、每个NS224磁盘架都有一个唯一的磁盘架ID来区分。此ID可确保存储架在存储系统设置中是不同的。默认情况下、磁盘架ID通常分配为‘00 '和‘01 '、但您可能需要调整这些ID、以便在存储系统中保持唯一性。</block>
   <block id="4de17b4fab9ee69108776ab9c4aaa0c6" category="admonition">控制器机箱磁盘架ID硬编码为"00"。请勿对连接到平台的任何NS224磁盘架使用磁盘架ID "00"。</block>
   <block id="8e6cf8027b121504bad8e5f00fe274bd" category="summary">准备安装AFF A70、AFF A90平台。</block>
-  <block id="6ac7ef3cf74f3edcc05e92fb62092d4a" category="doc">准备安装- AFF A70、AFF A90</block>
   <block id="45fa7acb63053c31c5ae0a83dd4b3618" category="paragraph">准备安装平台。</block>
   <block id="62ca0ae61a6f061f90175c671563df84" category="list-text">访问Web浏览器以配置存储系统</block>
   <block id="bcaac0b69edbeb6d6ebf55df173a989d" category="paragraph">满载的A70-90平台的重量可达151.68磅(68.8千克)、需要四个人来提升或使用液压提升装置。</block>
@@ -9747,7 +9701,6 @@ SFP+(目标/启动程序)</block>
   <block id="6e6faa41850da2cbf2fba1981d46dbf5" category="list-text">两个电缆管理设备</block>
   <block id="a960b1448ee5bc8431d64797103ff6f9" category="paragraph">注册您的平台以获得支持优势。</block>
   <block id="9ddae9a7519b413c3e002aaa6578c11b" category="paragraph">您可以在装箱单、确认电子邮件或打开包装后的控制器上找到该号码。</block>
-  <block id="321d330a3500c9aa223bf5d134d0886b" category="list-text">输入系统序列号和请求的详细信息。</block>
   <block id="9693b6a52f0ee9092f8116f36e38a969" category="summary">要更换I/O模块、您必须断开模块的缆线、从模块中卸下SFP和QSFP模块、卸下模块、安装更换模块、重新安装SFP和QSFP模块、然后为I/O模块布线。</block>
   <block id="2224bc58afd68539e0dea6bf9e50c3d6" category="doc">添加I/O模块- AFF A70、AFF A90</block>
   <block id="24ca01289b896c334109ba7e14ec004f" category="doc">添加和更换I/O模块概述- AFF A70-90K</block>
@@ -9999,4 +9952,67 @@ SFP+(目标/启动程序)</block>
   <block id="f3585daa539c5917b4fedd0eb7efb3f2" category="sidebar">AFF 系统</block>
   <block id="6476573ba5b973ad8ea01c57f5b30267" category="sidebar">ASA 系统</block>
   <block id="9aaba65702056e024efc0836758c1538" category="sidebar">完成热添加</block>
+  <block id="b1cd69e899e8ab2e8b0c559899a3f2d7" category="admonition">下图显示了如何卸下水平和垂直I/O模块。通常、您只会卸下一个I/O模块。</block>
+  <block id="ed8012a83cd9088ec111d26e82a75971" category="list-text">使用_security key-manager keyStore show_命令确定密钥管理器是否处于活动状态。有关详细信息、请参见<block ref="4b8f2aeacb1514195535ef615c2cae4a" category="inline-link-rx"></block></block>
+  <block id="3e6277588162255770fd3384bad09d6d" category="list-text">从控制器上的加载程序提示符处、启动控制器、并在系统因系统ID不匹配而提示覆盖系统ID时输入_y_。</block>
+  <block id="9daabece8db7521a7882f63ebd76a891" category="image-alt">卸下驱动器，释放按钮位于顶部</block>
+  <block id="e0bc24820711c466532ba2cb67ababd9" category="image-alt">卸下释放按钮位于中间的驱动器</block>
+  <block id="5be3be4e3c78f5ba4233a70fab6255f9" category="paragraph">在正常启动后、通过完成最终检查并交还存储来完成启动介质更换过程。</block>
+  <block id="0ae7701d2ef507a0fceb7c75d4891e75" category="list-text">使用缆线将控制器A上的端口e1a连接到控制器B上的端口e1A</block>
+  <block id="8bf237b60bd4b2db806d6610ad52ec49" category="list-text">使用缆线将控制器A上的端口e7a连接到控制器B上的端口e1A</block>
+  <block id="1de71be9c54175327aecef768179d1bd" category="paragraph">+ image：：../media/drw_a1k_tnsc_cluster-c布线ieops-1648.svg[双节点无交换机集群布线图、宽度=500ps]</block>
+  <block id="89135cd683c3d107d2c82b9a703f04cb" category="paragraph">+。使用缆线将以太网模块端口连接到主机网络。</block>
+  <block id="4e44798e075d2d881a9fb7543667af95" category="paragraph">+以下是一些典型的主机网络布线示例。有关您的特定系统配置、请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> 。</block>
+  <block id="38821947dff053760f4c97b648ca454a" category="admonition">请勿插入电源线。</block>
+  <block id="b0dc4e3ef222885899ea12125b17e5eb" category="list-text">单击左窗格中的*网络*，右键单击并选择*refresh。</block>
+  <block id="1d0b4b2ae4d50e55a4247f5c6ede72f1" category="paragraph">在空机柜或电信机架中安装硬件。如果机柜已预先填充、请跳过此步骤。</block>
+  <block id="cd5e55734c933dafcff53ae3865a89d5" category="doc">准备安装- AFF A1K</block>
+  <block id="5a5cce6679503c381a637f466b048193" category="open-title">选项1：现有NetApp客户</block>
+  <block id="253e5915076081eaf8bcc8dd74c1d42e" category="admonition">如果未列出新系统序列号、请按照适用于新NetApp客户的说明进行操作。</block>
+  <block id="7e2ca0c1daf9aaf521d6b306d11f7c79" category="open-title">选项2：新的NetApp客户</block>
+  <block id="a620e4025016adf1d0a58233ca0fabf5" category="image-alt">卸下或更换RTC电池</block>
+  <block id="49c0e8738689c7137641d0b6eed8b74c" category="image-alt">移动启动介质</block>
+  <block id="e9178489530d4c60949007e8abe6cd95" category="image-alt">移动DIMM动画</block>
+  <block id="3cebb0bf3f808b01f8380666a63cc376" category="image-alt">移动PCI Riser卡</block>
+  <block id="1079efe662e16cf433206d49d63eeaa6" category="paragraph"><block ref="1079efe662e16cf433206d49d63eeaa6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8dca5ac38ffa0e9613281a20a0ace994" category="image-alt">系统提升重量小心</block>
+  <block id="9971c7f02208e39ad6368e57eb2f82f3" category="image-alt">卸下或安装缆线管理臂</block>
+  <block id="2b6ebc45199173506b9b4592d62affa0" category="image-alt">双节点无交换机集群复合布线</block>
+  <block id="3988cb152ae91c53f380027a4232d536" category="inline-image-macro">双节点无交换机集群用于连接cluster-HA连接</block>
+  <block id="372a8dd97d0e0a73dd341e38652ff673" category="list-text">e0d到e0d <block ref="df4a6e6703f97285d4be98ac6b32bb9f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="896029f9803d769d6b4c354df0fa1440" category="inline-image-macro">连接板载数据网络连接</block>
+  <block id="5fc0a7eeb4f9f66fd26242880a45cfa4" category="list-text">e0g和e0h <block ref="ba2134526422f5f21eaaa9ef2e2f11c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="722ecbce3343f3dc23dee2d53d88f2ed" category="image-alt">双节点无交换机集群用于连接NIC</block>
+  <block id="5a77698302494ef91ee95c3f9ded308f" category="inline-image-macro">连接管理端口</block>
+  <block id="1c0c9fe4df36ecf54b797e69eff0360e" category="paragraph"><block ref="1c0c9fe4df36ecf54b797e69eff0360e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="aecf4c890506699d5134914982e97718" category="image-alt">有交换机集群复合布线</block>
+  <block id="79135b297c57329d2d977b75149a086c" category="inline-image-macro">有交换机集群集群集群集群-HA连接</block>
+  <block id="2a41afda28faa24bd5359e120005398d" category="list-text">两个控制器上的e0d连接到集群/HA交换机 <block ref="b92a1fef09a96ed6d9089504fec643ee" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1b6bade89e0d586d34572548f1418dff" category="inline-image-macro">有交换机集群板载网络连接</block>
+  <block id="e734ac5b706a3982e94ed4bcf5783d35" category="list-text">e0g和e0h <block ref="d655351f2183e938c691c0566f625116" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d2b5e3a94d4de532d196fa8367775092" category="image-alt">有交换机集群网络连接</block>
+  <block id="aeb83c4121e1220b0a8efc82136a809d" category="inline-image-macro">交换集群管理网络连接</block>
+  <block id="df81ef45089583d9cf254a5e823c88ab" category="paragraph"><block ref="df81ef45089583d9cf254a5e823c88ab" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f44e898d80cbbf4a33440188c038a5d3" category="image-alt">复合式单驱动器架布线</block>
+  <block id="7619a75fe3181346925af214b3805907" category="inline-image-macro">Cable controller A to the shelf</block>
+  <block id="ed6605849a8f419088845bc48c2b4374" category="paragraph">使用缆线将控制器A连接到磁盘架 <block ref="8f69dbb1a9676f77b4e45659e89350f0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9228396d4ae4e82ba4cd05b1f94961bf" category="inline-image-macro">将控制器B连接到单个磁盘架</block>
+  <block id="4e324a0bffb1eb75afb38454acf8e1ea" category="paragraph">使用缆线将控制器B连接到磁盘架： <block ref="eae43961c4d76c017c2440362d53b1c7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b7d0a8670d6614b389c8403bdb0f5690" category="image-alt">为两个磁盘架布线动画</block>
+  <block id="694cbf19b59e9646ed9b4e00c40a2d5e" category="inline-image-macro">使用缆线将两个磁盘架连接到控制器A</block>
+  <block id="eeadc1e47c5ada05336cc4a2430aff44" category="paragraph">使用缆线将控制器A连接到磁盘架： <block ref="d1f96be8e1b1f281d39fbb850bfff8ae" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f7272edef7a7fba4085ccfab3dcab29" category="inline-image-macro">使用缆线将磁盘架连接到控制器b</block>
+  <block id="5068cb73707de732551109a3000233a5" category="paragraph">使用缆线将控制器B连接到磁盘架： <block ref="a2de9db71ec552fd6bcd09e536f53289" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3efca07728c425a2d570687f9c5ee055" category="list-text">打开文件资源管理器。</block>
+  <block id="060661d6632055dffb9c643daef86e4f" category="image-alt">使用缆线将笔记本电脑连接到管理子网交换机</block>
+  <block id="cf3f3f0fc4be4a45a82eb23742f77b44" category="image-alt">更换NV电池</block>
+  <block id="8dd9b5acff09c1cf11545aba64dc805d" category="image-alt">Replace the NVDIMM</block>
+  <block id="d8ee7164de4500239f84b98bce6a6cba" category="image-alt">卸下缆线管理设备</block>
+  <block id="0607668bcd83e971ac318001952a55ae" category="image-alt">更换PCI卡</block>
+  <block id="abb9a3f7b40da322ff2c9d6b0f555396" category="image-alt">有交换机集群网络布线</block>
+  <block id="11e10f0140c4a2adc649196a587b4fb5" category="image-alt">使用缆线将两个磁盘架连接到控制器</block>
+  <block id="91ffcf18fe68ab362696af94371c45a6" category="image-alt">使用缆线将三个磁盘架连接到控制器</block>
+  <block id="5d40c2e94b9e6a2b23697795499fe265" category="paragraph">+图像：../media/drw_70-90_tnsc_cluster-c布线ieops-1653.svg[双节点无交换机集群布线图、宽度=500ps]</block>
+  <block id="46ef92fe9e0acb49a708c33291f9e608" category="doc">准备安装- AFF A70、AFF A90</block>
+  <block id="0f8a8f2efc51dcb48a6d357e4ed1476e" category="sidebar">准备安装</block>
 </blocks>

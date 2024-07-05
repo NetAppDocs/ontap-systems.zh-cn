@@ -88,7 +88,7 @@ image::../media/drw_a320_controller_cable_unplug_animated_gif.png[卸下缆线�
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 . 从机箱中卸下控制器模块：
 +
-image::../media/drw_a320_controller_remove_animated_gif.png[删除控制器]
+image::../media/drw_a320_controller_remove_animated_gif.png[卸下控制器]
 
 +
 .. 将前掌插入控制器模块两侧的锁定装置。
@@ -111,7 +111,7 @@ image::../media/drw_a320_controller_remove_animated_gif.png[删除控制器]
 
 要更换 NVDIMM 电池，您必须从控制器模块中取出故障电池，然后将更换电池安装到控制器模块中。
 
-image::../media/drw_a320_nvbat_move_animated_gif.png[DRW A320 nvbat move 动画 gif]
+image::../media/drw_a320_nvbat_move_animated_gif.png[更换NV电池]
 
 . 打开通风管并找到 NVDIMM 电池。
 . 找到电池插头，然后挤压电池插头正面的夹子，将插头从插槽中释放，然后从插槽中拔下电池缆线。

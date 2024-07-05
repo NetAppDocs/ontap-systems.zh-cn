@@ -79,7 +79,7 @@ NOTE: 为避免损坏内部连接器，请勿在将电源滑入系统时用力�
 
 您可以使用下图或写入的步骤将 NVDIMM 电池从受损的控制器模块移至替代控制器模块。
 
-image::../media/drw_a320_nvbat_move_animated_gif.png[DRW A320 nvbat move 动画 gif]
+image::../media/drw_a320_nvbat_move_animated_gif.png[移动NV电池]
 
 . 在控制器模块中找到 NVDIMM 电池。
 . 找到电池插头，然后挤压电池插头正面的夹子，将插头从插槽中释放，然后从插槽中拔下电池缆线。
@@ -100,7 +100,7 @@ NOTE: 除非系统指示，否则请勿将电池缆线重新插入主板。
 
 您可以使用下图或写入的步骤将启动介质从受损的控制器模块移至替代控制器模块。
 
-image::../media/drw_a320_boot_media_move_animated_gif.png[DRW A320 启动介质移动动画 gif]
+image::../media/drw_a320_boot_media_move_animated_gif.png[移动启动介质]
 
 . 打开通风管，并使用下图或控制器模块上的 FRU 示意图找到启动介质：
 . 从控制器模块中找到并取出启动介质：
@@ -133,11 +133,11 @@ image::../media/drw_a320_boot_media_move_animated_gif.png[DRW A320 启动介质�
 
 您可以使用以下插图或写入的步骤将 DIMM 从受损的控制器模块移至更换用的控制器模块。
 
-image::../media/drw_a320_dimm_move_animated_gif.png[DRW A320 DIMM 移动动画 gif]
+image::../media/drw_a320_dimm_move_animated_gif.png[移动DIMM动画]
 
 . 找到控制器模块上的 DIMM 。
 +
-image::../media/drw_a320_dimm_map.png[DRW A320 DIMM 映射]
+image::../media/drw_a320_dimm_map.png[DIMM映射]
 
 +
 |===
@@ -196,7 +196,7 @@ DIMM 紧紧固定在插槽中，但应易于插入。如果没有，请将 DIMM 
 
 您可以使用下图或写入的步骤将 PCIe 提升板从受损控制器模块移至更换控制器模块。
 
-image::../media/drw_a320_pci_riser_move_animated_gif.png[DRW A320 PCI 提升板移动动画 gif]
+image::../media/drw_a320_pci_riser_move_animated_gif.png[移动PCI Riser卡]
 
 . 拧下 PCIe 提升板上的蓝色翼形螺钉，将盖板滑向您的方向，向上旋转盖板，将其从控制器模块上取下，然后将其放在一旁。
 . 从更换用的控制器模块中卸下空的提升板。
