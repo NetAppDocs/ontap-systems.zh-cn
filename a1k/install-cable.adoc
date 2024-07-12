@@ -52,19 +52,20 @@ NOTE: 集群互连流量和HA流量共享相同的物理端口。
 +
 *集群/HA互连缆线*
 
-
-
-
-
++
 image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[集群HA缆线]
 
-+ image：：../media/drw_a1k_tnsc_cluster-c布线ieops-1648.svg[双节点无交换机集群布线图、宽度=500ps]
++
+image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[双节点无交换机集群布线图]
 
-+。使用缆线将以太网模块端口连接到主机网络。
 
-+以下是一些典型的主机网络布线示例。有关您的特定系统配置、请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 。
 
-. 如图所示、使用缆线将端口e9a和e9b连接到以太网数据网络交换机。
+. 使用缆线将以太网模块端口连接到主机网络。
++
+以下是一些典型的主机网络布线示例。有关您的特定系统配置、请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 。
+
++
+.. 如图所示、使用缆线将端口e9a和e9b连接到以太网数据网络交换机。
 +
 
 NOTE: 为了最大程度地提高集群和HA流量的系统性能、最好不要使用端口e1b和e7b端口进行主机网络连接。使用单独的主机卡以最大程度地提高性能。
@@ -78,7 +79,7 @@ image::../media/oie_cable_sfp_gbe_copper.svg[100 Gb以太网电缆]
 +
 image::../media/drw_a1k_network_cabling1_ieops-1649.svg[使用缆线连接到100 Gb以太网网络]
 
-. 为1025 GbE主机网络交换机布线。
+.. 为1025 GbE主机网络交换机布线。
 +
 *1025 GbE主机*
 
@@ -88,8 +89,9 @@ image::../media/oie_cable_sfp_gbe_copper.svg[1025Gb以太网电缆]
 +
 image::../media/drw_a1k_network_cabling2_ieops-1650.svg[使用缆线连接到1025Gb以太网网络]
 
-+
-.. 使用1000BASE-T RJ-45缆线将控制器管理(扳手)端口连接到管理网络交换机。
+
+
+. 使用1000BASE-T RJ-45缆线将控制器管理(扳手)端口连接到管理网络交换机。
 +
 image::../media/oie_cable_rj45.svg[RJ-45电缆]
 
@@ -98,8 +100,6 @@ image::../media/oie_cable_rj45.svg[RJ-45电缆]
 
 +
 image::../media/drw_a1k_management_connection_ieops-1651.svg[连接到管理网络]
-
-
 
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: AFF A90, AFF A70, replace io module 
 summary: '您必须使用提供商提供的更换现场可更换单元(FRU)组件来更换故障组件。' 
 ---
-= 添加和更换I/O模块概述- AFF A70-90K
+= 添加和更换I/O模块概述- AFF A70、AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,3 +12,13 @@ summary: '您必须使用提供商提供的更换现场可更换单元(FRU)组�
 
 [role="lead"]
 您可以将存储系统中发生故障的I/O模块更换为相同类型的I/O模块或不同类型的I/O模块。您还可以将I/O模块添加到具有空插槽的系统中。
+
+* link:io-module-add.html["添加I/O模块"]
++
+添加更多模块可以提高冗余度、有助于确保即使一个模块出现故障、系统仍可正常运行。
+
+* link:io-module-replace.html["更换I/O模块"]
++
+更换发生故障的I/O模块可以将系统还原到其最佳运行状态。
+
+

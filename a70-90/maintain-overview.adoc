@@ -11,76 +11,100 @@ summary: 维护AFF A70、AFF A90硬件
 
 
 [role="lead"]
-对于AFF A70、AFF A90存储系统、您可以对以下组件执行维护过程。
+您可能需要对硬件执行维护过程。本节将介绍维护AFF A70和AFF A90系统组件的特定过程。
+
+本节中的过程假设AFF A70和AFF A90系统已部署为ONTAP环境中的存储节点。
 
 
 
-== 启动介质
+== 系统组件
 
-启动介质用于存储系统在启动时使用的一组主启动映像文件和一组二级启动映像文件。
+对于ASA A70和ASA A90存储系统、您可以对以下组件执行维护过程。
+
+[cols="25,65"]
+|===
+
+
+ a| 
+link:bootmedia-replace-workflow.html["启动介质"]
+ a| 
+启动介质用于存储系统在启动时使用的一组主和二级ONTAP映像文件。
 
 
 
-== 机箱
-
+ a| 
+link:chassis-replace-workflow.html["机箱"]
+ a| 
 机箱是托管所有控制器组件(例如控制器/CPU单元、电源和I/O)的物理机箱
 
 
 
-== 控制器
-
-控制器由主板，固件和软件组成。它控制驱动器并实现ONTAP功能。
-
-
-
-== DIMM
-
-如果存在内存不匹配或 DIMM 发生故障，则必须更换 DIMM （双列直插式内存模块）。
+ a| 
+link:controller-replace-workflow.html["控制器"]
+ a| 
+控制器由主板，固件和软件组成。它控制驱动器并运行ONTAP操作系统软件。
 
 
 
-== 驱动器
-
-驱动器是为数据提供物理存储介质的设备。
-
-
-
-== 风扇
-
-风扇用于冷却控制器。
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
+双列直插式内存模块(DIMM)是一种计算机内存。安装它们是为了向控制器主板添加系统内存。
 
 
 
-== NVRAM
+ a| 
+link:drive-replace.html["驱动器"]
+ a| 
+驱动器是提供数据所需物理存储的设备。
 
+
+
+ a| 
+link:fan-replace.html["风扇"]
+ a| 
+风扇冷却控制器。
+
+
+
+ a| 
+link:nvram-replace.html["NVRAM"]
+ a| 
 NVRAM (非易失性随机存取存储器)是一个模块、可使控制器在系统断电时保护和保存传输中的数据。系统ID位于NVRAM模块中。更换后、控制器将从更换的NVRAM模块获取新的系统ID。
 
 
 
-== NV电池
+ a| 
+link:nvdimm-battery-replace.html["NV电池"]
+ a| 
+NV电池负责在断电后将传输中的数据转存到闪存时为NVRAM模块供电。
 
-NVRAM电池负责在断电后将传输中的数据转存到闪存时为NVRAM模块供电。
 
 
-
-== I/O 模块
-
+ a| 
+link:io-module-overview.html["I/O 模块"]
+ a| 
 I/O模块(输入/输出模块)是一个硬件组件、充当控制器与需要与控制器交换数据的各种设备或系统之间的媒介。
 
 
 
-== 电源
-
+ a| 
+link:power-supply-replace.html["电源"]
+ a| 
 电源设备在控制器中提供冗余电源。
 
 
 
-== 实时时钟电池
-
+ a| 
+link:rtc-battery-replace.html["实时时钟电池"]
+ a| 
 实时时钟电池可在断电时保留系统日期和时间信息。
 
 
 
-== 系统管理模块
-
+ a| 
+link:system-management-replace.html["系统管理模块"]
+ a| 
 系统管理模块提供控制器与控制台或笔记本电脑之间的接口、用于控制器或系统维护。系统管理模块包含启动介质并存储系统序列号(SSN)。
+
+|===

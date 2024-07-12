@@ -17,18 +17,18 @@ summary: 您可以使用完整的控制器到堆栈布线工作表和布线示�
 * 如果需要，可以参考 link:install-cabling-worksheets-how-to-read-quadpath.html["如何阅读使用缆线连接控制器到堆栈连接以实现四路径连接的工作表"]。
 * 布线示例显示控制器到堆栈的缆线为实线或虚线，以区分控制器 A 和 C 端口连接与控制器 B 和 D 端口连接。
 +
-image::../media/drw_controller_to_stack_cable_type_key.gif[DRW 控制器到堆栈缆线类型密钥]
+image::../media/drw_controller_to_stack_cable_type_key.gif[用于控制器到堆栈布线的缆线类型密钥]
 
 * 布线示例中的缆线及其工作表中对应的端口对采用颜色编码，以区分与 HA 对中每个堆栈的连接。
 +
-image::../media/drw_controller_to_stack_cable_color_key_non2600.gif[DRW 控制器到堆栈的缆线颜色密钥，非 2600]
+image::../media/drw_controller_to_stack_cable_color_key_non2600.gif[用于布线工作表的彩色键]
 
 * 布线示例直观地区分了为每个控制器与 HA 对或单控制器配置中的每个堆栈实现四路径连接所需的两组多路径布线。
 +
 第一组多路径布线称为 " `m多路径` " 。第二组多路径布线称为 "`quad pathed` " 。第二组布线称为 "`四路径` " ，因为完成这组布线将为您提供四路径连接。
 
 +
-image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[将 DRW 控制器堆栈为四路径连接密钥]
+image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[彩色键用于四路径连接]
 
 * 此工作表示例显示了指定用于在适用堆栈中进行多路径布线或四路径布线的端口对。
 +
@@ -44,4 +44,4 @@ image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[将 DRW
 
 image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[四路径HA布线工作表]
 
-image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[DRW qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 NAU]
+image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[具有两个四端口SAS HBA和两个多磁盘架堆栈的Quuad-path HA]

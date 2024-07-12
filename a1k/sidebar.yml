@@ -20,13 +20,15 @@ entries:
 - title: 维护
   pdf-filename: AFF A1K维护
   entries:
-  - title: 概述
+  - title: 维护概述
     url: "/a1k/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A1K启动介质
     entries:
-    - title: 启动介质更换概述
-      url: "/a1k/bootmedia-replace-overview.html"
+    - title: 启动介质更换工作流
+      url: "/a1k/bootmedia-replace-workflow.html"
+    - title: 要求和注意事项
+      url: "/a1k/bootmedia-replace-requirements.html"
     - title: 检查板载加密密钥
       url: "/a1k/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
@@ -35,15 +37,17 @@ entries:
       url: "/a1k/bootmedia-replace.html"
     - title: 启动恢复映像
       url: "/a1k/bootmedia-recovery-image-boot.html"
-    - title: 加密还原
+    - title: 恢复加密
       url: "/a1k/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/a1k/bootmedia-complete-rma.html"
   - title: 控制器
     pdf-filename: AFF A1K控制器模块
     entries:
-    - title: 控制器模块更换概述
-      url: "/a1k/controller-replace-overview.html"
+    - title: 控制器更换工作流
+      url: "/a1k/controller-replace-workflow.html"
+    - title: 要求和注意事项
+      url: "/a1k/controller-replace-requirements.html"
     - title: 关闭受损控制器
       url: "/a1k/controller-replace-shutdown.html"
     - title: 更换控制器
@@ -64,9 +68,9 @@ entries:
     url: "/a1k/nvdimm-battery-replace.html"
   - title: I/O 模块
     entries:
-    - title: I/O模块添加或更换概述
+    - title: I/O模块概述
       url: "/a1k/io-module-overview.html"
-    - title: 添加I/O模块
+    - title: 添加 I/O 模块
       url: "/a1k/io-module-add.html"
     - title: 更换I/O模块
       url: "/a1k/io-module-replace.html"

@@ -27,13 +27,13 @@ NOTE: 此操作步骤 适用于同类磁盘架 IOM 热插拔或更换。这意�
 IOM12模块通过"IOM12"标签来区分：
 
 +
-image::../media/drw_iom12.gif[DRW iom12]
+image::../media/drw_iom12.gif[IOM12的正面]
 
 +
 IOM12B模块通过蓝色条带和"IOM12B"标签来区分：
 
 +
-image::../media/iom12b.png[iom12b]
+image::../media/iom12b.png[IOM12B正面]
 
 * 对于多路径(多路径HA或多路径)、三路径HA和四路径(四路径HA或四路径)配置、您可以热插拔磁盘架IOM (无中断更换已启动且正在提供数据的系统中的磁盘架IOM—正在执行I/O操作)。
 * 对于FAS2600系列和FAS2700系列单路径HA配置、您必须执行接管和交还操作、以更换已启动并正在提供数据的系统中的磁盘架IOM。
@@ -110,10 +110,10 @@ FAS2600 系列单路径配置
 
 . 按下磁盘架IOM凸轮把手上的橙色闩锁、直到其释放为止、然后完全打开凸轮把手、以从中间板释放磁盘架IOM。
 +
-image::../media/drw_iom_latch.png[DRW IOM 闩锁]
+image::../media/drw_iom_latch.png[松开凸轮把手的闩锁]
 
 +
-image::../media/drw_iom_open.png[已打开 DRW IOM]
+image::../media/drw_iom_open.png[凸轮把手处于打开位置]
 
 . 使用凸轮把手将磁盘架IOM滑出磁盘架。
 +

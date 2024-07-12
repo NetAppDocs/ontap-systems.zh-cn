@@ -446,9 +446,9 @@ NOTE: 在 MetroCluster 配置中，不能使用 IOM B 路径。
 此图特定于具有多路径HA连接的堆栈；但是、布线概念可应用于具有多路径、三路径HA、单路径HA、单路径连接和延伸型MetroCluster配置的堆栈。
 
 +
-image::../media/drw_sas2_sas3_mixed_stack.png[DRW SAS2 SAS3 混合堆栈]
+image::../media/drw_sas2_sas3_mixed_stack.png[多路径混合堆栈布线]
 
-* 在桥接MetroCluster 配置中、使用缆线将IOM12/IOM12B磁盘架连接到IOM6磁盘架堆栈时、您可以参考下图。 image:../media/hot_adding_iom12_shelves_to_iom6_stack_in_bridge_attached_config.png[""]
+* 您可以参考下图将IOM12/IOM12B磁盘架连接到网桥连接MetroCluster配置中的IOM6磁盘架堆栈。 image:../media/hot_adding_iom12_shelves_to_iom6_stack_in_bridge_attached_config.png["桥接配置中的混合堆栈布线"]
 
 
 .步骤

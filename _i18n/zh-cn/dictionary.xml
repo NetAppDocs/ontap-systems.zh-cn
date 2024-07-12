@@ -3382,10 +3382,8 @@
   <block id="894ffcc20897b622cbd7b6ca6714ee4f" category="list-text">布线示例显示控制器到堆栈的缆线为实线或虚线，以区分控制器 A 和 C 端口连接与控制器 B 和 D 端口连接。</block>
   <block id="f8e47c7d28ca54fc60e534a2aa66cd55" category="image-alt">DRW 控制器到堆栈缆线类型密钥</block>
   <block id="e49b7bdd8191780aea4f583124847913" category="list-text">布线示例中的缆线及其工作表中对应的端口对采用颜色编码，以区分与 HA 对中每个堆栈的连接。</block>
-  <block id="de01522e941cfe599b9f3b4a6394c373" category="image-alt">DRW 控制器到堆栈的缆线颜色密钥，非 2600</block>
   <block id="0230c83ced57a67f2d5277748826cfef" category="list-text">布线示例直观地区分了为每个控制器与 HA 对或单控制器配置中的每个堆栈实现四路径连接所需的两组多路径布线。</block>
   <block id="bdb9e07856583317bddd1f2c2748f611" category="paragraph">第一组多路径布线称为 " `m多路径` " 。第二组多路径布线称为 "`quad pathed` " 。第二组布线称为 "`四路径` " ，因为完成这组布线将为您提供四路径连接。</block>
-  <block id="3ab4c9235d9001b444564b2a71159407" category="image-alt">将 DRW 控制器堆栈为四路径连接密钥</block>
   <block id="a1133df643b44f52c54c9ac1cc0963ee" category="list-text">此工作表示例显示了指定用于在适用堆栈中进行多路径布线或四路径布线的端口对。</block>
   <block id="ecc08dd2661076f245ef51eb14c4a74d" category="paragraph">为多路径布线指定的每个端口对都由一个与所连接的堆栈关联的椭圆所环绕。为四路径布线指定的每个端口对都由一个与所连接的堆栈相关的颜色的方框所环绕。</block>
   <block id="7c0edd402cd55e5ea26650be4a6f998c" category="section-title">具有两个四端口 SAS HBA 和两个多架堆栈的四路径 HA</block>
@@ -3601,7 +3599,6 @@
   <block id="954499b275aa6b0244088769d4cab500" category="admonition">在 MetroCluster 配置中，不能使用 IOM B 路径。</block>
   <block id="f260b20153205d9038127e4a15618a0f" category="list-text">SAS 缆线连接器具有方向性；正确连接到 SAS 端口时，连接器会卡入到位。</block>
   <block id="10ae5a4ce8cb24c89ab7989958cb34b9" category="paragraph">对于磁盘架，您可以插入 SAS 缆线连接器，拉片朝下（位于连接器的下侧）。对于控制器， SAS 端口的方向可能因平台型号而异；因此，正确的 SAS 缆线连接器方向会有所不同。</block>
-  <block id="9eae6e522d01233eda31813671040bc9" category="image-alt">DRW SAS2 SAS3 混合堆栈</block>
   <block id="a4450110a0add0d3dc0ed544c4dc9587" category="list-text">物理确定堆栈中的最后一个逻辑磁盘架。</block>
   <block id="3290caa995109a5019ab331bcbb4fd8c" category="paragraph">否则，请转至步骤 3 。</block>
   <block id="49ae96093ef4318ebea3748695f1f2ec" category="cell">如果 IOM6 堆栈连接 ...</block>
@@ -3673,9 +3670,7 @@
   <block id="f9949e25a19a066ee96b2445c47e6bbd" category="paragraph">按下释放按钮时，磁盘驱动器上的凸轮把手会部分打开。</block>
   <block id="8c1abcf074a9adec09e39ebd810a512d" category="admonition">DS212C 磁盘架中的磁盘驱动器通过位于磁盘驱动器正面左侧的释放按钮水平排列。DS224C 磁盘架中的磁盘驱动器垂直排列，释放按钮位于磁盘驱动器正面的顶部。</block>
   <block id="691f396d85c0be2dbf8fe249eb9aa06b" category="paragraph">下面显示了 DS212C 磁盘架中的磁盘驱动器：</block>
-  <block id="9f384f4e3cb7648375730a62ac90eff9" category="image-alt">DRW 驱动器未打开挡板</block>
   <block id="ae837c75b919fd34b7bb3a1ac14b40ca" category="paragraph">以下显示了 DS224C 磁盘架中的磁盘驱动器：</block>
-  <block id="3c8f0ed13542dc0b44cabea8893057b5" category="image-alt">2240 卸下磁盘，无挡板</block>
   <block id="0a6926c08151fd5eb5c8be886b34f3d9" category="list-text">将磁盘驱动器轻轻滑出以使磁盘安全地旋转，然后从磁盘架中取出磁盘驱动器。</block>
   <block id="e36b3cad9a6a6901301f9b0cbb18d94b" category="paragraph">HDD 可能需要长达一分钟的时间才能安全地停转。</block>
   <block id="fbe4d4e18826cc880bfe176cb971e107" category="admonition">处理磁盘驱动器时，请始终用双手支撑其重量。</block>
@@ -3847,7 +3842,6 @@
   <block id="96c5571f7b6648b76366cba9755c4f43" category="paragraph">LNK</block>
   <block id="19e79e9ef0fa80f9b6aa5a3f8e5bb42c" category="paragraph">端口链路</block>
   <block id="e35abb0fc157a472260600f52f6994cc" category="paragraph">四个 SAS 通道中的一个或多个用于建立链路（与适配器或另一个磁盘架）。</block>
-  <block id="f2105620d136a321a397d0310e98f133" category="image-alt">DRW iom12</block>
   <block id="2aa3adf1c0ff2c8444260a0e888c02bc" category="section-title">电源 LED</block>
   <block id="09cdf702b67ff26e9a51e5bd564332db" category="paragraph">电源上的 LED 指示电源运行正常还是存在硬件问题。</block>
   <block id="593e6773180149ce15a83f47762be685" category="paragraph">下表介绍了 DS460C ， DS224C 和 DS212C 磁盘架中使用的电源上的两个 LED ：</block>
@@ -3908,7 +3902,6 @@
   <block id="2d876268689d2b3dd0523bf8bc1a49ab" category="list-text">查看驱动器抽屉的顶部，找到位于每个驱动器前面的驱动器抽屉上的警示 LED 。</block>
   <block id="27967334ee8d19e4cf590fd2f532f262" category="list-text">从打开的抽盒中取出故障驱动器：</block>
   <block id="e42c19e11077bb09d5a36d3d6a01cda9" category="list-text">轻轻向后拉要卸下的驱动器前面的橙色释放闩锁。</block>
-  <block id="2006a7ac1c738ee804933b92cb0fd114" category="image-alt">Trafford 驱动器 rell 按钮</block>
   <block id="40f837f06bbd36f49cef42babd88b053" category="cell">橙色释放闩锁</block>
   <block id="48cb4c1c5e18eec97fe2c35a66b8047c" category="list-text">打开凸轮把手，然后轻轻提起驱动器。</block>
   <block id="764a62532760f655a4934a835eafa280" category="list-text">等待 30 秒。</block>
@@ -4174,8 +4167,6 @@
   <block id="1e78ab40bbabb204b7d418ad7a32f801" category="paragraph">FAS2600 系列单路径配置</block>
   <block id="afd363af41e03520500b30751b522491" category="list-text">从系统控制台关闭系统： `halt`</block>
   <block id="e8403bb6f96eb0e9dd855761d673bcfb" category="list-text">通过检查存储系统控制台验证系统是否已暂停。</block>
-  <block id="cd5f38b38ffd79461cf543f7d3a14843" category="image-alt">DRW IOM 闩锁</block>
-  <block id="4c85cb5670afa3b61996e7baa0111129" category="image-alt">已打开 DRW IOM</block>
   <block id="ccadbe2edcc98f542a5f72090def31e3" category="paragraph">等待至少 70 秒可使驱动程序正确注册磁盘架 ID 。</block>
   <block id="9bf609fda741e4f05af53222039c4623" category="list-text">重新连接布线。</block>
   <block id="240ac1f7b24df668dce754edbdea2f25" category="paragraph">SAS 缆线连接器具有方向性；正确连接到 IOM 端口时，连接器会卡入到位， IOM 端口 LNK LED 会呈绿色亮起。将 SAS 缆线连接器插入 IOM 端口，拉片朝下（位于连接器的下侧）。</block>
@@ -5774,7 +5765,6 @@
   <block id="0455216bece3ce620e2fd5c84b24a523" category="list-text">在HA对中、包含两个IOM6磁盘架和两个IOM12/IOM12B磁盘架的堆栈中的单速过渡如下所示：</block>
   <block id="22c141c57159ea5a9cf5ecee1f8b4145" category="list-text">首先通过连接IOM A路径上的SAS端口来为IOM12/IOM12B磁盘架布线、然后根据堆栈连接情况对IOM B路径重复上述布线步骤。</block>
   <block id="f40ad7d263effd48cd15f5ec54dc2775" category="list-text">在未使用FC-SAS网桥的配置中、您可以参考下图将IOM12/IOM12B磁盘架连接到IOM6磁盘架堆栈。</block>
-  <block id="5c5d06fa180884eea62ba831b980ed33" category="list-text">在桥接MetroCluster 配置中、使用缆线将IOM12/IOM12B磁盘架连接到IOM6磁盘架堆栈时、您可以参考下图。 <block ref="3bf7d126d94220be52cd0d278e98261d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3d7f99cbbf1b9ba05ea3a6ec89eae8b6" category="list-text">如果要热添加的IOM12/IOM12B磁盘架是要添加到IOM6堆栈的初始IOM12/IOM12B磁盘架、这意味着IOM6磁盘架堆栈中不存在其他IOM12/IOM12B磁盘架、请完成相应的子步骤。</block>
   <block id="423d2f16d6d5594161f3868e4a50907a" category="list-text">使用缆线将最后一个IOM6磁盘架IOM A圆形端口(子步骤A)与新的IOM12/IOM12B磁盘架IOM A端口1之间的磁盘架到磁盘架连接。</block>
   <block id="41cb447e88bb124a5db517ed30198998" category="list-text">如果要热添加另一个IOM12/IOM12B磁盘架、请在刚刚连接缆线的磁盘架的IOM12/IOM12B磁盘架IOM A端口3和下一个IOM12B磁盘架IOM A端口1之间使用缆线连接磁盘架到磁盘架。</block>
@@ -5819,7 +5809,6 @@
   <block id="ebe49a15e88084dd22a61a0c761257fe" category="list-text">IOM12模块和IOM12B模块的外观可以区分：</block>
   <block id="20b0dc7787284cb0afa2dbc5d95136a2" category="paragraph">IOM12模块通过"IOM12"标签来区分：</block>
   <block id="5416d570ace1334ffbc27d0d9486ebe5" category="paragraph">IOM12B模块通过蓝色条带和"IOM12B"标签来区分：</block>
-  <block id="d2a8fdadc8d18dd445c56f47cea6197a" category="image-alt">iom12b</block>
   <block id="9785f45e8f6989c9b8cb2419a2b695da" category="list-text">对于FAS2600系列和FAS2700系列单路径HA配置、您必须执行接管和交还操作、以更换已启动并正在提供数据的系统中的磁盘架IOM。</block>
   <block id="0894c7928fa1bee8fd4a0207429b7254" category="list-text">对于FAS2600系列单路径配置、您必须暂停系统以更换磁盘架IOM。</block>
   <block id="f00eb102fd21bbf5e0dd612fcc8a9fde" category="admonition">如果您尝试使用单路径连接热插拔磁盘架上的磁盘架IOM、则将无法访问磁盘架中的磁盘驱动器以及下面的任何磁盘架。You could also bring down your entire system.</block>
@@ -8913,8 +8902,6 @@ SFP+(目标/启动程序)</block>
   <block id="3874bbf004c50eed71c2b06f7ce4e648" category="list-text">Repeat these steps for the remaining DIMMs.关闭主板通风管。</block>
   <block id="d20809d05af81f52d71c6d3d4f4fe771" category="list-text">由于启动设备位于安装在系统背面的系统管理模块上、因此在更换控制器模块时无需移动启动设备。</block>
   <block id="c78805aa63e8c47c7cae0cdebcc54f64" category="list-text">您必须始终将控制器的控制台输出捕获到文本日志文件中。</block>
-  <block id="564469f8ea8458a513637b3b059f6404" category="doc">第1步：交还控制器</block>
-  <block id="3342bfb4c028e1d77e8b0ab8a0dce560" category="paragraph">交还控制器以继续执行更换过程。</block>
   <block id="f9d9eff2772e16e9135d964e4533138c" category="list-text">如果您的存储系统配置了加密、则必须使用以下过程还原存储或卷加密功能以重新启动系统：</block>
   <block id="c380f4d06afd36dcee7654a86545b95b" category="list-text">引导至菜单并运行选项10</block>
   <block id="1cd2c681f4d255665595108ab57cef94" category="list-text">输入密码短语并备份数据，然后执行正常启动请参阅。<block ref="1ab4828979a21de09829a9c51e95a6df" category="inline-link-rx"></block></block>
@@ -9375,16 +9362,11 @@ SFP+(目标/启动程序)</block>
   <block id="2990a44118615c0a3bf6cce4a7382d56" category="list-text">如果看到、请为集群中的每个控制器输入* y *<block ref="e50c9785a9a600201730c59602a210ab" prefix=" " category="inline-code"></block></block>
   <block id="889f830bf501de78eaa854a4c956e927" category="doc">将故障部件退回给NetApp - AFF A1K</block>
   <block id="66ed54e044d464902b4fc84eae0aaebf" category="doc">检查板载加密密钥- AFF A1K</block>
-  <block id="0af39fad029d8a54529403cecac5dfcd" category="doc">加密恢复—AFF A1K</block>
   <block id="1ab064b6602aa76e09ccae7297651215" category="doc">启动恢复映像- AFF A1K</block>
-  <block id="b32c820e9a6b0c19e598a90100f6ede2" category="doc">启动介质更换概述- AFF A1K</block>
   <block id="59b85bf8d1d726d67312a9425f7cabac" category="doc">更换启动介质- AFF A1K</block>
   <block id="ac632c351c050929564cd7a72c3d383a" category="doc">关闭受损控制器- AFF A1K</block>
-  <block id="c0fbab8ec26a74970b48b956b885d93b" category="doc">更换控制器模块硬件- AFF A1K</block>
-  <block id="62eb40be1c65593a3462e6f5ba4a05a0" category="doc">控制器模块更换概述—AFF A1K</block>
   <block id="a4fbb291103a5430eb9ece2393c095a4" category="doc">交还控制器- AFF A1K</block>
   <block id="fb829c49a3a2da88fb46330449bb960d" category="summary">要将系统还原到完全运行状态、您必须验证NetApp、检查集群运行状况并将故障部件返回给LUN。如果您需要RMA编号或有关更换过程的其他帮助，请通过以下网址与技术支持联系：<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>、888-463-8277 (北美)、00-800-44-638277 (欧洲)或+800-80-800 (亚太地区)。</block>
-  <block id="8993dc7b76f8cb7fa94fec3534c4c210" category="doc">完整的系统还原—AFF A1K</block>
   <block id="5f0eff5741eb1b44c778897a8674fa87" category="paragraph">要将系统还原到完全运行状态、您必须验证NetApp、检查集群运行状况并将故障部件返回给LUN。</block>
   <block id="6bcc49329cd2b052a2bddab981fec2e3" category="section-title">第1步：验证SIFs和并检查集群运行状况</block>
   <block id="61ec4d4962d0f24c38b731c335dcb259" category="doc">还原并验证系统配置- AFF A1K</block>
@@ -9618,7 +9600,6 @@ SFP+(目标/启动程序)</block>
   <block id="83ec06d2d85deb94568cf05665746cc6" category="paragraph">风扇冷却控制器。</block>
   <block id="f7ce037e5340ee9ac2b2cd474ee29778" category="paragraph">NVRAM (非易失性随机存取存储器)是一个模块、可使控制器在系统断电时保护和保存传输中的数据。系统ID位于NVRAM模块中。更换后、控制器将从更换的NVRAM模块获取新的系统ID。</block>
   <block id="d138e90428f37a60387c8577b6e009b8" category="section-title">NV电池</block>
-  <block id="971b00f795c3753e8fa0422eed0b0d3e" category="paragraph">NVRAM电池负责在断电后将传输中的数据转存到闪存时为NVRAM模块供电。</block>
   <block id="807b26d7111f209057a30d265b88f6ae" category="paragraph">I/O模块(输入/输出模块)是一个硬件组件、充当控制器与需要与控制器交换数据的各种设备或系统之间的媒介。</block>
   <block id="517e65cbfa02ca306eec69200485822d" category="paragraph">电源设备在控制器中提供冗余电源。</block>
   <block id="aebd84aedf30ca3854097975c59229ed" category="doc">更换NV电池- AFF A1K</block>
@@ -9630,20 +9611,13 @@ SFP+(目标/启动程序)</block>
   <block id="8696c3a11bb55bf4544256cfb1b2bd94" category="doc">更换系统管理模块- AFF A1K</block>
   <block id="cca32d9f7020830ce64904a8c1aecba9" category="doc">将故障部件退回给NetApp - AFF A70、AFF A90</block>
   <block id="24adca74cd4521b9f4f4a8ab1033a6d8" category="doc">检查板载加密密钥- AFF A70、AFF A90</block>
-  <block id="ce327d04876efb8d4a59808bf378cece" category="doc">加密恢复- AFF A70、AFF A90</block>
   <block id="a79b7b4459526eba247c33a94309858e" category="doc">启动恢复映像- AFF A70、AFF A90</block>
-  <block id="1123346d505790a2a7f4001b490d0c4c" category="doc">启动介质更换概述- AFF A70、AFF A90</block>
   <block id="b565c8083612023ff18332e3f18570fb" category="doc">更换启动介质- AFF A70、AFF A90</block>
   <block id="7a78f14a4a6a79a25fb9d91deac29f7f" category="doc">关闭控制器- AFF A70、AFF A90</block>
-  <block id="c51acb19ea5c85f590681561a6632ee7" category="doc">完成还原和更换过程- AFF A70、AFF A90</block>
-  <block id="1f6784a27e692a917bbc139bcab6f062" category="doc">移动并更换硬件- AFF A70、AFF A90</block>
   <block id="3fd2ece46b2cae70b208d459839b7ea6" category="doc">更换机箱- AFF A70、AFF A90</block>
   <block id="47cc53453bdbc0a412f7d6260da64a94" category="doc">关闭控制器- AFF A70、AFF A90</block>
-  <block id="ea75031f570b7a55db89689259c07998" category="doc">更换控制器模块硬件- AFF A70、AFF A90</block>
-  <block id="b5c682512ae7ddb81d1086428c97af49" category="doc">控制器模块更换概述- AFF A70、AFF A90</block>
   <block id="729f102b3131803a07803cd2f223d3c3" category="summary">您必须重新设置存储的可重新启动控制器。</block>
   <block id="5026bf36473d8bd98b2f832968a63c84" category="doc">重新恢复并交还控制器- AFF A70、AFF A90</block>
-  <block id="e01e42ef6a8116389e0f89dad6068e42" category="doc">完整的系统还原- AFF A70、AFF A90</block>
   <block id="7b78a43d2ef1cd56888972224b322cba" category="section-title">第1步：验证SIFs并检查集群运行状况</block>
   <block id="44e04fa20bc233bee93d06b7b58ece31" category="doc">关闭受损控制器- AFF A70、AFF A90</block>
   <block id="9a05f1c61c530c04ac5d33357330d517" category="doc">还原并验证系统配置- AFF A70、AFF A90</block>
@@ -9703,9 +9677,7 @@ SFP+(目标/启动程序)</block>
   <block id="9ddae9a7519b413c3e002aaa6578c11b" category="paragraph">您可以在装箱单、确认电子邮件或打开包装后的控制器上找到该号码。</block>
   <block id="9693b6a52f0ee9092f8116f36e38a969" category="summary">要更换I/O模块、您必须断开模块的缆线、从模块中卸下SFP和QSFP模块、卸下模块、安装更换模块、重新安装SFP和QSFP模块、然后为I/O模块布线。</block>
   <block id="2224bc58afd68539e0dea6bf9e50c3d6" category="doc">添加I/O模块- AFF A70、AFF A90</block>
-  <block id="24ca01289b896c334109ba7e14ec004f" category="doc">添加和更换I/O模块概述- AFF A70-90K</block>
   <block id="924c37fc9153e68527b7be3c003bb435" category="doc">更换I/O模块- AFF A70、AFF A90</block>
-  <block id="1f6a084d4572b01747b6b088d9e0ee43" category="paragraph">对于AFF A70、AFF A90存储系统、您可以对以下组件执行维护过程。</block>
   <block id="f99a621b951fd2b537d7a091c6b754fd" category="doc">更换NV电池- AFF A70、AFF A90</block>
   <block id="64adf1ea4c1f4c02f038823429bd4c66" category="doc">更换NVRAM - AFF A70、AFF A90</block>
   <block id="9020c560951313547d9b00a00f95d818" category="doc">更换电源- AFF A70、AFF A90</block>
@@ -9927,13 +9899,9 @@ SFP+(目标/启动程序)</block>
   <block id="fad3eebd1aa676638de5e9e932b52f40" category="sidebar">完成系统设置</block>
   <block id="cdea6179c22763aadc0ee6a4b14f5f21" category="sidebar">AFF A1K维护</block>
   <block id="5881b108517b27e7011c12b72fab1eb6" category="sidebar">AFF A1K启动介质</block>
-  <block id="316c8b53d0bf94b7eb89217eff43484f" category="sidebar">启动介质更换概述</block>
-  <block id="96be37c346f6ee6fa03e35cdcf3a0159" category="sidebar">加密还原</block>
   <block id="2df31b353db26ab75397dd256071bb0f" category="sidebar">AFF A1K控制器模块</block>
-  <block id="f2113978e313a35c71164bd53785fe54" category="sidebar">控制器模块更换概述</block>
   <block id="2dc5b9299e6c112139901723adb67ed0" category="sidebar">交还控制器</block>
   <block id="5a34816c99c709c3123cc893c23aa8de" category="sidebar">NV电池</block>
-  <block id="9e76982e92861bfe7b8b9a2c95380f48" category="sidebar">I/O模块添加或更换概述</block>
   <block id="4d5d9ed8cd3daf7e0f60b7f56524d07a" category="sidebar">添加I/O模块</block>
   <block id="00015974de1f6f69c16403a005f48582" category="sidebar">更换I/O模块</block>
   <block id="8c62ca0981c296824eceba9a38d6aa19" category="sidebar">AFF A70和AFF A90系统</block>
@@ -9941,7 +9909,6 @@ SFP+(目标/启动程序)</block>
   <block id="8431b3d07718f99a71910529288bfbef" category="sidebar">AFF A70、AFF A90维护</block>
   <block id="0961888a0db0b2456e0301cb7e70997c" category="sidebar">AFF A70、AFF A90启动介质</block>
   <block id="bae3b9c4dc4ef01c1c3e52131996d15d" category="sidebar">AFF A70、AFF A90机箱</block>
-  <block id="6895ff697457a497cc096ed423a7f5f7" category="sidebar">机箱更换概述</block>
   <block id="12a66472ea6e6007bdd278fb5f5f4773" category="sidebar">AFF A70、AFF A90控制器模块</block>
   <block id="be9c2c89d042ee7f71b10024f37a31ce" category="sidebar">热添加工作流</block>
   <block id="9671268467391e7f925a038c0f83e411" category="sidebar">要求和最佳实践</block>
@@ -9960,9 +9927,6 @@ SFP+(目标/启动程序)</block>
   <block id="5be3be4e3c78f5ba4233a70fab6255f9" category="paragraph">在正常启动后、通过完成最终检查并交还存储来完成启动介质更换过程。</block>
   <block id="0ae7701d2ef507a0fceb7c75d4891e75" category="list-text">使用缆线将控制器A上的端口e1a连接到控制器B上的端口e1A</block>
   <block id="8bf237b60bd4b2db806d6610ad52ec49" category="list-text">使用缆线将控制器A上的端口e7a连接到控制器B上的端口e1A</block>
-  <block id="1de71be9c54175327aecef768179d1bd" category="paragraph">+ image：：../media/drw_a1k_tnsc_cluster-c布线ieops-1648.svg[双节点无交换机集群布线图、宽度=500ps]</block>
-  <block id="89135cd683c3d107d2c82b9a703f04cb" category="paragraph">+。使用缆线将以太网模块端口连接到主机网络。</block>
-  <block id="4e44798e075d2d881a9fb7543667af95" category="paragraph">+以下是一些典型的主机网络布线示例。有关您的特定系统配置、请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> 。</block>
   <block id="38821947dff053760f4c97b648ca454a" category="admonition">请勿插入电源线。</block>
   <block id="b0dc4e3ef222885899ea12125b17e5eb" category="list-text">单击左窗格中的*网络*，右键单击并选择*refresh。</block>
   <block id="1d0b4b2ae4d50e55a4247f5c6ede72f1" category="paragraph">在空机柜或电信机架中安装硬件。如果机柜已预先填充、请跳过此步骤。</block>
@@ -10012,7 +9976,121 @@ SFP+(目标/启动程序)</block>
   <block id="abb9a3f7b40da322ff2c9d6b0f555396" category="image-alt">有交换机集群网络布线</block>
   <block id="11e10f0140c4a2adc649196a587b4fb5" category="image-alt">使用缆线将两个磁盘架连接到控制器</block>
   <block id="91ffcf18fe68ab362696af94371c45a6" category="image-alt">使用缆线将三个磁盘架连接到控制器</block>
-  <block id="5d40c2e94b9e6a2b23697795499fe265" category="paragraph">+图像：../media/drw_70-90_tnsc_cluster-c布线ieops-1653.svg[双节点无交换机集群布线图、宽度=500ps]</block>
   <block id="46ef92fe9e0acb49a708c33291f9e608" category="doc">准备安装- AFF A70、AFF A90</block>
-  <block id="0f8a8f2efc51dcb48a6d357e4ed1476e" category="sidebar">准备安装</block>
+  <block id="5f1422fe4664becf0aa8b9ffe6bf86d6" category="paragraph">在更换启动介质之前、请确保查看以下要求。</block>
+  <block id="76b9ce100a5ce0ab266bb83f1c474ac5" category="list-text">您必须将文件复制<block ref="c70b112e1b022bd450e0790d8615c85a" prefix=" " category="inline-code"></block> 到USB闪存驱动器、以供日后在此过程中使用。</block>
+  <block id="01df70585b251d67c7e85dbced3f0bae" category="paragraph">将存储资源的所有权转移回替代控制器。</block>
+  <block id="5685250d28f7395e8ea2fbd5656061c6" category="paragraph">查看控制器更换过程的要求、并为您的ONTAP操作系统版本选择正确的要求。</block>
+  <block id="b7325683a2337dcdab8a07d398701bbe" category="list-text">如果您的系统采用MetroCluster配置、则必须查看一节<block ref="dbcae02c495cc3db61b37ce85396171e" category="inline-link-rx"></block> 以确定是否应使用此控制器更换过程。</block>
+  <block id="8505696d0e3fbe2fd170739bbdf0fd07" category="list-text">确保系统中的所有其他组件均正常工作；如果不正常、请联系技术支持。</block>
+  <block id="9b3a68cd89d10f3b0ccc10f24e3f6012" category="list-text">您可以对系统支持的所有ONTAP版本使用机箱更换过程。</block>
+  <block id="fd6ec360446d31e3ab9c3f69a39b148a" category="list-text">在编写机箱更换过程时、假设您要将挡板、NVMe驱动器和控制器模块移至新机箱、并且更换机箱是NetApp的新组件。</block>
+  <block id="f39018b3c08ed8bfa54e407c9e13c6b4" category="list-text">*机箱更换过程会造成系统中断。*For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.</block>
+  <block id="a77e388862c17fbfa9503eb6e38c1ec3" category="paragraph">您必须查看控制器更换过程的要求、并为您的ONTAP操作系统版本选择正确的要求。</block>
+  <block id="fcf1f99c5510f69d07371f2deebe6070" category="doc">恢复加密- AFF A1K</block>
+  <block id="6153407aa3467dec46b4d9467c1b1856" category="summary">了解更换启动介质的要求。</block>
+  <block id="cc038387595615d54230bead39a5f9c2" category="doc">要求和注意事项—AFF A1K</block>
+  <block id="83755d1a8b686dba4bc8143c0cb7f397" category="doc">启动介质更换工作流- AFF A1K</block>
+  <block id="1d7e5e0e3df76ac9dc695510c92b0468" category="paragraph">按照以下工作流步骤更换启动介质。</block>
+  <block id="725fba88551da9c92e0dc7b5ab34ba0c" category="inline-link-macro">启动介质要求和注意事项</block>
+  <block id="7aa8454601f36b96e1a20bee3753c58b" category="paragraph">要更换启动介质、您必须满足特定要求。查看 <block ref="be62bd79c2fbb00cbbdbbb71ced5d802" category="inline-link-macro-rx"></block>。</block>
+  <block id="80a95f49e4683aaa8aed6e4b56d5cef1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="0caeda8d60cf80f7a042375ba653d60a" category="inline-link-macro-rx"></block></block>
+  <block id="d5874724b2a05ddd0fcf9a45278e58ff" category="paragraph">验证系统是否已启用安全密钥管理器或已加密磁盘。</block>
+  <block id="99656405f7d1d5d39430b7771d03dad7" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="7444ce336f5cb99437679b1ac8b6aefb" category="inline-link-macro-rx"></block></block>
+  <block id="7db8d856045d03a62b20e857798b75c4" category="paragraph">关闭或接管受损控制器、以使运行正常的控制器继续从受损控制器存储提供数据。</block>
+  <block id="ecb8f83b8d48363a92afc461e11d3752" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="d5411bd0189d789655f8f33f07ceef1c" category="inline-link-macro-rx"></block></block>
+  <block id="8ba62a96dab9549596c8edd46f3bd5cc" category="paragraph">从系统管理模块中取出故障启动介质并安装替代启动介质、然后使用USB闪存驱动器将ONTAP映像传输到替代启动介质。</block>
+  <block id="28f71f0981cad1b4d63248d24cc356e5" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="68895f240ebc6c043e757f74f16ee4e8" category="inline-link-macro-rx"></block></block>
+  <block id="3075613c146b62cdb964218b1b25f33a" category="paragraph">从USB驱动器启动ONTAP映像、还原文件系统并验证环境变量。</block>
+  <block id="328c5bc6b9f2e06bb542a0d6dabcedd7" category="inline-link-macro">恢复加密</block>
+  <block id="e8715de67b3dc98a20f01d64b03b5a53" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block></block>
+  <block id="66155ab867b9e72e003c32039430a194" category="paragraph">从ONATp启动菜单还原板载密钥管理器配置或外部密钥管理器。</block>
+  <block id="3e7991bdfb889505687a7da2384ab8ab" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block><block ref="ad27444622868149ebc13d5b01cf807a" category="inline-link-macro-rx"></block></block>
+  <block id="5be3f38f9a32479c868826a858d049a6" category="doc">更换控制器模块- AFF A1K</block>
+  <block id="011c6a75a4dc386bdb35a883058e2297" category="doc">完整控制器更换—AFF A1K</block>
+  <block id="f3555ea3467ebe4fdfc22c15f93397e0" category="doc">控制器更换工作流- AFF A1K</block>
+  <block id="4eccda983f51d658744291e7b5e3e733" category="paragraph">按照以下工作流步骤更换控制器模块。</block>
+  <block id="d768a9e13831df72a415dcdd45486ce6" category="inline-link-macro">控制器更换要求和注意事项</block>
+  <block id="42a7b941256031cfc400576fdc2d0885" category="paragraph">要更换控制器模块、您必须满足特定要求。查看 <block ref="dd87dfb53f7dd70c25e1260ab79eff31" category="inline-link-macro-rx"></block>。</block>
+  <block id="ae3b72ec9d4bfefbb94ce5a07d383d84" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="980cfa80bc576e35f09c67c3be4eddc8" category="inline-link-macro-rx"></block></block>
+  <block id="55c7ebf0deeac4f8204507eb9ab3cf38" category="inline-link-macro">更换控制器</block>
+  <block id="a0a9245f1a7e957d0b3062551118fe1b" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="1f759de80b41385676d2f1fe163eb0aa" category="inline-link-macro-rx"></block></block>
+  <block id="033d50cc4a08211a432c03a9350b9a71" category="paragraph">更换控制器包括卸下受损控制器、将FRU组件移至更换用的控制器模块、然后在机箱中安装更换用的控制器模块。</block>
+  <block id="4d642a38ec660c3a650895de21d1fe3b" category="inline-link-macro">还原并验证系统配置</block>
+  <block id="0710b8cf1cc5e9353db038dc5164ec82" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block><block ref="d7f15e9703914d919163ee72018c4347" category="inline-link-macro-rx"></block></block>
+  <block id="1f2fe4b700b2b1be29968eb7ee0dfa6b" category="paragraph">验证替代控制器的低级系统配置、并根据需要重新配置系统设置。</block>
+  <block id="f3cee1c656f19c44e3775cb54693c03a" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="0314c54fb87f2f2b01af763f24ebf5ef" category="inline-link-macro-rx"></block></block>
+  <block id="4e11a85a0220206b0bc560e74a5eb99f" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="94dc13e126f429eefb3c1f2ca69200fa" category="inline-link-macro-rx"></block></block>
+  <block id="3f241611f37a3a938c6086f224665f2d" category="paragraph">验证NetApp、检查集群运行状况、然后将故障部件返回给LUN。</block>
+  <block id="cddf061490cf83caae5feee2aaeb87ab" category="summary">您必须使用提供商提供的更换现场可更换单元(FRU)组件来更换故障组件。</block>
+  <block id="cc642e219166c76e6ac027cc2f450209" category="list-text"><block ref="cc642e219166c76e6ac027cc2f450209" category="inline-link-macro-rx"></block></block>
+  <block id="74b0c9e1c6f08f1930847df1992af055" category="paragraph">添加更多模块可以提高冗余度、有助于确保即使一个模块出现故障、系统仍可正常运行。</block>
+  <block id="b49ba47015c67eae9f182326198621a4" category="list-text"><block ref="b49ba47015c67eae9f182326198621a4" category="inline-link-macro-rx"></block></block>
+  <block id="9fda3838f591736cf5d7bf5941736a26" category="paragraph">更换发生故障的I/O模块可以将系统还原到其最佳运行状态。</block>
+  <block id="7a327b859ee108f2920cd543eddd73a0" category="paragraph">您可能需要对硬件执行维护过程。本节将介绍维护AFF A1K系统组件的特定过程。</block>
+  <block id="7799c706f7bfc9f724a38dd742f52aaa" category="paragraph">本节中的过程假定AFF A1K系统已部署为ONTAP环境中的存储节点。</block>
+  <block id="000fb458b47995fb84311bb7ef7c7f62" category="section-title">系统组件</block>
+  <block id="c0e6d430c38f280369988922128024f4" category="paragraph"><block ref="c0e6d430c38f280369988922128024f4" category="inline-link-macro-rx"></block></block>
+  <block id="dceb619599d0aa6d9d89d0abf54e0b37" category="paragraph"><block ref="dceb619599d0aa6d9d89d0abf54e0b37" category="inline-link-macro-rx"></block></block>
+  <block id="57a64598a9ce65521278654300cbc21d" category="paragraph"><block ref="57a64598a9ce65521278654300cbc21d" category="inline-link-macro-rx"></block></block>
+  <block id="48fa76b6ceef78de919d0c14de5c1e8e" category="paragraph"><block ref="48fa76b6ceef78de919d0c14de5c1e8e" category="inline-link-macro-rx"></block></block>
+  <block id="7c9d2d9c711dd30a47c41d53fb8f639d" category="paragraph"><block ref="7c9d2d9c711dd30a47c41d53fb8f639d" category="inline-link-macro-rx"></block></block>
+  <block id="42e36784b087ac0d890c7f6dabed6982" category="paragraph"><block ref="42e36784b087ac0d890c7f6dabed6982" category="inline-link-macro-rx"></block></block>
+  <block id="55e7645d6bac38e8a7d8f01356040d16" category="paragraph">NV电池负责在断电后将传输中的数据转存到闪存时为NVRAM模块供电。</block>
+  <block id="1cec3a4ecd2d4b7c8580770e953af5c3" category="paragraph"><block ref="1cec3a4ecd2d4b7c8580770e953af5c3" category="inline-link-macro-rx"></block></block>
+  <block id="95ab97eb0fe2b20f23eb848c59d681ac" category="paragraph"><block ref="95ab97eb0fe2b20f23eb848c59d681ac" category="inline-link-macro-rx"></block></block>
+  <block id="05cdc0d49abee279ee5e0bdde910f96c" category="paragraph"><block ref="05cdc0d49abee279ee5e0bdde910f96c" category="inline-link-macro-rx"></block></block>
+  <block id="bc425b4b6ac9f297a4fe3bc23a9beb1c" category="paragraph">实时时钟电池可在断电时保留系统日期和时间信息。</block>
+  <block id="e6b4d284961b2daa06d56302ba361b67" category="inline-link-macro">系统管理模块</block>
+  <block id="e5f38539729ed58a561f506662e81abe" category="paragraph"><block ref="e5f38539729ed58a561f506662e81abe" category="inline-link-macro-rx"></block></block>
+  <block id="d7158a40e6d62c91f568a937bb75f8ad" category="paragraph">系统管理模块提供控制器与控制台或笔记本电脑之间的接口、用于控制器或系统维护。系统管理模块包含启动介质并存储系统序列号(SSN)。</block>
+  <block id="22e57cb512e3ee6dd44ad84e9c0eba6d" category="doc">恢复加密- AFF A70、AFF A90</block>
+  <block id="806833b8e020115ba120e0259b5b6dde" category="doc">要求和注意事项- AFF A70、AFF A90</block>
+  <block id="3a090f45cd3eaaf1125470fb47b78d45" category="doc">启动介质更换工作流- AFF A70、AFF A90</block>
+  <block id="1a80a229053bc2701262e358084c838b" category="paragraph">要更换引导介质，必须满足特定要求。查看 <block ref="be62bd79c2fbb00cbbdbbb71ced5d802" category="inline-link-macro-rx"></block>。</block>
+  <block id="f9b1c5db9a25fd2334e8aba09a914138" category="doc">完整机箱更换- AFF A70、AFF A90</block>
+  <block id="e2fecd58050f321afb4d9cc739d4187c" category="summary">使用与受损机箱型号相同的新机箱更换受损机箱。</block>
+  <block id="ed235526c9cfaa44fbc032db9854b1e9" category="doc">机箱更换工作流- AFF A70、AFF A90</block>
+  <block id="64e923d27d8f20b1c39e996784b889e8" category="paragraph">按照以下工作流步骤更换机箱。</block>
+  <block id="ad5348d83b53533243eebb2be9ef1707" category="inline-link-macro">机箱更换要求和注意事项</block>
+  <block id="d00e4984e8012d79f3629015b50175c5" category="paragraph">要更换机箱、您必须满足特定要求。查看 <block ref="85b79c35aab56873c02d629d1d3908c3" category="inline-link-macro-rx"></block>。</block>
+  <block id="b9a16e18baf3e3435991b6d9c3ba01af" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="6b014aeda9f88c8732e6a64d143414df" category="inline-link-macro-rx"></block></block>
+  <block id="d26fcd936ac92db8cf84389a3ab7bf47" category="inline-link-macro">更换机箱</block>
+  <block id="d59de865276916bdd9f97d9473947ee3" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="50c430fbfd37e7720d34aff806c960b8" category="inline-link-macro-rx"></block></block>
+  <block id="2c248a1a1b5e42590f3b77ae3ede043f" category="paragraph">更换机箱包括将电源、硬盘驱动器和控制器模块从受损机箱移至新机箱、以及将受损机箱更换为与受损机箱型号相同的新机箱。</block>
+  <block id="76f5f34488e514a65bf0c31e970e4fe7" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="24cfaad2045c82e6542685b8f9154291" category="inline-link-macro-rx"></block></block>
+  <block id="7f54aa0b6fdadc77a6c35a589cdb35b3" category="paragraph">验证机箱的HA状态、并将故障部件退回给NetApp。</block>
+  <block id="59ae240445027bbf9dc6c3c5d9bceb5c" category="doc">更换控制器模块- AFF A70、AFF A90</block>
+  <block id="b935c7ad64878b8339ab0991016d016b" category="doc">完整控制器更换- AFF A70、AFF A90</block>
+  <block id="458af0f5eb6cb4db8860e3274353ecac" category="doc">控制器更换工作流- AFF A70、AFF A90</block>
+  <block id="58d356c259fddd513288088c96915d44" category="inline-link-macro">重新恢复并交还控制器</block>
+  <block id="d0f2dbd12d4daa019c3a6a9b40b092ac" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="e14fc53a2fbc5d3f87f2c572a1629eed" category="inline-link-macro-rx"></block></block>
+  <block id="9a4829e743998d9894153667670dfd29" category="paragraph">重新对控制器进行配置、并将存储资源的所有权转移回替代控制器。</block>
+  <block id="b1e4b88723d63ea7009965cda7a3722c" category="doc">添加和更换I/O模块概述- AFF A70、AFF A90</block>
+  <block id="137aeb15d685b764448324fcbbc40af6" category="paragraph">您可能需要对硬件执行维护过程。本节将介绍维护AFF A70和AFF A90系统组件的特定过程。</block>
+  <block id="75775d88e26bd0ec1b5827bced4fb9dd" category="paragraph">本节中的过程假设AFF A70和AFF A90系统已部署为ONTAP环境中的存储节点。</block>
+  <block id="cde82c9b04790b90c2679aca48bf0641" category="paragraph">对于ASA A70和ASA A90存储系统、您可以对以下组件执行维护过程。</block>
+  <block id="dc5fb977cb8c88d079092e9c6ec6160e" category="paragraph"><block ref="dc5fb977cb8c88d079092e9c6ec6160e" category="inline-link-macro-rx"></block></block>
+  <block id="5d7bf1cac3020aecc9e419835da60990" category="paragraph"><block ref="5d7bf1cac3020aecc9e419835da60990" category="inline-link-macro-rx"></block></block>
+  <block id="8c2694371a75dd052d8b2e0cd66496fc" category="paragraph">驱动器是提供数据所需物理存储的设备。</block>
+  <block id="68957a8f3d38a433e42aad8e6127ef63" category="paragraph"><block ref="68957a8f3d38a433e42aad8e6127ef63" category="inline-link-macro-rx"></block></block>
+  <block id="817eb80fb251d174bd0db4e59b399ab2" category="image-alt">用于控制器到堆栈布线的缆线类型密钥</block>
+  <block id="4feb668b50eb4388bae4031a6d3195b8" category="image-alt">用于布线工作表的彩色键</block>
+  <block id="d72417441c3fe0b8542f7fd634702b7c" category="image-alt">彩色键用于四路径连接</block>
+  <block id="92111cfa73a8b9848b8194c307bf7fc4" category="image-alt">具有两个四端口SAS HBA和两个多磁盘架堆栈的Quuad-path HA</block>
+  <block id="331d1570f3bb78a7df5983eef1419886" category="image-alt">多路径混合堆栈布线</block>
+  <block id="36ee953295cb8328778ccc3c480b3518" category="inline-image-macro">桥接配置中的混合堆栈布线</block>
+  <block id="5e93aebff8a73cdc55e9e45600704cda" category="list-text">您可以参考下图将IOM12/IOM12B磁盘架连接到网桥连接MetroCluster配置中的IOM6磁盘架堆栈。 <block ref="0933d45bdb42bc4cf61cb846f3d6402b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b370bb883c0ae399576093140be62573" category="image-alt">正在删除DS212C磁盘架中的磁盘</block>
+  <block id="ef1b2155f266ae851abdcc2efb79e577" category="image-alt">正在删除DS224C磁盘架中的磁盘</block>
+  <block id="783b57f4c424133fb614814a5561cacd" category="image-alt">IOM12的正面</block>
+  <block id="a8ab1a97e4cda29b26f514a774dd5ba0" category="image-alt">IOM12B正面</block>
+  <block id="4283b924e5ab8de772cce8a8672e234a" category="image-alt">松开凸轮把手的闩锁</block>
+  <block id="5bd609ccafc05b4bba3acfef2eaa0190" category="image-alt">凸轮把手处于打开位置</block>
+  <block id="7dd431cc03f43f663695fa547eddc199" category="sidebar">维护概述</block>
+  <block id="d95c547fbb677f06b886d9af6b8c8c7f" category="sidebar">启动介质更换工作流</block>
+  <block id="e7d709a415f457e468d93ff7beb8afbf" category="sidebar">要求和注意事项</block>
+  <block id="4f46fe04ed7debd30ef1d3c151e24935" category="sidebar">控制器更换工作流</block>
+  <block id="1ca4e63b42d944e09b1132b7f6f56b66" category="sidebar">I/O模块概述</block>
+  <block id="926cbecf3e76b90a2bcdbc9c4519fc77" category="sidebar">机箱更换工作流</block>
 </blocks>
