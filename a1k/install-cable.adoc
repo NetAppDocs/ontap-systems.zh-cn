@@ -193,6 +193,10 @@ IMPORTANT: 请勿插入电源线。
 --
 使用缆线将每个控制器连接到NS224磁盘架上的NSM模块。图中显示了每个控制器的布线：蓝色的控制器A布线和黄色的控制器B布线。
 
+*100 GbE QSFP28铜缆*
+
+image::../media/oie_cable100_gbe_qsfp28.svg[100 GbE QSFP28铜缆]
+
 .步骤
 . 在控制器A上、为以下连接布线：
 +
@@ -218,6 +222,10 @@ image:../media/drw_a1k_1shelf_cabling_b_ieops-1704.svg["使用缆线将控制器
 .选项2：使用缆线连接到两个NS224磁盘架
 --
 使用缆线将每个控制器连接到两个NS224磁盘架上的NSM模块。图中显示了每个控制器的布线：蓝色的控制器A布线和黄色的控制器B布线。
+
+*100 GbE QSFP28铜缆*
+
+image::../media/oie_cable100_gbe_qsfp28.svg[100 GbE QSFP28铜缆]
 
 .步骤
 . 在控制器A上、为以下连接布线：
