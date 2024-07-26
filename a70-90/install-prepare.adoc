@@ -14,7 +14,7 @@ summary: 准备安装AFF A70、AFF A90平台。
 准备安装平台。
 
 .开始之前
-* 使用记录时所需的 https://docs.netapp.com/us-en/ontap/software_setup/index.html["集群设置工作表"] 值 link:complete-install.html#step-3-configure-your-cluster["配置集群"]。如果提供了默认值，则可以使用该值，或者输入您自己的值。
+* 使用 https://docs.netapp.com/us-en/ontap/software_setup/index.html["集群设置工作表"] 记录配置集群时所需的值。如果提供了默认值、您可以使用该值或输入自己的值。
 * 确认您已具备完成硬件安装所需的所有附加设备和工具。
 +
 ** 2 号十字螺丝刀
