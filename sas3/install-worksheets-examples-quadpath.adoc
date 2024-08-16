@@ -28,7 +28,7 @@ image::../media/drw_controller_to_stack_cable_color_key_non2600.gif[用于布线
 第一组多路径布线称为 " `m多路径` " 。第二组多路径布线称为 "`quad pathed` " 。第二组布线称为 "`四路径` " ，因为完成这组布线将为您提供四路径连接。
 
 +
-image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[彩色键用于四路径连接]
+image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[四路径连接的彩色键]
 
 * 此工作表示例显示了指定用于在适用堆栈中进行多路径布线或四路径布线的端口对。
 +
@@ -42,6 +42,6 @@ image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[彩色�
 
 以下工作表和布线示例对堆栈 1 使用端口对 11/2b （多路径）和 2a/1D （四路径），对 stack2 使用端口对 1c/2D （多路径）和 2c/1b （四路径）。
 
-image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[四路径HA布线工作表]
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[四路径HA的布线工作表]
 
-image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[具有两个四端口SAS HBA和两个多磁盘架堆栈的Quuad-path HA]
+image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[具有两个四端口SAS HBA和两个多磁盘架堆栈的四路径HA]

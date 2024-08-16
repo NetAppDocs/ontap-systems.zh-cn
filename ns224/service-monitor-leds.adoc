@@ -38,7 +38,7 @@ Location LEDs remain illuminated for 30 minutes.您可以输入相同的命令�
 
 下图和下表介绍了ODP上的三个LED：
 
-image::../media/drw_ns224_odp_leds_IEOPS-1262.svg[DRW ns224耗氧潜能值LED IEOPS 1262]
+image::../media/drw_ns224_odp_leds_IEOPS-1262.svg[操作员显示面板 LED]
 
 [cols="1,2,1,5"]
 |===
@@ -46,7 +46,7 @@ image::../media/drw_ns224_odp_leds_IEOPS-1262.svg[DRW ns224耗氧潜能值LED IE
 
 
  a| 
-image::../media/drw_sas_power_icon.svg[DRW SAS电源图标]
+image::../media/drw_sas_power_icon.svg[操作员显示面板电源LED]
  a| 
 电源(绿色)
  a| 
@@ -57,7 +57,7 @@ image::../media/drw_sas_power_icon.svg[DRW SAS电源图标]
 
 
  a| 
-image::../media/drw_sas_fault_icon.svg[DRW SAS故障图标]
+image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
  a| 
 注意(琥珀色)
  a| 
@@ -76,7 +76,7 @@ image::../media/drw_sas_fault_icon.svg[DRW SAS故障图标]
 
 
  a| 
-image::../media/drw_sas3_location_icon.svg[DRW SAS3位置图标]
+image::../media/drw_sas3_location_icon.svg[操作员显示面板位置LED]
  a| 
 位置(蓝色)
  a| 
@@ -93,7 +93,7 @@ NSM模块上的LED指示该模块是否正常运行、是否已准备好处理I/
 
 下图和表格介绍了与模块功能以及模块上每个NVMe端口的功能相关的NSM模块LED。
 
-image::../media/drw_ns224_nsm_leds_IEOPS-1270.svg[DRW ns224 NSM LED IEOPS 1270]
+image::../media/drw_ns224_nsm_leds_IEOPS-1270.svg[NS224 NSM100模块LED]
 
 [cols="1,1,2,4"]
 |===
@@ -103,7 +103,7 @@ image::../media/drw_ns224_nsm_leds_IEOPS-1270.svg[DRW ns224 NSM LED IEOPS 1270]
  a| 
 image:../media/legend_icon_01.png["标注编号1"]
  a| 
-image::../media/drw_sas3_location_icon.svg[DRW SAS3位置图标]
+image::../media/drw_sas3_location_icon.svg[操作员显示面板位置LED]
  a| 
 蓝色
  a| 
@@ -114,7 +114,7 @@ NSM模块：位置
  a| 
 image:../media/legend_icon_02.png["标注编号2"]
  a| 
-image::../media/drw_sas_fault_icon.svg[DRW SAS故障图标]
+image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
  a| 
 琥珀色
  a| 
@@ -136,7 +136,7 @@ NVMe端口/链路：状态
  a| 
 image:../media/legend_icon_04.png["标注编号4"]
  a| 
-image::../media/drw_sas_fault_icon.svg[DRW SAS故障图标]
+image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
  a| 
 琥珀色
  a| 
@@ -232,7 +232,7 @@ NSM VPD错误
 
 下图和表格介绍了PSU上的LED。(图中所示为交流PSU；但是、直流PSU上的LED位置相同)：
 
-image::../media/drw_ns224_psu_leds_IEOPS-1261.svg[DRW ns224 PSU LED IEOPS 1261]
+image::../media/drw_ns224_psu_leds_IEOPS-1261.svg[电源设备电源活动LED]
 
 [cols="1,4"]
 |===
@@ -320,7 +320,7 @@ NVMe驱动器上的LED指示灯可指示其是否正常运行或硬件是否存�
 
 下图和下表介绍了NVMe驱动器上的两个LED：
 
-image::../media/drw_ns224_drive_leds_IEOPS-1263.svg[DRW ns224驱动器LED IEOPS 1263]
+image::../media/drw_ns224_drive_leds_IEOPS-1263.svg[NVMe驱动器警示和电源LED]
 
 [cols="1,2,2"]
 |===

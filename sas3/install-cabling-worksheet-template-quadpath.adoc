@@ -35,7 +35,7 @@ summary: 完成工作表模板后、您可以定义控制器SAS端口对、使�
 * 如果需要，请在完成工作表后参考 link:install-cabling-worksheets-how-to-read-quadpath.html["如何阅读使用缆线连接控制器到堆栈连接以实现四路径连接的工作表"]。
 
 
-image::../media/drw_worksheet_quad_pathed_template_nau.gif[DRW 工作表四路径模板 NAU]
+image::../media/drw_worksheet_quad_pathed_template_nau.gif[四路径布线工作表模板]
 
 .步骤
 . 在灰色框上方的框中、列出系统上的所有SAS A端口、然后按插槽(0、1、2、3等)顺序列出系统上的所有SAS C端口。
@@ -58,7 +58,7 @@ image::../media/drw_worksheet_quad_pathed_template_nau.gif[DRW 工作表四路�
 以下示例使用端口对 1a/2b 进行多路径布线，使用端口对 2a/1d 进行四路径布线到堆栈 1 。
 
 +
-image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_set1_circled_nau.gif[DRW 工作表 qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 set1 圈出的 NAU]
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_set1_circled_nau.gif[显示连接到堆栈1的端口对的四路径HA布线工作表]
 
 . 通过围绕第一组端口对绘制一个椭圆并围绕第二组端口对绘制一个方框，确定要连接到堆栈 2 的两组端口对。
 +
@@ -68,13 +68,13 @@ image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_set1_c
 以下示例将端口对 1c/2D 用于多路径布线，并将端口对 2c/1b 用于到堆栈 2 的四路径布线。
 
 +
-image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[四路径HA布线工作表]
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[显示连接到堆栈2的端口对的四路径HA布线工作表]
 
 . 如果您使用的是四路径（单控制器）配置，请交叉显示控制器 2 的信息；您只需要控制器 1 信息即可为控制器到堆栈的连接布线。
 +
 以下示例显示控制器 2 的信息已被划掉。
 
 +
-image::../media/drw_worksheet_qp_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[DRW 工作表 QP 插槽 1 和 2 两个 4 端口 bas 两个堆栈 NAU]
+image::../media/drw_worksheet_qp_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[四路径单控制器布线工作表、显示连接到堆栈1和2的端口对]
 
 

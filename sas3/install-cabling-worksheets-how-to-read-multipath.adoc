@@ -33,9 +33,9 @@ NOTE: 如果您的端口对数量超过了为系统中的堆栈布线所需的�
 
 这些端口对使用工作表中的每一个其他端口对进行布线： 1A/2b 和 11/2D 。
 
-image::../media/drw_worksheet_mpha_skipped_template.gif[DRW 工作表 mpha 已跳过模板]
+image::../media/drw_worksheet_mpha_skipped_template.gif[使用跳过的端口对进行多路径连接的布线工作表]
 
-image::../media/drw_mpha_slots_1_and_2_two_4porthbas_two_stacks_skipped.gif[已跳过 DRW mpha 插槽 1 和 2 中的两个 4 孔 bas 两个堆栈]
+image::../media/drw_mpha_slots_1_and_2_two_4porthbas_two_stacks_skipped.gif[使用跳过的端口对进行多路径连接的布线示例]
 
 .步骤
 . 使用缆线将每个控制器上的端口对 11/2b 连接到堆栈 1 ：

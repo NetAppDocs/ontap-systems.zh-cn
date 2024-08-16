@@ -153,7 +153,7 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
 . 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
 . 如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _<node name>_ -port _<port name>__ -mode network` 命令转换插槽以供网络连接使用。
 . 对控制器 B 重复上述步骤
-. 如果您安装了存储 I/O 模块，请按照中所述安装 NS224 磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["热添加 NS224 驱动器架"^]。
+. 如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["热添加工作流"^]。
 
 
 
@@ -383,7 +383,7 @@ NOTE: 如果您在重新启动期间遇到问题描述 、请参见 https://mysu
  a| 
 存储模块
  a| 
-Install and cable your NS224 shelves, as described inhttps://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf.html["热添加 NS224 驱动器架"^]。
+按照中所述安装NS224磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["热添加工作流"^]。
 
 |===
 . 对控制器 B 重复上述步骤

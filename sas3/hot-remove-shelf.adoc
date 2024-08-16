@@ -194,10 +194,10 @@ NOTE: 请至少等待 10 秒，然后再连接端口。SAS 缆线连接器具有
 如果要移除堆栈中第一个逻辑磁盘架，或者堆栈具有多路径连接，则可以推断重新布线。
 
 +
-image::../media/drw_hotremove_end.gif[DRW 热删除结束]
+image::../media/drw_hotremove_end.gif[从堆栈末端热删除磁盘架]
 
 +
-image::../media/drw_hotremove_middle.gif[DRW 热删除中间]
+image::../media/drw_hotremove_middle.gif[从堆栈中间热删除磁盘架]
 
 
 

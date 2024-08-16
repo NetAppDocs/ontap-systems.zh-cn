@@ -290,7 +290,7 @@ NOTE: 如果未将0b/0b1端口连接到正确的域(交叉连接域)、则会使
 
 下图突出显示了内部存储端口(0b/0b1)与外部磁盘架堆栈的域连接：
 
-image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[内部存储端口0b/0b1域连接]
+image::../media/drw_fas2600_mpha_domain_example_IEOPS-1172.svg[内部存储端口0b 0b1域连接]
 
 
 

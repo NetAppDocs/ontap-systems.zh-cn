@@ -228,7 +228,7 @@ If you disabled automatic drive assignment as part of the preparation for this p
 .. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 1 端口 A （ e1a ）。
 .. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 1 端口 b （ e1b ）。+ 下图显示了完成后的磁盘架布线。
 +
-image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为AFF A250布线]
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为具有一个NS224磁盘架和一组PCIe卡端口的AFF A250 C250或FAS500f布线]
 
 
 

@@ -22,9 +22,9 @@ summary: 您可以使用此示例指导您完成如何读取已完成的工作�
 * If needed, you can refer to link:install-cabling-rules.html["SAS布线规则和概念"] for information about the controller slot numbering convention, shelf-to-shelf connectivity, and controller-to-shelf connectivity (including the use of port pairs).
 
 
-image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[四路径HA布线工作表]
+image::../media/drw_worksheet_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[四路径连接的布线工作表]
 
-image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[DRW qpha 插槽 1 和 2 两个 4 孔 bas 两个堆栈 NAU]
+image::../media/drw_qpha_slots_1_and_2_two_4porthbas_two_stacks_nau.gif[四路径连接的布线示例]
 
 .步骤
 . 使用缆线将每个控制器上的端口对 11/2b 连接到堆栈 1 ：
