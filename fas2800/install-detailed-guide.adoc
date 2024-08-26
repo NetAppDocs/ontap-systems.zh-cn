@@ -48,7 +48,7 @@ IMPORTANT: 具有特定电源要求的客户必须进行检查 https://hwu.netap
 .. 通过完成收集有关存储系统的信息 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["设置工作表^(需要工作表的URL)"]。
 .. 记录控制器中的存储系统序列号。
 +
-image::../media/drw_ssn_label.svg[DRW SSN 标签]
+image::../media/drw_ssn_label.svg[显示编号位置的系统序列号示例]
 
 
 
@@ -401,7 +401,7 @@ IMPORTANT: 请勿插入电源线。
 下表列出了将驱动器架连接到存储系统时插图中的缆线类型以及呼出编号和缆线颜色。
 
 
-NOTE: The example uses DS224C.Cabling is similar with other supported drive shelves.请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["为新系统安装安装安装磁盘架并为其布线—带有IOM12/IOM12B模块的磁盘架"^] 有关详细信息 ...
+NOTE: The example uses DS224C.Cabling is similar with other supported drive shelves.有关详细信息、请参见 link:../sas3/install-new-system.html["为新系统安装安装安装磁盘架并为其布线—带有IOM12/IOM12B模块的磁盘架"] 。
 
 [cols="20%,80%"]
 |===
@@ -436,7 +436,7 @@ image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
 使用动画或分步说明完成控制器和驱动器架之间的布线。
 
 
-IMPORTANT: 请勿在FAS2800上使用端口0b2。ONTAP不使用此SAS端口、并且此端口始终处于禁用状态。请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["在新存储系统中安装磁盘架"^] 有关详细信息 ...
+IMPORTANT: 请勿在FAS2800上使用端口0b2。ONTAP不使用此SAS端口、并且此端口始终处于禁用状态。有关详细信息、请参见 link:../sas3/install-new-system.html["在新存储系统中安装磁盘架"^] 。
 
 .动画-驱动器架布线
 video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]

@@ -162,7 +162,7 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
 . 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
 . 如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _<node name>_ -port _<port name>__ -mode network` 命令转换插槽以供网络连接使用。
 . 对控制器 B 重复上述步骤
-. 如果您安装了存储I/O模块、请按照中所述安装SAS磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/sas3/install-hot-add-shelf.html["热添加SAS磁盘架"^]。
+. 如果您安装了存储I/O模块，请按照中所述安装SAS磁盘架并为link:../sas3/install-hot-add-shelf.html["热添加SAS磁盘架"]其布线。
 
 
 
@@ -387,7 +387,7 @@ NOTE: 如果您在重新启动期间遇到问题描述 、请参见 https://mysu
 
 
  a| 
-插槽 3 或 7 中的 NIC 模块，
+插槽3或7中的NIC模块
  a| 
 对每个端口使用 `storage port modify -node *_< 节点名称 >_ -port *_< 端口名称 >__ -mode network` 命令。
 
@@ -396,7 +396,7 @@ NOTE: 如果您在重新启动期间遇到问题描述 、请参见 https://mysu
  a| 
 存储模块
  a| 
-安装SAS磁盘架并为其布线、如中所述https://docs.netapp.com/us-en/ontap-systems/sas3/install-hot-add-shelf.html["热添加SAS磁盘架"^]。
+按照中所述安装SAS磁盘架并为link:../sas3/install-hot-add-shelf.html["热添加SAS磁盘架"]其布线。
 
 |===
 . 对控制器 B 重复上述步骤

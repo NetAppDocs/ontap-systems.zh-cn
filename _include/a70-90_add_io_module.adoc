@@ -177,7 +177,7 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
 . 对控制器 B 重复上述步骤
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
 . 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
-. 如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["热添加工作流"^]。
+. 如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为link:../ns224/hot-add-shelf-overview.html["热添加工作流"]其布线。
 
 
 
@@ -399,7 +399,7 @@ NIC模块
  a| 
 存储模块
  a| 
-按照中所述安装NS224磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["热添加工作流"^]。
+按照中所述安装NS224磁盘架并为其布线 link:../ns224/hot-add-shelf-overview.html["热添加工作流"]。
 
 |===
 . 对控制器 B 重复上述步骤

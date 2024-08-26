@@ -313,7 +313,7 @@ image:../media/SAS_storage_ONTAP_9.8_and_later.png["适用于ONTAP 9.8及更高�
 NOTE: 如果您有多个驱动器架堆栈，请参见适用于您的驱动器架类型的 _Installation and Cabling Guide_ 。
 
 +
-https://docs.netapp.com/us-en/ontap-systems/sas3/install-new-system.html["安装新系统安装的磁盘架并为其布线—带有 IOM12 模块的磁盘架"]
+link:../sas3/install-new-system.html["安装新系统安装的磁盘架并为其布线—带有 IOM12 模块的磁盘架"]
 
 +
 image:../media/Cable_shelves_new_system_IOM12_shelves.png["使用SAS磁盘架进行存储系统布线"]

@@ -35,7 +35,7 @@ summary: 此提供了有关安装典型 NetApp 系统的详细分步说明。
 . 打开所有框内容的包装。
 . 记录控制器的系统序列号。
 +
-image::../media/drw_ssn_label.svg[DRW SSN 标签]
+image::../media/drw_ssn_label.svg[显示编号位置的系统序列号示例]
 
 . 清点并记下收到的缆线数量和类型。
 +
@@ -223,7 +223,7 @@ image::../media/drw_9500_cable_management_arms.svg[DRW 9500缆线 管理臂]
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image::../media/oie_cable_pull_tab_up.svg[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.svg[电缆拉片方向]
 
 
 NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
@@ -312,7 +312,7 @@ image::../media/drw_a900fas9500_power_source_icon_IEOPS-1142.svg[DRW a900FAS9500
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image::../media/oie_cable_pull_tab_up.svg[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.svg[电缆拉片方向]
 
 
 NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
@@ -400,14 +400,14 @@ image::../media/drw_a900fas9500_power_source_icon_IEOPS-1142.svg[DRW a900FAS9500
 使用缆线将DS212C或DS224C驱动器架连接到控制器。
 
 
-NOTE: 有关SAS布线的详细信息和工作表、请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/overview-cabling-rules-examples.html["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"^]
+NOTE: 有关更多SAS布线信息和工作表、请参见link:../sas3/overview-cabling-rules-examples.html["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"]
 
 .开始之前
-* 填写适用于您系统的SAS布线工作表。请参见 https://docs.netapp.com/us-en/ontap-systems/sas3/overview-cabling-rules-examples.html["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"^]。
+* 填写适用于您系统的SAS布线工作表。请参阅。 link:../sas3/overview-cabling-rules-examples.html["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"]
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 
 
-image::../media/oie_cable_pull_tab_up.svg[OIE 缆线拉片向上]
+image::../media/oie_cable_pull_tab_up.svg[电缆拉片方向]
 
 image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
 

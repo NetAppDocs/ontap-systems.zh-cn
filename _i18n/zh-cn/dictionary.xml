@@ -508,7 +508,6 @@
   <block id="f663c131d87c9bf95d21d63d6579dfb8" category="paragraph">要更换 RTC 电池，请在控制器中找到该电池，然后按照特定步骤顺序进行操作。</block>
   <block id="e0f21664596f0c97d1d5a04e2fdf74bc" category="paragraph">使用以下视频或表格中的步骤更换 RTC 电池：</block>
   <block id="3bfc0205925c583b173da8aaa6c933a5" category="list-text">找到散热器和中板之间的 RTC 电池，然后完全按照图中所示取出。</block>
-  <block id="da00f0981a71582bcc5ed875dab5af5b" category="image-alt">DRW A250 删除 RTC 电池</block>
   <block id="2a79f92f83e80b8d7c1b1b19435df449" category="paragraph">电池应弹出。</block>
   <block id="bc953fc580dd3c98e5ac857917f1e839" category="paragraph">电池将被弹出。</block>
   <block id="ea4330063aff847ec18a76ddefbeb737" category="list-text">从防静电运输袋中取出更换用电池。</block>
@@ -592,7 +591,6 @@
   <block id="e13ec8340eb62f2310817c4d2909445e" category="list-text">使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台</block>
   <block id="0e6a8e99a6fb91e4c4fc0cee8731b786" category="list-text">打开所有框内容的包装。</block>
   <block id="9a7aa4a793df686179a9f904351e5dce" category="list-text">记录控制器的系统序列号。</block>
-  <block id="a894e80c84e8ffdd148bac48114dae68" category="image-alt">DRW SSN 标签</block>
   <block id="4d825fae8ae896f70b8ddce9f54ecdbd" category="list-text">设置您的帐户：</block>
   <block id="e94d8dffa39f693984ca4b083d6c79fb" category="list-text">登录到现有帐户或创建帐户。</block>
   <block id="8d9c8060944dfdc584e5f406ccb7cdcc" category="list-text">注册您的系统。</block>
@@ -656,7 +654,6 @@
   <block id="af28ebab5d3a50ec2aa0d0aefd31b178" category="paragraph">您可以通过与配置相关的可选布线方式连接到光纤通道或 iSCSI 主机网络或直连存储。此布线并非独占的；您可以使用缆线连接到主机网络和存储。</block>
   <block id="97af7274dc94a2eacaad27110ee92a44" category="section-title">选项 1 ：使用缆线连接到光纤通道主机网络</block>
   <block id="b24498c2793e7d8d3cefa3bb843a56da" category="paragraph">控制器上的光纤通道端口连接到光纤通道主机网络交换机。</block>
-  <block id="6fe081310097e5bdd9201304d5f2f43c" category="image-alt">OIE 缆线拉片向上</block>
   <block id="e19d235ecefc26b5aac95b096a664ec6" category="cell">对每个控制器模块执行</block>
   <block id="c4ca4238a0b923820dcc509a6f75849b" category="paragraph">1.</block>
   <block id="c81e728d9d4c2f636f067f89cc14862c" category="paragraph">2.</block>
@@ -1896,7 +1893,6 @@
   <block id="69204463d5fd7274cd7c15cdd8754c5b" category="section-title">重新安装照明标志</block>
   <block id="e39173998bcb0a429fbb384ad9f2b4a3" category="paragraph">安装系统机柜门后，您需要安装照明标志以完成门反转过程，然后关闭并锁定前盖。</block>
   <block id="655b379eb55a962545027e4c4765decc" category="list-text">参考下图，重新安装系统机柜前盖上的照明标志：</block>
-  <block id="2893f66e6b01f34fba119ce895b85ff5" category="image-alt">DRW 系统 CAB GDE bridmstone 安装</block>
   <block id="07fe9225534f4404a2e26cdf7452dbe0" category="list-text">关闭并锁定前挡盖。</block>
   <block id="158164ba02e099ef26a07a4dc2f190fb" category="summary">反转系统机柜门时，您必须将系统机柜门合页和锁扣竖直移动到对面的正面系统机柜。</block>
   <block id="4870418b0a18b6824d4496cb1208d178" category="doc">反转车门转轴和锁扣</block>
@@ -1908,7 +1904,6 @@
   <block id="8c03dc270927151ae2f4c04ba9af6241" category="list-text">从系统机柜框架中卸下用于固定顶部转轴的螺钉，并将这些螺钉和转轴放在一旁。</block>
   <block id="c504df8a2e05ee517dc6a7dfaae8534a" category="admonition">拆下内六角螺钉时请小心，以免将其跌落机柜框架中。系统机柜随附的备件套件中提供了备用内六角螺钉。</block>
   <block id="6ae32f268b877b3b573defa304a11e20" category="list-text">从系统机柜框架中卸下用于固定底部转轴的螺钉，并将这些螺钉和转轴放在一旁。</block>
-  <block id="f7903c84afc48e16923743ea24c3501f" category="image-alt">DRW 系统驾驶室门反转 ozeki</block>
   <block id="faf16e882ec4df1018434c9a53f4aba9" category="paragraph">带接地线的车门接地螺钉</block>
   <block id="87a5515b72437b095b1c74278d86d9a5" category="paragraph">接地线</block>
   <block id="2dbb2b48352443791844e4033011af55" category="paragraph">机架接地线片</block>
@@ -1937,15 +1932,11 @@
   <block id="aa24a9cd171f9abd8925640d8d206200" category="list-text">确定设备需要多少空间。</block>
   <block id="29bf63e9639af89689623a2194820d09" category="paragraph">根据设备高度计算设备所需的 U 空间量（每 U 1.75 英寸），然后根据可用空间确定设备将安装在系统机柜中的位置。</block>
   <block id="2c66268a397bedc4a8ee565eb321a361" category="list-text">找到需要安装支撑导轨的位置，然后使用下图进行安装以供参考：</block>
-  <block id="7109dddefbc1cca910a17a3003f918d1" category="image-alt">DRW syscab ozeki 支持导轨安装</block>
   <block id="84362391cde89925e3ad3550a96b7cd2" category="list-text">如果您的设备安装法兰超出支撑导轨中的螺孔，请根据需要在支撑导轨上方安装锁紧螺母。</block>
-  <block id="3b738832fd7805dcb59a6e3ceb6d1691" category="image-alt">DRW 卡夹螺母安装</block>
   <block id="70150c1a82fd194a31cb4375a5daa21c" category="summary">SuperRail 可以安装在标准方孔四柱机架上，也可以使用圆到方孔适配器支架安装在标准圆孔四柱机架上。</block>
   <block id="966a4cc013cbf07d2dc9b6d14833b3e0" category="doc">SuperRail 套件安装说明</block>
   <block id="04abd72307682d4665fde1d35d82daaf" category="section-title">将 SuperRail 安装到方孔四柱机架</block>
-  <block id="34da9d7212dd506252380d0f44fc7986" category="image-alt">DRW 超级导轨方形孔四柱套件重新发布</block>
   <block id="c1f04067f36960edddc9075483e6ac55" category="section-title">将 SuperRail 安装到圆孔四柱机架</block>
-  <block id="e38ed45d70c33aad1179b302b05d8606" category="image-alt">DRW 超级导轨圆孔四柱套件重新发布</block>
   <block id="496b4a3650aab467cf608b170b892ff0" category="summary">您可以更换系统机柜中发生故障的 PDU ，也可以将现有 PDU 更换为其他类型的 PDU 。</block>
   <block id="ef229ddf3c0a14a70216a92856d40161" category="doc">更换 PDU</block>
   <block id="88cf45a15ad0d90bd6e19a24f810822a" category="paragraph">更换用的 PDU 必须由系统机柜支持，并且必须为已安装的设备提供足够的电源。</block>
@@ -1970,7 +1961,6 @@
   <block id="bccb69ce24042e59edaddcbd859db7ef" category="admonition">如果设备安装法兰超出支撑导轨中的螺孔，请根据需要在支撑导轨上方安装锁紧螺母，以便将设备竖直固定到机柜上。</block>
   <block id="751d4b928240d52864a2818fe5317da7" category="list-text">在系统机柜中的任何空托架上安装空白面板。</block>
   <block id="4ccedf93160862bbf89c3f9a64941193" category="paragraph">如果您收到的系统机柜已安装设备，则必须卸下空机柜托架正下方设备顶部的系紧导轨，如下图所示：</block>
-  <block id="b4449fca9dbd74bd7d58f7cfdbad1d41" category="image-alt">DRW syscab ooei tiedown 导轨卸下空白面板</block>
   <block id="cc32f847114f40b46bd875dc4bc7b049" category="list-text">重新安装前后系统机柜门。</block>
   <block id="9682abea21a8105e25e53a664815f083" category="summary">您必须将系统组件连接到 PDU ，将 PDU 缆线连接到交流电源，将其连接到电源以及打开系统电源。</block>
   <block id="de377ff4f06113db5f03b6d5d7501baa" category="doc">打开系统机柜的电源</block>
@@ -1989,7 +1979,6 @@
   <block id="6389d85f34f387a4ea8fe4528c426e25" category="paragraph">反转系统机柜门时，必须将照明标志电源，电源线和布线导管移至系统机柜的另一侧。该组件经过专门设计，用于将缆线连接到标志的位置位于安装了车门转轴的机柜侧面。</block>
   <block id="709ddaede46e6b855beff61d58586373" category="list-text">打开电源线固定夹，然后断开电源线与电源的连接。</block>
   <block id="667c7de8e5248a14983029ec8ffffaa5" category="list-text">参考下图，卸下电源外壳和电源：</block>
-  <block id="1776efc78bebc4dcee89829bd247c429" category="image-alt">DRW 系统驾驶室挡板 PSU 卸下 ozeki</block>
   <block id="2cf25b719c3838a91f027f2c3f8142fd" category="list-text">提起电源外壳上的固定销，然后向下旋转外壳盖并将其从后电源外壳上取下来卸下外壳盖。</block>
   <block id="5591b24e5b893e15cc2f08bac3a35504" category="admonition">电源通过钩环接线连接到电源外壳。</block>
   <block id="7afcbe61bb1a2c3c522f1d080649dfd4" category="list-text">断开照明标志缆线的电源，然后将电源和电源盖板设置到侧面。</block>
@@ -2001,9 +1990,7 @@
   <block id="661e3d47c0a5f6ab62d151d30ccd98a3" category="list-text">安装电源盖板和电源，方法是将盖板挂钩与电源对齐，将柱塞向上拉到盖板上，将柱塞旋转到关闭位置，然后释放柱塞。</block>
   <block id="20aadda179d514a8d5e6a99bf7d92b8e" category="list-text">从固定夹中卸下导管固定夹，然后将导管滑出电源线，从而卸下挡板电源导管。</block>
   <block id="aca431319f86a8f357d439e7ccf59f20" category="paragraph">将用于安装导管的固定夹和螺钉保留在机柜的另一侧。</block>
-  <block id="c48a48be7c0f1e99840883a3280b1799" category="image-alt">DRW 系统驾驶室挡板电源导管 ozeki</block>
   <block id="639cf71ee916974f7f6e30150a85d737" category="list-text">将带标志的电源线移至机柜的另一端：</block>
-  <block id="2d9b6f21ece6c57c36fd0e50193e491d" category="image-alt">DRW 系统驾驶室挡板电源线移动</block>
   <block id="22c0b80cd01ef90622d1da92c6e0296e" category="list-text">将机柜上的胶线固定器竖直旋转 180° ，将其从系统机柜框架中取出，然后将其轻轻拉出系统机柜。</block>
   <block id="845c272095f5b0f6e051259dcbf4b8c4" category="list-text">将缆线移至机柜的另一侧，然后将其完全穿过机柜顶部附近的孔。</block>
   <block id="fb703b4947b0235a0a86e7284865fbdb" category="list-text">将胶缆线固定器与框架中的孔对齐，将其尽量推入，然后将缆线固定器向左旋转 180° 以将其固定。</block>
@@ -2119,7 +2106,6 @@
   <block id="51096157b524c7405d973a26f6a00303" category="doc">安装紧固套件</block>
   <block id="4630806a49f3d566c73da0208c0cd76a" category="paragraph">您必须为每个固定支架提供适合您的地面的固定螺钉。</block>
   <block id="147a1dc5cec13c688326299559be22ae" category="list-text">在您的楼层上标记要安装系统机柜的区域，然后将机柜滚动到位。</block>
-  <block id="319a2ed158a8cb88c3de9dd6a93c15a1" category="image-alt">DRW 系统 CAB 通用崩溃工具包 ozeki</block>
   <block id="1966a82c06f624b9d7efa1d0aa3d578b" category="paragraph">前后固定支架</block>
   <block id="b973d96e7d5bc1a13b71536b349a5588" category="paragraph">支架上的地面定位点位置</block>
   <block id="547f8fa31ac2afc77d18705755c12837" category="list-text">标记后部固定支架将固定到地面的固定点，然后为支架钻出孔。</block>
@@ -2156,11 +2142,9 @@
   <block id="855cffdbc90612707b516c4fbf2e4af6" category="list-text">如果在安装互连套件时已卸下侧面板，请卸下前挡盖，其转轴位于机柜的边缘：</block>
   <block id="adb71487fe02ff95335d325d05bd2f15" category="list-text">解锁并打开要卸下的前挡盖。</block>
   <block id="9a4fe80d04ca9856800b2ddabd18e395" category="list-text">请参考下图，拔下照明挡板的电源插头：</block>
-  <block id="85816983ffa30e30b984a6f2f3ceaa67" category="image-alt">DRW 系统驾驶室拆卸桥石背面板</block>
   <block id="e8a8f00a7d5bf25e6a1ac90e7cb6e4ce" category="paragraph">照明挡板电路板和缆线</block>
   <block id="4c3580dc8ec8ac15abb74f8ae9e12d37" category="paragraph">后面板和翼形螺钉</block>
   <block id="7b38852247e34a7c2f895128fb65a1b9" category="list-text">请参考下图卸下前挡盖：</block>
-  <block id="d685fa3196540e3ea5b6005dcc845f27" category="image-alt">DRW 系统驾驶室前车门 daiginjo</block>
   <block id="b8935c8d03d333d31d39f234ce7ca6a2" category="paragraph">门接地缆线</block>
   <block id="137d396b6d0a86b1ac38d18e8d8c8941" category="paragraph">车门顶部转轴</block>
   <block id="990c943d20a9b30b2a54828e009ea5b0" category="paragraph">转轴销</block>
@@ -2170,11 +2154,9 @@
   <block id="7a12958e889303dd69f0e10b6b24a30b" category="list-text">将门从底部转轴上提起，然后将其放在一旁。</block>
   <block id="6e55d11b93b41e214f2747e4f2f62d30" category="list-text">将系统机柜完全移动在一起，然后通过调整系统机柜底部的四个水平垫对齐和水平。</block>
   <block id="8219a534e6cd0a6c1713509618457269" category="list-text">安装互连支架。</block>
-  <block id="9003c6de864cf9e22d9985840ee11662" category="list-text">如果您要按照建议安装互连支架，并在上安装系统机柜侧面板，请参考下图：<block ref="901c263387e1aa6a92d2a47d94581abb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0581354b86d3712208b91e6cf6f161e8" category="paragraph">系统机柜顶部的塑料推入式抽芯</block>
   <block id="2bebe43be7aead982807f7b4fe8cc0a2" category="paragraph">顶部互连支架</block>
   <block id="bb59e9a622257ac58cd5376c41c18911" category="paragraph">底部互连支架</block>
-  <block id="8ca8711af46d57c76eb7b29bf8e82c2c" category="list-text">如果在系统机柜侧面板关闭的情况下安装互连支架，请参考下图：<block ref="ed3976d92b59b9f945feec2c90845831" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6ffc5df4a17461423317852eab42d605" category="list-text">对其余所有系统机柜重复此过程。</block>
   <block id="9513dbed5687d13ec78a5ed7ab3503cc" category="list-text">拧紧所有互连支架螺钉。</block>
   <block id="696dd736b666ee17e46c95a26790f5d2" category="summary">打开系统机柜的包装时，您必须确保有足够的空间从包装材料中取出系统机柜。此外，还要确保系统机柜的预期位置足够大，以便将机柜移动到位。</block>
@@ -2226,13 +2208,11 @@
   <block id="ba962792d53198162e980600d4ad1689" category="paragraph">12 英寸</block>
   <block id="bfcd3622a8ea921fc92445a1fdabbd58" category="section-title">系统机柜外部尺寸</block>
   <block id="554d16876be8b6f45da7b9f94ca29374" category="paragraph">下图显示了系统机柜的正面，背面和侧面视图：</block>
-  <block id="d33692cb816156acc24972dd0730169e" category="image-alt">DRW 系统驾驶室侧前部尺寸 ozeki</block>
   <block id="3d916345d2d4b88d59baeb4da4d032c2" category="paragraph">下图显示了系统机柜的顶部和底部视图，并确定了可将缆线束从数据中心的地面装入系统机柜的开口。图中还显示了系统机柜脚轮和水平垫的位置。</block>
   <block id="8b33a6fabc9dc64d006c6243d17ccb18" category="paragraph">小心</block>
   <block id="03e181c9a4ee916b1c6394530dfe5d25" category="paragraph">为了防止系统机柜从数据中心楼层跌落，请勿尝试将系统机柜滚动到比系统机柜底部的缆线访问开口宽的楼层开口上。</block>
   <block id="d971400e841652c0674351e1776f8782" category="summary">在将系统机柜移动到位之前，您必须取出其周围的包装材料。您还应在卸载机柜后回收包装材料。</block>
   <block id="a95834c1a8ed59ab3858580d175bb665" category="doc">打开系统机柜的包装</block>
-  <block id="129309842bc5dbd264ad4f8622f29bfc" category="image-alt">DRW 系统驾驶室开箱说明 ozeki</block>
   <block id="c9c398d96e19f76a792dde6c40d97674" category="summary">您可以订购安装了 NetApp 存储控制器和磁盘架的系统机柜，也可以订购已安装 NetApp 设备的空系统机柜。可以使用可选互连套件将多个系统机柜连接在一起，也可以使用可选的固定套件将其固定到数据中心楼层。</block>
   <block id="04dd3356a6ed1dc409a57e068d7f5007" category="doc">安装系统机柜</block>
   <block id="15ec95a1d0a631e3b92b0edbb8cc676a" category="doc">升级过程</block>
@@ -2242,7 +2222,6 @@
   <block id="fa010c3e95aca618a783f3f5f398a8ba" category="paragraph">Hardware Universe 中列出了系统机柜中支持的 PDU 的最新信息。</block>
   <block id="525de838b0b63aa03a438e94f2a28f29" category="summary">要卸下照明标志，您需要打开系统机柜前盖，从标志背面拔下电源线，然后从系统机柜门中卸下标志组件。</block>
   <block id="fcb9814ec0f783887dac12f72d00226b" category="doc">拆下照明标志</block>
-  <block id="4c0a89c292f890b878557c520551c332" category="paragraph">使用下图以及以下步骤：<block ref="f85f4e62a4b22615b36542fe3d51ee23" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5e431905274e59cf132f091a54196f47" category="list-text">解锁并打开系统机柜前盖。</block>
   <block id="85c3d0cde48efa347bc893ba6c30e89b" category="list-text">松开车门内侧标志后面板上的固定螺钉，然后将后面板轻轻拉出车门网格。</block>
   <block id="3316ddf58954cd81f69dd3a261a67df4" category="list-text">按下插头上的锁定夹，从插槽拔下电源线，然后从后面板拔下缆线，从而从后面板拔下电源线。</block>
@@ -2253,9 +2232,7 @@
   <block id="ac153f0a41690d0111bba47080ad4deb" category="summary">FAS9000 和 AFF A700 系统可以使用两个双柱支持导轨套件。一个套件用于将系统嵌装到两柱机架中，另一个套件用于在两柱机架中将系统安装到中端。</block>
   <block id="3d621fa2786c28a29e81425001413c0e" category="doc">两柱支持导轨套件安装说明— AFF A700 和 FAS9000</block>
   <block id="9de356bba732ea3279684bd5fa1e5f9f" category="section-title">安装两柱中置导轨套件</block>
-  <block id="2f338557f8c0be16e8ae51b661b071b1" category="image-alt">DRW telco 中置 1</block>
   <block id="17bc73815850fd6dc60d586cf707300e" category="section-title">安装两柱嵌装导轨套件</block>
-  <block id="ef2cbc76f2fb85efc97170002c910e15" category="image-alt">DRW Telco 正面安装 1</block>
   <block id="7d309cda2d3359be8b443f7451192e61" category="summary">您可以通过以下方式更改前挡盖打开的方向：卸下照明标志，挡盖，顶部转轴和相关硬件，然后将其安装在系统机柜框架正面的另一侧。</block>
   <block id="cb60a8dc869953f0c81e001801098d91" category="doc">反转系统机柜前盖</block>
   <block id="0a4a8cbec44f07cf1fa6adeb0d46999d" category="paragraph">您需要使用以下工具和设备完成带照明标志的系统机柜的门反转：</block>
@@ -3119,16 +3096,12 @@
   <block id="f4df5bf0a483aea075033d6e474e6dab" category="paragraph">100 GbE 存储缆线</block>
   <block id="53590b790d3ba08516176d2bd37b33e9" category="paragraph">存储缆线</block>
   <block id="8ba04efff1ec0749374586b1b311d6c9" category="admonition">此缆线仅适用于适用场景 AFF A700 。</block>
-  <block id="bf4bab0f60d5f890ac80c1ebcbbc12a9" category="image-alt">DRW 9000 起重图标</block>
   <block id="6aaee4945b201c5a5677251dde867361" category="admonition">左侧的标签表示空机箱，右侧的标签表示系统已完全填充。</block>
-  <block id="85b367f413d423e28eebf0d4d7343b21" category="image-alt">DRW 9000 缆线管理臂</block>
   <block id="39ee497291056c5c7e4ecc487f5e822d" category="section-title">选项 1 ：双节点无交换机集群</block>
   <block id="9cc9aa6b319d537a98d9c9c820e6c4b3" category="paragraph">控制器上的管理网络，数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。</block>
   <block id="08f8dc743a7889305e9e12b5efdf8be5" category="paragraph">在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。</block>
-  <block id="e7a50f58a45bba10b5aba5b8e04b5f6f" category="image-alt">DRW 9000 TNSC 复合布线</block>
   <block id="84252b20b7e0ac6281a9b368a8f95d01" category="section-title">选项 2 ：交换集群</block>
   <block id="64f550ceb718fb87884d6c018d99b0d3" category="paragraph">控制器上的管理网络，数据网络和管理端口连接到交换机。集群互连和 HA 端口通过缆线连接到集群 /HA 交换机。</block>
-  <block id="2d4ee23b790e29acaba8afea7d2de7bf" category="paragraph"><block ref="2d4ee23b790e29acaba8afea7d2de7bf" category="inline-image-macro-rx" type="image"></block></block>
   <block id="951f189826bb64c4dbc3f08ee373f69e" category="paragraph">您可以使用缆线将新系统连接到 DS212C ， DS224C 或 NS224 磁盘架，具体取决于它是 AFF 还是 FAS 系统。</block>
   <block id="67ec2b038363eb1a2ca82d119dc3c4ca" category="section-title">选项 1 ：使用缆线将控制器连接到 DS212C 或 DS224C 驱动器架</block>
   <block id="2c12ea065c27431a69c35d833f9b51a7" category="paragraph">您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到 DS212C 或 DS224C 驱动器磁盘架。</block>
@@ -5463,7 +5436,6 @@
   <block id="a31ab93f41516026d249aceb633bccc3" category="doc">添加一个I/O模块—FAS9500</block>
   <block id="4d3b1425bbd62943a546a9f98dc3b7ef" category="list-text">从配对节点交还节点。`storage failover giveback -ofnode target_node_name`</block>
   <block id="6f8193ca6bfb281db32afbcc9e285f79" category="inline-link">热添加SAS磁盘架</block>
-  <block id="9856beabcb389225df78cec96e74e365" category="list-text">如果您安装了存储I/O模块、请按照中所述安装SAS磁盘架并为其布线<block ref="322cc377ef41f5776a1c64690e12c49b" category="inline-link-rx"></block>。</block>
   <block id="c964f542415e7614484e4edf970ab7a8" category="paragraph">将受影响的 LIF 永久重新分配到其他主端口。请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> 有关使用 System Manager 永久移动 LIF 的信息，请参见。</block>
   <block id="6d351dbc4a7187d4512a1c505c200687" category="paragraph">使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block>。</block>
   <block id="f3ca7c7565b074fbf5e12ffb59930d2f" category="doc">将故障部件退回给NetApp—FAS9500</block>
@@ -5603,8 +5575,6 @@
   <block id="67e68c155f62af046486d4818ab551b1" category="list-text">将缆线固定到缆线管理臂上(未显示)。</block>
   <block id="0815daeb3f5819b5b26f2d852a3480ed" category="video-title">动画—切换集群布线</block>
   <block id="ab4ba237fa2abf24783610d2c0f56a3a" category="image-alt">DRW 9500"交换网络布线"</block>
-  <block id="c88355c0ee4fee45dfc3a83996fea5ca" category="admonition">有关SAS布线的详细信息和工作表、请参见<block ref="a92f79530cc2a1794f52d1c1214e4c1c" category="inline-link-rx"></block></block>
-  <block id="9d00a2e517a4069bd82955f8b1b02a18" category="list-text">填写适用于您系统的SAS布线工作表。请参见<block ref="a92f79530cc2a1794f52d1c1214e4c1c" category="inline-link-rx"></block>。</block>
   <block id="3e86e158b18295e17a62b9c2ae164933" category="list-text">使用以下动画或图将控制器连接到三个(一个驱动器架的一个堆栈和两个驱动器架的一个堆栈) DS224C驱动器架。</block>
   <block id="dd012e2b911cefcb3afb5c18a9eea983" category="image-alt">DRW 9500SAS磁盘架布线</block>
   <block id="b16ca301b4f1b51a963f8ecd8de52638" category="image-alt">OIE图例图标1 MB</block>
@@ -5623,7 +5593,6 @@
   <block id="27daaf3028854170e8321e8ffc573b7a" category="image-alt">DRW 9500缆线 控制台交换机控制器</block>
   <block id="c1ba9dd5eac89f4e8a8e84e18e1785d1" category="list-text">Configure the system using the data you collected in the<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block> 。</block>
   <block id="e9a40b7f4288ab51ddb8de2a88f0cf93" category="video-title">动画-删除/安装LED/USB模块</block>
-  <block id="a282c221fc0b795896ece0422f9febe5" category="paragraph">安装SAS磁盘架并为其布线、如中所述<block ref="f5c5b2b96e8da7cc3e4c1c8ae096611e" category="inline-link-rx"></block>。</block>
   <block id="5fac6017ac5f7a2aad56f49afbe00547" category="paragraph">使用动画或表格中的步骤将控制器连接到一个磁盘架：</block>
   <block id="752a20127a073c8fcfed6924719fb0ed" category="paragraph">使用动画或表格中的步骤将控制器连接到两个驱动器架：</block>
   <block id="cff7332bdf16692a2c691280471c2521" category="list-text">使用动画将笔记本电脑连接到管理交换机：</block>
@@ -5951,7 +5920,6 @@
   <block id="450bb6c29a5f5af0fe4d1f8fcfcb4777" category="paragraph">更换电源包括关闭、断开和卸下电源以及安装、连接和打开替代电源。</block>
   <block id="3e476a4d56adc74857e9c49cf82980f1" category="list-text">系统中有四个电源。</block>
   <block id="d35281b877a38ecad54d9ac919c0ff9a" category="list-text">将电源线重新连接到电源。</block>
-  <block id="5803fc3bcce0b024b213bb355de85f8f" category="paragraph">NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。If you want to change the shelf IDs, you must create a tool to insert into the hole where button is located.请参见<block ref="86c3962fabec597b00cc6faeabccf883" category="inline-link-rx"></block> 有关详细说明、请参见。</block>
   <block id="312be20d26d0db2b40b706dc2f350028" category="image-alt">DRW a900 OIE change nss224 shelf ID IEOPS 836</block>
   <block id="48fb10beb7e1cd15b9bdbab40aac9532" category="paragraph">磁盘架端盖</block>
   <block id="22f4a2aa68e94fdf29e1fc7d0f30d571" category="paragraph">磁盘架面板</block>
@@ -5984,7 +5952,6 @@
   <block id="aae78f4a3d47a08dddca98a632d4a75f" category="paragraph">If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 。</block>
   <block id="68d9e980b8b4998ef88139d7b7ab8ff6" category="paragraph"><block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block></block>
   <block id="3cf0b39ddc0b0c6fbe705a62aacc7d3c" category="list-text">在机箱正面、用拇指用力推入每个驱动器、直到您感觉到有一定的停机。这样可确保驱动器牢固地固定在机箱中板上。</block>
-  <block id="7acc547c8acfbe4a745ca72a3e0e83e4" category="image-alt">DRW a800驱动器已就位IEOPS960</block>
   <block id="9fec9d1f051b750c4b137dc68aaa9695" category="list-text">转至机箱背面。如果您尚未接地，请正确接地。</block>
   <block id="3caccb46026f8affc6c95f65aa0c8af1" category="list-text">将控制器模块滑出机箱、然后将其放在平稳的表面上。</block>
   <block id="9bc9bee1c7c86ea6e815437b4f02ff6c" category="paragraph">Make sure that you support the bottom of the controller module as you slide it out of the chassis.。</block>
@@ -5994,8 +5961,6 @@
   <block id="a5462faa34b6cf806cb49f24d84b02a7" category="list-text">如果您的系统配置为在40 GbE NIC上支持10 GbE集群互连和数据连接、请在维护模式下使用nicadmin convert命令将这些端口转换为10 GbE连接。请参见<block ref="2d808a662d9493bde97b50913a25a294" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="c56809d9cff2ea190c6fb9d67e804b42" category="paragraph">更换机箱时、必须卸下机箱正面的六个风扇模块。</block>
   <block id="e9e9a6de5e421dfe8a5ccc0b156ecc94" category="admonition">如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后查找卡、然后按部件号在中查找卡<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 用于显示端口标签的挡板图形。可以使用查找卡部件号<block ref="432345ed72f5509f18312f01d4f08dff" prefix=" " category="inline-code"></block> 命令或。</block>
-  <block id="2f50f96b8a95f8c73f9257ccd13d3c46" category="image-alt">机箱ID为IEOPS 856的DRW a900控制器</block>
-  <block id="ea69d5fd5f06add244968ab4b689c261" category="image-alt">DRW a900 tnsc网络布线IEOPS 933</block>
   <block id="e1ed9dc03578bbf7dfdc44cf31220a86" category="image-alt">DRW a900交换机网络布线IEOPS 934</block>
   <block id="f31eedcaeccdc6e2f0110a8d59512b5b" category="image-alt">DRW a900 NS224一个磁盘架、使用缆线连接IEOPS 937</block>
   <block id="de9724762d060c871892fe8183e35056" category="image-alt">DRW a900 NS224两个磁盘架布线IEOPS 938</block>
@@ -6033,9 +5998,7 @@
   <block id="ba17e519b189ae10cd004d12dcc5e44d" category="paragraph"><block ref="751c01f8467f96987ff97e3a647e9973" category="inline-xref-macro-rx"></block></block>
   <block id="c1918f58421ab69768df267ff2412c99" category="paragraph"><block ref="0b030be2689b90a40f49c456c91f18ec" category="inline-xref-macro-rx"></block></block>
   <block id="b102c1828cf53d9df33f622c2208da4c" category="paragraph"><block ref="6ac3340c69a46ee235155eba76c461d6" category="inline-xref-macro-rx"></block></block>
-  <block id="d034ad76bb5b20c4f0a1790c3665c3b2" category="paragraph"><block ref="d034ad76bb5b20c4f0a1790c3665c3b2" category="inline-link-rx"></block></block>
   <block id="7be2f40216e9676314a384c650694fed" category="admonition">请参见<block ref="17d46f7a995ead494ec7b2eb9caffda8" category="inline-link-rx"></block> for your version of ONTAP for more details.</block>
-  <block id="1fad4d8ec174b60255a8febb2707e048" category="paragraph"><block ref="1fad4d8ec174b60255a8febb2707e048" category="inline-link-rx"></block></block>
   <block id="8c2c8bc4e47d0ed180d7a321a6f45a30" category="paragraph">要更换NVRAM模块、请将其置于机箱中的插槽6中、并按照特定步骤顺序进行操作。</block>
   <block id="44e91a10c5fb9bc923eb6ca613b41106" category="list-text">按下带字母和编号的凸轮闩锁。</block>
   <block id="35ed901089030d76b9de29f7bb8d54ce" category="paragraph">凸轮闩锁从机箱中移出。</block>
@@ -6170,7 +6133,6 @@
   <block id="6a5cc777b5cea5516ed3c04946243c15" category="paragraph">要更换直流PSU、请完成以下步骤。</block>
   <block id="81118bbf4dc8e737a15cb33e309d5928" category="list-text">使用插头上的翼形螺钉拧下D-sub直流电源线连接器。</block>
   <block id="a11fffebed2ec4e6399a05866d830825" category="list-text">从PSU拔下电源线并将其放在一旁。</block>
-  <block id="50e55f801844aaccd3dd2512f4973284" category="image-alt">DRW dcpsu remove replace generic IEOPS 788</block>
   <block id="7e9c947073c870125f5537753ceb963c" category="inline-image-macro">宽度= 10像素</block>
   <block id="3c41e1437657ea44ea906d59991155fe" category="paragraph"><block ref="3c41e1437657ea44ea906d59991155fe" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1a2188e25bb7db28c0b09dd772382a5c" category="paragraph">翼形螺钉</block>
@@ -6248,13 +6210,6 @@
   <block id="1a4af28a3bbd2601782d5a7f4300eace" category="paragraph">如果您的系统采用MetroCluster 配置、请转至<block ref="7a41c0ceac7b7f46cc98ba334d076153" category="inline-link-rx"></block> 并按照适用于您的MetroCluster 配置类型的安装说明进行操作。</block>
   <block id="71e3f3adc231b164f4f0837d133f2bc6" category="paragraph">如果您的存储系统未在MetroCluster 配置中设置、请使用以下工作流进行部署。</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一个</block>
-  <block id="8e4eec704f9a8706e1a3cf96accb2c17" category="list-text"><block ref="8e4eec704f9a8706e1a3cf96accb2c17" category="inline-link-rx"></block></block>
-  <block id="5173935e91aef44c51b8afd57f32f13f" category="list-text"><block ref="5173935e91aef44c51b8afd57f32f13f" category="inline-link-rx"></block></block>
-  <block id="e06ad9290eff5c16396920aafb75091e" category="list-text"><block ref="e06ad9290eff5c16396920aafb75091e" category="inline-link-rx"></block></block>
-  <block id="2f143cdae4fee80d6697460e215b8a02" category="list-text"><block ref="2f143cdae4fee80d6697460e215b8a02" category="inline-link-rx"></block></block>
-  <block id="9832cac218f9fee6c6d44a9f9b5e7d76" category="list-text"><block ref="9832cac218f9fee6c6d44a9f9b5e7d76" category="inline-link-rx"></block></block>
-  <block id="4cd32923632a1028f1e64fee85335b39" category="list-text"><block ref="4cd32923632a1028f1e64fee85335b39" category="inline-link-rx"></block></block>
-  <block id="2bf999bae7084da5db26c6b483ac44f0" category="list-text"><block ref="2bf999bae7084da5db26c6b483ac44f0" category="inline-link-rx"></block></block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">两个</block>
   <block id="26d2e0bd267361cc8916e7e16faebcbb" category="paragraph">将交换机安装在机架或机柜中。根据您的交换机型号访问以下说明。</block>
   <block id="8821c03ea98d1edaf4b4b82c0aaf59dc" category="inline-link-macro">安装BES-53248交换机</block>
@@ -6497,8 +6452,6 @@
   <block id="ac4fc8e93ed87aaf0d607c7594b760df" category="open-title">选项2：使用缆线将控制器连接到两个NS224驱动器架</block>
   <block id="eab02c161618f87134d04b274c9ed0a9" category="image-alt">DRW a900 NS224 line art双磁盘架、为IEOPS 1147布线</block>
   <block id="93d4151426ee3e46d52580ae98128972" category="list-text">Configure the system using the data you collected in the<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block></block>
-  <block id="a6857db3b19fb4b9bb2a3b1cad9a31f1" category="list-text"><block ref="a6857db3b19fb4b9bb2a3b1cad9a31f1" category="inline-link-rx"></block></block>
-  <block id="90a9e7415b88be6a0d94cebc7d4a7a57" category="list-text"><block ref="90a9e7415b88be6a0d94cebc7d4a7a57" category="inline-link-rx"></block></block>
   <block id="17732d64911b83c1ef019e7ce301df3a" category="summary">您可以通过存储系统文档安装、设置和维护ASA 系统。</block>
   <block id="27562113eba41d0820398afd585cb267" category="sidebar">ASA 软件配置</block>
   <block id="ff529c4d04327f7d20ae4d7b457bcd18" category="sidebar">ASA 产品规格</block>
@@ -6748,7 +6701,6 @@
   <block id="a9965269fc2882517b2f7404230818ad" category="list-text">如果要将一个或多个磁盘架热添加到现有堆栈的一端(逻辑第一个或最后一个磁盘架)、请完成适用于您的配置的子步骤；否则、请转至下一步。</block>
   <block id="ca067501330c228a786fd00d17229575" category="paragraph">将磁盘架热添加到与控制器具有多路径HA、三路径HA、多路径、四路径HA或四路径连接的堆栈末端</block>
   <block id="fa3d4e5360018aa45e5104272d43148c" category="paragraph">The stack must meet the requirements stated in the <block ref="d7ead9d51e0253f97f9c0ae83a2ee9eb" category="inline-xref-macro-rx"></block> section of this procedure.</block>
-  <block id="78fe270cb69c9ecda90d7e049a571c28" category="list-text">如果&lt;lno-DARE&gt;未显示在命令输出中、并且系统运行的是ONTAP 9.6或更高版本、请继续下一节。 <block ref="a913f4e8384864716d5146884ff27f0e" category="inline-xref-macro-rx"></block>。</block>
   <block id="d9b691280dde7c1805e39052719c9c29" category="list-text">从运行状况良好的控制器禁用自动交还：
 storage故障转移修改-node local -auto-G给予 恢复false`
 或<block ref="1d2c479b57949de891a15e148e1ebcf5" prefix=" " category="inline-code"></block></block>
@@ -7001,7 +6953,6 @@ SFP+(目标/启动程序)</block>
   <block id="945919717a9a1b9de8896baef8c155a5" category="paragraph">为有交换机集群的网络连接和集群互连端口布线。</block>
   <block id="b6713b6dcccfb0ea851ac5892871d1ce" category="paragraph">使用缆线将控制器连接到外部存储。</block>
   <block id="3fc162aa6870cf22cf3e0a947b89615a" category="video-title">动画-驱动器架布线</block>
-  <block id="2728bec52c30a9bf554b834ce8cfd335" category="admonition">请勿在FAS2800上使用端口0b2。ONTAP不使用此SAS端口、并且此端口始终处于禁用状态。请参见<block ref="6f4656a8b776447b5b4debad13e7a22e" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="936f11624ce65028d5f2861c02e343af" category="image-alt">OIE图例图标1</block>
   <block id="c40e49e90ec7d35ff60916a8d39fe6e8" category="image-alt">OIE图例图标2 MB</block>
   <block id="3b7d5f20d28c201cdbde659df3e31649" category="image-alt">OIE图例图标3 t</block>
@@ -7698,12 +7649,7 @@ SFP+(目标/启动程序)</block>
   <block id="a15b9605ee28854b0a879286a11a485d" category="doc">维护FAS2800硬件</block>
   <block id="3bf4e15c5081d9414a6cd3448aae890e" category="paragraph">对于FAS2800存储系统、您可以对以下组件执行维护过程。</block>
   <block id="d90835a42340aac8a036ef710a1aa68a" category="doc">启动并运行AFF、ASA和FAS存储系统</block>
-  <block id="fe16224741a81fa9747d82d6dc05182c" category="list-text"><block ref="fe16224741a81fa9747d82d6dc05182c" category="inline-link-rx"></block></block>
-  <block id="52142476f2ac75ac73f5e40f09d0e6d4" category="list-text"><block ref="52142476f2ac75ac73f5e40f09d0e6d4" category="inline-link-rx"></block></block>
-  <block id="b9cc4cc5d585d56b19a0b0bf8c7ff71f" category="list-text"><block ref="b9cc4cc5d585d56b19a0b0bf8c7ff71f" category="inline-link-rx"></block></block>
-  <block id="0ac6aa3296c0437f3274277862d88d2b" category="list-text"><block ref="0ac6aa3296c0437f3274277862d88d2b" category="inline-link-rx"></block></block>
   <block id="a334af0b164fc0db79711e89abe4cb0d" category="inline-link">FAS2800</block>
-  <block id="53e69397147d83b3fa253cab22a92a98" category="list-text"><block ref="53e69397147d83b3fa253cab22a92a98" category="inline-link-rx"></block></block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -7973,7 +7919,6 @@ SFP+(目标/启动程序)</block>
   <block id="ca7dce9cd06f0f2ef6e548c8c26d54d9" category="sidebar">ASA C800控制器模块</block>
   <block id="664f9c52f93e2fbf6e801148b0f573ad" category="inline-link">HA对管理</block>
   <block id="665a2533bb5f8d55add7fd24df29e614" category="paragraph"><block ref="665a2533bb5f8d55add7fd24df29e614" category="inline-link-rx"></block></block>
-  <block id="8fa572d5dfdbff8c60e791d349eca279" category="list-text">如果命令输出中显示&lt;lno-DARE&gt;或&lt;1ONo-DARe&gt;、则系统不支持NVE、请继续执行<block ref="c2302bfb39f1e6b6fccfd9207e94da44" category="inline-link-rx"></block>。</block>
   <block id="7d52b24114e5d676f50874574fb29878" category="paragraph">系统中的所有其他组件都必须正常工作；否则、您必须与联系<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>。</block>
   <block id="6cca151867efbcb742b6e15efec51760" category="list-text">挤压凸轮把手上的闩锁、直到其释放、完全打开凸轮把手以从中板释放控制器模块、然后用双手将控制器模块从机箱中拉出一半。</block>
   <block id="92edeac7b5b629f5e93e2de4ba2adf43" category="list-text">检查控制器模块背面的NVMEM LED。  查找NV图标：</block>
@@ -8014,7 +7959,6 @@ SFP+(目标/启动程序)</block>
   <block id="089568b0e72f52eda465bac3d797022f" category="list-text">检查图示箭头、了解电缆连接器的推拉卡舌方向是否正确。</block>
   <block id="cef25943b26eeebcaa1241ede0442fb2" category="paragraph">使用动画或分步说明完成控制器和交换机之间的布线。</block>
   <block id="86ef3e62afc46d4fbce176cfff238447" category="paragraph">下表列出了将驱动器架连接到存储系统时插图中的缆线类型以及呼出编号和缆线颜色。</block>
-  <block id="225172475d1dd48d2f55426f1792f1b5" category="admonition">The example uses DS224C.Cabling is similar with other supported drive shelves.请参见<block ref="defd6f8cbcbf4438c52ada1e92d7a17f" category="inline-link-rx"></block> 有关详细信息 ...</block>
   <block id="8a811c8bdca2987d299cfb24cf85ad86" category="paragraph">磁盘架到磁盘架布线</block>
   <block id="3fa1bc4f962d0649f457ff7e994b46d8" category="paragraph">控制器A连接到驱动器架</block>
   <block id="353960fbbf75aa5a4dd1042a20bf18dc" category="paragraph">控制器B连接到驱动器架</block>
@@ -8041,7 +7985,6 @@ SFP+(目标/启动程序)</block>
   <block id="6a1952da65ff3ad3728cd89ec078bfa2" category="paragraph">本操作步骤提供了有关安装AFF C250存储系统的详细分步说明。</block>
   <block id="3e9ec063809ed35fdf77c6c261c6e205" category="paragraph">快速指南提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。如果您熟悉安装 NetApp 系统，请使用此内容。</block>
   <block id="34da8131e3c849a4fd58c995ca7c8514" category="paragraph">安装和设置说明提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。Use this guide if you are familiar with installing NetApp systems.</block>
-  <block id="5590b96dc59eb91eb51b7b3ea51d3fd8" category="image-alt">DRW C400卸下控制器IEOPS 1216</block>
   <block id="8a8905b8ba33c894ca2404f3ecc9601d" category="image-alt">DRW C400露天风道IEOPS第1、第1、第1、第1、第4</block>
   <block id="7f3e7059150c562376058a9c62805700" category="image-alt">DRW C400更换启动介质IEOPS第12.7节</block>
   <block id="2e983c0397ba596f716adfed1e1f9821" category="image-alt">DRW C400空Riser卡卸下IEOPS 1225</block>
@@ -8051,7 +7994,6 @@ SFP+(目标/启动程序)</block>
   <block id="5af2765bc8ec26a113a34fb076ee531e" category="image-alt">DRW C400更换PCIe卡IEOPS 1235</block>
   <block id="f84e6736e0937abd8ec66865d23305e8" category="image-alt">DRW C400安装控制器IEOPS 1226</block>
   <block id="e46b8c6d3d358d972a1fe516250dcf5d" category="paragraph">将控制器滑入机箱</block>
-  <block id="ff0420a1b97d66a283e50773fa71f7ab" category="image-alt">DRW C400 RTC batt IEOPS 1239</block>
   <block id="d1ad021bd9b79ffa9323df56f68e4b22" category="paragraph">快速指南提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。如果您熟悉安装NetApp系统、请使用此操作步骤。</block>
   <block id="e7f3c0051e6bc5cbd205f59b35151985" category="inline-image-macro">宽度= 500像素</block>
   <block id="8f9d84ce0761e9cbbd0e69dc419011a6" category="paragraph"><block ref="8f9d84ce0761e9cbbd0e69dc419011a6" category="inline-image-macro-rx" type="image"></block></block>
@@ -8096,14 +8038,7 @@ SFP+(目标/启动程序)</block>
   <block id="ca42e40f781122cb5a2d8f08cb50d450" category="summary">您可以通过存储系统文档安装、设置和维护ASA C系列系统。</block>
   <block id="d6db6f02fef14cb7ca1df4e0aecf3992" category="doc">全闪存SAN阵列(ASA) C系列系统</block>
   <block id="1e328579e066bd52d81db5813109e763" category="paragraph">** ASA A系列系统**</block>
-  <block id="1ab5446725f4ee75e53cfa05dcd66d51" category="list-text"><block ref="1ab5446725f4ee75e53cfa05dcd66d51" category="inline-link-rx"></block></block>
-  <block id="5bdb8055b260f02eec19d823c3311a42" category="list-text"><block ref="5bdb8055b260f02eec19d823c3311a42" category="inline-link-rx"></block></block>
-  <block id="c68b919518dbc07c3ea6de93e748f2a8" category="list-text"><block ref="c68b919518dbc07c3ea6de93e748f2a8" category="inline-link-rx"></block></block>
-  <block id="77072c848f54ead938faeef11b9c0c7f" category="list-text"><block ref="77072c848f54ead938faeef11b9c0c7f" category="inline-link-rx"></block></block>
   <block id="41bfcd2f6014398965bef92c57ac1de1" category="paragraph">** ASA C系列系统**</block>
-  <block id="6505edfb90a2164175a72e5b1e50783a" category="list-text"><block ref="6505edfb90a2164175a72e5b1e50783a" category="inline-link-rx"></block></block>
-  <block id="503163f0da3a219668f1526d7486559b" category="list-text"><block ref="503163f0da3a219668f1526d7486559b" category="inline-link-rx"></block></block>
-  <block id="2127de740eb730a4618a8b073a6c6e02" category="list-text"><block ref="2127de740eb730a4618a8b073a6c6e02" category="inline-link-rx"></block></block>
   <block id="6be417bc5c1ffdb0f8da869305e5d269" category="list-text">将缆线管理设备连接到控制器背面(如图所示)。</block>
   <block id="d042cd94231d5a9490b5a46cb7fcfa64" category="image-alt">DRW C400电缆托架IEOPS 1208</block>
   <block id="9e9d13bc60316acb706283fdc88fb378" category="image-alt">DRW C400 TNSC网络布线IEOPS 1189.</block>
@@ -8247,7 +8182,6 @@ SFP+(目标/启动程序)</block>
   <block id="b6f08137ef915aeef8b0f7a87febae2a" category="image-alt">电缆连接器，顶部带有推拉卡舌</block>
   <block id="fba6f55e0eedb7bfb55d5ae671432c82" category="image-alt">底部带有推拉卡舌的电缆连接器</block>
   <block id="8310c84e951a895da0b0f8647c1eb8d9" category="image-alt">选择ONTAP图标</block>
-  <block id="c4e6f16ead2370d5b6f107bb474cb8d8" category="list-text"><block ref="c4e6f16ead2370d5b6f107bb474cb8d8" category="inline-link-rx"></block></block>
   <block id="efd776be7a583ca294bb1a8ce2c4e66e" category="image-alt">释放控制器模块</block>
   <block id="cc278673be0ce007e60343587ca221b7" category="image-alt">排空空气管道</block>
   <block id="3adccad6709367d60f0645e89c86a994" category="image-alt">关闭空气管道</block>
@@ -8413,7 +8347,6 @@ SFP+(目标/启动程序)</block>
   <block id="421c376f4d6d54ea975a03a818082d3d" category="image-alt">更换DIMM</block>
   <block id="9cb7281bb7eb2acd0ccc0342394f8a2a" category="summary">NVMe SSD FlashCache模块(FlashCache或缓存模块)仅位于FAS9500系统插槽6中NVRAM11模块的前部。您可以从相同或不同的受支持供应商热插拔具有相同容量的缓存模块。</block>
   <block id="be156c2254730ffea327aad8b7574600" category="paragraph">&lt;stdin&gt;中未解析的指令-包括：..//_include/700_9000_caching_model_and_core_dump_module _Replace .adoc[]</block>
-  <block id="c2aecd7a81767c23b66c3ce771bbf967" category="image-alt">DRW ozeki系统驾驶室底部顶部尺寸ieops (ieops</block>
   <block id="98c84c18c84bbdb869a3af52fb92fee5" category="admonition">用于安装SuperRail的前后连接点之间的最小深度为24英寸、最大深度为32英寸。</block>
   <block id="391efe7c4ae90cf6bb51a9deabcdbefb" category="image-alt">五条电缆链以及每个抽盒的垂直和水平连接器视图</block>
   <block id="eaa8764720f96ec6f05bfcafb2927484" category="image-alt">电缆链末端的橙色环</block>
@@ -9476,9 +9409,6 @@ SFP+(目标/启动程序)</block>
   <block id="9020c560951313547d9b00a00f95d818" category="doc">更换电源- AFF A70、AFF A90</block>
   <block id="866b7e69a0fb0f745608a59b2a02f1ca" category="doc">更换实时时钟电池- AFF A70、AFF A90</block>
   <block id="a1bdc631ad485f9356bc93d7ccbb7e85" category="doc">更换系统管理模块- AFF A70、AFF A90</block>
-  <block id="47213676da315290cbc4f8dbfd4c19b1" category="list-text"><block ref="47213676da315290cbc4f8dbfd4c19b1" category="inline-link-rx"></block></block>
-  <block id="0f8eba0b4d4003961e911a8b87c8c645" category="list-text"><block ref="0f8eba0b4d4003961e911a8b87c8c645" category="inline-link-rx"></block></block>
-  <block id="afadad86a19bc1f3f4145429ab25f587" category="list-text"><block ref="afadad86a19bc1f3f4145429ab25f587" category="inline-link-rx"></block></block>
   <block id="f710bde9f928341df6ff92fee79cb81a" category="summary">为要热添加的每个NS224磁盘架布线、以便每个磁盘架都有两个连接、连接到HA对中的每个控制器。</block>
   <block id="567fab43047b0960ce69a80b4d3eeef2" category="doc">使用缆线将磁盘架连接到AFF系统—NS224磁盘架</block>
   <block id="62415c5f208498fa7a928f2f3d1ce337" category="example-title">将电缆架连接到AFF A1K</block>
@@ -9875,11 +9805,7 @@ SFP+(目标/启动程序)</block>
   <block id="f4c083c41633c63a72a1bbce7db1c159" category="sidebar">交还控制器</block>
   <block id="26916af0dde7f17e1c0020bc61152522" category="sidebar">重新恢复并交还控制器</block>
   <block id="a39e0fbfb2db42a80ba7546850d8b5c6" category="paragraph"><block ref="a39e0fbfb2db42a80ba7546850d8b5c6" category="inline-link-rx"></block></block>
-  <block id="e27597c307865e3bea898a954dc995d4" category="list-text">按照中所述安装NS224磁盘架并为其布线<block ref="4c714ee9fc4a7e04a2f40d5895a74f6c" category="inline-link-rx"></block>。</block>
-  <block id="c143f6738ddd9a541350644ebd64ceb2" category="list-text">如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为其布线<block ref="4c714ee9fc4a7e04a2f40d5895a74f6c" category="inline-link-rx"></block>。</block>
-  <block id="755e668f97fbbf7befbf9d64fb746177" category="paragraph">按照中所述安装NS224磁盘架并为其布线 <block ref="f09cb6a873a3efd513b1f74c6b0f4d6b" category="inline-link-rx"></block>。</block>
   <block id="4c32ebd39f3a998e8ed434a92fb2337e" category="image-alt">为具有一个NS224磁盘架和一组PCIe卡端口的AFF A250 C250或FAS500f布线</block>
-  <block id="b413266e5808605ce76e56374f66f52b" category="paragraph">有关其它布线信息，请参阅<block ref="defd6f8cbcbf4438c52ada1e92d7a17f" category="inline-link-rx"></block>。</block>
   <block id="3512d92434ff4ef9e4eb4253b21a863e" category="image-alt">插入电缆时、连接器拉片朝上</block>
   <block id="fa8057e66f11f58b193c0063c5f89d0f" category="image-alt">NS224 NSM100模块端口e0a和e0b的位置</block>
   <block id="21631ea576ae592d82bfa53578687d4b" category="image-alt">操作员显示面板电源LED</block>
@@ -9961,4 +9887,83 @@ SFP+(目标/启动程序)</block>
   <block id="4b2bd889d120e947fdefd38ec782a1e4" category="image-alt">左侧更换电缆链</block>
   <block id="73272ed5a28a1f4d9270f9fb73f87cc0" category="inline-image-macro">右侧更换电缆链</block>
   <block id="b4418dc8cc1b24bcce503c5f73b9599e" category="paragraph"><block ref="b4418dc8cc1b24bcce503c5f73b9599e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="abf8f13bdb84c7122ff9a72d14501969" category="image-alt">删除控制器</block>
+  <block id="f58d98f433350ee3e614bfdfe3036a89" category="image-alt">Remove controller module</block>
+  <block id="0e6eb93881093798ffaf4eef324aae16" category="list-text">按照中所述安装NS224磁盘架并为其布线 <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>。</block>
+  <block id="f399facc82d214513205adcdfed1e55f" category="image-alt">安装磁盘驱动器</block>
+  <block id="f20a0219f10b0070c92efe4269486629" category="list-text">如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为<block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>其布线。</block>
+  <block id="86e8e2badf42560bb0b1ed3bac3933fa" category="paragraph">按照中所述安装NS224磁盘架并为其布线 <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>。</block>
+  <block id="32054c5ad8312edd8060078021c40e5a" category="list-text">如果命令输出中显示&lt;lno-DARE&gt;或&lt;1ONo-DARe&gt;，则系统不支持NVE，请继续执行<block ref="28ec6f22ff725a2b75e5efb9fe4ec8ad" category="inline-link-macro-rx"></block>。</block>
+  <block id="f5fc26027a17bd6c3d672fadcfbcbd0a" category="list-text">如果命令输出中未显示&lt;lno-DARE&gt;，并且系统正在运行ONTAP 9 6或更高版本，请继续执行下一节，<block ref="2a46afadceb505b77f1bd61e2cc13b61" category="inline-link-macro-rx"></block>。</block>
+  <block id="b9c98500ab9d006e0d9fd3d1c95f7904" category="paragraph">有关其它布线信息，请参阅<block ref="b8ff88c1a2e9444f28ec1504689e0040" category="inline-link-macro-rx"></block>。</block>
+  <block id="ade8035150bd89ce6852db30459ac3ea" category="image-alt">AFF A90 AFF A70重量小心图标</block>
+  <block id="ef83cb60cd5ea6118e6d106efa30f927" category="image-alt">起重注意事项</block>
+  <block id="f3badb2cde47b97db55936f633e8bbf1" category="image-alt">双节点无交换机集群复合布线</block>
+  <block id="34af8f9ffd0b4b6280598852b3af1562" category="inline-image-macro">有交换机集群复合布线</block>
+  <block id="b366deff74abec3d97706be3787610e6" category="paragraph"><block ref="b366deff74abec3d97706be3787610e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e74fc944b6640bce2095a80e847f3353" category="paragraph"><block ref="e74fc944b6640bce2095a80e847f3353" category="inline-link-macro-rx"></block></block>
+  <block id="26b2e029138f60c53b9962c3dd979bff" category="paragraph"><block ref="26b2e029138f60c53b9962c3dd979bff" category="inline-link-macro-rx"></block></block>
+  <block id="56d92be82a54ba66080116a8d89e1c62" category="image-alt">举重注意标签</block>
+  <block id="9554185bd1af8271072b83b3b2d575ac" category="image-alt">安装缆线管理ARM</block>
+  <block id="6689fce443e90feab8661570283f66c8" category="image-alt">典型集群配置</block>
+  <block id="e02d5ac9fd42c5389b0ad276455297f1" category="image-alt">电缆拉片方向</block>
+  <block id="2bccda25615c5e6e7b2f2c08de00a446" category="paragraph">NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。如果要更改磁盘架ID、则必须创建一个工具以插入按钮所在的孔中。<block ref="59d7f7611d6a3a02163f2743d346863e" category="inline-link-macro-rx"></block>有关详细说明、请参见。</block>
+  <block id="79f9797d84bf75ae713143b18a0030f3" category="paragraph">NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。如果要更改磁盘架ID、则必须创建一个工具以插入按钮所在的孔中。<block ref="59d7f7611d6a3a02163f2743d346863e" category="inline-link-macro-rx"></block>有关详细说明、请参见。</block>
+  <block id="f3649257de65ad2898ffea0bcd6b4429" category="admonition">The example uses DS224C.Cabling is similar with other supported drive shelves.有关详细信息、请参见 <block ref="b8ff88c1a2e9444f28ec1504689e0040" category="inline-link-macro-rx"></block> 。</block>
+  <block id="a50d38918f3af2fcdf9a82289745bef3" category="admonition">请勿在FAS2800上使用端口0b2。ONTAP不使用此SAS端口、并且此端口始终处于禁用状态。有关详细信息、请参见 <block ref="e082bc1662f9e2eeea25ff123ac1639a" category="inline-link-macro-rx"></block> 。</block>
+  <block id="cea2fe0896f98e522227f31af739bad1" category="image-alt">如何取出RTC电池</block>
+  <block id="c865faf8e136bd4fb16b864c71a1a831" category="list-text">如果您安装了存储I/O模块，请按照中所述安装SAS磁盘架并为<block ref="4a30b7191a311b85a3f2f50c86b1c925" category="inline-link-macro-rx"></block>其布线。</block>
+  <block id="1668821fbbc6ef249109c235ace901e6" category="paragraph">插槽3或7中的NIC模块</block>
+  <block id="482ef01703219125ccae426ff4615b76" category="paragraph">按照中所述安装SAS磁盘架并为<block ref="4a30b7191a311b85a3f2f50c86b1c925" category="inline-link-macro-rx"></block>其布线。</block>
+  <block id="b50fb23aa9dcb8c4fb1207d42be2b9ef" category="admonition">有关更多SAS布线信息和工作表、请参见<block ref="7a9ea3663e1b04ab8d8799fec120c13c" category="inline-link-macro-rx"></block></block>
+  <block id="59a6e33abad0374c68f887cd3fe3416f" category="list-text">填写适用于您系统的SAS布线工作表。请参阅。 <block ref="7a9ea3663e1b04ab8d8799fec120c13c" category="inline-link-macro-rx"></block></block>
+  <block id="b6799ec4c4ae20ab730ee39bdc6f022e" category="list-text"><block ref="b6799ec4c4ae20ab730ee39bdc6f022e" category="inline-link-macro-rx"></block></block>
+  <block id="51db8835b6a4662bdd282d562dce9ce4" category="list-text"><block ref="51db8835b6a4662bdd282d562dce9ce4" category="inline-link-macro-rx"></block></block>
+  <block id="9050a46bb2de8c6cc18f67e24b6f5bf6" category="list-text"><block ref="9050a46bb2de8c6cc18f67e24b6f5bf6" category="inline-link-macro-rx"></block></block>
+  <block id="314f50463955587e2037d8d2e40ae3af" category="list-text"><block ref="314f50463955587e2037d8d2e40ae3af" category="inline-link-macro-rx"></block></block>
+  <block id="45f5be1c6c4a88aeaa428800b6f3aee9" category="list-text"><block ref="45f5be1c6c4a88aeaa428800b6f3aee9" category="inline-link-macro-rx"></block></block>
+  <block id="8de3ebdb51afcc0413ac087089da1ef2" category="list-text"><block ref="8de3ebdb51afcc0413ac087089da1ef2" category="inline-link-macro-rx"></block></block>
+  <block id="67a1276a1283538eae5934ff4eb4a757" category="list-text"><block ref="67a1276a1283538eae5934ff4eb4a757" category="inline-link-macro-rx"></block></block>
+  <block id="126e4c17980262c3c430f022f5f56c3f" category="list-text"><block ref="126e4c17980262c3c430f022f5f56c3f" category="inline-link-macro-rx"></block></block>
+  <block id="ba2155c54eab4d26f52d9b663764d321" category="list-text"><block ref="ba2155c54eab4d26f52d9b663764d321" category="inline-link-macro-rx"></block></block>
+  <block id="c47800ce43f6bd4b5933465b941ca5e9" category="list-text"><block ref="c47800ce43f6bd4b5933465b941ca5e9" category="inline-link-macro-rx"></block></block>
+  <block id="e5aad213d0a77808fe82b572eeb5888c" category="list-text"><block ref="e5aad213d0a77808fe82b572eeb5888c" category="inline-link-macro-rx"></block></block>
+  <block id="c53d8396f56e01349bd6179f83e6a9a7" category="list-text"><block ref="c53d8396f56e01349bd6179f83e6a9a7" category="inline-link-macro-rx"></block></block>
+  <block id="694ebeeb15a60c82d17ed627858519ec" category="list-text"><block ref="694ebeeb15a60c82d17ed627858519ec" category="inline-link-macro-rx"></block></block>
+  <block id="c86567a0c3671bea1c02bd3e7294ad5b" category="list-text"><block ref="c86567a0c3671bea1c02bd3e7294ad5b" category="inline-link-macro-rx"></block></block>
+  <block id="fa92edc45af4eed5d7a491dc76f20edd" category="list-text"><block ref="fa92edc45af4eed5d7a491dc76f20edd" category="inline-link-macro-rx"></block></block>
+  <block id="c95480199cbbef020e68f17335af44d8" category="list-text"><block ref="c95480199cbbef020e68f17335af44d8" category="inline-link-macro-rx"></block></block>
+  <block id="ffb9da3894ac287e5ae93e12ca8cfbf5" category="list-text"><block ref="ffb9da3894ac287e5ae93e12ca8cfbf5" category="inline-link-macro-rx"></block></block>
+  <block id="33ec0e26cea0cf48884f5417b5271b20" category="list-text"><block ref="33ec0e26cea0cf48884f5417b5271b20" category="inline-link-macro-rx"></block></block>
+  <block id="76e66c3eaa0efaed0d080a74942cc900" category="list-text"><block ref="76e66c3eaa0efaed0d080a74942cc900" category="inline-link-macro-rx"></block></block>
+  <block id="b1b7d90b95e84c2c2f4f36df9e38550c" category="list-text"><block ref="b1b7d90b95e84c2c2f4f36df9e38550c" category="inline-link-macro-rx"></block></block>
+  <block id="8e4e1285f49cb2de8e4ad6f96de7a955" category="list-text"><block ref="8e4e1285f49cb2de8e4ad6f96de7a955" category="inline-link-macro-rx"></block></block>
+  <block id="6ed83ea3812e071cb890a3397f1ef8f3" category="list-text"><block ref="6ed83ea3812e071cb890a3397f1ef8f3" category="inline-link-macro-rx"></block></block>
+  <block id="f9e104181ae9f5f7cb047ada1d31db67" category="list-text"><block ref="f9e104181ae9f5f7cb047ada1d31db67" category="inline-link-macro-rx"></block></block>
+  <block id="7e888c9e662025943d61a7b6ab33fa3f" category="list-text"><block ref="7e888c9e662025943d61a7b6ab33fa3f" category="inline-link-macro-rx"></block></block>
+  <block id="0b91391244828b90a1ed6303288f165b" category="list-text"><block ref="0b91391244828b90a1ed6303288f165b" category="inline-link-macro-rx"></block></block>
+  <block id="57a2933dce60e141524865c41e2635ce" category="image-alt">如何安装支撑导轨</block>
+  <block id="6fb023b413c1f113940c64b778b1ea19" category="image-alt">如何安装锁紧螺母</block>
+  <block id="71d0706f6b47786d0dedd60322ca91a7" category="image-alt">前后螺栓固定式支架的位置以及支架上的地板锚固点</block>
+  <block id="bfc0cce31d98aae9ff6f0afbee4218da" category="image-alt">如何拔下照明挡板的电源插头</block>
+  <block id="f578e985217a79047ffda7fc4b180e02" category="image-alt">如何卸下前挡盖</block>
+  <block id="b2564b61ca12ebf4a488cbdc0cce727f" category="inline-image-macro">如何在系统机柜侧面板的情况下安装互连支架</block>
+  <block id="cf8b97cab728f89b4da7baf0f5ca79cf" category="list-text">如果要按照建议安装互连支架并将系统机柜侧面板置于上、请参考下图：<block ref="d70d3974fa2da1671002032761d0a6c5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5738a6b999fdf7d364607840e3cc0677" category="inline-image-macro">如何在系统机柜侧面板关闭的情况下安装互连支架</block>
+  <block id="a61dd737c11d0f864c9548e2f6aa9f84" category="list-text">如果要在系统机柜侧面板关闭的情况下安装互连支架、请参考下图：<block ref="a1bcde1197c2dce30494d2f780a78e1d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ba6c2986da775e910e79b1ca95b73c8d" category="image-alt">如何卸下系紧导轨</block>
+  <block id="1dcfc009d16c30b8aacf28ebe57c47cc" category="image-alt">如何卸下电源设备外壳和电源设备</block>
+  <block id="09a493301a026113d898691ba7dc2f2f" category="image-alt">卸下挡板电源导管</block>
+  <block id="936ef259e0efb1f9f3f7d58c4321acd0" category="image-alt">如何将标牌电源线移至机柜的另一侧</block>
+  <block id="af93e1aa65228f426ca0975df51e9263" category="image-alt">如何在前车门上重新安装照明标牌</block>
+  <block id="c4f952bf2e8da62bbec89d8b25f01d71" category="inline-image-macro">如何拆下照明标牌</block>
+  <block id="c10739aa61a9c6b713b87668c827de5b" category="paragraph">请使用下图和以下步骤：<block ref="1afa4d7311a14b4db10f850c473bef34" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eaa40ecf0ab58cd749fd4bde3bca611e" category="image-alt">拧下固定底部铰接部件的螺钉</block>
+  <block id="ac5733ebc895a7d02ab309fcfd6f1e39" category="image-alt">系统机柜的正面背面和侧面图</block>
+  <block id="4f5967d6e1e7c3a8ebe7ff7cb13d297f" category="image-alt">系统机柜的顶部和底部视图</block>
+  <block id="041e3dc0c2e09769718a5527ab4196a5" category="image-alt">如何打开系统机柜的包装</block>
+  <block id="c6d2485e6e329f1085d2f13a06b7f1f7" category="image-alt">如何将SuperRail安装到方孔四柱机架中</block>
+  <block id="1a603190ae07bbceebb7036072831b8b" category="image-alt">如何将SuperRail安装到圆孔四柱机架中</block>
+  <block id="7c89b00bc8ce7878c39671bd32585c2d" category="image-alt">如何安装两柱中部安装导轨套件</block>
+  <block id="887f19a9ed16e42d506a7ee90031e54f" category="image-alt">如何安装两柱嵌装导轨套件</block>
 </blocks>

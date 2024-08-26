@@ -19,8 +19,8 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 
 . 使用 `version -v` 命令检查受损控制器（如果已启动）或配对控制器（如果受损控制器已关闭）上运行的 ONTAP 版本：
 +
-** 如果命令输出中显示<lno-DARE>或<1ONo-DARe>、则系统不支持NVE、请继续执行 https://docs.netapp.com/us-en/ontap-systems/fas2800/bootmedia-impaired-controller-shutdown.html["Shut down the impaired controller"]。
-** 如果<lno-DARE>未显示在命令输出中、并且系统运行的是ONTAP 9.6或更高版本、请继续下一节。 <<在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE>>。
+** 如果命令输出中显示<lno-DARE>或<1ONo-DARe>，则系统不支持NVE，请继续执行link:../fas2800/bootmedia-impaired-controller-shutdown.html["Shut down the impaired controller"]。
+** 如果命令输出中未显示<lno-DARE>，并且系统正在运行ONTAP 9 6或更高版本，请继续执行下一节，link:../fas2800/bootmedia-encryption-preshutdown-checks.html#check-nve-or-nse-on-systems-running-ontap-9-6-and-later["在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE"]。
 
 
 . 从运行状况良好的控制器禁用自动交还：
