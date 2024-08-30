@@ -82,6 +82,7 @@ entries:
   - title: NV电池
     url: "/a70-90/nvdimm-battery-replace.html"
   - title: I/O 模块
+    pdf-filename: AFF A70和AFF A90 I/O模块
     entries:
     - title: I/O模块概述
       url: "/a70-90/io-module-overview.html"

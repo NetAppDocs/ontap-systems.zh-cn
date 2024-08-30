@@ -37,7 +37,7 @@ NOTE: 控制器机箱磁盘架ID硬编码为"00"。请勿对连接到平台的�
 
 . 卸下左端盖、以便接触面板后面的磁盘架ID按钮。
 +
-image::../media/drw_a900_oie_change_ns224_shelf_id_ieops-836.svg[更改NS224磁盘架ID]
+image:drw_a900_oie_change_ns224_shelf_id_ieops-836.svg["更改NS224磁盘架ID、宽度= 300个素"]
 
 +
 [cols="20%,80%"]
@@ -45,28 +45,28 @@ image::../media/drw_a900_oie_change_ns224_shelf_id_ieops-836.svg[更改NS224磁�
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image:legend_icon_01.svg["标注编号1，宽度=20"]
  a| 
 磁盘架端盖
 
 
 
  a| 
-image::../media/legend_icon_02.svg[标注编号2]
+image:legend_icon_02.svg["标注编号2，宽度=20"]
  a| 
 磁盘架面板
 
 
 
  a| 
-image::../media/legend_icon_03.svg[标注编号3]
+image:legend_icon_03.svg["标注编号3，宽度=20"]
  a| 
 磁盘架ID编号
 
 
 
  a| 
-image::../media/legend_icon_04.svg[标注编号4]
+image:legend_icon_04.svg["标注编号4，宽度=20"]
  a| 
 磁盘架ID访问按钮
 
@@ -140,14 +140,14 @@ NOTE: 有关如何配置串行控制台端口的说明，请参阅便携式计�
 .. 将控制台电缆连接到笔记本电脑、然后使用平台随附的控制台电缆连接控制器上的串行控制台端口。
 .. 将笔记本电脑连接到管理子网上的交换机。
 +
-image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[控制台连接]
+image:drw_a1k_70-90_console_connection_ieops-1702.svg["控制台连接"]
 
 .. 使用管理子网上的TCP/IP地址为笔记本电脑分配TCP/IP地址。
 
 
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 +
-image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[通用电源连接图]
+image:drw_affa1k_power_source_icon_ieops-1700.svg["通用电源连接图"]
 
 +
 ** 平台开始启动。Initial booting may take up to eight minutes.
