@@ -181,18 +181,18 @@ image:oie_cable_power.svg["宽=85个"]
 NOTE: 您需要了解与系统重量相关的安全问题。
 
 +
-image:drw_9500_lifting_icon.svg[""]
+image::../media/drw_9500_lifting_icon.svg[举重注意标签]
 
 . 连接缆线管理设备（如图所示）。
 +
-image:drw_9500_cable_management_arms.svg[""]
+image::../media/drw_9500_cable_management_arms.svg[提升手柄和缆线管理设备]
 
 . 将挡板放在系统正面。
 
 
 下图显示了典型系统的外观以及主要组件位于系统背面的位置：
 
-image:drw_a900_controller_in _chassis_ID_IEOPS-856.svg["典型集群配置"]
+image::../media/drw_a900_controller_in_chassis_ID_IEOPS-856.svg[典型集群配置]
 
 
 
