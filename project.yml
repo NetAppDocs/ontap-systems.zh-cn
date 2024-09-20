@@ -71,7 +71,8 @@ sidebar:
     - section: fas500f
     - section: fas8200
     - section: fas9000
-    - section: other
+    - title: 其他型号
+      url: "/other/other-models.html"
   - title: 驱动器架
     url: "/drive-shelves/index.html"
     entries:
