@@ -1,0 +1,164 @@
+---
+permalink: asa-r2-70-90/power-supply-replace.html 
+sidebar: sidebar 
+keywords: asa r2 a70, asa r2 a90, replace a power supply 
+summary: 更换电源包括断开目标电源与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。 
+---
+= 更换电源- ASA A70和ASA A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+更换电源(PSU)包括断开目标PSU与电源的连接、拔下电源线、卸下旧PSU并安装替代PSU、然后将其重新连接到电源。
+
+电源为冗余且可热插拔。
+
+.关于此任务
+此操作步骤 是为一次更换一个PSU而编写的。
+
+
+IMPORTANT: 请勿混用效率等级不同或输入类型不同的PSU。请始终像这样替换。
+
+请根据您的PSU类型使用相应的操作步骤 ：AC或DC。
+
+[role="tabbed-block"]
+====
+.选项1：更换交流PSU
+--
+要更换交流PSU、请完成以下步骤。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 根据控制台错误消息或PSU上的红色故障LED确定要更换的PSU。
+. 断开PSU的连接：
++
+.. 打开电源线固定器、然后从PSU拔下电源线。
+
+
+. 向上旋转手柄、按下锁定卡舌、然后将PSU拉出控制器模块、以卸下PSU。
++
+
+CAUTION: PSU较短。Always use two hands to support it when removing it from the controller module so that it does not suddenly swing free from the controller module and injure you.
+
++
+image::../media/drw_a70-90_psu_remove_replace_ieops-1368.svg[更换PSU]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["标注编号1、Wides=30bex"]
+ a| 
+Terrac兵马俑PSU锁定卡舌
+
+|===
+. 在控制器模块中安装替代PSU：
++
+.. 用双手支撑备用PSU的边缘并将其与控制器模块的开口对齐。
+.. 将PSU轻轻推入控制器模块、直到锁定卡舌卡入到位。
++
+电源只能与内部连接器正确接合并单向锁定到位。
+
++
+
+NOTE: 为了避免损坏内部连接器、请勿在将PSU滑入系统时用力过大。
+
+
+
+. 重新连接PSU布线：
++
+.. 将电源线重新连接到PSU。
+.. 使用电源线固定器将电源线固定到PSU。
+
+
++
+在PSU恢复供电后、状态LED应为绿色。
+
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"^]有关详细信息、请参见页面。
+
+
+--
+.选项2：更换DC PSU
+--
+要更换直流PSU、请完成以下步骤。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 根据控制台错误消息或PSU上的红色故障LED确定要更换的PSU。
+. 断开PSU的连接：
++
+.. 使用插头上的翼形螺钉拧下D-sub DC缆线连接器。
+.. 从PSU拔下缆线并将其放在一旁。
+
+
+. 向上旋转手柄、按下锁定卡舌、然后将PSU拉出控制器模块、以卸下PSU。
++
+
+CAUTION: PSU较短。Always use two hands to support it when removing it from the controller module so that it does not suddenly swing free from the controller module and injure you.
+
++
+image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[卸下直流PSU]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["标注编号1、Wides=30bex"]
+ a| 
+翼形螺钉
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["标注编号2、宽度=30个"]
+ a| 
+D-sub直流电源PSU缆线连接器
+
+
+
+ a| 
+image:../media/legend_icon_03.svg["标注编号3、Wides=30bex"]
+ a| 
+电源手柄
+
+
+
+ a| 
+image:../media/legend_icon_04.svg["标注编号4，宽度=30x"]
+ a| 
+蓝色PSU锁定卡舌
+
+|===
+. 在控制器模块中安装替代PSU：
++
+.. 用双手支撑备用PSU的边缘并将其与控制器模块的开口对齐。
+.. 将PSU轻轻推入控制器模块、直到锁定卡舌卡入到位。
++
+电源只能与内部连接器正确接合并单向锁定到位。
+
++
+
+NOTE: 为了避免损坏内部连接器、请勿在将PSU滑入系统时用力过大。
+
+
+
+. 重新连接D-sub DC电源线：
++
+.. 将电源线连接器插入PSU。
+.. 使用翼形螺钉将电源线固定到PSU。
++
+在PSU恢复供电后、状态LED应为绿色。
+
+
+
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"^]有关详细信息、请参见页面。
+
+
+--
+====

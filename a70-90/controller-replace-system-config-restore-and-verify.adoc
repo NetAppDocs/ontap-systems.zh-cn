@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
 ---
-= 还原并验证系统配置- AFF A70、AFF A90
+= 还原并验证系统配置- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -61,7 +61,7 @@ ha-state 的值可以是以下值之一：
 +
 ** `ha`
 ** `mcc` (不支持)
-** `mCCIP`
+** `mccip`(在ASA系统中不受支持)
 ** `non-ha` (不支持)
 
 

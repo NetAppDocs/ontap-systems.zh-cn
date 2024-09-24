@@ -1,0 +1,219 @@
+---
+permalink: fas-70-90/controller-replace-move-hardware.html 
+sidebar: sidebar 
+keywords: fas70, fas90, move the controller module hardware 
+summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 
+---
+= Replace the controller module - FAS70 and FAS90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要更换控制器、您必须卸下受损控制器、将FRU组件移至更换用的控制器模块、在机箱中安装更换用的控制器模块、然后将系统启动至维护模式。
+
+
+
+== 第 1 步：卸下控制器模块
+
+在更换控制器模块或更换控制器模块内部的组件时、您必须从机柜中卸下控制器模块。
+
+. 检查系统插槽4/5中的NVRAM状态指示灯。控制器模块的前面板上还有一个NVRAM LED。查找NV图标：
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED位置图]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+ a| 
+NVRAM 状态 LED
+
+
+
+ a| 
+image:../media/legend_icon_02.svg["标注编号1、宽度=30制"]
+ a| 
+NVRAM警示LED
+
+|===
++
+
+NOTE: 如果NVRAM状态LED闪烁、则可能表示控制器模块未被接管或正常暂停(未提交的数据)。如果受损控制器模块未被配对控制器模块成功接管、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"] 然后再继续此过程。
+
++
+受损控制器模块上的NVRAM状态LED的一般行为如下：
+
++
+** 当控制器模块断电且控制器模块处于"正在等待恢复"状态、或者控制器模块未被正确接管或暂停(未提交的数据)时、NVRAM状态LED会闪烁。
+** 从机柜中卸下控制器模块后、NVRAM状态LED会闪烁、这可能意味着控制器模块未被接管或暂停(未提交的数据)。确认此控制器模块已被配对控制器模块完全接管，或者受损控制器模块显示 `waiting for giveback`。然后、可以忽略闪烁的LED指示灯(并且可以从机柜中卸下控制器)。
+
+
+. 如果您尚未接地，请正确接地。
+. 在设备正面、将手指钩入锁定凸轮上的孔中、挤压凸轮杆上的卡舌、然后同时朝您的方向轻轻而稳固地旋转两个闩锁。
++
+控制器模块会稍微移出机柜。
+
++
+image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[控制器删除图形]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+| A锁定凸轮锁扣 
+|===
+. 将控制器模块滑出机箱、然后将其放在平稳的表面上。
++
+将控制器模块滑出机柜时、请确保支撑好其底部。
+
+
+
+
+
+== 第 2 步：移动风扇
+
+您必须将受损控制器模块中的五个风扇模块卸下到更换用的控制器模块。
+
+. 如果您尚未接地，请正确接地。
+. 如有必要，请用两只手抓住挡板每一侧的开口，然后将其拉向您，直到挡板从机箱框架上的球形螺柱上松开，从而卸下挡板。
+. 按下风扇模块上的灰色锁定按钮、然后将风扇模块从机箱中竖直拉出、确保您用空闲的手支撑它。
++
+
+NOTE: 风扇模块较短。请始终用您的空闲手托住风扇模块的底部，以免其突然从机箱中脱离并造成您的人身伤害。
+
++
+image::../media/drw_a1k_fan_remove_replace_ieops-1376.svg[风扇拆卸AFF A1K]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[标注编号1]
+ a| 
+黑色锁定按钮
+
+|===
+. 在更换用的控制器模块中安装风扇：
++
+.. 将风扇壳体的边缘与更换用的控制器模块前部的开口对齐。
+.. 将风扇模块轻轻地滑入更换用的控制器模块、直至其锁定到位。
+
+
+. 对其余风扇模块重复上述步骤。
+
+
+
+
+== Step 3: Move the NV battery
+
+将NV电池移至更换用的控制器。
+
+. 打开NV蓄电池空气管道盖并找到NV蓄电池。
++
+image::../media/drw_a1k_remove_replace_nvmembat_ieops-1379.svg[NV电池拆卸AFF A1K]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[标注编号1]
+| NV蓄电池空气管道盖 
+
+
+ a| 
+image::../media/legend_icon_02.svg[标注编号2]
+ a| 
+NV电池插头
+
+
+
+ a| 
+image::../media/legend_icon_03.svg[标注编号3]
+ a| 
+NV battery pack
+
+|===
+. 向上提起蓄电池以接触蓄电池插头。
+. 挤压电池插头表面的夹子以从插座中释放插头、然后从插座中拔下电池电缆。
+. 将电池从空气管道和控制器模块中提出。
+. 将电池组移至更换用的控制器模块、然后将其安装在NV电池通风管中：
++
+.. 打开备用控制器模块中的NV电池通风管。
+.. 将电池插头插入插座、并确保插头锁定到位。
+.. 将电池组插入插槽，然后用力向下按电池组，以确保其锁定到位。
+.. 关闭空气管道盖。
+
+
+
+
+
+
+== Step 4: Move system DIMMs
+
+将DIMM移至更换用的控制器模块。
+
+. 打开主板通风管并找到DIMM。
++
+image::../media/drw_a1k_dimms_ieops-1512.svg[DIMM卸下AFF A1K]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/legend_icon_01.svg[标注编号1]
+ a| 
+系统DIMM
+
+|===
+. 记下插槽中 DIMM 的方向，以便可以按正确的方向将 DIMM 插入更换用的控制器模块中。
+. 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。
++
+
+NOTE: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
+
+. 找到要在更换用的控制器模块中安装DIMM的插槽。
+. 将 DIMM 垂直插入插槽。
++
+DIMM 紧紧固定在插槽中，但应很容易插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。
+
++
+
+NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
+
+. 小心而稳固地推动 DIMM 的上边缘，直到弹出器卡舌卡入到位，卡入到位于 DIMM 两端的缺口上。
+. Repeat these steps for the remaining DIMMs.关闭主板通风管。
+
+
+
+
+== 第 5 步：安装控制器模块
+
+重新安装并启动控制器模块。
+
+. 如果尚未关闭此通风管，请关闭此通风管。
+. 将控制器模块的一端与机柜中的开口对齐、然后将控制器模块滑入机箱、使拉杆从系统正面转开。
+. 一旦控制器模块阻止您进一步滑动、请向内旋转凸轮把手、直到它们在风扇下锁紧
++
+
+NOTE: 将控制器模块滑入机箱时、请勿用力过度、以免损坏连接器。
+
++
+控制器模块在盘柜中完全就位后、即开始启动。
+
+. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+. 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
+

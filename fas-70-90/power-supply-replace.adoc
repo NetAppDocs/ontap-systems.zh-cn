@@ -1,0 +1,70 @@
+---
+permalink: fas-70-90/power-supply-replace.html 
+sidebar: sidebar 
+keywords: fas70, fas90, replace a power supply 
+summary: 更换电源包括断开目标电源与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。 
+---
+= Replace a power supply - FAS70 and FAS90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+更换电源(PSU)包括断开目标PSU与电源的连接、拔下电源线、卸下旧PSU并安装替代PSU、然后将其重新连接到电源。
+
+电源为冗余且可热插拔。
+
+.关于此任务
+此操作步骤 是为一次更换一个PSU而编写的。
+
+
+IMPORTANT: 请勿混用具有不同效率额定值的 PSU 。请始终像这样替换。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 根据控制台错误消息或PSU上的红色故障LED确定要更换的PSU。
+. 打开电源线固定器、断开PSU的连接、然后从PSU上拔下电源线。
+. 向上旋转手柄、按下锁定卡舌、然后将PSU拉出控制器模块、以卸下PSU。
++
+
+CAUTION: PSU较短。Always use two hands to support it when removing it from the controller module so that it does not suddenly swing free from the controller module and injure you.
+
++
+image::../media/drw_a1k_psu_remove_replace_ieops-1378.svg[更换PSU]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+ a| 
+Terrac兵马俑PSU锁定卡舌
+
+|===
+. 在控制器模块中安装替代PSU：
++
+.. 用双手支撑备用PSU的边缘并将其与控制器模块的开口对齐。
+.. 将PSU轻轻推入控制器模块、直到锁定卡舌卡入到位。
++
+电源只能与内部连接器正确接合并单向锁定到位。
+
++
+
+NOTE: 为了避免损坏内部连接器、请勿在将PSU滑入系统时用力过大。
+
+
+
+. 重新连接PSU布线：
++
+.. 将电源线重新连接到PSU。
+.. 使用电源线固定器将电源线固定到PSU。
+
+
++
+在PSU恢复供电后、状态LED应为绿色。
+
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"^]有关详细信息、请参见页面。
+

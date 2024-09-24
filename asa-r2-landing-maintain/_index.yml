@@ -1,0 +1,55 @@
+---
+indexpage:
+  title: 维护ASA R2系统
+  summary: 了解如何维护ASA R2系统。
+  keywords: maintain asa a1k, a70, a90
+  lead: 您可能需要对硬件执行维护过程。本节将介绍维护ASA r2系统组件的特定过程。
+  tiles:
+  - title: ASA A1K
+    links:
+    - title: 启动介质
+      url: "../asa-r2-a1k/bootmedia-overview.html"
+    - title: 控制器
+      url: "../asa-r2-a1k/controller-replace-workflow.html"
+    - title: DIMM
+      url: "../asa-r2-a1k/dimm-replace.html"
+    - title: 风扇
+      url: "../asa-r2-a1k/fan-replace.html"
+    - title: NVRAM
+      url: "../asa-r2-a1k/nvram-replace.html"
+    - title: NV电池
+      url: "../asa-r2-a1k/nvdimm-battery-replace.html"
+    - title: I/O 模块
+      url: "../asa-r2-a1k/io-module-overview.html"
+    - title: 电源
+      url: "../asa-r2-a1k/power-supply-replace.html"
+    - title: 实时时钟电池
+      url: "../asa-r2-a1k/rtc-battery-replace.html"
+    - title: 系统管理模块
+      url: "../asa-r2-a1k/system-management-replace.html"
+  - title: ASA A70和ASA A90
+    links:
+    - title: 启动介质
+      url: "../asa-r2-70-90/bootmedia-overview.html"
+    - title: 机箱
+      url: "../asa-r2-70-90/chassis-replace-workflow.html"
+    - title: 控制器
+      url: "../asa-r2-70-90/controller-replace-workflow.html"
+    - title: DIMM
+      url: "../asa-r2-70-90/dimm-replace.html"
+    - title: 驱动器
+      url: "../asa-r2-70-90/drive-replace.html"
+    - title: 风扇
+      url: "../asa-r2-70-90/fan-swap-out.html"
+    - title: NVRAM
+      url: "../asa-r2-70-90/nvram-replace.html"
+    - title: NV电池
+      url: "../asa-r2-70-90/nvdimm-battery-replace.html"
+    - title: I/O 模块
+      url: "../asa-r2-70-90/io-module-overview.html"
+    - title: 电源
+      url: "../asa-r2-70-90/power-supply-replace.html"
+    - title: 实时时钟电池
+      url: "../asa-r2-70-90/rtc-battery-replace.html"
+    - title: 系统管理模块
+      url: "../asa-r2-70-90/system-management-replace.html"

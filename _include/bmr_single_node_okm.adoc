@@ -1,0 +1,83 @@
+= 
+:allow-uri-read: 
+
+
+ `boot_recovery -partner`对于运行ONTAP 9．16.0及更高版本的ASA R2平台、您可以使用从配对节点还原ONTAP映像(启动介质恢复)。
+
+.开始之前
+当您启动某个节点且该节点上的启动介质损坏时、您将在Loader提示符处看到以下消息以及启动过程STOP：
+
+....
+
+Can't find primary boot device u0a.0
+Can't find backup boot device u0a.1
+ACPI RSDP Found at 0x777fe014
+
+
+Starting AUTOBOOT press Ctrl-C to abort...
+Could not load fat://boot0/X86_64/freebsd/image1/kernel:Device not found
+
+ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/Linux/image1/vmlinuz (boot0,fat)
+
+
+ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/freebsd/image1/kernel (boot0,fat)
+
+
+Autoboot of PRIMARY image failed. Device not found (-6)
+LOADER-A>
+
+....
+如果您看到此消息、则必须还原ONTAP映像
+
+.步骤
+. 在Loader提示符处、输入_boot_recovery -Partner_命令。
++
+屏幕将显示消息 `Starting boot media recovery (BMR) process press Ctrl-C to abort...`、并开始初始检查和安装启动恢复文件。
+
++
+.. 如果配置了板载密钥管理器(Onboard Key Manager、OKM)、则会显示以下内容：
++
+....
+key manager is configured.
+Entering Bootmenu Option 10...
+
+This option must be used only in disaster recovery procedures. Are you sure? (y or n):
+....
+
+
+. 在提示符处输入_y_。
+. 如果看到、请输入板载密钥管理器的密码短语 `Enter the passphrase for onboard key management:`
+. 当系统提示确认密码短语时、再次输入板载密钥管理器的密码短语。
++
+....
+Enter the passphrase for onboard key management:
+Enter the passphrase again to confirm:
+Enter the backup data:
+TmV0QXBwIEtleSBCbG9iAAECAAAEAAAAcAEAAAAAAAA3yR6UAAAAACEAAAAAAAAA
+QAAAAAAAAACJz1u2AAAAAPX84XY5AU0p4Jcb9t8wiwOZoqyJPJ4L6/j5FHJ9yj/w
+RVDO1sZB1E4HO79/zYc82nBwtiHaSPWCbkCrMWuQQDsiAAAAAAAAACgAAAAAAAAA
+3WTh7gAAAAAAAAAAAAAAAAIAAAAAAAgAZJEIWvdeHr5RCAvHGclo+wAAAAAAAAAA
+IgAAAAAAAAAoAAAAAAAAAEOTcR0AAAAAAAAAAAAAAAACAAAAAAAJAGr3tJA/LRzU
+QRHwv+1aWvAAAAAAAAAAACQAAAAAAAAAgAAAAAAAAABHVFpxAAAAAHUgdVq0EKNp
+.
+.
+.
+.
+....
++
+恢复过程完成后、您将看到以下内容：
+
++
+....
+Trying to recover keymanager secrets....
+Setting recovery material for the onboard key manager
+Recovery secrets set successfully
+Trying to delete any existing km_onboard.wkeydb file.
+
+Successfully recovered keymanager secrets.
+....
+. 监控从配对系统执行还原备份配置、env文件、MDB和rdb的BRE过程。
++
+还原完成后、节点将重新启动以完成此过程。
+
+

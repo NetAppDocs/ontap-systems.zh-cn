@@ -1,4 +1,4 @@
-= Check NVE or NSE on systems running ONTAP 9.15 and later
+= 检查系统上的NVE或NSE
 :allow-uri-read: 
 
 
@@ -8,7 +8,7 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 
 
 
-== Check NVE or NSE on systems running ONTAP 9.15 and later
+== 检查系统上的NVE或NSE
 
 在关闭受损控制器之前、您需要验证系统是否已启用安全密钥管理器或已加密磁盘。
 

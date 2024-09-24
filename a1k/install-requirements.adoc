@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: a1k/install-requirements.html 
+keywords: a1k, install, setup, cautions 
+summary: 查看所需设备以及平台和磁盘架的吊装预防措施。 
+---
+= 安装要求- AFF A1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+查看AFF A1K存储系统和存储架所需的设备以及搬运注意事项。
+
+
+
+== 安装所需的设备
+
+要安装AFF A1K存储系统、您需要以下设备和工具。
+
+* 访问Web浏览器以配置存储系统
+* 静电放电(ESD)带
+* 手电筒
+* 具有USB/串行连接的笔记本电脑或控制台
+* 回形针或窄尖头圆珠笔、用于设置NS224存储架ID
+* 2 号十字螺丝刀
+
+
+
+
+== 提升注意事项
+
+AFF A1K存储系统和NS224存储架很重。搬运这些物品时请务必小心。
+
+
+
+=== AFF A1K存储系统
+
+AFF A1K存储系统的重量可达22.83磅(28.5千克)。要抬起系统、请由两个人或一个液压提升装置来完成。
+
+image::../media/drw_a1k_weight_caution_ieops-1698.svg[AFF A1K提升注意图标]
+
+
+
+=== NS224磁盘架
+
+NS224存储架的重量不超过66.78磅(30.29千克)。要抬起存储架、请两个人或使用液压升降机。将所有组件(前部和后部)保留在存储架中、以防止存储架重量不平衡。
+
+image::../media/drw_ns224_lifting_weight_ieops-1716.svg[NS224举升注意事项]
+
+.相关信息
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["安全信息和法规声明"^]
+
+
+.下一步是什么？
+查看硬件要求后，您可以link:install-prepare.html["准备安装AFF A1K存储系统"]：

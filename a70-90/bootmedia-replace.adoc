@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a70, aff a90, replace the boot media 
 summary: 在更换启动介质之前，您可以通过删除控制器模块上的提升板 3 来找到控制器模块中发生故障的启动介质。 
 ---
-= 更换启动介质- AFF A70、AFF A90
+= 更换启动介质- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换启动介质、您必须从系统背面卸下系统管理模块、卸下受损的启动介质、在系统管理模块中安装替代启动介质、并将启动映像传输到USB闪存驱动器。
+要更换引导介质、您必须从系统背面卸下系统管理模块、卸下受损的引导介质、然后在系统管理模块中安装替代引导介质。
 
 
 

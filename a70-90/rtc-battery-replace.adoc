@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, replace the real-time clock battery 
 summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。 
 ---
-= 更换实时时钟电池- AFF A70、AFF A90
+= 更换实时时钟电池- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -323,4 +323,4 @@ NOTE: 如果系统停留在启动菜单处、请选择选项  `Reboot node` 并�
 
 == 第 6 步：将故障部件退回 NetApp
 
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

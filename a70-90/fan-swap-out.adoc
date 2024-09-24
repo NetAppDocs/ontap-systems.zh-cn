@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, aff, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
 summary: 要在不中断服务的情况下交换风扇模块，您必须执行一系列特定的任务。 
 ---
-= 更换风扇模块- AFF A70、AFF A90
+= 更换风扇模块- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -285,4 +285,4 @@ NOTE: 如果您有直流电源、请在控制器模块完全固定在机箱中�
 
 == 第 5 步：将故障部件退回 NetApp
 
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

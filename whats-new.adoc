@@ -1,27 +1,46 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: new, features,aff, asa,  fas, legacy, end-of-support 
-summary: 了解AFF、ASA和FAS系统的新功能以及不再支持的原有硬件。 
+keywords: new, features, asa r2, aff, asa, fas, legacy, end-of-support 
+summary: 了解ONTAP硬件系统的新功能。 
 ---
-= AFF、ASA和FAS系统的新增功能
+= ONTAP硬件系统新增功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-了解AFF、ASA和FAS系统的新功能。
+了解ONTAP硬件系统的新功能。
 
 有关ONTAP 9版本中的已知问题、限制和升级注意事项的详细信息、请参阅 https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508["《 ONTAP 9 发行说明》"]。您必须使用NetApp帐户登录或创建帐户才能访问发行说明。
 
 
 
-== 新平台支持
+== 平台支持
 
 [cols="2*"]
 |===
-| 平台（包含指向数据表的链接） | 可从一开始使用 
+| 平台 | 可从一开始使用 
+
+
+ a| 
+https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA r2系统"]
+
+* ASA A1K
+* ASA A70
+* ASA A90
+
+ a| 
+ONTAP 9.16.1.
+
+
+
+ a| 
+https://www.netapp.com/data-storage/fas/["FAS70和FAS90"]
+ a| 
+ONTAP 9.16.1.
+
 
 
  a| 
@@ -212,7 +231,7 @@ ONTAP 9.6
 |===
 
 
-== 新交换机支持
+== 交换机支持
 
 [cols="20,65,15"]
 |===
@@ -296,53 +315,7 @@ ONTAP 9.5P8
 |===
 
 
-== 新的适配器支持
-
-[cols="4*"]
-|===
-| 适配器部件号 | Description | 类别 | 可从一开始使用 
-
-
- a| 
-https://hwu.netapp.com/adapter/index["X91148A"]
- a| 
-2 端口 100GbE RoCE QSFP28
- a| 
-* 存储
-* 网络
-* HA/MetroCluster
-
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/adapter/index["X91122A"]
- a| 
-2 端口 25GbE RoCE QSFP28
- a| 
-* 网络
-* HA/MetroCluster
-
- a| 
-ONTAP 9.8
-
-
-
- a| 
-https://hwu.netapp.com/adapter/index["X9170A"]
- a| 
-NVMe SSD 模块（ 1 TB ）
- a| 
-核心转储设备
- a| 
-ONTAP 9.8
-
-|===
-
-
-== 新磁盘架支持
+== 磁盘架支架
 
 [cols="2*"]
 |===
@@ -357,7 +330,7 @@ ONTAP 9.6
 |===
 
 
-== 新硬件更新
+== 硬件更新
 
 [cols="25h,~,~"]
 |===

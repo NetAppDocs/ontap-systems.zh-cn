@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: AFF A70, AFF A90, replace the system management module 
 summary: 必须替换。 
 ---
-= 更换系统管理模块- AFF A70、AFF A90
+= 更换系统管理模块- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -310,4 +310,4 @@ NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文�
 
 == 第 5 步：将故障部件退回 NetApp
 
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。请参见 https://mysupport.netapp.com/site/info/rma["部件退回和放大器；更换"] 第页，了解更多信息。
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

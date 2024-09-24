@@ -4,7 +4,26 @@
 
 [cols="2*"]
 |===
-| 平台（包含指向数据表的链接） | 可从一开始使用 
+| 平台 | 可从一开始使用 
+
+
+ a| 
+https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["ASA r2系统"]
+
+* ASA A1K
+* ASA A70
+* ASA A90
+
+ a| 
+ONTAP 9.16.1.
+
+
+
+ a| 
+https://www.netapp.com/data-storage/fas/["FAS70和FAS90"]
+ a| 
+ONTAP 9.16.1.
+
 
 
  a| 

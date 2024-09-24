@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, pre-shutdown checks for onboard encryption keys 
 summary: 在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
 ---
-= 检查板载加密密钥- AFF A70、AFF A90
+= 检查板载加密密钥- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,7 +17,7 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 
 
 
-== Check NVE or NSE on systems running ONTAP 9.15 and later
+== 检查系统上的NVE或NSE
 
 在关闭受损控制器之前、您需要验证系统是否已启用安全密钥管理器或已加密磁盘。
 

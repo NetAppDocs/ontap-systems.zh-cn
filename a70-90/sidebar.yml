@@ -7,6 +7,8 @@ entries:
   entries:
   - title: 安装工作流
     url: "/a70-90/install-overview.html"
+  - title: 查看要求
+    url: "/a70-90/install-requirements.html"
   - title: 准备安装
     url: "/a70-90/install-prepare.html"
   - title: 安装硬件
@@ -27,7 +29,7 @@ entries:
     entries:
     - title: 启动介质更换工作流
       url: "/a70-90/bootmedia-replace-workflow.html"
-    - title: 要求和注意事项
+    - title: 查看要求
       url: "/a70-90/bootmedia-replace-requirements.html"
     - title: 检查板载加密密钥
       url: "/a70-90/bootmedia-encryption-preshutdown-checks.html"
@@ -46,7 +48,7 @@ entries:
     entries:
     - title: 机箱更换工作流
       url: "/a70-90/chassis-replace-workflow.html"
-    - title: 要求和注意事项
+    - title: 查看要求
       url: "/a70-90/chassis-replace-requirements.html"
     - title: 关闭控制器
       url: "/a70-90/chassis-replace-shutdown.html"
@@ -59,7 +61,7 @@ entries:
     entries:
     - title: 控制器更换工作流
       url: "/a70-90/controller-replace-workflow.html"
-    - title: 要求和注意事项
+    - title: 查看要求
       url: "/a70-90/controller-replace-requirements.html"
     - title: 关闭受损控制器
       url: "/a70-90/controller-replace-shutdown.html"

@@ -1,0 +1,22 @@
+---
+permalink: asa-r2-70-90/chassis-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa r2 a70, asa r2 a90, replace the chassis 
+summary: 使用与受损机箱型号相同的新机箱更换受损机箱。 
+---
+= 机箱更换要求- ASA A70和ASA A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+机箱是托管所有控制器组件(例如控制器/CPU单元、电源和I/O)的物理机箱
+
+在更换机箱之前、请确保查看以下要求。
+
+* 确保系统中的所有其他组件均正常工作；如果不正常、请联系技术支持。
+* 您可以对系统支持的所有ONTAP版本使用机箱更换过程。
+* 在编写机箱更换过程时、假设您要将挡板、NVMe驱动器和控制器模块移至新机箱、并且更换机箱是NetApp的新组件。
+* *机箱更换过程会造成系统中断。*For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.
+

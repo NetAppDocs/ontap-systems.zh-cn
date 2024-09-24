@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a70, a90, prepare installation 
 summary: 通过仅连接到交换机和笔记本电脑的集群发现、或者直接连接到存储系统中的控制器、然后连接到管理交换机、完成平台设置和配置。 
 ---
-= 完成存储系统设置和配置—AFF A70、AFF A90
+= 完成存储系统设置和配置—AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-安装硬件后、请使用ONTAP软件配置和管理存储系统。
+打开存储系统后、即可发现集群网络并设置ONTAP集群。
 
 
 
@@ -19,7 +19,7 @@ summary: 通过仅连接到交换机和笔记本电脑的集群发现、或者�
 
 如果您尚未收集配置集群所需的信息、例如集群管理接口端口和IP地址、请执行此操作。
 
-使用 https://docs.netapp.com/us-en/ontap/software_setup/index.html["集群设置工作表"] 记录集群设置过程中所需的值。如果提供了默认值，则可以使用该值，或者输入您自己的值。
+使用 https://docs.netapp.com/us-en/ontap/software_setup/index.html["集群设置工作表"^] 记录集群设置过程中所需的值。如果提供了默认值，则可以使用该值，或者输入您自己的值。
 
 
 
@@ -47,10 +47,10 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[如何使用Wi
 
 NOTE: 此目标节点的平台序列号为7本。
 
+
+
 +
 此时将打开 System Manager 。
-
-
 
 
 
@@ -60,7 +60,7 @@ NOTE: 此目标节点的平台序列号为7本。
 如果您的笔记本电脑未启用网络发现、请使用ONTAP命令行界面(CLI)集群设置向导完成配置和设置。
 
 .开始之前
-确保您的笔记本电脑已连接到串行控制台端口、并且控制器已打开电源。有关说明、请参见。 link:install-power-hardware.html#step-2-power-on-the-controllers["Power on the controllers"]
+确保您的笔记本电脑已连接到串行控制台端口、并且控制器已打开电源。有关说明、请参见。 link:install-power-hardware.html#step-2-power-on-the-controllers["启动存储系统"]
 
 .步骤
 将初始节点管理 IP 地址分配给其中一个节点。
@@ -99,9 +99,9 @@ NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制�
 
 == 第3步：配置集群
 
-NetApp建议您使用System Manager设置新集群。有关设置说明、请参见。 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["使用System Manager在新集群上配置ONTAP"]
+NetApp建议您使用System Manager设置新集群。有关设置说明、请参见。 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["使用System Manager在新集群上配置ONTAP"^]
 
 System Manager为集群设置和配置提供了一个简单易行的工作流、其中包括分配节点管理IP地址、初始化集群、创建本地层、配置协议以及初始配置连接的存储。
 
-
-NOTE: 初始化集群后、下载并运行  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] 以确认设置。
+.下一步是什么？
+初始化集群后、下载并运行  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] 以确认设置。

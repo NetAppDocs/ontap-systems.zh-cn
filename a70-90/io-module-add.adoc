@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, add I/O module 
 summary: 要更换I/O模块、您必须断开模块的缆线、从模块中卸下SFP和QSFP模块、卸下模块、安装更换模块、重新安装SFP和QSFP模块、然后为I/O模块布线。 
 ---
-= 添加I/O模块- AFF A70、AFF A90
+= 添加I/O模块- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -155,7 +155,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 |===
 +
 .. 按下目标插槽中空白模块上的凸轮闩锁。
-.. 将凸轮闩锁向下旋转到最远位置。对于水平模块、将凸轮尽可能远离模块。
+.. 将凸轮闩锁尽可能远离模块。
 .. 拆下挡板模块。
 
 

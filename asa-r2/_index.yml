@@ -1,0 +1,43 @@
+---
+indexpage:
+  title: ASA r2系统
+  summary: ASA R2存储系统文档可用于安装、设置和维护ASA R2系统。
+  keywords: asa r2, asa a1k, asa a70, asa a90, install, setup, maintain
+  lead: 新的NetApp ASA R2系统(ASA A1K、ASA A70和ASA A90)提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。
+  tiles:
+  - title: 入门
+    links:
+    - title: 了解ASA R2存储系统
+      url: https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html
+    - title: ASA 产品规格
+      url: https://www.netapp.com/data-storage/all-flash-san-storage-array/
+  - title: 安装和维护ASA R2系统
+    links:
+    - title: 安装ASA R2系统
+      url: https://docs.netapp.com/us-en/asa-r2/install-setup/install-setup-workflow.html
+    - title: 维护ASA R2系统
+      url: "../asa-r2-landing-maintain/index.html"
+  - title: 管理ASA R2系统上的数据
+    links:
+    - title: 配置 SAN 存储
+      url: https://docs.netapp.com/us-en/asa-r2/manage-data/provision-san-storage.html
+    - title: 克隆数据
+      url: https://docs.netapp.com/us-en/asa-r2/manage-data/data-cloning.html
+    - title: 修改存储单元
+      url: https://docs.netapp.com/us-en/asa-r2/manage-data/modify-storage-units.html
+  - title: 保护和保障ASA R2系统上的数据安全
+    links:
+    - title: 创建快照
+      url: https://docs.netapp.com/us-en/asa-r2/data-protection/create-snapshots.html
+    - title: 设置快照复制
+      url: https://docs.netapp.com/us-en/asa-r2/data-protection/snapshot-replication.html
+    - title: 对空闲数据进行加密
+      url: https://docs.netapp.com/us-en/asa-r2/secure-data/encrypt-data-at-rest.html
+  - title: 更多ASA R2资源
+    links:
+    - title: ONTAP命令参考
+      url: https://docs.netapp.com/us-en/ontap-cli/
+    - title: ONTAP REST API参考
+      url: https://docs.netapp.com/us-en/ontap-restapi/index.html
+    - title: ONTAP EMS参考
+      url: https://docs.netapp.com/us-en/ontap-ems/index.html
