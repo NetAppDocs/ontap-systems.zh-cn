@@ -11,6 +11,8 @@ summary: 本指南提供了从机架安装和布线到初始系统启动等典�
 
 
 [role="lead"]
+*警告：*如果您的系统安装了ONTAP 9．13.1P8－9.13.1P11、ONTAP 9．14.1P1 9.14.1P7或ONTAP 9．15．1 9.15.1P2，并且您的系统包含10个或更多的内部固态驱动器，则必须采取其它步骤来准备安装系统。请参阅问题 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["COOTP-285173 - ADP不会在具有10个或更多内部驱动器的AFF A150上保留备用根分区"^]。
+
 安装和设置说明提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。Use this guide if you are familiar with installing NetApp systems.
 
 使用链接： link:../media/PDF/Jan_2024_Rev2_AFFA150_ISI_IEOPS-1480.pdf["《AFF A150系统安装和设置说明》"^]

@@ -112,7 +112,7 @@ X6561-R6
 
 X6562-R6
  a| 
-image::../media/oie_cable_rj45.svg[OIE 缆线 RJ45]
+image::../media/oie_cable_rj45.svg[RJ-45电缆]
  a| 
 管理网络和以太网数据
 
@@ -202,21 +202,21 @@ image::../media/drw_cable_management_arm_install.svg[DRW 缆线管理臂安装]
 
 
  a| 
-image::../media/oie_legend_icon_1_lg.svg[OIE图例图标1长]
+image::../media/oie_legend_icon_1_lg.svg[标注图标三]]
  a| 
 集群互连
 
 
 
  a| 
-image::../media/oie_legend_icon_2_lp.svg[OIE 图例图标 2 LP]
+image::../media/oie_legend_icon_2_lp.svg[标注图标2.]
  a| 
 管理网络交换机
 
 
 
  a| 
-image::../media/oie_legend_icon_3_o.svg[OIE 图例图标 3 o]
+image::../media/oie_legend_icon_3_o.svg[标注图标3]
  a| 
 主机网络交换机
 
@@ -257,7 +257,7 @@ image::../media/drw_2800_tnsc_cluster_cabling_IEOPS-892.svg[DRW 2800 tnsc集群�
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 +
-image::../media/oie_cable_rj45.svg[OIE 缆线 RJ45]
+image::../media/oie_cable_rj45.svg[RJ-45电缆]
 
 +
 *RJ45电缆*
@@ -281,7 +281,7 @@ image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[OIE缆线25 Gb以�
 
 *** 4端口、10GBase-T、RJ45
 +
-image::../media/oie_cable_rj45.svg[OIE 缆线 RJ45]
+image::../media/oie_cable_rj45.svg[RJ-45电缆]
 
 
 
@@ -335,7 +335,7 @@ image::../media/drw_2800_switched_cluster_cabling_IEOPS-893.svg[DRW 2800交换�
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 +
-image::../media/oie_cable_rj45.svg[OIE 缆线 RJ45]
+image::../media/oie_cable_rj45.svg[RJ-45电缆]
 
 +
 image::../media/drw_2800_management_connection_IEOPS-1077.svg[DRW 2800管理连接IEOPS 1077]
@@ -356,7 +356,7 @@ image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[OIE缆线25 Gb以�
 
 *** 4端口、10GBase-T、RJ45
 +
-image::../media/oie_cable_rj45.svg[OIE 缆线 RJ45]
+image::../media/oie_cable_rj45.svg[RJ-45电缆]
 
 
 

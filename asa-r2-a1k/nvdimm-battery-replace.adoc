@@ -88,14 +88,14 @@ image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED�
 
 
  a| 
-image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_01.png["标注编号1"]
  a| 
 NVRAM 状态 LED
 
 
 
  a| 
-image:../media/legend_icon_02.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_02.png["标注编号2"]
  a| 
 NVRAM警示LED
 
@@ -126,7 +126,7 @@ image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[控制器删除图形]
 
 
  a| 
-image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_01.png["标注编号1"]
 | A锁定凸轮锁扣 
 |===
 . 将控制器模块滑出机箱、然后将其放在平稳的表面上。

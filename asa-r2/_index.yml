@@ -33,11 +33,3 @@ indexpage:
       url: https://docs.netapp.com/us-en/asa-r2/data-protection/snapshot-replication.html
     - title: 对空闲数据进行加密
       url: https://docs.netapp.com/us-en/asa-r2/secure-data/encrypt-data-at-rest.html
-  - title: 更多ASA R2资源
-    links:
-    - title: ONTAP命令参考
-      url: https://docs.netapp.com/us-en/ontap-cli/
-    - title: ONTAP REST API参考
-      url: https://docs.netapp.com/us-en/ontap-restapi/index.html
-    - title: ONTAP EMS参考
-      url: https://docs.netapp.com/us-en/ontap-ems/index.html

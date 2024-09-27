@@ -35,7 +35,7 @@ summary: 安装典型NetApp系统的详细分步说明。
 . 打开所有框内容的包装。
 . 记录控制器的系统序列号。
 +
-image:drw_ssn_label.svg["显示编号位置的系统序列号示例"]
+image:../media/drw_ssn_label.svg["显示编号位置的系统序列号示例"]
 
 . 清点并记下收到的缆线数量和类型。
 +
@@ -59,7 +59,7 @@ X66240A-2 （ 112-00598 ）， 2 米
 
 X66240A-5 （ 112-00600 ）， 5 米
  a| 
-image:oie_cable_sfp_gbe_copper.svg["宽=85个"]
+image:../media/oie_cable_sfp_gbe_copper.svg["GbE铜缆SFP"]
  a| 
 网络缆线
 
@@ -74,7 +74,7 @@ X66250-5 （ 112-00344 ）， 5 米
 
 X66250-15 （ 112-00346 ）， 15 米
  a| 
-image:oie_cable_sfp_gbe_copper.svg["宽=85个"]
+image:../media/oie_cable_sfp_gbe_copper.svg["GbE铜缆SFP"]
  a| 
 FC 光纤网络缆线
 
@@ -89,7 +89,7 @@ X66100-3 （ 112-00543 ）， 3 米
 
 X66100-5 （ 112-00544 ）， 5 米
  a| 
-image:oie_cable100_gbe_qsfp28.svg["宽=85个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["100 Gb缆线"]
  a| 
 以太网数据，集群网络
 
@@ -104,7 +104,7 @@ X6621B-2 （ 112-00574 ）， 2 米
 
 X6621B-5 （ 112-00576 ）， 5 米
  a| 
-image:oie_cable100_gbe_qsfp28.svg["宽=85个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["100 Gb缆线"]
  a| 
 网络，
 
@@ -125,7 +125,7 @@ X66032A （ 112-00437 ）， 2 米
 
 X66033A （ 112-00438 ）， 3 米
  a| 
-image:oie_cable_fiber_lc_connector.svg["宽=85个"]
+image:../media/oie_cable_fiber_lc_connector.svg["LC光纤连接器"]
  a| 
 FC 光纤网络
 
@@ -138,7 +138,7 @@ FC 光纤网络
 
 X6562-R6 （ 112-00196 ）， 5 米
  a| 
-image:oie_cable_rj45.svg["宽=85个"]
+image:../media/oie_cable_rj45.svg["RJ-45电缆"]
  a| 
 管理网络和以太网数据
 
@@ -149,7 +149,7 @@ image:oie_cable_rj45.svg["宽=85个"]
  a| 
 不适用
  a| 
-image:oie_cable_micro_usb.svg["宽=85个"]
+image:../media/oie_cable_micro_usb.svg["微型USB电缆"]
  a| 
 在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
 
@@ -160,7 +160,7 @@ image:oie_cable_micro_usb.svg["宽=85个"]
  a| 
 不适用
  a| 
-image:oie_cable_power.svg["宽=85个"]
+image:../media/oie_cable_power.svg["宽=85个"]
  a| 
 启动系统
 
@@ -211,7 +211,7 @@ image::../media/drw_a900_controller_in_chassis_ID_IEOPS-856.svg[典型集群配�
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image:oie_cable_pull_tab_up.svg["电缆拉片方向"]
+image:../media/oie_cable_pull_tab_up.svg["电缆拉片方向"]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -221,15 +221,16 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .动画—为双节点无交换机集群布线
 video::37419c37-f56f-48e5-8e6c-afa600095444[panopto]
 +
-image:drw_a900_tnsc_network_cabling_IEOPS-933.svg["双节点无交换机网络布线"]
+image:../media/drw_a900_tnsc_network_cabling_IEOPS-933.svg["双节点无交换机网络布线"]
 
 +
+[cols="20%,80%"]
 |===
 | 步骤 | 在每个控制器上执行 
 
 
  a| 
-image:oie_legend_icon_1_lg.svg["宽度=30个"]
+image:../media/oie_legend_icon_1_lg.svg["标注图标1"]
  a| 
 使用缆线连接集群互连端口：
 
@@ -237,55 +238,53 @@ image:oie_legend_icon_1_lg.svg["宽度=30个"]
 ** 插槽 -A8 和 B8 （ E8a ）
 
 
-image:oie_cable100_gbe_qsfp28.svg["宽=85个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["100 Gb缆线"]
 
 
 
  a| 
-image:oie_legend_icon_2_lp.svg["宽度=30个"]
+image:../media/oie_legend_icon_2_lp.svg["标注图标2."]
  a| 
 使用缆线连接控制器管理（扳手）端口。
 
-image:oie_cable_rj45.svg["宽=85个"]
+image:../media/oie_cable_rj45.svg["RJ-45电缆"]
 
 
 
  a| 
-image:oie_legend_icon_3_o.svg["宽度=30个"]
+image:../media/oie_legend_icon_3_o.svg["标注图标3"]
  a| 
 使用缆线连接 25 GbE 网络交换机：
 
 插槽 A3 和 B3 （ E3A 和 E3C ）以及插槽 A9 和 B9 （ e9a 和 e9c ）中的端口连接到 25 GbE 网络交换机。
 
-image:oie_cable_sfp_gbe_copper.svg["宽=85个"]
+image:../media/oie_cable_sfp_gbe_copper.svg["GbE铜缆SFP"]
 
 40GbE 主机网络交换机：
 
 使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。
 
-image:oie_cable100_gbe_qsfp28.svg["宽=85个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["100 Gb缆线"]
 
 
 
  a| 
-image:oie_legend_icon_4_dr.svg["宽度=30个"]
+image:../media/oie_legend_icon_4_dr.svg["标注图标4."]
  a| 
 使用缆线连接 32 Gb FC 连接：
 
 使用缆线将插槽 5 和 B5 （ 5a ， 5b ， 5c 和 5d ）以及插槽 A7 和 B7 （ 7a ， 7b ， 7c 和 7d ）中的端口连接到 32 Gb FC 网络交换机。
 
-image:oie_cable_sfp_gbe_copper.svg["宽=85个"]
+image:../media/oie_cable_sfp_gbe_copper.svg["GbE铜缆SFP"]
 
 
 
+ a| 
+image:../media/oie_legend_icon_5_lp.png["标注图标5"]
  a| 
 ** 将缆线固定到缆线管理臂上(未显示)。
 ** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
 
- a| 
-image:oie_cable_power.svg["宽=85个"]
-
-image:drw_a900fas9500_power_source_icon_IEOPS-1142.svg["宽度=200个"]
 
 |===
 
@@ -300,7 +299,7 @@ image:drw_a900fas9500_power_source_icon_IEOPS-1142.svg["宽度=200个"]
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image:oie_cable_pull_tab_up.svg["电缆拉片方向"]
+image:../media/oie_cable_pull_tab_up.svg["电缆拉片方向"]
 
 
 NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
@@ -310,15 +309,16 @@ NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不�
 .动画—为有交换机集群布线
 video::61ec11ec-aa30-474a-87a5-afa60008b52b[panopto]
 +
-image:drw_a900_switched_network_cabling_IEOPS-934.svg["宽度= 500像素"]
+image:../media/drw_a900_switched_network_cabling_IEOPS-934.svg["宽度= 500像素"]
 
 +
+[cols="20%,80%"]
 |===
 | 步骤 | 在每个控制器上执行 
 
 
  a| 
-image:oie_legend_icon_1_lg.svg["宽度=30个"]
+图像：../media/oie_legend_icl_1_lg.svg[
  a| 
 使用缆线连接集群互连 A 端口：
 
@@ -326,55 +326,57 @@ image:oie_legend_icon_1_lg.svg["宽度=30个"]
 ** 插槽 "A8 和 B8 （ E8a ）连接到集群网络交换机。
 
 
-image:oie_cable100_gbe_qsfp28.svg["宽=85个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["100 Gb缆线"]
 
 
 
  a| 
-image:oie_legend_icon_2_lp.svg["宽度=30个"]
+image:../media/oie_legend_icon_2_lp.svg["标注图标2."]
  a| 
 使用缆线连接控制器管理（扳手）端口。
 
-image:oie_cable_rj45.svg["宽=85个"]
+image:../media/oie_cable_rj45.svg["RJ-45电缆"]
 
 
 
  a| 
-image:oie_legend_icon_3_o.svg["宽度=30个"]
+image:../media/oie_legend_icon_3_o.svg["标注图标3"]
  a| 
 使用缆线连接 25GbE 网络交换机：
 
 插槽 A3 和 B3 （ E3A 和 E3C ）以及插槽 A9 和 B9 （ e9a 和 e9c ）中的端口连接到 25 GbE 网络交换机。
 
-image:oie_cable_sfp_gbe_copper.svg["宽=85个"]
+image:../media/oie_cable_sfp_gbe_copper.svg["GbE铜缆SFP"]
 
 40GbE 主机网络交换机：
 
 使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。
 
-image:oie_cable100_gbe_qsfp28.svg["宽=85个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["100 Gb缆线"]
 
 
 
  a| 
-image:oie_legend_icon_4_dr.svg["宽度=30个"]
+image:../media/oie_legend_icon_4_dr.svg["标注图标4"]
  a| 
 使用缆线连接 32 Gb FC 连接：
 
 使用缆线将插槽 5 和 B5 （ 5a ， 5b ， 5c 和 5d ）以及插槽 A7 和 B7 （ 7a ， 7b ， 7c 和 7d ）中的端口连接到 32 Gb FC 网络交换机。
 
-image:oie_cable_sfp_gbe_copper.svg["宽=85个"]
+image:../media/oie_cable_sfp_gbe_copper.svg["GbE铜缆SFP"]
 
 
 
+ a| 
+image:../media/oie_legend_icon_5_lp.png["标注图标5"]
  a| 
 ** 将缆线固定到缆线管理臂上(未显示)。
 ** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
 
- a| 
-image:oie_cable_power.svg["宽=85个"]
 
-image:drw_a900fas9500_power_source_icon_IEOPS-1142.svg["宽度=200个"]
+image:../media/oie_cable_power.svg["宽=85个"]
+
+image:../media/drw_a900fas9500_power_icon_IEOPS-1142.svg["宽度=200个"]
 
 |===
 
@@ -397,9 +399,9 @@ image:drw_a900fas9500_power_source_icon_IEOPS-1142.svg["宽度=200个"]
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 
 
-image:oie_cable_pull_tab_up.svg["电缆拉片方向"]
+image:../media/oie_cable_pull_tab_up.svg["电缆拉片方向"]
 
-image:oie_cable_pull_tab_down.svg["宽度=200个"]
+image:../media/oie_cable_pull_tab_down.svg["宽度=200个"]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -409,34 +411,35 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .动画-为一个NS224磁盘架布线
 video::8d8b45cd-bd8f-4fab-a4fa-afa5017e7b72[panopto]
 +
-image:drw_a900_NS224_one shelf_cabling_IEOPS-937.svg["宽度= 500像素"]
+image:../media/drw_a900_NS224_one shelf_cabling_IEOPS-937.svg["宽度= 500像素"]
 
 +
+[cols="20%,80%"]
 |===
 | 步骤 | 在每个控制器上执行 
 
 
  a| 
-image:oie_legend_icon_1_mb.svg["宽度=30个"]
+image:../media/oie_legend_icon_1_mb.svg["标注图标1"]
  a| 
 ** 将控制器 A 端口 E2A 连接到磁盘架上 NSM A 上的端口 e0a 。
 ** 将控制器 A 端口 e10b 连接到磁盘架上 NSM B 上的端口 e0b 。
 
 
-image:oie_cable100_gbe_qsfp28.svg["宽度=50个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["宽度=50个"]
 
 100 GbE 缆线
 
 
 
  a| 
-image:oie_legend_icon_2_lo.svg["宽度=30个"]
+image:../media/oie_legend_icon_2_lo.svg["标注图标1"]
  a| 
 ** 将控制器 B 端口 E2A 连接到磁盘架上 NSM B 上的端口 e0a 。
 ** 将控制器 B 端口 e10b 连接到磁盘架上 NSM A 上的端口 e0b 。
 
 
-image:oie_cable100_gbe_qsfp28.svg["宽度=50个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["宽度=50个"]
 
 100 GbE 缆线
 
@@ -452,9 +455,9 @@ image:oie_cable100_gbe_qsfp28.svg["宽度=50个"]
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 
 
-image:oie_cable_pull_tab_up.svg["电缆拉片方向"]
+image:../media/oie_cable_pull_tab_up.svg["电缆拉片方向"]
 
-image:oie_cable_pull_tab_down.svg["宽度=200个"]
+image:../media/oie_cable_pull_tab_down.svg["宽度=200个"]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -464,18 +467,19 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 .动画-使用缆线连接两个NS224磁盘架
 video::ec143c32-9e4b-47e5-893e-afa5017da6b4[panopto]
 +
-image:drw_a900_NS224_line_art_two shelf_cabling_IEOPS-1147.svg["宽度= 500像素"]
+image:../media/drw_a900_NS224_line_art_two shelf_cabling_IEOPS-1147.svg["宽度= 500像素"]
 
 +
-image:drw_a900_NS224_two_shelf_cabling_IEOPS-938.svg["宽度= 500像素"]
+image:../media/drw_a900_NS224_two_shelf_cabling_IEOPS-938.svg["宽度= 500像素"]
 
 +
+[cols="20%,80%"]
 |===
 | 步骤 | 在每个控制器上执行 
 
 
  a| 
-image:oie_legend_icon_1_mb.svg["宽度=30个"]
+image:../media/oie_legend_icon_1_mb.svg["标注图标1"]
  a| 
 ** 将控制器 A 端口 E2A 连接到磁盘架 1 上的 NSM A e0a 。
 ** 将控制器 A 端口 e10b 连接到磁盘架 1 上的 NSM B e0b 。
@@ -483,14 +487,14 @@ image:oie_legend_icon_1_mb.svg["宽度=30个"]
 ** 将控制器 A 端口 E10A 连接到磁盘架 2 上的 NSM A e0a 。
 
 
-image:oie_cable100_gbe_qsfp28.svg["宽度=50个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["宽度=50个"]
 
 100 GbE 缆线
 
 
 
  a| 
-image:oie_legend_icon_2_lo.svg["宽度=30个"]
+image:../media/oie_legend_icon_2_lo.svg["宽度=30个"]
  a| 
 ** 将控制器 B 端口 E2A 连接到磁盘架 1 上的 NSM B e0a 。
 ** 将控制器 B 端口 e10b 连接到磁盘架 1 上的 NSM A e0b 。
@@ -498,7 +502,7 @@ image:oie_legend_icon_2_lo.svg["宽度=30个"]
 ** 将控制器 B 端口 E10A 连接到磁盘架 2 上的 NSM B e0a 。
 
 
-image:oie_cable100_gbe_qsfp28.svg["宽度=50个"]
+image:../media/oie_cable100_gbe_qsfp28.svg["宽度=50个"]
 
 100 GbE 缆线
 
@@ -527,7 +531,7 @@ NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。如果要更改磁盘
 .动画—设置NVMe驱动器架ID
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image:drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg["宽度= 500像素"]
+image:../media/drw_a900_oie_change_ns224_shelf_ID_ieops-836.svg["更改磁盘架 ID"]
 
 +
 [cols="20%,80%"]
@@ -535,28 +539,28 @@ image:drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg["宽度= 500像素"]
 
 
  a| 
-image:legend_icon_01.svg["宽度= 20"]
+image:../media/legend_icon_01.png["标注图标1"]
  a| 
 磁盘架端盖
 
 
 
  a| 
-image:legend_icon_02.svg["宽度= 20"]
+image:../media/legend_icon_02.png["标注编号2"]
  a| 
 磁盘架面板
 
 
 
  a| 
-image:legend_icon_03.svg["宽度= 20"]
+image:../media/legend_icon_03.png["标注编号3"]
  a| 
 磁盘架ID LED
 
 
 
  a| 
-image:legend_icon_04.svg["宽度= 20"]
+image:../media/legend_icon_04.svg["宽度= 20"]
  a| 
 磁盘架ID设置按钮
 
@@ -566,7 +570,7 @@ image:legend_icon_04.svg["宽度= 20"]
 .动画—打开控制器的电源
 video::a905e56e-c995-4704-9673-adfa0005a891[panopto]
 +
-image:drw_a900_power-on_IEOPS-941.svg["宽度= 500像素"]
+image:../media/drw_a900_power-on_IEOPS-941.svg["宽度= 500像素"]
 
 +
 
@@ -581,11 +585,11 @@ NOTE: 初始启动可能需要长达八分钟的时间。
 .动画—将笔记本电脑连接到管理交换机
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 +
-image:dwr_laptop_to_switch_only.svg["宽度= 500像素"]
+image:../media/dwr_laptop_to_switch_only.svg["宽度= 500像素"]
 
 . 选择列出的 ONTAP 图标以发现：
 +
-image:drw_autodiscovery_controler_select.svg["宽度= 500像素"]
+image:../media/drw_autodiscovery_controler_select.svg["宽度= 500像素"]
 
 +
 .. 打开文件资源管理器。
@@ -636,7 +640,7 @@ NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或�
 
 .. 使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台，然后将此笔记本电脑连接到管理子网上的管理交换机。
 +
-image:drw_A900_cable_console_switch_controller_IEOPS-953.svg["宽度= 500像素"]
+image:../media/drw_a900_cable_console_switch_controller_IEOPS-953.svg["控制台电缆连接"]
 
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 
@@ -649,36 +653,36 @@ NS224 磁盘架已预先设置为磁盘架 ID 00 和 01 。如果要更改磁盘
 .动画—设置NVMe驱动器架ID
 video::95a29da1-faa3-4ceb-8a0b-ac7600675aa6[panopto]
 +
-image:drw_a900_oie_change_ns224_shelf_ID_IEOPS-836.svg["宽度= 500像素"]
+image:../media/drw_a900_oie_change_ns224_shelf_ID_ieops-836.svg["更改磁盘架 ID"]
 
 +
-[cols="20%,80%"]
+[cols="1,5"]
 |===
 
 
  a| 
-image:legend_icon_01.svg["宽度= 20"]
+image:../media/legend_icon_01.png["标注图标1"]
  a| 
 磁盘架端盖
 
 
 
  a| 
-image:legend_icon_02.svg["宽度= 20"]
+image:../media/legend_icon_02.png["标注图标2"]
  a| 
 磁盘架面板
 
 
 
  a| 
-image:legend_icon_03.svg["宽度= 20"]
+image:../media/legend_icon_03.png["标注图标3"]
  a| 
 磁盘架ID LED
 
 
 
  a| 
-image:legend_icon_04.svg["宽度= 20"]
+image:../media/legend_icon_04.png["标注图标4"]
  a| 
 磁盘架ID设置按钮
 
@@ -688,7 +692,7 @@ image:legend_icon_04.svg["宽度= 20"]
 .动画—打开控制器的电源
 video::bb04eb23-aa0c-4821-a87d-ab2300477f8b[panopto]
 +
-image:drw_a900_power-on_IEOPS-941.svg["宽度= 500像素"]
+图像：[callout icon one] drw_a900_power-on_IEOPS-941.svg[wid=500P]
 
 +
 

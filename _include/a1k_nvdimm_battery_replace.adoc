@@ -131,14 +131,14 @@ image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED�
 
 
  a| 
-image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_01.png["标注编号1"]
  a| 
 NVRAM 状态 LED
 
 
 
  a| 
-image:../media/legend_icon_02.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_02.png["标注编号2"]
  a| 
 NVRAM警示LED
 
@@ -169,7 +169,7 @@ image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[控制器删除图形]
 
 
  a| 
-image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_01.png["标注编号1"]
 | A锁定凸轮锁扣 
 |===
 . 将控制器模块滑出机箱、然后将其放在平稳的表面上。
@@ -193,16 +193,14 @@ image::../media/drw_a1k_remove_replace_nvmembat_ieops-1379.svg[重新调整NV电
 |===
 
 
- a| 
-image:../media/legend_icon_01.svg["标注编号1、Wides=30bex"]
-| NV蓄电池空气管道盖 
+| image:../media/legend_icon_01.png["标注编号1"]  a| 
+NV蓄电池空气管道盖
 
 
- a| 
-image:../media/legend_icon_02.svg["标注编号2、宽度=30个"]
- a| 
-NV电池插头
 
+ a| 
+image:../media/legend_icon_02.png["标注编号2"]
+| NV电池插头 
 |===
 . 向上提起蓄电池以接触蓄电池插头。
 . 挤压电池插头表面的夹子以从插座中释放插头、然后从插座中拔下电池电缆。

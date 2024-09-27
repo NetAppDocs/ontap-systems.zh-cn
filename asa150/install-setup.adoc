@@ -28,3 +28,5 @@ summary: 安装和设置系统。
 
 
 如果您的系统采用 MetroCluster IP 配置，请参见 https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html["安装 MetroCluster IP 配置"] 说明。
+
+*警告：*如果您的系统安装了ONTAP 9．13.1P8－9.13.1P11、ONTAP 9．14.1P1 9.14.1P7或ONTAP 9．15．1 9.15.1P2，并且您的系统包含10个或更多的内部固态驱动器，则必须采取其它步骤来准备安装系统。请参阅问题 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["COOTP-285173 - ADP不会在具有10个或更多内部驱动器的AFF A150上保留备用根分区"^]。

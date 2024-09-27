@@ -15,6 +15,8 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 如果您使用的是MetroCluster 配置、请使用 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]。
 
+*警告：*如果您的系统安装了ONTAP 9．13.1P8－9.13.1P11、ONTAP 9．14.1P1 9.14.1P7或ONTAP 9．15．1 9.15.1P2，并且您的系统包含10个或更多的内部固态驱动器，则必须采取其它步骤来准备安装系统。请参阅问题 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["COOTP-285173 - ADP不会在具有10个或更多内部驱动器的AFF A150上保留备用根分区"^]。
+
 
 
 == 第 1 步：准备安装

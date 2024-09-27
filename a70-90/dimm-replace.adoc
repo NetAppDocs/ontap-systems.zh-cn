@@ -147,14 +147,14 @@ image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED�
 
 
  a| 
-image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_01.png["标注编号1"]
  a| 
 NVRAM 状态 LED
 
 
 
  a| 
-image:../media/legend_icon_02.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_02.png["标注编号2"]
  a| 
 NVRAM警示LED
 
@@ -195,12 +195,12 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[控制器删除图�
 
 
  a| 
-image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_01.png["标注编号1"]
 | A锁定闩锁 
 
 
  a| 
-image:../media/legend_icon_02.svg["标注编号2、宽度=30制"]
+image:../media/legend_icon_02.png["标注编号2"]
  a| 
 锁定销
 
@@ -243,7 +243,7 @@ image::../media/drw_a70_90_dimm_ieops-1513.svg[更换DIMM]
 
 
  a| 
-image:../media/legend_icon_01.svg["标注编号1、宽度=30制"]
+image:../media/legend_icon_01.png["标注编号1"]
  a| 
 DIMM 和 DIMM 弹出器卡舌
 
