@@ -59,7 +59,7 @@ X66240A-2 （ 112-00598 ）， 2 米
 
 X66240A-5 （ 112-00600 ）， 5 米
  a| 
-图像：../media/oIE_cable_SFP_GbE_copper．svg
+图像：./media/oie_cable_sfp_gbe_copper.png
  a| 
 网络缆线
 
@@ -74,7 +74,7 @@ X66250-5 （ 112-00344 ）， 5 米
 
 X66250-15 （ 112-00346 ）， 15 米
  a| 
-图像：../media/oIE_cable_SFP_GbE_copper．svg
+图像：./media/oie_cable_sfp_gbe_copper.png
  a| 
 FC 光纤网络缆线
 
@@ -89,7 +89,7 @@ X66100-3 （ 112-00543 ）， 3 米
 
 X66100-5 （ 112-00544 ）， 5 米
  a| 
-图像：../media/oIE_cable100_GbE_QSFP28.svg
+图像：./media/oie_cable100_gbe_qsfp28.png
  a| 
 以太网数据，集群网络
 
@@ -104,7 +104,7 @@ X6621B-2 （ 112-00574 ）， 2 米
 
 X6621B-5 （ 112-00576 ）， 5 米
  a| 
-图像：../media/oIE_cable100_GbE_QSFP28.svg
+图像：./media/oie_cable100_gbe_qsfp28.png
  a| 
 网络，
 
@@ -123,7 +123,7 @@ X66032A （ 112-00437 ）， 2 米
 
 X66033A （ 112-00438 ）， 3 米
  a| 
-image::../media/oie_cable_fiber_lc_connector.svg[OIE 缆线光纤 LC 连接器]
+image::../media/oie_cable_fiber_lc_connector.png[OIE 缆线光纤 LC 连接器]
  a| 
 FC 光纤网络
 
@@ -136,7 +136,7 @@ FC 光纤网络
 
 X6562-R6 （ 112-00196 ）， 5 米
  a| 
-图像：../media/oIE_cable_RJ45-svg
+图像：./media/oie_cable_rj45.png
  a| 
 管理网络和以太网数据
 
@@ -162,7 +162,7 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷�
  a| 
 不适用
  a| 
-image::../media/oie_cable_micro_usb.svg[OIE缆线微型USB]
+图像：../media/oIE_cable_micro_USB.pngMicro USB连接器]
  a| 
 在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
 
@@ -173,7 +173,7 @@ image::../media/oie_cable_micro_usb.svg[OIE缆线微型USB]
  a| 
 不适用
  a| 
-image::../media/oie_cable_power.svg[OIE缆线电源]
+image::../media/oie_cable_power.png[电源线]
  a| 
 启动系统
 
@@ -242,7 +242,7 @@ image::../media/drw_9500_tnsc_network_cabling.svg[DRW 9500tnsc网络布线]
 
 
  a| 
-图像：../media/oIE_legend_icl_1_lg.svg
+图像：./media/icon_square_1_green.png
  a| 
 使用缆线连接集群互连端口：
 
@@ -250,44 +250,44 @@ image::../media/drw_9500_tnsc_network_cabling.svg[DRW 9500tnsc网络布线]
 ** 插槽 -A8 和 B8 （ E8a ）
 
 
-图像：../media/oIE_cable100_GbE_QSFP28.svg
+图像：./media/oie_cable100_gbe_qsfp28.png
 
 
 
  a| 
-图像：../media/oIE_legend_icl_2_lp.svg
+图像：./media/icon_square_2_yellow.png
  a| 
 使用缆线连接控制器管理（扳手）端口。
 
-图像：../media/oIE_cable_RJ45-svg
+图像：./media/oie_cable_rj45.png
 
 
 
  a| 
-图像：：./media/oIE_legend_icand_3_o.svg
+图像：./media/icon_square_3_orange.png
  a| 
 使用缆线连接32 Gb FC网络交换机：
 
 插槽A3和B3 (E3A和E3C)以及插槽A9和B9 (e9a和e9c)中的端口连接到32 Gb FC网络交换机。
 
-图像：../media/oIE_cable_SFP_GbE_copper．svg
+图像：./media/oie_cable_sfp_gbe_copper.png
 
 40GbE 主机网络交换机：
 
 使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。
 
-图像：../media/oIE_cable100_GbE_QSFP28.svg
+图像：./media/oie_cable100_gbe_qsfp28.png
 
 
 
  a| 
-图像：../media/oIE_legend_icand_4_dr.svg
+图像：./media/icon_square_4_red.png
  a| 
 使用缆线连接25 GbE连接：
 
 使用缆线将插槽5和B5 (5a、5b、5c和5d)以及插槽A7和B7 (7a、7b、7c和7d)中的端口连接到25 GbE网络交换机。
 
-图像：../media/oIE_cable_SFP_GbE_copper．svg
+图像：./media/oie_cable_sfp_gbe_copper.png
 
 
 
@@ -296,7 +296,7 @@ image::../media/drw_9500_tnsc_network_cabling.svg[DRW 9500tnsc网络布线]
 ** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
 
  a| 
-image::../media/oie_cable_power.svg[OIE缆线电源]
+image::../media/oie_cable_power.png[电源线]
 
 image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[电源]
 
@@ -332,7 +332,7 @@ image::../media/drw_9500_switched_network_cabling.svg[DRW 9500"交换网络布�
 
 
  a| 
-图像：../media/oIE_legend_icl_1_lg.svg
+图像：./media/icon_square_1_green.png
  a| 
 使用缆线连接集群互连 A 端口：
 
@@ -340,44 +340,44 @@ image::../media/drw_9500_switched_network_cabling.svg[DRW 9500"交换网络布�
 ** 插槽 "A8 和 B8 （ E8a ）连接到集群网络交换机。
 
 
-图像：../media/oIE_cable100_GbE_QSFP28.svg
+图像：./media/oie_cable100_gbe_qsfp28.png
 
 
 
  a| 
-图像：../media/oIE_legend_icl_2_lp.svg
+图像：./media/icon_square_2_yellow.png
  a| 
 使用缆线连接控制器管理（扳手）端口。
 
-图像：../media/oIE_cable_RJ45-svg
+图像：./media/oie_cable_rj45.png
 
 
 
  a| 
-图像：：./media/oIE_legend_icand_3_o.svg
+图像：./media/icon_square_3_orange.png
  a| 
 使用缆线连接32 Gb FC网络交换机：
 
 插槽A3和B3 (E3A和E3C)以及插槽A9和B9 (e9a和e9c)中的端口连接到32 Gb FC网络交换机。
 
-图像：../media/oIE_cable_SFP_GbE_copper．svg
+图像：./media/oie_cable_sfp_gbe_copper.png
 
 40GbE 主机网络交换机：
 
 使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。
 
-图像：../media/oIE_cable100_GbE_QSFP28.svg
+图像：./media/oie_cable100_gbe_qsfp28.png
 
 
 
  a| 
-图像：../media/oIE_legend_icand_4_dr.svg
+图像：./media/icon_square_4_red.png
  a| 
 使用缆线连接25 GbE连接：
 
 使用缆线将插槽5和B5 (5a、5b、5c和5d)以及插槽A7和B7 (7a、7b、7c和7d)中的端口连接到25 GbE网络交换机。
 
-图像：../media/oIE_cable_SFP_GbE_copper．svg
+图像：./media/oie_cable_sfp_gbe_copper.png
 
 
 
@@ -386,7 +386,7 @@ image::../media/drw_9500_switched_network_cabling.svg[DRW 9500"交换网络布�
 ** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
 
  a| 
-image::../media/oie_cable_power.svg[OIE缆线电源]
+image::../media/oie_cable_power.png[电源线]
 
 image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[电源]
 
@@ -430,7 +430,7 @@ image::../media/drw_9500_sas_shelf_cabling.svg[DRW 9500SAS磁盘架布线]
 
 
  a| 
-image::../media/oie_legend_icon_1_mb.svg[OIE图例图标1 MB]
+image::../media/icon_square_1_blue.png[图标方块1蓝色]
  a| 
 使用图作为参考、将驱动器架堆栈1连接到控制器。
 
@@ -441,7 +441,7 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷�
 
 
  a| 
-image::../media/oie_legend_icon_2_t.svg[OIE图例图标2 t]
+image::../media/icon_square_2_yellow.png[图标方形2黄色]
  a| 
 使用图作为参考、将驱动器架堆栈2连接到控制器。
 
@@ -477,14 +477,14 @@ image::../media/drw_power-on_set_shelf_ID_set.svg[已设置 DRW 电源打开设�
 
 
  a| 
-image::../media/legend_icon_01.png[标注图标1]
+image::../media/icon_round_1.png[标注编号1]
  a| 
 拆下端盖。
 
 
 
  a| 
-image::../media/legend_icon_02.svg[图例图标 02]
+image::../media/icon_round_2.png[标注编号2]
  a| 
 按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。
 
@@ -494,7 +494,7 @@ NOTE: 第一个数字将继续闪烁
 
 
  a| 
-image::../media/legend_icon_03.svg[图例图标 03]
+image::../media/icon_round_2.png[标注编号2]
  a| 
 按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。
 
@@ -504,14 +504,14 @@ NOTE: 第一个数字停止闪烁、第二个数字继续闪烁。
 
 
  a| 
-image::../media/legend_icon_04.svg[图例图标04]
+image::../media/icon_round_4.png[标注编号4]
  a| 
 更换端盖。
 
 
 
  a| 
-image::../media/legend_icon_05.svg[图例图标05]
+image::../media/icon_round_5.png[标注编号5]
  a| 
 等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。
 
@@ -609,14 +609,14 @@ image::../media/drw_power-on_set_shelf_ID_set.svg[已设置 DRW 电源打开设�
 
 
  a| 
-image::../media/legend_icon_01.png[标注图标1]
+image::../media/icon_round_1.png[标注编号1]
  a| 
 拆下端盖。
 
 
 
  a| 
-image::../media/legend_icon_02.svg[图例图标 02]
+image::../media/icon_round_2.png[标注编号2]
  a| 
 按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。
 
@@ -626,7 +626,7 @@ NOTE: 第一个数字将继续闪烁
 
 
  a| 
-image::../media/legend_icon_03.svg[图例图标 03]
+image::../media/icon_round_2.png[标注编号2]
  a| 
 按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。
 
@@ -636,14 +636,14 @@ NOTE: 第一个数字停止闪烁、第二个数字继续闪烁。
 
 
  a| 
-image::../media/legend_icon_04.svg[图例图标04]
+image::../media/icon_round_4.png[标注编号4]
  a| 
 更换端盖。
 
 
 
  a| 
-image::../media/legend_icon_05.svg[图例图标05]
+image::../media/icon_round_5.png[标注编号5]
  a| 
 等待 10 秒，以显示琥珀色 LED （！） 显示，然后重新启动驱动器架以设置磁盘架 ID 。
 

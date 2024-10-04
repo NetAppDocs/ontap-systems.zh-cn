@@ -17,13 +17,13 @@ entries:
     - title: 查看要求
       url: "/asa-r2-a1k/bootmedia-replace-requirements-bmr.html"
     - title: 关闭受损控制器
-      url: "/asa-r2-a1k/bootmedia-shutdown-asa-r2.html"
+      url: "/asa-r2-a1k/bootmedia-shutdown-bmr.html"
     - title: 更换启动介质
       url: "/asa-r2-a1k/bootmedia-replace-bmr.html"
     - title: 还原启动介质上的映像
       url: "/asa-r2-a1k/bootmedia-recovery-image-boot-bmr.html"
     - title: 将故障部件退回 NetApp
-      url: "/asa-r2-a1k/bootmedia-complete-rma.html"
+      url: "/asa-r2-a1k/bootmedia-complete-rma-bmr.html"
   - title: 手动
     entries:
     - title: 启动介质更换工作流

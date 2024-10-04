@@ -29,14 +29,14 @@ image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED�
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 NVRAM 状态 LED
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 NVRAM警示LED
 
@@ -67,8 +67,8 @@ image::../media/drw_a1k_pcm_remove_replace_ieops-1375.svg[控制器删除图形]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
-| A锁定凸轮锁扣 
+image:../media/icon_round_1.png["标注编号1"]
+| 锁定凸轮闩锁 
 |===
 . 将控制器模块滑出机箱、然后将其放在平稳的表面上。
 +
@@ -98,7 +98,7 @@ image::../media/drw_a1k_fan_remove_replace_ieops-1376.svg[风扇拆卸AFF A1K]
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image::../media/icon_round_1.png[标注编号1]
  a| 
 黑色锁定按钮
 
@@ -128,19 +128,19 @@ image::../media/drw_a1k_remove_replace_nvmembat_ieops-1379.svg[NV电池拆卸AFF
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image::../media/icon_round_1.png[标注编号1]
 | NV蓄电池空气管道盖 
 
 
  a| 
-image::../media/legend_icon_02.svg[标注编号2]
+image::../media/icon_round_2.png[标注编号2]
  a| 
 NV电池插头
 
 
 
  a| 
-image::../media/legend_icon_03.svg[标注编号3]
+image::../media/icon_round_3.png[标注编号3]
  a| 
 NV battery pack
 
@@ -174,7 +174,7 @@ image::../media/drw_a1k_dimms_ieops-1512.svg[DIMM卸下AFF A1K]
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image::../media/icon_round_1.png[标注编号1]
  a| 
 系统DIMM
 

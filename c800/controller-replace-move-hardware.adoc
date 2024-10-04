@@ -44,14 +44,14 @@ image::../media/drw_a800_pcm_remove.png[松开控制器模块]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 锁定闩锁
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 锁定销
 
@@ -74,21 +74,21 @@ image::../media/drw_a800_open_air_duct.png[打开空气管道]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 通风管锁定卡舌
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 将通风管滑向风扇模块
 
 
 
  a| 
-image:../media/legend_icon_03.png["标注编号3"]
+image:../media/icon_round_3.png["标注编号3"]
  a| 
 向风扇模块旋转通风管
 
@@ -109,7 +109,7 @@ image:../media/legend_icon_03.png["标注编号3"]
 CAUTION: 电源不足。从控制器模块中取出时，请始终用双手托住它，以免它突然从控制器模块中自由转动并给您造成损害。
 
 +
-image::../media/drw_a800_replace_psu.png[卸下或更换电源]
+image::../media/drw_a800_replace_psu.svg[卸下或更换电源]
 
 +
 [cols="1,4"]
@@ -117,14 +117,14 @@ image::../media/drw_a800_replace_psu.png[卸下或更换电源]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 蓝色电源锁定卡舌
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 电源
 
@@ -155,7 +155,7 @@ image::../media/drw_a800_replace_fan.png[卸下风扇]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
 
 
 
@@ -165,7 +165,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
 
 
 
@@ -193,21 +193,21 @@ image::../media/drw_a800_nvdimm_battery_replace.png[更换NVDIMM电池]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 通风管竖板
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 NVDIMM 电池插头
 
 
 
  a| 
-image:../media/legend_icon_03.png["标注编号3"]
+image:../media/icon_round_3.png["标注编号3"]
  a| 
 NVDIMM 电池组
 
@@ -248,14 +248,14 @@ image::../media/drw_a800_riser_2_3_remove.png[卸下Riser卡2和3]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 通风管
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 提升板 1 （左提升板），提升板 2 （中间提升板）和 3 （右提升板）锁定闩锁
 
@@ -307,14 +307,14 @@ image::../media/drw_a800_no_risers_nvdimm_move.png[移动NVDIMM]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 通风管
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 NVDIMM
 
@@ -356,35 +356,35 @@ image::../media/drw_a800_pcm_replace_only_boot_media.png[取出启动介质]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 通风管
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 提升板 3
 
 
 
  a| 
-image:../media/legend_icon_03.png["标注编号3"]
+image:../media/icon_round_3.png["标注编号3"]
  a| 
 1 号十字螺丝刀
 
 
 
  a| 
-image:../media/legend_icon_04.png["标注编号4"]
+image:../media/icon_round_4.png["标注编号4"]
  a| 
 启动介质螺钉
 
 
 
  a| 
-image:../media/legend_icon_05.png["标注编号5"]
+image:../media/icon_round_5.png["标注编号5"]
  a| 
 启动介质
 
@@ -447,14 +447,14 @@ image::../media/drw_a800_close_air_duct.png[关闭空气管道]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 锁定卡舌
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 滑动柱塞
 

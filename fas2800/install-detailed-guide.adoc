@@ -68,7 +68,7 @@ X6566B-05-R6、.5、
 
 X6566B-2-R6、2米
  a| 
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
  a| 
 网络缆线
 
@@ -99,7 +99,7 @@ X66250-5、5米
 
 X66250-15、15米
  a| 
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
  a| 
 FC网络
 
@@ -112,7 +112,7 @@ X6561-R6
 
 X6562-R6
  a| 
-image::../media/oie_cable_rj45.svg[RJ-45电缆]
+image::../media/oie_cable_rj45.png[RJ-45电缆]
  a| 
 管理网络和以太网数据
 
@@ -138,7 +138,7 @@ USB-C控制台电缆
  a| 
 无部件号标签
  a| 
-image::../media/oie_cable_micro_usb.svg[OIE缆线微型USB]
+image::../media/oie_cable_micro_usb.png[微型USB连接器]
  a| 
 在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
 
@@ -149,7 +149,7 @@ image::../media/oie_cable_micro_usb.svg[OIE缆线微型USB]
  a| 
 无部件号标签
  a| 
-image::../media/oie_cable_power.svg[OIE缆线电源]
+image::../media/oie_cable_power.png[OIE缆线电源]
  a| 
 启动存储系统
 
@@ -160,7 +160,7 @@ image::../media/oie_cable_power.svg[OIE缆线电源]
  a| 
 可选FC缆线
  a| 
-image::../media/oie_cable_fiber_lc_connector.svg[OIE 缆线光纤 LC 连接器]
+image::../media/oie_cable_fiber_lc_connector.png[LC光纤连接器]
  a| 
 附加FC网络缆线
 
@@ -202,21 +202,21 @@ image::../media/drw_cable_management_arm_install.svg[DRW 缆线管理臂安装]
 
 
  a| 
-image::../media/oie_legend_icon_1_lg.svg[标注图标三]]
+image::../media/icon_square_1_green.png[插图编号3]]
  a| 
 集群互连
 
 
 
  a| 
-image::../media/oie_legend_icon_2_lp.svg[标注图标2.]
+image::../media/icon_square_2_yellow.png[标注编号2]
  a| 
 管理网络交换机
 
 
 
  a| 
-image::../media/oie_legend_icon_3_o.svg[标注图标3]
+image::../media/icon_square_3_orange.png[标注编号3]
  a| 
 主机网络交换机
 
@@ -257,7 +257,7 @@ image::../media/drw_2800_tnsc_cluster_cabling_IEOPS-892.svg[DRW 2800 tnsc集群�
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 +
-image::../media/oie_cable_rj45.svg[RJ-45电缆]
+image::../media/oie_cable_rj45.png[RJ-45电缆]
 
 +
 *RJ45电缆*
@@ -274,14 +274,14 @@ image::../media/drw_2800_network_cabling_IEOPS-894.svg[DRW 2800 IEOPS 894网络�
 +
 *** 4端口、1025 Gb以太网、SFP28
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 +
 image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[OIE缆线25 Gb以太网SFP28 IEOPS 1069]
 
 *** 4端口、10GBase-T、RJ45
 +
-image::../media/oie_cable_rj45.svg[RJ-45电缆]
+image::../media/oie_cable_rj45.png[RJ-45电缆]
 
 
 
@@ -289,11 +289,11 @@ image::../media/oie_cable_rj45.svg[RJ-45电缆]
 +
 *** 4端口、32 Gb光纤通道、SFP+(仅限目标)
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 *** 4端口、32 Gb光纤通道、SFP+(启动程序/目标)
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 
 
@@ -301,10 +301,10 @@ image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜�
 +
 *** 2端口、10/C5Gb以太网(SFP28)+ 2端口32 Gb FC (SFP+)
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 
 
@@ -335,7 +335,7 @@ image::../media/drw_2800_switched_cluster_cabling_IEOPS-893.svg[DRW 2800交换�
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 +
-image::../media/oie_cable_rj45.svg[RJ-45电缆]
+image::../media/oie_cable_rj45.png[RJ-45电缆]
 
 +
 image::../media/drw_2800_management_connection_IEOPS-1077.svg[DRW 2800管理连接IEOPS 1077]
@@ -349,14 +349,14 @@ image::../media/drw_2800_network_cabling_IEOPS-894.svg[DRW 2800 IEOPS 894网络�
 +
 *** 4端口、1025 Gb以太网、SFP28
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 +
 image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[OIE缆线25 Gb以太网SFP28 IEOPS 1069]
 
 *** 4端口、10GBase-T、RJ45
 +
-image::../media/oie_cable_rj45.svg[RJ-45电缆]
+image::../media/oie_cable_rj45.png[RJ-45电缆]
 
 
 
@@ -364,11 +364,11 @@ image::../media/oie_cable_rj45.svg[RJ-45电缆]
 +
 *** 4端口、32 Gb光纤通道、SFP+(仅限目标)
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 *** 4端口、32 Gb光纤通道、SFP+(启动程序/目标)
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 
 
@@ -376,10 +376,10 @@ image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜�
 +
 *** 2端口、10/C5Gb以太网(SFP28)+ 2端口32 Gb FC (SFP+)
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[OIE 使用缆线连接 SFP GbE 铜缆]
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 
 
@@ -409,21 +409,21 @@ NOTE: The example uses DS224C.Cabling is similar with other supported drive shel
 
 
  a| 
-image::../media/oie_legend_icon_1_lo.svg[OIE图例图标1]
+image::../media/icon_square_1_blue.png[图标方块1蓝色]
  a| 
 磁盘架到磁盘架布线
 
 
 
  a| 
-image::../media/oie_legend_icon_2_mb.svg[OIE图例图标2 MB]
+image::../media/icon_square_2_yellow.png[图标方形2黄色]
  a| 
 控制器A连接到驱动器架
 
 
 
  a| 
-image::../media/oie_legend_icon_3_t.svg[OIE图例图标3 t]
+image::../media/icon_square_3_orange.png[图标方形3橙色]
  a| 
 控制器B连接到驱动器架
 

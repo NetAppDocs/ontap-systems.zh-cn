@@ -142,7 +142,7 @@ image:../media/oie_cable_fc_optical.png["OIE光纤通道光缆"]
  a| 
 不适用
  a| 
-image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
+image:../media/oie_cable_micro_usb.png["微型USB连接器"]
  a| 
 软件设置期间的控制台连接
 
@@ -170,7 +170,7 @@ image:../media/oie_cable_power.png["电源线"]
 .步骤
 . 根据需要安装导轨套件。
 +
-link:../com.netapp.doc.hw-rail-superrail/home.html["将 SuperRail 安装到四柱机架中"^]
+link:/platform-supplemental/superrail-install.html["SuperRail 套件安装说明"^]
 
 . 按照导轨套件附带的说明安装并固定系统。
 +
@@ -227,7 +227,7 @@ video::edc42447-f721-4cbe-b080-ab0c0123a139[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_dp.png["标注编号1"]
+image:../media/icon_square_1_blue.png["标注编号1"]
  a| 
 为 HA 互连端口布线：
 
@@ -239,7 +239,7 @@ image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 
 
  a| 
-image:../media/oie_legend_icon_2_lg.png["标注编号2"]
+image:../media/icon_square_2_yellow.png["标注编号2"]
  a| 
 为集群互连端口布线：
 
@@ -251,7 +251,7 @@ image:../media/drw_affa800_tnsc_clust_cabling.png["在双节点无交换机集�
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png["步骤3."]
+image:../media/icon_square_3_orange.png["步骤3."]
  a| 
 Cable the management ports to the management network switches    image:../media/drw_affa800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
 
@@ -302,7 +302,7 @@ video::49e48140-4c5a-4395-a7d7-ab0c0123a10e[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_dp.png["标注编号1"]
+image:../media/icon_square_1_blue.png["标注编号1"]
  a| 
 为 HA 互连端口布线：
 
@@ -314,7 +314,7 @@ image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 
 
  a| 
-image:../media/oie_legend_icon_2_lg.png["标注编号2"]
+image:../media/icon_square_2_yellow.png["标注编号2"]
  a| 
 使用缆线将集群互连端口连接到100 GbE集群互连交换机。
 ** e0a
@@ -324,7 +324,7 @@ image:../media/drw_affa800_switched_clust_cabling.png["集群互连布线"]
 
 
  a| 
-image:../media/oie_legend_icon_3_lp.png["步骤3."]
+image:../media/icon_square_3_orange.png["步骤3."]
  a| 
 Cable the management ports to the management network switches    image:../media/drw_affa800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
 
@@ -467,14 +467,14 @@ video::09dade4f-00bd-4d41-97d7-ab0c0123a0b4[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png["标注编号1"]
+image:../media/icon_square_1_blue.png["标注编号1"]
  a| 
 使用缆线将控制器 A 连接到磁盘架：    image:../media/drw_affa800_1shelf_cabling_a.png["使用缆线将控制器连接到单个磁盘架"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png["标注编号2"]
+image:../media/icon_square_2_yellow.png["标注编号2"]
  a| 
 Cable controller B to the shelf:    image:../media/drw_affa800_1shelf_cabling_b.png["使用缆线将控制器B连接到单个磁盘架"]
 
@@ -505,14 +505,14 @@ video::fe50ac38-9375-4e6b-85af-ab0c0123a0e0[panopto]
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png["标注编号1"]
+image:../media/icon_square_1_blue.png["标注编号1"]
  a| 
 Cable controller A to the shelves:    image:../media/drw_affa800_2shelf_cabling_a.png["使用缆线将控制器A连接到两个磁盘架"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png["标注编号2"]
+image:../media/icon_square_2_yellow.png["标注编号2"]
  a| 
 Cable controller B to the shelves:    image:../media/drw_affa800_2shelf_cabling_b.png["使用缆线将控制器B连接到两个磁盘架"]
 

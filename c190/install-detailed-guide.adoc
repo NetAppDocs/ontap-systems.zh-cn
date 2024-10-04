@@ -114,7 +114,7 @@ image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
  a| 
 不适用
  a| 
-image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
+image:../media/oie_cable_micro_usb.png["微型USB连接器"]
  a| 
 在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
 
@@ -170,21 +170,21 @@ image::../media/drw_cable_management_arm_install.png[正在连接电缆管理设
 
 
  a| 
-image::../media/oie_legend_icon_1_lg.svg[OIE图例图标1长]
+image::../media/icon_square_1_green.png[图标方块1绿色]
  a| 
 集群互连
 
 
 
  a| 
-image::../media/oie_legend_icon_2_o.svg[OIE图例图标2 o]
+image::../media/icon_square_2_yellow.png[标注编号2]
  a| 
 用于托管数据网络交换机的控制器
 
 
 
  a| 
-image::../media/oie_legend_icon_3_lp.svg[OIE图例图标3 LP]
+image::../media/icon_square_3_orange.png[标注编号3]
  a| 
 控制器连接到管理网络交换机
 
@@ -236,7 +236,7 @@ image:../media/drw_c190_u_tnsc_clust_cbling.png["集群互连布线"]
 UTA2数据网络配置:: 使用以下缆线类型之一将e0c/0c和e0d/0d或e0e/0e和e0f/0f数据端口连接到主机网络。
 +
 --
-image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
+image:../media/drw_c190_u_fc_10gbe_cabling.png["数据端口连接"]
 
 --
 以太网网络配置:: 使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。在下图中。
@@ -249,7 +249,7 @@ image:../media/drw_c190_e_rj45_cbling.png["主机网络布线"]
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 +
-image:../media/drw_c190_u_mgmt_cbling.png["管理端口布线"]
+image:../media/drw_c190_u_mgmt_cabling.png["管理端口布线"]
 
 
 
@@ -303,7 +303,7 @@ image:../media/drw_c190_u_switched_clust_cbling.png["集群互连布线"]
 UTA2数据网络配置:: 使用以下缆线类型之一将e0c/0c和e0d/0d或e0e/0e和e0f/0f数据端口连接到主机网络。
 +
 --
-image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
+image:../media/drw_c190_u_fc_10gbe_cabling.png["数据端口连接"]
 
 --
 以太网网络配置:: 使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。
@@ -316,7 +316,7 @@ image:../media/drw_c190_e_rj45_cbling.png["主机网络布线"]
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 +
-image:../media/drw_c190_u_mgmt_cbling.png["管理端口布线"]
+image:../media/drw_c190_u_mgmt_cabling.png["管理端口布线"]
 
 
 

@@ -125,7 +125,7 @@ X66260-5 （ 112-00344 ）， 5 米
 
 X66260-30 （ 112-00354 ）， 30 米
  a| 
-image:../media/oie_cable_fiber_lc_connector.png["显示光纤LC连接器的图示"]
+image:../media/oie_cable_fiber_lc_connector.png["LC光纤连接器"]
  a| 
 FC 配置（取决于订单）
 
@@ -149,7 +149,7 @@ image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
  a| 
 不适用
  a| 
-image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
+image:../media/oie_cable_micro_usb.png["微型USB连接器"]
  a| 
 如果笔记本电脑或控制台不支持网络发现，则在软件设置期间使用控制台连接。
 
@@ -227,7 +227,7 @@ image::../media/drw_a320_tnsc_network_cabling_composite_animated_gif.png[双节�
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png["第 1 步"]
+image:../media/icon_square_1_green.png["第 1 步"]
  a| 
 使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口彼此相连：
 
@@ -238,7 +238,7 @@ image:../media/oie_legend_icon_1_lg.png["第 1 步"]
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png["步骤2."]
+image:../media/icon_square_2_yellow.png["步骤2."]
  a| 
 如果您使用板载端口进行数据网络连接，请将 100GbE 或 40GbE 缆线连接到相应的数据网络交换机：
 
@@ -248,7 +248,7 @@ image:../media/oie_legend_icon_2_o.png["步骤2."]
 
 
  a| 
-image:../media/oie_legend_icon_3_dr.png["步骤3."]
+image:../media/icon_square_3_orange.png["步骤3."]
  a| 
 如果要使用 NIC 卡进行以太网或 FC 连接，请将 NIC 卡连接到相应的交换机：
 
@@ -257,7 +257,7 @@ image::../media/drw_a320_nic_connections_step3.png[双节点无交换机集群�
 
 
  a| 
-image:../media/oie_legend_icon_4_lp.png["步骤4."]
+image:../media/icon_square_4_red.png["步骤4."]
  a| 
 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 
@@ -300,7 +300,7 @@ image::../media/drw_a320_switched_network_cabling_composite_animated_GIF.png[有
 
 
  a| 
-image:../media/oie_legend_icon_1_lg.png["第 1 步"]
+image:../media/icon_square_1_green.png["第 1 步"]
  a| 
 使用 100 GbE （ QSFP28 ）缆线将集群 /HA 端口连接到集群 /HA 交换机：
 
@@ -311,7 +311,7 @@ image:../media/oie_legend_icon_1_lg.png["第 1 步"]
 
 
  a| 
-image:../media/oie_legend_icon_2_o.png["步骤2."]
+image:../media/icon_square_2_yellow.png["步骤2."]
  a| 
 如果您使用板载端口进行数据网络连接，请将 100GbE 或 40GbE 缆线连接到相应的数据网络交换机：
 
@@ -321,7 +321,7 @@ image:../media/oie_legend_icon_2_o.png["步骤2."]
 
 
  a| 
-image:../media/oie_legend_icon_3_dr.png["步骤3."]
+image:../media/icon_square_3_orange.png["步骤3."]
  a| 
 如果要使用 NIC 卡进行以太网或 FC 连接，请将 NIC 卡连接到相应的交换机：
 
@@ -330,7 +330,7 @@ image::../media/drw_a320_nic_connections_step3.png[有交换机集群网络连�
 
 
  a| 
-image:../media/oie_legend_icon_4_lp.png["步骤4."]
+image:../media/icon_square_4_red.png["步骤4."]
  a| 
 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 
@@ -377,14 +377,14 @@ image::../media/drw_a320_single_shelf_connections_animated_gif.png[复合式单�
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png["标注编号1"]
+image:../media/icon_square_1_blue.png["标注编号1"]
  a| 
 使用缆线将控制器A连接到磁盘架 image:../media/drw_a320_storage_cabling_controller_a_single_shelf.png["Cable controller A to the shelf"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png["标注编号2"]
+image:../media/icon_square_2_yellow.png["标注编号2"]
  a| 
 使用缆线将控制器B连接到磁盘架： image:../media/drw_a320_storage_cabling_controller_b_single_shelf.png["将控制器B连接到单个磁盘架"]
 
@@ -416,14 +416,14 @@ image::../media/drw_a320_2_shevles_cabling_animated_gif.png[为两个磁盘架�
 
 
  a| 
-image:../media/oie_legend_icon_1_mb.png["标注编号1"]
+image:../media/icon_square_1_blue.png["标注编号1"]
  a| 
 使用缆线将控制器A连接到磁盘架： image:../media/drw_a320_2_shelves_cabling_controller_a.png["使用缆线将两个磁盘架连接到控制器A"]
 
 
 
  a| 
-image:../media/oie_legend_icon_2_lo.png["标注编号2"]
+image:../media/icon_square_2_yellow.png["标注编号2"]
  a| 
 使用缆线将控制器B连接到磁盘架： image:../media/drw_a320_2_shelves_cabling_controller_b.png["使用缆线将磁盘架连接到控制器b"]
 

@@ -24,14 +24,14 @@ image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED�
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 NVRAM 状态 LED
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 NVRAM警示LED
 
@@ -72,12 +72,12 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[控制器删除图�
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
 | A锁定闩锁 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 锁定销
 
@@ -108,12 +108,12 @@ image::../media/drw_a70-90_psu_remove_replace_ieops-1368.svg[卸下PSU]
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image::../media/icon_round_1.png[标注编号1]
 | Terrac兵马俑PSU锁定卡舌 
 
 
  a| 
-image::../media/legend_icon_02.svg[标注编号2]
+image::../media/icon_round_2.png[标注编号2]
  a| 
 电源
 
@@ -145,14 +145,14 @@ image::../media/drw_a70-90_fan_remove_replace_ieops-1366.svg[卸下风扇]
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image::../media/icon_round_1.png[标注编号1]
  a| 
 风扇锁定卡舌
 
 
 
  a| 
-image::../media/legend_icon_02.svg[标注编号2]
+image::../media/icon_round_2.png[标注编号2]
  a| 
 风扇模块
 
@@ -177,12 +177,12 @@ image::../media/drw_a70-90_remove_replace_nvmembat_ieops-1369.svg[移动NV电池
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image::../media/icon_round_1.png[标注编号1]
 | NV蓄电池空气管道 
 
 
  a| 
-image::../media/legend_icon_02.svg[标注编号2]
+image::../media/icon_round_2.png[标注编号2]
  a| 
 NV电池组插头
 
@@ -225,7 +225,7 @@ image::../media/drw_a70_90_dimm_ieops-1513.svg[DIMM映射]
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image::../media/icon_round_1.png[标注编号1]
 | 系统DIMM 
 |===
 . 记下插槽中 DIMM 的方向，以便可以按正确的方向将 DIMM 插入更换用的控制器模块中。
@@ -261,7 +261,7 @@ image::../media/drw_a70_90_io_remove_replace_ieops-1532.svg[卸下I/O模块]
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image::../media/icon_round_1.png[标注编号1]
 | I/O模块凸轮拉杆 
 |===
 . 拔下目标 I/O 模块上的所有布线。
@@ -306,21 +306,21 @@ image::../media/drw_a70-90_sys-mgmt_replace_ieops-1373.svg[更换系统管理模
 
 
  a| 
-image::../media/legend_icon_01.svg[标注编号1]
+image::../media/icon_round_1.png[标注编号1]
  a| 
 系统管理模块凸轮闩锁
 
 
 
  a| 
-image::../media/legend_icon_02.svg[标注编号2]
+image::../media/icon_round_2.png[标注编号2]
  a| 
 启动介质锁定按钮
 
 
 
  a| 
-image::../media/legend_icon_03.svg[标注编号3]
+image::../media/icon_round_3.png[标注编号3]
  a| 
 更换系统管理模块
 
@@ -352,13 +352,13 @@ image::../media/drw_a70-90_nvram12_remove_replace_ieops-1370.svg[卸下NVRAM12�
 |===
 
 
-| image:../media/legend_icon_01.png["标注编号1"]  a| 
+| image:../media/icon_round_1.png["标注编号1"]  a| 
 凸轮锁定按钮
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
 | DIMM锁定卡舌 
 |===
 . 从受损控制器模块中卸下NVRAM模块：

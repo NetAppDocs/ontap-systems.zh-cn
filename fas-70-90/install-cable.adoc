@@ -74,7 +74,7 @@ NOTE: 为了最大程度地提高集群和HA流量的系统性能、请勿将端
 *100 GbE电缆*
 
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[100 Gb以太网电缆]
+image::../media/oie_cable_sfp_gbe_copper.png[100 Gb以太网电缆]
 
 +
 image::../media/drw_a1k_network_cabling1_ieops-1649.svg[使用缆线连接到100 Gb以太网网络]
@@ -84,7 +84,7 @@ image::../media/drw_a1k_network_cabling1_ieops-1649.svg[使用缆线连接到100
 *1025 GbE主机*
 
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[1025Gb以太网电缆]
+image::../media/oie_cable_sfp_gbe_copper.png[1025Gb以太网电缆]
 
 +
 image::../media/drw_a1k_network_cabling2_ieops-1650.svg[使用缆线连接到1025Gb以太网网络]
@@ -93,7 +93,7 @@ image::../media/drw_a1k_network_cabling2_ieops-1650.svg[使用缆线连接到102
 
 . 使用1000BASE-T RJ-45缆线将控制器管理(扳手)端口连接到管理网络交换机。
 +
-image::../media/oie_cable_rj45.svg[RJ-45电缆]
+image::../media/oie_cable_rj45.png[RJ-45电缆]
 
 +
 *1000BASE-T RJ-45电缆*
@@ -124,7 +124,7 @@ NOTE: 集群互连流量和HA流量共享相同的物理端口。
 *100 GbE电缆*
 
 +
-image::../media/oie_cable100_gbe_qsfp28.svg[100 Gb缆线]
+image::../media/oie_cable100_gbe_qsfp28.png[100 Gb缆线]
 
 +
 image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[使用缆线将集群连接到集群网络]
@@ -145,7 +145,7 @@ NOTE: 为了最大程度地提高集群和HA流量的系统性能、请勿将端
 *100 GbE电缆*
 
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[100 Gb以太网电缆]
+image::../media/oie_cable_sfp_gbe_copper.png[100 Gb以太网电缆]
 
 +
 image::../media/drw_a1k_network_cabling1_ieops-1649.svg[使用缆线连接到100 Gb以太网网络]
@@ -155,7 +155,7 @@ image::../media/drw_a1k_network_cabling1_ieops-1649.svg[使用缆线连接到100
 *4端口，1025 GbE主机*
 
 +
-image::../media/oie_cable_sfp_gbe_copper.svg[1025Gb以太网电缆]
+image::../media/oie_cable_sfp_gbe_copper.png[1025Gb以太网电缆]
 
 +
 image::../media/drw_a1k_network_cabling2_ieops-1650.svg[使用缆线连接到1025Gb以太网网络]
@@ -164,7 +164,7 @@ image::../media/drw_a1k_network_cabling2_ieops-1650.svg[使用缆线连接到102
 
 . 使用1000BASE-T RJ-45缆线将控制器管理(扳手)端口连接到管理网络交换机。
 +
-image::../media/oie_cable_rj45.svg[RJ-45电缆]
+image::../media/oie_cable_rj45.png[RJ-45电缆]
 
 +
 *1000BASE-T RJ-45电缆*
@@ -195,7 +195,7 @@ IMPORTANT: 请勿插入电源线。
 
 *100 GbE QSFP28铜缆*
 
-image::../media/oie_cable100_gbe_qsfp28.svg[100 GbE QSFP28铜缆]
+image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFP28铜缆]
 
 .步骤
 . 在控制器A上、连接以下端口：
@@ -225,7 +225,7 @@ image:../media/drw_a1k_1shelf_cabling_b_ieops-1704.svg["使用缆线将控制器
 
 *100 GbE QSFP28铜缆*
 
-image::../media/oie_cable100_gbe_qsfp28.svg[100 GbE QSFP28铜缆]
+image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFP28铜缆]
 
 .步骤
 . 在控制器A上、连接以下端口：

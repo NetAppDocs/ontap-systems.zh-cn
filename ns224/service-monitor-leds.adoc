@@ -101,7 +101,7 @@ image::../media/drw_ns224_nsm_leds_IEOPS-1270.svg[NS224 NSM100模块LED]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 image::../media/drw_sas3_location_icon.svg[操作员显示面板位置LED]
  a| 
@@ -112,7 +112,7 @@ NSM模块：位置
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
  a| 
@@ -123,7 +123,7 @@ NSM模块：注意
 
 
  a| 
-image:../media/legend_icon_03.png["标注编号3"]
+image:../media/icon_round_3.png["标注编号3"]
  a| 
 LNK
  a| 
@@ -134,7 +134,7 @@ NVMe端口/链路：状态
 
 
  a| 
-image:../media/legend_icon_04.png["标注编号4"]
+image:../media/icon_round_4.png["标注编号4"]
  a| 
 image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
  a| 
@@ -240,7 +240,7 @@ image::../media/drw_ns224_psu_leds_IEOPS-1261.svg[电源设备电源活动LED]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 双色LED指示灯呈绿色时指示电源/活动、呈琥珀色时指示故障。
 
@@ -328,7 +328,7 @@ image::../media/drw_ns224_drive_leds_IEOPS-1263.svg[NVMe驱动器警示和电源
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 注意
  a| 
@@ -337,7 +337,7 @@ image:../media/legend_icon_01.png["标注编号1"]
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 电源/活动
  a| 

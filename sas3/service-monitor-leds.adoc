@@ -201,7 +201,7 @@ DS460C 风扇上的 LED 指示风扇是运行正常还是存在硬件问题。
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 注意
  a| 
@@ -231,7 +231,7 @@ image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout.gif[风
 | 标注 | LED name | State | Description 
 
 
-.2+| image:../media/legend_icon_01.png["标注编号1"] .2+| 活动  a| 
+.2+| image:../media/icon_round_1.png["标注编号1"] .2+| 活动  a| 
 呈绿色稳定亮起
  a| 
 磁盘驱动器已通电。
@@ -246,7 +246,7 @@ image::../media/28_dwg_e2860_de460c_single_fan_canister_with_led_callout.gif[风
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 注意
  a| 
@@ -334,6 +334,6 @@ image::../media/2860_dwg_amber_on_drive.gif[驱动器警示LED]
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
 | 警示 LED 亮起 
 |===

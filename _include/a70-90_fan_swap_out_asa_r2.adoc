@@ -81,14 +81,14 @@ image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED�
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
  a| 
 NVRAM 状态 LED
 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 NVRAM警示LED
 
@@ -129,12 +129,12 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[控制器删除图�
 
 
  a| 
-image:../media/legend_icon_01.png["标注编号1"]
+image:../media/icon_round_1.png["标注编号1"]
 | A锁定闩锁 
 
 
  a| 
-image:../media/legend_icon_02.png["标注编号2"]
+image:../media/icon_round_2.png["标注编号2"]
  a| 
 锁定销
 
@@ -162,12 +162,12 @@ image::../media/drw_a70-90_fan_remove_replace_ieops-1366.svg[更换风扇]
 
 
  a| 
-image:../media/legend_icon_01.svg["标注编号1、Wides=30bex"]
+image:../media/icon_round_1.png["标注编号1"]
 | 风扇锁定卡舌 
 
 
  a| 
-image:../media/legend_icon_02.svg["标注编号2、宽度=30个"]
+image:../media/icon_round_2.png["标注编号2"]
 | 风扇模块 
 |===
 . 将更换用风扇模块的边缘与控制器模块的开口对齐，然后将更换用的风扇模块滑入控制器模块，直到锁定闩锁卡入到位。

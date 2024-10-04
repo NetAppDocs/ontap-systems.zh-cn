@@ -97,7 +97,7 @@ X6536-R6 （ 112-00090 ）， 5 米
 
 X6554-R6 （ 112-00189 ）， 15 米
  a| 
-image:../media/oie_cable_fiber_lc_connector.png["显示光纤LC连接器的图示"]
+image:../media/oie_cable_fiber_lc_connector.png["LC光纤连接器"]
  a| 
 FC 主机网络
 
@@ -138,7 +138,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS�
  a| 
 不适用
  a| 
-image:../media/oie_cable_micro_usb.png["图中显示了微型USB连接器"]
+image:../media/oie_cable_micro_usb.png["微型USB连接器"]
  a| 
 在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
 
@@ -195,21 +195,21 @@ image::../media/drw_cable_management_arm_install.png[正在连接电缆管理设
 
 
  a| 
-图像：../media/oIE_legend_Icon_1_lg.svgwide=40象
+image::../media/icon_square_1_green.png[标注编号1]
  a| 
 集群互连
 
 
 
  a| 
-image::../media/oie_legend_icon_2_o.svg[OIE图例图标2 o]
+image::../media/icon_square_2_yellow.png[标注编号2]
  a| 
 用于托管数据网络交换机的控制器
 
 
 
  a| 
-image::../media/oie_legend_icon_3_lp.svg[OIE图例图标3 LP]
+image::../media/icon_square_3_orange.png[标注编号3]
  a| 
 控制器连接到管理网络交换机
 
@@ -240,7 +240,7 @@ UTA2数据网络配置:: 使用以下缆线类型之一将UTA2数据端口连接
 ** 对于FC主机、请使用0c和0d *或* 0e和0f。
 ** 对于10GbE系统、请使用e0c和e0d *或* e0e和e0f。
 +
-image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
+image:../media/drw_c190_u_fc_10gbe_cabling.png["数据端口连接"]
 
 +
 您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
@@ -258,7 +258,7 @@ image:../media/drw_c190_e_rj45_cbling.png["主机网络布线"]
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 +
-image:../media/drw_c190_u_mgmt_cbling.png["管理端口布线"]
+image:../media/drw_c190_u_mgmt_cabling.png["管理端口布线"]
 
 
 
@@ -291,7 +291,7 @@ UTA2数据网络配置:: 使用以下缆线类型之一将UTA2数据端口连接
 ** 对于FC主机、请使用0c和0d **或** 0e和0f。
 ** 对于10GbE系统、请使用e0c和e0d **或** e0e和e0f。
 +
-image:../media/drw_c190_u_fc_10gbe_cbling.png["图中显示了周围文本中所述的数据端口连接"]
+image:../media/drw_c190_u_fc_10gbe_cabling.png["数据端口连接"]
 
 +
 您可以将一个端口对作为 CNA 连接，将一个端口对作为 FC 连接，也可以将两个端口对作为 CNA 连接，或者将两个端口对作为 FC 连接。
@@ -309,7 +309,7 @@ image:../media/drw_c190_e_rj45_cbling.png["主机网络布线"]
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机。
 +
-image:../media/drw_c190_u_mgmt_cbling.png["管理端口布线"]
+image:../media/drw_c190_u_mgmt_cabling.png["管理端口布线"]
 
 
 
