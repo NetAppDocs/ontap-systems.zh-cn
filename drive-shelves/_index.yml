@@ -34,7 +34,6 @@ indexpage:
     - title: 驱动器
       url: "../ns224/service-replace-drive.html"
     - title: 驱动器架
-      pdf-filename: NS224 shelf
       url: "../ns224/ns224-shelf-overview.html"
     - title: 风扇
       url: "../ns224/service-replace-fan.html"
@@ -53,7 +52,6 @@ indexpage:
     - title: DS460C 磁盘架中的驱动器抽盒
       url: "../sas3/service-replace-drawer-ds460c.html"
     - title: 驱动器架
-      pdf-filename: SAS shelf
       url: "../sas3/sas3-shelf-overview.html"
     - title: DS460C磁盘架中的风扇
       url: "../sas3/service-replace-fan-ds460c.html"

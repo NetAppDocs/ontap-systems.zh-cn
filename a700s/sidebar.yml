@@ -23,7 +23,7 @@ entries:
     entries:
     - title: 概述
       url: "/a700s/bootmedia-replace-overview.html"
-    - title: 检查板载加密
+    - title: 检查加密密钥
       url: "/a700s/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭节点
       url: "/a700s/bootmedia-shutdown.html"

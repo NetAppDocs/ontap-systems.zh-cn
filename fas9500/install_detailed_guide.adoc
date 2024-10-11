@@ -59,7 +59,7 @@ X66240A-2 （ 112-00598 ）， 2 米
 
 X66240A-5 （ 112-00600 ）， 5 米
  a| 
-图像：./media/oie_cable_sfp_gbe_copper.png
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
  a| 
 网络缆线
 
@@ -74,7 +74,7 @@ X66250-5 （ 112-00344 ）， 5 米
 
 X66250-15 （ 112-00346 ）， 15 米
  a| 
-图像：./media/oie_cable_sfp_gbe_copper.png
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
  a| 
 FC 光纤网络缆线
 
@@ -89,7 +89,7 @@ X66100-3 （ 112-00543 ）， 3 米
 
 X66100-5 （ 112-00544 ）， 5 米
  a| 
-图像：./media/oie_cable100_gbe_qsfp28.png
+image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
  a| 
 以太网数据，集群网络
 
@@ -104,7 +104,7 @@ X6621B-2 （ 112-00574 ）， 2 米
 
 X6621B-5 （ 112-00576 ）， 5 米
  a| 
-图像：./media/oie_cable100_gbe_qsfp28.png
+image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
  a| 
 网络，
 
@@ -136,7 +136,7 @@ FC 光纤网络
 
 X6562-R6 （ 112-00196 ）， 5 米
  a| 
-图像：./media/oie_cable_rj45.png
+image::../media/oie_cable_rj45.png[RJ-45连接器]
  a| 
 管理网络和以太网数据
 
@@ -223,7 +223,7 @@ image::../media/drw_9500_cable_management_arms.svg[提升手柄和缆线管理�
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image::../media/oie_cable_pull_tab_up.svg[电缆拉片方向]
+image::../media/oie_cable_pull_tab_up.png[电缆拉片方向]
 
 
 NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
@@ -250,12 +250,12 @@ image::../media/drw_9500_tnsc_network_cabling.svg[DRW 9500tnsc网络布线]
 ** 插槽 -A8 和 B8 （ E8a ）
 
 
-图像：./media/oie_cable100_gbe_qsfp28.png
+image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 
 
 
  a| 
-图像：./media/icon_square_2_yellow.png
+image::../media/icon_square_2_yellow.png[标注图标2.]
  a| 
 使用缆线连接控制器管理（扳手）端口。
 
@@ -264,19 +264,19 @@ image::../media/drw_9500_tnsc_network_cabling.svg[DRW 9500tnsc网络布线]
 
 
  a| 
-图像：./media/icon_square_3_orange.png
+image::../media/icon_square_3_orange.png[标注图标3]
  a| 
 使用缆线连接32 Gb FC网络交换机：
 
 插槽A3和B3 (E3A和E3C)以及插槽A9和B9 (e9a和e9c)中的端口连接到32 Gb FC网络交换机。
 
-图像：./media/oie_cable_sfp_gbe_copper.png
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 40GbE 主机网络交换机：
 
 使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。
 
-图像：./media/oie_cable100_gbe_qsfp28.png
+image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 
 
 
@@ -287,7 +287,7 @@ image::../media/drw_9500_tnsc_network_cabling.svg[DRW 9500tnsc网络布线]
 
 使用缆线将插槽5和B5 (5a、5b、5c和5d)以及插槽A7和B7 (7a、7b、7c和7d)中的端口连接到25 GbE网络交换机。
 
-图像：./media/oie_cable_sfp_gbe_copper.png
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 
 
@@ -313,7 +313,7 @@ image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[电源]
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image::../media/oie_cable_pull_tab_up.svg[电缆拉片方向]
+image::../media/oie_cable_pull_tab_up.png[电缆拉片方向]
 
 
 NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
@@ -332,7 +332,7 @@ image::../media/drw_9500_switched_network_cabling.svg[DRW 9500"交换网络布�
 
 
  a| 
-图像：./media/icon_square_1_green.png
+image::../media/icon_square_1_green.png[标注编号1]
  a| 
 使用缆线连接集群互连 A 端口：
 
@@ -340,38 +340,38 @@ image::../media/drw_9500_switched_network_cabling.svg[DRW 9500"交换网络布�
 ** 插槽 "A8 和 B8 （ E8a ）连接到集群网络交换机。
 
 
-图像：./media/oie_cable100_gbe_qsfp28.png
+image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 
 
 
  a| 
-图像：./media/icon_square_2_yellow.png
+image::../media/icon_square_2_yellow.png[标注图标2.]
  a| 
 使用缆线连接控制器管理（扳手）端口。
 
-图像：./media/oie_cable_rj45.png
+image::../media/oie_cable_rj45.png[RJ-45连接器]
 
 
 
  a| 
-图像：./media/icon_square_3_orange.png
+image::../media/icon_square_3_orange.png[标注图标3]
  a| 
 使用缆线连接32 Gb FC网络交换机：
 
 插槽A3和B3 (E3A和E3C)以及插槽A9和B9 (e9a和e9c)中的端口连接到32 Gb FC网络交换机。
 
-图像：./media/oie_cable_sfp_gbe_copper.png
+image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 40GbE 主机网络交换机：
 
 使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。
 
-图像：./media/oie_cable100_gbe_qsfp28.png
+image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 
 
 
  a| 
-图像：./media/icon_square_4_red.png
+image::../media/icon_square_4_red.png[标注图标4.]
  a| 
 使用缆线连接25 GbE连接：
 
@@ -409,9 +409,9 @@ NOTE: 有关更多SAS布线信息和工作表、请参见link:../sas3/overview-c
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 
 
-image::../media/oie_cable_pull_tab_up.svg[电缆拉片方向]
+image::../media/oie_cable_pull_tab_up.png[电缆拉片方向]
 
-image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[电缆拉片方向]
 
 
 NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
@@ -441,7 +441,7 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷�
 
 
  a| 
-image::../media/icon_square_2_yellow.png[图标方形2黄色]
+image::../media/icon_square_2_yellow.png[标注图标2.]
  a| 
 使用图作为参考、将驱动器架堆栈2连接到控制器。
 

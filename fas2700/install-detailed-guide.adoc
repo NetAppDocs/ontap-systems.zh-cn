@@ -233,7 +233,7 @@ image:../media/drw_c190_u_tnsc_clust_cbling.png["集群互连布线"]
 
 
  a| 
-image:../media/icon_square_2_yellow.png["步骤2."]
+image:../media/icon_square_2_orange.png["步骤2."]
  a| 
 使用以下电缆类型之一将 UTA2 数据端口连接到主机网络：
 
@@ -253,7 +253,7 @@ image:../media/drw_c190_u_fc_10gbe_cabling.png["数据端口连接"]
 
 
  a| 
-image:../media/icon_square_3_orange.png["步骤3."]
+image:../media/icon_square_3_purple.png["步骤3."]
  a| 
 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 
@@ -306,7 +306,7 @@ image:../media/drw_c190_u_switched_clust_cbling.png["集群互连布线"]
 
 
  a| 
-image:../media/icon_square_2_yellow.png["步骤2."]
+image:../media/icon_square_2_orange.png["步骤2."]
  a| 
 使用以下电缆类型之一将 UTA2 数据端口连接到主机网络：
 
@@ -330,7 +330,7 @@ image:../media/drw_c190_u_fc_10gbe_cabling.png["数据端口连接"]
 
 
  a| 
-image:../media/icon_square_3_orange.png["步骤3."]
+image:../media/icon_square_3_purple.png["步骤3."]
  a| 
 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 
@@ -385,7 +385,7 @@ image:../media/icon_square_1_green.png["第 1 步"]
 
 
  a| 
-image:../media/icon_square_2_yellow.png["步骤2."]
+image:../media/icon_square_2_orange.png["步骤2."]
  a| 
 使用 Cat 6 RJ45 缆线将 e0c 通过 e0f 端口连接到主机网络：
 
@@ -394,7 +394,7 @@ image:../media/drw_c190_e_rj45_cbling.png["主机网络布线"]
 
 
  a| 
-image:../media/icon_square_3_orange.png["步骤3."]
+image:../media/icon_square_3_purple.png["步骤3."]
  a| 
 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 
@@ -447,7 +447,7 @@ image:../media/drw_c190_e_switched_clust_cbling.png["集群互连布线"]
 
 
  a| 
-image:../media/icon_square_2_yellow.png["步骤2."]
+image:../media/icon_square_2_orange.png["步骤2."]
  a| 
 使用 Cat 6 RJ45 缆线将 e0c 通过 e0f 端口连接到主机网络：
 
@@ -456,7 +456,7 @@ image:../media/drw_c190_e_rj45_cbling.png["主机网络布线"]
 
 
  a| 
-image:../media/icon_square_3_orange.png["步骤3."]
+image:../media/icon_square_3_purple.png["步骤3."]
  a| 
 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 
@@ -533,7 +533,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS�
 
 
  a| 
-image:../media/icon_square_3_orange.png["步骤3."]
+image:../media/icon_square_3_tourquoise.png["步骤3."]
  a| 
 将每个节点连接到堆栈中的 IOM B
 

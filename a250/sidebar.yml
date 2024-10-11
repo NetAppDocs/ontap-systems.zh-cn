@@ -23,7 +23,7 @@ entries:
     entries:
     - title: 概述
       url: "/a250/bootmedia-replace-overview.html"
-    - title: 检查板载加密密钥
+    - title: 检查加密密钥
       url: "/a250/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
       url: "/a250/bootmedia-shutdown.html"

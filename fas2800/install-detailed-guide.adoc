@@ -209,7 +209,7 @@ image::../media/icon_square_1_green.png[插图编号3]]
 
 
  a| 
-image::../media/icon_square_2_yellow.png[标注编号2]
+image::../media/icon_square_2_purple.png[标注编号2]
  a| 
 管理网络交换机
 
@@ -231,7 +231,7 @@ image::../media/icon_square_3_orange.png[标注编号3]
 
 
 
-image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[拉片方向]
 
 [role="tabbed-block"]
 ====
@@ -409,28 +409,28 @@ NOTE: The example uses DS224C.Cabling is similar with other supported drive shel
 
 
  a| 
-image::../media/icon_square_1_blue.png[图标方块1蓝色]
+image::../media/icon_square_1_yellow.png[标注图标1]
  a| 
 磁盘架到磁盘架布线
 
 
 
  a| 
-image::../media/icon_square_2_yellow.png[图标方形2黄色]
+image::../media/icon_square_2_blue.png[标注图标2.]
  a| 
 控制器A连接到驱动器架
 
 
 
  a| 
-image::../media/icon_square_3_orange.png[图标方形3橙色]
+image::../media/icon_square_3_tourquoise.png[标注图标3]
  a| 
 控制器B连接到驱动器架
 
 |===
 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-image::../media/oie_cable_pull_tab_down.svg[OIE 缆线下拉卡舌]
+image::../media/oie_cable_pull_tab_down.png[拉片方向]
 
 .关于此任务
 使用动画或分步说明完成控制器和驱动器架之间的布线。

@@ -21,14 +21,18 @@ summary: 维护ASA R2 A1K硬件
 
 对于ASA A1K存储系统、您可以对以下组件执行维护过程。
 
-[cols="25,65"]
+[cols="30,70"]
 |===
 
 
  a| 
-link:bootmedia-overview.html["启动介质"]
+link:bootmedia-overview.html["启动介质-手动恢复"]
+
+link:bootmedia-overview-bmr.html["启动介质—自动恢复"]
  a| 
-启动介质用于存储系统在启动时使用的一组主和二级ONTAP映像文件。
+您可以使用USB模块作为启动映像来手动更换发生故障的启动介质。
+
+自动启动介质更换会使用配对节点中的启动映像、并自动运行相应的启动菜单选项、以便在替代启动介质上安装启动映像。
 
 
 

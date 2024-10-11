@@ -13,7 +13,7 @@ summary: 了解更换启动介质的要求。
 [role="lead"]
 在更换启动介质之前、请确保查看以下要求。
 
-* You must have a USB flash drive, formatted to FAT32, with the appropriate amount of storage to hold the `image_xxx.tgz`.
+* 您必须使用格式化为 fat32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。
 * 您必须将文件复制 `image_xxx.tgz` 到USB闪存驱动器、以供日后在此过程中使用。
 * 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
 * 请务必在正确的控制器上应用以下步骤中的命令：

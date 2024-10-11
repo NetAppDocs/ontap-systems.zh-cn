@@ -240,7 +240,7 @@ image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 
 
  a| 
-image:../media/icon_square_2_yellow.png["标注编号2"]
+image:../media/icon_square_2_green.png["标注编号2"]
  a| 
 为集群互连端口布线：
 
@@ -252,7 +252,7 @@ image:../media/drw_affa800_tnsc_clust_cabling.png["在双节点无交换机集�
 
 
  a| 
-image:../media/icon_square_3_orange.png["步骤3."]
+image:../media/icon_square_3_purple.png["步骤3."]
  a| 
 Cable the management ports to the management network switches    image:../media/drw_affa800_mgmt_cabling.png["此图显示了管理端口在系统背面的位置"]
 

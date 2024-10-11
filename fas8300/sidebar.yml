@@ -26,7 +26,7 @@ entries:
     - title: 检查板载加密密钥
       url: "/fas8300/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
-      url: "/fas8300/bootmedia-impaired-controller-shutdown.html"
+      url: "/fas8300/bootmedia-shutdown.html"
     - title: 替换启动映像
       url: "/fas8300/bootmedia-replace.html"
     - title: 启动恢复映像

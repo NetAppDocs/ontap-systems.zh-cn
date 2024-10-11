@@ -21,10 +21,10 @@ entries:
     entries:
     - title: 概述
       url: "/a300/bootmedia-replace-overview.html"
-    - title: 检查板载加密密钥
+    - title: 检查加密密钥
       url: "/a300/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
-      url: "/a300/bootmedia-impaired-controller-shutdown.html"
+      url: "/a300/bootmedia-shutdown.html"
     - title: 更换启动介质
       url: "/a300/bootmedia-replace.html"
     - title: 启动恢复映像

@@ -211,7 +211,7 @@ image::../media/drw_a900_controller_in_chassis_ID_IEOPS-856.svg[典型集群配�
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image::../media/oie_cable_pull_tab_up.svg[电缆拉片方向]
+image::../media/oie_cable_pull_tab_up.png[电缆拉片方向]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -303,7 +303,7 @@ image:../media/drw_a900fas9500_power_icon_IEOPS-1142.svg["电源连接"]
 
 在端口中插入缆线时，请务必检查缆线拉片的方向。所有网络模块端口的缆线拉片均已启动。
 
-image:../media/oie_cable_pull_tab_up.svg["电缆拉片方向"]
+image:../media/oie_cable_pull_tab_up.png["电缆拉片方向"]
 
 
 NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
@@ -403,9 +403,9 @@ image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[电源连接]
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 
 
-image::../media/oie_cable_pull_tab_up.svg[电缆拉片方向]
+image::../media/oie_cable_pull_tab_up.png[电缆拉片方向]
 
-image::../media/oie_cable_pull_tab_down.svg[电缆拉片方向]
+image::../media/oie_cable_pull_tab_down.png[电缆拉片方向]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。
@@ -459,9 +459,9 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 * 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
 
 
-image::../media/oie_cable_pull_tab_up.svg[电缆拉片方向]
+image::../media/oie_cable_pull_tab_up.png[电缆拉片方向]
 
-image::../media/oie_cable_pull_tab_down.svg[电缆拉片方向]
+image::../media/oie_cable_pull_tab_down.png[电缆拉片方向]
 
 
 NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不认为连接器卡嗒声，请将其卸下，然后将其翻转并重试。

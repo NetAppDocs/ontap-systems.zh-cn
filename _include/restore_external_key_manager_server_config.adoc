@@ -7,19 +7,21 @@
 .开始之前
 要还原外部密钥管理器(EKM)配置、您需要以下信息：
 
-* 您需要另一个集群节点上的/cfcard/kmip/servers.cfg文件的副本、或者以下信息：
-* KMIP服务器地址。
-* KMIP端口。
-* 另一个集群节点或客户端证书中的/cfcard/kmip/certs/client.crt文件的副本。
-* 另一个集群节点或客户端密钥上的/cfcard/kmip/certs client.key文件的副本。
-* 另一个集群节点或KMIP服务器CA的/cfcard/kmip/certs /CA.pm文件的副本。
+* 另一个集群节点上的/cfcard/kmip/servers.cfg文件的副本、或者以下信息：
++
+** KMIP服务器地址。
+** KMIP端口。
+** 另一个集群节点或客户端证书中的/cfcard/kmip/certs/client.crt文件的副本。
+** 另一个集群节点或客户端密钥上的/cfcard/kmip/certs client.key文件的副本。
+** 另一个集群节点或KMIP服务器CA的/cfcard/kmip/certs /CA.pm文件的副本。
+
+
 
 
 .步骤
 . 从ONTAP启动菜单中选择选项11。
 +
-[listing]
-----
+....
 
 (1)  Normal Boot.
 (2)  Boot without /etc/rc.
@@ -34,7 +36,7 @@
 (11) Configure node for external key management.
 Selection (1-11)? 11
 
-----
+....
 . 出现提示时、确认您已收集所需信息：
 +
 .. `Do you have a copy of the /cfcard/kmip/certs/client.crt file? {y/n}` _y_
@@ -54,13 +56,14 @@ Selection (1-11)? 11
 
 . 为每个提示提供相关信息：
 +
-.. `Enter the client certificate (client.crt) file contents:`
-.. `Enter the client key (client.key) file contents:`
-.. `Enter the KMIP server CA(s) (CA.pem) file contents:`
-.. `Enter the server configuration (servers.cfg) file contents:`
+.. _Enter the client certificATE (cclient.crt) file contents：_
+.. _Enter the client key (cclient.key) file contents：_
+.. _Enter the KMIP server CA (ca.pm) file contents：_
+.. _Enter the server configuration (servers.cfg) file contents：_
+
+
 +
-[listing]
-----
+....
 
 Example
 
@@ -97,13 +100,10 @@ Running command '/sbin/ifconfig e0M'
 ..
 kmip_init: cmd: ReleaseExtraBSDPort e0M
 ​​​​​​
-----
-
-
+....
 . 恢复过程将完成：
 +
-[listing]
-----
+....
 
 
 System is ready to utilize external key manager(s).
@@ -111,11 +111,11 @@ Trying to recover keys from key servers....
 [Aug 29 21:06:28]: 0x808806100: 0: DEBUG: kmip2::main: [initOpenssl]:460: Performing initialization of OpenSSL
 Successfully recovered keymanager secrets.
 
-----
+....
 . 从启动菜单中选择选项1以继续启动至ONTAP。
-+
-[listing]
-----
+
+
+....
 
 ***********************************************************************************
 * Select option "(1) Normal Boot." to complete the recovery process.
@@ -136,5 +136,4 @@ Successfully recovered keymanager secrets.
 (11) Configure node for external key management.
 Selection (1-11)? 1
 
-----
-
+....

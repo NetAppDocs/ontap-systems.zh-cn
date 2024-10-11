@@ -22,104 +22,32 @@ summary: 用于从恢复映像启动受损控制器的操作步骤 取决于系�
 +
 [cols="1,2"]
 |===
-| 如果您的系统 ... | 那么 ... 
+| 如果系统正在运行 ... | 那么 ... 
 
 
  a| 
-网络连接
+ONTAP 9.16.0 或更早版本
  a| 
-.. 当系统提示您还原备份配置时，按 `y` 。
-.. 当系统提示您覆盖 ` /etc/ssh/ssh_host_ecdsa_key` 时，按 `y` 。
-.. 当系统提示您确认还原备份是否成功时，按 `y` 。
-.. 当系统提示您创建已还原的配置副本时，按 `Y` 。
-.. 将受损控制器设置为高级权限级别： `set -privilege advanced`
-.. 运行 restore backup 命令： `ssystem node restore-backup -node local -target-address impaired_node_ip_address`
-.. 将受损控制器恢复为管理员级别： `set -privilege admin`
-.. 当系统提示您使用已还原的配置时，按 `y` 。
-.. 当系统提示重新启动受损控制器时，按 `y` 。
-
-
-
-
- a| 
-无网络连接
- a| 
-.. 当系统提示您还原备份配置时，按 `n` 。
-.. 系统提示时重新启动系统。
-.. 从显示的菜单中选择 * 从备份配置更新闪存 * （同步闪存）选项。
+.. 在受损控制器上、看到时按_Y_ `Do you want to restore the backup configuration now?`
+.. 在受损控制器上，当系统提示覆盖时按_Y_ `/etc/ssh/ssh_host_ecdsa_key`。
+.. 在运行状况良好的配对控制器上，将受损控制器设置为高级权限级别： `set -privilege admin`。
+.. 在运行状况良好的配对控制器上，运行restore backup命令： `system node restore-backup -node local -target-address impaired_node_IP_address`。
 +
-如果系统提示您继续更新，请按 `y` 。
+*注：*如果您看到除成功还原以外的任何消息，请联系 https://support.netapp.com["NetApp 支持"]。
 
-
-
-
-
- a| 
-无网络连接，采用 MetroCluster IP 配置
- a| 
-.. 当系统提示您还原备份配置时，按 `n` 。
-.. 系统提示时重新启动系统。
-.. 等待 iSCSI 存储连接连接完成。
+.. 在运行状况良好的配对控制器上，将受损控制器恢复为管理级别： `set -privilege admin`。
+.. 在受损控制器上，看到时按_y_ `Was the restore backup procedure successful?`。
+.. 在受损控制器上，看到时按_y_ `...would you like to use this restored copy now?`。
+.. 在受损控制器上、在系统提示重新启动受损控制器时按_y_、然后按_Ctrl-c_进入启动菜单。
+.. 如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。 link:bootmedia_encryption_restore.html["还原密钥管理器"]
+.. 将控制台缆线连接到配对控制器。
+.. 使用_storage故障转移交还-from node local_命令交还控制器。
+.. 如果已使用_storage故障转移修改-node local -auto-交还true命令禁用自动交还、则还原自动交还。
+.. 如果启用了AutoSupport、请使用_system node AutoSupport invoke -node *-type all -message Maint=end_命令还原/取消禁止自动创建案例。
 +
-您可以在看到以下消息后继续操作：
-
-+
-[listing]
-----
-date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
-date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
-date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
-date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
-----
-.. 从显示的菜单中选择 * 从备份配置更新闪存 * （同步闪存）选项。
-+
-如果系统提示您继续更新，请按 `y` 。
+*注：*如果此过程失败，请联系 https://support.netapp.com["NetApp 支持"]。
 
 
 
 |===
-. 确保环境变量按预期设置：
-+
-.. 将受损控制器显示为 LOADER 提示符。
-.. 使用 printenv 命令检查环境变量设置。
-.. 如果未按预期设置环境变量，请使用 `setenv _environment_variable_name_ _changed_value_` 命令对其进行修改。
-.. 使用 saveenv 命令保存所做的更改。
-
-
-. 下一个取决于您的系统配置：
-+
-** If your system has onboard keymanager, NSE or NVE configured, go to xref:bootmedia_encryption_restore.adoc[OKM ， NSE 和 NVE 的启动后介质更换步骤]
-** 如果您的系统未配置板载密钥管理器， NSE 或 NVE ，请完成本节中的步骤。
-
-
-. 在 LOADER 提示符处，输入 boot_ontap 命令。
-+
-[cols="1,2"]
-|===
-| 如果您看到 ... | 那么 ... 
-
-
- a| 
-登录提示符
- a| 
-转至下一步。
-
-
-
- a| 
-正在等待交还
- a| 
-.. 登录到配对控制器。
-.. 使用 `storage failover show` 命令确认目标已准备好进行交还。
-
-
-|===
-. 将控制台缆线连接到配对控制器。
-. 使用 storage failover giveback -fromnode local 命令交还控制器。
-. 在集群提示符处，使用 net int -is-home false 命令检查逻辑接口。
-+
-如果任何接口列为 "false" ，请使用 net int revert 命令将这些接口还原回其主端口。
-
-. 使用适用于您的配置的相应操作步骤 将控制台缆线移至修复后的关闭控制器或接管受损控制器。并运行 version -v 命令以检查 ONTAP 版本。
-. 如果您使用 storage failover modify -node local -auto-giveback true 命令禁用了自动交还，则还原自动交还。
 

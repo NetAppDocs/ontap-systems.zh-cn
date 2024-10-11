@@ -11,7 +11,7 @@ summary: 在更换启动介质之前、您可以通过删除系统管理模块�
 
 
 [role="lead"]
-要更换引导介质、您必须从系统背面卸下系统管理模块、卸下受损的引导介质、然后在系统管理模块中安装替代引导介质。
+您必须拔掉控制器模块、从系统背面卸下系统管理模块、卸下受损启动介质、然后在系统管理模块中安装替代启动介质。
 
 
 
@@ -86,13 +86,13 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[安装磁盘驱动器]
 
 == Step 2: Transfer the boot image to the boot media
 
-您安装的替代启动介质没有ONTAP映像、因此您需要使用USB闪存驱动器传输ONTAP映像。
+您安装的替代启动介质没有ONTAP映像。您可以将相应的ONTAP服务映像从下载到USB闪存驱动器、然后再下载到替代启动介质、从而将ONTAP映像传输到 https://mysupport.netapp.com/["NetApp 支持站点"]替代启动介质。
 
 .开始之前
 * 您必须具有一个已格式化为 32 位的 USB 闪存驱动器，并且容量至少为 4 GB 。
-* 您必须拥有与受损控制器正在运行的ONTAP映像版本相同的副本。您可以从NetApp支持站点上的部分下载相应的映像 https://support.netapp.com/downloads["下载"]
+* 下载与受损控制器正在运行的映像版本相同的ONTAP的副本。您可以从NetApp支持站点上的"Downloads"部分下载相应的映像。使用 `version -v`命令显示您的ONTAP版本是否支持NVE。如果命令输出显示 `<10no- DARE>`，则您的ONTAP版本不支持NVE。
 +
-** 如果支持NVE、请按照下载按钮中的说明、使用NetApp卷加密下载映像。
+** 如果您的ONTAP版本支持NVE、请按照下载按钮中的说明、使用NetApp卷加密下载映像。
 ** 如果不支持NVE、请按照下载按钮中的说明下载不带NetApp卷加密的映像。
 
 
@@ -108,12 +108,9 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[安装磁盘驱动器]
 
 NOTE: 如果要使用 Windows 提取内容，请勿使用 WinZip 提取网络启动映像。使用其他提取工具，例如 7-Zip 或 WinRAR 。
 
-
-
 +
 USB闪存驱动器应具有受损控制器正在运行的相应ONTAP映像。
 
-+
 .. 从笔记本电脑中取出 USB 闪存驱动器。
 
 

@@ -15,19 +15,19 @@ summary: 您必须将故障组件更换为从提供商处收到的替代 FRU 组
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:bootmedia-replace-requirements.html["查看启动介质要求"]
 [role="quick-margin-para"]
-要更换启动介质、您必须满足特定要求。
+查看更换启动介质的要求。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:bootmedia-encryption-preshutdown-checks.html["检查板载加密密钥"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:bootmedia-encryption-preshutdown-checks.html["检查加密密钥支持和状态"]
 [role="quick-margin-para"]
 验证系统是否已启用安全密钥管理器或已加密磁盘。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:bootmedia-shutdown.html["Shut down the impaired controller"]
 [role="quick-margin-para"]
-关闭或接管受损控制器、以使运行正常的控制器继续从受损控制器存储提供数据。
+关闭或接管受损控制器、以使运行正常的控制器继续从受损控制器的存储提供数据。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:bootmedia-replace.html["更换启动介质"]
 [role="quick-margin-para"]
-从系统管理模块中取出故障启动介质并安装替代启动介质、然后使用USB闪存驱动器将ONTAP映像传输到替代启动介质。
+从系统管理模块中取出故障启动介质、安装替代启动介质、然后使用USB闪存驱动器传输ONTAP映像。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:bootmedia-recovery-image-boot.html["启动恢复映像"]
 [role="quick-margin-para"]

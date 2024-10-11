@@ -2,23 +2,15 @@
 permalink: asa-r2-70-90/bootmedia-overview.html 
 sidebar: sidebar 
 keywords: asa r2 a70, a90, overview, the boot media 
-summary: 了解更换启动介质的自动化方法和手动方法。 
+summary: 了解更换启动介质的手动方法。 
 ---
-= 更换启动介质概述- ASA A70和ASA A90
+= 手动启动介质恢复概述—ASA A70和ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用USB模块作为启动映像或通过自动启动介质恢复(BR)选项手动更换发生故障的启动介质。
+您可以使用USB模块作为启动映像来手动更换发生故障的启动介质。
 
-* link:bootmedia-replace-workflow-bmr.html["自动启动介质恢复"]
-+
-自动启动介质恢复功能会使用从配对节点创建的启动映像、并自动运行相应的启动菜单选项、将启动映像安装到替代启动介质中。
-
-* link:bootmedia-replace-workflow.html["手动启动介质更换"]
-+
 手动启动介质更换使用传统方法：从NetApp支持站点下载ONTAP映像、将映像传输到USB驱动器、将其下载到目标替代启动介质、以及手动浏览启动菜单选项以在替代启动介质上安装ONTAP映像。
-
-

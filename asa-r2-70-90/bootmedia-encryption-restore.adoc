@@ -15,7 +15,7 @@ summary: 检查环境变量后，您必须完成特定于已启用板载密钥�
 
 
 
-== 第1步：还原板载密钥管理器
+== 第1步：还原密钥管理器
 
 您必须使用在此过程开始时捕获的设置完成特定于启用了板载密钥管理器(OKM)、NetApp存储加密(NSE)或NetApp卷加密(NVE)的系统的步骤。
 
@@ -42,10 +42,11 @@ NOTE: 如果启用了NSE或NVE以及板载或外部密钥管理器、则必须�
 
 
 .步骤
-. 从ONTAP启动菜单中选择选项10：
+. 从ONTAP启动菜单中选择相应的选项：
 +
-[listing]
-----
+** 对于ONTAP 9 8及更高版本，请选择选项10：
++
+....
 
 Please choose one of the following:
 
@@ -62,9 +63,29 @@ Please choose one of the following:
 (11) Configure node for external key management.
 Selection (1-11)? 10
 
-----
+....
+** 对于ONTAP 9 7及更早版本，请输入隐藏选项 `recover_onboard_keymanager`命令。
++
+....
+
+Please choose one of the following:
+
+(1)  Normal Boot.
+(2)  Boot without /etc/rc.
+(3)  Change password.
+(4)  Clean configuration and initialize all disks.
+(5)  Maintenance mode boot.
+(6)  Update flash from backup config.
+(7)  Install new software first.
+(8)  Reboot node.
+(9)  Configure Advanced Drive Partitioning.
+Selection (1-19)? recover_onboard_keymanager
+
+....
+
+
 . 确认此过程是否继续。
-`This option must be used only in disaster recovery procedures. Are you sure? (y or n):`_y_
+`This option must be used only in disaster recovery procedures. Are you sure? (y or n): `y`
 . 输入集群范围的密码短语两次。
 +
 
@@ -81,8 +102,7 @@ NOTE: 输入密码短语时、控制台不会显示任何输入。
 在输入末尾按两次回车键。
 
 +
-[listing]
-----
+....
 
 
 Enter the backup data:
@@ -120,11 +140,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 ---------------------------END BACKUP---------------------------
 
-----
+....
 . 恢复过程将完成。
 +
-[listing]
-----
+....
 
 Trying to recover keymanager secrets....
 Setting recovery material for the onboard key manager
@@ -139,15 +158,14 @@ Successfully recovered keymanager secrets.
 * Run the "security key-manager onboard sync" command to synchronize the key database after the node reboots.
 ***********************************************************************************
 
-----
+....
 +
 
 WARNING: 如果显示的输出不是，请勿继续 `Successfully recovered keymanager secrets`。执行故障排除以更正错误。
 
 . 从启动菜单中选择选项1以继续启动至ONTAP。
 +
-[listing]
-----
+....
 
 ***********************************************************************************
 * Select option "(1) Normal Boot." to complete the recovery process.
@@ -168,21 +186,24 @@ WARNING: 如果显示的输出不是，请勿继续 `Successfully recovered keym
 (11) Configure node for external key management.
 Selection (1-11)? 1
 
-----
+....
 . 确认控制器的控制台显示 `Waiting for giveback...(Press Ctrl-C to abort wait)`
-. 从配对节点交还配对控制器：_storage故障转移交还-frofnode local -only—cfo-Aggregates true _
-. 仅使用CFO聚合启动后、运行_security key-manager onboard sync​​​​​​​_命令：
-. 输入板载密钥管理器的集群范围密码短语：
+. 从配对节点中，将配对控制器： `storage failover giveback -fromnode local -only-cfo-aggregates true`
+. 仅使用CFO聚合启动后、运行_security key-manager onboard sync​​​​​​​_命令。
+. 输入板载密钥管理器的集群范围密码短语。
 +
-[listing]
-----
+....
 
 Enter the cluster-wide passphrase for the Onboard Key Manager:
 
 All offline encrypted volumes will be brought online and the corresponding volume encryption keys (VEKs) will be restored automatically within 10 minutes. If any offline encrypted volumes are not brought online automatically, they can be brought online manually using the "volume online -vserver <vserver> -volume <volume_name>" command.
 
-----
-. 确保所有密钥均已同步：_security key-manager key query-reRestored false_
+....
++
+
+NOTE: 如果同步成功、则会返回集群提示符、而不会显示任何其他消息。如果同步失败、则会在返回集群提示符之前显示一条错误消息。更正错误并成功运行同步之前、请勿继续。
+
+. 确保所有密钥均已同步： `security key-manager key query -restored false`。
 +
 `There are no entries matching your query.`
 
@@ -190,7 +211,7 @@ All offline encrypted volumes will be brought online and the corresponding volum
 
 NOTE: 在reved参数中筛选false时、不应显示任何结果。
 
-. 从配对节点进行节点恢复：_storage故障转移-from node local_
+. 从配对节点进行节点的返回： `storage failover giveback -fromnode local`
 
 
 --
@@ -201,19 +222,21 @@ NOTE: 在reved参数中筛选false时、不应显示任何结果。
 .开始之前
 要还原外部密钥管理器(EKM)配置、您需要以下信息：
 
-* 您需要另一个集群节点上的/cfcard/kmip/servers.cfg文件的副本、或者以下信息：
-* KMIP服务器地址。
-* KMIP端口。
-* 另一个集群节点或客户端证书中的/cfcard/kmip/certs/client.crt文件的副本。
-* 另一个集群节点或客户端密钥上的/cfcard/kmip/certs client.key文件的副本。
-* 另一个集群节点或KMIP服务器CA的/cfcard/kmip/certs /CA.pm文件的副本。
+* 另一个集群节点上的/cfcard/kmip/servers.cfg文件的副本、或者以下信息：
++
+** KMIP服务器地址。
+** KMIP端口。
+** 另一个集群节点或客户端证书中的/cfcard/kmip/certs/client.crt文件的副本。
+** 另一个集群节点或客户端密钥上的/cfcard/kmip/certs client.key文件的副本。
+** 另一个集群节点或KMIP服务器CA的/cfcard/kmip/certs /CA.pm文件的副本。
+
+
 
 
 .步骤
 . 从ONTAP启动菜单中选择选项11。
 +
-[listing]
-----
+....
 
 (1)  Normal Boot.
 (2)  Boot without /etc/rc.
@@ -228,7 +251,7 @@ NOTE: 在reved参数中筛选false时、不应显示任何结果。
 (11) Configure node for external key management.
 Selection (1-11)? 11
 
-----
+....
 . 出现提示时、确认您已收集所需信息：
 +
 .. `Do you have a copy of the /cfcard/kmip/certs/client.crt file? {y/n}` _y_
@@ -248,13 +271,14 @@ Selection (1-11)? 11
 
 . 为每个提示提供相关信息：
 +
-.. `Enter the client certificate (client.crt) file contents:`
-.. `Enter the client key (client.key) file contents:`
-.. `Enter the KMIP server CA(s) (CA.pem) file contents:`
-.. `Enter the server configuration (servers.cfg) file contents:`
+.. _Enter the client certificATE (cclient.crt) file contents：_
+.. _Enter the client key (cclient.key) file contents：_
+.. _Enter the KMIP server CA (ca.pm) file contents：_
+.. _Enter the server configuration (servers.cfg) file contents：_
+
+
 +
-[listing]
-----
+....
 
 Example
 
@@ -291,13 +315,10 @@ Running command '/sbin/ifconfig e0M'
 ..
 kmip_init: cmd: ReleaseExtraBSDPort e0M
 ​​​​​​
-----
-
-
+....
 . 恢复过程将完成：
 +
-[listing]
-----
+....
 
 
 System is ready to utilize external key manager(s).
@@ -305,11 +326,11 @@ Trying to recover keys from key servers....
 [Aug 29 21:06:28]: 0x808806100: 0: DEBUG: kmip2::main: [initOpenssl]:460: Performing initialization of OpenSSL
 Successfully recovered keymanager secrets.
 
-----
+....
 . 从启动菜单中选择选项1以继续启动至ONTAP。
-+
-[listing]
-----
+
+
+....
 
 ***********************************************************************************
 * Select option "(1) Normal Boot." to complete the recovery process.
@@ -330,9 +351,7 @@ Successfully recovered keymanager secrets.
 (11) Configure node for external key management.
 Selection (1-11)? 1
 
-----
-
-
+....
 --
 ====
 

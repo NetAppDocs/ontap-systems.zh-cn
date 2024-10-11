@@ -1,17 +1,17 @@
 ---
-permalink: c400/bootmedia-impaired-controller-shutdown.html 
+permalink: a300/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff c400, aff, c400, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
+keywords: aff a300, shut down the impaired controller 
 summary: 根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。 
 ---
-= 关闭受损控制器- AFF C400
+= 关闭受损控制器 - AFF A300
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-完成 NVE 或 NSE 任务后，您需要关闭受损控制器。使用适用于您的配置的操作步骤 关闭或接管受损控制器。
+使用适用于您的配置的操作步骤 关闭或接管受损控制器。
 
 
 
@@ -59,6 +59,8 @@ NOTE: 如果启动设备损坏或无法正常运行，则此命令可能不起�
 
 
 == 选项 2 ：控制器采用 MetroCluster 配置
+
+完成 NVE 或 NSE 任务后，您需要关闭受损节点。
 
 
 NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
@@ -108,7 +110,9 @@ LOADER 提示符
 
 
 
-== 选项 3 ：控制器位于双节点 MetroCluster 中
+== Option 3: Controller is in a two-node MetroCluster
+
+完成 NVE 或 NSE 任务后，您需要关闭受损节点。
 
 要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
