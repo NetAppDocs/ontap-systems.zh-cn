@@ -276,6 +276,9 @@ image::../media/icon_round_3.png[标注编号3]
 
 您有 90 天的宽限期来安装许可证密钥。宽限期过后，所有旧许可证将失效。安装有效的许可证密钥后，您可以在 24 小时内安装所有密钥，直到宽限期结束。
 
+
+NOTE: 如果您的系统最初运行的是ONTAP 9．10.1或更高版本，请使用中所述的过程link:https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Post_Motherboard_Replacement_Process_to_update_Licensing_on_a_AFF_FAS_system#Internal_Notes["主板更换后流程、用于更新AFF/FAS系统上的许可"^]。如果您不确定系统的初始ONTAP版本、请参阅link:https://hwu.netapp.com["NetApp Hardware Universe"^]以了解更多信息。
+
 .步骤
 . 如果需要新的许可证密钥，请在上获取替代许可证密钥 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持站点"] 在软件许可证下的我的支持部分中。
 +

@@ -1619,7 +1619,6 @@
   <block id="413c7cb867bfe063a5a3a480228674da" category="paragraph">提升板 3</block>
   <block id="d4d3885e3484305b905fde6b3ef5c19c" category="paragraph">1 号十字螺丝刀</block>
   <block id="b075a4576b5250274446097769fe8ec1" category="list-text">将替代启动介质安装到控制器模块中：</block>
-  <block id="cece3275192f19a99192545e91b78506" category="list-text">将 EFI 文件夹复制到 USB 闪存驱动器上的顶部目录。+ USB 闪存驱动器应具有 EFI 文件夹，并且与受损控制器运行的服务映像（ BIOS ）版本相同。</block>
   <block id="34cf3a43d39d8b0acc65bd578d7188da" category="doc">更换启动介质— AFF A800</block>
   <block id="56ea39f220f0f9a4e092906ae1b4e2a2" category="paragraph">在更换控制器模块时，您必须将受损控制器模块中的电源移至更换控制器模块。</block>
   <block id="3526385a16b15ee87aa73e9d27bca396" category="section-title">第 4 步：移动 NVDIMM 电池</block>
@@ -8615,7 +8614,6 @@ SFP+(目标/启动程序)</block>
   <block id="e1e5cf3c178b5500c9ca99734851f088" category="list-text">将锁定闩锁向上旋转到锁定位置。</block>
   <block id="2e642e4a5011ff5ac26769f55b9fb111" category="list-text">将电源线插入电源。</block>
   <block id="73bf3c5901e8959909093f245da79b5c" category="admonition">如果您有直流电源、请在控制器模块完全固定在机箱中后、将电源块重新连接到电源。</block>
-  <block id="7cb60d31286d9a356a9f1d81c01d5d76" category="paragraph">电源恢复后、控制器模块将启动。如果启动到加载程序提示符、请使用命令重新启动控制器<block ref="ce54ef17bebf280339d340bd40dff593" prefix=" " category="inline-code"></block> 。</block>
   <block id="c90c2ae11fe917d8b5a1debf0e0a1a26" category="list-text">*此过程会造成系统中断。*For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.</block>
   <block id="7ae4c88c0c1f1ed7c8b6a312fdab75ab" category="paragraph">要更换控制器、您必须卸下受损控制器、将FRU组件从受损控制器模块移至更换用的控制器模块、在机箱中安装更换用的控制器模块、然后将系统启动至维护模式。</block>
   <block id="2fb967de668a2d809970dd0ee11a24ab" category="paragraph">将电源移至更换用的控制器。</block>
@@ -8779,8 +8777,6 @@ SFP+(目标/启动程序)</block>
   <block id="9cdea9bbd0e16c22fc991522b7972ed5" category="paragraph">您必须使用在此过程开始时捕获的设置完成特定于启用了板载密钥管理器(OKM)、NetApp存储加密(NSE)或NetApp卷加密(NVE)的系统的步骤。</block>
   <block id="7b2bdafe064028eef5977d05150f12ac" category="admonition">如果启用了NSE或NVE以及板载或外部密钥管理器、则必须还原在此过程开始时捕获的设置。</block>
   <block id="63a4de1bcedff077618555275f624f08" category="open-title">选项1：具有板载密钥管理器服务器配置的系统</block>
-  <block id="da8f6d618f55e4068dea90bc98f1254e" category="paragraph">从ONATp启动菜单还原板载密钥管理器配置。</block>
-  <block id="89cb88c9bc1bb6b7dcae6435585c0324" category="paragraph">还原OKM配置时、需要以下信息：</block>
   <block id="7000494e61efaf925f6df5293a176456" category="inline-link">同时启用板载密钥管理</block>
   <block id="da204d9262b182aa6636ef0f759e2181" category="list-text">已输入集群范围的密码短语<block ref="45fc92ed2fd28afadf25f8be26cb5500" category="inline-link-rx"></block>。</block>
   <block id="f295be867ed42957086669bda6d018d8" category="inline-link">板载密钥管理器的备份信息</block>
@@ -8791,47 +8787,15 @@ SFP+(目标/启动程序)</block>
   <block id="f9bffba0a703b49e4849f916f5e0b86a" category="admonition">输入密码短语时、控制台不会显示任何输入。</block>
   <block id="13919b42be0dc9d06cf38142917f4b9e" category="paragraph"><block ref="2b673e138bf62e9f201d2fe3f4e48e85" prefix="" category="inline-code"></block></block>
   <block id="0784a1581386529d37ed702d7c0c6404" category="paragraph"><block ref="7c93709ee00a5bf88772022db8bfa591" prefix="" category="inline-code"></block></block>
-  <block id="de5132c93b5d93a59d85652f38a4c1be" category="list-text">输入备份信息。将整个内容从开始备份行粘贴到结束备份行。</block>
   <block id="23f31e8486de5b0c9919cdb1d6f7bb1f" category="paragraph">在输入末尾按两次回车键。</block>
-  <block id="17f4c7292b19bfcfe3d4c928df22bc3c" category="list-text">恢复过程将完成。</block>
   <block id="25a669068aaab50a7c2fd5bce904c674" category="admonition">如果显示的输出不是，请勿继续<block ref="3f52dc951949a3041638d54635d71099" prefix=" " category="inline-code"></block>。执行故障排除以更正错误。</block>
   <block id="4ca210717c7b74a5849140e091b8b172" category="list-text">从启动菜单中选择选项1以继续启动至ONTAP。</block>
-  <block id="de52f5c2d18fad1d9bb02f99ec8dadf5" category="list-text">确认控制器的控制台显示<block ref="22714968f3c097ea3249c9d4b9e8119f" prefix=" " category="inline-code"></block></block>
   <block id="36127ab42d959b7fd1802bde97fbbebd" category="paragraph"><block ref="ff552bb89260932a935c259f2e059d29" prefix="" category="inline-code"></block></block>
   <block id="1a397feeabbac5c761b3d1f336523079" category="admonition">在reved参数中筛选false时、不应显示任何结果。</block>
-  <block id="612c478fd861d23534a26dd856605b43" category="open-title">选项2：具有外部密钥管理器服务器配置的系统</block>
-  <block id="179622516286b14a2256b085ee45c10a" category="paragraph">从ONATp启动菜单还原外部密钥管理器配置。</block>
   <block id="075c44463f07a0ee059a3e5089c43ca5" category="paragraph">要还原外部密钥管理器(EKM)配置、您需要以下信息：</block>
   <block id="d60b517023845eb33535660ac501cf18" category="list-text">KMIP服务器地址。</block>
   <block id="70b8d21a07e70130ed6b262a91c18626" category="list-text">KMIP端口。</block>
-  <block id="08abc77c04d9685a10837fbb9135a705" category="list-text">另一个集群节点或客户端证书中的/cfcard/kmip/certs/client.crt文件的副本。</block>
-  <block id="db1b600b813d1f6f50a04eba824c70ab" category="list-text">另一个集群节点或客户端密钥上的/cfcard/kmip/certs client.key文件的副本。</block>
-  <block id="dbf0b245d6b63885207c70d983243a7b" category="list-text">另一个集群节点或KMIP服务器CA的/cfcard/kmip/certs /CA.pm文件的副本。</block>
   <block id="e43680b19a57600cbf0bc788265754c7" category="list-text">从ONTAP启动菜单中选择选项11。</block>
-  <block id="a2a02d01ac6ca6a677201d0767b02f34" category="list-text">出现提示时、确认您已收集所需信息：</block>
-  <block id="91edae04cf5f805055ec3dac6c3b7f8c" category="list-text"><block ref="b19458ff12859c393f2fd46d02cb24d4" prefix="" category="inline-code"></block> _y_</block>
-  <block id="635db4ba4393f4aa6637dd02dc8cabae" category="list-text"><block ref="05ac7348459861360c86dc5851e1ab0b" prefix="" category="inline-code"></block> _y_</block>
-  <block id="1ea0f8ccc55c1aaa4b40e778eca7d203" category="list-text"><block ref="0daafd01a5c78aa4cf52e57febc9c7d9" prefix="" category="inline-code"></block> _y_</block>
-  <block id="7edfa6272c16cc3e1b7ef52bbf985294" category="list-text"><block ref="05f6b998dcdacf2a7e5882ef776dfa8e" prefix="" category="inline-code"></block> _y_</block>
-  <block id="66b0e02903c6c36ff4685952e8a46ec1" category="paragraph">您也可以使用以下提示：</block>
-  <block id="db7e8e2b0c1ff16e7d69c69fa0d6a061" category="list-text"><block ref="05f6b998dcdacf2a7e5882ef776dfa8e" prefix="" category="inline-code"></block> _n_</block>
-  <block id="ca2e8c6e7a166833a27d9755f814672b" category="list-text"><block ref="9254f5a10bf0e4d18aa18a91a9321bea" prefix="" category="inline-code"></block> _y_</block>
-  <block id="d0d46e5c203e3a92bef26e001a5e623d" category="list-text"><block ref="616aa2e195f429a92684489246e90f34" prefix="" category="inline-code"></block> _y_</block>
-  <block id="83b207edf8a800f4f88cf102b88cf241" category="list-text">为每个提示提供相关信息：</block>
-  <block id="a242b56bad1d07089dce8ccb795966f2" category="list-text">恢复过程将完成：</block>
-  <block id="3bac3ae452491bc05a59b99b3d2476d6" category="paragraph">转至步骤6。</block>
-  <block id="070dd7606e33a466d7a8bb82a9a64b17" category="list-text">使用_storage故障转移show_命令确认目标控制器已准备好进行恢复。</block>
-  <block id="378fa36f6e90b3bf6ddbb070e35b0388" category="list-text">使用_storage故障转移交还-fronode local -only -cfo-Aggregates true命令将控制台缆线移至配对控制器并交还目标控制器存储。</block>
-  <block id="bd7b047ae429d755acf6b20e1064e5ce" category="list-text">如果此命令因配对节点"未就绪"而失败、请等待5分钟、以便HA子系统在配对节点之间同步。</block>
-  <block id="1bcf977583274fe2567618999a9b0c90" category="list-text">等待3分钟、然后使用_storage故障转移show_命令检查故障转移状态。</block>
-  <block id="d92dd32085afaf328cc7fcda13198cc8" category="list-text">在cluster-shell提示符处、输入_network interface show -is-home false_命令、列出不在其主控制器和端口上的逻辑接口。</block>
-  <block id="e396be98bc8257ac03b57843c10e38b9" category="paragraph">如果列出了任何接口<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>，请使用_net int revserver cluster -lif _nokename_命令 将这些接口还原回其主端口。</block>
-  <block id="62de7d9b4c53e76eb0aa2abbb0821ccd" category="list-text">将控制台缆线移至目标控制器、然后运行_version -v_命令以检查ONTAP版本。</block>
-  <block id="63d74ff14d34f13a62e8eb172d26a62f" category="list-text">使用<block ref="46353f4e0bb2c136591c37c9eeedcf40" prefix=" " category="inline-code"></block> 查看输出。</block>
-  <block id="d9432d5d4d3a21bdc03aa318c2cfdb11" category="list-text">使用_security key-manager key query_命令 显示密钥管理服务器上存储的身份验证密钥的密钥ID。</block>
-  <block id="8064cac27c9219c213e029af9a5800db" category="list-text">如果<block ref="aac34f614f4514a3f670bae971a30369" prefix=" " category="inline-code"></block> =<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block> 和<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列=以外的任何内容<block ref="0f456cd0d7a5ae4a393a7b207a83284e" prefix=" " category="inline-code"></block>，请使用_security key-manager External Restore_命令 还原身份验证密钥的密钥ID。</block>
-  <block id="8b6a11a09054c203c222c056a501059f" category="list-text">如果<block ref="aac34f614f4514a3f670bae971a30369" prefix=" " category="inline-code"></block> =<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block> 和<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 列=以外的任何内容<block ref="0f456cd0d7a5ae4a393a7b207a83284e" prefix=" " category="inline-code"></block>，请使用_security key-manager onboard sync_命令同步修复后节点上缺少的板载密钥。</block>
-  <block id="27b0a5d00d58f515ceda3d56b392bdf7" category="paragraph">使用_security key-manager key query_命令 验证所有身份验证<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block> 密钥的列=<block ref="0f456cd0d7a5ae4a393a7b207a83284e" prefix=" " category="inline-code"></block> 。</block>
   <block id="4f95ab1472771ae8e2475d26cfccfefd" category="paragraph">以下AutoSupport消息会禁止自动创建案例两小时：`集群1：*&gt; system node AutoSupport invoke -node *-type all -message Maint=2h</block>
   <block id="46bbc90a4740f73d85b026da0e0ba4db" category="list-text">从运行状况良好的控制器禁用自动交还：</block>
   <block id="b719e721c62569ed8b97aaf7ac03691a" category="paragraph">多集群互连交换机</block>
@@ -9238,7 +9202,6 @@ SFP+(目标/启动程序)</block>
   <block id="3e6277588162255770fd3384bad09d6d" category="list-text">从控制器上的加载程序提示符处、启动控制器、并在系统因系统ID不匹配而提示覆盖系统ID时输入_y_。</block>
   <block id="9daabece8db7521a7882f63ebd76a891" category="image-alt">卸下驱动器，释放按钮位于顶部</block>
   <block id="e0bc24820711c466532ba2cb67ababd9" category="image-alt">卸下释放按钮位于中间的驱动器</block>
-  <block id="5be3be4e3c78f5ba4233a70fab6255f9" category="paragraph">在正常启动后、通过完成最终检查并交还存储来完成启动介质更换过程。</block>
   <block id="38821947dff053760f4c97b648ca454a" category="admonition">请勿插入电源线。</block>
   <block id="b0dc4e3ef222885899ea12125b17e5eb" category="list-text">单击左窗格中的*网络*，右键单击并选择*refresh。</block>
   <block id="a620e4025016adf1d0a58233ca0fabf5" category="image-alt">卸下或更换RTC电池</block>
@@ -9620,7 +9583,6 @@ SFP+(目标/启动程序)</block>
   <block id="d6b5f802b07df1179c13649ed53524f0" category="paragraph">恢复过程完成后、您将看到以下内容：</block>
   <block id="c6980bbd79483c6809cc84795b7d14d6" category="paragraph">还原完成后、节点将重新启动以完成此过程。</block>
   <block id="0afa9147e7fde537954ecea742d84625" category="list-text">从ONATp启动菜单中选择以下选项之一以还原板载密钥管理器配置。</block>
-  <block id="1f816c392c5ee466677e2fd2587ce8a1" category="section-title">第2步：完成启动介质更换</block>
   <block id="417968dd9c410e2ebdf82236e2a6f1d8" category="doc">第1步：将存储控制器连接到网络</block>
   <block id="c0b05ac617b77a5c10f26756e6ef04f2" category="list-text">如果要连接到光纤交换机、请先将小型可插拔(Small form-纤 巧型可插拔、SFP)收发器插入控制器端口、然后再使用缆线连接到该端口。</block>
   <block id="1463138ead0bd5def70e2d744eddfc0a" category="paragraph">将控制器直接相互连接并连接到主机网络。</block>
@@ -9670,7 +9632,6 @@ SFP+(目标/启动程序)</block>
   <block id="871681e86e80556b261166721e0bbe3b" category="list-text">使用随附的安装螺钉将存储架固定到机柜或电信机架上。</block>
   <block id="c5eaaf4a6fa532356e5d0189384e0e34" category="list-text">将缆线管理设备连接到存储系统背面。</block>
   <block id="36eaeecf3fe5d82e498290c50c773db1" category="list-text">将挡板连接到存储系统正面。</block>
-  <block id="c239b345dc160b2bfc0fb8247acc17eb" category="paragraph">每个NS224磁盘架都有一个唯一的磁盘架ID来区分。此ID可确保存储架在存储系统设置中是不同的。默认情况下、磁盘架ID分配为‘00 '和‘01 '、但您可能需要调整这些ID、以便在存储系统中保持唯一性。</block>
   <block id="f044e75ec5037aabefb204d1365ba96b" category="image-alt">更改NS224磁盘架ID</block>
   <block id="d8147b4a0f272144c59f006b412b8290" category="image-alt">[插图编号2</block>
   <block id="8c5529e435c4992332c3afef54410f4e" category="image-alt">[插图编号3</block>
@@ -10375,7 +10336,6 @@ SFP+(目标/启动程序)</block>
   <block id="5bfc9396e31ecaf44561c35f76ab21a6" category="list-text">您必须确认已配置MetroCluster配置状态，并且节点处于启用和正常状态<block ref="4d06f3844212ac745a73965bbb3f6e51" prefix="(" category="inline-code"></block>)。</block>
   <block id="b53660f761dc53e7b68aefd5edbbae44" category="paragraph">转至下一节。</block>
   <block id="cb469b95641c1382be009038b04e5158" category="paragraph">您必须拔掉控制器模块、从系统背面卸下系统管理模块、卸下受损启动介质、然后在系统管理模块中安装替代启动介质。</block>
-  <block id="ffffd77faa91cb4a767b88905267cf2b" category="doc">第1步：检查您的ONTAP版本是否支持加密</block>
   <block id="ef265e1108b8991c7b12209078d6123e" category="paragraph">在关闭受损控制器之前、请检查您的ONTAP版本是否支持NetApp卷加密(NVE)以及是否已正确配置密钥管理系统。</block>
   <block id="fdb2cbe8b1e451ff001e9714b834c459" category="paragraph">检查您的ONTAP版本是否支持NetApp卷加密(NVE)。此信息对于下载正确的ONTAP映像至关重要。</block>
   <block id="1c09443221312bdba5a22ddbba4f768f" category="list-text">运行以下命令、确定您的ONTAP版本是否支持加密：</block>
@@ -10385,27 +10345,14 @@ SFP+(目标/启动程序)</block>
   <block id="d8b3ebaef14f15ddadd58f8788097867" category="list-text">如果支持NVE、请下载采用NetApp卷加密的ONTAP映像。</block>
   <block id="723417ff6efb8e61349dd2d6b90d0898" category="list-text">如果不支持NVE、请下载ONTAP映像*不使用* NetApp卷加密。</block>
   <block id="6bd78f9c7732510cf857d49ceb4bd776" category="section-title">第2步：确定关闭控制器是否安全</block>
-  <block id="bdaa0edeb07bd0ecc38e28982c4df8d7" category="paragraph">要安全关闭控制器、请首先确定板载密钥管理器(OKM)还是外部密钥管理器(EKM)处于活动状态。然后、验证正在使用的密钥管理器、显示相应的密钥信息、并根据身份验证密钥的状态采取措施。</block>
   <block id="30f7cbebdfdaa0338bc99a69c5ef0e38" category="list-text">确定您的系统上启用了哪个密钥管理器：</block>
-  <block id="aac34f614f4514a3f670bae971a30369" category="cell">密钥管理器类型</block>
-  <block id="a36a9da82fdc17311ba2d5d847082cce" category="paragraph">运行以下命令、确定您的系统上是否启用了EKM：</block>
-  <block id="c62c99e83e1c9d2a44da11eaa2e0b14a" category="paragraph"><block ref="0565c41723caaa37b0079906ad365846" prefix="" category="inline-code"></block></block>
-  <block id="89add348f9d444253c70c9efcfa0b483" category="paragraph">如果启用了EKM、<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block>则会在输出中列出。</block>
-  <block id="518b09108bfe2ee41d9afdf44e6a6e45" category="paragraph">根据节点运行的ONTAP版本运行以下命令之一、确定您的系统上是否启用了OKM。</block>
-  <block id="f8cefe4e9eda67cd04349f4560aad96f" category="list-text">对于ONTAP 9．14．1或更高版本，输入以下命令：</block>
   <block id="9b5996b90a7a19dc5ca9e91a6d0c7ac9" category="paragraph"><block ref="ed039e134fdf3b84c71d409a4024dbc7" prefix="" category="inline-code"></block></block>
   <block id="67d6aa20f2257cc1b6c99fa4ed444eca" category="paragraph">如果启用了OKM、<block ref="90d4e6078945c9c6155e77edcafa9984" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
-  <block id="5114d877b6bdc7484d5c2c9efc040aa0" category="list-text">对于ONTAP 9．1．1或更早版本，输入以下命令：</block>
   <block id="6f76cbf64620dc55dc8a5d1462ae7822" category="paragraph"><block ref="1847f4f206eb3ab8397f6206fcf1bb3f" prefix="" category="inline-code"></block></block>
   <block id="4efa472f82474aa8572aacddb95c4a1b" category="paragraph">如果启用了OKM、<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
-  <block id="b520d3c69ccbf428928a30eeb5fcaeec" category="list-text">输入以下查询命令以显示密钥管理器中的身份验证密钥状态：</block>
   <block id="2a4a9d693caa859153f77cf2204d30cc" category="paragraph"><block ref="c9b37f9017fc101cecef415e707e7b5f" prefix="" category="inline-code"></block></block>
   <block id="775c4f8ef2eabc8574bb57ddd10b0b23" category="list-text">检查密钥管理器列中的值输出<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>。</block>
   <block id="0244ade962fa9d071f4def5c7ef769cc" category="paragraph">此列指示您的密钥管理器(EKM或OKM)的身份验证密钥是否已成功还原。</block>
-  <block id="5532ef9f6f6fe7cdd455dde7a78eb12c" category="list-text">如果"Restored (已还原)"列中的值为true、则表示密钥已正确还原、并且可以安全地继续关闭控制器。</block>
-  <block id="8ec65b3b21949ed324beef5dbc025c92" category="list-text">如果此值不是true、则表示密钥尚未还原、您需要根据使用的是EKM还是OKM执行其他步骤(还原或同步密钥)。</block>
-  <block id="b4bddfeecfd5716741acba5ef08dfdd9" category="list-text">根据您使用的是EKM还是OKM、选择以下选项之一、并根据列中显示的输出值执行相应的步骤<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>。</block>
-  <block id="d080cdba04a9e58adbe244b4d170ff25" category="open-title">EKM</block>
   <block id="a26b32b28af2e3521ad3e104fee11f80" category="paragraph">根据列中显示的输出值<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>、执行相应的步骤。</block>
   <block id="c9fb391da0641ace637021ed0f9d1c94" category="cell">列中的输出值<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block></block>
   <block id="22cfef4d87bd251ba39dd92d08a6b0bb" category="paragraph"><block ref="b326b5062b2f0e69046810717534cb09" prefix="" category="inline-code"></block></block>
@@ -10414,9 +10361,7 @@ SFP+(目标/启动程序)</block>
   <block id="1a1cd257525bddea68723047e36e6e90" category="list-text">使用以下命令将外部密钥管理身份验证密钥还原到集群中的所有节点：</block>
   <block id="74c90316d25b4cdc5c8e524af066a5a0" category="paragraph"><block ref="24b420efa276a683b4bd02f14a2d6f59" prefix="" category="inline-code"></block></block>
   <block id="581f12d33ebdffd65e567d7483436438" category="paragraph">如果命令失败，请联系<block ref="1a36b59ecae7684863b79a0f690b6840" category="inline-link-rx"></block>。</block>
-  <block id="c2c27d455a0034831b8e2b3d5a1fdd37" category="list-text">输入命令以验证所有身份验证密钥的<block ref="91f9c18d13195a5e3c010df87360adf2" prefix=" " category="inline-code"></block>列是否<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>。</block>
   <block id="90b0be5cd55fef8ba4b2677ba61937be" category="paragraph">如果所有身份验证密钥均为<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>，则可以安全地关闭受损控制器。转到。 <block ref="eee94cfaa2087b0a7525f83880646105" category="inline-link-macro-rx"></block></block>
-  <block id="90d4e6078945c9c6155e77edcafa9984" category="open-title">确定</block>
   <block id="f756353c7a60081133f6ef85804b6485" category="paragraph">手动备份OKM信息。</block>
   <block id="349e0edd7094f31576c430a35f1c73e3" category="list-text">输入进入高级模式、然后<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>在出现提示时输入<block ref="8d2cf87827d8c4c105b70542cc18077d" prefix=" " category="inline-code"></block>。</block>
   <block id="86123e57ff90dca177de37d445925d0d" category="list-text">输入以下命令以显示密钥管理信息：</block>
@@ -10431,20 +10376,8 @@ SFP+(目标/启动程序)</block>
   <block id="d81a048f736ca3a03a0fc11c4bc74978" category="list-text">输入命令以显示密钥管理备份信息：</block>
   <block id="d019a61bbe760bfae51153af25e806b3" category="doc">第1步：还原密钥管理器</block>
   <block id="926dc92762712fb5c888d06d13b2835c" category="list-text">从ONTAP启动菜单中选择相应的选项：</block>
-  <block id="802134e5cd64408009bf9ca5065786b2" category="list-text">对于ONTAP 9 8及更高版本，请选择选项10：</block>
-  <block id="07447cab17885ca45337781e921897fa" category="list-text">对于ONTAP 9 7及更早版本，请输入隐藏选项<block ref="7191584fa52473c1df15d3c03b065c0b" prefix=" " category="inline-code"></block>命令。</block>
-  <block id="b8853c4009726e2ece8d95f47908e1c0" category="list-text">确认此过程是否继续。<block ref="31d3e9f860a1ea4bc24acbcd0c462856" prefix=" " category="inline-code"></block></block>
-  <block id="2f494951e987e38666c6a1935c0c88be" category="list-text">从配对节点中，将配对控制器：<block ref="291b31306c2e0668f091d41edca7e97f" prefix=" " category="inline-code"></block></block>
-  <block id="b6074ec78f4878986cfabd4a86abf5c8" category="list-text">仅使用CFO聚合启动后、运行_security key-manager onboard sync​​​​​​​_命令。</block>
   <block id="3554bd6dca965e0e8bcb314a54ef655c" category="list-text">输入板载密钥管理器的集群范围密码短语。</block>
   <block id="68e51e7cb5faf4732838f76bc7db6b45" category="admonition">如果同步成功、则会返回集群提示符、而不会显示任何其他消息。如果同步失败、则会在返回集群提示符之前显示一条错误消息。更正错误并成功运行同步之前、请勿继续。</block>
-  <block id="ce4fb0e60bb66e89ea3ad1fd2ff46a30" category="list-text">确保所有密钥均已同步：<block ref="297f477a8524857592ffedfea06bb8d7" prefix=" " category="inline-code"></block>。</block>
-  <block id="39182fbb28bf0718bee46eab1961e1bd" category="list-text">从配对节点进行节点的返回：<block ref="e23a9f1c6189f372292c98d844a0895f" prefix=" " category="inline-code"></block></block>
-  <block id="61942e8f4689a17c71500d84d0b47041" category="list-text">另一个集群节点上的/cfcard/kmip/servers.cfg文件的副本、或者以下信息：</block>
-  <block id="6b7fb6689b4ff21477eda31338d189ce" category="list-text">_Enter the client certificATE (cclient.crt) file contents：_</block>
-  <block id="4cf3e6ebf1c573912cdf7f61f3baff04" category="list-text">_Enter the client key (cclient.key) file contents：_</block>
-  <block id="8a0822d48c830ac216ea7f9d4db5a9dd" category="list-text">_Enter the KMIP server CA (ca.pm) file contents：_</block>
-  <block id="fff930cef46bf6cadd68fad5ec20a254" category="list-text">_Enter the server configuration (servers.cfg) file contents：_</block>
   <block id="5eadc2e25337518dc852a80577d9cf1e" category="doc">检查加密密钥支持和状态- AFF A150</block>
   <block id="0dc57322765c9d58ce88190f1690fcde" category="doc">检查加密密钥支持和状态- AFF A1K</block>
   <block id="8bc64411ac44956417615b1424961016" category="paragraph">还原节点上的加密。</block>
@@ -10507,4 +10440,109 @@ SFP+(目标/启动程序)</block>
   <block id="d431e47bf770a9393ee9f239dc2035b5" category="sidebar">ASA A70和ASA A90 I/O模块</block>
   <block id="2d5a952fbb91c4ae00f6cf700a7a8912" category="sidebar">ASA A1K控制器</block>
   <block id="21b2ca1e48faf28d5918cce56ce73345" category="sidebar">ASA A1K I/O模块</block>
+  <block id="de6146d3d2df55568fb2490009341fe7" category="inline-link-macro">用于FAS和AFF型号的启动设备恢复的服务映像下载文件缺少EFI文件夹^</block>
+  <block id="08bb41e143a5dbcb1f95809650758d5d" category="admonition">如果服务映像没有EFI文件夹，请参阅<block ref="ff41085fda5f8dca9d0e49c279b90ce2" category="inline-link-macro-rx"></block>。</block>
+  <block id="fb187e830be89fc21d44062ee3e0783a" category="list-text">从Loader提示符处、从USB闪存驱动器启动恢复映像：<block ref="199329b95897fa5b91256fa51b2186ce" prefix=" " category="inline-code"></block></block>
+  <block id="9f4b6474b2791f1e18fb394e0a9d5749" category="list-text">在运行状况良好的配对控制器上，将受损控制器设置为高级权限级别：<block ref="0581d0d071ad835f74bf419081ce5d75" prefix=" " category="inline-code"></block>。</block>
+  <block id="852fee667b0218d56efb26732593192d" category="inline-link-macro">主板更换后流程、用于更新AFF/FAS系统上的许可</block>
+  <block id="77464f13a7bfd5b5de3f6d6592b43344" category="admonition">如果您的系统最初运行的是ONTAP 9．10.1或更高版本，请使用中所述的过程<block ref="396f3a939b9056719487db53e0cdf43e" category="inline-link-macro-rx"></block>。如果您不确定系统的初始ONTAP版本、请参阅<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>以了解更多信息。</block>
+  <block id="8137cc3da5d92cb60020874c492d8701" category="list-text">根据需要对存储系统重新进行配置。</block>
+  <block id="fc2585bb5dd330e4d87dd2cdbd6c596b" category="admonition">确保控制台电缆已连接到已修复的控制器模块、以便在重新启动时接收控制台消息。修复后的控制器将从运行状况良好的控制器获得电源、并在完全装入机箱后立即开始重新启动。</block>
+  <block id="1dbff4f0fe05034cfd08080f90023ca9" category="admonition">如果控制器启动至Loader提示符、请使用命令重新启动它<block ref="ce54ef17bebf280339d340bd40dff593" prefix=" " category="inline-code"></block>。</block>
+  <block id="c9a687d1939d0b48b69bff3618583e04" category="doc">第1步：检查您的ONTAP版本是否支持NetApp卷加密</block>
+  <block id="7a98ae061f92b7a841dcacb8930a02c5" category="paragraph">要安全关闭控制器、请首先确定外部密钥管理器(External Key Manager、EKM)还是板载密钥管理器(Onboard Key Manager、OKM)处于活动状态。然后、验证正在使用的密钥管理器、显示相应的密钥信息、并根据身份验证密钥的状态采取措施。</block>
+  <block id="8dd09587169b8d8db58ece09496b890f" category="cell">运行此命令</block>
+  <block id="d5069b83ec1ddf9e9d88f354e8909059" category="paragraph">ONTAP 9．14．1或更高版本</block>
+  <block id="196874775b44aa4bd067da099307af94" category="list-text">如果启用了EKM、<block ref="d080cdba04a9e58adbe244b4d170ff25" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
+  <block id="de8ced263989be76729e57ef48af2580" category="list-text">如果未启用密钥管理器、<block ref="6f10782c5275dd4037c763904b15d067" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
+  <block id="70c9355c5ddc7957399355ec7ad55706" category="paragraph">ONTAP 9.13.1 或更早版本</block>
+  <block id="bf7423b09b1d8268d393de84679df3cb" category="list-text">如果启用了EKM、<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
+  <block id="3bdaba759104a48c3a95e5443ba7e5e0" category="list-text">如果未启用密钥管理器、<block ref="119e62c9aa407bc6041ef3db23b93be8" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
+  <block id="4867667f589f1bf5a2892fe48a4b93ba" category="list-text">根据系统上是否配置了密钥管理器、选择以下选项之一。</block>
+  <block id="52aadd496ee1f92c301bdde94ed48b99" category="open-title">未配置密钥管理器</block>
+  <block id="3bf4a86005a59ea3cd8643586d04cd78" category="open-title">已配置外部或板载密钥管理器</block>
+  <block id="64d036deb4b248416ccf87deceafe674" category="list-text">输入以下查询命令以显示密钥管理器中的身份验证密钥状态。</block>
+  <block id="22f8cc1607d6f80a2aa89016db8a184d" category="list-text">根据您的系统是使用外部密钥管理器还是板载密钥管理器、选择以下选项之一。</block>
+  <block id="7f6aa2eddb31d7d07b49d6c308057b6a" category="open-title">外部密钥管理器</block>
+  <block id="710588d994062c1accbe164eb56effb3" category="list-text">输入命令以验证所有身份验证密钥的<block ref="c9b37f9017fc101cecef415e707e7b5f" prefix=" " category="inline-code"></block>列是否<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>。</block>
+  <block id="a32dd2ca79d8d8a0056821cb37fed7f4" category="open-title">板载密钥管理器</block>
+  <block id="9b9655d38c65764bacf8c0b8b4afb853" category="doc">选项1：还原板载密钥管理器配置</block>
+  <block id="7e6403e728a2ec69c3089e7bc3236779" category="paragraph">您必须使用在启动介质更换过程开始时捕获的设置完成特定于已启用板载密钥管理器(OKM)、NetApp存储加密(NSE)或NetApp卷加密(NVE)的系统的步骤。</block>
+  <block id="be88b9d7f41515efb1dc3a6709cef2ab" category="paragraph">根据系统上配置的密钥管理器、选择以下选项之一、从启动菜单中将其还原。</block>
+  <block id="206a7e535a6da65b30f0a9fac61abc1c" category="list-text"><block ref="206a7e535a6da65b30f0a9fac61abc1c" category="inline-link-macro-rx"></block></block>
+  <block id="9969c9b9ffd1f5e74ee3793724d1c3ee" category="inline-link-macro">选项2：还原外部密钥管理器配置</block>
+  <block id="68a33ad2037a014f19d73eff657236ff" category="list-text"><block ref="68a33ad2037a014f19d73eff657236ff" category="inline-link-macro-rx"></block></block>
+  <block id="959b1843f7153b31ca9e5042d5534f8c" category="paragraph">从ONTAP启动菜单还原板载密钥管理器(OKM)配置。</block>
+  <block id="8f697727fea4250d67048e2138fdfe91" category="list-text">还原OKM配置时、请确保您具有以下信息：</block>
+  <block id="c7c0fa0163df4e41253409458437d32b" category="list-text">从ONTAP启动菜单中、从启动菜单中选择适当的选项。</block>
+  <block id="d94292453b69f94bbc4d0bef7005d22f" category="cell">选择此选项</block>
+  <block id="c6cd4470ed1711bc2e8d8495a077a331" category="paragraph">选择选项10。</block>
+  <block id="5aae59241c50fe780033cb1d5baf9473" category="example-title">显示启动菜单示例</block>
+  <block id="5a830b76ff5a71db59759b13f383410c" category="paragraph">ONTAP 9 7及更早版本</block>
+  <block id="f3f3dc4442f797fb778f168eb6675243" category="paragraph">选择隐藏选项<block ref="7191584fa52473c1df15d3c03b065c0b" prefix=" " category="inline-code"></block></block>
+  <block id="2872bac3bb8e962ddbf71990facbbad1" category="list-text">确认您要继续恢复过程。</block>
+  <block id="8c93e57015aff70c970b23d7de65c653" category="example-title">显示示例提示符</block>
+  <block id="e314c9fb053c84dcecbf01a9551cdbba" category="paragraph"><block ref="9c14d4f8d14519ea4ded790c9f9cd146" prefix="" category="inline-code"></block></block>
+  <block id="ec8983024a1dd9d86d8993145c0634a2" category="list-text">输入备份信息。</block>
+  <block id="488b5fa5584634f2b60d1dede7597561" category="list-text">将整个内容从开始备份行粘贴到结束备份行。</block>
+  <block id="22533ece7a970e82cf7bf3234ae433b9" category="paragraph">恢复过程完成。</block>
+  <block id="56a002b10eeb1f0bd392165e1ce5d75e" category="list-text">确认控制器的控制台显示以下消息。</block>
+  <block id="0825b93c2d111f930b63d2cd3e2d04ef" category="paragraph"><block ref="22714968f3c097ea3249c9d4b9e8119f" prefix="" category="inline-code"></block></block>
+  <block id="3f6182c959954ae64a1f0a7915a90752" category="list-text">在配对节点上、输入以下命令以对配对控制器进行回指。</block>
+  <block id="d13607256d488794948c0a4e6b5b5273" category="paragraph"><block ref="291b31306c2e0668f091d41edca7e97f" prefix="" category="inline-code"></block>(英文)</block>
+  <block id="63faa4ccd80cd6495683040b69af8206" category="list-text">在仅使用CFO聚合启动后、运行以下命令。</block>
+  <block id="83b41e54088cea42afe1d3b83e81ef91" category="list-text">输入以下命令、确保所有密钥均已同步。</block>
+  <block id="a1f1cac1fa107bdba40f9cbe641925e7" category="paragraph"><block ref="297f477a8524857592ffedfea06bb8d7" prefix="" category="inline-code"></block>(英文)</block>
+  <block id="f0069062031757b5fc9b9b11649dfe8f" category="list-text">输入以下命令、从配对节点进行节点回给。</block>
+  <block id="d2dafc284c7314e818c45df3a8758637" category="paragraph"><block ref="e23a9f1c6189f372292c98d844a0895f" prefix="" category="inline-code"></block></block>
+  <block id="670813ebc2cd52c023ff4cd4ada7a627" category="list-text">如果已禁用自动交还、请输入以下命令来还原自动交还。</block>
+  <block id="50273ef55b3a53bf30771dd1ef5f8b5f" category="list-text">如果启用了AutoSupport、请输入以下命令来恢复自动创建案例。</block>
+  <block id="824a761c1584c25f025a384b7b387c56" category="paragraph"><block ref="9ac424c0d7b432975df36a19daf50c9c" prefix="" category="inline-code"></block></block>
+  <block id="02f6f43349cf003c6dd944a923f4ce06" category="paragraph">从ONTAP启动菜单还原外部密钥管理器配置。</block>
+  <block id="9b5c6b418b2bc4f063803a9b7739bb1d" category="paragraph">要还原外部密钥管理器(External Key Manager、EKM)配置、您需要以下信息。</block>
+  <block id="2b48a2afe7987203a2b1e9de1f031374" category="list-text">另一个集群节点上的/cfcard/kmip/servers.cfg文件的副本或以下信息：</block>
+  <block id="482d3df52d0525a7489378dac2f01ff9" category="list-text">另一个集群节点或客户端证书中的文件副本<block ref="d606236dedb6ed649b29651c1ec53a99" prefix=" " category="inline-code"></block>。</block>
+  <block id="97caf745f0852f09d6e00ee59a8529bb" category="list-text">从其他集群节点或客户端密钥获取的文件副本<block ref="ccb442c2c2cc4367a087cfc7cd3b4876" prefix=" " category="inline-code"></block>。</block>
+  <block id="18c2b9b14349e289338452c8eeaa5868" category="list-text">另一个集群节点或KMIP服务器CA中的文件副本<block ref="443acc94def30bc037fb2dacac4fb7d3" prefix=" " category="inline-code"></block>。</block>
+  <block id="3addeb39344804a6c77f096b5c3fe2fc" category="list-text">从ONTAP启动菜单中选择选项11。</block>
+  <block id="962741d9207d007a86d85dd741057111" category="list-text">出现提示时、确认您已收集所需信息。</block>
+  <block id="8fbd4854fd031dc0c47635c899b74c12" category="list-text">出现提示时、输入客户端和服务器信息。</block>
+  <block id="b1a80a7089afd7d3b9be5936d7cc2c4b" category="example-title">显示提示符</block>
+  <block id="6015ee0c3c4dbc37f534783a65239e72" category="example-title">显示示例</block>
+  <block id="6758e112526dd1470fdafbd89c3b25df" category="paragraph">输入客户端和服务器信息后、恢复过程将完成。</block>
+  <block id="5c333c9d5086ee50b7f10724d1f9dc2b" category="paragraph">A| ONTAP 9 7及更早版本A|选择隐藏选项<block ref="7191584fa52473c1df15d3c03b065c0b" prefix=" " category="inline-code"></block></block>
+  <block id="d9b80a753e6bd9c6b770fc295f295dc3" category="cell">+。确认您要继续恢复过程。+.Show示例提示符[%可 折叠]</block>
+  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
+  <block id="68ce5ec1e3f9c353c053b6feafae61f1" category="paragraph">+警告：如果显示的输出不是，请勿继续<block ref="3f52dc951949a3041638d54635d71099" prefix=" " category="inline-code"></block>。执行故障排除以更正错误。</block>
+  <block id="1544c9897deafcbdffc044dac2f06610" category="list-text">确认控制器的控制台显示以下内容：</block>
+  <block id="1ebe17e50ef0f20c9a4943cdde00f20b" category="list-text">从配对节点中、将配对控制器进行回指：</block>
+  <block id="24de39ef6b972a13ee81c8f1e764261f" category="list-text">在仅使用CFO聚合启动后、运行以下命令：</block>
+  <block id="a26071b84ebad6f3f9f4f6902bd06efe" category="paragraph"><block ref="1fd11ad9c6fc9e17e9729cd939a2b47b" prefix="" category="inline-code"></block>命令。</block>
+  <block id="93c58e434dc7b5eb5c16678bb00205d0" category="paragraph">+注意：如果同步成功、则不会返回任何其他消息、而会返回集群提示符。如果同步失败、则会在返回集群提示符之前显示一条错误消息。更正错误并成功运行同步之前、请勿继续。</block>
+  <block id="85ea8ad93708cbd62f01b1e93c22f93c" category="list-text">确保所有密钥均已同步：</block>
+  <block id="e4cab1326503c7b85827bb20b6ecc371" category="list-text">从配对节点进行节点回指：</block>
+  <block id="8c262ff4c019499a1809393e7aaf9ec1" category="list-text">如果已禁用自动交还、请输入以下命令来还原自动交还：</block>
+  <block id="b0a8481877486fd3aa85b04b4ae588ea" category="list-text">如果启用了AutoSupport、请输入以下命令来恢复自动创建案例：</block>
+  <block id="98605073c3b6ddfa49164a951555a334" category="paragraph">从ONATTP启动菜单还原外部密钥管理器配置。</block>
+  <block id="44175671016a3c55aa9144d7352ab920" category="list-text">另一个集群节点或客户端证书中的/cfcard/kmip/certs/client.crt文件的副本。</block>
+  <block id="d424dce62a7b2ea39afe29d8361240e7" category="list-text">从其他集群节点或客户端密钥获取的/cfcard/kmip/certs client.key文件的副本。</block>
+  <block id="b8dd2898e8ee20a6f6cb34867845aa17" category="list-text">另一个集群节点或KMIP服务器CA中的/cfcard/kmip/certs /CA.pm文件的副本。</block>
+  <block id="7ae600ed46c79416b9301ce3a1377c21" category="paragraph">+。显示示例</block>
+  <block id="16080a7eee840ac3e377c36a8da5fb6f" category="paragraph">系统已准备好使用外部密钥管理器。正在尝试从密钥服务器恢复密钥[Aug 29 21：06：28]：0x808806100：0：debug：kmip2：：main：[initOpenssl]：460：执行OpenSSL初始化已成功恢复keymanager机密。</block>
+  <block id="f9797a252c2780e96d414a71cd6ecf04" category="list-text">选择选项"(1) Normal Boot"(正常启动)以完成恢复过程。*</block>
+  <block id="285251407570005df5c8fe081a777f29" category="paragraph">(1) Normal Boot.(2) Boot without /etc/rc.(3) Change password.(4) Clean configuration and initialize all disks.(5) Maintenance mode boot.(6) Update flash from backup config.(7) Install new software first.(8) Reboot node.(9)配置高级驱动器部分。(10)设置板载密钥管理器恢复密钥。(11)为节点配置外部密钥管理。Selection (1-11)? 1</block>
+  <block id="5943dcc79f4be51c7946faa01081c8c7" category="admonition">如果您的系统最初运行的是ONTAP 9．10.1或更高版本，请使用中所述的过程<block ref="b14f44ab326196475bf1d94f7e3821ad" category="inline-link-rx"></block>。如果您不确定系统的初始ONTAP版本、请参阅<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>以了解更多信息。</block>
+  <block id="6379280c267113ec35e5881e1b0f65bb" category="paragraph">每个磁盘架都有一个唯一的磁盘架ID来区分。此ID可确保存储架在存储系统设置中是不同的。</block>
+  <block id="937eeb311ae4c7f36059ec45705ae05b" category="list-text">有效的外部磁盘架ID为01到99。</block>
+  <block id="ce4b2f7741d87ac6c37e8727ca9ad20a" category="paragraph">如果控制器中集成了内部磁盘架(存储)、则会为其分配一个固定磁盘架ID 00。</block>
+  <block id="9944ff6c526e81f7d9ce060adc105e86" category="list-text">按下并释放磁盘架ID按钮可将该数字前进、直到达到所需数字0到9、或者如果系统具有板载存储、则从1到9。</block>
+  <block id="52f79b2833c42027e63e45681585067e" category="example-title">您可能会看到这些提示</block>
+  <block id="e65e1ac152dcb95552c1c1f62ceaf393" category="paragraph"><block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix="" category="inline-code"></block>命令。</block>
+  <block id="85ef91c4d71faa53c83efc7222148253" category="video-title">更换NS224磁盘架启动介质</block>
+  <block id="bed8800ffb3dfb17d15fabcbf21305be" category="video-title">更换NS224磁盘架中的DIMM</block>
+  <block id="d0a4089478fc848fcc714a17114651e5" category="video-title">热插拔NS224磁盘架中的驱动器</block>
+  <block id="adf9a21a79092388f61e544af11cd756" category="video-title">更换NS224磁盘架中的风扇</block>
+  <block id="f8798e73b2d5e1dfd7612b46ff0e89e2" category="video-title">更换NS224磁盘架中的NSM模块</block>
+  <block id="ed5f0b1fadc9d155c332ddd3a2c8910b" category="video-title">热插拔NS224磁盘架中的电源</block>
+  <block id="4dc161fec1e803228a4a6e64a87cc800" category="video-title">更换NS224磁盘架中的RTC电池</block>
 </blocks>

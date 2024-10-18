@@ -189,6 +189,10 @@ NOTE: 如果要使用 Windows 提取内容，请勿使用 WinZip 提取网络启
 
 .. 将 `EFI` 文件夹复制到 USB 闪存驱动器上的顶部目录。
 +
+
+NOTE: 如果服务映像没有EFI文件夹，请参阅link:https://kb.netapp.com/onprem/ontap/hardware/EFI_folder_missing_from_Service_Image_download_file_used_for_boot_device_recovery_for_FAS_and_AFF_models["用于FAS和AFF型号的启动设备恢复的服务映像下载文件缺少EFI文件夹^"]。
+
++
 USB 闪存驱动器应具有 EFI 文件夹，并且与受损控制器运行的服务映像（ BIOS ）版本相同。
 
 .. 从笔记本电脑中取出 USB 闪存驱动器。

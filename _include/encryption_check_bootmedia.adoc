@@ -1,4 +1,4 @@
-= 第1步：检查您的ONTAP版本是否支持加密
+= 第1步：检查您的ONTAP版本是否支持NetApp卷加密
 :allow-uri-read: 
 
 
@@ -6,7 +6,7 @@
 
 
 
-== 第1步：检查您的ONTAP版本是否支持加密
+== 第1步：检查您的ONTAP版本是否支持NetApp卷加密
 
 检查您的ONTAP版本是否支持NetApp卷加密(NVE)。此信息对于下载正确的ONTAP映像至关重要。
 
@@ -29,66 +29,68 @@
 
 == 第2步：确定关闭控制器是否安全
 
-要安全关闭控制器、请首先确定板载密钥管理器(OKM)还是外部密钥管理器(EKM)处于活动状态。然后、验证正在使用的密钥管理器、显示相应的密钥信息、并根据身份验证密钥的状态采取措施。
+要安全关闭控制器、请首先确定外部密钥管理器(External Key Manager、EKM)还是板载密钥管理器(Onboard Key Manager、OKM)处于活动状态。然后、验证正在使用的密钥管理器、显示相应的密钥信息、并根据身份验证密钥的状态采取措施。
 
 . 确定您的系统上启用了哪个密钥管理器：
 +
 [cols="1a,2a"]
 |===
-| 密钥管理器类型 | 请按照以下步骤操作 ... 
+| ONTAP 版本 | 运行此命令 
 
 
  a| 
-外部密钥管理器（ EKM ）
+ONTAP 9．14．1或更高版本
  a| 
-运行以下命令、确定您的系统上是否启用了EKM：
-
-`security key-manager show key store`
-
-如果启用了EKM、 `external`则会在输出中列出。
-
-
-
- a| 
-板载密钥管理器（ OKM ）
- a| 
-根据节点运行的ONTAP版本运行以下命令之一、确定您的系统上是否启用了OKM。
-
-** 对于ONTAP 9．14．1或更高版本，输入以下命令：
-+
 `security key-manager keystore show`
 
-+
-如果启用了OKM、 `OKM`则会在命令输出中列出。
+** 如果启用了EKM、 `EKM`则会在命令输出中列出。
+** 如果启用了OKM、 `OKM`则会在命令输出中列出。
+** 如果未启用密钥管理器、 `No key manager keystores configured`则会在命令输出中列出。
 
-** 对于ONTAP 9．1．1或更早版本，输入以下命令：
-+
+
+
+
+ a| 
+ONTAP 9.13.1 或更早版本
+ a| 
 `security key-manager show-key-store`
 
-+
-如果启用了OKM、 `onboard`则会在命令输出中列出。
-
+** 如果启用了EKM、 `external`则会在命令输出中列出。
+** 如果启用了OKM、 `onboard`则会在命令输出中列出。
+** 如果未启用密钥管理器、 `No key managers configured`则会在命令输出中列出。
 
 
 |===
-. 输入以下查询命令以显示密钥管理器中的身份验证密钥状态：
-+
-`security key-manager key query`
-
-. 检查密钥管理器列中的值输出 `Restored`。
-+
-此列指示您的密钥管理器(EKM或OKM)的身份验证密钥是否已成功还原。
-
-+
-** 如果"Restored (已还原)"列中的值为true、则表示密钥已正确还原、并且可以安全地继续关闭控制器。
-** 如果此值不是true、则表示密钥尚未还原、您需要根据使用的是EKM还是OKM执行其他步骤(还原或同步密钥)。
-
-
-. 根据您使用的是EKM还是OKM、选择以下选项之一、并根据列中显示的输出值执行相应的步骤 `Restored`。
+. 根据系统上是否配置了密钥管理器、选择以下选项之一。
 +
 [role="tabbed-block"]
 ====
-.EKM
+.未配置密钥管理器
+--
+您可以安全地关闭受损控制器。转到。 link:bootmedia-shutdown.html["关闭受损控制器"]
+
+--
+.已配置外部或板载密钥管理器
+--
+.. 输入以下查询命令以显示密钥管理器中的身份验证密钥状态。
++
+`security key-manager key query`
+
+.. 检查密钥管理器列中的值输出 `Restored`。
++
+此列指示您的密钥管理器(EKM或OKM)的身份验证密钥是否已成功还原。
+
+
+
+--
+====
+
+
+. 根据您的系统是使用外部密钥管理器还是板载密钥管理器、选择以下选项之一。
++
+[role="tabbed-block"]
+====
+.外部密钥管理器
 --
 根据列中显示的输出值 `Restored`、执行相应的步骤。
 
@@ -114,7 +116,7 @@
 +
 如果命令失败，请联系 http://mysupport.netapp.com/["NetApp 支持"^]。
 
-.. 输入命令以验证所有身份验证密钥的 `_security key-manager key query_`列是否 `Restored`显示 `true`。
+.. 输入命令以验证所有身份验证密钥的 `security key-manager key query`列是否 `Restored`显示 `true`。
 +
 如果所有身份验证密钥均为 `true`，则可以安全地关闭受损控制器。转到。 link:bootmedia-shutdown.html["关闭受损控制器"]
 
@@ -122,7 +124,7 @@
 
 |===
 --
-.确定
+.板载密钥管理器
 --
 根据列中显示的输出值 `Restored`、执行相应的步骤。
 
