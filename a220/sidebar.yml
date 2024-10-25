@@ -31,7 +31,7 @@ entries:
       url: "/a220/bootmedia-replace.html"
     - title: 启动恢复映像
       url: "/a220/bootmedia-recovery-image-boot-non-2n-mcc.html"
-    - title: 还原 OKM ， NSE 和 NVE
+    - title: 恢复加密
       url: "/a220/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/a220/bootmedia-complete-rma.html"

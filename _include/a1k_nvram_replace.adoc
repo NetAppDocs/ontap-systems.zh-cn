@@ -216,6 +216,9 @@ NOTE: 请参阅NVRAM模块侧面的FRU示意图标签、以确定DIMM插槽1和2
 更换 FRU 后，必须重新启动控制器模块。
 
 . 要从加载程序提示符处启动ONTAP、请输入_BYE_。
+. 通过交还存储使受损控制器恢复正常运行： `_storage failover giveback -ofnode _impaired_node_name_`。
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`。
+. 如果启用了AutoSupport，则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`。
 
 
 
@@ -316,9 +319,9 @@ dr-group-id            cluster node           configuration-state
 4 entries were displayed.
 ----
 . 验证每个控制器是否存在所需的卷： `vol show -node node-name`
-. 如果启用了存储加密、则必须还原功能。
-. 如果您禁用了重新启动时自动接管、请从运行状况良好的控制器启用该功能：_storage故障转移修改-node repender-n节点 名称-onreboot true _
-. 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`。
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`。
+. 如果启用了AutoSupport，则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`。
 
 
 

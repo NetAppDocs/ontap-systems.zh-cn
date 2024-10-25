@@ -21,7 +21,7 @@ entries:
     entries:
     - title: 概述
       url: "/fas8200/bootmedia-replace-overview.html"
-    - title: 检查板载加密密钥
+    - title: 检查加密密钥
       url: "/fas8200/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
       url: "/fas8200/bootmedia-shutdown.html"
@@ -31,7 +31,7 @@ entries:
       url: "/fas8200/bootmedia-recovery-image-boot-options.html"
     - title: 切回 MetroCluster 配置
       url: "/fas8200/bootmedia-2n-mcc-switchback.html"
-    - title: 还原 OKM ， NSE 和 NVE
+    - title: 恢复加密
       url: "/fas8200/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/fas8200/bootmedia-complete-rma.html"

@@ -23,7 +23,7 @@ entries:
     entries:
     - title: 概述
       url: "/asa-c400/bootmedia-replace-overview.html"
-    - title: 检查板载加密密钥
+    - title: 检查加密密钥
       url: "/asa-c400/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
       url: "/asa-c400/bootmedia-shutdown.html"
@@ -33,7 +33,7 @@ entries:
       url: "/asa-c400/bootmedia-recovery-image-boot-options.html"
     - title: 切回 MetroCluster 配置
       url: "/asa-c400/bootmedia-2n-mcc-switchback.html"
-    - title: 还原 OKM ， NSE 和 NVE
+    - title: 恢复加密
       url: "/asa-c400/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/asa-c400/bootmedia-complete-rma.html"

@@ -195,6 +195,9 @@ image:../media/icon_round_2.png["标注编号2"]
 NOTE: 控制器在完全固定在机箱中后立即重新启动。
 
 . 将缆线管理托架向上旋转到关闭位置。
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`。
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`。
+. 如果启用了AutoSupport，则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`。
 
 
 
@@ -269,6 +272,9 @@ NOTE: 请参阅NVRAM模块侧面的FRU示意图标签、以确定DIMM插槽1和2
 NOTE: 控制器在完全固定在机箱中后立即重新启动。
 
 . 将缆线管理托架向上旋转到关闭位置。
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`。
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`。
+. 如果启用了AutoSupport，则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`。
 
 
 
@@ -370,8 +376,9 @@ dr-group-id            cluster node           configuration-state
 ----
 . 验证每个控制器是否存在所需的卷： `vol show -node node-name`
 . 如果启用了存储加密、则必须还原功能。
-. 如果您禁用了重新启动时自动接管、请从运行状况良好的控制器启用该功能：_storage故障转移修改-node repender-n节点 名称-onreboot true _
-. 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`。
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`。
+. 如果启用了AutoSupport，则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`。
 
 
 

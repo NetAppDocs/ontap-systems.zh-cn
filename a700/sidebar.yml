@@ -33,7 +33,7 @@ entries:
       url: "/a700/bootmedia-recovery-image-boot-options.html"
     - title: 切回 MetroCluster 配置
       url: "/a700/bootmedia-2n-mcc-switchback.html"
-    - title: 还原 OKM ， NSE 和 NVE
+    - title: 恢复加密
       url: "/a700/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/a700/bootmedia-complete-rma.html"

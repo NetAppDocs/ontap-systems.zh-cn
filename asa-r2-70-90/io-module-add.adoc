@@ -131,7 +131,6 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
 . 对控制器 B 重复上述步骤
 . 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
 . 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
-. 如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为link:../ns224/hot-add-shelf-overview.html["热添加工作流"]其布线。
 
 
 
@@ -157,7 +156,7 @@ LIF 将在其控制器模块关闭时自动迁移。
  a| 
 NIC I/O 模块，端口更少
  a| 
-将ASAected的生命周期管理器永久重新分配到其他主端口。有关使用System Manager永久移动这些LUN的信息、请参见 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"^] 。
+将受影响的 LIF 永久重新分配到其他主端口。请参见 https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-960/GUID-208BB0B8-3F84-466D-9F4F-6E1542A2BE7D.html["迁移 LIF"^] 有关使用 System Manager 永久移动 LIF 的信息，请参见。
 
 
 

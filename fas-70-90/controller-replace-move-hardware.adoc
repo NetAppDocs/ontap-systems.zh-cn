@@ -214,6 +214,7 @@ NOTE: 将控制器模块滑入机箱时、请勿用力过度、以免损坏连�
 +
 控制器模块在盘柜中完全就位后、即开始启动。
 
-. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
-. 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`。
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`。
+. 如果启用了AutoSupport，则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`。
 

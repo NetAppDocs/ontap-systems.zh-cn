@@ -433,7 +433,8 @@ NOTE: 如果控制器启动至Loader提示符、请使用命令重新启动它 `
 
 NOTE: 如果您有直流电源、请在控制器模块完全固定在机箱中后、将电源块重新连接到电源。
 
-. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
-. 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`。
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`。
+. 如果启用了AutoSupport，则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`。
 . 如果尚未重新安装缆线管理设备并对控制器重新布线、请执行此操作。
 

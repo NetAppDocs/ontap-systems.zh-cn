@@ -24,7 +24,7 @@ entries:
     entries:
     - title: 概述
       url: "/c190/bootmedia-replace-overview.html"
-    - title: 检查板载加密密钥
+    - title: 检查加密密钥
       url: "/c190/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
       url: "/c190/bootmedia-shutdown.html"
@@ -32,7 +32,7 @@ entries:
       url: "/c190/bootmedia-replace.html"
     - title: 启动恢复映像
       url: "/c190/bootmedia-recovery-image-boot-non-2n-mcc.html"
-    - title: 还原 OKM ， NSE 和 NVE
+    - title: 恢复加密
       url: "/c190/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/c190/bootmedia-complete-rma.html"

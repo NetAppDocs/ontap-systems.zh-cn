@@ -23,7 +23,7 @@ entries:
     entries:
     - title: 概述
       url: "/fas9500/bootmedia_replace_overview.html"
-    - title: 预关闭检查板载加密密钥
+    - title: 检查加密密钥
       url: "/fas9500/bootmedia_encryption_preshutdown_checks.html"
     - title: Shut down the impaired controller
       url: "/fas9500/bootmedia_impaired_controller_shutdown.html"

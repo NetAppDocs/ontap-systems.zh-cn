@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: asa c800, post boot media replacement steps for okm, nse, and nve 
 summary: 检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM\ ）， NetApp 存储加密 \ （ NSE\ ）或 NetApp 卷加密 \ （ NVE\ ）的系统的步骤。 
 ---
-= 根据需要还原OKM、NSE和NVE - ASA C800
+= 恢复加密- ASA C800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+恢复替代启动介质上的加密。
+
 您必须使用在启动介质更换过程开始时捕获的设置完成特定于已启用板载密钥管理器(OKM)、NetApp存储加密(NSE)或NetApp卷加密(NVE)的系统的步骤。
 
 根据系统上配置的密钥管理器、选择以下选项之一、从启动菜单中将其还原。

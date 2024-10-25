@@ -253,9 +253,9 @@ image::../media/icon_round_3.png[标注编号3]
 系统将开始重新启动、通常会显示加载程序提示符。
 
 . 在加载程序提示符处输入_BYE_。
-. 通过交还控制器的存储、使其恢复正常运行：_storage Failover gi交还-ofnode _d受损_ne_name_
-. 使用还原自动交还 `storage failover modify -node local -auto-giveback true` 命令：
-. 如果已触发AutoSupport维护窗口、请使用结束此窗口 `system node autosupport invoke -node * -type all -message MAINT=END` 命令：
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`。
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`。
+. 如果启用了AutoSupport，则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`。
 
 
 

@@ -4,167 +4,191 @@ sidebar: sidebar
 keywords: fas8300, fas8300, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, version, ontap, system, run, pre-shutdown, check, pre-shutdown checks for onboard encryption keys 
 summary: 在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
 ---
-= 检查板载加密密钥— AFF fas8300 和 FAS8700
+= 检查加密密钥支持和状态- AFF FAS8300和FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在关闭受损控制器并检查板载加密密钥的状态之前、您必须先检查受损控制器的状态、禁用自动交还、并检查系统上正在运行的ONTAP版本。
+在关闭受损控制器之前、请检查您的ONTAP版本是否支持NetApp卷加密(NVE)以及是否已正确配置密钥管理系统。
 
-If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示 false ，则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
 
-.步骤
-. 检查受损控制器的状态：
+
+== 第1步：检查您的ONTAP版本是否支持NetApp卷加密
+
+检查您的ONTAP版本是否支持NetApp卷加密(NVE)。此信息对于下载正确的ONTAP映像至关重要。
+
+. 运行以下命令、确定您的ONTAP版本是否支持加密：
 +
-** 如果受损控制器处于登录提示符处，请以 `admin` 身份登录。
-** 如果受损控制器位于 LOADER 提示符处且属于 HA 配置的一部分，请以 `admin` 身份登录到运行正常的控制器上。
-** 如果受损控制器采用独立配置并出现 LOADER 提示符，请联系 link:http://mysupport.netapp.com/["mysupport.netapp.com"^]。
-
-
-. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
-+
-以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
-
-. 使用 `version -v` 命令检查受损控制器（如果已启动）或配对控制器（如果受损控制器已关闭）上运行的 ONTAP 版本：
-+
-** 如果命令输出中显示 <lno-dury> 或 <1osno-dury> ，则系统不支持 NVE ，请继续关闭控制器。
-** 如果命令输出中未显示 <lno-dur> ，并且系统运行的是 ONTAP 9.6 或更高版本，请转至下一节。
-
-
-. 如果受损控制器属于 HA 配置，请禁用从运行状况良好的控制器自动交还： `storage failover modify -node local -auto-giveback false` 或 `storage failover modify -node local -auto-giveback-after-panic false`
-
-
-
-
-== 在运行 ONTAP 9.6 及更高版本的系统上检查 NVE 或 NSE
-
-在关闭受损控制器之前，您需要验证系统是否已启用 NetApp 卷加密（ NVE ）或 NetApp 存储加密（ NSE ）。If so, you need to verify the configuration.
-
-. 验证集群中的任何卷是否正在使用 NVE ： `volume show -is-encrypted true`
-+
-If any volumes are listed in the output, NVE is configured and you need to verify the NVE configuration.如果未列出任何卷，请检查是否已配置 NSE 并正在使用此 NSE 。
-
-. 验证是否已配置 NSE 并正在使用： `storage encryption disk show`
-+
-** 如果命令输出列出了驱动器详细信息以及模式和密钥 ID 信息，则表示已配置 NSE ，您需要验证 NSE 配置和正在使用的。
-** 如果未显示任何磁盘，则表示未配置 NSE 。
-** 如果未配置 NVE 和 NSE ，则不会使用 NSE 密钥保护任何驱动器，因此可以安全地关闭受损的控制器。
-
-
-
-
-
-
-== 验证 NVE 配置
-
-. 显示密钥管理服务器上存储的身份验证密钥的密钥ID： `security key-manager key query`
-+
-
-NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 `KMIP` ， `AKV` 和 `GCP` 。确认这些类型的过程与确认 `外部` 或 `板载` 密钥管理器类型相同。
+`version -v`
 
 +
-** 如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损的控制器。
-** 如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示 `是` ，则需要完成一些额外步骤。
-** 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。
-** 如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示除 `是` 以外的任何内容，则需要完成一些额外步骤。
+如果输出包括 `1Ono-DARE`，则您的集群版本不支持NVE。
 
-
-. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示 `yes` ，请手动备份 OKM 信息：
+. 根据您的系统是否支持NVE、执行以下操作之一：
 +
-.. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
-.. 输入命令以显示密钥管理信息： `security key-manager on板 载 show-backup`
-.. 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
-.. 返回到管理模式： `set -priv admin`
-.. 关闭受损控制器。
+** 如果支持NVE、请下载采用NetApp卷加密的ONTAP映像。
+** 如果不支持NVE、请下载ONTAP映像*不使用* NetApp卷加密。
 
 
-. 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容：
+
+
+
+
+== 第2步：确定关闭控制器是否安全
+
+要安全关闭控制器、请首先确定外部密钥管理器(External Key Manager、EKM)还是板载密钥管理器(Onboard Key Manager、OKM)处于活动状态。然后、验证正在使用的密钥管理器、显示相应的密钥信息、并根据身份验证密钥的状态采取措施。
+
+. 确定您的系统上启用了哪个密钥管理器：
 +
-.. 将外部密钥管理身份验证密钥还原到集群中的所有节点： `security key-manager external restore`
+[cols="1a,2a"]
+|===
+| ONTAP 版本 | 运行此命令 
+
+
+ a| 
+ONTAP 9．14．1或更高版本
+ a| 
+`security key-manager keystore show`
+
+** 如果启用了EKM、 `EKM`则会在命令输出中列出。
+** 如果启用了OKM、 `OKM`则会在命令输出中列出。
+** 如果未启用密钥管理器、 `No key manager keystores configured`则会在命令输出中列出。
+
+
+
+
+ a| 
+ONTAP 9.13.1 或更早版本
+ a| 
+`security key-manager show-key-store`
+
+** 如果启用了EKM、 `external`则会在命令输出中列出。
+** 如果启用了OKM、 `onboard`则会在命令输出中列出。
+** 如果未启用密钥管理器、 `No key managers configured`则会在命令输出中列出。
+
+
+|===
+. 根据系统上是否配置了密钥管理器、选择以下选项之一。
 +
-如果命令失败，请联系 NetApp 支持部门。
+[role="tabbed-block"]
+====
+.未配置密钥管理器
+--
+您可以安全地关闭受损控制器。转到。 link:bootmedia-shutdown.html["关闭受损控制器"]
+
+--
+.已配置外部或板载密钥管理器
+--
+.. 输入以下查询命令以显示密钥管理器中的身份验证密钥状态。
++
+`security key-manager key query`
+
+.. 检查密钥管理器列中的值输出 `Restored`。
++
+此列指示您的密钥管理器(EKM或OKM)的身份验证密钥是否已成功还原。
+
+
+
+--
+====
+
+
+. 根据您的系统是使用外部密钥管理器还是板载密钥管理器、选择以下选项之一。
++
+[role="tabbed-block"]
+====
+.外部密钥管理器
+--
+根据列中显示的输出值 `Restored`、执行相应的步骤。
+
+[cols="1a,2a"]
+|===
+| 列中的输出值 `Restored` | 请按照以下步骤操作 ... 
+
+
+ a| 
+`true`
+ a| 
+您可以安全地关闭受损控制器。转到。 link:bootmedia-shutdown.html["关闭受损控制器"]
+
+
+
+ a| 
+以外的任何内容 `true`
+ a| 
+.. 使用以下命令将外部密钥管理身份验证密钥还原到集群中的所有节点：
++
+`security key-manager external restore`
 
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"^]
+如果命令失败，请联系 http://mysupport.netapp.com/["NetApp 支持"^]。
 
-.. 验证是否已 `Restored` 列等于 `yes` 对于所有身份验证密钥： `security key-manager key query`
-.. 关闭受损控制器。
-
-
-. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示除 `yes` 以外的任何内容：
+.. 输入命令以验证所有身份验证密钥的 `security key-manager key query`列是否 `Restored`显示 `true`。
 +
-.. 输入板载 security key-manager sync 命令： `ssecurity key-manager on板 载同步`
+如果所有身份验证密钥均为 `true`，则可以安全地关闭受损控制器。转到。 link:bootmedia-shutdown.html["关闭受损控制器"]
+
+
+
+|===
+--
+.板载密钥管理器
+--
+根据列中显示的输出值 `Restored`、执行相应的步骤。
+
+[cols="1a,2a"]
+|===
+| 列中的输出值 `Restored` | 请按照以下步骤操作 ... 
+
+
+ a| 
+`true`
+ a| 
+手动备份OKM信息。
+
+.. 输入进入高级模式、然后 `Y`在出现提示时输入 `set -priv advanced`。
+.. 输入以下命令以显示密钥管理信息：
 +
+`security key-manager onboard show-backup`
 
-NOTE: 在提示符处输入客户的32个字符的字母数字板载密钥管理密码短语。If the passphrase cannot be provided, contact NetApp Support. http://mysupport.netapp.com/["mysupport.netapp.com"^]
-
-.. 验证 `Restored` 列显示 `yes` 对于所有身份验证密钥： `security key-manager key query`
-.. 验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。
-.. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
-.. 输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`
-.. 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
-.. 返回到管理模式： `set -priv admin`
-.. 您可以安全地关闭控制器。
-
-
-
-
-
-
-== 验证 NSE 配置
-
-. 显示密钥管理服务器上存储的身份验证密钥的密钥ID： `security key-manager key query -key-type NSE-AK`
+.. Copy the contents of the backup information to a separate file or your log file.
 +
+You'll need it in disaster scenarios where you might need to manually recover OKM.
 
-NOTE: 在 ONTAP 9.6 版之后，您可能还需要其他密钥管理器类型。类型为 `KMIP` ， `AKV` 和 `GCP` 。确认这些类型的过程与确认 `外部` 或 `板载` 密钥管理器类型相同。
+.. 您可以安全地关闭受损控制器。转到。 link:bootmedia-shutdown.html["关闭受损控制器"]
 
+
+
+
+ a| 
+以外的任何内容 `true`
+ a| 
+.. 输入板载security key-manager sync命令：
 +
-** 如果 `密钥管理器` 类型显示 `external` ，而 `restored` 列显示 `yes` ，则可以安全地关闭受损的控制器。
-** 如果 `密钥管理器` 类型显示 `板载` 且 `还原` 列显示 `是` ，则需要完成一些额外步骤。
-** 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。
-** 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容，则需要完成一些额外步骤。
+`security key-manager onboard sync`
 
-
-. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示 `yes` ，请手动备份 OKM 信息：
+.. 出现提示时、输入32个字符的字母数字板载密钥管理密码短语。
 +
-.. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
-.. 输入命令以显示密钥管理信息： `security key-manager on板 载 show-backup`
-.. 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
-.. 返回到管理模式： `set -priv admin`
-.. 您可以安全地关闭控制器。
+如果无法提供密码短语，请联系 http://mysupport.netapp.com/["NetApp 支持"^]。
 
-
-. 如果 `Key Manager` type 显示 `external` ，而 `restored` 列显示除 `yes` 以外的任何内容：
+.. 验证 `Restored`所有身份验证密钥的列显示 `true`：
 +
-.. 将外部密钥管理身份验证密钥还原到集群中的所有节点： `security key-manager external restore`
+`security key-manager key query`
+
+.. 验证类型是否 `Key Manager` 显示 `onboard`，然后手动备份OKM信息。
+.. 输入命令以显示密钥管理备份信息：
 +
-如果命令失败，请联系 NetApp 支持部门。
+`security key-manager onboard show-backup`
 
+.. Copy the contents of the backup information to a separate file or your log file.
 +
-http://mysupport.netapp.com/["mysupport.netapp.com"^]
+You'll need it in disaster scenarios where you might need to manually recover OKM.
 
-.. 验证是否已 `Restored` 列等于 `yes` 对于所有身份验证密钥： `security key-manager key query`
-.. 您可以安全地关闭控制器。
-
-
-. 如果 `Key Manager` type 显示 `板载` 且 `Restored` 列显示除 `yes` 以外的任何内容：
-+
-.. 输入板载 security key-manager sync 命令： `ssecurity key-manager on板 载同步`
-+
-在提示符处输入客户的32个字符的字母数字板载密钥管理密码短语。If the passphrase cannot be provided, contact NetApp Support.
-
-+
-http://mysupport.netapp.com/["mysupport.netapp.com"^]
-
-.. 验证 `Restored` 列显示 `yes` 对于所有身份验证密钥： `security key-manager key query`
-.. 验证 `Key Manager` type 是否显示 `板载` ，然后手动备份 OKM 信息。
-.. 转到高级权限模式，并在系统提示您继续时输入 `y` ： `set -priv advanced`
-.. 输入命令以显示密钥管理备份信息： `security key-manager on板 载 show-backup`
-.. 将备份信息的内容复制到单独的文件或日志文件。在可能需要手动恢复 OKM 的灾难情形下，您将需要它。
-.. 返回到管理模式： `set -priv admin`
-.. 您可以安全地关闭控制器。
+.. 您可以安全地关闭受损控制器。转到。 link:bootmedia-shutdown.html["关闭受损控制器"]
 
 
+|===
+--
+====
 

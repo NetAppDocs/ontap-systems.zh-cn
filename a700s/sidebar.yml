@@ -33,7 +33,7 @@ entries:
       url: "/a700s/bootmedia-transfer-boot-image.html"
     - title: 启动恢复映像
       url: "/a700s/bootmedia-recovery-image-boot-non-2n-mcc.html"
-    - title: 还原 OKM ， NSE 和 NVE
+    - title: 恢复加密
       url: "/a700s/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/a700s/bootmedia-complete-rma.html"

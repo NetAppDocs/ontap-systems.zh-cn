@@ -23,7 +23,7 @@ entries:
     entries:
     - title: 概述
       url: "/asa900/bootmedia_replace_overview.html"
-    - title: 检查板载加密密钥
+    - title: 检查加密密钥
       url: "/asa900/bootmedia_encryption_preshutdown_checks.html"
     - title: 关闭受损控制器
       url: "/asa900/bootmedia_impaired_controller_shutdown.html"
@@ -31,7 +31,7 @@ entries:
       url: "/asa900/bootmedia_replace.html"
     - title: 启动恢复映像
       url: "/asa900/bootmedia_recovery_image.html"
-    - title: 还原 OKM ， NSE 和 NVE
+    - title: 恢复加密
       url: "/asa900/bootmedia_encryption_restore.html"
     - title: 将故障部件退回 NetApp
       url: "/asa900/bootmedia_complete_rma.html"
