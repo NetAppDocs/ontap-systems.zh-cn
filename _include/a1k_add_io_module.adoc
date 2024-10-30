@@ -154,13 +154,7 @@ image:../media/icon_round_1.png["标注编号1"]
 .. 将模块轻轻地滑入插槽，直至完全滑入机箱，然后将凸轮闩锁一直向上旋转，以将模块锁定到位。
 
 
-. 为I/O模块布线。
-+
-如果I/O模块是NIC、请使用缆线将此模块连接到数据交换机。
-
-+
-如果I/O模块是存储模块、请使用缆线将其连接到NS224磁盘架。
-
+. 使用缆线将I/O模块连接到指定设备。
 +
 
 NOTE: 确保所有未使用的 I/O 插槽都安装了空格，以防止可能出现散热问题。
@@ -173,7 +167,7 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
 
 . 从配对控制器交还控制器：_storage故障转移g交还-ofnode target_ne_name_
 . 对控制器 B 重复上述步骤
-. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+. 如果您使用命令禁用了自动交还、请从运行状况良好的节点还原此 `storage failover modify -node local -auto-giveback true`功能。
 . 如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例 `system node autosupport invoke -node * -type all -message MAINT=END` 。
 . 如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为link:../ns224/hot-add-shelf-overview.html["热添加工作流"]其布线。
 
@@ -355,7 +349,7 @@ image:../media/icon_round_1.png["标注编号1"]
 .. 将模块轻轻地滑入插槽，直至完全滑入机箱，然后将凸轮闩锁一直向上旋转，以将模块锁定到位。
 
 
-. 为I/O模块布线。
+. 使用缆线将I/O模块连接到指定设备。
 . 重复拆卸和安装步骤以更换控制器的其他模块。
 . 将缆线管理托架向上旋转到关闭位置。
 . 从加载程序提示符：_BYE_重新启动控制器

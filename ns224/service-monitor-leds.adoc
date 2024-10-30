@@ -242,12 +242,12 @@ image::../media/drw_ns224_psu_leds_IEOPS-1261.svg[电源设备电源活动LED]
  a| 
 image:../media/icon_round_1.png["标注编号1"]
  a| 
-双色LED指示灯呈绿色时指示电源/活动、呈琥珀色时指示故障。
+双色LED指示灯呈绿色时指示电源/活动、呈红色时指示故障。
 
 |===
 [cols="2,1,1"]
 |===
-| Status | 电源/活动(绿色) | 注意(琥珀色) 
+| Status | 电源/活动(绿色) | 注意(红色) 
 
 
  a| 

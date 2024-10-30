@@ -198,4 +198,16 @@ LOADER-B>
 
 
 . 节点重新启动后、确认系统恢复联机并正常运行、以验证启动介质恢复是否成功。
+. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
+
+. 如果已禁用自动交还、请重新启用它：
++
+`storage failover modify -node local -auto-giveback true`(英文)
+
+. 如果启用了AutoSupport、则还原自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=END`(英文)
+
 

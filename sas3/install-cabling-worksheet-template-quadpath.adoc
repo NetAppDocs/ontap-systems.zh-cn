@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: complete, completing, worksheet, template, controller, sas, port, pair, cable, controller, disk, shelves, shelf, iom12, quad-pathed, connectivity, ha, pair, controller-to-stack, controller-to-stack cabling worksheet template for quad-pathed connectivity 
 summary: 完成工作表模板后、您可以定义控制器SAS端口对、使用这些端口对将控制器连接到具有IOM12/IOM12B模块的磁盘架堆栈、以便在HA对或单控制器配置中实现四路径连接。You can also use the completed worksheet to walk yourself through cabling the quad-pathed connections for your configuration. 
 ---
-= 四路径连接的控制器到堆栈布线工作表模板—具有IOM1/IOM12B2模块的磁盘架
+= 四路径连接的控制器到堆栈布线工作表模板—具有IOM12/IOM12B模块的磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
