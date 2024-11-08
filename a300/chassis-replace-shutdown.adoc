@@ -73,11 +73,6 @@ NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `s
 . 等待每个控制器暂停、然后显示加载程序提示符。
 
 
-.下一步是什么？
-* 如果系统是用作FabricPool云层的NetApp StorageGRID或ONTAP S3、请在执行此关闭过程后参阅 https://kb.netapp.com/onprem/ontap/hardware/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage#["《正常关闭和启动存储系统解决方案指南》"]。
-* 如果使用SSD、请在执行此关闭过程后参阅 https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU490["SU490：(影响：关键) SSD最佳实践：避免关闭电源超过两个月后发生驱动器故障和数据丢失的风险"]。
-
-
 
 
 == 选项 2 ：控制器采用双节点 MetroCluster 配置

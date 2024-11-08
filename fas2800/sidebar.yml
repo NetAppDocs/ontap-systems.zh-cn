@@ -1,9 +1,9 @@
 ---
 section: fas2800
-title: FAS2800系统
+title: FAS2820系统
 entries:
 - title: 安装和设置
-  pdf-filename: FAS2800安装和设置
+  pdf-filename: FAS2820安装和设置
   entries:
   - title: 选择安装和设置体验
     url: "/fas2800/install-setup.html"
@@ -14,12 +14,12 @@ entries:
   - title: 详细步骤
     url: "/fas2800/install-detailed-guide.html"
 - title: 维护
-  pdf-filename: FAS2800维护
+  pdf-filename: FAS2820维护
   entries:
   - title: 概述
     url: "/fas2800/maintain-overview.html"
   - title: 启动介质
-    pdf-filename: FAS2800启动介质
+    pdf-filename: FAS2820启动介质
     entries:
     - title: 概述
       url: "/fas2800/bootmedia-replace-overview.html"
@@ -36,10 +36,10 @@ entries:
     - title: 将故障部件退回 NetApp
       url: "/fas2800/bootmedia-complete-rma.html"
   - title: 缓存模块
-    pdf-filename: FAS2800缓存模块
+    pdf-filename: FAS2820缓存模块
     url: "/fas2800/caching-module-replace.html"
   - title: 机箱
-    pdf-filename: FAS2800机箱
+    pdf-filename: FAS2820机箱
     entries:
     - title: 概述
       url: "/fas2800/chassis-replace-overview.html"
@@ -50,7 +50,7 @@ entries:
     - title: 还原配置
       url: "/fas2800/chassis-replace-complete-system-restore-rma.html"
   - title: 控制器
-    pdf-filename: FAS2800控制器
+    pdf-filename: FAS2820控制器
     entries:
     - title: 概述
       url: "/fas2800/controller-replace-overview.html"
@@ -65,20 +65,20 @@ entries:
     - title: 完成系统还原
       url: "/fas2800/controller-replace-restore-system-rma.html"
   - title: DIMM
-    pdf-filename: FAS2800 DIMM
+    pdf-filename: FAS2820 DIMM
     url: "/fas2800/dimm-replace.html"
   - title: 驱动器
-    pdf-filename: FAS2800驱动器
+    pdf-filename: FAS2820驱动器
     url: "/fas2800/drive-replace.html"
   - title: NVMEM 电池
-    pdf-filename: FAS2800 NVMEM电池
+    pdf-filename: FAS2820 NVMEM电池
     url: "/fas2800/nvmem-nvram-battery-replace.html"
   - title: 夹层卡
-    pdf-filename: FAS2800夹层卡
+    pdf-filename: FAS2820夹层卡
     url: "/fas2800/pci-cards-and-risers-replace.html"
   - title: 电源
-    pdf-filename: FAS2800电源
+    pdf-filename: FAS2820电源
     url: "/fas2800/power-supply-swap-out.html"
   - title: 实时时钟电池
-    pdf-filename: FAS2800实时时钟电池
+    pdf-filename: FAS2820实时时钟电池
     url: "/fas2800/rtc-battery-replace.html"

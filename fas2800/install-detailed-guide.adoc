@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, storage system, setup, discovery 
 summary: 本过程提供了有关安装典型NetApp存储系统的详细分步说明。 
 ---
-= 详细步骤—FAS2800
+= 详细步骤—FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -436,7 +436,7 @@ image::../media/oie_cable_pull_tab_down.png[拉片方向]
 使用动画或分步说明完成控制器和驱动器架之间的布线。
 
 
-IMPORTANT: 请勿在FAS2800上使用端口0b2。ONTAP不使用此SAS端口、并且此端口始终处于禁用状态。有关详细信息、请参见 link:../sas3/install-new-system.html["在新存储系统中安装磁盘架"^] 。
+IMPORTANT: 请勿在FAS2820上使用端口0b2。ONTAP不使用此SAS端口、并且此端口始终处于禁用状态。有关详细信息、请参见 link:../sas3/install-new-system.html["在新存储系统中安装磁盘架"^] 。
 
 .动画-驱动器架布线
 video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]

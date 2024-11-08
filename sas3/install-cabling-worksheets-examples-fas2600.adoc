@@ -29,15 +29,15 @@ image::../media/drw_fas2600_cable_color_key.png[带板载存储的平台的电�
 
 
 
-== 采用多路径HA配置且无外部磁盘架的FAS2800平台
+== 采用多路径HA配置且无外部磁盘架的FAS2820平台
 
 以下示例显示、不需要布线即可实现多路径HA连接：
 
-image::../media/drw_fas2800_noshelf_mpha_IEOPS-954.svg[FAS2800多路径HA、无外部磁盘架]
+image::../media/drw_fas2800_noshelf_mpha_IEOPS-954.svg[FAS2820多路径HA、无外部磁盘架]
 
 
 
-== 采用三路径HA配置且无外部磁盘架的FAS2800平台
+== 采用三路径HA配置且无外部磁盘架的FAS2820平台
 
 以下布线示例显示了两个控制器之间实现三路径连接所需的布线：
 
@@ -45,13 +45,13 @@ image::../media/drw_fas2800_noshelf_tpha_IEOPS-955.svg[不带外部磁盘架的F
 
 
 
-== 采用三路径HA配置并具有一个多磁盘架堆栈的FAS2800平台
+== 采用三路径HA配置并具有一个多磁盘架堆栈的FAS2820平台
 
 以下工作表和布线示例使用端口对0a/0b1：
 
-image::../media/drw_fas2800_worksheet_IEOPS-948.svg[显示堆栈1端口对的FAS2800三路径HA布线工作表]
+image::../media/drw_fas2800_worksheet_IEOPS-948.svg[显示堆栈1端口对的FAS2820三路径HA布线工作表]
 
-image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[FAS2800三路径HA到一个堆栈的布线示例]
+image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[FAS2820三路径HA到一个堆栈的布线示例]
 
 
 
@@ -60,7 +60,7 @@ image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[FAS2800三路径HA到
 以下工作表和布线示例使用端口对 0A/0b ：
 
 
-NOTE: 本节不适用于FAS2800或FAS25XX系统。
+NOTE: 本节不适用于FAS2820或FAS25XX系统。
 
 image::../media/drw_fas2600_mpha_worksheet_IEOPS-1255.svg[包含内部存储和一个堆栈的平台的多路径HA布线工作表]
 

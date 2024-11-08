@@ -134,7 +134,9 @@ image:../media/drw_a1k_io_remove_replace_ieops-1382.svg["卸下I/O模块"]
 
  a| 
 image:../media/icon_round_1.png["标注编号1"]
-| I/O凸轮闩锁 
+ a| 
+I/O凸轮闩锁
+
 |===
 +
 请确保为这些缆线贴上标签，以便您知道这些缆线来自何处。
@@ -178,8 +180,7 @@ NOTE: 如果新I/O模块与故障模块型号不同、则必须先重新启动BM
 
 . 在 LOADER 提示符处，重新启动节点： _bybye
 +
-
-NOTE: 此操作将重新初始化I/O卡和其他组件、然后重新启动节点。
+此操作将重新初始化I/O卡和其他组件、然后重新启动节点。
 
 . 将节点恢复正常运行：_storage故障转移g交还-ofnode受损_ne_name_
 . 如果已禁用自动交还、请重新启用它：_storage故障转移修改-node local -auto-交还true _

@@ -12,10 +12,9 @@
 
 == 第 1 步：关闭受损控制器
 
-重新对控制器模块的存储和网络连接进行配线。
+验证控制器模块的存储和网络连接。
 
 .步骤
-. 将控制器模块重新连接到存储和网络连接。
 . 使用验证布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
 +
 .. 下载并安装 Config Advisor 。

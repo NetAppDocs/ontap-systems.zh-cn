@@ -11,4 +11,112 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 
 
 [role="lead"]
-<stdin>中未解析的指令- include：..//_include/800_bootmedia_Encryption _preshutdun_Checks.adoc[]
+您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
+
+. 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`
++
+此映像将从 USB 闪存驱动器下载。
+
+. 出现提示时，请输入映像名称或接受屏幕上括号内显示的默认映像。
+. 还原 var 文件系统：
++
+[cols="1,2"]
+|===
+| 如果您的系统 ... | 那么 ... 
+
+
+ a| 
+网络连接
+ a| 
+.. 当系统提示您还原备份配置时，按 `y` 。
+.. 将运行状况良好的控制器设置为高级权限级别： `set -privilege advanced`
+.. 运行 restore backup 命令： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`
+.. 将控制器恢复为管理员级别： `set -privilege admin`
+.. 当系统提示您使用已还原的配置时，按 `y` 。
+.. 在系统提示重新启动控制器时，按 `y` 。
+
+
+
+
+ a| 
+无网络连接
+ a| 
+.. 当系统提示您还原备份配置时，按 `n` 。
+.. 系统提示时重新启动系统。
+.. 从显示的菜单中选择 * 从备份配置更新闪存 * （同步闪存）选项。
++
+如果系统提示您继续更新，请按 ` * y*` 。
+
+
+
+
+
+ a| 
+无网络连接，采用 MetroCluster IP 配置
+ a| 
+.. 当系统提示您还原备份配置时，按 `n` 。
+.. 系统提示时重新启动系统。
+.. 等待 iSCSI 存储连接连接完成。
++
+您可以在看到以下消息后继续操作：
+
++
+[listing]
+----
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+----
+.. 从显示的菜单中选择 * 从备份配置更新闪存 * （同步闪存）选项。
++
+如果系统提示您继续更新，请按 ` * y*` 。
+
+
+
+|===
+. 确保环境变量按预期设置：
++
+.. 将控制器显示 LOADER 提示符。
+.. 使用 `printenv` 命令检查环境变量设置。
+.. 如果未按预期设置环境变量，请使用 `setenv _environment_variable_name_ _changed_value_` 命令对其进行修改。
+.. 使用 `savenv` 命令保存所做的更改。
+
+
+. 下一个取决于您的系统配置：
++
+** 如果您的系统配置了板载密钥管理器， NSE 或 NVE ，请转至 xref:bootmedia-encryption-restore.adoc[根据需要还原 OKM ， NSE 和 NVE]
+** 如果您的系统未配置板载密钥管理器， NSE 或 NVE ，请完成本节中的步骤。
+
+
+. 在 LOADER 提示符处，输入 `boot_ontap` 命令。
++
+[cols="1,2"]
+|===
+| 如果您看到 ... | 那么 ... 
+
+
+ a| 
+登录提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+.. 登录到配对控制器。
+.. 使用 `storage failover show` 命令确认目标控制器已准备好进行交还。
+
+
+|===
+. 将控制台缆线连接到配对控制器。
+. 使用 `storage failover giveback -fromnode local` 命令交还控制器
+. 在集群提示符处，使用 `net int -is-home false` 命令检查逻辑接口。
++
+如果任何接口列为 "false" ，请使用 `net int revert` 命令将这些接口还原回其主端口。
+
+. 将控制台缆线移至已修复的控制器，然后运行 `version -v` 命令以检查 ONTAP 版本。
+. 使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。
+

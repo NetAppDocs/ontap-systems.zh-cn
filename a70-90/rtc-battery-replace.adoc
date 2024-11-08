@@ -159,15 +159,8 @@ NVRAM警示LED
 
 |===
 +
-
-NOTE: 如果NVRAM状态LED闪烁、则可能表示控制器模块未被接管或正常暂停(未提交的数据)。如果受损控制器模块未被配对控制器模块成功接管、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"] 然后再继续此过程。
-
-+
-受损控制器模块上的NVRAM状态LED的一般行为如下：
-
-+
-** 当控制器模块断电、存储系统处于"正在等待恢复"状态、或者控制器模块未被正确接管或暂停(未提交的数据)时、NVRAM状态LED会闪烁。
-** 从机箱中卸下控制器模块后、NVRAM状态LED会闪烁、这可能意味着控制器模块未被接管或暂停(未提交的数据)。确认此控制器模块已被配对控制器模块完全接管，或者受损控制器模块显示 `waiting for giveback`。然后、可以忽略闪烁的LED指示灯(并且可以从机箱中卸下控制器模块)。
+** 如果NV LED熄灭、请转至下一步。
+** 如果NV LED闪烁、请等待闪烁停止。如果闪烁持续时间超过5分钟、请联系技术支持以获得帮助。
 
 
 . 如果您尚未接地，请正确接地。
@@ -195,7 +188,9 @@ image::../media/drw_a70-90_pcm_remove_replace_ieops-1365.svg[控制器删除图�
 
  a| 
 image:../media/icon_round_1.png["标注编号1"]
-| A锁定闩锁 
+ a| 
+锁定闩锁
+
 
 
  a| 
@@ -231,7 +226,11 @@ image::../media/drw_a70-90_rtc_bat_remove_replace_ieops-1371.svg[Replace the RTC
 |===
 
 
-| image:../media/icon_round_1.png["标注编号1"] | RTC 电池和外壳 
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+RTC 电池和外壳
+
 |===
 . 将电池轻轻推离电池架，将其旋转出电池架，然后将其从电池架中取出。
 +
@@ -300,7 +299,7 @@ NOTE: 如果您有直流电源、请在控制器模块完全固定在机箱中�
 
 NOTE: 在更换RTC电池、插入控制器并首次启动BIOS重置后、您将看到以下错误消息：
 `RTC date/time error. Reset date/time to default`
-`RTC power failure error` 这些消息已被排除、您可以继续此过程。
+`RTC power failure error`这些消息是预期的、您可以继续此过程。
 
 . 使用命令检查运行正常的控制器上的日期和时间 `cluster date show` 。
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2800, how to recable the system, how to reassign disks 
 summary: 您必须重新配置存储并确认磁盘重新分配。 
 ---
-= 重新对系统进行配置并重新分配磁盘—FAS2800
+= 重新对系统进行配置并重新分配磁盘—FAS2820
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,10 +17,9 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 == 第 1 步：重新对系统进行布线
 
-重新对控制器模块的存储和网络连接进行配线。
+验证控制器模块的存储和网络连接。
 
 .步骤
-. 将控制器模块重新连接到存储和网络连接。
 . 使用验证布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
 +
 .. 下载并安装 Config Advisor 。
