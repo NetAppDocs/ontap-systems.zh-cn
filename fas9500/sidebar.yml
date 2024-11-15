@@ -72,10 +72,10 @@ entries:
   - title: I/O 模块
     pdf-filename: FAS9500 I/O模块
     entries:
-    - title: 替换
-      url: "/fas9500/pci_cards_and_risers_replace.html"
-    - title: 添加
+    - title: 添加 I/O 模块
       url: "/fas9500/add_io_module.html"
+    - title: 更换I/O模块
+      url: "/fas9500/pci_cards_and_risers_replace.html"
   - title: LED USB
     url: "/fas9500/led_module_replace.html"
   - title: NVRAM

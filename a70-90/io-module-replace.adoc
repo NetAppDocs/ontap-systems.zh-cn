@@ -178,17 +178,8 @@ image:../media/icon_round_1.png["标注编号1"]
 
 更换 I/O 模块后，必须重新启动控制器模块。
 
-
-NOTE: 如果新I/O模块与故障模块型号不同、则必须先重新启动BMC。
-
 .步骤
-. 如果替代模块与旧模块的型号不同、请重新启动BMC：
-+
-.. 从加载程序提示符处、更改为高级权限模式：_set PRILEGE advanced_
-.. 重新启动BMC：_sp reboot
-
-
-. 在 LOADER 提示符处，重新启动节点： _bybye
+. 从LOADER提示符处、重新启动节点：`bye`
 +
 
 NOTE: 此操作将重新初始化I/O卡和其他组件、然后重新启动节点。

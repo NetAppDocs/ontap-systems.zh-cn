@@ -4586,7 +4586,6 @@
   <block id="4e4fca0318eac6dc1315f4bad56eb1c6" category="summary">您可以将 I/O 模块添加到系统中，方法是在已完全填充的系统中将现有 I/O 模块更换为新的 I/O 模块，或者将新的 I/O 模块添加到机箱中的空插槽中。</block>
   <block id="a164244a6913c60772e9b9fbbbc17a4a" category="doc">添加 I/O 模块— AFF A900</block>
   <block id="e01b6c84aaebe2321eef7b7a933b171f" category="list-text">要无中断地添加 I/O 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖或卸下现有 I/O 模块，添加新的或更换的 I/O 模块，然后交还目标控制器。</block>
-  <block id="329fe7c89a525def535e03c6dbc6f98f" category="section-title">选项 1 ：将 I/O 模块添加到插槽已打开的系统中</block>
   <block id="c45c3f1f9d099575b7abd851e7ef8b33" category="list-text">向下旋转凸轮闩锁，直到其处于打开位置。</block>
   <block id="9a08e35bf8850515585d9bd11e96351b" category="list-text">安装 I/O 模块：</block>
   <block id="66efd9c2b6ae55ef5c1ff3be01c1fe65" category="list-text">将 I/O 模块与插槽边缘对齐。</block>
@@ -4594,7 +4593,6 @@
   <block id="7ca78c6d47f27487175e23a00c576196" category="list-text">如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</block>
   <block id="3267c15e351fe1dd15721e79b072fedc" category="admonition">确保所有未使用的 I/O 插槽都安装了空格，以防止可能出现散热问题。</block>
   <block id="05648a23fc430a3dcc4fb4c1fbb040cd" category="list-text">如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _&lt;node name&gt;_ -port _&lt;port name&gt;__ -mode network` 命令转换插槽以供网络连接使用。</block>
-  <block id="3e0887648c519f4a3c16a1c61b2e8ec3" category="section-title">选项 2 ：在没有打开插槽的系统中添加 I/O 模块</block>
   <block id="cebb0168d5bfd94a91f0da51501ba6b8" category="list-text">如果您是：</block>
   <block id="e818b574f8a890f6c21405d9164bb6ef" category="cell">替换 ...</block>
   <block id="d6737fd4fc838900efec68220d9b62d5" category="paragraph">具有相同端口数的 NIC I/O 模块</block>
@@ -5660,10 +5658,7 @@
   <block id="6f189db9f1b1dfc1be838de48c805168" category="video-title">动画—设置NVMe驱动器架ID</block>
   <block id="1f583998630e94806bf5b9e059227dd4" category="paragraph"><block ref="1f583998630e94806bf5b9e059227dd4" category="inline-link-rx"></block></block>
   <block id="9b0500b65158795cfc5abb2becae4e80" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 以找到缆线并确定其用途。</block>
-  <block id="192e7ded6d54e3ac04596dc33b9c67cf" category="paragraph">您可以将I/O模块添加到系统中的空模块插槽中。</block>
   <block id="741ade379895992f2a574e8e60de1571" category="section-title">第2步：添加I/O模块</block>
-  <block id="31ac56c0f673cbef254563f6a8a32626" category="paragraph">如果系统已完全填充、您可以通过删除现有I/O模块并将其更换为其他I/O模块来更改I/O插槽中的I/O模块。</block>
-  <block id="037baf09c7ddcc7c38f81e7dbe35fa87" category="paragraph">您可以通过在插槽为空的系统中添加新的I/O节点或在已完全填充的系统中使用新的I/O模块来将I/O模块添加到系统中。</block>
   <block id="55f1569cdcfb82612fcf293f23db4f6f" category="list-text">检查<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> to make sure that the new I/O module is compatible with your system and version of ONTAP you're running.</block>
   <block id="6e4968851f4373ab9764e16cffb39389" category="list-text">If multiple slots are available, check the slot priorities in<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> and use the best one available for your I/O module.</block>
   <block id="757216293ea1da04339a2c9b8eaa2641" category="admonition">tar.gz文件必须放置在至少4 GB的32位格式化分区上。虽然32 TB分区的大小可以达到2 TB、但Windows内置工具(例如diskpart)无法格式化32 GB以上的32 GB分区。</block>
@@ -6509,11 +6504,6 @@
   <block id="fb7c806d17ac05daec934e824397154e" category="list-text">对更换机箱中的第二个控制器模块重复上述步骤。</block>
   <block id="5a78b16de65a946feda8c56392de99d0" category="paragraph">完成硬件更换并启动替代控制器后、验证替代控制器的低级系统配置、并根据需要重新配置系统设置。</block>
   <block id="3fc70ee0f25a2808ad9e1ace34edd095" category="list-text">如果为控制器显示的系统状态与您的系统配置不匹配、请为替代控制器模块设置HA状态：<block ref="83ac5421ebdbb8b86762e96ecda44c4a" prefix=" " category="inline-code"></block></block>
-  <block id="c5ad83e174ba7727e76fc50c8366e589" category="list-text">恢复var文件系统：</block>
-  <block id="e51ecd8f185715278ef737fd290e62f5" category="list-text">按<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> 提示还原配置副本时。</block>
-  <block id="1a037944aedbce3040a5314200246858" category="list-text">在集群提示符处、使用检查逻辑接口<block ref="55cf88a325a6e0574aef732566cc984c" prefix=" " category="inline-code"></block> 命令：</block>
-  <block id="8c4cb494b75288cf3ce1e7ce1dee3c9d" category="paragraph">如果任何接口列为"false"、请使用将这些接口还原回其主端口<block ref="ffbe7d182280173cba10c83ec9992974" prefix=" " category="inline-code"></block> 命令：</block>
-  <block id="fcb4d3b1f229bc036dc2280a7c1d29c4" category="list-text">如果不使用存储加密、请还原自动交还和AutoSupport：</block>
   <block id="82374f90663d7205d26c38028c93cb8d" category="inline-link">适用于您的ONTAP 9版本的发行说明</block>
   <block id="202c6b9676e6e0879f99a323aacdd76b" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> 以找到缆线并确定其用途。</block>
   <block id="21d9a13ac1bf780b5a88db05a215c05d" category="paragraph">10 GbE、SFP28缆线(因订单而异)</block>
@@ -7196,8 +7186,6 @@ SFP+(目标/启动程序)</block>
   <block id="678386553f74beb2b1838a6f503572a1" category="sidebar">ASA A150电源</block>
   <block id="3b407a01f87e8a92694c7e38e00bfea0" category="sidebar">ASA A150实时时钟电池</block>
   <block id="88caadba05eccaaf5df5206e6c67f90b" category="sidebar">AFF C系列系统</block>
-  <block id="0ebe6df8a3ac338e0512acc741823fdb" category="sidebar">替换</block>
-  <block id="ec211f7c20af43e742bf2570c3cb84f9" category="sidebar">添加</block>
   <block id="880e70d8b15ad919e463072506581a9a" category="sidebar">ASA A400系统</block>
   <block id="9d524e3b80cdb8b322945f9b3acd0611" category="sidebar">ASA A400安装和设置</block>
   <block id="34dd7f09476a68e4a11cace464b55609" category="sidebar">ASA A400维护</block>
@@ -8011,9 +7999,6 @@ SFP+(目标/启动程序)</block>
   <block id="7b71c8c5341c95139930e1f1748956d7" category="list-text">将模块与机柜插槽开口的边缘对齐。</block>
   <block id="0169e44348295d5766b174aa4c296a62" category="list-text">重复拆卸和安装步骤以更换控制器的其他模块。</block>
   <block id="7c99497119e4bb81fd50dbd906dfde72" category="list-text">从加载程序提示符：_BYE_重新启动控制器</block>
-  <block id="270bbec39f8392e251637a1b86bbf5c3" category="list-text">检查控制器上的BMC版本：_system service-processor show_</block>
-  <block id="d6b96e8ac8bc341aa87626c9a7f76ffd" category="list-text">根据需要更新BMC固件：_system service-processor image update_</block>
-  <block id="3ff703e913550c7687a9cef2aa4f646d" category="list-text">重新启动节点：_BYE_</block>
   <block id="db89594b0a0cbb483395a2641220f1fe" category="list-text">如果已禁用自动交还、请启用此功能：_storage故障转移修改-node local -auto-交还true _</block>
   <block id="4e0b6dc04aaa383038bc23130a17cb25" category="cell">如果I/O模块是...</block>
   <block id="09c2cf2531a14305542e6aff93e691c5" category="paragraph">NIC模块</block>
@@ -8148,8 +8133,6 @@ SFP+(目标/启动程序)</block>
   <block id="2f4150c3867bbf0ce9e1aa56330f576b" category="list-text">按下目标模块上的凸轮按钮。</block>
   <block id="53843c5eb3759758de138cf301af27c3" category="paragraph">凸轮按钮移离机柜。</block>
   <block id="cb6d0d31a2a110b0d07c657262474a40" category="list-text">将更换用的I/O模块安装到机柜中：</block>
-  <block id="1ac1a67458bf621b04e5e87511601b9c" category="list-text">从加载程序提示符处、更改为高级权限模式：_set PRILEGE advanced_</block>
-  <block id="10c3a425fded9589c238301aa82be35e" category="list-text">重新启动BMC：_sp reboot</block>
   <block id="8c2fb795497456b969ba9307ef6f84c8" category="list-text">在 LOADER 提示符处，重新启动节点： _bybye</block>
   <block id="7abd890d238c51ed2801454d1144b6c2" category="admonition">此操作将重新初始化I/O卡和其他组件、然后重新启动节点。</block>
   <block id="f39bcef8471a9193d70395e440c5c30f" category="list-text">将节点恢复正常运行：_storage故障转移g交还-ofnode受损_ne_name_</block>
@@ -10375,4 +10358,38 @@ SFP+(目标/启动程序)</block>
   <block id="2f9958347081d2ce185d76c702380979" category="sidebar">FAS2820夹层卡</block>
   <block id="6283d5729bdaa96d13760bf62bbe62f2" category="sidebar">FAS2820电源</block>
   <block id="e8a44fb416b30e755ecaf489baacfd39" category="sidebar">FAS2820实时时钟电池</block>
+  <block id="227398eddfb6e692fd89b8302d75c666" category="paragraph">如果存储系统具有空插槽、请将新的I/O模块安装到其中一个可用插槽中。如果所有插槽均已占用、请卸下现有I/O模块以留出空间、然后安装新模块。</block>
+  <block id="a76aaa38baa5ae3b2ab41cc1b875078f" category="open-title">将I/O模块添加到空插槽</block>
+  <block id="f2cc9125d85f992590d6b8f3fbd46de6" category="paragraph">您可以将新的I/O模块添加到具有可用空插槽的存储系统中。</block>
+  <block id="c0f2e030aecd4084592ca2454ad9a524" category="open-title">将I/O模块添加到完全填充的系统</block>
+  <block id="6408704f957fafc42e96a37aa68b10ce" category="paragraph">您可以通过卸下现有I/O模块并在其位置安装新的I/O模块、将I/O模块添加到完全填充的系统中。</block>
+  <block id="d9c0fee19239cdba61031cde184c8d74" category="paragraph">确保您了解将新I/O模块添加到完全填充的系统的以下情形：</block>
+  <block id="54861efdd06fc309e1c9a420feff98eb" category="cell">场景</block>
+  <block id="3d6623b8d5249788a0d797d4bbc5e5a1" category="cell">需要执行操作</block>
+  <block id="6be20647be40341586dcfb1dbbefcbcc" category="paragraph">NIC到NIC (端口数相同)</block>
+  <block id="09109aaca603d8ac1da46aa588c46f63" category="paragraph">NIC到NIC (端口数不同)</block>
+  <block id="4e7b2ae169cb37276347e7c88d211db4" category="paragraph">将选定的生命周期重新分配到其他主端口。有关详细信息、请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> 。</block>
+  <block id="0c3f64052572f9d13d9b078656a055e4" category="paragraph">通过NIC连接到存储I/O模块</block>
+  <block id="deaf42dafc1e4522c0ccf86ad58f237e" category="list-text">从配对控制器交还控制器：`sstorage Failover g交还-ofnode target_ne_name`</block>
+  <block id="c1d0761e549ef1ce873a404f8d41a2d5" category="list-text">从Loader提示符处重新启动控制器：<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
+  <block id="5d831aef00c06eb087aebfb790f041b7" category="section-title">第2步：添加新的I/O模块</block>
+  <block id="68c06f8f4688078ddfe1ceedef798cae" category="list-text">从配对控制器交还控制器：</block>
+  <block id="523f5a38bba8d64b2af1cdee174a06cc" category="paragraph"><block ref="49c908925c3b8a3554612823f81c8964" prefix="" category="inline-code"></block></block>
+  <block id="b98036ad0a9b610670da83fe762dadb5" category="list-text">如果您使用以下命令禁用了自动交还、请从运行状况良好的节点还原此功能：</block>
+  <block id="518d4ff09aabdcee7f75f2c44315aa32" category="list-text">如果启用了AutoSupport、请使用以下命令还原自动创建案例：</block>
+  <block id="4bcd1563c4332086304e70dd3fb7e19a" category="list-text">如果已禁用自动交还、请启用此功能：</block>
+  <block id="1e80f086f2d3ddea0cd02baa25f9c2f1" category="list-text">如果您卸下了NIC I/O模块并安装了新的NIC I/O模块、请对每个端口使用以下network命令：</block>
+  <block id="157602c08bdec493e8c79f5e41971ab6" category="paragraph"><block ref="9dedaa5871e5e9684cbae52f5e1b987d" prefix="" category="inline-code"></block></block>
+  <block id="ff7274e5c00dade3058bf32828127837" category="list-text">如果您卸下了NIC I/O模块并安装了存储I/O模块，请按照中所述安装NS224磁盘架并为其布线<block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>。</block>
+  <block id="fe7cc4281bcf5c347bdaa6bdb704b29b" category="list-text">从Loader提示符处、重新启动节点：`Bye`</block>
+  <block id="440f1f310315bec96a5e23d47024d880" category="list-text">If you are replacing another drive, repeat Steps 2 through 6.</block>
+  <block id="91dfaaed30791a3d6d5402ba403f8f73" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向AFF A1K存储系统添加I/O模块。</block>
+  <block id="8b6b47c9ffbf56147eb39245a0848071" category="open-title">选项2：MetroCluster配置</block>
+  <block id="e1e5a630a2475cff2c5c9107cbfff228" category="section-title">第2步：添加新的I/O模块</block>
+  <block id="aaa31e70b1e8d53e84fc317dfdcef1ed" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向AFF A70和AFF A90存储系统添加I/O模块。</block>
+  <block id="fc201f3061cf0fb0ac92be830093fe44" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向AFF A900存储系统添加I/O模块。</block>
+  <block id="5342cf7e14ace50bbfab26225b3e6f39" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向ASA A70和ASA A90存储系统添加I/O模块。</block>
+  <block id="cac74c301a508cf350f8f41a7de866a0" category="paragraph">当有空插槽可用或所有插槽均已完全填充时、您可以将I/O模块添加到ASA A1K存储系统。</block>
+  <block id="94aa992895c11cf963b2b749b84aa267" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向FAS70和FAS90存储系统添加I/O模块。</block>
+  <block id="bc049e4428d592b69605104cc85d56bc" category="section-title">第2步：添加新的I/O模块</block>
 </blocks>

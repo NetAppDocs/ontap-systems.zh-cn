@@ -1,10 +1,10 @@
 ---
-permalink: asa900/bootmedia_recovery_image.html 
+permalink: asa-c250/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
-keywords:  
-summary: 用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双节点 MetroCluster 配置。 
+keywords: asa c250, boot the recovery image 
+summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
 ---
-= 启动恢复映像- ASA A900
+= 启动恢复映像- ASA C250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

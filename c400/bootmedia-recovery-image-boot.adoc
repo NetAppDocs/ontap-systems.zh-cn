@@ -1,10 +1,10 @@
 ---
-permalink: asa900/bootmedia_recovery_image.html 
+permalink: c400/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
-keywords:  
+keywords: aff c400, aff, c400, procedure, boot, impair, controller, recovery, image, system, two-node, metrocluster, configuration, boot the recovery image 
 summary: 用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双节点 MetroCluster 配置。 
 ---
-= 启动恢复映像- ASA A900
+= 启动恢复映像—AFF C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

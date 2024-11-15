@@ -360,18 +360,12 @@ image:../media/icon_round_1.png["标注编号1"]
 . 将缆线管理托架旋转到锁定位置。
 . 从加载程序提示符：_BYE_重新启动控制器模块
 +
-.. 检查控制器上的BMC版本：_system service-processor show_
-.. 根据需要更新BMC固件：_system service-processor image update_
-.. 重新启动节点：_BYE_
-+
+此操作将重新初始化PCIe卡和其他组件、并重新启动节点。
 
-NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点。
 
-+
+
 
 NOTE: 如果您在重新启动期间遇到问题、请参见 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1494308["BURT 1494308 -更换I/O模块期间可能触发环境关闭"]
-
-
 
 . 从配对控制器模块交还控制器模块。_storage故障转移gi故障 恢复-ofnode target_ne_name_
 . 如果已禁用自动交还、请启用此功能：_storage故障转移修改-node local -auto-交还true _

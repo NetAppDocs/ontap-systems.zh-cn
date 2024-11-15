@@ -30,7 +30,7 @@ entries:
     - title: 替换启动映像
       url: "/fas2800/bootmedia-replace.html"
     - title: 启动恢复映像
-      url: "/fas2800/bootmedia-recovery-image-boot-non-2n-mcc.html"
+      url: "/fas2800/bootmedia-recovery-image-boot.html"
     - title: 恢复加密
       url: "/fas2800/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp

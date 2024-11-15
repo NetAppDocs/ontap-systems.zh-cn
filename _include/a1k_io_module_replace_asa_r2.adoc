@@ -113,23 +113,13 @@ I/O凸轮闩锁
 
 更换 I/O 模块后，必须重新启动控制器模块。
 
-
-NOTE: 如果新I/O模块与故障模块型号不同、则必须先重新启动BMC。
-
 .步骤
-. 如果替代模块与旧模块的型号不同、请重新启动BMC：
+. 从LOADER提示符处、重新启动节点：`bye`
 +
-.. 从加载程序提示符处、更改为高级权限模式：_set PRILEGE advanced_
-.. 重新启动BMC：_sp reboot
+此操作将重新初始化I/O卡和其他组件、然后重新启动节点。
 
-
-. 在 LOADER 提示符处，重新启动节点： _bybye
-+
-
-NOTE: 此操作将重新初始化I/O卡和其他组件、然后重新启动节点。
-
-. 将节点恢复正常运行：_storage故障转移g交还-ofnode受损_ne_name_
-. 如果已禁用自动交还、请重新启用它：_storage故障转移修改-node local -auto-交还true _
+. 使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`
+. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
 
 
 
