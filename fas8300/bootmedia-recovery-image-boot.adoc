@@ -36,7 +36,7 @@ summary: 用于从恢复映像启动受损控制器的操作步骤 取决于系�
 .. 在受损控制器上，当您看到时 `Was the restore backup procedure successful?`按 `Y`。
 .. 在受损控制器上，当您看到时 `...would you like to use this restored copy now?`按 `Y`。
 .. 在受损控制器上、当系统提示您重新启动受损控制器时按键 `Y`、然后按键 `ctrl-c`进入Boot Menu (启动菜单)。
-.. 如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。 link:bootmedia-encryption-restore.html["还原密钥管理器"]
+.. 如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。link:bootmedia-encryption-restore.html["恢复加密"]
 
 
 --
@@ -50,7 +50,7 @@ summary: 用于从恢复映像启动受损控制器的操作步骤 取决于系�
 .. 在受损控制器上、当系统提示使用还原的配置时、按 `Y`。
 .. 在受损控制器上、当系统提示重新启动节点时按 `Y`。
 .. 在受损控制器上、当系统提示您重新启动受损控制器时按键 `Y`、然后按键 `ctrl-c`进入Boot Menu (启动菜单)。
-.. 如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。 link:bootmedia-encryption-restore.html["还原密钥管理器"]
+.. 如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。link:bootmedia-encryption-restore.html["恢复加密"]
 
 
 --

@@ -4593,12 +4593,7 @@
   <block id="7ca78c6d47f27487175e23a00c576196" category="list-text">如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</block>
   <block id="3267c15e351fe1dd15721e79b072fedc" category="admonition">确保所有未使用的 I/O 插槽都安装了空格，以防止可能出现散热问题。</block>
   <block id="05648a23fc430a3dcc4fb4c1fbb040cd" category="list-text">如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _&lt;node name&gt;_ -port _&lt;port name&gt;__ -mode network` 命令转换插槽以供网络连接使用。</block>
-  <block id="cebb0168d5bfd94a91f0da51501ba6b8" category="list-text">如果您是：</block>
-  <block id="e818b574f8a890f6c21405d9164bb6ef" category="cell">替换 ...</block>
-  <block id="d6737fd4fc838900efec68220d9b62d5" category="paragraph">具有相同端口数的 NIC I/O 模块</block>
   <block id="c5cb03fb8ac84e8ed0867902373368c5" category="paragraph">LIF 将在其控制器模块关闭时自动迁移。</block>
-  <block id="5b4da5fe899903c4fb7ea38cdcd59059" category="paragraph">NIC I/O 模块，端口更少</block>
-  <block id="f83c48dd124994c4062d124a835da954" category="paragraph">带有存储 I/O 模块的 NIC I/O 模块</block>
   <block id="658f167c4900ed24167db8a2c8ec0dae" category="list-text">将 I/O 模块安装到目标插槽中：</block>
   <block id="af7e67afbae0d677789152f59d9ac82d" category="list-text">如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。</block>
   <block id="65c5b494e6d3420e2beeee5028389f58" category="list-text">如果您添加了：</block>
@@ -5172,7 +5167,6 @@
   <block id="a31ab93f41516026d249aceb633bccc3" category="doc">添加一个I/O模块—FAS9500</block>
   <block id="4d3b1425bbd62943a546a9f98dc3b7ef" category="list-text">从配对节点交还节点。`storage failover giveback -ofnode target_node_name`</block>
   <block id="6f8193ca6bfb281db32afbcc9e285f79" category="inline-link">热添加SAS磁盘架</block>
-  <block id="c964f542415e7614484e4edf970ab7a8" category="paragraph">将受影响的 LIF 永久重新分配到其他主端口。请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> 有关使用 System Manager 永久移动 LIF 的信息，请参见。</block>
   <block id="6d351dbc4a7187d4512a1c505c200687" category="paragraph">使用 System Manager 将 LIF 永久迁移到不同的主端口，如中所述<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block>。</block>
   <block id="f3ca7c7565b074fbf5e12ffb59930d2f" category="doc">将故障部件退回给NetApp—FAS9500</block>
   <block id="4ea7136415cb99f780a4177ea7ada9f4" category="doc">还原并验证系统配置—FAS9500</block>
@@ -5658,7 +5652,6 @@
   <block id="6f189db9f1b1dfc1be838de48c805168" category="video-title">动画—设置NVMe驱动器架ID</block>
   <block id="1f583998630e94806bf5b9e059227dd4" category="paragraph"><block ref="1f583998630e94806bf5b9e059227dd4" category="inline-link-rx"></block></block>
   <block id="9b0500b65158795cfc5abb2becae4e80" category="paragraph">The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 以找到缆线并确定其用途。</block>
-  <block id="741ade379895992f2a574e8e60de1571" category="section-title">第2步：添加I/O模块</block>
   <block id="55f1569cdcfb82612fcf293f23db4f6f" category="list-text">检查<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> to make sure that the new I/O module is compatible with your system and version of ONTAP you're running.</block>
   <block id="6e4968851f4373ab9764e16cffb39389" category="list-text">If multiple slots are available, check the slot priorities in<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> and use the best one available for your I/O module.</block>
   <block id="757216293ea1da04339a2c9b8eaa2641" category="admonition">tar.gz文件必须放置在至少4 GB的32位格式化分区上。虽然32 TB分区的大小可以达到2 TB、但Windows内置工具(例如diskpart)无法格式化32 GB以上的32 GB分区。</block>
@@ -7969,14 +7962,10 @@ SFP+(目标/启动程序)</block>
   <block id="61612a74be5170dd342eb619d607d9a0" category="paragraph">以下AutoSupport命令将禁止自动创建案例两小时：<block ref="6cf51b10a85b7bdc2a6698400ee841b7" prefix=" " category="inline-code"></block></block>
   <block id="ab859514fa976f71299cd0d5366c702d" category="paragraph">暂停受损控制器或从运行正常的控制器接管此控制器：<block ref="64d2ac6bbd59fb854ec2bed7b2dbe259" prefix=" " category="inline-code"></block></block>
   <block id="fd9366185c7040d2814e95fefcce2264" category="list-text">如果启用了AutoSupport、则通过调用AutoSupport命令禁止自动创建案例：<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
-  <block id="9f496d341d66d79304a55547445c00a2" category="doc">选项1：将I/O模块添加到具有空插槽的存储系统</block>
-  <block id="c4b17ef982ae644ec1d2b995fa1534a8" category="paragraph">您可以通过向具有空插槽的存储系统添加新I/O模块或在完全填充的存储系统中将新I/O模块更换为新I/O模块来向存储系统添加I/O模块。</block>
   <block id="656450ae55843844fdfca7b44cbc5678" category="list-text">检查<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 以确保新的I/O模块与您的存储系统和您正在运行的ONTAP版本兼容。</block>
-  <block id="9808a3e490e0cd81c2fab70cb489f958" category="paragraph">您可以将I/O模块添加到存储系统中的空模块插槽中。</block>
   <block id="78263f5226743bdd204519f0e9bd22d2" category="list-text">向下旋转缆线管理托架、方法是拉动缆线管理托架内部的按钮、然后向下旋转。</block>
   <block id="72e0b58a2d456f6ab89ca8d83859264d" category="list-text">从托架上卸下目标插槽空白模块：</block>
   <block id="abca9f9a7ffb3d4afa15f947303b1c4c" category="admonition">下图显示了如何卸下水平和垂直I/O模块。通常、您只会卸下一个I/O模块。</block>
-  <block id="b0fe3ad00c115ca25f49fb3d48769b0b" category="image-alt">卸下AFF A1K I/O模块</block>
   <block id="243dd5ebf726e6d6a9762938953c1a6a" category="cell">凸轮锁定按钮</block>
   <block id="3939b3c4c6e868d0268fd9a75f3b3805" category="list-text">按下目标插槽中空白模块上的凸轮闩锁。</block>
   <block id="c053808d9acb931bed74754155a6e86f" category="list-text">将凸轮闩锁向下旋转到最远位置。对于水平模块、将凸轮尽可能远离模块。</block>
@@ -7984,24 +7973,13 @@ SFP+(目标/启动程序)</block>
   <block id="f47dbf934d7d51340a5c58741715b2d5" category="list-text">将I/O模块与机柜插槽开口的边缘对齐。</block>
   <block id="b3fe1b3e8557371fcb101f90a1a32fd0" category="list-text">将模块轻轻地滑入插槽，直至完全滑入机箱，然后将凸轮闩锁一直向上旋转，以将模块锁定到位。</block>
   <block id="be9dc0332662b913cef88d5dcde78acd" category="list-text">为I/O模块布线。</block>
-  <block id="040f840d8fdf859359eb680be25e8992" category="paragraph">如果I/O模块是NIC、请使用缆线将此模块连接到数据交换机。</block>
-  <block id="3072040b83655039de255184380a9271" category="paragraph">如果I/O模块是存储模块、请使用缆线将其连接到NS224磁盘架。</block>
   <block id="9056e6b74b2e2b546abd76b6e7408f4d" category="list-text">将缆线管理托架向上旋转到关闭位置。</block>
-  <block id="a0a7e707ad35c210d4582fab4069c223" category="list-text">从配对控制器交还控制器：_storage故障转移g交还-ofnode target_ne_name_</block>
   <block id="6c91356d53993ce0d1f0c1af28c7a48b" category="list-text">如果启用了AutoSupport、请使用命令还原/取消禁止自动创建案例<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block> 。</block>
-  <block id="026bf593d893e27d6f090dc74e403a75" category="section-title">选项2：在没有空插槽的存储系统中添加I/O模块</block>
-  <block id="a06ddc697cce62226c19e353e0f2eeba" category="paragraph">您可以通过卸下现有I/O模块并将其更换为其他I/O模块来更改完全填充的系统中I/O插槽中的I/O模块。</block>
-  <block id="47ab52c1da07a0c00e2b876e54778a95" category="paragraph">将选定的生命周期重新分配到其他主端口。有关使用System Manager永久移动这些LUN的信息、请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> 。</block>
-  <block id="8f6ea8b644b16793208bc55e27bc7669" category="section-title">第2步：更换I/O模块</block>
-  <block id="900056c17f40fb1a034e134a72eca912" category="image-alt">卸下AFF A1K I/O模块</block>
   <block id="8181d3a6b1640b5868632cfe5589a05d" category="list-text">按下凸轮闩锁按钮。</block>
   <block id="0cfc07520b64c5be4e64fac899e6eaa9" category="list-text">将I/O模块安装到机柜中的目标插槽中：</block>
   <block id="7b71c8c5341c95139930e1f1748956d7" category="list-text">将模块与机柜插槽开口的边缘对齐。</block>
   <block id="0169e44348295d5766b174aa4c296a62" category="list-text">重复拆卸和安装步骤以更换控制器的其他模块。</block>
   <block id="7c99497119e4bb81fd50dbd906dfde72" category="list-text">从加载程序提示符：_BYE_重新启动控制器</block>
-  <block id="db89594b0a0cbb483395a2641220f1fe" category="list-text">如果已禁用自动交还、请启用此功能：_storage故障转移修改-node local -auto-交还true _</block>
-  <block id="4e0b6dc04aaa383038bc23130a17cb25" category="cell">如果I/O模块是...</block>
-  <block id="09c2cf2531a14305542e6aff93e691c5" category="paragraph">NIC模块</block>
   <block id="a286fff38dd07b679c8ce3d88b6f2962" category="inline-link-macro">关闭受损控制器</block>
   <block id="4332aa8c798bac1ec6c0f4c83e0df305" category="list-text">验证类型是否<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 显示<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block>，然后手动备份OKM信息。</block>
   <block id="66e5f5f877412d7578e6bec4d8f933b5" category="list-text">在受损控制器上、看到时按_Y_<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
@@ -8010,7 +7988,6 @@ SFP+(目标/启动程序)</block>
   <block id="e9636d3f8e24f08b43c5d1ed71e065ea" category="list-text">在受损控制器上，看到时按_y_<block ref="396e369cf75815ba643925818d3ec37e" prefix=" " category="inline-code"></block>。</block>
   <block id="976af5aa217f6c1b1dbf16e0ed0a4bde" category="list-text">在受损控制器上、在系统提示重新启动受损控制器时按_y_、然后按_Ctrl-c_进入启动菜单。</block>
   <block id="29d550bee6b8b18ca38f7642778d8dad" category="inline-link-macro">还原密钥管理器</block>
-  <block id="88045ffbfc0d9ef09cd470c545082621" category="list-text">如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。 <block ref="f2abf47fd75193a34b6b143e08f5b248" category="inline-link-macro-rx"></block></block>
   <block id="55f7c3a98a49a2f2d96cb2d21b95d947" category="list-text">使用_storage故障转移交还-from node local_命令交还控制器。</block>
   <block id="4c6b53c8ce9f5900a70a994f21a32c6b" category="list-text">如果已使用_storage故障转移修改-node local -auto-交还true命令禁用自动交还、则还原自动交还。</block>
   <block id="85ef34c14131c3f446c3d96330659ce7" category="list-text">如果启用了AutoSupport、请使用_system node AutoSupport invoke -node *-type all -message Maint=end_命令还原/取消禁止自动创建案例。</block>
@@ -8233,23 +8210,10 @@ SFP+(目标/启动程序)</block>
   <block id="05dceffd3c31a9d53e9b23ec48d1bf77" category="paragraph">如果受损节点正在使用需要标准(节点锁定)许可证的ONTAP功能、则必须为此节点安装新许可证。对于具有标准许可证的功能，集群中的每个节点都应具有自己的功能密钥。</block>
   <block id="d498932449bd1680afbe5aad136fb7e3" category="paragraph">在安装许可证密钥之前、需要标准许可证的功能仍可供节点使用。但是、如果此节点是集群中唯一具有此功能许可证的节点、则不允许对此功能进行配置更改。此外、在节点上使用未经许可的功能可能会使您违反许可协议、因此您应尽快在上为此节点安装替代许可证密钥。</block>
   <block id="3e508eeaedfdae09fad57a764b5e2b73" category="section-title">步骤1：关闭受损控制器模块</block>
-  <block id="6f13230d5681e1c88b50f5ecbce62637" category="paragraph">使用以下选项之一关闭或接管受损控制器模块。</block>
   <block id="5d053cb0e109f37b3c9cfa31e957c2bc" category="list-text">将控制器模块从机箱中拉出约3英寸以断开电源。</block>
-  <block id="d9d1de25706aa51c5367e4dafd60898e" category="list-text">从机箱中卸下目标插槽空白模块：</block>
-  <block id="192d3ce6854b267e65d46222f8f3a24f" category="image-alt">卸下I/O模块</block>
-  <block id="75fa26086844dfcbf14f35086518217a" category="list-text">拆下挡板模块。</block>
-  <block id="2b6adb50592127273fdb4bb2b68918d5" category="list-text">将I/O模块与控制器模块插槽开口的边缘对齐。</block>
-  <block id="97366bfb1dcb5b97156c347c8ad89d9a" category="list-text">将模块轻轻滑入插槽中、然后将凸轮闩锁一直向上旋转、以将模块锁定到位。</block>
   <block id="6181ce929bc404494408989e6b8a9b52" category="paragraph">要更换I/O模块、请在控制器模块中找到该模块、然后按照特定的步骤顺序进行操作。</block>
   <block id="8a9a8a0db84d9dd59b0f006930b47193" category="list-text">按下凸轮闩锁按钮。</block>
-  <block id="422e2aa4ec97de509f54db9d23618f37" category="list-text">将手指插入凸轮拉杆开口并将模块拉出机箱、从而将模块从机箱中卸下。</block>
-  <block id="ce8b63d25565a610d1f9564150f85914" category="list-text">将模块轻轻地滑入插槽，一直滑入机箱中，然后将凸轮闩锁一直向上旋转，以将模块锁定到位。</block>
-  <block id="fb2068c184d4dbf1c0e520d9e9b173b2" category="list-text">重复拆卸和安装步骤以更换控制器模块的其他模块。</block>
   <block id="ed5714a7b9709284c56117bd6dc4e081" category="list-text">将缆线管理托架旋转到锁定位置。</block>
-  <block id="268bccb6c35b538d967467b5d2935b49" category="list-text">从加载程序提示符：_BYE_重新启动控制器模块</block>
-  <block id="253b24d74d0517388c6e5b078713c86a" category="inline-link">BURT 1494308 -更换I/O模块期间可能触发环境关闭</block>
-  <block id="fc5ee1a4ca46ff0160eeada84fe673fc" category="admonition">如果您在重新启动期间遇到问题、请参见<block ref="5f4b19e33781d4df6c59a005be26e607" category="inline-link-rx"></block></block>
-  <block id="cfedf0b233356261eb909e7add24bded" category="list-text">从配对控制器模块交还控制器模块。_storage故障转移gi故障 恢复-ofnode target_ne_name_</block>
   <block id="43d656a7b2fb92dbbe5e13b8f00a00b8" category="list-text">按下系统管理凸轮按钮。凸轮杆移离机箱。</block>
   <block id="f0d27e50eb41ec006d18a96b5254063e" category="list-text">将凸轮拉杆一直向下旋转、然后从控制器模块中卸下系统管理模块。</block>
   <block id="54a53a09772d42f23357a9952d2d46a1" category="section-title">Step 2: Transfer the boot image to the boot media</block>
@@ -8848,7 +8812,6 @@ SFP+(目标/启动程序)</block>
   <block id="f3585daa539c5917b4fedd0eb7efb3f2" category="sidebar">AFF 系统</block>
   <block id="6476573ba5b973ad8ea01c57f5b30267" category="sidebar">ASA 系统</block>
   <block id="9aaba65702056e024efc0836758c1538" category="sidebar">完成热添加</block>
-  <block id="b1cd69e899e8ab2e8b0c559899a3f2d7" category="admonition">下图显示了如何卸下水平和垂直I/O模块。通常、您只会卸下一个I/O模块。</block>
   <block id="3e6277588162255770fd3384bad09d6d" category="list-text">从控制器上的加载程序提示符处、启动控制器、并在系统因系统ID不匹配而提示覆盖系统ID时输入_y_。</block>
   <block id="9daabece8db7521a7882f63ebd76a891" category="image-alt">卸下驱动器，释放按钮位于顶部</block>
   <block id="e0bc24820711c466532ba2cb67ababd9" category="image-alt">卸下释放按钮位于中间的驱动器</block>
@@ -9088,7 +9051,6 @@ SFP+(目标/启动程序)</block>
   <block id="0e6eb93881093798ffaf4eef324aae16" category="list-text">按照中所述安装NS224磁盘架并为其布线 <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>。</block>
   <block id="f399facc82d214513205adcdfed1e55f" category="image-alt">安装磁盘驱动器</block>
   <block id="f20a0219f10b0070c92efe4269486629" category="list-text">如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为<block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>其布线。</block>
-  <block id="86e8e2badf42560bb0b1ed3bac3933fa" category="paragraph">按照中所述安装NS224磁盘架并为其布线 <block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>。</block>
   <block id="b9c98500ab9d006e0d9fd3d1c95f7904" category="paragraph">有关其它布线信息，请参阅<block ref="b8ff88c1a2e9444f28ec1504689e0040" category="inline-link-macro-rx"></block>。</block>
   <block id="ef83cb60cd5ea6118e6d106efa30f927" category="image-alt">起重注意事项</block>
   <block id="f3badb2cde47b97db55936f633e8bbf1" category="image-alt">双节点无交换机集群复合布线</block>
@@ -9833,7 +9795,6 @@ SFP+(目标/启动程序)</block>
   <block id="c285ffddf1786cd1a14a26bcf9b74c7d" category="paragraph"><block ref="061047859ec1e213bd771fe5350bda2c" prefix="" category="inline-code"></block></block>
   <block id="811ae15d713f8c846d0516e053f895b2" category="list-text">在Loader配置本地集群端口并从配对节点执行时监控启动介质恢复过程<block ref="83a4445bcfef2bd179eaffaabe3b3c20" prefix=" " category="inline-code"></block>。</block>
   <block id="8f616ca67798afd132662e15fc4caa28" category="paragraph">当网络启动运行时、将显示此<block ref="f6715e6f2a651bfc51d27566b1be5385" prefix=" " category="inline-code"></block>消息。</block>
-  <block id="ab8b7433e2ad2aa82ba07b42b4cd465d" category="list-text">根据加密方法、选择与您的单节点配置匹配的选项：</block>
   <block id="39cb6e7651585d511fc148af8198837f" category="open-title">无加密</block>
   <block id="aada4d2dac8a2a5bd04bf211104ff2c5" category="paragraph">如果未检测到加密、则启动介质恢复过程将继续进行、而无需进行密钥管理。</block>
   <block id="69c50e084d31ca90079f6b8b4409607b" category="paragraph">继续监控恢复过程、因为它会从配对节点还原备份配置、env文件、MDb和rdb。</block>
@@ -10190,7 +10151,6 @@ SFP+(目标/启动程序)</block>
   <block id="13e7cf07309f0d95eee5aa49b6842dc0" category="doc">检查加密密钥支持和状态- FAS9500</block>
   <block id="e4d9374bc79ce9095fb021e03551599f" category="doc">还原加密- FAS9500</block>
   <block id="bd5c047c4a41e95a8a9424888875e56a" category="list-text">使用缆线将I/O模块连接到指定设备。</block>
-  <block id="2d8241a8fe54414b6494b29d26d8b251" category="list-text">如果您使用命令禁用了自动交还、请从运行状况良好的节点还原此<block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix=" " category="inline-code"></block>功能。</block>
   <block id="9d462bd05672844aeab0d3d5d323d66a" category="list-text">重新安装控制器并重新连接控制器模块的电源：</block>
   <block id="4d872659b015ad414d5e68440a7ddfd6" category="paragraph">一旦控制器就位并恢复供电、控制器就会开始启动。</block>
   <block id="6f3fa8086df2fa20b3e903512f693396" category="list-text">通过交还存储使受损控制器恢复正常运行：</block>
@@ -10370,9 +10330,6 @@ SFP+(目标/启动程序)</block>
   <block id="09109aaca603d8ac1da46aa588c46f63" category="paragraph">NIC到NIC (端口数不同)</block>
   <block id="4e7b2ae169cb37276347e7c88d211db4" category="paragraph">将选定的生命周期重新分配到其他主端口。有关详细信息、请参见<block ref="8a81e44d8701c7e0abd4b6ad328792f0" category="inline-link-rx"></block> 。</block>
   <block id="0c3f64052572f9d13d9b078656a055e4" category="paragraph">通过NIC连接到存储I/O模块</block>
-  <block id="deaf42dafc1e4522c0ccf86ad58f237e" category="list-text">从配对控制器交还控制器：`sstorage Failover g交还-ofnode target_ne_name`</block>
-  <block id="c1d0761e549ef1ce873a404f8d41a2d5" category="list-text">从Loader提示符处重新启动控制器：<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block></block>
-  <block id="5d831aef00c06eb087aebfb790f041b7" category="section-title">第2步：添加新的I/O模块</block>
   <block id="68c06f8f4688078ddfe1ceedef798cae" category="list-text">从配对控制器交还控制器：</block>
   <block id="523f5a38bba8d64b2af1cdee174a06cc" category="paragraph"><block ref="49c908925c3b8a3554612823f81c8964" prefix="" category="inline-code"></block></block>
   <block id="b98036ad0a9b610670da83fe762dadb5" category="list-text">如果您使用以下命令禁用了自动交还、请从运行状况良好的节点还原此功能：</block>
@@ -10392,4 +10349,6 @@ SFP+(目标/启动程序)</block>
   <block id="cac74c301a508cf350f8f41a7de866a0" category="paragraph">当有空插槽可用或所有插槽均已完全填充时、您可以将I/O模块添加到ASA A1K存储系统。</block>
   <block id="94aa992895c11cf963b2b749b84aa267" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向FAS70和FAS90存储系统添加I/O模块。</block>
   <block id="bc049e4428d592b69605104cc85d56bc" category="section-title">第2步：添加新的I/O模块</block>
+  <block id="a6448c631c301c525a61c500fdf8e46a" category="list-text">根据加密方法、选择与您的系统配置匹配的选项：</block>
+  <block id="92ba658b9a66d0825f0f084b7da309b7" category="list-text">如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。<block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block></block>
 </blocks>
