@@ -1,0 +1,28 @@
+= 
+:allow-uri-read: 
+
+
+更换 I/O 模块后，必须重新启动控制器模块。
+
+.步骤
+. 从Loader提示符处、重新启动节点：
++
+`bye`
+
++
+
+NOTE: 此操作将重新初始化I/O模块和其他组件、然后重新启动节点。
+
+. 从配对控制器交还控制器：
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. 在运行状况良好的节点上、如果禁用了自动交还、请将其还原：
++
+`storage failover modify -node local -auto-giveback _true_`
+
+. 如果启用了AutoSupport、则还原自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+
