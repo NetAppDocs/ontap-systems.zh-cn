@@ -1,7 +1,7 @@
 ---
 permalink: ns224/service-monitor-leds.html 
 sidebar: sidebar 
-keywords: monitor, health, drive, shelf, location, status, condition, led, component, operator, display, panel, nsm, power, supply, drive, monitor drive shelf leds, operator display panel leds, nsm module leds, power supply leds, drive leds 
+keywords: monitor, health, drive, shelf, location, status, condition, led, component, operator, display, panel, nsm, power, supply, drive, monitor drive shelf leds, operator display panel leds, nsm leds, power supply leds, drive leds 
 summary: 您可以通过了解驱动器架组件上LED的位置和状态条件来监控驱动器架的运行状况。 
 ---
 = 监控驱动器架LED—NS224磁盘架
@@ -13,7 +13,7 @@ summary: 您可以通过了解驱动器架组件上LED的位置和状态条件�
 [role="lead"]
 您可以通过了解驱动器架组件上LED的位置和状态条件来监控驱动器架的运行状况。
 
-* 可以激活磁盘架操作员显示面板(ODP)和两个NSM模块上的位置(蓝色) LED、以帮助实际定位需要维修的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
+* 可以激活磁盘架操作员显示面板(ODP)和两个NSM上的位置(蓝色) LED、以帮助实际定位需要维修的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
 如果您不知道受影响磁盘架的 ` _shelf_name_` ，请运行 `storage shelf show` 命令。
 
@@ -87,12 +87,16 @@ image::../media/drw_sas3_location_icon.svg[操作员显示面板位置LED]
 |===
 
 
-== NSM模块LED
+== NSM LED
 
-NSM模块上的LED指示该模块是否正常运行、是否已准备好处理I/O流量以及硬件是否存在任何问题。
+NSM上的LED指示该模块是否正常运行、是否已准备好处理I/O流量以及硬件是否存在任何问题。
 
-下图和表格介绍了与模块功能以及模块上每个NVMe端口的功能相关的NSM模块LED。
+下图和表格介绍了与模块功能以及模块上每个NVMe端口的功能相关的NSM LED。
 
+[role="tabbed-block"]
+====
+.NSM100模块
+--
 image::../media/drw_ns224_nsm_leds_IEOPS-1270.svg[NS224 NSM100模块LED]
 
 [cols="1,1,2,4"]
@@ -107,7 +111,7 @@ image::../media/drw_sas3_location_icon.svg[操作员显示面板位置LED]
  a| 
 蓝色
  a| 
-NSM模块：位置
+NSM：位置
 
 
 
@@ -118,7 +122,7 @@ image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
  a| 
 琥珀色
  a| 
-NSM模块：注意
+NSM：注意
 
 
 
@@ -143,6 +147,72 @@ image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
 NVMe端口/链路：注意
 
 |===
+--
+.NSM100B模块
+--
+image::../media/drw_ns224_nsmb_leds_ieops-2004.svg[NS224 NSM100B模块LED]
+
+[cols="1,1,2,4"]
+|===
+| 呼出 | LED 图标 | 颜色 | Description 
+
+
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+LNK
+ a| 
+绿色
+ a| 
+NVMe端口/链路：状态
+
+
+
+ a| 
+image:../media/icon_round_2.png["标注编号2"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
+ a| 
+琥珀色
+ a| 
+NVMe端口/链路：注意
+
+
+
+ a| 
+image:../media/icon_round_3.png["标注编号3"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
+ a| 
+琥珀色
+ a| 
+I/O模块：状态
+
+
+
+ a| 
+image:../media/icon_round_4.png["标注编号4"]
+ a| 
+image::../media/drw_sas3_location_icon.svg[操作员显示面板位置LED]
+ a| 
+蓝色
+ a| 
+NSM：位置
+
+
+
+ a| 
+image:../media/icon_round_5.png["标注编号5"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
+ a| 
+琥珀色
+ a| 
+NSM：注意
+
+|===
+--
+====
 [cols="2,1,1,1"]
 |===
 | Status | NSM警示(琥珀色) | 端口LNK (绿色) | 端口警示(琥珀色) 

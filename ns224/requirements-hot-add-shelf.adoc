@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, requirement 
 summary: 要热添加NS224驱动器架、HA对必须满足特定要求。 
 ---
-= 热添加—NS224磁盘架的要求和最佳实践
+= 热添加NS224磁盘架的要求和最佳实践
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -47,7 +47,7 @@ You cannot have exceeded the maximum number of shelves supported by your HA pair
 
 * *最佳实践：*最佳实践是在热添加磁盘架前后运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] 。
 +
-Running Active IQ Config Advisor before hot-adding a shelf provides a snap shot of the existing shelf Ethernet (ENET) connectivity, verifies NVMe shelf module (NSM) firmware versions, and allows you to verify a shelf ID already in use in the HA pair.
+在热添加磁盘架之前运行Active IQ Config Advisor可提供现有磁盘架以太网(ENET)连接的快照、验证NVMe磁盘架模块(NSM)固件版本、并允许您验证HA对中已在使用的磁盘架ID。
 
 +
 Running Active IQ Config Advisor after hot-adding a shelf allows you to verify shelves are cabled correctly and that shelf IDs are unique within the HA pair.

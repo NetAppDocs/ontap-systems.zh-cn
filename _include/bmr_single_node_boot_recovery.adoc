@@ -50,9 +50,9 @@ LOADER-A>
 --
 如果未检测到加密、则启动介质恢复过程将继续进行、而无需进行密钥管理。
 
-继续监控恢复过程、因为它会从配对节点还原备份配置、env文件、MDb和rdb。
+.. 继续监控恢复过程、因为它会从配对节点还原备份配置、env文件、MDb和rdb。
+.. 恢复过程完成后、节点将重新启动。以下消息表示已成功恢复：
 
-恢复过程完成后、节点将重新启动。以下消息表示已成功恢复：
 
 ....
 
@@ -64,6 +64,13 @@ Terminated
 varfs_backup_restore: bootarg.abandon_varfs is set! Skipping /var backup.
 
 ....
+.. 节点重新启动后、确认系统恢复联机并正常运行、以验证启动介质恢复是否成功。
+.. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
+
+
+
 --
 .板载密钥管理器（ OKM ）
 --
@@ -110,6 +117,15 @@ Trying to delete any existing km_onboard.wkeydb file.
 
 Successfully recovered keymanager secrets.
 ....
+.. 节点重新启动后、确认系统恢复联机并正常运行、以验证启动介质恢复是否成功。
+.. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
+
+.. 在仅使用CFO聚合启动后、运行以下命令。
++
+`security key-manager onboard sync`
+
 
 
 --
@@ -118,7 +134,7 @@ Successfully recovered keymanager secrets.
 如果配置了EKM、系统将显示以下提示。
 
 ....
-Error when fetching key manager config from partner <IP>: 28
+Error when fetching key manager config from partner <IP>:
 
 Has key manager been configured on this system? {y|n}
 ....
@@ -140,7 +156,7 @@ Entering Bootmenu Option 11...
 
 *** 在配对节点上、使用以下命令检索密钥库UUID。
 +
-`vserver show -type admin`
+`vserver show -type admin -fields uuid`
 
 +
 `key-manager keystore show -vserver <nodename>`
@@ -189,16 +205,16 @@ LOADER-B>
 =====
 
 
+.. 节点重新启动后、确认系统恢复联机并正常运行、以验证启动介质恢复是否成功。
+.. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
+
 
 
 --
 ====
 
-
-. 节点重新启动后、确认系统恢复联机并正常运行、以验证启动介质恢复是否成功。
-. 通过交还存储使受损控制器恢复正常运行：
-+
-`storage failover giveback -ofnode _impaired_node_name_`(英文)
 
 . 如果已禁用自动交还、请重新启用它：
 +

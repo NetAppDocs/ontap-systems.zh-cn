@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: a20-30-50/install-requirements.html 
+keywords: aff a20, aff a30, aff a50, install, setup, cautions 
+summary: 查看所需设备以及平台和磁盘架的吊装预防措施。 
+---
+= 安装要求和注意事项- AFF A20、AFF A30和AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+查看AFF A20、AFF A30或AFF A50存储系统的要求和注意事项。
+
+
+
+== 安装所需的设备
+
+要安装存储系统、您需要以下设备和工具。
+
+* 访问Web浏览器以配置存储系统
+* 静电放电(ESD)带
+* 手电筒
+* 具有USB/串行连接的笔记本电脑或控制台
+* 回形针或窄尖头圆珠笔、用于设置NS224存储架ID
+* 2 号十字螺丝刀
+
+
+
+
+== 提升注意事项
+
+存储系统和磁盘架很重。搬运这些物品时请务必小心。
+
+
+
+=== 存储系统重量
+
+移动或抬起存储系统时、请采取必要的预防措施。
+
+一个-20、A30或A50存储系统的最大重量为27.9千克(61.5磅)。要抬起存储系统、请两个人或使用液压升降机。
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[AFF A20,A30,or an A50 weight caution icon]
+
+
+
+=== 磁盘架重量
+
+移动或抬起磁盘架时、请采取必要的预防措施。
+
+带有NSM100B模块的NS224磁盘架的重量可达56.8磅(25.8千克)。要抬起磁盘架、请两个人或使用液压升降机。将所有组件(前部和后部)保留在磁盘架中、以防止磁盘架重量不平衡。
+
+image::../media/drw_ns224_nsm100b_lifting_weight_ieops-1832.svg[NS224和NSM100b提升注意事项]
+
+.相关信息
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["安全信息和法规声明"^]
+
+
+.下一步是什么？
+在查看存储系统的安装要求和注意事项之后，您可以link:install-prepare.html["准备安装"]：

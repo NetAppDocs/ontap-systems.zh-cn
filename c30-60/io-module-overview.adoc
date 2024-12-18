@@ -1,0 +1,24 @@
+---
+permalink: c30-60/io-module-overview.html 
+sidebar: sidebar 
+keywords: AFF c30, AFF c60, replace io module 
+summary: '您必须使用提供商提供的更换现场可更换单元(FRU)组件来更换故障组件。' 
+---
+= 添加和更换I/O模块概述- AFF C30和AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将存储系统中发生故障的I/O模块更换为相同类型的I/O模块或不同类型的I/O模块。您还可以向具有可用插槽的存储系统添加I/O模块。
+
+* link:io-module-add.html["添加I/O模块"]
++
+添加额外的I/O模块可以提高冗余度、从而有助于确保即使一个I/O模块发生故障、存储系统仍可正常运行。
+
+* link:io-module-replace.html["更换I/O模块"]
++
+更换发生故障的I/O模块可以将存储系统还原到其最佳运行状态。
+
+

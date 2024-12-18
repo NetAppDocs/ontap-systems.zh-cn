@@ -30,12 +30,6 @@
 .板载加密(OKM)
 --
 . 在Loader提示符处，输入 `boot_ontap maint`。
-. 使用命令检查TMP固件版本 `sysconfig -v`。
-+
-** 如果版本低于5.63，请联系 https://support.netapp.com["NetApp 支持"]。
-** 如果版本高于5.63，请退出到Loader提示符： `halt`。
-
-
 . 从Loader提示符处启动到ONTAP菜单 `boot_ontap menu`、然后选择选项10。
 . 输入OKM密码短语。您可以从客户处获取此密码短语，也可以联系 https://support.netapp.com["NetApp 支持"]。
 +

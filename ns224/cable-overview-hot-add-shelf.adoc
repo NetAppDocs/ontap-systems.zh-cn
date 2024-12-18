@@ -24,6 +24,7 @@ summary: 为要热添加的每个NS224磁盘架布线、以便每个磁盘架都
 
 == 关于此任务
 
+* 此过程仅适用于直连存储。要查看有关交换机连接存储的说明，请查看我们的link:cable-as-switch-attached.html["交换机连接的布线指南"]。
 * 熟悉正确的缆线连接器方向以及NS224 NSM100磁盘架模块上的端口位置和标签。
 +
 ** 插入缆线时，连接器拉片朝上。
@@ -38,14 +39,29 @@ image::../media/oie_cable_pull_tab_up.png[插入电缆时、连接器拉片朝�
 
 ** 您可以使用下图帮助您以物理方式识别磁盘架NSM100端口e0a和e0b。
 +
-NS224磁盘架包含两个NSM100模块。顶部模块插入插槽A (NSM A)、底部模块插入插槽B (NSM B)。
-
-+
-每个NSM100模块包括2个100GbE QSFP28端口：e0a和e0b。
-
+[role="tabbed-block"]
+====
+.NSM100模块
+--
+*** NS224磁盘架包含两个NSM100模块。顶部模块插入插槽A (NSM A)、底部模块插入插槽B (NSM B)。
+*** 每个NSM100模块包括2个100GbE QSFP28端口：e0a和e0b。
 +
 image::../media/drw_ns224_back_ports.png[NS224 NSM100模块端口e0a和e0b的位置]
 
+
+
+--
+.NSM100B模块
+--
+*** NS224磁盘架包含两个NSM100B模块。顶部模块插入插槽A (NSM A)、底部模块插入插槽B (NSM B)。
+*** 每个NSM100B模块包括2个100GbE CX6/DX端口：e1a和e1b。
++
+image::../media/drw_ns224_nsmb_back_ports_ieops-2006.svg[NS224 NSM100B模块端口e0a和e0b的位置]
+
+
+
+--
+====
 
 
 * 为热添加的磁盘架布线后， ONTAP 将识别该磁盘架：

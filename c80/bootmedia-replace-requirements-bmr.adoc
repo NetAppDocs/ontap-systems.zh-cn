@@ -1,0 +1,24 @@
+---
+permalink: c80/bootmedia-replace-requirements-bmr.html 
+sidebar: sidebar 
+keywords: c80, replace the boot media 
+summary: 了解更换启动介质的要求。 
+---
+= 要求和注意事项—AFF C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在更换启动介质之前、请确保查看以下要求。
+
+* 您必须使用从NetApp收到的替代FRU组件来更换故障组件。
+* 请务必在正确的控制器上应用以下步骤中的命令：
++
+** 受损 _ 控制器是要在其中执行维护的控制器。
+** _health_ 控制器是受损控制器的 HA 配对控制器。
+
+
+* 受损控制器上不得存在任何故障集群端口。
+

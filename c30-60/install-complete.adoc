@@ -1,0 +1,107 @@
+---
+permalink: c30-60/install-complete.html 
+sidebar: sidebar 
+keywords: aff c30, aff c60, prepare installation 
+summary: 通过仅连接到交换机和笔记本电脑的集群发现、或者直接连接到存储系统中的控制器、然后连接到管理交换机、完成平台设置和配置。 
+---
+= 完成存储系统设置和配置—AFF C30和AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+打开存储系统后、即可发现集群网络并设置ONTAP集群。
+
+
+
+== 第1步：收集集群信息
+
+如果您尚未收集配置集群所需的信息、例如集群管理接口端口和IP地址、请执行此操作。
+
+使用 https://docs.netapp.com/us-en/ontap/software_setup/index.html["集群设置工作表"^] 记录集群设置过程中所需的值。如果提供了默认值，则可以使用该值，或者输入您自己的值。
+
+
+
+== 第2步：发现集群网络
+
+通过发现过程、您可以发现网络上的存储系统控制器。
+
+[role="tabbed-block"]
+====
+.选项1：已启用网络发现
+--
+如果您在笔记本电脑上启用了网络发现、则可以使用自动集群发现完成设置和配置。
+
+.步骤
+. 将笔记本电脑连接到管理交换机并访问网络计算机和设备。
+. 选择列出的 ONTAP 图标以发现：
++
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[如何使用Windows文件资源管理器发现控制器]
+
++
+.. 打开文件资源管理器。
+.. 单击左窗格中的*网络*，右键单击并选择*refresh。
+.. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
++
+
+NOTE: 此目标节点的存储系统序列号为7本。
+
+
+
++
+此时将打开 System Manager 。
+
+
+
+--
+.选项2：未启用网络发现
+--
+如果您的笔记本电脑未启用网络发现、请使用ONTAP命令行界面(CLI)集群设置向导完成配置和设置。
+
+.开始之前
+确保您的笔记本电脑已连接到串行控制台端口、并且控制器已打开电源。有关说明、请参见。 link:install-power-hardware.html#step-2-power-on-the-controllers["启动存储系统"]
+
+.步骤
+将初始节点管理 IP 地址分配给其中一个节点。
+
+[cols="1,2"]
+|===
+| 如果管理网络具有 DHCP... | 那么 ... 
+
+
+ a| 
+已配置
+ a| 
+记录分配给新控制器的 IP 地址。
+
+
+
+ a| 
+未配置
+ a| 
+. 使用 PuTTY ，终端服务器或环境中的等效项打开控制台会话。
++
+
+NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制台的联机帮助。
+
+. 连接到第一个节点的控制台。
++
+节点将启动，然后在控制台上启动集群设置向导。
+
+. 在集群设置向导提示时、输入节点的管理IP地址。
+
+
+|===
+--
+====
+
+
+== 第3步：配置集群
+
+NetApp建议您使用System Manager设置新集群。有关设置说明、请参见。 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["使用System Manager在新集群上配置ONTAP"^]
+
+System Manager为集群设置和配置提供了一个简单易行的工作流、其中包括分配节点管理IP地址、初始化集群、创建本地层、配置协议以及初始配置连接的存储。
+
+.下一步是什么？
+初始化集群后、下载并运行  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] 以确认设置。

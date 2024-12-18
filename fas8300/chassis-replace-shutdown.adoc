@@ -59,11 +59,11 @@ NOTE: 打开与每个SP/BMC连接的SSH会话、以便监控进度。
 
 . 暂停受损机箱中的两个节点：
 +
-`system node halt -node <node>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
+`system node halt -node <node1>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
 
 +
 
-NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `system node halt -node <node>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `system node halt -node <node1>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
 
 . 如果看到、请为集群中的每个控制器输入* y * `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
 {y|n}:_`

@@ -23,14 +23,17 @@ NOTE: 如果尝试使用要删除的磁盘架上的聚合执行此操作步骤�
 +
 您可以使用 `storage aggregate offline -aggregate _aggregate_name_` 命令，然后使用 `storage aggregate delete -aggregate _aggregate_name_` 命令。
 
-* 如果系统随附在系统机柜中，则需要使用十字螺丝刀卸下将磁盘架固定到机柜后部右上角的螺钉。
++
+要查看有关此步骤的详细信息并避免潜在的IO问题，请参见 https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["磁盘和聚合概述"^]。
+
+* 如果您的系统出厂时安装在系统机柜中、则需要使用梅花槽螺丝刀拧下将磁盘架固定到机柜机架导轨的螺钉。
 
 
 .关于此任务
 * 如果要热移除多个磁盘架，请一次移除一个磁盘架。
-* * 最佳实践： * 最佳实践是，从要移除的磁盘架中的驱动器中删除聚合后，删除驱动器所有权。
+* *最佳实践：*最佳实践是、从要移除的磁盘架中的驱动器中删除聚合后、清除驱动器所有权。
 +
-通过从备用驱动器中删除所有权信息，可以根据需要将该驱动器正确集成到另一个节点中。
+从备用驱动器中清除所有权信息可以根据需要将该驱动器正确集成到另一个节点中。
 
 +
 可从磁盘和聚合内容中找到用于从驱动器中删除所有权的操作步骤：
@@ -48,12 +51,11 @@ NOTE: 操作步骤要求您禁用自动驱动器分配。您可以在此操作�
 如果您不知道受影响磁盘架的 ` _shelf_name_` ，请运行 `storage shelf show` 命令。
 
 +
-一个磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 NSM 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令并使用 off 选项来将其关闭。
+磁盘架具有三个定位LED：操作员显示面板上一个、每个NSM上一个。Location LEDs remain illuminated for 30 minutes.You can turn them off by entering the same command, but using the off option.
 
 * 从不支持 RoCE 的专用端口（板载控制器，支持 RoCE 的 PCIe 卡，两者的组合或 I/O 模块）上断开磁盘架连接后，您可以选择重新配置这些端口以供网络使用。
 +
-
-NOTE: 如果 HA 对运行的是 ONTAP 9.6 版，则需要一次重新启动一个控制器。如果 HA 对运行的是 ONTAP 9.7 或更高版本，则无需重新启动控制器，除非一个或两个控制器均处于维护模式。此操作步骤假定两个控制器均未处于维护模式。
+如果 HA 对运行的是 ONTAP 9.7 或更高版本，则无需重新启动控制器，除非一个或两个控制器均处于维护模式。此操作步骤假定两个控制器均未处于维护模式。
 
 
 
@@ -110,11 +112,11 @@ Disk         Size Shelf Bay Type     Type        Name       Owner
 . 从机架或机柜中物理卸下磁盘架。
 +
 
-NOTE: 满载的 NS224 磁盘架的重量最多可达 66.78 磅（ 30.29 千克），需要两个人抬起或使用液压升降机。请避免移除磁盘架组件（从磁盘架前部或后部）以减少磁盘架重量，因为磁盘架重量会变得不平衡。
+NOTE: 满载的NS224架在装载NSM100模块时的重量可达66.78磅(30.29千克)、在装载NSM100B模块时的平均重量可达56.8磅(28.8千克)、并且需要两个人来提升或使用液压提升装置。Avoid removing shelf components (from the front or rear of the shelf) to reduce the shelf weight, because shelf weight will become unbalanced.
 
 +
 
-NOTE: 如果您的系统是在机柜中发货的，则必须先拧下将磁盘架固定到后上的两个十字螺钉。这些螺钉位于底部 NSM 模块的机架内侧。您应同时卸下两个 NSM 模块才能使用螺钉。
+NOTE: 如果您的系统出厂时使用的是机柜、则必须先拧下将磁盘架固定到机架导轨的两颗梅花槽螺钉。螺钉位于底部NSM的磁盘架内侧。您应卸下两个NSM以接触螺钉。
 
 . 如果要删除多个磁盘架，请重复步骤 2 到 5 。
 +
@@ -124,10 +126,7 @@ NOTE: 如果您的系统是在机柜中发货的，则必须先拧下将磁盘�
 +
 您可以在两个控制器模块上运行命令。
 
-. 您可以通过完成以下子步骤来重新配置不支持专用 RoCE 的端口以供网络使用。
-+
-否则，您将使用此操作步骤。
-
+. You have the option of reconfiguring the non-dedicated RoCE capable ports for networking use, by completing the following substeps.Otherwise, you are done with this procedure.
 +
 .. 验证当前为存储配置的非专用端口的名称： `storage port show`
 +
@@ -135,7 +134,7 @@ NOTE: 如果您的系统是在机柜中发货的，则必须先拧下将磁盘�
 
 +
 
-NOTE: The non-dedicated ports configured for storage use are displayed in the output as follows: If your HA pair is running ONTAP 9.8 or later, the non-dedicated ports display `storage` in the `Mode` column.If your HA pair is running ONTAP 9.7 or 9.6, the non-dedicated ports, which display `false` in the `Is Dedicated?` column, also display `enabled` in the `State` column.
+NOTE: 输出中将显示为存储使用而配置的非专用端口、如下所示：如果HA对运行的是ONTAP 9.8或更高版本、则列中 `Mode`将显示非专用端口 `storage`。如果HA对运行的是ONTAP 9.7、列中显示的非专用端口 `false`也会显示在列中 `Is Dedicated?`。 `enabled` `State`
 
 .. 完成适用于 HA 对所运行的 ONTAP 版本的一组步骤：
 +
@@ -168,28 +167,6 @@ ONTAP 9.7
 ... 转至子步骤 8c 以验证所有端口更改。
 
 
-
-
- a| 
-ONTAP 9.6 版
- a| 
-... 在第一个控制器模块上重新配置支持 RoCE 的端口以供网络使用： `storage port disable -node _node name_ -port _port name_`
-+
-您必须对要重新配置的每个端口运行此命令。
-
-... 重新启动控制器模块以使端口更改生效：
-+
-`ssystem node reboot -node _node name_ -reason _reason_ for the reboot`
-
-+
-
-NOTE: 必须完成重新启动，然后才能继续执行下一步。重新启动可能需要长达 15 分钟。
-
-... 重复第一步（ A ），重新配置第二个控制器模块上的端口。
-... 重复第二步（ b ），重新启动第二个控制器以使端口更改生效。
-... 转至子步骤 8c 以验证所有端口更改。
-
-
 |===
 .. 验证是否已重新配置两个控制器模块的非专用端口以供网络使用： `storage port show`
 +
@@ -199,7 +176,7 @@ NOTE: 必须完成重新启动，然后才能继续执行下一步。重新启�
 如果 HA 对运行的是 ONTAP 9.8 或更高版本，则非专用端口会在 `Mode` 列中显示 `network` 。
 
 +
-如果 HA 对运行的是 ONTAP 9.7 或 9.6 ，则非专用端口会在 `is dedicated ？` 中显示 `false` 列中，也会在 `State` 列中显示 `d已标记` 。
+如果HA对运行的是ONTAP 9.7、列中显示的非专用端口 `false`也会显示在列中 `Is Dedicated?`。 `disabled` `State`
 
 
 

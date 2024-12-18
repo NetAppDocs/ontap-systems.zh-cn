@@ -1,0 +1,236 @@
+---
+permalink: c80/bootmedia-recovery-image-boot-bmr.html 
+sidebar: sidebar 
+keywords: c80, boot the recovery image 
+summary: 您可以通过自动启动恢复过程从配对控制器还原启动介质上的映像。 
+---
+= 自动启动恢复—C80
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+启动介质损坏时、从配对节点还原ONTAP映像。
+
+.关于此任务
+如果节点的启动介质损坏、启动过程将在Loader提示符处暂停、并显示启动错误消息。
+
+如果遇到这些启动错误消息、则需要从配对节点还原ONTAP映像。
+
+.显示启动错误消息示例
+[%collapsible]
+====
+....
+Can't find primary boot device u0a.0
+Can't find backup boot device u0a.1
+ACPI RSDP Found at 0x777fe014
+
+Starting AUTOBOOT press Ctrl-C to abort...
+Could not load fat://boot0/X86_64/freebsd/image1/kernel: Device not found
+
+ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/Linux/image1/vmlinuz (boot0, fat)
+ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/freebsd/image1/kernel (boot0, fat)
+
+Autoboot of PRIMARY image failed. Device not found (-6)
+LOADER-A>
+....
+====
+.步骤
+. 在Loader提示符处、输入命令：
++
+`boot_recovery -partner`
+
++
+屏幕将显示以下消息：
+
++
+`Starting boot media recovery (BMR) process. Press Ctrl-C to abort…`
+
+. 在Loader配置本地集群端口并从配对节点执行时监控启动介质恢复过程 `netboot`。
++
+当网络启动运行时、将显示此 `Starting BMR`消息。
+
+. 根据加密方法、选择与您的系统配置匹配的选项：
++
+[role="tabbed-block"]
+====
+.无加密
+--
+如果未检测到加密、则启动介质恢复过程将继续进行、而无需进行密钥管理。
+
+.. 继续监控恢复过程、因为它会从配对节点还原备份配置、env文件、MDb和rdb。
+.. 恢复过程完成后、节点将重新启动。以下消息表示已成功恢复：
+
+
+....
+
+varfs_backup_restore: update checksum for varfs.tgz
+varfs_backup_restore: restore using /cfcard/x86_64/freebsd/oldvarfs.tgz
+varfs_backup_restore: Rebooting to load the new varfs
+.
+Terminated
+varfs_backup_restore: bootarg.abandon_varfs is set! Skipping /var backup.
+
+....
+.. 节点重新启动后、确认系统恢复联机并正常运行、以验证启动介质恢复是否成功。
+.. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
+
+
+
+--
+.板载密钥管理器（ OKM ）
+--
+如果检测到板载密钥管理器(OKM)、系统将显示以下提示。
+
+....
+key manager is configured.
+Entering Bootmenu Option 10...
+
+This option must be used only in disaster recovery procedures. Are you sure? (y or n):
+....
+.. 在Bootmenu Option提示符处、输入 `Y`以确认您要使用bootmedia recovery选项。
+.. 出现提示时、输入板载密钥管理器的密码短语、然后再次输入密码短语进行确认。
++
+.显示密码短语提示示例
+[%collapsible]
+=====
+....
+Enter the passphrase for onboard key management:
+Enter the passphrase again to confirm:
+Enter the backup data:
+TmV0QXBwIEtleSBCbG9iAAECAAAEAAAAcAEAAAAAAAA3yR6UAAAAACEAAAAAAAAA
+QAAAAAAAAACJz1u2AAAAAPX84XY5AU0p4Jcb9t8wiwOZoqyJPJ4L6/j5FHJ9yj/w
+RVDO1sZB1E4HO79/zYc82nBwtiHaSPWCbkCrMWuQQDsiAAAAAAAAACgAAAAAAAAA
+3WTh7gAAAAAAAAAAAAAAAAIAAAAAAAgAZJEIWvdeHr5RCAvHGclo+wAAAAAAAAAA
+IgAAAAAAAAAoAAAAAAAAAEOTcR0AAAAAAAAAAAAAAAACAAAAAAAJAGr3tJA/LRzU
+QRHwv+1aWvAAAAAAAAAAACQAAAAAAAAAgAAAAAAAAABHVFpxAAAAAHUgdVq0EKNp
+.
+.
+.
+.
+....
+=====
+.. 继续监控恢复过程、因为它会从配对节点还原备份配置、env文件、MDb和rdb。
++
+恢复过程完成后、节点将重新启动。以下消息表示已成功恢复：
+
++
+....
+Trying to recover keymanager secrets....
+Setting recovery material for the onboard key manager
+Recovery secrets set successfully
+Trying to delete any existing km_onboard.wkeydb file.
+
+Successfully recovered keymanager secrets.
+....
+.. 节点重新启动后、确认系统恢复联机并正常运行、以验证启动介质恢复是否成功。
+.. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
+
+.. 在仅使用CFO聚合启动后、运行以下命令。
++
+`security key-manager onboard sync`
+
+
+
+--
+.外部密钥管理器（ EKM ）
+--
+如果配置了EKM、系统将显示以下提示。
+
+....
+Error when fetching key manager config from partner <IP>:
+
+Has key manager been configured on this system? {y|n}
+....
+.. 如果已配置EKM、请输入 `Y`。
++
+....
+key manager is configured.
+Entering Bootmenu Option 11...
+....
++
+系统将提示您输入在设置期间最初使用的EKM设置。
+
+.. 出现提示时、输入每个EKM配置设置。
+.. 验证集群UUID和密钥库UUID的属性是否正确。
++
+*** 在配对节点上、使用以下命令检索集群UUID。
++
+`cluster identity show`
+
+*** 在配对节点上、使用以下命令检索密钥库UUID。
++
+`vserver show -type admin -fields uuid`
+
++
+`key-manager keystore show -vserver <nodename>`
+
+*** 如果配对节点不可用、请使用Mroot-AK密钥检索UUID：
++
+**** 对于集群UUID、输入以下命令：
++
+`x-NETAPP-ClusterName: <cluster name>`
+
+**** 对于密钥库UUID、输入以下命令：
++
+`x-NETAPP-KeyUsage: MROOT-AK`
+
+
+
+
+
+.. 出现提示时、输入密钥库UUID和集群UUID的值。
+.. 根据密钥是否已成功还原、执行以下操作之一：
++
+*** 如果密钥已成功还原、则恢复过程将继续并重新启动节点。继续执行步骤4。
+*** 如果未成功还原密钥、系统将暂停并显示错误和警告消息。重新运行恢复过程。
++
+.显示密钥恢复错误和警告消息的示例
+[%collapsible]
+=====
+....
+
+ERROR: kmip_init: halting this system with encrypted mroot...
+
+WARNING: kmip_init: authentication keys might not be available.
+
+System cannot connect to key managers.
+
+ERROR: kmip_init: halting this system with encrypted mroot...
+
+Terminated
+
+Uptime: 11m32s
+
+System halting...
+
+LOADER-B>
+....
+=====
+
+
+.. 节点重新启动后、确认系统恢复联机并正常运行、以验证启动介质恢复是否成功。
+.. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
+
+
+
+--
+====
+
+
+. 如果已禁用自动交还、请重新启用它：
++
+`storage failover modify -node local -auto-giveback true`(英文)
+
+. 如果启用了AutoSupport、则还原自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=END`(英文)
+
+

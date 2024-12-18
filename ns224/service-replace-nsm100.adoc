@@ -1,10 +1,10 @@
 ---
 permalink: ns224/service-replace-nsm100.html 
 sidebar: sidebar 
-keywords: ns224, shelves, shelf, ns224 shelves, replace, impair, nvme, module, nsm, nondisruptive, drive, i/o, nsm, replace an nsm module 
+keywords: ns224, shelves, shelf, ns224 shelves, replace, impair, nvme, module, nsm, nondisruptive, drive, i/o, nsm, replace an NSM 
 summary: 您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断更换受损的 NVMe 磁盘架模块（ NSM\ ）。 
 ---
-= 更换 NSM 模块— NS224 磁盘架
+= 更换NSM - NS224磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无�
 您可以在已启动且正在执行 I/O 的 NS224 驱动器架中无中断更换受损的 NVMe 磁盘架模块（ NSM ）。
 
 .开始之前
-* 磁盘架的配对 NSM 模块必须已启动且正在运行，并且已正确布线，以便在卸下故障 NSM 模块时，磁盘架可以保持连接。
+* 磁盘架的配对NSM必须已启动且正在运行、并已正确布线、以便在删除故障NSM时磁盘架可以保持连接。
 +
 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
@@ -22,9 +22,14 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 .关于此任务
-* 更换 NSM 模块需要将 DIMM ，风扇和电源从受损的 NSM 模块移至更换的 NSM 模块。
+* 更换NSM需要移动以下内容：
 +
-您不会移动实时时钟（ Real-time Clock ， RTC ）电池或启动介质。它们预装在替代 NSM 模块中。
+** *NSM100模块*：从受损NSM到替代NSM的DIMM、风扇和电源。
+** *NSM100B模块*：从受损NSM到更换NSM的DIMM、风扇、启动介质、I/O模块和电源。
++
+不移动实时时钟(RTC)电池。它们预装在替代NSM中。
+
+
 
 * 在拆卸和安装 NVMe 磁盘架模块（ NSM ）之间至少留出 70 秒。
 +
@@ -43,77 +48,81 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp
 请勿将固件还原到不支持您的磁盘架及其组件的版本。
 
 ====
-* 在固件版本不是最新的新 NSM 模块上，磁盘架（ NSM ）固件会自动更新（无中断）。
+* 在固件版本不是最新的新NSM上、磁盘架(NSM)固件会自动更新(无干扰)。
 +
-NSM 模块固件每 10 分钟检查一次。NSM 模块固件更新最多可能需要 30 分钟。
+NSM固件检查每10分钟进行一次。An NSM firmware update can take up to 30 minutes.
 
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
 如果您不知道受影响磁盘架的 `shelf_name` ，请运行 `storage shelf show` 命令。
 
 +
-一个磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 NSM 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令，但使用 `off` 选项将其关闭。
+磁盘架具有三个定位LED：操作员显示面板上一个、每个NSM上一个。Location LEDs remain illuminated for 30 minutes.您可以通过输入相同的命令并使用选项来关闭它们 `off`。
 
-* 拆开备用 NSM 模块的包装时，请保存所有包装材料，以便在退回发生故障的 NSM 模块时使用。
+* When you unpack the replacement NSM, save all packing materials for use when you return the failed NSM.
 +
 If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
-* 您可以使用以下动画或写入的步骤来更换NSM模块。
-+
-.更换NS224磁盘架中的NSM模块
+
+
+[role="tabbed-block"]
+====
+.NSM100模块
+--
+您可以使用以下动画或写入的步骤来替换NSM。
+
+.更换NS224磁盘架中的NSM
 video::f57693b3-b164-4014-a827-aa86002f4b34[panopto]
-
-
 .步骤
 . 正确接地。
-. 以物理方式识别受损的 NSM 模块。
+. 物理识别受损的NSM。
 +
 系统会向系统控制台记录一条警告消息，指示哪个模块受损。此外，驱动器架操作员显示面板和受损模块上的警示（琥珀色） LED 也会亮起。
 
-. 断开受损 NSM 模块的布线：
+. 断开受损NSM的布线：
 +
 .. 如果电源为交流电源、请打开电源线固定器、或者如果为直流电源、请拧下两个拇指螺丝、然后从电源拔下电源线、从而断开电源线与电源的连接。
 +
 电源没有电源开关。
 
-.. 断开存储布线与 NSM 模块端口的连接。
+.. 断开存储布线与NSM端口的连接。
 +
-记下每个缆线连接到的 NSM 模块端口。您可以将缆线重新连接到此更换用的操作步骤模块上的相同端口。
+记下每个缆线连接到的NSM端口。您可以将缆线重新连接到替代NSM上的相同端口、此过程稍后将进行介绍。
 
 
 
-. 从磁盘架中卸下 NSM 模块：
+. 从磁盘架中卸下NSM：
 +
-.. 将索引指针绕过 NSM 模块两侧的锁定机制的指孔。
+.. 将食指环穿过NSM两侧闩锁装置的手指孔。
 +
 
-NOTE: 如果您要卸下底部 NSM 模块，并且底部导轨阻碍了对锁定机制的访问，请将索引指针从内部穿过指针孔（通过跨越臂）。
+NOTE: 如果您要卸下底部NSM，并且底部导轨阻碍了对锁定装置的操作，请将食指从内侧穿过手指孔(通过交叉手臂)。
 
 .. 用拇指按住锁定机制顶部的橙色卡舌。
 +
 闩锁机制将抬起，以清除磁盘架上的闩锁销。
 
-.. 轻轻地将 NSM 模块拉出磁盘架，直到大约三分之一的位置，用双手抓住 NSM 模块的两侧以支撑其重量，然后将其放在平稳的表面上。
+.. 轻轻拉动NSM、直至其离开磁盘架的三分之一处、用双手抓住NSM两侧以支撑其重量、然后将其放在平稳的表面上。
 +
-开始拉动时，锁定装置臂从 NSM 模块伸出并锁定在完全展开的位置。
+当您开始拉动时、锁定机构臂会从NSM伸出、并锁定在完全伸出的位置。
 
 
 
-. 拆开备用 NSM 模块的包装，并将其放在受损 NSM 模块附近的水平表面上。
-. 松开受损 NSM 模块和更换用 NSM 模块上的翼形螺钉，打开受损 NSM 模块的外盖。
+. 拆开替代NSM的包装、并将其放在受损NSM附近的水平表面上。
+. 拧松受损NSM的翼形螺钉、打开更换用的NSM的护盖。
 +
 
-NOTE: NSM 模块盖上的 FRU 标签显示了 DIMM 和风扇的位置。
+NOTE: NSM护盖上的FRU标签显示了DIMM和风扇的位置。
 
-. 将DIMM从受损的NSM模块移至更换的NSM模块：
+. 将受损NSM中的DIMM移至更换NSM：
 +
-.. 记下插槽中 DIMM 的方向，以便可以使用相同的方向将 DIMM 插入更换用的 NSM 模块。
+.. 记下插槽中DIMM的方向、以便可以使用相同的方向将DIMM插入更换用的NSM。
 .. 缓慢地将 DIMM 插槽两端的弹出卡舌推离插槽，然后将 DIMM 从插槽中提出，从而从插槽中弹出 DIMM 。
 +
 
 NOTE: 小心握住 DIMM 的边角或边缘，以避免对 DIMM 电路板组件施加压力。弹出器凸耳保持打开位置。
 
-.. 拿住 DIMM 的边角，然后将 DIMM 垂直插入更换用的 NSM 模块上的插槽。
+.. 拿住DIMM的边角、然后将DIMM垂直插入更换用的NSM上的插槽中。
 +
 DIMM 底部插脚之间的槽口应与插槽中的卡舌对齐。
 
@@ -124,24 +133,24 @@ DIMM 底部插脚之间的槽口应与插槽中的卡舌对齐。
 .. 对其余 DIMM 重复子步骤 7a 到 7d 。
 
 
-. 将风扇从受损的NSM模块移至更换的NSM模块：
+. 将风扇从受损NSM移动到更换的NSM：
 +
 .. 从蓝色接触点所在的两侧牢牢抓住风扇，然后垂直提起风扇，将其从插槽中断开。
 +
 在将风扇提出之前，您可能需要来回轻缓地摇动风扇以断开其连接。
 
-.. 将风扇与更换用的 NSM 模块中的导轨对齐，然后向下推，直到风扇模块连接器在插槽中完全就位。
+.. 将风扇与更换用的NSM中的导轨对齐、然后向下推、直到风扇模块连接器在插槽中完全就位。
 .. 对其余风扇重复子步骤 8a 和 8b 。
 
 
-. 合上每个 NSM 模块的外盖，然后拧紧每个翼形螺钉。
-. 将电源从受损的NSM模块移至更换的NSM模块：
+. 合上每个NSM的护盖、然后拧紧每个翼形螺钉。
+. 将受损NSM中的电源移至更换NSM：
 +
 .. 将手柄向上旋转到其水平位置、然后抓住它。
 .. 用拇指按下蓝色卡舌以释放锁定机制。
-.. 将电源从 NSM 模块中拉出，同时用另一只手支撑其重量。
-.. 用双手支撑电源边缘并将其与更换用 NSM 模块的开口对齐。
-.. 将电源轻轻推入 NSM 模块，直到锁定机制卡入到位。
+.. 将电源从NSM中拉出、同时使用另一只手支撑其重量。
+.. 用双手支撑电源边缘并将其与更换用NSM中的开口对齐。
+.. 将电源轻轻推入NSM、直至锁定装置卡入到位。
 +
 
 NOTE: 请勿用力过大，否则可能会损坏内部连接器。
@@ -149,30 +158,30 @@ NOTE: 请勿用力过大，否则可能会损坏内部连接器。
 .. 向下旋转手柄、使其无法正常运行。
 
 
-. 将替代 NSM 模块插入磁盘架：
+. 将替代NSM插入磁盘架：
 +
 .. 确保锁定装置臂锁定在完全展开的位置。
-.. 用双手将 NSM 模块轻轻滑入磁盘架，直到磁盘架完全支撑 NSM 模块的重量为止。
-.. 将 NSM 模块推入磁盘架，直到其停止（距离磁盘架背面大约半英寸）。
+.. 用双手将NSM轻轻滑入磁盘架、直到磁盘架完全支撑NSM的重量为止。
+.. 将NSM推入磁盘架、直至其停止(距离磁盘架背面大约半英寸)。
 +
-您可以将拇指放在每个（锁定装置臂的）指环正面的橙色卡舌上，以推入 NSM 模块。
+您可以将拇指放在每个手指环(锁定装置臂)正面的橙色卡舌上、以推入NSM。
 
-.. 将索引指针绕过 NSM 模块两侧的锁定机制的指孔。
+.. 将食指环穿过NSM两侧闩锁装置的手指孔。
 +
 
-NOTE: 如果您要插入底部 NSM 模块，并且底部导轨阻碍了对锁定机制的访问，请将索引指针从内部穿过指针孔（通过跨越臂）。
+NOTE: 如果您插入底部NSM，并且底部导轨阻碍了对锁定装置的操作，请将食指从内侧穿过手指孔(通过交叉手臂)。
 
 .. 用拇指按住锁定机制顶部的橙色卡舌。
 .. 轻轻向前推，使闩锁超过停止位置。
 .. 从锁定机制的顶部释放拇指，然后继续推动，直到锁定机制卡入到位。
 +
-NSM 模块应完全插入磁盘架并与磁盘架边缘平齐。
+NSM应完全插入磁盘架、并与磁盘架边缘齐平。
 
 
 
-. 重新连接到 NSM 模块的布线：
+. 将布线重新连接到NSM：
 +
-.. 将存储布线重新连接到同一两个 NSM 模块端口。
+.. 将存储布线重新连接到相同的两个NSM端口。
 +
 插入缆线时，连接器拉片朝上。正确插入缆线后，它会卡入到位。
 
@@ -181,20 +190,315 @@ NSM 模块应完全插入磁盘架并与磁盘架边缘平齐。
 正常运行时，电源的双色 LED 将呈绿色亮起。
 
 +
-此外，两个 NSM 模块端口 LNK （绿色） LED 均会亮起。如果 LNK LED 不亮，请重新拔插缆线。
+此外、两个NSM端口LNK (绿色) LED都会亮起。If a LNK LED does not illuminate, reseat the cable.
 
 
 
 . 验证磁盘架操作员显示面板上的警示（琥珀色） LED 是否不再亮起。
 +
-NSM 模块重新启动后，操作员显示面板警示 LED 将熄灭。这可能需要三到五分钟。
+NSM重新启动后、操作员显示面板警示LED熄灭。This can take three to five minutes.
 
-. 运行 Active IQ Config Advisor ，验证 NSM 模块的布线是否正确。
+. 运行Active IQ Config Advisor以验证NSM是否已正确布线。
 +
 如果生成任何布线错误，请按照提供的更正操作进行操作。
 
 +
 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
 
-. 确保磁盘架中的两个NSM模块运行相同版本的固件：0200或更高版本。
+. 确保磁盘架中的两个NSM运行相同版本的固件：0200或更高版本。
 
+
+--
+.NSM100B模块
+--
+.步骤
+. 正确接地。
+. 物理识别受损的NSM。
++
+系统会向系统控制台记录一条警告消息，指示哪个模块受损。此外，驱动器架操作员显示面板和受损模块上的警示（琥珀色） LED 也会亮起。
+
+. 断开受损NSM的布线：
++
+.. 如果电源为交流电源、请打开电源线固定器、或者如果为直流电源、请拧下两个拇指螺丝、然后从电源拔下电源线、从而断开电源线与电源的连接。
++
+电源没有电源开关。
+
+.. 断开存储布线与NSM端口的连接。
++
+记下每个缆线连接到的NSM端口。您可以将缆线重新连接到替代NSM上的相同端口、此过程稍后将进行介绍。
+
+
+
+. 卸下NSM：
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[卸下NSM。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+在NSM的两端、向外推垂直锁定卡舌以释放手柄。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+** 朝您的方向拉动手柄、从中间板上取下NSM。
++
+拉动时、手柄会从磁盘架中伸出。当您遇到一些阻力时、请继续拉。
+
+** 将NSM滑出磁盘架、然后将其放在平稳的表面上。
++
+确保在将NSM滑出磁盘架时支撑其底部。
+
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+竖直旋转手柄(卡舌旁边)、将其移开。
+
+|===
+. 拆开替代NSM的包装、并将其放在受损NSM附近的水平表面上。
+. 松开每个护盖上的翼形螺钉、打开两个NSM的护盖。
+. 将DIMM从受损NSM移至更换用的NSM：
++
+.. 从受损NSM中卸下DIMM：
++
+image::../media/drw_t_dimm_ieops-1978.svg[卸下DIMM。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+DIMM插槽编号和位置。
+
+NSM在插槽1和3中包含DIMM、在插槽2和4中包含DIMM挡片。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+*** 记下插槽中DIMM的方向、以便可以使用相同的方向将其插入更换用的DIMM中。
+*** 缓慢地拉开DIMM插槽两端的两个DIMM弹出卡舌、以弹出故障DIMM。
+
+
+
+IMPORTANT: 小心握住 DIMM 的边角或边缘，以避免对 DIMM 电路板组件施加压力。
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+向上提起DIMM并将其从插槽中取出。
+
+弹出器凸耳保持打开位置。
+
+|===
+.. 在替代NSM中安装DIMM：
++
+... 拿住 DIMM 的边角，然后将 DIMM 垂直插入插槽。
++
+DIMM 底部插脚之间的槽口应与插槽中的卡舌对齐。
+
++
+正确插入后， DIMM 应轻松插入，但应紧紧插入插槽中。如果没有，请重新插入 DIMM 。
+
+... 小心而稳固地向下推 DIMM 的上边缘，直到弹出器卡舌卡入到位，卡入到位于 DIMM 两端的缺口上。
+... 对另一个DIMM重复上述步骤。
+
+
+
+
+. 将受损NSM中的所有风扇移至更换NSM：
++
+image::../media/drw_t_fan_replace_ieops-1979.svg[卸下故障风扇。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+用力抓住蓝色触点所在的两侧、然后将故障风扇从插槽中竖直拉出、以卸下风扇。
+
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号2]
+ a| 
+通过将替代风扇与导板对齐来插入、然后向下推、直到风扇连接器完全固定在插槽中。
+
+|===
+. 将启动介质移至替代NSM：
++
+.. 从受损NSM中删除启动介质：
++
+image::../media/drw_t_boot_media_replace_ieops-1977.svg[删除启动介质。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+启动介质位置
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+按下蓝色卡舌以释放启动介质的右端。
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+轻轻向上提起引导介质的右端，以便沿着引导介质的两侧获得良好的抓持力。
+
+
+
+ a| 
+image::../media/icon_round_4.png[标注编号4]
+ a| 
+轻轻地将引导介质的左端从插槽中拉出。
+
+|===
+.. 在替代NSM中安装启动介质：
++
+... 将启动介质的边缘与替换NSM中的插槽外壳对齐、然后将其垂直推入插槽。
+... 朝锁定按钮方向向下旋转启动介质。
+... 按下锁定按钮、向下旋转行李箱介质、然后松开锁定按钮。
+
+
+
+
+. 将I/O模块从受损NSM移动到替代NSM。
++
+.. 从受损NSM中卸下I/O模块：
++
+image::../media/drw_t_io_module_replace_ieops-1980.svg[更换I/O模块。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+逆时针旋转I/O模块指旋螺钉以拧松。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+使用左侧的端口标签卡舌和翼形螺钉将I/O模块从NSM中拉出。
+
+|===
+.. 在替代NSM中安装I/O模块：
++
+... 将I/O模块与替代NSM中插槽的边缘对齐。
+... 将I/O模块轻轻推入插槽、确保将模块正确插入连接器。
++
+您可以使用左侧的卡舌和指旋螺钉推入I/O模块。
+
+
+
+
+
+. 合上每个NSM的护盖、然后拧紧每个翼形螺钉。
+. 将受损NSM中的电源移至更换NSM：
++
+.. 将手柄向上旋转到其水平位置、然后抓住它。
+.. 用拇指按下蓝色卡舌(AC PSU)或触地卡舌(DC PSU)以释放锁定装置。
+.. 将电源从NSM中拉出、同时使用另一只手支撑其重量。
+.. 用双手支撑电源边缘并将其与更换用NSM中的开口对齐。
+.. 将电源轻轻推入NSM、直至锁定装置卡入到位。
++
+
+NOTE: 请勿用力过大，否则可能会损坏内部连接器。
+
+.. 向下旋转手柄、使其无法正常运行。
+
+
+. 将NSM插入磁盘架：
++
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[更换NSM。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+如果您在维修NSM时竖直旋转NSM手柄(位于卡舌旁边)以将其移出、请将其向下旋转至水平位置。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+将NSM的后部与磁盘架中的开口对齐、然后使用手柄轻轻推动NSM、直至其完全就位。
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+将手柄旋转至竖直位置、并使用卡舌锁定到位。
+
+|===
+. 将布线重新连接到NSM：
++
+.. 将存储布线重新连接到相同的两个NSM端口。
++
+插入缆线时，连接器拉片朝上。正确插入缆线后，它会卡入到位。
+
+.. 将电源线重新连接到电源、如果电源为交流电源、则使用电源线固定器固定电源线；如果是直流电源、则拧紧两个翼形螺钉。
++
+正常运行时，电源的双色 LED 将呈绿色亮起。
+
++
+此外、两个NSM端口LNK (绿色) LED都会亮起。If a LNK LED does not illuminate, reseat the cable.
+
+
+
+. 验证磁盘架操作员显示面板上的警示（琥珀色） LED 是否不再亮起。
++
+NSM重新启动后、操作员显示面板警示LED熄灭。This can take three to five minutes.
+
+. 运行Active IQ Config Advisor以验证NSM是否已正确布线。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+
+. 确保磁盘架中的两个NSM运行的固件版本相同：0300或更高版本。
+
+
+--
+====

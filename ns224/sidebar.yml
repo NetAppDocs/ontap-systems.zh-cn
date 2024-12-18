@@ -52,7 +52,9 @@ entries:
       url: "/ns224/service-monitor-leds.html"
   - title: 风扇
     url: "/ns224/service-replace-fan.html"
-  - title: NSM 模块
+  - title: I/O 模块
+    url: "/ns224/service-replace-io-module.html"
+  - title: NSM
     url: "/ns224/service-replace-nsm100.html"
   - title: 电源
     url: "/ns224/service-replace-power-supply.html"

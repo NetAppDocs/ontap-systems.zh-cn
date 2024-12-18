@@ -1,0 +1,96 @@
+---
+permalink: a20-30-50/maintain-overview.html 
+sidebar: sidebar 
+keywords: aff a20 aff a30 aff a50 maintenance, maintenance, repairing a20 aff a30 aff a50, replace a20 aff a30 aff a50 components 
+summary: 维护AFF A20、AFF A30和AFF A50硬件 
+---
+= 硬件维护概述—AFF A20、AFF A30和AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可能需要对硬件执行维护过程。本节将介绍维护AFF A20、AFF A30和AFF A50系统组件的特定过程。
+
+本节中的过程假设AFF A20、AFF A30或AFF A50存储系统已部署为ONTAP环境中的存储节点。
+
+
+
+== 系统组件
+
+对于AFF A20、AFF A30和AFF A50存储系统、您可以对以下组件执行维护过程。
+
+[cols="25,65"]
+|===
+
+
+ a| 
+link:bootmedia-replace-workflow.html["启动介质"]
+ a| 
+启动介质存储一组主和二级ONTAP映像文件以及系统在启动时使用的系统配置信息。
+
+
+
+ a| 
+link:chassis-replace-workflow.html["机箱"]
+ a| 
+机箱是托管所有控制器组件(例如控制器/CPU单元、电源和I/O)的物理机箱
+
+
+
+ a| 
+link:controller-replace-workflow.html["控制器"]
+ a| 
+控制器由主板，固件和软件组成。它控制驱动器并运行ONTAP操作系统软件。
+
+
+
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
+双列直插式内存模块(DIMM)是一种计算机内存。安装它们是为了向控制器主板添加系统内存。
+
+
+
+ a| 
+link:drive-replace.html["驱动器"]
+ a| 
+驱动器是提供数据所需物理存储的设备。
+
+
+
+ a| 
+link:fan-replace.html["风扇"]
+ a| 
+风扇用于冷却控制器和驱动器。
+
+
+
+ a| 
+link:io-module-overview.html["I/O 模块"]
+ a| 
+I/O模块(输入/输出模块)是一个硬件组件、充当控制器与需要与控制器交换数据的各种设备或系统之间的媒介。
+
+
+
+ a| 
+link:nvdimm-battery-replace.html["NV电池"]
+ a| 
+非易失性存储器(NV)电池负责为NVMEM组件供电、同时在断电后将传输中的数据转存到闪存中。
+
+
+
+ a| 
+link:power-supply-replace.html["电源"]
+ a| 
+电源设备在控制器中提供冗余电源。
+
+
+
+ a| 
+link:rtc-battery-replace.html["实时时钟电池"]
+ a| 
+实时时钟电池可在断电时保留系统日期和时间信息。
+
+|===

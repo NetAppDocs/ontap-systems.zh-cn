@@ -1,0 +1,193 @@
+---
+permalink: c30-60/power-supply-replace.html 
+sidebar: sidebar 
+keywords: aff c30, aff c60, replace a power supply 
+summary: 更换电源包括断开目标电源与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。 
+---
+= 更换电源- AFF C30和AFF C60
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+更换电源设备(PSU)包括断开故障PSU与电源的连接、拔下电源线、卸下故障PSU并安装更换PSU、然后将其重新连接到电源。
+
+.关于此任务
+* 此操作步骤 是为一次更换一个PSU而编写的。
++
+PSU是冗余的可热插拔PSU。
+
+* 重要说明：请勿混用具有不同效率等级或不同输入类型的PSU。请始终像这样替换。
+* 请根据您的PSU类型使用相应的操作步骤 ：AC或DC。
+* 如果需要、您可以打开存储系统位置(蓝色) LED、以帮助您以物理方式定位受影响的存储系统。使用SSH登录到BMC并输入 `system location-led _on_`命令。
++
+存储系统具有三个定位LED：操作员显示面板上一个、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.
+
++
+您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
+
+
+
+[role="tabbed-block"]
+====
+.选项1：更换交流PSU
+--
+要更换交流PSU、请完成以下步骤。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 根据控制台错误消息或通过PSU上的红色警示LED确定出现故障的PSU。
+. 打开电源线固定器、从PSU断开电源线、然后从PSU拔下电源线。
++
+
+NOTE: PSU没有电源开关。
+
+. 卸下PSU：
++
+image::../media/drw_g_t_psu_replace_ieops-1899.svg[更换交流PSU]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+向上旋转PSU手柄至水平位置、然后抓住它。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+用拇指按下蓝色卡舌、从控制器中松开PSU。
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+将PSU从控制器中拉出、同时用另一只手支撑其重量。
+
+
+CAUTION: PSU较短。从控制器上卸下控制器时、始终用双手支撑控制器、以防止其突然从控制器上摆动而造成人员的任何人员的任何人员的安全。
+
+|===
+. 安装替代PSU：
++
+.. 用双手支撑PSU的边缘并将其与控制器中的开口对齐。
+.. 将PSU轻轻推入控制器、直至锁定卡舌卡入到位。
++
+PSU只能与内部连接器正确啮合并单向锁定到位。
+
++
+
+NOTE: 为避免损坏内部连接器、将PSU滑入控制器时请勿用力过度。
+
+.. 向下旋转手柄、使其无法正常运行。
+
+
+. 将电源线重新连接到PSU、然后使用电源线固定器固定电源线。
++
+在PSU恢复供电后、状态LED应为绿色。
+
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"^]有关详细信息、请参见页面。
+
+
+--
+.选项2：更换DC PSU
+--
+要更换直流PSU、请完成以下步骤。
+
+.步骤
+. 如果您尚未接地，请正确接地。
+. 根据控制台错误消息或通过PSU上的红色警示LED确定出现故障的PSU。
+. 断开PSU的连接：
++
+
+NOTE: PSU没有电源开关。
+
++
+.. 拧下D-sub直流电源线连接器上的两颗指旋螺钉。
++
+步骤4中的图示和表格显示了两个指旋螺钉(项目1)和D-sub直流电源线连接器(项目2)。
+
+.. 从PSU上拔下电源线、并将其放在一旁。
+
+
+. 卸下PSU：
++
+.. 将手柄向上旋转到其水平位置、然后抓住它。
+.. 用拇指按压赤陶色卡舌以释放锁定装置。
+.. 将PSU从控制器中拉出、同时用另一只手支撑其重量。
++
+
+CAUTION: PSU较短。从控制器上卸下控制器时、请始终用双手支撑控制器、以免其从控制器上摆动而造成人员的任何人员的安全。
+
++
+image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[卸下直流PSU]
+
+
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+翼形螺钉
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+D-sub直流电源PSU电源线连接器
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+电源手柄
+
+
+
+ a| 
+image::../media/icon_round_4.png[标注编号4]
+ a| 
+Terrac兵马俑PSU锁定卡舌
+
+|===
+. 插入更换PSU：
++
+.. 用双手支撑PSU的边缘并将其与控制器中的开口对齐。
+.. 将PSU轻轻滑入控制器、直至锁定卡舌卡入到位。
++
+PSU必须与内部连接器和锁定装置正确接合。如果您认为PSU未正确就位、请重复此步骤。
+
++
+
+NOTE: 为避免损坏内部连接器、将PSU滑入控制器时请勿用力过度。
+
+.. 向下旋转手柄、使其无法正常运行。
+
+
+. 重新连接D-sub直流电源线：
++
+在PSU恢复供电后、状态LED应为绿色。
+
++
+.. 将D-sub直流电源线连接器插入PSU。
+.. 拧紧两颗指旋螺钉、将D-sub直流电源线连接器固定至PSU。
+
+
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"^]有关详细信息、请参见页面。
+
+
+--
+====

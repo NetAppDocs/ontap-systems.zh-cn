@@ -19,7 +19,7 @@ summary: 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 �
 请始终像这样替换。
 
 * 如果要更换多个电源，则必须一次更换一个，以便磁盘架保持供电。
-* * 最佳实践： * 最佳实践是在从 NSM 模块卸下电源后两分钟内更换电源。
+* *最佳实践：*最佳实践是在从NSM卸下电源后两分钟内更换电源。
 +
 如果超过这两分钟，磁盘架将继续运行，但 ONTAP 会向控制台发送有关电源降级的消息，直到更换电源为止。
 
@@ -29,12 +29,20 @@ summary: 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 �
 如果您不知道受影响磁盘架的 `shelf_name` ，请运行 `storage shelf show` 命令。
 
 +
-一个磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 NSM 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令并使用 off 选项来将其关闭。
+磁盘架具有三个定位LED：操作员显示面板上一个、每个NSM上一个。Location LEDs remain illuminated for 30 minutes.You can turn them off by entering the same command, but using the off option.
 
 * 拆开备用电源的包装时，请保存所有包装材料，以便在退回故障电源时使用。
 +
 If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
+* 如果要将NS224磁盘架的交流电源更换为NSM100模块、您可以观看以下动画、熟悉此过程、然后再开始操作。
++
+.将NS224的交流电源更换为NSM100模块
+[%collapsible]
+====
+.热插拔NS224磁盘架中的电源
+video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
+====
 
 
 请根据您的PSU类型使用相应的操作步骤 ：AC或DC。
@@ -43,10 +51,8 @@ If you need the RMA number or additional help with the replacement procedure, co
 ====
 .选项1：更换交流电源
 --
-要更换交流电源、您可以观看动画或完成以下步骤。
+要更换交流电源、请完成以下步骤。
 
-.热插拔NS224磁盘架中的电源
-video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
 .步骤
 . 正确接地。
 . 以物理方式确定故障电源。
@@ -59,15 +65,37 @@ video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
 
 . 卸下电源：
 +
-.. 将手柄向上旋转到其水平位置、然后抓住它。
-.. 用拇指按下蓝色卡舌以释放锁定机制。
-.. 将电源从 NSM 模块中拉出，同时用另一只手支撑其重量。
+image::../media/drw_t_psu_ac_replace_ieops-2035.svg[卸下交流PSU]
+
++
+[cols="1,3"]
+|===
 
 
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+将手柄向上旋转到其水平位置、然后抓住它。
+
+
+
+ a| 
+image:../media/icon_round_2.png["标注编号2"]
+ a| 
+用拇指按下蓝色卡舌以释放锁定机制。
+
+
+
+ a| 
+image:../media/icon_round_3.png["标注编号3"]
+ a| 
+将电源从NSM中拉出、同时使用另一只手支撑其重量。
+
+|===
 . 插入替代电源：
 +
-.. 用双手支撑电源边缘并将其与 NSM 模块中的开口对齐。
-.. 将电源轻轻推入 NSM 模块，直到锁定机制卡入到位。
+.. 用双手支撑电源的边缘并将其与NSM中的开口对齐。
+.. 将电源轻轻推入NSM、直至锁定装置卡入到位。
 +
 
 NOTE: 请勿用力过大，否则可能会损坏内部连接器。
@@ -103,11 +131,11 @@ NOTE: 请勿用力过大，否则可能会损坏内部连接器。
 . 卸下电源：
 +
 .. 将手柄向上旋转到其水平位置、然后抓住它。
-.. 用拇指按下蓝色卡舌以释放锁定机制。
-.. 将电源从 NSM 模块中拉出，同时用另一只手支撑其重量。
+.. 用拇指按下毛棉突舌以松开锁定装置。
+.. 将电源从NSM中拉出、同时使用另一只手支撑其重量。
 +
 
-NOTE: The power supply is short.从NSM模块中取出时、请始终用双手托住它、以免它从NSM模块中自由转动并给您造成损害。
+NOTE: The power supply is short.从NSM卸下NSM时、请始终用双手支撑它、以防止它从NSM中自由摆动并对您造成人员的任何人员的安全。
 
 +
 image::../media/drw_dcpsu_remove-replace-generic_IEOPS-788.svg[卸下直流PSU]
@@ -141,15 +169,15 @@ image:../media/icon_round_3.png["标注编号3"]
  a| 
 image:../media/icon_round_4.png["标注编号4"]
  a| 
-蓝色电源锁定卡舌
+蓝色/黑色电源设备锁定卡舌
 
 |===
 
 
 . 插入替代电源：
 +
-.. 用双手支撑电源边缘并将其与 NSM 模块中的开口对齐。
-.. 将电源轻轻推入 NSM 模块，直到锁定机制卡入到位。
+.. 用双手支撑电源的边缘并将其与NSM中的开口对齐。
+.. 将电源轻轻推入NSM、直至锁定装置卡入到位。
 +
 电源必须与内部连接器和锁定机制正确接合。如果您认为电源未正确就位、请重复此步骤。
 

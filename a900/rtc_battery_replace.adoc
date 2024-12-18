@@ -42,7 +42,7 @@ summary:
 +
 以下AutoSupport 消息禁止自动创建案例两小时： `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 从运行状况良好的控制器的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`
 +
 
 NOTE: 当您看到_Do you want to disable auto-giveback？_时、输入`y`。

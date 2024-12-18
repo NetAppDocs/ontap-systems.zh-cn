@@ -1,0 +1,42 @@
+---
+permalink: a20-30-50/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: aff a20, aff a30, aff a50, replace the boot media 
+summary: 了解更换启动介质的要求。 
+---
+= 要求和注意事项- AFF A20、AFF A30和AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在更换启动介质之前、请务必查看以下要求和注意事项。
+
+
+
+== 要求
+
+* You must have a USB flash drive, formatted to FAT32, with the appropriate amount of storage to hold the `image_xxx.tgz`.
+* 您必须将文件复制 `image_xxx.tgz` 到USB闪存驱动器、以供日后在此过程中使用。
+* 您必须使用与提供商提供的容量相同的替代FRU组件来更换故障组件。
+
+
+
+
+== 注意事项
+
+* 请务必在正确的控制器上应用以下步骤中的命令：
++
+** 受损 _ 控制器是要在其中执行维护的控制器。
+** _health_ 控制器是受损控制器的 HA 配对控制器。
+
+
+* 如果需要、您可以打开平台机箱位置(蓝色) LED、以帮助找到受影响的平台。使用SSH登录到BMC并输入 `system location-led _on_`命令。
++
+平台机箱有三个定位LED：操作员显示面板上一个、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.
+
++
+您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
+
+

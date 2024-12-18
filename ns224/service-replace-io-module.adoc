@@ -1,0 +1,197 @@
+---
+permalink: ns224/service-replace-io-module.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, replace, fail,  nondisruptive, power, i/o 
+summary: 您可以在已启动的NS224驱动器架中以及执行I/O期间无故障更换发生故障的以太网I/O模块。 
+---
+= 将以太网I/O模块(NS224磁盘架)更换为NSM100B模块
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在已启动的NS224驱动器架中以及执行I/O期间无故障更换发生故障的以太网I/O模块。此过程仅适用于具有NSM100B模块的NS224磁盘架。
+
+.开始之前
+* 磁盘架的配对NSM必须已启动且正在运行、并已正确布线、以便在删除故障NSM时磁盘架可以保持连接。
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+
+* 系统中的所有其他组件必须正常运行。
+
+
+.关于此任务
+* 在拆卸和安装 NVMe 磁盘架模块（ NSM ）之间至少留出 70 秒。
++
+这样， ONTAP 就有足够的时间来处理 NSM 删除事件。
+
+* * 最佳实践： * 最佳实践是，在更换 FRU 组件之前，应在系统上安装最新版本的 NVMe 磁盘架模块（ NSM ）固件和驱动器固件。
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
+
++
+https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
+
++
+[NOTE]
+====
+请勿将固件还原到不支持您的磁盘架及其组件的版本。
+
+====
+* 在固件版本不是最新的新NSM上、磁盘架(NSM)固件会自动更新(无干扰)。
++
+NSM固件检查每10分钟进行一次。An NSM firmware update can take up to 30 minutes.
+
+* 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+如果您不知道受影响磁盘架的 `shelf_name` ，请运行 `storage shelf show` 命令。
+
++
+磁盘架具有三个定位LED：操作员显示面板上一个、每个NSM上一个。Location LEDs remain illuminated for 30 minutes.您可以通过输入相同的命令并使用选项来关闭它们 `off`。
+
+* When you unpack the replacement NSM, save all packing materials for use when you return the failed NSM.
++
+If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
+
+
+
+.步骤
+. 正确接地。
+. 从包含要更换的FRU的NSM断开布线：
++
+.. 如果是交流电源、请打开电源线固定器、如果是直流电源、请拧下两个翼形螺钉、然后从电源拔下电源线、从而断开电源线与电源的连接。
++
+电源没有电源开关。
+
+.. 断开存储布线与NSM端口的连接。
++
+记下每个缆线连接到的NSM端口。重新插入NSM时、请将缆线重新连接到相同的端口、此过程稍后将进行介绍。
+
+
+
+. 卸下NSM：
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[卸下NSM。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+在NSM的两端、向外推垂直锁定卡舌以释放手柄。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+** 朝您的方向拉动手柄、从中间板上取下NSM。
++
+拉动时、手柄会从磁盘架中伸出。当您遇到一些阻力时、请继续拉。
+
+** 将NSM滑出磁盘架、然后将其放在平稳的表面上。
++
+确保在将NSM滑出磁盘架时支撑其底部。
+
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+竖直旋转手柄(卡舌旁边)、将其移开。
+
+|===
+. 从NSM中删除故障I/O模块：
++
+image::../media/drw_t_io_module_replace_ieops-1980.svg[更换I/O模块。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+逆时针旋转I/O模块指旋螺钉以拧松。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+使用左侧的端口标签卡舌和翼形螺钉将I/O模块从NSM中拉出。
+
+|===
+. 将更换用的I/O模块安装到目标插槽中：
++
+.. 将 I/O 模块与插槽边缘对齐。
+.. 将I/O模块轻轻推入插槽、确保将模块正确插入连接器。
++
+您可以使用左侧的卡舌和指旋螺钉推入I/O模块。
+
+.. 顺时针旋转翼形螺钉以拧紧。
+
+
+. 将NSM插入磁盘架：
++
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[更换NSM。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+如果您在维修NSM时竖直旋转NSM手柄(位于卡舌旁边)以将其移出、请将其向下旋转至水平位置。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+将NSM的后部与磁盘架中的开口对齐、然后使用手柄轻轻推动NSM、直至其完全就位。
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+将手柄旋转至竖直位置、并使用卡舌锁定到位。
+
+|===
+. 重新对NSM进行电源恢复。
++
+.. 将存储布线重新连接到相同的两个NSM端口。
++
+插入缆线时，连接器拉片朝上。正确插入缆线后，它会卡入到位。
+
+.. 将电源线重新连接到电源、如果电源为交流电源、请使用电源线固定器固定电源线、如果是直流电源、则拧紧两个翼形螺钉、然后从电源中拔下电源线。
++
+正常运行时，电源的双色 LED 将呈绿色亮起。
+
++
+此外、两个NSM端口LNK (绿色) LED都会亮起。If a LNK LED does not illuminate, reseat the cable.
+
+
+
+. 确认包含故障I/O模块的NSM和磁盘架操作员显示面板上的警示(琥珀色) LED不再亮起
++
+NSM重新启动后、NSM警示LED熄灭、不再检测到I/O模块问题。This can take three to five minutes.
+
+. 运行Active IQ Config Advisor以验证NSM是否已正确布线。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
++
+https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"^]
+
+

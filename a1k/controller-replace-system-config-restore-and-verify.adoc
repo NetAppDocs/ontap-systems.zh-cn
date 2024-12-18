@@ -48,7 +48,6 @@ ha-state 的值可以是以下值之一：
 ** `non-ha` (不支持)
 
 
-. 如果显示的控制器模块系统状态与您的系统配置不匹配，请为控制器模块设置 `HA` state ： `ha-config modify controller ha-state`
 . 确认设置已更改： `ha-config show`
 
 

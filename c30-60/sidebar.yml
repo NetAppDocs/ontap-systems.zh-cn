@@ -1,0 +1,94 @@
+---
+section: c30-60
+title: AFF C30和AFF C60系统
+entries:
+- title: 安装和设置
+  pdf-filename: AFF C30和AFF C60安装和设置
+  entries:
+  - title: 安装工作流
+    url: "/c30-60/install-overview.html"
+  - title: 查看要求
+    url: "/c30-60/install-requirements.html"
+  - title: 准备安装
+    url: "/c30-60/install-prepare.html"
+  - title: 安装硬件
+    url: "/c30-60/install-hardware.html"
+  - title: 电缆硬件
+    url: "/c30-60/install-cable.html"
+  - title: 打开系统电源
+    url: "/c30-60/install-power-hardware.html"
+  - title: 完成系统设置
+    url: "/c30-60/install-complete.html"
+- title: 维护
+  pdf-filename: AFF C30和AFF C60维护
+  entries:
+  - title: 维护概述
+    url: "/c30-60/maintain-overview.html"
+  - title: 启动介质
+    entries:
+    - title: 启动介质更换工作流
+      url: "/c30-60/bootmedia-replace-workflow.html"
+    - title: 查看要求
+      url: "/c30-60/bootmedia-replace-requirements.html"
+    - title: 检查加密密钥
+      url: "/c30-60/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭受损控制器
+      url: "/c30-60/bootmedia-shutdown.html"
+    - title: 更换启动介质
+      url: "/c30-60/bootmedia-replace.html"
+    - title: 启动恢复映像
+      url: "/c30-60/bootmedia-recovery-image-boot.html"
+    - title: 恢复加密
+      url: "/c30-60/bootmedia-encryption-restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/c30-60/bootmedia-complete-rma.html"
+  - title: 机箱
+    pdf-filename: AFF C30和AFF C60机箱
+    entries:
+    - title: 机箱更换工作流
+      url: "/c30-60/chassis-replace-workflow.html"
+    - title: 查看要求
+      url: "/c30-60/chassis-replace-requirements.html"
+    - title: 关闭控制器
+      url: "/c30-60/chassis-replace-shutdown.html"
+    - title: 更换机箱
+      url: "/c30-60/chassis-replace-move-hardware.html"
+    - title: 完成机箱更换
+      url: "/c30-60/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器
+    pdf-filename: AFF C30和AFF C60控制器模块
+    entries:
+    - title: 控制器更换工作流
+      url: "/c30-60/controller-replace-workflow.html"
+    - title: 查看要求
+      url: "/c30-60/controller-replace-requirements.html"
+    - title: 关闭受损控制器
+      url: "/c30-60/controller-replace-shutdown.html"
+    - title: 更换控制器
+      url: "/c30-60/controller-replace-move-hardware.html"
+    - title: 还原系统配置
+      url: "/c30-60/controller-replace-system-config-restore-and-verify.html"
+    - title: 重新恢复并交还控制器
+      url: "/c30-60/controller-replace-recable-reassign-disks.html"
+    - title: 完成控制器更换
+      url: "/c30-60/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/c30-60/dimm-replace.html"
+  - title: 驱动器
+    url: "/c30-60/drive-replace.html"
+  - title: 风扇
+    url: "/c30-60/fan-replace.html"
+  - title: I/O 模块
+    entries:
+    - title: I/O模块概述
+      url: "/c30-60/io-module-overview.html"
+    - title: 添加 I/O 模块
+      url: "/c30-60/io-module-add.html"
+    - title: 更换I/O模块
+      url: "/c30-60/io-module-replace.html"
+  - title: NV电池
+    url: "/c30-60/nvdimm-battery-replace.html"
+  - title: 电源
+    url: "/c30-60/power-supply-replace.html"
+  - title: 实时时钟电池
+    url: "/c30-60/rtc-battery-replace.html"

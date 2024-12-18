@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-如果需要为一个AFF A70或AFF A90 HA对热添加更多存储(到内部磁盘架)、则最多可以将两个NS224磁盘架添加到其中。
+如果需要为一个AFF A70、AFF A90或AFF C80 HA对热添加更多存储(到内部磁盘架)、则最多可以将两个NS224磁盘架添加到其中。
 
 .开始之前
 * 您必须已查看 link:requirements-hot-add-shelf.html["热添加要求和最佳实践"]。

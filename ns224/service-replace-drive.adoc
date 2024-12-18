@@ -67,43 +67,36 @@ NOTE: 驱动器固件检查每两分钟进行一次。
 如果您不知道受影响磁盘架的 ` _shelf_name_` ，请运行 `storage shelf show` 命令。
 
 +
-一个磁盘架具有三个位置 LED ：一个位于操作员显示面板上，一个位于每个 NSM 模块上。定位 LED 保持亮起 30 分钟。您可以通过输入相同的命令，但使用 `off` 选项将其关闭。
+磁盘架具有三个定位LED：操作员显示面板上一个、每个NSM上一个。Location LEDs remain illuminated for 30 minutes.您可以通过输入相同的命令并使用选项来关闭它们 `off`。
 
 * 拆开备用驱动器的包装时，请保存所有包装材料，以便在退回故障驱动器时使用。
 +
 If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
-* 以下动画简要介绍了驱动器热插拔操作步骤 的物理拆卸和插入部分。
-+
-.热插拔NS224磁盘架中的驱动器
-video::733011a7-e03a-41b0-8723-aa840133bf25[panopto]
-+
+
+
 .步骤
-.. 如果要手动为替代驱动器分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。
+. 如果要手动为替代驱动器分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。
 +
 
-NOTE: 如果磁盘架中的驱动器由 HA 对中的两个控制器模块拥有，则需要手动分配驱动器所有权。
+NOTE: You need to manually assign drive ownership if drives in the shelf are owned by both controller modules in the HA pair.您将在此过程后面完成此任务。
 
 +
-
-NOTE: 您可以手动分配驱动器所有权，然后在此操作步骤中稍后重新启用自动驱动器分配。
-
-+
-... 验证是否已启用自动驱动器分配： `storage disk option show`
+.. 验证是否已启用自动驱动器分配： `storage disk option show`
 +
 您可以在任一控制器模块上输入命令。
 
 +
 如果启用了自动驱动器分配，则输出会在 `Auto Assign` 列中显示 `on` （对于每个控制器模块）。
 
-... 如果启用了自动驱动器分配，请将其禁用： `storage disk option modify -node node_name -autodassign off`
+.. 如果启用了自动驱动器分配，请将其禁用： `storage disk option modify -node node_name -autodassign off`
 +
 您必须在两个控制器模块上禁用自动驱动器分配。
 
 
 
-.. 正确接地。
-.. 以物理方式确定故障驱动器。
+. 正确接地。
+. 以物理方式确定故障驱动器。
 +
 驱动器发生故障时，系统会向系统控制台记录一条警告消息，指示哪个驱动器发生故障。此外，驱动器架操作员显示面板上的警示（琥珀色） LED 和故障驱动器将亮起。
 
@@ -111,49 +104,70 @@ NOTE: 您可以手动分配驱动器所有权，然后在此操作步骤中稍�
 
 NOTE: 故障驱动器上的活动（绿色） LED 可能会亮起（稳定亮起），表示驱动器已通电，但不应闪烁，这表示 I/O 活动。故障驱动器没有 I/O 活动。
 
-.. 删除故障驱动器：
+. 删除故障驱动器：
 +
-... 按下驱动器表面上的释放按钮以打开凸轮把手。
-... 使用凸轮把手将驱动器滑出磁盘架，并用另一只手支撑驱动器。
+image::../media/drw_nvme_drive_replace_ieops-1904.svg[卸下驱动器。]
+
++
+[cols="1,4"]
+|===
 
 
-.. 请至少等待 70 秒，然后再插入替代驱动器。
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+按下驱动器表面上的释放按钮以打开凸轮把手。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+向下旋转凸轮把手、使驱动器与中板分离。
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+使用凸轮把手将驱动器滑出磁盘架，并用另一只手支撑驱动器。
+
+|===
+. 请至少等待 70 秒，然后再插入替代驱动器。
 +
 这样，系统就可以识别出驱动器已被删除。
 
-.. 插入替代驱动器：
+. 插入替代驱动器：
 +
-... 在凸轮把手处于打开位置的情况下，用双手插入替代驱动器。
-... 按，直到驱动器停止。
-... 合上凸轮把手，使驱动器完全固定在中间板上，并使把手卡入到位。
+.. 在凸轮把手处于打开位置的情况下、用双手插入驱动器。
+.. 轻轻推动、直至驱动器停止。
+.. 合上凸轮把手，使驱动器完全固定在中间板上，并使把手卡入到位。
 +
 请务必缓慢地关闭凸轮把手，使其与驱动器正面正确对齐。
 
 
 
-.. 验证驱动器的活动（绿色） LED 是否亮起。
+. 验证驱动器的活动（绿色） LED 是否亮起。
 +
 如果驱动器的活动 LED 稳定亮起，则表示驱动器已通电。当驱动器的活动 LED 闪烁时，表示驱动器已通电且 I/O 正在进行中。如果驱动器固件正在自动更新，则 LED 将闪烁。
 
-.. 如果要更换另一个驱动器，请重复步骤 3 到步骤 7 。
-.. 如果您在步骤 1 中禁用了自动驱动器分配，请手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配：
+. 如果要更换另一个驱动器，请重复步骤 3 到步骤 7 。
+. 如果您在步骤 1 中禁用了自动驱动器分配，请手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配：
 +
-... 显示所有未分配的驱动器： `storage disk show -container-type unassigned`
+.. 显示所有未分配的驱动器： `storage disk show -container-type unassigned`
 +
 您可以在任一控制器模块上输入命令。
 
-... 分配每个驱动器： `storage disk assign -disk disk_name -owner owner_name`
+.. 分配每个驱动器： `storage disk assign -disk disk_name -owner owner_name`
 +
 您可以在任一控制器模块上输入命令。
 
 +
 您可以使用通配符一次分配多个驱动器。
 
-... 如果需要，请重新启用自动驱动器分配： `storage disk option modify -node node_name -autodassign on`
+.. 如果需要，请重新启用自动驱动器分配： `storage disk option modify -node node_name -autodassign on`
 +
 您必须在两个控制器模块上重新启用自动驱动器分配。
-
-
 
 
 
