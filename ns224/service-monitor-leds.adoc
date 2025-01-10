@@ -147,72 +147,6 @@ image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
 NVMe端口/链路：注意
 
 |===
---
-.NSM100B模块
---
-image::../media/drw_ns224_nsmb_leds_ieops-2004.svg[NS224 NSM100B模块LED]
-
-[cols="1,1,2,4"]
-|===
-| 呼出 | LED 图标 | 颜色 | Description 
-
-
- a| 
-image:../media/icon_round_1.png["标注编号1"]
- a| 
-LNK
- a| 
-绿色
- a| 
-NVMe端口/链路：状态
-
-
-
- a| 
-image:../media/icon_round_2.png["标注编号2"]
- a| 
-image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
- a| 
-琥珀色
- a| 
-NVMe端口/链路：注意
-
-
-
- a| 
-image:../media/icon_round_3.png["标注编号3"]
- a| 
-image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
- a| 
-琥珀色
- a| 
-I/O模块：状态
-
-
-
- a| 
-image:../media/icon_round_4.png["标注编号4"]
- a| 
-image::../media/drw_sas3_location_icon.svg[操作员显示面板位置LED]
- a| 
-蓝色
- a| 
-NSM：位置
-
-
-
- a| 
-image:../media/icon_round_5.png["标注编号5"]
- a| 
-image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
- a| 
-琥珀色
- a| 
-NSM：注意
-
-|===
---
-====
 [cols="2,1,1,1"]
 |===
 | Status | NSM警示(琥珀色) | 端口LNK (绿色) | 端口警示(琥珀色) 
@@ -294,6 +228,180 @@ NSM VPD错误
 任何状态
 
 |===
+--
+.NSM100B模块
+--
+image::../media/drw_ns224_nsmb_leds_ieops-2004.svg[NS224 NSM100B模块LED]
+
+[cols="1,1,2,4"]
+|===
+| 呼出 | LED 图标 | 颜色 | Description 
+
+
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+LNK
+ a| 
+绿色
+ a| 
+NVMe端口/链路：状态
+
+
+
+ a| 
+image:../media/icon_round_2.png["标注编号2"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
+ a| 
+琥珀色
+ a| 
+NVMe端口/链路：注意
+
+
+
+ a| 
+image:../media/icon_round_3.png["标注编号3"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
+ a| 
+琥珀色
+ a| 
+I/O模块：注意
+
+
+
+ a| 
+image:../media/icon_round_4.png["标注编号4"]
+ a| 
+image::../media/drw_sas3_location_icon.svg[操作员显示面板位置LED]
+ a| 
+蓝色
+ a| 
+NSM：位置
+
+
+
+ a| 
+image:../media/icon_round_5.png["标注编号5"]
+ a| 
+image::../media/drw_sas_fault_icon.svg[操作员显示面板警示LED]
+ a| 
+琥珀色
+ a| 
+NSM：注意
+
+|===
+[cols="2,1,1,1,1"]
+|===
+| Status | NSM警示(琥珀色) | 端口LNK (绿色) | 端口警示(琥珀色) | I/O模块注意 
+
+
+ a| 
+NSM正常
+ a| 
+关闭
+ a| 
+任何状态
+ a| 
+关闭
+ a| 
+关闭
+
+
+
+ a| 
+NSM故障
+ a| 
+开启
+ a| 
+任何状态
+ a| 
+任何状态
+ a| 
+关闭
+
+
+
+ a| 
+NSM VPD错误
+ a| 
+开启
+ a| 
+任何状态
+ a| 
+任何状态
+ a| 
+关闭
+
+
+
+ a| 
+无主机端口连接
+ a| 
+任何状态
+ a| 
+关闭
+ a| 
+关闭
+ a| 
+关闭
+
+
+
+ a| 
+主机端口连接链路处于活动状态
+ a| 
+任何状态
+ a| 
+活动时亮起/闪烁
+ a| 
+任何状态
+ a| 
+关闭
+
+
+
+ a| 
+主机端口连接出现故障
+ a| 
+开启
+ a| 
+如果所有车道都发生故障、则打开/关闭
+ a| 
+开启
+ a| 
+关闭
+
+
+
+ a| 
+开机后从BIOS映像启动BIOS
+ a| 
+闪烁
+ a| 
+任何状态
+ a| 
+任何状态
+ a| 
+关闭
+
+
+
+ a| 
+I/O模块缺失
+ a| 
+开启
+ a| 
+不适用
+ a| 
+不适用
+ a| 
+开启
+
+|===
+--
+====
 
 
 == 电源 LED

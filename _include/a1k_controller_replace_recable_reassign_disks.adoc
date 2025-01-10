@@ -40,8 +40,6 @@ NOTE: 系统将提示您输入密码短语两次。
 . 在启动菜单中、输入选项 `1`进行正常启动。
 . 当显示_wawawaite_for vig-back_时、按<enter>键。
 . 将控制台缆线移至配对节点并以身份登录 `admin`。
-. 确保已修复节点上的所有核心转储均已保存，方法是进入高级模式” `set -privilege advanced`，然后 `run local partner savecore`。
-. 返回管理控制杆： `set privilege admin`。
 . 仅交还CFO聚合(根聚合)： `storage failover giveback -fromnode local -only-cfo-aggregates true`
 +
 ** 如果遇到错误，请联系 https://support.netapp.com["NetApp 支持"]。

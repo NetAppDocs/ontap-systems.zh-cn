@@ -318,8 +318,7 @@ video::c500e747-30f8-4763-9065-afbf00008e7f[panopto]
 有关详细信息，请参见笔记本电脑的联机帮助。
 
 . 将笔记本电脑连接到管理交换机。
-
-
++
 image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交换机]
 
 . 选择列出的 ONTAP 图标以发现：
@@ -361,7 +360,7 @@ https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"]
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后，转到 https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+. 完成初始配置后、请转到、 https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9 文档"^]了解有关在ONTAP中配置其他功能的信息。
 
 
 
@@ -449,5 +448,5 @@ https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"]
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后，转到 https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+. 完成初始配置后、请转到、 https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9 文档"^]了解有关在ONTAP中配置其他功能的信息。
 

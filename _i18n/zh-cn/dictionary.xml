@@ -636,8 +636,6 @@
   <block id="7e043f500d316c07931a265899f256e5" category="paragraph">此时将打开 System Manager 。</block>
   <block id="b0312e5410d679be9e7767f60affd0f9" category="list-text">使用 System Manager 引导式设置，使用在 _NetApp ONTAP 配置指南 _ 中收集的数据配置系统。</block>
   <block id="ab6c62f8c03fd8de7dd75edd9339f332" category="list-text">运行 Config Advisor 以验证系统的运行状况。</block>
-  <block id="32ff0984d1cda5a6a82a31ba6abcaf25" category="inline-link">ONTAP 和 AMP ； ONTAP System Manager 文档资源</block>
-  <block id="9d0be0d6f61b9f5f1bd1c769171e1a51" category="list-text">完成初始配置后，转到<block ref="8203f64117389bb7bbdf8d4d70d36e4d" category="inline-link-rx"></block> 页面，了解有关在 ONTAP 中配置其他功能的信息。</block>
   <block id="ff07d29ea509a7a995f5989a37c478e6" category="section-title">选项 2 ：如果未启用网络发现，则完成系统设置和配置</block>
   <block id="e26c9b04bf0bc2c4d8073d81596cbe06" category="paragraph">如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。</block>
   <block id="9bd015997b6e1551fc91d1a6374fc274" category="list-text">为笔记本电脑或控制台布线并进行配置：</block>
@@ -2114,10 +2112,6 @@
   <block id="3ed6da3ce264f0c66cef48e19cd15c73" category="doc">所需工具和设备</block>
   <block id="f9fe90b9a7c32c659a86cfe53f6587b1" category="list-text">适用于磁盘架的硬件指南</block>
   <block id="bcf8fb15c418590ecd335df2dcfad4e4" category="list-text">系统的相应安装和设置说明</block>
-  <block id="5d69fd338b800eeec5483a90a86e34c3" category="inline-link">全闪存 FAS 文档资源</block>
-  <block id="94ca956ba088a0239acd4c8e7349af15" category="paragraph"><block ref="94ca956ba088a0239acd4c8e7349af15" category="inline-link-rx"></block></block>
-  <block id="bc36b7561098172a45ca8601c91c3c1c" category="inline-link">FAS 存储系统文档资源</block>
-  <block id="ffd3191487f66e44a54010853dc2463b" category="paragraph"><block ref="ffd3191487f66e44a54010853dc2463b" category="inline-link-rx"></block></block>
   <block id="45b8f0b842002ec85fb07171d4b0d278" category="list-text">1 号和 2 号十字螺丝刀</block>
   <block id="830cb2795d80d2d868f65bf4fc0302ba" category="list-text">用于调平系统机柜的调平工具</block>
   <block id="9839b9efeb4f2cb59f36a02a747b73cb" category="doc">完成系统还原— FAS8300 和 FAS8700</block>
@@ -4332,7 +4326,6 @@
   <block id="423ba51655c4d8cf97fea5498fc8182b" category="list-text">单击左窗格中的 * 网络 * 。</block>
   <block id="52cc73fca17e9ee46a84b54fe8d9c8f2" category="list-text">右键单击并选择 * 刷新 * 。</block>
   <block id="26e92d478a1389009c384007225dc825" category="list-text">使用 System Manager 引导式设置使用中收集的数据配置系统 <block ref="571ad76602d16a750ecd1119ab38063c" category="inline-link-macro-rx"></block>。</block>
-  <block id="e6db50cefb25b43305353a6a987f05e3" category="list-text">After you have completed the initial configuration, go to the <block ref="9c0a34143b47aa65068059820284fe99" category="inline-link-macro-rx"></block> page for information about configuring additional features in ONTAP.</block>
   <block id="abda447c368c0080cdf2af6a77ea3d22" category="list-text">Configure the system using the data you collected in the <block ref="571ad76602d16a750ecd1119ab38063c" category="inline-link-macro-rx"></block>。</block>
   <block id="3125087114c2490b7c6800800a39a990" category="summary">本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。</block>
   <block id="2721d15a1712238198ba49214a74054c" category="paragraph">您必须使用格式化为 fat32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。</block>
@@ -4445,7 +4438,6 @@
   <block id="bd21e6ec29256eee4c7a9b34dd71c9ba" category="image-alt">DWR 笔记本电脑仅连接到交换机</block>
   <block id="382f497663af8b0b026d3c66f6a2bfce" category="list-text">使用 System Manager 引导式设置使用中收集的数据配置系统<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block>。</block>
   <block id="c866cf78ea22fe8b8a7122b28202ae22" category="paragraph"><block ref="c866cf78ea22fe8b8a7122b28202ae22" category="inline-link-rx"></block></block>
-  <block id="5ee8cd6a87d8b25f71b533639902587c" category="list-text">After you have completed the initial configuration, go to the<block ref="3cd2da01c2a4ba58d102a6abe7a05e1f" category="inline-link-rx"></block> page for information about configuring additional features in ONTAP.</block>
   <block id="208ee0864fe983f53622b3619eef5932" category="section-title">选项 2 ：如果未启用网络发现</block>
   <block id="b3364f412d1466e4f6e340836fff9abb" category="paragraph">如果您使用的不是基于 Windows 或 Mac 的笔记本电脑或控制台，或者未启用自动发现，则必须使用此任务完成配置和设置。</block>
   <block id="11991b3479fcd322fec352f130b7b364" category="admonition">The format for the address is +https://x.x.x.x+.</block>
@@ -9631,7 +9623,6 @@ SFP+(目标/启动程序)</block>
   <block id="69c68a07899b46965d63bdd6fea6e0da" category="paragraph"><block ref="4d9c822f717329c7000654e8bae09ae4" prefix="" category="inline-code"></block></block>
   <block id="1857c0ed792dbbfc2525805e6132de0b" category="paragraph">屏幕将显示以下消息：</block>
   <block id="c285ffddf1786cd1a14a26bcf9b74c7d" category="paragraph"><block ref="061047859ec1e213bd771fe5350bda2c" prefix="" category="inline-code"></block></block>
-  <block id="811ae15d713f8c846d0516e053f895b2" category="list-text">在Loader配置本地集群端口并从配对节点执行时监控启动介质恢复过程<block ref="83a4445bcfef2bd179eaffaabe3b3c20" prefix=" " category="inline-code"></block>。</block>
   <block id="8f616ca67798afd132662e15fc4caa28" category="paragraph">当网络启动运行时、将显示此<block ref="f6715e6f2a651bfc51d27566b1be5385" prefix=" " category="inline-code"></block>消息。</block>
   <block id="39cb6e7651585d511fc148af8198837f" category="open-title">无加密</block>
   <block id="aada4d2dac8a2a5bd04bf211104ff2c5" category="paragraph">如果未检测到加密、则启动介质恢复过程将继续进行、而无需进行密钥管理。</block>
@@ -10021,7 +10012,6 @@ SFP+(目标/启动程序)</block>
   <block id="e5954b5f665f3b9aee4023c5d8eb4f5f" category="list-text">当显示_wawawaite_for vig-back_时、按&lt;enter&gt;键。</block>
   <block id="68921013f9ca843f9d1bcfd514ee67de" category="list-text">将控制台缆线移至配对节点并以身份登录<block ref="21232f297a57a5a743894a0e4a801fc3" prefix=" " category="inline-code"></block>。</block>
   <block id="92e13c6a52e1a9d4e2955cd77e4db99d" category="list-text">确保已修复节点上的所有核心转储均已保存，方法是进入高级模式”<block ref="0581d0d071ad835f74bf419081ce5d75" prefix=" " category="inline-code"></block>，然后<block ref="7f4756e08687048c35020c40f9c8567b" prefix=" " category="inline-code"></block>。</block>
-  <block id="2b0a436148e337f3515c283e053a817b" category="list-text">返回管理控制杆：<block ref="4282e6e28684065097c0d90042d19b11" prefix=" " category="inline-code"></block>。</block>
   <block id="9e989767231ec29efb85ce3345c961ff" category="list-text">仅交还CFO聚合(根聚合)：<block ref="291b31306c2e0668f091d41edca7e97f" prefix=" " category="inline-code"></block></block>
   <block id="e28912f373bd8bce85f7c259590bbe92" category="list-text">如果遇到错误，请联系<block ref="dac6ef02422de09259cb8cc562a669a7" category="inline-link-rx"></block>。</block>
   <block id="bfc2c53d06a8a433a0fef8b142ab388e" category="list-text">在恢复报告完成后等待5分钟，然后检查故障转移状态和恢复状态：<block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix=" " category="inline-code"></block>和<block ref="852ce55a153bc728405ba8a2c95bcdf1" prefix=" " category="inline-code"></block>。</block>
@@ -10644,7 +10634,6 @@ SFP+(目标/启动程序)</block>
   <block id="fe464b77547b113c26b6c4a663f8d99c" category="paragraph">移动或抬起磁盘架时、请采取必要的预防措施。</block>
   <block id="55a163291cdcad8ab6af6a932720e193" category="inline-link-macro">详细了解AFF系统</block>
   <block id="67bacc9d73c9b4789f2c3cde9ab59ad8" category="paragraph">AFF A系列和AFF C系列系统提供了一个专为虚拟化环境量身定制的强大横向扩展平台。它们可以作为独立系统部署、也可以作为NetApp ONTAP配置中的高性能层部署。<block ref="587107815f5f912e7d3b8f989c8db7df" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="a9db10f1a3e6d0ba4d022c457468e317" category="paragraph">AFF A系列和AFF C系列系统与以下ONTAP版本兼容。</block>
   <block id="9d9de1698f7e401c78687204de906ee5" category="list-text">AFF A20</block>
   <block id="f8f6ba2d572ef729148f2d89d8ff810a" category="list-text">AFF A30</block>
   <block id="cc6089132b9a5e4af29a76834480cc1a" category="list-text">AFF A50</block>
@@ -10653,16 +10642,13 @@ SFP+(目标/启动程序)</block>
   <block id="724bf3ae18d86521a5b9d77a13fcfddb" category="list-text">AFF C80</block>
   <block id="8c20e9c3f526d526af74c044baf7da64" category="inline-link-macro">详细了解ASA R2系统</block>
   <block id="77f5d8fa3689e046b946bfbacf61536e" category="paragraph">ASA R2系统提供统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。<block ref="2f9305bd6f8a2949646123561cb92ab4" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="d6b4d0a4c54a0ac7b309dcc0a4c68300" category="paragraph">ASA R2系统与以下ONTAP版本兼容。</block>
   <block id="e2ead389bfa8a65f29bc4e57fdaf4a7b" category="inline-link-macro">详细了解ASA系统</block>
   <block id="0f14ce10f8ff3a34f46c25bba942372c" category="paragraph">ASA A系列和ASA C系列系统提供简化的专用SAN体验、可使用FCP或iSCSI协议为企业级任务关键型数据库和其他SAN工作负载提供持续的数据可用性。<block ref="9c36b794130c589d6d71e1c2ef02ceef" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="eb0470bba41a4cbf0371d0bd107bbce5" category="paragraph">ASA系统与以下ONTAP版本兼容。</block>
   <block id="2ce90a39656cd7489bede7894c2a9943" category="list-text">ASA AFF A250</block>
   <block id="7ddb32a2b45e07e265f9e454f57d2eb0" category="list-text">ASA AFF A800</block>
   <block id="b5efaabac2b0776c5f0ca29587d418e4" category="list-text">ASA AFF A400</block>
   <block id="4c71fe952f2c533bd53ba2db64f6ef23" category="inline-link-macro">详细了解FAS系统</block>
   <block id="1c95b928d9b5e4bc7aae5c9a97498da8" category="paragraph">FAS系统可提供高效安全的二级存储、这是用于分层、备份和灾难恢复的终极解决方案。<block ref="be362a4689d663d0b6df6b6c151241ba" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="404f3f6d0927e6ee3c2ebeca58d2189b" category="paragraph">FAS系统与以下ONTAP版本兼容。</block>
   <block id="017db3debbf4b1ed577798b78fd96b66" category="list-text">FAS70</block>
   <block id="649e9f4912bcf4af7efe489c6866eb1d" category="list-text">FAS90</block>
   <block id="3eab1bbd4a3f05ea0803f3bcf5fac9e5" category="list-text">FAS2750</block>
@@ -11115,7 +11101,6 @@ SFP+(目标/启动程序)</block>
   <block id="967573797c1191f0df22ec6107c3aa00" category="paragraph">NSM：位置</block>
   <block id="8d205de013ce8da6fb34e1d90ce0701b" category="paragraph">NSM：注意</block>
   <block id="6cdd970a99287856fae6549b1e4e2661" category="image-alt">NS224 NSM100B模块LED</block>
-  <block id="3730904429a62b0e0defc58fca36a915" category="paragraph">I/O模块：状态</block>
   <block id="61252ea3598dcec72eee2b579cc93a3f" category="paragraph">您可以更换NS224磁盘架中发生故障的启动介质。Replacing the boot media can be done nondisruptively, while the drive shelf is powered on, and I/O is in progress.</block>
   <block id="cd222c56bd862c1482d8e9937d65d53f" category="list-text">*仅限具有NSM100模块的NS224：HA对必须已运行ONTAP 9.7或更高版本、此版本必须具有支持的最低NSM固件版本。</block>
   <block id="93b1f886febe706b068327d5a32a6de5" category="paragraph">如果磁盘架未运行NSM固件版本0111或更高版本、则无法更换启动介质、必须更换NSM。</block>
@@ -11252,23 +11237,17 @@ SFP+(目标/启动程序)</block>
   <block id="3354017d0219e20af53d56d429ce46e6" category="list-text">合上NSM护盖、顺时针旋转翼形螺钉、直到拧紧为止。</block>
   <block id="ba899e38071a77eb1dfc114477d7df7e" category="summary">了解您的平台或磁盘架支持的ONTAP版本。</block>
   <block id="7e5d96420c04db907e37ffc0f25670b5" category="doc">ONTAP硬件和软件兼容性</block>
-  <block id="7d52a2ea081400d43cc4e5df6690bda4" category="paragraph">ONTAP存储系统与多个版本的ONTAP软件兼容。了解存储系统和驱动器架支持的ONTAP版本。</block>
   <block id="66a2f01bbe5e27a2d0a21ef15725c491" category="paragraph">有关ONTAP硬件系统的完整配置支持和限制，请参见<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>。有关ONTAP 9软件中的已知问题、限制和升级注意事项的详细信息，请参见<block ref="84fe5db170ffeba3db16dd5c6d7a58db" category="inline-link-rx"></block>。</block>
   <block id="c43fddbfefcc8dab0b365319ffc7ad2f" category="summary">了解适用于ONTAP硬件系统的新平台。</block>
   <block id="b1243a1d02acf9453220663ea4294abf" category="paragraph">了解ONTAP硬件系统的新增功能。</block>
   <block id="73b3856e20fbea83dc1573f8203ad6a4" category="section-title">2024年12月</block>
-  <block id="1129d1f188d1633e51b36c0cd887e4d2" category="section-title">AFF A20、AFF A30和AFF A50</block>
-  <block id="a8eff28ccaa252cbf7a07cd04596e572" category="paragraph">全新的AFF A20、A30和A50硬件系统将高性能、智能和全面的数据管理功能扩展到更多客户和工作负载。</block>
   <block id="909cc883ddbed6fc06a25647ba1f212b" category="paragraph">这些系统可为AI、VMware、数据库和分析等任务关键型工作负载提供基于ML的实时勒索软件检测、无缝云集成和无与伦比的性能、并支持块、文件和对象存储。</block>
   <block id="3c8e670cb2f634a0b68672d5f01ec686" category="inline-link-macro">详细了解AFF A系列系统</block>
   <block id="cc41bf37432333539dd5ceeb6841880b" category="paragraph"><block ref="ec47a919cf5fb6b1b188d40c3428c9bc" category="inline-link-macro-rx"></block>(英文)</block>
-  <block id="2bb9fccffbf46bf730e526d835bed9ef" category="section-title">AFF C30、AFF C60和AFF C80</block>
-  <block id="b58cef9baa77e44e93bac28d90989c0f" category="paragraph">全新的AFF C30、AFF C60和AFF C80硬件系统通过在双机架部署中提供行业领先的1.5 PB存储容量、使企业更容易获得闪存的性能和效率提升。</block>
   <block id="f96ee2b3f1f5c0e57287bc570e1eafdd" category="paragraph">该解决方案可通过60 TB驱动器提供超群的密度、提高性能并提高I/O灵活性。</block>
   <block id="e3433be76af8797b5b6d90a688a36fd9" category="inline-link-macro">详细了解AFF C系列系统</block>
   <block id="6541c02105210891ec02de804f02e6af" category="paragraph"><block ref="607826820a51c80a539353cde0434437" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="f31f11743f1dfba18e9f008e2956d24e" category="section-title">2024年9月</block>
-  <block id="a69d86173a4fe9e3cf70845ad40fd15a" category="paragraph">新的ASA R2硬件系统(ASA A1K、ASA A70和ASA A90)提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。</block>
   <block id="d6ee5f134cf5e78f59ab20a782f67ed3" category="paragraph"><block ref="2f9305bd6f8a2949646123561cb92ab4" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="8a3c98db91e158f54dfa013fc3f590be" category="paragraph">全新的FAS70和FAS90硬件系统可提供经济实惠且性能高的备份存储、从而实现安全的网络存储、以便从勒索软件攻击中恢复。</block>
   <block id="8a974b4a7078e973c2cf1c4794446802" category="paragraph"><block ref="be362a4689d663d0b6df6b6c151241ba" category="inline-link-macro-rx"></block>(英文)</block>
@@ -11296,4 +11275,27 @@ SFP+(目标/启动程序)</block>
   <block id="41d12fb2ee8b3c6f7046a51242a72a75" category="sidebar">C80机箱</block>
   <block id="3e4165f9c6936da0daac33c7b7ca4957" category="sidebar">C80控制器模块</block>
   <block id="8f31b4d50eb915a24104b3cb7a5cfcb5" category="sidebar">C80 I/O模块</block>
+  <block id="325e928b605da8dd44aca29a94da895c" category="list-text">在Loader配置本地端口并从配对节点执行时监控启动介质恢复过程<block ref="83a4445bcfef2bd179eaffaabe3b3c20" prefix=" " category="inline-code"></block>。</block>
+  <block id="a0828c6d7f89434e71860268e9d651b2" category="list-text">在配对节点完全启动并提供数据后、在整个集群中同步OKM密钥。</block>
+  <block id="4230ba5bca3d60bf63b2c39aa992ed84" category="paragraph">从以下ONTAP版本开始、支持AFF A系列和AFF C系列系统。</block>
+  <block id="5fce742f9b06c803a2f04474b1d16eef" category="paragraph">从以下ONTAP版本开始、支持ASA R2系统。</block>
+  <block id="7ca2ebdb81019f1e7c8ef7f9d66913b9" category="paragraph">从以下ONTAP版本开始、支持ASA系统。</block>
+  <block id="5f0845697f3ce72b24247637120d7754" category="paragraph">从以下ONTAP版本开始、支持FAS系统。</block>
+  <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link">ONTAP 9 文档</block>
+  <block id="8d3ee503b5cc36e3c6b7cbecb34eb387" category="list-text">完成初始配置后、请转到、<block ref="10428d07d2ebc7af9af6725963887c6d" category="inline-link-rx"></block>了解有关在ONTAP中配置其他功能的信息。</block>
+  <block id="98c507d8c3fe68bb4281ebd9f9ea9418" category="paragraph">I/O模块：注意</block>
+  <block id="6a78e833d1d48c3ad3f5fcd87dc0f4d4" category="cell">I/O模块注意</block>
+  <block id="402ff9cfbe902d88550764b90aa6cb76" category="paragraph">I/O模块缺失</block>
+  <block id="5f99c34270a42ab74283fdec312239c2" category="paragraph">ONTAP存储系统与多个版本的ONTAP软件兼容。了解存储系统和驱动器架支持的ONTAP版本。</block>
+  <block id="6e078dd140fc50f53b5f2c4385d718bd" category="section-title">具有NSM100B模块的NS224磁盘架</block>
+  <block id="e0d3410def69ea25d4a73fbd6f0bbed2" category="paragraph">具有NSM100B模块的NS224驱动器架可提供高性能和灵活性、以满足您的数字化转型需求。</block>
+  <block id="fc65336c1bd8a062ad4562b40078d3fe" category="inline-link-macro">使用NS224磁盘架扩展硬件系统存储</block>
+  <block id="7b19cd7f52ff90324c1acacbd46001f8" category="paragraph"><block ref="66341a595da7a2db1d6f0b3d14139d08" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="7158496fa6a387eea85c17aa48eba85e" category="section-title">AFF A20、AFF A30和AFF A50</block>
+  <block id="a09039ce1af61d84b9a954849fc88067" category="paragraph">全新的AFF A20、A30和A50硬件系统将高性能、智能和全面的数据管理功能扩展到更多客户和工作负载。</block>
+  <block id="bc44b220c4c2656e94204809ef23fa40" category="section-title">AFF C30、AFF C60和AFF C80</block>
+  <block id="67a30af096daac591ce29425c8d0e867" category="paragraph">全新的AFF C30、AFF C60和AFF C80硬件系统通过在双机架部署中提供行业领先的1.5 PB存储容量、使企业更容易获得闪存的性能和效率提升。</block>
+  <block id="007ace9cd707338f2e4f8f25ed4bb0b8" category="section-title">具有NSM100B磁盘架模块的NS224驱动器架</block>
+  <block id="e3f4eea829fa5771d87c60fb05124223" category="paragraph">借助NS224和全新的NSM100B NVMe存储扩展模块增强数据中心的功能。全新的NSM100B磁盘架模块可直接取代NSM100模块、可无缝集成到您的现有设置中。它支持NS224磁盘架的直连和交换机连接配置、可提供卓越的灵活性、以优化存储系统的效率和可扩展性。</block>
+  <block id="02ad6883c66e836f88f8ac60378af5d5" category="paragraph">新的ASA R2硬件系统(ASA A1K、ASA A70和ASA A90)提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。</block>
 </blocks>

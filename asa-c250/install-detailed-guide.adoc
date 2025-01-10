@@ -382,7 +382,7 @@ NOTE: XXXXX 是目标节点的系统序列号。
 
 . 使用 System Manager 引导式设置使用中收集的数据配置系统 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^]。
 . 运行 Config Advisor 以验证系统的运行状况。
-. After you have completed the initial configuration, go to the link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
+. 完成初始配置后、请转到、 https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9 文档"^]了解有关在ONTAP中配置其他功能的信息。
 
 
 --
@@ -446,7 +446,7 @@ NOTE: 此地址的格式为 +https://x.x.x.x+ 。
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. After you have completed the initial configuration, go to the link:https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"^] page for information about configuring additional features in ONTAP.
+. 完成初始配置后、请转到、 https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9 文档"^]了解有关在ONTAP中配置其他功能的信息。
 
 
 --

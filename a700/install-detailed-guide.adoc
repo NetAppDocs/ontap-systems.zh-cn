@@ -192,8 +192,7 @@ NOTE: 您需要了解与系统重量相关的安全问题。
 +
 image::../media/drw_9000_lifting_icon.png[起重注意事项]
 
-
-
++
 
 NOTE: 左侧的标签表示空机箱，右侧的标签表示系统已完全填充。
 
@@ -230,8 +229,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 +
 .动画—为双节点无交换机集群布线
 video::7a55b98a-e8b8-41d5-821f-ac5b0032ead0[panopto]
-
-
++
 image::../media/drw_9000_TNSC_composite_cabling.png[双节点无交换机集群复合布线]
 
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
@@ -257,8 +255,7 @@ NOTE: 插入连接器时，您应感觉到连接器卡入到位；如果您不�
 +
 .动画—切换集群布线
 video::6381b3f1-4ce5-4805-bd0a-ac5b0032f51d[panopto]
-
-
++
 image:../media/drw_9000_switched_cluster_cabling.png["有交换机集群复合布线"]
 
 . 转至 <<第 4 步：使用缆线将控制器连接到驱动器架>> 有关驱动器架布线说明。
@@ -290,18 +287,16 @@ NOTE: 这些示例使用 DS224C 磁盘架。布线与其他受支持的 SAS 驱�
 
 +
 ** 在 FAS9000 ， AFF A700 和 ASA AFF A700 ， ONTAP 9.7 及更早版本中为 SAS 磁盘架布线：
-
-
 +
 .动画—为ONTAP 9.7及更早版本的SAS存储布线
 video::a312e09e-df56-47b3-9b5e-ab2300477f67[panopto]
+
+
 +
 image:../media/SAS_storage_ONTAP_9.7_and_earlier.png["适用于ONTAP 9.7及更早版本的SAS存储布线"]
 
 +
 ** 在 FAS9000 ， AFF A700 和 ASA AFF A700 ， ONTAP 9.8 及更高版本中为 SAS 磁盘架布线：
-
-
 +
 .动画—为SAS存储布线—ONTAP 9.8及更高版本
 video::61d23302-9526-4a2b-9335-ac5b0032eafd[panopto]
@@ -317,6 +312,8 @@ link:../sas3/install-new-system.html["安装新系统安装的磁盘架并为其
 
 +
 image:../media/Cable_shelves_new_system_IOM12_shelves.png["使用SAS磁盘架进行存储系统布线"]
+
+
 
 . 转至 <<第 5 步：完成系统设置和配置>> 完成系统设置和配置。
 
@@ -467,7 +464,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后，转到 https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+. 完成初始配置后、请转到、 https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9 文档"^]了解有关在ONTAP中配置其他功能的信息。
 
 
 
@@ -563,5 +560,5 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 . 运行 Config Advisor 以验证系统的运行状况。
-. 完成初始配置后，转到 https://www.netapp.com/data-management/oncommand-system-documentation/["ONTAP 和 AMP ； ONTAP System Manager 文档资源"] 页面，了解有关在 ONTAP 中配置其他功能的信息。
+. 完成初始配置后、请转到、 https://docs.netapp.com/us-en/ontap/index.html["ONTAP 9 文档"^]了解有关在ONTAP中配置其他功能的信息。
 

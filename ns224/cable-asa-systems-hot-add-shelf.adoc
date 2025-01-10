@@ -510,13 +510,13 @@ If you disabled automatic drive assignment as part of the preparation for this p
 .. 使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 2 端口 b （ e2b ）。
 .. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 10 端口 A （ E10A ）。
 .. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 2 端口 b （ e2b ）。
-
-
 +
 下图显示了第二个磁盘架的布线（以及第一个磁盘架）。
 
 +
 image::../media/drw_ns224_a900_2shelves.png[为具有两个NS224磁盘架和两个IO模块的AFF A900布线]
+
+
 
 . 如果要热添加的 NS224 磁盘架是 HA 对中的第三个 NS224 磁盘架，请完成以下子步骤。
 +

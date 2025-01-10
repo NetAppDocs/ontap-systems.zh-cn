@@ -38,7 +38,7 @@ LOADER-A>
 +
 `Starting boot media recovery (BMR) process. Press Ctrl-C to abort…`
 
-. 在Loader配置本地集群端口并从配对节点执行时监控启动介质恢复过程 `netboot`。
+. 在Loader配置本地端口并从配对节点执行时监控启动介质恢复过程 `netboot`。
 +
 当网络启动运行时、将显示此 `Starting BMR`消息。
 
@@ -120,9 +120,9 @@ Successfully recovered keymanager secrets.
 .. 节点重新启动后、确认系统恢复联机并正常运行、以验证启动介质恢复是否成功。
 .. 通过交还存储使受损控制器恢复正常运行：
 +
-`storage failover giveback -ofnode _impaired_node_name_`(英文)
+`storage failover giveback -ofnode _impaired_node_name_`
 
-.. 在仅使用CFO聚合启动后、运行以下命令。
+.. 在配对节点完全启动并提供数据后、在整个集群中同步OKM密钥。
 +
 `security key-manager onboard sync`
 
