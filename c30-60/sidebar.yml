@@ -25,6 +25,7 @@ entries:
   - title: 维护概述
     url: "/c30-60/maintain-overview.html"
   - title: 启动介质
+    pdf-filename: AFF C30和AFF C60启动介质
     entries:
     - title: 启动介质更换工作流
       url: "/c30-60/bootmedia-replace-workflow.html"
@@ -79,6 +80,7 @@ entries:
   - title: 风扇
     url: "/c30-60/fan-replace.html"
   - title: I/O 模块
+    pdf-filename: AFF C30和AFF C60 I/O模块
     entries:
     - title: I/O模块概述
       url: "/c30-60/io-module-overview.html"

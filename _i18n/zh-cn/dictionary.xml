@@ -8307,7 +8307,6 @@ SFP+(目标/启动程序)</block>
   <block id="29b62d617481485649ea2d5b54fca512" category="image-alt">集群HA缆线</block>
   <block id="8c1f3262727530ad8d4652a5b107e167" category="paragraph">*集群/HA互连缆线*</block>
   <block id="e5878ec206640d3f0489cbe562e56856" category="paragraph">以下是一些典型的主机网络布线示例。有关您的特定系统配置、请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> 。</block>
-  <block id="4f223663358c0dcb4aac038f73fdf58d" category="admonition">为了最大程度地提高集群和HA流量的系统性能、最好不要使用端口e1b和e7b端口进行主机网络连接。使用单独的主机卡以最大程度地提高性能。</block>
   <block id="d2163ed76fe91108f8a1e58f08924448" category="paragraph">*100 GbE电缆*</block>
   <block id="dca4917cf460ca0094ae46e8d7178c17" category="image-alt">100 Gb以太网电缆</block>
   <block id="63498c78e69ef7b5cc7cd5a1c0c3b724" category="image-alt">使用缆线连接到100 Gb以太网网络</block>
@@ -8389,16 +8388,12 @@ SFP+(目标/启动程序)</block>
   <block id="dc4cb3e8c6b9abe025aa10b2d8d4b6f5" category="list-text">将笔记本电脑连接到管理子网上的交换机。</block>
   <block id="5dc15886a7be0b02974c471249fd2702" category="image-alt">控制台连接</block>
   <block id="9e7e8b48adc159107d0baf9021253c61" category="list-text">使用管理子网上的TCP/IP地址为笔记本电脑分配TCP/IP地址。</block>
-  <block id="d4b97f0234af8d33d5ad6190a7930ff4" category="image-alt">通用电源连接图</block>
   <block id="71abffb89587fc128eb09ec9ef2dd7e1" category="list-text">LED指示灯闪烁且风扇启动、这表示控制器正在通电。</block>
-  <block id="671754b07475807f952083aca6f98a97" category="list-text">使用每个电源设备上的固定设备固定电源线。</block>
   <block id="b20f6daaff695ed207299929a85ec2f0" category="summary">准备安装AFF A1K平台。</block>
   <block id="32271edc7814b81370e65a0b9ea22010" category="list-text">具有USB/串行连接的笔记本电脑或控制台</block>
   <block id="5c454c254f4e346b0d54dac30e743b57" category="list-text">访问Web浏览器以配置存储系统</block>
   <block id="00db13616a21c862d199d7fae938549d" category="image-alt">AFF A1K提升注意图标</block>
-  <block id="c55a46464ae8350cc2bff0a097df93e1" category="image-alt">NS224举升注意事项</block>
   <block id="92c8397408f55d9526d554c55cde3d22" category="section-title">第1步：准备站点</block>
-  <block id="0b75c01928f08a952353b4ed76796fb5" category="list-text">确保您有足够的机架空间：</block>
   <block id="588fcd6ecf982925ddac393983abe360" category="list-text">在适用于平台的HA配置中为4U</block>
   <block id="11b5963f8c4ca653ab5f43bc4b9828df" category="inline-link">交换机文档</block>
   <block id="6630a85163683d2127a4b50c91d77093" category="section-title">第2步：打开包装箱</block>
@@ -8415,8 +8410,6 @@ SFP+(目标/启动程序)</block>
   <block id="7ceeb9e2de47574891152d45e033aea1" category="list-text">电源线</block>
   <block id="b2cdf9589096f203f816541f43a15f6c" category="list-text">网络缆线</block>
   <block id="06d2646a8077631818b55a12dc3c58ac" category="list-text">管理以太网缆线(RJ-45缆线)</block>
-  <block id="3ad4852daca6060d9a43783d0d67578c" category="list-text">USB－C串行端口电缆</block>
-  <block id="501009762675d8b94f6d05080102eaa1" category="paragraph">打开包装后、您可以在装箱单、确认电子邮件或控制器的系统管理模块上找到此编号。</block>
   <block id="8a55a5b89690f6046e6de8dd649ff837" category="list-text">使用您的用户名和密码登录。</block>
   <block id="5c83cedabfd78baf337988a092bcf317" category="list-text">选择*系统*&gt;*我的系统*。</block>
   <block id="12dc2a66a130388ec482398caa6ce95b" category="list-text">单击 * 立即注册 * ，然后创建帐户。</block>
@@ -8999,51 +8992,27 @@ SFP+(目标/启动程序)</block>
   <block id="6d194eccb9cd88bfbcde1df65103cbb4" category="list-text">出现提示时、输入密钥库UUID和集群UUID的值。</block>
   <block id="417968dd9c410e2ebdf82236e2a6f1d8" category="doc">第1步：将存储控制器连接到网络</block>
   <block id="c0b05ac617b77a5c10f26756e6ef04f2" category="list-text">如果要连接到光纤交换机、请先将小型可插拔(Small form-纤 巧型可插拔、SFP)收发器插入控制器端口、然后再使用缆线连接到该端口。</block>
-  <block id="1463138ead0bd5def70e2d744eddfc0a" category="paragraph">将控制器直接相互连接并连接到主机网络。</block>
-  <block id="73672e433c39ed0cc0cdb0334e672525" category="paragraph">有关将存储系统连接到主机网络交换机的信息、请与网络管理员联系。</block>
-  <block id="a5e51e5f50ca83720f1d0d8b17c1e93b" category="paragraph">以下过程显示了常见配置。具体布线取决于为存储系统订购的组件。有关全面的配置和插槽优先级详细信息，请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
-  <block id="8c8e768c4d86293c1b8fd551cc2a1a4e" category="open-title">ASA A1K存储系统</block>
   <block id="10ddcbe568df11daf470f9b11ab92b62" category="paragraph">将存储控制器相互连接以创建ONTAP集群连接、然后将每个控制器上的以太网端口连接到主机网络。</block>
   <block id="ee6c90ad735c4fc892e900202d6ff034" category="list-text">使用集群/HA互连缆线将端口e1a连接到e1a、并将端口e7a连接到e7a。</block>
-  <block id="491359bee867965cfa22411b77d88b8d" category="list-text">将控制器A上的端口e1a连接到控制器B上的端口e1A</block>
-  <block id="1a33712b794a97041f7338604473e7a3" category="list-text">将控制器A上的端口e7a连接到控制器B上的端口e1A</block>
   <block id="8637ca13eb3c1a10bb4383130268c950" category="list-text">将以太网模块端口连接到主机网络。</block>
   <block id="a6992cc3b8eb7adfbce0724b4ed8e4a4" category="list-text">将端口e9a和e9b连接到以太网数据网络交换机、如图所示。</block>
   <block id="1cddeaef0a0b08b7178f9023a157d0fc" category="list-text">连接1025 GbE主机网络交换机。</block>
   <block id="9d62d1718b5465944796c5fb854d0f5d" category="list-text">使用1000BASE-T RJ-45缆线将控制器管理(扳手)端口连接到管理网络交换机。</block>
-  <block id="c70a96a223c88c75dde3d248fd91e2b1" category="open-title">ASA A70和ASA A90存储系统</block>
   <block id="bd078f69cc3533ea9bc3100deef482d0" category="list-text">使用集群/HA互连缆线将端口e1a连接到e1a、并将端口e7a连接到e7a。</block>
-  <block id="b4e1b9768de4fea1a231630708e9f914" category="section-title">第2步：将存储控制器连接到存储架</block>
   <block id="581d5dbeb2b657af56ca70f32099c9d4" category="paragraph">以下布线过程显示了如何将控制器连接到一个磁盘架和两个磁盘架。您最多可以将四个磁盘架直接连接到控制器。</block>
-  <block id="44101c78d328291236c1e6a8035b52d1" category="open-title">ASA A1K 系统</block>
-  <block id="b3623f40c8ee8913ca5a6a7756d97ce9" category="paragraph">选择以下与您的设置匹配的布线选项之一。</block>
-  <block id="200ab92b71653aeb6904db07dcb0a81b" category="example-title">选项1：使用缆线将控制器连接到一个NS224存储架</block>
   <block id="46d73bd828c75397e5f3cca81c4236e1" category="paragraph">将每个控制器连接到NS224磁盘架上的NSM模块。图中显示了每个控制器的布线：控制器A的布线显示为蓝色、控制器B的布线显示为黄色。</block>
   <block id="cdc609c675d24b2fff8b5acc2e37e89e" category="list-text">在控制器A上、连接以下端口：</block>
   <block id="ab7ef1e990b02e4f310f950e86665f24" category="list-text">在控制器B上、连接以下端口：</block>
-  <block id="150e5856fceb6b2cacbe569c1921d330" category="example-title">选项2：使用缆线将控制器连接到两个NS224存储架</block>
   <block id="348bd528033e13e79fcfb366a5cd5af4" category="paragraph">将每个控制器连接到两个NS224磁盘架上的NSM模块。图中显示了每个控制器的布线：控制器A的布线显示为蓝色、控制器B的布线显示为黄色。</block>
-  <block id="40e080201f076f6a17456e5af8be4fa3" category="open-title">ASA A70和A90系统</block>
-  <block id="d2304a06aa5c8ddc89113b1713a1c67e" category="example-title">选项1：将控制器连接到一个NS224存储架</block>
-  <block id="d4e2126c6118383149b1e943e8bba458" category="example-title">选项2：将控制器连接到两个NS224存储架</block>
-  <block id="e934f6c11392ce362b9b522d3905e905" category="list-text">在控制器A上、连接以下端口：</block>
-  <block id="b54dd6af6e848badd84700a68025355a" category="paragraph">打开存储系统后、即可发现集群网络并设置ONTAP集群。</block>
   <block id="9567b57fbc256ab6a2a904d9e65e90fc" category="paragraph">使用<block ref="2b7eb894c1625ebcb138cf06e4e24423" category="inline-link-rx"></block> 记录集群设置过程中所需的值。如果提供了默认值，则可以使用该值，或者输入您自己的值。</block>
   <block id="2b613a5cfe94ed4e246fd0b8d8e788d7" category="inline-link-macro">启动存储系统</block>
   <block id="62b1b8fecbe53d21e29b3193b917d52b" category="paragraph">确保您的笔记本电脑已连接到串行控制台端口、并且控制器已打开电源。有关说明、请参见。 <block ref="7c573676638f479dced3a24193374cdc" category="inline-link-macro-rx"></block></block>
   <block id="c0cca90a0ea793a9983b3bf5d8f21117" category="paragraph">NetApp建议您使用System Manager设置新集群。有关设置说明、请参见。<block ref="21993ef26df9bd69488ae5f93ea51b95" category="inline-link-rx"></block></block>
-  <block id="eb060a6205d76a5e75ea0815f4f83b5a" category="paragraph">初始化集群后、下载并运行 <block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block> 以确认设置。</block>
   <block id="25e29897c37b7e5f9f9f0d8aac2e8c21" category="list-text">确保已将说明随导轨套件一起提供。</block>
-  <block id="6a82938033e352436834589b4000acd1" category="list-text">请注意与存储系统和存储架重量相关的安全问题。</block>
   <block id="cd5270ea2c99376e2e028058d02bfa65" category="list-text">了解流经存储系统的气流从安装挡板或端盖的前部进入、并从端口所在的后部排气。</block>
-  <block id="a23c8df519f5dec5dcc76f5989d937c4" category="list-text">根据需要、按照导轨套件随附的说明为存储系统和存储架安装导轨套件。</block>
   <block id="1c8c6696ac03ef01690be450b3767032" category="list-text">在机柜或电信机架中安装并固定存储系统：</block>
   <block id="bdb39b5926a304a8f387b036b6fd9445" category="list-text">将存储系统置于机柜或电信机架中间的导轨上、然后从底部支撑存储系统并将其滑入到位。</block>
   <block id="0a508c750e66a219b3bc9449125a4672" category="list-text">使用随附的安装螺钉将存储系统固定到机柜或电信机架上。</block>
-  <block id="c91c25b22baf3cf726a3ecc4b7e7f23f" category="list-text">安装存储架：</block>
-  <block id="76f6a6a53ead4da24271bca7a9b976e0" category="list-text">将存储架的背面置于导轨上、然后从底部支撑存储架、并将其滑入机柜或电信机架。</block>
-  <block id="8ac98c640ab335c330eb3d45c03096ad" category="paragraph">如果要安装多个存储架、请将第一个存储架直接置于控制器上方。将第二个存储架直接置于控制器下方。对任何其他存储架重复此模式。</block>
-  <block id="871681e86e80556b261166721e0bbe3b" category="list-text">使用随附的安装螺钉将存储架固定到机柜或电信机架上。</block>
   <block id="c5eaaf4a6fa532356e5d0189384e0e34" category="list-text">将缆线管理设备连接到存储系统背面。</block>
   <block id="36eaeecf3fe5d82e498290c50c773db1" category="list-text">将挡板连接到存储系统正面。</block>
   <block id="f044e75ec5037aabefb204d1365ba96b" category="image-alt">更改NS224磁盘架ID</block>
@@ -9058,43 +9027,27 @@ SFP+(目标/启动程序)</block>
   <block id="1e6aa1713a8e26a3cecae4cd918e20a0" category="list-text">按下并释放磁盘架ID按钮、将该数字前进、直到达到所需数字0到9为止。</block>
   <block id="fbfc6fb88e89fa9fd421347ccdc222c8" category="list-text">锁定所需的数字、并按住磁盘架ID按钮退出编程模式、直到第二个数字停止闪烁。</block>
   <block id="3a7f97a4c78b33a1c47a571494b17709" category="paragraph">数字显示屏上的两个数字开始闪烁、大约五秒钟后琥珀色LED亮起、提醒您待定磁盘架ID尚未生效。</block>
-  <block id="51ebfc33ce787da893819e3a68129a19" category="paragraph">打开存储架并为其分配唯一ID后、打开存储控制器的电源。</block>
-  <block id="9be560fd489238e97542aa683a683199" category="list-text">将笔记本电脑连接到串行控制台端口。这样、您就可以在控制器打开时监控启动顺序。</block>
   <block id="cd76e142e3adabbfc33b1de3c074b2cb" category="list-text">首次启动风扇时、风扇可能会发出很大的噪音。启动期间风扇噪音正常。</block>
   <block id="8d30b064af728ae0d0217b4663afa97d" category="paragraph">要安装存储系统、请确保您计划使用的站点和机柜或机架符合您的配置规格。</block>
   <block id="784289434de2772034240714a84f80a9" category="list-text">使用<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>确认您的站点满足存储系统的环境和电气要求。</block>
   <block id="6ac193907083dd66438c89227559f4dc" category="list-text">每个NS224存储架占用2U空间</block>
-  <block id="f7baf09cec0bef6d7451bbfb2506b5d8" category="paragraph">*注：*<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>有关其他受支持存储架的机架空间要求、请参见。</block>
   <block id="2df7e61cfe4bf7857f54171cec3da494" category="list-text">安装所需的任何网络交换机。</block>
   <block id="6734bc0c212e4efd373707768ae51b81" category="paragraph">确保存储系统的站点和计划使用的机柜或机架符合所需规格后、打开所有包装箱的包装并将物品与装箱单上的物品进行比较。</block>
-  <block id="2a6f49472befe7fd3e056a4a6fedfe00" category="list-text">存储架</block>
   <block id="256397940895ecf3de88fca8684f0a2d" category="list-text">存储缆线(如果您订购了额外的存储)</block>
   <block id="9bea2d1b752b83d2f602c5b85b99a901" category="section-title">第3步：注册存储系统</block>
-  <block id="b36d5598e44a73dff0e120c41f02ee3f" category="paragraph">在确保您的站点满足存储系统规格的要求并确认您已订购所有部件后、应注册您的系统。</block>
-  <block id="04a9069d60a270b8326c0bf8dece532c" category="list-text">找到存储系统的序列号。</block>
   <block id="f5c45bcc73f02c7f2b1398ee78576a7a" category="list-text">转到。<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block></block>
   <block id="6918c0735e9cef59385e60d3f94d7115" category="list-text">确定是否需要注册存储系统：</block>
   <block id="8f45a9f1fcb944bee42c078bdeacd8ac" category="cell">如果您是 ...</block>
   <block id="e3df4624e4d36502b5d044730eab97cc" category="cell">请按照以下步骤操作 ...</block>
   <block id="d3f2dc7623074c370346f082b621f2db" category="paragraph">现有 NetApp 客户</block>
-  <block id="8cc04c4151dd22af84b31cd55d6c5f57" category="list-text">确认新序列号已列出。</block>
   <block id="d193a53b34315bee1bed499f665686ce" category="list-text">如果不是，请按照适用于新 NetApp 客户的说明进行操作。</block>
   <block id="daee797d0bf63a91fe069e1df88d7923" category="paragraph">NetApp 新客户</block>
-  <block id="616ce92e68107b272305803b0da3016e" category="list-text">输入存储系统的序列号和请求的详细信息。</block>
   <block id="38342a608d29c610e381db6c1bfd532c" category="doc">安装所需的设备</block>
   <block id="3278b4b06a799dc3318232ebf4631179" category="paragraph">要安装存储系统、您需要以下设备和工具。</block>
   <block id="8dd75d4e14815a2e3e3154ea67cd841e" category="list-text">静电放电(ESD)带</block>
   <block id="2e9e7e3bf632d3a831fdcb0a200d53b7" category="list-text">回形针或窄尖头圆珠笔、用于设置NS224存储架ID</block>
   <block id="8170c4932dac7ac5a018213e28744cab" category="section-title">提升注意事项</block>
-  <block id="631a629b49692f05c6c442b2053abb24" category="paragraph">存储系统和存储架很重。搬运这些物品时请务必小心。</block>
-  <block id="522bd666055071c79860849502df1178" category="section-title">存储系统重量</block>
   <block id="33f8da0ea30bb3eb60321a8d29715499" category="paragraph">移动或抬起存储系统时、请采取必要的预防措施。</block>
-  <block id="cc462bbdb3b8d9369a4c3f67dcc8095c" category="open-title">A1K</block>
-  <block id="5ea1cbb0d935be77a5bd89c7ae6df537" category="paragraph">A1K存储系统的重量可达62.83磅(28.5千克)。要抬起系统、请由两个人或一个液压提升装置来完成。</block>
-  <block id="b1f39e4d9956723a4e80ea4844651e57" category="open-title">A70和A90</block>
-  <block id="dd9f2d53c1722b6c2ac842b778803e5a" category="paragraph">A70存储系统或A90存储系统的最大重量为151.68磅(68.8千克)。要提升系统、请使用四人或液压提升装置。</block>
-  <block id="336e0262f6402efd45d8cf9d7ae13e8c" category="section-title">存储架重量</block>
-  <block id="2426c13bd8c78d02a8ccbd2a43174936" category="paragraph">NS224存储架的重量不超过66.78磅(30.29千克)。要抬起存储架、请两个人或使用液压升降机。将所有组件(前部和后部)保留在存储架中、以防止存储架重量不平衡。</block>
   <block id="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="list-text"><block ref="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="inline-link-rx"></block></block>
   <block id="fde1abb5537b55c34521d414267b3f70" category="inline-link">ASA r2系统</block>
   <block id="5d6a7459a3583d9e29f4b486d809b6a1" category="list-text">ASA A1K</block>
@@ -9175,11 +9128,6 @@ SFP+(目标/启动程序)</block>
   <block id="e7536efd3b9d16674c0de677b471dab2" category="summary">查看所需设备以及平台和磁盘架的吊装预防措施。</block>
   <block id="9715acc529a1f784f09c842c87aa8b94" category="doc">安装要求- AFF A1K</block>
   <block id="203f80207b135ea7e43386a891f88e09" category="paragraph">查看AFF A1K存储系统和存储架所需的设备以及搬运注意事项。</block>
-  <block id="7441be50cc1ffa7c8f6b88094fab2108" category="paragraph">要安装AFF A1K存储系统、您需要以下设备和工具。</block>
-  <block id="3330827a108d9ed79f76697fbb71af4c" category="paragraph">AFF A1K存储系统和NS224存储架很重。搬运这些物品时请务必小心。</block>
-  <block id="01b7bc7debacf02e21b4e5c1eec0bcf9" category="section-title">AFF A1K存储系统</block>
-  <block id="bcc0f364176a6b86cafbe8e4dfce2a4a" category="paragraph">AFF A1K存储系统的重量可达22.83磅(28.5千克)。要抬起系统、请由两个人或一个液压提升装置来完成。</block>
-  <block id="45e63469b991d33c068f31181b786804" category="section-title">NS224磁盘架</block>
   <block id="d03f5ec8a330688c4e047e99f5fecd12" category="inline-link-macro">准备安装AFF A1K存储系统</block>
   <block id="95225809efab4457ee4a53c1a58dfb52" category="paragraph">查看硬件要求后，您可以<block ref="483aaa3c2f4f88e7b219b85383e864a7" category="inline-link-macro-rx"></block>：</block>
   <block id="e736c3581e7cc7eb9804edd4215c31b3" category="doc">将故障部件退回给NetApp - AFF A70 and AFF A90</block>
@@ -9244,10 +9192,6 @@ SFP+(目标/启动程序)</block>
   <block id="09f908c7739e53b3d2c38aa6643b223a" category="paragraph">准备好安装AFF A70或AFF A90硬件后，您可以<block ref="5d63ec75b552414f601ef48807f802a1" category="inline-link-macro-rx"></block>。</block>
   <block id="4090848005a10223aa8682ab65a126b3" category="doc">安装要求- AFF A70和AFF A90</block>
   <block id="9d5550245778349bc21a4d66e8e5cc3e" category="paragraph">查看AFF A70或AFF A90存储系统和存储架所需的设备以及搬运注意事项。</block>
-  <block id="c9341c606e640aaa0d7045e6ee2fa517" category="paragraph">要安装AFF A70或AFF A90存储系统、您需要以下设备和工具。</block>
-  <block id="1b8e66b9b4993a3fd09f38d7bd0611e0" category="paragraph">AFF A70和AFF A90存储系统以及NS224存储架非常重。搬运这些物品时请务必小心。</block>
-  <block id="0ac98212d833b45fb113f4133b2650ca" category="section-title">AFF A70和AFF A90存储系统</block>
-  <block id="c629dd83e83c71e99f9857aae4c70761" category="paragraph">AFF A70存储系统或AFF A90存储系统的最大重量为151.68磅(68.8千克)。要提升系统、请使用四人或液压提升装置。</block>
   <block id="e78eb711e1e947ddb92f05657d0347d1" category="inline-link-macro">准备安装AFF A70或AFF A90存储系统</block>
   <block id="2f2189cfd66651c01e836375bb7f1b05" category="paragraph">查看硬件要求后，您可以<block ref="cee013a212eeca03333769e1fffc4483" category="inline-link-macro-rx"></block>：</block>
   <block id="2eb78ee9cbbc9fb7df3e32a863ef8c78" category="doc">添加I/O模块- AFF A70和AFF A90</block>
@@ -9472,12 +9416,8 @@ SFP+(目标/启动程序)</block>
   <block id="9ed07b45e5e582647bc2df0721e7b250" category="paragraph">准备好安装FAS70或FAS90硬件后，您可以<block ref="8b675fcd81dca00f177be4137f647288" category="inline-link-macro-rx"></block>：</block>
   <block id="6a9167a5943a2edebb563033d742c92d" category="doc">安装要求—FAS70和FAS90</block>
   <block id="9ab04ed2ca5bf9f3a53912fe8182bc26" category="paragraph">查看FAS70或FAS90存储系统和存储架所需的设备以及吊装预防措施。</block>
-  <block id="4bcd9ea495d5d070dfd7277883825b09" category="paragraph">要安装FAS70或FAS90存储系统、您需要以下设备和工具。</block>
-  <block id="8018872d59cd903e3be8eabdcfd25213" category="paragraph">FAS70和FAS90存储系统、NS224存储架和DS460C存储架非常重。搬运这些物品时请务必小心。</block>
-  <block id="ba0156151072eea87a571e4e7ebcfc77" category="section-title">FAS70和FAS90存储系统</block>
   <block id="831a011f3efcfa2b56239bdfd5507fdc" category="paragraph">FAS70或FAS90存储系统的重量可达22.83磅(28.5千克)。要抬起系统、请由两个人或一个液压提升装置来完成。</block>
   <block id="d7c4e8ded75a649c909a48d80b0ce125" category="image-alt">FAS70和FAS90提升注意事项图标</block>
-  <block id="aec8e07370e7c72963dcbf3098d2a8ad" category="section-title">DS460C磁盘架</block>
   <block id="3f7ff5a5fa66b539e61c49c16ecbff4c" category="image-alt">DS460C举升注意事项</block>
   <block id="6948cb33670435c578dc2ed5f9bd0547" category="inline-link-macro">准备安装FAS70或FAS90存储系统</block>
   <block id="5060dc7c2f8e62d845323bb56c316f67" category="paragraph">查看硬件要求后，您可以<block ref="f9fa58ae9ecc3e85b1db488d30bad78e" category="inline-link-macro-rx"></block>：</block>
@@ -9559,12 +9499,8 @@ SFP+(目标/启动程序)</block>
   <block id="bbd90c57f0c4facd0e407d460b63f5e4" category="sidebar">FAS70和FAS90控制器模块</block>
   <block id="6aa2bbbbcd863a688ecea951a078cc57" category="sidebar">FlashCache模块</block>
   <block id="9d6e68abc86ef52726565c7e52c9dea7" category="image-alt">系统序列号示例</block>
-  <block id="acaf98d7d873f9a7ee774034dc1440fc" category="image-alt">AFF A90和AFF A70重量小心图标</block>
   <block id="54425f945644281ccaf6201b998f169f" category="paragraph"><block ref="54425f945644281ccaf6201b998f169f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e41a410f85201d7cc87e022e1f2daf34" category="paragraph">如果您在笔记本电脑上启用了网络发现、则可以使用自动集群发现完成设置和配置。</block>
-  <block id="637d6f599c1184d1c5de273700d7924f" category="list-text">将控制台缆线连接到笔记本电脑、然后使用存储系统随附的控制台缆线连接控制器上的串行控制台端口。</block>
-  <block id="6b66db132383abf32640c51ec249e853" category="list-text">存储系统开始启动。Initial booting may take up to eight minutes.</block>
-  <block id="26e7314ba01a2bdc4fda67ee84154359" category="list-text">在存储系统的HA配置中为4U</block>
   <block id="f31303ddb8ada38aed08c2bb8f9d8e6c" category="list-text">存储系统</block>
   <block id="f65a3f7f8789fde53b9d1f80f9881d85" category="paragraph">ONTAP 9.16.0.</block>
   <block id="cfb74b9f3447e3aada1f3cbeb61c7028" category="inline-link">COOTP-285173 - ADP不会在具有10个或更多内部驱动器的AFF A150上保留备用根分区</block>
@@ -9907,11 +9843,8 @@ SFP+(目标/启动程序)</block>
   <block id="b8dd2898e8ee20a6f6cb34867845aa17" category="list-text">另一个集群节点或KMIP服务器CA中的/cfcard/kmip/certs /CA.pm文件的副本。</block>
   <block id="5943dcc79f4be51c7946faa01081c8c7" category="admonition">如果您的系统最初运行的是ONTAP 9．10.1或更高版本，请使用中所述的过程<block ref="b14f44ab326196475bf1d94f7e3821ad" category="inline-link-rx"></block>。如果您不确定系统的初始ONTAP版本、请参阅<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>以了解更多信息。</block>
   <block id="6379280c267113ec35e5881e1b0f65bb" category="paragraph">每个磁盘架都有一个唯一的磁盘架ID来区分。此ID可确保存储架在存储系统设置中是不同的。</block>
-  <block id="937eeb311ae4c7f36059ec45705ae05b" category="list-text">有效的外部磁盘架ID为01到99。</block>
   <block id="ce4b2f7741d87ac6c37e8727ca9ad20a" category="paragraph">如果控制器中集成了内部磁盘架(存储)、则会为其分配一个固定磁盘架ID 00。</block>
-  <block id="9944ff6c526e81f7d9ce060adc105e86" category="list-text">按下并释放磁盘架ID按钮可将该数字前进、直到达到所需数字0到9、或者如果系统具有板载存储、则从1到9。</block>
   <block id="52f79b2833c42027e63e45681585067e" category="example-title">您可能会看到这些提示</block>
-  <block id="e65e1ac152dcb95552c1c1f62ceaf393" category="paragraph"><block ref="6f0c6616b99fea33a3020e0e0dcbe3c6" prefix="" category="inline-code"></block>命令。</block>
   <block id="85ef91c4d71faa53c83efc7222148253" category="video-title">更换NS224磁盘架启动介质</block>
   <block id="bed8800ffb3dfb17d15fabcbf21305be" category="video-title">更换NS224磁盘架中的DIMM</block>
   <block id="adf9a21a79092388f61e544af11cd756" category="video-title">更换NS224磁盘架中的风扇</block>
@@ -10606,9 +10539,6 @@ SFP+(目标/启动程序)</block>
   <block id="a23e2b87ba2a5b48b686bd85b652c686" category="list-text">如有必要、请设置时间、以GMT为单位：<block ref="0ad4ade5bf715a5335525c69a44424c1" prefix=" " category="inline-code"></block></block>
   <block id="53de4fa11536ef0442c7750efccf6f67" category="list-text">确认日期和时间。</block>
   <block id="f409d381c4de00dcaf2050c848bff8e2" category="list-text">在Loader提示符处、输入<block ref="bfa99df33b137bc8fb5f5407d7e58da8" prefix=" " category="inline-code"></block>以重新初始化I/O模块和其他组件、然后让控制器重新启动。</block>
-  <block id="1f7f3df907c101709203efb4bab8f946" category="paragraph">将每个控制器连接到NS224磁盘架上的NSM。图中显示了每个控制器的布线：控制器A的布线显示为蓝色、控制器B的布线显示为黄色。</block>
-  <block id="482b09bc81dba0cc246c5ee5bfa63dc2" category="paragraph">将每个控制器连接到两个NS224磁盘架上的NSM。图中显示了每个控制器的布线：控制器A的布线显示为蓝色、控制器B的布线显示为黄色。</block>
-  <block id="d5c4ea0bd4062f3b335586480daba755" category="list-text">将端口e11b连接到磁盘架2的NSM A端口e0b。</block>
   <block id="5e096228421e8040641c1e77b70b9752" category="list-text">请注意与存储系统和磁盘架重量相关的安全问题。</block>
   <block id="a1ef0e50a49115f0c600ba32004b3c02" category="list-text">根据需要、按照导轨套件随附的说明为存储系统和磁盘架安装导轨套件。</block>
   <block id="7d6993d4b57fba8118e248dd2051a8be" category="list-text">根据需要安装并固定磁盘架。</block>
@@ -10652,7 +10582,6 @@ SFP+(目标/启动程序)</block>
   <block id="017db3debbf4b1ed577798b78fd96b66" category="list-text">FAS70</block>
   <block id="649e9f4912bcf4af7efe489c6866eb1d" category="list-text">FAS90</block>
   <block id="3eab1bbd4a3f05ea0803f3bcf5fac9e5" category="list-text">FAS2750</block>
-  <block id="13b901139d96d3088b86d12d380ba57f" category="paragraph">驱动器架专为NetApp AFF、ASA和FAS系统设计、可帮助您提供数字化转型所需的性能、故障恢复能力和灵活性。</block>
   <block id="61c05ca68a6ca538f3473986616103f2" category="paragraph">从以下ONTAP版本开始提供驱动器架。</block>
   <block id="5c7fb5a9cab188683ddf4f0991a21e1c" category="list-text">具有NSM100B模块的NS224</block>
   <block id="e9fc04f90ca55de311ddb1dfba04ecbc" category="list-text">具有NSM100模块的NS224磁盘架</block>
@@ -10703,7 +10632,6 @@ SFP+(目标/启动程序)</block>
   <block id="7dd75dd7ed57db82538f9394ec870940" category="doc">检查板载加密密钥- AFF A20、AFF A30和AFF A50</block>
   <block id="8c1c309a8934bc76c1690fc554f02c58" category="doc">恢复加密- AFF A20、AFF A30和AFF A50</block>
   <block id="d059c96eddd0b4b4a166d0c46c11f9f9" category="doc">启动恢复映像- AFF A20、AFF A30和AFF A50</block>
-  <block id="58074d051ee24c5fe9238ebc15f03c16" category="doc">要求和注意事项- AFF A20、AFF A30和AFF A50</block>
   <block id="cb6f6bb6e53f2513d37ec540678d4269" category="doc">启动介质更换工作流- AFF A20、AFF A30和AFF A50</block>
   <block id="56b8cde3b1f3e08c4473d9b2684dcde7" category="paragraph-title"><block ref="444c1bf2e877f5617e8ce0a2ded57f4f" category="inline-image-macro-rx" type="image"></block><block ref="0caeda8d60cf80f7a042375ba653d60a" category="inline-link-macro-rx"></block></block>
   <block id="d0a34c5f741fcf4c8a27a4a0ebeb67d5" category="paragraph">验证存储系统是否已启用安全密钥管理器或已加密磁盘。</block>
@@ -10871,8 +10799,6 @@ SFP+(目标/启动程序)</block>
   <block id="1594210318baaedcde7a9ee6cf877e2f" category="list-text">在每个控制器上</block>
   <block id="b9d56fbafd9b44fad97bacb9a2bb786a" category="inline-link-macro">为存储系统安装硬件</block>
   <block id="6cc83c1114ef7a72628c17c930f42046" category="paragraph">准备好安装存储系统后，您可以<block ref="32ef1f18704cc0c97dfcafcf18cacd02" category="inline-link-macro-rx"></block>：</block>
-  <block id="b86941c46a365645f6cca04da4b7f6ed" category="doc">安装要求和注意事项- AFF A20、AFF A30和AFF A50</block>
-  <block id="7e20b5146ae177ed895704399c8a977b" category="paragraph">查看AFF A20、AFF A30或AFF A50存储系统的要求和注意事项。</block>
   <block id="810da8188a0c92df4fdc4ccf84b888d0" category="paragraph">一个-20、A30或A50存储系统的最大重量为27.9千克(61.5磅)。要抬起存储系统、请两个人或使用液压升降机。</block>
   <block id="6eb0f75df27b0466f7984bf67accd904" category="paragraph">带有NSM100B模块的NS224磁盘架的重量可达56.8磅(25.8千克)。要抬起磁盘架、请两个人或使用液压升降机。将所有组件(前部和后部)保留在磁盘架中、以防止磁盘架重量不平衡。</block>
   <block id="34ae4f1779c2db0223377cbefc6262df" category="image-alt">NS224和NSM100b提升注意事项</block>
@@ -10900,7 +10826,6 @@ SFP+(目标/启动程序)</block>
   <block id="8818851bcff9f03737f9fd5705a45fa6" category="doc">检查板载加密密钥- AFF C30和AFF C60</block>
   <block id="a4455ae0c0c7969583856994395f0cde" category="doc">恢复加密- AFF C30和AFF C60</block>
   <block id="3ec7c47dabf1d4f35a400c4071a00ca3" category="doc">启动恢复映像- AFF C30 and AFF C60</block>
-  <block id="3fff9e6751f0e3483b46c1b09e921f27" category="doc">要求和注意事项- AFF C30和AFF C60</block>
   <block id="b51f305b31269b3c0c90f0c435f98dc7" category="doc">启动介质更换工作流- AFF C30和AFF C60</block>
   <block id="eff4d8e89759d68c96ebcfc87dc315dd" category="doc">更换启动介质- AFF C30和AFF C60</block>
   <block id="5cc55241a9614abe4087e6c9b29624e6" category="doc">关闭受损控制器- AFF C30和AFF C60</block>
@@ -10958,7 +10883,6 @@ SFP+(目标/启动程序)</block>
   <block id="fab9e21f1bee0f7c0618cad32b09e254" category="summary">准备安装AFF C30和AFF C60平台。</block>
   <block id="e5c1fdfad20885712f2500f11ac35b2f" category="doc">准备安装- AFF C30和AFF C60</block>
   <block id="79e12a938ddc8f32473767866053dbf9" category="paragraph">准备安装AFF C30或AFF C60存储系统、方法是准备好场地、打开包装箱并将包装箱内物品与装箱单进行比较、然后注册存储系统以获得支持权益。</block>
-  <block id="5dbd4f15eeb8f486caf56f53d58063e0" category="doc">安装要求和注意事项- AFF C30和AFF C60</block>
   <block id="7a3914f84de0175770593720f9a6ce99" category="paragraph">查看AFF C30或AFF C60存储系统的要求和注意事项。</block>
   <block id="9bf4665a2c4e66c0d1872abb97cf1e62" category="doc">添加I/O模块- AFF C30和AFF C60</block>
   <block id="72e4a819218c094d076f11afa9177f29" category="paragraph">如果存在可用插槽或所有插槽均已完全填充、则可以向AFF C30和AFF C60存储系统添加I/O模块。</block>
@@ -11037,10 +10961,6 @@ SFP+(目标/启动程序)</block>
   <block id="ce16306562432372fadd2f97d4862648" category="summary">查看存储系统和磁盘架所需的设备以及提升注意事项。</block>
   <block id="d74315adf12485d8310e758b0294275f" category="doc">安装要求- AFF C80</block>
   <block id="a36836ef1b3b8277e163c5017c4ab7f9" category="paragraph">查看AFF C80存储系统和存储架所需的设备以及搬运注意事项。</block>
-  <block id="0818c15009c3b4c695f98b8c3aeb92d7" category="paragraph">要安装AFF C80存储系统、您需要以下设备和工具。</block>
-  <block id="da1ca086cad8d91904b85d2d85fdb468" category="paragraph">AFF C80存储系统和NS224存储架很重。搬运这些物品时请务必小心。</block>
-  <block id="3329bdafff22eccade430ba875e7f7e1" category="section-title">AFF C80存储系统</block>
-  <block id="1ecdf6d5dc581cf37d18e38fc6672845" category="paragraph">AFF C80存储系统的重量可达68.8千克(151.68磅)。要提升系统、请使用四人或液压提升装置。</block>
   <block id="c04a673c3bb56ad9a4dc3b8e2b216fe8" category="inline-link-macro">准备安装AFF C80存储系统</block>
   <block id="6a9ec7f0e337f1b22db691540de71dd2" category="paragraph">查看硬件要求后，您可以<block ref="f1512d282e7d59c9ab940248c652d05d" category="inline-link-macro-rx"></block>：</block>
   <block id="a5fb99858c57b188273ea5a1afedd002" category="doc">添加I/O模块- AFF C80</block>
@@ -11054,7 +10974,6 @@ SFP+(目标/启动程序)</block>
   <block id="11eb8865607ab8973149731becf87b54" category="doc">更换电源- AFF C80</block>
   <block id="dafdc51bcfddfb75cdc104244fa42b60" category="doc">更换实时时钟电池- AFF C80</block>
   <block id="0c760c78e9d0c008701a3538ed8f1c85" category="doc">更换系统管理模块- AFF C80</block>
-  <block id="2f5c749fdf8bbd8318bf83993d614136" category="paragraph">DS460C磁盘架的重量可达260.4磅(118.1千克)。要抬起存储架、您可能需要最多五人或一台液压升降机。将所有组件(前部和后部)保留在存储架中、以防止存储架重量不平衡。</block>
   <block id="0e0493531094a28281ba5f32c328ac63" category="paragraph">您的硬件系统可能与具有NSM100模块的NS224磁盘架和具有NSM100B模块的NS224磁盘架兼容。要检查硬件和磁盘架的兼容性和端口名称，请参阅<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>。</block>
   <block id="c97d3a72e7c1692c1c5f56d517b82c8c" category="example-title">使用缆线将磁盘架连接到AFF A20、AFF A30、AFF A50、AFF C30或AFF C60</block>
   <block id="494fa596205dff234fa0bdbd9d667c60" category="example-title">用缆线将磁盘架连接到AFF A70、AFF A90或AFF C80</block>
@@ -11287,10 +11206,6 @@ SFP+(目标/启动程序)</block>
   <block id="6a78e833d1d48c3ad3f5fcd87dc0f4d4" category="cell">I/O模块注意</block>
   <block id="402ff9cfbe902d88550764b90aa6cb76" category="paragraph">I/O模块缺失</block>
   <block id="5f99c34270a42ab74283fdec312239c2" category="paragraph">ONTAP存储系统与多个版本的ONTAP软件兼容。了解存储系统和驱动器架支持的ONTAP版本。</block>
-  <block id="6e078dd140fc50f53b5f2c4385d718bd" category="section-title">具有NSM100B模块的NS224磁盘架</block>
-  <block id="e0d3410def69ea25d4a73fbd6f0bbed2" category="paragraph">具有NSM100B模块的NS224驱动器架可提供高性能和灵活性、以满足您的数字化转型需求。</block>
-  <block id="fc65336c1bd8a062ad4562b40078d3fe" category="inline-link-macro">使用NS224磁盘架扩展硬件系统存储</block>
-  <block id="7b19cd7f52ff90324c1acacbd46001f8" category="paragraph"><block ref="66341a595da7a2db1d6f0b3d14139d08" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="7158496fa6a387eea85c17aa48eba85e" category="section-title">AFF A20、AFF A30和AFF A50</block>
   <block id="a09039ce1af61d84b9a954849fc88067" category="paragraph">全新的AFF A20、A30和A50硬件系统将高性能、智能和全面的数据管理功能扩展到更多客户和工作负载。</block>
   <block id="bc44b220c4c2656e94204809ef23fa40" category="section-title">AFF C30、AFF C60和AFF C80</block>
@@ -11298,4 +11213,38 @@ SFP+(目标/启动程序)</block>
   <block id="007ace9cd707338f2e4f8f25ed4bb0b8" category="section-title">具有NSM100B磁盘架模块的NS224驱动器架</block>
   <block id="e3f4eea829fa5771d87c60fb05124223" category="paragraph">借助NS224和全新的NSM100B NVMe存储扩展模块增强数据中心的功能。全新的NSM100B磁盘架模块可直接取代NSM100模块、可无缝集成到您的现有设置中。它支持NS224磁盘架的直连和交换机连接配置、可提供卓越的灵活性、以优化存储系统的效率和可扩展性。</block>
   <block id="02ad6883c66e836f88f8ac60378af5d5" category="paragraph">新的ASA R2硬件系统(ASA A1K、ASA A70和ASA A90)提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。</block>
+  <block id="f1f5a8071b69ef980c0fca64b3b9c54e" category="list-text">如果禁用了自动交还、请还原它。</block>
+  <block id="a7ecdb67614fe7d399a65b213dd20e1a" category="paragraph">驱动器架专为NetApp AFF、ASA和FAS系统设计、可帮助您提供数字化转型所需的性能、故障恢复能力和灵活性。</block>
+  <block id="dbc74f369dbf214b25d0f839fd4cd2b0" category="list-text">如果禁用了自动交还、则还原它：</block>
+  <block id="37e73c8cf9d7d3b4aeaa58f23b2fcb81" category="paragraph">打开AFF A1K存储系统后、即可发现集群网络并设置ONTAP集群。</block>
+  <block id="f2cde5cb8aa49228f5cb392e473dff51" category="paragraph">初始化集群后、下载并运行<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block>以确认设置。</block>
+  <block id="5d181ca91be1af691d1f01654691cc7b" category="image-alt">A1K存储系统和A70或A90电源连接图</block>
+  <block id="e826d5b26017ec374bf63b94b8a425d9" category="list-text">使用每个电源上的固定设备固定电源线。:a1K-A70-90!:</block>
+  <block id="0bf1ff1f561d2a96752b8ee596c65068" category="list-text">HA配置中的4U</block>
+  <block id="3ac4d4a9f6b930345bd4ccdb8435d0fb" category="list-text">在每个控制器的系统管理模块上</block>
+  <block id="388eeeeae411a70beaf8ef696a22f538" category="paragraph">A1K存储系统的重量可达62.83磅(28.5千克)。要抬起存储系统、请两个人或使用液压升降机。</block>
+  <block id="6de84c72e7e126f172cbcc00c68cd297" category="paragraph">NS224磁盘架的重量不超过66.78磅(30.29千克)。要抬起磁盘架、请两个人或使用液压升降机。将所有组件(前部和后部)保留在磁盘架中、以防止磁盘架重量不平衡。</block>
+  <block id="f6212161be26bdf2d9804cc49d78a681" category="image-alt">NS224 NSM100提升注意事项</block>
+  <block id="4eb7fd7f39fdba863f648fba58c6a17b" category="list-text"><block ref="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="inline-link-rx"></block>:a1k!:</block>
+  <block id="c06aa2e2131c24245e0e7d96530eafc3" category="doc">启动介质更换要求- AFF A20、AFF A30和AFF A50</block>
+  <block id="c0264caab63d4097d1e1ed92439e60a7" category="doc">机箱更换要求- AFF A20、AFF A30和AFF A50</block>
+  <block id="eaada1112c624d35f830400d927a467d" category="doc">控制器更换要求- AFF A20、AFF A30和AFF A50</block>
+  <block id="be520d0c187d935243d727d6ae1fae7d" category="paragraph">打开AFF A20、AFF A30或AFF A50存储系统后、即可发现集群网络并设置ONTAP集群。</block>
+  <block id="a8df3504a76da7d726b26d0dfd4a23f3" category="doc">安装要求- AFF A20、AFF A30和AFF A50</block>
+  <block id="a6c628254ff2bf40212541b76682d0ca" category="paragraph">查看AFF A20、AFF A30或AFF A50存储系统的要求。</block>
+  <block id="b88e50a127892280ab464a0d38a10676" category="paragraph">打开AFF A70或AFF A90存储系统后、即可发现集群网络并设置ONTAP集群。</block>
+  <block id="7fffd066161648ae573d6d74ec60e85e" category="paragraph">存储系统的最大重量为151.68磅(68.8千克)。要抬起存储系统、请使用四个人或一台液压升降机。</block>
+  <block id="89ef365c5b885c967c3d8cc986042787" category="doc">启动介质要求- AFF C30和AFF C60</block>
+  <block id="93ed93f61a0fe8be55f5a5227eba1f27" category="doc">机箱更换要求- AFF C30和AFF C60</block>
+  <block id="0786f21f31213511b77d9fde64302a80" category="doc">控制器更换要求- AFF C30和AFF C60</block>
+  <block id="877c6321779942add591f77ab7b28f2e" category="paragraph">打开AFF C30或AFF C60存储系统后、即可发现集群网络并设置ONTAP集群。</block>
+  <block id="4572f45ac79ded53bd57f95eaf949d13" category="doc">安装要求- AFF C30和AFF C60</block>
+  <block id="2795470282b110353916b87e8a68ea10" category="paragraph">打开AFF C80存储系统后、即可发现集群网络并设置ONTAP集群。</block>
+  <block id="021fad57648b2198deca585e8c317a71" category="paragraph">打开FAS70或FAS90存储系统后、即可发现集群网络并设置ONTAP集群。</block>
+  <block id="4c92eb29f2a257faff3e90e45cf70459" category="paragraph">DS460C磁盘架的重量可达181.1千克(260.4磅)。要抬起存储架、您可能需要最多五人或一台液压升降机。将所有组件(前部和后部)保留在存储架中、以防止存储架重量不平衡。</block>
+  <block id="510996b7cd8e0bf946a50e1f000afbe2" category="paragraph">SuperRail可以使用圆孔到方孔适配器支架安装在标准方孔四柱机架上、也可以安装在标准圆孔四柱机架上。</block>
+  <block id="090baac144fae3a90d22bb679e0194a6" category="sidebar">AFF A20、AFF A30和AFF A50启动介质</block>
+  <block id="f923335af94abdb12e15d306f375ccba" category="sidebar">AFF A20、AFF A30和AFF A50 I/O模块</block>
+  <block id="78630acc24e5fd1073367e9c78f003a0" category="sidebar">AFF C30和AFF C60启动介质</block>
+  <block id="0cc03c1fb7fac3f451692406956a999d" category="sidebar">AFF C30和AFF C60 I/O模块</block>
 </blocks>

@@ -11,7 +11,7 @@ summary: 只需连接到交换机和笔记本电脑、或者直接连接到存�
 
 
 [role="lead"]
-打开存储系统后、即可发现集群网络并设置ONTAP集群。
+打开AFF A1K存储系统后、即可发现集群网络并设置ONTAP集群。
 
 
 
@@ -104,4 +104,4 @@ NetApp建议您使用System Manager设置新集群。有关设置说明、请参
 System Manager为集群设置和配置提供了一个简单易行的工作流、其中包括分配节点管理IP地址、初始化集群、创建本地层、配置协议以及初始配置连接的存储。
 
 .下一步是什么？
-初始化集群后、下载并运行  https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] 以确认设置。
+初始化集群后、下载并运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]以确认设置。

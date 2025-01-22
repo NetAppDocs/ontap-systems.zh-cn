@@ -25,6 +25,7 @@ entries:
   - title: 维护概述
     url: "/a20-30-50/maintain-overview.html"
   - title: 启动介质
+    pdf-filename: AFF A20、AFF A30和AFF A50启动介质
     entries:
     - title: 启动介质更换工作流
       url: "/a20-30-50/bootmedia-replace-workflow.html"
@@ -79,6 +80,7 @@ entries:
   - title: 风扇
     url: "/a20-30-50/fan-replace.html"
   - title: I/O 模块
+    pdf-filename: AFF A20、AFF A30和AFF A50 I/O模块
     entries:
     - title: I/O模块概述
       url: "/a20-30-50/io-module-overview.html"
