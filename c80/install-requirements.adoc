@@ -17,7 +17,6 @@ summary: 查看存储系统和磁盘架所需的设备以及提升注意事项�
 
 == 安装所需的设备
 
-.下一步是什么？
 要安装存储系统、您需要以下设备和工具。
 
 * 访问Web浏览器以配置存储系统
@@ -58,4 +57,5 @@ image::../media/drw_ns224_lifting_weight_ieops-1716.svg[NS224 NSM100提升注意
 * https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["安全信息和法规声明"^]
 
 
+.下一步是什么？
 查看硬件要求后，您可以link:install-prepare.html["准备安装AFF C80存储系统"]：

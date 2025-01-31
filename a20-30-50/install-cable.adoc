@@ -1,7 +1,7 @@
 ---
 permalink: a20-30-50/install-cable.html 
 sidebar: sidebar 
-keywords: aff a20, aff a30, aff a50, prepare installation 
+keywords: aff a20, aff a30, aff a50, cabling, cluster cabling, host network cabling, management network cabling, shelf cabling 
 summary: 'Management network ports on the controllers are connected to switches.The HA interconnect and cluster interconnect ports are cabled on both controllers.控制器模块连接到外部存储(如果已订购)。' 
 ---
 = 为硬件AFF A20、AFF A30和AFF A50布线
@@ -38,11 +38,11 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["电缆拉片方向"]
 ====
 .无交换机集群布线
 --
+使用缆线将控制器互相连接以创建ONTAP集群连接。
+
 .具有两个双端口40/100 GbE I/O模块的AFF A30或AFF A50
 [%collapsible]
 =====
-使用缆线将控制器互相连接以创建ONTAP集群连接。
-
 .步骤
 . 为集群/HA互连连接布线：
 +
@@ -127,11 +127,10 @@ image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[使用一
 
 =====
 --
-====
-[role="tabbed-block"]
-====
 .Switched cluster cabling
 --
+使用缆线将控制器互相连接以创建ONTAP集群连接。
+
 .具有两个双端口40/100 GbE I/O模块的AFF A30或AFF A50
 [%collapsible]
 =====

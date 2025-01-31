@@ -1,7 +1,7 @@
 ---
 permalink: c30-60/install-cable.html 
 sidebar: sidebar 
-keywords: aff c30, aff c60, prepare installation 
+keywords: aff c30, aff c60, cabling, cluster cabling, host network cabling, management network cabling, shelf cabling 
 summary: 'Management network ports on the controllers are connected to switches.The HA interconnect and cluster interconnect ports are cabled on both controllers.控制器模块连接到外部存储(如果已订购)。' 
 ---
 = 为硬件布线- AFF C30和AFF C60
@@ -38,108 +38,152 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["电缆拉片方向"]
 ====
 .无交换机集群布线
 --
-使用缆线将控制器互相连接以创建ONTAP集群连接。
-
-.具有两个2端口100GbE I/O模块的AFF A30或A50
+.具有两个双端口40/100 GbE I/O模块的AFF C30或AFF C60
 [%collapsible]
 =====
-插槽2和4中的I/O模块端口是40/100GbE端口。这是否仅适用于30-50、如果是、请将2个注释保留在所在位置、但如果适用于所有3个注释、则将其移动到节主文本下的新段落。？？？
+使用缆线将控制器互相连接以创建ONTAP集群连接。
 
 .步骤
 . 为集群/HA互连连接布线：
 +
 
-NOTE: 集群互连流量和HA流量共享相同的物理端口。
+NOTE: 集群互连流量和HA流量共享相同的物理端口(位于插槽2和4的I/O模块上)。端口为40/100 GbE。
 
 +
 .. 使用缆线将控制器A端口E2A连接到控制器B端口E2A。
 .. 使用缆线将控制器A端口e4a连接到控制器B端口e4a。
 +
 
-NOTE: 插槽2和4中的I/O模块上的端口e2b和e4b未使用、可用于前端(主机网络)连接(如果需要)。
+NOTE: I/O模块端口e2b和e4b未使用、可用于主机网络连接。
 
 +
-*集群/HA互连缆线*
+*100 GbE集群/HA互连缆线*
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[集群HA缆线]
+image::../media/oie_cable100_gbe_qsfp28.png[集群HA 100 GbE缆线]
 
 +
-image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[使用两个100GbE IO模块的双节点无交换机集群布线图]
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[使用两个100GbE IO模块的A30和A50无交换机集群布线图]
 
 
 
 
 
 =====
-.具有一个2端口100GbE I/O模块的AFF A30或A50
+.带有一个双端口40/100 GbE I/O模块的AFF C30或AFF C60
 [%collapsible]
 =====
-插槽2和4中的I/O模块端口是40/100GbE端口。
+使用缆线将控制器互相连接以创建ONTAP集群连接。
 
 .步骤
 . 为集群/HA互连连接布线：
 +
 
-NOTE: 集群互连流量和HA流量共享相同的物理端口。
+NOTE: 集群互连流量和HA流量共享相同的物理端口(位于插槽4中的I/O模块上)。端口为40/100 GbE。
 
 +
 .. 使用缆线将控制器A端口e4a连接到控制器B端口e4a。
 .. 使用缆线将控制器A端口e4b连接到控制器B端口e4b。
 +
-*集群/HA互连缆线*
+*100 GbE集群/HA互连缆线*
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[集群HA缆线]
+image::../media/oie_cable100_gbe_qsfp28.png[集群HA 100 GbE缆线]
 
 +
-image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[使用一个100GbE IO模块的双节点无交换机集群布线图]
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[使用一个100GbE IO模块的A30和A50无交换机集群布线图]
 
 
 
 
 
 =====
-.带有一个双端口10Gbe I/O模块的AFF A20
+.带有一个双端口1025 GbE I/O模块的AFF C30
 [%collapsible]
 =====
-添加示例
+使用缆线将控制器互相连接以创建ONTAP集群连接。
 
-+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]
+.步骤
+. 为集群/HA互连连接布线：
++
+
+NOTE: 集群互连流量和HA流量共享相同的物理端口(位于插槽4中的I/O模块上)。端口为1025 GbE。
 
 +
+.. 使用缆线将控制器A端口e4a连接到控制器B端口e4a。
+.. 使用缆线将控制器A端口e4b连接到控制器B端口e4b。
++
+*25 GbE集群/HA互连缆线*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器、宽度=100pp"]
+
++
+image::../media/drw_isi_a20_switchless_2p_25gbe_cabling_ieops-2018.svg[使用一个25 GbE IO模块的2020无交换机集群布线图]
+
+
+
+
 
 =====
 --
 .Switched cluster cabling
 --
+.具有两个双端口40/100 GbE I/O模块的AFF C30或AFF C60
+[%collapsible]
+=====
 使用缆线将控制器连接到集群网络交换机以创建ONTAP集群连接。
 
-.具有两个2端口100GbE I/O模块的AFF A30或A50
+.步骤
+. 为集群/HA互连连接布线：
++
+
+NOTE: 集群互连流量和HA流量共享相同的物理端口(位于插槽2和4的I/O模块上)。端口为40/100 GbE。
+
++
+.. 使用缆线将控制器A端口e4a连接到集群网络交换机A
+.. 使用缆线将控制器A端口E2A连接到集群网络交换机B
+.. 使用缆线将控制器B端口e4a连接到集群网络交换机A
+.. 使用缆线将控制器B端口E2A连接到集群网络交换机B
++
+
+NOTE: I/O模块端口e2b和e4b未使用、可用于主机网络连接。
+
++
+*40/100 GbE集群/HA互连缆线*
+
++
+image::../media/oie_cable100_gbe_qsfp28.png[集群HA 40/100 GbE缆线]
+
++
+image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[使用两个100GbE IO模块的A30和A50交换集群布线图]
+
+
+
+
+
+=====
+.带有一个双端口40/100 GbE I/O模块的AFF C30或AFF C60
 [%collapsible]
 =====
-添加示例
+使用缆线将控制器连接到集群网络交换机以创建ONTAP集群连接。
 
-添加注释：插槽2和4中I/O模块上的40/100GbE端口e2b和e4b未使用、可用于前端连接(如果需要)。
-
-=====
-.具有一个2端口100GbE I/O模块的AFF A30或A50
-[%collapsible]
-=====
 .步骤
 . 使用缆线将控制器连接到集群网络交换机：
 +
 
-NOTE: 集群互连流量和HA流量共享相同的物理端口。
+NOTE: 集群互连流量和HA流量共享相同的物理端口(位于插槽4中的I/O模块上)。端口为40/100 GbE。
 
 +
-.. 使用缆线将控制器A端口e4a和控制器B端口e4a连接到集群网络交换机A
-.. 使用缆线将控制器A端口e4b和控制器B端口e4b连接到集群网络交换机B
+.. 使用缆线将控制器A端口e4a连接到集群网络交换机A
+.. 使用缆线将控制器A端口e4b连接到集群网络交换机B
+.. 使用缆线将控制器B端口e4a连接到集群网络交换机A
+.. 使用缆线将控制器B端口e4b连接到集群网络交换机B
 +
-*集群/HA互连缆线*
+*40/100 GbE集群/HA互连缆线*
 
 +
-image::../media/oie_cable100_gbe_qsfp28.png[100 Gb缆线]
+image::../media/oie_cable100_gbe_qsfp28.png[集群HA 40/100 GbE缆线]
 
 +
 image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[使用缆线将集群连接到集群网络]
@@ -149,10 +193,33 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[�
 
 
 =====
-.带有一个双端口10Gbe I/O模块的AFF A20
+.带有一个双端口1025 GbE I/O模块的AFF C30
 [%collapsible]
 =====
-添加示例
+使用缆线将控制器连接到集群网络交换机以创建ONTAP集群连接。
+
+. 使用缆线将控制器连接到集群网络交换机：
++
+
+NOTE: 集群互连流量和HA流量共享相同的物理端口(位于插槽4中的I/O模块上)。端口为1025 GbE。
+
++
+.. 使用缆线将控制器A端口e4a连接到集群网络交换机A
+.. 使用缆线将控制器A端口e4b连接到集群网络交换机B
+.. 使用缆线将控制器B端口e4a连接到集群网络交换机A
+.. 使用缆线将控制器B端口e4b连接到集群网络交换机B
++
+*1025 GbE集群/HA互连缆线*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器、宽度=100pp"]
+
++
+image:../media/drw_isi_a20_switched_2p_25gbe_cabling_ieops-2019.svg["使用一个25GbE IO模块的2020交换集群布线图"]
+
+
+
+
 
 =====
 --
@@ -161,25 +228,26 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[�
 
 == 第2步：为主机网络连接布线
 
-使用缆线将控制器连接到主机网络。此过程因存储系统型号和I/O模块配置而异。主机连接为40/100 GbE。
+使用缆线将控制器连接到主机网络。
 
-.具有两个2端口100GbE I/O模块的AFF A30或A50
+此过程因存储系统型号和I/O模块配置而异。
+
+.具有两个双端口40/100 GbE I/O模块的AFF C30或AFF C60
 [%collapsible]
 ====
-文本
-
-====
-.具有一个2端口100GbE I/O模块的AFF A30或A50
-[%collapsible]
-====
+.步骤
 . 为主机网络连接布线。
 +
 以下子步骤是可选主机网络布线示例。如果需要、请参见link:https://hwu.netapp.com["NetApp Hardware Universe"^]了解您的特定存储系统配置。
 
 +
-.. 可选：使用缆线连接到40/100GbE主机网络交换机。
+.. 可选：使用缆线将控制器连接到主机网络交换机。
 +
-使用缆线将每个控制器上的端口e2a、e2b、e2C和e2d连接到以太网主机网络交换机。
+在每个控制器上、使用缆线将端口e2b和e4b连接到以太网主机网络交换机。
+
++
+
+NOTE: 插槽2和4中I/O模块上的端口为40/100 GbE (主机连接为40/100 GbE)。
 
 +
 *40/100 GbE缆线*
@@ -188,17 +256,57 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[�
 image::../media/oie_cable_sfp_gbe_copper.png[40/100 GB电缆]
 
 +
-image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[使用缆线连接到40/100GbE以太网主机网络交换机]
+image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[使用缆线连接到40/100GbE以太网主机网络交换机]
 
-.. 可选：使用缆线连接到FC主机网络交换机。
+.. 可选：使用缆线将控制器连接到FC主机网络交换机。
 +
-使用缆线将每个控制器上的端口1a、1b、1c和1d连接到FC主机网络交换机。
+在每个控制器上、使用缆线将端口1a、1b、1c和1d连接到FC主机网络交换机。
 
 +
 *64 Gb/秒FC缆线*
 
 +
-image::../media/oie_cable_sfp_gbe_copper.png[64 Gb光纤信道电缆]
+image:../media/oie_cable_sfp_gbe_copper.png["64 Gb FC电缆、宽度=100个点"]
+
++
+image::../media/drw_isi_a30-50_4p_64gb_fc_2card_cabling_ieops-2023.svg[使用两个IO模块将A30或A50连接到64 GB FC主机网络交换机]
+
+
+
+
+
+====
+.AFF C30或AFF C60、带有一个双端口1025 GbE I/O模块
+[%collapsible]
+====
+.步骤
+. 为主机网络连接布线。
++
+以下子步骤是可选主机网络布线示例。如果需要、请参见link:https://hwu.netapp.com["NetApp Hardware Universe"^]了解您的特定存储系统配置。
+
++
+.. 可选：使用缆线将控制器连接到主机网络交换机。
++
+在每个控制器上、使用缆线将端口e2a、e2b、e2C和e2d连接到以太网主机网络交换机。
+
++
+*1025 GbE缆线*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器、宽度=100pp"]
+
++
+image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[使用缆线连接到40/100GbE以太网主机网络交换机]
+
+.. 可选：使用缆线将控制器连接到FC主机网络交换机。
++
+在每个控制器上、使用缆线将端口1a、1b、1c和1d连接到FC主机网络交换机。
+
++
+*64 Gb/秒FC缆线*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["64 Gb FC电缆、宽度=100个点"]
 
 +
 image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[连接到64 GB FC主机网络交换机的缆线]
@@ -208,10 +316,44 @@ image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[连接到
 
 
 ====
-.带有一个2端口100GbE模块的AFF A20
+.带有一个双端口1025 GbE模块的AFF C30
 [%collapsible]
 ====
-添加文本
+.步骤
+. 为主机网络连接布线。
++
+以下子步骤是可选主机网络布线示例。如果需要、请参见link:https://hwu.netapp.com["NetApp Hardware Universe"^]了解您的特定存储系统配置。
+
++
+.. 可选：使用缆线将控制器连接到主机网络交换机。
++
+在每个控制器上、使用缆线将端口e2a、e2b、e2C和e2d连接到以太网主机网络交换机。
+
++
+*1025 GbE缆线*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器、宽度=100pxx"]
+
++
+image::../media/drw_isi_a20_host_4p_25gbe_cabling_ieops-2017.svg[使用缆线将A20连接到40/100GbE以太网主机网络交换机]
+
+.. 可选：使用缆线将控制器连接到FC主机网络交换机。
++
+在每个控制器上、使用缆线将端口1a、1b、1c和1d连接到FC主机网络交换机。
+
++
+*64 Gb/秒FC缆线*
+
++
+image:../media/oie_cable_sfp_gbe_copper.png["64 Gb FC电缆，宽度=100pxx"]
+
++
+image::../media/drw_isi_a20_4p_64gb_fc_cabling_ieops-2016.svg[使用缆线将A20连接到64 GB FC主机网络交换机]
+
+
+
+
 
 ====
 
