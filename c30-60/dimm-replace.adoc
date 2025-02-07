@@ -14,7 +14,7 @@ summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断
 如果存储系统遇到错误(例如、基于运行状况监控器警报的CECC (可更正错误更正代码)错误过多或不可更正的ECC错误)、通常是由于单个DIMM故障导致存储系统无法启动ONTAP而导致的、则必须更换控制器中的DIMM。
 
 .开始之前
-* 存储系统中的所有其他组件都必须正常运行；否则、您必须先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。
+* 确保存储系统中的所有其他组件均正常工作；如果不正常、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续。"
 * 您必须使用提供商提供的替代FRU组件来更换发生故障的FRU组件。
 
 
@@ -249,9 +249,9 @@ image::../media/icon_round_3.png[标注编号3]
 DIMM 底部插脚之间的槽口应与插槽中的卡舌对齐。
 
 +
-正确插入后， DIMM 应轻松插入，但应紧紧插入插槽中。如果没有，请重新插入 DIMM 。
+正确插入后、DIMM可以轻松插入、但要紧紧固定在插槽中。If not, reinsert the DIMM.
 
-.. 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
+.. 目视检查DIMM、确保其均匀对齐并完全插入插槽。
 .. 小心而稳固地向下推 DIMM 的上边缘，直到弹出器卡舌卡入到位，卡入到位于 DIMM 两端的缺口上。
 
 

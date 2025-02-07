@@ -1,76 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="1a02fe8fc6a186319dd3345573fc3717" category="doc">安装并启动节点 4.</block>
-  <block id="550ffaa7219faf74146770514db0d8e8" category="inline-link-macro">准备网络启动</block>
-  <block id="df5267f8e4bbfa9add1dd732e6b68e41" category="inline-link-macro">在 node4 上设置 FC 或 UTA/UTA2 配置</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
   <block id="8c4aa541ee911e8d80451ef8cc304806" category="list-text">存储</block>
   <block id="c1325f6903ebb5ebb2bb519a73ddb1b0" category="cell">那么 ...</block>
   <block id="0ba2b3e0a887666765eb2d690768c576" category="cell">针对 ...</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
-  <block id="befd434b83717d2b7bd83967d66e9157" category="doc">停用 node2</block>
-  <block id="6d23265c57ba430c404cc6f3a940e117" category="doc">还原 node4 上的 key-manager 配置</block>
-  <block id="43ccb3503988f16a767b1af1e29d2384" category="doc">将非根聚合和 NAS 数据 LIF 从 node2 重新定位到 node3</block>
-  <block id="1a4d3feb333aa03c1008e54bae47d8e9" category="doc">确保新控制器设置正确</block>
-  <block id="83b27b00949218cb0d9ec7e1eb1c92ad" category="inline-link-macro">准备要升级的节点</block>
-  <block id="27af4227ca8acc558df96e2723ec9b37" category="inline-link-macro">在新控制器模块上设置存储加密</block>
-  <block id="ac616410952c35e808a3c7ce4ea5b4a7" category="inline-link-macro">停用旧系统</block>
   <block id="a2539e65a13fda0a8ce497ac0baa63a7" category="inline-link-macro">《控制器硬件升级快速指南》</block>
   <block id="1988e9c8cf124cb346a67d52ea613567" category="inline-link-macro">《 ONTAP 9 SAN 管理指南》</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link-macro">NetApp 支持站点</block>
   <block id="865e9b4ef52f3b0d3050c8b3c14eb660" category="inline-link-macro">Active IQ Config Advisor</block>
-  <block id="405ab80b96586360ea83735c37305935" category="inline-link-macro">验证 node4 安装</block>
-  <block id="32d978cffec9875e4d92dc55b84df69b" category="doc">将 node2 拥有的非根聚合和 NAS 数据 LIF 从 node3 移动到 node4</block>
-  <block id="26678fb639f40f31f518f926dd61b9ab" category="doc">获取用于存储加密的外部密钥管理服务器的 IP 地址</block>
-  <block id="bc26b5e5559721e19875fb91dce22cec" category="doc">在 node3 上设置 FC 或 UTA/UTA2 配置</block>
-  <block id="5ff20c188ceb23808ed9b47d8e5637ff" category="inline-link-macro">安装并启动 node3</block>
-  <block id="63ad3c4d36a1a9f413872ac57af754a7" category="inline-link-macro">验证 node3 安装</block>
-  <block id="da289ccf0fe9b7b8a0a8c3f55c76c877" category="doc">使用 ARL 升级控制器的准则</block>
-  <block id="231cf4c70d866b616c21baddaeed0696" category="section-title">故障排除</block>
-  <block id="b02aac451baf6d7b36d981f898537961" category="doc">聚合重新定位失败</block>
-  <block id="e7323a54c9f53a295a2c4d707c7b3fce" category="doc">验证 MetroCluster 配置的运行状况。</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">Description</block>
-  <block id="140c4ad72e426b76f7e15699ae078635" category="doc">恢复 SnapMirror 操作</block>
-  <block id="e33c48b52ab7d302b4af41aca3bbe858" category="doc">操作步骤的多个阶段可能会出现的问题</block>
-  <block id="7ce57c4ce051863fc414ccd402a178f5" category="inline-link-macro">还原 node3 上的 key-manager 配置</block>
-  <block id="840820d31f6c078aeb1567ce302bdd05" category="inline-link-macro">将 node1 拥有的非根聚合和 NAS 数据 LIF 从 node2 移动到 node3</block>
-  <block id="b81d64bc331b1e2e60b2cef595c6ddf8" category="inline-link-macro">完成 MetroCluster FC 配置的升级</block>
-  <block id="da7d6f53a5e074768e000aca830b3bfa" category="inline-link-macro">在新控制器模块上设置 NetApp 卷加密</block>
-  <block id="93d6a78ca650a17d67b6a45ca81b7f3f" category="doc">停用 node1</block>
-  <block id="2e4e187dce2e8970e167f157b1040ef2" category="doc">确定是否使用聚合重新定位指南</block>
   <block id="c37feb3492d999b3f216448183986be2" category="cell">FAS8200</block>
   <block id="c78a423f3132ee2ac4f4f4c1fa5d4859" category="cell">AFF A300</block>
-  <block id="7de24b16e7313de118da7559fecd8fd4" category="doc">将节点 1 拥有的非根聚合和 NAS 数据 LIF 重新定位到节点 2</block>
-  <block id="06d473a91334306e0ea337d0cf403b02" category="doc">LIF 迁移失败</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">开始之前</block>
   <block id="0373910e51252c7b97dcbea9f4942604" category="inline-link-macro">mysupport.netapp.com</block>
-  <block id="9759ad3dfabdb9631ec5fba47d71c313" category="doc">验证切换，修复和切回</block>
-  <block id="15577d2c813239ab53fdc6f35d8a1dc5" category="doc">升级节点对</block>
-  <block id="0e635d7a91ccc4eccdfb03e35353c899" category="doc">所需的工具和文档</block>
-  <block id="f1b92e8f33cf66355b4b9762bf95256b" category="doc">检查 MetroCluster 配置错误</block>
-  <block id="8fb4b518ce39a0704f920c9d4f2f7b77" category="doc">使用聚合重新定位升级控制器硬件</block>
-  <block id="32de3fe80cc3182e6d21291decbf392a" category="inline-link-macro">ARL 升级概述</block>
-  <block id="d75bd21e9af20a5036c0fbf461bc4e2d" category="doc">重新启动，崩溃或重新启动</block>
-  <block id="97075c537f59de355c8d44c57697ef74" category="doc">重新定位失败或被否决的聚合</block>
-  <block id="64f7904c016a035f1928a2cbeea82ab1" category="doc">升级完成后， node1 上的聚合属于 node4</block>
-  <block id="b72c69a60f695309089392e6d394557c" category="doc">安装 NX-OS 软件和参考配置文件（ Reference Configuration Files ， RCF ）</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="section-title">关于此任务</block>
-  <block id="62bb127cfc33134b4b7ba3eb79ae05f3" category="doc">通过重复使用存储交换机从具有 SAT 存储的交换集群进行迁移</block>
-  <block id="8a6725809e9d102de1fa5e1c7d8c431d" category="inline-link-macro">更换 Cisco Nexus 9336C-x2 共享交换机</block>
-  <block id="7bd0358c3b996edfe19bd3da912bde62" category="doc">Cisco Nexus 9336C-x2 共享交换机</block>
-  <block id="31a64a44fce8ed03b7b71b06a1ddc567" category="doc">通过重复使用存储交换机从具有 SAT 存储的无交换机配置进行迁移</block>
-  <block id="467a501ced0eaaee20142a975e074f95" category="doc">通过添加两个新的共享交换机，从具有数据存储的交换配置进行迁移</block>
-  <block id="eac9e7086f92a026c0dbe06001206204" category="doc">Cisco 共享交换机的设置和配置指南</block>
-  <block id="b7167dcb288bc483f270fcd135c332ec" category="doc">通过添加两个新的共享交换机，从具有数据存储的无交换机集群进行迁移</block>
-  <block id="bdbf296139657929f989f110dccebbd3" category="doc">检查聚合重新定位失败</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="sidebar">概述</block>
-  <block id="3ffee04e4bb020103f1bece18c2ac58e" category="sidebar">自动执行控制器升级过程</block>
-  <block id="eee953986530407bd81dc7dec37f7151" category="sidebar">第 1 阶段准备升级</block>
-  <block id="d410001785d5e6cf46422378e7dc305f" category="sidebar">第 2 阶段重新定位和停用节点 1</block>
-  <block id="db0f435716365df4f28208e723c02179" category="sidebar">第 3 阶段安装和启动节点 3.</block>
-  <block id="cd93c6e9e61b2d31c781ea8786cb4e81" category="sidebar">第 4 阶段重新定位和停用节点 2.</block>
-  <block id="62e340083f3c5febba2fa693ce759a1a" category="sidebar">第 5 阶段安装和启动节点 4.</block>
-  <block id="ded1f8eb21bf382d51471642d150b8d5" category="sidebar">第 6 阶段完成升级</block>
   <block id="e4deab2919ae4ce97668d5271fe4fc29" category="summary">将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。</block>
   <block id="47e6ca7a31b3f3492d704b44dea3bc0e" category="section-title">第 1 步：卸下控制器模块</block>
   <block id="c488924be9cfde77f802e82e996e90e1" category="paragraph">要更换机箱，必须从旧机箱中卸下控制器模块。</block>
@@ -10677,7 +10622,6 @@ SFP+(目标/启动程序)</block>
   <block id="c486d43df45ffe41cde84a1b0fa45aa0" category="paragraph"><block ref="c486d43df45ffe41cde84a1b0fa45aa0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e3eb777419d46f8ec20ca944795a4d26" category="list-text">如果使用缆线连接到光纤交换机、请先将光纤收发器插入控制器端口、然后再使用缆线连接到交换机端口。</block>
   <block id="d16a227aab66041a81c6f88b290eb486" category="section-title">第1步：为集群/HA连接布线</block>
-  <block id="e5f780ef73bd41c1dd64af7a1a1a31ac" category="paragraph">使用缆线将控制器连接到ONTAP集群。此过程因存储系统型号和I/O模块配置而异。</block>
   <block id="134e0586a0879fa097abfb47d5e64dbe" category="open-title">无交换机集群布线</block>
   <block id="ee68cf12a16ca46d58bedd8cf9051f32" category="example-title">具有两个双端口40/100 GbE I/O模块的AFF A30或AFF A50</block>
   <block id="1de8dab1beab3d5ee0495c66a3c814b7" category="paragraph">使用缆线将控制器互相连接以创建ONTAP集群连接。</block>
@@ -10700,7 +10644,6 @@ SFP+(目标/启动程序)</block>
   <block id="6fb39f4b9d1de8f2f3a463d3f9eedd52" category="paragraph"><block ref="6fb39f4b9d1de8f2f3a463d3f9eedd52" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7e04550968face4eb31df851171941f8" category="image-alt">使用一个25 GbE IO模块的2020无交换机集群布线图</block>
   <block id="666ce5251c9c6f25db5da3d713f9b34a" category="open-title">Switched cluster cabling</block>
-  <block id="c9802659f25463254a11923317d9fd06" category="paragraph">使用缆线将控制器连接到集群网络交换机以创建ONTAP集群连接。</block>
   <block id="3a343cf67a3c616a35a00f3a82358fe3" category="list-text">使用缆线将控制器A端口e4a连接到集群网络交换机A</block>
   <block id="627172884756ce9f3fccfd51a4559c59" category="list-text">使用缆线将控制器A端口E2A连接到集群网络交换机B</block>
   <block id="9c7f10ca7cef7791dc302ef4b9fc6cff" category="list-text">使用缆线将控制器B端口e4a连接到集群网络交换机A</block>
@@ -10716,35 +10659,18 @@ SFP+(目标/启动程序)</block>
   <block id="3488ff918c31f4a57e74bbab6ef9bcc9" category="inline-image-macro">使用一个25GbE IO模块的2020交换集群布线图</block>
   <block id="ae3bd4fc66b4084d0dc856b5f0230d72" category="paragraph"><block ref="ae3bd4fc66b4084d0dc856b5f0230d72" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7f99cbc2aa28ab9fed6e99fa94242b4a" category="section-title">第2步：为主机网络连接布线</block>
-  <block id="9b8a63481b35238e3f6af2aff25d8e9a" category="paragraph">使用缆线将控制器连接到主机网络。</block>
-  <block id="40a36b0ffd7a648bae61167d750303ae" category="paragraph">此过程因存储系统型号和I/O模块配置而异。</block>
-  <block id="b3d6f5fd41d136be22908a2112c08ed2" category="list-text">为主机网络连接布线。</block>
-  <block id="9ef6fba4dfd63e9f14ee44588abe6952" category="paragraph">以下子步骤是可选主机网络布线示例。如果需要、请参见<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>了解您的特定存储系统配置。</block>
-  <block id="1c4fc31a2e3f3932ec066d51327fdee3" category="list-text">可选：使用缆线将控制器连接到主机网络交换机。</block>
   <block id="8246042d23ca859d83185957ac9c4044" category="paragraph">在每个控制器上、使用缆线将端口e2b和e4b连接到以太网主机网络交换机。</block>
   <block id="e827a0600a7ebd00f36ea855012f66a1" category="admonition">插槽2和4中I/O模块上的端口为40/100 GbE (主机连接为40/100 GbE)。</block>
   <block id="7329bfa51dec924de206ced093bea600" category="paragraph">*40/100 GbE缆线*</block>
   <block id="8f31147c7cfeb7520dc9739e31dedc90" category="image-alt">40/100 GB电缆</block>
   <block id="ec83c89c1bfd1fa2fe72db4df75b0e43" category="image-alt">使用缆线连接到40/100GbE以太网主机网络交换机</block>
-  <block id="a4beda8ffedc190bd2365aa3c0a3982e" category="list-text">可选：使用缆线将控制器连接到FC主机网络交换机。</block>
   <block id="8f03269dbdbab70bab244893051fb6ec" category="paragraph">在每个控制器上、使用缆线将端口1a、1b、1c和1d连接到FC主机网络交换机。</block>
   <block id="241c17a1be2cc4feae5c8c6007f8aed3" category="paragraph">*64 Gb/秒FC缆线*</block>
   <block id="176084e0e3d1d8b98919ade28704bd7b" category="inline-image-macro">64 Gb FC电缆、宽度=100个点</block>
   <block id="0174aef3c6edce25256f90638a06bdca" category="paragraph"><block ref="0174aef3c6edce25256f90638a06bdca" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3c8610994d0d0d721ba1a3c2b56d2606" category="image-alt">使用两个IO模块将A30或A50连接到64 GB FC主机网络交换机</block>
-  <block id="6070aae2c5cbb466ea4b44033555f52a" category="example-title">AFF A30或AFF A50、带有一个双端口1025 GbE I/O模块</block>
   <block id="baae66b5065d8c53c84d82ba2175779d" category="paragraph">在每个控制器上、使用缆线将端口e2a、e2b、e2C和e2d连接到以太网主机网络交换机。</block>
   <block id="c053ea984f8ec26545ef5a0f8e3c516b" category="paragraph">*1025 GbE缆线*</block>
   <block id="53b32e6926c94a5a2ab06b2fe3836135" category="image-alt">连接到64 GB FC主机网络交换机的缆线</block>
-  <block id="2fcfbaa3d5181e463a6bbfa1a15ce7fa" category="example-title">带有一个双端口1025 GbE模块的AFF A20</block>
-  <block id="3a6f33d3d155b4ae4ac4c5555a5a5b30" category="list-text">可选：使用缆线将控制器连接到主机网络交换机。</block>
-  <block id="615ea66b0774b4053f21b1c6a497d682" category="inline-image-macro">GbE SFP铜缆连接器、宽度=100pxx</block>
-  <block id="3448e0c15182366c2b7b3aa1515e467c" category="paragraph"><block ref="3448e0c15182366c2b7b3aa1515e467c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f6e881d94dc3ef7c3a5b2444eddf6212" category="image-alt">使用缆线将A20连接到40/100GbE以太网主机网络交换机</block>
-  <block id="09b66647463ed1ce42bd62c5b8ec2e1a" category="paragraph">在每个控制器上、使用缆线将端口1a、1b、1c和1d连接到FC主机网络交换机。</block>
-  <block id="8e97dad8f8493822d0e00e75c6d71f3c" category="inline-image-macro">64 Gb FC电缆，宽度=100pxx</block>
-  <block id="a592636155b15ffbef0e20c00b496be4" category="paragraph"><block ref="a592636155b15ffbef0e20c00b496be4" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="be986ea08bb54dd79ad4a1cee8ab3d63" category="image-alt">使用缆线将A20连接到64 GB FC主机网络交换机</block>
   <block id="945babbf23a8741321d27a1c4a0c4200" category="section-title">第3步：为管理网络连接布线</block>
   <block id="b88fb46fa64622aa179b7b543ddf13a5" category="paragraph">使用缆线将控制器连接到管理网络。</block>
   <block id="e42848811631f979cb5744f72268013a" category="list-text">使用缆线将每个控制器上的管理(扳手)端口连接到管理网络交换机。</block>
@@ -10772,7 +10698,6 @@ SFP+(目标/启动程序)</block>
   <block id="8bfccb1f0c0fcef7c65c13971279707a" category="paragraph">安装完存储系统的硬件后，您可以<block ref="bca22c8e81cd07d8c060c28f352f5c5b" category="inline-link-macro-rx"></block>。</block>
   <block id="d18e261115fca673ca85d869ef16199c" category="doc">安装和设置工作流- AFF A20、AFF A30和AFF A50</block>
   <block id="3cdf8c6347bdc0a257b06253a291ef6c" category="paragraph-title"><block ref="444c1bf2e877f5617e8ce0a2ded57f4f" category="inline-image-macro-rx" type="image"></block><block ref="bce179ad419bd48e9c41b073fd99e202" category="inline-link-macro-rx"></block></block>
-  <block id="efbed9ff10698a899995d519b6515646" category="paragraph">要准备安装、您需要准备好站点、检查环境和电气要求、并确保有足够的机架空间。然后、打开设备包装、将其内容与装箱单进行比较、并注册硬件以获得支持优势。</block>
   <block id="966353821596fdf316108d72854ad8be" category="paragraph-title"><block ref="4f954e3aac01b1dc982b61d245b37a02" category="inline-image-macro-rx" type="image"></block><block ref="d8f87fb4140fea77f47017bd9ec5dcdd" category="inline-link-macro-rx"></block></block>
   <block id="14dba6115fa0ee08da437dd9fc5018c2" category="paragraph">要安装硬件、请为存储系统和磁盘架安装导轨套件、然后在机柜或电信机架中安装并固定存储系统和磁盘架。</block>
   <block id="88b736e6d5561b4dc7cce39802381ee6" category="inline-link-macro">为硬件布线</block>
@@ -11218,13 +11143,22 @@ SFP+(目标/启动程序)</block>
   <block id="d27876edf06fef01e9d562affcf483bc" category="paragraph">要安装和设置AFF A20、AFF A30或AFF A50存储系统、您必须查看安装要求、准备站点、安装硬件组件并为其布线、打开存储系统电源以及设置ONTAP集群。</block>
   <block id="2b9366d786af7f25816abf5ad658f2ab" category="inline-link-macro">查看安装要求</block>
   <block id="bd9e341941a30be8d1d66fd436b9cbb4" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="5f0905e544c52c81d90a8c636fddd0a9" category="inline-link-macro-rx"></block></block>
-  <block id="70bfeb1ef79ed88d76859531032e6795" category="paragraph">在安装存储系统之前、存储系统必须满足安装要求。</block>
   <block id="a62423bfdb0c7361946c3892f20d2e7d" category="paragraph">存储系统最重可达27.9千克(61.5磅)。要抬起存储系统、请两个人或使用液压升降机。</block>
   <block id="05591bc7cdace84971ece26cdbd0437b" category="example-title">具有两个双端口40/100 GbE I/O模块的AFF C30或AFF C60</block>
   <block id="a25f694b3fe46b8223a96d7f7a6709e2" category="example-title">带有一个双端口40/100 GbE I/O模块的AFF C30或AFF C60</block>
-  <block id="40311ade600e0691ceb4ef1447a01304" category="example-title">带有一个双端口1025 GbE I/O模块的AFF C30</block>
-  <block id="365c5f6cc1c974e74595f900dc07803d" category="example-title">AFF C30或AFF C60、带有一个双端口1025 GbE I/O模块</block>
-  <block id="61bc9478fe9837a2edfeec12cfef1a17" category="example-title">带有一个双端口1025 GbE模块的AFF C30</block>
   <block id="385d33bb3589ce3f38e65ed1e314719e" category="paragraph">要安装和设置AFF C30或AFF C60存储系统、您必须查看安装要求、准备站点、安装硬件组件并为其布线、打开存储系统电源以及设置ONTAP集群。</block>
   <block id="d92a2bc26be46a05b32e6cc5c37b3984" category="paragraph">查看AFF C30或AFF C60存储系统的要求。</block>
+  <block id="b3fb7cc55fec6d7df9078e2ee7739718" category="paragraph">正确插入后、DIMM可以轻松插入、但要紧紧固定在插槽中。If not, reinsert the DIMM.</block>
+  <block id="7e08ee4b466dc677d31c40c8b0488339" category="list-text">目视检查DIMM、确保其均匀对齐并完全插入插槽。</block>
+  <block id="34f650ca44fabe66ff7e4095a137da22" category="list-text">确保存储系统中的所有其他组件均正常工作；如果不正常、请先联系、<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>然后再继续。"</block>
+  <block id="54d890bf92693607c99bccb67f9933f5" category="paragraph">为控制器布线以创建ONTAP集群连接。</block>
+  <block id="d48b3cfe096b47bcb7f13e683c934beb" category="paragraph">使用缆线将控制器连接到以太网或FC主机网络。</block>
+  <block id="bb8661c49545cac68358046e25b8f950" category="open-title">以太网主机布线</block>
+  <block id="3c90cea8d34e6c024dcfcf7fbe2bc396" category="example-title">带有一个4端口1025 GbE I/O模块的AFF A20、A30或AFF A50</block>
+  <block id="91ca13b03c277f557b91f705d4455de5" category="open-title">FC主机布线</block>
+  <block id="45adc6168b3bfdd0a69aad7185cab6d2" category="example-title">带有一个4端口64 Gb/秒FC I/O模块的AFF A20、A30或AFF A50</block>
+  <block id="5b903193757e7495dce32499ded20f07" category="paragraph">在安装存储系统之前、存储系统必须满足安装要求。</block>
+  <block id="82f66f7658dd53410415bd1c67e9ccad" category="paragraph">要准备安装、请准备好站点、检查环境和电气要求、并确保有足够的机架空间。然后、打开设备包装、将物品与装箱单进行比较、并注册硬件以获得支持优势。</block>
+  <block id="c273a3f4ab5c9add6857208b8a70d10e" category="example-title">带有一个4端口1025 GbE I/O模块的AFF C30或AFF C60</block>
+  <block id="46a9bbd60b5adf699bea6b74307aac99" category="example-title">具有一个4端口64 Gb/秒FC I/O模块的AFF C30或AFF C60</block>
 </blocks>
