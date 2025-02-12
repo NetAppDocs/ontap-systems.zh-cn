@@ -15,16 +15,20 @@ summary: 您必须将故障组件更换为从提供商处收到的替代 FRU 组
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:chassis-replace-requirements.html["查看机箱更换要求"]
 [role="quick-margin-para"]
-要更换机箱模块、您必须满足特定要求。
+查看机箱更换要求。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:chassis-replace-shutdown.html["关闭控制器"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:chassis-replace-prepare.html["准备更换机箱"]
+[role="quick-margin-para"]
+准备更换机箱、方法是找到系统、收集系统凭据和必要工具、验证是否收到更换机箱并为系统电缆贴上标签。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:chassis-replace-shutdown.html["关闭控制器"]
 [role="quick-margin-para"]
 关闭控制器、以便对机箱执行维护。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:chassis-replace-move-hardware.html["更换机箱"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:chassis-replace-move-hardware.html["更换机箱"]
 [role="quick-margin-para"]
-更换机箱包括将电源、硬盘驱动器和控制器模块从受损机箱移至新机箱、以及将受损机箱更换为与受损机箱型号相同的新机箱。
+通过将组件从受损机箱移至更换机箱来更换机箱。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]
 [role="quick-margin-para"]
-验证机箱的HA状态、并将故障部件退回给NetApp。
+启动控制器、交还控制器并将发生故障的机箱返还给NetApp、以完成机箱更换。

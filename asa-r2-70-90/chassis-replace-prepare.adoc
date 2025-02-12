@@ -1,0 +1,65 @@
+---
+permalink: asa-r2-70-90/chassis-replace-prepare.html 
+sidebar: sidebar 
+keywords: asa r2 a70, asa r2 a90, prepare to replace the chassis 
+summary: 使用与受损机箱型号相同的新机箱更换受损机箱。 
+---
+= 准备更换机箱- ASA A70和ASA A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+准备将受损机箱更换为与受损机箱型号相同的新机箱。
+
+
+
+== 第1步：找到并监控您的系统
+
+您应打开控制台会话并保存会话日志以供将来参考、同时打开系统位置LED以查找受损机箱。
+
+. 连接到串行控制台端口以连接并监控系统。
+. 找到并打开控制器的位置LED：
++
+.. 使用 `system controller location-led show`命令显示位置LED的当前状态。
+.. 将位置LED的状态更改为"on"：
++
+`system controller location-led modify -node _node1_ -state on`(英文)
+
++
+定位指示灯将保持亮起30分钟。
+
+
+
+
+
+
+
+== 第2步：验证更换组件
+
+您应验证是否已收到必要的组件、将其从包装中取出并保存好包装。
+
+. 打开包装之前、您应查看包装标签并确认：
++
+** 组件零件号。
+** 部件说明。
+** 包装盒中的数量。
+
+
+. 从包装中取出物品、然后使用包装将故障组件退回NetApp。
+
+
+
+
+== 第3步：为缆线和控制器模块贴上标签并接地
+
+在从控制器模块或机箱中卸下电缆和控制器之前、应为其贴上标签。
+
+. 标记与存储系统关联的所有缆线。这有助于在此过程后面的重新配置。
+. 为控制器模块贴上标签。
+. 如果尚未正确接地、请接地。
+
+
+.下一步是什么？
+准备好更换ASA A70或ASA A90机箱硬件后，您需要link:chassis-replace-shutdown.html["关闭控制器"]。

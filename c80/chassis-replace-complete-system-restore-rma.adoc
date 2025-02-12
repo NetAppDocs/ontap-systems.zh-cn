@@ -10,38 +10,38 @@ summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故
 :imagesdir: ../media/
 
 
-[role="lead"]
-您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。
 
 
+== 第1步：启动控制器并交还控制器
 
-== 第 1 步：验证并设置机箱的 HA 状态
+控制器重新启动后、启动ONTAP并交还控制器。
 
-您必须验证机箱的 HA 状态，并在必要时更新此状态以匹配您的系统配置。
-
-. 在维护模式下，从任一控制器模块显示本地控制器模块和机箱的 HA 状态： `ha-config show`
+. Check the console output:
 +
-所有组件的 HA 状态都应相同。
+.. 如果控制器启动至Loader提示符、请使用命令重新启动控制器 `boot_ontap`。
+.. 如果重新启动后控制台显示 `waiting for giveback`、请登录到配对控制器、然后使用命令检查更换后的控制器是否已准备好进行恢复 `storage failover show`。
 
-. 如果为机箱显示的系统状态与您的系统配置不匹配：
+
+. 执行回给：
 +
-.. 设置机箱的 HA 状态： `ha-config modify chassis _ha-state_`
-+
-ha-state 的值可以是以下值之一：
-
-+
-*** `ha`
-*** `mcc`(在ASA中不受支持)
-
-
-.. 确认设置已更改： `ha-config show`
-
-
-. 如果尚未执行此操作，请重新对系统的其余部分进行布线。
+.. 将控制台缆线连接到配对控制器。
+.. 使用命令交还控制器 `storage failover giveback -fromnode local`。
 
 
 
 
-== 第2步：将故障部件退回给NetApp
+
+
+== 第2步：验证存储系统运行状况
+
+控制器交还存储后，您应使用检查整体运行状况 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
+
+. 完成恢复后、运行Active IQ Config Advisor以验证存储系统的运行状况。
+. 更正您遇到的任何问题。
+
+
+
+
+== 第 3 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

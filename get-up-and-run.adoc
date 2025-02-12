@@ -49,67 +49,11 @@ summary: 要启动并运行ONTAP硬件系统、您需要在ONTAP中安装硬件�
 [role="quick-margin-para"]
 在机柜或机架中安装存储系统和存储架。访问适用于您的平台型号的安装和设置说明。
 
-[role="quick-margin-para"]
-** AFF A系列系统**
-
 [role="quick-margin-list"]
-* link:a1k/install-overview.html["AFF A1K"]
-* link:a70-90/install-overview.html["AFF A70"]
-* link:a70-90/install-overview.html["AFF A90"]
-* link:a150/install-setup.html["AFF A150"]
-* link:a250/install-setup.html["AFF A250"]
-* link:a400/install-setup.html["AFF A400"]
-* link:a800/install-setup.html["AFF A800"]
-* link:a900/install_setup.html["AFF A900"]
-
-
-[role="quick-margin-para"]
-** AFF C系列系统**
-
-[role="quick-margin-list"]
-* link:c190/install-setup.html["AFF C190"]
-* link:c250/install-setup.html["AFF C250"]
-* link:c400/install-setup.html["AFF C400"]
-* link:c800/install-setup.html["AFF C800"]
-
-
-[role="quick-margin-para"]
-** ASA A系列系统**
-
-[role="quick-margin-list"]
-* link:asa150/install-setup.html["ASA A150"]
-* link:asa250/install-setup.html["ASA A250"]
-* link:asa400/install-setup.html["ASA A400"]
-* link:asa800/install-setup.html["ASA A800"]
-* link:asa900/install_setup.html["ASA A900"]
-
-
-[role="quick-margin-para"]
-** ASA C系列系统**
-
-[role="quick-margin-list"]
-* link:asa-c250/install-setup.html["ASA C250"]
-* link:asa-c400/install-setup.html["ASA C400"]
-* link:asa-c800/install-setup.html["ASA C800"]
-
-
-[role="quick-margin-para"]
-** ASA R2系统**
-
-[role="quick-margin-list"]
+* link:aff-landing/index.html["AFF 系统"]
+* link:allsan-landing/index.html["ASA 系统"]
 * https://docs.netapp.com/us-en/asa-r2/index.html["ASA r2系统"]
-
-
-[role="quick-margin-para"]
-** FAS 系统**
-
-[role="quick-margin-list"]
-* link:fas-70-90/install-overview.html["FAS70和FAS90"]
-* link:fas2700/install-setup.html["FAS2700"]
-* link:fas2800/install-setup.html["FAS2820"]
-* link:fas8300/install-setup.html["FAS8300"]
-* link:fas8300/install-setup.html["FAS8700"]
-* link:fas9500/install_setup.html["FAS9500"]
+* link:fas/index.html["FAS 系统"]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"] 连接缆线

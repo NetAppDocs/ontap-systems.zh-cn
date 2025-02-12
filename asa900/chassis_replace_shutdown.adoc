@@ -13,17 +13,12 @@ summary: 要更换机箱，必须关闭控制器。
 == 关闭控制器- ASA A900
 
 [role="lead"]
-关闭控制器、以便对机箱执行维护。
-
-此过程适用于具有双节点配置的系统。如果您的系统包含两个以上的节点，请参阅 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_perform_a_graceful_shutdown_and_power_up_of_one_HA_pair_in_a_4__node_cluster["如何正常关闭和启动四节点集群中的一个HA对"^]。
+此过程适用于具有双节点配置的系统。有关在维护集群时正常关闭的详细信息，请参见 https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["正常关闭和启动存储系统解决方案指南—NetApp知识库"]。
 
 .开始之前
-* 停止所有客户端/主机访问NetApp系统上的数据。
-* 暂停外部备份作业。
 * 确保您具有必要的权限和凭据：
 +
 ** ONTAP 的本地管理员凭据。
-** 如果使用存储加密或NVE/NAE、则为NetApp板载密钥管理(OKM)集群范围的密码短语。
 ** 每个控制器的BMC可访问性。
 
 
@@ -39,22 +34,23 @@ summary: 要更换机箱，必须关闭控制器。
 
 .步骤
 . 通过SSH登录到集群、或者使用本地控制台缆线和笔记本电脑/控制台从集群中的任何节点登录。
-. 关闭AutoSupport并指示系统预计脱机多长时间：
+. 停止所有客户端/主机访问NetApp系统上的数据。
+. 暂停外部备份作业。
+. 如果启用了AutoSupport、则禁止创建案例、并指示系统预计脱机多长时间：
 +
-`system node autosupport invoke -node * -type all -message "MAINT=8h Power Maintenance"`
+`system node autosupport invoke -node * -type all -message "MAINT=2h Replace chassis"`
 
-. 确定所有节点的SP/BMC地址：
+. 确定所有集群节点的SP或BMC地址：
 +
 `system service-processor show -node * -fields address`
 
-. 退出集群Shell： `exit`
-. 使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP/BMC。
+. 退出集群Shell：
++
+`exit`
+
+. 使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP或BMC以监控进度。
 +
 如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。
-
-+
-
-NOTE: 打开与每个SP/BMC连接的SSH会话、以便监控进度。
 
 . 暂停受损机箱中的两个节点：
 +
@@ -64,7 +60,9 @@ NOTE: 打开与每个SP/BMC连接的SSH会话、以便监控进度。
 
 NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `system node halt -node <node1>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
 
-. 如果看到、请为集群中的每个控制器输入* y * `_Warning: Are you sure you want to halt node "cluster <node-name> number"?
-{y|n}:_`
+. 如果出现以下情况，请为集群中的每个控制器输入*y*：
++
+`Warning: Are you sure you want to halt node _<node_name>_? {y|n}:`
+
 . 等待每个控制器暂停、然后显示加载程序提示符。
 
