@@ -4,13 +4,28 @@ sidebar: sidebar
 keywords: asa r2 a70, a90, overview, the boot media 
 summary: 了解更换启动介质的自动化方法。 
 ---
-= 自动启动介质恢复概述—ASA A70和ASA A90
+= 启动介质恢复概述- ASA A70和ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以通过自动启动介质恢复(B融合)选项更换发生故障的启动介质。
+启动介质恢复会使用配对节点中的启动映像、并自动运行相应的启动菜单选项、以便在替代启动介质上安装启动映像。
 
-自动启动介质恢复会使用配对节点中的启动映像、并自动运行相应的启动菜单选项、以便在替代启动介质上安装启动映像。
+如果遇到类似于以下所示的启动错误消息、则需要更换启动介质并从配对节点还原ONTAP映像。
+
+....
+Can't find primary boot device u0a.0
+Can't find backup boot device u0a.1
+ACPI RSDP Found at 0x777fe014
+
+Starting AUTOBOOT press Ctrl-C to abort...
+Could not load fat://boot0/X86_64/freebsd/image1/kernel: Device not found
+
+ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/Linux/image1/vmlinuz (boot0, fat)
+ERROR: Error booting OS on: 'boot0' file: fat://boot0/X86_64/freebsd/image1/kernel (boot0, fat)
+
+Autoboot of PRIMARY image failed. Device not found (-6)
+LOADER-A>
+....

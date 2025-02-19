@@ -1,16 +1,7 @@
----
-permalink: asa-r2-a1k/bootmedia-recovery-image-boot.html 
-sidebar: sidebar 
-keywords: asa r2 a1k, boot the recovery image 
-summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
----
-= 启动恢复映像- ASA A1K
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
-[role="lead"]
 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
 
 .步骤
@@ -42,15 +33,30 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 --
 .选项2：ONTAP 9．16．1或更高版本
 --
-.. 在受损控制器上、当系统提示还原备份配置时按 `Y`。
+.. 在受损控制器上的Loader提示符处、配置受损控制器模块的IP地址：
 +
-恢复过程成功后，将在控制台-上显示此消息 `syncflash_partner: Restore from partner complete`。
+`ifconfig e0M - auto`
 
+.. 在Loader提示符处、从网络启动受损节点：
++
+`netboot \http://_web_server_ip/path_to_web-accessible_directory_/<ontap_version>_image.tgz`
+
+.. 从启动菜单中，选择选项 `7`。
+.. 当系统询问您是否还原备份配置时、输入 `n`。
+.. 在系统提示重新启动节点时、输入 `y`。
+.. 按键 `ctrl-c`返回Boot Menu (引导菜单)。
++
+如果启用了加密、则需要先将其还原、然后再继续还原启动映像。转到。 link:bootmedia-encryption-restore.html["恢复加密"]
+
+.. 在受损控制器上、当系统提示您重新启动受损控制器时按键 `Y`、然后按键 `ctrl-c`进入Boot Menu (启动菜单)。
+.. 选择选项。 `6`
 .. 在受损控制器上、当系统提示确认还原备份是否成功时按 `Y`。
 .. 在受损控制器上、当系统提示使用还原的配置时、按 `Y`。
 .. 在受损控制器上、当系统提示重新启动节点时按 `Y`。
-.. 在受损控制器上、当系统提示您重新启动受损控制器时按键 `Y`、然后按键 `ctrl-c`进入Boot Menu (启动菜单)。
-.. 如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。link:bootmedia-encryption-restore.html["恢复加密"]
+.. 在系统提示还原备份配置时、按 `Y`。
++
+恢复过程成功后，将在控制台-上显示此消息 `syncflash_partner: Restore from partner complete`。
+
 
 
 --
