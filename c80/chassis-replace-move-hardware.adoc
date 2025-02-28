@@ -2,13 +2,16 @@
 permalink: c80/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: c80, move hardware components, replace the chassis 
-summary: 将硬盘驱动器和控制器模块从受损机箱移至新机箱、然后将受损机箱从设备机架或系统机柜更换为与受损机箱型号相同的新机箱。 
+summary: 如果硬件故障或升级需要更换AFF C80系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。 
 ---
 = 更换机箱- AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
+
+[role="lead"]
+如果硬件故障或升级需要更换AFF C80系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。
 
 
 

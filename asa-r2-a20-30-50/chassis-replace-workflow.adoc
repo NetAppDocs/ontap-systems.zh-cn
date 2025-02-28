@@ -1,0 +1,30 @@
+---
+permalink: asa-r2-a20-30-50/chassis-replace-workflow.html 
+sidebar: sidebar 
+keywords: asa a20, asa a30, asa a50, replace the chassis workflow 
+summary: 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。 
+---
+= 机箱更换工作流- ASA A20、ASA A30和ASA A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+按照以下工作流步骤更换机箱。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:chassis-replace-requirements.html["查看机箱更换要求"]
+[role="quick-margin-para"]
+要更换机箱、您必须满足特定要求。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:chassis-replace-shutdown.html["关闭控制器"]
+[role="quick-margin-para"]
+关闭控制器、以便对机箱执行维护。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:chassis-replace-move-hardware.html["更换机箱"]
+[role="quick-margin-para"]
+更换机箱包括将受损机箱中的驱动器和任何驱动器挡片、控制器(含电源)和挡板移至新机箱、并将受损机箱更换为与受损机箱型号相同的新机箱。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]
+[role="quick-margin-para"]
+验证机箱的HA状态、并将故障部件退回给NetApp。

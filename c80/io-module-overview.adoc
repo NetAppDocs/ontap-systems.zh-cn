@@ -2,7 +2,7 @@
 permalink: c80/io-module-overview.html 
 sidebar: sidebar 
 keywords: AFF C80, replace io module 
-summary: '您必须使用提供商提供的更换现场可更换单元(FRU)组件来更换故障组件。' 
+summary: 您可以将AFF C80存储系统中发生故障的I/O模块更换为相同类型的I/O模块或不同类型的I/O模块。您还可以将I/O模块添加到具有空插槽的系统中。 
 ---
 = 添加和更换I/O模块概述- AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: '您必须使用提供商提供的更换现场可更换单元(FRU)组�
 
 
 [role="lead"]
-您可以将存储系统中发生故障的I/O模块更换为相同类型的I/O模块或不同类型的I/O模块。您还可以将I/O模块添加到具有空插槽的系统中。
+您可以将AFF C80存储系统中发生故障的I/O模块更换为相同类型的I/O模块或不同类型的I/O模块。您还可以将I/O模块添加到具有空插槽的系统中。
 
 * link:io-module-add.html["添加I/O模块"]
 +

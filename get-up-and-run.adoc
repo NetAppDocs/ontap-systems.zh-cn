@@ -60,7 +60,7 @@ summary: 要启动并运行ONTAP硬件系统、您需要在ONTAP中安装硬件�
 [role="quick-margin-para"]
 使用缆线将控制器连接到网络、然后使用缆线将控制器连接到磁盘架。  适用于您的平台型号的安装和设置说明包括使用缆线将控制器端口连接到网络和交换机的说明。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"]设置ONTAP集群
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["六个"]设置ONTAP集群
 [role="quick-margin-para"]
 安装并设置控制器和交换机后、必须在ONTAP中完成存储配置。根据您的部署配置访问以下说明。
 

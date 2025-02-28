@@ -2,7 +2,7 @@
 permalink: c80/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: c80, boot the recovery image 
-summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
+summary: 如果AFF C80系统中的启动介质损坏、您可以从USB驱动器启动恢复映像、从配对节点还原配置并验证环境变量 
 ---
 = 启动恢复映像- AFF C80
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 
 
 [role="lead"]
+如果AFF C80系统中的启动介质损坏、您可以从USB驱动器启动恢复映像、从配对节点还原配置并验证环境变量。
+
 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
 
 .步骤

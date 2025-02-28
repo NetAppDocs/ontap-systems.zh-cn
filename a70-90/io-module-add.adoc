@@ -2,7 +2,7 @@
 permalink: a70-90/io-module-add.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, add I/O module 
-summary: 要更换I/O模块、您必须断开模块的缆线、从模块中卸下SFP和QSFP模块、卸下模块、安装更换模块、重新安装SFP和QSFP模块、然后为I/O模块布线。 
+summary: 如果存在空插槽或所有插槽均已完全填充、则可以向AFF A70和AFF A90存储系统添加I/O模块。 
 ---
 = 添加I/O模块- AFF A70和AFF A90
 :allow-uri-read: 
@@ -17,7 +17,7 @@ summary: 要更换I/O模块、您必须断开模块的缆线、从模块中卸�
 
 == 步骤1：关闭受损控制器模块
 
-关闭或接管受损控制器模块。
+使用以下选项之一关闭或接管受损控制器模块。
 
 [role="tabbed-block"]
 ====

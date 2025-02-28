@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, move hardware components, replace the chassis 
-summary: 将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。 
+summary: 如果硬件故障或升级需要更换ASA A70或ASA A90系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。 
 ---
 = 移动并更换硬件- ASA A70和ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 将受损机箱中的电源，硬盘驱动器和控制器模块或模�
 
 
 [role="lead"]
-您需要先从控制器模块中卸下特定组件、然后再卸下受损机箱、更换机箱、将组件重新安装到正确的控制器模块中、然后使控制器恢复正常运行。
+如果硬件故障或升级需要更换ASA A70或ASA A90系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。
 
 
 
@@ -213,4 +213,4 @@ NOTE: 为了避免损坏内部连接器、请勿在将PSU滑入系统时用力�
 
 
 .下一步是什么？
-在更换受损AFF A70或AFF A90机箱并将组件重新安装到其中后，您需要link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]。
+在更换受损ASA A70或ASA A90机箱并将组件重新安装到其中后，您需要link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]。

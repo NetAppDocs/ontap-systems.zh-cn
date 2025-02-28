@@ -2,7 +2,7 @@
 permalink: c80/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff c80, replace the boot media 
-summary: 了解更换启动介质的要求。 
+summary: 在更换AFF C80系统中的启动介质之前、请确保您具有正确的替代启动设备、可访问系统固件和ONTAP软件、并可备份基本配置数据。 
 ---
 = 启动介质更换要求- AFF C80
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 了解更换启动介质的要求。
 
 
 [role="lead"]
-在更换启动介质之前、请确保查看以下要求。
+在更换AFF C80系统中的启动介质之前、请确保您具有正确的替代启动设备、可访问系统固件和ONTAP软件、并可备份基本配置数据。
+
+查看以下要求。
 
 * 您必须使用格式化为 fat32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。
 * 您必须将文件复制 `image_xxx.tgz` 到USB闪存驱动器、以供日后在此过程中使用。

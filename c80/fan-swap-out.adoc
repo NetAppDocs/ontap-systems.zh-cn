@@ -2,7 +2,7 @@
 permalink: c80/fan-swap-out.html 
 sidebar: sidebar 
 keywords: c80, aff, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
-summary: 要在不中断服务的情况下交换风扇模块，您必须执行一系列特定的任务。 
+summary: 如果AFF C80系统中的风扇模块出现故障或运行效率低下、则更换该风扇模块可能会影响系统散热和整体性能。 
 ---
 = 更换风扇模块- AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 要在不中断服务的情况下交换风扇模块，您必须执行�
 
 
 [role="lead"]
-要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。
+如果AFF C80系统中的风扇模块出现故障或运行效率低下、则更换该风扇模块可能会影响系统散热和整体性能。
 
 
 

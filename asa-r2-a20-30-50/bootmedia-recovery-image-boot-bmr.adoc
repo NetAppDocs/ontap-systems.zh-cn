@@ -1,10 +1,10 @@
 ---
-permalink: c80/bootmedia-recovery-image-boot-bmr.html 
+permalink: asa-r2-a20-30-50/bootmedia-recovery-image-boot-bmr.html 
 sidebar: sidebar 
-keywords: c80, boot the recovery image 
+keywords: aff a20, aff a30, aff a50, boot the recovery image 
 summary: 您可以通过自动启动恢复过程从配对控制器还原启动介质上的映像。 
 ---
-= 自动启动恢复—C80
+= 恢复ONTAP映像- AFF A20、AFF A30和AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

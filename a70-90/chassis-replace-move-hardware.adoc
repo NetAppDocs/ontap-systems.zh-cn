@@ -2,7 +2,7 @@
 permalink: a70-90/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, move hardware components, replace the chassis 
-summary: 将硬盘驱动器和控制器模块从受损机箱移至新机箱、然后将受损机箱从设备机架或系统机柜更换为与受损机箱型号相同的新机箱。 
+summary: 如果硬件故障或升级需要、请更换AFF A70或AFF A90系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。 
 ---
 = 更换机箱- AFF A70和AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 将硬盘驱动器和控制器模块从受损机箱移至新机箱、�
 
 
 [role="lead"]
-您需要先从控制器模块中卸下特定组件、然后再卸下受损机箱、更换机箱、将组件重新安装到正确的控制器模块中、然后使控制器恢复正常运行。
+如果硬件故障或升级需要、请更换AFF A70或AFF A90系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。
 
 
 

@@ -1,9 +1,9 @@
 ---
 indexpage:
-  title: 全闪存SAN阵列(ASA) A系列系统
+  title: ASA A系列系统
   summary: 您可以通过存储系统文档安装、设置和维护ASA A系列系统。
   keywords: asa, a-series, asa a150, asa a250, asa a400, asa a800, asa a900, datasheet
-  lead: NetApp的全闪存SAN阵列(ASA)可提供简化的专用SAN体验、为您企业的任务关键型数据库和其他SAN工作负载提供持续的数据可用性。
+  lead: ASA A系列系统专为任务关键型应用程序而设计、可提供卓越的性能和效率。它们可提供数百万次IOPS、保持稳定一致的亚微秒级延迟、并提供行业领先的原始存储容量与有效存储容量之比。
   tiles:
   - title: 入门
     links:

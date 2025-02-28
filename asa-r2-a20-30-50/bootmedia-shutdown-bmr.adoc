@@ -1,10 +1,10 @@
 ---
-permalink: c80/bootmedia-shutdown-bmr.html 
+permalink: asa-r2-a20-30-50/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
-keywords: c80, shut down the controller 
+keywords: aff a20, aff a30, aff a50, shut down the controller 
 summary: 您需要完成受损控制器的关闭。 
 ---
-= 关闭控制器- AFF C80
+= 关闭控制器- AFF A20、AFF A30和AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -63,3 +63,6 @@ LOADER 提示符
 
 |===
 
+
+.下一步行动
+关闭受损控制器后，link:bootmedia-replace-bmr.html["更换启动介质"]。

@@ -2,7 +2,7 @@
 permalink: a70-90/chassis-replace-complete-system-restore-rma.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90,  verify and set HA state, complete the replacement process 
-summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。 
+summary: 重新启动控制器、验证系统运行状况、并将故障部件返回给NetApp以完成AFF A70和AFF A90机箱更换工作流中的最后一步。 
 ---
 = 完成机箱更换- AFF A70和AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故
 
 
 [role="lead"]
-要完成机箱更换过程、您需要启动到ONTAP、交还存储、验证存储系统运行状况、然后将发生故障的机箱返回到NetApp。
+重新启动控制器、验证系统运行状况、并将故障部件返回给NetApp以完成AFF A70和AFF A90机箱更换工作流中的最后一步。
 
 
 

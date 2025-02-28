@@ -2,7 +2,7 @@
 permalink: a70-90/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, move the controller module hardware 
-summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 
+summary: 如果硬件故障或升级需要、请更换AFF A70或AFF A90系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器并重新启动它。 
 ---
 = 更换控制器模块- AFF A70和AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 
 
 
 [role="lead"]
-要更换控制器、您必须卸下受损控制器、将FRU组件从受损控制器模块移至更换用的控制器模块、在机箱中安装更换用的控制器模块、然后将系统启动至维护模式。
+如果硬件故障或升级需要、请更换AFF A70或AFF A90系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器并重新启动它。
 
 
 

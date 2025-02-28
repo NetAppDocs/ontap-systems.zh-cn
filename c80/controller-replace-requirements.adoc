@@ -2,7 +2,7 @@
 permalink: c80/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a1k, prerequisite, replace the controller module 
-summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。 
+summary: 在更换AFF C80系统中的机箱之前、请确保满足成功更换的必要要求。这包括拥有正确的更换机箱、备份系统配置以及访问任何所需的工具和固件。 
 ---
 = 控制器更换要求- AFF C80
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP �
 
 
 [role="lead"]
-您必须查看控制器更换过程的要求、并为您的ONTAP操作系统版本选择正确的要求。
+在更换AFF C80系统中的机箱之前、请确保满足成功更换的必要要求。这包括拥有正确的更换机箱、备份系统配置以及访问任何所需的工具和固件。
+
+查看更换控制器模块的要求。
 
 * 所有驱动器架都必须正常工作。
 * 运行正常的控制器必须能够接管要更换的控制器（在本操作步骤 中称为 "`受损控制器` " ）。

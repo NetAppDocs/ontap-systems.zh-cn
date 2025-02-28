@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/bootmedia-recovery-image-boot-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, boot the recovery image 
-summary: 您可以通过自动启动恢复过程从配对控制器还原启动介质上的映像。 
+summary: 如果ASA A70或ASA A90系统中的启动介质损坏、您可以启动恢复映像、从配对节点还原配置以及验证环境变量。 
 ---
 = 恢复ONTAP映像- ASA A70和ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您可以通过自动启动恢复过程从配对控制器还原启动�
 
 
 [role="lead"]
-在物理更换受损启动介质后、从配对节点还原ONTAP映像。
+如果ASA A70或ASA A90系统中的启动介质损坏、您可以启动恢复映像并从配对节点还原配置。
 
 .开始之前
 * 确定是否使用以下方法之一配置板载密钥管理器(OKM)或外部密钥管理器(EKM)：
