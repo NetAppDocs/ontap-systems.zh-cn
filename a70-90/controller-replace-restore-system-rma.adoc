@@ -2,7 +2,7 @@
 permalink: a70-90/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 验证逻辑接口是否正在向其主端口报告、执行集群运行状况检查、并将故障部件返回给NetApp以完成AFF A70和AFF A90控制器更换工作流中的最后一步。 
+summary: 验证逻辑接口是否正在向其主端口报告、执行集群运行状况检查、然后将故障部件返回给NetApp以完成AFF A70和AFF A90控制器更换过程中的最后一步。 
 ---
 = 完整控制器更换—AFF A70和AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 验证逻辑接口是否正在向其主端口报告、执行集群运�
 
 
 [role="lead"]
-验证逻辑接口是否正在向其主端口报告、执行集群运行状况检查、并将故障部件返回给NetApp以完成AFF A70和AFF A90控制器更换工作流中的最后一步。
+验证逻辑接口是否正在向其主端口报告、执行集群运行状况检查、然后将故障部件返回给NetApp以完成AFF A70和AFF A90控制器更换过程中的最后一步。
 
 
 

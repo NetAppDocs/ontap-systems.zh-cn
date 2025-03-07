@@ -2,7 +2,7 @@
 permalink: fas-70-90/nvram-replace.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace an nvdimm 
-summary: NVRAM 模块由 NVRAM12 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。 
+summary: 'NVRAM模块由NVRAM12和DIMM以及每个NVRAM模块最多两个NVMe SSD闪存模块(Flash Cache或缓存模块)组成。' 
 ---
 = 更换NVRAM - FAS70和FAS90
 :allow-uri-read: 

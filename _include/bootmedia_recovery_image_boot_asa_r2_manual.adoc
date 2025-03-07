@@ -39,7 +39,7 @@
 
 .. 在Loader提示符处、从网络启动受损节点：
 +
-`netboot \http://_web_server_ip/path_to_web-accessible_directory_/<ontap_version>_image.tgz`
+`netboot \http://_web_server_ip/path_to_web-accessible_directory_/<xxx_image.tgz>`
 
 .. 从启动菜单中，选择选项 `7`。
 .. 当系统询问您是否还原备份配置时、输入 `n`。

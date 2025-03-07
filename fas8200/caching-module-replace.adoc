@@ -20,7 +20,7 @@ summary: 如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控�
 ** 擦除缓存模块上的数据： `system controller flash-cache secure-erase run -node _node name_ localhost -device-id _device_number_`
 +
 
-NOTE: 运行 `system controller flash-cache show` 命令。
+NOTE: 请运行 `system controller flash-cache show`如果您不知道Flash Cache设备ID、命令。
 
 ** 验证是否已从缓存模块中擦除数据： `system controller flash-cache secure-erase show`
 

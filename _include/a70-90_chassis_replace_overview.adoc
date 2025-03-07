@@ -7,6 +7,7 @@
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。
+* 请勿使用此过程进行系统升级、而应参阅 https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["选择您的控制器硬件升级操作步骤"]以获得指导。
 * 编写此操作步骤时，假设您要将挡板， NVMe 驱动器和控制器模块移至新机箱，而更换机箱是 NetApp 的一个新组件。
 * *此过程会造成系统中断。*For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.
 

@@ -13,7 +13,6 @@ summary: 如果驱动器出现故障或需要升级、请更换AFF C80系统中�
 [role="lead"]
 如果驱动器出现故障或需要升级、请更换AFF C80系统中的驱动器。此过程包括确定故障驱动器、安全地将其卸下以及安装新驱动器、以确保持续访问数据和提高系统性能。
 
-[role="lead"]
 您可以在I/O运行期间无中断更换发生故障的SSD驱动器。
 
 When a drive fails, the platform logs a warning message to the system console indicating which drive has failed.In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.

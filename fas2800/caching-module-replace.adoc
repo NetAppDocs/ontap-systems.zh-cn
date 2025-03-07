@@ -35,7 +35,7 @@ http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sag/home.html["《 ON
 .. 擦除缓存模块上的数据： `system controller flash-cache secure-erase run -node _node name_ localhost -device-id _device_number_`
 +
 
-NOTE: 运行 `system controller flash-cache show` 命令。
+NOTE: 请运行 `system controller flash-cache show`如果您不知道Flash Cache设备ID、命令。
 
 .. 验证是否已从缓存模块中擦除数据： `system controller flash-cache secure-erase show`
 +

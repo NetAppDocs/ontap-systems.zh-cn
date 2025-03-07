@@ -2,7 +2,7 @@
 permalink: a70-90/install-overview.html 
 sidebar: sidebar 
 keywords: Installation, deployment, Install, deploy, Installing, deploying 
-summary: 请按照以下简要步骤安装和设置AFF A70或A90存储系统、并将其部署为ONTAP系统中的HA对。 
+summary: 要安装和配置AFF A70或AFF A90系统、您需要查看硬件要求、准备站点、安装硬件组件并为其布线、打开系统电源以及设置ONTAP集群。 
 ---
 = 安装和配置工作流—AFF A70和AFF A90
 :allow-uri-read: 

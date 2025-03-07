@@ -2,20 +2,20 @@
 permalink: a70-90/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, replace a dimm 
-summary: 如果检测到可更正或不可更正的错误过多、请更换AFF A70或AFF A90系统中的DIMM。这些问题通常由单个DIMM故障引起、可能会阻止存储系统启动ONTAP。 
+summary: 如果检测到可更正或不可更正的内存错误过多、请更换AFF A70或AFF A90系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、然后重新安装控制器。 
 ---
-= 更换DIMM - AFF A70和AFF A90
+= 将DIMM更换为可更正或不可更正的错误- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-如果检测到可更正或不可更正的错误过多、请更换AFF A70或AFF A90系统中的DIMM。这些问题通常由单个DIMM故障引起、可能会阻止存储系统启动ONTAP。
+如果检测到可更正或不可更正的内存错误过多、请更换AFF A70或AFF A90系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、然后重新安装控制器。
 
 .开始之前
-* 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
-* 您必须使用从NetApp收到的替代FRU组件来更换故障组件。
+* 确保系统中的所有其他组件均正常运行；否则，您必须联系技术支持。
+* 请确保将故障组件更换为从NetApp收到的更换组件。
 
 
 
@@ -210,7 +210,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 == 第 3 步：更换 DIMM
 
-要更换 DIMM ，请在控制器中找到它们，然后按照特定步骤顺序进行操作。
+要更换DIMM、请在控制器内找到它们、然后按照特定的步骤顺序进行操作。
 
 . 如果您尚未接地，请正确接地。
 . 打开控制器顶部的控制器通风管。

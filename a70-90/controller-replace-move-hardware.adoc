@@ -2,16 +2,16 @@
 permalink: a70-90/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, move the controller module hardware 
-summary: 如果硬件故障或升级需要、请更换AFF A70或AFF A90系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器并重新启动它。 
+summary: 如果硬件故障需要更换AFF A70或AFF A90系统中的控制器。更换过程包括移除受损控制器、将组件移至更换控制器、安装更换控制器并重新启动它。 
 ---
-= 更换控制器模块- AFF A70和AFF A90
+= 更换控制器- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-如果硬件故障或升级需要、请更换AFF A70或AFF A90系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器并重新启动它。
+如果硬件故障需要更换AFF A70或AFF A90系统中的控制器。更换过程包括移除受损控制器、将组件移至更换控制器、安装更换控制器并重新启动它。
 
 
 
@@ -437,3 +437,6 @@ NOTE: 显示的时间为本地时间、并非始终为GMT、并以24小时模式
 NOTE: 如果您有直流电源、请在控制器模块完全固定在机箱中后、将电源块重新连接到电源。
 
 
+
+.下一步是什么？
+在更换受损AFF A70或AFF A90控制器后，您需要link:controller-replace-system-config-restore-and-verify.html["还原系统配置"]。

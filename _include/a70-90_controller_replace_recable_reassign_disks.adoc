@@ -6,7 +6,7 @@
 ====
 .无加密
 --
-通过交还存储使受损控制器恢复正常运行
+通过交还存储使受损控制器恢复正常运行。
 
 .步骤
 . 在Loader提示符处，输入 `boot_ontap`。
@@ -31,14 +31,14 @@
 
 
 --
-.板载加密(OKM)
+.OKM加密
 --
 重置板载加密并使控制器恢复正常运行。
 
 .步骤
 . 在Loader提示符处、输入：
 +
-`boot_ontap maint`(英文)
+`boot_ontap maint`
 
 . 从Loader提示符处启动到ONTAP菜单 `boot_ontap menu`、然后选择选项10。
 . 输入OKM密码短语。您可以从客户处获取此密码短语，也可以联系 https://support.netapp.com["NetApp 支持"]。
@@ -91,7 +91,7 @@ NOTE: 系统将提示您为此集群输入集群范围的OKM密码短语。
 
 
 --
-.外部密钥管理器(EKM)
+.EKM加密
 --
 重置加密并使控制器恢复正常运行。
 
@@ -137,14 +137,7 @@ NOTE: 如有问题、请联系 https://support.netapp.com["NetApp 支持"]。
 +
 `storage failover show`(英文)
 
-. 转到高级模式、确保已修复节点上的所有核心转储均已保存：
-+
-`set -privilege advanced`然后 `run local partner savecore`。
-
-. 通过交还存储使受损控制器恢复正常运行：
-+
-`storage failover giveback -ofnode _impaired_node_name_`(英文)
-
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`。
 . 如果已禁用自动交还、请重新启用它：
 +
 `storage failover modify -node local -auto-giveback true`(英文)

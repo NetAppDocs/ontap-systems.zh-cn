@@ -136,24 +136,7 @@ USB闪存驱动器应具有受损控制器正在运行的相应ONTAP映像。
 +
 如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停控制器以启动到加载程序。
 
-. 在 LOADER 提示符处设置网络连接类型：
-+
-** 如果要配置DHCP： `ifconfig e0M -auto`
-+
-
-NOTE: 您配置的目标端口是在通过网络连接还原 var 文件系统期间，用于与运行正常的控制器中受损的控制器进行通信的目标端口。You can also use the e0M port in this command.
-
-** 如果要配置手动连接： `ifconfig e0M -addr=filer_addr -mask=netmask -gw=gateway`
-+
-*** filer_addr 是存储系统的 IP 地址。
-*** netmask 是连接到 HA 配对节点的管理网络的网络掩码。
-*** gateway 是网络的网关。
 
 
-
-
-+
-
-NOTE: 您的接口可能需要其他参数。有关详细信息，您可以在固件提示符处输入 help ifconfig 。
-
-
+.下一步是什么？
+更换启动介质后，您需要link:bootmedia-recovery-image-boot.html["启动恢复映像"]。

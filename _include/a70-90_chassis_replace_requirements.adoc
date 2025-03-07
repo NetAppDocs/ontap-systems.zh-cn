@@ -11,5 +11,5 @@
 * 确保您拥有进行更换所需的工具和设备。
 * 您可以对系统支持的所有ONTAP版本使用机箱更换过程。
 * 在编写机箱更换过程时、假设您要将挡板、NVMe驱动器和控制器模块移至新机箱、并且更换机箱是NetApp的新组件。
-* *机箱更换过程会造成系统中断。*For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.
+* 机箱更换过程会造成系统中断。For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.
 

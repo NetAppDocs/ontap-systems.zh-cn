@@ -2,7 +2,7 @@
 permalink: a70-90/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, prerequisite, replace the controller module 
-summary: 在更换AFF A70或AFF A90系统中的机箱之前、请确保满足成功更换的必要要求。这包括拥有正确的更换机箱、备份系统配置以及访问任何所需的工具和固件。 
+summary: 在更换AFF A70或AFF A90系统中的控制器之前、请确保满足成功更换控制器所需的要求。这包括拥有正确的替代控制器、备份系统配置以及访问任何所需的工具和固件。 
 ---
 = 控制器更换要求- AFF A70和AFF A90
 :allow-uri-read: 
@@ -17,8 +17,9 @@ summary: 在更换AFF A70或AFF A90系统中的机箱之前、请确保满足成
 
 * 所有驱动器架都必须正常工作。
 * 运行正常的控制器必须能够接管要更换的控制器（在本操作步骤 中称为 "`受损控制器` " ）。
-* 如果您的系统采用 MetroCluster 配置，则必须查看一节 https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["选择正确的恢复操作步骤"] 以确定是否应使用此操作步骤。
-* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+* 请勿使用此过程升级控制器、而应参考 https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["选择您的控制器硬件升级操作步骤"]以获得指导。
+* 如果您的系统采用MetroCluster配置、则必须查看 https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["选择正确的恢复操作步骤"]以确定是否应使用此过程。
+* 您必须使用从NetApp收到的现场可更换单元(FRU)更换故障组件。
 * 您必须将控制器模块更换为相同型号类型的控制器模块。您不能只更换控制器模块来升级系统。
 * 您不能在此操作步骤中更改任何驱动器或驱动器架。
 * 由于启动设备位于安装在系统背面的系统管理模块上、因此在更换控制器模块时无需移动启动设备。
@@ -34,3 +35,6 @@ summary: 在更换AFF A70或AFF A90系统中的机箱之前、请确保满足成
 此操作将为您提供操作步骤的记录，以便您可以对更换过程中可能遇到的任何问题进行故障排除。
 
 
+
+.下一步是什么？
+查看更换AFF A70或AFF A90控制器的要求后，您需要link:controller-replace-shutdown.html["关闭控制器"]。

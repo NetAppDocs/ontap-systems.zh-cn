@@ -2,7 +2,7 @@
 permalink: a70-90/io-module-replace.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, replace a pcie card 
-summary: 要更换 PCIe 卡，您必须断开卡的缆线连接，从卡中卸下 SFP 和 QSFP 模块，然后再卸下提升板，重新安装提升板，最后重新安装 SFP 和 QSFP 模块，最后再为卡布线。 
+summary: 如果AFF A70或AFF A90系统中的I/O模块出现故障或需要升级以支持更高性能或其他功能、请更换该模块。更换过程包括关闭控制器、更换发生故障的I/O模块、重新启动控制器以及将发生故障的部件退回NetApp。 
 ---
 = 更换I/O模块- AFF A70和AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 要更换 PCIe 卡，您必须断开卡的缆线连接，从卡中卸�
 
 
 [role="lead"]
-如果AFF A70或AFF A90系统中的I/O模块出现故障或需要升级以支持更高性能或其他功能、请更换该模块。
+如果AFF A70或AFF A90系统中的I/O模块出现故障或需要升级以支持更高性能或其他功能、请更换该模块。更换过程包括关闭控制器、更换发生故障的I/O模块、重新启动控制器以及将发生故障的部件退回NetApp。
 
 您可以对存储系统支持的所有ONTAP版本使用此过程。
 

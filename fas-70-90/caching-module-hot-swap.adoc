@@ -1,34 +1,34 @@
 ---
 permalink: fas-70-90/caching-module-hot-swap.html 
 sidebar: sidebar 
-keywords: fas70, fas90, hot swap, replace, FlashCache module carrier, caching module, FlashCache 
-summary: 'NVMe SSD FlashCache模块托架包含一个或两个FlashCache模块(缓存模块)、每个缓存模块集成一个SSD缓存驱动器。缓存模块可以热插拔、但FlashCache模块托架不能热插拔。' 
+keywords: fas70, fas90, hot swap, replace, Flash Cache module carrier, caching module, Flash Cache 
+summary: 'NVMe SSD Flash Cache模块托架包含一个或两个Flash Cache模块(缓存模块)、每个缓存模块集成一个SSD缓存驱动器。缓存模块可以热插拔、但Flash Cache模块托架不能热插拔。' 
 ---
-= 更换FlashCache模块托架或缓存模块- FAS70和FAS90
+= 更换Flash Cache模块托架或缓存模块- FAS70和FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-NVMe SSD FlashCache模块托架包含一个或两个FlashCache模块(缓存模块)、每个缓存模块集成一个SSD FlashCache驱动器。
+NVMe SSD Flash Cache模块托架包含一个或两个Flash Cache模块(缓存模块)、每个缓存模块集成一个SSD Flash Cache驱动器。
 
-FAS70支持2 TB缓存模块、FAS90支持4 TB缓存模块。您不能在FlashCache模块托架中混用容量不同的缓存模块。
+FAS70支持2 TB缓存模块、FAS90支持4 TB缓存模块。不能在Flash Cache模块托架中混用容量不同的缓存模块。
 
-根据需要更换的组件、您可以执行以下任一过程：整个Flashcache模块托架或缓存模块。
+根据需要更换的组件、您可以执行以下任一过程：整个Flash Cache模块托架或缓存模块。
 
-* <<更换FlashCache模块托架>>
+* <<更换Flash Cache模块托架>>
 * <<更换缓存模块>>
 
 
 
 
-== 更换FlashCache模块托架
+== 更换Flash Cache模块托架
 
-FlashCache模块托架位于插槽6中、最多可容纳两个FlashCache模块。您不能热插拔FlashCache模块托架
+Flash Cache模块托架位于插槽6中、最多可容纳两个Flash Cache模块。您不能热插拔Flash Cache模块托架
 
 .开始之前
-* 确保存储系统具有适用于更换FlashCache模块托架的操作系统。
+* 确保存储系统具有适用于更换用Flash Cache模块托架的操作系统。
 * 确认所有其他组件均正常工作；如果不正常、则必须联系技术支持。
 
 
@@ -136,15 +136,15 @@ LOADER 提示符
 ====
 
 
-=== 第2步：更换FlashCache模块托架
+=== 第2步：更换Flash Cache模块托架
 
-执行以下步骤以更换FlashCache模块托架。
+执行以下步骤以更换Flash Cache模块托架。
 
 .步骤
 . 如果您尚未接地，请正确接地。
-. 通过FlashCache模块托架正面亮起的琥珀色警示LED、找到插槽6中发生故障的FlashCache模块托架。
+. 通过Flash Cache模块托架正面亮起的琥珀色警示LED、找到插槽6中发生故障的Flash Cache模块托架。
 +
-image::../media/drw_fas70-90_remove_caching_module_carrier_ieops-1772.svg[卸下FlashCache模块托架]
+image::../media/drw_fas70-90_remove_caching_module_carrier_ieops-1772.svg[卸下Flash Cache模块托架]
 
 +
 [cols="1,4"]
@@ -154,7 +154,7 @@ image::../media/drw_fas70-90_remove_caching_module_carrier_ieops-1772.svg[卸下
  a| 
 image:../media/icon_round_1.png["标注编号1"]
  a| 
-FlashCache模块托架
+Flash Cache模块托架
 
 
 
@@ -168,33 +168,33 @@ image:../media/icon_round_2.png["标注编号2"]
  a| 
 image:../media/icon_round_3.png["标注编号3"]
  a| 
-FlashCache模块托架凸轮把手
+Flash Cache模块托架凸轮把手
 
 
 
  a| 
 image:../media/icon_round_4.png["标注编号4"]
  a| 
-FlashCache模块托架故障LED
+Flash Cache模块托架故障LED
 
 |===
-. 卸下发生故障的FlashCache模块托架：
+. 卸下发生故障的Flash Cache模块托架：
 +
 .. 向下旋转缆线管理托架、方法是拉动缆线管理托架内侧两侧的按钮、然后向下旋转托架。
-.. 捏住FlashCache模块托架底部的蓝色卡舌。
+.. 捏住Flash Cache模块托架底部的蓝色卡舌。
 .. 旋转卡舌、使其远离模块。
 
 
-. 将FlashCache模块托架从控制器模块中拉出、然后将其放在防静电垫上。
-. 将缓存模块移至更换用的FlashCache模块托架：
+. 将Flash Cache模块托架拉出控制器模块、然后将其放在防静电垫上。
+. 将缓存模块移至替代Flash Cache模块托架：
 +
 .. 捏住缓存模块顶部的Terra Cotta卡舌、然后将凸轮把手转离缓存模块。
-.. 将手指插入凸轮拉杆开口处、然后将模块拉出FlashCache模块托架、从而将模块从机箱中卸下。
-.. 将缓存模块安装到更换用的FlashCache模块托架中的同一插槽中、然后将凸轮把手旋转到缓存模块上的闭合位置以将其锁定到位。
+.. 将手指插入凸轮拉杆开口处、然后将模块拉出Flash Cache模块托架、从而将模块从机箱中卸下。
+.. 将缓存模块安装到更换用的Flash Cache模块托架中的同一插槽中、然后将凸轮把手旋转到缓存模块上的闭合位置以将其锁定到位。
 
 
 . 如果有第二个缓存模块、请重复上述步骤。
-. 将更换用的FlashCache模块托架安装到系统中：
+. 将更换用的Flash Cache模块托架安装到系统中：
 +
 .. 将模块与机柜插槽开口的边缘对齐。
 .. 将模块轻轻地滑入插槽，直至完全滑入机箱，然后将凸轮闩锁一直向上旋转，以将模块锁定到位。
@@ -207,7 +207,7 @@ FlashCache模块托架故障LED
 
 === 第3步：重新启动控制器
 
-更换FlashCache模块托架后、必须重新启动控制器模块。
+更换Flash Cache模块托架后、必须重新启动控制器模块。
 
 .步骤
 . 在 LOADER 提示符处，重新启动节点： _bybye
@@ -230,7 +230,7 @@ NOTE: 此操作将重新初始化I/O卡和其他组件、然后重新启动节�
 == 更换缓存模块
 
 .开始之前
-FlashCache模块(缓存模块)位于插槽6-1或插槽6-2中、或者同时位于插槽6-1和插槽6-2中。
+Flash Cache模块(缓存模块)位于插槽6-1或插槽6-2中、或者同时位于插槽6-1和插槽6-2中。
 
 您可以将各个缓存模块热插拔为同一供应商或其他受支持供应商提供的容量相同的缓存模块。
 
@@ -292,9 +292,9 @@ image:../media/icon_round_2.png["标注编号2"]
 .. 向下旋转缆线管理托架、方法是拉动缆线管理托架内侧两侧的按钮、然后向下旋转托架。
 .. 按下缓存模块正面的 Terra cotta 释放按钮。
 .. 将凸轮把手旋转到最远位置。
-.. 将手指插入凸轮拉杆开口处、然后将缓存模块拉出FlashCache模块托架、从而将该模块从机箱中卸下。
+.. 将手指插入凸轮拉杆开口处、然后将缓存模块拉出Flash Cache模块托架、从而将该模块从机柜中卸下。
 +
-从FlashCache模块托架中删除缓存模块时、请务必支持该模块。
+从Flash Cache模块托架中删除缓存模块时、请务必支持此模块。
 
 
 

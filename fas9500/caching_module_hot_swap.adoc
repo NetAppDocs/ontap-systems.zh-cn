@@ -1,8 +1,8 @@
 ---
 permalink: fas9500/caching_module_hot_swap.html 
 sidebar: sidebar 
-keywords: fas9500, hot swap, replace, FlashCache 
-summary: 'NVMe SSD FlashCache模块(FlashCache或缓存模块)仅位于FAS9500系统插槽6中NVRAM11模块的前部。您可以从相同或不同的受支持供应商热插拔具有相同容量的缓存模块。' 
+keywords: fas9500, hot swap, replace, Flash Cache 
+summary: 'NVMe SSD Flash Cache模块(Flash Cache或缓存模块)仅位于FAS9500系统插槽6中NVRAM11模块的前部。您可以从相同或不同的受支持供应商热插拔具有相同容量的缓存模块。' 
 ---
 = 热插拔缓存模块— FAS9500
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'NVMe SSD FlashCache模块(FlashCache或缓存模块)仅位于FAS9500�
 
 
 [role="lead"]
-NVMe SSD FlashCache模块(FlashCache或缓存模块)位于FAS9500系统插槽6中NVRAM11模块的正面。您可以从相同或不同的受支持供应商热插拔具有相同容量的缓存模块。
+NVMe SSD Flash Cache模块(Flash Cache或缓存模块)位于FAS9500系统插槽6中NVRAM11模块的前部。您可以从相同或不同的受支持供应商热插拔具有相同容量的缓存模块。
 
 
-NOTE: 如果您需要或希望冷插拔FlashCache模块、请按照有关更换I/O模块的过程进行操作。
+NOTE: 如果您需要或希望冷插拔Flash Cache模块、请按照更换I/O模块的过程进行操作。
 
 .开始之前
 您的存储系统必须满足特定条件，具体取决于您的情况：

@@ -2,7 +2,7 @@
 permalink: fas9000/nvram-module-or-nvram-dimm-replacement.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, replace, nvram, module, dimm, manually, reassign, system, id, ha, system, disk, two, node, restore, storage, volume, encryption, functionality 
-summary: NVRAM 模块由 NVRAM10 和 DIMM 组成，每个 NVRAM 模块最多包含两个 NVMe SSD Flash Cache 模块（ FlashCache 或缓存模块）。 
+summary: 'NVRAM模块由NVRAM10和DIMM以及每个NVRAM模块最多两个NVMe SSD闪存模块(Flash Cache或缓存模块)组成。' 
 ---
 = 更换NVRAM模块或NVRAM DIMM - FAS9000
 :allow-uri-read: 
@@ -11,9 +11,9 @@ summary: NVRAM 模块由 NVRAM10 和 DIMM 组成，每个 NVRAM 模块最多包�
 
 
 [role="lead"]
-The NVRAM module consists of the NVRAM10 and DIMMs and up to two NVMe SSD Flash Cache modules (FlashCache or caching modules) per NVRAM module.You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.
+NVRAM模块由NVRAM10和DIMM以及每个NVRAM模块最多两个NVMe SSD闪存模块(Flash Cache或缓存模块)组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.
 
-To replace a failed NVRAM module, you must remove it from the chassis, remove the FlashCache module or modules from the NVRAM module, move the DIMMs to the replacement module, reinstall the FlashCache module or modules, and install the replacement NVRAM module into the chassis.
+要更换发生故障的NVRAM模块、您必须将其从机箱中卸下、从NVRAM模块中卸下一个或多个Flash Cache模块、将DIMM移动到更换用的模块、重新安装一个或多个Flash Cache模块、然后将更换用的NVRAM模块安装到机箱中。
 
 Because the system ID is derived from the NVRAM module, if replacing the module, disks belonging to the system are reassigned to the new system ID.
 
@@ -196,7 +196,7 @@ mcc1A::> metrocluster operation show
 
 .步骤
 . 如果您尚未接地，请正确接地。
-. 将 FlashCache 模块从旧 NVRAM 模块移至新 NVRAM 模块：
+. 将Flash Cache模块从旧的NVRAM模块移至新的NVRAM模块：
 +
 image::../media/drw_9000_remove_flashcache.png[更换缓存模块]
 
@@ -208,25 +208,25 @@ image::../media/drw_9000_remove_flashcache.png[更换缓存模块]
  a| 
 image:../media/icon_round_1.png["标注编号1"]
  a| 
-橙色释放按钮（空 FlashCache 模块上为灰色）
+橙色释放按钮(空Flash Cache模块上为灰色)
 
 
 
  a| 
 image:../media/icon_round_2.png["标注编号2"]
  a| 
-FlashCache 凸轮把手
+Flash Cache凸轮句柄
 
 |===
 +
-.. 按 FlashCache 模块正面的橙色按钮。
+.. 按Flash Cache模块正面的橙色按钮。
 +
 
-NOTE: 空 FlashCache 模块上的释放按钮为灰色。
+NOTE: 空Flash Cache模块上的释放按钮为灰色。
 
 .. 向外旋转凸轮把手，直到模块开始滑出旧的 NVRAM 模块。
 .. 抓住模块凸轮把手，将其滑出 NVRAM 模块，然后将其插入新 NVRAM 模块的正面。
-.. 将 FlashCache 模块轻轻推入 NVRAM 模块，然后将凸轮把手旋转到关闭位置，直到其将模块锁定到位。
+.. 将Flash Cache模块一直轻轻推入NVRAM模块、然后旋转凸轮把手关闭、直至其将模块锁定到位。
 
 
 . 从机箱中删除目标 NVRAM 模块：

@@ -150,31 +150,6 @@ USB闪存驱动器应具有受损控制器正在运行的相应ONTAP映像。
 +
 如果未显示此消息，请按 Ctrl-C ，选择选项以启动到维护模式，然后暂停控制器以启动到加载程序。
 
-. 在 LOADER 提示符处设置网络连接类型：
-+
-** 如果要配置 DHCP ： `ifconfig e0a -auto`
-+
-
-NOTE: 您配置的目标端口是在通过网络连接还原 var 文件系统期间，用于与运行正常的控制器中受损的控制器进行通信的目标端口。You can also use the e0M port in this command.
-
-** 如果要配置手动连接： `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
-+
-*** filer_addr 是存储系统的 IP 地址。
-*** netmask 是连接到 HA 配对节点的管理网络的网络掩码。
-*** gateway 是网络的网关。
-*** dns_addr 是网络上名称服务器的 IP 地址。
-*** dns_domain 是域名系统（ DNS ）域名。
-+
-如果使用此可选参数，则无需在网络启动服务器 URL 中使用完全限定域名。您只需要服务器的主机名。
-
-
-
-
-
-+
-
-NOTE: 您的接口可能需要其他参数。有关详细信息，您可以在固件提示符处输入 help ifconfig 。
-
 . 如果控制器位于延伸型或光纤连接的 MetroCluster 中，则必须还原 FC 适配器配置：
 +
 .. 启动到维护模式： `boot_ontap maint`

@@ -2,16 +2,16 @@
 permalink: a70-90/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, shut down the controller 
-summary: 如果AFF A70或AFF A90存储系统中的控制器受损、请将其关闭。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。 
+summary: 需要更换启动介质时、关闭AFF A70或AFF A90存储系统中的控制器。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。 
 ---
-= 关闭受损控制器- AFF A70和AFF A90
+= 关闭控制器以更换启动介质- AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-如果AFF A70或AFF A90存储系统中的控制器受损、请将其关闭。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。
+需要更换启动介质时、关闭AFF A70或AFF A90存储系统中的控制器。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。
 
 [role="tabbed-block"]
 ====
@@ -116,3 +116,5 @@ LOADER 提示符
 
 --
 ====
+.下一步是什么？
+关闭控制器后，您需要link:bootmedia-replace.html["更换启动介质"]。

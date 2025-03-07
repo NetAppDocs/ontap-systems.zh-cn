@@ -41,18 +41,18 @@ You cannot have exceeded the maximum number of shelves supported by your HA pair
 
 在热添加NS224磁盘架之前、请熟悉以下最佳实践。
 
-* *最佳实践：*最佳实践是在热添加磁盘架之前安装的最新版本 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["磁盘认证包"^] 。
+* *磁盘认证包：*最佳实践是在热添加磁盘架之前安装的最新版本 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["磁盘认证包"^]。
 +
 安装最新版本的 DQP 后，您的系统便可识别和使用新认证的驱动器。这样可以避免出现有关驱动器信息不最新以及由于无法识别驱动器而阻止驱动器分区的系统事件消息。DQP 还会通知您驱动器固件不是最新的。
 
-* *最佳实践：*最佳实践是在热添加磁盘架前后运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^] 。
+* * Active IQ Config Advisor：*最佳实践是在热添加磁盘架前后运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
 +
 在热添加磁盘架之前运行Active IQ Config Advisor可提供现有磁盘架以太网(ENET)连接的快照、验证NVMe磁盘架模块(NSM)固件版本、并允许您验证HA对中已在使用的磁盘架ID。
 
 +
 Running Active IQ Config Advisor after hot-adding a shelf allows you to verify shelves are cabled correctly and that shelf IDs are unique within the HA pair.
 
-* *最佳实践：*最佳实践是在添加新磁盘架之前、在存储系统上安装和的最新版本 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NVMe磁盘架模块(NSM)固件"^] https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["驱动器固件"^] 。
+* *NSM固件：*最佳实践是、在添加新磁盘架之前、请在存储系统上安装最新版本的 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NVMe磁盘架模块(NSM)固件"^]和 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["驱动器固件"^]。
 +
 
 NOTE: 请勿将固件还原到不支持您的磁盘架及其组件的版本。

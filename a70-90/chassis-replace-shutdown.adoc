@@ -2,7 +2,7 @@
 permalink: a70-90/chassis-replace-shutdown.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, shutdown the controllers 
-summary: 如果需要更换机箱、请关闭AFF A70或AFF A90存储系统中的控制器。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。 
+summary: 如果需要更换机箱、请关闭AFF A70或AFF A90存储系统中的控制器。安全地关闭控制器以防止数据丢失并确保系统稳定性至关重要。 
 ---
 = 关闭控制器- AFF A70和AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果需要更换机箱、请关闭AFF A70或AFF A90存储系统中的
 
 
 [role="lead"]
-如果需要更换机箱、请关闭AFF A70或AFF A90存储系统中的控制器。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。
+如果需要更换机箱、请关闭AFF A70或AFF A90存储系统中的控制器。安全地关闭控制器以防止数据丢失并确保系统稳定性至关重要。
 
 此过程适用于具有双节点配置的系统。有关在维护集群时正常关闭的详细信息，请参见 https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["正常关闭和启动存储系统解决方案指南—NetApp知识库"]。
 

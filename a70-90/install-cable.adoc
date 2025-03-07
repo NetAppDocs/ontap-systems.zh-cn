@@ -2,7 +2,7 @@
 permalink: a70-90/install-cable.html 
 sidebar: sidebar 
 keywords: aff a70, a90, prepare installation 
-summary: 'Management network ports on the controllers are connected to switches.The HA interconnect and cluster interconnect ports are cabled on both controllers.控制器模块连接到外部存储(如果已订购)。' 
+summary: 为AFF A70或AFF A90存储系统安装机架硬件后、请安装控制器的网络缆线、并在控制器和存储架之间连接缆线。 
 ---
 = 为硬件布线- AFF A70和AFF A90
 :allow-uri-read: 

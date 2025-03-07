@@ -54,7 +54,7 @@ link:fan-replace.html["风扇"]
 
 
  a| 
-link:caching-module-hot-swap.html["FlashCache"]
+link:caching-module-hot-swap.html["Flash Cache"]
  a| 
 Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。
 
