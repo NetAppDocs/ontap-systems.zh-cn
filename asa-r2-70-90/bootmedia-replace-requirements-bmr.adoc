@@ -2,16 +2,18 @@
 permalink: asa-r2-70-90/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a70, a90, replace the boot media 
-summary: 了解更换启动介质的要求。 
+summary: 在更换ASA A70或A90系统中的启动介质之前、请确保满足成功更换的必要要求。 
 ---
-= 启动介质更换要求- ASA A70和ASA A90
+= 更换启动介质的要求- ASA A70和ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在更换启动介质之前、请确保查看以下要求。
+在更换ASA A70或ASA A90系统中的启动介质之前、请确保满足成功更换的必要要求。这包括验证您是否具有正确的替代启动介质、确认控制器上没有有故障的集群端口、以及确定是否已启用板载密钥管理器(OKM)或外部密钥管理器(EKM)。
+
+查看以下要求。
 
 * 您必须将故障启动介质更换为从NetApp收到的替代启动介质。
 * 受损控制器上不得存在任何故障集群端口。
@@ -34,4 +36,4 @@ summary: 了解更换启动介质的要求。
 
 
 .下一步行动
-查看引导介质要求后，您可以link:bootmedia-shutdown-bmr.html["关闭受损控制器"]。
+查看引导介质要求后，您可以link:bootmedia-shutdown-bmr.html["关闭控制器"]。

@@ -2,7 +2,7 @@
 permalink: a1k/rtc-battery-replace.html 
 sidebar: sidebar 
 keywords: aff a1k, replace the real-time clock battery 
-summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。 
+summary: '更换AFF A1K系统中的实时时钟(RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。' 
 ---
 = 更换实时时钟电池- AFF A1K
 :allow-uri-read: 
@@ -11,10 +11,11 @@ summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ，
 
 
 [role="lead"]
-您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。
+更换AFF A1K系统中的实时时钟(RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。
 
-* 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。
-* 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+.开始之前
+* 请注意、您可以对系统支持的所有ONTAP版本使用此过程。
+* 确保系统中的所有其他组件均正常运行；否则，您必须联系技术支持。
 
 
 

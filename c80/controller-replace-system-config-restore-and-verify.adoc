@@ -61,3 +61,6 @@ ha-state 的值可以是以下值之一：
 
 . 退出维护模式： `halt`。
 
+
+.下一步是什么？
+恢复并验证AFF C80系统的系统配置后，您需要link:controller-replace-recable-reassign-disks.html["交还控制器"]。

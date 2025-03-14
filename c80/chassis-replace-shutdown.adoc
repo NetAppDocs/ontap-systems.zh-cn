@@ -66,3 +66,6 @@ NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `s
 
 . 等待每个控制器暂停、然后显示加载程序提示符。
 
+
+.下一步是什么？
+关闭控制器后，您需要link:chassis-replace-move-hardware.html["更换机箱"]。

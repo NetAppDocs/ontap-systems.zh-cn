@@ -4,16 +4,14 @@ sidebar: sidebar
 keywords: c80, pre-shutdown checks for onboard encryption keys 
 summary: '要确保AFF C80存储系统上的数据安全、您需要验证加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。' 
 ---
-= 检查加密密钥支持和状态- AFF C80
+= 检查启动介质上的加密密钥支持和状态- AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要确保AFF C80存储系统上的数据安全、您需要验证加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。
-
-在关闭受损控制器之前、请检查您的ONTAP版本是否支持NetApp卷加密(NVE)以及是否已正确配置密钥管理系统。
+要确保AFF C80存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。
 
 
 
@@ -194,3 +192,6 @@ You'll need it in disaster scenarios where you might need to manually recover OK
 --
 ====
 
+
+.下一步是什么？
+检查启动介质上的加密密钥支持和状态后，您需要link:bootmedia-shutdown.html["关闭控制器"]。

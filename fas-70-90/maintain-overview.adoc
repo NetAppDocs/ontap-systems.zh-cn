@@ -2,18 +2,18 @@
 permalink: fas-70-90/maintain-overview.html 
 sidebar: sidebar 
 keywords: fas70, fas90 maintenance, maintenance, repairing a1k, repairing fas70, fas90, replace fas70, fas90 components, replace fas70, fas90 components 
-summary: 维护 FAS70 和 FAS90 硬件 
+summary: 维护FAS70或FAS90存储系统的硬件、以确保长期可靠性和最佳性能。执行定期维护任务、例如更换故障组件、因为这有助于防止停机和数据丢失。 
 ---
-= 维护FAS70和FAS90硬件
+= 维护过程概述—FAS70和FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可能需要对硬件执行维护过程。本节将介绍维护FAS70和FAS90系统组件的特定过程。
+维护FAS70或FAS90存储系统的硬件、以确保长期可靠性和最佳性能。执行定期维护任务、例如更换故障组件、因为这有助于防止停机和数据丢失。
 
-本节中的过程假设FAS70和FAS90系统已部署为ONTAP环境中的存储节点。
+维护过程假定FAS70或FAS90系统已部署为ONTAP环境中的存储节点。
 
 
 

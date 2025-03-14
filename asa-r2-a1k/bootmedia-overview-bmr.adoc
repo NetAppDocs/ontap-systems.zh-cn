@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/bootmedia-overview-bmr.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, overview, the boot media 
-summary: 了解更换启动介质的自动化方法。 
+summary: 启动介质恢复会使用配对节点中的启动映像、并自动运行相应的启动菜单选项、以便在替代启动介质上安装启动映像。 
 ---
 = 启动介质恢复概述- ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 了解更换启动介质的自动化方法。
 
 
 [role="lead"]
-启动介质恢复会使用配对节点中的启动映像、并自动运行相应的启动菜单选项、以便在替代启动介质上安装启动映像。
+ASA A1K存储系统的启动介质恢复将使用配对节点的启动映像、并自动运行相应的启动菜单选项、以便在替代启动介质上安装启动映像。
 
 如果遇到启动错误消息、则需要更换启动介质并从配对节点还原ONTAP映像。
 

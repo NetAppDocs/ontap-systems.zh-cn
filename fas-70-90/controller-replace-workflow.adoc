@@ -2,16 +2,16 @@
 permalink: fas-70-90/controller-replace-workflow.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace the controller 
-summary: 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。 
+summary: 开始更换FAS70或FAS90存储系统中的控制器、方法是关闭受损控制器、卸下并更换控制器、重新配置系统设置以及验证系统运行情况。 
 ---
-= 控制器更换工作流—FAS70和FAS90
+= 快速开始更换控制器—FAS70和FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-按照以下工作流步骤更换控制器模块。
+开始更换FAS70或FAS90存储系统中的控制器、方法是关闭受损控制器、卸下并更换控制器、还原系统配置以及验证系统运行情况。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:controller-replace-requirements.html["查看控制器更换要求"]
 [role="quick-margin-para"]

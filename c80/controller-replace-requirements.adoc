@@ -2,16 +2,16 @@
 permalink: c80/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff a1k, prerequisite, replace the controller module 
-summary: 在更换AFF C80系统中的机箱之前、请确保满足成功更换的必要要求。这包括拥有正确的更换机箱、备份系统配置以及访问任何所需的工具和固件。 
+summary: 在更换AFF C80系统中的控制器之前、请确保满足成功更换控制器所需的要求。这包括拥有正确的替代控制器、备份系统配置以及访问任何所需的工具和固件。 
 ---
-= 控制器更换要求- AFF C80
+= 更换控制器的要求- AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在更换AFF C80系统中的机箱之前、请确保满足成功更换的必要要求。这包括拥有正确的更换机箱、备份系统配置以及访问任何所需的工具和固件。
+在更换AFF C80系统中的控制器之前、请确保满足成功更换控制器所需的要求。这包括拥有正确的替代控制器、备份系统配置以及访问任何所需的工具和固件。
 
 查看更换控制器模块的要求。
 
@@ -35,3 +35,6 @@ summary: 在更换AFF C80系统中的机箱之前、请确保满足成功更换�
 此操作将为您提供操作步骤的记录，以便您可以对更换过程中可能遇到的任何问题进行故障排除。
 
 
+
+.下一步是什么？
+查看更换AFF C80控制器的要求后，您需要link:controller-replace-shutdown.html["关闭控制器"]。

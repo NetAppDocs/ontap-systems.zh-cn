@@ -2,13 +2,16 @@
 permalink: asa-r2-70-90/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, how to recable the system, boot the system 
-summary: 您必须重新设置存储的可重新启动控制器。 
+summary: 将存储资源的控制权归还给替代控制器、以便ASA A70或ASA A90系统可以恢复正常运行。 
 ---
 = 交还控制器- ASA A70和ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
+
+[role="lead"]
+将存储资源的控制权归还给替代控制器、以便ASA A70或ASA A90系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。
 
 [role="tabbed-block"]
 ====

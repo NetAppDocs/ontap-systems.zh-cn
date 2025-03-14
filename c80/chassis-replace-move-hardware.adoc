@@ -2,7 +2,7 @@
 permalink: c80/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: c80, move hardware components, replace the chassis 
-summary: 如果硬件故障或升级需要更换AFF C80系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。 
+summary: '如果硬件故障需要更换AFF C80系统中的机箱。更换过程包括卸下电源设备(PSU)、卸下现有机箱、安装新机箱以及重新安装机箱组件。' 
 ---
 = 更换机箱- AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果硬件故障或升级需要更换AFF C80系统中的机箱。此�
 
 
 [role="lead"]
-如果硬件故障或升级需要更换AFF C80系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。
+如果硬件故障需要更换AFF C80系统中的机箱。更换过程包括卸下电源设备(PSU)、卸下现有机箱、安装新机箱以及重新安装机箱组件。
 
 
 
@@ -211,3 +211,6 @@ NOTE: 为了避免损坏内部连接器、请勿在将PSU滑入系统时用力�
 安装PSU并恢复供电后、控制器模块将立即启动。
 
 
+
+.下一步是什么？
+在更换受损AFF C80机箱并将组件重新安装到其中后，您需要link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]。

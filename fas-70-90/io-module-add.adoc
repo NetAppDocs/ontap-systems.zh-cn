@@ -2,7 +2,7 @@
 permalink: fas-70-90/io-module-add.html 
 sidebar: sidebar 
 keywords: fas70, fas90, add I/O module 
-summary: 要更换PCIe卡、您必须先断开卡上的电缆连接、从卡上卸下SFP和QSFP模块、然后重新安装SFP和QSFP模块、然后再为卡布线。 
+summary: 向FAS70和FAS90系统添加I/O模块、以增强网络连接并扩展系统处理数据流量的能力。 
 ---
 = 添加I/O模块—FAS70和FAS90
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 要更换PCIe卡、您必须先断开卡上的电缆连接、从卡上�
 
 
 [role="lead"]
+向FAS70和FAS90系统添加I/O模块、以增强网络连接并扩展系统处理数据流量的能力。
+
 如果存在空插槽或所有插槽均已完全填充、则可以向FAS70和FAS90存储系统添加I/O模块。
 
 

@@ -2,16 +2,16 @@
 permalink: a1k/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a1k, move the controller module hardware 
-summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 
+summary: 如果因硬件故障而需要更换AFF A1K系统中的控制器。更换过程包括移除受损控制器、将组件移至更换控制器、安装更换控制器并重新启动它。 
 ---
-= 更换控制器模块- AFF A1K
+= 更换控制器- AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换控制器、您必须卸下受损控制器、将FRU组件移至更换用的控制器模块、在机箱中安装更换用的控制器模块、然后将系统启动至维护模式。
+如果因硬件故障而需要更换AFF A1K系统中的控制器。更换过程包括移除受损控制器、将组件移至更换控制器、安装更换控制器并重新启动它。
 
 
 
@@ -222,3 +222,6 @@ NOTE: 显示的时间为本地时间、并非始终为GMT、并以24小时模式
 如果您删除了收发器(QSFP或SFP)、请记得在使用光缆时重新安装它们。
 
 
+
+.下一步是什么？
+更换受损AFF A1K控制器后，您需要link:controller-replace-system-config-restore-and-verify.html["还原系统配置"]。

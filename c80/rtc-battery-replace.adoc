@@ -2,7 +2,7 @@
 permalink: c80/rtc-battery-replace.html 
 sidebar: sidebar 
 keywords: c80, replace the real-time clock battery 
-summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。 
+summary: '更换AFF C80系统中的实时时钟(RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。' 
 ---
 = 更换实时时钟电池- AFF C80
 :allow-uri-read: 
@@ -10,8 +10,10 @@ summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ，
 :imagesdir: ../media/
 
 
-.开始之前
 [role="lead"]
+更换AFF C80系统中的实时时钟(RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。
+
+.开始之前
 * 请注意、您可以对系统支持的所有ONTAP版本使用此过程。
 * 确保系统中的所有其他组件均正常运行；否则，您必须联系技术支持。
 

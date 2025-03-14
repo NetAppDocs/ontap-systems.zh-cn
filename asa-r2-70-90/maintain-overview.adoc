@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: asa r2 a70 asa r2 a90 maintenance, maintenance, repairing asa r2 a70 asa r2 a90, repairing a70 asa r2 a90, replace a70 asa r2 a90 components 
 summary: 维护ASA R2 A70、ASA R2 A90硬件 
 ---
-= 维护ASA A70和ASA A90硬件
+= 维护过程概述—ASA A70和ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可能需要对硬件执行维护过程。本节将介绍维护ASA A70和ASA A90系统组件的特定过程。
+维护ASA A70和ASA A90存储系统的硬件、以确保长期可靠性和最佳性能。执行定期维护任务、例如更换故障组件、因为这有助于防止停机和数据丢失。
 
-本节中的过程假设ASA A70和ASA A90系统已部署为ONTAP环境中的存储节点。
+维护过程假定ASA A70和ASA A90系统已部署为ONTAP环境中的存储节点。
 
 
 

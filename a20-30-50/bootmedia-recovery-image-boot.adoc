@@ -10,8 +10,8 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 :imagesdir: ../media/
 
 
-[role="lead"]
-您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
+[role="lead lead"]
+在AFF A20、AFF A30或AFF A50系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。
 
 .步骤
 . 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`

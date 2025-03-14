@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-在关闭受损控制器之前、请检查您的ONTAP版本是否支持NetApp卷加密(NVE)以及是否已正确配置密钥管理系统。
-
 
 
 == 第1步：检查您的ONTAP版本是否支持NetApp卷加密

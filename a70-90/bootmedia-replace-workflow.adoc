@@ -11,19 +11,19 @@ summary: 开始更换AFF A70或AFF A90存储系统中的启动介质、方法是
 
 
 [role="lead"]
-开始更换AFF A70或AFF A90存储系统中的启动介质、方法是准备替代介质、将其安装在系统中、还原启动映像并验证系统功能。
+通过查看更换要求、检查加密状态、关闭控制器、更换启动介质、启动恢复映像、还原加密以及验证系统功能、开始更换AFF A70或AFF A90存储系统中的启动介质。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:bootmedia-replace-requirements.html["查看启动介质要求"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:bootmedia-replace-requirements.html["查看更换启动介质的要求"]
 [role="quick-margin-para"]
 查看更换启动介质的要求。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:bootmedia-encryption-preshutdown-checks.html["检查加密密钥支持和状态"]
 [role="quick-margin-para"]
-验证系统是否已启用安全密钥管理器或已加密磁盘。
+确定系统是启用了安全密钥管理器还是对磁盘进行了加密。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:bootmedia-shutdown.html["Shut down the impaired controller"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:bootmedia-shutdown.html["关闭控制器"]
 [role="quick-margin-para"]
-关闭或接管受损控制器、以使运行正常的控制器继续从受损控制器的存储提供数据。
+需要更换启动介质时、关闭存储系统中的控制器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:bootmedia-replace.html["更换启动介质"]
 [role="quick-margin-para"]

@@ -15,6 +15,7 @@
 ** 如果未启用 AutoSupport ，请调用 https://mysupport.netapp.com["NetApp 支持"] 注册序列号。
 
 
+. 检查集群的运行状况。有关详细信息、请参见 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何在ONTAP 中使用脚本执行集群运行状况检查"^] 知识库文章。
 . 如果已触发AutoSupport维护窗口、请使用结束此窗口 `system node autosupport invoke -node * -type all -message MAINT=END` 命令：
 . 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
 

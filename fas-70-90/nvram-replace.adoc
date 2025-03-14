@@ -2,7 +2,7 @@
 permalink: fas-70-90/nvram-replace.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace an nvdimm 
-summary: 'NVRAM模块由NVRAM12和DIMM以及每个NVRAM模块最多两个NVMe SSD闪存模块(Flash Cache或缓存模块)组成。' 
+summary: 当非易失性内存出现故障或需要升级时、请更换FAS70或FAS90系统中的NVRAM。 
 ---
 = 更换NVRAM - FAS70和FAS90
 :allow-uri-read: 
@@ -11,11 +11,14 @@ summary: 'NVRAM模块由NVRAM12和DIMM以及每个NVRAM模块最多两个NVMe SS
 
 
 [role="lead"]
-NVRAM模块由NVRAM12硬件和现场可更换DIMM组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.要更换发生故障的NVRAM模块、您必须从机柜中卸下该模块、将DIMM移至更换模块、然后将更换用的NVRAM模块安装到机柜中。
+当非易失性内存出现故障或需要升级时、请更换FAS70或FAS90系统中的NVRAM。更换过程包括关闭受损控制器、更换NVRAM模块或NVRAM DIMM、重新分配磁盘以及将故障部件返回给NetApp。
 
-系统中的所有其它组件必须正常工作；如果不能正常工作，则必须与联系 https://support.netapp.com["NetApp 支持"]。
+NVRAM模块由NVRAM12硬件和现场可更换DIMM组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.
 
-您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+.开始之前
+* 确保您已准备好更换部件。您必须使用从NetApp收到的更换组件来更换故障组件。
+* 确保存储系统中的所有其他组件均正常运行；如果未正常运行，请联系 https://support.netapp.com["NetApp 支持"]。
+
 
 
 
@@ -178,7 +181,7 @@ DIMM锁定卡舌
 
 
 
-== 第 3 步：更换 NVRAM DIMM
+== 步骤3：更换NVRAM DIMM
 
 要更换NVRAM模块中的NVRAM DIMM、必须先卸下NVRAM模块、然后再更换目标DIMM。
 

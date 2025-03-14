@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, how to recable the system, how to reassign disks 
-summary: 重新启动系统。 
+summary: 将存储资源的控制权归还给替代控制器、以便ASA A1K系统可以恢复正常运行。 
 ---
 = 交还控制器- ASA A1K
 :allow-uri-read: 
@@ -11,18 +11,15 @@ summary: 重新启动系统。
 
 
 [role="lead"]
-验证存储和网络连接、然后交还控制器。
-
-
-
-== 交还控制器
-
-如果已启用、请重置加密并使控制器恢复正常运行。
+将存储资源的控制权归还给替代控制器、以便ASA A1K系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。
 
 [role="tabbed-block"]
 ====
 .无加密
 --
+通过交还存储使受损控制器恢复正常运行。
+
+.步骤
 . 在Loader提示符处，输入 `boot_ontap`。
 . 当控制台消息停止时、按<enter>。
 +
@@ -36,8 +33,11 @@ summary: 重新启动系统。
 
 
 --
-.板载加密(OKM)
+.OKM加密
 --
+重置板载加密并使控制器恢复正常运行。
+
+.步骤
 . 在Loader提示符处、输入：
 +
 `boot_ontap maint`
@@ -73,8 +73,11 @@ NOTE: 系统将提示您为此集群输入集群范围的OKM密码短语。
 
 
 --
-.外部密钥管理器(EKM)
+.EKM加密
 --
+重置加密并使控制器恢复正常运行。
+
+.步骤
 . 如果根卷已使用外部密钥管理器进行加密，并且控制台电缆已连接至替代节点，请输入并选择选项 `11`。 `boot_ontap menu`
 . 回答 `y`或 `n`以下问题：
 +
@@ -120,3 +123,5 @@ NOTE: 如有问题、请联系 https://support.netapp.com["NetApp 支持"]。
 
 --
 ====
+.下一步是什么？
+在将存储资源的所有权转移回替代控制器后、您需要执行相关link:controller-replace-restore-system-rma.html["完成控制器更换"]步骤。

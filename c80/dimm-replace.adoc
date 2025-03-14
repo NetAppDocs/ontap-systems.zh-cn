@@ -2,7 +2,7 @@
 permalink: c80/dimm-replace.html 
 sidebar: sidebar 
 keywords: c80, replace a dimm 
-summary: 如果检测到过多可更正或不可更正的错误、请更换AFF C80系统中的DIMM。这些问题通常由单个DIMM故障引起、可能会阻止存储系统启动ONTAP。 
+summary: 如果检测到可更正或不可更正的内存错误过多、请更换AFF C80系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。 
 ---
 = 更换DIMM - AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果检测到过多可更正或不可更正的错误、请更换AFF C
 
 
 [role="lead"]
-如果检测到过多可更正或不可更正的错误、请更换AFF C80系统中的DIMM。这些问题通常由单个DIMM故障引起、可能会阻止存储系统启动ONTAP。
+如果检测到可更正或不可更正的内存错误过多、请更换AFF C80系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。
 
 .开始之前
 * 确保系统中的所有其他组件均正常运行；否则，您必须联系技术支持。

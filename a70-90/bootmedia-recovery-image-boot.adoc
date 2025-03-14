@@ -2,7 +2,7 @@
 permalink: a70-90/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, boot the recovery image 
-summary: 如果AFF A70或AFF A90系统中的启动介质损坏、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。 
+summary: 在AFF A70或AFF A90系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。 
 ---
 = 启动恢复映像- AFF A70 and AFF A90
 :allow-uri-read: 
@@ -11,9 +11,7 @@ summary: 如果AFF A70或AFF A90系统中的启动介质损坏、您可以从USB
 
 
 [role="lead"]
-如果AFF A70或AFF A90系统中的启动介质损坏、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。
-
-您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
+在AFF A70或AFF A90系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。
 
 .步骤
 . 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`

@@ -2,7 +2,7 @@
 permalink: a1k/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
 keywords: aff a1k, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
+summary: 确认控制器的HA配置在AFF A1K存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。 
 ---
 = 还原并验证系统配置- AFF A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 完成硬件更换并启动至维护模式后，您可以验证更换�
 
 
 [role="lead"]
-完成硬件更换后、您可以验证替代控制器的低级系统配置、并根据需要重新配置系统设置。
+确认控制器的HA配置在AFF A1K存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。
 
 
 
@@ -61,3 +61,6 @@ ha-state 的值可以是以下值之一：
 
 . 退出维护模式： `halt`。
 
+
+.下一步是什么？
+恢复并验证AFF A1K系统的系统配置后，您需要link:controller-replace-recable-reassign-disks.html["交还控制器"]。

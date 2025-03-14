@@ -2,7 +2,7 @@
 permalink: a1k/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: aff a1k, boot the recovery image 
-summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
+summary: 在AFF A1K系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。 
 ---
 = 启动恢复映像- AFF A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 
 
 [role="lead"]
-您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
+在AFF A1K系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。
 
 .步骤
 . 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`
@@ -65,3 +65,6 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 *注：*如果此过程失败，请联系 https://support.netapp.com["NetApp 支持"]。
 
 
+
+.下一步是什么？
+启动恢复映像后，您需要link:bootmedia-encryption-restore.html["恢复启动介质上的加密"]。

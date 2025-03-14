@@ -2,7 +2,7 @@
 permalink: a70-90/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, replace a dimm 
-summary: 如果检测到可更正或不可更正的内存错误过多、请更换AFF A70或AFF A90系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、然后重新安装控制器。 
+summary: 如果检测到可更正或不可更正的内存错误过多、请更换AFF A70或AFF A90系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。 
 ---
 = 将DIMM更换为可更正或不可更正的错误- AFF A70和AFF A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果检测到可更正或不可更正的内存错误过多、请更�
 
 
 [role="lead"]
-如果检测到可更正或不可更正的内存错误过多、请更换AFF A70或AFF A90系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、然后重新安装控制器。
+如果检测到可更正或不可更正的内存错误过多、请更换AFF A70或AFF A90系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。
 
 .开始之前
 * 确保系统中的所有其他组件均正常运行；否则，您必须联系技术支持。

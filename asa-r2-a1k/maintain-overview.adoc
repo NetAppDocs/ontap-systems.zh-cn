@@ -2,18 +2,18 @@
 permalink: asa-r2-a1k/maintain-overview.html 
 sidebar: sidebar 
 keywords: asa r2 a1k maintenance, maintenance, repairing a1k, repairing asa a1k, replace asa a1k components, replace asa a1k components 
-summary: 维护ASA R2 A1K硬件 
+summary: 维护ASA A1K存储系统的硬件、以确保长期可靠性和最佳性能。执行定期维护任务、例如更换故障组件、因为这有助于防止停机和数据丢失。 
 ---
-= 维护ASA A1K硬件
+= 维护程序概述- ASA A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可能需要对硬件执行维护过程。本节将介绍维护ASA A1K系统组件的特定过程。
+维护ASA A1K存储系统的硬件、以确保长期可靠性和最佳性能。执行定期维护任务、例如更换故障组件、因为这有助于防止停机和数据丢失。
 
-本节中的过程假定A1K系统已部署为ONTAP环境中的存储节点。
+维护过程假定ASA A1K系统已部署为ONTAP环境中的存储节点。
 
 
 

@@ -32,7 +32,7 @@ entries:
     - title: 启动恢复映像
       url: "/a900/bootmedia_recovery_image.html"
     - title: 恢复加密
-      url: "/a900/bootmedia_encryption_restore.html"
+      url: "/a900/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/a900/bootmedia_complete_rma.html"
   - title: 机箱

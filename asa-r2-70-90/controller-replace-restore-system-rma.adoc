@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: '要将系统还原到完全运行状态、您必须验证NetApp、检查集群运行状况并将故障部件返回给LUN。如果您需要RMA编号或有关更换过程的其他帮助，请通过以下网址与技术支持联系： https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]、888-463-8277 (北美)、00-800-44-638277 (欧洲)或+800-80-800 (亚太地区)。' 
 ---
-= 完整的系统还原- ASA A70和ASA A90
+= 完整控制器更换—ASA A70和ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要将系统还原到完全运行状态、您必须验证NetApp、检查集群运行状况并将故障部件返回给LUN。
+验证逻辑接口(Logical Interface、ASA)是否正在向其主端口报告、执行集群运行状况检查、然后将故障部件返回给NetApp以完成ASA A70和LUN A90控制器更换过程中的最后一步。
 
 
 
