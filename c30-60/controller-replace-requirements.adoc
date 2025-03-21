@@ -2,15 +2,17 @@
 permalink: c30-60/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, prerequisite, replace the controller module 
-summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。 
+summary: 在更换AFF C30或AFF C60系统中的控制器之前、请确保满足成功更换控制器所需的要求。这包括验证系统中的所有其他组件是否正常运行、验证是否具有正确的替代控制器以及将控制器的控制台输出保存到文本日志文件。 
 ---
-= 控制器更换要求- AFF C30和AFF C60
+= 更换控制器的要求- AFF C30和AFF C60
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+在更换AFF C30或AFF C60系统中的控制器之前、请确保满足成功更换控制器所需的要求。这包括验证系统中的所有其他组件是否正常运行、验证是否具有正确的替代控制器以及将控制器的控制台输出保存到文本日志文件。
+
 您必须查看控制器更换过程的要求和注意事项。
 
 
@@ -46,3 +48,6 @@ summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP �
 您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
 
 
+
+.下一步是什么？
+查看更换AFF C30或AFF C60控制器的要求后，您需要link:controller-replace-shutdown.html["关闭受损控制器"]。

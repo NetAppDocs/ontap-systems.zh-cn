@@ -2,7 +2,7 @@
 permalink: c30-60/power-supply-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace a power supply 
-summary: 更换电源包括断开目标电源与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。 
+summary: 如果AFF C30或AFF C60系统中的交流或直流电源设备发生故障或出现故障、请更换该设备、以确保系统继续获得稳定运行所需的电源。 
 ---
 = 更换电源- AFF C30和AFF C60
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 更换电源包括断开目标电源与电源的连接，拔下电源�
 
 
 [role="lead"]
+AFF C30或AFF C60系统中的交流或直流电源设备(PSU)出现故障或出现故障时、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开目标PSU与电源的连接、拔下电源线、卸下故障PSU并安装更换PSU、然后将其重新连接到电源。
+
 更换电源设备(PSU)包括断开故障PSU与电源的连接、拔下电源线、卸下故障PSU并安装更换PSU、然后将其重新连接到电源。
 
 .关于此任务

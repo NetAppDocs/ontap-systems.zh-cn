@@ -2,7 +2,7 @@
 permalink: c30-60/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace a dimm 
-summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。 
+summary: '如果系统注册的可更正错误更正代码(ECC)数量不断增加、请更换控制器模块中的DIMM；否则会导致系统崩溃。' 
 ---
 = 更换DIMM - AFF C30和AFF C60
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断
 
 
 [role="lead"]
+如果检测到可更正或不可更正的内存错误过多、请更换AFF C30或AFF C60系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。
+
 如果存储系统遇到错误(例如、基于运行状况监控器警报的CECC (可更正错误更正代码)错误过多或不可更正的ECC错误)、通常是由于单个DIMM故障导致存储系统无法启动ONTAP而导致的、则必须更换控制器中的DIMM。
 
 .开始之前

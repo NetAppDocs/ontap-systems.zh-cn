@@ -2,7 +2,7 @@
 permalink: c30-60/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace the boot media 
-summary: 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。 
+summary: 通过查看更换要求、检查加密状态、关闭控制器、更换启动介质、启动恢复映像、还原加密以及验证系统功能、开始更换AFF C30或AFF C60存储系统中的启动介质。 
 ---
 = 启动介质更换工作流- AFF C30和AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您必须将故障组件更换为从提供商处收到的替代 FRU 组
 
 
 [role="lead"]
-按照以下工作流步骤更换启动介质。
+通过查看更换要求、检查加密状态、关闭控制器、更换启动介质、启动恢复映像、还原加密以及验证系统功能、开始更换AFF C30或AFF C60存储系统中的启动介质。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:bootmedia-replace-requirements.html["查看启动介质要求"]
 [role="quick-margin-para"]

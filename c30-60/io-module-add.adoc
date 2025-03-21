@@ -2,7 +2,7 @@
 permalink: c30-60/io-module-add.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, add I/O module 
-summary: 要更换I/O模块、您必须断开模块的缆线、从模块中卸下SFP和QSFP模块、卸下模块、安装更换模块、重新安装SFP和QSFP模块、然后为I/O模块布线。 
+summary: 在AFF C30或AFF C60系统中添加I/O模块、以增强网络连接并扩展系统处理数据流量的能力。 
 ---
 = 添加I/O模块- AFF C30和AFF C60
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 要更换I/O模块、您必须断开模块的缆线、从模块中卸�
 
 
 [role="lead"]
+在AFF C30或AFF C60系统中添加I/O模块、以增强网络连接并扩展系统处理数据流量的能力。
+
 如果存在可用插槽或所有插槽均已完全填充、则可以向AFF C30和AFF C60存储系统添加I/O模块。
 
 .关于此任务

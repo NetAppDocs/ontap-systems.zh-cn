@@ -11,7 +11,7 @@ summary: 要将系统还原到完全运行状态、您必须验证NetApp、检�
 
 
 [role="lead"]
-还原NetApp存储加密配置(如有必要)、为替代控制器安装许可证、验证逻辑接口(Logical Interface、Logical Interface、lIF)是否向其主端口报告、执行集群运行状况检查、注册替代控制器的序列号、然后将故障部件返回给NetApp以完成AFF C30和C60控制器更换过程中的最后一步。
+要完成AFF C30或AFF C60系统的控制器更换、请先还原NetApp存储加密配置(如果需要)、并在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。
 
 
 

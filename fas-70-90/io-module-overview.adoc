@@ -24,3 +24,8 @@ FAS70或FAS90系统可以灵活地扩展或更换I/O模块、以增强网络连�
 更换发生故障的I/O模块可以将系统还原到其最佳运行状态。
 
 
+
+.I/O插槽编号
+FAS70和FAS90控制器上的I/O插槽编号为1到11、如下图所示。
+
+image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[FAS70和FAS90控制器上的插槽编号]

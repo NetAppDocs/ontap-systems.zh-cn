@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/controller-replace-shutdown-nomcc.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, shut down the impaired controller 
-summary: 如果ASA A1K存储系统中的控制器受损、请将其关闭。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。 
+summary: 在更换控制器时、关闭ASA A1K存储系统中的控制器、以防止数据丢失并确保系统稳定性。 
 ---
 = 关闭受损控制器- ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果ASA A1K存储系统中的控制器受损、请将其关闭。在�
 
 
 [role="lead"]
-如果ASA A1K存储系统中的控制器受损、请将其关闭。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。
+在更换控制器时、关闭ASA A1K存储系统中的控制器、以防止数据丢失并确保系统稳定性。
 
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 

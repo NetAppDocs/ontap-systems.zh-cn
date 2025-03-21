@@ -2,7 +2,7 @@
 permalink: fas-70-90/controller-replace-shutdown.html 
 sidebar: sidebar 
 keywords: fas70, fas90, shut down the impaired controller 
-summary: 如果FAS70或FAS90存储系统中的控制器受损、请将其关闭。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。 
+summary: 在更换控制器时、关闭FAS70或FAS90存储系统中的控制器、以防止数据丢失并确保系统稳定性。 
 ---
 = Shut down the impaired controller - FAS70 and FAS90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果FAS70或FAS90存储系统中的控制器受损、请将其关闭�
 
 
 [role="lead"]
-如果FAS70或FAS90存储系统中的控制器受损、请将其关闭。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。
+在更换控制器时、关闭FAS70或FAS90存储系统中的控制器、以防止数据丢失并确保系统稳定性。
 
 [role="tabbed-block"]
 ====

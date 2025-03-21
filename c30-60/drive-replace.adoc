@@ -2,7 +2,7 @@
 permalink: c30-60/drive-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace the drives 
-summary: 您可以在执行I/O期间无故障更换发生故障的驱动器SSD驱动器。 
+summary: 如果驱动器出现故障或需要升级、请更换AFF C30或AFF C60系统中的驱动器。更换过程包括确定故障驱动器、安全地将其卸下以及安装新驱动器、以确保持续访问数据和提高系统性能。 
 ---
 = 更换驱动器- AFF C30和AFF C60
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 您可以在执行I/O期间无故障更换发生故障的驱动器SSD�
 
 
 [role="lead"]
+如果驱动器出现故障或需要升级、请更换AFF C30或AFF C60系统中的驱动器。更换过程包括确定故障驱动器、安全地将其卸下以及安装新驱动器、以确保持续访问数据和提高系统性能。
+
 You can replace a failed drive nondisruptively while I/O is in progress.
 
 .开始之前

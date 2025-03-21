@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/controller-replace-requirements.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, prerequisite, replace the controller module 
-summary: 在更换ASA A1K系统中的控制器之前、请确保满足成功更换所需的要求。这包括拥有正确的替代控制器、备份系统配置以及访问任何所需的工具和固件。 
+summary: 在更换ASA A1K系统中的控制器之前、请确保满足成功更换控制器所需的要求。这包括验证系统中的所有其他组件是否正常运行、验证是否具有正确的替代控制器以及将控制器的控制台输出保存到文本日志文件。 
 ---
 = 更换控制器的要求- ASA A1K
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在更换ASA A1K系统中的控制器之前、请确保满足成功更�
 
 
 [role="lead"]
-在更换ASA A1K系统中的控制器之前、请确保满足成功更换所需的要求。这包括拥有正确的替代控制器、备份系统配置以及访问任何所需的工具和固件。
+在更换ASA A1K系统中的控制器之前、请确保满足成功更换控制器所需的要求。这包括验证系统中的所有其他组件是否正常运行、验证是否具有正确的替代控制器以及将控制器的控制台输出保存到文本日志文件。
 
 查看要求。
 

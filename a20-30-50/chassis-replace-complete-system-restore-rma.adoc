@@ -2,7 +2,7 @@
 permalink: a20-30-50/chassis-replace-complete-system-restore-rma.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, verify and set HA state, complete the replacement process 
-summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。 
+summary: 重新启动控制器、验证系统运行状况、并将故障部件返回给NetApp以完成AFF A20、AFF A30和AFF A50机箱更换过程中的最后一步。 
 ---
 = 完整机箱更换- AFF A20、AFF A30和AFF A50
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故
 
 
 [role="lead"]
+验证机箱的HA状态、然后将故障部件返回给NetApp以完成AFF A20、AFF A30和AFF A50机箱更换过程中的最后一步。
+
 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。
 
 

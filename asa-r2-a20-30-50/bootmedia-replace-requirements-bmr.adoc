@@ -1,8 +1,8 @@
 ---
 permalink: asa-r2-a20-30-50/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
-keywords: aff a20, aff a30, aff a50, replace the boot media 
-summary: 了解更换启动介质的要求。 
+keywords: asa a20, asa a30, asa a50, replace the boot media 
+summary: '在更换ASA A20、ASA A30或ASA A50存储系统中的启动介质之前、请确保满足成功更换所需的要求和注意事项。这包括验证您是否具有正确的替代启动介质、确认受损控制器上的e0S (e0M扳手)端口未出现故障、以及确定是否已启用板载密钥管理器(Onboard Key Manager、OKM)或外部密钥管理器(External Key Manager、EKM)。' 
 ---
 = 要求- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 了解更换启动介质的要求。
 
 
 [role="lead"]
-在更换启动介质之前、请务必查看以下要求和注意事项。
+在更换ASA A20、ASA A30或ASA A50存储系统中的启动介质之前、请确保满足成功更换所需的要求和注意事项。这包括验证您是否具有正确的替代启动介质、确认受损控制器上的e0S (e0M扳手)端口未出现故障、以及确定是否已启用板载密钥管理器(Onboard Key Manager、OKM)或外部密钥管理器(External Key Manager、EKM)。
 
 
 
@@ -60,4 +60,50 @@ e0S端口用于自动启动恢复。
 
 
 .下一步行动
-查看引导介质要求后，link:bootmedia-shutdown-bmr.html["关闭受损控制器"]。
+查看引导介质要求后，您可以link:bootmedia-shutdown-bmr.html["关闭受损控制器"]。
+
+
+
+== 要求
+
+* 您必须使用与从NetApp收到的容量相同的替代FRU组件来更换故障组件。
+* 受损控制器上的e0S (e0M扳手)端口不能出现故障。
++
+e0S端口用于自动启动恢复。
+
+* 确定是否使用以下方法之一配置板载密钥管理器(OKM)或外部密钥管理器(EKM)：
++
+** 您可以询问系统管理员是否已启用OKM或EKM。
+** 要检查是否已启用OKM，可以使用 `security key-manager onboard show`。
+** 要检查是否已启用EMM，您可以使用 `security key-manager external show`。
+
+
+* 对于OKM、您需要OKM密码短语文件内容。
+* 对于EMM、您需要配对节点上以下文件的副本：
++
+** /cfcard/kmip/servers.cfg文件。
+** /cfcard/kmip/certs/client.crt文件。
+** /cfcard/kmip/certs client.key文件。
+** /cfcard/kmip/certs或CA.prom文件。
+
+
+
+
+
+
+== 注意事项
+
+* 请务必在正确的控制器上应用以下步骤中的命令：
++
+** 受损 _ 控制器是要在其中执行维护的控制器。
+** _health_ 控制器是受损控制器的 HA 配对控制器。
+
+
+* 如果需要、您可以打开平台机箱位置(蓝色) LED、以帮助找到受影响的平台。使用SSH登录到BMC并输入 `system location-led _on_`命令。
++
+平台机箱有三个定位LED：操作员显示面板上一个、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.
+
++
+您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
+
+

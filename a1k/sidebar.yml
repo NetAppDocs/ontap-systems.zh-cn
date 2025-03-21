@@ -27,7 +27,7 @@ entries:
   - title: 启动介质
     pdf-filename: AFF A1K启动介质
     entries:
-    - title: 快速启动以更换启动介质
+    - title: 启动介质更换工作流
       url: "/a1k/bootmedia-replace-workflow.html"
     - title: 查看要求
       url: "/a1k/bootmedia-replace-requirements.html"
@@ -46,7 +46,7 @@ entries:
   - title: 控制器
     pdf-filename: AFF A1K控制器模块
     entries:
-    - title: 快速开始更换控制器
+    - title: 控制器更换工作流
       url: "/a1k/controller-replace-workflow.html"
     - title: 查看要求
       url: "/a1k/controller-replace-requirements.html"

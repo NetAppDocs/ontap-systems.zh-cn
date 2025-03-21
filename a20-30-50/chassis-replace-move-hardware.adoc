@@ -2,7 +2,7 @@
 permalink: a20-30-50/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, move hardware components, replace the chassis 
-summary: 将挡板、驱动器和控制器模块从受损机箱移至新机箱、然后将受损机箱从设备机架或系统机柜更换为与受损机箱型号相同的新机箱。 
+summary: '如果硬件故障需要更换AFF A20、AFF A30或AFF A50系统中的机箱。更换过程包括卸下控制器和电源设备(PSU)、从受损机箱中卸下驱动器、安装更换机箱以及重新安装机箱组件。' 
 ---
 = 更换机箱- AFF A20、AFF A30和AFF A50
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 将挡板、驱动器和控制器模块从受损机箱移至新机箱�
 
 
 [role="lead"]
+如果硬件故障需要更换AFF A20、AFF A30或AFF A50系统中的机箱。更换过程包括卸下控制器和电源设备(PSU)、从受损机箱中卸下驱动器、安装更换机箱以及重新安装机箱组件。
+
 将驱动器、任何驱动器挡片、控制器和挡板从受损机箱移至更换机箱(相同型号)、然后在设备机架或系统机柜中更换受损机箱。
 
 
@@ -293,3 +295,6 @@ NOTE: 电源恢复后、控制器将立即启动。
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
+
+.下一步是什么？
+在更换受损AFF A20、AFF A30或AFF A50机箱并将组件重新安装到其中后，您需要link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]。

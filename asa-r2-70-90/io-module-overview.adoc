@@ -24,3 +24,8 @@ ASA A70和ASA A90系统可以灵活地扩展或更换I/O模块、以增强网络
 更换发生故障的I/O模块可以将系统还原到其最佳运行状态。
 
 
+
+.I/O插槽编号
+ASA A70和ASA A90控制器上的I/O插槽编号为1到11、如下图所示。
+
+image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[ASA A70和AFF A90控制器上的插槽编号]

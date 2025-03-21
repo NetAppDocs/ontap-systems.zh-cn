@@ -2,7 +2,7 @@
 permalink: c30-60/rtc-battery-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace the real-time clock battery 
-summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。 
+summary: '更换AFF C30或AFF C60系统中的实时时钟(RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。' 
 ---
 = 更换实时时钟电池- AFF C30和AFF C60
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ，
 
 
 [role="lead"]
+更换AFF C30或AFF C60系统中的实时时钟(RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。
+
 您可以更换控制器中的实时时钟(RTC)电池、以便存储系统的服务和应用程序能够继续运行、而这些服务和应用程序依赖于准确的时间同步。
 
 .开始之前

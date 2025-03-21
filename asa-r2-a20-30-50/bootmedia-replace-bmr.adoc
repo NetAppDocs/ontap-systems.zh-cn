@@ -1,7 +1,7 @@
 ---
 permalink: asa-r2-a20-30-50/bootmedia-replace-bmr.html 
 sidebar: sidebar 
-keywords: aff a20, aff a30, aff a50, replace the boot media 
+keywords: asa a20, asa a30, asa a50, replace the boot media 
 summary: 在更换启动介质之前、您可以通过删除系统管理模块来找到故障启动介质。 
 ---
 = 更换启动介质- ASA A20、ASA A30和ASA A50
@@ -11,7 +11,7 @@ summary: 在更换启动介质之前、您可以通过删除系统管理模块�
 
 
 [role="lead"]
-要更换启动介质、您必须卸下受损控制器、卸下受损启动介质、然后在受损控制器中安装替代启动介质。
+要更换启动介质、您必须先卸下受损控制器、再卸下受损启动介质、然后在受损控制器中安装替代启动介质。
 
 
 

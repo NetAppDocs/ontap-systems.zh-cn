@@ -2,16 +2,16 @@
 permalink: a20-30-50/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, shut down the controller 
-summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。 
+summary: 在更换启动介质时、关闭AFF A20、AFF A30或AFF A50存储系统中的受损控制器、以防止数据丢失并确保系统稳定性。 
 ---
-= 关闭受损控制器- AFF A20、AFF A30和AFF A50
+= 关闭控制器以更换启动介质- AFF A20、AFF A30和AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-关闭或接管受损控制器。
+在更换启动介质时、关闭AFF A20、AFF A30或AFF A50存储系统中的受损控制器、以防止数据丢失并确保系统稳定性。
 
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
@@ -63,3 +63,6 @@ LOADER 提示符
 
 |===
 
+
+.下一步是什么？
+关闭控制器后，您需要link:bootmedia-replace.html["更换启动介质"]。

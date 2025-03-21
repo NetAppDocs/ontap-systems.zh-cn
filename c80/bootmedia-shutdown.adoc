@@ -2,7 +2,7 @@
 permalink: c80/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: c80, shut down the controller 
-summary: 如果AFF C80存储系统中的控制器受损、请将其关闭。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。 
+summary: 在更换启动介质时、关闭AFF C80存储系统中的受损控制器、以防止数据丢失并确保系统稳定性。 
 ---
 = 关闭控制器以更换启动介质- AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果AFF C80存储系统中的控制器受损、请将其关闭。在�
 
 
 [role="lead"]
-需要更换启动介质时、关闭AFF C80存储系统中的控制器。在执行维护或组件更换之前、请务必安全地关闭控制器、以防止数据丢失并确保系统稳定性。
+在更换启动介质时、关闭AFF C80存储系统中的受损控制器、以防止数据丢失并确保系统稳定性。
 
 [role="tabbed-block"]
 ====
