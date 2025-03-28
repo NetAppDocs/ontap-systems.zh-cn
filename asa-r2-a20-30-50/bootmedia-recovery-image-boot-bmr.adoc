@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a20, asa a30, asa a50, boot the recovery image 
 summary: 您可以通过自动启动恢复过程从配对控制器还原启动介质上的映像。 
 ---
-= 恢复ONTAP映像- ASA A20、ASA A30和ASA A50
+= 还原启动介质上的ONTAP映像- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

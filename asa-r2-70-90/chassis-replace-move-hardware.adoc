@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, move hardware components, replace the chassis 
-summary: 如果硬件故障需要更换ASA A70或ASA A90系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。 
+summary: '如果硬件故障需要更换ASA A70或ASA A90系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下驱动器、安装更换机箱以及重新安装机箱组件。' 
 ---
 = 移动并更换硬件- ASA A70和ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果硬件故障需要更换ASA A70或ASA A90系统中的机箱。此
 
 
 [role="lead"]
-如果硬件故障需要更换ASA A70或ASA A90系统中的机箱。此过程包括关闭系统电源、卸下现有机箱、安装新机箱以及重新配置组件以确保系统正常运行。
+如果硬件故障需要更换ASA A70或ASA A90系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下驱动器、安装更换机箱以及重新安装机箱组件。
 
 
 

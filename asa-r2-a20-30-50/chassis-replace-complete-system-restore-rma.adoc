@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/chassis-replace-complete-system-restore-rma.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, verify and set HA state, complete the replacement process 
-summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。 
+summary: 验证机箱的HA状态、然后将故障部件返回给NetApp以完成ASA A20、ASA A30和ASA A50机箱更换过程中的最后一步。 
 ---
 = 完整机箱更换- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故
 
 
 [role="lead"]
-您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。
+验证机箱的HA状态、然后将故障部件返回给NetApp以完成ASA A20、ASA A30和ASA A50机箱更换过程中的最后一步。
 
 
 

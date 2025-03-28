@@ -123,7 +123,7 @@ X66032A （ 112-00437 ）， 2 米
 
 X66033A （ 112-00438 ）， 3 米
  a| 
-image::../media/oie_cable_fiber_lc_connector.png[OIE 缆线光纤 LC 连接器]
+image::../media/oie_cable_fiber_lc_connector.png[LC光纤连接器]
  a| 
 FC 光纤网络
 
@@ -151,7 +151,7 @@ X66032A （ 112-00437 ）， 2 米
 
 X66033A （ 112-00438 ）， 3 米
  a| 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[迷你SAS连接器]
  a| 
 存储
 
@@ -162,7 +162,7 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷�
  a| 
 不适用
  a| 
-图像：../media/oIE_cable_micro_USB.pngMicro USB连接器]
+image::../media/oie_cable_micro_usb.png[微型USB连接器]
  a| 
 在非 Windows 或 Mac 笔记本电脑 / 控制台上设置软件期间连接控制台
 
@@ -242,7 +242,7 @@ image::../media/drw_9500_tnsc_network_cabling.svg[DRW 9500tnsc网络布线]
 
 
  a| 
-图像：./media/icon_square_1_green.png
+image::../media/icon_square_1_green.png[标注图标1]
  a| 
 使用缆线连接集群互连端口：
 
@@ -255,11 +255,11 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 
 
  a| 
-image::../media/icon_square_2_yellow.png[标注图标2.]
+image::../media/icon_square_2_purple.png[标注图标2.]
  a| 
 使用缆线连接控制器管理（扳手）端口。
 
-图像：./media/oie_cable_rj45.png
+image::../media/oie_cable_rj45.png[RJ-45连接器]
 
 
 
@@ -281,7 +281,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 
 
  a| 
-图像：./media/icon_square_4_red.png
+image::../media/icon_square_4_red.png[标注图标4.]
  a| 
 使用缆线连接25 GbE连接：
 
@@ -292,10 +292,12 @@ image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 
  a| 
+image::../media/icon_square_5_grey.png[标注图标4.]
+ a| 
 ** 将缆线固定到缆线管理臂上(未显示)。
 ** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
 
- a| 
+
 image::../media/oie_cable_power.png[电源线]
 
 image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[电源]
@@ -345,7 +347,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 
 
  a| 
-image::../media/icon_square_2_yellow.png[标注图标2.]
+image::../media/icon_square_2_purple.png[标注图标2.]
  a| 
 使用缆线连接控制器管理（扳手）端口。
 
@@ -377,15 +379,17 @@ image::../media/icon_square_4_red.png[标注图标4.]
 
 使用缆线将插槽5和B5 (5a、5b、5c和5d)以及插槽A7和B7 (7a、7b、7c和7d)中的端口连接到25 GbE网络交换机。
 
-图像：./media/oie_cable_sfp_gbe_copper.png
+image::../media/oie_cable_sfp_gbe_copper.png[100 GbE铜缆连接器]
 
 
 
+ a| 
+image::../media/icon_square_4_red.png[标注图标4.]
  a| 
 ** 将缆线固定到缆线管理臂上(未显示)。
 ** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
 
- a| 
+
 image::../media/oie_cable_power.png[电源线]
 
 image::../media/drw_a900fas9500_power_icon_IEOPS-1142.svg[电源]
@@ -434,20 +438,31 @@ image::../media/icon_square_1_blue.png[图标方块1蓝色]
  a| 
 使用图作为参考、将驱动器架堆栈1连接到控制器。
 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
+*迷你SAS电缆*
 
-迷你SAS缆线
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
 
 
 
  a| 
 image::../media/icon_square_2_yellow.png[标注图标2.]
  a| 
-使用图作为参考、将驱动器架堆栈2连接到控制器。
+使用图形作为参考、将堆栈2中的驱动器架彼此连接起来。
+
+*迷你SAS电缆*
 
 image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
 
-迷你SAS缆线
+
+
+ a| 
+image::../media/icon_square_3_tourquoise.png[标注图标3]
+ a| 
+使用图作为参考、将驱动器架堆栈2连接到控制器。
+
+*迷你SAS电缆*
+
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
 
 |===
 
@@ -540,12 +555,11 @@ image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交
 
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.svg[DRW 自动发现控制器选择]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[DRW自动发现控制器选择ieops 1849]
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的 network 。
-.. 右键单击并选择刷新。
+.. 单击左窗格中的"Network"(网络)、右键单击并选择"Refresh (刷新)"。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 

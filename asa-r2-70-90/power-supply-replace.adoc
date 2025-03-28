@@ -2,7 +2,7 @@
 permalink: asa-r2-70-90/power-supply-replace.html 
 sidebar: sidebar 
 keywords: asa r2 a70, asa r2 a90, replace a power supply 
-summary: 'ASA A70或ASA A90系统中的交流或直流电源设备(PSU)出现故障或出现故障时、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开目标PSU与电源的连接、拔下电源线、卸下故障PSU并安装更换PSU、然后将其重新连接到电源。' 
+summary: 'ASA A70或ASA A90系统中的交流或直流电源设备(PSU)出现故障或出现故障时、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。' 
 ---
 = 更换电源- ASA A70和ASA A90
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'ASA A70或ASA A90系统中的交流或直流电源设备(PSU)出现故
 
 
 [role="lead"]
-ASA A70或ASA A90系统中的交流或直流电源设备(PSU)出现故障或出现故障时、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开目标PSU与电源的连接、拔下电源线、卸下故障PSU并安装更换PSU、然后将其重新连接到电源。
+ASA A70或ASA A90系统中的交流或直流电源设备(PSU)出现故障或出现故障时、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。
 
 电源为冗余且可热插拔。
 

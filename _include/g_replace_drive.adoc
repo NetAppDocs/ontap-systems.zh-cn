@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-You can replace a failed drive nondisruptively while I/O is in progress.
+您可以在I/O运行期间无中断更换发生故障的SSD驱动器。
 
 .开始之前
 * 存储系统必须支持您要安装的驱动器。

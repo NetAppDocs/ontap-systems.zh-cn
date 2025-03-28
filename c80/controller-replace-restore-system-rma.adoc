@@ -11,25 +11,64 @@ summary: 验证逻辑接口是否向其主端口报告、执行集群运行状�
 
 
 [role="lead"]
-验证逻辑接口(Logical Interface、)是否正在向其主端口报告、执行集群运行状况检查、然后将故障部件返回给NetApp以完成AFF C80控制器更换过程中的最后一步。
+要完成AFF C80系统的控制器更换、请先还原NetApp存储加密配置(如果需要)、并在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。
 
 
 
-== 第1步：验证SIFs并检查集群运行状况
+== 第 1 步：在 ONTAP 中为替代控制器安装许可证
 
-在将替代节点恢复使用之前、请验证逻辑接口是否位于其主端口上、检查集群运行状况并重置自动交还。
+如果受损节点正在使用需要标准（节点锁定）许可证的 ONTAP 功能，则必须为 _replacement_ 节点安装新许可证。对于具有标准许可证的功能，集群中的每个节点都应具有自己的功能密钥。
+
+.关于此任务
+在安装许可证密钥之前，需要标准许可证的功能仍可供替代节点使用。但是，如果受损节点是集群中唯一具有此功能许可证的节点，则不允许更改此功能的配置。
+
+此外，在节点上使用未经许可的功能可能会使您不符合您的许可协议，因此您应尽快在替代节点上安装替代许可证密钥。
+
+许可证密钥必须采用 28 个字符的格式。
+
+您有 90 天的宽限期来安装许可证密钥。宽限期过后，所有旧许可证将失效。安装有效的许可证密钥后，您可以在 24 小时内安装所有密钥，直到宽限期结束。
+
+如果节点采用 MetroCluster 配置，并且站点上的所有节点均已更换，则在切回之前，必须在 _replacement_ 节点上安装许可证密钥。
+
+.步骤
+. If you need new license keys, obtain replacement license keys on the https://mysupport.netapp.com/site/global/dashboard["NetApp 支持站点"] in the My Support section under Software licenses.
++
+
+NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文件中的电子邮件地址。如果您未能在 30 天内收到包含许可证密钥的电子邮件，应联系技术支持。
+
+. 安装每个许可证密钥： ` + system license add -license-code license-key ， license-key...+`
+. 如果需要，删除旧许可证：
++
+.. 检查未使用的许可证： `license clean-up -unused -simulate`
+.. 如果列表显示正确，请删除未使用的许可证： `license clean-up -unused`
+
+
+
+
+
+
+== 第2步：验证SIFs、注册序列号并检查集群运行状况
+
+在将 _replacement_ 节点恢复使用之前，您应验证 LIF 是否位于其主端口上，如果启用了 AutoSupport ，则注册 _replacement_ 节点的序列号，并重置自动交还。
 
 .步骤
 . 验证逻辑接口是否正在向其主服务器和端口报告： `network interface show -is-home false`
 +
-如果任何逻辑接口列为false、请将其还原到其主端口： `network interface revert -vserver * -lif *`
+如果任何LUN列为false、请将其还原到其主端口： `network interface revert -vserver * -lif *`
+
+. 向 NetApp 支持部门注册系统序列号。
++
+** 如果启用了 AutoSupport ，请发送 AutoSupport 消息以注册序列号。
+** 如果未启用 AutoSupport ，请调用 https://mysupport.netapp.com["NetApp 支持"] 注册序列号。
+
 
 . 检查集群的运行状况。有关详细信息、请参见 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何在ONTAP 中使用脚本执行集群运行状况检查"^] 知识库文章。
+. 如果已触发AutoSupport维护窗口、请使用结束此窗口 `system node autosupport invoke -node * -type all -message MAINT=END` 命令：
 . 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
 
 
 
 
-== 第2步：将故障部件退回给NetApp
+== 第 3 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

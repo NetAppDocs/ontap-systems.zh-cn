@@ -2,7 +2,7 @@
 permalink: c30-60/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace the boot media 
-summary: 在更换启动介质之前，您可以通过删除控制器模块上的提升板 3 来找到控制器模块中发生故障的启动介质。 
+summary: AFF C30或AFF C60系统中的引导介质用于存储基本固件和配置数据。更换过程包括卸下控制器模块、卸下受损的启动介质、安装替代启动介质、然后将ONTAP映像传输到替代启动介质。 
 ---
 = 更换启动介质- AFF C30和AFF C60
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/power-supply-replace.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace a power supply 
-summary: 更换电源包括断开目标电源与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。 
+summary: '如果ASA A20、ASA A30或ASA A50系统中的交流或直流电源设备(PSU)发生故障或出现故障、请更换该系统、以确保系统继续获得稳定运行所需的电源。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。' 
 ---
 = 更换电源- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 更换电源包括断开目标电源与电源的连接，拔下电源�
 
 
 [role="lead"]
-更换电源设备(PSU)包括断开故障PSU与电源的连接、拔下电源线、卸下故障PSU并安装更换PSU、然后将其重新连接到电源。
+如果ASA A20、ASA A30或ASA A50系统中的交流或直流电源设备(PSU)发生故障或出现故障、请更换该系统、以确保系统继续获得稳定运行所需的电源。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。
 
 .关于此任务
 * 此操作步骤 是为一次更换一个PSU而编写的。

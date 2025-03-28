@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a1k, replace a pcie card 
 summary: 如果AFF A1K系统中的I/O模块出现故障或需要升级以支持更高性能或其他功能、请更换该模块。更换过程包括关闭控制器、更换发生故障的I/O模块、重新启动控制器以及将发生故障的部件退回NetApp。 
 ---
-= 更换I/O模块- AFF A1K
+= 更换 I/O 模块 - AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

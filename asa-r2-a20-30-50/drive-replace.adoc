@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/drive-replace.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the drives 
-summary: 您可以在执行I/O期间无故障更换发生故障的驱动器SSD驱动器。 
+summary: 如果驱动器出现故障或需要升级、请更换ASA A20、ASA A30或ASA A50系统中的驱动器。更换过程包括确定故障驱动器、安全地将其卸下以及安装新驱动器、以确保持续访问数据和提高系统性能。 
 ---
 = 更换驱动器- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 您可以在执行I/O期间无故障更换发生故障的驱动器SSD�
 
 
 [role="lead"]
+如果驱动器出现故障或需要升级、请更换ASA A20、ASA A30或ASA A50系统中的驱动器。更换过程包括确定故障驱动器、安全地将其卸下以及安装新驱动器、以确保持续访问数据和提高系统性能。
+
 You can replace a failed drive nondisruptively while I/O is in progress.
 
 .开始之前
@@ -73,35 +75,10 @@ NOTE: 驱动器固件检查每两分钟进行一次。
 
 
 .步骤
-. 如果要手动为替代驱动器分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。
-+
-
-NOTE: 您可以手动分配驱动器所有权，然后在此操作步骤中稍后重新启用自动驱动器分配。
-
-+
-.. 验证是否已启用自动驱动器分配：
-+
-`storage disk option show`
-
-+
-您可以在任一控制器上输入命令。
-
-+
-如果启用了自动驱动器分配、则输出将显示 `on`在列中 `Auto Assign`(对于每个控制器)。
-
-.. 如果启用了自动驱动器分配、请将其禁用：
-+
-`storage disk option modify -node node_name -autoassign off`
-
-+
-您必须在两个控制器上禁用自动驱动器分配。
-
-
-
 . 正确接地。
 . 以物理方式确定故障驱动器。
 +
-驱动器发生故障时，系统会向系统控制台记录一条警告消息，指示哪个驱动器发生故障。此外，驱动器架操作员显示面板上的警示（琥珀色） LED 和故障驱动器将亮起。
+When a drive fails, the system logs a warning message to the system console indicating which drive failed.此外、磁盘架操作员显示面板上的警示(琥珀色) LED和故障驱动器将亮起。
 
 +
 
@@ -142,9 +119,12 @@ NOTE: 由于驱动器易碎、请尽量减少操作以避免损坏驱动器。
 
 |===
 . 请至少等待 70 秒，然后再插入替代驱动器。
++
+这样，系统就可以识别出驱动器已被删除。
+
 . 插入替代驱动器：
 +
-.. 在凸轮把手处于打开位置的情况下、用双手插入驱动器。
+.. 在凸轮把手处于打开位置的情况下，用双手插入替代驱动器。
 .. 轻轻推动、直至驱动器停止。
 .. 合上凸轮把手、使驱动器完全固定在中板中、并且把手卡入到位。
 +
@@ -156,35 +136,7 @@ NOTE: 由于驱动器易碎、请尽量减少操作以避免损坏驱动器。
 +
 如果驱动器的活动 LED 稳定亮起，则表示驱动器已通电。当驱动器的活动 LED 闪烁时，表示驱动器已通电且 I/O 正在进行中。如果驱动器固件正在自动更新，则 LED 将闪烁。
 
-. 如果要更换另一个驱动器，请重复步骤 3 到步骤 7 。
-. 如果您在步骤 1 中禁用了自动驱动器分配，请手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配：
-+
-.. 显示所有未拥有的驱动器：
-+
-`storage disk show -container-type unassigned`
-
-+
-您可以在任一控制器上输入命令。
-
-.. 分配每个驱动器：
-+
-`storage disk assign -disk disk_name -owner owner_name`
-
-+
-您可以在任一控制器上输入命令。
-
-+
-您可以使用通配符一次分配多个驱动器。
-
-.. 如果需要、重新启用自动驱动器分配：
-+
-`storage disk option modify -node node_name -autoassign on`
-
-+
-您必须在两个控制器上重新启用自动驱动器分配。
-
-
-
+. If you are replacing another drive, repeat Steps 2 through 6.
 . 按照套件随附的 RMA 说明将故障部件退回 NetApp 。
 +
 请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

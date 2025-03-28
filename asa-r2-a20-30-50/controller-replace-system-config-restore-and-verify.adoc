@@ -11,7 +11,7 @@ summary: 完成硬件更换并启动至维护模式后，您可以验证更换�
 
 
 [role="lead"]
-验证替代控制器的低级系统配置、并根据需要重新配置系统设置。
+确认控制器的HA配置在ASA A20、ASA A30或ASA A50存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。
 
 
 
@@ -77,3 +77,6 @@ ha-state 的值可以是以下值之一：
 `halt`
 
 
+
+.下一步是什么？
+恢复并验证ASA A20、ASA A30或ASA A50系统的系统配置后，您需要link:controller-replace-recable-reassign-disks.html["交还控制器"]。

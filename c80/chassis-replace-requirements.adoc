@@ -2,7 +2,7 @@
 permalink: c80/chassis-replace-requirements.html 
 sidebar: sidebar 
 keywords: c80, replace the chassis 
-summary: 在更换AFF C80系统中的机箱之前、请验证系统中的所有其他组件是否正常运行、并确保您具有ONTAP的本地管理员凭据、正确的更换机箱以及必要的工具。 
+summary: 在更换AFF C80系统的机箱之前、请验证系统中的所有其他组件是否正常运行、并确保您具有ONTAP的本地管理员凭据、正确的更换机箱以及必要的工具。 
 ---
 = 更换机箱的要求- AFF C80
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在更换AFF C80系统中的机箱之前、请验证系统中的所有�
 
 
 [role="lead"]
-在更换AFF C80系统中的机箱之前、请验证系统中的所有其他组件是否正常运行、并确保您具有ONTAP的本地管理员凭据、正确的更换机箱以及必要的工具。
+在更换AFF C80系统的机箱之前、请验证系统中的所有其他组件是否正常运行、并确保您具有ONTAP的本地管理员凭据、正确的更换机箱以及必要的工具。
 
 机箱是托管所有控制器组件(例如控制器/CPU单元、电源和I/O)的物理机箱
 
