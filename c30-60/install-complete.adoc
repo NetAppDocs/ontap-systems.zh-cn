@@ -2,7 +2,7 @@
 permalink: c30-60/install-complete.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, prepare installation 
-summary: 通过仅连接到交换机和笔记本电脑的集群发现、或者直接连接到存储系统中的控制器、然后连接到管理交换机、完成平台设置和配置。 
+summary: 打开AFF C30或AFF C60存储系统后、即可发现集群网络并设置ONTAP集群。 
 ---
 = 完成存储系统设置和配置—AFF C30和AFF C60
 :allow-uri-read: 
@@ -60,7 +60,7 @@ NOTE: 此目标节点的存储系统序列号为7本。
 如果您的笔记本电脑未启用网络发现、请使用ONTAP命令行界面(CLI)集群设置向导完成配置和设置。
 
 .开始之前
-确保您的笔记本电脑已连接到串行控制台端口、并且控制器已打开电源。有关说明、请参见。 link:install-power-hardware.html#step-2-power-on-the-controllers["启动存储系统"]
+确保您的笔记本电脑已连接到串行控制台端口、并且控制器已打开电源。
 
 .步骤
 将初始节点管理 IP 地址分配给其中一个节点。

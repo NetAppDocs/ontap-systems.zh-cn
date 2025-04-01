@@ -16,7 +16,7 @@ ONTAP 文档中的说明介绍了在更换 SED 之前和之后必须执行的其
 +
 https://docs.netapp.com/us-en/ontap/encryption-at-rest/index.html["使用命令行界面概述 NetApp 加密"^]
 
-* 存储系统中的所有其他组件都必须正常运行、否则、您必须先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。
+* 存储系统中的所有其他组件都必须正常运行；如果未正常运行、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。
 * 验证要删除的驱动器是否出现故障。
 +
 您可以运行 `storage disk show -broken` 命令来验证驱动器是否出现故障。故障驱动器将显示在故障驱动器列表中。如果不是，则应等待，然后重新运行命令。

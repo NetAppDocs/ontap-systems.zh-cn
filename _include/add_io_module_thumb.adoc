@@ -7,7 +7,7 @@
 .开始之前
 * 检查 https://hwu.netapp.com/["NetApp Hardware Universe"^] 以确保新的I/O模块与您的存储系统和您正在运行的ONTAP版本兼容。
 * If multiple slots are available, check the slot priorities in https://hwu.netapp.com/["NetApp Hardware Universe"^] and use the best one available for your I/O module.
-* 存储系统中的所有其他组件都必须正常运行；否则、您必须先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。
+* 存储系统中的所有其他组件都必须正常运行；如果未正常运行、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。
 
 
 [role="tabbed-block"]

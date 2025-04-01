@@ -1,0 +1,74 @@
+---
+permalink: fas50/caching-module-hot-swap.html 
+sidebar: sidebar 
+keywords: fas50, hot swap, replace, Flash Cache 
+summary: '您可以从受支持的同一供应商或不同供应商热插拔容量相同的NVMe SSD Flash Cache模块(缓存模块)。' 
+---
+= 热插拔缓存模块—FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从受支持的同一供应商或不同供应商热插拔容量相同的NVMe SSD缓存模块(Flash Cache模块)。
+
+.开始之前
+您的存储系统必须满足特定条件，具体取决于您的情况：
+
+* 您的存储系统必须具有适用于您要安装的缓存模块的操作系统。
+* 替换的缓存模块必须与发生故障的缓存模块具有相同的容量，但可以来自其他受支持的供应商。
+* 存储系统中的所有其他组件都必须正常运行；如果未正常运行、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续操作。
+
+
+.步骤
+. 正确接地。
+. 通过缓存模块前面呈琥珀色亮起的警示LED找到发生故障的缓存模块。
++
+缓存模块可以位于驱动器托架0或23中。
+
+. 删除缓存模块：
++
+image::../media/drw_fas50_flash_cache_module_replace_ieops-2173.svg[FAS50缓存模块更换步骤图]
+
++
+[cols="20%,80%"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+按下模块表面的释放按钮以打开凸轮把手。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+向下旋转凸轮把手、使模块与中板分离。
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+使用凸轮把手将模块滑出驱动器托架、并用另一只手支撑模块。
+
+拆卸模块时、始终用双手支撑其重量。
+
+|===
+. 至少等待70秒、然后再插入替代缓存模块。
+. 安装替代缓存模块：
++
+.. 在凸轮把手处于打开位置的情况下、用双手插入模块。
+.. 轻轻推动、直至模块停止。
+.. 合上凸轮把手、使模块完全固定在中板中、手柄卡入到位。
++
+请务必缓慢关闭凸轮把手、使其与模块表面正确对齐。
+
+
+
+. 确认模块的活动(绿色) LED亮起。
+. 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"^]有关详细信息、请参见页面。
+

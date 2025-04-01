@@ -1,0 +1,334 @@
+= 第 1 步：关闭受损控制器
+:allow-uri-read: 
+
+
+要更换风扇、您必须先卸下控制器、卸下故障风扇、安装更换风扇、然后重新安装控制器。
+
+.关于此任务
+如果需要、您可以打开存储系统位置(蓝色) LED、以帮助您以物理方式定位受影响的存储系统。使用SSH登录到BMC并输入 `system location-led _on_`命令。
+
+存储系统具有三个定位LED：操作员显示面板上一个、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.
+
+您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
+
+
+
+== 第 1 步：关闭受损控制器
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+* 如果您使用的是SAN系统，则必须已检查受损控制器SCSI刀片的事件消息  `cluster kernel-service show`。 `cluster kernel-service show`命令(在priv高级模式下)可显示该节点的节点名称link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["仲裁状态"]、该节点的可用性状态以及该节点的运行状态。
++
+每个 SCSI 刀片式服务器进程应与集群中的其他节点保持仲裁关系。在继续更换之前，必须先解决所有问题。
+
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+
+.步骤
+. 如果启用了AutoSupport、则通过调用AutoSupport消息禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
++
+以下AutoSupport 消息禁止自动创建案例两小时： `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行状况良好的控制器的控制台禁用自动交还： `storage failover modify -node local -auto-giveback false`
++
+
+NOTE: 当您看到_Do you want to disable auto-giveback？_时、输入`y`。
+
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+
+
+== 第 2 步：卸下控制器
+
+在更换控制器或更换控制器内部的组件时、必须从机箱中卸下控制器。
+
+.开始之前
+确保存储系统中的所有其他组件均正常运行；否则、您必须先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。
+
+.步骤
+. 在受损控制器上、确保NV LED熄灭。
++
+当NV LED熄灭时、转销已完成、可以安全地卸下受损控制器。
+
++
+
+NOTE: 如果NV LED闪烁(绿色)、则表示正在进行减载。您必须等待NV LED熄灭。但是、如果闪烁持续时间超过五分钟、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。
+
++
+NV LED位于控制器上的NV图标旁边。
+
++
+image::../media/drw_g_nvmem_led_ieops-1839.svg[NV状态LED位置]
+
+
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+控制器上的NV图标和LED
+
+|===
+. 如果您尚未接地，请正确接地。
+. 断开受损控制器的电源：
++
+
+NOTE: 电源(PSU)没有电源开关。
+
++
+[cols="1,2"]
+|===
+| 如果您要断开... | 那么 ... 
+
+
+ a| 
+交流PSU
+ a| 
+.. 打开电源线固定器。
+.. 从PSU上拔下电源线、并将其放在一旁。
+
+
+
+
+ a| 
+直流PSU
+ a| 
+.. 拧下D-sub直流电源线连接器上的两颗指旋螺钉。
+.. 从PSU上拔下电源线、并将其放在一旁。
+
+
+|===
+. 从受损控制器上拔下所有缆线。
++
+跟踪电缆的连接位置。
+
+. 删除受损控制器：
++
+下图显示了卸下控制器时控制器手柄(从控制器左侧开始)的操作：
+
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[用于删除控制器的控制器句柄操作]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+在控制器的两端、向外推垂直锁定卡舌以释放手柄。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+** 朝您的方向拉动手柄、将控制器从中间板上取下。
++
+拉动时、手柄会从控制器中伸出、然后您会感觉到一些阻力、请继续拉动。
+
+** 将控制器滑出机箱、同时支撑控制器底部、然后将其放在平稳的表面上。
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+如果需要、竖直旋转手柄(位于卡舌旁边)以将其移开。
+
+|===
+. 逆时针旋转指旋螺钉以打开控制器护盖、然后打开护盖。
+
+
+
+
+== 步骤3：更换风扇
+
+要更换风扇、请卸下故障风扇、然后使用新风扇进行更换。
+
+. 通过检查控制台错误消息确定必须更换的风扇。
+. 卸下故障风扇：
++
+image::../media/drw_g_fan_replace_ieops-1903.svg[更换风扇]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+| 握住风扇两侧的蓝色触点。 
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+| 将风扇竖直向上拉出插槽。 
+|===
+. 通过将替代风扇与导板对齐来插入、然后向下推、直到风扇连接器完全固定在插槽中。
+
+
+
+
+== 第 4 步：重新安装控制器模块
+
+将控制器重新安装到机箱中并重新启动。
+
+.关于此任务
+下图显示了重新安装控制器时控制器手柄(从控制器左侧开始)的操作、可用作其余控制器重新安装步骤的参考。
+
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[用于安装控制器的控制器句柄操作]
+
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+如果在维修控制器时竖直旋转控制器手柄(卡舌旁边)以使其移出、请将其向下旋转至水平位置。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+将手柄推至一半以将控制器重新插入机箱、然后在系统提示时按、直至控制器完全就位。
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+将手柄旋转至竖直位置、并使用锁定卡舌锁定到位。
+
+|===
+.步骤
+. 合上控制器护盖、然后顺时针旋转指旋螺钉、直到拧紧为止。
+. 将控制器插入机箱一半。
++
+将控制器背面与机箱中的开口对齐、然后使用手柄轻轻推动控制器。
+
++
+
+NOTE: 在系统指示之前、请勿将控制器完全插入机箱。
+
+. 将控制台电缆连接到控制器上的控制台端口和笔记本电脑、以便笔记本电脑在控制器重新启动时接收控制台消息。
+. 将控制器完全装入机箱：
++
+.. 用力推动手柄、直至控制器与中板接触并完全就位。
++
+
+NOTE: 将控制器滑入机箱时、请勿用力过度、否则可能会损坏连接器。
+
+.. 向上旋转控制器手柄、并使用卡舌锁定到位。
++
+
+NOTE: 控制器在机箱中完全就位后立即开始启动。
+
+
+
+. 通过按CTRL-C将控制器转到Loader提示符以中止自动启动。
+. 设置控制器上的时间和日期：
++
+确保处于控制器的Loader提示符处。
+
++
+.. 显示控制器上的日期和时间：
++
+`show date`
+
++
+
+NOTE: 时间和日期默认为GMT。您可以选择以本地时间和24小时模式显示。
+
+.. 设置GMT的当前时间：
++
+`set time hh:mm:ss`
+
++
+您可以从运行状况良好的节点获取当前GMT：
+
++
+`date -u`
+
+.. 在GMT中设置当前日期：
++
+`set date mm/dd/yyyy`
+
++
+您可以从运行状况良好的节点获取当前GMT：+
+`date -u`
+
+
+
+. 根据需要重新对控制器进行配置。
+. 将电源线重新连接到电源(PSU)。
++
+在PSU恢复供电后、状态LED应为绿色。
+
++
+[cols="1,2"]
+|===
+| 如果您要重新连接... | 那么 ... 
+
+
+ a| 
+交流PSU
+ a| 
+.. 将电源线插入PSU。
+.. 使用电源线固定器固定电源线。
+
+
+
+
+ a| 
+直流PSU
+ a| 
+.. 将D-sub直流电源线连接器插入PSU。
+.. 拧紧两颗指旋螺钉、将D-sub直流电源线连接器固定至PSU。
+
+
+|===
+
+
+
+
+== 第 5 步：将故障部件退回 NetApp
+
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

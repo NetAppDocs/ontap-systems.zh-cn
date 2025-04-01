@@ -1,0 +1,96 @@
+---
+section: fas50
+title: FAS50系统
+entries:
+- title: 安装和设置
+  pdf-filename: FAS50安装和设置
+  entries:
+  - title: 安装工作流
+    url: "/fas50/install-overview.html"
+  - title: 查看要求
+    url: "/fas50/install-requirements.html"
+  - title: 准备安装
+    url: "/fas50/install-prepare.html"
+  - title: 安装硬件
+    url: "/fas50/install-hardware.html"
+  - title: 电缆硬件
+    url: "/fas50/install-cable.html"
+  - title: 打开系统电源
+    url: "/fas50/install-power-hardware.html"
+  - title: 完成系统设置
+    url: "/fas50/install-complete.html"
+- title: 维护
+  pdf-filename: FAS50维护
+  entries:
+  - title: 维护概述
+    url: "/fas50/maintain-overview.html"
+  - title: 启动介质
+    pdf-filename: FAS50启动介质
+    entries:
+    - title: 启动介质更换工作流
+      url: "/fas50/bootmedia-replace-workflow.html"
+    - title: 查看要求
+      url: "/fas50/bootmedia-replace-requirements.html"
+    - title: 检查加密密钥
+      url: "/fas50/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭受损控制器
+      url: "/fas50/bootmedia-shutdown.html"
+    - title: 更换启动介质
+      url: "/fas50/bootmedia-replace.html"
+    - title: 启动恢复映像
+      url: "/fas50/bootmedia-recovery-image-boot.html"
+    - title: 恢复加密
+      url: "/fas50/bootmedia-encryption-restore.html"
+    - title: 将故障部件退回 NetApp
+      url: "/fas50/bootmedia-complete-rma.html"
+  - title: 缓存模块
+    url: "/fas50/caching-module-hot-swap.html"
+  - title: 机箱
+    pdf-filename: FAS50机箱
+    entries:
+    - title: 机箱更换工作流
+      url: "/fas50/chassis-replace-workflow.html"
+    - title: 查看要求
+      url: "/fas50/chassis-replace-requirements.html"
+    - title: 关闭控制器
+      url: "/fas50/chassis-replace-shutdown.html"
+    - title: 更换机箱
+      url: "/fas50/chassis-replace-move-hardware.html"
+    - title: 完成机箱更换
+      url: "/fas50/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器
+    pdf-filename: FAS50控制器模块
+    entries:
+    - title: 控制器更换工作流
+      url: "/fas50/controller-replace-workflow.html"
+    - title: 查看要求
+      url: "/fas50/controller-replace-requirements.html"
+    - title: 关闭受损控制器
+      url: "/fas50/controller-replace-shutdown.html"
+    - title: 更换控制器
+      url: "/fas50/controller-replace-move-hardware.html"
+    - title: 还原系统配置
+      url: "/fas50/controller-replace-system-config-restore-and-verify.html"
+    - title: 交还控制器
+      url: "/fas50/controller-replace-recable-reassign-disks.html"
+    - title: 完成控制器更换
+      url: "/fas50/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/fas50/dimm-replace.html"
+  - title: 风扇
+    url: "/fas50/fan-replace.html"
+  - title: I/O 模块
+    pdf-filename: FAS50 I/O模块
+    entries:
+    - title: I/O模块概述
+      url: "/fas50/io-module-overview.html"
+    - title: 添加 I/O 模块
+      url: "/fas50/io-module-add.html"
+    - title: 更换I/O模块
+      url: "/fas50/io-module-replace.html"
+  - title: NV电池
+    url: "/fas50/nvdimm-battery-replace.html"
+  - title: 电源
+    url: "/fas50/power-supply-replace.html"
+  - title: 实时时钟电池
+    url: "/fas50/rtc-battery-replace.html"

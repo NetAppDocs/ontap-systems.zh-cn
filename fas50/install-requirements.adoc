@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: fas50/install-requirements.html 
+keywords: fas50, install, setup, cautions 
+summary: 查看所需设备以及平台和磁盘架的吊装预防措施。 
+---
+= 安装要求—FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+查看FAS50存储系统的要求。
+
+
+
+== 安装所需的设备
+
+要安装存储系统、您需要以下设备和工具。
+
+* 访问Web浏览器以配置存储系统
+* 静电放电(ESD)带
+* 手电筒
+* 具有USB/串行连接的笔记本电脑或控制台
+* 2 号十字螺丝刀
+
+
+
+
+== 提升注意事项
+
+存储系统和磁盘架很重。搬运这些物品时请务必小心。
+
+
+
+=== 存储系统重量
+
+移动或抬起存储系统时、请采取必要的预防措施。
+
+存储系统的重量可达24.4千克(53.8磅)。要抬起存储系统、请两个人或使用液压升降机。
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[FAS50重量注意图标]
+
+
+
+=== 磁盘架重量
+
+移动或抬起磁盘架时、请采取必要的预防措施。
+
+DS460C磁盘架的重量可达181.1千克(260.4磅)。要抬起磁盘架、您可能需要最多五个人或一台液压升降机。将所有组件(前部和后部)保留在磁盘架中、以防止磁盘架重量不平衡。
+
+image::../media/drw_ds460c_weight_warning_ieops-1932.svg[DS460C举升注意事项]
+
+.相关信息
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12475945["安全信息和法规声明"^]
+
+
+.下一步是什么？
+在查看存储系统的安装要求和注意事项之后，您可以link:install-prepare.html["准备安装"]：

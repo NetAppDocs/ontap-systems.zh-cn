@@ -13,6 +13,10 @@ summary: 关闭AFF C30或AFF C60存储系统中的受损控制器、以防止数
 [role="lead"]
 关闭AFF C30或AFF C60存储系统中的受损控制器、以防止数据丢失、并在更换控制器时确保系统稳定性。
 
+[role="tabbed-block"]
+====
+.选项 1 ：大多数系统
+--
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
 .关于此任务
@@ -64,5 +68,53 @@ LOADER 提示符
 |===
 
 
+--
+.选项 2 ：控制器位于 MetroCluster 中
+--
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+* 您必须确认已配置MetroCluster配置状态，并且节点处于启用和正常状态(`metrocluster node show`)。
+
+
+.步骤
+. 如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`
++
+以下 AutoSupport 消息禁止自动创建案例两小时： `cluster1 ： * > system node AutoSupport invoke -node * -type all -message MAINT=2h`
+
+. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一节。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符（输入系统密码）
+ a| 
+从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`
+
+当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。
+
+|===
+
+
+--
+====
 .下一步是什么？
 关闭控制器后，您需要link:controller-replace-move-hardware.html["更换控制器"]。

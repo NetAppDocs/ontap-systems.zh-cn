@@ -1,0 +1,84 @@
+---
+permalink: fas50/controller-replace-system-config-restore-and-verify.html 
+sidebar: sidebar 
+keywords: fas50, restore and verify the system configuration, verify and set the ha state of the controller module 
+summary: 确认控制器的HA配置在FAS50存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。 
+---
+= 还原并验证系统配置—FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+确认控制器的HA配置在FAS50存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。
+
+
+
+== 第1步：验证HA配置设置
+
+您必须验证 `HA`控制器的状态、并在必要时更新此状态以匹配存储系统配置。
+
+. 启动至维护模式：
++
+`boot_ontap maint`
+
++
+.. 当您看到_continue with boot？_时、输入 `y`。
++
+如果看到_System ID Mismatch (系统ID不匹配)警告消息，请输入 `y`。
+
+
+
+. 输入 `sysconfig -v`并捕获显示内容。
++
+
+NOTE: 如果您看到_pendis_Mismatch、请联系客户支持。
+
+. 从输出中 `sysconfig -v`、将适配器卡信息与替代控制器中的卡和位置进行比较。
+. 验证所有组件是否显示相同 `HA`状态：
++
+`ha-config show`
+
++
+所有组件的 HA 状态都应相同。
+
+. 如果显示的控制器系统状态与您的存储系统配置不匹配、请设置 `HA`控制器的状态：
++
+`ha-config modify controller ha-state`
+
++
+ha-state 的值可以是以下值之一：
+
++
+** `ha`
+** `mcc` (不支持)
+** `mccip`(在ASA系统中不受支持)
+** `non-ha` (不支持)
+
+
+. 确认设置已更改：
++
+`ha-config show`
+
+
+
+
+
+== 第2步：验证磁盘列表
+
+. 验证适配器是否列出了指向所有磁盘的路径：
++
+`storage show disk -p`
+
++
+如果发现任何问题、请检查布线并重新拔插缆线。
+
+. 退出维护模式：
++
+`halt`
+
+
+
+.下一步是什么？
+还原并验证FAS50系统的系统配置后，您需要link:controller-replace-recable-reassign-disks.html["交还控制器"]。

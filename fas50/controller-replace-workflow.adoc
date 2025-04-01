@@ -1,0 +1,38 @@
+---
+permalink: fas50/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: fas50, replace the controller workflow 
+summary: 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。 
+---
+= 控制器更换工作流—FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+按照以下工作流步骤更换控制器。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:controller-replace-requirements.html["查看控制器更换要求"]
+[role="quick-margin-para"]
+要更换控制器、必须满足特定要求。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:controller-replace-shutdown.html["Shut down the impaired controller"]
+[role="quick-margin-para"]
+关闭或接管受损控制器、以使运行正常的控制器继续从受损控制器存储提供数据。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:controller-replace-move-hardware.html["更换控制器"]
+[role="quick-margin-para"]
+更换控制器包括卸下受损控制器、将FRU组件移动到更换用的控制器、在机箱中安装更换用的控制器、设置时间和日期、然后重新连接。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:controller-replace-system-config-restore-and-verify.html["还原并验证系统配置"]
+[role="quick-margin-para"]
+验证替代控制器的低级系统配置、并根据需要重新配置系统设置。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:controller-replace-recable-reassign-disks.html["交还控制器"]
+[role="quick-margin-para"]
+将存储资源的所有权转移回替代控制器。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"]link:controller-replace-restore-system-rma.html["完成控制器更换"]
+[role="quick-margin-para"]
+验证NetApp、检查集群运行状况、然后将故障部件返回给LUN。

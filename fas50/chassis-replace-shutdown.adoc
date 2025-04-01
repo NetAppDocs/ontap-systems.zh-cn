@@ -1,0 +1,71 @@
+---
+permalink: fas50/chassis-replace-shutdown.html 
+sidebar: sidebar 
+keywords: fas50, shutdown the controllers 
+summary: 在更换机箱时、关闭FAS50存储系统中的控制器、以防止数据丢失并确保系统稳定性。 
+---
+= 关闭控制器- FAS50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在更换机箱时、关闭FAS50存储系统中的控制器、以防止数据丢失并确保系统稳定性。
+
+此过程适用于具有双节点配置的系统。有关在维护集群时正常关闭的详细信息，请参见 https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["正常关闭和启动存储系统解决方案指南—NetApp知识库"]。
+
+.开始之前
+* 确保您具有必要的权限和凭据：
++
+** ONTAP 的本地管理员凭据。
+** 每个控制器的BMC可访问性。
+
+
+* 确保您拥有进行更换所需的工具和设备。
+* 作为关闭之前的最佳实践、您应：
++
+** 执行其他 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["系统运行状况检查"]。
+** 将ONTAP 升级到系统的建议版本。
+** 解决任何问题 https://activeiq.netapp.com/["Active IQ 健康提醒和风险"]。记下系统当前的任何故障、例如系统组件上的LED。
+
+
+
+
+.步骤
+. 通过SSH登录到集群、或者使用本地控制台缆线和笔记本电脑/控制台从集群中的任何节点登录。
+. 停止所有客户端/主机访问NetApp系统上的数据。
+. 暂停外部备份作业。
+. 如果启用了AutoSupport、则禁止创建案例、并指示系统预计脱机多长时间：
++
+`system node autosupport invoke -node * -type all -message "MAINT=2h Replace chassis"`
+
+. 确定所有集群节点的SP或BMC地址：
++
+`system service-processor show -node * -fields address`
+
+. 退出集群Shell：
++
+`exit`
+
+. 使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP或BMC以监控进度。
++
+如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。
+
+. 暂停受损机箱中的两个节点：
++
+`system node halt -node <node1>,<node2> -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true`
+
++
+
+NOTE: 对于使用在StrictSync模式下运行的同步SnapMirror的集群： `system node halt -node <node1>,<node2>  -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true -ignore-strict-sync-warnings true`
+
+. 如果出现以下情况，请为集群中的每个控制器输入*y*：
++
+`Warning: Are you sure you want to halt node _<node_name>_? {y|n}:`
+
+. 等待每个控制器暂停、然后显示加载程序提示符。
+
+
+.下一步是什么？
+关闭控制器后，您需要link:chassis-replace-move-hardware.html["更换机箱"]。

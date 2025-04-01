@@ -33,7 +33,7 @@ summary: 重新启动控制器、验证系统运行状况、并将故障部件�
 `ha-config modify chassis _HA-state_`
 
 +
-HA状态的值应为_ha_。
+HA状态的值应为_ha_。HA状态的值可以是以下值之一：***_ha_***_MCC _(在ASA中不受支持)
 
 .. 确认设置已更改：
 +

@@ -8795,7 +8795,6 @@ SFP+(目标/启动程序)</block>
   <block id="ab7ef1e990b02e4f310f950e86665f24" category="list-text">在控制器B上、连接以下端口：</block>
   <block id="9567b57fbc256ab6a2a904d9e65e90fc" category="paragraph">使用<block ref="2b7eb894c1625ebcb138cf06e4e24423" category="inline-link-rx"></block> 记录集群设置过程中所需的值。如果提供了默认值，则可以使用该值，或者输入您自己的值。</block>
   <block id="2b613a5cfe94ed4e246fd0b8d8e788d7" category="inline-link-macro">启动存储系统</block>
-  <block id="62b1b8fecbe53d21e29b3193b917d52b" category="paragraph">确保您的笔记本电脑已连接到串行控制台端口、并且控制器已打开电源。有关说明、请参见。 <block ref="7c573676638f479dced3a24193374cdc" category="inline-link-macro-rx"></block></block>
   <block id="c0cca90a0ea793a9983b3bf5d8f21117" category="paragraph">NetApp建议您使用System Manager设置新集群。有关设置说明、请参见。<block ref="21993ef26df9bd69488ae5f93ea51b95" category="inline-link-rx"></block></block>
   <block id="25e29897c37b7e5f9f9f0d8aac2e8c21" category="list-text">确保已将说明随导轨套件一起提供。</block>
   <block id="cd5270ea2c99376e2e028058d02bfa65" category="list-text">了解流经存储系统的气流从安装挡板或端盖的前部进入、并从端口所在的后部排气。</block>
@@ -9876,16 +9875,11 @@ SFP+(目标/启动程序)</block>
   <block id="a475b089bd1d54a48dc02d6327ce3723" category="paragraph">HA状态的值应为_ha_。</block>
   <block id="9c6a064471e1d988a3b10d26ed1c4d09" category="list-text">如果尚未重新对存储系统的其余部分执行此操作、请重新进行此操作。</block>
   <block id="90c5817c78a73467a558dc23bd5e4f4c" category="list-text">对机箱中的另一个控制器重复上述步骤。</block>
-  <block id="45d69e7bdfec0647cf3523f57e30a808" category="section-title">步骤2：从受损机箱中卸下驱动器</block>
-  <block id="c0055725498ec7c6a2d459f6d18aef46" category="paragraph">您需要从受损机箱中卸下所有驱动器和任何驱动器挡片、以便在此过程稍后将其安装到更换机箱中。</block>
   <block id="dd96419c0010405119a86fda57cc77f4" category="list-text">从存储系统正面轻轻卸下挡板。</block>
-  <block id="3e56a6d3defe800cc97429c918a7c4fb" category="list-text">卸下驱动器和所有驱动器挡片：</block>
-  <block id="ba52981b53ce10a301f84e2da386c778" category="admonition">请记录每个驱动器和驱动器挡片从哪个驱动器托架中卸下、因为它们必须安装在更换机箱中的相同驱动器托架中。</block>
   <block id="802e81544e7cd56335454cb3f02f6c1a" category="image-alt">删除NVMe驱动器</block>
   <block id="36c4bb9266e617d3ca8a33eb9502e855" category="paragraph">向下旋转凸轮把手、使驱动器与中板分离。</block>
   <block id="72b54ea7be3a13b4755dc4521c8d0af6" category="paragraph">使用凸轮把手将驱动器滑出驱动器托架、并用另一只手支撑驱动器。</block>
   <block id="0093c88dee6ce91e0bd8ccb1cfbc03ff" category="admonition">由于驱动器易碎、请尽量减少操作以避免损坏驱动器。</block>
-  <block id="ab32ae446e6fa5de50a5d631bbe01daf" category="list-text">将驱动器放在无静电的手推车或桌子上。</block>
   <block id="0649d37403624118b801efa8956dc716" category="section-title">第3步：从设备机架或系统机柜中更换机箱</block>
   <block id="e5a4b20c56ed46e589289f6e1a9368dd" category="paragraph">您可以从设备机架或系统机柜中卸下受损机箱、安装更换机箱、安装驱动器和所有驱动器挡片、然后安装挡板。</block>
   <block id="eb8def779f4d3e61a371ec65c0cc0128" category="list-text">从受损机箱安装点上卸下螺钉。</block>
@@ -9903,8 +9897,6 @@ SFP+(目标/启动程序)</block>
   <block id="a49827c76ee70fdd179847c88075dc56" category="list-text">用力推动手柄、直至控制器与中板接触并完全固定在机箱中。</block>
   <block id="3056a592db17bf1d39a65418c696f961" category="list-text">根据需要对控制器重新布线(电源线除外)。</block>
   <block id="707d1581f04f57894e17cb3cafe9b845" category="list-text">重复上述步骤、将第二个控制器安装到机箱中。</block>
-  <block id="a6d6e73e138675b6ffbbb0e4663b2d5d" category="list-text">将驱动器和从受损机箱中卸下的任何驱动器挡片安装到更换机箱中：</block>
-  <block id="4a7738e24d9329241e05c40def3be102" category="admonition">驱动器和驱动器挡片必须安装在更换机箱中的相同驱动器托架中。</block>
   <block id="8434f030a8261109d70a0f1ab5da399d" category="list-text">在凸轮把手处于打开位置的情况下、用双手插入驱动器。</block>
   <block id="969b8fc5cc51be52f8dce30f8f2d4b34" category="list-text">轻轻推动、直至驱动器停止。</block>
   <block id="1b247863479c60a2779b5eedef888d17" category="list-text">对其余驱动器重复此过程。</block>
@@ -10712,7 +10704,6 @@ SFP+(目标/启动程序)</block>
   <block id="4572f45ac79ded53bd57f95eaf949d13" category="doc">安装要求- AFF C30和AFF C60</block>
   <block id="2795470282b110353916b87e8a68ea10" category="paragraph">打开AFF C80存储系统后、即可发现集群网络并设置ONTAP集群。</block>
   <block id="021fad57648b2198deca585e8c317a71" category="paragraph">打开FAS70或FAS90存储系统后、即可发现集群网络并设置ONTAP集群。</block>
-  <block id="4c92eb29f2a257faff3e90e45cf70459" category="paragraph">DS460C磁盘架的重量可达181.1千克(260.4磅)。要抬起存储架、您可能需要最多五人或一台液压升降机。将所有组件(前部和后部)保留在存储架中、以防止存储架重量不平衡。</block>
   <block id="510996b7cd8e0bf946a50e1f000afbe2" category="paragraph">SuperRail可以使用圆孔到方孔适配器支架安装在标准方孔四柱机架上、也可以安装在标准圆孔四柱机架上。</block>
   <block id="090baac144fae3a90d22bb679e0194a6" category="sidebar">AFF A20、AFF A30和AFF A50启动介质</block>
   <block id="f923335af94abdb12e15d306f375ccba" category="sidebar">AFF A20、AFF A30和AFF A50 I/O模块</block>
@@ -11593,7 +11584,6 @@ SFP+(目标/启动程序)</block>
   <block id="0d7d91e5c0ba14682d8accd0725bd4f8" category="paragraph">查看以下要求和注意事项。</block>
   <block id="26bdea20d97a5dc3ed17ac3abb94f903" category="paragraph">查看控制器更换过程的要求和注意事项。</block>
   <block id="b00e817c5e070498acf083d5cdea215d" category="paragraph">确保您有回形针或窄尖头圆珠笔来设置NS224存储架ID。</block>
-  <block id="dac54bdee97e00ed11513b711808fbbb" category="list-text">您必须重新启动磁盘架(关闭SAS磁盘架背面的电源开关、等待适当的时间、然后重新打开电源)、磁盘架ID才能生效。</block>
   <block id="7ca755a8f6cc07b6b9e0fb7e1b6c9a09" category="list-text">首先将电源线连接到磁盘架、使用电源线固定器将其固定到位、将电源线连接到不同电路上的电源、然后打开每个电源(位于磁盘架背面)上的电源开关、以此为磁盘架供电。</block>
   <block id="58664d0a6ee33336810fe2050bd807f7" category="paragraph">磁盘架通电并在通电后自动启动。</block>
   <block id="ba79a134cbfbf535ef0d30ec122fd9fb" category="list-text">卸下左端盖，以接触面板上的橙色磁盘架ID按钮。</block>
@@ -11610,7 +11600,6 @@ SFP+(目标/启动程序)</block>
   <block id="7c72724f0b6450fb95e7722b18d2e78f" category="summary">在更换AFF A20、AFF A30或AFF A50系统的机箱之前、请确保满足成功更换系统所需的要求。其中包括验证系统中的所有其他组件是否正常工作、验证是否具有正确的更换机箱以及必要的工具。</block>
   <block id="6c5e82deb6f3de231e3eb286f77e492f" category="paragraph">查看更换机箱的要求后，您需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
   <block id="e7eea0ad5ba5d4f18a6414b3197206c3" category="summary">通过查看更换要求、关闭控制器、更换机箱以及验证系统运行情况、开始更换AFF A20、AFF A30或AFF A50存储系统的机箱。</block>
-  <block id="dcde20e17b1c5c80f1f980da5150736e" category="list-text">系统机箱正面的磁盘架ID显示屏未亮起。系统的内部磁盘架ID固定为00。</block>
   <block id="b299bf8f9276ecc9c20cd1ae118c9799" category="list-text">使用每个电源上的固定设备固定电源线。:A20-30-50!:</block>
   <block id="12c8eb3808a13f0adea4f2c3d86acb4c" category="image-alt">AFF 2020 A30 A50和C30及C60重量小心图标</block>
   <block id="90c51f2e3ac0e73e60b00bd0eba8b946" category="doc">添加I/O模块- AFF A20、AFF A30和AFF A50</block>
@@ -11710,4 +11699,181 @@ SFP+(目标/启动程序)</block>
   <block id="9f4af5ab487f7477da2dd13bdd9a635c" category="paragraph">使用图形作为参考、将堆栈2中的驱动器架彼此连接起来。</block>
   <block id="5314841cf1990f9c696f41eaf702eb4f" category="image-alt">DRW自动发现控制器选择ieops 1849</block>
   <block id="4c871f3eceeb63ae32259cd45a0be767" category="list-text">单击左窗格中的"Network"(网络)、右键单击并选择"Refresh (刷新)"。</block>
+  <block id="08308f65214c45c04131a1ad77f35101" category="list-text">存储系统中的所有其他组件都必须正常运行；如果未正常运行、请先联系、<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>然后再继续此过程。</block>
+  <block id="6c9f2761d7d74eb3a979daf442af39b5" category="paragraph">确保存储系统中的所有其他组件均正常运行；否则、您必须先联系、<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>然后再继续此过程。</block>
+  <block id="452dbbce25fd2a411a98a68c759a30a7" category="paragraph">HA状态的值应为_ha_。HA状态的值可以是以下值之一：***_ha_***_MCC _(在ASA中不受支持)</block>
+  <block id="944a42cded90e80d0304a07ec28b9a33" category="section-title">第2步：从受损机箱中卸下缓存模块</block>
+  <block id="d7906265ec3e4443fc6dc14ccbf13357" category="paragraph">您需要从受损机箱中卸下任何缓存模块和驱动器挡片、以便在此过程稍后将其安装到更换机箱中。</block>
+  <block id="54418dee1efbdcdf7f7e4f53c224f259" category="list-text">卸下缓存模块和驱动器挡片：</block>
+  <block id="a4453fe1e94237d231fc2f4878753194" category="admonition">跟踪每个缓存模块和驱动器挡片的驱动器托架、因为它们必须安装在更换机箱的相同驱动器托架中。</block>
+  <block id="4feff098827182c526ab95ef83e78f24" category="image-alt">FAS50缓存模块更换步骤图</block>
+  <block id="9a4b2d8c6321f069d147bd3a6aab1771" category="paragraph">按下模块表面的释放按钮以打开凸轮把手。</block>
+  <block id="078ab15ebb81d82e85799292435daed5" category="paragraph">向下旋转凸轮把手、使模块与中板分离。</block>
+  <block id="3696cc02cc4e1d6727f9f15be51f46c4" category="paragraph">使用凸轮把手将模块滑出驱动器托架、并用另一只手支撑模块。</block>
+  <block id="12399a516954dd0843cdcb19410dd141" category="paragraph">拆卸模块时、始终用双手支撑其重量。</block>
+  <block id="9222b175cf0c7af5a9ebb98fd1fd266f" category="list-text">将缓存模块放在无静电的手推车或桌子上。</block>
+  <block id="fb042e101845ff5cfb8e58953697dd25" category="list-text">将从受损机箱中卸下的缓存模块和驱动器挡片安装到更换机箱中：</block>
+  <block id="08a3990a102599592f1bfa837fdb4b59" category="admonition">高速缓存模块和驱动器挡片必须安装在更换机箱的相同驱动器托架中。</block>
+  <block id="7efc069c2d6033d673e36b12fe42467a" category="paragraph">您必须查看控制器更换过程的要求和注意事项。</block>
+  <block id="8e02634dbf9dfd6114030109a952c94d" category="list-text">存储系统中的所有其他组件都必须正常工作；如果不正常、请先联系、<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>然后再继续。</block>
+  <block id="cb4319361e919e892411df69baf2763b" category="paragraph">要更换风扇、您必须先卸下控制器、卸下故障风扇、安装更换风扇、然后重新安装控制器。</block>
+  <block id="1ceae8e0ff0bec3c4a785784e13c38e0" category="paragraph">使用此过程更换发生故障的I/O模块。</block>
+  <block id="72cad785e17debea8fb89d72f80450e0" category="paragraph">要更换NV电池、您必须先卸下控制器、卸下故障电池、安装更换电池、然后重新安装控制器。</block>
+  <block id="837c47c934f14522b94248f34ec495be" category="paragraph">您可以更换控制器中的实时时钟(RTC)电池、以便存储系统的服务和应用程序能够继续运行、而这些服务和应用程序依赖于准确的时间同步。</block>
+  <block id="55eba7ecf8d7b61636e734c095e4ed8c" category="paragraph">确保您的笔记本电脑已连接到串行控制台端口、并且控制器已打开电源。</block>
+  <block id="91860a8cf69554e12c3e3a5720821c5a" category="list-text">要使磁盘架ID生效、您必须重新启动磁盘架(关闭SAS磁盘架每个电源上的电源开关、等待适当的时间、然后重新打开电源)。</block>
+  <block id="f5afd4b6c78c970d9b9f36473a81eb43" category="paragraph">DS460C磁盘架的重量可达181.1千克(260.4磅)。要抬起存储架、您可能需要最多五个人或一台液压升降机。将所有组件(前部和后部)保留在存储架中、以防止存储架重量不平衡。</block>
+  <block id="33ae25491bd1a8a3daa58c3e044ddc6f" category="doc">将故障部件退回给NetApp - FAS50</block>
+  <block id="cb898608072ab3625e9f94c0f82cbc2f" category="paragraph">如果FAS50系统中的某个组件发生故障、请将故障部件退回给NetApp。<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>有关详细信息、请参见页面。</block>
+  <block id="ddcc1fe805cfc4158d50ee0c9f6ad59c" category="doc">重新安装控制器- FAS50</block>
+  <block id="739ec770fb0f54d0a185f727d0e59411" category="doc">卸下控制器- FAS50</block>
+  <block id="0277d6392a2af9f708f9e4369e630a19" category="summary">要确保FAS50存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。</block>
+  <block id="f1079072d592c82515d925fae16c5721" category="doc">检查板载加密密钥- FAS50</block>
+  <block id="0c7c2005d76982e23553fd1d3514150c" category="summary">在FAS50系统中的替代启动介质上恢复加密、以确保持续提供数据保护。更换过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。</block>
+  <block id="0151d2e25a624c9dbf01c9da862a2efb" category="doc">还原加密- FAS50</block>
+  <block id="16d1af605f4fcd33a64f8a2ed880330e" category="summary">在FAS50系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。</block>
+  <block id="d21d0e8ba826df129a1cd71f29ee4d5e" category="doc">启动恢复映像—FAS50</block>
+  <block id="56429bb6d74550cd9c5360f41397c6de" category="summary">在更换FAS50系统中的启动介质之前、请确保满足成功更换所需的要求。这包括确保您的USB闪存驱动器具有适当的存储量、并验证您是否具有正确的替代启动设备。</block>
+  <block id="aeba6c8bbaea20952c636da581b7a8c2" category="doc">启动介质更换要求- FAS50</block>
+  <block id="062f7c310d8631c5c060416fd38b1228" category="doc">启动介质更换工作流—FAS50</block>
+  <block id="1d7e5e0e3df76ac9dc695510c92b0468" category="paragraph">按照以下工作流步骤更换启动介质。</block>
+  <block id="bd898a77e63b1dd4978b864491e6c7b0" category="summary">FAS50系统中的启动介质用于存储基本固件和配置数据。更换过程包括卸下控制器模块、卸下受损的启动介质、安装替代启动介质、然后将ONTAP映像传输到替代启动介质。</block>
+  <block id="719e92c119e580be0fedfe1616953620" category="doc">更换启动介质- FAS50</block>
+  <block id="c518e6003337d8c1efff7e119d9365d2" category="summary">在更换启动介质时、关闭FAS50存储系统中的受损控制器、以防止数据丢失并确保系统稳定性。</block>
+  <block id="079acc3f3f4418c4b4c1010b6fa2edff" category="doc">关闭控制器以更换启动介质- FAS50</block>
+  <block id="5f8c2ad1061532c9035fde45699f108c" category="summary">您可以从受支持的同一供应商或不同供应商热插拔容量相同的NVMe SSD Flash Cache模块(缓存模块)。</block>
+  <block id="3645f29f6c8c221f20d7813f0fa26a50" category="doc">热插拔缓存模块—FAS50</block>
+  <block id="375300c4c74d065b6e97b93cfb47065f" category="paragraph">您可以从受支持的同一供应商或不同供应商热插拔容量相同的NVMe SSD缓存模块(Flash Cache模块)。</block>
+  <block id="8ebd59de86e8c4e921b201cca97c0308" category="list-text">您的存储系统必须具有适用于您要安装的缓存模块的操作系统。</block>
+  <block id="b8c60af649b796482380a3f6a76bbe83" category="list-text">存储系统中的所有其他组件都必须正常运行；如果未正常运行、请先联系、<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>然后再继续操作。</block>
+  <block id="cc2fe3a3c64e24b07aa04c80f9e847e5" category="list-text">通过缓存模块前面呈琥珀色亮起的警示LED找到发生故障的缓存模块。</block>
+  <block id="a2a6e52f9ed0f0942796917dad1d8983" category="paragraph">缓存模块可以位于驱动器托架0或23中。</block>
+  <block id="62e950648d145fe8127106ed64a26ffc" category="list-text">至少等待70秒、然后再插入替代缓存模块。</block>
+  <block id="c212e76764548ecbad1eec55aa51a425" category="list-text">在凸轮把手处于打开位置的情况下、用双手插入模块。</block>
+  <block id="654ae1f780a7bf81f96af9189ef4e099" category="list-text">轻轻推动、直至模块停止。</block>
+  <block id="f4766f330ca30e7a625e2b5dbae44be1" category="list-text">合上凸轮把手、使模块完全固定在中板中、手柄卡入到位。</block>
+  <block id="dc327f7dba7a06bc6de0e2276d46d0a4" category="paragraph">请务必缓慢关闭凸轮把手、使其与模块表面正确对齐。</block>
+  <block id="b99f6dafb7ef9e4ba4319aeb859a0f74" category="list-text">确认模块的活动(绿色) LED亮起。</block>
+  <block id="69013c48c40dc96bdb9016813612271b" category="summary">验证机箱的HA状态、然后将故障部件返回给NetApp以完成FAS50机箱更换过程中的最后一步。</block>
+  <block id="71ca5fa859d5d656d350997252618cfd" category="doc">完整机箱更换—FAS50</block>
+  <block id="c39f2ee0c21b22242c863103ccffba7b" category="summary">如果硬件故障需要更换FAS50系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下任何缓存模块、安装更换机箱以及重新安装机箱组件。</block>
+  <block id="f7fd8733f7a1cdfb735457344642d65a" category="doc">更换机箱- FAS50</block>
+  <block id="43c0e4ff98cea4dff4c5c25388cd5bdb" category="paragraph">在更换受损FAS50机箱并将组件重新安装到其中之后，您需要<block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block>。</block>
+  <block id="92b1dd9a60c1d18f7606ce281d72ad2d" category="summary">在更换FAS50系统的机箱之前、请确保满足成功更换的必要要求。其中包括验证系统中的所有其他组件是否正常工作、验证是否具有正确的更换机箱以及必要的工具。</block>
+  <block id="b6658ca07f1d7034f64ec87009aff148" category="doc">机箱更换要求- FAS50</block>
+  <block id="d5558ef85c97f84228e8ede4f9fe68a6" category="summary">在更换机箱时、关闭FAS50存储系统中的控制器、以防止数据丢失并确保系统稳定性。</block>
+  <block id="975d6c51bb7949ae1d3665c5ddf83cd9" category="doc">关闭控制器- FAS50</block>
+  <block id="9d9651f97ee43fc1894d70b8fca0c55f" category="doc">机箱更换工作流—FAS50</block>
+  <block id="64e923d27d8f20b1c39e996784b889e8" category="paragraph">按照以下工作流步骤更换机箱。</block>
+  <block id="d46dfcea882ba1b154e777304a052dbb" category="paragraph">更换机箱包括将驱动器挡片、任何缓存模块、控制器(含电源)和挡板从受损机箱移至新机箱、以及将受损机箱更换为与受损机箱型号相同的新机箱。</block>
+  <block id="f8ab9ad62f54fefd22c0d90bef055198" category="summary">如果硬件故障需要更换FAS50系统中的控制器、请进行更换。更换过程包括移除受损控制器、将组件移至更换控制器、安装更换控制器并重新启动它。</block>
+  <block id="b8642444bf8dd9a7f955ef4d53c42954" category="doc">更换控制器- FAS50</block>
+  <block id="38ebe64559125444b42957c926d9309b" category="paragraph">在更换受损FAS50控制器后，您需要<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>。</block>
+  <block id="f47617ad2fb9ec35e7f692f630cf213c" category="summary">将存储资源的控制权归还给替代控制器、以便FAS50系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。</block>
+  <block id="f82377f16c8e20dd1aa1d107e057ab26" category="doc">交还控制器—FAS50</block>
+  <block id="94346bd4e393d4a734081b75a7200d5c" category="doc">控制器更换要求—FAS50</block>
+  <block id="18850df12d6d3905c171cf3b41eb6ff7" category="summary">要完成FAS50系统的控制器更换、请先还原NetApp存储加密配置(如果需要)、然后在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。</block>
+  <block id="6a9ca21da69005485aa97597c969ab06" category="doc">完整控制器更换—FAS50</block>
+  <block id="73b625912eebd490af94249495a8a3ff" category="summary">在更换控制器时、关闭FAS50存储系统中受损的控制器、以防止数据丢失并确保系统稳定性。</block>
+  <block id="47a8a5d1c629f2781c2ebb30539303b9" category="doc">关闭受损控制器—FAS50</block>
+  <block id="49945f2cad4c9c368059dd754d754f6a" category="summary">确认控制器的HA配置在FAS50存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。</block>
+  <block id="c8401b5380a5df9e9eb71687aa5cbf9f" category="doc">还原并验证系统配置—FAS50</block>
+  <block id="2c4ddbd4f1c1216183f0c5bd566a6763" category="paragraph">还原并验证FAS50系统的系统配置后，您需要<block ref="f96992113d4cc080f9d372523b7a919c" category="inline-link-macro-rx"></block>。</block>
+  <block id="5f4615774f4a50ce4e2b4677a17e8e75" category="doc">控制器更换工作流—FAS50</block>
+  <block id="fdfa46ff546c241fb59ecec0b3caccd1" category="paragraph">按照以下工作流步骤更换控制器。</block>
+  <block id="72b60d2ae609d3cbfaf3bd48263c8ae5" category="summary">如果检测到可更正或不可更正的内存错误过多、请更换FAS50系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。</block>
+  <block id="83182c55d59f50af3178dc292ed9f781" category="doc">更换DIMM - FAS50</block>
+  <block id="b12e36ec5c23c2b057b2d1aff5582fd9" category="summary">如果FAS50系统中的风扇模块出现故障或运行效率低下、请更换该风扇模块、因为这会影响系统散热和整体性能。更换过程包括关闭控制器、卸下控制器、更换风扇、重新安装控制器以及将故障部件退回NetApp。</block>
+  <block id="14c5b0713d5ac9cac842b3b9d9f1c6e9" category="doc">更换风扇模块- FAS50</block>
+  <block id="c553f0c394c115c59a3770645eef6aac" category="summary">维护FAS50硬件</block>
+  <block id="aedcdd21a0c77de5f96885987dfadefb" category="doc">维护FAS50硬件</block>
+  <block id="b58ab625a31715db771c75c8ea90990d" category="paragraph">对于FAS50存储系统、您可以对以下组件执行维护过程。</block>
+  <block id="24b87f9884757dfe5ebe74a987ca5489" category="doc">为硬件(FAS50)布线</block>
+  <block id="176d935f21584d13a73cc2fee6d2006f" category="paragraph">安装FAS50存储系统硬件后、使用缆线将控制器连接到网络和磁盘架。</block>
+  <block id="e7bd234f89aa10fe2a25ab70f1881386" category="example-title">带有一个双端口40/100 GbE I/O模块的FAS50</block>
+  <block id="ab0929853066bc5afff8f565bc7e138d" category="image-alt">使用一个100GbE IO模块的FAS50无交换机集群布线图</block>
+  <block id="f5e2edd1a08f37ae784f4706be49b73d" category="admonition">集群互连流量和HA流量共享相同的物理端口(位于插槽4中的I/O模块上)。端口为40/100 GbE。</block>
+  <block id="587bed5e1b1013acb3b0cad78e0dc97f" category="inline-image-macro">使用一个100GbE IO模块的FAS50交换集群布线图</block>
+  <block id="5af61e2d32561bdfd725b4ff1abad33d" category="paragraph"><block ref="5af61e2d32561bdfd725b4ff1abad33d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="30116aad52f0bad698fa0cb2a523a7d2" category="example-title">带有一个4端口1025 GbE I/O模块的FAS50</block>
+  <block id="83ed0059cf7b8565a69e40d218194766" category="image-alt">使用缆线将FAS50连接到10/C5GbE以太网主机网络交换机</block>
+  <block id="97999a10174c7270f80d69a61f881c34" category="example-title">具有一个4端口64 Gb/秒FC I/O模块的FAS50</block>
+  <block id="4af0635b9b0fa01d90348d64d44ac5a7" category="paragraph">以下过程显示了如何使用缆线将控制器连接到一个或两个DS460C磁盘架。</block>
+  <block id="0d4ae2c19fb1eec9c73a9ba31cf7b80f" category="list-text">布线示例显示了DS460C磁盘架；但是，还支持其他SAS磁盘架，请参见<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="dc59d157ac5f286eedfff99a1bb61862" category="inline-link-macro">为新系统安装安装磁盘架并为其布线</block>
+  <block id="016ce9a551ae5a3866c3feb9f430f867" category="inline-link-macro">SAS布线规则、工作表和示例概述</block>
+  <block id="41f30de602f778bd37fd94cde0e93d98" category="paragraph">其他受支持SAS磁盘架的布线方式类似。请参阅。 <block ref="c0d7aa9ee22aab3ecf7bf0fe7732f94e" category="inline-link-macro-rx"></block>您也可以参考<block ref="f178d666cc0e8ba0d12eda1a67319fdb" category="inline-link-macro-rx"></block>。</block>
+  <block id="0bf36a9d3e5241c7c2a803cca8393af0" category="list-text">有关存储系统支持的最大磁盘架数量以及所有布线选项(例如光纤和交换机连接)，请参见<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="72d885b36f3dabe9e44ce371442073d6" category="list-text">您可以使用存储系统随附的存储缆线、可以是以下缆线类型：</block>
+  <block id="72f4035027f2f7ca82b0a522cc86f866" category="open-title">选项1：一个DS460C磁盘架</block>
+  <block id="1475db94c866c1134ab5b90020f91d8e" category="paragraph">使用缆线将每个控制器连接到DS460C磁盘架上的每个IOM12模块。</block>
+  <block id="4148c23baf0acb2d5a889bf39e98d451" category="list-text">使用缆线将控制器A端口3a连接到IOMA端口1。</block>
+  <block id="83622a8ebd61bb324e46d859d063a629" category="list-text">使用缆线将控制器A端口3D连接到IOMB端口3。</block>
+  <block id="e9c2e0916e87c8e70c3f414d7a2a3171" category="inline-image-macro">控制器A端口3a和3d连接到一个DS460C磁盘架</block>
+  <block id="ad272dab205763d50bc64eb8ffbaab6a" category="paragraph"><block ref="ad272dab205763d50bc64eb8ffbaab6a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="65b2202bf59d69d19c408dfe2eb87eb4" category="list-text">使用缆线将控制器B端口3a连接到IOMB端口1。</block>
+  <block id="e8849143d50daef61f19b6d8a620b759" category="list-text">使用缆线将控制器B端口3D连接到IOMA端口3。</block>
+  <block id="ef1647c46666dea72c87973140aae982" category="inline-image-macro">控制器B端口3a和3d连接到一个DS460C磁盘架</block>
+  <block id="e4c4ceb79fe5729418dba70f3d3a4b6f" category="paragraph"><block ref="e4c4ceb79fe5729418dba70f3d3a4b6f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fd4b8702e1fece6900211aed1df08297" category="open-title">选项2：两个DS460C磁盘架</block>
+  <block id="d5b0fb86b04fadb04b2c1aabdc682124" category="paragraph">将每个控制器连接到两个DS460C磁盘架上的IOM12模块。</block>
+  <block id="92b6981d91e56c51ed8cd81ceb0c2725" category="list-text">使用缆线进行磁盘架到磁盘架连接：</block>
+  <block id="4a433061aeb5f5489a4f6f2c6998431e" category="list-text">使用缆线将磁盘架1的IOMA端口3连接到磁盘架2的IOMA端口1。</block>
+  <block id="953e03d7a579b26571697352f2be0e05" category="list-text">使用缆线将磁盘架1的IOMB端口3连接到磁盘架2的IOMB端口1。</block>
+  <block id="123ab7e1c9141cb0b7e7b712d202404a" category="inline-image-macro">使用缆线将磁盘架连接到磁盘架</block>
+  <block id="5b5c504f96f7bd830b1746878c952c52" category="paragraph"><block ref="5b5c504f96f7bd830b1746878c952c52" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="32711258ec649d276f0febe359183174" category="list-text">Cable controller A to the shelves:</block>
+  <block id="8a077fe26258a791808f6c79d3bb7497" category="list-text">使用缆线将控制器A端口3a连接到磁盘架1的IOMA端口1。</block>
+  <block id="3b49545c9e32c779ba99005b8bdb4459" category="list-text">使用缆线将控制器A端口3D连接到磁盘架2的IOMB端口3。</block>
+  <block id="262e032c06dfbe5a4f5e5984c10f93a8" category="inline-image-macro">控制器A端口3a和3d连接到两个DS460C磁盘架</block>
+  <block id="f55c64664eae8ba733b8672a7ff524f8" category="paragraph"><block ref="f55c64664eae8ba733b8672a7ff524f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7a6143a096aca12e23bfad9f1d41fe20" category="list-text">Cable controller B to the shelves:</block>
+  <block id="0b811f09e9eac5e37e239a12858a54c1" category="list-text">使用缆线将控制器B端口3a连接到磁盘架1的IOMB端口1。</block>
+  <block id="01c7cda26a7b465d1c56f741d328e967" category="list-text">使用缆线将控制器B端口3D连接到磁盘架2 IOMA端口3。</block>
+  <block id="60fee2ee2c3e768d10719c680fb38afb" category="inline-image-macro">控制器B端口3a和3d通过缆线连接到两个DS460C磁盘架</block>
+  <block id="7a2d0d2a1e1f5dc3d5184332fb23afba" category="paragraph"><block ref="7a2d0d2a1e1f5dc3d5184332fb23afba" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c7a75f3a015710392a8467c08fd9862a" category="doc">完成存储系统设置和配置—FAS50</block>
+  <block id="c63c71562f3b83fe3a2793ff2deb8fd5" category="paragraph">打开FAS50存储系统后、即可发现集群网络并设置ONTAP集群。</block>
+  <block id="a48dcb52a80835a67657f668af54582e" category="doc">安装硬件- FAS50</block>
+  <block id="986b47fd733e9cbf32255b28864ed238" category="paragraph">准备安装FAS50存储系统后、请安装该存储系统的硬件。首先、安装导轨套件。然后、将存储系统安装并固定在机柜或电信机架中。</block>
+  <block id="4f71d9bde1ecffc22f8c526c10e5381e" category="doc">安装和设置工作流—FAS50</block>
+  <block id="1974af6df768391cf88c40aec678571e" category="paragraph">要安装和设置FAS50存储系统、您必须查看安装要求、准备站点、安装硬件组件并为其布线、打开存储系统电源以及设置ONTAP集群。</block>
+  <block id="dbcb2bc4d50c0b367ad35ab35049f6cf" category="doc">启动存储系统—FAS50</block>
+  <block id="58a9bceae382f9146952eb764c24eaa4" category="paragraph">使用缆线将控制器连接到FAS50存储系统中的网络和磁盘架后、您可以打开磁盘架和控制器的电源。</block>
+  <block id="c5c54b199e1cae61ce9f1f8df4d64ad2" category="list-text">系统机箱正面的磁盘架ID显示屏未亮起。</block>
+  <block id="21b1424b1e644de7e738b04ffc32d5fb" category="list-text">使用每个电源上的固定设备固定电源线。:FAS50-A20-30-50!:</block>
+  <block id="64edc211ab70498201f3acbe712ec6a4" category="summary">准备安装FAS50平台。</block>
+  <block id="ba721f2e06c40252a394b51ea95142e3" category="doc">准备安装- FAS50</block>
+  <block id="e20b24ffe711fbb4211c8b7f51f10949" category="paragraph">准备安装FAS50存储系统、方法是准备好场地、打开包装箱包装、将包装箱中的物品与装箱单进行比较、并注册存储系统以获得支持优势。</block>
+  <block id="bf6f76951a411b87fee677094547f5d4" category="doc">安装要求—FAS50</block>
+  <block id="f3239a5f1291696246e54607fd3b9a01" category="paragraph">查看FAS50存储系统的要求。</block>
+  <block id="e56a8d138f62f4590eed5655df5c011f" category="paragraph">存储系统的重量可达24.4千克(53.8磅)。要抬起存储系统、请两个人或使用液压升降机。</block>
+  <block id="9c48a8da7b0db1cca470b9010947185e" category="image-alt">FAS50重量注意图标</block>
+  <block id="af0319de88f3ed43d4ee4fb8b670c558" category="paragraph">DS460C磁盘架的重量可达181.1千克(260.4磅)。要抬起磁盘架、您可能需要最多五个人或一台液压升降机。将所有组件(前部和后部)保留在磁盘架中、以防止磁盘架重量不平衡。</block>
+  <block id="7b153c13ff10bb5ce6fd48c3d66f3a2d" category="summary">将I/O模块添加到FAS50系统中、以增强网络连接并扩展系统处理数据流量的能力。</block>
+  <block id="26f561223ab76238a005189688efb525" category="doc">添加一个I/O模块—FAS50</block>
+  <block id="472113a5add68b7f9bf4dce6d45207dd" category="paragraph">当有可用插槽或所有插槽均已完全填充时、您可以向FAS50存储系统添加I/O模块。</block>
+  <block id="0da13ed47030f4f6aff66ca53e9ab7bd" category="summary">FAS50系统可以灵活地扩展或更换I/O模块、以增强网络连接和性能。在升级网络功能或解决故障模块时、添加或更换I/O模块至关重要。</block>
+  <block id="9f6e0871bc1f665d9d55adeaef141285" category="doc">添加和更换I/O模块概述—FAS50</block>
+  <block id="74be49eeaaab5e0816ef02fff20cac31" category="summary">如果FAS50系统中的I/O模块发生故障或需要升级以支持更高性能或其他功能、请更换该模块。更换过程包括关闭控制器、更换发生故障的I/O模块、重新启动控制器以及将发生故障的部件退回NetApp。</block>
+  <block id="c65fcc9bc376acee1b7dc4604e426776" category="doc">更换I/O模块- FAS50</block>
+  <block id="c296ba9a8987d716f7c569e3d75c754e" category="summary">维护FAS50存储系统的硬件、以确保长期可靠性和最佳性能。执行定期维护任务、例如更换故障组件、因为这有助于防止停机和数据丢失。</block>
+  <block id="651d5528b03e26465b5710deab4b18d5" category="doc">硬件维护概述—FAS50</block>
+  <block id="92bf596899ecc2dd428dae4ead6350e9" category="paragraph">维护过程假定FAS50系统已部署为ONTAP环境中的存储节点。</block>
+  <block id="0c2720f00fff80891cbfa57fc6b79952" category="paragraph"><block ref="0c2720f00fff80891cbfa57fc6b79952" category="inline-link-macro-rx"></block></block>
+  <block id="c83ef2561162a9d1f0f9a046b5027a5f" category="paragraph">缓存模块(Flash Cache模块)利用高速SSD存储经常访问的数据、以便于快速检索。</block>
+  <block id="99345c0fa01397fc4834fca8d86e6924" category="summary">当FAS50系统中的NV电池开始失去电量或发生故障时、请更换电池、因为它负责在断电期间保留关键系统数据。更换过程包括关闭受损控制器、卸下控制器模块、更换NV电池、重新安装控制器模块以及将故障部件退回NetApp。</block>
+  <block id="ee30a6d4bd29182df174caa70edbbdf0" category="doc">更换NV电池- FAS50</block>
+  <block id="8847128a12be40ae1b08a6092e93aa11" category="summary">如果FAS50系统中的交流或直流电源设备(PSU)发生故障或出现故障、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。</block>
+  <block id="bfae144eadfeb10d9deaca4eda74d8ca" category="doc">Replace a power supply - FAS50</block>
+  <block id="ac8a37f8b37d0c6890e6847a1c6e4f90" category="summary">更换FAS50系统中的实时时钟(Real-time clock、RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。</block>
+  <block id="cd9bb4588a19b474bb2eea89a70d69b9" category="doc">更换实时时钟电池- FAS50</block>
+  <block id="d85e5cacacd757755e3d09416d2a8bf8" category="sidebar">FAS50</block>
+  <block id="89c74f56d3077d699f62355b846ecb58" category="sidebar">FAS50系统</block>
+  <block id="d45586db6404e164f2c1f5e7cee53a63" category="sidebar">FAS50安装和设置</block>
+  <block id="e4a119c627ab5c9085b1bc8cdd861028" category="sidebar">FAS50维护</block>
+  <block id="b27b643308a11f640602b0b02c8a2b53" category="sidebar">FAS50启动介质</block>
+  <block id="58a129a196d2bcb0ede5faa90327004e" category="sidebar">FAS50机箱</block>
+  <block id="e05691d9a469c6dfe5333a08214cfeee" category="sidebar">FAS50控制器模块</block>
+  <block id="58a7a102daa03629c6548f4b567a8bdc" category="sidebar">FAS50 I/O模块</block>
 </blocks>

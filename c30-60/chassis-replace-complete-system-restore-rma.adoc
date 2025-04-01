@@ -33,7 +33,7 @@ summary: 验证机箱的HA状态、然后将故障部件返回给NetApp以完成
 `ha-config modify chassis _HA-state_`
 
 +
-HA状态的值应为_ha_。
+HA状态的值应为_ha_。HA状态的值可以是以下值之一：***_ha_***_MCC _(在ASA中不受支持)
 
 .. 确认设置已更改：
 +
