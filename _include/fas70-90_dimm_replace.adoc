@@ -1,21 +1,10 @@
----
-permalink: a1k/rtc-battery-replace.html 
-sidebar: sidebar 
-keywords: aff a1k, replace the real-time clock battery 
-summary: '更换AFF A1K系统中的实时时钟(RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。' 
----
-= 更换实时时钟电池- AFF A1K
+= 第 1 步：关闭受损控制器
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-更换AFF A1K系统中的实时时钟(RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。
 
 .开始之前
-* 请注意、您可以对系统支持的所有ONTAP版本使用此过程。
 * 确保系统中的所有其他组件均正常运行；否则，您必须联系技术支持。
+* 请确保将故障组件更换为从NetApp收到的更换组件。
 
 
 
@@ -210,19 +199,47 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
-== 第 3 步：更换 RTC 电池
+== 第 3 步：更换 DIMM
 
-卸下发生故障的RTC电池、然后安装更换的RTC电池。
+如果系统报告DIMM出现永久故障、则必须更换该DIMM。
 
+. 如果您尚未接地，请正确接地。
 . 打开控制器顶部的控制器通风管。
 +
 .. 将手指插入空气管道远端的凹槽中。
 .. 提起空气管道、将其向上旋转至最远位置。
 
 
-. 找到空气管道下方的RTC电池。
+. 找到控制器模块上的DIMM并确定要更换的DIMM。
 +
-image::../media/drw_a1k_rtc_remove_replace_ieops-1381.svg[Replace the RTC battery]
+DIMM位置取决于系统型号：
+
++
+[cols="1,4"]
+|===
+
+
+| 型号 | DIMM插槽位置 
+
+
+| FAS70  a| 
+插槽3、10、19、26
+
+
+
+ a| 
+FAS90
+ a| 
+插槽3、7、10、14、19、23、26、30
+
+|===
+. 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。
++
+
+IMPORTANT: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
+
++
+image::../media/drw_a1k_dimms_ieops-1512.svg[更换DIMM]
 
 +
 [cols="1,4"]
@@ -231,21 +248,29 @@ image::../media/drw_a1k_rtc_remove_replace_ieops-1381.svg[Replace the RTC batter
 
  a| 
 image:../media/icon_round_1.png["标注编号1"]
-| RTC 电池和外壳 
+ a| 
+DIMM 和 DIMM 弹出器卡舌
+
 |===
-. 将电池轻轻推离电池架，将其旋转出电池架，然后将其从电池架中取出。
+. 从防静电运输袋中取出更换用的 DIMM ，拿住 DIMM 的边角并将其与插槽对齐。
++
+DIMM 插脚之间的缺口应与插槽中的突起对齐。
+
+. 确保连接器上的 DIMM 弹出器卡舌处于打开位置，然后将 DIMM 垂直插入插槽。
++
+DIMM 紧紧固定在插槽中，但应很容易插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。
+
 +
 
-NOTE: 从电池架中取出电池时，请注意电池的极性。电池标有加号，必须正确放置在支架中。电池座旁边的加号用于指示电池的位置。
+IMPORTANT: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
-. 从防静电运输袋中取出更换用电池。
-. 记下 RTC 电池的极性，然后将电池倾斜并向下推，将其插入电池架中。
-. 目视检查电池，确保其已完全安装到电池架中，并且极性正确。
-
+. 小心而稳固地推动 DIMM 的上边缘，直到弹出器卡舌卡入到位，卡入到位于 DIMM 两端的缺口上。
+. 关闭控制器空气管道。
 
 
 
-== 第 4 步：重新安装控制器模块
+
+== 第 4 步：安装控制器
 
 重新安装并启动控制器模块。
 
@@ -269,31 +294,6 @@ NOTE: 将控制器模块滑入机箱时、请勿用力过度、以免损坏连�
 
 
 
-== 第5步：重置控制器上的时间和日期
-
-
-NOTE: 在更换RTC电池、插入控制器并首次启动BIOS重置后、您将看到以下错误消息：
-`RTC date/time error. Reset date/time to default`
-`RTC power failure error` 这些消息已被排除、您可以继续此过程。
-
-. 使用_cluster date show_命令检查运行正常的控制器上的日期和时间。
-
-
-
-NOTE: 如果系统停留在启动菜单处、请选择选项  `Reboot node` 并在出现提示时回答_y_、然后按_Ctrl-C_启动到加载程序
-
-. 在目标控制器上的加载程序提示符处、使用命令检查时间和日期 `cluster date show` 。
-. 如有必要，请使用 `set date MM/dd/yyyy` 命令修改日期。
-. 如有必要，请使用 `set time hh ： mm ： ss` 命令在 GMT 中设置时间。
-+
-.. 确认目标控制器上的日期和时间。
-.. 在加载程序提示符处、输入_BYE_重新初始化PCIe卡和其他组件、然后重新启动控制器。
-
-
-
-
-
-
-== 第 6 步：将故障部件退回 NetApp
+== 第 5 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

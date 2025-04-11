@@ -45,10 +45,10 @@ NOTE: 如果您看到_pendis_Mismatch、请联系客户支持。
 
 . 如果显示的控制器系统状态与您的存储系统配置不匹配、请设置 `HA`控制器的状态：
 +
-`ha-config modify controller ha-state`
+`ha-config modify controller ha`
 
 +
-ha-state 的值可以是以下值之一：
+HA状态的值可以是以下值之一：
 
 +
 ** `ha`

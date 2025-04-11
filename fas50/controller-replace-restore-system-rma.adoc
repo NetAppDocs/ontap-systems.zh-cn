@@ -19,16 +19,18 @@ summary: '要完成FAS50系统的控制器更换、请先还原NetApp存储加�
 
 如果受损节点正在使用需要标准（节点锁定）许可证的 ONTAP 功能，则必须为 _replacement_ 节点安装新许可证。对于具有标准许可证的功能，集群中的每个节点都应具有自己的功能密钥。
 
-.关于此任务
-在安装许可证密钥之前，需要标准许可证的功能仍可供替代节点使用。但是，如果受损节点是集群中唯一具有此功能许可证的节点，则不允许更改此功能的配置。
+.开始之前
+如果您的系统最初运行的是ONTAP 9．10.1或更高版本，请使用中所述的过程 https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Post_Motherboard_Replacement_Process_to_update_Licensing_on_a_AFF_FAS_system#Internal_Notes^["主板更换后流程、用于更新ONTAP平台上的许可"]。如果您不确定系统的初始ONTAP版本、请参阅link:https://hwu.netapp.com["NetApp Hardware Universe"^]以了解更多信息。
 
+.关于此任务
+* 在安装许可证密钥之前，需要标准许可证的功能仍可供替代节点使用。但是，如果受损节点是集群中唯一具有此功能许可证的节点，则不允许更改此功能的配置。
++
 此外，在节点上使用未经许可的功能可能会使您不符合您的许可协议，因此您应尽快在替代节点上安装替代许可证密钥。
 
-许可证密钥必须采用 28 个字符的格式。
+* 许可证密钥必须采用 28 个字符的格式。
+* 您有 90 天的宽限期来安装许可证密钥。宽限期过后，所有旧许可证将失效。安装有效的许可证密钥后，您可以在 24 小时内安装所有密钥，直到宽限期结束。
+* 如果节点采用 MetroCluster 配置，并且站点上的所有节点均已更换，则在切回之前，必须在 _replacement_ 节点上安装许可证密钥。
 
-您有 90 天的宽限期来安装许可证密钥。宽限期过后，所有旧许可证将失效。安装有效的许可证密钥后，您可以在 24 小时内安装所有密钥，直到宽限期结束。
-
-如果节点采用 MetroCluster 配置，并且站点上的所有节点均已更换，则在切回之前，必须在 _replacement_ 节点上安装许可证密钥。
 
 .步骤
 . If you need new license keys, obtain replacement license keys on the https://mysupport.netapp.com/site/global/dashboard["NetApp 支持站点"] in the My Support section under Software licenses.

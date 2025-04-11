@@ -26,7 +26,7 @@ summary: 在FAS70或FAS90系统中安装新的启动介质设备后、您可以�
 .选项1：ONTAP 9 16.0或更早版本
 --
 .. 在受损控制器上、看到时 `Do you want to restore the backup configuration now?`按 `Y`
-.. 在受损控制器上、当系统提示覆盖_/etc/ssh/ssh_host_Ossa_key_时、按 `Y`。
+.. 如果受损控制器出现提示、请按键 `Y`覆盖_/etc/ssh/ssh_host_Ossa_key_。
 .. 在运行状况良好的配对控制器上，将受损控制器设置为高级权限级别： `set -privilege advanced`。
 .. 在运行状况良好的配对控制器上，运行restore backup命令： `system node restore-backup -node local -target-address impaired_node_IP_address`。
 +

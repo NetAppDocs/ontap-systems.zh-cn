@@ -76,6 +76,7 @@ NOTE: 驱动器固件检查每两分钟进行一次。
 
 .步骤
 . 正确接地。
+. 从存储系统正面卸下挡板。
 . 以物理方式确定故障驱动器。
 +
 When a drive fails, the system logs a warning message to the system console indicating which drive failed.此外、磁盘架操作员显示面板上的警示(琥珀色) LED和故障驱动器将亮起。
@@ -136,7 +137,8 @@ NOTE: 由于驱动器易碎、请尽量减少操作以避免损坏驱动器。
 +
 如果驱动器的活动 LED 稳定亮起，则表示驱动器已通电。当驱动器的活动 LED 闪烁时，表示驱动器已通电且 I/O 正在进行中。如果驱动器固件正在自动更新，则 LED 将闪烁。
 
-. If you are replacing another drive, repeat Steps 2 through 6.
+. If you are replacing another drive, repeat Steps 2 through 7.
+. 重新安装存储系统正面的挡板。
 . 按照套件随附的 RMA 说明将故障部件退回 NetApp 。
 +
 请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。

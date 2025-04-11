@@ -11,9 +11,9 @@ summary: 将I/O模块添加到FAS50系统中、以增强网络连接并扩展系
 
 
 [role="lead"]
-将I/O模块添加到FAS50系统中、以增强网络连接并扩展系统处理数据流量的能力。
+将I/O模块添加到FAS50存储系统中、以增强网络连接并扩展系统处理数据流量的能力。
 
-当有可用插槽或所有插槽均已完全填充时、您可以向FAS50存储系统添加I/O模块。
+当有可用插槽或所有插槽均已完全填充时、您可以将I/O模块添加到FAS50存储系统中(方法是移除现有I/O模块并在其位置安装新的I/O模块)。
 
 .关于此任务
 如果需要、您可以打开存储系统位置(蓝色) LED、以帮助您以物理方式定位受影响的存储系统。使用SSH登录到BMC并输入 `system location-led _on_`命令。
@@ -145,7 +145,7 @@ LOADER 提示符
 . 如果您尚未接地，请正确接地。
 . 在受损控制器上、从目标插槽中卸下I/O消隐模块。
 +
-未使用的I/O插槽应安装空白模块、以防止可能出现散热问题。
+未使用的I/O插槽应安装空白模块、以防止可能出现散热问题并符合EMC要求。
 
 +
 image::../media/drw_g_io_blanking_module_replace_ieops-1901.svg[卸下I/O消隐模块]
@@ -186,7 +186,7 @@ image:../media/icon_round_2.png["标注编号2"]
 +
 重新启动受损控制器还会重新初始化I/O模块和其他组件。
 
-. 从配对控制器交还受损控制器： `storage failover giveback -ofnode _impaired_node_name_`
+. 从运行正常的控制器交还受损控制器： `storage failover giveback -ofnode _impaired_node_name_`
 . 重复上述步骤、将I/O模块添加到另一个控制器。
 . 从运行状况良好的控制器的控制台还原自动交还： `storage failover modify -node local -auto-giveback _true_`
 . 如果启用了AutoSupport、则还原(取消禁止)自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`
@@ -269,10 +269,10 @@ image:../media/icon_round_2.png["标注编号2"]
 +
 重新启动受损控制器还会重新初始化I/O模块和其他组件。
 
-. 从配对控制器交还受损控制器： `storage failover giveback -ofnode _impaired_node_name_`
+. 从运行正常的控制器交还受损控制器： `storage failover giveback -ofnode _impaired_node_name_`
 . 从运行状况良好的控制器的控制台还原自动交还： `storage failover modify -node local -auto-giveback _true_`
-. 如果启用了AutoSupport、则还原(取消禁止)自动创建案例：system node AutoSupport invoke -node *-type all -message Maint=end
-. 如果安装了NIC模块、请将每个端口的使用模式指定为_network_： `storage port modify -node *_<node name>_ -port *_<port name>_ -mode network`
+. 如果启用了AutoSupport、则还原(取消禁止)自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`
+. 如果安装了NIC模块、请将每个端口的使用模式指定为_network_： `storage port modify -node _node_name_ -port _port_name_ -mode _network_`
 . 对另一个控制器重复上述步骤。
 
 

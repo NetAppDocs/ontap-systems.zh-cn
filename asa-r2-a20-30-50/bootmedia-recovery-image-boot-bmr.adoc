@@ -53,7 +53,7 @@ summary: 您可以通过自动启动恢复过程从配对控制器还原启动�
 
 . 监控启动介质安装恢复过程。
 +
-此过程完成并显示 `Installation complete.`消息。
+此过程完成并显示 `Installation complete`消息。
 
 . 系统将检查加密和加密类型、并显示两条消息之一。根据显示的消息、执行以下操作之一：
 +
@@ -348,7 +348,10 @@ kmip2_client: Successfully imported the keys from external key server: xxx.xxx.x
 Successfully recovered keymanager secrets.
 ....
 =====
-*** 如果未成功还原密钥、系统将暂停并指示它无法还原密钥。此时将显示错误和警告消息。输入以重新运行恢复过程 `boot_recovery -partner`。
+*** 如果未成功还原密钥、系统将暂停并指示它无法还原密钥。此时将显示错误和警告消息。重新运行恢复过程：
++
+`boot_recovery -partner`
+
 +
 .显示密钥恢复错误和警告消息的示例
 [%collapsible]
@@ -378,7 +381,7 @@ LOADER-B>
 .. 节点重新启动后、通过确认系统恢复联机并正常运行来验证启动介质恢复是否成功。
 .. 通过交还存储使控制器恢复正常运行：
 +
-`storage failover giveback -ofnode _impaired_node_name_`(英文)
+`storage failover giveback -ofnode _impaired_node_name_`
 
 
 
@@ -388,11 +391,11 @@ LOADER-B>
 
 . 如果已禁用自动交还、请重新启用它：
 +
-`storage failover modify -node local -auto-giveback true`(英文)
+`storage failover modify -node local -auto-giveback true`
 
 . 如果启用了AutoSupport、则还原自动创建案例：
 +
-`system node autosupport invoke -node * -type all -message MAINT=END`(英文)
+`system node autosupport invoke -node * -type all -message MAINT=END`
 
 
 
