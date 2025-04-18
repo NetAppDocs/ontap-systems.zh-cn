@@ -1,17 +1,6 @@
----
-permalink: asa-r2-a20-30-50/bootmedia-controller-reinstall.html 
-sidebar: sidebar 
-keywords: asa a20, asa a30, asa a50, remove controller 
-summary: '如果系统注册的可更正错误更正代码(ECC)数量不断增加、则必须更换控制器模块；否则会导致系统崩溃。' 
----
-= 重新安装控制器- ASA A20、ASA A30和ASA A50
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-将控制器重新安装到机箱中并重新启动。
 
 .关于此任务
 下图显示了重新安装控制器时控制器手柄(从控制器左侧开始)的操作、可用作其余控制器重新安装步骤的参考。
@@ -68,6 +57,40 @@ NOTE: 将控制器滑入机箱时、请勿用力过度、否则可能会损坏�
 +
 
 NOTE: 替代控制器从运行状况良好的控制器获得电源、并在完全固定在机箱中后立即开始启动。
+
+
+
+. 通过按CTRL-C将控制器转到Loader提示符以中止自动启动。
+. 设置控制器上的时间和日期：
++
+确保处于控制器的Loader提示符处。
+
++
+.. 显示控制器上的日期和时间：
++
+`show date`
+
++
+
+NOTE: 时间和日期默认为GMT。您可以选择以本地时间和24小时模式显示。
+
+.. 设置GMT的当前时间：
++
+`set time hh:mm:ss`
+
++
+您可以从运行状况良好的节点获取当前GMT：
+
++
+`date -u`
+
+.. 在GMT中设置当前日期：
++
+`set date mm/dd/yyyy`
+
++
+您可以从运行状况良好的节点获取当前GMT：+
+`date -u`
 
 
 

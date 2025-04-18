@@ -703,7 +703,6 @@
   <block id="c6f502d8dd8eb8b387d8da2e59e48c95" category="summary">以下视频显示了运行 ONTAP 9.2 的系统的端到端软件配置。</block>
   <block id="1ab25fd464770ca38598dbf7e3aa872c" category="doc">安装和设置视频— AFF A700s</block>
   <block id="0e77f42d7c64a07ce718d60dd8e6bd46" category="inline-link-macro">AFF A700s 设置视频</block>
-  <block id="ad95e5b69f87474809f8228af5e2fbe2" category="paragraph"><block ref="ad95e5b69f87474809f8228af5e2fbe2" category="inline-link-macro-rx"></block></block>
   <block id="d9119345c9a007e36472326a6510319b" category="section-title">第 2 步：移动 NVRAM 卡</block>
   <block id="63f3a7c41a55885608d548f506cf6e84" category="paragraph">在控制器更换过程中，您必须从受损控制器模块的提升板 1 中卸下 NVRAM 卡，然后将该卡安装到更换控制器模块的提升板 1 中。只有在将 DIMM 从受损的控制器模块移至更换用的控制器模块后，才应将提升板 1 重新安装到更换用的控制器模块中。</block>
   <block id="1ab810cfbdc8e768a7dd00d6ecd7d645" category="list-text">从控制器模块中卸下 NVRAM 提升板提升板 1 ：</block>
@@ -1384,10 +1383,8 @@
   <block id="741c2196cc7abcf971992d4e656da7ea" category="paragraph">在此示例中， Node_B_1 是旧节点，旧系统 ID 为 118073209 ：</block>
   <block id="2aa94dd7242f16ec9126f4d25ad06195" category="list-text">在受损节点上的维护模式提示符处查看新的系统 ID ： `disk show`</block>
   <block id="761dab2a2eaf4e205d39d0acc4925d17" category="paragraph">在此示例中，新系统 ID 为 118065481 ：</block>
-  <block id="73a7440753d817323876d5857eb4a3f7" category="list-text">使用从 disk show 命令获取的系统 ID 信息重新分配磁盘所有权（对于 FAS 系统）或 LUN 所有权（对于 FlexArray 系统）： `disk reassign -s old system ID`</block>
   <block id="aab7ee705a771085da41cf3f32f1aebe" category="paragraph">在上述示例中，命令为： `disk reassign -s 118073209`</block>
   <block id="1d1227c1811174bd93682bbcc9fdce3c" category="paragraph">系统提示您继续时，您可以回答 `Y` 。</block>
-  <block id="a3437746fcb93fe85bd0d8ade510007d" category="list-text">验证是否已正确分配磁盘（或 FlexArray LUN ）： `disk show -a`</block>
   <block id="21d6dd74cdb7e164685f5da4f2e76256" category="paragraph">验证属于 _replacement_ 节点的磁盘是否显示 _replacement_ 节点的新系统 ID 。在以下示例中， system-1 所拥有的磁盘现在显示新的系统 ID 118065481 ：</block>
   <block id="b06003538a02608d68f5e58756344017" category="list-text">验证核心转储是否已保存： `ssystem node run -node _local-node-name_ partner savecore`</block>
   <block id="83d65805f786049104c0e0050c82696b" category="paragraph">如果命令输出指示 savecore 正在进行中，请等待 savecore 完成，然后再发出交还。您可以使用 `ssystem node run -node _local-node-name_ partner savecore -s 命令` 监控 savecore 的进度。 &lt;/info&gt;</block>
@@ -1425,7 +1422,6 @@
   <block id="9f3fe6619f3cc21d2cc057e260c9a3ae" category="doc">关闭受损控制器— FAS8200</block>
   <block id="2ae25bf6a8aeb42c4073ddba26224b0c" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。</block>
   <block id="061a78fed35fa26d870ae789dd6685b8" category="doc">将故障部件退回给 NetApp - FAS8200</block>
-  <block id="2cbabd3028fd0cb6f4a57144ace2ee33" category="list-text">如果您的系统是 FlexArray 系统或具有 V_StorageAttach 许可证，则在执行此操作步骤之前，必须参考所需的其他步骤。</block>
   <block id="0012bcaadb56ca5543ace124a6a404f9" category="list-text">如果您的系统位于 HA 对中，则运行状况良好的节点必须能够接管要更换的节点（在此操作步骤中称为 "`受损节点` " ）。</block>
   <block id="eceeb845d6027471d1eafcff9c9e0e9e" category="paragraph">您应按照操作步骤中的指示执行驱动器重新分配。</block>
   <block id="18286caf45baac43fedf94bfeaff35fa" category="list-text">更换用的控制器模块必须支持从旧控制器模块移至新控制器模块或从现有客户站点清单中添加的任何 PCIe 卡。</block>
@@ -2851,7 +2847,6 @@
   <block id="c66eef3fd6b2a7fdd9b6e9fbe927aa2f" category="doc">安装和设置视频— FAS2600</block>
   <block id="7d529e0ab83dded43342f45ed2a098bd" category="inline-link-macro">AFF FAS2600 设置视频</block>
   <block id="5b9bf9643d348558871bac7550eb6bf2" category="inline-link-macro">AFF FAS2600 控制器更换视频</block>
-  <block id="bfc5f4fff0a27940b1f4676800d974c4" category="paragraph"><block ref="bfc5f4fff0a27940b1f4676800d974c4" category="inline-link-macro-rx"></block></block>
   <block id="86b067a1faa816ad3c0a245cc1e409ad" category="section-title">第 5 步：移动缓存模块</block>
   <block id="f5f4db4cbf741ec589cd881a641a1a02" category="paragraph">要移动控制器标签上的 M.2 PCIe 卡缓存模块，请找到旧控制器并将其移至更换控制器，然后按照特定步骤顺序进行操作。</block>
   <block id="fb2b1a9ce62aa797e37590c1f38945e1" category="doc">移动并更换硬件— FAS2600</block>
@@ -2860,7 +2855,6 @@
   <block id="54460a9998b0b0517a52cc21d98c7497" category="paragraph">如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。在独立系统中，必须手动将 ID 重新分配给磁盘。您必须为您的配置使用正确的操作步骤。</block>
   <block id="478fc4fb96b68e7639f1b8b60636da7c" category="doc">更换 NVMEM 电池— FAS2600</block>
   <block id="c8ce5afe6808111cafcf57c11a22b941" category="inline-link-macro">AFF FAS2600 NVMEM 电池更换视频</block>
-  <block id="42eb4da4054bc83a79fd36f832504d55" category="paragraph"><block ref="42eb4da4054bc83a79fd36f832504d55" category="inline-link-macro-rx"></block></block>
   <block id="d2efa0c31f219abbc043377bfd4ffa3b" category="doc">启动恢复映像— FAS2600</block>
   <block id="a102b530af65288511339cf8117713a3" category="doc">关闭控制器— FAS2600</block>
   <block id="a47803b6b6d01b67efcc88a157378c39" category="doc">将故障部件退回 NetApp - FAS2600</block>
@@ -4162,7 +4156,6 @@
   <block id="00a787350c10dda9fec8ed799a0a0d41" category="inline-link">安装 MetroCluster IP 配置</block>
   <block id="dd97e64f3163f239256639a3f4314e89" category="paragraph">如果您的系统采用 MetroCluster IP 配置，请参见<block ref="373f2390d7121eb9c57821ab147cf1e7" category="inline-link-rx"></block> 说明。</block>
   <block id="320003b122e9ced04801080d4fca8abd" category="list-text"><block ref="320003b122e9ced04801080d4fca8abd" category="inline-link-macro-rx"></block></block>
-  <block id="604b91e7007f6b52b608d188580ff582" category="list-text"><block ref="604b91e7007f6b52b608d188580ff582" category="inline-link-macro-rx"></block></block>
   <block id="cfe676549c53e52dc611f1610a8ef495" category="paragraph">有关 MetroCluster 配置，请参见：</block>
   <block id="b232e9ef89b4f98b36e1c295adeb4a63" category="inline-link">安装 MetroCluster IP 配置</block>
   <block id="d495410a7f7a2c72ad8aa73f5cdb0372" category="list-text"><block ref="d495410a7f7a2c72ad8aa73f5cdb0372" category="inline-link-rx"></block></block>
@@ -4205,7 +4198,6 @@
   <block id="447072f7ce3f18e54dbea54be9810116" category="list-text">如果 HA 对中正在进行维护的节点显示 `true` （持有 epsilon ），则从节点中删除 epsilon ： `cluster modify -node _node_name_ -epsilon false`</block>
   <block id="859b2518ddc407ed154103ca5d61902f" category="list-text">将 epsilon 分配给另一个 HA 对中的节点： `cluster modify -node _node_name_ -epsilon true`</block>
   <block id="49ba302fbc53429009e579494e0457be" category="list-text"><block ref="49ba302fbc53429009e579494e0457be" category="inline-link-macro-rx"></block></block>
-  <block id="ddd1a9511bc4cec117e8b939fbe7f2cc" category="list-text"><block ref="ddd1a9511bc4cec117e8b939fbe7f2cc" category="inline-link-macro-rx"></block></block>
   <block id="5ffba9ed2c673f5145fe25996fc2b0dc" category="summary">本节详细介绍了安装 AFF A800 系统的分步说明。</block>
   <block id="823b36f7fa4cb798d78af7be2bf8aca7" category="doc">详细步骤— AFF A800</block>
   <block id="b0e69a1b113b20966641e48d3d36e788" category="doc">快速步骤— AFF A800</block>
@@ -4255,10 +4247,6 @@
   <block id="b8657f72d8b4e1ef5c7e2c082690279e" category="list-text"><block ref="b8657f72d8b4e1ef5c7e2c082690279e" category="inline-link-rx"></block></block>
   <block id="4d2e328d055378ef43067726132a9c56" category="list-text"><block ref="4d2e328d055378ef43067726132a9c56" category="inline-link-rx"></block></block>
   <block id="47172f1226f9908865e044955d2f091b" category="paragraph">您可以使用 <block ref="cb0390cbe2f3cf678134885ff143b6ba" category="inline-link-macro-rx"></block> 收集并记录配置 ONTAP 集群时所需的站点专用 IP 地址和其他信息。</block>
-  <block id="e85e66f99bf70a0cd52615d346aa4f9f" category="paragraph"><block ref="e85e66f99bf70a0cd52615d346aa4f9f" category="inline-link-macro-rx"></block></block>
-  <block id="e3d9e54e0daad2e60e36e8b370fec883" category="paragraph"><block ref="e3d9e54e0daad2e60e36e8b370fec883" category="inline-link-macro-rx"></block></block>
-  <block id="083781fc87756a032121b806b4d18a92" category="paragraph"><block ref="083781fc87756a032121b806b4d18a92" category="inline-link-macro-rx"></block></block>
-  <block id="5f3f6cd3a4d5edc50129f46b603aa9c2" category="paragraph"><block ref="5f3f6cd3a4d5edc50129f46b603aa9c2" category="inline-link-macro-rx"></block></block>
   <block id="e477637685baafe9bbd353f71ef51283" category="paragraph">允许系统启动。Initial booting may take up to eight minutes.</block>
   <block id="fe3be7b129e2b9c74abd26381eea72bb" category="cell">Gently pull tab away from the battery housing.*Attention:* Pulling it away aggressively might displace the tab.</block>
   <block id="d61a84f0b033dd225ff9a1af9b0f08a5" category="paragraph">Lift the battery up.*Note:* Make a note of the polarity of the battery.</block>
@@ -4297,7 +4285,6 @@
   <block id="055140d300b472c3cf197b316fc1a111" category="doc">完成系统还原— AFF A900</block>
   <block id="8f73eb9fb7acfd413cf2778aacee51b6" category="doc">视频步骤— AFF A900</block>
   <block id="3bc737994532b61e4fad9c84d6dccfc0" category="summary">此提供了有关安装典型 NetApp 系统的详细分步说明。</block>
-  <block id="b37eeea92bef8e254a5c7650e7002788" category="doc">详细步骤— AFF 900</block>
   <block id="fa3056f29df183b75e177c2b6ee65b45" category="paragraph">本文详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本文。</block>
   <block id="8666406295c84e68942a4f6fc1b2cb4e" category="paragraph">您需要有权访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 有关站点要求以及已配置系统上的追加信息的信息。</block>
   <block id="efe451bd1c5b374a05e7d5178bb06987" category="inline-link">《 ONTAP 9 发行说明》</block>
@@ -9901,7 +9888,6 @@ SFP+(目标/启动程序)</block>
   <block id="07e9b2c4f45f1b16bcc15da0757a3cab" category="admonition">在系统指示之前、请勿将控制器完全插入机箱。</block>
   <block id="ef25353e4e6a2996c8c58db66688c4b4" category="list-text">将控制台电缆连接到控制器上的控制台端口和笔记本电脑、以便笔记本电脑在控制器重新启动时接收控制台消息。</block>
   <block id="b5286ddd59d2d1bedeafbeaffb7de288" category="list-text">将控制器完全装入机箱：</block>
-  <block id="28b7fea1449f9a616376a90e478d67b0" category="admonition">控制器在机箱中完全就位后立即开始启动。</block>
   <block id="f34b6cfc50a1739d51d949fcdd369dad" category="list-text">通过按CTRL-C将控制器转到Loader提示符以中止自动启动。</block>
   <block id="316bb85cd1ab9a7f0cc40325c5827a6d" category="list-text">设置控制器上的时间和日期：</block>
   <block id="1e5698196a8490bf6290a21eeb883524" category="paragraph">确保处于控制器的Loader提示符处。</block>
@@ -11911,4 +11897,19 @@ SFP+(目标/启动程序)</block>
   <block id="3034b89fc8e6fc3ae99585d8f1eab80e" category="doc">更换控制器的要求- FAS50</block>
   <block id="5c15054b184102da84361b1cd1e81384" category="paragraph">将I/O模块添加到FAS50存储系统中、以增强网络连接并扩展系统处理数据流量的能力。</block>
   <block id="9bb6ca48b5f448262155e3c3811e7d6e" category="paragraph">当有可用插槽或所有插槽均已完全填充时、您可以将I/O模块添加到FAS50存储系统中(方法是移除现有I/O模块并在其位置安装新的I/O模块)。</block>
+  <block id="b9aaf4b8305c7a34a4b30da6df50ebc5" category="list-text">使用从disk show命令获取的系统ID信息重新分配磁盘所有权(对于FAS系统)：<block ref="c59d47aa9e91bfb7b5c45feb4846c496" prefix=" " category="inline-code"></block></block>
+  <block id="2dcdf3018c4d483d8c38e450dbdf5944" category="list-text">如果您的系统具有V_StorageAttach许可证、则在执行此过程之前、必须参考其他必需步骤。</block>
+  <block id="1253bf6221482d606a7719ba415d9176" category="admonition">此时请勿连接任何其他电缆或电源线。</block>
+  <block id="c69071436bdfe1b2f2edc29969a29980" category="admonition">替代控制器从运行状况良好的控制器获得电源、并在完全固定在机箱中后立即开始启动。</block>
+  <block id="5cb4dbca31ce772b17987c15a725b52e" category="list-text">Return the node to normal operation:</block>
+  <block id="257315f653a5868c10e8897449aa264f" category="list-text">从运行状况良好的控制器的控制台还原自动交还：</block>
+  <block id="b9adb77861a7f27800ce914be076df5d" category="list-text"><block ref="b9adb77861a7f27800ce914be076df5d" category="inline-link-macro-rx"></block></block>
+  <block id="ec3558cc556230de3472d8f669055445" category="paragraph"><block ref="ec3558cc556230de3472d8f669055445" category="inline-link-macro-rx"></block></block>
+  <block id="2b1f12b6c48af6da013ad7ca0b3e507d" category="doc">详细步骤—AFF A900</block>
+  <block id="b8a400661d0d8f4681160e3984f8fe0e" category="paragraph"><block ref="b8a400661d0d8f4681160e3984f8fe0e" category="inline-link-macro-rx"></block></block>
+  <block id="c17ceb181c73449b45e8ac62b23f0788" category="paragraph"><block ref="c17ceb181c73449b45e8ac62b23f0788" category="inline-link-macro-rx"></block></block>
+  <block id="7d3ad47a619f98568e42b3c81d3fc66e" category="paragraph"><block ref="7d3ad47a619f98568e42b3c81d3fc66e" category="inline-link-macro-rx"></block></block>
+  <block id="3f6b8f5ed334d33d55220057f3840983" category="paragraph"><block ref="3f6b8f5ed334d33d55220057f3840983" category="inline-link-macro-rx"></block></block>
+  <block id="13ac941ecf968dc28151bce5851fd7a9" category="paragraph"><block ref="13ac941ecf968dc28151bce5851fd7a9" category="inline-link-macro-rx"></block></block>
+  <block id="f9314d663ff89799d6d255ab7e3ca079" category="paragraph"><block ref="f9314d663ff89799d6d255ab7e3ca079" category="inline-link-macro-rx"></block></block>
 </blocks>

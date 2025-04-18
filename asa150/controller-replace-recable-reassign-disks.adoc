@@ -256,14 +256,14 @@ Local System ID: 118065481
     ...
     ...
 ----
-. 使用从 disk show 命令获取的系统 ID 信息重新分配磁盘所有权（对于 FAS 系统）或 LUN 所有权（对于 FlexArray 系统）： `disk reassign -s old system ID`
+. 使用从disk show命令获取的系统ID信息重新分配磁盘所有权(对于FAS系统)： `disk reassign -s old system ID`
 +
 在上述示例中，命令为： `disk reassign -s 118073209`
 
 +
 系统提示您继续时，您可以回答 `Y` 。
 
-. 验证是否已正确分配磁盘（或 FlexArray LUN ）： `disk show -a`
+. 验证是否已正确分配磁盘： `disk show -a`
 +
 验证属于 _replacement_ 节点的磁盘是否显示 _replacement_ 节点的新系统 ID 。在以下示例中， system-1 所拥有的磁盘现在显示新的系统 ID 118065481 ：
 
