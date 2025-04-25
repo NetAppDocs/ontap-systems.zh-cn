@@ -55,7 +55,7 @@ image::../media/drw_ssn_label.png[系统序列号示例]
 The following table identifies the types of cables you might receive.如果您收到的缆线未在表中列出，请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 以找到缆线并确定其用途。
 
 +
-[cols="1,2,1,2"]
+[cols="1,2,2,2"]
 |===
 | 连接器类型 | 部件号和长度 | 缆线类型 ... | 针对 ... 
 
@@ -64,28 +64,19 @@ The following table identifies the types of cables you might receive.如果您�
 100 GbE 缆线
  a| 
 X6621A-05 （ 112-00595 ）， 0.5 米
- a| 
-image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFP28连接器"]
- a| 
-HA 互连
-
-
-
- a| 
-X6621A-05 （ 112-00595 ）， 0.5 米；
 
 X66211-1 （ 112-00573 ）， 1 米
- a| 
-集群互连网络
 
-
-
- a| 
-X66211-2 （ 112-00574 ）， 2 米；
+X66211-2 （ 112-00574 ）， 2 米
 
 X66211-5 （ 112-00576 ）， 5 米
  a| 
-存储，数据
+image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFP28连接器"]
+ a| 
+** HA 互连
+** 集群互连网络
+** 存储，数据
+
 
 
 
@@ -96,7 +87,10 @@ X6566B-3-R6 （ 112-00300 ）， 3 米；
 
 X6566B-5-R6 （ 112-00301 ）， 5 米
  a| 
-数据
+image:../media/oie_cable100_gbe_qsfp28.png["10 GbE QSFP28连接器"]
+ a| 
+** 数据
+
 
 
 
@@ -107,7 +101,10 @@ X66240A-2 （ 112-00598 ）， 2 米；
 
 X66240A-5 （ 112-00600 ）， 5 米
  a| 
-数据
+image:../media/oie_cable100_gbe_qsfp28.png["25 GbE QSFP28连接器"]
+ a| 
+** 数据
+
 
 
 
@@ -118,7 +115,8 @@ RJ-45 （取决于订单）
  a| 
 image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
  a| 
-管理
+** 管理
+
 
 
 
@@ -135,6 +133,8 @@ X66250-30 （ 112-00347 ） 30 米
  a| 
 image:../media/oie_cable_fc_optical.png["OIE光纤通道光缆"]
  a| 
+** 网络
+
 
 
 
@@ -145,7 +145,8 @@ image:../media/oie_cable_fc_optical.png["OIE光纤通道光缆"]
  a| 
 image:../media/oie_cable_micro_usb.png["微型USB连接器"]
  a| 
-软件设置期间的控制台连接
+** 软件设置期间的控制台连接
+
 
 
 
@@ -156,7 +157,7 @@ image:../media/oie_cable_micro_usb.png["微型USB连接器"]
  a| 
 image:../media/oie_cable_power.png["电源线"]
  a| 
-启动系统
+将PSU连接到电源
 
 |===
 . 下载并完成 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工作表"^]。
@@ -234,8 +235,9 @@ image:../media/icon_square_1_dark_purple.png["标注编号1"]
 
 ** e0b 到 e0b
 ** e1b至e1b
-image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 
+
+image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 
 
 
@@ -246,8 +248,9 @@ image:../media/icon_square_2_green.png["标注编号2"]
 
 ** e0a 到 e0a
 ** e1a到e1a
-image:../media/drw_affa800_tnsc_clust_cabling.png["在双节点无交换机集群中进行集群互连布线"]
 
+
+image:../media/drw_affa800_tnsc_clust_cabling.png["在双节点无交换机集群中进行集群互连布线"]
 
 
 
@@ -309,8 +312,9 @@ image:../media/icon_square_1_dark_purple.png["标注编号1"]
 
 ** e0b 到 e0b
 ** e1b至e1b
-image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 
+
+image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 
 
 
@@ -318,8 +322,11 @@ image:../media/drw_affa800_ha_pair_cabling.png["HA对布线"]
 image:../media/icon_square_2_green.png["标注编号2"]
  a| 
 使用缆线将集群互连端口连接到100 GbE集群互连交换机。
+
 ** e0a
-** e1a.
+** e1a
+
+
 image:../media/drw_affa800_switched_clust_cabling.png["集群互连布线"]
 
 
@@ -547,12 +554,11 @@ To complete setting up your system, see link:install-detailed-guide.html#step-4-
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的 * 网络 * 。
-.. 右键单击并选择 * 刷新 * 。
+.. 单击左窗格中的*网络*，右键单击并选择*refresh。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 

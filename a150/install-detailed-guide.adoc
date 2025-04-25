@@ -202,7 +202,7 @@ image::../media/icon_square_1_green.png[标注编号1]
 
 
  a| 
-image::../media/icon_square_2_yellow.png[标注编号2]
+image::../media/icon_square_2_orange.png[标注编号2]
  a| 
 用于托管数据网络交换机的控制器
 
@@ -362,8 +362,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS�
 . 将每个节点连接到堆栈中的 IOM B
 +
 ** 控制器 1 端口 0a 连接到堆栈中第一个驱动器架上的 IOM B 端口 1 。
-** Controller 2 port 0b to IOM B port 3 on the last drive shelf in the stack.
-image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS连接器"]     mini-SAS HD to mini-SAS HD cables
+** Controller 2 port 0b to IOM B port 3 on the last drive shelf in the stack.+image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS连接器"]迷你SAS HD到迷你SAS HD缆线
 
 
 
@@ -406,12 +405,11 @@ image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交
 
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的 network 。
-.. 右键单击并选择刷新。
+.. 单击左窗格中的*网络*，右键单击并选择*refresh。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 

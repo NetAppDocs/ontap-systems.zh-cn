@@ -555,11 +555,11 @@ image::../media/dwr_laptop_to_switch_only.svg[DWR 笔记本电脑仅连接到交
 
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[DRW自动发现控制器选择ieops 1849]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[如何使用Windows文件资源管理器发现控制器]
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的"Network"(网络)、右键单击并选择"Refresh (刷新)"。
+.. 单击左窗格中的*网络*，右键单击并选择*refresh。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 

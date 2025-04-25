@@ -479,13 +479,10 @@ image:../media/oie_legend_icon_attn_symbol.png["注意符号"]
 
 您必须使用板载存储端口将控制器连接到磁盘架。NetApp 建议对具有外部存储的系统使用 MP-HA 布线。如果您使用的是 SAS 磁带驱动器，则可以使用单路径布线。如果没有外部磁盘架，则可选择使用 MP-HA 缆线连接到内部驱动器（未显示），前提是 SAS 缆线是随系统一起订购的。
 
+.开始之前
+* 您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到驱动器磁盘架。
+* 请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
-
-=== 选项 1 ：使用缆线将 HA 对上的存储与外部驱动器架连接起来
-
-您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到驱动器磁盘架。
-
-请务必检查插图箭头以确定正确的缆线连接器拉片方向。
 
 image::../media/oie_cable_pull_tab_down.png[底部带有推拉卡舌的电缆连接器]
 
@@ -539,12 +536,15 @@ image:../media/icon_square_3_tourquoise.png["步骤3."]
 
 ** 控制器 1 端口 0a 连接到堆栈中第一个驱动器架上的 IOM B 端口 1 。
 ** Controller 2 port 0b to IOM B port 3 on the last drive shelf in the stack.
+
+
 image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS连接器"]     mini-SAS HD to mini-SAS HD cables
 
-
 |===
-+
-如果您有多个驱动器架堆栈，请参见适用于您的驱动器架类型的 _Installation and Cabling Guide_ 。
+
+
+
+NOTE: 有关更多SAS布线信息和工作表、请参见link:../sas3/overview-cabling-rules-examples.html["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"]
 
 . To complete setting up your system, see <<第 5 步：完成系统设置和配置>>
 
@@ -585,12 +585,11 @@ NOTE: 初始启动可能需要长达八分钟的时间。
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
+DRw_autociscovery_controler_Select_ieops-1849.svg[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的 network 。
-.. 右键单击并选择刷新。
+.. 单击左窗格中的*网络*，右键单击并选择*refresh。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 

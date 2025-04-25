@@ -23,16 +23,16 @@ summary: 您必须在控制器中找到启动介质并按照说明进行更换�
 . 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块上拔下系统缆线和 SFP （如果需要），并跟踪缆线的连接位置。
 . 按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。
 +
-image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[DRW 285 PCM拆卸、安装IEOPS 694]
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[卸下控制器]
 
 . 将控制器模块翻转，将其放在平稳的表面上。
 . 按下控制器模块两侧的蓝色按钮以松开护盖、然后向上旋转护盖、使其脱离控制器模块、从而打开护盖。
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[DRW 285控制器模块盖板打开IEOPS 695]
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[打开控制器]
 
 
 
-[cols="1,3"]
+[cols="1,2"]
 |===
 
 
@@ -50,9 +50,9 @@ image::../media/icon_round_1.png[标注编号1]
 
 .动画-更换启动介质
 video::10a29a01-a86e-451c-b05a-af4701726f57[panopto]
-image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["宽度=500"]
+image:../media/drw_2850_replace_boot_media_IEOPS-696.svg["更换启动介质"]
 
-[cols="1,3"]
+[cols="1,2"]
 |===
 
 

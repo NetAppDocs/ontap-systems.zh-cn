@@ -17,7 +17,10 @@ summary: 'Management network ports on the controllers are connected to switches.
 有关将存储系统连接到网络交换机的信息、请与网络管理员联系。
 
 .关于此任务
-* 集群/HA和主机网络布线过程显示了常见配置。请注意、具体布线取决于为存储系统订购的组件。有关全面的配置和插槽优先级详细信息，请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
+* 集群/HA和主机网络布线过程显示了常见配置。
++
+如果在此处未看到您的配置、请访问link:https://hwu.netapp.com["NetApp Hardware Universe"^]以获取全面的配置和插槽优先级信息、以便为存储系统布线。
+
 * 布线图中的箭头图标显示了将连接器插入端口时电缆连接器推拉卡舌的正确方向(向上或向下)。
 +
 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
@@ -61,7 +64,7 @@ NOTE: I/O模块端口e2b和e4b未使用、可用于主机网络连接。
 image::../media/oie_cable100_gbe_qsfp28.png[集群HA 100 GbE缆线]
 
 +
-image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[使用两个100GbE IO模块的A30和A50无交换机集群布线图]
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_2card_cabling_ieops-2011.svg[使用两个100GbE IO模块的A30和A60无交换机集群布线图]
 
 
 
@@ -87,7 +90,7 @@ NOTE: 集群互连流量和HA流量共享相同的物理端口(位于插槽4中�
 image::../media/oie_cable100_gbe_qsfp28.png[集群HA 100 GbE缆线]
 
 +
-image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[使用一个100GbE IO模块的A30和A50无交换机集群布线图]
+image::../media/drw_isi_a30-50_switchless_2p_100gbe_1card_cabling_ieops-1925.svg[使用一个100GbE IO模块的A30和A60无交换机集群布线图]
 
 
 
@@ -122,7 +125,7 @@ NOTE: I/O模块端口e2b和e4b未使用、可用于主机网络连接。
 image::../media/oie_cable100_gbe_qsfp28.png[集群HA 40/100 GbE缆线]
 
 +
-image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[使用两个100GbE IO模块的A30和A50交换集群布线图]
+image::../media/drw_isi_a30-50_switched_2p_100gbe_2card_cabling_ieops-2013.svg[使用两个100GbE IO模块的A30和A60交换集群布线图]
 
 
 
@@ -199,7 +202,7 @@ image::../media/drw_isi_a30-50_host_2p_40-100gbe_2card_cabling_ieops-2014.svg[�
 *1025 GbE缆线*
 
 +
-image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器、宽度=100pp"]
+image:../media/oie_cable_sfp_gbe_copper.png["GbE SFP铜缆连接器"]
 
 +
 image::../media/drw_isi_a30-50_host_2p_40-100gbe_1card_cabling_ieops-1923.svg[使用缆线连接到40/100GbE以太网主机网络交换机]

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: c80, how to recable the system, teboot the system 
 summary: 将存储资源的控制权归还给替代控制器、以便AFF C80系统可以恢复正常运行。 
 ---
-= 重新恢复并交还控制器- AFF C80
+= 交还控制器- AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,82 +27,58 @@ summary: 将存储资源的控制权归还给替代控制器、以便AFF C80系�
 ** 如果您看到_wawaigif for nifecback_、请按<enter>键、登录到配对节点、然后转到本节末尾的下一步。
 
 
-. 通过交还存储使受损控制器恢复正常运行：
-+
-`storage failover giveback -ofnode _impaired_node_name_`(英文)
-
-. 如果已禁用自动交还、请重新启用它：
-+
-`storage failover modify -node local -auto-giveback true`(英文)
-
-. 如果启用了AutoSupport、则还原/取消禁止自动创建案例：
-+
-`system node autosupport invoke -node * -type all -message MAINT=END`(英文)
-
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 如果已禁用自动交还、请重新启用它： `storage failover modify -node local -auto-giveback _true_`
+. 如果启用了AutoSupport、则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
 --
-.OKM加密
+.板载加密(OKM)
 --
 重置板载加密并使控制器恢复正常运行。
 
 .步骤
-. 在Loader提示符处、输入：
-+
-`boot_ontap maint`
-
+. 在Loader提示符处，输入 `boot_ontap maint`。
 . 从Loader提示符处启动到ONTAP菜单 `boot_ontap menu`、然后选择选项10。
-. 输入OKM密码短语。您可以从客户处获取此密码短语，也可以联系 https://support.netapp.com["NetApp 支持"]。
+. 输入OKM密码短语。
 +
 
-NOTE: 系统将提示您输入密码短语两次。
+NOTE: 系统会两次提示您输入密码短语。
 
 . 出现提示时、输入备份密钥数据。
 . 在启动菜单中、输入选项 `1`进行正常启动。
 . 当显示_wawawaite_for vig-back_时、按<enter>键。
 . 将控制台缆线移至配对节点并以身份登录 `admin`。
-. 仅交还CFO聚合(根聚合)：
+. 仅交还CFO聚合(根聚合)： `storage failover giveback -fromnode local -only-cfo-aggregates _true_`
 +
-`storage failover giveback -fromnode local -only-cfo-aggregates true`
+** 如果遇到错误，请联系 https://support.netapp.com["NetApp 支持"]。
 
+
+. 在恢复报告完成后等待5分钟，然后检查故障转移状态和恢复状态： `storage failover show`和 `storage failover show-giveback`。
+. 同步并验证密钥状态：
 +
-如果遇到错误，请联系 https://support.netapp.com["NetApp 支持"]。
-
-. 在恢复报告完成后等待5分钟、然后检查故障转移状态和恢复状态：
-+
-`storage failover show`和 `storage failover show-giveback`。
-
-. 将控制台缆线移至替代节点并输入：
-+
-`security key-manager onboard sync`
-
+.. 将控制台缆线移回替代控制器。
+.. 同步缺少的密钥： `security key-manager onboard sync`
 +
 
-NOTE: 系统将提示您为此集群输入集群范围的OKM密码短语。
+NOTE: 系统会提示您为此集群输入集群范围的OKM密码短语。
 
-. 使用以下命令检查密钥的状态：
+.. 验证密钥状态： `security key-manager key query -restored _false_`
 +
-`security key-manager key query -key-type svm-KEK`(英文)
+正确同步后、输出不应显示任何结果。
 
 +
-如果_Restored_列显示_TRUE_以外的内容，请联系 https://support.netapp.com["NetApp 支持"]。
+如果输出显示结果(系统内部密钥表中不存在的密钥ID)，请与联系。 https://support.netapp.com["NetApp 支持"]
 
-. 通过交还存储使受损控制器恢复正常运行：
-+
-`storage failover giveback -ofnode _impaired_node_name_`(英文)
 
-. 如果已禁用自动交还、请重新启用它：
-+
-`storage failover modify -node local -auto-giveback true`(英文)
 
-. 如果启用了AutoSupport、则还原/取消禁止自动创建案例：
-+
-`system node autosupport invoke -node * -type all -message MAINT=END`(英文)
-
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 如果已禁用自动交还、请重新启用它： `storage failover modify -node local -auto-giveback _true_`
+. 如果启用了AutoSupport、则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
 --
-.EKM加密
+.外部密钥管理器(EKM)
 --
 重置加密并使控制器恢复正常运行。
 
@@ -133,27 +109,19 @@ NOTE: 如有问题、请联系 https://support.netapp.com["NetApp 支持"]。
 
 . 提供以下信息：
 +
-** 客户端证书(client.crt)文件内容。
-** 客户端密钥(client.key)文件内容。
-** KMIP服务器CA (CA.prom)文件内容。
-** KMIP服务器的IP地址。
-** KMIP服务器的端口。
+** 客户端证书(client.crt)文件内容
+** 客户端密钥(client.key)文件内容
+** KMIP服务器CA (CA.prom)文件内容
+** KMIP服务器的IP地址
+** KMIP服务器的端口
 
 
-. 系统运行完毕后、您将看到启动菜单。选择"1"进行正常启动。
-. 检查接管状态：
-+
-`storage failover show`(英文)
-
-. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`。
-. 如果已禁用自动交还、请重新启用它：
-+
-`storage failover modify -node local -auto-giveback true`(英文)
-
-. 如果启用了AutoSupport、则还原/取消禁止自动创建案例：
-+
-`system node autosupport invoke -node * -type all -message MAINT=END`(英文)
-
+. 系统运行完毕后、您会看到启动菜单。选择"1"进行正常启动。
+. 检查接管状态： `storage failover show`
+. 转到高级模式，然后转到， `run local partner nosavecore`确保已修复节点上的所有核心转储均已保存 `set -privilege advanced`。
+. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
+. 如果已禁用自动交还、请重新启用它： `storage failover modify -node local -auto-giveback _true_`
+. 如果启用了AutoSupport、则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
 --

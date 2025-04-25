@@ -23,6 +23,7 @@ summary: 您可以先卸下控制器模块上的通风管，然后再更换启�
 . 如果您尚未接地，请正确接地。
 . 从源拔下控制器模块电源。
 . 释放电源线固定器，然后从电源中拔下缆线。
+. 从控制器模块拔下I/O电缆。
 . 将前掌插入控制器模块两侧的锁定装置中，用拇指按下控制杆，然后将控制器轻轻拉出机箱几英寸。
 +
 
@@ -32,6 +33,7 @@ NOTE: 如果在卸下控制器模块时遇到困难，请将食指从内部穿�
 image::../media/drw_a250_pcm_remove_install.png[打开闩锁装置]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -54,6 +56,7 @@ image:../media/icon_round_2.png["标注编号2"]
 image::../media/drw_a250_open_controller_module_cover.png[打开控制器模块护盖]
 
 +
+[cols="1,4"]
 |===
 
 
@@ -152,16 +155,13 @@ NOTE: 如果要使用 Windows 提取内容，请勿使用 WinZip 提取网络启
 
 
 .. 将 EFI 文件夹复制到 USB 闪存驱动器上的顶部目录。
-
-
 +
 
 NOTE: 如果服务映像没有EFI文件夹，请参阅link:https://kb.netapp.com/onprem/ontap/hardware/EFI_folder_missing_from_Service_Image_download_file_used_for_boot_device_recovery_for_FAS_and_AFF_models["用于FAS和AFF型号的启动设备恢复的服务映像下载文件缺少EFI文件夹^"]。
 
 +
-+ The USB flash drive should have the efi folder and the same Service Image (BIOS) version of what the impaired controller is running.
+USB 闪存驱动器应具有 EFI 文件夹，并且与受损控制器运行的服务映像（ BIOS ）版本相同。
 
-+
 .. 从笔记本电脑中取出 USB 闪存驱动器。
 .. 如果尚未安装此通风管，请安装此通风管。
 +
@@ -201,6 +201,7 @@ image:../media/icon_round_2.png["标注编号2"]
 +
 控制器模块应完全插入，并与机箱边缘平齐。
 
+.. 重新连接控制器模块I/O电缆。
 .. 将电源线插入电源、重新安装电源线锁环、然后将电源连接到电源。
 +
 电源恢复后、控制器模块将立即启动。Be prepared to interrupt the boot process.

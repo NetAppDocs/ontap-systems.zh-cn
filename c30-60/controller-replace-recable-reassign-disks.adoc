@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c30, aff c60, how to recable the system, reboot the system 
 summary: 将存储资源的控制权归还给替代控制器、以便AFF C30或AFF C60系统可以恢复正常运行。 
 ---
-= 重新对控制器进行数据传输并交还- AFF C30和AFF C60
+= 交还控制器- AFF C30和AFF C60
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,8 +12,6 @@ summary: 将存储资源的控制权归还给替代控制器、以便AFF C30或A
 
 [role="lead"]
 将存储资源的控制权归还给替代控制器、以便AFF C30或AFF C60系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。
-
-如果已启用、请重置加密并使控制器恢复正常运行。
 
 [role="tabbed-block"]
 ====

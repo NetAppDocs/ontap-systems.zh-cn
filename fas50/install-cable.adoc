@@ -17,7 +17,10 @@ summary: 'Management network ports on the controllers are connected to switches.
 有关将存储系统连接到网络交换机的信息、请与网络管理员联系。
 
 .关于此任务
-* 集群/HA和主机网络布线过程显示了常见配置。请注意、具体布线取决于为存储系统订购的组件。有关全面的配置和插槽优先级详细信息，请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
+* 集群/HA和主机网络布线过程显示了常见配置。
++
+如果在此处未看到您的配置、请访问link:https://hwu.netapp.com["NetApp Hardware Universe"^]以获取全面的配置和插槽优先级信息、以便为存储系统布线。
+
 * 布线图中的箭头图标显示了将连接器插入端口时电缆连接器推拉卡舌的正确方向(向上或向下)。
 +
 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。

@@ -13,8 +13,6 @@ summary: '将存储资源的控制权归还给替代控制器、以便FAS50系�
 [role="lead"]
 将存储资源的控制权归还给替代控制器、以便FAS50系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。
 
-如果已启用、请重置加密并使控制器恢复正常运行。
-
 [role="tabbed-block"]
 ====
 .无加密
@@ -129,4 +127,4 @@ NOTE: 如有问题、请联系 https://support.netapp.com["NetApp 支持"]。
 --
 ====
 .下一步是什么？
-在将存储资源的所有权转移回替代控制器后、您需要执行相关link:controller-replace-restore-system-rma.html["完成控制器更换"]步骤。
+将存储资源的所有权转移到替代控制器后、您需要执行相关link:controller-replace-restore-system-rma.html["完成控制器更换"]步骤。

@@ -54,7 +54,7 @@ The following table identifies the types of cables you might receive.如果您�
 +
 [cols="1,2,1,2"]
 |===
-| 缆线类型 ... | 部件号和长度 | 连接器类型 | 针对 ... 
+| 缆线类型 ... | 部件号和长度 | 连接器类型 | 对象.2+ 
 
 
  a| 
@@ -62,7 +62,7 @@ The following table identifies the types of cables you might receive.如果您�
  a| 
 X66240A-05 （ 112-00595 ）， 0.5 米；
 
-X66240-2 （ 112-00573 ）， 2 米
+X66240-2 (112-00573)、2米.3+
  a| 
 image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFP28连接器"]
  a| 
@@ -76,31 +76,28 @@ X66240A-2 （ 112-00598 ）， 2 米；
 X66240A-5 （ 112-00600 ）， 5 米
  a| 
 数据
-
-
-
  a| 
 100 GbE 缆线
  a| 
 X66211-2 （ 112-00574 ）， 2 米；
 
 X66211-5 （ 112-00576 ）， 5 米
+
+
+
  a| 
 存储
-
-
-
  a| 
 RJ-45 （取决于订单）
  a| 
 不适用
  a| 
 image:../media/oie_cable_rj45.png["RJ-45电缆连接器"]
+
+
+
  a| 
 管理网络（ BMC 和扳手端口）和以太网数据（ e0a 和 e0b ）
-
-
-
  a| 
 光纤通道
  a| 
@@ -113,29 +110,27 @@ X66250-15 （ 112-00346 ） 15 米；
 X66250-30 （ 112-00347 ） 30 米
  a| 
 image:../media/oie_cable_fc_optical.png["OIE光纤通道光缆"]
+
+
+
  a| 
-
-
-
  a| 
 微型 USB 控制台缆线
  a| 
 不适用
  a| 
 image:../media/oie_cable_micro_usb.png["微型USB连接器"]
+
+
+
  a| 
 软件设置期间的控制台连接
-
-
-
  a| 
 电源线
  a| 
 不适用
  a| 
 image:../media/oie_cable_power.png["电源线"]
- a| 
-启动系统
 
 |===
 . 查看 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置指南》"^] 并收集该指南中列出的所需信息。
@@ -327,11 +322,11 @@ video::3f92e625-a19c-4d10-9028-ac68017fbf57[panopto]
 .步骤
 . 使用缆线将控制器A连接到磁盘架。
 +
-image:../media/drw_affa250_1shelf_cabling_a.png["控制器A布线"]
+image:../media/drw_affa250_1shelf_cabling_a.png["控制器1布线"]
 
 . 使用缆线将控制器B连接到磁盘架。
 +
-image:../media/drw_affa250_1shelf_cabling_b.png["控制器B布线"]
+image:../media/drw_affa250_1shelf_cabling_b.png["控制器2布线"]
 
 
 
@@ -364,12 +359,11 @@ image:../media/drw_affa250_1shelf_cabling_b.png["控制器B布线"]
 video::d61f983e-f911-4b76-8b3a-ab1b0066909b[panopto]
 . 选择列出的 ONTAP 图标以发现：
 +
-image::../media/drw_autodiscovery_controler_select.png[选择ONTAP图标]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[选择ONTAP图标]
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的 * 网络 * 。
-.. 右键单击并选择 * 刷新 * 。
+.. 单击左窗格中的*网络*，右键单击并选择*refresh。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 

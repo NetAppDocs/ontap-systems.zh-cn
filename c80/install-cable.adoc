@@ -54,10 +54,10 @@ NOTE: 集群互连流量和HA流量共享相同的物理端口。
 *集群/HA互连缆线*
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[集群HA缆线]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[集群HA缆线]
 
 +
-image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[双节点无交换机集群布线图]
+image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[双节点无交换机集群布线图]
 
 
 
@@ -72,13 +72,11 @@ image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[双节点无交换
 +
 *100 GbE电缆*
 
-+
+
+
 image::../media/oie_cable100_gbe_qsfp28.png[100 Gb缆线]
 
-+
 image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[使用缆线将集群连接到集群网络]
-
-
 
 --
 ====
@@ -123,9 +121,9 @@ image::../media/drw_70-90_network_cabling2_ieops-1655.svg[使用缆线连接到1
 
 使用1000BASE-T RJ-45缆线将每个控制器上的管理(扳手)端口连接到管理网络交换机。
 
-image::../media/oie_cable_rj45.png[RJ-45电缆]
-
 *1000BASE-T RJ-45电缆*
+
+image::../media/oie_cable_rj45.png[RJ-45电缆]
 
 image::../media/drw_70-90_management_connection_ieops-1656.svg[连接到管理网络]
 

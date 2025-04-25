@@ -83,7 +83,7 @@ X66240-2、2米
 
 X66240A-5、5米
  a| 
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[OIE缆线25 Gb以太网SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[25 GB网络缆线]
  a| 
 网络缆线
 
@@ -127,7 +127,7 @@ X66031A、1米
 
 X66032 A、2米
  a| 
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[迷你SAS到迷你SAS缆线]
  a| 
 存储
 
@@ -149,7 +149,7 @@ image::../media/oie_cable_micro_usb.png[微型USB连接器]
  a| 
 无部件号标签
  a| 
-image::../media/oie_cable_power.png[OIE缆线电源]
+image::../media/oie_cable_power.png[电源线]
  a| 
 启动存储系统
 
@@ -179,11 +179,11 @@ image::../media/oie_cable_fiber_lc_connector.png[LC光纤连接器]
 NOTE: 您需要了解与存储系统重量相关的安全问题。
 
 +
-image::../media/oie_fas2800_weight_caution_IEOPS-1070.svg[OIE FAS2800重量注意事项IEOPS 1070]
+image::../media/oie_fas2800_weight_caution_IEOPS-1070.svg[提升小心标签]
 
 . 连接缆线管理设备（如图所示）。
 +
-image::../media/drw_cable_management_arm_install.svg[DRW 缆线管理臂安装]
+image::../media/drw_cable_management_arm_install.svg[安装缆线管理ARM]
 
 . 将挡板放在存储系统正面。
 
@@ -247,13 +247,13 @@ video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
 .步骤
 . 使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b：
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[OIE缆线25 Gb以太网SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[25 GB网络缆线]
 
 +
 *集群互连缆线*
 
 +
-image::../media/drw_2800_tnsc_cluster_cabling_IEOPS-892.svg[DRW 2800 tnsc集群为IEOPS 892布线]
+image::../media/drw_2800_tnsc_cluster_cabling_IEOPS-892.svg[双节点集群布线]
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 +
@@ -263,11 +263,11 @@ image::../media/oie_cable_rj45.png[RJ-45电缆]
 *RJ45电缆*
 
 +
-image::../media/drw_2800_management_connection_IEOPS-1077.svg[DRW 2800管理连接IEOPS 1077]
+image::../media/drw_2800_management_connection_IEOPS-1077.svg[管理连接]
 
 . 使用缆线将夹层卡端口连接到主机网络。
 +
-image::../media/drw_2800_network_cabling_IEOPS-894.svg[DRW 2800 IEOPS 894网络布线]
+image::../media/drw_2800_network_cabling_IEOPS-894.svg[网络连接]
 
 +
 .. 如果您使用的是4端口以太网数据网络、请使用缆线将端口e1a到e1d连接到以太网数据网络。
@@ -277,7 +277,7 @@ image::../media/drw_2800_network_cabling_IEOPS-894.svg[DRW 2800 IEOPS 894网络�
 image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[OIE缆线25 Gb以太网SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[25 Gb以太网电缆]
 
 *** 4端口、10GBase-T、RJ45
 +
@@ -328,21 +328,21 @@ video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
 .步骤
 . 使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b：
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[OIE缆线25 Gb以太网SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[25 Gb以太网连接器]
 
 +
-image::../media/drw_2800_switched_cluster_cabling_IEOPS-893.svg[DRW 2800交换式集群为IEOPS内容使用缆线]
+image::../media/drw_2800_switched_cluster_cabling_IEOPS-893.svg[有交换机集群连接]
 
 . 使用 RJ45 缆线将 e0M 端口连接到管理网络交换机：
 +
 image::../media/oie_cable_rj45.png[RJ-45电缆]
 
 +
-image::../media/drw_2800_management_connection_IEOPS-1077.svg[DRW 2800管理连接IEOPS 1077]
+image::../media/drw_2800_management_connection_IEOPS-1077.svg[管理网络连接]
 
 . 使用缆线将夹层卡端口连接到主机网络。
 +
-image::../media/drw_2800_network_cabling_IEOPS-894.svg[DRW 2800 IEOPS 894网络布线]
+image::../media/drw_2800_network_cabling_IEOPS-894.svg[网络连接]
 
 +
 .. 如果您使用的是4端口以太网数据网络、请使用缆线将端口e1a到e1d连接到以太网数据网络。
@@ -352,7 +352,7 @@ image::../media/drw_2800_network_cabling_IEOPS-894.svg[DRW 2800 IEOPS 894网络�
 image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 +
-image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[OIE缆线25 Gb以太网SFP28 IEOPS 1069]
+image::../media/oie_cable_25Gb_Ethernet_SFP28_IEOPS-1069.svg[25 Gb以太网连接器]
 
 *** 4端口、10GBase-T、RJ45
 +
@@ -446,47 +446,31 @@ video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
 .. IOM A上的端口1到直接下方磁盘架上IOM A上的端口3。
 .. IOM B上的端口1到直接下方磁盘架上IOM B上的端口3。
 +
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
+image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[迷你SAS到迷你SAS连接器]
 
-+
+
+
+
+
 *迷你SAS HD到迷你SAS HD电缆*
 
-+
-image::../media/drw_2800_shelf-to-shelf_cabling_IEOPS-895.svg[DRW 2800磁盘架到磁盘架的缆线IEOPS 895]
++图像：../media/drw_2800_Shelf-to-Shelbing_IEOPS-8.svg[磁盘架到磁盘架布线]
 
++。使用缆线将控制器A连接到驱动器架。……控制器A端口0a到堆栈中第一个驱动器架上的IOM B端口1。……控制器A端口0b1到堆栈中最后一个驱动器架上的IOM A端口3。
 
++图像：../media/oie_cable_mini_sa_hd_to mini-sa_hd.svg[迷你SAS到迷你SAS连接器]
 
-. 使用缆线将控制器A连接到驱动器架。
-+
-.. 控制器A端口0a到堆栈中第一个驱动器架上的IOM B端口1。
-.. 控制器A端口0b1到堆栈中最后一个驱动器架上的IOM A端口3。
-+
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
-
-+
 *迷你SAS HD到迷你SAS HD电缆*
 
-+
-image::../media/dwr-2800_controller1-to shelves_IEOPS-896.svg[DWR 2800控制器1到磁盘架IEOPS 896]
++图像：../media/dwR-2800_controler1-to Shels_IEOPS-896.svg[控制器A到磁盘架连接]
 
++。将控制器B连接到驱动器架。……控制器B端口0a到堆栈中第一个驱动器架上的IOM A端口1。……控制器B端口0b1到堆栈中最后一个驱动器架上的IOM B端口3。
 
++图像：../media/oie_cable_mini_sa_hd_to mini-sa_hd.svg[迷你SAS到迷你SAS连接器]
 
-. 将控制器B连接到驱动器架。
-+
-.. 控制器B端口0a到堆栈中第一个驱动器架上的IOM A端口1。
-.. 控制器B端口0b1到堆栈中最后一个驱动器架上的IOM B端口3。
-+
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[OIE使用缆线将迷你SAS HD连接到迷你SAS HD]
-
-+
 *迷你SAS HD到迷你SAS HD电缆*
 
-+
-image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[DWR 2800控制器2到磁盘架IEOPS 897]
-
-
-
-
++图像：../media/dwR-2800_controler2-to Shels_IEOPS-897.svg[控制器B到磁盘架连接]
 
 
 
@@ -514,7 +498,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 NOTE: 初始启动可能需要长达八分钟的时间。
 
 +
-image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[DWR 2800打开电源IEOPS 898]
+image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[打开电源]
 
 
 
@@ -525,12 +509,11 @@ image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[DWR 2800打开电源IEOPS 8
 . 将笔记本电脑连接到管理交换机。
 . 使用图形或步骤发现要配置的存储系统节点：
 +
-image::../media/drw_autodiscovery_controler_select.svg[DRW 自动发现控制器选择]
+image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[自动发现系统]
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的 network 。
-.. 右键单击并选择刷新。
+.. 单击左窗格中的*网络*，右键单击并选择*refresh。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 
@@ -570,9 +553,9 @@ NOTE: 此目标节点的存储系统序列号为7本。
 
 NOTE: 有关如何配置控制台端口的信息，请参见笔记本电脑或控制台的联机帮助。
 
-.. 将控制台缆线连接到笔记本电脑或控制台、使用存储系统附带的控制台缆线连接控制器上的控制台端口、然后cConnect将笔记本电脑或控制台连接到管理子网上的交换机。
+.. 将控制台缆线连接到笔记本电脑或控制台、使用存储系统附带的控制台缆线连接控制器上的控制台端口、然后将笔记本电脑或控制台连接到管理子网上的交换机。
 +
-image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[DRW 2800笔记本电脑、用于切换到控制器IEOPS 1084]
+image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[笔记本电脑到交换机的连接]
 
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 
@@ -584,7 +567,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 打开两个节点的电源开关。
 +
-image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[DWR 2800打开电源IEOPS 898]
+image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[打开电源]
 
 +
 
