@@ -17,13 +17,6 @@ summary: 在更换ASA A1K系统中的启动介质之前、请确保满足成功�
 
 * 您必须将故障启动介质更换为从NetApp收到的替代启动介质。
 * 受损控制器上不得存在任何故障集群端口。
-* 确定是否使用以下方法之一配置板载密钥管理器(OKM)或外部密钥管理器(EKM)：
-+
-** 您可以询问系统管理员是否已启用OKM或EKM。
-** 要检查是否已启用OKM，可以使用 `security key-manager onboard show`。
-** 要检查是否已启用EMM，您可以使用 `security key-manager external show`。
-
-
 * 对于OKM、您需要OKM密码短语文件内容。
 * 对于EMM、您需要配对节点上以下文件的副本：
 +

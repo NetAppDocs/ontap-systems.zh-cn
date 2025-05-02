@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-如何在AFF A800或AFF C800 HA对中为NS224磁盘架布线取决于要热添加的磁盘架数量以及控制器上使用的支持RoCE的端口集(一个或两个)数量。
-
 .开始之前
 * 您必须已查看 link:requirements-hot-add-shelf.html["热添加要求和最佳实践"]。
 * 您必须已完成中的适用过程 link:prepare-hot-add-shelf.html["准备热添加磁盘架"]。
@@ -28,7 +26,7 @@ NOTE: 此步骤假定您已在插槽 5 中安装支持 RoCE 的 PCIe 卡。
 下图显示了在每个控制器上使用一个支持RoCE的PCIe卡为一个热添加磁盘架布线：
 
 +
-image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[为具有一个NS224磁盘架和一个PCIe卡的AFF A800或AFF C800布线]
+image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[为AFF具有一个NS224磁盘架和一个AFF卡的ASA A800或ASA C800布线]
 
 
 

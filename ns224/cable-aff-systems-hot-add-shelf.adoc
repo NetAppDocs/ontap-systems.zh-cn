@@ -53,7 +53,7 @@ summary: 为要热添加的每个NS224磁盘架布线、以便每个磁盘架都
 下图突出显示了HA对中第二个磁盘架的布线、其中每个控制器具有两个支持RoCE的I/O模块：
 
 +
-image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[为具有两个磁盘架和两个IO模块的AFF A1K布线]
+image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[为AFF具有两个磁盘架和两个ASA模块的IO/IO A1K布线]
 
 
 
@@ -67,7 +67,7 @@ image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[为具有两个�
 下图突出显示了HA对中第三个磁盘架的布线、其中每个控制器具有三个支持RoCE的I/O模块：
 
 +
-image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[为具有三个磁盘架和三个IO模块的AFF A1K布线]
+image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[为AFF具有三个磁盘架和三个ASA模块的IO/IO A1K布线]
 
 
 
@@ -81,7 +81,7 @@ image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[为具有三个�
 下图突出显示了HA对中第三个磁盘架的布线、其中每个控制器具有四个支持RoCE的I/O模块：
 
 +
-image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[为具有三个磁盘架和四个IO模块的AFF A1K布线]
+image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[使用缆线为AFF具有三个磁盘架和四个ASA模块的IO/IO A1K布线]
 
 
 
@@ -95,7 +95,7 @@ image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[为具有三个�
 下图突出显示了HA对中第四个磁盘架的布线、其中每个控制器具有四个支持RoCE的I/O模块：
 
 +
-image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[为具有四个磁盘架和四个IO模块的AFF A1K布线]
+image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[为AFF具有四个磁盘架和四个IO模块的IO/IO ASA A1K布线]
 
 
 
@@ -111,10 +111,10 @@ If you disabled automatic drive assignment as part of the preparation for this p
 否则、您将完成热添加磁盘架过程。
 
 ====
-.使用缆线将磁盘架连接到AFF A20、AFF A30、AFF A50、AFF C30或AFF C60
+.使用缆线将磁盘架连接到AFF A20
 [%collapsible]
 ====
-如果需要为一个AFF A20、AFF A30、AFF C30、AFF A50或AFF C60 HA对添加额外存储(到内部磁盘架)、则最多可以将两个NS224磁盘架热添加到其中。
+如果需要额外存储(到内部磁盘架)、您可以将一个NS224磁盘架热添加到AFF 2020 HA对。
 
 .开始之前
 * 您必须已查看 link:requirements-hot-add-shelf.html["热添加要求和最佳实践"]。
@@ -123,12 +123,100 @@ If you disabled automatic drive assignment as part of the preparation for this p
 
 
 .关于此任务
-* 此过程假定您的HA对仅具有内部存储(无外部磁盘架)、并且您：
+* 此过程假设您的HA对只有内部存储(无外部磁盘架)、并且您要热添加最多一个额外磁盘架。
+* 此过程可解决以下热添加情形：
 +
-** 为AFF A20热添加最多一个额外磁盘架。
-** 为AFF A30、AFF C30、AFF A50或AFF C60在每个控制器中热添加最多两个额外磁盘架和两个支持RoCE的I/O模块。
+** 在每个控制器中使用一个支持RoCE的I/O模块将第一个磁盘架热添加到HA对。
+** 在每个控制器中使用两个支持RoCE的I/O模块将第一个磁盘架热添加到HA对。
 
 
+* 这些系统可与具有NSM100模块的NS224磁盘架和具有NSM100B模块的NS224磁盘架兼容。为确保将控制器连接到正确的端口、请将每个示意图中的"X"替换为适用于您的模块的正确端口号：
++
+[cols="1,4"]
+|===
+| 模块类型 | 端口标记 
+
+
+ a| 
+NSM100
+ a| 
+"0"
+
+例如e0a
+
+
+
+ a| 
+NSM100B
+ a| 
+"1"
+
+例如e1a
+
+|===
+
+
+.步骤
+. 如果要在每个控制器模块中使用一组支持RoCE的端口(一个支持RoCE的I/O模块)热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。
++
+否则，请转至下一步。
+
++
+
+NOTE: 此步骤假定您已将支持RoCE的I/O模块安装在插槽3中。
+
++
+.. 使用缆线将磁盘架NSM A端口exa连接到控制器A插槽3端口A (E3A)。
+.. 使用缆线将磁盘架NSM A端口EXB连接到控制器B插槽3端口b (e3b)。
+.. 使用缆线将磁盘架NSM B端口exa连接到控制器B插槽3端口A (E3A)。
+.. 使用缆线将磁盘架NSM B端口EXB连接到控制器A插槽3端口b (e3b)。
++
+下图显示了在每个控制器模块中使用一个支持 RoCE 的 I/O 模块为一个热添加磁盘架布线：
+
++
+image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[使用缆线为AFF具有一个磁盘架和一个模块的IO/IO ASA A20布线]
+
+
+
+. 如果要在每个控制器模块中使用两组支持RoCE的端口(两个支持RoCE的I/O模块)热添加一个磁盘架、请完成以下子步骤。
++
+.. 使用缆线将NSM A端口exa连接到控制器A插槽3端口A (E3A)。
+.. 使用缆线将NSM A端口EXB连接到控制器B插槽1端口b (e1b)。
+.. 使用缆线将NSM B端口exa连接到控制器B插槽3端口A (E3A)。
+.. 使用缆线将NSM B端口EXB连接到控制器A插槽1端口b (e1b)。
+
+
+
+
+下图显示了如何在每个控制器模块中使用两个支持RoCE的I/O模块为一个热添加磁盘架布线：
+
+image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[为AFF具有一个磁盘架和两个模块的IO/IO ASA A20布线]
+
+. 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
+
+
+.下一步是什么？
+If you disabled automatic drive assignment as part of the preparation for this procedure, you need to manually assign drive ownership and then reenable automatic drive assignment, if needed.转到。 link:complete-hot-add-shelf.html["完成热添加"]
+
+否则、您将完成热添加磁盘架过程。
+
+====
+.使用缆线将磁盘架连接到AFF A30、AFF A50、AFF C30或AFF C60
+[%collapsible]
+====
+如果需要额外存储(到内部磁盘架)、您最多可以将两个NS224磁盘架热添加到AFF A30、AFF C30、AFF A50或AFF C60 HA对。
+
+.开始之前
+* 您必须已查看 link:requirements-hot-add-shelf.html["热添加要求和最佳实践"]。
+* 您必须已完成中的适用过程 link:prepare-hot-add-shelf.html["准备热添加磁盘架"]。
+* 您必须已安装磁盘架并为其通电，然后按照中所述设置磁盘架ID link:prepare-hot-add-shelf.html["安装用于热添加的磁盘架"]。
+
+
+.关于此任务
+* 此过程假设HA对只有内部存储(无外部磁盘架)、并且您要在每个控制器中热添加最多两个额外磁盘架和两个支持RoCE的I/O模块。
 * 此过程可解决以下热添加情形：
 +
 ** 在每个控制器中使用一个支持RoCE的I/O模块将第一个磁盘架热添加到HA对。
@@ -180,7 +268,7 @@ NOTE: 此步骤假定您已将支持RoCE的I/O模块安装在插槽3中。
 下图显示了在每个控制器模块中使用一个支持 RoCE 的 I/O 模块为一个热添加磁盘架布线：
 
 +
-image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[为AFF A20布线,452px,AFF C30]
+image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[为AFF或ASA A30布线,452px,AFF/ASA A50]
 
 
 
@@ -207,7 +295,7 @@ NOTE: 此步骤假定您已在插槽3和1中安装了支持RoCE的I/O模块。
 
 下图显示了如何在每个控制器模块中使用两个支持RoCE的I/O模块为一个热添加磁盘架布线：
 
-image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[为AFF A20布线,452px,AFF C30]
+image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[为AFF或ASA A30布线,452px,AFF/ASA A50]
 
 
 
@@ -223,7 +311,7 @@ image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[为AFF A20布线,452px,A
 
 下图显示了在每个控制器模块中使用两个支持RoCE的I/O模块为两个热添加磁盘架布线：
 
-image::../media/drw_ns224_g_2shelf_2card_ieops-2003.svg[为AFF A20布线,452px,AFF C30]
+image::../media/drw_ns224_g_2shelf_2card_ieops-2003.svg[为AFF ASA布线,452px,AFF/ASA A50]
 
 |===
 . 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
@@ -278,7 +366,7 @@ NOTE: 此步骤假定您已将支持RoCE的I/O模块安装在插槽11中。
 下图显示了在每个控制器模块中使用一个支持 RoCE 的 I/O 模块为一个热添加磁盘架布线：
 
 +
-image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[使用缆线连接具有一个磁盘架和一个IO模块的AFF A70或A90]
+image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[使用缆线为AFF带有一个磁盘架和一个ASA模块的IO/IO A70或A90布线]
 
 
 
@@ -305,7 +393,7 @@ NOTE: 此步骤假定您已在插槽11和8中安装了支持RoCE的I/O模块。
 
 下图显示了如何在每个控制器模块中使用两个支持RoCE的I/O模块为一个热添加磁盘架布线：
 
-image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[使用缆线连接具有一个磁盘架和两个IO模块的AFF A70或A90]
+image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[为带有一个磁盘架和两个ASA模块的IO/IO A70或AFF布线]
 
 
 
@@ -321,7 +409,7 @@ image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[使用缆线连接
 
 下图显示了在每个控制器模块中使用两个支持RoCE的I/O模块为两个热添加磁盘架布线：
 
-image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[为具有两个磁盘架和两个IO模块的AFF A70或A90布线]
+image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[使用缆线连接具有两个磁盘架和两个ASA模块的IO/IO A70或AFF]
 
 |===
 . 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
@@ -358,7 +446,7 @@ If you disabled automatic drive assignment as part of the preparation for this p
 .. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 1 端口 A （ e1a ）。
 .. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 1 端口 b （ e1b ）。+ 下图显示了完成后的磁盘架布线。
 +
-image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为具有一个NS224磁盘架和一组PCIe卡端口的AFF A250 C250或FAS500f布线]
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为AFF具有一个NS224磁盘架和一组ASA A250卡端口的PCI/PCIE C250或FAS500f布线]
 
 
 
@@ -403,7 +491,7 @@ If you disabled automatic drive assignment as part of the preparation for this p
 下图显示了如何在每个控制器上使用一组支持RoCE的端口为一个热添加磁盘架布线：
 
 +
-image::../media/drw_ns224_a400_1shelf.png[为具有一个NS224磁盘架和一组板载端口的AFF A400布线]
+image::../media/drw_ns224_a400_1shelf.png[为AFF具有一个NS224磁盘架和一组板载端口的NSS/ ASA A400布线]
 
 
 
@@ -441,7 +529,7 @@ image::../media/drw_ns224_a400_1shelf.png[为具有一个NS224磁盘架和一组
 下图显示了两个热添加磁盘架的布线：
 
 +
-image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[为具有两个NS224磁盘架、一组板载端口和一组PCIe卡端口的AFF A400布线]
+image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[为ASA A400具有两个NS224磁盘架、一组板载端口和一组PCIe卡端口的/PCIe布线]
 
 . 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
 +
@@ -471,7 +559,7 @@ image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[为具有两个NS224磁盘
 下图显示了如何在每个控制器上使用一组支持RoCE的端口为一个热添加磁盘架布线：
 
 +
-image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[为具有一个NS224磁盘架和一组PCIe卡端口的AFF C400布线]
+image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[为具有一个NS224磁盘架和一组AFF卡端口的ASA C400布线]
 
 
 
@@ -509,7 +597,7 @@ image::../media/drw_ns224_c400_1shelf_IEOPS-985.svg[为具有一个NS224磁盘�
 下图显示了两个热添加磁盘架的布线：
 
 +
-image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[为具有两个NS224磁盘架和两组PCIe卡端口的AFF C400布线]
+image::../media/drw_ns224_c400_2shelves_IEOPS-984.svg[为具有两个NS224磁盘架和两组AFF卡端口的ASA C400布线]
 
 . 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
 +
@@ -552,7 +640,7 @@ NOTE: 此步骤假定您已在插槽 5 中安装支持 RoCE 的 PCIe 卡。
 下图显示了在每个控制器上使用一个支持RoCE的PCIe卡为一个热添加磁盘架布线：
 
 +
-image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[为具有一个NS224磁盘架和一个PCIe卡的AFF A800或AFF C800布线]
+image::../media/drw_ns224_a800_c800_1shelf_IEOPS-964.svg[为AFF具有一个NS224磁盘架和一个AFF卡的ASA A800或ASA C800布线]
 
 
 
@@ -644,7 +732,7 @@ If you disabled automatic drive assignment as part of the preparation for this p
 下图显示了第二个磁盘架的布线（以及第一个磁盘架）。
 
 +
-image::../media/drw_ns224_a900_2shelves.png[为具有两个NS224磁盘架和两个IO模块的AFF A900布线]
+image::../media/drw_ns224_a900_2shelves.png[为具有两个NS224磁盘架和两个AFF模块的NSS/ ASA A900布线]
 
 
 
@@ -661,7 +749,7 @@ image::../media/drw_ns224_a900_2shelves.png[为具有两个NS224磁盘架和两�
 下图显示了第三个磁盘架的布线。
 
 +
-image::../media/drw_ns224_a900_3shelves.png[为具有三个NS224磁盘架和四个IO模块的AFF A900布线]
+image::../media/drw_ns224_a900_3shelves.png[为AFF包含三个NS224磁盘架和四个IO模块的NSS/ ASA A900布线]
 
 
 
@@ -678,7 +766,7 @@ image::../media/drw_ns224_a900_3shelves.png[为具有三个NS224磁盘架和四�
 下图显示了第四个磁盘架的布线。
 
 +
-image::../media/drw_ns224_a900_4shelves.png[为具有四个NS224磁盘架和四个IO模块的AFF A900布线]
+image::../media/drw_ns224_a900_4shelves.png[为AFF具有四个NS224磁盘架和四个IO模块的ASA A900布线]
 
 
 

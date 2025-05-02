@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-您可以将最多三个额外的NS224磁盘架热添加到一个AFF A1K HA对中(总共四个磁盘架)。
-
 .开始之前
 * 您必须已查看 link:requirements-hot-add-shelf.html["热添加要求和最佳实践"]。
 * 您必须已完成中的适用过程 link:prepare-hot-add-shelf.html["准备热添加磁盘架"]。
@@ -36,7 +34,7 @@
 下图突出显示了HA对中第二个磁盘架的布线、其中每个控制器具有两个支持RoCE的I/O模块：
 
 +
-image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[为具有两个磁盘架和两个IO模块的AFF A1K布线]
+image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[为AFF具有两个磁盘架和两个ASA模块的IO/IO A1K布线]
 
 
 
@@ -50,7 +48,7 @@ image::../media/drw_ns224_vino_m_2shelves_2cards_ieops-1642.svg[为具有两个�
 下图突出显示了HA对中第三个磁盘架的布线、其中每个控制器具有三个支持RoCE的I/O模块：
 
 +
-image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[为具有三个磁盘架和三个IO模块的AFF A1K布线]
+image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[为AFF具有三个磁盘架和三个ASA模块的IO/IO A1K布线]
 
 
 
@@ -64,7 +62,7 @@ image::../media/drw_ns224_vino_m_3shelves_3cards_ieops-1643.svg[为具有三个�
 下图突出显示了HA对中第三个磁盘架的布线、其中每个控制器具有四个支持RoCE的I/O模块：
 
 +
-image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[为具有三个磁盘架和四个IO模块的AFF A1K布线]
+image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[使用缆线为AFF具有三个磁盘架和四个ASA模块的IO/IO A1K布线]
 
 
 
@@ -78,7 +76,7 @@ image::../media/drw_ns224_vino_m_3shelves_4cards_ieops-1644.svg[为具有三个�
 下图突出显示了HA对中第四个磁盘架的布线、其中每个控制器具有四个支持RoCE的I/O模块：
 
 +
-image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[为具有四个磁盘架和四个IO模块的AFF A1K布线]
+image::../media/drw_ns224_vino_m_4shelves_4cards_ieops-1645.svg[为AFF具有四个磁盘架和四个IO模块的IO/IO ASA A1K布线]
 
 
 

@@ -7996,20 +7996,17 @@ SFP+(目标/启动程序)</block>
   <block id="4367e3d6fa33a8e5340bcdfaf20e76b1" category="list-text">热-将第二个磁盘架添加到每个控制器中具有两个支持RoCE的I/O模块的HA对中。</block>
   <block id="bd7b27778a055163b7315acc047708fd" category="list-text">如果要在每个控制器模块中使用一组支持RoCE的端口(一个支持RoCE的I/O模块)热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
   <block id="7326450dfaf2d352b15c1dbb36a9010e" category="admonition">此步骤假定您已将支持RoCE的I/O模块安装在插槽11中。</block>
-  <block id="f9ba636c0d9fc6353c91cac13fe6290c" category="image-alt">使用缆线连接具有一个磁盘架和一个IO模块的AFF A70或A90</block>
   <block id="1d99994321fcf88aba221cbb6612805a" category="admonition">此步骤假定您已在插槽11和8中安装了支持RoCE的I/O模块。</block>
   <block id="220b4e5517a1a5b99f0642ce282c3975" category="list-text">使用缆线将NSM A端口e0a连接到控制器A插槽11端口A (e11a)。</block>
   <block id="635ff36fada70d6b9a46124ec04022cf" category="list-text">使用缆线将NSM A端口e0b连接到控制器B插槽8端口b (e8b)。</block>
   <block id="3adcb5d3f00489780b17f91dbcf4c8b6" category="list-text">使用缆线将NSM B端口e0a连接到控制器B插槽11端口A (e11a)。</block>
   <block id="fed38315c77f3f617a7a61ed019eb467" category="list-text">使用缆线将NSM B端口e0b连接到控制器A插槽8端口b (e8b)。</block>
   <block id="8b2cc73a271f9ec9f419e138f66cb109" category="paragraph">下图显示了如何在每个控制器模块中使用两个支持RoCE的I/O模块为一个热添加磁盘架布线：</block>
-  <block id="0fd5a3b540c1af5ae188f141b2f40c24" category="image-alt">使用缆线连接具有一个磁盘架和两个IO模块的AFF A70或A90</block>
   <block id="efd179e747ea06abffaa97721b0cc372" category="list-text">使用缆线将NSM A端口e0a连接到控制器A插槽8端口A (E8a)。</block>
   <block id="9db08de14bb838886cf8eaaee8575093" category="list-text">使用缆线将NSM A端口e0b连接到控制器B插槽11端口b (e11b)。</block>
   <block id="e227bb2c8482a8ac7a342596ddc812fe" category="list-text">使用缆线将NSM B端口e0a连接到控制器B插槽8端口A (E8a)。</block>
   <block id="6d4a579eaf72f5aec95723d499d76fe9" category="list-text">使用缆线将NSM B端口e0b连接到控制器A插槽11端口b (e11b)。</block>
   <block id="ae14ce538d268aca5ec54fbb093b2156" category="paragraph">下图显示了在每个控制器模块中使用两个支持RoCE的I/O模块为两个热添加磁盘架布线：</block>
-  <block id="25862846eedff523b089999508c204b1" category="image-alt">为具有两个磁盘架和两个IO模块的AFF A70或A90布线</block>
   <block id="14ac662b33a52d48f6573c07b50e5b8f" category="list-text">使用验证热添加磁盘架的布线是否正确<block ref="7064c89577900622f24a070c24ebbaa7" category="inline-link-rx"></block>。</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">下一步是什么？</block>
   <block id="8d39c366d0f2a2847eeab7a904800822" category="paragraph">If you disabled automatic drive assignment as part of the preparation for this procedure, you need to manually assign drive ownership and then reenable automatic drive assignment, if needed.转到。 <block ref="27f0c709ab4d9ea809b0da6fd9c1c251" category="inline-link-macro-rx"></block></block>
@@ -8023,48 +8020,36 @@ SFP+(目标/启动程序)</block>
   <block id="244addd6f2bc2e043852c2e18eeb5621" category="list-text">将第三个磁盘架热添加到每个控制器中具有四个支持RoCE的I/O模块的HA对。(您已安装第三个和第四个I/O模块、并将使用缆线将第三个磁盘架连接到第三个和第四个I/O模块)。</block>
   <block id="72cdf939e98d17baf87d0a5a64dfcea8" category="list-text">在每个控制器中使用四个支持RoCE的I/O模块将第四个磁盘架热添加到HA对。(您已安装第四个I/O模块并将第三个磁盘架重新布线到第三个和第四个I/O模块、或者已将第三个磁盘架布线到第三个和第四个I/O模块。您将使用缆线将第四个磁盘架同时连接到第三个和第四个I/O模块)。</block>
   <block id="b5fb112065a7304ad93afe5e3c7fa849" category="paragraph">下图突出显示了HA对中第二个磁盘架的布线、其中每个控制器具有两个支持RoCE的I/O模块：</block>
-  <block id="ea0cc2be4039f5636ca9de5e2c7a3940" category="image-alt">为具有两个磁盘架和两个IO模块的AFF A1K布线</block>
   <block id="7190ee5c0c8079e24da44f24c6b7abbc" category="list-text">如果要热添加的NS224磁盘架是HA对中的第三个NS224磁盘架、并且每个控制器中有三个支持RoCE的I/O模块、请完成以下子步骤。否则，请继续执行下一步。</block>
   <block id="67a32de8a36abcac3887051fb422a5f5" category="list-text">使用缆线将磁盘架NSM A端口e0a连接到控制器A插槽9端口A (e9a)。</block>
   <block id="b94b22c566c53666c9eb824858482f94" category="list-text">使用缆线将磁盘架NSM A端口e0b连接到控制器B插槽9端口b (e9b)。</block>
   <block id="daa2e224b274ef312de5853c6cbffaf6" category="list-text">使用缆线将磁盘架NSM B端口e0a连接到控制器B插槽9端口A (e9a)。</block>
   <block id="3a8f2e391b6044dec7d6ef6c3e9dda69" category="list-text">使用缆线将磁盘架NSM B端口e0b连接到控制器A插槽9端口b (e9b)。</block>
   <block id="6c6e97e4c29594c5856e13f4b1a8be0c" category="paragraph">下图突出显示了HA对中第三个磁盘架的布线、其中每个控制器具有三个支持RoCE的I/O模块：</block>
-  <block id="94213ae2609c82c94807004beab91de1" category="image-alt">为具有三个磁盘架和三个IO模块的AFF A1K布线</block>
   <block id="46e04d93b6d495a5235036857998eae9" category="list-text">如果要热添加的NS224磁盘架是HA对中的第三个NS224磁盘架、并且每个控制器中有四个支持RoCE的I/O模块、请完成以下子步骤。否则，请继续执行下一步。</block>
   <block id="abb0dbc2abeae0d456ed2095b4c9ed12" category="list-text">使用缆线将磁盘架NSM A端口e0b连接到控制器B插槽8端口b (e8b)。</block>
   <block id="8ff8aa3f78832bf6ceceeea539763fec" category="list-text">使用缆线将磁盘架NSM B端口e0b连接到控制器A插槽8端口b (e8b)。</block>
   <block id="863764690b094c2d6a28b8edc2afba72" category="paragraph">下图突出显示了HA对中第三个磁盘架的布线、其中每个控制器具有四个支持RoCE的I/O模块：</block>
-  <block id="f9d0d9976d1ff7ee0097da8e1b7fb3c2" category="image-alt">为具有三个磁盘架和四个IO模块的AFF A1K布线</block>
   <block id="3bd0afb8978e34368879d152c8aec251" category="list-text">如果要热添加的NS224磁盘架是HA对中的第四个NS224磁盘架、并且每个控制器中有四个支持RoCE的I/O模块、请完成以下子步骤。</block>
   <block id="d10794f4d3cca7a2993e8d2d6a12cd28" category="list-text">使用缆线将磁盘架NSM A端口e0a连接到控制器A插槽8端口A (e8a)。</block>
   <block id="ed24faf41d7d53c3a668df6e070aca6d" category="list-text">使用缆线将磁盘架NSM B端口e0a连接到控制器B插槽8端口A (e8a)。</block>
   <block id="551d2fc9e8e1159b84b9c23da6d27984" category="paragraph">下图突出显示了HA对中第四个磁盘架的布线、其中每个控制器具有四个支持RoCE的I/O模块：</block>
-  <block id="40d57aad6b502bb35f6aa64821041f6a" category="image-alt">为具有四个磁盘架和四个IO模块的AFF A1K布线</block>
   <block id="8f5d4ff45922bd2a0a4b4ca26b784653" category="paragraph">如果需要更多存储、您最多可以将一个NS224磁盘架热添加到一个AFF A250或AFF C250 HA对中。</block>
   <block id="3c8f15ce2288517ffd28cbab07b4cd4f" category="paragraph">如何为NS224磁盘架布线以进行热添加取决于您拥有的是AFF A400还是AFF C400 HA对。</block>
   <block id="95e9c90f47d7134271c5de6f5d8d41f5" category="paragraph">*用电缆将磁盘架连接到AFF A400 HA对*</block>
   <block id="e47d066c3638efab14a13923e89b312a" category="paragraph">对于AFF A400 HA对、您可以根据需要热添加最多两个磁盘架、并使用板载端口e0c/e0d和插槽5中的端口。</block>
   <block id="d4e171bee30acee3b4097e177f087224" category="list-text">如果要在每个控制器上使用一组支持RoCE的端口(板载支持RoCE的端口)热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
   <block id="4df6de3fb6b5eece4bd1d42f75e5ae3d" category="paragraph">下图显示了如何在每个控制器上使用一组支持RoCE的端口为一个热添加磁盘架布线：</block>
-  <block id="672cc22dbbc7622be2f56d3dce98ffcd" category="image-alt">为具有一个NS224磁盘架和一组板载端口的AFF A400布线</block>
   <block id="306fa6b2ff7e9909c6a2a302a380875a" category="list-text">如果要在每个控制器上使用两组支持RoCE的端口(板载端口和支持RoCE的PCIe卡端口)热添加一个或两个磁盘架、请完成以下子步骤。</block>
-  <block id="303de4b6b1481e40bb1b8e2368a123b6" category="image-alt">为具有两个NS224磁盘架、一组板载端口和一组PCIe卡端口的AFF A400布线</block>
   <block id="41132f8bc7d00935b8687c18c2c9e35d" category="list-text">If you disabled automatic drive assignment as part of the preparation for this procedure, you need to manually assign drive ownership and then re enable automatic drive assignment, if needed.请参阅。 <block ref="27f0c709ab4d9ea809b0da6fd9c1c251" category="inline-link-macro-rx"></block></block>
   <block id="406a6a05dc05bb651919c02b9570c743" category="paragraph">*用电缆将磁盘架连接到AFF C400 HA对*</block>
   <block id="9d6636aae443fd88eb415b0a814eb7ed" category="paragraph">对于AFF C400 HA对、您最多可以热添加两个磁盘架、并根据需要使用插槽4和5中的端口。</block>
   <block id="b6c9c1f2bae5bda1b2ec0ca34865478a" category="list-text">如果要在每个控制器上使用一组支持RoCE的端口热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
-  <block id="a3c44bf0089bcb64a39869e3500ee7be" category="image-alt">为具有一个NS224磁盘架和一组PCIe卡端口的AFF C400布线</block>
   <block id="c4dcb8322178395823ac67e2ea704340" category="list-text">如果要在每个控制器上使用两组支持RoCE的端口热添加一个或两个磁盘架、请完成以下子步骤。</block>
-  <block id="8e60b7b6a9c9e9483da2fb013ea4987b" category="image-alt">为具有两个NS224磁盘架和两组PCIe卡端口的AFF C400布线</block>
   <block id="8b27019cea28c7866ff81a933ac7c02c" category="paragraph">如何在AFF A800或AFF C800 HA对中为NS224磁盘架布线取决于要热添加的磁盘架数量以及控制器上使用的支持RoCE的端口集(一个或两个)数量。</block>
   <block id="e6960ae3a6a92d53555f3471da322c41" category="list-text">如果要在每个控制器上使用一组支持RoCE的端口(一个支持RoCE的PCIe卡)热添加一个磁盘架、并且这是HA对中唯一的NS224磁盘架、请完成以下子步骤。</block>
   <block id="c55555ebd43bc616a6c859bbbad79ac8" category="paragraph">下图显示了在每个控制器上使用一个支持RoCE的PCIe卡为一个热添加磁盘架布线：</block>
-  <block id="e21205a57cd96b3d3b2ad37564df9874" category="image-alt">为具有一个NS224磁盘架和一个PCIe卡的AFF A800或AFF C800布线</block>
   <block id="6f313b51958d9ef2aa65c80a9b64de6b" category="list-text">如果要在每个控制器上使用两组支持RoCE的端口(两个支持RoCE的PCIe卡)热添加一个或两个磁盘架、请完成相应的子步骤。</block>
-  <block id="b44d424c15322ecb36a077b677527005" category="image-alt">为具有两个NS224磁盘架和两个IO模块的AFF A900布线</block>
-  <block id="e896f649bc7a69947f85c288e5cb0b96" category="image-alt">为具有三个NS224磁盘架和四个IO模块的AFF A900布线</block>
-  <block id="325058948df9e92ff2c1577aeb745fc0" category="image-alt">为具有四个NS224磁盘架和四个IO模块的AFF A900布线</block>
   <block id="40e6ceebb2eb1677b588bd7f52f95206" category="paragraph">磁盘架ID编号</block>
   <block id="42a63d570d38a93d3cbaddcfd266a58c" category="paragraph">磁盘架ID访问按钮</block>
   <block id="d6f7de8608837079f0d0dd7fa668c457" category="list-text">检查集群的运行状况。有关详细信息、请参见<block ref="9f193d2818f839c9575e0a6969820fd9" category="inline-link-rx"></block> 知识库文章。</block>
@@ -8572,7 +8557,6 @@ SFP+(目标/启动程序)</block>
   <block id="cada3ae8b9b850f4721595b91f8ab383" category="doc">第1步：重新对控制器进行配置</block>
   <block id="f4c083c41633c63a72a1bbce7db1c159" category="sidebar">交还控制器</block>
   <block id="a39e0fbfb2db42a80ba7546850d8b5c6" category="paragraph"><block ref="a39e0fbfb2db42a80ba7546850d8b5c6" category="inline-link-rx"></block></block>
-  <block id="4c32ebd39f3a998e8ed434a92fb2337e" category="image-alt">为具有一个NS224磁盘架和一组PCIe卡端口的AFF A250 C250或FAS500f布线</block>
   <block id="3512d92434ff4ef9e4eb4253b21a863e" category="image-alt">插入电缆时、连接器拉片朝上</block>
   <block id="fa8057e66f11f58b193c0063c5f89d0f" category="image-alt">NS224 NSM100模块端口e0a和e0b的位置</block>
   <block id="21631ea576ae592d82bfa53578687d4b" category="image-alt">操作员显示面板电源LED</block>
@@ -9060,15 +9044,8 @@ SFP+(目标/启动程序)</block>
   <block id="7bf4e86b8c2f5ff036932a932f9dc604" category="list-text"><block ref="7bf4e86b8c2f5ff036932a932f9dc604" category="inline-link-rx"></block></block>
   <block id="3ab6aa369c3f9b8276a331929da6f82c" category="example-title">将电缆架连接到ASA A1K</block>
   <block id="5085ff6c350861af4448d82a2c958fe8" category="paragraph">您可以将最多三个额外的NS224磁盘架热添加到一个ASA A1K HA对中(总共四个磁盘架)。</block>
-  <block id="b96506939d3be5ee82870422bae11f18" category="image-alt">为具有两个磁盘架和两个IO模块的ASA A1K布线</block>
-  <block id="7c5aa1be4042527c8f9979e790cb45ad" category="image-alt">为具有三个磁盘架和三个IO模块的ASA A1K布线</block>
-  <block id="09bb2c93b169f0c519beed078ec84db3" category="image-alt">为具有三个磁盘架和四个IO模块的ASA A1K布线</block>
-  <block id="568d158739474681892c0a2e2456188d" category="image-alt">为具有四个磁盘架和四个IO模块的ASA A1K布线</block>
   <block id="ae9e439bbd5c00f8b8a1bc7a935729c7" category="example-title">使用缆线将磁盘架连接到ASA A70或ASA A90</block>
   <block id="9e4b32259f721cc54024969657de5534" category="paragraph">如果需要为一个ASA A70或ASA A90 HA对热添加更多存储(到内部磁盘架)、则最多可以将两个NS224磁盘架添加到其中。</block>
-  <block id="087914c8dfa7abbb50d9c6d8ec5daab1" category="image-alt">使用缆线连接具有一个磁盘架和一个IO模块的ASA A70或A90</block>
-  <block id="1bc9489d5803221329c048bb065c42ec" category="image-alt">使用缆线连接具有一个磁盘架和两个IO模块的ASA A70或A90</block>
-  <block id="cdd4188b076dc68d9ffe52ac80b230c6" category="image-alt">为具有两个磁盘架和两个IO模块的ASA A70或A90布线</block>
   <block id="55ec693931401ff7a634100e33ff8cfd" category="doc">ONTAP硬件系统新增功能</block>
   <block id="ec6e72d1c4bb7dccdc62b6caf35c95f7" category="sidebar">ONTAP硬件系统文档</block>
   <block id="64f78e10c5d8a4db6f25299bf9a418cd" category="sidebar">AFF A系列和C系列系统旨在帮助企业更快地转变基础架构、并为数据驱动型战略提供动力。</block>
@@ -9669,10 +9646,6 @@ SFP+(目标/启动程序)</block>
   <block id="e726d5f098bf18b53d3d464c11fbe033" category="list-text">如果启用了AutoSupport、则还原(取消禁止)自动创建案例：system node AutoSupport invoke -node *-type all -message Maint=end</block>
   <block id="975c4856a4750ba558520ec8a4820a30" category="list-text">如果安装了NIC模块、请将每个端口的使用模式指定为_network_：<block ref="2318bc4fadd0b94ffa92c4a515df2262" prefix=" " category="inline-code"></block></block>
   <block id="b6d91a8f20eef2bd8b5f445d19459cac" category="list-text">对另一个控制器重复上述步骤。</block>
-  <block id="fbff7da02a9769667db9e912fa36fc5e" category="paragraph">如果需要为一个AFF A20、AFF A30、AFF C30、AFF A50或AFF C60 HA对添加额外存储(到内部磁盘架)、则最多可以将两个NS224磁盘架热添加到其中。</block>
-  <block id="73a95c42a81e9be601403e3a9d4a84c9" category="list-text">此过程假定您的HA对仅具有内部存储(无外部磁盘架)、并且您：</block>
-  <block id="c6e5816c4606aead75e5bf161bd98726" category="list-text">为AFF A20热添加最多一个额外磁盘架。</block>
-  <block id="11e9efba28ae2ed6dc6e8d713d0a9d85" category="list-text">为AFF A30、AFF C30、AFF A50或AFF C60在每个控制器中热添加最多两个额外磁盘架和两个支持RoCE的I/O模块。</block>
   <block id="4a09af6ecaf81ef3c2832bb75c6a0661" category="list-text">这些系统可与具有NSM100模块的NS224磁盘架和具有NSM100B模块的NS224磁盘架兼容。为确保将控制器连接到正确的端口、请将每个示意图中的"X"替换为适用于您的模块的正确端口号：</block>
   <block id="d6df784a5f01190c34ccccae7152455a" category="cell">模块类型</block>
   <block id="0ef8def66b79f6a75efa2dde40c34190" category="cell">端口标记</block>
@@ -9687,7 +9660,6 @@ SFP+(目标/启动程序)</block>
   <block id="4719f083a14108e1749d33a162c3f72e" category="list-text">使用缆线将磁盘架NSM A端口EXB连接到控制器B插槽3端口b (e3b)。</block>
   <block id="e12dd7341a7320b1bfee16cf7817ae73" category="list-text">使用缆线将磁盘架NSM B端口exa连接到控制器B插槽3端口A (E3A)。</block>
   <block id="36eb4fa8319a2d5789a89ff95d28ecb4" category="list-text">使用缆线将磁盘架NSM B端口EXB连接到控制器A插槽3端口b (e3b)。</block>
-  <block id="4d6aa4e10ec4c72ec3a386b483422bc8" category="image-alt">为AFF A20布线</block>
   <block id="d6dc171c9f98fe17e814fd05d2ee1489" category="admonition">此步骤假定您已在插槽3和1中安装了支持RoCE的I/O模块。</block>
   <block id="e8becaef69668c291a5f960c6cd5f04e" category="list-text">使用缆线将NSM A端口exa连接到控制器A插槽3端口A (E3A)。</block>
   <block id="5d0425db587b395e698ec97c99c625fc" category="list-text">使用缆线将NSM A端口EXB连接到控制器B插槽1端口b (e1b)。</block>
@@ -10373,7 +10345,6 @@ SFP+(目标/启动程序)</block>
   <block id="dafdc51bcfddfb75cdc104244fa42b60" category="doc">更换实时时钟电池- AFF C80</block>
   <block id="0c760c78e9d0c008701a3538ed8f1c85" category="doc">更换系统管理模块- AFF C80</block>
   <block id="0e0493531094a28281ba5f32c328ac63" category="paragraph">您的硬件系统可能与具有NSM100模块的NS224磁盘架和具有NSM100B模块的NS224磁盘架兼容。要检查硬件和磁盘架的兼容性和端口名称，请参阅<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>。</block>
-  <block id="c97d3a72e7c1692c1c5f56d517b82c8c" category="example-title">使用缆线将磁盘架连接到AFF A20、AFF A30、AFF A50、AFF C30或AFF C60</block>
   <block id="494fa596205dff234fa0bdbd9d667c60" category="example-title">用缆线将磁盘架连接到AFF A70、AFF A90或AFF C80</block>
   <block id="cfa4ea65df4b282eb8322ca03dbd679d" category="inline-link-macro">交换机连接的布线指南</block>
   <block id="d8ddb474e138beeebfa487dca0fe0955" category="list-text">此过程仅适用于直连存储。要查看有关交换机连接存储的说明，请查看我们的<block ref="655fd8ce12b9f1cd7287415659488f07" category="inline-link-macro-rx"></block>。</block>
@@ -10614,7 +10585,6 @@ SFP+(目标/启动程序)</block>
   <block id="dbc74f369dbf214b25d0f839fd4cd2b0" category="list-text">如果禁用了自动交还、则还原它：</block>
   <block id="37e73c8cf9d7d3b4aeaa58f23b2fcb81" category="paragraph">打开AFF A1K存储系统后、即可发现集群网络并设置ONTAP集群。</block>
   <block id="f2cde5cb8aa49228f5cb392e473dff51" category="paragraph">初始化集群后、下载并运行<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block>以确认设置。</block>
-  <block id="5d181ca91be1af691d1f01654691cc7b" category="image-alt">A1K存储系统和A70或A90电源连接图</block>
   <block id="e826d5b26017ec374bf63b94b8a425d9" category="list-text">使用每个电源上的固定设备固定电源线。:a1K-A70-90!:</block>
   <block id="0bf1ff1f561d2a96752b8ee596c65068" category="list-text">HA配置中的4U</block>
   <block id="3ac4d4a9f6b930345bd4ccdb8435d0fb" category="list-text">在每个控制器的系统管理模块上</block>
@@ -10777,7 +10747,6 @@ SFP+(目标/启动程序)</block>
   <block id="4e3c3284590d1aa1440e67b3bd65ba6e" category="list-text"><block ref="4e3c3284590d1aa1440e67b3bd65ba6e" category="inline-link-macro-rx"></block></block>
   <block id="370d2e6f20948d3881708f9706576691" category="sidebar">准备更换</block>
   <block id="19d944a3a323213d80bcdd66ecd5c26f" category="list-text">确定是否使用以下方法之一配置板载密钥管理器(OKM)或外部密钥管理器(EKM)：</block>
-  <block id="b3387f173ebbff42e3160605c9db518a" category="list-text">您可以询问客户或系统管理员是否已启用OKM或EKM。</block>
   <block id="5dc17ba8443f8aafae4ca9de8cf9545b" category="list-text">要检查是否已启用OKM，可以使用<block ref="3c690d79c23fa8c25994507c25377567" prefix=" " category="inline-code"></block>。</block>
   <block id="4e447e93a3331607c74749775653cbfc" category="list-text">要检查是否已启用EMM，您可以使用<block ref="001642cb897a8bebce3210207b7e81af" prefix=" " category="inline-code"></block>。</block>
   <block id="161a8b7bf3b6a7aaa3bda387e5eab04b" category="list-text">对于OKM、您需要OKM密码短语文件内容。</block>
@@ -11119,10 +11088,6 @@ SFP+(目标/启动程序)</block>
   <block id="3b0feb5303f3eeec93eba65f8eb967ae" category="list-text">确保所有其他系统组件均正常工作。</block>
   <block id="d5607198701fa39cc481498d62a52e7b" category="list-text">确保系统中的所有其他组件均正常工作；否则、请联系以寻求帮助。<block ref="468ae937a554dfd3baf209aa53f9f7a6" category="inline-link-rx"></block></block>
   <block id="1b55fb3af000d448310e77a6de6c5161" category="paragraph">NVRAM模块由NVRAM12硬件和现场可更换DIMM组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.</block>
-  <block id="566c293315d81d047304e5fade9a967d" category="list-text">要检查是否已启用OKM、请使用以下命令：</block>
-  <block id="248c44cfee0de883f1e8e602cd90cfbb" category="paragraph"><block ref="3c690d79c23fa8c25994507c25377567" prefix="" category="inline-code"></block></block>
-  <block id="a0e65297bb80c27972e34aa4810ab81b" category="list-text">要检查是否已启用EMM、请使用以下命令：</block>
-  <block id="49bfbad696a2529ef03d859ad9b3f40a" category="paragraph"><block ref="001642cb897a8bebce3210207b7e81af" prefix="" category="inline-code"></block></block>
   <block id="c174421f5b8f9ca697d7784c901fd0e7" category="paragraph">要确保存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。</block>
   <block id="6e9d75b7e6d83f0d47bf1ca8b289ab30" category="summary">如果AFF A1K系统中的某个组件发生故障、请将故障部件退回给NetApp。<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>有关详细信息、请参见页面。</block>
   <block id="e7202980adb67469897852b1c95d1aa0" category="summary">要确保AFF A1K存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密、关闭控制器之前、请检查密钥管理器是否处于活动状态。</block>
@@ -11923,4 +11888,50 @@ SFP+(目标/启动程序)</block>
   <block id="40bde7f2324ee2876dd8a09846b14ff4" category="image-alt">打开电源</block>
   <block id="512bdc85c8065a0397ce7025381aaf66" category="image-alt">自动发现系统</block>
   <block id="397249170dcc18ae00c3a7885f97fdc1" category="list-text">将控制台缆线连接到笔记本电脑或控制台、使用存储系统附带的控制台缆线连接控制器上的控制台端口、然后将笔记本电脑或控制台连接到管理子网上的交换机。</block>
+  <block id="caf5b8ffb4d79dceb1fb647290798a01" category="list-text">此过程假设您的HA对只有内部存储(无外部磁盘架)、并且您要热添加最多一个额外磁盘架。</block>
+  <block id="93594816ce3f17fed74d263c83a0dbf3" category="image-alt">使用缆线为AFF具有一个磁盘架和一个模块的IO/IO ASA A20布线</block>
+  <block id="1e105a621d0adba625aea7a6ae6a26c4" category="list-text">如果要在每个控制器模块中使用两组支持RoCE的端口(两个支持RoCE的I/O模块)热添加一个磁盘架、请完成以下子步骤。</block>
+  <block id="ce8013dd06f3fee752bb7a7d4b9238d2" category="image-alt">为AFF具有一个磁盘架和两个模块的IO/IO ASA A20布线</block>
+  <block id="aa7a979a65afd227664ca4bcf07916aa" category="list-text">此过程假设HA对只有内部存储(无外部磁盘架)、并且您要在每个控制器中热添加最多两个额外磁盘架和两个支持RoCE的I/O模块。</block>
+  <block id="f2a9ba351ff729d0ca9404bb3db069f6" category="image-alt">为AFF或ASA A30布线</block>
+  <block id="22069d1c29859ffdad9469c1e6747cf1" category="image-alt">为AFF ASA布线</block>
+  <block id="612bdab395b71e87cee7fad47c71f93d" category="image-alt">使用缆线为AFF带有一个磁盘架和一个ASA模块的IO/IO A70或A90布线</block>
+  <block id="e3292c7d546f92fd0a5ab680be388d1f" category="image-alt">为带有一个磁盘架和两个ASA模块的IO/IO A70或AFF布线</block>
+  <block id="6aa91cf36fd9acfb2a369c09c6c070ca" category="image-alt">使用缆线连接具有两个磁盘架和两个ASA模块的IO/IO A70或AFF</block>
+  <block id="9bb029ef1a9ff9e816e879a364d3c7b6" category="image-alt">为AFF具有两个磁盘架和两个ASA模块的IO/IO A1K布线</block>
+  <block id="7376879927d2b84ec553cfa3f1bfd0f4" category="image-alt">为AFF具有三个磁盘架和三个ASA模块的IO/IO A1K布线</block>
+  <block id="de5bea2fd617f7327f73c1c44e37b9a6" category="image-alt">使用缆线为AFF具有三个磁盘架和四个ASA模块的IO/IO A1K布线</block>
+  <block id="db0e24742d4fd4f6f2a732aeac2ca6a3" category="image-alt">为AFF具有四个磁盘架和四个IO模块的IO/IO ASA A1K布线</block>
+  <block id="ac2f75fe6673cb1f5f103f2229eb9ca0" category="image-alt">为AFF具有一个NS224磁盘架和一组ASA A250卡端口的PCI/PCIE C250或FAS500f布线</block>
+  <block id="eaa19193ad1b64f0162e8f312a6ddc47" category="image-alt">为AFF具有一个NS224磁盘架和一组板载端口的NSS/ ASA A400布线</block>
+  <block id="bba30f16a0c3755741b0f3e2032fe595" category="image-alt">为ASA A400具有两个NS224磁盘架、一组板载端口和一组PCIe卡端口的/PCIe布线</block>
+  <block id="062f2d0d7124d747b94b599ceb1f29ed" category="image-alt">为具有一个NS224磁盘架和一组AFF卡端口的ASA C400布线</block>
+  <block id="ea4ee6dbdfefd4ed125fc31c39deee4c" category="image-alt">为具有两个NS224磁盘架和两组AFF卡端口的ASA C400布线</block>
+  <block id="baa82981e40f9200b81a359d31653dd6" category="image-alt">为AFF具有一个NS224磁盘架和一个AFF卡的ASA A800或ASA C800布线</block>
+  <block id="c398a3b33f9866994ec7dd506a0affe1" category="image-alt">为具有两个NS224磁盘架和两个AFF模块的NSS/ ASA A900布线</block>
+  <block id="0e9ff50f94b0a9a55c9b9c4773ddccbe" category="image-alt">为AFF包含三个NS224磁盘架和四个IO模块的NSS/ ASA A900布线</block>
+  <block id="97f00e66a1cda314ebb07a43f08fca5b" category="image-alt">为AFF具有四个NS224磁盘架和四个IO模块的ASA A900布线</block>
+  <block id="10236a63db20e6dd5b0c0b8f3cbc1c18" category="list-text">将两根电源线插入控制器电源、然后将其连接到不同电路上的电源。</block>
+  <block id="dba5caf7b75bcd8724abd1b1ca8827fd" category="image-alt">AFF A1K AFF A70或AFF A90或FAS70或FAS90电源连接图</block>
+  <block id="638f4a62fea5cc77db53abd671ddb8ef" category="example-title">使用缆线将磁盘架连接到AFF A20</block>
+  <block id="9eec124f47af3a03039f640091e3ed69" category="paragraph">如果需要额外存储(到内部磁盘架)、您可以将一个NS224磁盘架热添加到AFF 2020 HA对。</block>
+  <block id="e76cf9924a9de1dd17f1b48f3a38d0cd" category="example-title">使用缆线将磁盘架连接到AFF A30、AFF A50、AFF C30或AFF C60</block>
+  <block id="5820f31f30f8fc695d25c9cec1305cdb" category="paragraph">如果需要额外存储(到内部磁盘架)、您最多可以将两个NS224磁盘架热添加到AFF A30、AFF C30、AFF A50或AFF C60 HA对。</block>
+  <block id="2b5ec68149482145f38e8592a2e4b794" category="example-title">使用缆线将磁盘架连接到ASA A20</block>
+  <block id="c84fe478157d5a5e8c65815d80aa16a6" category="paragraph">如果需要额外存储(到内部磁盘架)、则最多可以将一个NS224磁盘架热添加到一个ASA 2020 HA对中。</block>
+  <block id="bb5cf394b2e920ea8a139221d234cd8f" category="example-title">使用缆线将磁盘架连接到ASA A30或ASA A50</block>
+  <block id="541e9b9bea8f992a6c173f0c44b17452" category="paragraph">如果需要为一个ASA A30或A50 HA对热添加更多存储(到内部磁盘架)、则最多可以将两个NS224磁盘架添加到其中。</block>
+  <block id="46aa3bf0a87f8519f8e9314ed7186c68" category="paragraph">如果需要更多存储、您最多可以将一个NS224磁盘架热添加到一个ASA A250或ASA C250 HA对中。</block>
+  <block id="74259516da197cf641342dca62af2c0b" category="paragraph">如何为NS224磁盘架布线以进行热添加取决于您拥有的是ASA A400还是ASA C400 HA对。</block>
+  <block id="5a9c7ba8fea538e8bddca7cfd05765f9" category="paragraph">如何在ASA A800或ASA C800 HA对中为NS224磁盘架布线取决于要热添加的磁盘架数量以及控制器上使用的支持RoCE的端口集(一个或两个)数量。</block>
+  <block id="6bb205a0be0fdef8b8935f61e328f79d" category="paragraph">如果需要更多存储，您可以将最多三个额外的 NS224 驱动器架（总共四个磁盘架）热添加到一个 ASA A900 HA 对中。</block>
+  <block id="74375be821a0ccfdaa2aae68f1a39391" category="list-text">对于AFF系统：</block>
+  <block id="f7e7abd6131f4502c1bda794831656d2" category="list-text">对于ASA系统：</block>
+  <block id="c1ec0f43de6728212fc94985d5f83feb" category="admonition">如果您有一个ASA A1K HA对、并且要热添加第三个磁盘架、并在每个控制器中安装第三个或第四个支持RoCE的I/O模块、则第三个磁盘架仅连接到第三个或第三个和第四个I/O模块。您无需重新对任何现有磁盘架进行配置。</block>
+  <block id="80e4582b9d6f2e4fef63bc13dc0ddad1" category="open-title">ASA A70或ASA A90</block>
+  <block id="ba8d903e745090016b0afab400d33f7c" category="open-title">ASA A800或ASA C800</block>
+  <block id="ade2052b1dc75cccb7fc7b0760456566" category="open-title">ASA A400或ASA C400</block>
+  <block id="18b75697f84707c97e051581b495caae" category="list-text">在ASA A400上：</block>
+  <block id="f08c247bf18a7d50e52f66010faca66f" category="list-text">在ASA C400上：</block>
+  <block id="2aba7ab5e3f8f696965da4208fe4dd23" category="open-title">ASA A30或ASA A50</block>
 </blocks>

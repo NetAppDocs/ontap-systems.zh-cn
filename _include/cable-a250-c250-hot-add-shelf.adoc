@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-如果需要更多存储、您最多可以将一个NS224磁盘架热添加到一个AFF A250或AFF C250 HA对中。
-
 .开始之前
 * 您必须已查看 link:requirements-hot-add-shelf.html["热添加要求和最佳实践"]。
 * 您必须已完成中的适用过程 link:prepare-hot-add-shelf.html["准备热添加磁盘架"]。
@@ -21,7 +19,7 @@
 .. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 1 端口 A （ e1a ）。
 .. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 1 端口 b （ e1b ）。+ 下图显示了完成后的磁盘架布线。
 +
-image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为具有一个NS224磁盘架和一组PCIe卡端口的AFF A250 C250或FAS500f布线]
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为AFF具有一个NS224磁盘架和一组ASA A250卡端口的PCI/PCIE C250或FAS500f布线]
 
 
 

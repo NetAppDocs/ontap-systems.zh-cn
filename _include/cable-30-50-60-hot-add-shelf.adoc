@@ -17,6 +17,30 @@
 ** 热-将第二个磁盘架添加到每个控制器中具有两个支持RoCE的I/O模块的HA对中。
 
 
+* 这些系统可与具有NSM100模块的NS224磁盘架和具有NSM100B模块的NS224磁盘架兼容。为确保将控制器连接到正确的端口、请将每个示意图中的"X"替换为适用于您的模块的正确端口号：
++
+[cols="1,4"]
+|===
+| 模块类型 | 端口标记 
+
+
+ a| 
+NSM100
+ a| 
+"0"
+
+例如e0a
+
+
+
+ a| 
+NSM100B
+ a| 
+"1"
+
+例如e1a
+
+|===
 
 
 .步骤
@@ -26,25 +50,25 @@
 
 +
 
-NOTE: 此步骤假定您已将支持RoCE的I/O模块安装在插槽11中。
+NOTE: 此步骤假定您已将支持RoCE的I/O模块安装在插槽3中。
 
 +
-.. 使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 11 端口 A （ e11a ）。
-.. 使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 11 端口 b （ e11b ）。
-.. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 11 端口 A （ e11a ）。
-.. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 11 端口 b （ e11b ）。
+.. 使用缆线将磁盘架NSM A端口exa连接到控制器A插槽3端口A (E3A)。
+.. 使用缆线将磁盘架NSM A端口EXB连接到控制器B插槽3端口b (e3b)。
+.. 使用缆线将磁盘架NSM B端口exa连接到控制器B插槽3端口A (E3A)。
+.. 使用缆线将磁盘架NSM B端口EXB连接到控制器A插槽3端口b (e3b)。
 +
 下图显示了在每个控制器模块中使用一个支持 RoCE 的 I/O 模块为一个热添加磁盘架布线：
 
 +
-image::../media/drw_ns224_vino_i_1shelf_1card_ieops-1639.svg[使用缆线为AFF带有一个磁盘架和一个ASA模块的IO/IO A70或A90布线]
+image::../media/drw_ns224_g_1shelf_1card_ieops-2002.svg[为AFF或ASA A30布线,452px,AFF/ASA A50]
 
 
 
 . 如果要在每个控制器模块中使用两组支持 RoCE 的端口（两个支持 RoCE 的 I/O 模块）热添加一个或两个磁盘架，请完成相应的子步骤。
 +
 
-NOTE: 此步骤假定您已在插槽11和8中安装了支持RoCE的I/O模块。
+NOTE: 此步骤假定您已在插槽3和1中安装了支持RoCE的I/O模块。
 
 +
 [cols="1,3"]
@@ -55,32 +79,32 @@ NOTE: 此步骤假定您已在插槽11和8中安装了支持RoCE的I/O模块。
  a| 
 磁盘架 1
  a| 
-.. 使用缆线将NSM A端口e0a连接到控制器A插槽11端口A (e11a)。
-.. 使用缆线将NSM A端口e0b连接到控制器B插槽8端口b (e8b)。
-.. 使用缆线将NSM B端口e0a连接到控制器B插槽11端口A (e11a)。
-.. 使用缆线将NSM B端口e0b连接到控制器A插槽8端口b (e8b)。
+.. 使用缆线将NSM A端口exa连接到控制器A插槽3端口A (E3A)。
+.. 使用缆线将NSM A端口EXB连接到控制器B插槽1端口b (e1b)。
+.. 使用缆线将NSM B端口exa连接到控制器B插槽3端口A (E3A)。
+.. 使用缆线将NSM B端口EXB连接到控制器A插槽1端口b (e1b)。
 .. 如果要热添加第二个磁盘架，请完成 `Shelf 2` 子步骤；否则，请转至步骤 3 。
 
 
 下图显示了如何在每个控制器模块中使用两个支持RoCE的I/O模块为一个热添加磁盘架布线：
 
-image::../media/drw_ns224_vino_i_1shelf_2cards_ieops-1640.svg[为带有一个磁盘架和两个ASA模块的IO/IO A70或AFF布线]
+image::../media/drw_ns224_g_1shelf_2card_ieops-2005.svg[为AFF或ASA A30布线,452px,AFF/ASA A50]
 
 
 
  a| 
 磁盘架 2
  a| 
-.. 使用缆线将NSM A端口e0a连接到控制器A插槽8端口A (E8a)。
-.. 使用缆线将NSM A端口e0b连接到控制器B插槽11端口b (e11b)。
-.. 使用缆线将NSM B端口e0a连接到控制器B插槽8端口A (E8a)。
-.. 使用缆线将NSM B端口e0b连接到控制器A插槽11端口b (e11b)。
+.. 使用缆线将NSM A端口exa连接到控制器A插槽1的端口a (e1a)。
+.. 使用缆线将NSM A端口EXB连接到控制器B插槽3端口b (e3b)。
+.. 使用缆线将NSM B端口exa连接到控制器B插槽1端口A (e1a)。
+.. 使用缆线将NSM B端口EXB连接到控制器A插槽3端口b (e3b)。
 .. 转至步骤 3 。
 
 
 下图显示了在每个控制器模块中使用两个支持RoCE的I/O模块为两个热添加磁盘架布线：
 
-image::../media/drw_ns224_vino_i_2shelves_2cards_ieops-1641.svg[使用缆线连接具有两个磁盘架和两个ASA模块的IO/IO A70或AFF]
+image::../media/drw_ns224_g_2shelf_2card_ieops-2003.svg[为AFF ASA布线,452px,AFF/ASA A50]
 
 |===
 . 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
