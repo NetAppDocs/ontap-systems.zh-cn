@@ -9787,7 +9787,6 @@ SFP+(目标/启动程序)</block>
   <block id="72b54ea7be3a13b4755dc4521c8d0af6" category="paragraph">使用凸轮把手将驱动器滑出驱动器托架、并用另一只手支撑驱动器。</block>
   <block id="0093c88dee6ce91e0bd8ccb1cfbc03ff" category="admonition">由于驱动器易碎、请尽量减少操作以避免损坏驱动器。</block>
   <block id="0649d37403624118b801efa8956dc716" category="section-title">第3步：从设备机架或系统机柜中更换机箱</block>
-  <block id="e5a4b20c56ed46e589289f6e1a9368dd" category="paragraph">您可以从设备机架或系统机柜中卸下受损机箱、安装更换机箱、安装驱动器和所有驱动器挡片、然后安装挡板。</block>
   <block id="eb8def779f4d3e61a371ec65c0cc0128" category="list-text">从受损机箱安装点上卸下螺钉。</block>
   <block id="16e252393218a73fc25b829675a86fce" category="paragraph">将螺钉放在一边、以便稍后在此过程中使用。</block>
   <block id="433916ec8110bbee1005399f55ede944" category="admonition">如果存储系统随附在NetApp系统机柜中、则必须先卸下机箱背面的额外螺钉、然后才能卸下机箱。</block>
@@ -11808,7 +11807,6 @@ SFP+(目标/启动程序)</block>
   <block id="64013ec345bda7b07597c5bf34eac5fe" category="open-title">选项1：NS224磁盘架</block>
   <block id="8a978cde5ab4fac3e67487580bc3a51a" category="open-title">选项2：SAS磁盘架</block>
   <block id="2cc2225989c416fa40923a89f7f8d99c" category="doc">检查启动介质(FAS50)上的加密密钥支持和状态</block>
-  <block id="e65767537c6f00cc3bec96359db6404a" category="summary">如果硬件故障需要更换FAS50存储系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下任何缓存模块、安装更换机箱以及重新安装机箱组件。</block>
   <block id="aa7129f47a0b0a00e74ba4024fe7ba35" category="paragraph">如果硬件故障需要更换FAS50存储系统的机箱。更换过程包括卸下控制器、卸下任何缓存模块和驱动器挡片、安装更换机箱以及重新安装机箱组件。</block>
   <block id="d3f6a519d78eb3e642c0549ced5f8f2f" category="summary">在更换FAS50存储系统中的控制器之前、请确保满足成功更换控制器所需的要求。这包括验证系统中的所有其他组件是否正常运行、验证是否具有正确的替代控制器以及将控制器的控制台输出保存到文本日志文件。</block>
   <block id="3034b89fc8e6fc3ae99585d8f1eab80e" category="doc">更换控制器的要求- FAS50</block>
@@ -11934,4 +11932,23 @@ SFP+(目标/启动程序)</block>
   <block id="18b75697f84707c97e051581b495caae" category="list-text">在ASA A400上：</block>
   <block id="f08c247bf18a7d50e52f66010faca66f" category="list-text">在ASA C400上：</block>
   <block id="2aba7ab5e3f8f696965da4208fe4dd23" category="open-title">ASA A30或ASA A50</block>
+  <block id="e3fb1d8bd564bfe9f807ba42e5cd7b33" category="paragraph">按下缓存模块正面的释放按钮以打开凸轮把手。</block>
+  <block id="06269d1797937a16e290698098cc8abd" category="paragraph">向下旋转凸轮把手、使缓存模块与中板分离。</block>
+  <block id="469c355b09315b0a1d1690c1923180a4" category="paragraph">使用凸轮把手将高速缓存模块滑出驱动器托架、并用另一只手支撑高速缓存模块。</block>
+  <block id="e84b84ef6157f4a35245509c8a7fa353" category="paragraph">卸下缓存模块时、请始终用双手支撑其重量。</block>
+  <block id="feec4c6e74f9f529edb4ef65e2cc4efc" category="paragraph">从设备机架或系统机柜中卸下受损机箱、安装更换机箱、安装控制器、安装所有缓存模块和驱动器挡片、然后安装挡板。</block>
+  <block id="19b2479c4fb73cb4e1e7a5cd66cd9fa9" category="list-text">使凸轮把手处于打开位置、用双手插入缓存模块。</block>
+  <block id="5b42dc5254df979588b011980c1a8adc" category="list-text">轻轻推动、直至缓存模块停止。</block>
+  <block id="73e8bab771e1e37a562d7cdbeb444153" category="list-text">合上凸轮把手、使缓存模块完全插入中板、并且把手卡入到位。</block>
+  <block id="82a8073ecc9994385ee15cd53ba7d96a" category="paragraph">请务必缓慢关闭凸轮把手、使其与缓存模块的正面正确对齐。</block>
+  <block id="0c1eef5d5ee997a38d2bb1303bcee89d" category="list-text">如果需要、对其余缓存模块重复此过程。</block>
+  <block id="45d69e7bdfec0647cf3523f57e30a808" category="section-title">步骤2：从受损机箱中卸下驱动器</block>
+  <block id="c0055725498ec7c6a2d459f6d18aef46" category="paragraph">您需要从受损机箱中卸下所有驱动器和任何驱动器挡片、以便在此过程稍后将其安装到更换机箱中。</block>
+  <block id="3e56a6d3defe800cc97429c918a7c4fb" category="list-text">卸下驱动器和所有驱动器挡片：</block>
+  <block id="ba52981b53ce10a301f84e2da386c778" category="admonition">请记录每个驱动器和驱动器挡片从哪个驱动器托架中卸下、因为它们必须安装在更换机箱中的相同驱动器托架中。</block>
+  <block id="ab32ae446e6fa5de50a5d631bbe01daf" category="list-text">将驱动器放在无静电的手推车或桌子上。</block>
+  <block id="17df5870a90dff11dc4f027f001751a7" category="section-title">第2步：从设备机架或系统机柜中更换机箱</block>
+  <block id="277a5698809db74260fd2ddda1e6acd9" category="paragraph">您可以从设备机架或系统机柜中卸下受损机箱、安装更换机箱、安装驱动器和所有驱动器挡片、然后安装挡板。</block>
+  <block id="a6d6e73e138675b6ffbbb0e4663b2d5d" category="list-text">将驱动器和从受损机箱中卸下的任何驱动器挡片安装到更换机箱中：</block>
+  <block id="4a7738e24d9329241e05c40def3be102" category="admonition">驱动器和驱动器挡片必须安装在更换机箱中的相同驱动器托架中。</block>
 </blocks>
