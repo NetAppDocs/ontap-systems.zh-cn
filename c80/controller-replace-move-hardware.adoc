@@ -323,7 +323,7 @@ NOTE: 要从插槽6和7移动I/O模块、必须将包含这些I/O模块的托架
 
 将系统管理模块移至更换用的控制器模块。
 
-image::../media/drw_a70-90_sys-mgmt_replace_ieops-1373.svg[更换系统管理模块]
+image::../media/drw_70-90_sys-mgmt_remove_ieops-1817.svg[移动系统管理模块]
 
 [cols="1,4"]
 |===
@@ -333,20 +333,6 @@ image::../media/drw_a70-90_sys-mgmt_replace_ieops-1373.svg[更换系统管理模
 image::../media/icon_round_1.png[标注编号1]
  a| 
 系统管理模块凸轮闩锁
-
-
-
- a| 
-image::../media/icon_round_2.png[标注编号2]
- a| 
-启动介质锁定按钮
-
-
-
- a| 
-image::../media/icon_round_3.png[标注编号3]
- a| 
-更换系统管理模块
 
 |===
 . 从受损控制器模块中卸下系统管理模块：

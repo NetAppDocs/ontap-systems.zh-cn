@@ -14,6 +14,7 @@ summary: 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 �
 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 驱动器架中的故障电源。
 
 .关于此任务
+* 此过程适用于具有NSM100或NSM100B模块的NS224磁盘架。
 * 请勿混用具有不同效率额定值或不同输入类型的电源。
 +
 请始终像这样替换。
@@ -35,12 +36,12 @@ summary: 您可以在 I/O 正在进行时无中断地更换已启动的 NS224 �
 +
 If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
 
-* 如果要将NS224磁盘架的交流电源更换为NSM100模块、您可以观看以下动画、熟悉此过程、然后再开始操作。
+* 如果要更换NS224磁盘架的交流电源、您可以观看以下动画、熟悉此过程、然后再开始操作。动画显示了具有NSM100模块的NS224、但具有NSM100B模块的磁盘架的步骤相同。
 +
-.将NS224的交流电源更换为NSM100模块
+.更换NS224的交流电源
 [%collapsible]
 ====
-.热插拔NS224磁盘架中的电源
+.热插拔NS224磁盘架中的交流电源
 video::5794da63-99aa-425a-825f-aa86002f154d[panopto]
 ====
 

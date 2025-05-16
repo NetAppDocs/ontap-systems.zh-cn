@@ -7948,7 +7948,6 @@ SFP+(目标/启动程序)</block>
   <block id="aa0bcb347c0d996ed6d3094ca9407905" category="list-text">轻轻地将托架完全推入更换用的控制器模块、直到其锁定到位。</block>
   <block id="e156abc6c55d67bc52379c9afbf08a38" category="section-title">第7步：移动系统管理模块</block>
   <block id="0970f7cff19d17cbcf6cda476c075ee2" category="paragraph">将系统管理模块移至更换用的控制器模块。</block>
-  <block id="94b3eb3106138f7bc53935ffbe690cbf" category="paragraph">更换系统管理模块</block>
   <block id="18dd6244b942460d88413f477ea1a813" category="list-text">从受损控制器模块中卸下系统管理模块：</block>
   <block id="953f96c587cb69d7c4ffdd62048a1067" category="list-text">向下旋转凸轮杆。</block>
   <block id="d02b3bf2c9834e1200fb66a2408e400a" category="list-text">将手指环入凸轮杆、然后将模块直接拉出系统。</block>
@@ -8819,7 +8818,6 @@ SFP+(目标/启动程序)</block>
   <block id="5ff2c2e371b329794d430555ced9e3f7" category="paragraph">要为硬件布线、请先将存储控制器连接到网络、然后再将控制器连接到存储架。</block>
   <block id="285d6553cd8c7daec6f0d12aba91379c" category="inline-link-macro">启动AFF A1K存储系统</block>
   <block id="7975efdb78ae2356ecfb7785916813ea" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="e440a513b8c5f4e1fdb4e9cd395eb57d" category="inline-link-macro-rx"></block></block>
-  <block id="9adaba33c41b009e4561e4c9bfed5074" category="paragraph">打开控制器电源之前、请打开每个NS224磁盘架的电源、并分配一个唯一的磁盘架ID、以确保每个磁盘架在设置中都是唯一标识的。</block>
   <block id="54cd8d1881f4be7195e616a39249670b" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block><block ref="ed796137dcbf61e6432604e7b2936e62" category="inline-link-macro-rx"></block></block>
   <block id="80c97b00983d1544cf5059e1ae224d3c" category="paragraph">要完成系统设置、请通过浏览器指向控制器的IP地址来访问ONTAP系统管理器。设置向导可帮助您完成AFF A1K存储系统的集群配置。</block>
   <block id="cb3c09e0aea666ca89714e771fe2a341" category="paragraph">在为AFF A1K存储系统安装机架硬件并为控制器和存储架安装缆线后、您应打开存储架和控制器的电源。</block>
@@ -9012,7 +9010,6 @@ SFP+(目标/启动程序)</block>
   <block id="de6952744c4efa4af3b088924141554c" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="47f9cb95cf9bc2df13978b8a91985b13" category="inline-link-macro-rx"></block></block>
   <block id="a817c10af381296411c154c716af48b7" category="inline-link-macro">启动FAS70或FAS90存储系统</block>
   <block id="b2f6fbbaf5842fe5addbaac3aabc158d" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="164a6e7d5b74e1ce7eb1009b0b13e4f3" category="inline-link-macro-rx"></block></block>
-  <block id="dca1bb25aacd58a886c534d26e411b34" category="paragraph">打开控制器电源之前、请打开每个磁盘架的电源并分配一个唯一的磁盘架ID、以确保每个磁盘架在设置中都是唯一标识的。</block>
   <block id="7bf2fa9e265a50a618153953f60062b9" category="paragraph">要完成系统设置、请通过浏览器指向控制器的IP地址来访问ONTAP系统管理器。设置向导可帮助您完成存储系统的集群配置。</block>
   <block id="d9eb7005000baef74822bf5afd90707b" category="doc">打开存储系统(FAS70和FAS90)的电源</block>
   <block id="f6d3448cfd45b6a4ae23d47aec38dd6f" category="paragraph">在为FAS70 0r FAS90存储系统安装机架硬件并为控制器和存储架安装缆线后、您应打开存储架和控制器的电源。</block>
@@ -9368,7 +9365,6 @@ SFP+(目标/启动程序)</block>
   <block id="85ef91c4d71faa53c83efc7222148253" category="video-title">更换NS224磁盘架启动介质</block>
   <block id="bed8800ffb3dfb17d15fabcbf21305be" category="video-title">更换NS224磁盘架中的DIMM</block>
   <block id="adf9a21a79092388f61e544af11cd756" category="video-title">更换NS224磁盘架中的风扇</block>
-  <block id="ed5f0b1fadc9d155c332ddd3a2c8910b" category="video-title">热插拔NS224磁盘架中的电源</block>
   <block id="4dc161fec1e803228a4a6e64a87cc800" category="video-title">更换NS224磁盘架中的RTC电池</block>
   <block id="63de15d7ebdc2c559ae57bca24a50ba0" category="paragraph">如果存储系统遇到错误(例如、基于运行状况监控器警报的CECC (可更正错误更正代码)错误过多或不可更正的ECC错误)、通常是由于单个DIMM故障导致存储系统无法启动ONTAP而导致的、则必须更换控制器中的DIMM。</block>
   <block id="e2c22e2725f2ca1633de7f84c13e7ee9" category="list-text">通过交还存储使受损控制器恢复正常运行：<block ref="30edaf7c9fa43c78aeaf4b8fabb7af1a" prefix=" " category="inline-code"></block>。</block>
@@ -9592,14 +9588,11 @@ SFP+(目标/启动程序)</block>
   <block id="1e80f086f2d3ddea0cd02baa25f9c2f1" category="list-text">如果您卸下了NIC I/O模块并安装了新的NIC I/O模块、请对每个端口使用以下network命令：</block>
   <block id="157602c08bdec493e8c79f5e41971ab6" category="paragraph"><block ref="9dedaa5871e5e9684cbae52f5e1b987d" prefix="" category="inline-code"></block></block>
   <block id="ff7274e5c00dade3058bf32828127837" category="list-text">如果您卸下了NIC I/O模块并安装了存储I/O模块，请按照中所述安装NS224磁盘架并为其布线<block ref="4dfda7c2f93914990922f65bd50f90b3" category="inline-link-macro-rx"></block>。</block>
-  <block id="fe7cc4281bcf5c347bdaa6bdb704b29b" category="list-text">从Loader提示符处、重新启动节点：`Bye`</block>
   <block id="91dfaaed30791a3d6d5402ba403f8f73" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向AFF A1K存储系统添加I/O模块。</block>
   <block id="8b6b47c9ffbf56147eb39245a0848071" category="open-title">选项2：MetroCluster配置</block>
   <block id="e1e5a630a2475cff2c5c9107cbfff228" category="section-title">第2步：添加新的I/O模块</block>
   <block id="aaa31e70b1e8d53e84fc317dfdcef1ed" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向AFF A70和AFF A90存储系统添加I/O模块。</block>
   <block id="fc201f3061cf0fb0ac92be830093fe44" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向AFF A900存储系统添加I/O模块。</block>
-  <block id="5342cf7e14ace50bbfab26225b3e6f39" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向ASA A70和ASA A90存储系统添加I/O模块。</block>
-  <block id="cac74c301a508cf350f8f41a7de866a0" category="paragraph">当有空插槽可用或所有插槽均已完全填充时、您可以将I/O模块添加到ASA A1K存储系统。</block>
   <block id="94aa992895c11cf963b2b749b84aa267" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向FAS70和FAS90存储系统添加I/O模块。</block>
   <block id="bc049e4428d592b69605104cc85d56bc" category="section-title">第2步：添加新的I/O模块</block>
   <block id="92ba658b9a66d0825f0f084b7da309b7" category="list-text">如果系统不使用加密，请选择_Option 1 Normal Boot._，否则转到。<block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block></block>
@@ -10439,7 +10432,6 @@ SFP+(目标/启动程序)</block>
   <block id="36af6c0789f3b35c6a8c474e0b4e66ee" category="image-alt">卸下驱动器。</block>
   <block id="ebf49f799b81f16663764f137403e280" category="doc">更换风扇模块- NS224磁盘架</block>
   <block id="c470458262a5bbc89c9003e2f2f84bd8" category="paragraph">如果风扇模块中的一个或两个风扇出现故障、您可以更换风扇模块。此过程可以在已启动且正在执行I/O的NS224驱动器架中无干扰地完成。</block>
-  <block id="0830cf51d8ae2e9118a554fe97fb1d02" category="paragraph">+<block ref="3868a54921a81264bddb64b574765582" category="inline-link-rx"></block></block>
   <block id="4b691b95d8c60f28c5dfd9dd24941ef6" category="list-text">以更新<block ref="585e085c167dffb4091a9c937b46294a" category="inline-link-rx"></block></block>
   <block id="9fe844dd87b3416bab8a90cbcc35c19a" category="paragraph">您可以使用以下动画帮助将NS224中的风扇更换为NSM100模块。</block>
   <block id="ca2096484e663abca9dc4fa6ac2051b2" category="paragraph">记下每个缆线连接到的NSM端口。在此过程后面重新插入NSM时、请将缆线重新连接到相同的端口。</block>
@@ -10503,8 +10495,6 @@ SFP+(目标/启动程序)</block>
   <block id="b254c8d5380d00a9cf9dc07aeb888a8d" category="list-text">用拇指按下蓝色卡舌(AC PSU)或触地卡舌(DC PSU)以释放锁定装置。</block>
   <block id="4a6d2236af73602673ffd2f6298b026e" category="list-text">确保磁盘架中的两个NSM运行的固件版本相同：0300或更高版本。</block>
   <block id="31420926f47d4e93ca3eefcdb39987c8" category="list-text">*最佳实践：*最佳实践是在从NSM卸下电源后两分钟内更换电源。</block>
-  <block id="ceb0dec0c605867adba81fcf239c6a9f" category="list-text">如果要将NS224磁盘架的交流电源更换为NSM100模块、您可以观看以下动画、熟悉此过程、然后再开始操作。</block>
-  <block id="797face4a3e2a79dbe5e7ff09179e113" category="example-title">将NS224的交流电源更换为NSM100模块</block>
   <block id="7d232f34386955a5ab2c7bf405061047" category="paragraph">要更换交流电源、请完成以下步骤。</block>
   <block id="8edff7940704d1573546aa46ccb024a4" category="image-alt">卸下交流PSU</block>
   <block id="c1eed2f70b95decf23863086c87c701f" category="list-text">用双手支撑电源的边缘并将其与NSM中的开口对齐。</block>
@@ -11951,4 +11941,13 @@ SFP+(目标/启动程序)</block>
   <block id="277a5698809db74260fd2ddda1e6acd9" category="paragraph">您可以从设备机架或系统机柜中卸下受损机箱、安装更换机箱、安装驱动器和所有驱动器挡片、然后安装挡板。</block>
   <block id="a6d6e73e138675b6ffbbb0e4663b2d5d" category="list-text">将驱动器和从受损机箱中卸下的任何驱动器挡片安装到更换机箱中：</block>
   <block id="4a7738e24d9329241e05c40def3be102" category="admonition">驱动器和驱动器挡片必须安装在更换机箱中的相同驱动器托架中。</block>
+  <block id="d939be8abe0645a186c5e2276ed7d76d" category="image-alt">移动系统管理模块</block>
+  <block id="2ca01560515b774bbe8010d626eaa173" category="paragraph">打开控制器电源之前、请打开每个NS224磁盘架的电源、并分配一个唯一的磁盘架ID、以确保每个磁盘架在设置中都是唯一标识的、将笔记本电脑或控制台连接到控制器、然后将控制器连接到电源。</block>
+  <block id="80fa214fde654e9ccd63d0efc1c1aa45" category="paragraph">存储系统具有两个位置LED、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.</block>
+  <block id="89aaebc504e24628ae2ed382d4f18074" category="paragraph">如果存在空插槽或所有插槽均已完全填充、则可以向ASA A70和ASA A90存储系统添加I/O模块。.关于此任务</block>
+  <block id="40f579c384e8adf65664e4d24345733d" category="paragraph">当有空插槽可用或所有插槽均已完全填充时、您可以将I/O模块添加到ASA A1K存储系统。.关于此任务</block>
+  <block id="f4eebdeb5b8898b082de73e6e4949845" category="list-text">此过程适用于具有NSM100或NSM100B模块的NS224磁盘架。</block>
+  <block id="3d30da9db64c70df76ae8eab8c37ddf1" category="list-text">如果要更换NS224磁盘架的交流电源、您可以观看以下动画、熟悉此过程、然后再开始操作。动画显示了具有NSM100模块的NS224、但具有NSM100B模块的磁盘架的步骤相同。</block>
+  <block id="e772ad168b6f97f132982a96392cd046" category="example-title">更换NS224的交流电源</block>
+  <block id="0dcc8efe101bb5e6350d650ce519cbfa" category="video-title">热插拔NS224磁盘架中的交流电源</block>
 </blocks>
