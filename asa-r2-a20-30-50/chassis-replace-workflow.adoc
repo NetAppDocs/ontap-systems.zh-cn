@@ -15,7 +15,7 @@ summary: 通过查看更换要求、关闭控制器、更换机箱以及验证�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:chassis-replace-requirements.html["查看机箱更换要求"]
 [role="quick-margin-para"]
-要更换机箱、您必须满足特定要求。
+查看更换底盘的要求。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:chassis-replace-shutdown.html["关闭控制器"]
 [role="quick-margin-para"]
@@ -23,7 +23,7 @@ summary: 通过查看更换要求、关闭控制器、更换机箱以及验证�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:chassis-replace-move-hardware.html["更换机箱"]
 [role="quick-margin-para"]
-更换机箱包括将受损机箱中的驱动器和任何驱动器挡片、控制器(含电源)和挡板移至新机箱、并将受损机箱更换为与受损机箱型号相同的新机箱。
+更换机箱，方法是将驱动器和所有驱动器挡片、控制器（带电源）和挡板从损坏的机箱移到新机箱，然后将损坏的机箱换成与损坏的机箱相同型号的新机箱。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]
 [role="quick-margin-para"]

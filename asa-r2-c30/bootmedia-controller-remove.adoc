@@ -1,10 +1,10 @@
 ---
-permalink: c30-60/bootmedia-controller-remove.html 
+permalink: asa-r2-c30/bootmedia-controller-remove.html 
 sidebar: sidebar 
-keywords: aff c30, aff c60, remove controller 
+keywords: asa c30, remove controller 
 summary: '如果系统注册的可更正错误更正代码(ECC)数量不断增加、则必须更换控制器模块；否则会导致系统崩溃。' 
 ---
-= 卸下控制器- AFF C30和AFF C60
+= 移除控制器 - ASA C30
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

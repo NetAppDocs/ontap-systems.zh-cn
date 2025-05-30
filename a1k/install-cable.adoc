@@ -140,6 +140,15 @@ IMPORTANT: 请勿插入电源线。
 
 有关存储系统和所有布线选项支持的最大磁盘架数量，请参见link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
 
+.关于此任务
+AFF A1K 存储系统支持带有 NSM100 或 NSM100B 模块的 NS224 磁盘架。这两个模块之间的主要区别在于：
+
+* NSM100 机架模块使用内置端口 e0a 和 e0b。
+* NSM100B 架模块使用插槽 1 中的端口 e1a 和 e1b。
+
+
+以下布线示例显示了 NS224 机架中的 NSM100 模块（涉及机架模块端口）。
+
 [role="tabbed-block"]
 ====
 .选项1：连接到一个NS224存储架

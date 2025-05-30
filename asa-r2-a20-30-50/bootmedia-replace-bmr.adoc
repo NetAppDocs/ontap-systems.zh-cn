@@ -268,4 +268,4 @@ NOTE: 完全插入机箱后、控制器将启动至Loader提示符。它从配�
 
 
 .下一步行动
-物理更换受损启动介质后，link:bootmedia-recovery-image-boot-bmr.html["从配对节点还原ONTAP映像"]。
+在物理更换受损的启动介质后，您link:bootmedia-recovery-image-boot-bmr.html["从配对节点还原ONTAP映像"] 。

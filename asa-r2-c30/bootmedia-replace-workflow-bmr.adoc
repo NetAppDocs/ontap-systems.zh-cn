@@ -1,0 +1,34 @@
+---
+permalink: asa-r2-c30/bootmedia-replace-workflow-bmr.html 
+sidebar: sidebar 
+keywords: asa c30, replace the boot media 
+summary: 通过查看更换要求、关闭受损控制器、更换启动介质、恢复启动介质上的映像以及验证系统功能，开始更换 ASA C30 存储系统中的启动介质。 
+---
+= 启动介质更换工作流- ASA C30
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过查看更换要求、关闭受损控制器、更换启动介质、恢复启动介质上的映像以及验证系统功能，开始更换 ASA C30 存储系统中的启动介质。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:bootmedia-replace-requirements-bmr.html["查看启动介质要求"]
+[role="quick-margin-para"]
+查看更换启动介质的要求。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:bootmedia-shutdown-bmr.html["Shut down the impaired controller"]
+[role="quick-margin-para"]
+关闭或接管受损控制器、以使运行正常的控制器继续从受损控制器存储提供数据。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:bootmedia-replace-bmr.html["更换启动介质"]
+[role="quick-margin-para"]
+从受损控制器中取出故障启动介质、然后安装替代启动介质。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:bootmedia-recovery-image-boot-bmr.html["还原启动介质上的映像"]
+[role="quick-margin-para"]
+从运行正常的控制器还原ONTAP映像。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:bootmedia-complete-rma-bmr.html["将故障部件退回 NetApp"]
+[role="quick-margin-para"]
+按照套件随附的 RMA 说明将故障部件退回 NetApp 。

@@ -1,7 +1,7 @@
 ---
 permalink: asa-r2-a20-30-50/index.html 
 sidebar: sidebar 
-keywords: asa a70 asa a90 maintenance, maintenance, repairing a70 asa a90,  replace a70 asa a90 components 
+keywords: asa a20, asa a30, asa a50 maintenance, maintenance, repairing a70 asa a90,  replace a70 asa a90 components 
 summary: 维护ASA A20、ASA A30和ASA A50硬件 
 ---
 = 维护ASA A20、ASA A30和ASA A50硬件
@@ -78,9 +78,3 @@ PCIe (外围组件互连Express)卡是一种插入主板上PCIe插槽的扩展�
 == 实时时钟电池
 
 实时时钟电池可在断电时保留系统日期和时间信息。
-
-
-
-== 系统管理模块
-
-系统管理模块提供控制器与控制台或笔记本电脑之间的接口、用于控制器或系统维护。系统管理模块包含启动介质并存储系统序列号(SSN)。
