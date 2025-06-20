@@ -26,7 +26,7 @@ entries:
     - title: 检查加密密钥
       url: "/fas9500/bootmedia_encryption_preshutdown_checks.html"
     - title: Shut down the impaired controller
-      url: "/fas9500/bootmedia_impaired_controller_shutdown.html"
+      url: "/fas9500/bootmedia-shutdown.html"
     - title: 更换启动介质
       url: "/fas9500/bootmedia_replace.html"
     - title: 启动恢复映像

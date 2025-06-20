@@ -1194,7 +1194,6 @@
   <block id="d7af9a3c4368ff6cf5b9e238dd4b3896" category="paragraph">要更换 DIMM ，请在控制器中找到它们，然后按照特定步骤顺序进行操作。</block>
   <block id="70be59aa151beb580087673edc12abfe" category="list-text">检查控制器模块上的 NVMEM LED 。</block>
   <block id="a044a5f46138f43a2dd00fc3698c73d7" category="paragraph">在更换系统组件之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM ）中未写入的数据。此 LED 位于控制器模块的背面。查找以下图标：</block>
-  <block id="8d2c918ab807c3bf6748afd3be858588" category="image-alt">DRW 硬件 NVRAM 图标</block>
   <block id="7fc9c28875c33b71c57dca88d46c06f5" category="list-text">如果 NVMEM LED 未闪烁，则 NVMEM 中没有任何内容；您可以跳过以下步骤并继续执行此操作步骤中的下一项任务。</block>
   <block id="c5b9012e57c2a5abd0825d96beb791c6" category="list-text">拔下电池：</block>
   <block id="6b9b1cb6618c5611338942302e7875a3" category="admonition">在暂停系统时， NVMEM LED 会闪烁，同时将内容转存到闪存中。目标值完成后，此 LED 将熄灭。</block>
@@ -1555,7 +1554,6 @@
   <block id="56c92e962f19f33c819fa704568c60fe" category="list-text"><block ref="56c92e962f19f33c819fa704568c60fe" category="inline-link-macro-rx"></block></block>
   <block id="07b824a16e2eac6bafd600bdf983d340" category="list-text">对于独立系统： `ssystem node halt _impaired_node_name_`</block>
   <block id="1b96f3aa099b152fc864dedb115af912" category="list-text">按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。</block>
-  <block id="d6daae29261c119313124d1d21a1c267" category="image-alt">DRW 2240 x 打开凸轮闩锁</block>
   <block id="5fb9af22ffedd74df1492c91f96b8d7a" category="list-text">将控制器模块翻转，将其放在平稳的表面上。</block>
   <block id="99734ded605f0a86173c861064992678" category="list-text">滑动蓝色卡舌以释放盖板，然后向上翻盖并打开，从而打开盖板。</block>
   <block id="1a10af87793c3739bf7cb49fd85a4c13" category="paragraph">如果要更换 DIMM ，则需要在从控制器模块中拔下 NVMEM 电池后将其卸下。</block>
@@ -4333,7 +4331,6 @@
   <block id="c3ecc9b1be38b712a8f61f8b27c41352" category="list-text">将控制器 B 端口 E10A 连接到磁盘架 2 上的 NSM B e0a 。</block>
   <block id="1a012ae90c41b7530ce0df40b8053d54" category="section-title">选项 1 ：如果启用了网络发现</block>
   <block id="5eadc00e7d9146c2fd474e7d8d5f5137" category="list-text">使用以下动画或图形设置一个或多个驱动器架 ID ：</block>
-  <block id="6b39390f8836ac9ddcaf033f6ec9d535" category="image-alt">已设置 DRW 电源打开设置磁盘架 ID</block>
   <block id="543ab7831f0589c951278e6073647eb0" category="paragraph">拆下端盖。</block>
   <block id="77b9275f6fd711644f4214aa9c1fd216" category="paragraph">按住磁盘架 ID 按钮，直到第一位数字闪烁，然后按进入 0-9 。</block>
   <block id="72e911c52ba51e970a39b1b30b1c8424" category="paragraph">更换端盖。</block>
@@ -4977,7 +4974,6 @@
   <block id="fb796745f1b93e7c27af0a928be9d5ae" category="doc">热插拔缓存模块— FAS9500</block>
   <block id="fa807167a57a5e7782f90326093319e4" category="list-text">缓存模块必须运行良好、才能被系统识别。如果缓存模块自上次启动以来未正常运行、则无法使用此操作步骤 、必须使用冷插拔操作步骤。</block>
   <block id="bdd8c99ec41c2de3e99ba0a36e04bfbf" category="list-text">在管理权限级别中、准备要删除的目标NVMe插槽、并在系统提示是否继续时回答`y`：`ssystem controller slot module remove -node node_name -slot slot_number`以下命令会准备node1上的插槽6-1以进行删除、并显示一条消息、指出可以安全删除：</block>
-  <block id="68607949342d7df39c7770d809d0a5f2" category="image-alt">DRW 9500-删除闪存</block>
   <block id="5e8d2460689245ee00f6d51f5db543dc" category="paragraph">Terra cotta释放按钮。</block>
   <block id="948a2b625585740c830fda62dae13d97" category="list-text">按下缓存模块正面的 Terra cotta 释放按钮。</block>
   <block id="783e93aa36e1cf0b0fe9d46618c3f4da" category="admonition">Do not use the numbered and lettered I/O cam latch to eject the caching module.带编号和字母的I/O凸轮闩锁可弹出整个NVRAM11模块、而不是缓存模块。</block>
@@ -5010,7 +5006,6 @@
   <block id="9e51ab12d26faade2a31d70da71c74f5" category="list-text">替代节点是指正在更换受损节点的新节点。</block>
   <block id="537af5095a4992ae7e9026bd3ff008a6" category="list-text">运行正常的节点是运行正常的节点。</block>
   <block id="c704a060606b2944e3c331124aaaa743" category="doc">详细步骤—FAS9500</block>
-  <block id="9a7819d4ddc611b1438c0a7f4633f619" category="image-alt">OIE使用缆线将迷你SAS HD连接到迷你SAS HD</block>
   <block id="fd2cb99acafb4f0144bfb5e0e4c31373" category="admonition">插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。</block>
   <block id="3bdc20d60c6095f8c752a75e72777feb" category="doc">重新对系统进行布线—FAS9500</block>
   <block id="580fe6e7e310b3db810754c7c7927744" category="list-text">如果 _replacement_ 节点处于维护模式（显示 ` * &gt;` 提示符），请退出维护模式并转到加载程序提示符： `halt`</block>
@@ -5028,7 +5023,6 @@
   <block id="208e6af1006f73ba3b37a7e05e3692cd" category="list-text">使节点恢复正常运行：`storage failover giveback -ofnode _impaired_node_name_`</block>
   <block id="837fcf17f123dccb1301f252ade8a58e" category="admonition">如果您的系统采用双节点MetroCluster 配置、则必须按照下一步中所述切回聚合。</block>
   <block id="abc219c929a34cf7b62e36c2503b63ac" category="video-title">动画-删除控制器模块</block>
-  <block id="0b3bd9d9290b20b7deabeee68dbd8982" category="image-alt">DRW 9500-删除PCM源</block>
   <block id="0b8e9f368ea269ec23c6c676a7561e53" category="video-title">动画-更换启动介质</block>
   <block id="defa99ee750d2ca6a8f52cf79e8eb713" category="list-text">bootarg.init.boot_clustered</block>
   <block id="d18fd3db938a26ebbd3f74de41f0b73f" category="list-text">合作伙伴 - 系统</block>
@@ -5044,53 +5038,35 @@
   <block id="a1781eecf18376feb2f740b6a3d7781d" category="list-text">bootarg.bontery_keymanager &lt;value&gt;</block>
   <block id="8ed13fe688162a9d4d89829700344e8f" category="list-text">使用 `printenv variable-name` 命令确认所做的更改。</block>
   <block id="f8cc7bd538c729e18dab57ecfd18b69e" category="video-title">动画-更换NVRAM模块</block>
-  <block id="9b191eaf82da57faf3acb37f96f84ca6" category="image-alt">DRW 9500移动删除NVRAM模块</block>
-  <block id="1b75d6028af1363f62eb9a45010f31c4" category="image-alt">DRW 9500-删除NVRAM模块内容</block>
-  <block id="2c2b9a83665e5336275a4320efcb9a16" category="image-alt">DRW 9500-删除PCM</block>
-  <block id="31006bbd619d2a77e6fe8ac85bee0cc0" category="image-alt">DRW 9500PCM已打开</block>
   <block id="65b7d00d22ce12162c084039ae28de63" category="video-title">动画-更换RTC电池</block>
-  <block id="53eb8664ee63f8ed2095fd3f5e8eb8f1" category="image-alt">DRW 9500-取出RTC电池</block>
   <block id="e0ec09ab8cb93f04e1ddb90be314a159" category="paragraph">向上转动电池</block>
   <block id="0c724ad091d5fbe112bba9f946140f9b" category="paragraph">将电池从外壳中滑出</block>
   <block id="4714e8423619d9cc43be300b5a406117" category="list-text">交还节点的存储，使节点恢复正常运行： `storage failover giveback -ofnode impaired_node_name`</block>
   <block id="29aa4a699a26a575f893c69af8527aa7" category="video-title">动画-拆卸/安装风扇</block>
-  <block id="2966eb224d8489f097a42690752e472a" category="image-alt">DRW 9500-卸下安装风扇</block>
   <block id="262047271a9f0ac7ba69952e78e4ced1" category="video-title">动画-删除/安装PSU</block>
-  <block id="9494be0e4fc0cc7bf5a561ba23cc37dd" category="image-alt">DRW 9500remove install PSU module</block>
   <block id="c593377a30c937702f96d13d76989bc2" category="video-title">动画-删除/安装I/O模块</block>
-  <block id="5ef805c7229de31e948db97478049a11" category="image-alt">DRW 9500-卸下PCIe模块</block>
   <block id="1738e7d625dcae031916a2d329f6a6b1" category="video-title">动画-删除/安装DCPM</block>
-  <block id="450c055f11dd33524e41f3c84160e631" category="image-alt">DRW 9500-取出NV电池</block>
   <block id="cae2fd913220da36fb401366df2ed0b8" category="video-title">动画-删除/安装USB模块</block>
-  <block id="0161d43ee09fff69cc35ae43ed1f07f5" category="image-alt">DRW 9500-删除更换LED模块</block>
   <block id="58f1a63de110893e27e2b9974273d710" category="video-title">动画—更换控制器模块、完成过程</block>
-  <block id="eee0b061ed19ecc08e6c30167f3b0ca9" category="image-alt">DRW 9500remove boot dev</block>
-  <block id="3c882fe343465f148bf8900ab7dde11b" category="image-alt">DRW 9500"更换PCM DIMM</block>
   <block id="abe0e9d012f3bb2e25626cbd54f69e36" category="video-title">动画-安装控制器模块</block>
   <block id="9c50a16ad09918eb5e84e11b90826699" category="video-title">动画-删除控制器</block>
-  <block id="3b0d2698116982bc6cc48e12fb31e0d2" category="image-alt">DRW 9500DIMM映射</block>
   <block id="a0ab299f7b0b0e1628580e5c326625a7" category="video-title">动画-更换DIMM</block>
   <block id="2ea72e4e42953327054629036f1b6a12" category="video-title">动画-安装控制器</block>
   <block id="ce43cf0f3fdd398cbca499ba447d6df2" category="video-title">动画—双节点无交换机集群布线</block>
-  <block id="b78339b4bcd807d0cb07b09d3b379c86" category="image-alt">DRW 9500tnsc网络布线</block>
   <block id="9f6754a88107405b79961d111f064f72" category="paragraph">使用缆线连接32 Gb FC网络交换机：</block>
   <block id="393993c9f7562f1a53d4d13744facd0e" category="paragraph">插槽A3和B3 (E3A和E3C)以及插槽A9和B9 (e9a和e9c)中的端口连接到32 Gb FC网络交换机。</block>
   <block id="7b49110d5bcbc4998964949bf1d4d386" category="paragraph">使用缆线连接25 GbE连接：</block>
   <block id="823c1d0595274590edabd782a377efc4" category="paragraph">使用缆线将插槽5和B5 (5a、5b、5c和5d)以及插槽A7和B7 (7a、7b、7c和7d)中的端口连接到25 GbE网络交换机。</block>
   <block id="67e68c155f62af046486d4818ab551b1" category="list-text">将缆线固定到缆线管理臂上(未显示)。</block>
   <block id="0815daeb3f5819b5b26f2d852a3480ed" category="video-title">动画—切换集群布线</block>
-  <block id="ab4ba237fa2abf24783610d2c0f56a3a" category="image-alt">DRW 9500"交换网络布线"</block>
   <block id="3e86e158b18295e17a62b9c2ae164933" category="list-text">使用以下动画或图将控制器连接到三个(一个驱动器架的一个堆栈和两个驱动器架的一个堆栈) DS224C驱动器架。</block>
-  <block id="dd012e2b911cefcb3afb5c18a9eea983" category="image-alt">DRW 9500SAS磁盘架布线</block>
   <block id="b216213c8469f70fd4cd72ba7795f4aa" category="paragraph">使用图作为参考、将驱动器架堆栈1连接到控制器。</block>
   <block id="ff080081ab0602360a6573f88141ada1" category="paragraph">使用图作为参考、将驱动器架堆栈2连接到控制器。</block>
   <block id="6029e94957ee34ca18227d08b799c166" category="admonition">第一个数字将继续闪烁</block>
   <block id="5d41de9f95f6b3adc43d1136659190d1" category="paragraph">按住磁盘架 ID 按钮，直到第二位数字闪烁，然后按进入 0-9 。</block>
   <block id="28764a4bf139e725956a33d36127da72" category="admonition">第一个数字停止闪烁、第二个数字继续闪烁。</block>
   <block id="a308cbadd7ff9683558704008014a7a5" category="video-title">动画—打开控制器的电源</block>
-  <block id="92ffcfe5fdb4d48f02fe79bb44448ab3" category="image-alt">打开DRW 9500"电源</block>
   <block id="89b878b89413c1b8d2254e6380e13c0d" category="list-text">使用系统随附的控制台缆线将控制台缆线连接到笔记本电脑或控制台、然后将笔记本电脑连接到管理子网上的交换机。</block>
-  <block id="27daaf3028854170e8321e8ffc573b7a" category="image-alt">DRW 9500缆线 控制台交换机控制器</block>
   <block id="c1ba9dd5eac89f4e8a8e84e18e1785d1" category="list-text">Configure the system using the data you collected in the<block ref="31fb422f2cdfc1b2e916b587bec00136" category="inline-link-rx"></block> 。</block>
   <block id="e9a40b7f4288ab51ddb8de2a88f0cf93" category="video-title">动画-删除/安装LED/USB模块</block>
   <block id="5fac6017ac5f7a2aad56f49afbe00547" category="paragraph">使用动画或表格中的步骤将控制器连接到一个磁盘架：</block>
@@ -5266,8 +5242,6 @@
   <block id="052c4e56b98f7829dc91610f07b00a63" category="video-title">动画—使用缆线将控制器连接到一个NS224</block>
   <block id="b3a9c9a12a5c08d26dedba9b785cdd73" category="video-title">动画—将笔记本电脑连接到管理交换机</block>
   <block id="00e71c1d8c914ec4583e90599632f9f5" category="video-title">动画-更换夹层卡</block>
-  <block id="b198e959073372c8a4e521b4b4a94fb3" category="video-title">动画—为驱动器架布线</block>
-  <block id="219d4ec85f928925cadb5590292cbb49" category="video-title">动画—设置磁盘架ID和#8217</block>
   <block id="3312f9cce5a2b0b4ea67ddcce0850bf9" category="video-title">动画-更换I/O模块</block>
   <block id="1b251c10d7185e8e92bbc89e18a05085" category="video-title">动画—FAS9500安装和设置说明(ISI)</block>
   <block id="a51b0e75591721e9a3d930569f70d056" category="video-title">动画-为一个NS224磁盘架布线</block>
@@ -6094,9 +6068,7 @@
   <block id="ca067501330c228a786fd00d17229575" category="paragraph">将磁盘架热添加到与控制器具有多路径HA、三路径HA、多路径、四路径HA或四路径连接的堆栈末端</block>
   <block id="fa3d4e5360018aa45e5104272d43148c" category="paragraph">The stack must meet the requirements stated in the <block ref="d7ead9d51e0253f97f9c0ae83a2ee9eb" category="inline-xref-macro-rx"></block> section of this procedure.</block>
   <block id="ba1ddb4c1d6bdc698ece9a974aae0713" category="paragraph">关闭或接管受损控制器。</block>
-  <block id="1a829a672d8f4a1ab6936c766164f3fe" category="image-alt">DRW 285 PCM拆卸、安装IEOPS 694</block>
   <block id="5d9c656065fa74e7cb14500497b33617" category="list-text">按下控制器模块两侧的蓝色按钮以松开护盖、然后向上旋转护盖、使其脱离控制器模块、从而打开护盖。</block>
-  <block id="206f40d3d3a553b715b00b4ada962595" category="image-alt">DRW 285控制器模块盖板打开IEOPS 695</block>
   <block id="ac250ab529052385767cc5abd9d02efe" category="paragraph">控制器模块护盖释放按钮</block>
   <block id="02196554e362859bf13fdb8c354bd53c" category="paragraph">找到位于夹层卡下方的控制器模块中的启动介质、然后按照说明进行更换。</block>
   <block id="6b6e58fb741960f0300c7783438276a5" category="paragraph">启动介质锁定卡舌</block>
@@ -6122,7 +6094,6 @@
   <block id="a3dc3f912569e20eb3139702fd4a6206" category="inline-link">我应该下载哪个ONTAP映像？是否使用卷加密？</block>
   <block id="1532b93706d24d095538566641303954" category="list-text">如果集群不支持NVE、请下载不带NetApp卷加密的映像。
 请参见<block ref="087e4d006962c8ba6c4d8fdb71ff8e38" category="inline-link-rx"></block> 有关详细信息：</block>
-  <block id="b455521e9b63749ce3c5c792316849ca" category="list-text">解压缩下载的映像。</block>
   <block id="0f844d6324319ebe9b4aabd24f1b88dd" category="list-text">安装控制器模块：</block>
   <block id="6bfde1459ef866428e3532004887b3b8" category="list-text">重新对控制器模块进行配置。</block>
   <block id="db5c04ca6cb958f296ff071cf8420f54" category="paragraph">通过断开电缆以及任何SFP和QSFP模块与夹层卡的连接来更换夹层卡、更换发生故障的夹层卡、然后对这些卡重新布线。</block>
@@ -6130,7 +6101,6 @@
   <block id="a0ff1a6d16d908c33e10409aed0ac623" category="paragraph">从系统中卸下控制器模块、然后卸下控制器模块的护盖。</block>
   <block id="cf6800eb49ae54456676c105c115a1fa" category="section-title">步骤3：更换夹层卡</block>
   <block id="6918dd1d1ecfa7a18a047a925c4f30ee" category="paragraph">更换夹层卡。</block>
-  <block id="808ce573561d6717a3c0cc395df3a504" category="image-alt">DRW 2800更换HIC IEOPS 700</block>
   <block id="83b54898f0ac014b1e217ee413643205" category="paragraph">PCIe夹层卡</block>
   <block id="64016c063cf6b470fdcccc5a97f852b1" category="list-text">拧松夹层卡上的翼形螺钉、然后竖直提起夹层卡。</block>
   <block id="4bca5310f65e82fe5c4eec2c7a1c6c17" category="list-text">将替代夹层卡插头上的插槽与主板上的插槽对齐、然后将卡轻轻地垂直插入插槽中。</block>
@@ -6143,7 +6113,6 @@
   <block id="2a0805526339647b20ef0fc7df37dd6f" category="paragraph">卸下并打开控制器模块。</block>
   <block id="9ae3f8b33ac65ec233f1c5afa0e5b31c" category="paragraph">从系统中取出发生故障的NVMEM电池、然后更换为新的NVMEM电池。</block>
   <block id="6858cb3dca131d0d76332f3bd5160ce7" category="video-title">动画-更换NV电池</block>
-  <block id="cf7e5cd262adf1cc20a08505755f07a3" category="image-alt">DRW 2800更换nvBattery IEOPS 715</block>
   <block id="168d99dab7a9fe08ab26290312dd16e7" category="paragraph">电池释放卡舌</block>
   <block id="33d1a8451c69f74459695562e91ceef8" category="paragraph">电池电源连接器</block>
   <block id="c0c80117cce7bb03ee803f73b530673c" category="list-text">从控制器模块中取出故障电池：</block>
@@ -6175,7 +6144,6 @@
   <block id="099cf7f6040f65b3c9d7fb3f7393d4c3" category="list-text">垂直向上提起夹层卡、将其放在防静电表面上。</block>
   <block id="3356d87e196ed94acd2635f8d405e53f" category="paragraph">从受损控制器模块中取出启动介质、然后将其安装在更换用的控制器模块中。</block>
   <block id="fed0c92cdbae5ea9c1adbf11ed80e55a" category="list-text">卸下夹层卡后、按照下图或控制器模块上的FRU示意图找到启动介质：</block>
-  <block id="45602b20a419ba91959f6389b3e025a3" category="image-alt">DRW 2800更换启动介质IEOPS 696</block>
   <block id="a9ddd021b293dcac2e98382851f85f92" category="paragraph">启动介质释放按钮</block>
   <block id="f77adf36adb0721ff6a3bdb4c40ae967" category="list-text">删除启动介质：</block>
   <block id="7716b5b822ee00aa2c3fbd58b6ff2117" category="list-text">按下启动介质外壳上的蓝色按钮、将启动介质从其外壳中释放出来。</block>
@@ -6187,7 +6155,6 @@
   <block id="507e7243ab4a1d0bdbfa4edd5c9733d3" category="list-text">将夹层卡与主板上的插槽对齐。</block>
   <block id="fc7fc35188ad3f7c32f3328839f4dff2" category="list-text">轻轻向下推插卡，将插卡插入插槽。</block>
   <block id="ec782fd2b49f0e4d6edd263c0d30d7f7" category="paragraph">从受损控制器模块中卸下DIMM、然后将其安装到更换用的控制器模块中。</block>
-  <block id="64b66263e264f63be40a6135bb7e5f04" category="image-alt">DRW 2800更换DIMM IEOPS 699</block>
   <block id="2a7c25f4f62d559672aaa2da18086b65" category="paragraph">DIMM锁定闩锁</block>
   <block id="97d11e594531d9157ff1f8acb63fd22c" category="list-text">找到控制器模块上的DIMM</block>
   <block id="dab2480c00fbe3b34d9af825595e97ae" category="admonition">记下DIMM在插槽中的位置、以便可以按正确的方向将DIMM插入更换用的控制器模块中的同一位置。</block>
@@ -6200,7 +6167,6 @@
   <block id="3ef62fc6a162d755622021a1d6a1ed56" category="list-text">对另一个DIMM重复上述步骤。</block>
   <block id="873b72e260492016e7a701ecefab8d34" category="section-title">第7步：移动缓存模块</block>
   <block id="2123f32d0c6f36af91430296709196a1" category="paragraph">从受损控制器模块中卸下缓存模块将其安装到更换用的控制器模块中。</block>
-  <block id="60f4158622c1b93ba749ee47777762b7" category="image-alt">DRW 2800更换缓存模块IEOPS 697</block>
   <block id="bdf54b9db8bfe07cda14f003e5b4afea" category="paragraph">缓存模块锁定按钮</block>
   <block id="d6be971cb9546606b4106e2ce6594564" category="list-text">找到靠近控制器模块背面的缓存模块、然后将其卸下：</block>
   <block id="86afc3ba2df9db0892f3d7b13977fdb3" category="list-text">按下蓝色锁定按钮、然后向上旋转缓存模块。</block>
@@ -6236,11 +6202,9 @@
   <block id="58a4b1c93d94014eec48898453bccf6b" category="list-text">如果已触发AutoSupport维护窗口、请使用结束此窗口<block ref="9ac424c0d7b432975df36a19daf50c9c" prefix=" " category="inline-code"></block></block>
   <block id="f13ddfa8c0e2762d2f399acfc6f0806b" category="summary">更换电源设备包括关闭、断开和卸下受损电源设备以及安装、连接和打开替代电源设备。</block>
   <block id="9b0f331e43ad447dbbb78d71a44b1734" category="video-title">动画-更换电源</block>
-  <block id="ad74e1b8d39de33b6e8b9df71820c85f" category="image-alt">DRW 2800更换PSU IEOPS 702</block>
   <block id="2675f497966bc5cad0cdd88dbe6eab31" category="list-text">等待<block ref="f1cce1d6823a5337ea1ed313f3bc1d65" prefix=" " category="inline-code"></block> 命令以完成、然后再发出此返回命令。</block>
   <block id="578b3122a990bee5553a818b631268ef" category="admonition">如果此恢复被否决、请解析否决问题描述。如果否决对于解决不是至关重要的、您可以覆盖此否决。</block>
   <block id="103256b354864966fcc74d6466bc1cc4" category="paragraph">将RTC电池放在控制器中、然后按照特定步骤顺序进行更换。</block>
-  <block id="51f7be1d2b3585b769547e04e7036ed9" category="image-alt">DRW 2800更换RTC电池IEOPS 701</block>
   <block id="9f463a2feadd622498da11734b7d3548" category="paragraph">重新安装控制器模块、并将其启动至加载程序提示符。</block>
   <block id="8133c5bbfd79c61b3d28f53fd52d6b77" category="section-title">第5步：在更换RTC电池后设置时间/日期</block>
   <block id="e8b941fcc944e0bbefda4636b0900a37" category="list-text"><block ref="e8b941fcc944e0bbefda4636b0900a37" category="inline-link-macro-rx"></block></block>
@@ -6308,7 +6272,6 @@ SFP+(目标/启动程序)</block>
   <block id="3fc162aa6870cf22cf3e0a947b89615a" category="video-title">动画-驱动器架布线</block>
   <block id="6ac0c621e44f0d6d3cfb9a6035ba969b" category="list-text">IOM A上的端口1到直接下方磁盘架上IOM A上的端口3。</block>
   <block id="a2a4a3ef1017cf43a3cf109d61286633" category="list-text">IOM B上的端口1到直接下方磁盘架上IOM B上的端口3。</block>
-  <block id="9f8e1f093714df2b4e4cea2483986e1f" category="paragraph">*迷你SAS HD到迷你SAS HD电缆*</block>
   <block id="5725fc4af65adef1b57d4b7c9a365287" category="paragraph">如果您的笔记本电脑未启用网络发现、请手动完成配置和设置。</block>
   <block id="041e48089a1444bcdc82526d41790e40" category="paragraph">从系统中卸下控制器模块、然后卸下控制器模块护盖。</block>
   <block id="8caaa86fafbf22c9627e97fb31c1eea5" category="paragraph">找到控制器内的DIMM、将其卸下并更换。</block>
@@ -7217,7 +7180,6 @@ SFP+(目标/启动程序)</block>
   <block id="1c893d208d4a91c970226886751e800d" category="paragraph">下表列出了双节点无交换机集群和有交换机集群的缆线类型以及插图中的呼出编号和缆线颜色。</block>
   <block id="1ab7eafd757e6d1eae57d16228e5edc3" category="list-text">有关将存储系统连接到交换机的信息、请与网络管理员联系。</block>
   <block id="089568b0e72f52eda465bac3d797022f" category="list-text">检查图示箭头、了解电缆连接器的推拉卡舌方向是否正确。</block>
-  <block id="cef25943b26eeebcaa1241ede0442fb2" category="paragraph">使用动画或分步说明完成控制器和交换机之间的布线。</block>
   <block id="86ef3e62afc46d4fbce176cfff238447" category="paragraph">下表列出了将驱动器架连接到存储系统时插图中的缆线类型以及呼出编号和缆线颜色。</block>
   <block id="8a811c8bdca2987d299cfb24cf85ad86" category="paragraph">磁盘架到磁盘架布线</block>
   <block id="3fa1bc4f962d0649f457ff7e994b46d8" category="paragraph">控制器A连接到驱动器架</block>
@@ -7226,7 +7188,6 @@ SFP+(目标/启动程序)</block>
   <block id="9aca62ddbd88e63be7ec9f9c2469acab" category="section-title">第5步：完成存储系统设置和配置</block>
   <block id="b3308aded4f838607d118fa8281f0f4e" category="paragraph">使用选项1：(如果启用了网络发现)或选项2：(如果未启用网络发现)完成存储系统设置和配置。</block>
   <block id="cc76013bd2ca10d4b55bab3a0f8d5331" category="paragraph">如果您的笔记本电脑上启用了网络发现、请使用自动集群发现完成存储系统设置和配置。</block>
-  <block id="89fb7289455abb973e1e1d1887a8172d" category="list-text">使用以下动画打开磁盘架电源并设置磁盘架ID。</block>
   <block id="9be08f77b7ab4837ae1dadad63405dc2" category="list-text">Power on the controllers</block>
   <block id="4a8d781d6ae79557515be034fcf4bd6e" category="list-text">使用图形或步骤发现要配置的存储系统节点：</block>
   <block id="38c0c9e875391d2dc0f78f243ecc4f59" category="admonition">此目标节点的存储系统序列号为7本。</block>
@@ -9171,7 +9132,6 @@ SFP+(目标/启动程序)</block>
   <block id="cbb5640a4c423d549c9eb57b27dbd4ea" category="image-alt">图标方块1绿色</block>
   <block id="0b9a61d1a01d980aaf6ca850e1b286f5" category="paragraph"><block ref="0b9a61d1a01d980aaf6ca850e1b286f5" category="inline-link-macro-rx"></block></block>
   <block id="96a5f900d6bd8337209c17fce1a47ae5" category="image-alt">插图编号3]</block>
-  <block id="b88e980e78bfd532f1f6322cf703cb25" category="image-alt">图标方块1蓝色</block>
   <block id="f8fda7956963dfb2e60c6e0d0ffa6ede" category="list-text"><block ref="f8fda7956963dfb2e60c6e0d0ffa6ede" category="inline-link-macro-rx"></block></block>
   <block id="cd5ec5f3586869573f3f0b3112426052" category="sidebar">TR-4290 -基于采用NFS的NetApp FAS系统的SAP HANA</block>
   <block id="1e4893fc6c634f02ace3ba7beb78d669" category="inline-link-macro">仲裁状态</block>
@@ -10964,7 +10924,6 @@ SFP+(目标/启动程序)</block>
   <block id="045e51ef9fd14e92bed7263f56f60f6a" category="doc">更换控制器- AFF A70和AFF A90</block>
   <block id="7802e205f19ce9b3c1e4b5875798ebef" category="inline-link-macro">还原系统配置</block>
   <block id="44505b1d85314cbb257a6a2a6bf388ab" category="paragraph">在更换受损AFF A70或AFF A90控制器后，您需要<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>。</block>
-  <block id="13b0f53aec80ac13170530410c42bc46" category="paragraph">将存储资源的控制权归还给替代控制器、以便AFF A70或AFF A90系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。</block>
   <block id="a61002aab76d792f612bedb7d53fdd4f" category="inline-link-macro">完成控制器更换</block>
   <block id="8e4a77cdcca9305c0b2b2aaff9ccf95f" category="paragraph">在将存储资源的所有权转移回替代控制器后、您需要执行相关<block ref="d6f5f08e0612b966d919b4ea0b494c53" category="inline-link-macro-rx"></block>步骤。</block>
   <block id="09d0394dd9f4460ac15da27cea6fffaf" category="summary">验证逻辑接口是否正在向其主端口报告、执行集群运行状况检查、然后将故障部件返回给NetApp以完成AFF A70和AFF A90控制器更换过程中的最后一步。</block>
@@ -11062,7 +11021,6 @@ SFP+(目标/启动程序)</block>
   <block id="12f231246c1957ecc017d5e14e8fa5ce" category="doc">更换控制器- AFF A1K</block>
   <block id="a7a4c58bcecc6da48011ed379f160841" category="paragraph">更换受损AFF A1K控制器后，您需要<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>。</block>
   <block id="65cfd4efc075696b5b4fa182bd8310b6" category="summary">将存储资源的控制权归还给替代控制器、以便AFF A1K系统可以恢复正常运行。</block>
-  <block id="18ffded833a06eab340a3512c997924e" category="paragraph">将存储资源的控制权归还给替代控制器、以便AFF A1K系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。</block>
   <block id="c0fde7c58eda00a5144709bacf24bfe9" category="doc">更换控制器的要求- AFF A1K</block>
   <block id="6911c42baf5226ca6d00478ac1b258b9" category="summary">验证逻辑接口(Logical Interface、)是否正在向其主端口报告、执行集群运行状况检查、然后将故障部件返回给NetApp以完成AFF A1K控制器更换过程中的最后一步。</block>
   <block id="3559feca6c2a12a75b7a78f13f084dc8" category="summary">确认控制器的HA配置在AFF A1K存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。</block>
@@ -11121,7 +11079,6 @@ SFP+(目标/启动程序)</block>
   <block id="f27d9a5f7d5680dbe736e6836d3c1a9f" category="summary">如果硬件故障需要更换ASA A70或ASA A90系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器以及重新启动系统。</block>
   <block id="2c72ab76cb7a954eb5f3546d4abad687" category="doc">更换控制器- ASA A70和ASA A90</block>
   <block id="1a68c286a29e94a07ffe7e1a8e288e40" category="summary">将存储资源的控制权归还给替代控制器、以便ASA A70或ASA A90系统可以恢复正常运行。</block>
-  <block id="33973baa5847fa5dcb8ee97041c826ae" category="paragraph">将存储资源的控制权归还给替代控制器、以便ASA A70或ASA A90系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。</block>
   <block id="b25f0fb243bad5e39db497ca9643ee35" category="doc">更换控制器的要求- ASA A70和ASA A90</block>
   <block id="1e60488a65d744862b8f6292544da3f0" category="doc">完整控制器更换—ASA A70和ASA A90</block>
   <block id="bb9f8e902211727b75f62da6100f446a" category="summary">如果检测到可更正或不可更正的内存错误过多、请更换ASA A70或ASA A90系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。</block>
@@ -11152,7 +11109,6 @@ SFP+(目标/启动程序)</block>
   <block id="f36c76518c1338c3f03a21b9d4c06d87" category="paragraph">如果硬件故障需要更换ASA A1K系统中的控制器。更换过程包括移除受损控制器、将组件移至更换控制器、安装更换控制器并重新启动它。</block>
   <block id="f501a4282c0407a5377e73a38c2fe79c" category="paragraph">更换受损ASA A1K控制器后，您需要<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>。</block>
   <block id="0b7aa62fd5de84b2f6b9168c29cd9699" category="summary">将存储资源的控制权归还给替代控制器、以便ASA A1K系统可以恢复正常运行。</block>
-  <block id="650cd8dda24c1d628d2370fc896e2898" category="paragraph">将存储资源的控制权归还给替代控制器、以便ASA A1K系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。</block>
   <block id="6a41dab46dde5ea92e32bfe9162ff999" category="doc">更换控制器的要求- ASA A1K</block>
   <block id="1a197d6edeae9c94e0721ab454a5fb33" category="summary">验证逻辑接口(Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface NetApp、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface ASA、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、</block>
   <block id="95155c153887de18d244e072071f2b3a" category="summary">确认控制器的HA配置在ASA A1K存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。</block>
@@ -11193,7 +11149,6 @@ SFP+(目标/启动程序)</block>
   <block id="d13e978f047aec74606199ffff94e6ba" category="doc">更换控制器- AFF C80</block>
   <block id="02a9e9984c956e264ae67617477e3c81" category="paragraph">如果硬件故障需要更换AFF C80系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器以及重新启动系统。</block>
   <block id="7fe746cff776821811860f80a8a2766b" category="paragraph">更换受损AFF C80控制器后，您需要<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>。</block>
-  <block id="70ca6ca8fd81886c4dcc82d957e79ee9" category="paragraph">将存储资源的控制权归还给替代控制器、以便AFF C80系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。</block>
   <block id="c59af556b2a6209df2da47002b6b6559" category="doc">更换控制器的要求- AFF C80</block>
   <block id="993406729b186cdaf4296a5964b58d0c" category="summary">验证逻辑接口是否向其主端口报告、执行集群运行状况检查、并将故障部件返回给NetApp以完成AFF C80控制器更换过程中的最后一步。</block>
   <block id="179b17b78c730160d70c7ea7bf15c4b0" category="paragraph">恢复并验证AFF C80系统的系统配置后，您需要<block ref="f96992113d4cc080f9d372523b7a919c" category="inline-link-macro-rx"></block>。</block>
@@ -11226,7 +11181,6 @@ SFP+(目标/启动程序)</block>
   <block id="2e49773a386b54a9cb9b9ac6679c6e79" category="doc">更换控制器- FAS70和FAS90</block>
   <block id="a09bde82e257a9efc5c840b3d64e8e4f" category="paragraph">在更换受损的FAS70或FAS90控制器后，您需要<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>。</block>
   <block id="1e70422005019f4903b79a5a577df1a1" category="summary">将存储资源的控制权归还给替代控制器、以便FAS70或FAS90系统可以恢复正常运行。</block>
-  <block id="493e5e25ac20d8aedaf3aae396a4ec29" category="paragraph">将存储资源的控制权归还给替代控制器、以便FAS70或FAS90系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。</block>
   <block id="819d0a4d339e34d2e8daf63b772aae13" category="doc">更换控制器的要求- FAS70和FAS90</block>
   <block id="6dd3fde43a5f29446a4c49fb87879b65" category="summary">确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface NetApp、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、</block>
   <block id="dcac0d4d44ce3609f70b9f6817380eb7" category="summary">确认控制器的HA配置在FAS70或FAS90存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。</block>
@@ -11412,7 +11366,6 @@ SFP+(目标/启动程序)</block>
   <block id="85ff23f588feef29eb74730158d32ac1" category="list-text">关闭每个电源上的电源开关。</block>
   <block id="8d2d400bb8fd6bedd576a4f6ecb3b00e" category="list-text">打开每个电源上的电源开关以完成重新启动。</block>
   <block id="8e07696a8d5e9a7e9c31668e6a3d49b7" category="paragraph">打开电源时、双色LED应呈绿色亮起。</block>
-  <block id="efd27c031d08beb4f219a6bb74784e23" category="paragraph">要完成AFF A1K系统的控制器更换、请先还原NetApp存储加密配置(如果需要)、并在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。</block>
   <block id="6c7364d4c1c4b5063efec0f8c273bf0e" category="doc">添加I/O模块- AFF A1K</block>
   <block id="a9c0987fd2b31f999e6738087d128cfb" category="doc">添加和更换I/O模块概述- AFF A1K</block>
   <block id="5bd705ad3d1ea061d9af69ede4ff4f69" category="doc">更换 I/O 模块 - AFF A1K</block>
@@ -11429,7 +11382,6 @@ SFP+(目标/启动程序)</block>
   <block id="dc5c74d1abe195182477161220f736cb" category="summary">如果硬件故障需要更换AFF A70或AFF A90系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下驱动器、安装更换机箱以及重新安装机箱组件。</block>
   <block id="d40f146aa7a5b4915ec82bbac5b1b200" category="summary">通过查看更换要求、关闭控制器、更换机箱以及验证系统操作、开始更换AFF A70或AFF A90存储系统的机箱。</block>
   <block id="cdab9753bdddb0aefefab44fd8865fbb" category="summary">在更换AFF A70或AFF A90系统的控制器之前、请确保满足成功更换所需的要求。这包括验证系统中的所有其他组件是否正常运行、验证是否具有正确的替代控制器以及将控制器的控制台输出保存到文本日志文件。</block>
-  <block id="da2e83722a9d109b38820bde87ddb7a8" category="paragraph">要完成AFF A70和AFF A90系统的控制器更换、请先还原NetApp存储加密配置(如果需要)、并在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。</block>
   <block id="caea42c273f28398fdc8ee7ee846cba1" category="image-alt">AFF A90 AFF A70和C80重量注意图标</block>
   <block id="d33e53b401671bb9e3a6e4281b9c3735" category="doc">添加I/O模块- AFF A70和AFF A90</block>
   <block id="52f502f025ccffe3d4cc228d684b7404" category="doc">添加和更换I/O模块概述- AFF A70和AFF A90</block>
@@ -11438,13 +11390,11 @@ SFP+(目标/启动程序)</block>
   <block id="634fb6b2414a0adde8fe288c6e3a4d20" category="summary">如果硬件故障需要更换ASA A70或ASA A90系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下驱动器、安装更换机箱以及重新安装机箱组件。</block>
   <block id="626e429540858707bd287f5035fff3d8" category="summary">在更换ASA A70或ASA A90系统的机箱之前、请确保满足成功更换系统所需的要求。其中包括验证系统中的所有其他组件是否正常运行、验证您是否具有ONTAP的本地管理员凭据、正确的更换机箱以及必要的工具。</block>
   <block id="5fcac3b7d3646c7d8da4eed2bc7243ed" category="summary">开始通过关闭控制器、更换机箱并验证系统运行来更换ASA A70或ASA A90存储系统的机箱。</block>
-  <block id="eb60074f3f47ce499f250468ad5726d5" category="paragraph">要完成ASA A70和ASA A90系统的控制器更换、请先还原NetApp存储加密配置(如果需要)、并在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。</block>
   <block id="7123adf741599afcbf244e4e98d663f5" category="doc">更换SSD驱动器- ASA A70和ASA A90</block>
   <block id="9b6a53cb25d5ad933496e9c5e800035c" category="doc">添加I/O模块- ASA A70和ASA A90</block>
   <block id="69d316c0d65bb5a04b4bf5e833d3782c" category="doc">添加和更换I/O模块概述- ASA A70和ASA A90</block>
   <block id="be95fdb39b28a4328a79fd4d94cbeb8a" category="doc">更换I/O模块- ASA A70和ASA A90</block>
   <block id="77847efd1cd22c7d12c880345c3d2cbd" category="summary">ASA A70或ASA A90系统中的交流或直流电源设备(PSU)出现故障或出现故障时、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。</block>
-  <block id="114a1e34144ca96c18dd9f4b501897b1" category="paragraph">要完成ASA A1K系统的控制器更换、请先还原NetApp存储加密配置(如有必要)、并在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。</block>
   <block id="ced875171f078cb35825b28e1856dd9d" category="doc">添加I/O模块- ASA A1K</block>
   <block id="8c1b02887a2e6fb34ad3351d42ea690b" category="doc">添加和更换I/O模块概述- ASA A1K</block>
   <block id="b69d7ce462751c8d58c3cff284a4f258" category="doc">更换 I/O 模块 - ASA A1K</block>
@@ -11499,12 +11449,10 @@ SFP+(目标/启动程序)</block>
   <block id="148c37b997fbf92672f09bf3d72bdde2" category="summary">如果硬件故障需要更换AFF C80系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下驱动器、安装更换机箱以及重新安装机箱组件。</block>
   <block id="5e4f388782b23b352ea8d9214c80bfd5" category="summary">在更换AFF C80系统的机箱之前、请验证系统中的所有其他组件是否正常运行、并确保您具有ONTAP的本地管理员凭据、正确的更换机箱以及必要的工具。</block>
   <block id="149d9cc9170faac13c9c0680a914233c" category="summary">通过查看更换要求、关闭控制器、更换机箱以及验证系统运行、开始更换AFF C80系统的机箱。</block>
-  <block id="69da385d0b4ed938e7f5432f78900f88" category="paragraph">要完成AFF C80系统的控制器更换、请先还原NetApp存储加密配置(如果需要)、并在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。</block>
   <block id="2084cec6febad8ab72f79daa8b23a355" category="doc">添加I/O模块- AFF C80</block>
   <block id="79787f56fde4cb3ddec3ad369a61f158" category="doc">添加和更换I/O模块概述- AFF C80</block>
   <block id="41528475327a8cca2a4718c8cf712b2d" category="doc">更换 I/O 模块 - AFF C80</block>
   <block id="52c303d0882103b7a06ffa380685a14d" category="summary">AFF C80系统中的交流或直流电源设备(PSU)出现故障或出现故障时、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。</block>
-  <block id="4050cf454bfa73771654e36df1daa1f3" category="paragraph">要完成FAS70和FAS90系统的控制器更换、请先还原NetApp存储加密配置(如有必要)、并在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。</block>
   <block id="049a0642927141e1d119692b5063c175" category="doc">添加I/O模块—FAS70和FAS90</block>
   <block id="a4612f2df8f0746881d188cca57452da" category="doc">添加和更换I/O模块概述—FAS70和FAS90</block>
   <block id="c10739f7f976ccb066c6001d422a250a" category="doc">更换I/O模块- FAS70和FAS90</block>
@@ -11825,13 +11773,6 @@ SFP+(目标/启动程序)</block>
   <block id="d3a1b9f7d22d4b09db0b92c5183f1170" category="image-alt">25 Gb以太网连接器</block>
   <block id="ee151691d95fa34033bab458f921f308" category="image-alt">有交换机集群连接</block>
   <block id="422b19e9df415d67d88bd9b0fb3451d2" category="image-alt">管理网络连接</block>
-  <block id="fb8d77e1874a8ce16ad0e1d15408d8cd" category="image-alt">迷你SAS到迷你SAS连接器</block>
-  <block id="ead5f0e9b0fc157a5b141be2ccd44dbd" category="paragraph">+图像：../media/drw_2800_Shelf-to-Shelbing_IEOPS-8.svg[磁盘架到磁盘架布线]</block>
-  <block id="b672b75ae62195a280bf8f67f6923701" category="paragraph">+。使用缆线将控制器A连接到驱动器架。……控制器A端口0a到堆栈中第一个驱动器架上的IOM B端口1。……控制器A端口0b1到堆栈中最后一个驱动器架上的IOM A端口3。</block>
-  <block id="331c92c74ae2411dbfdce0b34bc0251f" category="paragraph">+图像：../media/oie_cable_mini_sa_hd_to mini-sa_hd.svg[迷你SAS到迷你SAS连接器]</block>
-  <block id="2525bc76b22ae63a5087b660ed944490" category="paragraph">+图像：../media/dwR-2800_controler1-to Shels_IEOPS-896.svg[控制器A到磁盘架连接]</block>
-  <block id="d93bc8a87f3c34f95017b69aa2590230" category="paragraph">+。将控制器B连接到驱动器架。……控制器B端口0a到堆栈中第一个驱动器架上的IOM A端口1。……控制器B端口0b1到堆栈中最后一个驱动器架上的IOM B端口3。</block>
-  <block id="05a6bd9e18c93cca4d9b550746dfd5d1" category="paragraph">+图像：../media/dwR-2800_controler2-to Shels_IEOPS-897.svg[控制器B到磁盘架连接]</block>
   <block id="40bde7f2324ee2876dd8a09846b14ff4" category="image-alt">打开电源</block>
   <block id="512bdc85c8065a0397ce7025381aaf66" category="image-alt">自动发现系统</block>
   <block id="397249170dcc18ae00c3a7885f97fdc1" category="list-text">将控制台缆线连接到笔记本电脑或控制台、使用存储系统附带的控制台缆线连接控制器上的控制台端口、然后将笔记本电脑或控制台连接到管理子网上的交换机。</block>
@@ -12016,5 +11957,68 @@ SFP+(目标/启动程序)</block>
   <block id="8fdc5ec3ff56b023a707d257557cb7c1" category="paragraph">FAS70 和 FAS90 存储系统支持带有 NSM100 或 NSM100B 模块的 DS212C、DS224C、DS460C 和 NS224 架。</block>
   <block id="cb1d7f2de7963108d3fe1b590a415523" category="paragraph">NS224 模块之间的主要区别是：</block>
   <block id="a1c52b2edb23bc93318c0b82dc9baead" category="paragraph">以下 NS224 布线示例显示了 NS224 架中的 NSM100 模块（涉及架模块端口）。</block>
-  <block id="29cc4b807f94b06bddae2e11c6a56c1e" category="paragraph">USB 闪存驱动器应具有与受损控制器所运行的服务映像 (BIOS) 版本相同的版本。</block>
+  <block id="e275ee75ac16491873bfc9c9d1565329" category="paragraph">将存储资源的控制权归还给替代控制器、以便AFF A1K系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密或板载密钥管理器 (OKM) 加密。</block>
+  <block id="7c43eb5994700149a54fedd4ee1d8391" category="paragraph">要完成 AFF A1K 系统的控制器更换，请先恢复 NetApp 存储加密配置（如有必要）。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后，将故障部件退回给 NetApp。</block>
+  <block id="7b78a43d2ef1cd56888972224b322cba" category="section-title">第1步：验证SIFs并检查集群运行状况</block>
+  <block id="8cd41611fab4233f826795a5cff7057f" category="paragraph">将存储资源的控制权归还给替代控制器、以便AFF A70或AFF A90系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密或板载密钥管理器 (OKM) 加密。</block>
+  <block id="2097fe5d6db2ee8034ca3ec430540bd7" category="paragraph">要完成 AFF A70 或 AFF A90 系统的控制器更换，请先恢复 NetApp 存储加密配置（如有必要）。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后，将故障部件退回 NetApp。</block>
+  <block id="26625a50fa6e85a829f4ae9e66e4eeaf" category="paragraph">将存储资源的控制权归还给替代控制器、以便ASA A70或ASA A90系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密或板载密钥管理器 (OKM) 加密。</block>
+  <block id="7c549e4c601c8fdf656eed56c26fc0b1" category="paragraph">要完成 ASA A70 或 ASA A90 系统的控制器更换，请先恢复 NetApp 存储加密配置（如有必要）。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后，将故障部件退回 NetApp。</block>
+  <block id="313b22307115c166dbbc63f27c50f3d7" category="paragraph">将存储资源的控制权归还给替代控制器、以便ASA A1K系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密或板载密钥管理器 (OKM) 加密。</block>
+  <block id="641052e443b693ce41e21f05c5994e69" category="paragraph">要完成 ASA A1K 系统的控制器更换，请先恢复 NetApp 存储加密配置（如有必要）。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后，将故障部件退回给 NetApp。</block>
+  <block id="9004880577dcf1d74c99d6bebf00183c" category="paragraph">将存储资源的控制权归还给替代控制器、以便AFF C80系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密或板载密钥管理器 (OKM) 加密。</block>
+  <block id="d87e0bc356d5924fdcb4486c339c3ed6" category="paragraph">要完成 AFF C80 系统的控制器更换，请先恢复 NetApp 存储加密配置（如有必要）。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后，将故障部件退回给 NetApp。</block>
+  <block id="f99fbeb85893ef928614af3af04b57f9" category="paragraph">将存储资源的控制权归还给替代控制器、以便FAS70或FAS90系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密或板载密钥管理器 (OKM) 加密。</block>
+  <block id="e72336b4018af60c67f4cbf23f269180" category="paragraph">您必须移除并打开受损的控制器模块，找到并更换控制器中的启动介质，将启动映像传输到 USB 驱动器，将 USB 驱动器插入控制器，然后启动控制器。</block>
+  <block id="058a58abf3e6b9d728a2756ffe61127f" category="paragraph">控制器完全安装到机箱后立即开始启动，并在 LOADER 提示符处停止。</block>
+  <block id="21c4edb5ca29e24e278c8cc8630ccac2" category="image-alt">打开控制器模块</block>
+  <block id="a665ff03cf3a259d8b99ade952697613" category="image-alt">替换缓存</block>
+  <block id="d3ec6e2694028a650f125d7451009961" category="image-alt">取下盖子</block>
+  <block id="9379754ed9f3ab421dc04083411d001d" category="image-alt">移动夹层卡</block>
+  <block id="191a2899fb1c6d81badd1d85126edeb4" category="image-alt">移动缓存模块</block>
+  <block id="408690a10a3a39e404462d2e1558a022" category="image-alt">NV icon</block>
+  <block id="df44d7e45332b82ddd2a2cb6eb3f7a38" category="image-alt">更换 DIMM</block>
+  <block id="5ec55e0a37fd9e86ae241589ac05d8d2" category="paragraph">您可以使用适用的动画或表格中的详细步骤将控制器连接到网络。</block>
+  <block id="0b13de20fe6ea39ec286743f12673e9b" category="image-alt">架间布线</block>
+  <block id="b1905c91f00e1e7ad75a290938d0c0ae" category="list-text">使用缆线将控制器A连接到驱动器架。</block>
+  <block id="7414b28752291f5ed73122cbbe85acd3" category="list-text">控制器A端口0a到堆栈中第一个驱动器架上的IOM B端口1。</block>
+  <block id="d490aaf97e1fdf82eb244edca242e5f7" category="list-text">控制器A端口0b1到堆栈中最后一个驱动器架上的IOM A端口3。</block>
+  <block id="0b2a648dd1d045b83d1fa5142e7649da" category="image-alt">控制器 A 到机架连接</block>
+  <block id="575f5a968bfa57f9d0a99b09b5f73ff2" category="list-text">将控制器B连接到驱动器架。</block>
+  <block id="49fefb8508936cb5a0f672b0146c0013" category="list-text">控制器B端口0a到堆栈中第一个驱动器架上的IOM A端口1。</block>
+  <block id="0cbd55a3e4a33973ae5e025f7565fe75" category="list-text">控制器B端口0b1到堆栈中最后一个驱动器架上的IOM B端口3。</block>
+  <block id="b6843b9add1e2cb558dffaed47319e3d" category="image-alt">控制器 B 到机架连接</block>
+  <block id="b1b862857f003aefeb508f3763b1caad" category="paragraph">在需要设置货架 ID 的任一选项中使用以下动画：</block>
+  <block id="56632d1795a7d32b89a455a3b633b7f5" category="list-text">打开架子电源并使用此步骤开始时的动画设置架子 ID。</block>
+  <block id="6a3ffb8f58252e034e90b5eb7a9cc233" category="list-text">打开架子电源并使用此步骤开始时的动画设置架子 ID。</block>
+  <block id="cb102c5c1eccde9b442d1de001f76cc3" category="image-alt">卸下控制器盖</block>
+  <block id="8fca7d700183532fd08f68b674a86c60" category="image-alt">打开控制器</block>
+  <block id="6abebf9335209d6b986ad1d41e48f43b" category="image-alt">更换夹层卡</block>
+  <block id="9f8a96e46f0e86179108737100c29b9d" category="list-text">重新安装控制器盖。</block>
+  <block id="627450f7182bd50247300c6db6f17129" category="image-alt">移除 PCI 模块</block>
+  <block id="ec6f3c3168126d55e199d31103c5eff8" category="image-alt">移除 PSU</block>
+  <block id="f2382f3ee3a7ff64d7ec97d77b5ab15c" category="image-alt">卸下风扇</block>
+  <block id="4bfdd5a73e3720ad79c2b5323672c823" category="image-alt">卸下 LED 模块</block>
+  <block id="c23afc0489b14bba326028378555b9c1" category="image-alt">重新安装控制器</block>
+  <block id="e16243c0ca21c7afdd6fc0990b04c048" category="image-alt">更换 NV（DCPM）电池</block>
+  <block id="5052644d2a37d1cfee946a38ee7221f2" category="image-alt">系统 DIMM 映射</block>
+  <block id="376b1cae869bbe8ab1cce68fdb30b696" category="image-alt">Replace the DIMMs</block>
+  <block id="b8de587b448eba855f302087e9db5abe" category="image-alt">关闭控制器</block>
+  <block id="cae1523af1f42548daf31beb55c076e0" category="image-alt">移除或安装控制器</block>
+  <block id="8d0301aa96154a1dd899f6aadef9857e" category="image-alt">更换风扇</block>
+  <block id="fe50dc87275089b9495d8023e008b820" category="video-title">动画双节点无交换机集群布线</block>
+  <block id="7008a581ef7d44f47c027e3b2e9746e8" category="image-alt">TNSC网络布线图</block>
+  <block id="f22ce3022c33416700b0499a02c630a6" category="video-title">动画：交换集群布线</block>
+  <block id="2f208beb3bb9a5b6070bc5ce129978b3" category="video-title">动画电缆驱动器架</block>
+  <block id="813131c928daa8bd0b445b14f11fdefd" category="image-alt">SAS 架布线</block>
+  <block id="131cc8f642319d66d2eee46367e4254b" category="image-alt">Mini-SAS HD 电缆</block>
+  <block id="41c5dae76a3f9314369f86b5e52c3453" category="video-title">动画设置你的架子ID</block>
+  <block id="ce8dd9fe7cfc645c2eaac3f8f1775ee7" category="image-alt">开启电源并设置机架ID</block>
+  <block id="05e7f3a9aff7390f8890fd6714b7fc4a" category="video-title">动画 打开控制器的电源</block>
+  <block id="921b8127a66db9c0d2ddd74b4aef6f67" category="video-title">动画 将笔记本电脑连接到管理交换机</block>
+  <block id="7b7f09122e68189a8cc5eade0ea74852" category="image-alt">笔记本电脑到交换机的布线</block>
+  <block id="c19c878358034620e42421b1d0e88979" category="image-alt">控制台切换连接</block>
+  <block id="bcbe9ce5b2d50ad0b254f40cda6fc7e1" category="image-alt">开机并设置机架ID</block>
+  <block id="43f978a7787080590a53cc2abdd637c9" category="image-alt">更换 LED 模块</block>
+  <block id="a54c219a955221bc0586ab22f8a07401" category="image-alt">更换RTC电池</block>
 </blocks>

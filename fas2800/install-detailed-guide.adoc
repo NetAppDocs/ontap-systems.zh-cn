@@ -233,17 +233,18 @@ image::../media/icon_square_3_orange.png[标注编号3]
 
 image::../media/oie_cable_pull_tab_down.png[拉片方向]
 
+您可以使用适用的动画或表格中的详细步骤将控制器连接到网络。
+
+.动画—为双节点无交换机集群布线
+video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
+.动画—切换集群布线
+video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
 [role="tabbed-block"]
 ====
 .选项 1 ：为双节点无交换机集群布线
 --
 为双节点无交换机集群的网络连接和集群互连端口布线。
 
-.关于此任务
-使用动画或分步说明完成控制器和交换机之间的布线。
-
-.动画—为双节点无交换机集群布线
-video::90577508-fa79-46cf-b18a-afe8016325af[panopto]
 .步骤
 . 使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b：
 +
@@ -320,11 +321,6 @@ IMPORTANT: 请勿插入电源线。
 --
 为有交换机集群的网络连接和集群互连端口布线。
 
-.关于此任务
-使用动画或分步说明完成控制器和交换机之间的布线。
-
-.动画—切换集群布线
-video::6553a3db-57dd-4247-b34a-afe8016315d4[panopto]
 .步骤
 . 使用集群互连缆线将集群互连端口e0a连接到e0a、并将e0b连接到e0b：
 +
@@ -446,31 +442,29 @@ video::b2a7549d-8141-47dc-9e20-afe8016f4386[panopto]
 .. IOM A上的端口1到直接下方磁盘架上IOM A上的端口3。
 .. IOM B上的端口1到直接下方磁盘架上IOM B上的端口3。
 +
-image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[迷你SAS到迷你SAS连接器]
+image::../media/drw_2800_shelf-to-shelf_cabling_IEOPS-895.svg[架间布线]
 
 
 
+. 使用缆线将控制器A连接到驱动器架。
++
+.. 控制器A端口0a到堆栈中第一个驱动器架上的IOM B端口1。
+.. 控制器A端口0b1到堆栈中最后一个驱动器架上的IOM A端口3。
++
+image::../media/dwr-2800_controller1-to shelves_IEOPS-896.svg[控制器 A 到机架连接]
 
 
-*迷你SAS HD到迷你SAS HD电缆*
 
-+图像：../media/drw_2800_Shelf-to-Shelbing_IEOPS-8.svg[磁盘架到磁盘架布线]
+. 将控制器B连接到驱动器架。
++
+.. 控制器B端口0a到堆栈中第一个驱动器架上的IOM A端口1。
+.. 控制器B端口0b1到堆栈中最后一个驱动器架上的IOM B端口3。
 
-+。使用缆线将控制器A连接到驱动器架。……控制器A端口0a到堆栈中第一个驱动器架上的IOM B端口1。……控制器A端口0b1到堆栈中最后一个驱动器架上的IOM A端口3。
 
-+图像：../media/oie_cable_mini_sa_hd_to mini-sa_hd.svg[迷你SAS到迷你SAS连接器]
++
+image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[控制器 B 到机架连接]
 
-*迷你SAS HD到迷你SAS HD电缆*
 
-+图像：../media/dwR-2800_controler1-to Shels_IEOPS-896.svg[控制器A到磁盘架连接]
-
-+。将控制器B连接到驱动器架。……控制器B端口0a到堆栈中第一个驱动器架上的IOM A端口1。……控制器B端口0b1到堆栈中最后一个驱动器架上的IOM B端口3。
-
-+图像：../media/oie_cable_mini_sa_hd_to mini-sa_hd.svg[迷你SAS到迷你SAS连接器]
-
-*迷你SAS HD到迷你SAS HD电缆*
-
-+图像：../media/dwR-2800_controler2-to Shels_IEOPS-897.svg[控制器B到磁盘架连接]
 
 
 
@@ -478,6 +472,10 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[迷你SAS到迷你SAS�
 
 使用选项1：(如果启用了网络发现)或选项2：(如果未启用网络发现)完成存储系统设置和配置。
 
+在需要设置货架 ID 的任一选项中使用以下动画：
+
+.动画—设置驱动器架ID
+video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 [role="tabbed-block"]
 ====
 .选项 1 ：如果启用了网络发现
@@ -485,10 +483,7 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[迷你SAS到迷你SAS�
 如果您的笔记本电脑上启用了网络发现、请使用自动集群发现完成存储系统设置和配置。
 
 .步骤
-. 使用以下动画打开磁盘架电源并设置磁盘架ID。
-+
-.动画—设置驱动器架ID
-video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
+. 打开架子电源并使用此步骤开始时的动画设置架子 ID。
 . Power on the controllers
 +
 .. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
@@ -560,10 +555,7 @@ image::../media/drw_2800_laptop_to_switch_to_controller_IEOPS-1084.svg[笔记本
 .. 使用管理子网上的一个 TCP/IP 地址为笔记本电脑或控制台分配 TCP/IP 地址。
 
 
-. 使用以下动画设置一个或多个驱动器架 ID ：
-+
-.动画—设置驱动器架ID
-video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
+. 打开架子电源并使用此步骤开始时的动画设置架子 ID。
 . 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 . 打开两个节点的电源开关。
 +

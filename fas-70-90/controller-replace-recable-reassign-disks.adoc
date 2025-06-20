@@ -11,7 +11,7 @@ summary: 将存储资源的控制权归还给替代控制器、以便FAS70或FAS
 
 
 [role="lead"]
-将存储资源的控制权归还给替代控制器、以便FAS70或FAS90系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。
+将存储资源的控制权归还给替代控制器、以便FAS70或FAS90系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密或板载密钥管理器 (OKM) 加密。
 
 [role="tabbed-block"]
 ====
@@ -72,53 +72,6 @@ NOTE: 系统会提示您为此集群输入集群范围的OKM密码短语。
 
 
 
-. 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
-. 如果已禁用自动交还、请重新启用它： `storage failover modify -node local -auto-giveback _true_`
-. 如果启用了AutoSupport、则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`
-
-
---
-.外部密钥管理器(EKM)
---
-重置加密并使控制器恢复正常运行。
-
-.步骤
-. 如果根卷已使用外部密钥管理器进行加密，并且控制台电缆已连接至替代节点，请输入并选择选项 `11`。 `boot_ontap menu`
-. 如果出现这些问题、请根据需要回答 `y`或 `n`：
-+
-是否有/cfcard/kmip/certs/client.crt文件的副本？｛y/n｝
-
-+
-是否有/cfcard/kmip/certs / client.key文件的副本？｛y/n｝
-
-+
-是否有/cfcard/kmip/certs文件的副本？｛y/n｝
-
-+
-是否有/cfcard/kmip/servers.cfg文件的副本？｛y/n｝
-
-+
-您是否知道KMIP服务器地址？｛y/n｝
-
-+
-您是否知道KMIP端口？｛y/n｝
-
-+
-
-NOTE: 如有问题、请联系 https://support.netapp.com["NetApp 支持"]。
-
-. 提供以下信息：
-+
-** 客户端证书(client.crt)文件内容
-** 客户端密钥(client.key)文件内容
-** KMIP服务器CA (CA.prom)文件内容
-** KMIP服务器的IP地址
-** KMIP服务器的端口
-
-
-. 系统运行完毕后、您会看到启动菜单。选择"1"进行正常启动。
-. 检查接管状态： `storage failover show`
-. 转到高级模式，然后转到， `run local partner nosavecore`确保已修复节点上的所有核心转储均已保存 `set -privilege advanced`。
 . 通过交还存储使受损控制器恢复正常运行： `storage failover giveback -ofnode _impaired_node_name_`
 . 如果已禁用自动交还、请重新启用它： `storage failover modify -node local -auto-giveback _true_`
 . 如果启用了AutoSupport、则还原/取消禁止自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`

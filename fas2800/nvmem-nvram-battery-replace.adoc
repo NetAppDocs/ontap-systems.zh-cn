@@ -75,11 +75,11 @@ LOADER 提示符
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 . 挤压凸轮把手上的闩锁、直到其释放、完全打开凸轮把手以从中板释放控制器模块、然后用双手将控制器模块从机箱中拉出一半。
 +
-image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[DRW 285 PCM拆卸、安装IEOPS 694]
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[卸下控制器]
 
 . 检查控制器模块背面的NVMEM LED。  查找NV图标：
 +
-image::../media/drw_hw_nvram_icon.svg[DRW 硬件 NVRAM 图标]
+image::../media/drw_hw_nvram_icon.svg[NV icon]
 
 +
 
@@ -108,14 +108,14 @@ NOTE: 如果系统处于"正在等待恢复"状态、或者系统未被正确接
 . 将控制器模块翻转，将其放在平稳的表面上。
 . 按下控制器模块两侧的蓝色按钮以松开护盖、然后向上旋转护盖、使其脱离控制器模块、从而打开护盖。
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[DRW 285控制器模块盖板打开IEOPS 695]
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[卸下控制器盖]
 
 . 在控制器模块中找到 NVMEM 电池。
 +
 .动画-更换NV电池
 video::592217fb-4868-4294-a559-af4701725598[panopto]
 +
-image::../media/drw_2850_replace_nvbattery_IEOPS-715.svg[DRW 2800更换nvBattery IEOPS 715]
+image::../media/drw_2850_replace_nvbattery_IEOPS-715.svg[Replace the NV battery]
 
 +
 [cols="1,3"]

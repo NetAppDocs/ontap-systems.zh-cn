@@ -192,3 +192,6 @@ You'll need it in disaster scenarios where you might need to manually recover OK
 --
 ====
 
+
+.下一步是什么？
+检查启动介质上的加密密钥支持和状态后，您需要link:bootmedia-shutdown.html["关闭控制器"]。

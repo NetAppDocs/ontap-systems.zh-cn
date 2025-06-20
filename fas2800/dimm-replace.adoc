@@ -79,12 +79,12 @@ LOADER 提示符
 . 从控制器模块的左右两侧卸下缆线管理设备并将其放在一旁。
 . 按压凸轮把手上的闩锁，直到其释放为止，完全打开凸轮把手以从中板释放控制器模块，然后用两只手将控制器模块拉出机箱。
 +
-image::../media/drw_2240_x_opening_cam_latch.svg[DRW 2240 x 打开凸轮闩锁]
+image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[卸下控制器]
 
 . 将控制器模块翻转，将其放在平稳的表面上。
 . 按下控制器模块两侧的蓝色按钮以松开护盖、然后向上旋转护盖、使其脱离控制器模块、从而打开护盖。
 +
-image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[DRW 285控制器模块盖板打开IEOPS 695]
+image::../media/drw_2850_open_controller_module_cover_IEOPS-695.svg[打开控制器]
 
 
 
@@ -113,7 +113,7 @@ NOTE: 在更换DIMM之前、您需要从控制器模块中拔下NVMEM电池。
 在更换系统组件之前，您必须完全关闭系统，以避免丢失非易失性内存（ NVMEM ）中未写入的数据。此 LED 位于控制器模块的背面。查找以下图标：
 
 +
-image::../media/drw_hw_nvram_icon.svg[DRW 硬件 NVRAM 图标]
+image::../media/drw_hw_nvram_icon.svg[NV icon]
 
 . 如果 NVMEM LED 未闪烁，则 NVMEM 中没有任何内容；您可以跳过以下步骤并继续执行此操作步骤中的下一项任务。
 . 如果 NVMEM LED 闪烁，则 NVMEM 中存在数据，您必须断开电池以清除内存：
@@ -138,7 +138,7 @@ DIMM将向上旋转一点。
 NOTE: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
 
 +
-image::../media/drw_2850_replace_dimms_IEOPS-699.svg[DRW 2800更换DIMM IEOPS 699]
+image::../media/drw_2850_replace_dimms_IEOPS-699.svg[更换 DIMM]
 
 +
 [cols="1,3"]

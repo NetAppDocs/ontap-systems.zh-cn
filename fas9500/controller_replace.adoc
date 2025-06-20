@@ -30,7 +30,7 @@ video::dc8d4acb-e061-45dd-8a0e-ae78004b6974[panopto]
 .动画-删除控制器模块
 video::5e029a19-8acc-4fa1-be5d-ae78004b365a[panopto]
 +
-image::../media/drw_9500_remove_PCM.svg[DRW 9500-删除PCM]
+image::../media/drw_9500_remove_PCM.svg[卸下控制器]
 
 +
 [cols="20%,80%"]
@@ -56,7 +56,7 @@ image::../media/icon_round_2.png[标注编号2]
 
 . 将控制器模块的盖板朝上放在平稳的平面上，按下盖板上的蓝色按钮，将盖板滑至控制器模块的背面，然后向上转动盖板并将其从控制器模块中提出。
 +
-image::../media/drw_9500_PCM_open.svg[DRW 9500PCM已打开]
+image::../media/drw_9500_PCM_open.svg[打开控制器]
 
 
 
@@ -78,7 +78,7 @@ image::../media/icon_round_1.png[标注编号1]
 
 . 使用下图或控制器模块上的 FRU 映射找到启动介质：
 +
-image::../media/drw_9500_remove_boot_dev.svg[DRW 9500remove boot dev]
+image::../media/drw_9500_remove_boot_dev.svg[删除启动设备]
 
 +
 [cols="20%,80%"]
@@ -129,7 +129,7 @@ NOTE: Ver2控制器的DIMM插槽较少。支持的DIMM数量没有减少、DIMM�
 IMPORTANT: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
 
 +
-image::../media/drw_9500_replace_PCM_dimms.svg[DRW 9500"更换PCM DIMM]
+image::../media/drw_9500_replace_PCM_dimms.svg[移动DIMM]
 
 +
 [cols="20%,80%"]
@@ -188,7 +188,7 @@ NOTE: 系统可能会在启动时更新系统固件。请勿中止此过程。�
 .动画-安装控制器模块
 video::f2aa14b4-0d95-4109-b410-ae78004b35c9[panopto]
 +
-image::../media/drw_9500_remove_PCM_source.svg[DRW 9500-删除PCM源]
+image::../media/drw_9500_remove_PCM_source.svg[重新安装控制器]
 
 +
 [cols="20%,80%"]
