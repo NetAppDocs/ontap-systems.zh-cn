@@ -17,10 +17,6 @@ summary: 'Management network ports on the controllers are connected to switches.
 有关将存储系统连接到网络交换机的信息、请与网络管理员联系。
 
 .关于此任务
-* 集群/HA和主机网络布线过程显示了常见配置。
-+
-如果在此处未看到您的配置、请访问link:https://hwu.netapp.com["NetApp Hardware Universe"^]以获取全面的配置和插槽优先级信息、以便为存储系统布线。
-
 * 布线图中的箭头图标显示了将连接器插入端口时电缆连接器推拉卡舌的正确方向(向上或向下)。
 +
 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
@@ -35,8 +31,15 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["电缆拉片方向"]
 
 == 第1步：为集群/HA连接布线
 
-使用缆线将控制器互相连接以创建ONTAP集群连接。
+创建ONTAP集群连接。对于无交换机集群、请将控制器相互连接。对于有交换机集群、将控制器连接到集群网络交换机。
 
+[NOTE]
+====
+集群/HA 布线示例展示了常见的配置。
+
+如果在此处未看到您的配置、请访问link:https://hwu.netapp.com["NetApp Hardware Universe"^]以获取全面的配置和插槽优先级信息、以便为存储系统布线。
+
+====
 [role="tabbed-block"]
 ====
 .无交换机集群布线
@@ -168,6 +171,13 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[�
 
 使用缆线将控制器连接到以太网或FC主机网络。
 
+[NOTE]
+====
+主机网络布线示例展示了常见的配置。
+
+如果在此处未看到您的配置、请访问link:https://hwu.netapp.com["NetApp Hardware Universe"^]以获取全面的配置和插槽优先级信息、以便为存储系统布线。
+
+====
 [role="tabbed-block"]
 ====
 .以太网主机布线

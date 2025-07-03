@@ -5188,7 +5188,6 @@
   <block id="319d072de0a7eb80654d8506bc74de47" category="paragraph">DCM2驱动器抽盒采用蓝色条带和"DCM2"标签来区分：</block>
   <block id="d5240bafd6bf54bcb59e9a9f899b324e" category="section-title">准备更换驱动器抽盒</block>
   <block id="38cd7f0eca6a82b183b0f9dc3599583a" category="paragraph">在更换驱动器抽盒之前、如果需要、您必须确保更新IOM12固件、并暂停HA对以使数据聚合保留在磁盘架上、或者您可以选择保持HA对正常运行。 这要求您将磁盘驱动器上的数据聚合中的所有数据移动到脱机状态并删除这些数据聚合。但是、如果磁盘架包含根聚合、则必须暂停HA对。最后、您必须关闭磁盘架。</block>
-  <block id="fca3ffea6534176432f58b5a22ed22e1" category="list-title">步骤</block>
   <block id="f1d6fcc8467c66247fc38fc5bb1e448c" category="list-text">确定在更换发生故障的驱动器抽盒时、是否会使磁盘架同时具有IOM12模块和任意数量的DCM2驱动器抽盒。</block>
   <block id="bb92ef0e860f1f3c67a9c3a453b2781c" category="list-text">如果磁盘架将包含IOM12模块和任意数量的DCM2驱动器抽盒、则必须将IOM12固件升级到0300或更高版本；否则、请转至下一步。</block>
   <block id="62f67af3803932031f11d177b5600361" category="list-text">如果磁盘架包含来自HA对中任一控制器的根聚合、或者您选择暂停HA对(而不是保持HA对正常运行)、请完成以下子步骤；否则、请转至下一步。</block>
@@ -5199,7 +5198,6 @@
   <block id="4bd0b0c2b519de54df41bc77088d8182" category="list-text">转到部分、 <block ref="f9b764c55080d7cf77ed91e890c43565" category="inline-xref-macro-rx"></block>。</block>
   <block id="eb1a8e53bca0fcb026633a23b562bfff" category="list-text">如果您选择保持HA对正常运行、请完成以下子步骤：</block>
   <block id="1aea84d8e76217145d77f4dd7efe6f8f" category="admonition">如果您尝试将某个抽盒更换为磁盘架上的聚合发生原因 、则可能会出现多磁盘崩溃、从而造成系统中断。</block>
-  <block id="ea0b163daac6d7d1dbcf0110733b7a5c" category="list-text">移动磁盘驱动器上的数据聚合中的所有数据。</block>
   <block id="a3285b442e65f70add01ba5f44551d15" category="paragraph">数据包括但不限于卷和LUN。</block>
   <block id="cf798cab97b54ad5fe43c91a959754ca" category="list-text">脱机并删除聚合以使磁盘驱动器成为备用磁盘：</block>
   <block id="19613506a0ea4d74ae9e654ba0e170e6" category="paragraph">可以从任一控制器的clustershell输入命令。</block>
@@ -10073,7 +10071,6 @@ SFP+(目标/启动程序)</block>
   <block id="d16a227aab66041a81c6f88b290eb486" category="section-title">第1步：为集群/HA连接布线</block>
   <block id="134e0586a0879fa097abfb47d5e64dbe" category="open-title">无交换机集群布线</block>
   <block id="ee68cf12a16ca46d58bedd8cf9051f32" category="example-title">具有两个双端口40/100 GbE I/O模块的AFF A30或AFF A50</block>
-  <block id="1de8dab1beab3d5ee0495c66a3c814b7" category="paragraph">使用缆线将控制器互相连接以创建ONTAP集群连接。</block>
   <block id="a8d16746fb80901317600cba36862a10" category="list-text">为集群/HA互连连接布线：</block>
   <block id="6780657f10ef4bbe5e784f3b1e7777e3" category="admonition">集群互连流量和HA流量共享相同的物理端口(位于插槽2和4的I/O模块上)。端口为40/100 GbE。</block>
   <block id="efe3bfda2c730f42fd2741bc4722e6f0" category="list-text">使用缆线将控制器A端口E2A连接到控制器B端口E2A。</block>
@@ -10544,7 +10541,6 @@ SFP+(目标/启动程序)</block>
   <block id="b3fb7cc55fec6d7df9078e2ee7739718" category="paragraph">正确插入后、DIMM可以轻松插入、但要紧紧固定在插槽中。If not, reinsert the DIMM.</block>
   <block id="7e08ee4b466dc677d31c40c8b0488339" category="list-text">目视检查DIMM、确保其均匀对齐并完全插入插槽。</block>
   <block id="34f650ca44fabe66ff7e4095a137da22" category="list-text">确保存储系统中的所有其他组件均正常工作；如果不正常、请先联系、<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>然后再继续。"</block>
-  <block id="54d890bf92693607c99bccb67f9933f5" category="paragraph">为控制器布线以创建ONTAP集群连接。</block>
   <block id="d48b3cfe096b47bcb7f13e683c934beb" category="paragraph">使用缆线将控制器连接到以太网或FC主机网络。</block>
   <block id="bb8661c49545cac68358046e25b8f950" category="open-title">以太网主机布线</block>
   <block id="3c90cea8d34e6c024dcfcf7fbe2bc396" category="example-title">带有一个4端口1025 GbE I/O模块的AFF A20、A30或AFF A50</block>
@@ -11729,7 +11725,6 @@ SFP+(目标/启动程序)</block>
   <block id="db424e93139f05b40145c02ca1496dab" category="image-alt">更换NVDIMM电池</block>
   <block id="f01c12d2b181f3fa692e46f31483240d" category="list-text">确保机柜或电信机架的导销固定在机箱导槽中。</block>
   <block id="0ce45b8799d32fa93b50aed5301e827b" category="list-text">Controller 2 port 0b to IOM B port 3 on the last drive shelf in the stack.+<block ref="065babb6c425d208f17452adf684f6f8" category="inline-image-macro-rx" type="image"></block>迷你SAS HD到迷你SAS HD缆线</block>
-  <block id="ce48b5f9c255c35e0431b311322885fc" category="list-text">集群/HA和主机网络布线过程显示了常见配置。</block>
   <block id="11695514a878032b3fb5ecdf5e659b5b" category="paragraph">如果在此处未看到您的配置、请访问<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>以获取全面的配置和插槽优先级信息、以便为存储系统布线。</block>
   <block id="2e169c8e6f4cc1f6315545b46d7284a2" category="inline-image-macro">64 Gb光纤信道电缆</block>
   <block id="0bf370304560205688213d22ba637c07" category="paragraph"><block ref="0bf370304560205688213d22ba637c07" category="inline-image-macro-rx" type="image"></block></block>
@@ -12021,4 +12016,15 @@ SFP+(目标/启动程序)</block>
   <block id="bcbe9ce5b2d50ad0b254f40cda6fc7e1" category="image-alt">开机并设置机架ID</block>
   <block id="43f978a7787080590a53cc2abdd637c9" category="image-alt">更换 LED 模块</block>
   <block id="a54c219a955221bc0586ab22f8a07401" category="image-alt">更换RTC电池</block>
+  <block id="14d4a75ecbe13082ebd840dc7d091f2c" category="section-title">步骤 4：安装控制器和驱动器</block>
+  <block id="7aa6db479f57ead7ac39225f410bdf2d" category="paragraph">将控制器和驱动器安装到替换机箱中并重新启动控制器。</block>
+  <block id="3dbc14ba753f9b6deb52fc17f8c85cec" category="paragraph">如果硬件故障需要更换AFF A20、AFF A30或AFF A50系统的机箱。更换过程包括移除控制器、移除驱动器、安装更换机箱以及重新安装机箱组件。</block>
+  <block id="fde22ae5f3a1cc39c61853ffe9a68675" category="paragraph">创建ONTAP集群连接。对于无交换机集群、请将控制器相互连接。对于有交换机集群、将控制器连接到集群网络交换机。</block>
+  <block id="4a1975a1a386f2f3f28c4859f5ea4976" category="paragraph">集群/HA 布线示例展示了常见的配置。</block>
+  <block id="8c3a29fca49d6a772e0a2f8ab6ab7280" category="paragraph">主机网络布线示例展示了常见的配置。</block>
+  <block id="6ce95ae69a1e0ed801b4369491228162" category="paragraph">如果硬件故障需要更换ASA A20、ASA A30或ASA A50系统的机箱。更换过程包括移除控制器、移除驱动器、安装更换机箱以及重新安装机箱组件。</block>
+  <block id="d756679882bcf80d5a80fd42020d0f25" category="paragraph">当硬件故障需要更换 ASA C30 存储系统的机箱时。更换过程包括移除控制器、移除驱动器、安装更换机箱以及重新安装机箱组件。</block>
+  <block id="72dc238e73081e826d88e29df24b4c58" category="paragraph">如果硬件故障需要更换AFF C30或AFF C60系统的机箱。更换过程包括移除控制器、移除驱动器、安装更换机箱以及重新安装机箱组件。</block>
+  <block id="149eed3e03e259c4e52b1de45a4fe3e9" category="paragraph">要更换磁盘架中的驱动器抽屉，您可以暂停整个存储系统（HA 对），这样可以保留磁盘架上的数据聚合。或者，您可以保持 HA 对正常运行，但这需要您将数据聚合中的所有数据移至磁盘架的磁盘驱动器上，然后使其脱机并删除这些数据聚合。如果磁盘架包含根聚合，则必须暂停 HA 对。</block>
+  <block id="12e16a41f9ae5c97288e4e9e78b0bbf6" category="list-text">将所有数据从位于机架上所有磁盘驱动器上的数据聚合中移动。</block>
 </blocks>
