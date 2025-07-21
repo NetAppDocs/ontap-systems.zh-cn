@@ -51,8 +51,8 @@ NOTE: 系统会两次提示您输入密码短语。
 . 将控制台缆线移至配对节点并以身份登录 `admin`。
 . 仅交还CFO聚合(根聚合)： `storage failover giveback -fromnode local -only-cfo-aggregates _true_`
 +
-** 如果遇到错误，请联系 https://support.netapp.com["NetApp 支持"]。
 
+NOTE: 如果遇到错误，请联系 https://support.netapp.com["NetApp 支持"]。
 
 . 在恢复报告完成后等待5分钟，然后检查故障转移状态和恢复状态： `storage failover show`和 `storage failover show-giveback`。
 . 同步并验证密钥状态：

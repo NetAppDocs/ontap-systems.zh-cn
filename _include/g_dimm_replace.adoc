@@ -417,6 +417,18 @@ NOTE: 替代控制器从运行状况良好的控制器获得电源、并在完�
 
 
 |===
+. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. 从运行状况良好的控制器的控制台还原自动交还：
++
+`storage failover modify -node local -auto-giveback true`
+
+. 如果启用了AutoSupport ，则恢复（取消抑制）自动案例创建：
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 

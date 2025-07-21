@@ -61,10 +61,19 @@ image:../media/icon_round_2.png["标注编号2"]
 +
 重新启动受损控制器还会重新初始化I/O模块和其他组件。
 
-. 从运行正常的控制器交还受损控制器： `storage failover giveback -ofnode _impaired_node_name_`
+. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
+
 . 重复上述步骤、将I/O模块添加到另一个控制器。
-. 从运行状况良好的控制器的控制台还原自动交还： `storage failover modify -node local -auto-giveback _true_`
-. 如果启用了AutoSupport、则还原(取消禁止)自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`
+. 从运行状况良好的控制器的控制台还原自动交还：
++
+`storage failover modify -node local -auto-giveback true`
+
+. 如果启用了AutoSupport ，则恢复（取消抑制）自动案例创建：+
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
 
 
 --
@@ -140,14 +149,29 @@ image:../media/icon_round_2.png["标注编号2"]
 如果安装了存储I/O模块，请按照中所述安装NS224磁盘架并为其布线 https://docs.netapp.com/us-en/ontap-systems/ns224/hot-add-shelf-overview.html["热添加工作流"^]。
 
 . 重复I/O模块的拆卸和安装步骤、在控制器中添加任何其他I/O模块。
-. 从Loader提示符处重新启动受损控制器： `bye`
+. 从 LOADER 提示符重新启动受损的控制器：
++
+`bye`
+
 +
 重新启动受损控制器还会重新初始化I/O模块和其他组件。
 
-. 从运行正常的控制器交还受损控制器： `storage failover giveback -ofnode _impaired_node_name_`
-. 从运行状况良好的控制器的控制台还原自动交还： `storage failover modify -node local -auto-giveback _true_`
-. 如果启用了AutoSupport、则还原(取消禁止)自动创建案例： `system node autosupport invoke -node * -type all -message MAINT=END`
-. 如果安装了NIC模块、请将每个端口的使用模式指定为_network_： `storage port modify -node _node_name_ -port _port_name_ -mode _network_`
+. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. 从运行状况良好的控制器的控制台还原自动交还：
++
+`storage failover modify -node local -auto-giveback true`
+
+. 如果启用了AutoSupport ，则恢复（取消抑制）自动案例创建：
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+. 如果您安装了 NIC 模块，请将每个端口的使用模式指定为 _network_：
++
+`storage port modify -node _node_name_ -port _port_name_ -mode _network_`
+
 . 对另一个控制器重复上述步骤。
 
 

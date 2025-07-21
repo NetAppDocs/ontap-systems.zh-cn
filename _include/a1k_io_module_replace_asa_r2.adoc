@@ -143,13 +143,13 @@ I/O凸轮闩锁
 
 NOTE: 重新启动受损控制器还会重新初始化I/O模块和其他组件。
 
-. Return the node to normal operation:
+. 通过交还存储使受损控制器恢复正常运行：
 +
 `storage failover giveback -ofnode _impaired_node_name_`
 
 . 从运行状况良好的控制器的控制台还原自动交还：
 +
-`storage failover modify -node local -auto-giveback _true_`
+`storage failover modify -node local -auto-giveback true`
 
 . 如果启用了AutoSupport、则还原自动创建案例：
 +

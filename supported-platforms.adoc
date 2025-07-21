@@ -19,7 +19,7 @@ ONTAP存储系统与多个版本的ONTAP软件兼容。了解存储系统和驱�
 ====
 .AFF 系统
 --
-AFF A系列和AFF C系列系统提供了一个专为虚拟化环境量身定制的强大横向扩展平台。它们可以作为独立系统部署、也可以作为NetApp ONTAP配置中的高性能层部署。link:https://www.netapp.com/data-storage/all-flash-san-storage-array["详细了解AFF系统"](英文)
+AFF A系列和AFF C系列系统提供了一个专为虚拟化环境量身定制的强大横向扩展平台。它们可以作为独立系统部署、也可以作为NetApp ONTAP配置中的高性能层部署。详细了解link:https://www.netapp.com/aff-a-series/["AFF A系列系统"]和link:https://www.netapp.com/aff-c-series/["AFF C系列系统"]。
 
 从以下ONTAP版本开始、支持AFF A系列和AFF C系列系统。
 
@@ -109,7 +109,7 @@ ONTAP 9.16.0.::
 --
 .ASA 系统
 --
-ASA A系列和ASA C系列系统提供简化的专用SAN体验、可使用FCP或iSCSI协议为企业级任务关键型数据库和其他SAN工作负载提供持续的数据可用性。link:https://www.netapp.com/data-storage/all-flash-san-storage-array["详细了解ASA系统"](英文)
+ASA A系列和ASA C系列系统提供简化的专用SAN体验、可使用FCP或iSCSI协议为企业级任务关键型数据库和其他SAN工作负载提供持续的数据可用性。link:https://www.netapp.com/asa/["详细了解ASA系统"](英文)
 
 从以下ONTAP版本开始、支持ASA系统。
 

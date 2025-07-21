@@ -9965,8 +9965,6 @@ SFP+(目标/启动程序)</block>
   <block id="5914cbd8747a44dda8282e3747061adf" category="section-title">存储系统重量</block>
   <block id="bb7471e13b2ece22767cb35368ded2a7" category="section-title">磁盘架重量</block>
   <block id="fe464b77547b113c26b6c4a663f8d99c" category="paragraph">移动或抬起磁盘架时、请采取必要的预防措施。</block>
-  <block id="55a163291cdcad8ab6af6a932720e193" category="inline-link-macro">详细了解AFF系统</block>
-  <block id="67bacc9d73c9b4789f2c3cde9ab59ad8" category="paragraph">AFF A系列和AFF C系列系统提供了一个专为虚拟化环境量身定制的强大横向扩展平台。它们可以作为独立系统部署、也可以作为NetApp ONTAP配置中的高性能层部署。<block ref="587107815f5f912e7d3b8f989c8db7df" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="9d9de1698f7e401c78687204de906ee5" category="list-text">AFF A20</block>
   <block id="f8f6ba2d572ef729148f2d89d8ff810a" category="list-text">AFF A30</block>
   <block id="cc6089132b9a5e4af29a76834480cc1a" category="list-text">AFF A50</block>
@@ -9976,7 +9974,6 @@ SFP+(目标/启动程序)</block>
   <block id="8c20e9c3f526d526af74c044baf7da64" category="inline-link-macro">详细了解ASA R2系统</block>
   <block id="77f5d8fa3689e046b946bfbacf61536e" category="paragraph">ASA R2系统提供统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。<block ref="2f9305bd6f8a2949646123561cb92ab4" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="e2ead389bfa8a65f29bc4e57fdaf4a7b" category="inline-link-macro">详细了解ASA系统</block>
-  <block id="0f14ce10f8ff3a34f46c25bba942372c" category="paragraph">ASA A系列和ASA C系列系统提供简化的专用SAN体验、可使用FCP或iSCSI协议为企业级任务关键型数据库和其他SAN工作负载提供持续的数据可用性。<block ref="9c36b794130c589d6d71e1c2ef02ceef" category="inline-link-macro-rx"></block>(英文)</block>
   <block id="2ce90a39656cd7489bede7894c2a9943" category="list-text">ASA AFF A250</block>
   <block id="7ddb32a2b45e07e265f9e454f57d2eb0" category="list-text">ASA AFF A800</block>
   <block id="b5efaabac2b0776c5f0ca29587d418e4" category="list-text">ASA AFF A400</block>
@@ -10451,7 +10448,6 @@ SFP+(目标/启动程序)</block>
   <block id="7e5d96420c04db907e37ffc0f25670b5" category="doc">ONTAP硬件和软件兼容性</block>
   <block id="66a2f01bbe5e27a2d0a21ef15725c491" category="paragraph">有关ONTAP硬件系统的完整配置支持和限制，请参见<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block>。有关ONTAP 9软件中的已知问题、限制和升级注意事项的详细信息，请参见<block ref="84fe5db170ffeba3db16dd5c6d7a58db" category="inline-link-rx"></block>。</block>
   <block id="c43fddbfefcc8dab0b365319ffc7ad2f" category="summary">了解适用于ONTAP硬件系统的新平台。</block>
-  <block id="b1243a1d02acf9453220663ea4294abf" category="paragraph">了解ONTAP硬件系统的新增功能。</block>
   <block id="73b3856e20fbea83dc1573f8203ad6a4" category="section-title">2024年12月</block>
   <block id="909cc883ddbed6fc06a25647ba1f212b" category="paragraph">这些系统可为AI、VMware、数据库和分析等任务关键型工作负载提供基于ML的实时勒索软件检测、无缝云集成和无与伦比的性能、并支持块、文件和对象存储。</block>
   <block id="3c8e670cb2f634a0b68672d5f01ec686" category="inline-link-macro">详细了解AFF A系列系统</block>
@@ -11666,8 +11662,6 @@ SFP+(目标/启动程序)</block>
   <block id="1a22b1d20df6f5e65b8bb7003b91c005" category="section-title">Step 3: Reassign disks</block>
   <block id="e7c2a2aadaeb3f0bbd622bc6dfdbba35" category="section-title">第3步：验证控制器状态</block>
   <block id="97e9b99ec4fb1f882057ec866b408907" category="paragraph">未使用的I/O插槽应安装空白模块、以防止可能出现散热问题并符合EMC要求。</block>
-  <block id="569db66c718b1f6397ae27568f2b6360" category="list-text">从运行正常的控制器交还受损控制器：<block ref="30edaf7c9fa43c78aeaf4b8fabb7af1a" prefix=" " category="inline-code"></block></block>
-  <block id="8036f04f3126628e1157f62c82a46ac6" category="list-text">如果安装了NIC模块、请将每个端口的使用模式指定为_network_：<block ref="b5ce1b43695dab734898874661154238" prefix=" " category="inline-code"></block></block>
   <block id="bc8cd0b25c4f8f5afe020026e3d82314" category="paragraph">此过程完成并显示<block ref="fd27264bf07cac36017c79d5bc35af81" prefix=" " category="inline-code"></block>消息。</block>
   <block id="59b113844b84da51f785fb0828d66ba7" category="list-text">如果未成功还原密钥、系统将暂停并指示它无法还原密钥。此时将显示错误和警告消息。重新运行恢复过程：</block>
   <block id="f3b6228c1cbd418b703785112e6450cf" category="list-text">如果受损控制器出现提示、请按键<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>覆盖_/etc/ssh/ssh_host_Ossa_key_。</block>
@@ -11709,7 +11703,6 @@ SFP+(目标/启动程序)</block>
   <block id="2dcdf3018c4d483d8c38e450dbdf5944" category="list-text">如果您的系统具有V_StorageAttach许可证、则在执行此过程之前、必须参考其他必需步骤。</block>
   <block id="1253bf6221482d606a7719ba415d9176" category="admonition">此时请勿连接任何其他电缆或电源线。</block>
   <block id="c69071436bdfe1b2f2edc29969a29980" category="admonition">替代控制器从运行状况良好的控制器获得电源、并在完全固定在机箱中后立即开始启动。</block>
-  <block id="5cb4dbca31ce772b17987c15a725b52e" category="list-text">Return the node to normal operation:</block>
   <block id="257315f653a5868c10e8897449aa264f" category="list-text">从运行状况良好的控制器的控制台还原自动交还：</block>
   <block id="b9adb77861a7f27800ce914be076df5d" category="list-text"><block ref="b9adb77861a7f27800ce914be076df5d" category="inline-link-macro-rx"></block></block>
   <block id="ec3558cc556230de3472d8f669055445" category="paragraph"><block ref="ec3558cc556230de3472d8f669055445" category="inline-link-macro-rx"></block></block>
@@ -12027,4 +12020,19 @@ SFP+(目标/启动程序)</block>
   <block id="72dc238e73081e826d88e29df24b4c58" category="paragraph">如果硬件故障需要更换AFF C30或AFF C60系统的机箱。更换过程包括移除控制器、移除驱动器、安装更换机箱以及重新安装机箱组件。</block>
   <block id="149eed3e03e259c4e52b1de45a4fe3e9" category="paragraph">要更换磁盘架中的驱动器抽屉，您可以暂停整个存储系统（HA 对），这样可以保留磁盘架上的数据聚合。或者，您可以保持 HA 对正常运行，但这需要您将数据聚合中的所有数据移至磁盘架的磁盘驱动器上，然后使其脱机并删除这些数据聚合。如果磁盘架包含根聚合，则必须暂停 HA 对。</block>
   <block id="12e16a41f9ae5c97288e4e9e78b0bbf6" category="list-text">将所有数据从位于机架上所有磁盘驱动器上的数据聚合中移动。</block>
+  <block id="18de2c69e2059bfb4397c266ca003000" category="list-text">如果启用了AutoSupport ，则恢复（取消抑制）自动案例创建：+</block>
+  <block id="2aa2517148232c12ae58df0e0682f437" category="list-text">从 LOADER 提示符重新启动受损的控制器：</block>
+  <block id="9607981dab4fa77906d0065cb84e707f" category="list-text">如果启用了AutoSupport ，则恢复（取消抑制）自动案例创建：</block>
+  <block id="6752a0d2cd717c7824d154f27bacd610" category="list-text">如果您安装了 NIC 模块，请将每个端口的使用模式指定为 _network_：</block>
+  <block id="249c68a3d34c9d4fc7fa8e3d5b116625" category="paragraph"><block ref="b5ce1b43695dab734898874661154238" prefix="" category="inline-code"></block></block>
+  <block id="b29e463b3ffa2246f6ca9731ac640d4f" category="list-text">在健康的控制器上，检查日期和时间：</block>
+  <block id="540405fb4a2a991ec2b5bd0ec4a08d48" category="paragraph"><block ref="1cac34e5e8442fb80d6ade838d969fc0" prefix="" category="inline-code"></block></block>
+  <block id="526f0f6f4025118277a35fffe0e34747" category="list-text">在受损控制器上，在 LOADER 提示符下检查时间和日期：</block>
+  <block id="32544c893b7f5f19e7a5f77a5c3e83d8" category="list-text">如果需要，修改日期：</block>
+  <block id="b44d7cf4a1e6c8202283ae7adf14c206" category="paragraph"><block ref="7e61842d1d9bb6d13127efea49e14c96" prefix="" category="inline-code"></block></block>
+  <block id="be701243d86021173bd71c46c1236c57" category="list-text">如果需要，请设置格林威治标准时间 (GMT)：</block>
+  <block id="a85af06f0bd401f4adf6e2aa1bb77ee7" category="paragraph">AFF A系列和AFF C系列系统提供了一个专为虚拟化环境量身定制的强大横向扩展平台。它们可以作为独立系统部署、也可以作为NetApp ONTAP配置中的高性能层部署。详细了解<block ref="e32d7f43a965b20b68ffaecd5419d04d" category="inline-link-macro-rx"></block>和<block ref="bab42395a66f3eaff2c39fe532427141" category="inline-link-macro-rx"></block>。</block>
+  <block id="d28d6e92f4637a29005ec41e1e153608" category="paragraph">ASA A系列和ASA C系列系统提供简化的专用SAN体验、可使用FCP或iSCSI协议为企业级任务关键型数据库和其他SAN工作负载提供持续的数据可用性。<block ref="81e0314610971d584490a2155e03ad8e" category="inline-link-macro-rx"></block>(英文)</block>
+  <block id="f43d5eca9a113ac2db5fd46e7f859dc2" category="inline-link-macro">不再支持硬件</block>
+  <block id="0fabeaca13110e9bf6952a432c728512" category="paragraph">了解ONTAP硬件系统的新增功能。有关其他支持信息，请参阅<block ref="957a5393ecc937ae8cfffe4d00549121" category="inline-link-macro-rx"></block>和<block ref="54b6b6b0b8b3660c20a40919b7a145c9" category="inline-link-macro-rx"></block> 。</block>
 </blocks>
