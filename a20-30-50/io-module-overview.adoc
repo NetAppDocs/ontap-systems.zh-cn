@@ -1,23 +1,30 @@
 ---
 permalink: a20-30-50/io-module-overview.html 
 sidebar: sidebar 
-keywords: AFF A90, AFF A70, replace io module 
-summary: AFF A20、AFF A30和AFF A50系统可以灵活地扩展或更换I/O模块、以增强网络连接和性能。在升级网络功能或解决故障模块时、添加或更换I/O模块至关重要。 
+keywords: AFF A20, AFF A30, and AFF A50, replace io module, add io module, hotswap io module 
+summary: AFF A20、 AFF A30 和AFF A50 存储系统可灵活扩展或更换 I/O 模块，从而增强网络连接性和性能。在升级网络功能或处理故障模块时，添加、热插拔或更换 I/O 模块至关重要。 
 ---
-= 添加和更换I/O模块概述—AFF A20、AFF A30和AFF A50
+= 添加、热插拔和更换 I/O 模块概述 - AFF A20、 AFF A30 和AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-AFF A20、AFF A30和AFF A50系统可以灵活地扩展或更换I/O模块、以增强网络连接和性能。在升级网络功能或解决故障模块时、添加或更换I/O模块至关重要。
+AFF A20、 AFF A30 和AFF A50 存储系统可灵活扩展或更换 I/O 模块，从而增强网络连接性和性能。在升级网络功能或处理故障模块时，添加、热插拔或更换 I/O 模块至关重要。
 
-您可以将存储系统中发生故障的I/O模块更换为相同类型的I/O模块或不同类型的I/O模块。您还可以向具有可用插槽的存储系统添加I/O模块。
+您可以使用相同类型的 I/O 模块或不同类型的 I/O 模块来更换存储系统中发生故障的 I/O 模块。当存储系统满足特定要求时，您可以热插拔集群和 HA I/O 模块。您还可以将 I/O 模块添加到具有可用插槽的存储系统。
 
 * link:io-module-add.html["添加I/O模块"]
 +
 添加额外的I/O模块可以提高冗余度、从而有助于确保即使一个I/O模块发生故障、存储系统仍可正常运行。
+
+* link:io-module-hotswap-ha-slot4.html["热插拔集群和 HA I/O 模块"]
++
+热插拔故障集群和 HA I/O 模块可以将存储系统恢复到最佳运行状态。热插拔无需手动接管受损控制器。
+
++
+要使用此过程，您的存储系统必须运行ONTAP 9.17.1 或更高版本，并且满足特定的存储系统要求。
 
 * link:io-module-replace.html["更换I/O模块"]
 +

@@ -2,16 +2,16 @@
 permalink: a70-90/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, replace the boot media 
-summary: AFF A70或AFF A90系统中的引导介质用于存储基本固件和配置数据。更换过程包括卸下系统管理模块、卸下受损的启动介质、安装替代启动介质、然后将ONTAP映像传输到替代启动介质。 
+summary: AFF A70或AFF A90系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除系统管理模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。 
 ---
-= 更换启动介质- AFF A70和AFF A90
+= 更换启动介质并准备手动启动恢复 - AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-AFF A70或AFF A90系统中的引导介质用于存储基本固件和配置数据。更换过程包括卸下系统管理模块、卸下受损的启动介质、安装替代启动介质、然后将ONTAP映像传输到替代启动介质。
+AFF A70或AFF A90系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除系统管理模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。
 
 
 

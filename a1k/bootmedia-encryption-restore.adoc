@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a1k, post boot media replacement steps for okm, nse, and nve 
 summary: 在AFF A1K系统的替代启动介质上恢复加密、以确保持续提供数据保护。更换过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。 
 ---
-= 恢复启动介质上的加密- AFF A1K
+= 手动启动恢复后恢复加密密钥 - AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

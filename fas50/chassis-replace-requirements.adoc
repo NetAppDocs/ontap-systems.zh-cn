@@ -27,16 +27,9 @@ summary: 在更换FAS50系统的机箱之前、请确保满足成功更换的必
 
 == 注意事项
 
-* *机箱更换过程会造成系统中断。*For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.
+* 机箱更换过程会造成系统中断。For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.
 * 您可以对存储系统支持的所有ONTAP版本使用机箱更换过程。
 * 在编写机箱更换过程时、假设您要将挡板、驱动器、任何驱动器挡片和控制器移至新机箱。
-* 如果需要、您可以打开存储系统位置(蓝色) LED、以帮助您以物理方式定位受影响的存储系统。使用SSH登录到BMC并输入 `system location-led _on_`命令。
-+
-存储系统具有三个定位LED：操作员显示面板上一个、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.
-
-+
-您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
-
 
 
 .下一步是什么？

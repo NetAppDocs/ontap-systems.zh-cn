@@ -19,16 +19,23 @@ summary: 维护AFF C80存储系统的硬件、以确保长期可靠性和最佳�
 
 == 系统组件
 
-对于AFF C80存储系统、您可以对以下组件执行维护过程。
+对于AFF C80 存储系统，您可以对以下组件执行维护过程。
 
 [cols="25,65"]
 |===
 
 
  a| 
-link:bootmedia-replace-workflow.html["启动介质"]
+link:bootmedia-replace-workflow-bmr.html["启动媒体 - 自动恢复"]
  a| 
-启动介质用于存储系统在启动时使用的一组主和二级ONTAP映像文件。
+启动介质存储一组主ONTAP映像文件和一组辅助 ONTAP 映像文件，存储系统使用这些文件从配对节点启动映像，并自动运行相应的启动菜单选项，以将启动映像安装到替换的启动介质上。自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
+
+
+
+ a| 
+link:bootmedia-replace-workflow.html["启动媒体-手动恢复"]
+ a| 
+启动介质存储一组主ONTAP映像文件和一组辅助 ONTAP 映像文件，存储系统使用这些文件从 USB 驱动器启动映像并从合作伙伴节点恢复配置。
 
 
 

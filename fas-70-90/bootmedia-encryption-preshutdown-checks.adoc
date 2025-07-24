@@ -2,9 +2,9 @@
 permalink: fas-70-90/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: fas70, fas90, pre-shutdown checks for onboard encryption keys 
-summary: '要确保FAS70或FAS90存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。' 
+summary: 为确保 FAS70 或 FAS90 存储系统上的数据安全，您需要验证启动介质上的加密密钥支持情况及其状态。请检查您的ONTAP版本是否支持NetApp卷加密，并在关闭控制器之前检查密钥管理器是否处于活动状态。 
 ---
-= 检查启动介质(FAS70和FAS90)上的加密密钥支持和状态
+= 检查手动启动介质恢复的加密支持 - FAS70 和 FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

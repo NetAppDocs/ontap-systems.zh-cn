@@ -2,16 +2,16 @@
 permalink: c80/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: c80, replace the boot media 
-summary: AFF C80系统中的启动介质用于存储基本固件和配置数据。更换过程包括卸下系统管理模块、卸下受损的启动介质、安装替代启动介质、然后将ONTAP映像传输到替代启动介质。 
+summary: AFF C80 系统中的启动介质存储了重要的固件和配置数据。更换过程包括移除系统管理模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。 
 ---
-= 更换启动介质- AFF C80
+= 更换启动介质并准备手动启动恢复 - AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-AFF C80系统中的启动介质用于存储基本固件和配置数据。更换过程包括卸下系统管理模块、卸下受损的启动介质、安装替代启动介质、然后将ONTAP映像传输到替代启动介质。
+AFF C80 系统中的启动介质存储了重要的固件和配置数据。更换过程包括移除系统管理模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。
 
 
 

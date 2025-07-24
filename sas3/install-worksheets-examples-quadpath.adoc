@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: complete, controller-to-stack, cabling, cable, worksheet, quad-path, ha, configuration, ha, configuration, sas, hba, controller-to-stack cabling worksheet and cabling example for a quad-path ha configuration with two quad-port sas hbas 
 summary: 您可以使用完整的控制器到堆栈布线工作表和布线示例为具有两个四端口 SAS HBA 的四路径 HA 配置布线。 
 ---
-= 具有两个四端口SAS HBA的四路径HA配置的控制器到堆栈布线工作表和布线示例—磁盘架带有IOM12/IOM12B模块
+= 具有两个四端口 SAS HBA（DS212C、DS224C 或 DS460C）的四路径 HA 配置的布线工作表
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用完整的控制器到堆栈布线工作表和布线示例为具有两个四端口 SAS HBA 的四路径 HA 配置布线。
+您可以使用已完成的控制器到堆栈布线工作表和布线示例，为具有两个四端口 SAS HBA 的四路径 HA 配置布线。这适用于带有 IOM12/IOM12B 模块的磁盘架。
 
 * 如果需要，可以参考 link:install-cabling-rules.html["SAS 布线规则"] 有关支持的配置，控制器插槽编号约定，磁盘架到磁盘架连接以及控制器到磁盘架连接（包括端口对的使用）的信息。
 * 如果需要，可以参考 link:install-cabling-worksheets-how-to-read-quadpath.html["如何阅读使用缆线连接控制器到堆栈连接以实现四路径连接的工作表"]。

@@ -21,8 +21,6 @@ indexpage:
       url: "../sas3/install-hot-add-shelf.html"
     - title: 更改磁盘架 ID
       url: "../sas3/install-change-shelf-id.html"
-    - title: 将磁盘架热添加到IOM6磁盘架堆栈(混合堆栈)
-      url: "../sas3/iom12-hot-add-mix.html"
     - title: SAS 布线规则，工作表和示例
       url: "../sas3/overview-cabling-rules-examples.html"
   - title: 维护NS224磁盘架

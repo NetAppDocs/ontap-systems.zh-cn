@@ -2,16 +2,16 @@
 permalink: c80/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: c80, boot the recovery image 
-summary: 如果AFF C80系统中的启动介质损坏、您可以从USB驱动器启动恢复映像、从配对节点还原配置并验证环境变量 
+summary: 在AFF C80 系统中安装新的启动介质设备后，您可以从 USB 驱动器手动启动恢复映像以从合作伙伴节点恢复配置。 
 ---
-= 启动恢复映像- AFF C80
+= 从 USB 驱动器手动恢复启动媒体 - AFF C80
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在AFF C80系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。
+在AFF C80 系统中安装新的启动介质设备后，您可以从 USB 驱动器手动启动恢复映像以从合作伙伴节点恢复配置。
 
 .步骤
 . 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`

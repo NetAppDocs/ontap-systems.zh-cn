@@ -2,9 +2,9 @@
 permalink: a70-90/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, post boot media replacement steps for okm, nse, and nve 
-summary: 在AFF A70或AFF A90系统中的替代启动介质上恢复加密、以确保持续提供数据保护。此过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。 
+summary: 在AFF A70或AFF A90系统中的替代启动介质上恢复加密、以确保持续提供数据保护。更换过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。 
 ---
-= 恢复启动介质上的加密- AFF A70和AFF A90
+= 手动启动恢复后恢复加密密钥 - AFF A70和AFF A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

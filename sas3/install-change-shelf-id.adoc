@@ -4,25 +4,14 @@ sidebar: sidebar
 keywords: change, shelf, id, system, ontap, run, hot-add, ontap, controller, module, available, serve, data, unown, spare, offline, aggregate 
 summary: 当 ONTAP 尚未运行或在将磁盘架连接到系统之前热添加磁盘架时，您可以更改系统中的磁盘架 ID 。您也可以在 ONTAP 启动并运行 \ （控制器模块可用于提供数据 \ ）且磁盘架中的所有驱动器均为无所有者，备用或脱机聚合的一部分时更改磁盘架 ID 。 
 ---
-= 更改磁盘架ID—具有IOM12/IOM12B模块的磁盘架
+= 更改机架 ID - DS212C、DS224C 或 DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-当 ONTAP 尚未运行或在将磁盘架连接到系统之前热添加磁盘架时，您可以更改系统中的磁盘架 ID 。您还可以在 ONTAP 启动并运行（控制器模块可用于提供数据）且磁盘架中的所有驱动器均为无主聚合，备用聚合或脱机聚合的一部分时更改磁盘架 ID 。
-
-.开始之前
-* 如果 ONTAP 已启动且正在运行（控制器模块可用于提供数据），则必须已验证磁盘架中的所有驱动器是否为无主聚合，备用聚合或脱机聚合的一部分。
-+
-您可以使用 `storage disk show -shelf _shelf_number_` 命令验证驱动器的状态。如果驱动器发生故障，则 Container Type 列中的输出应显示 spare 或 broken 。此外， Container Name 和 owner 列应包含一个短划线。
-
-* 您可以运行 Active IQ Config Advisor 或使用 `storage shelf show -fields shelf-id` 命令验证系统中已在使用的磁盘架 ID 。
-+
-https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp 下载： Config Advisor"]
-
-
+在配备 IOM12/IOM12B 模块的系统中，您可以在ONTAP尚未运行或在将磁盘架连接到系统之前进行热添加时更改磁盘架 ID。您还可以在ONTAP已启动并运行（控制器模块可用于提供数据）且磁盘架中的所有驱动器均为无主驱动器、备用驱动器或属于已脱机聚合体时更改磁盘架 ID。
 
 .关于此任务
 * 有效磁盘架 ID 为 00 到 99 。
@@ -34,6 +23,14 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 +
 重新打开电源之前等待的时间取决于 ONTAP 的状态，如本操作步骤后面所述。
 
+
+
+.开始之前
+* 如果 ONTAP 已启动且正在运行（控制器模块可用于提供数据），则必须已验证磁盘架中的所有驱动器是否为无主聚合，备用聚合或脱机聚合的一部分。
++
+您可以使用 `storage disk show -shelf _shelf_number_` 命令验证驱动器的状态。如果驱动器发生故障，则 Container Type 列中的输出应显示 spare 或 broken 。此外， Container Name 和 owner 列应包含一个短划线。
+
+* 您可以通过运行Active IQ Config Advisor或使用 `storage shelf show -fields shelf-id`命令。您可以 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["下载并访问Active IQ Config Advisor"]在NetApp支持站点上。
 
 
 .步骤

@@ -1,0 +1,59 @@
+= 
+:allow-uri-read: 
+
+
+准备存储系统和 I/O 模块插槽 4，以便可以安全地移除故障集群和 HA I/O 模块：
+
+. 正确接地。
+. 拔掉故障集群和 HA I/O 模块的电缆。
++
+确保标记电缆，以便稍后在此过程中将它们重新连接到相同的端口。
+
+. 如果启用了AutoSupport 、则通过调用AutoSupport 消息禁止自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+例如，以下AutoSupport消息会抑制自动案例创建两小时：
+
++
+`node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 从受损控制器的控制台禁用自动交还：
++
+`storage failover modify -node local -auto-giveback false`
+
++
+
+NOTE: 当您看到_Do you want to disable auto-giveback？_时、输入`y`。
+
+. 准备移除插槽 4 中的故障集群和 HA 模块，方法是将其从服务中移除并关闭电源：
++
+`system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
+
++
+
+NOTE: 当您看到“您想继续吗？”时，请输入 `y` 。
+
++
+例如，以下命令准备移除节点 2（受损控制器）上插槽 4 中的模块，并显示一条可安全移除的消息：
+
++
+[listing]
+----
+node2::> system controller slot module remove -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered off for removal.
+
+Do you want to continue? {y|n}: y
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+. 验证发生故障的集群以及插槽 4 中的 HA 模块是否已关闭：
++
+`system controller slot module show`
+
++
+输出应该显示 `_powered-off_`在插槽 4 中发生故障的模块的状态列中。
+
+

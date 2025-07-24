@@ -11,19 +11,25 @@ summary: 在更换ASA A1K系统中的启动介质之前、请确保满足成功�
 
 
 [role="lead"]
-在更换ASA A1K系统中的启动介质之前、请确保满足成功更换所需的要求。这包括验证您是否具有正确的替代启动介质、确认控制器上没有有故障的集群端口、以及确定是否已启用板载密钥管理器(OKM)或外部密钥管理器(EKM)。
+在更换ASA A1K 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否拥有正确的替换启动介质、确认受损控制器上的集群端口正常工作，以及确定是否启用了板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。
 
 查看以下要求。
 
 * 您必须将故障启动介质更换为从NetApp收到的替代启动介质。
-* 受损控制器上不得存在任何故障集群端口。
+* 集群端口用于在自动启动恢复过程中在两个控制器之间进行通信。请确保受损控制器上的集群端口正常工作。
 * 对于OKM、您需要OKM密码短语文件内容。
 * 对于EMM、您需要配对节点上以下文件的副本：
 +
-** /cfcard/kmip/servers.cfg文件。
-** /cfcard/kmip/certs/client.crt文件。
-** /cfcard/kmip/certs client.key文件。
-** /cfcard/kmip/certs或CA.prom文件。
+** /cfcard/kmip/servers.cfg
+** /cfcard/kmip/certs/client.crt
+** /cfcard/kmip/certs/client.key
+** /cfcard/kmip/certs/CA.pem
+
+
+* 更换受损的启动介质时，将命令应用到正确的控制器至关重要：
++
+** _受损控制器_是您正在执行维护的控制器。
+** _健康控制器_是受损控制器的 HA 伙伴。
 
 
 

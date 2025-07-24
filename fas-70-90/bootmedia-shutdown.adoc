@@ -2,16 +2,16 @@
 permalink: fas-70-90/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: fas70, fas90, shut down the controller 
-summary: 在更换启动介质时、关闭FAS70或FAS90存储系统中受损的控制器、以防止数据丢失并确保系统稳定性。 
+summary: 关闭 FAS70 或 FAS90 存储系统中受损的控制器，以防止数据丢失并在手动启动介质恢复过程中保持系统稳定性。 
 ---
-= 关闭控制器以更换启动介质- FAS70和FAS90
+= 关闭控制器以进行手动启动介质恢复 - FAS70 和 FAS90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在更换启动介质时、关闭FAS70或FAS90存储系统中受损的控制器、以防止数据丢失并确保系统稳定性。
+关闭 FAS70 或 FAS90 存储系统中受损的控制器，以防止数据丢失并在手动启动介质恢复过程中保持系统稳定性。
 
 [role="tabbed-block"]
 ====

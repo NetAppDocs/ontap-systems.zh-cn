@@ -2,16 +2,16 @@
 permalink: a1k/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a1k, shut down the controller 
-summary: 在更换启动介质时、关闭AFF A1K存储系统中受损的控制器、以防止数据丢失并确保系统稳定性。 
+summary: 关闭AFF A1K存储系统中受损的控制器，以防止数据丢失并在手动启动介质恢复过程中保持系统稳定性。 
 ---
-= 关闭控制器以更换启动介质- AFF A1K
+= 关闭控制器以进行手动启动介质恢复 - AFF A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在更换启动介质时、关闭AFF A1K存储系统中受损的控制器、以防止数据丢失并确保系统稳定性。
+关闭AFF A1K存储系统中受损的控制器，以防止数据丢失并在手动启动介质恢复过程中保持系统稳定性。
 
 [role="tabbed-block"]
 ====

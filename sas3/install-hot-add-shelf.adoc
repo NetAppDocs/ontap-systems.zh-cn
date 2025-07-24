@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: hot-add, disk, shelves, shelf, iom12, exist, stack, module, sas, hba, onboard, sas, port, controller, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
 summary: 您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添加到具有IOM12/IOM12B模块的现有磁盘架堆栈中、或者将一个或多个具有IOM12B模块的磁盘架堆栈直接热添加到控制器上的SAS HBA或板载SAS端口中。 
 ---
-= 热添加磁盘架—具有IOM12/IOM12B模块的磁盘架
+= 热添加架子 - DS212C、DS224C 或 DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,31 +13,17 @@ summary: 您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添�
 [role="lead"]
 您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添加到具有IOM12/IOM12B模块的现有磁盘架堆栈中、或者将一个或多个具有IOM12B模块的磁盘架堆栈直接热添加到控制器上的SAS HBA或板载SAS端口中。
 
-.关于此任务
-您不能使用此操作步骤 混用堆栈：将具有IOM12/IOM12B模块的磁盘架热添加到具有IOM6模块的磁盘架堆栈中。If you need to mix a stack, use link:iom12-hot-add-mix.html["将 IOM12 磁盘架热添加到 IOM6 磁盘架堆栈中"]。
+.开始之前
+在热添加磁盘架之前，您必须满足某些要求并熟悉此过程的最佳实践和注意事项。
 
-
-
-== 使用IOM12/IOM12B模块热添加磁盘架的要求
-
-在使用IOM12/IOM12B模块热添加磁盘架之前、您的系统必须满足特定要求。
-
-
-
-=== 系统状态
-
-* 您的系统和 ONTAP 版本必须支持您要热添加的磁盘架，包括 IOM ，磁盘驱动器和 SAS 缆线。
+* 在热添加带有 IOM12/IOM12B 模块的磁盘架之前，请确保您的系统满足某些要求：
 +
-https://hwu.netapp.com["NetApp Hardware Universe"^]
-
-* 您的系统必须小于支持的最大磁盘驱动器数，至少等于您计划热添加的磁盘架数。
+** 您的系统和ONTAP版本必须支持要热添加的磁盘架，包括 IOM、磁盘驱动器和 SAS 线缆。ONTAP可以在 https://hwu.netapp.com["NetApp Hardware Universe"^] 。
+** 您的系统必须小于支持的最大磁盘驱动器数，至少等于您计划热添加的磁盘架数。
 +
-热添加磁盘架后，您不能超过系统支持的最大磁盘驱动器数。
+热添加磁盘架后，您的系统支持的磁盘驱动器数量不得超过上限。您可以在 https://hwu.netapp.com["NetApp Hardware Universe"^]
 
-+
-https://hwu.netapp.com["NetApp Hardware Universe"^]
-
-* 如果要热添加一个或多个磁盘架的堆栈（直接添加到平台控制器），则系统必须具有足够的可用 PCI SAS HBA 或板载 SAS 端口，或者同时具有这两者的组合。
+** 如果要热添加一个或多个磁盘架的堆栈（直接添加到平台控制器），则系统必须具有足够的可用 PCI SAS HBA 或板载 SAS 端口，或者同时具有这两者的组合。
 +
 [NOTE]
 ====
@@ -46,117 +32,76 @@ https://hwu.netapp.com["NetApp Hardware Universe"^]
 支持使用 6 Gb SAS HBA 或 6 Gb SAS HBA 和 12 Gb SAS HBA 的组合；但是，与 6 Gb SAS HBA 的 IOM12 模块连接协商为 6 Gb ，从而降低性能。
 
 ====
-* 您的系统不能显示任何 SAS 布线错误消息。
+** 您的系统不能显示任何 SAS 布线错误消息。
 +
-下载并运行 Config Advisor 以验证 SAS 连接是否已正确布线。
+验证 SAS 连接是否正确 https://mysupport.netapp.com/site/tools["下载并运行Config Advisor"^] 。
 
 +
 您必须使用错误消息提供的更正操作更正任何布线错误。
 
+
+
+* 熟悉使用 mini-SAS HD SAS 光缆的要求和注意事项：
 +
-https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
-
-
-
-
-
-=== 使用迷你 SAS HD SAS 光缆
-
-* 如果在磁盘架堆栈中使用迷你 SAS HD SAS 光缆或混合使用迷你 SAS HD SAS 光缆和 SAS 铜缆，则必须符合中的规则 link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["迷你 SAS HD SAS 光缆规则"]。
-* 如果要将使用迷你 SAS HD SAS 光缆的磁盘架热添加到使用 SAS 铜缆连接的磁盘架堆栈中，则可以临时在堆栈中同时使用这两种电缆类型。
+** 如果在磁盘架堆栈中使用迷你 SAS HD SAS 光缆或混合使用迷你 SAS HD SAS 光缆和 SAS 铜缆，则必须符合中的规则 link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["迷你 SAS HD SAS 光缆规则"]。
+** 如果要将使用迷你 SAS HD SAS 光缆的磁盘架热添加到使用 SAS 铜缆连接的磁盘架堆栈中，则可以临时在堆栈中同时使用这两种电缆类型。
 +
 热添加磁盘架后，您必须更换堆栈中其余磁盘架到磁盘架连接以及控制器到堆栈连接的 SAS 铜缆，以使堆栈满足中的规则 link:install-cabling-rules.html#mini-sas-hd-sas-optical-cable-rules["迷你 SAS HD SAS 光缆规则"]。这意味着您必须已订购适当数量的迷你 SAS HD SAS 光缆。
 
 
 
-
-
-== 使用IOM12/IOM12B模块热添加磁盘架的注意事项
-
-在热添加磁盘架之前，您应熟悉此操作步骤的各个方面和最佳实践。
-
-
-
-=== 一般注意事项
-
-* 如果要将具有IOM12/IOM12B模块的磁盘架热添加到现有堆栈(包含IOM12/IOM12B模块的磁盘架)、则可以将磁盘架热添加到堆栈的任一端、即第一个或最后一个逻辑磁盘架。
+* 熟悉完成此过程的一般注意事项：
++
+** 如果要将具有IOM12/IOM12B模块的磁盘架热添加到现有堆栈(包含IOM12/IOM12B模块的磁盘架)、则可以将磁盘架热添加到堆栈的任一端、即第一个或最后一个逻辑磁盘架。
 +
 对于适用于 AFF A200 ， AFF A220 ， FAS2600 系列和 FAS2700 系统的单路径 HA 和单路径配置，您可以将磁盘架热添加到堆栈的末尾，而该堆栈没有控制器连接。
 
-* 带有IOM12/IOM12B模块的磁盘架必须位于其自身唯一的堆栈中；不能将其添加到包含带有IOM6模块或IOM3模块的磁盘架的堆栈中。
-* 此操作步骤假定您的配置使用带内 ACP 。
+** 带有 IOM12/IOM12B 模块的磁盘架必须位于其自己独特的堆栈中。
+** 此操作步骤假定您的配置使用带内 ACP 。
 +
 对于启用了带内 ACP 的配置，会在热添加磁盘架上自动启用带内 ACP 。对于未启用带内 ACP 的配置，热添加磁盘架在运行时不会使用任何 ACP 功能。
 
-* 不支持无中断堆栈整合。
+** 不支持无中断堆栈整合。
 +
 在系统启动并提供数据（ I/O 正在进行）时，您不能使用此操作步骤热添加从同一系统中的另一个堆栈热移除的磁盘架。
 
 
 
-
-
-=== 最佳实践注意事项
-
-* 最佳实践是，在热添加磁盘架之前，安装最新版本的磁盘认证包（ DQP ）。
+* *最佳实践*：确保您的系统能够识别并使用新合格的磁盘驱动器 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["下载当前版本的磁盘认证包 (DQP)"^] 。
 +
-安装当前版本的 DQP 后，您的系统便可识别和使用新认证的磁盘驱动器；因此，可以避免出现有关磁盘驱动器信息不是最新的系统事件消息。此外，您还可以避免由于无法识别磁盘驱动器而可能阻止磁盘分区。DQP 还会通知您磁盘驱动器固件不是最新的。
+这样可以避免出现有关磁盘驱动器信息非最新系统事件消息。此外，还可以避免因无法识别磁盘驱动器而导致磁盘分区受阻的情况。DQP会通知您磁盘驱动器固件非最新。
 
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["NetApp 下载：磁盘认证包"^]
-
-* 最佳做法是，在热添加磁盘架前后运行 Config Advisor 。
-+
-在热添加磁盘架之前运行 Config Advisor 可提供 SAS 连接的快照，验证磁盘架（ IOM ）固件版本，并允许您验证系统上已在使用的磁盘架 ID 。通过在热添加磁盘架后运行 Config Advisor ，您可以验证 SAS 连接布线是否正确，以及磁盘架 ID 在 HA 对或单控制器配置中是否唯一。
-
+* *最佳实践*：验证磁盘架 (IOM) 固件版本、系统已使用的磁盘架 ID，并通过以下方式获取 SAS 连接的快照 https://mysupport.netapp.com/site/tools["下载并运行Config Advisor"^]在热添加磁盘架之前。您还必须通过在热添加磁盘架后运行Config Advisor来验证 SAS 连接是否正确，以及磁盘架 ID 在 HA 对或单控制器配置中是否唯一。
 +
 如果生成任何 SAS 布线错误或重复的磁盘架 ID 错误，请按照提供的更正操作进行操作。
 
 +
 要下载 Config Advisor ，您需要网络访问权限。
 
+* *最佳实践*：在添加新的磁盘架、磁盘架 FRU 组件或 SAS 线缆之前，请确保您的系统已安装最新版本的磁盘架 (IOM) 固件和磁盘驱动器固件。您可以访问NetApp支持网站 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["下载磁盘架固件"]和 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["下载磁盘驱动器固件"] 。
+* 熟悉正确处理 SAS 电缆的注意事项：
 +
-https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
-
-* 最佳实践是，在添加新磁盘架，磁盘架 FRU 组件或 SAS 缆线之前，应在系统上安装最新版本的磁盘架（ IOM ）固件和磁盘驱动器固件。
-+
-可以在 NetApp 支持站点上找到最新版本的固件。
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
-
-
-
-
-
-=== SAS 缆线处理注意事项
-
-* 在将 SAS 端口插入之前，请目视检查该端口以验证其方向是否正确。
+** 在将 SAS 端口插入之前，请目视检查该端口以验证其方向是否正确。
 +
 SAS 缆线连接器具有键控。正确连接到 SAS 端口后，连接器会卡入到位，如果此时磁盘架电源已打开，则磁盘架 SAS 端口 LNK LED 会呈绿色亮起。对于磁盘架，您可以插入 SAS 缆线连接器，拉片朝下（位于连接器的下侧）。
 
 +
 对于控制器， SAS 端口的方向可能因平台型号而异；因此，正确的 SAS 缆线连接器方向会有所不同。
 
-* 为防止性能下降，请勿扭曲，折叠，挤压或踩踏缆线。
+** 为防止性能下降，请勿扭曲，折叠，挤压或踩踏缆线。
 +
 缆线具有最小弯曲半径。电缆制造商规格定义了最小弯曲半径；但是，最小弯曲半径的一般准则是电缆直径的 10 倍。
 
-* 使用 Velcro 缆线束而不是捆扎带捆绑和固定系统缆线，可以更轻松地调整缆线。
+** 使用 Velcro 缆线束而不是捆扎带捆绑和固定系统缆线，可以更轻松地调整缆线。
 
 
-
-
-=== DS460C驱动器处理注意事项
-
-* 这些驱动器与磁盘架机箱单独包装。
+* 熟悉正确处理 DS460C 驱动器的注意事项：
++
+** 这些驱动器与磁盘架机箱单独包装。
 +
 您应清点驱动器。
 
-* 拆开驱动器包装后、应保存包装材料以供将来使用。
+** 拆开驱动器包装后、应保存包装材料以供将来使用。
 +
 
 CAUTION: *可能丢失数据访问：*如果将来将磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。
@@ -165,7 +110,7 @@ CAUTION: *可能丢失数据访问：*如果将来将磁盘架移动到数据中
 
 NOTE: 请将磁盘驱动器放在ESD袋中、直到准备好安装为止。
 
-* 处理驱动器时、请始终佩戴ESD腕带、该腕带接地到存储机箱机箱上未上漆的表面、以防止静电释放。
+** 处理驱动器时、请始终佩戴ESD腕带、该腕带接地到存储机箱机箱上未上漆的表面、以防止静电释放。
 +
 如果没有腕带，请先触摸存储机箱机箱上未上漆的表面，然后再处理磁盘驱动器。
 
@@ -173,7 +118,9 @@ NOTE: 请将磁盘驱动器放在ESD袋中、直到准备好安装为止。
 
 
 
-== 安装具有IOM12/IOM12B模块的磁盘架以进行热添加
+
+
+== 步骤 1：安装用于热添加的磁盘架
 
 对于要热添加的每个磁盘架，您可以在为 SAS 连接布线之前将磁盘架安装到机架中，连接电源线，打开磁盘架电源并设置磁盘架 ID 。
 
@@ -192,20 +139,17 @@ NOTE: 请勿通过法兰将磁盘架安装到电信型机架中；磁盘架的�
 为了减轻磁盘架重量并便于操作，请卸下电源和 I/O 模块（ IOM ）。
 
 +
-对于DS460C磁盘架、尽管驱动器是单独包装的、因此磁盘架更轻便、但空的DS460C磁盘架的重量仍约为132磅(60千克)；因此、移动磁盘架时请注意以下事项。
+
+CAUTION: 虽然 DS460C 磁盘架中的驱动器单独包装，减轻了磁盘架的重量，但空的 DS460C 磁盘架仍重约 132 磅（60 公斤）。建议使用机械升降机或由四个人使用升降手柄来安全地移动空的 DS460C 磁盘架。
 
 +
-
-CAUTION: 建议您使用一个机械升降机或四个人使用升降机把手安全移动空的DS460C磁盘架。
-
-+
-您的DS460C发货随附了四个可拆卸的升降把手(每侧两个)。要使用提升把手、请将把手的卡舌插入磁盘架侧面的插槽并向上推、直到其卡入到位、以安装提升把手。然后、在将磁盘架滑入导轨时、一次使用拇指闩锁断开一组手柄。下图显示了如何连接提升把手。
+您的 DS460C 发货时附带四个可拆卸的升降手柄（每侧两个）。要使用升降手柄，请先将手柄的卡舌插入磁盘架侧面的插槽中，然后向上推直至其卡入到位。然后，在将磁盘架滑入导轨时，使用拇指锁销一次卸下一组手柄。下图显示了如何安装升降手柄。
 
 +
 image::../media/drw_ds460c_handles.gif[安装提升手柄]
 
 . 重新安装在将磁盘架安装到机架之前卸下的所有电源和 IOM 。
-. 如果要安装DS460C磁盘架、请将驱动器安装到驱动器抽盒中；否则、请转至下一步。
+. 如果您要安装 DS460C 磁盘架，请将驱动器安装到驱动器抽屉中。否则，请转至下一步。
 +
 [NOTE]
 ====
@@ -215,7 +159,7 @@ image::../media/drw_ds460c_handles.gif[安装提升手柄]
 
 ====
 +
-如果您购买的磁盘架部分填充、这意味着该磁盘架所支持的驱动器少于60个、请按如下所示安装每个磁盘架的驱动器：
+如果您购买了部分填充的架子，即架子支持的驱动器少于 60 个，请按如下方式在每个抽屉中安装驱动器：
 
 +
 ** 将前四个驱动器安装到正面插槽(0、3、6和9)中。
@@ -254,21 +198,11 @@ image:../media/icon_round_1.png["标注编号1"]
 +
 您必须确保每个抽盒中的插槽 0 ， 3 ， 6 和 9 包含驱动器。
 
-... 小心地将驱动器抽盒推回机箱。
+... 小心地将驱动器抽屉推回机柜中。+s image:../media/2860_dwg_e2860_de460c_gentle_close.gif["轻轻合上抽盒"]
 +
-|===
-
-
- a| 
-image:../media/2860_dwg_e2860_de460c_gentle_close.gif["轻轻合上抽盒"]
-
-
-
- a| 
 
 CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒，以避免抽盒震动并损坏存储阵列。
 
-|===
 ... 将两个拉杆推向中央，关闭驱动器抽屉。
 ... 对磁盘架中的每个抽盒重复上述步骤。
 ... 连接前挡板。
@@ -288,7 +222,7 @@ CAUTION: * 可能丢失数据访问： * 切勿关闭抽盒。缓慢推入抽盒
 如果您的平台型号具有内部磁盘架、则磁盘架ID必须在内部磁盘架和外部连接的磁盘架之间是唯一的。
 
 +
-You can use the following substeps to change shelf IDs, or for more detailed instructions, use link:install-change-shelf-id.html["更改磁盘架 ID"^]。
+您可以使用以下子步骤更改货架 ID。有关更详细的说明，请使用link:install-change-shelf-id.html["更改磁盘架 ID"^] 。
 
 +
 .. 如果需要，请运行 Config Advisor 来验证已在使用的磁盘架 ID 。
@@ -311,12 +245,9 @@ You can use the following substeps to change shelf IDs, or for more detailed ins
 
 
 
-== 使用缆线连接具有IOM12/IOM12B模块的磁盘架以进行热添加
+== 步骤 2：为热添加磁盘架布线
 
 您可以根据需要为热添加磁盘架的SAS连接(磁盘架到磁盘架和控制器到堆栈)布线、以便它们可以连接到系统。
-
-.开始之前
-You must have met the requirements in link:install-hot-add-shelf.html#requirements-for-hot-adding-disk-shelves-with-iom12iom12b-modules["Requirements for hot-adding disk shelves with IOM12 modules"] and installed, powered on, and set shelf IDs for each disk shelf as instructed in link:install-hot-add-shelf.html#install-disk-shelves-with-iom12iom12b-modules-for-a-hot-add["安装具有IOM12模块的磁盘架以进行热添加"]。
 
 .关于此任务
 * 有关磁盘架到磁盘架的 `standard` 布线和磁盘架到磁盘架的 `d外宽` 布线的说明和示例，请参见 link:install-cabling-rules.html#shelf-to-shelf-connection-rules["磁盘架到磁盘架 SAS 连接规则"]。
@@ -326,6 +257,10 @@ You must have met the requirements in link:install-hot-add-shelf.html#requiremen
 
 NOTE: 固件更新可能需要长达 30 分钟。
 
+
+
+.开始之前
+* 您必须满足完成此过程的要求<<before_you_begin,开始之前>>部分，并按照<<install_disk_shelves_for_a_hot_add,安装具有IOM12模块的磁盘架以进行热添加>> 。
 
 
 .步骤
@@ -441,15 +376,12 @@ NOTE: 请确保在断开缆线连接并重新连接缆线之间至少等待70秒
 |===
 . 如果您使用迷你 SAS HD SAS 光缆将磁盘架热添加到使用 SAS 铜缆连接的磁盘架堆栈中，请更换 SAS 铜缆；否则，请转至下一步。
 +
-The stack must meet the requirements stated in the <<使用IOM12/IOM12B模块热添加磁盘架的要求>> section of this procedure.
+堆栈必须满足<<before_you_begin,开始之前>>此过程的部分。
 
 +
 一次更换一根缆线、并确保在断开缆线与连接新缆线之间至少等待70秒。
 
-. 下载并运行 Config Advisor 以验证 SAS 连接是否已正确布线。
-+
-https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
-
+. 验证 SAS 连接是否正确 https://mysupport.netapp.com/site/tools["下载并运行Config Advisor"^] 。
 +
 如果生成任何 SAS 布线错误，请按照提供的更正操作进行操作。
 
@@ -512,11 +444,11 @@ Errors:
 
 
 
-== 移动或传输DS460C磁盘架
+== （可选）步骤 3：移动或运输 DS460C 架子
 
-如果将来将DS460C磁盘架移动到数据中心的其他部分或将磁盘架传输到其他位置、则需要从驱动器抽盒中卸下驱动器、以避免可能损坏驱动器抽盒和驱动器。
+如果将来您将 DS460C 机架移动到数据中心的不同部分或将机架运输到其他位置，则需要从驱动器抽屉中取出驱动器，以避免对驱动器抽屉和驱动器造成损坏。
 
-* 如果在磁盘架热添加过程中安装了DS460C磁盘架、但您保存了驱动器包装材料、请在移动驱动器之前使用这些材料重新打包驱动器。
+* 如果您在安装 DS460C 机架作为机架热添加的一部分时保存了驱动器包装材料，请在移动驱动器之前使用这些材料重新包装驱动器。
 +
 如果未保存包装材料、则应将驱动器放在缓冲表面上或使用备用缓冲包装。切勿将驱动器堆栈在彼此之上。
 

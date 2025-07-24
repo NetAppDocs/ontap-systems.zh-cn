@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the boot media 
-summary: 在更换启动介质之前、您可以通过删除系统管理模块来找到故障启动介质。 
+summary: ASA A20、 ASA A30 或ASA A50 系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后重新安装控制器模块。 
 ---
 = 更换启动介质- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,7 +11,17 @@ summary: 在更换启动介质之前、您可以通过删除系统管理模块�
 
 
 [role="lead"]
-ASA A20、ASA A30或ASA A50系统中的启动介质用于存储基本固件和配置数据。更换过程包括卸下控制器模块、卸下受损的启动介质、安装替代启动介质、然后将ONTAP映像传输到替代启动介质。
+ASA A20、 ASA A30 或ASA A50 系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后重新安装控制器模块。
+
+
+
+== 关于此任务
+
+如果需要、您可以打开平台机箱位置(蓝色) LED、以帮助找到受影响的平台。使用SSH登录到BMC并输入 `system location-led _on_`命令。
+
+平台机箱有三个定位LED：操作员显示面板上一个、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.
+
+您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
 
 
 

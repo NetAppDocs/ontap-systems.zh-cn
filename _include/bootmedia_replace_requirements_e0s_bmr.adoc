@@ -1,0 +1,22 @@
+= 
+:allow-uri-read: 
+
+
+* 您必须使用与从NetApp收到的容量相同的替代FRU组件来更换故障组件。
+* e0S（e0M 扳手）端口用于在自动启动恢复过程中在两个控制器之间进行通信。请确保受损控制器上的 e0S 端口正常工作。
+* 对于OKM、您需要OKM密码短语文件内容。
+* 对于EMM、您需要配对节点上以下文件的副本：
++
+** /cfcard/kmip/servers.cfg文件。
+** /cfcard/kmip/certs/client.crt文件。
+** /cfcard/kmip/certs client.key文件。
+** /cfcard/kmip/certs或CA.prom文件。
+
+
+* 更换受损的启动介质时，将命令应用到正确的控制器至关重要：
++
+** _受损控制器_是您正在执行维护的控制器。
+** _健康控制器_是受损控制器的 HA 伙伴。
+
+
+

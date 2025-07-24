@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: hot-swap, fail, power, supply, ds460c, ds224c, ds212c, disk, shelf-nondisruptively, shelf, nondisruptive, system, power, i/o, progress, hot-swap a power supply 
 summary: 您可以热插拔 DS460C ， DS224C 或 DS212C 磁盘架中的故障电源。 
 ---
-= 热插拔A电源—带有IOM12/IOM12B模块的磁盘架
+= 热插拔电源 - DS212C、DS224C 或 DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,28 +13,19 @@ summary: 您可以热插拔 DS460C ， DS224C 或 DS212C 磁盘架中的故障�
 [role="lead"]
 您可以热插拔 DS460C ， DS224C 或 DS212C 磁盘架中的故障电源。
 
-.开始之前
-系统中的所有其他组件（包括其他电源）必须正常运行。
+此过程适用于带有 IOM12 或 IOM12B 模块的架子。
 
-.关于此任务
+.开始之前
+* 系统中的所有其他组件（包括其他电源）必须正常运行。
 * 如果要更换多个电源，则必须一次更换一个，以便磁盘架保持供电。
 * 您必须在卸下电源后两分钟内更换电源，以最大限度地减少对磁盘架通风的影响。
 * 在拆卸，安装或搬运电源以支撑其重量时，请始终用双手。
-* 最佳实践是，在添加新磁盘架，磁盘架 FRU 组件或 SAS 缆线之前，应在系统上安装最新版本的磁盘架（ IOM ）固件和磁盘驱动器固件。
-+
-可以在 NetApp 支持站点上找到最新版本的固件。
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"]
-
+* *最佳实践*：在添加新的磁盘架、磁盘架 FRU 组件或 SAS 线缆之前，请确保您的系统已安装最新版本的磁盘架 (IOM) 固件和磁盘驱动器固件。您可以访问NetApp支持网站 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["下载磁盘架固件"]和 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["下载磁盘驱动器固件"] 。
 * 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
 +
 一个磁盘架具有三个位置LED：一个位于操作员显示面板上、一个位于每个磁盘架IOM上。Location LEDs remain illuminated for 30 minutes.You can turn them off by entering the same command, but using the off option.
 
-* 如果需要，您可以参阅 " 监控磁盘架 LED " 一节，了解有关操作员显示面板和 FRU 组件上磁盘架 LED 的含义和位置的信息。
+* 如果需要的话，你可以参考link:/sas3/service-monitor-leds.html#operator-display-panel-leds["监控磁盘架 LED"]指南，了解有关操作员显示面板和 FRU 组件上的磁盘架 LED 的含义和位置的信息。
 
 
 .步骤
@@ -60,17 +51,17 @@ image::../media/drw_2600_psu.gif[打开电源凸轮把手]
 
 . 使用凸轮把手将电源滑出磁盘架。
 +
-如果您使用的是 DS224C 或 DS212C 磁盘架，则在卸下电源时，一个翼片会摆入到位以阻止空托架，从而有助于保持气流和散热。
+如果您使用的是 DS224C 或 DS212C 磁盘架，则在移除电源时，挡板会摆动到位以挡住空置的磁盘架。这有助于保持空气流通和冷却。
 
 +
 
 NOTE: 处理电源时，请始终用双手支撑其重量。
 
 . 确保新电源的开关处于 OFF 位置。
-. 用两只手，将新电源的凸轮把手置于打开位置，支撑新电源的边缘并将其与磁盘架中的开口对齐，然后用力推动新电源，直到它与中板相吻合。
+. 将新电源的凸轮手柄置于打开位置，用双手支撑新电源，并将其边缘与磁盘架上的开口对齐。然后用力推动新电源，直至其与中间板接触。
 +
 
-NOTE: 将电源滑入磁盘架时，请勿用力过大；否则可能会损坏连接器。
+CAUTION: 将电源滑入磁盘架时，请勿用力过大；否则可能会损坏连接器。
 
 . 合上凸轮把手，使闩锁卡入到锁定位置，并且电源完全就位。
 . 重新连接电源线并打开新电源：
@@ -79,7 +70,7 @@ NOTE: 将电源滑入磁盘架时，请勿用力过大；否则可能会损坏�
 .. 将电源线重新连接到电源，并使用电源线固定器固定电源线。
 .. 打开电源开关。
 +
-电源的电源（绿色） LED 和警示（琥珀色） LED 亮起，然后在 40 秒内，警示（琥珀色） LED 熄灭。
+电源的电源（绿色）LED 指示灯和警示（琥珀色）LED 指示灯亮起。40秒内，警示（琥珀色）LED 指示灯熄灭。
 
 
 

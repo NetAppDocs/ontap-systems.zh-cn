@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: controller-to-stack, cabling, worksheet, aff, a200, a220, fas2600, fas2700, fas2800, internal storage 
 summary: 您可以使用完成的控制器到堆栈布线工作表和布线示例来为具有内部存储的平台布线。 
 ---
-= 使用内部存储的平台的控制器到堆栈布线工作表和布线示例—使用IOM12/IOM12B模块的磁盘架
+= 内部存储布线工作表 - DS212C、DS224C 或 DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用完成的控制器到堆栈布线工作表和布线示例来为具有内部存储的平台布线。
+您可以使用已完成的控制器到堆栈布线工作表和布线示例来连接带有内部存储的平台。这适用于带有 IOM12/IOM12B 模块的磁盘架。
 
 
 NOTE: 此信息不适用于 FAS25XX 平台。

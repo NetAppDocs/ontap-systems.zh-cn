@@ -1,0 +1,40 @@
+---
+permalink: a70-90/bootmedia-replace-requirements-bmr.html 
+sidebar: sidebar 
+keywords: aff a70, aff a90, replace the boot media 
+summary: 在更换AFF A70或AFF A90存储系统中的启动介质之前，请确保满足成功更换的必要要求。 
+---
+= 自动启动介质恢复的要求 - AFF A70和AFF A90
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在更换AFF A70或AFF A90存储系统中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否拥有正确的替换启动介质、确认受损控制器上的集群端口正常工作，以及确定是否启用了板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。
+
+自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
+
+查看以下要求。
+
+* 您必须将故障启动介质更换为从NetApp收到的替代启动介质。
+* 集群端口用于在自动启动恢复过程中在两个控制器之间进行通信。请确保受损控制器上的集群端口正常工作。
+* 对于OKM、您需要OKM密码短语文件内容。
+* 对于EMM、您需要配对节点上以下文件的副本：
++
+** /cfcard/kmip/servers.cfg
+** /cfcard/kmip/certs/client.crt
+** /cfcard/kmip/certs/client.key
+** /cfcard/kmip/certs/CA.pem
+
+
+* 更换受损的启动介质时，将命令应用到正确的控制器至关重要：
++
+** _受损控制器_是您正在执行维护的控制器。
+** _健康控制器_是受损控制器的 HA 伙伴。
+
+
+
+
+.下一步行动
+查看引导介质要求后，您可以link:bootmedia-shutdown-bmr.html["关闭控制器"]。

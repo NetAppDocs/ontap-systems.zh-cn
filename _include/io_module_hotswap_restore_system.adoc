@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+通过将存储交还给运行状况良好的控制器、恢复自动交还以及重新启用AutoSupport自动案例创建，将存储系统恢复正常运行。
+
+.步骤
+. 通过归还存储，使健康控制器（被接管的控制器）恢复正常运行：
++
+`storage failover giveback -ofnode _healthy_node_name_`
+
+. 从受损控制器（接管正常控制器的控制器）的控制台恢复自动交还：
++
+`storage failover modify -node local -auto-giveback _true_`
+
+. 如果启用了AutoSupport、则还原自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=end`
+
+

@@ -1,0 +1,40 @@
+---
+permalink: a20-30-50/bootmedia-replace-requirements-bmr.html 
+sidebar: sidebar 
+keywords: aff a20, aff a30, aff a50, replace the boot media 
+summary: '在更换AFF A20、 AFF A30 和AFF A50 存储系统中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否拥有正确的替换启动介质、确认受损控制器上的 e0S（e0M 扳手）端口是否正常工作，以及确定是否启用了板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。' 
+---
+= 自动启动介质恢复的要求 - AFF A20、 AFF A30 和AFF A50
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在更换AFF A20、 AFF A30 和AFF A50 存储系统中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否拥有正确的替换启动介质、确认受损控制器上的 e0S（e0M 扳手）端口是否正常工作，以及确定是否启用了板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。
+
+自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
+
+查看以下要求。
+
+* 您必须使用与从NetApp收到的容量相同的替代FRU组件来更换故障组件。
+* e0S（e0M 扳手）端口用于在自动启动恢复过程中在两个控制器之间进行通信。请确保受损控制器上的 e0S 端口正常工作。
+* 对于OKM、您需要OKM密码短语文件内容。
+* 对于EMM、您需要配对节点上以下文件的副本：
++
+** /cfcard/kmip/servers.cfg文件。
+** /cfcard/kmip/certs/client.crt文件。
+** /cfcard/kmip/certs client.key文件。
+** /cfcard/kmip/certs或CA.prom文件。
+
+
+* 更换受损的启动介质时，将命令应用到正确的控制器至关重要：
++
+** _受损控制器_是您正在执行维护的控制器。
+** _健康控制器_是受损控制器的 HA 伙伴。
+
+
+
+
+.下一步行动
+查看引导介质要求后，您可以link:bootmedia-shutdown-bmr.html["关闭控制器"]。

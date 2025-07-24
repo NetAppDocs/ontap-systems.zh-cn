@@ -4,25 +4,22 @@ sidebar: sidebar
 keywords: system, configuration, whether, perform, nondisruptive, iom12, module, hot-swap, disruptive, replacement, hot-swap or replace an iom12/iom12b module, iom12b 
 summary: 您的系统配置可确定在IOM12/IOM12B模块出现故障时是否可以执行无中断IOM12/IOM12B模块热插拔或中断IOM12B模块更换。 
 ---
-= 热插拔或更换IOM12/IOM12B模块—使用IOM12/IOM12B模块的磁盘架
+= 热插拔或更换 IOM 模块 - DS212C、DS224C 或 DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您的系统配置可确定在磁盘架IOM发生故障时是否可以执行无中断磁盘架IOM热插拔或中断磁盘架IOM更换。
-
-.开始之前
-系统中的所有其他组件(包括其他IOM12/IOM12B模块)必须正常运行。
+您的系统配置决定了当 IOM12 或 IOM12B 机架 IOM 出现故障时，您是否可以执行无中断机架 IOM 热插拔或中断机架 IOM 更换。
 
 .关于此任务
-* 此 操作步骤 适用场景 磁盘架具有IOM12模块、磁盘架具有IOM12B模块。
+* 此程序适用于具有 IOM12 或 IOM12B 模块的架子。
 +
 
-NOTE: 此操作步骤 适用于同类磁盘架 IOM 热插拔或更换。这意味着，您只能将 IOM12 模块更换为另一个 IOM12 模块，或者将 IOM12B 模块更换为另一个 IOM12B 模块。（您的磁盘架可以有两个 IOM12 模块，也可以有两个 IOM12B 模块。）
+NOTE: 此程序适用于同类 IOM 机架热插拔或更换。这意味着您只能将一个 IOM12 模块更换为另一个 IOM12 模块，或将一个 IOM12B 模块更换为另一个 IOM12B 模块。
 
-* IOM12模块和IOM12B模块的外观可以区分：
+* IOM12 或 IOM12B 模块可以通过外观来区分：
 +
 IOM12模块通过"IOM12"标签来区分：
 
@@ -40,17 +37,7 @@ image::../media/iom12b.png[IOM12B正面]
 * 对于FAS2600系列单路径配置、您必须暂停系统以更换磁盘架IOM。
 +
 
-NOTE: 如果您尝试使用单路径连接热插拔磁盘架上的磁盘架IOM、则将无法访问磁盘架中的磁盘驱动器以及下面的任何磁盘架。You could also bring down your entire system.
-
-* 最佳实践是，在添加新磁盘架，磁盘架 FRU 组件或 SAS 缆线之前，应在系统上安装最新版本的磁盘架（ IOM ）固件和磁盘驱动器固件。
-+
-可以在 NetApp 支持站点上找到最新版本的固件。
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NetApp 下载：磁盘架固件"^]
-
-+
-https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp 下载：磁盘驱动器固件"^]
+CAUTION: 如果您尝试使用单路径连接热插拔磁盘架上的磁盘架IOM、则将无法访问磁盘架中的磁盘驱动器以及下面的任何磁盘架。You could also bring down your entire system.
 
 * 在使用非最新固件版本的新磁盘架IOM上、磁盘架(IOM)固件会自动更新(无中断)。
 +
@@ -60,7 +47,12 @@ https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["NetApp
 +
 一个磁盘架具有三个位置LED：一个位于操作员显示面板上、一个位于每个磁盘架IOM上。Location LEDs remain illuminated for 30 minutes.You can turn them off by entering the same command, but using the off option.
 
-* 如果需要，您可以参阅 " 监控磁盘架 LED " 一节，了解有关操作员显示面板和 FRU 组件上磁盘架 LED 的含义和位置的信息。
+* 如果需要的话，你可以参考link:/sas3/service-monitor-leds.html#operator-display-panel-leds["监控磁盘架 LED"]指南，了解有关操作员显示面板和 FRU 组件上的磁盘架 LED 的含义和位置的信息。
+
+
+.开始之前
+* 系统中的所有其他组件(包括其他IOM12/IOM12B模块)必须正常运行。
+* *最佳实践*：在添加新的磁盘架、磁盘架 FRU 组件或 SAS 线缆之前，请确保您的系统已安装最新版本的磁盘架 (IOM) 固件和磁盘驱动器固件。您可以访问NetApp支持网站 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["下载磁盘架固件"]和 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["下载磁盘驱动器固件"] 。
 
 
 .步骤

@@ -1,0 +1,105 @@
+= 
+:allow-uri-read: 
+
+
+将插槽 4 中的替换集群和 HA I/O 模块联机，验证模块端口是否已成功初始化，验证插槽 4 是否已打开电源，然后验证模块是否联机并被识别。
+
+. 使替换集群和 HA I/O 模块联机：
++
+`system controller slot module insert -node impaired_node_name_ -slot _slot_name_`
+
++
+
+NOTE: 当您看到“您想继续吗？”时，请输入 `y` 。
+
++
+输出应确认集群和 HA I/O 模块已成功上线（启动、初始化并投入使用）。
+
++
+例如，以下命令使节点 2（受损控制器）上的插槽 4 联机，并显示该过程成功的消息：
+
++
+[listing]
+----
+node2::> system controller slot module insert -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered on and initialized.
+
+Do you want to continue? {y|n}: `y`
+
+The module has been successfully powered on, initialized and placed into service.
+----
+. 验证集群和 HA I/O 模块上的每个端口是否已成功初始化：
++
+`event log show -event \*hotplug.init*`
+
++
+
+NOTE: 可能需要几分钟的时间才能完成所需的固件更新和端口初始化。
+
++
+输出应显示为集群和 HA I/O 模块上的每个端口记录的 hotplug.init.success EMS 事件，其中包含 `_hotplug.init.success:_`在 `_Event_`柱子。
+
++
+例如，以下输出显示集群和 HA I/O 模块端口 e4b 和 e4a 的初始化成功：
+
++
+[listing]
+----
+node2::> event log show -event *hotplug.init*
+
+Time                Node             Severity      Event
+
+------------------- ---------------- ------------- ---------------------------
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e4b" in slot 4 succeeded
+
+7/11/2025 16:04:06  node2      NOTICE        hotplug.init.success: Initialization of ports "e4a" in slot 4 succeeded
+
+2 entries were displayed.
+----
+. 验证 I/O 模块插槽 4 是否已通电并准备好运行：
++
+`system controller slot module show`
+
++
+输出应显示插槽 4 状态为 `_powered-on_`因此可以为替换集群和 HA I/O 模块的运行做好准备。
+
+. 验证替换集群和 HA I/O 模块是否在线并被识别。
++
+从受损控制器的控制台输入命令：
+
++
+`system controller config show -node local -slot4`
+
++
+如果替换集群和 HA I/O 模块成功联机并被识别，则输出将显示插槽 4 的 I/O 模块信息，包括端口信息。
+
++
+例如，您应该看到类似以下内容的输出：
+
++
+[listing]
+----
+node2::> system controller config show -node local -slot 4
+
+Node: node2
+Sub- Device/
+Slot slot Information
+---- ---- -----------------------------
+   4    - Dual 40G/100G Ethernet Controller CX6-DX
+                  e4a MAC Address: d0:39:ea:59:69:74 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2807GJFM-B
+                  e4b MAC Address: d0:39:ea:59:69:75 (auto-100g_cr4-fd-up)
+                          QSFP Vendor:        CISCO-BIZLINK
+                          QSFP Part Number:   L45593-D218-D10
+                          QSFP Serial Number: LCC2809G26F-A
+                  Device Type:        CX6-DX PSID(NAP0000000027)
+                  Firmware Version:   22.44.1700
+                  Part Number:        111-05341
+                  Hardware Revision:  20
+                  Serial Number:      032403001370
+----
+

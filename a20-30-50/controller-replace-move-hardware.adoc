@@ -15,6 +15,16 @@ summary: 如果硬件故障需要更换AFF A20、AFF A30或AFF A50系统中的�
 
 
 
+== 关于此任务
+
+如果需要、您可以打开存储系统位置(蓝色) LED、以帮助您以物理方式定位受影响的存储系统。使用SSH登录到BMC并输入 `system location-led _on_`命令。
+
+存储系统具有三个定位LED：操作员显示面板上一个、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.
+
+您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
+
+
+
 == 第 1 步：卸下控制器
 
 在更换控制器或更换控制器内部的组件时、必须从机箱中卸下控制器。

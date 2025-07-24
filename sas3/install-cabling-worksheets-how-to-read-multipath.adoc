@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: example, guide, read, apply, complete, worksheet, cable, controller-to-stack, connection, disk, shelves, shelf, iom12, multipathed, connectivity, hot to read a worksheet to cable controller-to-stack connections for multipathed connectivity 
 summary: 您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便为具有 IOM12 模块的磁盘架使用缆线连接控制器到堆栈连接，从而实现多路径连接。 
 ---
-= 如何阅读使用缆线连接控制器到堆栈连接以实现多路径连接的工作表—具有IOM12/IOM12B模块的磁盘架
+= 如何阅读工作表以连接多路径连接的控制器到堆栈连接 - DS212C、DS224C 或 DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

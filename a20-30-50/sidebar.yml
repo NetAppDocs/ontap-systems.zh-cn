@@ -24,7 +24,22 @@ entries:
   entries:
   - title: 维护概述
     url: "/a20-30-50/maintain-overview.html"
-  - title: 启动介质
+  - title: 启动媒体 - 自动恢复
+    pdf-filename: AFF A20、AFF A30和AFF A50启动介质
+    entries:
+    - title: 启动介质更换工作流
+      url: "/a20-30-50/bootmedia-replace-workflow-bmr.html"
+    - title: 查看要求
+      url: "/a20-30-50/bootmedia-replace-requirements-bmr.html"
+    - title: 关闭控制器
+      url: "/a20-30-50/bootmedia-shutdown-bmr.html"
+    - title: 更换启动介质
+      url: "/a20-30-50/bootmedia-replace-bmr.html"
+    - title: 启动恢复映像
+      url: "/a20-30-50/bootmedia-recovery-image-boot-bmr.html"
+    - title: 将故障部件退回 NetApp
+      url: "/a20-30-50/bootmedia-complete-rma-bmr.html"
+  - title: 启动媒体 - 手动恢复
     pdf-filename: AFF A20、AFF A30和AFF A50启动介质
     entries:
     - title: 启动介质更换工作流
@@ -86,6 +101,8 @@ entries:
       url: "/a20-30-50/io-module-overview.html"
     - title: 添加 I/O 模块
       url: "/a20-30-50/io-module-add.html"
+    - title: 热插拔集群/HA模块
+      url: "/a20-30-50/io-module-hotswap-ha-slot4.html"
     - title: 更换I/O模块
       url: "/a20-30-50/io-module-replace.html"
   - title: NV电池

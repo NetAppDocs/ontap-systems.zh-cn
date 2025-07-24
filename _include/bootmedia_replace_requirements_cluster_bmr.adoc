@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+查看以下要求。
+
+* 您必须将故障启动介质更换为从NetApp收到的替代启动介质。
+* 集群端口用于在自动启动恢复过程中在两个控制器之间进行通信。请确保受损控制器上的集群端口正常工作。
+* 对于OKM、您需要OKM密码短语文件内容。
+* 对于EMM、您需要配对节点上以下文件的副本：
++
+** /cfcard/kmip/servers.cfg
+** /cfcard/kmip/certs/client.crt
+** /cfcard/kmip/certs/client.key
+** /cfcard/kmip/certs/CA.pem
+
+
+* 更换受损的启动介质时，将命令应用到正确的控制器至关重要：
++
+** _受损控制器_是您正在执行维护的控制器。
+** _健康控制器_是受损控制器的 HA 伙伴。
+
+
+

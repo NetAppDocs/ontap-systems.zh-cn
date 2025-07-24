@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disk, shelves, shelf, iom12, module, single-controller, configuration, support, platform, sas, cabling, cable, rule, controller, shelf-to-shelf, connection, rule, controller-to-stack, mini-sas, hd, optical, cable, rule, sas cabling rules, iom12b, concepts 
 summary: '具有IOM12/IOM12B模块的磁盘架可以采用HA对和单控制器配置进行布线(适用于受支持的平台)。' 
 ---
-= SAS布线规则和概念—具有IOM12/IOM12B模块的磁盘架
+= SAS 布线规则和概念 - DS212C、DS224C 或 DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: '具有IOM12/IOM12B模块的磁盘架可以采用HA对和单控制器�
 使用IOM12/IOM12B模块的磁盘架可以在HA对和单控制器配置中进行布线(适用于受支持的平台)、方法是应用SAS布线规则：配置规则、控制器插槽编号规则、磁盘架到磁盘架连接规则、控制器到堆栈连接规则以及迷你SAS HD SAS光缆规则(如果适用)。
 
 
-NOTE: 本指南中介绍的有关控制器插槽编号规则、磁盘架到磁盘架连接规则以及控制器到堆栈连接规则的SAS布线规则与适用于所有SAS磁盘架的规则相同、无论这些磁盘架是否具有IOM12/IOM12B、IOM6或IOM3模块。但是、本指南中的信息专门介绍了具有IOM12/IOM12B模块的磁盘架的独特特征及其在受支持配置中的使用。
+NOTE: 本指南中所述的 SAS 布线规则（包括控制器插槽编号规则、磁盘架间连接规则以及控制器与堆栈间的连接规则）适用于所有 SAS 磁盘架，无论其配备的是 IOM12 还是 IOM12B 模块。但是，本指南中的信息仅适用于配备 IOM12/IOM12B 模块的磁盘架的独特特性及其在受支持配置中的使用。
 
 本指南中介绍的有关配置规则和迷你SAS HD SAS光缆规则的SAS布线规则专用于具有IOM12/IOM12B模块的磁盘架。
 
@@ -33,9 +33,6 @@ NOTE: 本指南中介绍的有关控制器插槽编号规则、磁盘架到磁�
 == 配置规则
 
 特定类型的HA对和单控制器配置支持具有IOM12/IOM12B模块的磁盘架。
-
-
-NOTE: 此内容不会介绍FAS25XX平台。
 
 [NOTE]
 ====

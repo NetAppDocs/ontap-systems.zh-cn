@@ -2,16 +2,16 @@
 permalink: a20-30-50/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, boot the recovery image 
-summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
+summary: 在AFF A20、 AFF A30 或AFF A50 系统中安装新的启动介质设备后，您可以从 USB 驱动器手动启动恢复映像以从合作伙伴节点恢复配置。 
 ---
-= 启动恢复映像- AFF A20、AFF A30和AFF A50
+= 从 USB 驱动器手动恢复启动媒体 - AFF A20、 AFF A30 和AFF A50
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在AFF A20、AFF A30或AFF A50系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。
+在AFF A20、 AFF A30 或AFF A50 存储系统中安装新的启动介质设备后，您可以从 USB 驱动器手动启动恢复映像以从合作伙伴节点恢复配置。
 
 .步骤
 . 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`

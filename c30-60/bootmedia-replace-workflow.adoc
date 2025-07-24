@@ -2,32 +2,36 @@
 permalink: c30-60/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace the boot media 
-summary: 通过查看更换要求、检查加密状态、关闭控制器、更换启动介质、启动恢复映像、还原加密以及验证系统功能、开始更换AFF C30或AFF C60存储系统中的启动介质。 
+summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装到AFF C30 或AFF C60 系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用此准备好的 USB 驱动器执行恢复操作，将系统恢复到正常运行状态。 
 ---
-= 启动介质更换工作流- AFF C30和AFF C60
+= 启动媒体手动恢复工作流程 - AFF C30 和AFF C60
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-通过查看更换要求、检查加密状态、关闭控制器、更换启动介质、启动恢复映像、还原加密以及验证系统功能、开始更换AFF C30或AFF C60存储系统中的启动介质。
+手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装到AFF C30 或AFF C60 系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用此准备好的 USB 驱动器执行恢复操作，将系统恢复到正常运行状态。
+
+如果您的系统运行的是ONTAP 9.17.1 及更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"] 。
+
+首先，检查恢复要求，关闭控制器，更换启动媒体，使用 USB 驱动器恢复映像，并在必要时重新应用加密设置。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:bootmedia-replace-requirements.html["查看启动介质要求"]
 [role="quick-margin-para"]
-要更换启动介质、您必须满足特定要求。
+查看更换启动介质的要求。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["一个"]link:bootmedia-encryption-preshutdown-checks.html["检查板载加密密钥"]
 [role="quick-margin-para"]
-验证存储系统是否已启用安全密钥管理器或已加密磁盘。
+确定系统是启用了安全密钥管理器还是对磁盘进行了加密。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["两个"]link:bootmedia-shutdown.html["Shut down the impaired controller"]
 [role="quick-margin-para"]
-关闭或接管受损控制器、以使运行正常的控制器继续从受损控制器存储提供数据。
+需要更换启动介质时、请关闭控制器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["三个"]link:bootmedia-replace.html["更换启动介质"]
 [role="quick-margin-para"]
-从受损控制器中取出故障启动介质并安装替代启动介质、然后使用USB闪存驱动器将ONTAP映像传输到替代启动介质。
+从受损的控制器中移除故障的启动介质并安装替换的启动介质，然后使用 USB 闪存驱动器传输ONTAP映像。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["四个"]link:bootmedia-recovery-image-boot.html["启动恢复映像"]
 [role="quick-margin-para"]
@@ -35,7 +39,7 @@ summary: 通过查看更换要求、检查加密状态、关闭控制器、更�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["五个"]link:bootmedia-encryption-restore.html["恢复加密"]
 [role="quick-margin-para"]
-从ONATp启动菜单还原板载密钥管理器配置或外部密钥管理器。
+从ONTAP启动菜单恢复板载密钥管理器配置或外部密钥管理器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["六个"]link:bootmedia-complete-rma.html["将故障部件退回 NetApp"]
 [role="quick-margin-para"]

@@ -3,14 +3,12 @@ section: sas3
 title: SAS磁盘架
 entries:
 - title: 安装并布线
-  pdf-filename: 使用IOM12/IOM2B模块的磁盘架安装和布线
+  pdf-filename: DS212C、DS224C 或 DS460C 机架安装和布线
   entries:
   - title: 安装新系统的磁盘架并为其布线
     url: "/sas3/install-new-system.html"
   - title: 热添加磁盘架
     url: "/sas3/install-hot-add-shelf.html"
-  - title: 将IOM12/IOM12B磁盘架热添加到IOM6磁盘架堆栈中
-    url: "/sas3/iom12-hot-add-mix.html"
   - title: 更改磁盘架 ID
     url: "/sas3/install-change-shelf-id.html"
   - title: SAS 布线规则，工作表和示例
@@ -19,22 +17,22 @@ entries:
       url: "/sas3/overview-cabling-rules-examples.html"
     - title: SAS布线规则和概念
       url: "/sas3/install-cabling-rules.html"
-    - title: 多路径HA的布线工作表和示例
+    - title: 多路径 HA
       url: "/sas3/install-cabling-worksheets-examples-multipath.html"
-    - title: 使用内部存储的平台的布线工作表
+    - title: 具有内部存储的平台
       url: "/sas3/install-cabling-worksheets-examples-fas2600.html"
-    - title: 四路径HA的布线工作表和示例
+    - title: 四路径 HA
       url: "/sas3/install-worksheets-examples-quadpath.html"
-    - title: 多路径连接布线工作表
+    - title: 多路径连接
       url: "/sas3/install-cabling-worksheet-template-multipath.html"
-    - title: 四路径连接的布线工作表
+    - title: 四路径连接
       url: "/sas3/install-cabling-worksheet-template-quadpath.html"
-    - title: 如何阅读多路径连接工作表
+    - title: 多路径连接
       url: "/sas3/install-cabling-worksheets-how-to-read-multipath.html"
     - title: 如何阅读四路径连接工作表
       url: "/sas3/install-cabling-worksheets-how-to-read-quadpath.html"
 - title: 维护
-  pdf-filename: 具有IOM12/IOM12B模块的磁盘架会进行维护
+  pdf-filename: DS212C、DS224C 或 DS460C 机架维护
   entries:
   - title: DS224C 或 DS212C 磁盘架中的磁盘驱动器
     url: "/sas3/service-hot-swap-drive-ds224c-ds212c.html"

@@ -4,16 +4,36 @@ sidebar: sidebar
 keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, i/o, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
 summary: 您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。 
 ---
-= 热移除磁盘架—带有IOM12/IOM12B模块的磁盘架
+= 热移除架子 - DS212C、DS224C 和 DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以在需要移动或更换磁盘架时热移除带有IOM12/IOM12B模块的磁盘架(无中断地从已启动且正在执行I/O的系统中移除磁盘架)。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。
+当您需要移动或更换磁盘架时，可以热移除带有 IOM12 或 IOM12B 模块的磁盘架（即在系统已通电且 I/O 正在进行的情况下，以无中断方式移除磁盘架）。您可以从磁盘架堆栈中的任何位置热移除一个或多个磁盘架，也可以移除一叠磁盘架。
+
+.关于此任务
+* 如果要从堆栈热移除磁盘架（但保留堆栈），则一次可重新布线并验证一个路径（路径 A ，路径 B ），以绕过要移除的磁盘架，从而始终保持控制器与堆栈的单路径连接。
++
+
+NOTE: 如果在为堆栈重新布线以绕过要移除的磁盘架时，不保持从控制器到堆栈的单路径连接，则可能会导致系统出现多磁盘崩溃。
+
+* *可能的磁盘架损坏：*如果要移除DS460C磁盘架、并将其移至数据中心的其他部分或传输到其他位置、请参见本操作步骤末尾的"移动或传输DS460C磁盘架"一节。
+
 
 .开始之前
+* *最佳实践*：从要移除的磁盘架中的磁盘驱动器中移除聚合后，移除磁盘驱动器所有权。
++
+通过从备用磁盘驱动器中删除所有权信息，可以根据需要将该磁盘驱动器正确集成到另一个节点中。
+
+
+
+[NOTE]
+====
+您必须先禁用磁盘所有权自动分配，然后才能移除磁盘驱动器的所有权。完成此过程后，您可以重新启用此功能。要了解有关磁盘聚合的更多信息，请参阅 https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["磁盘和聚合概述"^] 。
+
+====
 * 系统必须采用多路径HA、三路径HA、多路径、四路径HA或四路径配置。
 +
 对于具有内部存储的平台、外部存储必须采用多路径HA、三路径HA或多路径的形式进行布线。
@@ -24,38 +44,19 @@ NOTE: 对于使用多路径连接对外部存储进行布线的 FAS2600 系列�
 
 * 您的系统不能显示任何 SAS 布线错误消息。
 +
-您可以下载并运行 Active IQ Config Advisor 以查看任何 SAS 布线错误消息以及应采取的更正操作。
-
-+
-https://mysupport.netapp.com/site/tools["NetApp 下载： Config Advisor"^]
+要查看任何 SAS 电缆错误消息以及应采取的纠正措施，请下载并运行 https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"^] 。
 
 * HA 对配置不能处于接管状态。
 * 您必须已从要移除的磁盘架中的磁盘驱动器（磁盘驱动器必须为备用磁盘）中删除所有聚合。
 +
 
-NOTE: 如果尝试使用要删除的磁盘架上的聚合执行此操作步骤，则可能会使系统出现故障，并出现多磁盘崩溃。
+CAUTION: 如果尝试使用要删除的磁盘架上的聚合执行此操作步骤，则可能会使系统出现故障，并出现多磁盘崩溃。
 
 +
 您可以使用 `storage aggregate offline -aggregate _aggregate_name_` 命令，然后使用 `storage aggregate delete -aggregate _aggregate_name_` 命令。
 
 * 如果要从堆栈中移除一个或多个磁盘架，则必须考虑距离因素，以绕过要移除的磁盘架；因此，如果当前缆线不够长，则需要提供更长的缆线。
-
-
-.关于此任务
-* * 最佳实践： * 最佳实践是，从要删除的磁盘架中的磁盘驱动器中删除聚合后，删除磁盘驱动器所有权。
-+
-通过从备用磁盘驱动器中删除所有权信息，可以根据需要将该磁盘驱动器正确集成到另一个节点中。
-
-
-
-[NOTE]
-====
-用于从磁盘驱动器中删除所有权的操作步骤要求您禁用磁盘所有权自动分配。您可以在此操作步骤末尾重新启用磁盘所有权自动分配。
-
-https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html["磁盘和聚合概述"^]
-
-====
-* 对于双节点以上的集群模式 ONTAP 系统，最佳实践是将 epsilon 重新分配给正在进行计划内维护的 HA 对以外的 HA 对。
+* *最佳实践*：对于大于两个节点的集群ONTAP系统，将 epsilon 重新分配给正在进行计划维护的 HA 对以外的 HA 对。
 +
 Reassigning epsilon minimizes the risk of unforeseen errors impacting all nodes in a clustered ONTAP system.您可以使用以下步骤确定持有 epsilon 的节点，并根据需要重新分配 epsilon ：
 
@@ -70,12 +71,6 @@ Reassigning epsilon minimizes the risk of unforeseen errors impacting all nodes 
 .. 返回到管理权限级别： `set -privilege admin`
 
 
-* 如果要从堆栈热移除磁盘架（但保留堆栈），则一次可重新布线并验证一个路径（路径 A ，路径 B ），以绕过要移除的磁盘架，从而始终保持控制器与堆栈的单路径连接。
-+
-
-NOTE: 如果在为堆栈重新布线以绕过要移除的磁盘架时，不保持从控制器到堆栈的单路径连接，则可能会导致系统出现多磁盘崩溃。
-
-* *可能的磁盘架损坏：*如果要移除DS460C磁盘架、并将其移至数据中心的其他部分或传输到其他位置、请参见本操作步骤末尾的"移动或传输DS460C磁盘架"一节。
 
 
 .步骤

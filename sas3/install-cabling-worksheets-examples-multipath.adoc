@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: controller-to-stack, cabling, worksheet, cable, ha, pair, multipath, ha, configuration, controller-to-stack, cabling, controller-to-stack cabling worksheets and cabling examples for multipath ha configuration 
 summary: 您可以使用控制器到堆栈的布线工作表和布线示例将 HA 对作为多路径 HA 配置进行布线。 
 ---
-= 多路径HA配置的控制器到堆栈布线工作表和布线示例—具有IOM12/IOM12B模块的磁盘架
+= 多路径 HA 配置的布线工作表 - DS212C、DS224C 或 DS460C
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用控制器到堆栈的布线工作表和布线示例将 HA 对作为多路径 HA 配置进行布线。
+您可以使用控制器到堆栈布线工作表和布线示例，将 HA 对布线为多路径 HA 配置。这适用于带有 IOM12/IOM12B 模块的磁盘架。
 
 
 NOTE: 此信息指的是没有内部存储的适用场景平台。
