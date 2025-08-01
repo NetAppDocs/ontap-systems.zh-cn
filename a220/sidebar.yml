@@ -35,9 +35,6 @@ entries:
       url: "/a220/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/a220/bootmedia-complete-rma.html"
-  - title: 缓存模块
-    pdf-filename: AFF A220 缓存模块
-    url: "/a220/caching-module-replace.html"
   - title: 机箱
     pdf-filename: AFF A220和a220机箱
     entries:

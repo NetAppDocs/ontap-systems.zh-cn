@@ -35,9 +35,6 @@ entries:
       url: "/asa150/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/asa150/bootmedia-complete-rma.html"
-  - title: 缓存模块
-    pdf-filename: ASA A150缓存模块
-    url: "/asa150/caching-module-replace.html"
   - title: 机箱
     pdf-filename: ASA A150机箱
     entries:

@@ -6,12 +6,11 @@
 
 . 使替换集群和 HA I/O 模块联机：
 +
-`system controller slot module insert -node impaired_node_name_ -slot _slot_name_`
-
+.. 输入以下命令：
 +
+`system controller slot module insert -node _impaired_node_name_ -slot _slot_name_`
 
-NOTE: 当您看到“您想继续吗？”时，请输入 `y` 。
-
+.. 进入 `y`当您看到提示“您想继续吗？”
 +
 输出应确认集群和 HA I/O 模块已成功上线（启动、初始化并投入使用）。
 
@@ -29,6 +28,8 @@ Do you want to continue? {y|n}: `y`
 
 The module has been successfully powered on, initialized and placed into service.
 ----
+
+
 . 验证集群和 HA I/O 模块上的每个端口是否已成功初始化：
 +
 `event log show -event \*hotplug.init*`

@@ -19,24 +19,24 @@
 +
 `node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. 从受损控制器的控制台禁用自动交还：
+. 禁用自动交还：
++
+.. 从受损控制器的控制台输入以下命令：
 +
 `storage failover modify -node local -auto-giveback false`
 
-+
+.. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
 
-NOTE: 当您看到_Do you want to disable auto-giveback？_时、输入`y`。
 
 . 准备移除插槽 4 中的故障集群和 HA 模块，方法是将其从服务中移除并关闭电源：
 +
+.. 输入以下命令：
++
 `system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
 
+.. 进入 `y`当您看到提示“您想继续吗？”
 +
-
-NOTE: 当您看到“您想继续吗？”时，请输入 `y` 。
-
-+
-例如，以下命令准备移除节点 2（受损控制器）上插槽 4 中的模块，并显示一条可安全移除的消息：
+例如，以下命令准备移除节点 2（受损控制器）上插槽 4 中的模块，并显示可以安全移除的消息：
 
 +
 [listing]
@@ -49,6 +49,8 @@ Do you want to continue? {y|n}: y
 
 The module has been successfully removed from service and powered off. It can now be safely removed.
 ----
+
+
 . 验证发生故障的集群以及插槽 4 中的 HA 模块是否已关闭：
 +
 `system controller slot module show`
