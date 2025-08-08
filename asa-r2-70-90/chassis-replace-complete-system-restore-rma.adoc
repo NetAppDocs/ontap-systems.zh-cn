@@ -19,6 +19,7 @@ summary: 重新启动控制器、验证系统运行状况、并将故障部件�
 
 控制器重新启动后、启动ONTAP并交还控制器。
 
+.步骤
 . Check the console output:
 +
 .. 如果控制器启动至Loader提示符、请使用命令重新启动控制器 `boot_ontap`。
@@ -39,6 +40,7 @@ summary: 重新启动控制器、验证系统运行状况、并将故障部件�
 
 控制器交还存储后，您应使用检查整体运行状况 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
 
+.步骤
 . 完成恢复后、运行Active IQ Config Advisor以验证存储系统的运行状况。
 . 更正您遇到的任何问题。
 

@@ -2,7 +2,7 @@
 permalink: c30-60/install-overview.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, Installation, deployment, Install, deploy, Installing, deploying 
-summary: 请按照以下简要步骤安装和设置AFF A70或A90存储系统、并将其部署为ONTAP系统中的HA对。 
+summary: 要安装和设置AFF C30或AFF C60存储系统、您必须查看安装要求、准备站点、安装硬件组件并为其布线、打开存储系统电源以及设置ONTAP集群。 
 ---
 = 安装和设置工作流- AFF C30和AFF C60
 :allow-uri-read: 

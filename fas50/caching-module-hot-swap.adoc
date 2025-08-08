@@ -2,7 +2,7 @@
 permalink: fas50/caching-module-hot-swap.html 
 sidebar: sidebar 
 keywords: fas50, hot swap, replace, Flash Cache 
-summary: '您可以从受支持的同一供应商或不同供应商热插拔容量相同的NVMe SSD Flash Cache模块(缓存模块)。' 
+summary: 您可以为您的 FAS50 存储系统热插拔来自相同或不同支持供应商的相同容量的 NVMe SSD 缓存模块、闪存缓存模块。 
 ---
 = 热插拔缓存模块—FAS50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: '您可以从受支持的同一供应商或不同供应商热插拔容�
 
 
 [role="lead"]
-您可以从受支持的同一供应商或不同供应商热插拔容量相同的NVMe SSD缓存模块(Flash Cache模块)。
+您可以为您的 FAS50 存储系统热插拔来自相同或不同受支持供应商的相同容量的 NVMe SSD 缓存模块（闪存缓存模块）。
 
 .开始之前
 您的存储系统必须满足特定条件，具体取决于您的情况：

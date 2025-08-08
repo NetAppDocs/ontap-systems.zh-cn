@@ -1,0 +1,21 @@
+= 
+:allow-uri-read: 
+
+
+重新启动控制器模块。
+
+.步骤
+. 在加载程序提示符处输入_BYE_。
+. 通过交还存储使控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`
+
+. 恢复自动交还：
++
+`storage failover modify -node local -auto-giveback true`
+
+. 如果已触发AutoSupport维护窗口，请结束它：
++
+`system node autosupport invoke -node * -type all -message MAINT=END`
+
+

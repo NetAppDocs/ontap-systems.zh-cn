@@ -2,7 +2,7 @@
 permalink: c30-60/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, how to recable the system, reboot the system 
-summary: 将存储资源的控制权归还给替代控制器、以便AFF C30或AFF C60系统可以恢复正常运行。 
+summary: 将存储资源的控制权返回给替换控制器，以便您的AFF C30 或AFF C60 存储系统可以恢复正常运行。恢复过程根据系统使用的加密类型（无加密、板载密钥管理器 OKM 加密或外部密钥管理器 EKM 加密）而有所不同。 
 ---
 = 交还控制器- AFF C30和AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 将存储资源的控制权归还给替代控制器、以便AFF C30或A
 
 
 [role="lead"]
-将存储资源的控制权归还给替代控制器、以便AFF C30或AFF C60系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。
+将存储资源的控制权返回给替换控制器，以便您的AFF C30 或AFF C60 存储系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密、板载密钥管理器 (OKM) 加密或外部密钥管理器 (EKM) 加密。
 
 [role="tabbed-block"]
 ====

@@ -2,7 +2,7 @@
 permalink: a20-30-50/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace the boot media 
-summary: AFF A20、 AFF A30 或AFF A50 系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。 
+summary: AFF A20、 AFF A30 或AFF A50 存储系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。 
 ---
 = 更换启动介质并准备手动启动恢复 - AFF A20、 AFF A30 和AFF A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: AFF A20、 AFF A30 或AFF A50 系统中的启动介质存储了必要�
 
 
 [role="lead"]
-AFF A20、 AFF A30 或AFF A50 系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。
+AFF A20、 AFF A30 或AFF A50 存储系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。
 
 
 

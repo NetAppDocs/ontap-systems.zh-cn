@@ -28,7 +28,9 @@ summary: 维护AFF A20、AFF A30或AFF A50存储系统的硬件、以确保长�
  a| 
 link:bootmedia-replace-workflow-bmr.html["启动媒体 - 自动恢复"]
  a| 
-启动介质存储一组主ONTAP映像文件和一组辅助 ONTAP 映像文件，存储系统使用这些文件从配对节点启动映像，并自动运行相应的启动菜单选项，以将启动映像安装到替换的启动介质上。自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
+启动介质存储存储系统用于启动的一组主要ONTAP映像文件。在自动恢复期间，系统从合作伙伴节点检索启动映像，并自动运行相应的启动菜单选项以在替换启动介质上安装该映像。
+
+自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
 
 
 

@@ -2,7 +2,7 @@
 permalink: a20-30-50/nvdimm-battery-replace.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace the NV battery, NV battery 
-summary: 当AFF A20、AFF A30或AFF A50系统中的NV电池开始失去电量或发生故障时、请予以更换、因为它负责在断电期间保留关键系统数据。更换过程包括关闭受损控制器、卸下控制器模块、更换NV电池、重新安装控制器模块以及将故障部件退回NetApp。 
+summary: 当电池开始失去电量或出现故障时，请更换AFF A20、 AFF A30 或AFF A50 存储系统中的 NV 电池，因为它负责在断电期间保存关键系统数据。更换过程包括关闭受损的控制器、移除控制器模块、更换 NV 电池、重新安装控制器模块以及将故障部件退回给NetApp。 
 ---
 = 更换NV电池- AFF A20、AFF A30和AFF A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 当AFF A20、AFF A30或AFF A50系统中的NV电池开始失去电量或
 
 
 [role="lead"]
-当AFF A20、AFF A30或AFF A50系统中的NV电池开始失去电量或发生故障时、请予以更换、因为它负责在断电期间保留关键系统数据。更换过程包括关闭受损控制器、卸下控制器模块、更换NV电池、重新安装控制器模块以及将故障部件退回NetApp。
+当电池开始失去电量或出现故障时，请更换AFF A20、 AFF A30 或AFF A50 存储系统中的 NV 电池，因为它负责在断电期间保存关键系统数据。更换过程包括关闭受损的控制器、移除控制器模块、更换 NV 电池、重新安装控制器模块以及将故障部件退回给NetApp。
 
 .开始之前
 存储系统中的所有其他组件都必须正常运行；如果未正常运行、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。

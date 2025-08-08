@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/bootmedia-recovery-image-boot-bmr.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, boot the recovery image 
-summary: 您可以通过自动启动恢复过程从配对控制器还原启动介质上的映像。 
+summary: 在ASA A20、ASA A30或ASA A50存储系统中安装新的启动介质设备后、您可以启动自动启动介质恢复过程、以便从运行状况良好的节点还原配置。 
 ---
 = 还原启动介质上的ONTAP映像- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -16,7 +16,7 @@ summary: 您可以通过自动启动恢复过程从配对控制器还原启动�
 在恢复过程中、系统会检查是否已启用加密、并确定所使用的密钥加密类型。如果启用了密钥加密、系统将指导您完成相应的还原步骤。
 
 .开始之前
-* 对于OKM、您需要OKM密码短语文件内容。
+* 对于 OKM，您需要集群范围的密码以及备份数据。
 * 对于EMM、您需要配对节点上以下文件的副本：
 +
 ** /cfcard/kmip/servers.cfg文件。
@@ -85,7 +85,7 @@ Is the key manager onboard
  a| 
 转至步骤4以还原相应的密钥管理器。
 
-节点将访问启动菜单并运行：
+节点进入启动菜单并运行：
 
 ** 选项10适用于具有板载密钥管理器(Onboard Key Manager、OKM)的系统。
 ** 选项11适用于具有外部密钥管理器(EKM)的系统。
@@ -107,20 +107,32 @@ Entering Bootmenu Option 10...
 This option must be used only in disaster recovery procedures. Are you sure? (y or n):
 ....
 .. 在提示符处输入 `Y`以确认您要启动OKM恢复过程。
-.. 出现提示时、输入板载密钥管理器的密码短语、出现提示时再次输入密码短语进行确认。
+.. 出现提示时输入以下内容：
 +
-.显示密码短语提示示例
+... 密码
+... 当提示确认时再次输入密码
+... 板载密钥管理器的备份数据
++
+.显示密码和备份数据提示的示例
 [%collapsible]
 =====
 ....
 Enter the passphrase for onboard key management:
-Enter the passphrase again to confirm:
-Enter the backup data:
 -----BEGIN PASSPHRASE-----
 <passphrase_value>
 -----END PASSPHRASE-----
+Enter the passphrase again to confirm:
+-----BEGIN PASSPHRASE-----
+<passphrase_value>
+-----END PASSPHRASE-----
+Enter the backup data:
+-----BEGIN BACKUP-----
+<passphrase_value>
+-----END ACKUP-----
 ....
 =====
+
+
 .. 从配对节点还原相应文件时、继续监控恢复过程。
 +
 恢复过程完成后、节点将重新启动。以下消息表示已成功恢复：
@@ -181,7 +193,7 @@ ONTAP 9.16.0.
 
 
  a| 
-ONTAP 9.16.1.
+ONTAP 9.16.1 及更高版本
  a| 
 继续执行下一步。
 
@@ -259,6 +271,8 @@ xxx.xxx.xxx.xxx:5696.netapp_keystore_uuid=<id_value>
 
  a| 
 如果出现提示、请输入配对节点的ONTAP集群UUID。
+
+您可以使用以下方式从伙伴节点检查集群 UUID `cluster identify show`命令。
  a| 
 .显示ONTAP集群UUID示例
 [%collapsible]
@@ -276,6 +290,13 @@ System is ready to utilize external key manager(s).
 
  a| 
 如果出现提示、请输入此节点的临时网络接口和设置。
+
+您需要输入：
+
+... 端口的 IP 地址
+... 端口的网络掩码
+... 默认网关的 IP 地址
+
  a| 
 .显示临时网络设置示例
 [%collapsible]
@@ -298,44 +319,11 @@ Trying to recover keys from key servers....
 |===
 .. 根据密钥是否已成功还原、执行以下操作之一：
 +
-*** 如果EKM配置已成功还原、则此过程将尝试从配对节点还原相应的文件、然后重新启动此节点。转至步骤d
+*** 如果你看到 `kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:5696`在输出中，EKM 配置已成功恢复。
 +
-.显示9.16.0还原消息示例
-[%collapsible]
-=====
-....
+该过程尝试从伙伴节点恢复适当的文件并重新启动该节点。转至步骤 d。
 
-kmip2_client: Importing keys from external key server: xxx.xxx.xxx.xxx:5696
-[Feb  6 04:57:43]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdUtils: [locateMrootAkUuids]:420: Locating local cluster MROOT-AK with keystore UUID: <uuid>
-[Feb  6 04:57:43]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [doCmdImp]:79: Calling KMIP Locate for the following attributes: [<x-NETAPP-ClusterId, <uuid>>, <x-NETAPP-KeyUsage, MROOT-AK>, <x-NETAPP-KeystoreUuid, <uuid>>, <x-NETAPP-Product, Data ONTAP>]
-[Feb  6 04:57:44]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [doCmdImp]:84: KMIP Locate executed successfully!
-[Feb  6 04:57:44]: 0x80cc09000: 0: DEBUG: kmip2::kmipCmds::KmipLocateCmdBase: [setUuidList]:50: UUID returned: <uuid>
-...
-kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:5696
-
-GEOM_ELI: Device nvd0s4.eli created.
-GEOM_ELI: Encryption: AES-XTS 256
-GEOM_ELI:     Crypto: software
-Feb 06 05:02:37 [_server-name_]: crypto_get_mroot_ak:140 MROOT-AK is requested.
-Feb 06 05:02:37 [_server-name_]: crypto_get_mroot_ak:162 Returning MROOT-AK.
-....
-=====
-+
-.显示9.16.1还原消息示例
-[%collapsible]
-=====
-....
-
-System is ready to utilize external key manager(s).
-Trying to recover keys from key servers....
-[discover_versions]
-[status=SUCCESS reason= message=]
-...
-kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:xxxx
-Successfully recovered keymanager secrets.
-....
-=====
-*** 如果未成功还原密钥、系统将暂停并指示它无法还原密钥。此时将显示错误和警告消息。重新运行恢复过程：
+*** 如果密钥未成功恢复，系统将停止并指示无法恢复密钥。显示错误和警告消息。您必须重新运行恢复过程：
 +
 `boot_recovery -partner`
 

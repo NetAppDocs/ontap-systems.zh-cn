@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, move the controller module hardware 
-summary: 如果硬件故障需要更换ASA A20、ASA A30或ASA A50系统中的控制器。更换过程包括移除受损控制器、将组件移至更换控制器、安装更换控制器并重新启动它。 
+summary: 当硬件故障需要更换ASA A20、 ASA A30 或ASA A50 存储系统中的控制器时。更换过程包括移除受损的控制器、将组件移至更换的控制器、安装更换的控制器以及重新启动它。 
 ---
 = 更换控制器- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果硬件故障需要更换ASA A20、ASA A30或ASA A50系统中的�
 
 
 [role="lead"]
-如果硬件故障需要更换ASA A20、ASA A30或ASA A50系统中的控制器。更换过程包括移除受损控制器、将组件移至更换控制器、安装更换控制器并重新启动它。
+当硬件故障需要更换ASA A20、 ASA A30 或ASA A50 存储系统中的控制器时。更换过程包括移除受损的控制器、将组件移至更换的控制器、安装更换的控制器以及重新启动它。
 
 
 

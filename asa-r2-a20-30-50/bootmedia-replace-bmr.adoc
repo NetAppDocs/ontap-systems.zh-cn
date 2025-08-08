@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, replace the boot media 
-summary: ASA A20、 ASA A30 或ASA A50 系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后重新安装控制器模块。 
+summary: ASA A20、 ASA A30 或ASA A50 存储系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后重新安装控制器模块。 
 ---
 = 更换启动介质- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: ASA A20、 ASA A30 或ASA A50 系统中的启动介质存储了必要�
 
 
 [role="lead"]
-ASA A20、 ASA A30 或ASA A50 系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后重新安装控制器模块。
+ASA A20、 ASA A30 或ASA A50 存储系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后重新安装控制器模块。
 
 
 

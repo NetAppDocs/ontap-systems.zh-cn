@@ -2,7 +2,7 @@
 permalink: a20-30-50/io-module-replace.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace a pcie card 
-summary: 如果AFF A20、AFF A30或AFF A50系统中的I/O模块出现故障或需要升级以支持更高性能或其他功能、请更换该模块。更换过程包括关闭控制器、更换发生故障的I/O模块、重新启动控制器以及将发生故障的部件退回NetApp。 
+summary: 当AFF A20、 AFF A30 或AFF A50 存储系统中的 I/O 模块发生故障或需要升级以支持更高性能或其他功能时，请更换该模块。更换过程包括关闭控制器、更换故障的 I/O 模块、重新启动控制器，以及将故障部件退回NetApp。 
 ---
 = 更换I/O模块- AFF A20、AFF A30和AFF A50
 :allow-uri-read: 

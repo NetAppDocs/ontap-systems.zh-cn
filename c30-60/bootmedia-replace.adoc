@@ -2,7 +2,7 @@
 permalink: c30-60/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff c30, aff c60, replace the boot media 
-summary: AFF C30 或AFF C60 系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。 
+summary: AFF C30 或AFF C60 存储系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。 
 ---
 = 更换启动介质并准备手动启动恢复 - AFF C30 和AFF C60
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: AFF C30 或AFF C60 系统中的启动介质存储了必要的固件和�
 
 
 [role="lead"]
-AFF C30 或AFF C60 系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。
+AFF C30 或AFF C60 存储系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。
 
 
 

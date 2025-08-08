@@ -7,11 +7,9 @@
 . 从存储系统正面卸下挡板。
 . 以物理方式确定故障驱动器。
 +
-When a drive fails, the system logs a warning message to the system console indicating which drive failed.此外、磁盘架操作员显示面板上的警示(琥珀色) LED和故障驱动器将亮起。
+** When a drive fails, the system logs a warning message to the system console indicating which drive failed.此外、磁盘架操作员显示面板上的警示(琥珀色) LED和故障驱动器将亮起。
+** 故障驱动器上的活动（绿色） LED 可能会亮起（稳定亮起），表示驱动器已通电，但不应闪烁，这表示 I/O 活动。故障驱动器没有 I/O 活动。
 
-+
-
-NOTE: 故障驱动器上的活动（绿色） LED 可能会亮起（稳定亮起），表示驱动器已通电，但不应闪烁，这表示 I/O 活动。故障驱动器没有 I/O 活动。
 
 . 删除故障驱动器：
 +
@@ -43,8 +41,7 @@ image::../media/icon_round_3.png[标注编号3]
 
 卸下驱动器时，请始终用双手支撑其重量。
 
-
-NOTE: 由于驱动器易碎、请尽量减少操作以避免损坏驱动器。
+由于驱动器易碎、请尽量减少操作以避免损坏驱动器。
 
 |===
 . 请至少等待 70 秒，然后再插入替代驱动器。
@@ -69,6 +66,6 @@ NOTE: 由于驱动器易碎、请尽量减少操作以避免损坏驱动器。
 . 重新安装存储系统正面的挡板。
 . 按照套件随附的 RMA 说明将故障部件退回 NetApp 。
 +
-请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。
+联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]如果您需要 RMA 号码或更换程序的额外帮助。
 
 

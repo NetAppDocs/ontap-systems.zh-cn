@@ -2,7 +2,7 @@
 permalink: fas50/install-complete.html 
 sidebar: sidebar 
 keywords: fas50, prepare installation 
-summary: 通过仅连接到交换机和笔记本电脑的集群发现、或者直接连接到存储系统中的控制器、然后连接到管理交换机、完成平台设置和配置。 
+summary: 打开FAS50存储系统后、即可发现集群网络并设置ONTAP集群。 
 ---
 = 完成存储系统设置和配置—FAS50
 :allow-uri-read: 

@@ -13,8 +13,9 @@ summary: 在ASA A70或ASA A90系统中添加I/O模块、以增强网络连接并
 [role="lead"]
 在ASA A70或ASA A90系统中添加I/O模块、以增强网络连接并扩展系统处理数据流量的能力。
 
-如果存在空插槽或所有插槽均已完全填充、则可以向ASA A70和ASA A90存储系统添加I/O模块。.关于此任务
+当有空插槽或所有插槽都已填满时，您可以向ASA A70 和ASA A90 存储系统添加 I/O 模块。
 
+.关于此任务
 如果需要、您可以打开存储系统位置(蓝色) LED、以帮助您以物理方式定位受影响的存储系统。使用SSH登录到BMC并输入 `system location-led _on_`命令。
 
 存储系统具有两个位置LED、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.

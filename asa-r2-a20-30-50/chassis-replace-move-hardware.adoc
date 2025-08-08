@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, move hardware components, replace the chassis 
-summary: '如果硬件故障需要更换ASA A20、ASA A30或ASA A50系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下驱动器、安装更换机箱以及重新安装机箱组件。' 
+summary: 当硬件故障需要更换ASA A20、 ASA A30 或ASA A50 存储系统的机箱时。更换过程包括移除控制器、移除驱动器、安装更换机箱以及重新安装机箱组件。 
 ---
 = 更换机箱- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: '如果硬件故障需要更换ASA A20、ASA A30或ASA A50系统的机�
 
 
 [role="lead"]
-如果硬件故障需要更换ASA A20、ASA A30或ASA A50系统的机箱。更换过程包括移除控制器、移除驱动器、安装更换机箱以及重新安装机箱组件。
+当硬件故障需要更换ASA A20、 ASA A30 或ASA A50 存储系统的机箱时。更换过程包括移除控制器、移除驱动器、安装更换机箱以及重新安装机箱组件。
 
 
 

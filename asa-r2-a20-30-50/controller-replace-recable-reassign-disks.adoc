@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: asa a20, asa a30, asa a50, how to reboot the system 
-summary: 您必须重新启动控制器。 
+summary: '将存储资源的控制权交还给替换控制器，以便您的ASA A20、 ASA A30 或ASA A50 存储系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密、板载密钥管理器 (OKM) 加密或外部密钥管理器 (EKM) 加密。' 
 ---
 = 交还控制器- ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您必须重新启动控制器。
 
 
 [role="lead"]
-将存储资源的控制权归还给替代控制器、以便ASA A20、ASA A30或ASA A50系统可以恢复正常运行。交还过程因系统使用的加密类型而异：无加密、板载密钥管理器(OKM)加密或外部密钥管理器(EKM)加密。
+将存储资源的控制权交还给替换控制器，以便您的ASA A20、 ASA A30 或ASA A50 存储系统可以恢复正常运行。恢复过程根据系统使用的加密类型而有所不同：无加密、板载密钥管理器 (OKM) 加密或外部密钥管理器 (EKM) 加密。
 
 [role="tabbed-block"]
 ====

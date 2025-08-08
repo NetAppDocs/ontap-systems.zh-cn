@@ -2,7 +2,7 @@
 permalink: asa-r2-a20-30-50/maintain-overview.html 
 sidebar: sidebar 
 keywords: asa a20 asa a30 asa a50 maintenance, maintenance, repairing a20 asa a30 asa a50, replace a20 asa a30 asa a50 components 
-summary: 维护ASA A20、ASA A30和ASA A50硬件 
+summary: 维护ASA A20、 ASA A30 或ASA A50 存储系统的硬件，以确保长期可靠性和最佳性能。定期执行维护任务（例如更换故障组件），有助于防止停机和数据丢失。 
 ---
 = 硬件维护概述—ASA A20、ASA A30和ASA A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 维护ASA A20、ASA A30和ASA A50硬件
 
 
 [role="lead"]
-维护ASA A20、ASA A30或ASA A50存储系统的硬件、以确保长期可靠性和最佳性能。执行定期维护任务、例如更换故障组件、因为这有助于防止停机和数据丢失。
+维护ASA A20、 ASA A30 或ASA A50 存储系统的硬件，以确保长期可靠性和最佳性能。定期执行维护任务（例如更换故障组件），有助于防止停机和数据丢失。
 
 维护过程假定ASA A20、ASA A30和ASA A50系统已部署为ONTAP环境中的存储节点。
 
@@ -26,9 +26,18 @@ summary: 维护ASA A20、ASA A30和ASA A50硬件
 
 
  a| 
-link:bootmedia-replace-workflow-bmr.html["启动介质"]
+link:bootmedia-replace-workflow-bmr.html["启动媒体 - 自动恢复"]
  a| 
-启动介质存储一组主和二级ONTAP映像文件以及系统在启动时使用的系统配置信息。
+启动介质存储存储系统用于启动的一组主要ONTAP映像文件。在自动恢复期间，系统从合作伙伴节点检索启动映像，并自动运行相应的启动菜单选项以在替换启动介质上安装该映像。
+
+自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
+
+
+
+ a| 
+link:bootmedia-replace-workflow.html["启动媒体-手动恢复"]
+ a| 
+启动介质存储一组主ONTAP映像文件和一组辅助 ONTAP 映像文件，存储系统使用这些文件从 USB 驱动器启动映像并从合作伙伴节点恢复配置
 
 
 

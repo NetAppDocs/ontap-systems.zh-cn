@@ -2,7 +2,7 @@
 permalink: a20-30-50/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 要将AFF A20、AFF A30或AFF A50系统还原到完全运行状态、请在新控制器上安装所需的许可证、确认逻辑接口是否向其主端口报告、然后执行集群运行状况检查。最后、注册新控制器的序列号、然后将故障部件退回给NetApp。 
+summary: '要完成AFF A20、 AFF A30 或AFF A50 存储系统的控制器更换，请首先恢复NetApp存储加密配置（如有必要）并在新控制器上安装所需的许可证。接下来，确认逻辑接口 (LIF) 正在向其主端口报告并执行集群健康检查。最后，注册新控制器的序列号，然后将发生故障的部件退回给NetApp。' 
 ---
 = 完整控制器更换—AFF A20、AFF A30和AFF A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 要将AFF A20、AFF A30或AFF A50系统还原到完全运行状态、�
 
 
 [role="lead"]
-要完成AFF A20、AFF A30或AFF A50系统的控制器更换、请先还原NetApp存储加密配置(如有必要)、并在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。
+要完成AFF A20、 AFF A30 或AFF A50 存储系统的控制器更换，请首先恢复NetApp存储加密配置（如有必要）并在新控制器上安装所需的许可证。接下来，确认逻辑接口 (LIF) 正在向其主端口报告并执行集群健康检查。最后，注册新控制器的序列号，然后将发生故障的部件退回给NetApp。
 
 
 

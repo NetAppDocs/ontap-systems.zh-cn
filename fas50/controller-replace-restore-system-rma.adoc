@@ -2,7 +2,7 @@
 permalink: fas50/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: fas50, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: '要完成FAS50系统的控制器更换、请先还原NetApp存储加密配置(如果需要)、然后在新控制器上安装所需的许可证。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后、注册新控制器的序列号、然后将故障部件退回给NetApp。' 
+summary: 要完成 FAS50 系统的控制器更换，请首先恢复NetApp存储加密配置（如有必要），然后在新控制器上安装所需的许可证。接下来，确认逻辑接口 LIF 正在向其主端口报告并执行集群运行状况检查。最后，注册新控制器的序列号，然后将发生故障的部件退回给NetApp。 
 ---
 = 完整控制器更换—FAS50
 :allow-uri-read: 

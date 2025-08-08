@@ -2,7 +2,7 @@
 permalink: a20-30-50/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace a dimm 
-summary: 如果检测到可更正或不可更正的内存错误过多、请更换AFF A20、AFF A30或AFF A50系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。 
+summary: 如果检测到过多可纠正或不可纠正的内存错误，请更换AFF A20、 AFF A30 或AFF A50 存储系统中的 DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损的控制器、将其移除、更换 DIMM、重新安装控制器，然后将故障部件返回给NetApp。 
 ---
 = 更换DIMM - AFF A20、AFF A30和AFF A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 如果检测到可更正或不可更正的内存错误过多、请更�
 
 
 [role="lead"]
-如果检测到可更正或不可更正的内存错误过多、请更换AFF A20、AFF A30或AFF A50系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。
+如果检测到过多可纠正或不可纠正的内存错误，请更换AFF A20、 AFF A30 或AFF A50 存储系统中的 DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损的控制器、将其移除、更换 DIMM、重新安装控制器，然后将故障部件返回给NetApp。
 
 .开始之前
 * 存储系统中的所有其他组件都必须正常工作；如果不正常、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续。

@@ -2,7 +2,7 @@
 permalink: a20-30-50/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace the boot media 
-summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装到AFF A20、 AFF A30 或AFF A50 系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复并将系统恢复到运行状态。 
+summary: 启动映像的手动恢复涉及使用 USB 驱动器将ONTAP重新安装到AFF A20、 AFF A30 或AFF A50 存储系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复操作，将系统恢复到正常运行状态。 
 ---
 = 启动介质手动恢复工作流程 - AFF A20、 AFF A30 和AFF A50
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装�
 
 
 [role="lead"]
-手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装到AFF A20、 AFF A30 或AFF A50 系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复并将系统恢复到运行状态。
+启动映像的手动恢复涉及使用 USB 驱动器将ONTAP重新安装到AFF A20、 AFF A30 或AFF A50 存储系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复操作，将系统恢复到正常运行状态。
 
 如果您的系统运行的是ONTAP 9.17.1 及更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"] 。
 
