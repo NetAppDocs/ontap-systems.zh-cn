@@ -13,10 +13,6 @@ summary: 'NVRAM模块由NVRAM12和DIMM以及每个NVRAM模块最多两个NVMe SS
 [role="lead"]
 当非易失性内存出现故障或需要升级时、请更换AFF C80系统中的NVRAM。更换过程包括关闭受损控制器、更换NVRAM模块或NVRAM DIMM、重新分配磁盘以及将故障部件返回给NetApp。
 
-
-
-== 步骤2：更换NVRAM模块或NVRAM DIMM
-
 使用以下相应选项更换NVRAM模块或NVRAM DIMM。
 
 [role="tabbed-block"]

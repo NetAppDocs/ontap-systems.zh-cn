@@ -33,6 +33,6 @@ summary: 要安装和配置AFF A70或AFF A90系统、您需要查看硬件要求
 [role="quick-margin-para"]
 打开控制器电源之前、请打开每个NS224磁盘架的电源、并分配一个唯一的磁盘架ID、以确保每个磁盘架在设置中都是唯一标识的、将笔记本电脑或控制台连接到控制器、然后将控制器连接到电源。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"]link:install-complete.html["完成存储系统设置"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"]/
 [role="quick-margin-para"]
-要完成系统设置、请通过浏览器指向控制器的IP地址来访问ONTAP系统管理器。设置向导可帮助您完成AFF A70或AFF A90存储系统的集群配置。
+打开存储系统电源后， https://docs.netapp.com/us-en/ontap/software_setup/workflow-summary.html["设置集群"] 。

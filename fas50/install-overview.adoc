@@ -33,6 +33,6 @@ summary: 要安装和设置FAS50存储系统、您必须查看安装要求、准
 [role="quick-margin-para"]
 要打开存储系统的电源、请打开每个磁盘架的电源并根据需要分配唯一的磁盘架ID、然后打开控制器的电源。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["五个"]link:install-complete.html["完成存储系统设置"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["五个"]/
 [role="quick-margin-para"]
-要完成存储系统的设置、请通过浏览器指向控制器的IP地址来访问ONTAP系统管理器。设置向导可帮助您完成存储系统的集群配置。
+打开存储系统电源后， https://docs.netapp.com/us-en/ontap/software_setup/workflow-summary.html["设置集群"] 。
