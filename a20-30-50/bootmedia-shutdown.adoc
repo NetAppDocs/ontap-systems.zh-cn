@@ -38,13 +38,14 @@ summary: 关闭AFF A20、 AFF A30 或AFF A50 存储系统中受损的控制器�
 +
 `cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行状况良好的控制器的控制台禁用自动交还：
+. 禁用自动交还：
++
+.. 从健康控制器的控制台输入以下命令：
 +
 `storage failover modify -node local -auto-giveback false`
 
-+
+.. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
 
-NOTE: 当您看到_Do you want to disable auto-giveback？_时、输入`y`。
 
 . 将受损控制器显示为 LOADER 提示符：
 +
@@ -102,9 +103,14 @@ LOADER 提示符
 +
 `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行状况良好的控制器的控制台禁用自动交还：
+. 禁用自动交还：
 +
-`storage failover modify –node local -auto-giveback false`
+.. 从健康控制器的控制台输入以下命令：
++
+`storage failover modify -node local -auto-giveback false`
+
+.. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
+
 
 . 将受损控制器显示为 LOADER 提示符：
 +

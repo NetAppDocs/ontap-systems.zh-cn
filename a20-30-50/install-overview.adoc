@@ -17,22 +17,22 @@ summary: 要安装和设置AFF A20、AFF A30或AFF A50存储系统、您必须�
 [role="quick-margin-para"]
 在安装存储系统之前、存储系统必须满足安装要求。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["一个"]link:install-prepare.html["准备安装"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:install-prepare.html["准备安装"]
 [role="quick-margin-para"]
 要准备安装、请准备好站点、检查环境和电气要求、并确保有足够的机架空间。然后、打开设备包装、将物品与装箱单进行比较、并注册硬件以获得支持优势。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["两个"]link:install-hardware.html["安装硬件"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:install-hardware.html["安装硬件"]
 [role="quick-margin-para"]
 要安装硬件、请为存储系统和磁盘架安装导轨套件、然后在机柜或电信机架中安装并固定存储系统和磁盘架。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["三个"]link:install-cable.html["为硬件布线"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:install-cable.html["为硬件布线"]
 [role="quick-margin-para"]
 要为硬件布线、请将控制器连接到您的网络、然后再连接到磁盘架。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["四个"]link:install-power-hardware.html["启动存储系统"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:install-power-hardware.html["启动存储系统"]
 [role="quick-margin-para"]
 要打开存储系统的电源、请打开每个磁盘架的电源并根据需要分配唯一的磁盘架ID、然后打开控制器的电源。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["五个"]/
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"]/
 [role="quick-margin-para"]
 打开存储系统电源后， https://docs.netapp.com/us-en/ontap/software_setup/workflow-summary.html["设置集群"] 。
