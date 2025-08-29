@@ -13,6 +13,8 @@ summary: 在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执�
 [role="lead"]
 在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine （ SVM ）现在处于活动状态，并从本地磁盘池提供数据。
 
+如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"]
+
 此任务仅限适用场景双节点 MetroCluster 配置。
 
 .步骤

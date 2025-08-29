@@ -356,8 +356,6 @@ NOTE: 如果系统停留在启动菜单处，请选择启动到 LOADER 选项。
 
 == 第 6 步：切回双节点 MetroCluster 配置中的聚合
 
-在双节点 MetroCluster 配置中完成 FRU 更换后，您可以执行 MetroCluster 切回操作。这样会将配置恢复到其正常运行状态，以前受损站点上的 sync-source Storage Virtual Machine （ SVM ）现在处于活动状态，并从本地磁盘池提供数据。
-
 此任务仅限适用场景双节点 MetroCluster 配置。
 
 .步骤

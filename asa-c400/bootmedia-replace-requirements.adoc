@@ -1,0 +1,19 @@
+---
+permalink: asa-c400/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa-c400, replace the boot media 
+summary: 在更换ASA C400 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您拥有具有适当存储容量的 USB 闪存驱动器，并验证您拥有正确的替换启动设备。 
+---
+= 手动启动媒体恢复的要求 - ASA C400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在更换ASA C400 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您拥有具有适当存储容量的 USB 闪存驱动器，并验证您拥有正确的替换启动设备。
+
+如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
+
+.下一步是什么？
+查看更换引导介质的要求后，您需要link:bootmedia-encryption-preshutdown-checks.html["检查启动介质上的加密密钥支持和状态"]。

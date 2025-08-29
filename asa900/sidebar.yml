@@ -16,23 +16,38 @@ entries:
 - title: 维护
   pdf-filename: ASA A900维护
   entries:
-  - title: 概述
-    url: "/asa900/index.html"
-  - title: 启动介质
-    pdf-filename: ASA A900启动介质
+  - title: 维护概述
+    url: "/asa900/maintain-overview.html"
+  - title: 启动媒体 - 自动恢复
+    pdf-filename: AFF ASA 900 启动介质自动化
+    entries:
+    - title: 启动介质更换工作流
+      url: "/asa900/bootmedia-replace-workflow-bmr.html"
+    - title: 查看要求
+      url: "/asa900/bootmedia-replace-requirements-bmr.html"
+    - title: 关闭控制器
+      url: "/asa900/bootmedia-shutdown-bmr.html"
+    - title: 更换启动介质
+      url: "/asa900/bootmedia-replace-bmr.html"
+    - title: 还原启动介质上的映像
+      url: "/asa900/bootmedia-recovery-image-boot-bmr.html"
+    - title: 将故障部件退回 NetApp
+      url: "/asa900/bootmedia-complete-rma-bmr.html"
+  - title: 启动媒体 - 手动恢复
+    pdf-filename: AFF ASA 900 启动介质手册
     entries:
     - title: 概述
       url: "/asa900/bootmedia_replace_overview.html"
     - title: 检查加密密钥
       url: "/asa900/bootmedia_encryption_preshutdown_checks.html"
     - title: 关闭受损控制器
-      url: "/asa900/bootmedia_impaired_controller_shutdown.html"
-    - title: 更换发生故障的启动介质
+      url: "/asa900/bootmedia-shutdown.html"
+    - title: 更换启动介质
       url: "/asa900/bootmedia_replace.html"
     - title: 启动恢复映像
       url: "/asa900/bootmedia_recovery_image.html"
     - title: 恢复加密
-      url: "/asa900/bootmedia_encryption_restore.html"
+      url: "/asa900/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/asa900/bootmedia_complete_rma.html"
   - title: 机箱

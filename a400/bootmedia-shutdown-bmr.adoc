@@ -1,0 +1,82 @@
+---
+permalink: a400/bootmedia-shutdown-bmr.html 
+sidebar: sidebar 
+keywords: a400, shut down the controller 
+summary: 关闭AFF A400存储系统中受损的控制器，以防止数据丢失并确保更换启动介质时系统稳定性。 
+---
+= 关闭控制器以进行自动启动介质恢复 - AFF A400
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+关闭AFF A400 存储系统中受损的控制器，以防止数据丢失并在自动启动介质恢复过程中保持系统稳定性。
+
+自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+* 如果您使用的是SAN系统，则必须已检查受损控制器SCSI刀片的事件消息  `cluster kernel-service show`。 `cluster kernel-service show`命令(在priv高级模式下)可显示该节点的节点名称link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["仲裁状态"]、该节点的可用性状态以及该节点的运行状态。
++
+每个 SCSI 刀片式服务器进程应与集群中的其他节点保持仲裁关系。在继续更换之前，必须先解决所有问题。
+
+* If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
+
+
+.步骤
+. 如果启用了AutoSupport 、则通过调用AutoSupport 消息禁止自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+
++
+以下AutoSupport 消息禁止自动创建案例两小时：
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 禁用自动交还：
++
+.. 从健康控制器的控制台输入以下命令：
++
+`storage failover modify -node local -auto-giveback false`
+
+.. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
+
+
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+正在等待交还
+ a| 
+按 Ctrl-C ，然后在出现提示时回答 `y` 。
+
+
+
+ a| 
+系统提示符或密码提示符
+ a| 
+从运行正常的控制器接管或暂停受损控制器：
+
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+-halt true参数将进入Loader提示符。
+
+|===
+
+
+.下一步行动
+关闭受损控制器后，您可以link:bootmedia-replace-bmr.html["更换启动介质"]。

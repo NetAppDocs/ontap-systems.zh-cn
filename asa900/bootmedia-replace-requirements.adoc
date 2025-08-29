@@ -1,0 +1,37 @@
+---
+permalink: asa900/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: asa900, replace the boot media 
+summary: 在更换AFF A900 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您拥有具有适当存储容量的 USB 闪存驱动器，并验证您拥有正确的替换启动设备。 
+---
+= 手动启动媒体恢复的要求 - ASA A900
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在更换ASA A900 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您拥有具有适当存储容量的 USB 闪存驱动器，并验证您拥有正确的替换启动设备。
+
+如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
+
+.USB 闪存盘
+* 确保您有一个格式化为 FAT32 的 USB 闪存驱动器。
+* USB 必须具有足够的存储容量来容纳 `image_xxx.tgz`文件。
+
+
+.文件准备
+复制 `image_xxx.tgz`将文件复制到 USB 闪存驱动器。使用 USB 闪存驱动器传输ONTAP映像时将使用此文件。
+
+.组件更换
+使用NetApp提供的替换组件来更换故障组件。
+
+.控制器识别
+更换受损的启动介质时，将命令应用到正确的控制器至关重要：
+
+* _受损控制器_是您正在执行维护的控制器。
+* _健康控制器_是受损控制器的 HA 伙伴。
+
+
+.下一步是什么？
+在您查看更换启动介质的要求后，您需要link:bootmedia_encryption_preshutdown_checks.html["检查启动介质上的加密密钥支持和状态"]。

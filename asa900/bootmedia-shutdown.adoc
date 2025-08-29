@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。 
 ---
-= 关闭受损控制器- ASA A900
+= 关闭控制器以进行手动启动介质恢复 - ASA A900
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: 根据存储系统硬件配置的不同，您可以使用不同的过�
 
 [role="lead"]
 使用适用于您的配置的操作步骤 关闭或接管受损控制器。
+
+如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 
 [role="tabbed-block"]
 ====

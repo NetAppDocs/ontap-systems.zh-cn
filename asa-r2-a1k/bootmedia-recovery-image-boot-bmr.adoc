@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a1k, boot the recovery image 
 summary: 在ASA A1K系统的替代启动介质上还原ONTAP映像。此过程包括从Loader提示符处启动启动启动恢复过程、并监控恢复过程、直到完成恢复过程并重新启动节点为止。 
 ---
-= 恢复启动介质上的映像- ASA A1K
+= 在启动介质上还原ONTAP映像 - ASA A1K
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -128,7 +128,7 @@ Enter the passphrase again to confirm:
 Enter the backup data:
 -----BEGIN BACKUP-----
 <passphrase_value>
------END ACKUP-----
+-----END BACKUP-----
 ....
 =====
 

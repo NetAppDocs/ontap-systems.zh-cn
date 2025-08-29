@@ -1,5 +1,5 @@
 ---
-section: asa-c-400
+section: asa-c400
 title: ASA C400系统
 entries:
 - title: 安装和设置
@@ -16,13 +16,30 @@ entries:
 - title: 维护
   pdf-filename: ASA C400维护
   entries:
-  - title: 概述
+  - title: 维护概述
     url: "/asa-c400/maintain-overview.html"
-  - title: 启动介质
-    pdf-filename: ASA C400启动介质
+  - title: 启动媒体 - 自动恢复
+    pdf-filename: ASA C400 启动介质自动化
     entries:
-    - title: 概述
-      url: "/asa-c400/bootmedia-replace-overview.html"
+    - title: 启动介质更换工作流
+      url: "/asa-c400/bootmedia-replace-workflow-bmr.html"
+    - title: 查看要求
+      url: "/asa-c400/bootmedia-replace-requirements-bmr.html"
+    - title: 关闭控制器
+      url: "/asa-c400/bootmedia-shutdown-bmr.html"
+    - title: 更换启动介质
+      url: "/asa-c400/bootmedia-replace-bmr.html"
+    - title: 还原启动介质上的映像
+      url: "/asa-c400/bootmedia-recovery-image-boot-bmr.html"
+    - title: 将故障部件退回 NetApp
+      url: "/asa-c400/bootmedia-complete-rma-bmr.html"
+  - title: 启动媒体 - 手动恢复
+    pdf-filename: ASA C400启动介质手册
+    entries:
+    - title: 启动介质更换工作流
+      url: "/asa-c400/bootmedia-replace-workflow.html"
+    - title: 查看要求
+      url: "/asa-c400/bootmedia-replace-requirements.html"
     - title: 检查加密密钥
       url: "/asa-c400/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
@@ -31,8 +48,6 @@ entries:
       url: "/asa-c400/bootmedia-replace.html"
     - title: 启动恢复映像
       url: "/asa-c400/bootmedia-recovery-image-boot.html"
-    - title: 切回 MetroCluster 配置
-      url: "/asa-c400/bootmedia-2n-mcc-switchback.html"
     - title: 恢复加密
       url: "/asa-c400/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
@@ -70,10 +85,10 @@ entries:
     pdf-filename: ASA C400风扇模块
     url: "/asa-c400/fan-swap-out.html"
   - title: NVDIMM 电池
-    pdf-filename: ASA C400 NVDIMM电池
+    pdf-filename: ASA C400 NVDIMM 电池
     url: "/asa-c400/nvdimm-battery-replace.html"
   - title: NVDIMM
-    pdf-filename: ASA A320 NVDIMM
+    pdf-filename: ASA C400 NVDIMM
     url: "/asa-c400/nvdimm-replace.html"
   - title: PCIe 或夹层卡
     pdf-filename: ASA C400 PCIe或夹层卡

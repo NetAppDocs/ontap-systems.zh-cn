@@ -6,60 +6,75 @@ entries:
   pdf-filename: FAS9500安装和设置
   entries:
   - title: 选择安装和设置体验
-    url: "/fas9500/install_setup.html"
+    url: "/fas9500/install-setup.html"
   - title: 快速步骤
-    url: "/fas9500/install_quick_guide.html"
+    url: "/fas9500/install-quick-guide.html"
   - title: 视频步骤
-    url: "/fas9500/install_videos.html"
+    url: "/fas9500/install-videos.html"
   - title: 详细步骤
-    url: "/fas9500/install_detailed_guide.html"
+    url: "/fas9500/install-detailed-guide.html"
 - title: 维护
   pdf-filename: FAS9500维护
   entries:
-  - title: 概述
+  - title: 维护概述
     url: "/fas9500/maintain-overview.html"
-  - title: 启动介质
-    pdf-filename: FAS9500启动介质
+  - title: 启动媒体 - 自动恢复
+    pdf-filename: FAS9500启动介质自动化
     entries:
-    - title: 概述
-      url: "/fas9500/bootmedia_replace_overview.html"
+    - title: 启动介质更换工作流
+      url: "/fas9500/bootmedia-replace-workflow-bmr.html"
+    - title: 查看要求
+      url: "/fas9500/bootmedia-replace-requirements-bmr.html"
+    - title: 关闭控制器
+      url: "/fas9500/bootmedia-shutdown-bmr.html"
+    - title: 更换启动介质
+      url: "/fas9500/bootmedia-replace-bmr.html"
+    - title: 还原启动介质上的映像
+      url: "/fas9500/bootmedia-recovery-image-boot-bmr.html"
+    - title: 将故障部件退回 NetApp
+      url: "/fas9500/bootmedia-complete-rma-bmr.html"
+  - title: 启动媒体 - 手动恢复
+    pdf-filename: FAS9500启动介质手册
+    entries:
+    - title: 启动介质更换工作流
+      url: "/fas9500/bootmedia-replace-workflow.html"
+    - title: 查看要求
+      url: "/fas9500/bootmedia-replace-requirements.html"
     - title: 检查加密密钥
-      url: "/fas9500/bootmedia_encryption_preshutdown_checks.html"
-    - title: Shut down the impaired controller
+      url: "/fas9500/bootmedia-encryption-preshutdown-checks.html"
+    - title: 关闭受损控制器
       url: "/fas9500/bootmedia-shutdown.html"
     - title: 更换启动介质
-      url: "/fas9500/bootmedia_replace.html"
+      url: "/fas9500/bootmedia-replace.html"
     - title: 启动恢复映像
-      url: "/fas9500/bootmedia_recovery_image.html"
-    - title: OKM ， NSE 和 NVE 的启动后介质更换步骤
-      url: "/fas9500/bootmedia_encryption_restore.html"
+      url: "/fas9500/bootmedia-recovery-image.html"
+    - title: 恢复加密
+      url: "/fas9500/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
-      url: "/fas9500/bootmedia_complete_rma.html"
-  - title: 缓存模块
-    url: "/fas9500/caching_module_hot_swap.html"
+      url: "/fas9500/bootmedia-complete-rma.html"
   - title: 机箱
     pdf-filename: FAS9500机箱
     entries:
     - title: 概述
       url: "/fas9500/chassis_replace_overview.html"
-    - title: Shut down the impaired controller
+    - title: 关闭受损控制器
       url: "/fas9500/chassis_replace_shutdown.html"
-    - title: 更换硬件
+    - title: 更换机箱
       url: "/fas9500/chassis_replace_move_hardware.html"
-    - title: 还原和验证配置
+    - title: 还原并验证配置
       url: "/fas9500/chassis_replace_complete_system_restore_rma.html"
-  - title: 控制器模块
+  - title: 控制器
     pdf-filename: FAS9500控制器模块
     entries:
     - title: 概述
       url: "/fas9500/controller_replace_overview.html"
-    - title: Shut down the impaired controller
+    - title: 关闭受损控制器
       url: "/fas9500/controller_replace_shutdown.html"
-    - title: 更换控制器模块硬件
+    - title: 更换控制器
       url: "/fas9500/controller_replace.html"
     - title: 还原并验证系统配置
       url: "/fas9500/controller_replace_system_config_restore_and_verify.html"
-    - title: 重新对系统进行布线
+    - title: 可重新连接的系统
       url: "/fas9500/controller_replace_recable_reassign_disks.html"
     - title: 完成系统还原
       url: "/fas9500/controller_replace_complete_system_restoration_rma.html"

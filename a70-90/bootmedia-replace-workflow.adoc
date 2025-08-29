@@ -13,7 +13,7 @@ summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装�
 [role="lead"]
 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装到AFF A70或AFF A90系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复并将系统恢复到正常运行状态。
 
-如果您的系统运行的是ONTAP 9.17.1 及更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"] 。
+如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 
 首先，检查恢复要求，关闭控制器，更换启动媒体，使用 USB 驱动器恢复映像，并在必要时重新应用加密设置。
 

@@ -1,7 +1,7 @@
 ---
 permalink: fas2800/maintain-overview.html 
 sidebar: sidebar 
-keywords: fas2800 maintenance, maintenance, repairing, repairing fas2700, replace fas2800 components, replace fas2800 components 
+keywords: fas2800 maintenance, maintenance, repairing, repairing fas2800, replace fas2800 components, replace fas2800 components 
 summary: 维护FAS2820硬件 
 ---
 = 维护FAS2820硬件
@@ -11,64 +11,93 @@ summary: 维护FAS2820硬件
 
 
 [role="lead"]
+维护 FAS2820 存储系统的硬件，以确保长期可靠性和最佳性能。定期执行维护任务（例如更换故障组件），有助于防止停机和数据丢失。
+
+维护过程假定 FAS2820 存储系统已部署为ONTAP环境中的存储节点。
+
+
+
+== 系统组件
+
 对于FAS2820存储系统、您可以对以下组件执行维护过程。
 
+[cols="25,65"]
+|===
 
 
-== 启动介质
+ a| 
+link:bootmedia-replace-workflow-bmr.html["启动媒体 - 自动恢复"]
+ a| 
+启动介质存储存储系统用于启动的一组主要ONTAP映像文件。在自动恢复期间，系统从合作伙伴节点检索启动映像，并自动运行相应的启动菜单选项以在替换启动介质上安装该映像。自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
 
-启动介质用于存储系统在启动时使用的一组主启动映像文件和一组二级启动映像文件。
+
+
+ a| 
+link:bootmedia-replace-workflow.html["启动媒体 - 手动恢复"]
+ a| 
+启动介质存储存储系统用于启动的一组主要ONTAP映像文件。在手动恢复期间，您从 USB 驱动器启动存储系统并手动恢复文件系统映像和配置。如果您的存储系统运行的是ONTAP 9.17.1 及更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。
 
 
 
-== 缓存模块
-
+ a| 
+link:caching-module-replace.html["缓存模块"]
+ a| 
 如果系统注册了一条AutoSupport (ASUP)消息、指出控制器的缓存模块已脱机、则必须更换该模块。
 
 
 
-== 机箱
-
+ a| 
+link:chassis-replace-overview.html["机箱"]
+ a| 
 机箱是托管所有控制器组件(例如控制器/CPU单元、电源和I/O)的物理机箱
 
 
 
-== 控制器
-
+ a| 
+link:controller-replace-overview.html["控制器"]
+ a| 
 控制器由主板，固件和软件组成。它控制驱动器并实现ONTAP功能。
 
 
 
-== DIMM
-
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
 如果存在内存不匹配或 DIMM 发生故障，则必须更换 DIMM （双列直插式内存模块）。
 
 
 
-== 驱动器
-
+ a| 
+link:drive-replace.html["驱动器"]
+ a| 
 驱动器是为数据提供物理存储介质的设备。
 
 
 
-== NVMEM 电池
-
+ a| 
+link:nvmem-nvram-battery-replace.html["NVMEM 电池"]
+ a| 
 控制器附带电池、如果交流电源出现故障、则会保留缓存的数据。
 
 
 
-== 夹层卡
-
-夹层卡是一种扩展卡、设计用于插入主板上的专用插槽。
-
-
-
-== 电源
-
-电源可在控制器架中提供冗余电源。
+ a| 
+link:pci-cards-and-risers-replace.html["夹层卡"]
+ a| 
+夹层卡是一种扩展卡，设计用于插入主板上的专用插槽并容纳卡 I/O 卡。
 
 
 
-== 实时时钟电池
+ a| 
+link:power-supply-swap-out.html["电源"]
+ a| 
+电源设备在控制器中提供冗余电源。
 
+
+
+ a| 
+link:rtc-battery-replace.html["实时时钟电池"]
+ a| 
 实时时钟电池可在断电时保留系统日期和时间信息。
+
+|===

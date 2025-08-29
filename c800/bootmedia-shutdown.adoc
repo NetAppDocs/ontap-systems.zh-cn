@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c800, shut down the controller 
 summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。 
 ---
-= 关闭控制器- AFF C800
+= 关闭控制器以进行手动启动介质恢复 - AFF C800
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
 
 [role="lead"]
 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。使用适用于您的配置的操作步骤 关闭或接管受损控制器。
+
+如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 
 
 

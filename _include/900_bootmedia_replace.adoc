@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-您必须拔下控制器模块、卸下并打开控制器模块、找到并更换控制器中的启动介质、然后将映像传输到替代启动介质。
-
 
 
 == 第 1 步：卸下控制器模块
@@ -71,7 +69,7 @@ image:../media/icon_round_1.png["标注编号1"]
 .动画-更换启动介质
 video::c5080658-765e-4d29-8456-adf2000e1495[panopto]
 +
-image::../media/drw_a900_remove_boot_dev.png[删除启动介质]
+image::../media/drw_9000_remove_boot_dev.svg[删除启动介质]
 
 +
 [cols="1,4"]
@@ -153,7 +151,7 @@ USB闪存驱动器应具有受损控制器正在运行的相应ONTAP映像。
 . 如果控制器位于延伸型或光纤连接的 MetroCluster 中，则必须还原 FC 适配器配置：
 +
 .. 启动到维护模式： `boot_ontap maint`
-.. 将 MetroCluster 端口设置为启动程序： `ucadmin modify -m fc -t ininitiator adapter_name`
+.. 将MetroCluster端口设置为启动器： `ucadmin modify -m fc -t initiator adapter_name`
 .. halt 返回维护模式： `halt`
 
 

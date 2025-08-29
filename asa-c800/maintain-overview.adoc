@@ -1,7 +1,7 @@
 ---
 permalink: asa-c800/maintain-overview.html 
 sidebar: sidebar 
-keywords: asa C800 maintenance, maintenance, repairing C800, repairing asa C800, replace asa C800 components, replace asa C800 components 
+keywords: asa C800 maintenance, maintenance, repairing ASA C800, repairing asa C800, replace asa ASA C800 components, replace asa C800 components 
 summary: 维护ASA C800硬件 
 ---
 = 维护ASA C800硬件
@@ -11,70 +11,100 @@ summary: 维护ASA C800硬件
 
 
 [role="lead"]
+维护ASA C800存储系统的硬件，以确保长期可靠性和最佳性能。定期执行维护任务（例如更换故障组件），有助于防止停机和数据丢失。
+
+维护过程假定ASA C800存储系统已部署为ONTAP环境中的存储节点。
+
+
+
+== 系统组件
+
 对于ASA C800存储系统、您可以对以下组件执行维护过程。
 
+[cols="25,65"]
+|===
 
 
-== 启动介质
+ a| 
+link:bootmedia-replace-workflow-bmr.html["启动媒体 - 自动恢复"]
+ a| 
+启动介质存储存储系统用于启动的一组主要ONTAP映像文件。在自动恢复期间，系统从合作伙伴节点检索启动映像，并自动运行相应的启动菜单选项以在替换启动介质上安装该映像。自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
 
-启动介质用于存储系统在启动时使用的一组主启动映像文件和一组二级启动映像文件。
+
+
+ a| 
+link:bootmedia-replace-workflow.html["启动媒体 - 手动恢复"]
+ a| 
+启动介质存储存储系统用于启动的一组主要ONTAP映像文件。在手动恢复期间，您从 USB 驱动器启动存储系统并手动恢复文件系统映像和配置。如果您的存储系统运行的是ONTAP 9.17.1 及更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。
 
 
 
-== 机箱
-
+ a| 
+link:chassis-replace-overview.html["机箱"]
+ a| 
 机箱是托管所有控制器组件(例如控制器/CPU单元、电源和I/O)的物理机箱
 
 
 
-== 控制器
-
+ a| 
+link:controller-replace-overview.html["控制器"]
+ a| 
 控制器由主板，固件和软件组成。它控制驱动器并实现ONTAP功能。
 
 
 
-== DIMM
-
+ a| 
+link:dimm-replace.html["DIMM"]
+ a| 
 如果存在内存不匹配或 DIMM 发生故障，则必须更换 DIMM （双列直插式内存模块）。
 
 
 
-== 驱动器
-
+ a| 
+link:drive-replace.html["驱动器"]
+ a| 
 驱动器是为数据提供物理存储介质的设备。
 
 
 
-== 风扇
-
+ a| 
+link:fan-replace.html["风扇"]
+ a| 
 风扇用于冷却控制器。
 
 
 
-== NVDIMM
-
+ a| 
+link:nvdimm-replace.html["NVDIMM"]
+ a| 
 NVDIMM (非易失性双列直插式内存模块)用于管理从易失性内存到非易失性存储的数据传输、并在断电或系统关闭时保持数据完整性。
 
 
 
-== NVDIMM 电池
-
+ a| 
+link:nvdimm-battery-replace.html["NVDIMM 电池"]
+ a| 
 NVDIMM电池负责为NVDIMM模块供电。
 
 
 
-== PCIe 卡
+ a| 
+link:pci-cards-and-risers-replace.html["PCIe 卡和转接卡"]
+ a| 
+PCIe（外围组件互连快速）卡是一种扩展卡，可插入主板上的 PCIe 插槽或插入主板的转接卡。
 
-PCIe (外围组件互连Express)卡是一种插入主板上PCIe插槽的扩展卡。
 
 
-
-== 电源
-
+ a| 
+link:power-supply-replace.html["电源"]
+ a| 
 电源可在控制器架中提供冗余电源。
 
 
 
-== 实时时钟电池
-
+ a| 
+link:rtc-battery-replace.html["实时时钟电池"]
+ a| 
 实时时钟电池可在断电时保留系统日期和时间信息。
+
+|===

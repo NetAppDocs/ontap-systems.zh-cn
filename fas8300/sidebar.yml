@@ -3,7 +3,7 @@ section: fas8300
 title: FAS8300 和 FAS8700 系统
 entries:
 - title: 安装和设置
-  pdf-filename: AFF FAS8300 和 FAS8700 安装和设置
+  pdf-filename: FAS8300和FAS8700安装和设置
   entries:
   - title: 选择安装和设置体验
     url: "/fas8300/install-setup.html"
@@ -14,15 +14,32 @@ entries:
   - title: 详细步骤
     url: "/fas8300/install-detailed-guide.html"
 - title: 维护
-  pdf-filename: AFF FAS8300 和 FAS8700 维护
+  pdf-filename: FAS8300和FAS8700维护
   entries:
-  - title: 概述
+  - title: 维护概述
     url: "/fas8300/maintain-overview.html"
-  - title: 启动介质
-    pdf-filename: AFF FAS8300 和 FAS8700 启动介质
+  - title: 启动媒体 - 自动恢复
+    pdf-filename: FAS8300和FAS8700启动介质自动化
     entries:
-    - title: 概述
-      url: "/fas8300/bootmedia-replace-overview.html"
+    - title: 启动介质更换工作流
+      url: "/fas8300/bootmedia-replace-workflow-bmr.html"
+    - title: 查看要求
+      url: "/fas8300/bootmedia-replace-requirements-bmr.html"
+    - title: 关闭控制器
+      url: "/fas8300/bootmedia-shutdown-bmr.html"
+    - title: 更换启动介质
+      url: "/fas8300/bootmedia-replace-bmr.html"
+    - title: 还原启动介质上的映像
+      url: "/fas8300/bootmedia-recovery-image-boot-bmr.html"
+    - title: 将故障部件退回 NetApp
+      url: "/fas8300/bootmedia-complete-rma-bmr.html"
+  - title: 启动媒体 - 手动恢复
+    pdf-filename: FAS8300和FAS8700启动介质手册
+    entries:
+    - title: 启动介质更换工作流
+      url: "/fas8300/bootmedia-replace-workflow.html"
+    - title: 查看要求
+      url: "/fas8300/bootmedia-replace-requirements.html"
     - title: 检查加密密钥
       url: "/fas8300/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
@@ -31,17 +48,15 @@ entries:
       url: "/fas8300/bootmedia-replace.html"
     - title: 启动恢复映像
       url: "/fas8300/bootmedia-recovery-image-boot.html"
-    - title: 切回 MetroCluster 配置
-      url: "/fas8300/bootmedia-2n-mcc-switchback.html"
     - title: 恢复加密
       url: "/fas8300/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/fas8300/bootmedia-complete-rma.html"
   - title: 缓存模块
-    pdf-filename: AFF FAS8300 和 FAS8700 缓存模块
+    pdf-filename: FAS8300和FAS8700缓存模块
     url: "/fas8300/caching-module-replace.html"
   - title: 机箱
-    pdf-filename: AFF FAS8300 和 FAS8700 机箱
+    pdf-filename: FAS8300和FAS8700机箱
     entries:
     - title: 概述
       url: "/fas8300/chassis-replace-overview.html"
@@ -52,7 +67,7 @@ entries:
     - title: 完成更换
       url: "/fas8300/chassis-replace-complete-system-restore-rma.html"
   - title: 控制器
-    pdf-filename: AFF FAS8300 和 FAS8700 控制器
+    pdf-filename: FAS8300和FAS8700控制器
     entries:
     - title: 概述
       url: "/fas8300/controller-replace-overview.html"
@@ -67,7 +82,7 @@ entries:
     - title: 完成更换
       url: "/fas8300/controller-replace-restore-system-rma.html"
   - title: DIMM
-    pdf-filename: AFF FAS8300 和 FAS8700 DIMM
+    pdf-filename: FAS8300和FAS8700 DIMM
     url: "/fas8300/dimm-replace.html"
   - title: 风扇
     url: "/fas8300/fan-swap-out.html"
@@ -76,11 +91,11 @@ entries:
   - title: NVDIMM 电池
     url: "/fas8300/nvdimm-battery-replace.html"
   - title: PCIe 或夹层卡
-    pdf-filename: AFF FAS8300 和 FAS8700 PCIe 或夹层卡
+    pdf-filename: FAS8300和FAS8700 PCIe 或夹层卡
     url: "/fas8300/pci-cards-and-risers-replace.html"
   - title: 电源
-    pdf-filename: AFF FAS8300 和 FAS8700 电源
+    pdf-filename: FAS8300和FAS8700电源
     url: "/fas8300/power-supply-replace.html"
   - title: 实时时钟电池
-    pdf-filename: AFF FAS8300 和 FAS8700 实时时钟电池
+    pdf-filename: FAS8300和FAS8700实时时钟电池
     url: "/fas8300/rtc-battery-replace.html"

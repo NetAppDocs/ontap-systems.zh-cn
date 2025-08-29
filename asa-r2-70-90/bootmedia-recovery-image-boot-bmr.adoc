@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, boot the recovery image 
 summary: 在ASA A70或ASA A90系统中安装新的启动介质设备后、您可以启动自动启动介质恢复过程以从配对节点还原配置。 
 ---
-= 还原启动介质上的映像- ASA A70和ASA A90
+= 在启动介质上恢复ONTAP映像 - ASA A70 和ASA A90
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -128,7 +128,7 @@ Enter the passphrase again to confirm:
 Enter the backup data:
 -----BEGIN BACKUP-----
 <passphrase_value>
------END ACKUP-----
+-----END BACKUP-----
 ....
 =====
 

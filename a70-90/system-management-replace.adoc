@@ -176,9 +176,35 @@ LOADER 提示符
 
 .步骤
 . 使用拇指推动每个驱动器、直至感觉到强制停止、以确保机箱中的所有驱动器都牢固地固定在中板上。
-. 确保NVRAM已完成减载、然后再继续。当NV模块上的LED熄灭时、NVRAM将被解除。如果LED闪烁、请等待闪烁停止。如果闪烁持续时间超过5分钟、请联系技术支持以获得帮助。
 +
 image::../media/drw_a800_drive_seated_IEOPS-960.svg[安装磁盘驱动器]
+
+. 确保NVRAM已完成减载、然后再继续。当NV模块上的LED熄灭时、NVRAM将被解除。如果LED闪烁、请等待闪烁停止。如果闪烁持续时间超过5分钟、请联系技术支持以获得帮助。
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED位置图]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+NVRAM 状态 LED
+
+
+
+ a| 
+image:../media/icon_round_2.png["标注编号2"]
+ a| 
+NVRAM警示LED
+
+|===
++
+** 如果NV LED熄灭、请转至下一步。
+** 如果NV LED闪烁、请等待闪烁停止。如果闪烁持续时间超过5分钟、请联系技术支持以获得帮助。
+
 
 . 转至机箱背面。如果您尚未接地，请正确接地。
 . 拔下控制器的 PSU。

@@ -1,10 +1,10 @@
 ---
 permalink: fas8300/bootmedia-recovery-image-boot.html 
 sidebar: sidebar 
-keywords: fas8300, fas8300, procedure, boot, impair, controller, recovery, image, system, two-node, metrocluster, configuration, boot the recovery image 
+keywords: fas8300, fas8700, procedure, boot, impair, controller, recovery, image, system, two-node, metrocluster, configuration, boot the recovery image 
 summary: 用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双节点 MetroCluster 配置。 
 ---
-= 启动恢复映像— AFF FAS8300 和 FAS8700
+= 从 USB 驱动器手动恢复启动介质 - FAS8300 和 FAS8700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -12,6 +12,8 @@ summary: 用于从恢复映像启动受损控制器的操作步骤 取决于系�
 
 [role="lead"]
 在系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。
+
+如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 
 .步骤
 . 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`

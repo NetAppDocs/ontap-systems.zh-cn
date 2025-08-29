@@ -33,9 +33,9 @@ link:bootmedia-replace-workflow-bmr.html["启动媒体 - 自动恢复"]
 
 
  a| 
-link:bootmedia-replace-workflow.html["启动媒体-手动恢复"]
+link:bootmedia-replace-workflow.html["启动媒体 - 手动恢复"]
  a| 
-启动介质存储一组主ONTAP映像文件和一组辅助 ONTAP 映像文件，存储系统使用这些文件从 USB 驱动器启动映像并从合作伙伴节点恢复配置
+启动介质存储存储系统用于启动的一组主要ONTAP映像文件。在手动恢复期间，您从 USB 驱动器启动存储系统并手动恢复文件系统映像和配置。如果您的存储系统运行的是ONTAP 9.17.1 及更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。
 
 
 
@@ -112,6 +112,6 @@ link:rtc-battery-replace.html["实时时钟电池"]
  a| 
 link:system-management-replace.html["系统管理模块"]
  a| 
-系统管理模块提供控制器与控制台或笔记本电脑之间的接口、用于控制器或系统维护。系统管理模块包含启动介质并存储系统序列号(SSN)。
+系统管理模块提供控制器和控制台或笔记本电脑之间的接口，用于控制器或系统维护目的。系统管理模块包含启动媒体并存储系统序列号 (SSN)。
 
 |===
