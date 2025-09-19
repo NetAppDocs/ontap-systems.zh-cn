@@ -33,9 +33,16 @@ link:bootmedia-replace-workflow-bmr.html["启动媒体 - 自动恢复"]
 
 
  a| 
-link:bootmedia-replace-workflow.html["启动媒体-手动恢复"]
+link:bootmedia-replace-workflow.html["启动媒体 - 手动恢复"]
  a| 
 启动介质存储一组主ONTAP映像文件和一组辅助 ONTAP 映像文件，系统使用这些文件从 USB 驱动器启动映像并从合作伙伴节点恢复配置。
+
+
+
+ a| 
+link:chassis-replace-workflow.html["机箱"]
+ a| 
+机箱内装有风扇、控制器、电源、PSU、NVRAM12、系统管理模块、I/O 卡和消隐模块。
 
 
 

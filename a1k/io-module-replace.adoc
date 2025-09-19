@@ -55,7 +55,7 @@ summary: 如果AFF A1K系统中的I/O模块出现故障或需要升级以支持�
 +
 .. 从健康控制器的控制台输入以下命令：
 +
-`storage failover modify -node local -auto-giveback false`
+`storage failover modify -node _impaired_node_name_ -auto-giveback false`
 
 .. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
 

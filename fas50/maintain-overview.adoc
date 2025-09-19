@@ -33,7 +33,7 @@ link:bootmedia-replace-workflow-bmr.html["启动媒体 - 自动恢复"]
 
 
  a| 
-link:bootmedia-replace-workflow.html["启动媒体-手动恢复"]
+link:bootmedia-replace-workflow.html["启动媒体 - 手动恢复"]
  a| 
 启动介质存储一组主ONTAP映像文件和一组辅助 ONTAP 映像文件，存储系统使用这些文件从 USB 驱动器启动映像并从合作伙伴节点恢复配置。
 
@@ -64,6 +64,13 @@ link:controller-replace-workflow.html["控制器"]
 link:dimm-replace.html["DIMM"]
  a| 
 双列直插式内存模块(DIMM)是一种计算机内存。安装它们是为了向控制器主板添加系统内存。
+
+
+
+ a| 
+link:drive-replace.html["驱动器"]
+ a| 
+驱动器是提供数据所需物理存储的设备。
 
 
 

@@ -58,7 +58,7 @@ summary: 当AFF A20、 AFF A30 或AFF A50 存储系统中的 I/O 模块发生故
 +
 .. 从健康控制器的控制台输入以下命令：
 +
-`storage failover modify -node local -auto-giveback false`
+`storage failover modify -node _impaired_node_name_ -auto-giveback false`
 
 .. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
 

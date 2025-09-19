@@ -58,7 +58,7 @@ summary: 当电池开始失去电量或出现故障时，请更换AFF A20、 AFF
 +
 .. 从健康控制器的控制台输入以下命令：
 +
-`storage failover modify -node local -auto-giveback false`
+`storage failover modify -node _impaired_node_name_ -auto-giveback false`
 
 .. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
 

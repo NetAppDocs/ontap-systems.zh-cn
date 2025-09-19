@@ -19,6 +19,21 @@ entries:
     url: "/asa-r2-a1k/bootmedia-recovery-image-boot-bmr.html"
   - title: 将故障部件退回 NetApp
     url: "/asa-r2-a1k/bootmedia-complete-rma-bmr.html"
+- title: 机箱
+  pdf-filename: ASA A1K 机箱
+  entries:
+  - title: 机箱更换工作流
+    url: "/asa-r2-a1k/chassis-replace-workflow.html"
+  - title: 查看要求
+    url: "/asa-r2-a1k/chassis-replace-requirements.html"
+  - title: 准备更换
+    url: "/asa-r2-a1k/chassis-replace-prepare.html"
+  - title: 关闭控制器
+    url: "/asa-r2-a1k/chassis-replace-shutdown.html"
+  - title: 更换机箱
+    url: "/asa-r2-a1k/chassis-replace-move-hardware.html"
+  - title: 完成机箱更换
+    url: "/asa-r2-a1k/chassis-replace-complete-system-restore-rma.html"
 - title: 控制器
   pdf-filename: ASA A1K控制器
   entries:

@@ -49,7 +49,7 @@ summary: 如果检测到可更正或不可更正的内存错误过多、请更�
 +
 .. 从健康控制器的控制台输入以下命令：
 +
-`storage failover modify -node local -auto-giveback false`
+`storage failover modify -node _impaired_node_name_ -auto-giveback false`
 
 .. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
 

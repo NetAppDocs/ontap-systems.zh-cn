@@ -56,6 +56,21 @@ entries:
       url: "/fas-70-90/bootmedia-encryption-restore.html"
     - title: 将故障部件退回 NetApp
       url: "/fas-70-90/bootmedia-complete-rma.html"
+  - title: 机箱
+    pdf-filename: FAS70和FAS90机箱
+    entries:
+    - title: 机箱更换工作流
+      url: "/fas-70-90/chassis-replace-workflow.html"
+    - title: 查看要求
+      url: "/fas-70-90/chassis-replace-requirements.html"
+    - title: 准备更换
+      url: "/fas-70-90/chassis-replace-prepare.html"
+    - title: 关闭控制器
+      url: "/fas-70-90/chassis-replace-shutdown.html"
+    - title: 更换机箱
+      url: "/fas-70-90/chassis-replace-move-hardware.html"
+    - title: 完成机箱更换
+      url: "/fas-70-90/chassis-replace-complete-system-restore-rma.html"
   - title: 控制器
     pdf-filename: FAS70和FAS90控制器模块
     entries:
