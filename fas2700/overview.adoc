@@ -1,0 +1,113 @@
+---
+permalink: fas2700/overview.html 
+sidebar: sidebar 
+summary: FAS2700 平台组的主要规格 
+---
+= FAS2750的主要规格
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以下是单个高可用性对中FAS2750存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。
+
+
+
+== FAS2750的主要规格
+
+* 平台配置： FAS2750 UTA2 单机箱 HA 对
+* 最大原始容量：2.6832 PB
+* 内存：64.0000 GB
+* 外形尺寸：2U 机箱，配备 2 个 HA 控制器和 24 个驱动器插槽
+* ONTAP版本： ONTAP：9.16.1P2
+* PCIe 扩展槽：2
+* 最低ONTAP版本： ONTAP 9.4RC1 == 横向扩展最大值
+* 类型：NAS；HA 对：12；原始容量：32.2 PB / 28.6 PiB；最大内存：768 GB
+* 类型：SAN；HA 对：6；原始容量：16.1 PB / 14.3 PiB；最大内存：384 GB
+* 类型：HA 对；原始容量：2.7 PB / 2.4 PiB；最大内存：64.0000
+
+
+
+
+== 输入/输出
+
+
+
+=== 板载 I/O
+
+* 协议：以太网 10 Gbps；端口：12
+* 协议：FC 16 Gbps；端口：8
+* 协议：SAS 12 Gbps；端口：4
+
+
+
+
+=== 总输入/输出
+
+* 协议：以太网 10 Gbps；端口：12
+* 协议：FC 16 Gbps；端口：8
+* 协议：SAS 12 Gbps；端口：4
+
+
+
+
+=== 管理端口
+
+* 协议：以太网 1 Gbps；端口：2
+* 协议：RS-232 115 Kbps；端口：4
+* 协议：USB 12 Mbps；端口：2
+
+
+
+
+== 支持的存储网络
+
+* CIFS
+* FC
+* FCoE
+* iSCSI
+* NFS v3
+* NFS v4.0
+* NFS v4.1
+* NVMe/TCP
+* S3
+* S3 与 NAS
+* SMB 2.0
+* SMB 2.1
+* SMB 2.x
+* SMB 3.0
+* SMB 3.1
+* SMB 3.1.1 == 系统环境规范
+* 典型功率：1209 BTU/小时
+* 最坏情况下的功率：1676 BTU/小时
+* 重量：60.8 磅 27.6 公斤
+* 高度：2U
+* 宽度：19 英寸 IEC 机架兼容（17.6 英寸 44.7 厘米）
+* 深度：19.0 英寸（带电缆管理支架为 24.1 英寸）
+* 工作温度/海拔/湿度：海拔高度 <= 3048m (<= 10000 ft) 时 5°C 至 45°C (41°F 至 113°F)；相对湿度 8% 至 90%，无冷凝
+* 非工作温度/湿度：-40°C 至 70°C（-40°F 至 158°F），最高海拔 12192 米（40000 英尺），相对湿度 10% 至 95%，无冷凝，原包装箱内
+* 噪音：标称声功率 (LwAd)：6.9 声压 (LpAm)（旁观者位置）：51.0 dB
+
+
+
+
+== Compliance
+
+* EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
+* 安全认证：BIS、CB、CSA、G_K_U-SoR、IRAM、NOM、NRCS、SONCAP、TBS
+* 安全/EMC/EMI认证：EAC、UKRSEPRO
+* 认证安全/EMC/EMI/RoHS：BSMI、CE DoC、UKCA DoC
+* 标准 EMC/EMI：BS-EN-55024、BS-EN55035、CISPR 32、EN55022、EN55024、EN55032、EN55035、EN61000-3-2、EN61000-3-3、FCC 第 15 部分 A 类、ICES-003、KS C 9832、KS C 9835
+* 标准安全：ANSI/UL60950-1、ANSI/UL62368-1、BS-EN62368-1、CAN/CSA C22.2 No. 60950-1、CAN/CSA C22.2 No. 62368-1、CNS 14336、EN60825-1、EN62368-1、IEC 62368-1、IEC60950-1、IS 13252（第 1 部分）
+
+
+
+
+== 高可用性
+
+* 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口
+* 冗余热插拔控制器
+* 冗余热插拔电源
+* 通过外部机架的 SAS 连接进行 SAS 带内管理
+

@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: fru-reference/mezzanine-fru-links.html 
+keywords: mezzanine, field replaceable units, FRU, mezzanine replacement 
+summary: 本页提供按系统划分的夹层更换程序的链接。 
+---
+= 夹层 FRU 链路
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本页面提供按平台型号组织的夹层更换程序的链接。
+
+[role="tabbed-block"]
+====
+.AFF 系统
+--
+* link:../a250/mezzanine-replace.html["AFF A250"^]
+* link:../c250/mezzanine-replace.html["AFF C250"^]
+
+
+--
+.ASA 系统
+--
+* link:../asa250/mezzanine-replace.html["ASA A250"^]
+* link:../asa-c250/mezzanine-replace.html["ASA C250"^]
+
+
+--
+.FAS 系统
+--
+* link:../fas500f/mezzanine-replace.html["FAS500f"^]
+
+
+--
+====

@@ -1,0 +1,281 @@
+---
+permalink: c30-60/overview.html 
+sidebar: sidebar 
+summary: C30-60平台组的主要规格 
+---
+= C30-60平台组主要规格
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以下是 C30-60 平台组的精选规格。访问 https://hwu.netapp.com["NetApp Hardware Universe"^]（HWU）获取完整规格列表。此页面反映的是单个高可用性对。
+
+
+
+== AFF C60
+
+
+
+=== AFF C60 的主要规格
+
+平台配置： AFF C60 单机箱 HA 对
+
+最大原始容量：7.3680 PB
+
+内存：128.0000 GB
+
+外形尺寸：2U 机箱，配备 2 个 HA 控制器和 24 个驱动器插槽
+
+ONTAP版本：b_startONTAP：9.16.1P2b_end
+
+PCIe 扩展槽：8
+
+最低ONTAP版本： ONTAP 9.16.1RC1
+
+
+
+=== 横向扩展最大值
+
+|===
+
+
+| 类型 | HA 对 | 原始容量 | 最大内存 
+
+
+| NAS | 4 | 29.5 PB / 26.2 PiB | 512 GB 
+
+
+| SAN | 4 | 29.5 PB / 26.2 PiB | 512 GB 
+
+
+| HA 对 |  | 7.4 PB / 6.5 PiB | 128.0000 
+|===
+
+
+=== 输入输出
+
+
+
+==== 板载 IO
+
+无板载 IO 数据。
+
+
+
+==== 总 IO
+
+|===
+
+
+| 协议 | 端口 
+
+
+| 以太网 100 Gbps | 16 
+
+
+| 以太网 25 Gbps | 24 
+
+
+| 以太网 10 Gbps | 24 
+
+
+| 光纤通道 64 Gbps | 24 
+
+
+| NVMe/FC 64 Gbps | 24 
+
+
+|  | 0 
+|===
+
+
+==== 管理端口
+
+|===
+
+
+| 协议 | 端口 
+
+
+| 以太网 1 Gbps | 2. 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 600 Mbps | 2. 
+|===
+
+
+=== 支持的存储网络
+
+CIFS；FC；iSCSI；NFS v3；NFS v4.0；NFS v4.1；NFS v4.2；NVMe/FC；NVMe/TCP；S3；带 NAS 的 S3；SMB 2.0；SMB 2.1；SMB 2.x；SMB 3.0；SMB 3.1；SMB 3.1.1；
+
+
+
+=== 系统环境规格
+
+* 典型功率：2892 BTU/小时
+* 最坏情况下的功率：4445 BTU/小时
+* 重量：60.7 磅/27.5 公斤
+* 高度：2U
+* 宽度：19 英寸 IEC 机架兼容（17.6 英寸 44.7 厘米）
+* 深度：
+* 工作温度/海拔/湿度：海拔 3048 英尺时 10°C 至 35°C（50°F 至 95°F）；相对湿度 8% 至 80%，无凝结
+* 非工作温度/湿度：-40°C 至 70°C（-40°F 至 158°F），最高海拔 12192 米（40000 英尺）<br/>10% 至 95% 相对湿度，非冷凝，原包装箱内
+* 噪音：标称声功率 (LwAd)：8.0；br/声压 (LpAm)（旁观者位置）：70.5 dB
+
+
+
+
+=== Compliance
+
+* EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
+* 安全认证：BIS、CB、CSA、G_K_U-SoR、IRAM、NOM、NRCS、SONCAP、TBS
+* 安全/EMC/EMI认证：EAC、UKRSEPRO
+* 认证安全/EMC/EMI/RoHS：BSMI、CE DoC、UKCA DoC
+* 标准 EMC/EMI：BS-EN-55032、BS-EN55035、CISPR 32、EN55022、EN55024、EN55032、EN55035、EN61000-3-2、EN61000-3-3、FCC 第 15 部分 A 类、ICES-003、KS C 9832、KS C 9835
+* 标准安全：ANSI/UL60950-1、ANSI/UL62368-1、BS-EN62368-1、CAN/CSA C22.2 No. 60950-1、CAN/CSA C22.2 No. 62368-1、CNS 15598-1、EN60825-1、EN62368-1、IEC 62368-1、IEC60950-1、IS 13252（第 1 部分）
+
+
+
+
+=== 高可用性
+
+基于以太网的基板管理控制器（BMC）和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；
+
+
+
+== AFF C30
+
+
+
+=== AFF C30 的主要规格
+
+平台配置： AFF C30 单机箱 HA 对
+
+最大原始容量：2.2104 PB
+
+内存：128.0000 GB
+
+外形尺寸：2U 机箱，配备 2 个 HA 控制器和 24 个驱动器插槽
+
+ONTAP版本：b_startONTAP：9.16.1P2b_end
+
+PCIe 扩展槽：8
+
+最低ONTAP版本： ONTAP 9.16.1RC1
+
+
+
+=== 横向扩展最大值
+
+|===
+
+
+| 类型 | HA 对 | 原始容量 | 最大内存 
+
+
+| NAS | 4 | 8.8 PB / 7.9 PiB | 512 GB 
+
+
+| SAN | 4 | 8.8 PB / 7.9 PiB | 512 GB 
+
+
+| HA 对 |  | 2.2 PB / 2.0 PiB | 128.0000 
+|===
+
+
+=== 输入输出
+
+
+
+==== 板载 IO
+
+无板载 IO 数据。
+
+
+
+==== 总 IO
+
+|===
+
+
+| 协议 | 端口 
+
+
+| 以太网 100 Gbps | 16 
+
+
+| 以太网 25 Gbps | 24 
+
+
+| 以太网 10 Gbps | 24 
+
+
+| 光纤通道 64 Gbps | 24 
+
+
+| NVMe/FC 64 Gbps | 24 
+
+
+|  | 0 
+|===
+
+
+==== 管理端口
+
+|===
+
+
+| 协议 | 端口 
+
+
+| 以太网 1 Gbps | 2. 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 600 Mbps | 2. 
+|===
+
+
+=== 支持的存储网络
+
+CIFS；FC；iSCSI；NFS v3；NFS v4.0；NFS v4.1；NFS v4.2；NVMe/FC；NVMe/TCP；S3；带 NAS 的 S3；SMB 2.0；SMB 2.1；SMB 2.x；SMB 3.0；SMB 3.1；SMB 3.1.1；
+
+
+
+=== 系统环境规格
+
+* 典型功率：2892 BTU/小时
+* 最坏情况下的功率：4445 BTU/小时
+* 重量：60.7 磅/27.5 公斤
+* 高度：2U
+* 宽度：19 英寸 IEC 机架兼容（17.6 英寸 44.7 厘米）
+* 深度：
+* 工作温度/海拔/湿度：海拔 3048 英尺时 10°C 至 35°C（50°F 至 95°F）；相对湿度 8% 至 80%，无凝结
+* 非工作温度/湿度：-40°C 至 70°C（-40°F 至 158°F），最高海拔 12192 米（40000 英尺）<br/>10% 至 95% 相对湿度，非冷凝，原包装箱内
+* 噪音：标称声功率 (LwAd)：8.0；br/声压 (LpAm)（旁观者位置）：70.5 dB
+
+
+
+
+=== Compliance
+
+* EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
+* 安全认证：BIS、CB、CSA、G_K_U-SoR、IRAM、NOM、NRCS、SONCAP、TBS
+* 安全/EMC/EMI认证：EAC、UKRSEPRO
+* 认证安全/EMC/EMI/RoHS：BSMI、CE DoC、UKCA DoC
+* 标准 EMC/EMI：BS-EN-55032、BS-EN55035、CISPR 32、EN55022、EN55024、EN55032、EN55035、EN61000-3-2、EN61000-3-3、FCC 第 15 部分 A 类、ICES-003、KS C 9832、KS C 9835
+* 标准安全：ANSI/UL60950-1、ANSI/UL62368-1、BS-EN62368-1、CAN/CSA C22.2 No. 60950-1、CAN/CSA C22.2 No. 62368-1、CNS 15598-1、EN60825-1、EN62368-1、IEC 62368-1、IEC60950-1、IS 13252（第 1 部分）
+
+
+
+
+=== 高可用性
+
+基于以太网的基板管理控制器（BMC）和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；

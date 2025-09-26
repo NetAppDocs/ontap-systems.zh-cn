@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: fru-reference/led-module-fru-links.html 
+keywords: LED module, field replaceable units, FRU, LED module replacement 
+summary: 本页提供按平台划分的 LED 模块更换程序的链接。 
+---
+= LED 模块 FRU 链接
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本页提供按平台型号组织的 LED 模块更换程序的链接。
+
+* link:../a700/led-module-replace.html["AFF A700"^]
+* link:../fas9000/led-module-replace.html["FAS9000"^]
+

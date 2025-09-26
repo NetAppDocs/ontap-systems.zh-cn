@@ -1,0 +1,25 @@
+---
+indexpage:
+  title: ASA r2 系统的主要规格
+  summary: 了解ASA r2 A1K、A70、A90、A20、A30 和 A50 系统的主要规格。
+  keywords: asa r2, key specifications, a1k, a70, a90, a20, a30, a50
+  lead: 查看ASA r2 系统的关键硬件规格。选择下面的平台来查看详细规格。
+  tiles:
+  - title: ASA r2 A1K
+    links:
+    - title: 主要规格
+      url: asa-r2-a1k-key-specifications.html
+  - title: ASA r2 A70 和ASA r2 A90
+    links:
+    - title: 主要规格（A70）
+      url: asa-r2-70-90/asa-a-series-asaa70-overview.html
+    - title: 主要规格（A90）
+      url: asa-r2-70-90/asa-a-series-asaa90-overview.html
+  - title: ASA r2 A20、A30 和 A50
+    links:
+    - title: 主要规格（A20）
+      url: asa-r2-a20-30-50/asa-a-series-asaa20-overview.html
+    - title: 主要规格（A30）
+      url: asa-r2-a20-30-50/asa-a-series-asaa30-overview.html
+    - title: 主要规格（A50）
+      url: asa-r2-a20-30-50/asa-a-series-asaa50-overview.html

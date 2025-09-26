@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: fru-reference/nvdimm-fru-links.html 
+keywords: NVDIMM, field replaceable units, FRU, NVDIMM replacement 
+summary: 此页面提供按系统划分的 NVDIMM 更换程序的链接。 
+---
+= NVDIMM FRU 链接
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本页面提供按平台型号组织的 NVDIMM 更换程序的链接。
+
+[role="tabbed-block"]
+====
+.AFF 系统
+--
+* link:../a320/nvdimm-replace.html["AFF A320"^]
+* link:../a400/nvdimm-replace.html["AFF A400"^]
+* link:../a800/nvdimm-replace.html["AFF A800"^]
+* link:../c400/nvdimm-replace.html["AFF C400"^]
+* link:../c800/nvdimm-replace.html["AFF C800"^]
+
+
+--
+.ASA 系统
+--
+* link:../asa400/nvdimm-replace.html["ASA A400"^]
+* link:../asa800/nvdimm-replace.html["ASA A800"^]
+* link:../asa-c400/nvdimm-replace.html["ASA C400"^]
+* link:../asa-c800/nvdimm-replace.html["ASA C800"^]
+
+
+--
+.FAS 系统
+--
+* link:../fas8300/nvdimm-replace.html["FAS8300"^]
+
+
+--
+====
