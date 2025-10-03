@@ -1,43 +1,43 @@
 ---
 sidebar: sidebar 
 permalink: fru-reference/io-module-fru-links.html 
-keywords: IO module, field replaceable units, FRU, IO module replacement 
-summary: 此页面提供系统 IO 模块更换程序的链接。 
+keywords: I/O module, field replaceable units, FRU, I/O module replacement 
+summary: 查找按平台系列组织的NetApp存储系统的 I/O 模块更换程序。此参考提供了AFF、 ASA和FAS系统的逐步 I/O 模块更换工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。 
 ---
-= IO 模块 FRU 链接
+= 各平台系列的 I/O 模块更换程序
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本页提供按平台型号组织的 IO 模块更换程序的链接。
+查找按平台系列组织的NetApp存储系统的 I/O 模块更换程序。此参考提供了AFF、 ASA和FAS系统的逐步 I/O 模块更换工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。
 
 [role="tabbed-block"]
 ====
 .AFF 系统
 --
-* link:../a1k/io-module-replace.html["AFF A1K"^]
-* link:../a20-30-50/io-module-replace.html["AFF A20/30/50"^]
-* link:../a70-90/io-module-replace.html["AFF A70/90"^]
-* link:../c30-60/io-module-replace.html["AFF C30/60"^]
-* link:../c80/io-module-replace.html["AFF C80"^]
+* link:../a1k/io-module-replace.html["AFF A1K"]
+* link:../a20-30-50/io-module-replace.html["AFF A20/30/50"]
+* link:../a70-90/io-module-replace.html["AFF A70/90"]
+* link:../c30-60/io-module-replace.html["AFF C30/60"]
+* link:../c80/io-module-replace.html["AFF C80"]
 
 
 --
 .ASA 系统
 --
-* link:../asa-r2-a1k/io-module-replace.html["ASA A1K"^]
-* link:../asa-r2-a20-30-50/io-module-replace.html["ASA A20/30/50"^]
-* link:../asa-r2-70-90/io-module-replace.html["ASA 70/90"^]
-* link:../asa-r2-c30/io-module-replace.html["ASA C30"^]
+* link:../asa-r2-a1k/io-module-replace.html["ASA A1K"]
+* link:../asa-r2-a20-30-50/io-module-replace.html["ASA A20/30/50"]
+* link:../asa-r2-70-90/io-module-replace.html["ASA 70/90"]
+* link:../asa-r2-c30/io-module-replace.html["ASA C30"]
 
 
 --
 .FAS 系统
 --
-* link:../fas50/io-module-replace.html["FAS50"^]
-* link:../fas-70-90/io-module-replace.html["FAS70/90"^]
+* link:../fas50/io-module-replace.html["FAS50"]
+* link:../fas-70-90/io-module-replace.html["FAS70/90"]
 
 
 --

@@ -2,36 +2,23 @@
 sidebar: sidebar 
 permalink: fru-reference/caching-module-fru-links.html 
 keywords: caching module, field replaceable units, FRU, caching module replacement 
-summary: 本页提供系统缓存模块替换程序的链接。 
+summary: 查找按平台系列组织的NetApp存储系统的缓存模块更换程序。此参考提供了针对AFF、 ASA和FAS系统的分步缓存模块替换工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。 
 ---
-= 缓存模块 FRU 链接
+= 按平台系列划分的缓存模块替换程序
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本页提供按系统组织的缓存模块替换程序的链接。
+查找按平台系列组织的NetApp存储系统的缓存模块更换程序。此参考提供了FAS系统缓存模块更换工作流程的分步直接链接，以帮助您快速找到适合您特定型号的正确程序。
 
-[role="tabbed-block"]
-====
-.AFF 系统
---
-* link:../a700/caching-module-and-core-dump-module-replace.html["AFF A700"^]
+* link:../fas50/caching-module-hot-swap.html["FAS50"]
+* link:../fas-70-90/caching-module-hot-swap.html["FAS70/90"]
+* link:../fas2600/caching-module-replace.html["FAS2600"]
+* link:../fas2700/caching-module-replace.html["FAS2700"]
+* link:../fas2800/caching-module-replace.html["FAS2800"]
+* link:../fas8200/caching-module-replace.html["FAS8200"]
+* link:../fas8300/caching-module-replace.html["FAS8300"]
+* link:../fas9000/caching-module-hot-swap.html["FAS9000"]
 
-
---
-.FAS 系统
---
-* link:../fas50/caching-module-hot-swap.html["FAS50"^]
-* link:../fas-70-90/caching-module-hot-swap.html["FAS70/90"^]
-* link:../fas2600/caching-module-replace.html["FAS2600"^]
-* link:../fas2700/caching-module-replace.html["FAS2700"^]
-* link:../fas2800/caching-module-replace.html["FAS2800"^]
-* link:../fas8200/caching-module-replace.html["FAS8200"^]
-* link:../fas8300/caching-module-replace.html["FAS8300"^]
-* link:../fas9000/caching-module-hot-swap.html["FAS9000"^]
-
-
---
-====

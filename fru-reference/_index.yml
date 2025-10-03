@@ -1,0 +1,56 @@
+---
+indexpage:
+  title: NetApp存储系统的系统组件更换参考
+  summary: 查找存储系统现场可更换单元 (FRU) 的更换程序。此参考提供了AFF、 ASA和FAS系统的逐步更换工作流程的直接链接，以帮助您快速找到适合您特定硬件维护需求的正确程序。
+  keywords: FRU reference, field replaceable units, platform FRUs, hardware components,
+    replacement procedures, AFF, ASA, FAS
+  lead: 查找存储系统现场可更换单元 (FRU) 的更换程序。此参考提供了AFF、 ASA和FAS系统的逐步更换工作流程的直接链接，以帮助您快速找到适合您特定硬件维护需求的正确程序。
+  tiles:
+  - title: 核心系统组件
+    links:
+    - title: 控制器更换程序
+      url: "/controller-fru-links.html"
+    - title: 底盘更换程序
+      url: "/chassis-fru-links.html"
+    - title: 启动介质更换程序
+      url: "/bootmedia-fru-links.html"
+    - title: 系统管理模块更换流程
+      url: "/system-management-fru-links.html"
+  - title: 内存和存储模块
+    links:
+    - title: DIMM 更换步骤
+      url: "/dimm-fru-links.html"
+    - title: NVDIMM 更换步骤
+      url: "/nvdimm-fru-links.html"
+    - title: NVRAM模块更换程序
+      url: "/nvram-module-fru-links.html"
+  - title: 电源和冷却
+    links:
+    - title: 电源更换程序
+      url: "/power-supply-fru-links.html"
+    - title: 风扇更换程序
+      url: "/fan-fru-links.html"
+    - title: DCPM 电源模块更换流程
+      url: "/dcpm-power-fru-links.html"
+  - title: I/O 和扩展卡
+    links:
+    - title: I/O 模块更换步骤
+      url: "/io-module-fru-links.html"
+    - title: PCI 卡和转接卡更换程序
+      url: "/pci-cards-fru-links.html"
+    - title: 夹层更换程序
+      url: "/mezzanine-fru-links.html"
+  - title: 存储和驱动器
+    links:
+    - title: 驱动器更换程序
+      url: "/drive-fru-links.html"
+    - title: 缓存模块更换程序
+      url: "/caching-module-fru-links.html"
+  - title: 系统电池和指示灯
+    links:
+    - title: NVMEM/ NVRAM电池更换程序
+      url: "/nvmem-battery-fru-links.html"
+    - title: RTC 电池更换步骤
+      url: "/rtc-battery-fru-links.html"
+    - title: LED 模块更换程序
+      url: "/led-module-fru-links.html"

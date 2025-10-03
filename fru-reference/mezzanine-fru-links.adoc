@@ -2,36 +2,36 @@
 sidebar: sidebar 
 permalink: fru-reference/mezzanine-fru-links.html 
 keywords: mezzanine, field replaceable units, FRU, mezzanine replacement 
-summary: 本页提供按系统划分的夹层更换程序的链接。 
+summary: 查找按平台系列组织的NetApp存储系统的夹层更换程序。此参考资料提供了AFF、 ASA和FAS系统的逐步夹层更换工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。 
 ---
-= 夹层 FRU 链路
+= 各平台系列的夹层更换程序
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本页面提供按平台型号组织的夹层更换程序的链接。
+查找按平台系列组织的NetApp存储系统的夹层更换程序。此参考资料提供了AFF、 ASA和FAS系统的逐步夹层更换工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。
 
 [role="tabbed-block"]
 ====
 .AFF 系统
 --
-* link:../a250/mezzanine-replace.html["AFF A250"^]
-* link:../c250/mezzanine-replace.html["AFF C250"^]
+* link:../a250/mezzanine-replace.html["AFF A250"]
+* link:../c250/mezzanine-replace.html["AFF C250"]
 
 
 --
 .ASA 系统
 --
-* link:../asa250/mezzanine-replace.html["ASA A250"^]
-* link:../asa-c250/mezzanine-replace.html["ASA C250"^]
+* link:../asa250/mezzanine-replace.html["ASA A250"]
+* link:../asa-c250/mezzanine-replace.html["ASA C250"]
 
 
 --
 .FAS 系统
 --
-* link:../fas500f/mezzanine-replace.html["FAS500f"^]
+* link:../fas500f/mezzanine-replace.html["FAS500f"]
 
 
 --

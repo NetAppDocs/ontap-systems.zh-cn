@@ -2,56 +2,56 @@
 sidebar: sidebar 
 permalink: fru-reference/drive-fru-links.html 
 keywords: drive, field replaceable units, FRU, drive replacement 
-summary: 此页面提供系统驱动器更换程序的链接。 
+summary: 查找按平台系列组织的NetApp存储系统的驱动器更换程序。此参考提供了AFF、 ASA和FAS系统的逐步驱动器更换工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。 
 ---
-= 驱动器 FRU 链接
+= 按平台系列划分的驱动器更换流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-此页面提供按平台型号组织的驱动器更换程序的链接。
+查找按平台系列组织的NetApp存储系统的驱动器更换程序。此参考提供了AFF、 ASA和FAS系统的逐步驱动器更换工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。
 
 [role="tabbed-block"]
 ====
 .AFF 系统
 --
-* link:../a20-30-50/drive-replace.html["AFF A20/30/50"^]
-* link:../a150/drive-replace.html["AFF A150"^]
-* link:../a200/drive-replace.html["AFF A200"^]
-* link:../a220/drive-replace.html["AFF A220"^]
-* link:../a250/drive-replace.html["AFF A250"^]
-* link:../a70-90/drive-replace.html["AFF A70/90"^]
-* link:../a700s/drive-replace.html["AFF A700s"^]
-* link:../a800/drive-replace.html["AFF A800"^]
-* link:../c30-60/drive-replace.html["AFF C30/60"^]
-* link:../c80/drive-replace.html["AFF C80"^]
-* link:../c190/drive-replace.html["AFF C190"^]
-* link:../c250/drive-replace.html["AFF C250"^]
-* link:../c800/drive-replace.html["AFF C800"^]
+* link:../a20-30-50/drive-replace.html["AFF A20/30/50"]
+* link:../a150/drive-replace.html["AFF A150"]
+* link:../a200/drive-replace.html["AFF A200"]
+* link:../a220/drive-replace.html["AFF A220"]
+* link:../a250/drive-replace.html["AFF A250"]
+* link:../a70-90/drive-replace.html["AFF A70/90"]
+* link:../a700s/drive-replace.html["AFF A700s"]
+* link:../a800/drive-replace.html["AFF A800"]
+* link:../c30-60/drive-replace.html["AFF C30/60"]
+* link:../c80/drive-replace.html["AFF C80"]
+* link:../c190/drive-replace.html["AFF C190"]
+* link:../c250/drive-replace.html["AFF C250"]
+* link:../c800/drive-replace.html["AFF C800"]
 
 
 --
 .ASA 系统
 --
-* link:../asa150/drive-replace.html["ASA A150"^]
-* link:../asa250/drive-replace.html["ASA A250"^]
-* link:../asa800/drive-replace.html["ASA A800"^]
-* link:../asa-c250/drive-replace.html["ASA C250"^]
-* link:../asa-c800/drive-replace.html["ASA C800"^]
-* link:../asa-r2-a20-30-50/drive-replace.html["ASA A20/30/50"^]
-* link:../asa-r2-70-90/drive-replace.html["ASA A70/90"^]
-* link:../asa-r2-c30/drive-replace.html["ASA C30"^]
+* link:../asa150/drive-replace.html["ASA A150"]
+* link:../asa250/drive-replace.html["ASA A250"]
+* link:../asa800/drive-replace.html["ASA A800"]
+* link:../asa-c250/drive-replace.html["ASA C250"]
+* link:../asa-c800/drive-replace.html["ASA C800"]
+* link:../asa-r2-a20-30-50/drive-replace.html["ASA A20/30/50"]
+* link:../asa-r2-70-90/drive-replace.html["ASA A70/90"]
+* link:../asa-r2-c30/drive-replace.html["ASA C30"]
 
 
 --
 .FAS 系统
 --
-* link:../fas500f/drive-replace.html["FAS500f"^]
-* link:../fas2600/drive-replace.html["FAS2600"^]
-* link:../fas2700/drive-replace.html["FAS2700"^]
-* link:../fas2800/drive-replace.html["FAS2800"^]
+* link:../fas500f/drive-replace.html["FAS500f"]
+* link:../fas2600/drive-replace.html["FAS2600"]
+* link:../fas2700/drive-replace.html["FAS2700"]
+* link:../fas2800/drive-replace.html["FAS2800"]
 
 
 --

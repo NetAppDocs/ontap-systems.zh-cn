@@ -2,41 +2,41 @@
 sidebar: sidebar 
 permalink: fru-reference/nvdimm-fru-links.html 
 keywords: NVDIMM, field replaceable units, FRU, NVDIMM replacement 
-summary: 此页面提供按系统划分的 NVDIMM 更换程序的链接。 
+summary: 查找按平台系列组织的NetApp存储系统的 NVDIMM 更换程序。此参考提供了针对AFF、 ASA和FAS系统的 NVDIMM 更换分步工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。 
 ---
-= NVDIMM FRU 链接
+= 按平台系列划分的 NVDIMM 更换步骤
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本页面提供按平台型号组织的 NVDIMM 更换程序的链接。
+查找按平台系列组织的NetApp存储系统的 NVDIMM 更换程序。此参考提供了针对AFF、 ASA和FAS系统的 NVDIMM 更换分步工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。
 
 [role="tabbed-block"]
 ====
 .AFF 系统
 --
-* link:../a320/nvdimm-replace.html["AFF A320"^]
-* link:../a400/nvdimm-replace.html["AFF A400"^]
-* link:../a800/nvdimm-replace.html["AFF A800"^]
-* link:../c400/nvdimm-replace.html["AFF C400"^]
-* link:../c800/nvdimm-replace.html["AFF C800"^]
+* link:../a320/nvdimm-replace.html["AFF A320"]
+* link:../a400/nvdimm-replace.html["AFF A400"]
+* link:../a800/nvdimm-replace.html["AFF A800"]
+* link:../c400/nvdimm-replace.html["AFF C400"]
+* link:../c800/nvdimm-replace.html["AFF C800"]
 
 
 --
 .ASA 系统
 --
-* link:../asa400/nvdimm-replace.html["ASA A400"^]
-* link:../asa800/nvdimm-replace.html["ASA A800"^]
-* link:../asa-c400/nvdimm-replace.html["ASA C400"^]
-* link:../asa-c800/nvdimm-replace.html["ASA C800"^]
+* link:../asa400/nvdimm-replace.html["ASA A400"]
+* link:../asa800/nvdimm-replace.html["ASA A800"]
+* link:../asa-c400/nvdimm-replace.html["ASA C400"]
+* link:../asa-c800/nvdimm-replace.html["ASA C800"]
 
 
 --
 .FAS 系统
 --
-* link:../fas8300/nvdimm-replace.html["FAS8300"^]
+* link:../fas8300/nvdimm-replace.html["FAS8300"]
 
 
 --

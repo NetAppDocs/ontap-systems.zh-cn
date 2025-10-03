@@ -154,10 +154,9 @@ sidebar:
           url: "/platform-supplemental/42u-1280mm-reverse-hinge-and-lock.html"
         - title: 重新安装车门和照明标志
           url: "/platform-supplemental/42u-1280mm-reinstall-door-and-badge.html"
-  - title: 平台 FRU 参考
+  - title: 组件更换程序
+    url: "/fru-reference/index.html"
     entries:
-    - title: 概述
-      url: "/fru-reference/fru-overview.html"
     - title: 启动介质
       url: "/fru-reference/bootmedia-fru-links.html"
     - title: 缓存模块
