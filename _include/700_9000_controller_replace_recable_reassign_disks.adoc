@@ -25,6 +25,14 @@
 
 == 第 2 步：重新分配磁盘
 
+您使用的程序取决于您的控制器冗余配置。
+
+[role="tabbed-block"]
+====
+.选项 1：HA 对
+--
+=== 验证 HA 系统上的系统 ID 更改
+
 如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
 
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
@@ -139,3 +147,132 @@ dr-group-id            cluster node           configuration-state
 . 验证每个节点是否存在所需的卷： `vol show -node node-name`
 . 如果您在重新启动时禁用了自动接管，请从运行正常的节点启用它： `storage failover modify -node replacement-node-name -onreboot true`
 
+
+--
+.选项 2：双节点MetroCluster
+--
+=== 在双节点MetroCluster配置中的系统上手动重新分配系统 ID
+
+在运行 ONTAP 的双节点 MetroCluster 配置中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。
+
+.关于此任务
+此操作步骤仅适用于运行 ONTAP 的双节点 MetroCluster 配置中的系统。
+
+您必须确保问题描述在此操作步骤中的命令位于正确的节点上：
+
+* 受损节点是指要在其中执行维护的节点。
+* _replacement_ 节点是此操作步骤中更换受损节点的新节点。
+* _health_ 节点是受损节点的 DR 配对节点。
+
+
+.步骤
+. 如果尚未重新启动 _replacement_ 节点，输入 `Ctrl-C` 以中断启动过程，然后从显示的菜单中选择启动到维护模式的选项。
++
+由于系统 ID 不匹配，系统提示您覆盖系统 ID 时，您必须输入 `Y` 。
+
+. 从运行状况良好的节点查看旧系统 ID ： ``MetroCluster node show -fields node-systemID` ， dr-partner-systemID`
++
+在此示例中， Node_B_1 是旧节点，旧系统 ID 为 118073209 ：
+
++
+[listing]
+----
+dr-group-id cluster         node                 node-systemid dr-partner-systemid
+ ----------- --------------------- -------------------- ------------- -------------------
+ 1           Cluster_A             Node_A_1             536872914     118073209
+ 1           Cluster_B             Node_B_1             118073209     536872914
+ 2 entries were displayed.
+----
+. 在受损节点上的维护模式提示符处查看新的系统 ID ： `disk show`
++
+在此示例中，新系统 ID 为 118065481 ：
+
++
+[listing]
+----
+Local System ID: 118065481
+    ...
+    ...
+----
+. 使用从disk show命令获取的系统ID信息重新分配磁盘所有权(对于FAS系统)： `disk reassign -s old system ID`
++
+在上述示例中，命令为： `disk reassign -s 118073209`
+
++
+系统提示您继续时，您可以回答 `Y` 。
+
+. 验证是否已正确分配磁盘： `disk show -a`
++
+验证属于 _replacement_ 节点的磁盘是否显示 _replacement_ 节点的新系统 ID 。在以下示例中， system-1 所拥有的磁盘现在显示新的系统 ID 118065481 ：
+
++
+[listing]
+----
+*> disk show -a
+Local System ID: 118065481
+
+  DISK     OWNER                 POOL   SERIAL NUMBER  HOME
+-------    -------------         -----  -------------  -------------
+disk_name   system-1  (118065481) Pool0  J8Y0TDZC       system-1  (118065481)
+disk_name   system-1  (118065481) Pool0  J8Y09DXC       system-1  (118065481)
+.
+.
+.
+----
+. 从运行状况良好的节点中，验证是否已保存任何核心转储：
++
+.. 更改为高级权限级别： `set -privilege advanced`
++
+系统提示您继续进入高级模式时，您可以回答 `y` 。此时将显示高级模式提示符（ * > ）。
+
+.. 验证核心转储是否已保存： `ssystem node run -node _local-node-name_ partner savecore`
++
+如果命令输出指示 savecore 正在进行中，请等待 savecore 完成，然后再发出交还。您可以使用 `ssystem node run -node _local-node-name_ partner savecore -s 命令` 监控 savecore 的进度。 </info>
+
+.. 返回到管理权限级别： `set -privilege admin`
+
+
+. 如果 _replacement_ 节点处于维护模式（显示 * > 提示符），请退出维护模式并转到加载程序提示符： `halt`
+. 启动 _replacement_ 节点： `boot_ontap`
+. 在 _replacement_ 节点完全启动后，执行切回： `MetroCluster switchback`
+. 验证 MetroCluster 配置： `MetroCluster node show - fields configuration-state`
++
+[listing]
+----
+node1_siteA::> metrocluster node show -fields configuration-state
+
+dr-group-id            cluster node           configuration-state
+-----------            ---------------------- -------------- -------------------
+1 node1_siteA          node1mcc-001           configured
+1 node1_siteA          node1mcc-002           configured
+1 node1_siteB          node1mcc-003           configured
+1 node1_siteB          node1mcc-004           configured
+
+4 entries were displayed.
+----
+. 在 Data ONTAP 中验证 MetroCluster 配置的运行情况：
++
+.. 检查两个集群上是否存在任何运行状况警报： `ssystem health alert show`
+.. 确认 MetroCluster 已配置且处于正常模式： `MetroCluster show`
+.. 执行 MetroCluster 检查： `MetroCluster check run`
+.. 显示 MetroCluster 检查的结果： `MetroCluster check show`
+.. 运行 Config Advisor 。转到NetApp 支持站点 上的Config Advisor页面、网址为 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor/["support.netapp.com/NOW/download/tools/config_advisor/"]。
++
+运行 Config Advisor 后，查看该工具的输出并按照输出中的建议解决发现的任何问题。
+
+
+
+. 模拟切换操作：
++
+.. 在任何节点的提示符处，更改为高级权限级别： `set -privilege advanced`
++
+当系统提示您继续进入高级模式并显示高级模式提示符（ * > ）时，您需要使用 `y` 进行响应。
+
+.. 使用 -simulate 参数执行切回操作： `MetroCluster switchover -simulate`
+.. 返回到管理权限级别： `set -privilege admin`
+
+
+
+
+--
+====
