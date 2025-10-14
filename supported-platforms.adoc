@@ -79,9 +79,25 @@ ONTAP 9.7::
 
 
 --
+.AFX 系统
+--
+AFX 系统提供分解解决方案，旨在满足高性能 NAS 和 S3 工作负载（包括 AI/ML 应用程序）的严格要求。link:https://docs.netapp.com/us-en/ontap-afx/get-started/ontap-afx-storage.html["了解有关 AFX 系统的更多信息"^] 。
+
+从以下ONTAP版本开始支持 AFX 系统。
+
+ONTAP 9.17.1::
++
+--
+* AFX 1K
+
+
+--
+
+
+--
 .ASA r2系统
 --
-ASA R2系统提供统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细了解ASA R2系统"](英文)
+ASA r2 系统提供统一的硬件和软件解决方案，可针对仅使用 SAN 的客户的需求创建简化的体验。link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细了解ASA R2系统"^] 。
 
 从以下ONTAP版本开始、支持ASA R2系统。
 
@@ -206,10 +222,17 @@ ONTAP 9.7::
 --
 .驱动器架
 --
-驱动器架专为NetApp AFF、ASA和FAS系统设计、可帮助您提供数字化转型所需的性能、故障恢复能力和灵活性。
+驱动器架专为NetApp AFF、AFX、 ASA和FAS系统设计，有助于提供您的数字化转型所需的性能、弹性和灵活性。
 
 从以下ONTAP版本开始提供驱动器架。
 
+ONTAP 9.17.1::
++
+--
+* 适用于 AFX 系统的 NSX224 架子
+
+
+--
 ONTAP 9.16.1.::
 +
 --

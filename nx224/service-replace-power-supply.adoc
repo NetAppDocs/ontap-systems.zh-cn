@@ -1,0 +1,94 @@
+---
+permalink: nx224/service-replace-power-supply.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, replace, fail, power, supply, nondisruptive, drive, i/o, progress, hot-swap, hot-swap a power supply 
+summary: 您可以在已打开电源且 I/O 正在进行的情况下无中断地更换 NX224 架中的故障电源。 
+---
+= 热插拔电源 - NX224 搁架
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在已打开电源且 I/O 正在进行的情况下无中断地更换 NX224 架中的故障电源。
+
+.关于此任务
+* 请勿混用具有不同效率额定值或不同输入类型的电源。
++
+请始终像这样替换。
+
+* 如果要更换多个电源，则必须一次更换一个，以便磁盘架保持供电。
+* *最佳实践：*最佳实践是在从NSM卸下电源后两分钟内更换电源。
++
+如果超过这两分钟，磁盘架将继续运行，但 ONTAP 会向控制台发送有关电源降级的消息，直到更换电源为止。
+
+* 请勿将固件还原到不支持您的磁盘架及其组件的版本。
+* 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+如果您不知道受影响磁盘架的 `shelf_name` ，请运行 `storage shelf show` 命令。
+
++
+磁盘架具有三个定位LED：操作员显示面板上一个、每个NSM上一个。Location LEDs remain illuminated for 30 minutes.You can turn them off by entering the same command, but using the off option.
+
+* 拆开备用电源的包装时，请保存所有包装材料，以便在退回故障电源时使用。
++
+If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
+
+
+
+.步骤
+. 正确接地。
+. 以物理方式确定故障电源。
++
+系统会向系统控制台记录一条警告消息，指示哪个电源出现故障。此外，磁盘架操作员显示面板上的警示（琥珀色） LED 会亮起，故障电源上的双色 LED 会呈红色亮起。
+
+. 打开电源线固定器，断开电源线与电源的连接，然后从电源中拔下电源线。
++
+电源没有电源开关。
+
+. 卸下电源：
++
+image::../media/drw_tp_psu_ac_replace_ieops-2343.svg[卸下交流PSU]
+
++
+[cols="1,3"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+将手柄向上旋转到其水平位置、然后抓住它。
+
+
+
+ a| 
+image:../media/icon_round_2.png["标注编号2"]
+ a| 
+用拇指按下毛棉突舌以松开锁定装置。
+
+
+
+ a| 
+image:../media/icon_round_3.png["标注编号3"]
+ a| 
+将电源从NSM中拉出、同时使用另一只手支撑其重量。
+
+|===
+. 插入替代电源：
++
+.. 用双手支撑电源的边缘并将其与NSM中的开口对齐。
+.. 将电源轻轻推入NSM、直至锁定装置卡入到位。
++
+
+NOTE: 请勿用力过大，否则可能会损坏内部连接器。
+
+.. 向下旋转手柄、使其无法正常运行。
+
+
+. 将电源线连接到电源，并使用电源线固定器固定电源线。
++
+正常运行时，电源的双色 LED 将呈绿色亮起。
+
+

@@ -1,0 +1,38 @@
+---
+permalink: afx-1k/controller-replace-workflow.html 
+sidebar: sidebar 
+keywords: afx 1k, replace the controller 
+summary: 通过关闭受损的控制器、移除并更换控制器、重新配置系统设置以及验证系统操作来开始更换 AFX 1K 存储系统中的控制器。 
+---
+= 控制器更换工作流程 - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过关闭受损的控制器、移除并更换控制器、恢复系统配置以及验证系统操作来开始更换 AFX 1K 存储系统中的控制器。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:controller-replace-requirements.html["查看更换控制器的要求"]
+[role="quick-margin-para"]
+要更换控制器模块、您必须满足特定要求。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:controller-replace-shutdown.html["Shut down the impaired controller"]
+[role="quick-margin-para"]
+关闭或接管受损控制器、以使运行正常的控制器继续从受损控制器存储提供数据。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:controller-replace-move-hardware.html["更换控制器"]
+[role="quick-margin-para"]
+通过移除损坏的控制器、将 FRU 组件移至替换模块并将替换模块安装在机柜中来更换控制器。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:controller-replace-system-config-restore-and-verify.html["还原并验证系统配置"]
+[role="quick-margin-para"]
+验证替换控制器的低级系统配置，并根据需要更新系统设置。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:controller-replace-recable-reassign-disks.html["交还控制器"]
+[role="quick-margin-para"]
+将存储资源的所有权转移回替代控制器。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六个"]link:controller-replace-restore-system-rma.html["完成控制器更换"]
+[role="quick-margin-para"]
+验证逻辑接口 (LIF)、检查集群健康状况，并将故障部件返回给NetApp。

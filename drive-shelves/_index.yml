@@ -5,6 +5,12 @@ indexpage:
   keywords: install ns224, hot-add, shelves, cable, drive-shelves
   lead: NetApp的NS224磁盘架和SAS磁盘架有助于为您的数字化转型提供所需的性能、故障恢复能力和灵活性。
   tiles:
+  - title: 安装 NX224 架子
+    links:
+    - title: 热添加磁盘架
+      url: "../nx224/hot-add-shelf.html"
+    - title: 更改磁盘架 ID
+      url: "../nx224/change-shelf-id.html"
   - title: 安装NS224磁盘架
     links:
     - title: 热添加磁盘架
@@ -23,6 +29,26 @@ indexpage:
       url: "../sas3/install-change-shelf-id.html"
     - title: SAS 布线规则，工作表和示例
       url: "../sas3/overview-cabling-rules-examples.html"
+  - title: 维护 NX224 架子
+    links:
+    - title: 启动介质
+      url: "../nx224/service-replace-boot-media.html"
+    - title: DIMM
+      url: "../nx224/service-replace-dimm.html"
+    - title: 驱动器
+      url: "../nx224/service-replace-drive.html"
+    - title: 驱动器架
+      url: "../nx224/nx224-shelf-overview.html"
+    - title: 风扇
+      url: "../nx224/service-replace-fan.html"
+    - title: I/O 模块
+      url: "../nx224/service-replace-io-module.html"
+    - title: NSM
+      url: "../nx224/service-replace-nsm140.html"
+    - title: 电源
+      url: "../nx224/service-replace-power-supply.html"
+    - title: RTC 电池
+      url: "../nx224/service-replace-rtc-battery.html"
   - title: 维护NS224磁盘架
     links:
     - title: 启动介质

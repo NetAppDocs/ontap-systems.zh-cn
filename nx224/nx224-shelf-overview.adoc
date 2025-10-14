@@ -1,0 +1,18 @@
+---
+permalink: nx224/nx224-shelf-overview.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, drive, aggregate, shelf maintenance 
+summary: NX224货架维护概述。 
+---
+= 货架维护概述 - NX224货架
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以采取以下措施来维护您的 NX224 机架：
+
+* link:hot-add-drive.html["热添加驱动器"]
+* link:service-monitor-leds.html["监控磁盘架LED"]
+

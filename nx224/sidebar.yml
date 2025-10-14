@@ -1,0 +1,36 @@
+---
+section: nx224
+title: NX224货架
+entries:
+- title: 热添加磁盘架
+  url: "/nx224/hot-add-shelf.html"
+- title: 更改磁盘架 ID
+  url: "/nx224/change-shelf-id.html"
+- title: 维护
+  pdf-filename: NX224货架维护
+  entries:
+  - title: 启动介质
+    url: "/nx224/service-replace-boot-media.html"
+  - title: DIMM
+    url: "/nx224/service-replace-dimm.html"
+  - title: 驱动器
+    url: "/nx224/service-replace-drive.html"
+  - title: 驱动器架
+    pdf-filename: 更换 NX224 驱动器架
+    entries:
+    - title: 磁盘架维护概述
+      url: "/nx224/nx224-shelf-overview.html"
+    - title: 热添加驱动器
+      url: "/nx224/hot-add-drive.html"
+    - title: 监控磁盘架LED
+      url: "/nx224/service-monitor-leds.html"
+  - title: 风扇
+    url: "/nx224/service-replace-fan.html"
+  - title: I/O 模块
+    url: "/nx224/service-replace-io-module.html"
+  - title: NSM
+    url: "/nx224/service-replace-nsm140.html"
+  - title: 电源
+    url: "/nx224/service-replace-power-supply.html"
+  - title: 实时时钟电池
+    url: "/nx224/service-replace-rtc-battery.html"

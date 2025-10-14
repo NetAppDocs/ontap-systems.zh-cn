@@ -1,0 +1,185 @@
+---
+permalink: nx224/service-replace-rtc-battery.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, replace, fail, real-time, clock, rtc, battery, nondisruptive, power, i/o, replace the real-time clock battery 
+summary: '您可以在已打开电源且 I/O 正在进行的情况下，无中断地更换发生故障的实时时钟 (RTC) 电池。' 
+---
+= 更换实时时钟电池-NX224上架
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在已打开电源且 I/O 正在进行的情况下，无中断地更换发生故障的实时时钟 (RTC) 电池。
+
+.开始之前
+* 机架的合作伙伴 NSM 必须启动并运行，并且布线正确，以便当您移除具有故障 FRU（目标 NSM）的 NSM 时，机架能够保持连接。您可以通过以下方式验证合作伙伴 NSM 的状态 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["下载并运行Config Advisor"^]。
+* 系统中的所有其他组件必须正常运行。
+
+
+.关于此任务
+* 在拆卸和安装 NVMe 磁盘架模块（ NSM ）之间至少留出 70 秒。
++
+这样， ONTAP 就有足够的时间来处理 NSM 删除事件。
+
+* 更换RTC电池、重新安装NSM后、模块启动后、ONTAP将更新实时时钟时间。
+* *最佳实践：*最佳实践是在更换 FRU 组件之前，在系统上安装最新版本的 NVMe 架模块 (NSM) 固件和驱动器固件。您可以访问NetApp支持网站 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["下载磁盘架固件"^]和 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["下载磁盘驱动器固件"^] 。
++
+[NOTE]
+====
+请勿将固件还原到不支持您的磁盘架及其组件的版本。
+
+====
+* 如果需要，您可以打开磁盘架的位置（蓝色） LED ，以帮助以物理方式定位受影响的磁盘架： `storage shelf location-led modify -shelf-name _shelf_name_ -led-status on`
++
+如果您不知道受影响磁盘架的 `shelf_name` ，请运行 `storage shelf show` 命令。
+
++
+磁盘架具有三个定位LED：操作员显示面板上一个、每个NSM上一个。Location LEDs remain illuminated for 30 minutes.您可以通过输入相同的命令并使用选项来关闭它们 `off`。
+
+* 拆开备用 RTC 电池的包装时，请保存所有包装材料，以便在退回发生故障的 RTC 电池时使用。
++
+If you need the RMA number or additional help with the replacement procedure, contact technical support at https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"^], 888-463-8277 (North America), 00-800-44-638277 (Europe), or +800-800-80-800 (Asia/Pacific).
+
+
+
+.步骤
+. 正确接地。
+. 从包含要更换的FRU的NSM断开布线：
++
+.. 打开电源线固定器，然后从电源上拔下电源线，以断开电源线与电源的连接。
++
+电源没有电源开关。
+
+.. 断开存储布线与NSM端口的连接。
++
+记下每个缆线连接到的NSM端口。重新插入NSM时、请将缆线重新连接到相同的端口、此过程稍后将进行介绍。
+
+
+
+. 卸下NSM：
++
+image::../media/drw_g_and_t_handles_remove_ieops-1837.svg[卸下NSM。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+在NSM的两端、向外推垂直锁定卡舌以释放手柄。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+** 朝您的方向拉动手柄、从中间板上取下NSM。
++
+拉动时、手柄会从磁盘架中伸出。当您遇到一些阻力时、请继续拉。
+
+** 将NSM滑出磁盘架、然后将其放在平稳的表面上。
++
+确保在将NSM滑出磁盘架时支撑其底部。
+
+
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+竖直旋转手柄(卡舌旁边)、将其移开。
+
+|===
+. 逆时针旋转指旋螺钉以松开模块盖、然后打开模块盖。
+. 找到RTC电池并进行更换。
++
+.. 取出发生故障的电池：
++
+image::../media/drw_tp_rtc_battery_replace_ieops-2205.svg[Replace the RTC battery]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+轻轻旋转RTC电池、使其与电池座成一定角度。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+将RTC电池从其支架中提出。
+
+|===
+.. 从防静电运输袋中取出更换用电池。
+.. 记下 RTC 电池的极性，然后将电池倾斜并向下推，将其插入电池架中。
++
+
+NOTE: 您必须确保电池上的加号与主板上的加号相对应。
+
+.. 目视检查电池，确保其已完全安装到电池架中，并且极性正确。
+
+
+. 合上NSM护盖、顺时针旋转翼形螺钉、直到拧紧为止。
+. 将NSM插入磁盘架：
++
+image::../media/drw_g_and_t_handles_reinstall_ieops-1838.svg[更换NSM。]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image::../media/icon_round_1.png[标注编号1]
+ a| 
+如果您在维修NSM时竖直旋转NSM手柄(位于卡舌旁边)以将其移出、请将其向下旋转至水平位置。
+
+
+
+ a| 
+image::../media/icon_round_2.png[标注编号2]
+ a| 
+将NSM的后部与磁盘架中的开口对齐、然后使用手柄轻轻推动NSM、直至其完全就位。
+
+
+
+ a| 
+image::../media/icon_round_3.png[标注编号3]
+ a| 
+将手柄旋转至竖直位置、并使用卡舌锁定到位。
+
+|===
+. 重新对NSM进行电源恢复。
++
+.. 将存储电缆重新连接到相同的八个 NSM 端口。
++
+插入缆线时，连接器拉片朝上。正确插入缆线后，它会卡入到位。
+
+.. 将电源线重新连接到电源，然后使用电源线固定器固定电源线。
++
+正常运行时，电源的双色 LED 将呈绿色亮起。
+
++
+此外、两个NSM端口LNK (绿色) LED都会亮起。If a LNK LED does not illuminate, reseat the cable.
+
+
+
+. 确认包含故障RTC电池的NSM上的警示(琥珀色) LED和磁盘架操作员显示面板不再亮起
++
+NSM重新启动后、NSM警示LED熄灭、不再检测到RTC电池问题。This can take three to five minutes.
+
+. 验证 NSM 是否已正确连接，方法是 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["运行Active IQ Config Advisor"^]。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
+

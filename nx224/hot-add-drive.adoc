@@ -1,0 +1,14 @@
+---
+permalink: nx224/hot-add-drive.html 
+sidebar: sidebar 
+keywords: nx224, shelves, shelf, nx224 shelves, hot-add, drive 
+summary: 即使在I/O操作期间、您也可以无中断地向已启动磁盘架添加新驱动器。 
+---
+= 热添加驱动器 - NX224 驱动器架
+:allow-uri-read: 
+
+
+[role="lead"]
+即使在I/O操作期间、您也可以无中断地向已启动磁盘架添加新驱动器。
+
+使用NetApp知识库文章 https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/Best_practices_for_adding_disks_to_an_existing_shelf_or_cluster["向现有磁盘架或集群添加磁盘的最佳实践"^]。

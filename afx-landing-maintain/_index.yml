@@ -1,0 +1,41 @@
+---
+indexpage:
+  title: 维护您的 AFX 存储系统
+  summary: 维护 AFX 存储系统的硬件以确保长期可靠性和最佳性能。
+  keywords: maintain afx 1k
+  lead: 维护 AFX 存储系统的硬件以确保长期可靠性和最佳性能。定期执行维护任务（例如更换故障组件），有助于防止停机和数据丢失。
+  tiles:
+  - title: 核心系统组件
+    links:
+    - title: 控制器
+      url: "../afx-1k/controller-replace-workflow.html"
+    - title: 机箱
+      url: "../afx-1k/chassis-replace-workflow.html"
+    - title: 系统管理模块
+      url: "../afx-1k/system-management-replace.html"
+  - title: 内存和存储
+    links:
+    - title: 启动介质
+      url: "../afx-1k/bootmedia-replace-workflow.html"
+    - title: DIMM
+      url: "../afx-1k/dimm-replace.html"
+    - title: NVRAM
+      url: "../afx-1k/nvram-replace.html"
+    - title: NV电池
+      url: "../afx-1k/nvdimm-battery-replace.html"
+  - title: 电源和冷却
+    links:
+    - title: 电源
+      url: "../afx-1k/power-supply-replace.html"
+    - title: 风扇
+      url: "../afx-1k/fan-replace.html"
+    - title: 实时时钟电池
+      url: "../afx-1k/rtc-battery-replace.html"
+  - title: I/O 和扩展
+    links:
+    - title: I/O模块概述
+      url: "../afx-1k/io-module-overview.html"
+    - title: 添加 I/O 模块
+      url: "../afx-1k/io-module-add.html"
+    - title: 更换I/O模块
+      url: "../afx-1k/io-module-replace.html"

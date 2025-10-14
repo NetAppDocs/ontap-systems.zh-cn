@@ -48,7 +48,24 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 +
 以下AutoSupport命令将禁止自动创建案例两小时： `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 从受损控制器的控制台禁用自动交还：
++
+`storage failover modify -node impaired-node -auto-giveback-of false`
+
++
+
+NOTE: 当您看到“您想禁用自动回馈吗？”时，请输入 `y`。
+
++
+.. 如果受损控制器无法启动或已被接管，则必须先从健康控制器断开 HA 互连链路，然后再启动受损控制器。这将阻止受损控制器执行自动交还。
++
+`system ha interconnect link off -node healthy-node -link 0`
+
++
+`system ha interconnect link off -node healthy-node -link 1`
+
+
+
 . 将受损控制器显示为 LOADER 提示符：
 +
 [cols="1,2"]
@@ -60,13 +77,6 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 LOADER 提示符
  a| 
 转至下一步。
-
-
-
- a| 
-`正在等待交还 ...`
- a| 
-按 Ctrl-C ，然后在出现提示时回答 `y` 。
 
 
 
@@ -240,7 +250,24 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 +
 以下AutoSupport命令将禁止自动创建案例两小时： `cluster1:*> system node autosupport invoke -node * -type all -message MAINT=2h`
 
-. 从运行正常的控制器的控制台禁用自动交还： `storage failover modify – node local -auto-giveback false`
+. 从受损控制器的控制台禁用自动交还：
++
+`storage failover modify -node impaired-node -auto-giveback-of false`
+
++
+
+NOTE: 当您看到“您想禁用自动回馈吗？”时，请输入 `y`。
+
++
+.. 如果受损控制器无法启动或已被接管，则必须先从健康控制器断开 HA 互连链路，然后再启动受损控制器。这将阻止受损控制器执行自动交还。
++
+`system ha interconnect link off -node healthy-node -link 0`
+
++
+`system ha interconnect link off -node healthy-node -link 1`
+
+
+
 . 将受损控制器显示为 LOADER 提示符：
 +
 [cols="1,2"]
@@ -252,13 +279,6 @@ If you have a cluster with more than two nodes, it must be in quorum.如果集�
 LOADER 提示符
  a| 
 转至下一步。
-
-
-
- a| 
-`正在等待交还 ...`
- a| 
-按 Ctrl-C ，然后在出现提示时回答 `y` 。
 
 
 

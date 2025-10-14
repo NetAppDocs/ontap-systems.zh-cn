@@ -1,0 +1,82 @@
+---
+permalink: afx-1k/chassis-replace-shutdown.html 
+sidebar: sidebar 
+keywords: afx 1k, shutdown the controller 
+summary: 关闭 AFX 1K 存储系统中的控制器，以防止数据丢失并确保更换机箱时系统稳定性。 
+---
+= 关闭控制器更换底盘 - AFX 1K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+关闭 AFX 1K 存储系统中的控制器，以防止数据丢失并确保更换机箱时系统稳定性。
+
+要关闭受损控制器，您必须确定控制器的状态，并在必要时执行控制器的存储故障转移接管，以便健康的控制器继续从受损控制器存储提供数据。
+
+.关于此任务
+* 如果您的集群具有四个以上的节点，则它必须达到法定人数。要查看有关节点的集群信息，请使用 `cluster show`命令。有关 `cluster show`命令，请参阅link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["查看ONTAP集群中的节点级详细信息"^]。
+* 如果集群不处于法定人数，或者任何控制器（受损控制器除外）的健康状况或资格显示为错误，则必须在关闭受损控制器之前纠正该问题。看link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^] 。
+
+
+.步骤
+. 如果启用了AutoSupport 、则通过调用AutoSupport 消息禁止自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=<# of hours>h`
+
++
+以下AutoSupport 消息禁止自动创建案例两小时：
+
++
+`cluster1:> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 从受损控制器的控制台禁用自动交还：
++
+`storage failover modify -node impaired-node -auto-giveback-of false`
+
++
+
+NOTE: 当您看到“您想禁用自动回馈吗？”时，请输入 `y`。
+
++
+.. 如果您运行的是ONTAP版本 9.17.1，并且受损控制器无法启动或已被接管，则必须先从正常控制器断开 HA 互连链路，然后再启动受损控制器。这可以防止受损控制器执行自动交还。
++
+`system ha interconnect link off -node healthy-node -link 0`
+
++
+`system ha interconnect link off -node healthy-node -link 1`
+
++
+
+NOTE: 如果您运行的不是ONTAP版本 9.17.1，请跳过上述步骤并转到步骤 3。
+
+
+
+. 将受损控制器显示为 LOADER 提示符：
++
+[cols="1,2"]
+|===
+| 如果受损控制器显示 ... | 那么 ... 
+
+
+ a| 
+LOADER 提示符
+ a| 
+转至下一步。
+
+
+
+ a| 
+系统提示符或密码提示符
+ a| 
+从健康控制器接管或停止受损控制器：
+`storage failover takeover -ofnode _impaired_node_name_ -halt _true_`
+
+_-halt true_ 参数将受损节点带入 LOADER 提示符。
+
+|===
+
+
+.下一步是什么？
+关闭控制器后，您需要link:chassis-replace-move-hardware.html["更换机箱"]。

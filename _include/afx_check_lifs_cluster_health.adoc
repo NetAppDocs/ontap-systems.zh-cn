@@ -1,0 +1,19 @@
+= 
+:allow-uri-read: 
+
+
+在将替换节点恢复服务之前，请确保逻辑接口位于其主端口上，检查集群运行状况，并重置自动交还。
+
+.步骤
+. 验证逻辑接口是否向其主服务器和端口报告：
++
+`network interface show -is-home false`
+
++
+如果任何逻辑接口被列为假，则将它们返回到其主端口：
+
++
+`network interface revert -vserver * -lif *`
+
+. 检查集群的运行状况。有关详细信息、请参见 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何在ONTAP 中使用脚本执行集群运行状况检查"^] 知识库文章。
+

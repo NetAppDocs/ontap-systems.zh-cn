@@ -1,0 +1,39 @@
+---
+indexpage:
+  title: AFX 系统
+  summary: NetApp AFX 存储系统是一种分解的硬件和软件解决方案，专注于满足高性能 NAS 和 S3 客户的独特需求。其性能和可扩展性专门设计用于满足
+    AI 和 ML 工作负载的要求。
+  keywords: afx, afx 1k, install, setup, maintain
+  lead: NetApp AFX 存储系统是一种分解的硬件和软件解决方案，专注于满足高性能 NAS 和 S3 客户的独特需求。其性能和可扩展性专门设计用于满足
+    AI 和 ML 工作负载的要求。
+  tiles:
+  - title: 入门
+    links:
+    - title: 了解 AFX 存储
+      url: https://docs.netapp.com/us-en/ontap-afx/get-started/ontap-afx-storage.html
+    - title: AFX系统特性
+      url: https://docs.netapp.com/us-en/ontap-afx/get-started/system-design.html
+    - title: AFX 架构
+      url: https://docs.netapp.com/us-en/ontap-afx/get-started/software-architecture.html
+  - title: 安装和维护 AFX
+    links:
+    - title: 安装 AFX 硬件
+      url: https://docs.netapp.com/us-en/ontap-afx/install-setup/install-setup-workflow.html
+    - title: 维护 AFX 硬件
+      url: "../afx-landing-maintain/index.html"
+  - title: 管理 AFX 上的数据
+    links:
+    - title: 创建 AFX 卷
+      url: https://docs.netapp.com/us-en/ontap-afx/manage-data/create-configure-volume.html
+    - title: 管理 AFX 卷
+      url: https://docs.netapp.com/us-en/ontap-afx/manage-data/manage-volumes.html
+    - title: 创建 AFX 存储桶
+      url: https://docs.netapp.com/us-en/ontap-afx/manage-data/create-configure-bucket.html
+  - title: 保护并保障 AFX 上的数据安全
+    links:
+    - title: 创建快照
+      url: https://docs.netapp.com/us-en/ontap-afx/protect-data/create-snapshot.html
+    - title: 设置快照复制
+      url: https://docs.netapp.com/us-en/ontap-afx/protect-data/snapshot-replication.html
+    - title: 对空闲数据进行加密
+      url: https://docs.netapp.com/us-en/ontap-afx/secure-data/encrypt-data-at-rest.html

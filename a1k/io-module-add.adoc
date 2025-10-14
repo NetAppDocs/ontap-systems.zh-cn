@@ -156,6 +156,7 @@ LOADER 提示符
 * 检查 https://hwu.netapp.com/["NetApp Hardware Universe"^] 以确保新的I/O模块与您的存储系统和您正在运行的ONTAP版本兼容。
 * If multiple slots are available, check the slot priorities in https://hwu.netapp.com/["NetApp Hardware Universe"^] and use the best one available for your I/O module.
 * 确保所有其他组件均正常运行。
+* 确保您拥有从NetApp收到的替换组件。
 
 
 [role="tabbed-block"]

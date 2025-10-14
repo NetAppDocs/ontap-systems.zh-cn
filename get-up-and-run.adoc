@@ -21,28 +21,11 @@ summary: 要启动并运行ONTAP硬件系统、您需要在ONTAP中安装硬件�
 [role="quick-margin-para"]
 将交换机安装在机架或机柜中。根据您的交换机型号访问以下说明。
 
-[role="quick-margin-para"]
-**集群交换机**
-
 [role="quick-margin-list"]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/install-hardware-bes53248.html["安装BES-53248交换机"^]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/install-switch-9336c-cluster.html["安装Cisco Nexus 9336C-x2交换机"^]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/install-hardware-sn2100-cluster.html["安装NVIDIA SN2100交换机"^]
-
-
-[role="quick-margin-para"]
-**存储交换机**
-
-[role="quick-margin-list"]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-storage/install-9336c-storage.html["安装Cisco Nexus 9336C-x2交换机"^]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100-storage/configure-overview-sn2100-storage.html["安装NVIDIA SN2100交换机"^]
-
-
-[role="quick-margin-para"]
-**共享交换机**
-
-[role="quick-margin-list"]
-* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/install-9336c-shared.html["安装Cisco Nexus 9336C-x2交换机"^]^
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/afx/index.html["AFX 交换机"^]
+* link:https://review.docs.netapp.com/us-en/ontap-systems-switches/cluster/index.html["集群交换机"^]
+* link:https://review.docs.netapp.com/us-en/ontap-systems-switches/storage/index.html["存储交换机"^]
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/install-9336c-shared.html["共享交换机"^]
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]安装存储系统和存储架
@@ -52,7 +35,8 @@ summary: 要启动并运行ONTAP硬件系统、您需要在ONTAP中安装硬件�
 [role="quick-margin-list"]
 * link:aff-landing/index.html["AFF 系统"]
 * link:allsan-landing/index.html["ASA 系统"]
-* https://docs.netapp.com/us-en/asa-r2/index.html["ASA r2系统"]
+* link:https://docs.netapp.com/us-en/ontap-afx/install-setup/install-setup-workflow.html["AFX 系统"]
+* https://docs.netapp.com/us-en/asa-r2/install-setup/install-setup-workflow.html["ASA r2系统"]
 * link:fas/index.html["FAS 系统"]
 
 
@@ -65,6 +49,6 @@ summary: 要启动并运行ONTAP硬件系统、您需要在ONTAP中安装硬件�
 安装并设置控制器和交换机后、必须在ONTAP中完成存储配置。根据您的部署配置访问以下说明。
 
 [role="quick-margin-list"]
-* 有关ONTAP 部署、请参见 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["配置 ONTAP"]。
-* 有关采用MetroCluster 的ONTAP 部署、请参见 https://docs.netapp.com/us-en/ontap-metrocluster/["使用ONTAP 配置MetroCluster"]。
+* 对于ONTAP部署，请参阅 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["配置 ONTAP"^]。
+* 对于采用MetroCluster部署的ONTAP ，请参阅 https://docs.netapp.com/us-en/ontap-metrocluster/["使用ONTAP 配置MetroCluster"^]。
 
