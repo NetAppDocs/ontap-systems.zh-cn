@@ -26,6 +26,12 @@ summary: 查找按平台系列组织的NetApp存储系统的NVRAM模块更换程
 
 
 --
+.AFX 系统
+--
+* link:../afx-1k/nvram-replace.html["AFX A1K"]
+
+
+--
 .ASA 系统
 --
 * link:../asa900/nvram_module_or_nvram_dimm_replacement.html["ASA A900"]

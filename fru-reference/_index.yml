@@ -46,6 +46,8 @@ indexpage:
       url: "/drive-fru-links.html"
     - title: 缓存模块更换程序
       url: "/caching-module-fru-links.html"
+    - title: NSM 更换程序
+      url: "/nsm-fru-links.html"
   - title: 系统电池和指示灯
     links:
     - title: NVMEM/ NVRAM电池更换程序

@@ -2,6 +2,8 @@
 section: a20-30-50
 title: AFF A20、AFF A30和AFF A50系统
 entries:
+- title: 概述
+  url: "/a20-30-50/overview.html"
 - title: 安装和设置
   pdf-filename: AFF A20、AFF A30和AFF A50安装和设置
   entries:
@@ -112,8 +114,8 @@ entries:
 - title: 主要规格
   entries:
   - title: AFF A20
-    url: a20-key-specifications.html
+    url: "/a20-30-50/a20-key-specifications.html"
   - title: AFF A30
-    url: a30-key-specifications.html
+    url: "/a20-30-50/a30-key-specifications.html"
   - title: AFF A50
-    url: a50-key-specifications.html
+    url: "/a20-30-50/a50-key-specifications.html"

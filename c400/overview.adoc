@@ -1,7 +1,8 @@
 ---
 permalink: c400/overview.html 
 sidebar: sidebar 
-summary: C400平台组的主要规格 
+keywords: AFF C400 specifications, AFF C400 specs, NetApp AFF C400, AFF C400 hardware 
+summary: AFF C400存储系统的主要规格 
 ---
 = AFF C400的主要规格
 :allow-uri-read: 
@@ -10,94 +11,132 @@ summary: C400平台组的主要规格
 
 
 [role="lead"]
-以下是单个高可用性对中AFF C400存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。
+以下是AFF C400的部分规格。访问 https://hwu.netapp.com["NetApp Hardware Universe"^]（HWU）获取AFF C400规格的完整列表。此页面反映的是单个高可用性对。
 
 
 
-== AFF C400的主要规格
+=== AFF C400的主要规格
 
-* 平台配置： AFF C400单机箱 HA 对，以太网捆绑包
-* 最大原始容量：2.9472 PB
-* 内存：256.0000 GB
-* 外形尺寸：4U 机箱，带 2 个 HA 控制器
-* ONTAP版本： ONTAP：9.16.1P2
-* PCIe 扩展槽：10
-* 最低ONTAP版本： ONTAP 9.10.1P15 == 横向扩展最大值
-* 类型：NAS；HA 对：12；原始容量：35.4 PB / 31.4 PiB；最大内存：3072 GB
-* 类型：SAN；HA 对：6；原始容量：17.7 PB / 15.7 PiB；最大内存：1536 GB
-* 类型：HA 对；原始容量：2.9 PB / 2.6 PiB；最大内存：256.0000
+平台配置： AFF C400单机箱 HA 对，以太网捆绑包
 
+最大原始容量：2.9472 PB
 
+内存：256.0000 GB
 
+外形尺寸：4U 机箱，带 2 个 HA 控制器
 
-== 输入/输出
+ONTAP版本：b_startONTAP：9.16.1P2b_end
+
+PCIe 扩展槽：10
+
+最低ONTAP版本： ONTAP 9.10.1P15
 
 
 
-=== 板载 I/O
+=== 横向扩展最大值
 
-* 协议：以太网 100 Gbps；端口：4
-* 协议：以太网 25 Gbps；端口：12
-
+|===
 
 
-
-=== 总输入/输出
-
-* 协议：以太网 100 Gbps；端口：24
-* 协议：以太网 25 Gbps；端口：28
-* 协议：以太网 10 Gbps；端口：32
-* 协议：FC 32 Gbps；端口：40
-* 协议：NVMe/FC 32 Gbps；端口：40
-* 端口：0
+| 类型 | HA 对 | 原始容量 | 最大内存 
 
 
+| NAS | 12 | 35.4 PB / 31.4 PiB | 3072 GB 
 
 
-=== 管理端口
+| SAN | 6 | 17.7 PB / 15.7 PiB | 1536 GB 
 
-* 协议：以太网 1 Gbps；端口：2
-* 协议：RS-232 115 Kbps；端口：4
-* 协议：USB 12 Mbps；端口：4
+
+| HA 对 |  | 2.9 PB / 2.6 PiB | 256.0000 
+|===
+
+
+=== 输入输出
 
 
 
+==== 板载 IO
 
-== 支持的存储网络
+|===
 
-* CIFS
-* FC
-* iSCSI
-* NFS v3
-* NFS v4.0
-* NFS v4.1
-* NFS v4.2
-* NFSv3/RDMA
-* NFSv4/RDMA
-* NVMe/FC
-* NVMe/TCP
-* S3
-* S3 与 NAS
-* SMB 2.0
-* SMB 2.1
-* SMB 2.x
-* SMB 3.0
-* SMB 3.1
-* SMB 3.1.1 == 系统环境规范
+
+| 协议 | 端口 
+
+
+| 以太网 100 Gbps | 4 
+
+
+| 以太网 25 Gbps | 12 
+|===
+
+
+==== 总 IO
+
+|===
+
+
+| 协议 | 端口 
+
+
+| 以太网 100 Gbps | 24 
+
+
+| 以太网 25 Gbps | 28 
+
+
+| 以太网 10 Gbps | 32 
+
+
+| 光纤通道 32 Gbps | 40 
+
+
+| NVMe/FC 32 Gbps | 40 
+
+
+|  | 0 
+|===
+
+
+==== 管理端口
+
+|===
+
+
+| 协议 | 端口 
+
+
+| 以太网 1 Gbps | 2. 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 12 Mbps | 4 
+|===
+
+
+=== 支持的存储网络
+
+CIFS；FC；iSCSI；NFS v3；NFS v4.0；NFS v4.1；NFS v4.2；NFSv3/RDMA；NFSv4/RDMA；NVMe/FC；NVMe/TCP；S3；带 NAS 的 S3；SMB 2.0；SMB 2.1；SMB 2.x；SMB 3.0；SMB 3.1；SMB 3.1.1；
+
+
+
+=== 系统环境规格
+
 * 典型功率：4209 BTU/小时
 * 最坏情况下的功率：5215 BTU/小时
-* 重量：110.0 磅 49.9 千克
+* 重量：110.0 磅/49.9 千克
 * 高度：4U
 * 宽度：19 英寸 IEC 机架兼容（17.6 英寸 44.7 厘米）
-* 深度：32.6 英寸（带电缆管理支架为 34.7 英寸）
-* 工作温度/海拔/湿度：海拔高度 3048 米时 10°C 至 35°C（50°F 至 95°F）；相对湿度 8% 至 80%，无凝结
-* 非工作温度/湿度：-40°C 至 70°C（-40°F 至 158°F），最高海拔 12192 米（40000 英尺），相对湿度 10% 至 95%，无冷凝，原包装箱内
-* 噪音：标称声功率 (LwAd)：8.5 声压 (LpAm)（旁观者位置）：67.2 dB
+* 深度：32.6 英寸/（34.7 英寸，含电缆管理支架）
+* 工作温度/海拔/湿度：海拔 3048 英尺时 10°C 至 35°C（50°F 至 95°F）；相对湿度 8% 至 80%，无凝结
+* 非工作温度/湿度：-40°C 至 70°C（-40°F 至 158°F），最高海拔 12192 米（40000 英尺）<br/>10% 至 95% 相对湿度，非冷凝，原包装箱内
+* 噪音：标称声功率 (LwAd)：8.5；br/声压 (LpAm)（旁观者位置）：67.2 dB
 
 
 
 
-== Compliance
+=== Compliance
 
 * EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
 * 安全认证：BIS、CB、CSA、G_K_U-SoR、IRAM、NOM、NRCS、SONCAP、TBS
@@ -109,10 +148,6 @@ summary: C400平台组的主要规格
 
 
 
-== 高可用性
+=== 高可用性
 
-* 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口
-* 冗余热插拔控制器
-* 冗余热插拔电源
-* 通过 SAS 连接进行 SAS 带内管理
-
+基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接进行 SAS 带内管理；[//] 2025-10-15 ontap-systems-internal/issues/1357

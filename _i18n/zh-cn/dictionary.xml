@@ -67,7 +67,6 @@
   <block id="004ff61696f63d2eb687e57371ce86bd" category="paragraph">控制器模块应完全插入，并与机箱边缘平齐。</block>
   <block id="63e4f060a3a69033c9bc37634f0af27d" category="list-text">重复上述步骤，将第二个控制器安装到新机箱中。</block>
   <block id="dd33af940cfd986282d97dc9269783a9" category="summary">更换电源包括断开目标电源的连接，拔下电源线，卸下旧 PSU 并安装更换 PSU ，然后将其重新连接到电源。</block>
-  <block id="b122a7303b98280f8acc1bef20b1890d" category="doc">更换电源— AFF A250</block>
   <block id="af9d8ec1fd1a942d04dce1dd9b6787b7" category="paragraph">更换电源包括断开目标电源（ PSU ）与电源的连接，拔下电源线，卸下旧 PSU 并安装更换 PSU ，然后将其重新连接到电源。</block>
   <block id="f05077bd3702b5bc7fac3f4dc56f3bc5" category="list-text">电源为冗余且可热插拔。</block>
   <block id="26718b15fb498b1c0fe0098a30392c8c" category="list-text">此操作步骤用于一次更换一个电源。</block>
@@ -666,7 +665,6 @@
   <block id="cceefd9f0d8ae2b522801129da926bd4" category="list-text">从显示的菜单中选择启动至维护模式的选项。</block>
   <block id="10581f2379a6cef29e5326e690ced10e" category="section-title">将故障部件退回 NetApp</block>
   <block id="f99e3c0be135f8d468eda1703b7345f9" category="summary">更换电源涉及断开目标电源的连接，拔下电源线，卸下旧 PSU 并安装更换 PSU ，然后将其重新连接到电源。</block>
-  <block id="e603d2510eeff2fb744840a8b8277f7c" category="doc">更换电源— AFF A700s</block>
   <block id="25b17a241b7878627647c78d24614092" category="paragraph">更换电源涉及断开目标电源（ PSU ）与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。</block>
   <block id="ea0af08f58acd216c0cdbf8f9611bc62" category="list-text">系统中的电源数量取决于型号。</block>
   <block id="a5c83d1259ea5fcd94515dacb438e884" category="list-text">根据控制台错误消息或通过电源上的 LED 确定要更换的电源。</block>
@@ -882,7 +880,6 @@
   <block id="96079f0a36e437f5bfadad93d5fec62f" category="paragraph">如果切回需要很长时间才能完成，您可以使用 `MetroCluster config-replication resync-status show` 命令检查正在进行的基线的状态。</block>
   <block id="bebab338ce208a8365444e4ebe4efe11" category="list-text">重新建立任何 SnapMirror 或 SnapVault 配置。</block>
   <block id="d6cd25c7a2ec0fe6ad8621d4562ce0ae" category="summary">更换电源 \ （ PSU\ ）包括断开目标 PSU 与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将替代 PSU 重新连接到电源。</block>
-  <block id="897fb2e62dec5276f207c3447d27e6c4" category="doc">更换电源— AFF A400</block>
   <block id="f044adaf132925553df56c50232bae8a" category="paragraph">更换电源（ PSU ）包括断开目标 PSU 与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将替代 PSU 重新连接到电源。</block>
   <block id="0b8bc61409e02494497fb415b526324c" category="list-text">卸下电源：</block>
   <block id="bd5e4756909c5ec64e5959e1f7d9e160" category="list-text">旋转凸轮把手，以便可以使用它将电源从机箱中拉出。</block>
@@ -1424,7 +1421,6 @@
   <block id="e7d6ca5a4598f4102e93853e3167db4f" category="doc">集群配置工作表— FAS8200</block>
   <block id="f474da68fe49004e7ef71b0e2e717c06" category="doc">完成系统还原— AFF A800</block>
   <block id="9fc6e6ebb195a8b268f686a0f8256e7b" category="summary">更换电源包括断开目标电源与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。</block>
-  <block id="80185b76790082a23c34d9ebf9a01f7e" category="doc">更换电源— AFF A800</block>
   <block id="4dbd79294c989758d5af25c272edcd18" category="list-text"><block ref="4dbd79294c989758d5af25c272edcd18" category="inline-link-macro-rx"></block></block>
   <block id="d95b217968788dc25668292af7a9506a" category="list-text"><block ref="d95b217968788dc25668292af7a9506a" category="inline-link-macro-rx"></block></block>
   <block id="02904a3ce7e72e4a3b6edab3f2862e50" category="list-text"><block ref="02904a3ce7e72e4a3b6edab3f2862e50" category="inline-link-macro-rx"></block></block>
@@ -2039,7 +2035,6 @@
   <block id="45b8f0b842002ec85fb07171d4b0d278" category="list-text">1 号和 2 号十字螺丝刀</block>
   <block id="830cb2795d80d2d868f65bf4fc0302ba" category="list-text">用于调平系统机柜的调平工具</block>
   <block id="9839b9efeb4f2cb59f36a02a747b73cb" category="doc">完成系统还原— FAS8300 和 FAS8700</block>
-  <block id="3a08488c499949ce994ce7beebe666ee" category="doc">更换电源— FAS8300 和 FAS8700</block>
   <block id="0d6447bac57d1b04d83d308e8b723682" category="doc">更换 DIMM - FAS8300 和 FAS8700</block>
   <block id="bf60b41d71bc04857d76c73eb0a0ab19" category="paragraph">系统中 DIMM 的数量和位置取决于系统的型号。有关详细信息，请参见通风管上的 FRU 示意图。</block>
   <block id="a2d7c3c08ea698a888673407b30cb325" category="list-text">如果您使用的是 FAS8300 系统，则系统 DIMM 位于插槽 2 ， 4 ， 13 和 15 中。</block>
@@ -2087,7 +2082,6 @@
   <block id="598ec2ec2714b9a699a42898b690e48d" category="section-title">选项 1 ：使用缆线将控制器连接到 SAS 驱动器架</block>
   <block id="16319414c65274d365d86327a61ef5dc" category="doc">AFF 和 FAS 系统文档</block>
   <block id="46b673e11c982206be30f1a0d6d4bde7" category="doc">完成系统还原— FAS500f</block>
-  <block id="b94c622729a1c3b9f221ed4f8376e65b" category="doc">更换电源— FAS500f</block>
   <block id="1661dbd7e15cf50b73ab10b3561b2d66" category="paragraph">您可以使用以下视频或表格中的步骤更换电源：</block>
   <block id="45449a9f8518fdccf3609592bca3388a" category="list-text"><block ref="45449a9f8518fdccf3609592bca3388a" category="inline-link-macro-rx"></block></block>
   <block id="fcc432315143968a857131ca40e0a000" category="list-text"><block ref="fcc432315143968a857131ca40e0a000" category="inline-link-macro-rx"></block></block>
@@ -2851,7 +2845,6 @@
   <block id="136c868eb6aa89c7b476d48a2b9ee98b" category="list-text">如果还原成功，请在系统提示您使用还原的副本时按受损节点上的 `y` 。</block>
   <block id="1e98034375ef52d4a4529ac291edcded" category="list-text">当您看到确认备份操作步骤成功时，按 `y` ，然后在系统提示您重新启动节点时按 `y` 。</block>
   <block id="2ca9575466d40889a9a6e4de0788d9d5" category="doc">完成系统还原— AFF A320</block>
-  <block id="e944774dbb716679ef719542153680f0" category="doc">更换电源— AFF A320</block>
   <block id="3f579d2ca9602742163eac8ab6869d34" category="list-text"><block ref="3f579d2ca9602742163eac8ab6869d34" category="inline-link-macro-rx"></block></block>
   <block id="a6eeb39ae43e2e8a39fd17df76bf38bf" category="list-text"><block ref="a6eeb39ae43e2e8a39fd17df76bf38bf" category="inline-link-macro-rx"></block></block>
   <block id="22d17da6d44d1c72d2415ed45b62cc6e" category="list-text"><block ref="22d17da6d44d1c72d2415ed45b62cc6e" category="inline-link-macro-rx"></block></block>
@@ -4116,7 +4109,6 @@
   <block id="85bdc20f7292dbafd4caa42c19f7b123" category="paragraph">有关详细信息，请参见<block ref="fea6157c393b81b627aed2aca6311576" category="inline-link-rx"></block> 主题以覆盖否决。</block>
   <block id="c081ffc5acf576c85556813974927192" category="list-text">_replacement_ 节点是灾难站点上磁盘的当前所有者。</block>
   <block id="7be085f8f1dc91cbac9f773985faef24" category="paragraph">有关详细信息，请参见<block ref="4b1c17d30e94cc8d68adcd4265a76547" category="inline-link-rx"></block> 主题。</block>
-  <block id="d35fd8965949830b92555b33686beb19" category="doc">更换电源— AFF A900</block>
   <block id="12ccb6284dde6c218f4afb3d3857d96e" category="list-text">按住电源手柄上的 Terra cotta 按钮，然后将电源从机箱中拉出。</block>
   <block id="055140d300b472c3cf197b316fc1a111" category="doc">完成系统还原— AFF A900</block>
   <block id="8f73eb9fb7acfd413cf2778aacee51b6" category="doc">视频步骤— AFF A900</block>
@@ -4815,7 +4807,6 @@
   <block id="3f679ad9b20cbb8994ff36e9ce18d58f" category="doc">更换NVRAM模块和/或NVRAM DIMM—FAS9500</block>
   <block id="140a295824b1023b2fcf1ac1414fc56b" category="paragraph">要更换和NVRAM DIMM、您必须从机箱中卸下NVRAM模块、更换模块中发生故障的DIMM、然后重新安装NVRAM模块。</block>
   <block id="821b1e6be57f410ab68ac2071fc04df4" category="doc">更换包含NVRAM11电池的目标控制电源模块- FAS9 500</block>
-  <block id="1aa73ef56da88752323de5876f9b3750" category="doc">更换电源—FAS9500</block>
   <block id="70ebba1c8f978f26a3ed9799176dd8a9" category="doc">更换控制器模块—FAS9500</block>
   <block id="0b69ae5dbb558a62f47c8962baf19909" category="list-text">If your system is in a MetroCluster configuration, you must review the section<block ref="2a021072247e4cc2397c2bcdaab4e2b0" category="inline-link-rx"></block> to determine whether you should use this procedure.</block>
   <block id="c60c00789a015e4c8edc176d68ea53c2" category="list-text">在此操作步骤中，启动设备将从受损节点移至更换节点，以便更换节点在与旧控制器模块相同版本的 ONTAP 中启动。</block>
@@ -5169,7 +5160,6 @@
   <block id="c2df61cd54941946b9e1d41669228517" category="paragraph"><block ref="c2df61cd54941946b9e1d41669228517" category="inline-link-rx"></block></block>
   <block id="a7d0c7f24713f4f2e4432bb2b91f97d0" category="paragraph"><block ref="a7d0c7f24713f4f2e4432bb2b91f97d0" category="inline-link-rx"></block></block>
   <block id="c4c07270ebbe6cd1bc5aa6f45be76f02" category="video-title">动画—安装和设置AFF A150</block>
-  <block id="15bdfa06733933ff3285c6dd92cad9c7" category="doc">更换电源—AFF A150</block>
   <block id="f9195e4f2cbce0b6d30752619eae4687" category="doc">更换控制器模块硬件—AFF A150</block>
   <block id="890166d65f80913ec2882e814dc85cff" category="doc">关闭控制器—AFF A150</block>
   <block id="7befdc0c8cc35d0c1711e11bd7feb970" category="list-text">擦除缓存模块上的数据：<block ref="6daf7f4112fcf7c7be366c44ff70faf2" prefix=" " category="inline-code"></block></block>
@@ -5197,7 +5187,6 @@
   <block id="5e7787ae07713719c2880dedfbaa61f7" category="doc">还原并验证系统配置—AFF C250</block>
   <block id="2fe38375bb3f7a0d45a583d876016df5" category="doc">更换DIMM - AFF C250</block>
   <block id="157f430cb5493d5d45b9bcab28a74c47" category="doc">更换启动介质—AFF C250</block>
-  <block id="9c0f44d79b852189eca9e0c3c970c0ff" category="doc">更换电源—AFF C250</block>
   <block id="3801b936526098c0a13cec6739840593" category="doc">重新配置系统并重新分配磁盘—AFF C250</block>
   <block id="9173003f27a48b6c3802570ab91f9690" category="summary">本节详细介绍了安装AFF C250系统的分步说明。</block>
   <block id="650ebf976037bb8321f0f947063e1da1" category="doc">详细步骤—AFF C250</block>
@@ -5224,7 +5213,6 @@
   <block id="a637f1b4c2a1d9b5cb9f0347c7e77539" category="doc">还原并验证系统配置—AFF C400</block>
   <block id="b1c4aeeae550bfbe7c6574898398d781" category="doc">更换NVDIMM电池—AFF C400</block>
   <block id="76f50c3f31d2ab405df556357b00ae41" category="doc">控制器模块更换概述—AFF C400</block>
-  <block id="327f4c7d5141a205c506afea880dfdef" category="doc">更换电源—AFF C400</block>
   <block id="59278043c69406fc3ad5a92b1268c7a1" category="list-text"><block ref="59278043c69406fc3ad5a92b1268c7a1" category="inline-link-macro-rx"></block></block>
   <block id="207fa20809605ec76418419987911de1" category="list-text"><block ref="207fa20809605ec76418419987911de1" category="inline-link-macro-rx"></block></block>
   <block id="8ec5a018cdb8c2ff183e79e6526679cf" category="list-text"><block ref="8ec5a018cdb8c2ff183e79e6526679cf" category="inline-link-macro-rx"></block></block>
@@ -5248,7 +5236,6 @@
   <block id="311f323a046afbcf6ce4b152ad2dee93" category="list-text">此操作步骤 是为一次更换一个PSU而编写的。</block>
   <block id="be0020622e775d64818f3acc7c2d856d" category="admonition">最佳做法是、在将PSU从机箱中卸下后两分钟内更换PSU。系统仍可正常运行、但ONTAP 会向控制台发送有关已降级的PSU的消息、直到更换PSU为止。</block>
   <block id="e5b2987f321084b00bed28fd97c58226" category="paragraph">请根据您的PSU类型使用相应的操作步骤 ；AC或DC。</block>
-  <block id="f93bc8f892972bb47d2b0ca4cd480fad" category="open-title">选项1：更换交流PSU</block>
   <block id="19a7bfc2c20931ac9f3593ce3f8c7632" category="paragraph">使用以下视频或表格中的步骤更换PSU：</block>
   <block id="a2528ca750816c5cbcc2ab1df78a8eb6" category="video-title">动画-更换交流PSU</block>
   <block id="ba076df359148e35b1b589b37e5d2faa" category="list-text">根据控制台错误消息或PSU上的红色故障LED确定要更换的PSU。</block>
@@ -5265,7 +5252,6 @@
   <block id="965cc3fcca40fe72903f2bf567787bd9" category="list-text">将电源线重新连接到PSU。</block>
   <block id="774e50999ed71aed779cdb839371a69d" category="list-text">使用电源线固定器将电源线固定到PSU。</block>
   <block id="eb3ac9b9efdc3a8db20ea72534f74755" category="paragraph">在PSU恢复供电后、状态LED应为绿色。</block>
-  <block id="88ff7f55200d397b9c241c6c03ccd6ab" category="open-title">选项2：更换DC PSU</block>
   <block id="6a5cc777b5cea5516ed3c04946243c15" category="paragraph">要更换直流PSU、请完成以下步骤。</block>
   <block id="81118bbf4dc8e737a15cb33e309d5928" category="list-text">使用插头上的翼形螺钉拧下D-sub直流电源线连接器。</block>
   <block id="a11fffebed2ec4e6399a05866d830825" category="list-text">从PSU拔下电源线并将其放在一旁。</block>
@@ -5345,7 +5331,6 @@
   <block id="e00efce1b44b4a70e33640aa4e4da7ab" category="doc">更换风扇—AFF C800</block>
   <block id="7bb5b3f1026a3e755afd3077cd503481" category="doc">更换NVDIMM电池—AFF C800</block>
   <block id="47b1e09c5a04b6651d4bc03190565935" category="doc">控制器模块更换概述—AFF C800</block>
-  <block id="555193cbb314d41872f483748d489825" category="doc">更换电源—AFF C800</block>
   <block id="3898efc1e45ee027e1343af6cd87375e" category="list-text"><block ref="3898efc1e45ee027e1343af6cd87375e" category="inline-link-macro-rx"></block></block>
   <block id="76908712922b1fbfdbdf730f794b109c" category="list-text"><block ref="76908712922b1fbfdbdf730f794b109c" category="inline-link-macro-rx"></block></block>
   <block id="96ec8a0dff9ea2637e9a0469cd7bf45e" category="list-text"><block ref="96ec8a0dff9ea2637e9a0469cd7bf45e" category="inline-link-macro-rx"></block></block>
@@ -6057,7 +6042,6 @@ SFP+(目标/启动程序)</block>
   <block id="7449f0c5fea223a0e8f25794fa6bfcf2" category="paragraph">将控制器模块安装到新机箱后、需要启动系统。</block>
   <block id="456c80751c3f09b31ee496c3872f0c25" category="paragraph">您必须按照套件附带的RMA说明验证机箱的HA状态、并将故障部件退回给NetApp。</block>
   <block id="8d25d311e353251341d471f4c2d37620" category="section-title">第2步：将故障部件退回给NetApp</block>
-  <block id="689f5d1d68f65bf1f76cf70ed891009d" category="doc">更换电源- ASA A250</block>
   <block id="508de305feb20c63f33ef9eff7de5eb4" category="doc">更换启动介质- ASA A250</block>
   <block id="a4117f1bf6bfe8785548e1e7a31f9864" category="summary">本节提供了安装系统的详细分步说明。</block>
   <block id="cef403fe8ffcaa9e4b76963ad5fbdfd9" category="doc">详细步骤- ASA A250</block>
@@ -6138,7 +6122,6 @@ SFP+(目标/启动程序)</block>
   <block id="6b97317afb01b5239c7991717942bc31" category="doc">控制器模块更换概述- AFF A700</block>
   <block id="ceeabc8de1992b857f097aa39825ded7" category="doc">更换DIMM - AFF A700</block>
   <block id="b00bdc86703139105ae05ab07b807a6a" category="paragraph">NVDIMM (非易失性双列直插式内存模块)用于管理从易失性内存到非易失性存储的数据传输、并在断电或系统关闭时保持数据完整性。</block>
-  <block id="53cf1eb17a3e9045dac329b1022412e7" category="doc">换用电源- AFF A700</block>
   <block id="b5862dffd2a662580b7e6e08646b8a4e" category="doc">关闭控制器- AFF A700</block>
   <block id="a4a9da0210f62016e71b1c10b9e4c492" category="doc">热插拔降级控制器电源模块(DCPM)- AFF A700</block>
   <block id="5b2f7b92c7435bc4b996d69c57391d11" category="doc">关闭受损控制器- AFF A700</block>
@@ -6184,7 +6167,6 @@ SFP+(目标/启动程序)</block>
   <block id="caa8aa4a595b6f33857d21fb97a3622e" category="paragraph">此页面提供了从机架安装和布线到初始系统启动的典型系统安装的图形说明。使用 <block ref="0cdb4981396afec17d02c8ce5d1b8e06" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="f0d6a8fa292b0f0965c180c3ec81b98c" category="admonition">ASA A800使用与AFF A800系统相同的安装操作步骤。</block>
   <block id="1809d57833f6aee6ca28a7a9976f3c02" category="doc">更换SSD驱动器或HDD驱动器- ASA A800</block>
-  <block id="8efb05cbcb76a25c9260967bb6da74ea" category="doc">更换电源- ASA A800</block>
   <block id="ab40c87c67587a22552f3f86175f6b6c" category="doc">更换控制器- ASA A800</block>
   <block id="3e1e482bf99769f878506ac262ea9469" category="doc">更换机箱- ASA A800</block>
   <block id="cf89ec61d7d165d24a4540839ef73f51" category="doc">完整机箱更换- ASA A800</block>
@@ -6211,7 +6193,6 @@ SFP+(目标/启动程序)</block>
   <block id="7c14198274ad186b196f84339867747a" category="doc">完整的系统恢复—FAS9000</block>
   <block id="92106d784bab2c2d0ac64d21da8379b3" category="doc">控制器模块更换概述—FAS9000</block>
   <block id="d9f3feb3ff9dd83a5d862eb64cc9a110" category="doc">更换DIMM - FAS9000</block>
-  <block id="6a2bdbf29fe66b28017ff3dc4e7ce2b1" category="doc">更换电源- FAS9000</block>
   <block id="7354c77553fbaba43d86f13f4a4b476e" category="doc">关闭控制器- FAS9000</block>
   <block id="74aa9c71bfd41b33dc21e26b67720c49" category="doc">热插拔降级控制器电源模块(DCPM)- FAS9000</block>
   <block id="14e88a77d6efea55ca64c457b9ab65da" category="doc">关闭受损控制器- FAS9000</block>
@@ -6261,7 +6242,6 @@ SFP+(目标/启动程序)</block>
   <block id="ae383c4833f526c25894b4e6dec33459" category="paragraph">对于ASA A900存储系统、您可以对以下组件执行维护过程。</block>
   <block id="1cf6ac8a974aa424dc7fbb078c513f07" category="doc">更换实时时钟电池- ASA A900</block>
   <block id="0b03535505d87f108fe49abb6aa06130" category="doc">更换DIMM - ASA A900</block>
-  <block id="028f92edd9500c0efb168e412294a861" category="doc">换用电源- ASA A900</block>
   <block id="ed6183c79360d84f37e156e80fe33aa6" category="doc">关闭控制器- ASA A900</block>
   <block id="67bcd92a05c94a3a813d8e595b1f5283" category="doc">完整的系统还原- ASA A900</block>
   <block id="eb192783589d844d1af1ecb849489b22" category="section-title">第1步：为新控制器安装许可证</block>
@@ -6296,7 +6276,6 @@ SFP+(目标/启动程序)</block>
   <block id="185d6bc662c8cd2db9d58c8a722d974e" category="paragraph">对于FAS2700存储系统、您可以对以下组件执行维护过程。</block>
   <block id="4091c5e7156fea8e74fb2f6ff3fe34fd" category="doc">更换实时时钟电池- FAS2700</block>
   <block id="b8e850ed2869826d3faae08f01220ae6" category="doc">更换DIMM - FAS2700</block>
-  <block id="de599e8ee2b792a05ff2446e93b3a7e5" category="doc">更换电源- FAS2700</block>
   <block id="38b5b8ea2b8764ef3d6b86337c41db64" category="doc">关闭控制器- FAS2700</block>
   <block id="478014c57de308398851e19e48a955f6" category="summary">要将系统还原到完全运行状态、您必须还原NetApp存储加密配置(如果需要)、为新控制器安装许可证、并将故障部件返回给NetApp。</block>
   <block id="dd3e1b2974ba653fef81686173aafcb6" category="doc">完整的系统恢复—FAS2700</block>
@@ -6371,7 +6350,6 @@ SFP+(目标/启动程序)</block>
   <block id="76f8020a6c211d0a85b51e324867f828" category="paragraph">对于ASA A150存储系统、您可以对以下组件执行维护过程。</block>
   <block id="25e4ca3cea9556bf60cfd34a863bcc83" category="doc">更换实时时钟电池- ASA A150</block>
   <block id="b2d9da7407ab97d4d923ee0f45653d7f" category="doc">更换DIMM - ASA A150</block>
-  <block id="044e314ccb891749cf1ff6ab7bb779e9" category="doc">换用电源- ASA A150</block>
   <block id="17d46fdea79baa1b0abb75060c4b26eb" category="doc">关闭控制器- ASA A150</block>
   <block id="15f3dc209220fcd5ed53507c602a5619" category="doc">还原OKM、NSE和NVE - ASA A150</block>
   <block id="3481ad4d7a2afb32f38e558fa9328a94" category="list-text"><block ref="3481ad4d7a2afb32f38e558fa9328a94" category="inline-link-macro-rx"></block></block>
@@ -6423,7 +6401,6 @@ SFP+(目标/启动程序)</block>
   <block id="b8a21ef26361bcf497970ad95729f649" category="doc">完整的系统还原—ASA A400</block>
   <block id="b65dcf1c7ad6c86f6d2d5bed4626bcc6" category="doc">快速指南—ASA A400</block>
   <block id="5eb8101a6e8a2a3f54c56549ab21ade4" category="admonition">ASA A400使用与AFF A400系统相同的安装操作步骤。</block>
-  <block id="b26cf0fc163ec7e9ea966514eed60da1" category="doc">更换电源- ASA A400</block>
   <block id="2d7c6c8ec11dfd6f4583d91c8d94d5d0" category="doc">更换控制器- ASA A400</block>
   <block id="1952c1c21894126b1d43fd1b446add88" category="doc">机箱更换概述- ASA A400</block>
   <block id="8a5c79d05f266b99fd8b21d069b75d78" category="doc">完整机箱更换- ASA A400</block>
@@ -6657,7 +6634,6 @@ SFP+(目标/启动程序)</block>
   <block id="967b266f7bf42739746ff8ee10704ec8" category="doc">完整的系统还原—ASA C400</block>
   <block id="a2e400b53e6df30e6ea808a7a8d9cf03" category="doc">重新对系统进行配置并重新分配磁盘- ASA C400</block>
   <block id="d87d17cd765dde0b8f553a33b6d61945" category="doc">更换硬件- ASA C400</block>
-  <block id="6b6916e7dab19d8ffcd0bc0fa006d0c2" category="doc">更换电源- ASA C400</block>
   <block id="d8548c2140dedaa5fc883590a1f7009a" category="doc">更换实时时钟电池- ASA C400</block>
   <block id="90276cd1568977c0a841334b01c793ee" category="doc">还原并验证系统配置- ASA C400</block>
   <block id="9f50c74c54d6b3ee3b7485498ed65016" category="doc">完成还原和更换过程- ASA C400</block>
@@ -6686,7 +6662,6 @@ SFP+(目标/启动程序)</block>
   <block id="e6b4abf5b92977063300e1d579857b79" category="doc">重新对系统进行配置并重新分配磁盘- ASA C250</block>
   <block id="12e315d8c52faa94677b1901adfb8eb4" category="doc">更换硬件- ASA C250</block>
   <block id="e6d96f81a26c1a2a35065ae9c3793837" category="doc">更换NVMEM电池- ASA C250</block>
-  <block id="5a3293bed167a0eb16f492a5ce0b1ed5" category="doc">更换电源- ASA C250</block>
   <block id="7382bde7f210f74c2e89d6849d2c853c" category="doc">更换实时时钟电池- ASA C250</block>
   <block id="d39ab7984d0a9959c51323b1566d39fd" category="doc">还原并验证系统配置- ASA C250</block>
   <block id="4011a7882485055cdc06ec93e7092124" category="doc">完成还原和更换过程- ASA C250</block>
@@ -6716,7 +6691,6 @@ SFP+(目标/启动程序)</block>
   <block id="7aceb406cd07b754209377738399299c" category="doc">完整的系统还原—ASA C800</block>
   <block id="7eb1428cde412a152576637c584b14c0" category="doc">重新对系统进行配置并重新分配磁盘- ASA C800</block>
   <block id="ea1dc19906ddc0d31254dd6f8ec34328" category="doc">移动并更换硬件- ASA C800</block>
-  <block id="5bb05bb37b0f50f78a66bcb870b4f799" category="doc">更换电源- ASA C800</block>
   <block id="bf0c9d599368cd33e5930b660050f4e0" category="doc">更换实时时钟电池- ASA C800</block>
   <block id="d7839b53c88c4bbaff7e95ac9d3c76fc" category="doc">还原并验证系统配置- ASA C800</block>
   <block id="cbc21197c1871348bbf882e4a113a8cf" category="doc">完成还原和更换过程- ASA C800</block>
@@ -7777,7 +7751,6 @@ SFP+(目标/启动程序)</block>
   <block id="807b26d7111f209057a30d265b88f6ae" category="paragraph">I/O模块(输入/输出模块)是一个硬件组件、充当控制器与需要与控制器交换数据的各种设备或系统之间的媒介。</block>
   <block id="517e65cbfa02ca306eec69200485822d" category="paragraph">电源设备在控制器中提供冗余电源。</block>
   <block id="f133a8ed8a0b7a76b6c1b28bc00b0fb1" category="doc">更换NVRAM - AFF A1K</block>
-  <block id="6794ac4e17218aaa4a21099cb6c428a5" category="doc">更换电源- AFF A1K</block>
   <block id="5dae7574a50de0a82f041d98e2b363d4" category="doc">更换实时时钟电池- AFF A1K</block>
   <block id="6f088e5455bf9d5415570fed055240bc" category="paragraph">对于AFF A70和A90存储系统、您可以对以下组件执行维护过程。</block>
   <block id="1fba4a247f94ae0adebcaa57fd54e768" category="image-alt">电缆拉片方向示例</block>
@@ -8335,7 +8308,6 @@ SFP+(目标/启动程序)</block>
   <block id="a353ad5d28eb41a61c5aaf6e3cdd653a" category="paragraph">为AFF A1K存储系统安装机架硬件后、请安装控制器的网络缆线、并在控制器和存储架之间连接缆线。</block>
   <block id="c4cbbd77402de8c27a0e7a305bcd7a83" category="list-text">将控制器A上的端口e1a连接到控制器B上的端口e1a</block>
   <block id="e2e054e25b28fb3d74a683482ef337a6" category="list-text">将控制器A上的端口e7a连接到控制器B上的端口e7a</block>
-  <block id="b1a78b15892ed366f203ff3009cb08d9" category="admonition">为了最大程度地提高集群和HA流量的系统性能、请勿将端口e1b和e7b端口用于主机网络连接。使用单独的主机卡以最大程度地提高性能。</block>
   <block id="bf419afe8104f0626b8c6f35d7546f54" category="list-text">将控制器A上的端口e1a和控制器B上的端口e1a连接到集群网络交换机A</block>
   <block id="cf5e5d4912cff0cbaa590fc1ae9ce6d7" category="list-text">将控制器A上的端口e7a和控制器B上的端口e7a连接到集群网络交换机B</block>
   <block id="8bff2f2dabc32a6a40817e91a3008934" category="open-title">选项1：连接到一个NS224存储架</block>
@@ -8417,7 +8389,6 @@ SFP+(目标/启动程序)</block>
   <block id="e78eb711e1e947ddb92f05657d0347d1" category="inline-link-macro">准备安装AFF A70或AFF A90存储系统</block>
   <block id="2f2189cfd66651c01e836375bb7f1b05" category="paragraph">查看硬件要求后，您可以<block ref="cee013a212eeca03333769e1fffc4483" category="inline-link-macro-rx"></block>：</block>
   <block id="45246f3dd0a53426b7b68a7138275eae" category="doc">更换NV电池- AFF A70和AFF A90</block>
-  <block id="142aed9b4219bef04d9ce41b26e16e98" category="doc">更换电源- AFF A70和AFF A90</block>
   <block id="09667d54b485aed2ff058a0b9116b943" category="doc">更换实时时钟电池- AFF A70和AFF A90</block>
   <block id="1d04f5bb7d7b81fc8fded3b79cc0c8d3" category="doc">安装和设置ASA R2系统</block>
   <block id="22d05c38a6e8032e35e9ff8d6b826ee0" category="inline-link">ASA R2系统文档</block>
@@ -8452,7 +8423,6 @@ SFP+(目标/启动程序)</block>
   <block id="5f402dad935ff3ab451b558b0df9b4f3" category="paragraph">控制器由主板，固件和软件组成。它控制存储、I/O卡并运行ONTAP操作系统软件。</block>
   <block id="33a7e77eb8f382b670aecd2f25304362" category="doc">更换NV电池- ASA A70和ASA A90</block>
   <block id="124b0b12b52d6ff2b5c211d8ab2b86c6" category="doc">更换NVRAM - ASA A70和ASA A90</block>
-  <block id="778b3919afeff8e8a35cc6a213bb7784" category="doc">更换电源- ASA A70和ASA A90</block>
   <block id="591fbd5c7a0e4469981c4bc0919fffdb" category="doc">更换实时时钟电池- ASA A70和ASA A90</block>
   <block id="77dbbb0add58d8d5b96d74c1b27689bb" category="doc">将故障部件退回给NetApp - ASA A1K</block>
   <block id="1c1be2f74300d879eb6d6d09021f9e6f" category="doc">更换启动介质- ASA A1K</block>
@@ -8465,7 +8435,6 @@ SFP+(目标/启动程序)</block>
   <block id="3f3cad89dab9930e656089557bd4ab26" category="doc">维护ASA A1K硬件</block>
   <block id="c0948273a639518682bdf15da7ef7782" category="paragraph">对于ASA A1K存储系统、您可以对以下组件执行维护过程。</block>
   <block id="d40d4bbeff22abe0ae50f578804e3f1d" category="doc">更换NVRAM - ASA A1K</block>
-  <block id="8280bf46cc1987c5763fa466b06ce943" category="doc">更换电源- ASA A1K</block>
   <block id="53211074b0edd2a1e49952ae0a99c70e" category="doc">更换实时时钟电池- ASA A1K</block>
   <block id="791c7d7e48c500e265e759e91a1190c4" category="paragraph">自指定的ONTAP版本起、不再支持以下系统、磁盘架和交换机。</block>
   <block id="e039aa1be61543fd84f1c4eb5d3e9f6b" category="section-title">ONTAP硬件系统</block>
@@ -8553,7 +8522,6 @@ SFP+(目标/启动程序)</block>
   <block id="5060dc7c2f8e62d845323bb56c316f67" category="paragraph">查看硬件要求后，您可以<block ref="f9fa58ae9ecc3e85b1db488d30bad78e" category="inline-link-macro-rx"></block>：</block>
   <block id="3a36e6b466e0265c25d241c486f64e02" category="paragraph">Flash Cache 通过实时智能缓存最近读取的用户数据和 NetApp 元数据来加快数据访问速度。它适用于随机读取密集型工作负载，包括数据库，电子邮件和文件服务。</block>
   <block id="c4ed6403201dfa217ff707bb31f7629c" category="doc">更换NVRAM - FAS70和FAS90</block>
-  <block id="031f9f009940597777a75796e5b17818" category="doc">Replace a power supply - FAS70 and FAS90</block>
   <block id="6edcaa0f49095aafb0fa011d3fa4d4c5" category="doc">更换实时时钟电池— FAS70 和 FAS90</block>
   <block id="d387637ce68cde3388b8e2a316fb8a4b" category="summary">要启动并运行ONTAP硬件系统、您需要在ONTAP中安装硬件组件、为硬件布线并配置存储。</block>
   <block id="b11226c776ec1b74f6a42f871e3194c9" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>安装存储系统和存储架</block>
@@ -9449,7 +9417,6 @@ SFP+(目标/启动程序)</block>
   <block id="87e83e1392e33b9e82110521a139bad8" category="list-text">取出NV电池：</block>
   <block id="d61cc7e5822a30588ead2cb9b0e8c0d8" category="list-text">安装替换NV电池：</block>
   <block id="216cd6b3556908b9bf9092308aacc2f2" category="list-text">将NV电池放入电池盒中。</block>
-  <block id="29e74344b0f8f3bb2a741f7b4a504193" category="paragraph">PSU是冗余的可热插拔PSU。</block>
   <block id="a9f9d19ee0352e6fe7d4ace8f91528b4" category="list-text">重要说明：请勿混用具有不同效率等级或不同输入类型的PSU。请始终像这样替换。</block>
   <block id="f6454949377394cc2236360f10f7e56e" category="list-text">根据控制台错误消息或通过PSU上的红色警示LED确定出现故障的PSU。</block>
   <block id="6f48d98c2df2386d39c71bc10860a818" category="list-text">打开电源线固定器、从PSU断开电源线、然后从PSU拔下电源线。</block>
@@ -9509,7 +9476,6 @@ SFP+(目标/启动程序)</block>
   <block id="7638bec0a959f7fd0b1433ed8d2deca8" category="list-text">存储架(如果您订购了额外的存储)</block>
   <block id="4aaf4b6268f5873187a9eb7110d1ec2e" category="list-text">USB－C串行控制台电缆</block>
   <block id="8f6507883f353b8fbeb448f5d296b420" category="paragraph">在确保您的站点满足存储系统规格的要求并确认您已订购所有部件后、您应注册存储系统。</block>
-  <block id="2ab82a0b93ec71d9918e64fb9b828444" category="list-text">找到要安装的每个控制器的系统序列号(SSN)。您可以在以下位置找到序列号：</block>
   <block id="3db53907b5ca9a298d8e8517cdd30a44" category="list-text">您可以在以下位置找到序列号：</block>
   <block id="3fc885acbf9f3f66cb5fefc99c0d76c6" category="list-text">在装箱单上</block>
   <block id="cf163ceac39b37fd1108b3cf9ff2b719" category="list-text">在您的确认电子邮件中</block>
@@ -9707,7 +9673,6 @@ SFP+(目标/启动程序)</block>
   <block id="90173eb1ed454afdf58b9269bb20c2b9" category="paragraph">风扇用于冷却控制器和驱动器。</block>
   <block id="05a221444243ea0ca6f4dad99fe28c6c" category="paragraph">非易失性存储器(NV)电池负责为NVMEM组件供电、同时在断电后将传输中的数据转存到闪存中。</block>
   <block id="93cffbd214791f6c73bd02d80e0804ab" category="doc">更换NV电池- AFF A20、AFF A30和AFF A50</block>
-  <block id="c21a1648c7655abd0241b02472ce577b" category="doc">更换电源- AFF A20、AFF A30和AFF A50</block>
   <block id="d04789e64aa71c747fa327e4d399534e" category="doc">更换实时时钟电池- AFF A20、AFF A30和AFF A50</block>
   <block id="4bc0f3e72d6123d7efdfe5948cc79a4c" category="doc">将故障部件退回给NetApp - AFF C30 and AFF C60</block>
   <block id="5c067d0c56a9b99bc0f72610745316f6" category="doc">完整机箱更换- AFF C30和AFF C60</block>
@@ -10303,7 +10268,6 @@ SFP+(目标/启动程序)</block>
   <block id="f7505dbf9cbf21226d33ed67b7c926e6" category="doc">硬件维护概述—ASA A20、ASA A30和ASA A50</block>
   <block id="02cbc9c9b92f52062a793fbc039a7a5f" category="paragraph">对于ASA A20、ASA A30和ASA A50存储系统、您可以对以下组件执行维护过程。</block>
   <block id="c62c530fe1e7e769964d1cac42c0c1ca" category="doc">更换NV电池- ASA A20、ASA A30和ASA A50</block>
-  <block id="db9511faddf8c60d659417ec7880bb9b" category="doc">更换电源- ASA A20、ASA A30和ASA A50</block>
   <block id="69ddcdcae3c05843aa3be62f304e023b" category="doc">更换实时时钟电池- ASA A20、ASA A30和ASA A50</block>
   <block id="3d68bd292ff38f0f7a42e75bafb71ae7" category="summary">如果AFF C80系统中的某个组件发生故障、请将故障部件退回给NetApp。<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>有关详细信息、请参见页面。</block>
   <block id="f48200b4fe7f2f013c6d085467e08b85" category="summary">如果硬件故障或升级需要、请更换AFF C80系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器以及重新启动系统。</block>
@@ -12547,14 +12511,7 @@ SFP+(目标/启动程序)</block>
   <block id="810944644ddbd9a71f9a53ebcd73f51d" category="list-text">标准 EMC/EMI：BS-EN-55024、BS-EN55035、CISPR 32、EN55022、EN55024、EN55032、EN55035、EN61000-3-2、EN61000-3-3、FCC 第 15 部分 A 类、ICES-003、KS C 9832、KS C 9835</block>
   <block id="9b3b75c67a53d54bba73c70cd1786aed" category="list-text">标准安全：ANSI/UL60950-1、ANSI/UL62368-1、BS-EN62368-1、CAN/CSA C22.2 No. 60950-1、CAN/CSA C22.2 No. 62368-1、CNS 14336、EN60825-1、EN62368-1、IEC 62368-1、IEC60950-1、IS 13252（第 1 部分）</block>
   <block id="520b661a272c9e6f55f469cc9c24193d" category="section-title">高可用性</block>
-  <block id="e447884015fc6cccd73419a58f4a2dc9" category="paragraph">基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接进行 SAS 带内管理；</block>
-  <block id="953484270d99ac98b7edea761c8accc5" category="summary">A150平台组的主要规格</block>
-  <block id="98cf7c8810f9cbc80da978f12dfd11de" category="paragraph">以下是单个高可用性对中AFF A150存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
   <block id="f5046e4779952c40dda2055325e842f6" category="list-text">ONTAP版本： ONTAP：9.16.1P2</block>
-  <block id="f31908f038c51788c271c5c4f452a2f9" category="list-text">最低ONTAP版本： ONTAP 9.10.1P12 == 横向扩展最大值</block>
-  <block id="b88ea7120b8d94ca7802d027ea4ae35d" category="list-text">类型：NAS；HA 对：12；原始容量：6.6 PB / 5.8 PiB；最大内存：768 GB</block>
-  <block id="a4e92d69d00158d7ae606a77ce4fd213" category="list-text">类型：SAN；HA 对：6；原始容量：3.3 PB / 2.9 PiB；最大内存：384 GB</block>
-  <block id="c00cb3237fcdb94d446acf8665539403" category="list-text">类型：HA 对；原始容量：0.5 PB / 0.5 PiB；最大内存：64.0000</block>
   <block id="014e996a6a164aaf40b8b3e72704fc2e" category="section-title">输入/输出</block>
   <block id="c9517cd5cbe4fac6d0c526d61f3fcc39" category="section-title">板载 I/O</block>
   <block id="81754037ddc5b97d9b806acad96f8815" category="list-text">协议：以太网 10 Gbps；端口：12</block>
@@ -12716,11 +12673,6 @@ SFP+(目标/启动程序)</block>
   <block id="caee1a6bd998eef961868a45bd4dbc8b" category="list-text">最坏情况下的功率：3476 BTU/小时</block>
   <block id="7d5423ead4cc9c9c7523162c96b9a70a" category="list-text">重量：54.3 磅/24.6 千克</block>
   <block id="bfb224eca9d5778fa9096edb45c6e0a6" category="list-text">噪音：标称声功率 (LwAd)：7.2；br/声压 (LpAm)（旁观者位置）：69.1 dB</block>
-  <block id="72c1a142348c9ef5cd0bfa8785831482" category="summary">A250平台组的主要规格</block>
-  <block id="d4ece2dd07e2b088387c9e6101f7374b" category="paragraph">以下是单个高可用性对中AFF A250存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
-  <block id="141231dc194fb8130baba1dedc3a1437" category="list-text">最低ONTAP版本： ONTAP 9.8RC1 == 横向扩展最大值</block>
-  <block id="e09d173ed5c31e4dd78ba88f30e765c1" category="list-text">类型：NAS；HA 对：12；原始容量：13.2 PB / 11.7 PiB；最大内存：1536 GB</block>
-  <block id="883fa3568cecac0f4750af6ef669d774" category="list-text">类型：SAN；HA 对：6；原始容量：6.6 PB / 5.9 PiB；最大内存：768 GB</block>
   <block id="8620fd4a54bd59df48445495cc60d6a1" category="list-text">类型：HA 对；原始容量：1.1 PB / 1.0 PiB；最大内存：128.0000</block>
   <block id="f350094c762b190b03da78050fac38f6" category="list-text">协议：以太网 25 Gbps；端口：4</block>
   <block id="ae6233ad0fe7d541d74b7fcbd8e20ee1" category="list-text">协议：以太网 10 Gbps；端口：4</block>
@@ -12749,17 +12701,10 @@ SFP+(目标/启动程序)</block>
   <block id="99190bf361f23d7f60b0311ed65db52c" category="list-text">高度：4U</block>
   <block id="fd82bddbad5203300e57904c991cb840" category="list-text">深度：32.6 英寸/（34.7 英寸，含电缆管理支架）</block>
   <block id="9725247c68aace7973804f231cbdd26b" category="list-text">噪音：标称声功率 (LwAd)：8.5；br/声压 (LpAm)（旁观者位置）：67.2 dB</block>
-  <block id="2ecaf45e6d941aa8787c5207d6e14cbf" category="summary">A400平台组的主要规格</block>
-  <block id="f0e9d60af7684125f1b3ec54132594db" category="paragraph">以下是单个高可用性对中AFF A400存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
   <block id="8d6f1126e03ba70819901e3191bf6358" category="list-text">最低ONTAP版本： ONTAP 9.7RC1 == 横向扩展最大值</block>
-  <block id="af08be515a9d4c3e3b541572ab14ca83" category="list-text">类型：NAS；HA 对：12；原始容量：176.3 PB / 156.5 PiB；最大内存：3072 GB</block>
-  <block id="93b63827e9f32e325a3be96e3d1d0d01" category="list-text">类型：SAN；HA 对：6；原始容量：88.1 PB / 78.3 PiB；最大内存：1536 GB</block>
-  <block id="d9dd3b93e031a157b272db3164ac9cef" category="list-text">类型：HA 对；原始容量：14.7 PB / 13.0 PiB；最大内存：256.0000</block>
   <block id="603170cd5591c91144ede853fb7004e9" category="list-text">协议：以太网 25 Gbps；端口：12</block>
   <block id="c3346d55fb4bcd313308cf344c3c9956" category="list-text">协议：以太网 100 Gbps；端口：20</block>
   <block id="1f9a9c48fecfca4a044d529a9d033783" category="list-text">协议：以太网 10 Gbps；端口：32</block>
-  <block id="637b290f820eaaf5033dfa8ab5a60528" category="list-text">协议：FC 32 Gbps；端口：24</block>
-  <block id="53650a5ecd2e7e6bd89acc186768c407" category="list-text">协议：NVMe/FC 32 Gbps；端口：24</block>
   <block id="4930a203d4d9fe648c8369b3361ea867" category="list-text">协议：SAS 12 Gbps；端口：32</block>
   <block id="24679701c4662127aa11de2c774f57f7" category="list-text">重量：110.0 磅 49.9 千克</block>
   <block id="f8c2b681f9f457cefef2b7a4d0a49b52" category="list-text">深度：32.6 英寸（带电缆管理支架为 34.7 英寸）</block>
@@ -12922,10 +12867,6 @@ SFP+(目标/启动程序)</block>
   <block id="8d316cb0dd32e6a29db7a99bc113d716" category="paragraph">最低ONTAP版本： ONTAP 9.13.1</block>
   <block id="f0ed92d1c0fd3e909c924094a93243f1" category="paragraph">光纤通道；iSCSI；NVMe/TCP；</block>
   <block id="fd49e13a7e97bd8bb1e4c38997b7c545" category="paragraph">没有可用的环境数据。</block>
-  <block id="0e1c2f19527964f6e08154d6482b5e30" category="summary">ASA150 平台组的主要规格</block>
-  <block id="4dbc96329d5818883df31ecb13a05ebd" category="paragraph">以下是单个高可用性对中ASA A150存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
-  <block id="541cac174e166b24f88392f26d40f404" category="list-text">最低ONTAP版本： ONTAP 9.13.1 == 横向扩展最大值</block>
-  <block id="18f87be5c5603f09112f8af3908b1280" category="list-text">NVMe/TCP == 系统环境规格 没有可用的环境数据。</block>
   <block id="680d950d544b60547a8bacca951d6718" category="summary">ASA A250存储系统的主要规格</block>
   <block id="a97c7cd2a22344db01c67b788d791334" category="doc">ASA A250的主要规格</block>
   <block id="20955af66ca82e86dac8266497f64dec" category="paragraph">以下是ASA A250的精选规格。访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>（HWU）获取ASA A250规格的完整列表。此页面反映的是单个高可用性对。</block>
@@ -12933,9 +12874,6 @@ SFP+(目标/启动程序)</block>
   <block id="8a7a6a6e68946412c0d94b0a69520833" category="cell">4.4 PB / 3.9 PiB</block>
   <block id="adb1577c933e08c5e605d6b3e683d150" category="cell">0.7 PB / 0.7 PiB</block>
   <block id="1978f393885cf00f05ab1be479828e8f" category="paragraph">足球俱乐部； iSCSI； NVMe/FC； NVMe/TCP；</block>
-  <block id="65f5bdc4ea585a25db7e798fe434a135" category="summary">ASA250 平台组的主要规格</block>
-  <block id="81dee4edf751df8f6f2a9351c3c1054e" category="paragraph">以下是单个高可用性对中ASA A250存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
-  <block id="a87f27eafdf3369f35e9efc3c479e4f7" category="list-text">类型：SAN；HA 对：6；原始容量：4.4 PB / 3.9 PiB；最大内存：768 GB</block>
   <block id="8635c55a722f7078767bf23390e4512b" category="list-text">协议：FC 32 Gbps；端口：8</block>
   <block id="836d5b409933ca37fd9abb594f9ffa51" category="list-text">协议：NVMe/FC 32 Gbps；端口：8</block>
   <block id="1e9ab1ef21b71ca54d8fb332aba59c57" category="summary">ASA A400存储系统的主要规格</block>
@@ -12943,8 +12881,6 @@ SFP+(目标/启动程序)</block>
   <block id="50c7467b088c1359dd4f78f13eee0b4a" category="paragraph">以下是ASA A400的部分规格。访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>（HWU）获取ASA A400规格的完整列表。此页面反映的是单个高可用性对。</block>
   <block id="c34e8a3f11aa9b5bf96f8f039946f5ac" category="paragraph">平台配置： ASA A400单机箱 HA 对，以太网捆绑包</block>
   <block id="171ad46774f32c56db17e5cc8a1c27ca" category="list-text">最坏情况下的功率：5212 BTU/小时</block>
-  <block id="36fb5b627c2dfb6e53810cdd3e6be3f3" category="summary">ASA400 平台组的主要规格</block>
-  <block id="1976618cf00c0b6aea89a517e457a8c1" category="paragraph">以下是单个高可用性对中ASA A400存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
   <block id="65d0afe8c0786bff1dd86021fdc07256" category="summary">ASA A800存储系统的主要规格</block>
   <block id="59a59c8ca4ad93f3a28d68343d4dc062" category="doc">ASA A800的主要规格</block>
   <block id="263fbe530f95144e2f9fc1764572e731" category="paragraph">以下是ASA A800的部分规格。访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>（HWU）获取ASA A800规格的完整列表。此页面反映的是单个高可用性对。</block>
@@ -12952,8 +12888,6 @@ SFP+(目标/启动程序)</block>
   <block id="9aa49a71aa0866fdf22c763b884cf447" category="cell">39.7 PB / 35.2 PiB</block>
   <block id="857fbb927f9301cb274cfbbe50576f34" category="cell">7680 GB</block>
   <block id="0a74815927318643e615dd9f6d9ef36c" category="cell">1280.0000</block>
-  <block id="580e58da3f4c8c0e004338e2d5463568" category="summary">ASA800 平台组的主要规格</block>
-  <block id="06eb93fc791c5a505c106b277c7d4f76" category="paragraph">以下是单个高可用性对中ASA A800存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
   <block id="1cb06846bf340ec24f77328a4840931c" category="summary">ASA A900存储系统的主要规格</block>
   <block id="cdca003ab9116f8c6df61f92c170e74f" category="doc">ASA A900的主要规格</block>
   <block id="b9cb6f539efb85bd3dbecb8f63b109da" category="paragraph">以下是ASA A900的部分规格。访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>（HWU）获取ASA A900规格的完整列表。此页面反映的是单个高可用性对。</block>
@@ -12964,8 +12898,6 @@ SFP+(目标/启动程序)</block>
   <block id="d5badd98590f7c8475031c722bee9f13" category="list-text">重量：220.5 磅/100.0 千克</block>
   <block id="d7dbfe33d50154da8ce85d1c1065e7be" category="list-text">深度：28.8 英寸/（36.8 英寸，含电缆管理支架）</block>
   <block id="a57159585077204011cc6d81536a227c" category="list-text">噪音：标称声功率 (LwAd)：7.4；br/声压 (LpAm)（旁观者位置）：65.0 dB</block>
-  <block id="fa224ab2852d40c3701e238592589a35" category="summary">ASA900 平台组的主要规格</block>
-  <block id="dae772a251ba6ae7609ce9eb445c4ca7" category="paragraph">以下是单个高可用性对中ASA A900存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
   <block id="18dc17338011190ae60489762b18bbba" category="summary">AFF C250存储系统的主要规格</block>
   <block id="06b4db325464ed97a14422979b4d8924" category="doc">AFF C250的主要规格</block>
   <block id="12dc95d0bc892a4d68c08990a2e0e93f" category="paragraph">以下是AFF C250的部分规格。访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>（HWU）获取AFF C250规格的完整列表。此页面反映的是单个高可用性对。</block>
@@ -12975,10 +12907,6 @@ SFP+(目标/启动程序)</block>
   <block id="ca0c9966bf6d8b13874c9a33d9b103fa" category="cell">8.8 PB / 7.9 PiB</block>
   <block id="4dfae59c5327b0ed3524f4482c118eaa" category="cell">1.5 PB / 1.3 PiB</block>
   <block id="acd481bb21a2d48c85590f748324f123" category="paragraph">基于以太网的基板管理控制器（BMC）和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；</block>
-  <block id="4f598ad0067992538a9b25a635fd7ebe" category="summary">C250平台组的主要规格</block>
-  <block id="c77413b9effec9f5e6d3543e5e5b357a" category="paragraph">以下是单个高可用性对中AFF C250存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
-  <block id="f15eebaf1ae51e81f921eaf53eb1297d" category="list-text">最低ONTAP版本： ONTAP 9.10.1P15 == 横向扩展最大值</block>
-  <block id="bdf24340dd03a1e6485e317e7694b9b2" category="list-text">类型：NAS；HA 对：12；原始容量：17.7 PB / 15.7 PiB；最大内存：1536 GB</block>
   <block id="121ccbb25c187ccfd21ddfb63cddb37b" category="summary">AFF C30 的主要规格</block>
   <block id="ac83142a3cf60457afcf64302dc699f8" category="paragraph">以下是单个高可用性对中AFF C30 存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
   <block id="bdb291fe6613a36b2df9dcf579e18d44" category="section-title">AFF C30 规格一览</block>
@@ -13008,9 +12936,6 @@ SFP+(目标/启动程序)</block>
   <block id="73378505345b16bafe8e8e0adc36335b" category="cell">2.9 PB / 2.6 PiB</block>
   <block id="33e75ff09dd601bbe69f351039152189" category="cell">28</block>
   <block id="d645920e395fedad7bbbed0eca3fe2e0" category="cell">40</block>
-  <block id="cc2197d8b97e0d4876bce9bda259529b" category="summary">C400平台组的主要规格</block>
-  <block id="14bd00edae2bf24d6d6bb1e970380fcd" category="paragraph">以下是单个高可用性对中AFF C400存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
-  <block id="e2904e96770de9235975509793655256" category="list-text">类型：NAS；HA 对：12；原始容量：35.4 PB / 31.4 PiB；最大内存：3072 GB</block>
   <block id="08bd3bd31dd4639c8d1ce08094a5c7ef" category="summary">AFF C80 存储系统的主要规格</block>
   <block id="2d33040a8a66f0c30e2c415a9eec7d8d" category="doc">AFF C80 的主要规格</block>
   <block id="67e389a0ebc658619776b9d5ac7e49d5" category="paragraph">以下是AFF C80 的部分规格。访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>（HWU）获取AFF C80 规格的完整列表。此页面反映的是单个高可用性对。</block>
@@ -13025,12 +12950,6 @@ SFP+(目标/启动程序)</block>
   <block id="4e635c54d834641513e2b2c8e225a127" category="cell">以太网 200 Gbps</block>
   <block id="19ca14e7ea6328a42e0eb13d585e4c22" category="cell">36</block>
   <block id="9f61408e3afb633e50cdf1b20de6f466" category="cell">56</block>
-  <block id="866524d146caf6d5d5ca58414133dfcb" category="summary">C80平台组的关键规格</block>
-  <block id="fc53799482b5c72e371c896c296eeaca" category="paragraph">以下是单个高可用性对中AFF C80 存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
-  <block id="790f2f7025a49405ecf494550abd2025" category="list-text">类型：NAS；HA 对：12；原始容量：176.8 PB / 157.0 PiB；最大内存：6144 GB</block>
-  <block id="4668001b533dcb01a288e13e438ef996" category="list-text">类型：SAN；HA 对：6；原始容量：88.4 PB / 78.5 PiB；最大内存：3072 GB</block>
-  <block id="88fef25d7d076a46933eb5cfece64d7d" category="list-text">类型：HA 对；原始容量：14.7 PB / 13.1 PiB；最大内存：512.0000</block>
-  <block id="48f850c93d74da66ee33ca24f09bc3d1" category="list-text">SMB 3.1.1 == 系统环境规范 没有可用的环境数据。</block>
   <block id="c16047b0b69bcd197b44430d6882aab1" category="summary">AFF C800存储系统的主要规格</block>
   <block id="198b715fa6258cbda0053099c7bc668e" category="doc">AFF C800的主要规格</block>
   <block id="f7695e44bea62e5b28836a193e3bda64" category="paragraph">以下是AFF C800的部分规格。访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>（HWU）获取AFF C800规格的完整列表。此页面反映的是单个高可用性对。</block>
@@ -13040,9 +12959,6 @@ SFP+(目标/启动程序)</block>
   <block id="439e4902245729253229992fd0a361ae" category="list-text">重量：132.5 磅/60.1 千克</block>
   <block id="f60520e90b3a6d873ecb44d71d75b734" category="list-text">工作温度/海拔/湿度：5°C 至 40°Cbr/41°F 至 br/104°F) atbr/= 3048mbr/= 10000 ft) 海拔；8% 至 90%br/相对湿度，无冷凝</block>
   <block id="d5cacbff7b82ab3d26541de685b1a32b" category="list-text">噪音：标称声功率 (LwAd)：8.0；br/声压 (LpAm)（旁观者位置）：62.8 dB</block>
-  <block id="de73ab042d31fbcaea0758773ba2aed7" category="summary">C800平台组的主要规格</block>
-  <block id="fc95a14b356ccae993f1c5a596003764" category="paragraph">以下是单个高可用性对中AFF C800存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
-  <block id="3a02dddbfe8af1c44ece16bc861685bb" category="list-text">类型：NAS；HA 对：12；原始容量：88.4 PB / 78.5 PiB；最大内存：15360 GB</block>
   <block id="8403c0175395ff495c9af55099b8fef4" category="summary">FAS70 的主要规格</block>
   <block id="c96eb561070b12daad5027ae91335418" category="paragraph">以下是单个高可用性对中 FAS70 存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
   <block id="c692e4fa105561892a2a9228b34bffae" category="section-title">FAS70 规格一览</block>
@@ -13108,12 +13024,6 @@ SFP+(目标/启动程序)</block>
   <block id="5914ff703c6686a6800588a76dacab74" category="list-text">典型功率：2319 BTU/小时</block>
   <block id="1c28248d81d6ff87ee55b4eb47056a8c" category="list-text">最坏情况下的功率：3872 BTU/小时</block>
   <block id="b95d880eb71d3f28802d99353d93f6f0" category="list-text">重量：52.2 磅/23.7 千克</block>
-  <block id="1c52b559c1f437da01a94de79dc7f45c" category="summary">FAS50 平台组的主要规格</block>
-  <block id="18f027e2b7707b7ff7767f76d5927af2" category="paragraph">以下是单个高可用性对中 FAS50 存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
-  <block id="f0a067ccea8b26d0b2f17d9fbdb931ad" category="list-text">类型：NAS；HA 对：4；原始容量：42.2 PB / 37.5 PiB；最大内存：512 GB</block>
-  <block id="3a0f42ee3e73e3f8370b07da4111f5b5" category="list-text">类型：SAN；HA 对：4；原始容量：42.2 PB / 37.5 PiB；最大内存：512 GB</block>
-  <block id="2283cd8fe9d3e6788a5f1e28f24f55a4" category="list-text">类型：HA 对；原始容量：10.6 PB / 9.4 PiB；最大内存：128.0000</block>
-  <block id="656b17c351d41c4973d279414ea79cc9" category="list-text">重量：52.2 磅 23.7 千克</block>
   <block id="c0abf347ba9cbc3892abfa80eb2e4397" category="summary">FAS8300的主要规格</block>
   <block id="e0fa95a49988723bdb3a71e39da9c698" category="paragraph">以下是单个高可用性对中FAS8300存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。</block>
   <block id="39d93cb8cb49b1e34ce4682195baa972" category="section-title">FAS8300规格概览</block>
@@ -13133,7 +13043,6 @@ SFP+(目标/启动程序)</block>
   <block id="0d53ee5ca699c3621f3c0a505c890b66" category="list-text">典型功率：5430 BTU/小时</block>
   <block id="36a13f3d826d9f6cf7fc56d6627d7528" category="list-text">最坏情况下的功率：5796 BTU/小时</block>
   <block id="d61c7e37be329d2ba5a7e809fb08d9c5" category="list-text">重量：108.9磅49.4公斤</block>
-  <block id="e495c9f38a737b6da2117ebaa52ba7ac" category="doc">FAS9500概述</block>
   <block id="40d3675d7a1ade404a4fdd374833eb73" category="paragraph">平台配置： FAS9500单机箱 HA 对</block>
   <block id="ce98aac2c839cd0ed245c16a1a40165a" category="summary">FAS9500存储系统的主要规格</block>
   <block id="1ea1a140190bf37eb933a90c35b37442" category="doc">FAS9500的主要规格</block>
@@ -13144,12 +13053,6 @@ SFP+(目标/启动程序)</block>
   <block id="5d1cd462bd74ff5016c71d1735d844d0" category="cell">90.0 PB / 79.9 PiB</block>
   <block id="6ec20c5ffb71fc8e6407815aba709ebe" category="cell">15.0 PB / 13.3 PiB</block>
   <block id="e71a112fcba059348a330658e07fff85" category="list-text">工作温度/海拔/湿度：海拔 3048 米/10000 英尺时 10°C 至 35°C（50°F 至 95°F）；相对湿度 8% 至 90%，无凝结</block>
-  <block id="fd64ba1b0614f4ffd66207f445196c93" category="summary">FAS9500平台组的主要规格</block>
-  <block id="8d8c60ca9b0b29f222ed76c52c6cf55b" category="list-text">最低ONTAP版本： ONTAP 9.10.1P3 == 横向扩展最大值</block>
-  <block id="014f2208129cdc831cee84fc30f9247f" category="list-text">类型：NAS；HA 对：12；原始容量：180.0 PB / 159.9 PiB；最大内存：24576 GB</block>
-  <block id="42af051dd0fff696f5ce895c1bb97de4" category="list-text">类型：SAN；HA 对：6；原始容量：90.0 PB / 79.9 PiB；最大内存：12288 GB</block>
-  <block id="8f449cf0254f2ad40d59dd095542b714" category="list-text">类型：HA 对；原始容量：15.0 PB / 13.3 PiB；最大内存：2048.0000</block>
-  <block id="f931f7d58dafa987aed167fe956586d0" category="list-text">工作温度/海拔/湿度：海拔高度 3048 米时 10°C 至 35°C（50°F 至 95°F）；相对湿度 8% 至 90%，无凝结</block>
   <block id="65a4d6fcc372057dd61e6cc7abb8c696" category="inline-link-macro">AFF A1K （自动恢复）</block>
   <block id="94bd55fe0571dbfa433cb6e80d3e228b" category="inline-link-macro">AFF A1K （手动恢复）</block>
   <block id="3c9419b0744beccd4fd6272e84be9db0" category="inline-link-macro">AFF A20/30/50（自动恢复）</block>
@@ -14170,7 +14073,6 @@ SFP+(目标/启动程序)</block>
   <block id="4bf81e37c38393eea22b0e46d9f43158" category="paragraph">FAS50 系统为二级存储和安全网络保险库提供了最低的每 GB 成本，同时通过更快的备份、更高的 IOPS 和 5-10 毫秒的低延迟提高了二级工作负载的性能。</block>
   <block id="beb7924c631bd72f6f5181a6a1773865" category="paragraph"><block ref="6fb9af7bf62d637bf3890d9d97180d06" category="inline-link-macro-rx"></block> 。</block>
   <block id="7b619a398942b2af52ce099821518739" category="section-title">2024 年发行</block>
-  <block id="e17f7565f95df58a416490dff287f6c1" category="paragraph"><block ref="b5bce7716321adf42716e3b598ed224d" category="inline-link-macro-rx"></block> 。</block>
   <block id="7b2fa3ce2f1cc4527c7d0a4e0f774ce1" category="paragraph"><block ref="9086cf3a37365194865877acb82e7669" category="inline-link-macro-rx"></block> 。</block>
   <block id="e3dd50b258bede9c23ca84687d397bed" category="paragraph"><block ref="028bf0170285d2584dcfed56c7103ca0" category="inline-link-macro-rx"></block> 。</block>
   <block id="728d7df870ee1451558451c200b714aa" category="sidebar">NetApp AFX 存储系统是一种分解的硬件和软件解决方案，专注于满足高性能 NAS 和 S3 客户的独特需求。其性能和可扩展性专门设计用于满足 AI 和 ML 工作负载的要求。</block>
@@ -14202,4 +14104,88 @@ SFP+(目标/启动程序)</block>
   <block id="d3bca45bb48d04c6d999281b772fa015" category="sidebar">AFX A1K 机箱</block>
   <block id="9a4e2ca13bc5368ad30e628996c8e94e" category="sidebar">AFX 1K 控制器</block>
   <block id="4c052a07dcf923d8d73e0be9a32b97a7" category="sidebar">AFX 1K IO模块</block>
+  <block id="35be92b1079dd4d454c4f763e5723f8a" category="list-text">电源是冗余的，并且可热插拔。您不必关闭控制器来更换 PSU。</block>
+  <block id="1053cf7d108791c08478ce9591984516" category="open-title">选项 1：热插拔交流电源</block>
+  <block id="3d70b6b1c750645a1540b9185ec5dbfc" category="open-title">选项 2：热插拔直流电源</block>
+  <block id="27b8025bf920b2fdec95f4719d7e3772" category="paragraph">PSU 是冗余的且可热插拔。您不必关闭控制器来更换 PSU。</block>
+  <block id="41221ad2b8f379d044b6e4c034575270" category="list-text">找到每个正在安装的控制器的系统序列号 (SSN)。</block>
+  <block id="639a764bd23851da6594721b4ee0a7d1" category="paragraph">基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接进行 SAS 带内管理；[//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="67bfe38eadb8acf6e70be93f4020561b" category="doc">热插拔电源 - AFF A150</block>
+  <block id="5ea0f09670f21c71300695e92b2cd256" category="admonition">请勿使用端口 e1b 和 e7b 端口进行主机网络连接。使用单独的主机卡。</block>
+  <block id="e0c35bf779836a3b5e187a211457a2b9" category="list-text">通过 SAS 连接对外部机架进行 SAS 带内管理 [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="25b7a8eef02360c09d8cb7847663af3e" category="doc">热插拔电源 - AFF A1K</block>
+  <block id="db8171f7944e9dc66fab5b089698d3fc" category="doc">热插拔电源 - AFF A20、 AFF A30 和AFF A50</block>
+  <block id="6d20796c812619e842f3483504be63f4" category="doc">热插拔电源 - AFF A250</block>
+  <block id="057cab5a212fb0cce841ca14b2cfeda3" category="doc">热插拔电源 - AFF A320</block>
+  <block id="3bebfde8a4d27ae5e27f0cd50cf9a5de" category="doc">热插拔电源 - AFF A400</block>
+  <block id="30432b9617d110e91bb55e0ee6592cdb" category="paragraph">基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接对外部机架进行 SAS 带内管理；[//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="3076b9da82c66ef1cac1e7179b746828" category="paragraph">使用 100 GbE 电缆将控制器 A 和 B 端口 e1a 和 e7a 连接到集群网络交换机 A 和 B。</block>
+  <block id="92998a9e2d395c7927371ced81dc9182" category="admonition">请勿使用端口 e1b 和 e7b 进行主机网络连接。使用单独的主机卡。</block>
+  <block id="ec3eca6cbff6c81c2c7efdc9ca0afcf4" category="doc">热插拔电源 - AFF A70和AFF A90</block>
+  <block id="b61c2071102a270d16023e40ee5b949e" category="doc">热插拔电源 - AFF A700</block>
+  <block id="9fdca944f84d0d7c1dd5bec5b33c4dad" category="doc">热插拔电源 - AFF A700s</block>
+  <block id="c88ebc5327d1036601d0eda773d3a9b3" category="doc">热插拔电源 - AFF A800</block>
+  <block id="000e33b346cf40ffbe68a52c2d14f2ea" category="list-text">通过 SAS 连接进行 SAS 带内管理 [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="8548a56c519034463f28eadc644360ab" category="doc">热插拔电源 - AFF A900</block>
+  <block id="20c8ebc12d960783bc610a9a7c628624" category="list-text">冗余热插拔电源 [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="98c78afbee9a38af4c14116fcea041ee" category="doc">热插拔电源 - ASA C250</block>
+  <block id="a93641a4525fdc7b24b1b838539eaefd" category="doc">热插拔电源 - ASA C400</block>
+  <block id="c5fdd34e2ef42364012a118012d79fb4" category="doc">热插拔电源 - ASA C800</block>
+  <block id="55db671ae8020eca8e8aeb4349a2b054" category="doc">热插拔电源 - ASA A70 和ASA A90</block>
+  <block id="c9a369c5554de29ccc1c26e1a891a293" category="doc">热插拔电源 - ASA A1K</block>
+  <block id="9bb2e7ff1d23ef0e1b53976314308a35" category="doc">热插拔电源 - ASA A20、 ASA A30 和ASA A50</block>
+  <block id="06d8fe566407f64414a820ada76ed8c0" category="doc">热插拔电源 - ASA A150</block>
+  <block id="b63c7571644d5ccca1e3715abbae44ca" category="doc">热插拔电源 - ASA A250</block>
+  <block id="2c050786a43c0ea0115e636878783956" category="doc">热插拔电源 - ASA A400</block>
+  <block id="a2ada69f15b8dc349c947f1966fadfab" category="doc">热插拔电源 - ASA A800</block>
+  <block id="afa34f783768c8c33178d16016fc5fc4" category="doc">热插拔电源 - ASA A900</block>
+  <block id="a09a90cc8fcac9f4d3e4b984533b8cad" category="paragraph">[//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="5e227aeb2fcad7eaeead32f5302682f3" category="doc">热插拔电源 - AFF C250</block>
+  <block id="41002485b29502010a8644065a0c7d58" category="doc">热插拔电源 - AFF C400</block>
+  <block id="7b4a1a3080b004d0b85c18311475acc2" category="paragraph">使用 100 GbE 电缆将控制器 A 和 B 端口 e1a 和 e7a 连接到集群网络交换机 A 和 B。步骤。将控制器A的e1a端口和控制器B的e1a端口连接到集群网络交换机A。将控制器A的e7a端口和控制器B的e7a端口连接到集群网络交换机B。</block>
+  <block id="a6b43aa69cfefff427f0aa588edab24d" category="paragraph">+ *100 GbE 电缆*</block>
+  <block id="e8b86e4a9e550f2cd1adce1d2f24708b" category="paragraph">基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；[//] 2025-10-15 ontap-systems-internal/issues/1357</block>
+  <block id="e742e13f0573253743538a54686b965c" category="doc">热插拔电源 - AFF C800</block>
+  <block id="bb9a46a830b86006c64c8c357fbcb73c" category="doc">热插拔电源 - FAS70 和 FAS90</block>
+  <block id="c0fb977424a2b5bca01ac503e2f1b009" category="doc">热插拔电源 - FAS2700</block>
+  <block id="58c298876292ce3ccb07434a6eb98ee8" category="doc">热插拔电源 - FAS500f</block>
+  <block id="265e5afbc76b65a563c8e31441a1e485" category="doc">热插拔电源 - FAS8300和FAS8700</block>
+  <block id="653496b123c4243a527d8a9ea55d4f8f" category="doc">热插拔电源 - FAS9000</block>
+  <block id="048c525dc48e40a1d09bef0038c82ef7" category="doc">热插拔电源 - FAS9500</block>
+  <block id="80f1b598bcc25f7ec82fc65712322c5f" category="inline-link-macro">AFX A1K</block>
+  <block id="456595a68c845460a0bce72ae205008b" category="list-text"><block ref="456595a68c845460a0bce72ae205008b" category="inline-link-macro-rx"></block></block>
+  <block id="bc43101d4663f6af1088f44fa1f4971c" category="open-title">货架系统</block>
+  <block id="4118c4e0c27fbed6f04b04d3aa72ac24" category="list-text"><block ref="4118c4e0c27fbed6f04b04d3aa72ac24" category="inline-link-macro-rx"></block></block>
+  <block id="ce10d24d102f61248a1ca7225202165a" category="inline-link-macro">NX224</block>
+  <block id="125f10a9ef50430953cfa201c04d3fc7" category="list-text"><block ref="125f10a9ef50430953cfa201c04d3fc7" category="inline-link-macro-rx"></block></block>
+  <block id="a15565e937e16d1f4615ffae54386c32" category="list-text"><block ref="a15565e937e16d1f4615ffae54386c32" category="inline-link-macro-rx"></block></block>
+  <block id="3c91bcd5af8e3e8a07bca4d6122e6b3e" category="list-text"><block ref="3c91bcd5af8e3e8a07bca4d6122e6b3e" category="inline-link-macro-rx"></block></block>
+  <block id="2eea8cfe67bfbaf554197cde256262be" category="list-text"><block ref="2eea8cfe67bfbaf554197cde256262be" category="inline-link-macro-rx"></block></block>
+  <block id="ed07672fb572f93f885feb990d0a637f" category="list-text"><block ref="ed07672fb572f93f885feb990d0a637f" category="inline-link-macro-rx"></block></block>
+  <block id="7a51e753de7bf2934296fac2cdc9d593" category="list-text"><block ref="7a51e753de7bf2934296fac2cdc9d593" category="inline-link-macro-rx"></block></block>
+  <block id="1397e21113f4acf414d8754488a466fc" category="list-text"><block ref="1397e21113f4acf414d8754488a466fc" category="inline-link-macro-rx"></block></block>
+  <block id="66fcce69e4503a0a9c8c46637435aa8c" category="list-text"><block ref="66fcce69e4503a0a9c8c46637435aa8c" category="inline-link-macro-rx"></block></block>
+  <block id="badea07b223f33f206dbb3f59038b884" category="list-text"><block ref="badea07b223f33f206dbb3f59038b884" category="inline-link-macro-rx"></block></block>
+  <block id="54d8c26f8a704f2ae1cd358913de64ac" category="list-text"><block ref="54d8c26f8a704f2ae1cd358913de64ac" category="inline-link-macro-rx"></block></block>
+  <block id="4b4484c2e067a790a8b029f0e7157ba8" category="list-text"><block ref="4b4484c2e067a790a8b029f0e7157ba8" category="inline-link-macro-rx"></block></block>
+  <block id="d4ec2b21b63964207f65fe842cdcf1d9" category="list-text"><block ref="d4ec2b21b63964207f65fe842cdcf1d9" category="inline-link-macro-rx"></block></block>
+  <block id="f9eb62938eec55221ed8ab27033b19b9" category="list-text"><block ref="f9eb62938eec55221ed8ab27033b19b9" category="inline-link-macro-rx"></block></block>
+  <block id="7ca1678229ac5064dbd99a27e4886773" category="list-text"><block ref="7ca1678229ac5064dbd99a27e4886773" category="inline-link-macro-rx"></block></block>
+  <block id="bd57b67f8598879d2601631d0c721137" category="summary">查找按机架型号组织的NetApp存储机架的 NVMe 机架模块 (NSM) 更换程序。此参考提供了 NS224 和 NX224 架子的 NSM 更换工作流程的直接链接，以帮助您快速找到特定架子型号的正确程序。</block>
+  <block id="09836515455d31781ff12c48f8614517" category="doc">按货架型号划分的 NSM 更换程序</block>
+  <block id="1a82a6fe55e3f2f61872867b5fd0dceb" category="list-text"><block ref="1a82a6fe55e3f2f61872867b5fd0dceb" category="inline-link-macro-rx"></block></block>
+  <block id="f39104a2d7ac4b866439486ba176811c" category="list-text"><block ref="f39104a2d7ac4b866439486ba176811c" category="inline-link-macro-rx"></block></block>
+  <block id="8f5f4bdbc294c6f2651fcd2e526c8a78" category="list-text"><block ref="8f5f4bdbc294c6f2651fcd2e526c8a78" category="inline-link-macro-rx"></block></block>
+  <block id="211bc6ebaac1ad5d04c5e33045e9bf83" category="list-text"><block ref="211bc6ebaac1ad5d04c5e33045e9bf83" category="inline-link-macro-rx"></block></block>
+  <block id="09fad4d466bf3d1fedb9b890171a4ef4" category="list-text"><block ref="09fad4d466bf3d1fedb9b890171a4ef4" category="inline-link-macro-rx"></block></block>
+  <block id="fb22f4b778e12fb8fce97075a2c2e7cc" category="list-text"><block ref="fb22f4b778e12fb8fce97075a2c2e7cc" category="inline-link-macro-rx"></block></block>
+  <block id="7e67c0810c8ad6d0694164958ee67278" category="list-text"><block ref="7e67c0810c8ad6d0694164958ee67278" category="inline-link-macro-rx"></block></block>
+  <block id="5b2fbd0784647c22ca81799fe3de9d4b" category="list-text"><block ref="5b2fbd0784647c22ca81799fe3de9d4b" category="inline-link-macro-rx"></block></block>
+  <block id="9dfce2bdad58de88bbfaf4eb1ffec4c6" category="list-text"><block ref="9dfce2bdad58de88bbfaf4eb1ffec4c6" category="inline-link-macro-rx"></block></block>
+  <block id="9942cbccf0648199db8728c675a51861" category="list-text"><block ref="9942cbccf0648199db8728c675a51861" category="inline-link-macro-rx"></block></block>
+  <block id="53293de4445d9809b5beb36bf8b2bdd2" category="list-text"><block ref="53293de4445d9809b5beb36bf8b2bdd2" category="inline-link-macro-rx"></block></block>
+  <block id="b1a10fdec821bde7511fcf1b956e5382" category="paragraph"><block ref="b6b8a8462966204b648f1ae9c887611d" category="inline-link-macro-rx"></block>。</block>
+  <block id="8a484401787078890bc1e7fd9beb44fb" category="sidebar">NSM 更换程序</block>
+  <block id="9dd7ce2f864cf38177fc70779cbe6635" category="sidebar">AFF A70概述</block>
+  <block id="045d04f83b324cbd691c0a2eef106f65" category="sidebar">AFF A90概述</block>
 </blocks>

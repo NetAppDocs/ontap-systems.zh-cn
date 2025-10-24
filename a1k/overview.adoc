@@ -1,6 +1,7 @@
 ---
 permalink: a1k/overview.html 
 sidebar: sidebar 
+keywords: AFF A1K specifications, AFF A1K specs, AFF A1K capacity, AFF A1K memory, AFF A1K I/O, AFF A1K compliance 
 summary: A1K平台组的主要规格 
 ---
 = AFF A1K的主要规格
@@ -114,5 +115,5 @@ summary: A1K平台组的主要规格
 * 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口
 * 冗余热插拔控制器
 * 冗余热插拔电源
-* 通过外部机架的 SAS 连接进行 SAS 带内管理
+* 通过 SAS 连接对外部机架进行 SAS 带内管理 [//] 2025-10-15 ontap-systems-internal/issues/1357
 

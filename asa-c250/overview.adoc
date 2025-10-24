@@ -1,6 +1,7 @@
 ---
 permalink: asa-c250/overview.html 
 sidebar: sidebar 
+keywords: ASA C250 specifications, ASA C250 specs, NetApp ASA C250, ASA C250 hardware 
 summary: ASA-C250 平台组的主要规格 
 ---
 = ASA C250的主要规格
@@ -97,5 +98,5 @@ summary: ASA-C250 平台组的主要规格
 
 * 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口
 * 冗余热插拔控制器
-* 冗余热插拔电源
+* 冗余热插拔电源 [//] 2025-10-15 ontap-systems-internal/issues/1357
 

@@ -1,10 +1,10 @@
 ---
 permalink: asa-c400/power-supply-replace.html 
 sidebar: sidebar 
-keywords: asa c400, asa, c400, replace, replacing, power, supply, psu, disconnect, target, psu, unplug, power, cable, removing, remove, replacement, source, replace a power supply 
-summary: 更换电源 \ （ PSU\ ）包括断开目标 PSU 与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将替代 PSU 重新连接到电源。 
+keywords: asa c400, replace a power supply 
+summary: 更换电源包括断开目标电源（ PSU ）与电源的连接，拔下电源线，卸下旧 PSU 并安装更换 PSU ，然后将其重新连接到电源。 
 ---
-= 更换电源- ASA C400
+= 热插拔电源 - ASA C400
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: 更换电源 \ （ PSU\ ）包括断开目标 PSU 与电源的连接，
 [role="lead"]
 更换电源（ PSU ）包括断开目标 PSU 与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将替代 PSU 重新连接到电源。
 
-* 电源为冗余且可热插拔。
+* 电源是冗余的，并且可热插拔。您不必关闭控制器来更换 PSU。
 * 此操作步骤用于一次更换一个电源。
 +
 

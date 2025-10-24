@@ -2,6 +2,8 @@
 section: c30-60
 title: AFF C30和AFF C60系统
 entries:
+- title: 概述
+  url: "/c30-60/overview.html"
 - title: 安装和设置
   pdf-filename: AFF C30和AFF C60安装和设置
   entries:
@@ -112,6 +114,6 @@ entries:
 - title: 主要规格
   entries:
   - title: AFF C30
-    url: c30-key-specifications.html
+    url: "/c30-60/c30-key-specifications.html"
   - title: AFF C60
-    url: c60-key-specifications.html
+    url: "/c30-60/c60-key-specifications.html"

@@ -1,6 +1,7 @@
 ---
 permalink: a20-30-50/overview.html 
 sidebar: sidebar 
+keywords: AFF A20 A30 A50 specifications, AFF A20 A30 A50 specs, AFF A20 A30 A50 capacity, AFF A20 A30 A50 memory, AFF A20 A30 A50 I/O, AFF A20 A30 A50 compliance 
 summary: A20-30-50平台组的主要规格 
 ---
 = A20-30-50平台组主要规格
@@ -286,6 +287,7 @@ CIFS；FC；iSCSI；NFS v3；NFS v4.0；NFS v4.1；NFS v4.2；NVMe/FC；NVMe/TCP
 
 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接对外部机架进行 SAS 带内管理；
 
+ [//] 2025-10-15 ontap-systems-internal/issues/1357
 
 
 == AFF A30

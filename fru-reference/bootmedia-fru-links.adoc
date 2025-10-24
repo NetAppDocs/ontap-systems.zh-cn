@@ -48,6 +48,12 @@ summary: 查找按平台系列组织的NetApp存储系统的启动介质更换�
 
 
 --
+.AFX 系统
+--
+* link:../afx-1k/bootmedia-replace-workflow.html["AFX A1K"]
+
+
+--
 .ASA 系统
 --
 * link:../asa150/bootmedia-replace-overview.html["ASA A150 （手动恢复）"]
@@ -85,6 +91,13 @@ summary: 查找按平台系列组织的NetApp存储系统的启动介质更换�
 * link:../fas9000/bootmedia-replace-overview.html["FAS9000 （手动恢复）"]
 * link:../fas9500/bootmedia-replace-workflow-bmr.html["FAS9500 （自动恢复）"]
 * link:../fas9500/bootmedia-replace-workflow.html["FAS9500 （手动恢复）"]
+
+
+--
+.货架系统
+--
+* link:../ns224/service-replace-boot-media.html["NS224"]
+* link:../nx224/service-replace-boot-media.html["NX224"]
 
 
 --

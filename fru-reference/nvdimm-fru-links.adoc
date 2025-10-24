@@ -25,6 +25,12 @@ summary: 查找按平台系列组织的NetApp存储系统的 NVDIMM 更换程序
 
 
 --
+.AFX 系统
+--
+* link:../afx-1k/nvdimm-battery-replace.html["AFX A1K"]
+
+
+--
 .ASA 系统
 --
 * link:../asa400/nvdimm-replace.html["ASA A400"]

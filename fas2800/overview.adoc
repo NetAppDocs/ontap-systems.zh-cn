@@ -1,6 +1,7 @@
 ---
 permalink: fas2800/overview.html 
 sidebar: sidebar 
+keywords: FAS2800 specifications, FAS2800 specs, NetApp FAS2800, FAS2800 hardware 
 summary: FAS2800 平台组的主要规格 
 ---
 = FAS2820的主要规格
@@ -111,5 +112,5 @@ summary: FAS2800 平台组的主要规格
 * 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口
 * 冗余热插拔控制器
 * 冗余热插拔电源
-* 通过外部机架的 SAS 连接进行 SAS 带内管理
+* 通过 SAS 连接对外部机架进行 SAS 带内管理 [//] 2025-10-15 ontap-systems-internal/issues/1357
 

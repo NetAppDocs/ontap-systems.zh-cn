@@ -1,7 +1,8 @@
 ---
 permalink: asa150/overview.html 
 sidebar: sidebar 
-summary: ASA150 平台组的主要规格 
+keywords: ASA A150 specifications, ASA A150 specs, NetApp ASA A150, ASA A150 hardware 
+summary: ASA A150存储系统的主要规格 
 ---
 = ASA A150的主要规格
 :allow-uri-read: 
@@ -10,66 +11,117 @@ summary: ASA150 平台组的主要规格
 
 
 [role="lead"]
-以下是单个高可用性对中ASA A150存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。
+以下是ASA A150的精选规格。访问 https://hwu.netapp.com["NetApp Hardware Universe"^]（HWU）获取ASA A150规格的完整列表。此页面反映的是单个高可用性对。
 
 
 
-== ASA A150的主要规格
+=== ASA A150的主要规格
 
-* 平台配置： ASA A150 UTA2 单机箱 HA 对
-* 最大原始容量：0.5472 PB
-* 内存：64.0000 GB
-* 外形尺寸：2U 机箱，配备 2 个 HA 控制器和 24 个驱动器插槽
-* ONTAP版本： ONTAP：9.16.1P2
-* 最低ONTAP版本： ONTAP 9.13.1 == 横向扩展最大值
-* 类型：NAS
-* 类型：SAN；HA 对：6；原始容量：3.3 PB / 2.9 PiB；最大内存：384 GB
-* 类型：HA 对；原始容量：0.5 PB / 0.5 PiB；最大内存：64.0000
+平台配置： ASA A150 UTA2 单机箱 HA 对
 
+最大原始容量：0.5472 PB
 
+内存：64.0000 GB
 
+外形尺寸：2U 机箱，配备 2 个 HA 控制器和 24 个驱动器插槽
 
-== 输入/输出
+ONTAP版本：b_startONTAP：9.16.1P2b_end
 
+PCIe 扩展槽：
 
-
-=== 板载 I/O
-
-* 协议：以太网 10 Gbps；端口：12
-* 协议：FC 16 Gbps；端口：8
-* 协议：SAS 12 Gbps；端口：4
+最低ONTAP版本： ONTAP 9.13.1
 
 
 
+=== 横向扩展最大值
 
-=== 总输入/输出
-
-* 协议：以太网 10 Gbps；端口：12
-* 协议：FC 16 Gbps；端口：8
-* 协议：SAS 12 Gbps；端口：4
+|===
 
 
+| 类型 | HA 对 | 原始容量 | 最大内存 
 
 
-=== 管理端口
-
-* 协议：以太网 1 Gbps；端口：2
-* 协议：RS-232 115 Kbps；端口：4
-* 协议：USB 12 Mbps；端口：2
+| NAS |  |  |  
 
 
+| SAN | 6 | 3.3 PB / 2.9 PiB | 384 GB 
 
 
-== 支持的存储网络
+| HA 对 |  | 0.5 PB / 0.5 PiB | 64.0000 
+|===
 
-* FC
-* iSCSI
-* NVMe/TCP == 系统环境规格 没有可用的环境数据。
+
+=== 输入输出
 
 
 
+==== 板载 IO
 
-== Compliance
+|===
+
+
+| 协议 | 端口 
+
+
+| 以太网 10 Gbps | 12 
+
+
+| 光纤通道 16 Gbps | 8 
+
+
+| SAS 12 Gbps | 4 
+|===
+
+
+==== 总 IO
+
+|===
+
+
+| 协议 | 端口 
+
+
+| 以太网 10 Gbps | 12 
+
+
+| 光纤通道 16 Gbps | 8 
+
+
+| SAS 12 Gbps | 4 
+|===
+
+
+==== 管理端口
+
+|===
+
+
+| 协议 | 端口 
+
+
+| 以太网 1 Gbps | 2. 
+
+
+| RS-232 115 Kbps | 4 
+
+
+| USB 12 Mbps | 2. 
+|===
+
+
+=== 支持的存储网络
+
+光纤通道；iSCSI；NVMe/TCP；
+
+
+
+=== 系统环境规格
+
+没有可用的环境数据。
+
+
+
+=== Compliance
 
 * EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
 * 安全认证：BIS、CB、CSA、G_K_U-SoR、IRAM、NOM、NRCS、SONCAP、TBS
@@ -81,10 +133,6 @@ summary: ASA150 平台组的主要规格
 
 
 
-== 高可用性
+=== 高可用性
 
-* 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口
-* 冗余热插拔控制器
-* 冗余热插拔电源
-* 通过 SAS 连接进行 SAS 带内管理
-
+基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接进行 SAS 带内管理；[//] 2025-10-15 ontap-systems-internal/issues/1357

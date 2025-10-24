@@ -1,6 +1,7 @@
 ---
-permalink: a70-key-specifications.html 
+permalink: a70-90/a70-key-specifications.html 
 sidebar: sidebar 
+keywords: AFF A70 specifications, AFF A70 specs, AFF A70 capacity, AFF A70 memory, AFF A70 I/O, AFF A70 compliance 
 summary: AFF A70的主要规格 
 ---
 = AFF A70的主要规格
@@ -114,5 +115,5 @@ summary: AFF A70的主要规格
 * 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口
 * 冗余热插拔控制器
 * 冗余热插拔电源
-* 通过外部机架的 SAS 连接进行 SAS 带内管理
+* 通过 SAS 连接对外部机架进行 SAS 带内管理 [//] 2025-10-15 ontap-systems-internal/issues/1357
 

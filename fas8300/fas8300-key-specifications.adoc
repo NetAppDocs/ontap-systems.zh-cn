@@ -1,6 +1,7 @@
 ---
-permalink: /fas8300/fas8300-key-specifications.html 
+permalink: fas8300/fas8300-key-specifications.html 
 sidebar: sidebar 
+keywords: FAS8300 specifications, FAS8300 specs, FAS8300 capacity, FAS8300 memory, FAS8300 I/O, FAS8300 compliance 
 summary: FAS8300的主要规格 
 ---
 = FAS8300的主要规格
@@ -114,5 +115,5 @@ summary: FAS8300的主要规格
 * 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口
 * 冗余热插拔控制器
 * 冗余热插拔电源
-* 通过外部机架的 SAS 连接进行 SAS 带内管理
+* 通过 SAS 连接对外部机架进行 SAS 带内管理 [//] 2025-10-15 ontap-systems-internal/issues/1357
 

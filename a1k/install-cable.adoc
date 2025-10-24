@@ -94,7 +94,7 @@ image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[使用缆线将�
 . 将端口e9a和e9b连接到以太网数据网络交换机。
 +
 
-NOTE: 为了最大程度地提高集群和HA流量的系统性能、请勿将端口e1b和e7b端口用于主机网络连接。使用单独的主机卡以最大程度地提高性能。
+NOTE: 请勿使用端口 e1b 和 e7b 端口进行主机网络连接。使用单独的主机卡。
 
 +
 *100 GbE电缆*
