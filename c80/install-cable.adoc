@@ -64,9 +64,15 @@ image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[双节点无交换�
 --
 .Switched cluster cabling
 --
-使用 100 GbE 电缆将控制器 A 和 B 端口 e1a 和 e7a 连接到集群网络交换机 A 和 B。步骤。将控制器A的e1a端口和控制器B的e1a端口连接到集群网络交换机A。将控制器A的e7a端口和控制器B的e7a端口连接到集群网络交换机B。
+使用 100 GbE 电缆将控制器 A 和 B 的 e1a 和 e7a 端口连接到集群网络交换机 A 和 B。
 
-+ *100 GbE 电缆*
+.步骤
+. 将控制器A上的端口e1a和控制器B上的端口e1a连接到集群网络交换机A
+. 将控制器A上的端口e7a和控制器B上的端口e7a连接到集群网络交换机B
++
+*100 GbE电缆*
+
+
 
 image::../media/oie_cable100_gbe_qsfp28.png[100 Gb缆线]
 
