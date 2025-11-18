@@ -2,7 +2,7 @@
 permalink: c80/chassis-replace-workflow.html 
 sidebar: sidebar 
 keywords: aff 70, 90, replace the chassis workflow 
-summary: 通过查看更换要求、关闭控制器、更换机箱以及验证系统运行、开始更换AFF C80系统的机箱。 
+summary: 要开始更换AFF C80 系统中的机箱，请先查看更换要求，关闭控制器，更换机箱，然后验证系统运行情况。 
 ---
 = 机箱更换工作流- AFF C80
 :allow-uri-read: 
@@ -11,20 +11,24 @@ summary: 通过查看更换要求、关闭控制器、更换机箱以及验证�
 
 
 [role="lead"]
-通过查看更换要求、关闭控制器、更换机箱以及验证系统运行、开始更换AFF C80系统的机箱。
+要开始更换AFF C80 系统中的机箱，请先查看更换要求，关闭控制器，更换机箱，然后验证系统运行情况。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:chassis-replace-requirements.html["查看机箱更换要求"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:chassis-replace-requirements.html["审查底盘更换要求"]
 [role="quick-margin-para"]
-要更换机箱、您必须满足特定要求。
+审查机箱更换要求，包括系统兼容性、所需工具、 ONTAP凭证和组件功能验证。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:chassis-replace-shutdown.html["关闭控制器"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:chassis-replace-prepare.html["准备更换底盘"]
 [role="quick-margin-para"]
-关闭控制器、以便对机箱执行维护。
+准备更换机箱时，请找到系统、收集凭证和工具、验证更换机箱并标记电缆。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:chassis-replace-move-hardware.html["更换机箱"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:chassis-replace-shutdown.html["关闭控制器"]
 [role="quick-margin-para"]
-更换机箱包括将电源、硬盘驱动器和控制器模块从受损机箱移至新机箱、以及将受损机箱更换为与受损机箱型号相同的新机箱。
+关闭控制器以安全地进行机箱维护。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:chassis-replace-move-hardware.html["更换机箱"]
 [role="quick-margin-para"]
-验证机箱的HA状态、并将故障部件退回给NetApp。
+将故障机箱中的组件移至替换机箱中。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]
+[role="quick-margin-para"]
+完成更换的方法是启动控制器，执行返还操作，并将故障机箱退回给NetApp。

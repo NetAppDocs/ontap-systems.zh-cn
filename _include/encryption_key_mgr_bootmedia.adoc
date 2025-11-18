@@ -1,0 +1,166 @@
+= 
+:allow-uri-read: 
+
+
+.步骤
+. 确定您的系统上启用了哪个密钥管理器：
++
+[cols="1a,2a"]
+|===
+| ONTAP 版本 | 运行此命令 
+
+
+ a| 
+ONTAP 9．14．1或更高版本
+ a| 
+`security key-manager keystore show`
+
+** 如果启用了EKM、 `EKM`则会在命令输出中列出。
+** 如果启用了OKM、 `OKM`则会在命令输出中列出。
+** 如果未启用密钥管理器、 `No key manager keystores configured`则会在命令输出中列出。
+
+
+
+
+ a| 
+ONTAP 9.13.1 或更早版本
+ a| 
+`security key-manager show-key-store`
+
+** 如果启用了EKM、 `external`则会在命令输出中列出。
+** 如果启用了OKM、 `onboard`则会在命令输出中列出。
+** 如果未启用密钥管理器、 `No key managers configured`则会在命令输出中列出。
+
+
+|===
+. 根据系统中是否配置了密钥管理器，执行以下操作之一：
++
+*如果未配置密钥管理器：*
+
++
+您可以安全地关闭故障控制器，并继续执行关机程序。
+
++
+*如果配置了密钥管理器（EKM 或 OKM）：*
+
++
+.. 输入以下查询命令，显示密钥管理器中身份验证密钥的状态：
++
+`security key-manager key query`
+
+.. 查看输出结果并检查其中的值。 `Restored`柱子。此列指示密钥管理器（EKM 或 OKM）的身份验证密钥是否已成功恢复。
+
+
+. 请根据您的密钥管理员类型完成相应的操作步骤：
++
+[role="tabbed-block"]
+====
+.外部密钥管理器（ EKM ）
+--
+根据数值完成以下步骤。 `Restored`柱子。
+
+*如果所有按键都显示 `true`在“已恢复”列中：*
+
+您可以安全地关闭故障控制器，并继续执行关机程序。
+
+*如果任何键显示的值不是 `true`在“已恢复”列中：*
+
+.. 将外部密钥管理认证密钥恢复到集群中的所有节点：
++
+`security key-manager external restore`
+
++
+如果命令执行失败，请联系NetApp支持。
+
+.. 确认所有身份验证密钥均已恢复：
++
+`security key-manager key query`
+
++
+确认 `Restored`列显示 `true`适用于所有身份验证密钥。
+
+.. 如果所有密钥都已恢复，则可以安全地关闭故障控制器并继续执行关机程序。
+
+
+--
+.板载密钥管理器（ OKM ）
+--
+根据数值完成以下步骤。 `Restored`柱子。
+
+*如果所有按键都显示 `true`在“已恢复”列中：*
+
+.. 备份 OKM 信息：
++
+... 切换到高级权限模式：
++
+`set -priv advanced`
+
++
+进入 `y`当提示继续时。
+
+... 显示密钥管理备份信息：
++
+`security key-manager onboard show-backup`
+
+... 将备份信息复制到单独的文件或日志文件中。
++
+如果在更换过程中需要手动恢复 OKM，您将需要此备份信息。
+
+... 返回管理员模式：
++
+`set -priv admin`
+
+
+
+.. 您可以安全地关闭故障控制器，并继续执行关机程序。
+
+
+*如果任何键显示的值不是 `true`在“已恢复”列中：*
+
+.. 同步板载密钥管理器：
++
+`security key-manager onboard sync`
+
++
+出现提示时，请输入 32 个字符的字母数字组合的机载密钥管理密码。
+
++
+
+NOTE: 这是您在最初配置车载密钥管理器时创建的集群范围密码短语。如果您没有此密码短语，请联系NetApp支持。
+
+.. 请确认所有身份验证密钥均已恢复：
++
+`security key-manager key query`
+
++
+确认 `Restored`列显示 `true`对于所有身份验证密钥和 `Key Manager`类型展 `onboard`。
+
+.. 备份 OKM 信息：
++
+... 切换到高级权限模式：
++
+`set -priv advanced`
+
++
+进入 `y`当提示继续时。
+
+... 显示密钥管理备份信息：
++
+`security key-manager onboard show-backup`
+
+... 将备份信息复制到单独的文件或日志文件中。
++
+如果在更换过程中需要手动恢复 OKM，您将需要此备份信息。
+
+... 返回管理员模式：
++
+`set -priv admin`
+
+
+
+.. 您可以安全地关闭故障控制器，并继续执行关机程序。
+
+
+--
+====
+

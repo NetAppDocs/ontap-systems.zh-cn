@@ -7230,8 +7230,6 @@ SFP+(目标/启动程序)</block>
   <block id="7b71c8c5341c95139930e1f1748956d7" category="list-text">将模块与机柜插槽开口的边缘对齐。</block>
   <block id="0169e44348295d5766b174aa4c296a62" category="list-text">重复拆卸和安装步骤以更换控制器的其他模块。</block>
   <block id="7c99497119e4bb81fd50dbd906dfde72" category="list-text">从加载程序提示符：_BYE_重新启动控制器</block>
-  <block id="a286fff38dd07b679c8ce3d88b6f2962" category="inline-link-macro">关闭受损控制器</block>
-  <block id="4332aa8c798bac1ec6c0f4c83e0df305" category="list-text">验证类型是否<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block> 显示<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block>，然后手动备份OKM信息。</block>
   <block id="66e5f5f877412d7578e6bec4d8f933b5" category="list-text">在受损控制器上、看到时按_Y_<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
   <block id="3578391379ba5c5411207a0793afef71" category="list-text">在受损控制器上，当系统提示覆盖时按_Y_<block ref="295b4ac77f4e1c5f93c6894df85fd86d" prefix=" " category="inline-code"></block>。</block>
   <block id="61dad7d5cf7f4e4b7469b097ac35485f" category="list-text">在受损控制器上，看到时按_y_<block ref="dff08971c5acbbdac6642922fde20608" prefix=" " category="inline-code"></block>。</block>
@@ -8034,7 +8032,6 @@ SFP+(目标/启动程序)</block>
   <block id="e5f38539729ed58a561f506662e81abe" category="paragraph"><block ref="e5f38539729ed58a561f506662e81abe" category="inline-link-macro-rx"></block></block>
   <block id="d7158a40e6d62c91f568a937bb75f8ad" category="paragraph">系统管理模块提供控制器与控制台或笔记本电脑之间的接口、用于控制器或系统维护。系统管理模块包含启动介质并存储系统序列号(SSN)。</block>
   <block id="d26fcd936ac92db8cf84389a3ab7bf47" category="inline-link-macro">更换机箱</block>
-  <block id="2c248a1a1b5e42590f3b77ae3ede043f" category="paragraph">更换机箱包括将电源、硬盘驱动器和控制器模块从受损机箱移至新机箱、以及将受损机箱更换为与受损机箱型号相同的新机箱。</block>
   <block id="7f54aa0b6fdadc77a6c35a589cdb35b3" category="paragraph">验证机箱的HA状态、并将故障部件退回给NetApp。</block>
   <block id="58d356c259fddd513288088c96915d44" category="inline-link-macro">重新恢复并交还控制器</block>
   <block id="9a4829e743998d9894153667670dfd29" category="paragraph">重新对控制器进行配置、并将存储资源的所有权转移回替代控制器。</block>
@@ -8682,43 +8679,17 @@ SFP+(目标/启动程序)</block>
   <block id="2fab3e35d3a8ad1baf526d01c455141e" category="list-text">在运行状况良好的配对控制器上，运行restore backup命令：<block ref="44d388b27236c791c5fe1d30cc29bc43" prefix=" " category="inline-code"></block>。</block>
   <block id="b393e0589b34195adda4ab7dea81ba99" category="paragraph">您安装的替代启动介质没有ONTAP映像。您可以将相应的ONTAP服务映像从下载到USB闪存驱动器、然后再下载到替代启动介质、从而将ONTAP映像传输到<block ref="0ecdd602ef5a1e7a11a81dad2433ccb0" category="inline-link-rx"></block>替代启动介质。</block>
   <block id="b53660f761dc53e7b68aefd5edbbae44" category="paragraph">转至下一节。</block>
-  <block id="fdb2cbe8b1e451ff001e9714b834c459" category="paragraph">检查您的ONTAP版本是否支持NetApp卷加密(NVE)。此信息对于下载正确的ONTAP映像至关重要。</block>
-  <block id="1c09443221312bdba5a22ddbba4f768f" category="list-text">运行以下命令、确定您的ONTAP版本是否支持加密：</block>
   <block id="f9a9052b778475b675b5a664c20b88b5" category="paragraph"><block ref="86722c94aea996cb23c11ba144dd63ed" prefix="" category="inline-code"></block></block>
   <block id="fe14f52e0520ec8b85990ac664593241" category="paragraph">如果输出包括<block ref="5deb4fa1f44cc6023eeec89c618a6f2c" prefix=" " category="inline-code"></block>，则您的集群版本不支持NVE。</block>
-  <block id="7d57d9967ba17fcb2386ee9040e7bf81" category="list-text">根据您的系统是否支持NVE、执行以下操作之一：</block>
-  <block id="d8b3ebaef14f15ddadd58f8788097867" category="list-text">如果支持NVE、请下载采用NetApp卷加密的ONTAP映像。</block>
-  <block id="723417ff6efb8e61349dd2d6b90d0898" category="list-text">如果不支持NVE、请下载ONTAP映像*不使用* NetApp卷加密。</block>
-  <block id="6bd78f9c7732510cf857d49ceb4bd776" category="section-title">第2步：确定关闭控制器是否安全</block>
   <block id="30f7cbebdfdaa0338bc99a69c5ef0e38" category="list-text">确定您的系统上启用了哪个密钥管理器：</block>
   <block id="9b5996b90a7a19dc5ca9e91a6d0c7ac9" category="paragraph"><block ref="ed039e134fdf3b84c71d409a4024dbc7" prefix="" category="inline-code"></block></block>
   <block id="67d6aa20f2257cc1b6c99fa4ed444eca" category="paragraph">如果启用了OKM、<block ref="90d4e6078945c9c6155e77edcafa9984" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
   <block id="6f76cbf64620dc55dc8a5d1462ae7822" category="paragraph"><block ref="1847f4f206eb3ab8397f6206fcf1bb3f" prefix="" category="inline-code"></block></block>
   <block id="4efa472f82474aa8572aacddb95c4a1b" category="paragraph">如果启用了OKM、<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
   <block id="2a4a9d693caa859153f77cf2204d30cc" category="paragraph"><block ref="c9b37f9017fc101cecef415e707e7b5f" prefix="" category="inline-code"></block></block>
-  <block id="775c4f8ef2eabc8574bb57ddd10b0b23" category="list-text">检查密钥管理器列中的值输出<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>。</block>
-  <block id="0244ade962fa9d071f4def5c7ef769cc" category="paragraph">此列指示您的密钥管理器(EKM或OKM)的身份验证密钥是否已成功还原。</block>
-  <block id="a26b32b28af2e3521ad3e104fee11f80" category="paragraph">根据列中显示的输出值<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>、执行相应的步骤。</block>
-  <block id="c9fb391da0641ace637021ed0f9d1c94" category="cell">列中的输出值<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block></block>
-  <block id="22cfef4d87bd251ba39dd92d08a6b0bb" category="paragraph"><block ref="b326b5062b2f0e69046810717534cb09" prefix="" category="inline-code"></block></block>
-  <block id="7bc0284c886b62d0290690999029913b" category="paragraph">您可以安全地关闭受损控制器。转到。 <block ref="eee94cfaa2087b0a7525f83880646105" category="inline-link-macro-rx"></block></block>
-  <block id="96ac29a54dd2ae54f4b88de9902aa2fc" category="paragraph">以外的任何内容<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block></block>
-  <block id="1a1cd257525bddea68723047e36e6e90" category="list-text">使用以下命令将外部密钥管理身份验证密钥还原到集群中的所有节点：</block>
   <block id="74c90316d25b4cdc5c8e524af066a5a0" category="paragraph"><block ref="24b420efa276a683b4bd02f14a2d6f59" prefix="" category="inline-code"></block></block>
-  <block id="581f12d33ebdffd65e567d7483436438" category="paragraph">如果命令失败，请联系<block ref="1a36b59ecae7684863b79a0f690b6840" category="inline-link-rx"></block>。</block>
-  <block id="90b0be5cd55fef8ba4b2677ba61937be" category="paragraph">如果所有身份验证密钥均为<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>，则可以安全地关闭受损控制器。转到。 <block ref="eee94cfaa2087b0a7525f83880646105" category="inline-link-macro-rx"></block></block>
-  <block id="f756353c7a60081133f6ef85804b6485" category="paragraph">手动备份OKM信息。</block>
-  <block id="349e0edd7094f31576c430a35f1c73e3" category="list-text">输入进入高级模式、然后<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>在出现提示时输入<block ref="8d2cf87827d8c4c105b70542cc18077d" prefix=" " category="inline-code"></block>。</block>
-  <block id="86123e57ff90dca177de37d445925d0d" category="list-text">输入以下命令以显示密钥管理信息：</block>
   <block id="c497a6b930105164567b744840c21e94" category="paragraph"><block ref="32ba7af89b7557f6e3e6d80a922080ce" prefix="" category="inline-code"></block></block>
-  <block id="35069a8a423f099e04e8e2341b7c3a72" category="list-text">Copy the contents of the backup information to a separate file or your log file.</block>
-  <block id="6ade7d58bfd0bec2c7f7e02330994b81" category="paragraph">You'll need it in disaster scenarios where you might need to manually recover OKM.</block>
-  <block id="8012fa12a80f4aa7498bdc5962cb24fb" category="list-text">输入板载security key-manager sync命令：</block>
   <block id="0a83ed732b07426c840d56d0ee6e648b" category="paragraph"><block ref="1fd11ad9c6fc9e17e9729cd939a2b47b" prefix="" category="inline-code"></block></block>
-  <block id="e4a4298f11208a45b6ac5d1a6df0ea7f" category="list-text">出现提示时、输入32个字符的字母数字板载密钥管理密码短语。</block>
-  <block id="2318a1a52ce7d20091148211d8be58fd" category="paragraph">如果无法提供密码短语，请联系<block ref="1a36b59ecae7684863b79a0f690b6840" category="inline-link-rx"></block>。</block>
-  <block id="f1223f2beed0f1db66fa98879448bb9d" category="list-text">验证<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>所有身份验证密钥的列显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>：</block>
-  <block id="d81a048f736ca3a03a0fc11c4bc74978" category="list-text">输入命令以显示密钥管理备份信息：</block>
   <block id="926dc92762712fb5c888d06d13b2835c" category="list-text">从ONTAP启动菜单中选择相应的选项：</block>
   <block id="3554bd6dca965e0e8bcb314a54ef655c" category="list-text">输入板载密钥管理器的集群范围密码短语。</block>
   <block id="68e51e7cb5faf4732838f76bc7db6b45" category="admonition">如果同步成功、则会返回集群提示符、而不会显示任何其他消息。如果同步失败、则会在返回集群提示符之前显示一条错误消息。更正错误并成功运行同步之前、请勿继续。</block>
@@ -8765,8 +8736,6 @@ SFP+(目标/启动程序)</block>
   <block id="77464f13a7bfd5b5de3f6d6592b43344" category="admonition">如果您的系统最初运行的是ONTAP 9．10.1或更高版本，请使用中所述的过程<block ref="396f3a939b9056719487db53e0cdf43e" category="inline-link-macro-rx"></block>。如果您不确定系统的初始ONTAP版本、请参阅<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>以了解更多信息。</block>
   <block id="8137cc3da5d92cb60020874c492d8701" category="list-text">根据需要对存储系统重新进行配置。</block>
   <block id="fc2585bb5dd330e4d87dd2cdbd6c596b" category="admonition">确保控制台电缆已连接到已修复的控制器模块、以便在重新启动时接收控制台消息。修复后的控制器将从运行状况良好的控制器获得电源、并在完全装入机箱后立即开始重新启动。</block>
-  <block id="c9a687d1939d0b48b69bff3618583e04" category="doc">第1步：检查您的ONTAP版本是否支持NetApp卷加密</block>
-  <block id="7a98ae061f92b7a841dcacb8930a02c5" category="paragraph">要安全关闭控制器、请首先确定外部密钥管理器(External Key Manager、EKM)还是板载密钥管理器(Onboard Key Manager、OKM)处于活动状态。然后、验证正在使用的密钥管理器、显示相应的密钥信息、并根据身份验证密钥的状态采取措施。</block>
   <block id="8dd09587169b8d8db58ece09496b890f" category="cell">运行此命令</block>
   <block id="d5069b83ec1ddf9e9d88f354e8909059" category="paragraph">ONTAP 9．14．1或更高版本</block>
   <block id="196874775b44aa4bd067da099307af94" category="list-text">如果启用了EKM、<block ref="d080cdba04a9e58adbe244b4d170ff25" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
@@ -8774,22 +8743,8 @@ SFP+(目标/启动程序)</block>
   <block id="70c9355c5ddc7957399355ec7ad55706" category="paragraph">ONTAP 9.13.1 或更早版本</block>
   <block id="bf7423b09b1d8268d393de84679df3cb" category="list-text">如果启用了EKM、<block ref="6a21b6995a068148bbb65c8f949b3fb2" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
   <block id="3bdaba759104a48c3a95e5443ba7e5e0" category="list-text">如果未启用密钥管理器、<block ref="119e62c9aa407bc6041ef3db23b93be8" prefix=" " category="inline-code"></block>则会在命令输出中列出。</block>
-  <block id="4867667f589f1bf5a2892fe48a4b93ba" category="list-text">根据系统上是否配置了密钥管理器、选择以下选项之一。</block>
-  <block id="52aadd496ee1f92c301bdde94ed48b99" category="open-title">未配置密钥管理器</block>
-  <block id="3bf4a86005a59ea3cd8643586d04cd78" category="open-title">已配置外部或板载密钥管理器</block>
-  <block id="64d036deb4b248416ccf87deceafe674" category="list-text">输入以下查询命令以显示密钥管理器中的身份验证密钥状态。</block>
-  <block id="7f6aa2eddb31d7d07b49d6c308057b6a" category="open-title">外部密钥管理器</block>
-  <block id="710588d994062c1accbe164eb56effb3" category="list-text">输入命令以验证所有身份验证密钥的<block ref="c9b37f9017fc101cecef415e707e7b5f" prefix=" " category="inline-code"></block>列是否<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>。</block>
-  <block id="a32dd2ca79d8d8a0056821cb37fed7f4" category="open-title">板载密钥管理器</block>
-  <block id="9b9655d38c65764bacf8c0b8b4afb853" category="doc">选项1：还原板载密钥管理器配置</block>
-  <block id="7e6403e728a2ec69c3089e7bc3236779" category="paragraph">您必须使用在启动介质更换过程开始时捕获的设置完成特定于已启用板载密钥管理器(OKM)、NetApp存储加密(NSE)或NetApp卷加密(NVE)的系统的步骤。</block>
-  <block id="be88b9d7f41515efb1dc3a6709cef2ab" category="paragraph">根据系统上配置的密钥管理器、选择以下选项之一、从启动菜单中将其还原。</block>
-  <block id="206a7e535a6da65b30f0a9fac61abc1c" category="list-text"><block ref="206a7e535a6da65b30f0a9fac61abc1c" category="inline-link-macro-rx"></block></block>
-  <block id="9969c9b9ffd1f5e74ee3793724d1c3ee" category="inline-link-macro">选项2：还原外部密钥管理器配置</block>
-  <block id="68a33ad2037a014f19d73eff657236ff" category="list-text"><block ref="68a33ad2037a014f19d73eff657236ff" category="inline-link-macro-rx"></block></block>
   <block id="959b1843f7153b31ca9e5042d5534f8c" category="paragraph">从ONTAP启动菜单还原板载密钥管理器(OKM)配置。</block>
   <block id="8f697727fea4250d67048e2138fdfe91" category="list-text">还原OKM配置时、请确保您具有以下信息：</block>
-  <block id="c7c0fa0163df4e41253409458437d32b" category="list-text">从ONTAP启动菜单中、从启动菜单中选择适当的选项。</block>
   <block id="d94292453b69f94bbc4d0bef7005d22f" category="cell">选择此选项</block>
   <block id="c6cd4470ed1711bc2e8d8495a077a331" category="paragraph">选择选项10。</block>
   <block id="5aae59241c50fe780033cb1d5baf9473" category="example-title">显示启动菜单示例</block>
@@ -8801,30 +8756,17 @@ SFP+(目标/启动程序)</block>
   <block id="ec8983024a1dd9d86d8993145c0634a2" category="list-text">输入备份信息。</block>
   <block id="488b5fa5584634f2b60d1dede7597561" category="list-text">将整个内容从开始备份行粘贴到结束备份行。</block>
   <block id="22533ece7a970e82cf7bf3234ae433b9" category="paragraph">恢复过程完成。</block>
-  <block id="56a002b10eeb1f0bd392165e1ce5d75e" category="list-text">确认控制器的控制台显示以下消息。</block>
   <block id="0825b93c2d111f930b63d2cd3e2d04ef" category="paragraph"><block ref="22714968f3c097ea3249c9d4b9e8119f" prefix="" category="inline-code"></block></block>
-  <block id="3f6182c959954ae64a1f0a7915a90752" category="list-text">在配对节点上、输入以下命令以对配对控制器进行回指。</block>
   <block id="d13607256d488794948c0a4e6b5b5273" category="paragraph"><block ref="291b31306c2e0668f091d41edca7e97f" prefix="" category="inline-code"></block>(英文)</block>
-  <block id="63faa4ccd80cd6495683040b69af8206" category="list-text">在仅使用CFO聚合启动后、运行以下命令。</block>
-  <block id="83b41e54088cea42afe1d3b83e81ef91" category="list-text">输入以下命令、确保所有密钥均已同步。</block>
   <block id="a1f1cac1fa107bdba40f9cbe641925e7" category="paragraph"><block ref="297f477a8524857592ffedfea06bb8d7" prefix="" category="inline-code"></block>(英文)</block>
-  <block id="f0069062031757b5fc9b9b11649dfe8f" category="list-text">输入以下命令、从配对节点进行节点回给。</block>
   <block id="d2dafc284c7314e818c45df3a8758637" category="paragraph"><block ref="e23a9f1c6189f372292c98d844a0895f" prefix="" category="inline-code"></block></block>
-  <block id="670813ebc2cd52c023ff4cd4ada7a627" category="list-text">如果已禁用自动交还、请输入以下命令来还原自动交还。</block>
-  <block id="50273ef55b3a53bf30771dd1ef5f8b5f" category="list-text">如果启用了AutoSupport、请输入以下命令来恢复自动创建案例。</block>
   <block id="824a761c1584c25f025a384b7b387c56" category="paragraph"><block ref="9ac424c0d7b432975df36a19daf50c9c" prefix="" category="inline-code"></block></block>
   <block id="02f6f43349cf003c6dd944a923f4ce06" category="paragraph">从ONTAP启动菜单还原外部密钥管理器配置。</block>
-  <block id="9b5c6b418b2bc4f063803a9b7739bb1d" category="paragraph">要还原外部密钥管理器(External Key Manager、EKM)配置、您需要以下信息。</block>
   <block id="2b48a2afe7987203a2b1e9de1f031374" category="list-text">另一个集群节点上的/cfcard/kmip/servers.cfg文件的副本或以下信息：</block>
-  <block id="482d3df52d0525a7489378dac2f01ff9" category="list-text">另一个集群节点或客户端证书中的文件副本<block ref="d606236dedb6ed649b29651c1ec53a99" prefix=" " category="inline-code"></block>。</block>
-  <block id="97caf745f0852f09d6e00ee59a8529bb" category="list-text">从其他集群节点或客户端密钥获取的文件副本<block ref="ccb442c2c2cc4367a087cfc7cd3b4876" prefix=" " category="inline-code"></block>。</block>
-  <block id="18c2b9b14349e289338452c8eeaa5868" category="list-text">另一个集群节点或KMIP服务器CA中的文件副本<block ref="443acc94def30bc037fb2dacac4fb7d3" prefix=" " category="inline-code"></block>。</block>
-  <block id="3addeb39344804a6c77f096b5c3fe2fc" category="list-text">从ONTAP启动菜单中选择选项11。</block>
   <block id="962741d9207d007a86d85dd741057111" category="list-text">出现提示时、确认您已收集所需信息。</block>
   <block id="8fbd4854fd031dc0c47635c899b74c12" category="list-text">出现提示时、输入客户端和服务器信息。</block>
   <block id="b1a80a7089afd7d3b9be5936d7cc2c4b" category="example-title">显示提示符</block>
   <block id="6015ee0c3c4dbc37f534783a65239e72" category="example-title">显示示例</block>
-  <block id="6758e112526dd1470fdafbd89c3b25df" category="paragraph">输入客户端和服务器信息后、恢复过程将完成。</block>
   <block id="1544c9897deafcbdffc044dac2f06610" category="list-text">确认控制器的控制台显示以下内容：</block>
   <block id="1ebe17e50ef0f20c9a4943cdde00f20b" category="list-text">从配对节点中、将配对控制器进行回指：</block>
   <block id="24de39ef6b972a13ee81c8f1e764261f" category="list-text">在仅使用CFO聚合启动后、运行以下命令：</block>
@@ -8968,12 +8910,10 @@ SFP+(目标/启动程序)</block>
   <block id="c724a78d41a5f05bc3f7a2f2993c497c" category="list-text">在受损控制器上，当您看到时<block ref="396e369cf75815ba643925818d3ec37e" prefix=" " category="inline-code"></block>按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>。</block>
   <block id="6b65eb3b3f603ad188b614f3f50a9d13" category="list-text">在受损控制器上、当系统提示您重新启动受损控制器时按键<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>、然后按键<block ref="1b10a0464da1409d5026aa8b4f098be8" prefix=" " category="inline-code"></block>进入Boot Menu (启动菜单)。</block>
   <block id="d955df273d2c08375d51dc9da0fe5684" category="open-title">选项2：ONTAP 9．16．1或更高版本</block>
-  <block id="c76bf517391d0898b2c357bf0119fc92" category="list-text">在受损控制器上、当系统提示还原备份配置时按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>。</block>
   <block id="5f711b3cd97054c3fbee1821e742da6d" category="paragraph">恢复过程成功后，将在控制台-上显示此消息<block ref="92080c75f9b065e263d7fea155b1d733" prefix=" " category="inline-code"></block>。</block>
   <block id="9959e1ea8c67446c566e6a371f9e14cb" category="list-text">在受损控制器上、当系统提示确认还原备份是否成功时按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>。</block>
   <block id="b883391d9dfbf834ff0bda07a53554f5" category="list-text">在受损控制器上、当系统提示使用还原的配置时、按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>。</block>
   <block id="d0ec0afe83814a07fcdbf02b0d2e2e8b" category="list-text">在受损控制器上、当系统提示重新启动节点时按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>。</block>
-  <block id="f3996efec422ea2910e77724e96ff04e" category="list-text">根据您的系统使用的是外部密钥管理器还是板载密钥管理器、选择以下选项之一。</block>
   <block id="cd979ca520736846558f2b04a04b63da" category="paragraph">如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。</block>
   <block id="4250e5b5781f94ff901cc1822461f6ae" category="doc">更换系统管理模块- AFF A1K</block>
   <block id="b1b14a007e6d27cacb6cbf9837dd5e7e" category="doc">交还控制器- AFF A70和AFF A90</block>
@@ -9980,7 +9920,6 @@ SFP+(目标/启动程序)</block>
   <block id="007ace9cd707338f2e4f8f25ed4bb0b8" category="section-title">具有NSM100B磁盘架模块的NS224驱动器架</block>
   <block id="e3f4eea829fa5771d87c60fb05124223" category="paragraph">借助NS224和全新的NSM100B NVMe存储扩展模块增强数据中心的功能。全新的NSM100B磁盘架模块可直接取代NSM100模块、可无缝集成到您的现有设置中。它支持NS224磁盘架的直连和交换机连接配置、可提供卓越的灵活性、以优化存储系统的效率和可扩展性。</block>
   <block id="02ad6883c66e836f88f8ac60378af5d5" category="paragraph">新的ASA R2硬件系统(ASA A1K、ASA A70和ASA A90)提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求提供简化的体验。</block>
-  <block id="f1f5a8071b69ef980c0fca64b3b9c54e" category="list-text">如果禁用了自动交还、请还原它。</block>
   <block id="dbc74f369dbf214b25d0f839fd4cd2b0" category="list-text">如果禁用了自动交还、则还原它：</block>
   <block id="e826d5b26017ec374bf63b94b8a425d9" category="list-text">使用每个电源上的固定设备固定电源线。:a1K-A70-90!:</block>
   <block id="0bf1ff1f561d2a96752b8ee596c65068" category="list-text">HA配置中的4U</block>
@@ -10026,7 +9965,6 @@ SFP+(目标/启动程序)</block>
   <block id="b7cef7ce19708461d960559a0cbdd6d3" category="list-text">执行回给：</block>
   <block id="3c0a55487da93612aec510dd85c1372b" category="list-text">使用命令交还控制器<block ref="e23a9f1c6189f372292c98d844a0895f" prefix=" " category="inline-code"></block>。</block>
   <block id="d5238f5c66dc80239f3f53b86f9798e6" category="section-title">第2步：验证存储系统运行状况</block>
-  <block id="b11012435cb6e40fb39a0e60c6d66e9b" category="paragraph">控制器交还存储后，您应使用检查整体运行状况<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block>。</block>
   <block id="16bf95726719dba1c85dbc4afd8aef7d" category="list-text">完成恢复后、运行Active IQ Config Advisor以验证存储系统的运行状况。</block>
   <block id="9261e4155dc9d7050346e41f387abed0" category="list-text">更正您遇到的任何问题。</block>
   <block id="2bee0b3d3c02eb9f92cef32437d8d2c2" category="doc">步骤1：卸下PSU和电缆</block>
@@ -10052,13 +9990,11 @@ SFP+(目标/启动程序)</block>
   <block id="dbde8d5193a15f49bb4ca93245713dbd" category="admonition">Drives are fragile.卸下驱动器时、请始终用双手支撑驱动器重量、以防止损坏驱动器。</block>
   <block id="a41593910ca5cd5e29a37f66cc945f5a" category="list-text">记录每个驱动器所在的驱动器托架、并将驱动器放在无静电的手推车或桌子旁。</block>
   <block id="67669a37061be72ba7c16dc56425a305" category="list-text">对机箱中的其余驱动器重复此步骤。</block>
-  <block id="ac4868572d4bea69913a77cfb54b08ad" category="section-title">步骤3：更换受损机箱</block>
   <block id="03c9fd2726b09b3a899dc59bb5c75182" category="paragraph">卸下受损机箱并安装更换机箱。</block>
   <block id="f4ac101e31a524123efbadec7bd91eae" category="list-text">卸下受损机箱：</block>
   <block id="733e4bd99bba77c8c714b8d3ca464453" category="list-text">使用两个人或一台升降机、将受损机箱从系统机柜或设备机架中的机架导轨上滑出、然后将其放在一旁。</block>
   <block id="df1e51256150b209588942af3aa39c86" category="list-text">安装更换机箱：</block>
   <block id="88713b0102b6702a4390c31e0218a5d0" category="list-text">使用两个人或一台升降机将更换用的机箱引导至系统机柜或设备机架中的机架导轨、从而将其安装到设备机架或系统机柜中。</block>
-  <block id="c2ca3f0f2cd46c993c472fe2b2ead2a1" category="section-title">步骤4：安装机箱组件</block>
   <block id="c35dbeca6a0894e924dd0f22bc74b7b6" category="list-text">从底部控制器模块开始、将控制器模块安装在更换机箱中：</block>
   <block id="462e0b4244f7f81086d8ed4914a4091d" category="paragraph">如果已卸下介质转换器(QSFP或SFP)、请记得重新安装它们。</block>
   <block id="30c13d1d724de7528c0d72d4e7555203" category="paragraph">确保参考电缆标签连接电缆。</block>
@@ -10072,7 +10008,6 @@ SFP+(目标/启动程序)</block>
   <block id="73a26e3a9da1aeee1db49561264e4668" category="list-text">找到并打开控制器的位置LED：</block>
   <block id="6a0f83a8396f29844196c2f0bd7d8e31" category="list-text">使用<block ref="aa852b86500356dcfaa83e25c0e37adf" prefix=" " category="inline-code"></block>命令显示位置LED的当前状态。</block>
   <block id="b8bc41dd2913f89cb9b031a495e0d9df" category="list-text">将位置LED的状态更改为"on"：</block>
-  <block id="431caf600106fae7e500e10220d13e61" category="paragraph"><block ref="73d25173d7c27d69b9fef91a1e6d8f78" prefix="" category="inline-code"></block>(英文)</block>
   <block id="88ee4f31896fe22b05df85dce4329229" category="paragraph">定位指示灯将保持亮起30分钟。</block>
   <block id="fe43e0f6f1ce9191e03498065b99712c" category="section-title">第2步：验证更换组件</block>
   <block id="58ea042c50e0d241ae4f3ef030055ab2" category="paragraph">您应验证是否已收到必要的组件、将其从包装中取出并保存好包装。</block>
@@ -10082,7 +10017,6 @@ SFP+(目标/启动程序)</block>
   <block id="a28e205929838e9983677a0a5740982f" category="list-text">包装盒中的数量。</block>
   <block id="aa540bb7b6b5d4e1ae19ef870d81aeed" category="list-text">从包装中取出物品、然后使用包装将故障组件退回NetApp。</block>
   <block id="79de133f35ffda00b1cc87bd3df0f0a1" category="list-text">标记与存储系统关联的所有缆线。这有助于在此过程后面的重新配置。</block>
-  <block id="61f54831afd31c3c4bb5fa569858091d" category="list-text">为控制器模块贴上标签。</block>
   <block id="02a322185bda81e4fb6f85f159dc2ba9" category="list-text">如果尚未正确接地、请接地。</block>
   <block id="ca5d1f6a9f282b2406a564dd3a9481d0" category="list-text">获取ONTAP的本地管理员凭据(如果没有)。</block>
   <block id="c2cb7195ee129e2594a56587113c65bc" category="list-text">确保您拥有进行更换所需的工具和设备。</block>
@@ -10111,8 +10045,6 @@ SFP+(目标/启动程序)</block>
   <block id="8814a36d70b251b1442c439b51299ee4" category="paragraph">在更换受损AFF A70或AFF A90机箱并将组件重新安装到其中后，您需要<block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block>。</block>
   <block id="fb34a84a11047c5449582cfc3e832942" category="inline-link-macro">关闭控制器</block>
   <block id="d3a08051606463fa6af8ba4af97a9c04" category="paragraph">准备好更换AFF A70或AFF A90机箱硬件后，您需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
-  <block id="026fb5a788ed1dd66790400c2f4099e7" category="inline-link-macro">准备更换机箱</block>
-  <block id="e228ff2a660e4cebe2066a5840c3b300" category="paragraph">查看机箱更换要求后，您需要<block ref="af017f73f8b24b023ee615b1ec4887a6" category="inline-link-macro-rx"></block>。</block>
   <block id="8f5a50ad9bf783f785b5b596a25d5896" category="inline-link-macro">更换机箱</block>
   <block id="926211b8c90e6b361336abd4a1e465bd" category="paragraph">关闭控制器后，您需要<block ref="36e3e0df655e652fc33a5dfc009000ae" category="inline-link-macro-rx"></block>。</block>
   <block id="2d5363bbdbfe18ac43fbd33d126fa9db" category="paragraph">查看机箱更换要求。</block>
@@ -10125,11 +10057,9 @@ SFP+(目标/启动程序)</block>
   <block id="fa14a5b629dea1c371a7052fe4a3da33" category="paragraph">通过将组件从受损机箱移至更换机箱来更换机箱。</block>
   <block id="bf5f18c90002b6633a071a5a3cc0114b" category="inline-link-macro">完成机箱更换</block>
   <block id="27715a4d2867a47fb027e5808760a851" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="ccb4edb95b58f7050d5462ae0acd0b1b" category="inline-link-macro-rx"></block></block>
-  <block id="4e82b04f61455363e2f4cb923f7fbbde" category="paragraph">启动控制器、交还控制器并将发生故障的机箱返还给NetApp、以完成机箱更换。</block>
   <block id="11f69ba457c92cc85e478b022d6fe27d" category="open-title">选项1：一个NS224存储架</block>
   <block id="dbc80d316683c8c8fbd51c4f53c57169" category="open-title">方案2：两个NS224存储架</block>
   <block id="5b64e8df8fa3f4298ca879bbc49b353c" category="doc">准备更换机箱- ASA A70和ASA A90</block>
-  <block id="24577d2fbefca70a58413bdd26876f6e" category="paragraph">准备好更换ASA A70或ASA A90机箱硬件后，您需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
   <block id="8019bdcaff5849ab8015533c8674f305" category="paragraph">使用缆线将每个控制器连接到两个NS224磁盘架上的NSM模块。图中显示控制器A的布线为蓝色、控制器B的布线为黄色。</block>
   <block id="546125971d4fce23d0f562118f0ce95f" category="open-title">选项3：两个DS460C磁盘架</block>
   <block id="8994222dc8e3118b755e00531cef6a1c" category="paragraph">使用缆线将每个控制器连接到两个DS460C磁盘架上的IOM模块。图中显示控制器A的布线为蓝色、控制器B的布线为黄色。</block>
@@ -10149,41 +10079,17 @@ SFP+(目标/启动程序)</block>
   <block id="4c097bc2a08e8665ee6ce5be5b6d4816" category="cell">如果您看到此消息...</block>
   <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">操作</block>
   <block id="0f5d2d6afab72dc1cc43cad3fdc5b679" category="paragraph"><block ref="0bff6104e6ddee2836161e63d5b29d5b" prefix="" category="inline-code"></block></block>
-  <block id="ea9bbc9a1644ad81a9e641c7756cb904" category="paragraph">系统上未安装加密。完成以下步骤：</block>
-  <block id="2a81e23f2dbdb4931da1ca1941fdcaed" category="list-text">显示登录提示时、登录到节点并交还存储：</block>
-  <block id="503facbcd54c8f4001c4d78ff3cd181d" category="list-text">如果已禁用自动交还、请转至步骤5以启用自动交还。</block>
   <block id="aba66c87293b779b339e88a54def4ece" category="paragraph"><block ref="fc8fae7f1985c187fcbe3dc568de6bab" prefix="" category="inline-code"></block></block>
-  <block id="0c9a8e05dae1edb79dee2ba0e0aa2e10" category="paragraph">转至步骤4以还原相应的密钥管理器。</block>
   <block id="c74f3fc8778415fe1908c3e70bdc5e1f" category="list-text">选项10适用于具有板载密钥管理器(Onboard Key Manager、OKM)的系统。</block>
   <block id="c5af7493bea6fdf0e6f855282fd978b1" category="list-text">选项11适用于具有外部密钥管理器(EKM)的系统。</block>
-  <block id="5acefa45eaecf4ca5d5698a77ec26b5f" category="list-text">选择适当的密钥管理器还原过程。</block>
   <block id="cec349ed8df71d2a36b9e8ae7d8becef" category="paragraph">如果检测到OKM、系统将显示以下消息并开始运行BootMenu选项10。</block>
   <block id="90853290faee7028e876fdfdb8de437b" category="list-text">在提示符处输入<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>以确认您要启动OKM恢复过程。</block>
   <block id="24ffce97bd07e6f791875335c17cd10d" category="list-text">从配对节点还原相应文件时、继续监控恢复过程。</block>
   <block id="3291f6521f975e1ead577845998bec95" category="paragraph">如果检测到EMM、系统将显示以下消息并开始运行BootMenu选项11。</block>
-  <block id="a24d722ae51d75766fa9dc3854952898" category="list-text">下一步取决于您的系统所运行的ONTAP版本：</block>
-  <block id="08f30bb9433217bd66359e72cda7c5e8" category="list-text">按<block ref="f07c0cba208baef6e2b2fc812661812b" prefix=" " category="inline-code"></block>退出BootMenu选项11。</block>
-  <block id="4a12d3871bbbec1a3e321415eaec24b4" category="list-text">按<block ref="f07c0cba208baef6e2b2fc812661812b" prefix=" " category="inline-code"></block>退出EKM配置过程并返回启动菜单。</block>
-  <block id="be6ec1858f853da7b5c9f4a13665509f" category="list-text">选择BootMenu选项8。</block>
-  <block id="adda1434d5e5c63f23cc8ea5287107c9" category="paragraph">如果<block ref="70f26aeb9493e5657ecb82bfdf9a4e2f" prefix=" " category="inline-code"></block>设置了、则节点将重新启动并使用配对节点中的配置文件。</block>
-  <block id="821fcd708c45adc084a7b5eb89088d9c" category="paragraph">如果<block ref="70f26aeb9493e5657ecb82bfdf9a4e2f" prefix=" " category="inline-code"></block>未设置、请输入相应的启动命令。节点将重新启动并使用配对节点上的配置文件。</block>
-  <block id="f125fc1712ff91500cfaa02b887dfaf7" category="list-text">重新启动节点、以便EMM保护启动介质分区。</block>
-  <block id="96dfb3dab5877e28d5de27242828d412" category="list-text">继续执行步骤C</block>
-  <block id="858cf7ac64fc02be0935ba5eba961888" category="list-text">出现提示时、输入以下EKM配置设置：</block>
-  <block id="004bf6c9a40003140292e97330236c53" category="cell">操作</block>
-  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="cell">示例</block>
-  <block id="42ffb07c8565a30a8e6e687d851c4dc9" category="paragraph">输入文件中的客户端证书内容<block ref="d606236dedb6ed649b29651c1ec53a99" prefix=" " category="inline-code"></block>。</block>
   <block id="3dc91f7451a4bd0eb09f75bd2140b3a8" category="example-title">显示客户端证书内容示例</block>
-  <block id="f95e57c3ab55de100400925a1d599f91" category="paragraph">输入文件中的客户端密钥文件内容<block ref="ccb442c2c2cc4367a087cfc7cd3b4876" prefix=" " category="inline-code"></block>。</block>
   <block id="04a71a38825e017a3b1cb1bec1346ae5" category="example-title">显示客户端密钥文件内容的示例</block>
-  <block id="916c9dd7b85a7a3381b3bdde1910503a" category="paragraph">输入文件中的KMIP服务器CA文件内容<block ref="443acc94def30bc037fb2dacac4fb7d3" prefix=" " category="inline-code"></block>。</block>
   <block id="e6188a9278a87ef417a8e2afcc22f93d" category="example-title">显示KMIP服务器文件内容示例</block>
-  <block id="d4fa69cc2ed09bdca599cf7ca3b020cd" category="paragraph">输入文件中的服务器配置文件内容<block ref="6b2948264272776ad38dbe7f59c7850f" prefix=" " category="inline-code"></block>。</block>
   <block id="acb2cdf0e044cb8e41dd9dbe163d56cb" category="example-title">显示服务器配置文件内容示例</block>
-  <block id="1677b437db33146f4ef190a0e1965055" category="paragraph">如果出现提示、请输入配对节点的ONTAP集群UUID。</block>
-  <block id="6af9b04018c1d00113ea69c62ee2cfae" category="example-title">显示ONTAP集群UUID示例</block>
-  <block id="ea127e0cf13eef619bb275aeff09d41d" category="paragraph">如果出现提示、请输入此节点的临时网络接口和设置。</block>
-  <block id="aab616abb54a154e4fcb6dc6edca0697" category="example-title">显示临时网络设置示例</block>
   <block id="b06a9a7481d8f3ca792e2636ad34a5f6" category="list-text">节点重新启动后、通过确认系统恢复联机并正常运行来验证启动介质恢复是否成功。</block>
   <block id="5f24aaf8b32f780fce1ea44bd659a2f1" category="list-text">通过交还存储使控制器恢复正常运行：</block>
   <block id="e531efa1ffce94331d0abc4548448cac" category="list-text">在受损控制器上的Loader提示符处、配置受损控制器模块的IP地址：</block>
@@ -10228,7 +10134,6 @@ SFP+(目标/启动程序)</block>
   <block id="653521d025652d70e27438c926da2d94" category="list-text">您必须准备好更换部件。</block>
   <block id="20277dcf478fd8c98c1e17e544b131b2" category="list-text">确保存储系统中的所有其他组件均正常运行；否则、请联系技术支持。</block>
   <block id="58d81e9c6e1457424bb76d78c99c796f" category="paragraph">在将替代节点恢复使用之前、请验证逻辑接口是否位于其主端口上、检查集群运行状况并重置自动交还。</block>
-  <block id="d3d539cc7775eda9c0302343dfd5c7d2" category="paragraph">如果任何逻辑接口列为false、请将其还原到其主端口：<block ref="985591930e85610706940dd82967bd61" prefix=" " category="inline-code"></block></block>
   <block id="723cc8a28cac7b868e52f0c89e8c7d82" category="list-text">将电源线重新连接到受损控制器上的PSU。</block>
   <block id="fdfe68741091c7c547341c8141aaafa9" category="list-text">您必须使用与从NetApp收到的容量相同的替代FRU组件来更换故障组件。</block>
   <block id="9604dc642186f64ed6e79665ee83d280" category="paragraph">正确插入后、DIMM可以轻松插入、但要紧紧固定在插槽中。如果您认为DIMM插入不正确、请重新插入DIMM。</block>
@@ -10244,7 +10149,6 @@ SFP+(目标/启动程序)</block>
   <block id="870bcf4039fdcff653f180566b1ae65d" category="summary">维护AFF A70和AFF A90存储系统的硬件、以确保长期可靠性和最佳性能。执行定期维护任务、例如更换故障组件、因为这有助于防止停机和数据丢失。</block>
   <block id="af1dd5bed2e7f895621a59db47f7a163" category="paragraph">维护过程假定AFF A70和AFF A90系统已部署为ONTAP环境中的存储节点。</block>
   <block id="06056d6fd7dddea48ba45b6addef7373" category="summary">重新启动控制器、验证系统运行状况、并将故障部件返回给NetApp以完成ASA A70和ASA A90机箱更换工作流中的最后一步。</block>
-  <block id="34157b6b9a0050e9c335468f75f69762" category="paragraph">在更换受损ASA A70或ASA A90机箱并将组件重新安装到其中后，您需要<block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block>。</block>
   <block id="c5a3b9039ee3d286f345090dc5bd7f24" category="summary">通过识别受损机箱、验证更换组件并为缆线和控制器模块贴上标签、准备更换ASA A70或ASA A90系统中的受损机箱。</block>
   <block id="5cb5b467ffe15c96f5be4b190434f4d7" category="summary">确认控制器的HA配置在ASA A70或ASA A90存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。</block>
   <block id="9b16f0deb40e2ccd298a84213dfcb3c1" category="summary">如果驱动器出现故障或需要升级、请更换ASA A70或ASA A90系统中的驱动器。此过程包括确定故障驱动器、安全地将其卸下以及安装新驱动器、以确保持续访问数据和提高系统性能。</block>
@@ -10274,7 +10178,6 @@ SFP+(目标/启动程序)</block>
   <block id="0dfddb9a8d92421aedc4b572cdcbfea9" category="summary">将存储资源的控制权归还给替代控制器、以便AFF C80系统可以恢复正常运行。</block>
   <block id="43d776718c1fd733b854e3b84bdffa63" category="summary">确认控制器的HA配置在AFF C80存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。</block>
   <block id="28494b8071c5db3970085154386f4a39" category="summary">如果驱动器出现故障或需要升级、请更换AFF C80系统中的驱动器。此过程包括确定故障驱动器、安全地将其卸下以及安装新驱动器、以确保持续访问数据和提高系统性能。</block>
-  <block id="d00c6aa9f0c4ce10a1828603f11f3a21" category="paragraph">当有空插槽可用或所有插槽均已完全填充时、您可以将I/O模块添加到AFF C80存储系统。</block>
   <block id="cd8d2c9f06c5661e2266f9927427382e" category="summary">您可以将AFF C80存储系统中发生故障的I/O模块更换为相同类型的I/O模块或不同类型的I/O模块。您还可以将I/O模块添加到具有空插槽的系统中。</block>
   <block id="d395647cfc21ff6edde6803e55dea637" category="summary">如果AFF C80系统中的I/O模块出现故障或需要升级以支持更高性能或其他功能、请更换该模块。</block>
   <block id="c52f1e3ee9e9664930223aa9ebbd84dc" category="summary">维护AFF C80存储系统的硬件、以确保长期可靠性和最佳性能。执行定期维护任务、例如更换故障组件、因为这有助于防止停机和数据丢失。</block>
@@ -10289,7 +10192,6 @@ SFP+(目标/启动程序)</block>
   <block id="6d6d899023064067891b54808437adaa" category="sidebar">ASA A系列系统</block>
   <block id="c1c2020b889a6e30c17c657c0d6b221e" category="sidebar">ASA C系列系统可为数据中心内的关键企业级应用程序提供经济高效的高密度闪存存储解决方案。</block>
   <block id="be83f0f3d9e7cc4af05991e4976d2134" category="sidebar">ASA C系列系统</block>
-  <block id="26acc0751726d751aea63afa51fee965" category="sidebar">ASA A系列和ASA C系列系统提供简化的专用SAN体验、可使用FCP或iSCSI协议为企业级任务关键型数据库和其他SAN工作负载提供持续的数据可用性。</block>
   <block id="ba9006710c05e167cf4c54dd8913e747" category="sidebar">ONTAP硬件系统的驱动器架</block>
   <block id="12f32ad5228092ba48607728f8bbaf60" category="sidebar">TR-4384：《采用FC协议的NetApp FAS系统上的SAP HANA》</block>
   <block id="6a003446ac5cfcc128a600e2f0f4d5f8" category="sidebar">ASA A20、ASA A30和ASA A50系统</block>
@@ -10314,12 +10216,9 @@ SFP+(目标/启动程序)</block>
   <block id="eeb7f593c159ca9eb2fb310bd7d23fc2" category="paragraph">NVMe SSD Flash Cache模块(Flash Cache或缓存模块)是单独的模块。They are located in the front of the NVRAM module.To replace or add a caching module, locate it on the rear of the system on slot 6, and then follow the specific sequence of steps to replace it.</block>
   <block id="b6a69cb39407395404cfbc744c377b6a" category="paragraph">NVMe SSD Flash Cache模块(Flash Cache或缓存模块)仅位于FAS9000系统插槽6中NVRAM10模块的前部。Beginning with ONTAP 9.4, you can hot-swap the caching module of the same capacity from the same or different supported vendor.</block>
   <block id="df6c8e6b3ba5bce0814db19ab16307c3" category="list-text">验证是否已显示所有磁盘：<block ref="242f4ce1948273386f8bb487bdd3732f" prefix=" " category="inline-code"></block></block>
-  <block id="6fbf6612f01484a6facb5d0d33a5b4ba" category="paragraph">安装替代机箱后、您需要安装控制器模块、对其重新进行配置、然后重新安装驱动器和PSU。</block>
   <block id="4b4bb5ddb129b80d911b66a281db42da" category="list-text">安装所有四个PSU：</block>
   <block id="81cf1b6821a9509701aa3ffa438696e8" category="inline-link">选择您的控制器硬件升级操作步骤</block>
   <block id="ebffb50e0b751314d493e13cf6d9bae2" category="list-text">请勿使用此过程进行系统升级、而应参阅<block ref="624f79ea247af93b551ac85c36e5246e" category="inline-link-rx"></block>以获得指导。</block>
-  <block id="11715af7d7c992de7e50f09b0ef0bd34" category="section-title">步骤3：为缆线和控制器模块贴上标签</block>
-  <block id="cc7478989c9d0ccd78b85146f63bc5dc" category="paragraph">在从控制器模块或机箱中卸下电缆和控制器模块之前、应为其贴上标签。</block>
   <block id="2ebb9d1c7085d32cb7f9f4ac52713740" category="list-text">机箱更换过程会造成系统中断。For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.</block>
   <block id="c3d2740d50d775957cdc077eff98b9c9" category="paragraph">通过交还存储使受损控制器恢复正常运行。</block>
   <block id="881029605ca74e40713919d1bb348fae" category="open-title">OKM加密</block>
@@ -10363,7 +10262,6 @@ SFP+(目标/启动程序)</block>
   <block id="a1de9509c1cc526ff2685cc16f15c3c0" category="paragraph">关闭控制器后，您需要<block ref="36e3e0df655e652fc33a5dfc009000ae" category="inline-link-macro-rx"></block>。</block>
   <block id="045e51ef9fd14e92bed7263f56f60f6a" category="doc">更换控制器- AFF A70和AFF A90</block>
   <block id="7802e205f19ce9b3c1e4b5875798ebef" category="inline-link-macro">还原系统配置</block>
-  <block id="44505b1d85314cbb257a6a2a6bf388ab" category="paragraph">在更换受损AFF A70或AFF A90控制器后，您需要<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>。</block>
   <block id="a61002aab76d792f612bedb7d53fdd4f" category="inline-link-macro">完成控制器更换</block>
   <block id="8e4a77cdcca9305c0b2b2aaff9ccf95f" category="paragraph">在将存储资源的所有权转移回替代控制器后、您需要执行相关<block ref="d6f5f08e0612b966d919b4ea0b494c53" category="inline-link-macro-rx"></block>步骤。</block>
   <block id="09d0394dd9f4460ac15da27cea6fffaf" category="summary">验证逻辑接口是否正在向其主端口报告、执行集群运行状况检查、然后将故障部件返回给NetApp以完成AFF A70和AFF A90控制器更换过程中的最后一步。</block>
@@ -10475,7 +10373,6 @@ SFP+(目标/启动程序)</block>
   <block id="ee8057da89b708de84bb437f57377732" category="paragraph">当非易失性内存出现故障或需要升级时，请更换AFF A1K系统中的NVRAM。更换过程包括关闭受损控制器、更换NVRAM模块或NVRAM DIMM、重新分配磁盘以及将故障部件返回给NetApp。</block>
   <block id="2fc18a45921e3a79b5488782baca4a44" category="summary">更换AFF A1K系统中的实时时钟(RTC)电池(通常称为币形电池)、以确保依赖于准确时间同步的服务和应用程序保持正常运行。</block>
   <block id="e4ce49599b7708d2380c0acd0152168f" category="summary">如果AFF A1K系统中的系统管理模块出现故障或其固件损坏、请将其更换。更换过程包括关闭控制器、更换发生故障的系统管理模块、重新启动控制器、更新许可证密钥以及将发生故障的部件返回给NetApp。</block>
-  <block id="24aeb6a573e5dc8ef8479a1cd01aa3a4" category="paragraph">要确保您的A20、AFF A30或AFF A50存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。</block>
   <block id="6757ff45ffc17a0e2c90504122294b6d" category="section-title">第2步：验证SIFs、注册序列号并检查集群运行状况</block>
   <block id="be220c57ca8f72eecc9ca98d4ae34396" category="paragraph">在系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。</block>
   <block id="4e62cf0c019b7703c5e266cf62716857" category="paragraph">在更换AFF A70或AFF A90系统中的启动介质之前、请确保满足成功更换的必要要求。这包括确保您的USB闪存驱动器具有适当的存储量、并验证您是否具有正确的替代启动设备。</block>
@@ -10499,7 +10396,6 @@ SFP+(目标/启动程序)</block>
   <block id="e02c1c38027df9cf184c084019ca80bd" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block><block ref="c17103ffaf4bf6b45a49b4f8fd312634" category="inline-link-macro-rx"></block></block>
   <block id="e11c4e7e1911a7e97e4e5ede6d323863" category="doc">关闭控制器以更换启动介质- ASA A1K</block>
   <block id="fc8100e55637c75e7d2b555b531a0ee4" category="paragraph">重新启动控制器、验证系统运行状况、然后将故障部件返回给NetApp以完成ASA A70和ASA A90机箱更换过程中的最后一步。</block>
-  <block id="dcce5c69a78e230fb171cf67cf118ad8" category="paragraph">通过识别受损机箱、验证更换组件并为缆线和控制器模块贴上标签、准备更换ASA A70或ASA A90系统中的受损机箱。</block>
   <block id="7b9d1397ffd8886e76e4fed43c1ecd40" category="doc">更换机箱的要求- ASA A70和ASA A90</block>
   <block id="f27d9a5f7d5680dbe736e6836d3c1a9f" category="summary">如果硬件故障需要更换ASA A70或ASA A90系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器以及重新启动系统。</block>
   <block id="2c72ab76cb7a954eb5f3546d4abad687" category="doc">更换控制器- ASA A70和ASA A90</block>
@@ -10558,11 +10454,9 @@ SFP+(目标/启动程序)</block>
   <block id="518d259b42a911dc3a20adcfc4d0303a" category="paragraph">在AFF C80系统的替代启动介质上恢复加密、以确保持续提供数据保护。更换过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。</block>
   <block id="8bd3a19a7fb9b578a97dddca4df4ad06" category="summary">在更换AFF C80系统中的启动介质之前、请确保满足成功更换的必要要求。这包括确保您的USB闪存驱动器具有适当的存储量、并验证您是否具有正确的替代启动设备。</block>
   <block id="7796ef257d684df8101cbe032026345a" category="summary">重新启动控制器、验证系统运行状况、然后将故障部件返回给NetApp以完成AFF C80机箱更换过程中的最后一步。</block>
-  <block id="e19839d5977fc486204b637326960f50" category="paragraph">在更换受损AFF C80机箱并将组件重新安装到其中后，您需要<block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block>。</block>
   <block id="c214c7601f79b45ee4e329a9388bcc1c" category="doc">更换机箱的要求- AFF C80</block>
   <block id="d13e978f047aec74606199ffff94e6ba" category="doc">更换控制器- AFF C80</block>
   <block id="02a9e9984c956e264ae67617477e3c81" category="paragraph">如果硬件故障需要更换AFF C80系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器以及重新启动系统。</block>
-  <block id="7fe746cff776821811860f80a8a2766b" category="paragraph">更换受损AFF C80控制器后，您需要<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block>。</block>
   <block id="c59af556b2a6209df2da47002b6b6559" category="doc">更换控制器的要求- AFF C80</block>
   <block id="993406729b186cdaf4296a5964b58d0c" category="summary">验证逻辑接口是否向其主端口报告、执行集群运行状况检查、并将故障部件返回给NetApp以完成AFF C80控制器更换过程中的最后一步。</block>
   <block id="179b17b78c730160d70c7ea7bf15c4b0" category="paragraph">恢复并验证AFF C80系统的系统配置后，您需要<block ref="f96992113d4cc080f9d372523b7a919c" category="inline-link-macro-rx"></block>。</block>
@@ -10571,7 +10465,6 @@ SFP+(目标/启动程序)</block>
   <block id="c3addd31ef6f6050c2957082a6b8435c" category="summary">如果AFF C80系统中的风扇模块出现故障或运行效率低下、请更换该风扇模块、因为这会影响系统散热和整体性能。更换过程包括关闭控制器、卸下控制器、更换风扇、重新安装控制器以及将故障部件退回NetApp。</block>
   <block id="099c3c7a7a81ab71ed79331578e0fe3d" category="summary">将I/O模块添加到AFF C80系统、以增强网络连接并扩展系统处理数据流量的能力。</block>
   <block id="aa385fb498b53644f6dc3936ceeb2d7e" category="paragraph">AFF C80系统可以灵活地扩展或更换I/O模块、以增强网络连接和性能。在升级网络功能或解决故障模块时、添加或更换I/O模块至关重要。</block>
-  <block id="d7c7e76b864ff7a3831cc063bb83b3e0" category="paragraph">如果AFF C80系统中的I/O模块出现故障或需要升级以支持更高性能或其他功能、请更换该模块。更换过程包括关闭控制器、更换发生故障的I/O模块、重新启动控制器以及将发生故障的部件退回NetApp。</block>
   <block id="3191381d0c4f9d1b943290e9648992cf" category="doc">维护程序概述- AFF C80</block>
   <block id="dd70af6ac86c3004056a10922bf1e4a7" category="paragraph">维护过程假定AFF C80系统已部署为ONTAP环境中的存储节点。</block>
   <block id="5d542a4393896b1649a9f71a10d0053c" category="summary">当AFF C80系统中的NV电池开始失去电量或发生故障时、请予以更换、因为它负责在断电期间保留关键系统数据。</block>
@@ -10637,7 +10530,6 @@ SFP+(目标/启动程序)</block>
   <block id="bffc713618f01feea26e9d1b0a2cb34f" category="paragraph">查看更换AFF A70或AFF A90控制器的要求后，您需要<block ref="049c9e44f3f84f6c7ce4b89629424c9c" category="inline-link-macro-rx"></block>。</block>
   <block id="3fc2d8288ca2d9186a190046cd5b6611" category="summary">在更换控制器时、关闭AFF A70或AFF A90存储系统中的控制器、以防止数据丢失并确保系统稳定性。</block>
   <block id="05bf5962e43260a46857d5654c4d1eb4" category="doc">控制器更换工作流- AFF A70和AFF A90</block>
-  <block id="019743989438eaa2dc6ea7574d8db4bb" category="paragraph">开始更换AFF A70或AFF A90存储系统中的控制器、方法是关闭受损控制器、卸下并更换控制器、还原系统配置、并将存储资源的控制权归还给替代控制器。</block>
   <block id="842ddb267d25fbc4eb3107587a8382b3" category="list-text">AFF A70和AFF A90控制器上的I/O插槽编号为1到11。</block>
   <block id="7f34458323092706180718c3db6d1d09" category="image-alt">FAS70和FAS90控制器上的插槽编号</block>
   <block id="a6eb4786359a21b31156551eb17820eb" category="paragraph">AFF A70和AFF A90控制器上的I/O插槽编号为1到11、如下图所示。</block>
@@ -10674,7 +10566,6 @@ SFP+(目标/启动程序)</block>
   <block id="77599faf30c91abaad9dace21e73154f" category="summary">通过识别受损机箱、验证更换组件并为缆线和控制器模块贴上标签、准备更换C80系统中的受损机箱。</block>
   <block id="45f5989999d0454062fb2df1d68290bb" category="doc">准备更换机箱- C80</block>
   <block id="0a9824864aee2fcb9f82d781386fcd33" category="paragraph">准备好更换C80机箱硬件后，您需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
-  <block id="6df8fa653e03333fbc93b09d475acf62" category="paragraph">查看更换机箱的要求后，您需要<block ref="56c6ba4ece2a517e11a0ae4af44a8f78" category="inline-link-macro-rx"></block>。</block>
   <block id="b5997b91fd0427f6460a2f73fede7767" category="summary">在更换机箱时、关闭AFF C80存储系统中的控制器、以防止数据丢失并确保系统稳定性。</block>
   <block id="75da82d1c8d06437e013a206a7525a3d" category="doc">关闭控制器以更换机箱- AFF C80</block>
   <block id="6f2b5e470efdad28dd219ef7a9db29cd" category="paragraph">关闭控制器后，您需要<block ref="36e3e0df655e652fc33a5dfc009000ae" category="inline-link-macro-rx"></block>。</block>
@@ -10729,8 +10620,6 @@ SFP+(目标/启动程序)</block>
   <block id="85b0d33109c8d3609950454b4c2a7d79" category="doc">更换I/O模块- AFF A70和AFF A90</block>
   <block id="172bb971e016c43ff64ba57272404e84" category="summary">AFF A70或AFF A90系统中的交流或直流电源设备(PSU)出现故障或出现故障时、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。</block>
   <block id="634fb6b2414a0adde8fe288c6e3a4d20" category="summary">如果硬件故障需要更换ASA A70或ASA A90系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下驱动器、安装更换机箱以及重新安装机箱组件。</block>
-  <block id="626e429540858707bd287f5035fff3d8" category="summary">在更换ASA A70或ASA A90系统的机箱之前、请确保满足成功更换系统所需的要求。其中包括验证系统中的所有其他组件是否正常运行、验证您是否具有ONTAP的本地管理员凭据、正确的更换机箱以及必要的工具。</block>
-  <block id="5fcac3b7d3646c7d8da4eed2bc7243ed" category="summary">开始通过关闭控制器、更换机箱并验证系统运行来更换ASA A70或ASA A90存储系统的机箱。</block>
   <block id="7123adf741599afcbf244e4e98d663f5" category="doc">更换SSD驱动器- ASA A70和ASA A90</block>
   <block id="9b6a53cb25d5ad933496e9c5e800035c" category="doc">添加I/O模块- ASA A70和ASA A90</block>
   <block id="69d316c0d65bb5a04b4bf5e833d3782c" category="doc">添加和更换I/O模块概述- ASA A70和ASA A90</block>
@@ -10764,8 +10653,6 @@ SFP+(目标/启动程序)</block>
   <block id="877ce8d6e2378f25eb1934d780634787" category="doc">添加I/O模块- AFF C30和AFF C60</block>
   <block id="f9430f7ad2e3d7cbd4ff22fe4e6db301" category="doc">更换I/O模块- AFF C30和AFF C60</block>
   <block id="148c37b997fbf92672f09bf3d72bdde2" category="summary">如果硬件故障需要更换AFF C80系统的机箱。更换过程包括卸下控制器和电源设备(PSU)、卸下驱动器、安装更换机箱以及重新安装机箱组件。</block>
-  <block id="5e4f388782b23b352ea8d9214c80bfd5" category="summary">在更换AFF C80系统的机箱之前、请验证系统中的所有其他组件是否正常运行、并确保您具有ONTAP的本地管理员凭据、正确的更换机箱以及必要的工具。</block>
-  <block id="149d9cc9170faac13c9c0680a914233c" category="summary">通过查看更换要求、关闭控制器、更换机箱以及验证系统运行、开始更换AFF C80系统的机箱。</block>
   <block id="2084cec6febad8ab72f79daa8b23a355" category="doc">添加I/O模块- AFF C80</block>
   <block id="79787f56fde4cb3ddec3ad369a61f158" category="doc">添加和更换I/O模块概述- AFF C80</block>
   <block id="41528475327a8cca2a4718c8cf712b2d" category="doc">更换 I/O 模块 - AFF C80</block>
@@ -10948,7 +10835,6 @@ SFP+(目标/启动程序)</block>
   <block id="e7c2a2aadaeb3f0bbd622bc6dfdbba35" category="section-title">第3步：验证控制器状态</block>
   <block id="97e9b99ec4fb1f882057ec866b408907" category="paragraph">未使用的I/O插槽应安装空白模块、以防止可能出现散热问题并符合EMC要求。</block>
   <block id="bc8cd0b25c4f8f5afe020026e3d82314" category="paragraph">此过程完成并显示<block ref="fd27264bf07cac36017c79d5bc35af81" prefix=" " category="inline-code"></block>消息。</block>
-  <block id="f3b6228c1cbd418b703785112e6450cf" category="list-text">如果受损控制器出现提示、请按键<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>覆盖_/etc/ssh/ssh_host_Ossa_key_。</block>
   <block id="343b939e82f6c7bd4d0b3724a8118a24" category="list-text">如果您在步骤1中禁用了自动驱动器分配、请手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。</block>
   <block id="4a7998c6b7bf581d6118278f506a5818" category="list-text">从存储系统正面卸下挡板。</block>
   <block id="6447c21ef920ffa27c0fa03f8a1f5fde" category="list-text">重新安装存储系统正面的挡板。</block>
@@ -11211,7 +11097,6 @@ SFP+(目标/启动程序)</block>
   <block id="b4a3b44dc7350cb88f59a4a2eb7dda1d" category="sidebar">ASA C30机箱</block>
   <block id="cb330090f109eb2fa5d8e0cb697b8627" category="sidebar">ASA C30控制器模块</block>
   <block id="d6cf13e3e73df787bea3a13aaa745efd" category="sidebar">ASA C30 I/O模块</block>
-  <block id="8acf9575f7f79494b7321c6428846a4b" category="paragraph">更换启动媒体。</block>
   <block id="8fdc5ec3ff56b023a707d257557cb7c1" category="paragraph">FAS70 和 FAS90 存储系统支持带有 NSM100 或 NSM100B 模块的 DS212C、DS224C、DS460C 和 NS224 架。</block>
   <block id="cb1d7f2de7963108d3fe1b590a415523" category="paragraph">NS224 模块之间的主要区别是：</block>
   <block id="a1c52b2edb23bc93318c0b82dc9baead" category="paragraph">以下 NS224 布线示例显示了 NS224 架中的 NSM100 模块（涉及架模块端口）。</block>
@@ -11458,9 +11343,7 @@ SFP+(目标/启动程序)</block>
   <block id="94466c3513efb2a7e0fd4321521372cf" category="doc">从 USB 驱动器手动恢复启动媒体 - AFF A70和AFF A90</block>
   <block id="2876aff07b3369691e90341d88c86ff4" category="summary">AFF A70或AFF A90存储系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除系统管理模块、移除损坏的启动介质、在系统管理模块中安装替换启动介质，然后重新安装系统管理模块。</block>
   <block id="663089c344d507b3ca987b8d0aefdbdd" category="doc">更换启动介质以实现自动启动恢复 - AFF A70和AFF A90</block>
-  <block id="8e894dbbb816463d5015f236d885bccb" category="summary">在更换AFF A70或AFF A90存储系统中的启动介质之前，请确保满足成功更换的必要要求。</block>
   <block id="d6fdaad6d58cdb9682d7a75e3e2dff14" category="doc">自动启动介质恢复的要求 - AFF A70和AFF A90</block>
-  <block id="396899dbc3a0822b75da7c772b177944" category="paragraph">在更换AFF A70或AFF A90存储系统中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否拥有正确的替换启动介质、确认受损控制器上的集群端口正常工作，以及确定是否启用了板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。</block>
   <block id="61e03a9ae98f11e74ecca739028b0d8d" category="doc">手动启动介质恢复的要求 - AFF A70和AFF A90</block>
   <block id="3d2127437f7682efd33cc290f8c65313" category="summary">启动映像的自动恢复涉及系统自动识别并选择适当的启动菜单选项。它使用合作伙伴节点上的启动映像在AFF A70或AFF A90存储系统中的替换启动介质上重新安装ONTAP 。</block>
   <block id="ba6215836b185b42ba18f8576bf97d60" category="doc">启动介质自动恢复工作流程 - AFF A70和AFF A90</block>
@@ -11760,7 +11643,6 @@ SFP+(目标/启动程序)</block>
   <block id="4f27afe411c647fb960721a1f0b3c4cd" category="list-text">从控制器 PSU 上拔下电源线。</block>
   <block id="7a9c239999a1f71d8b0a2953ac1cefd9" category="paragraph">更换组件后，必须将电源线重新插入 PSU 来重新启动控制器模块。</block>
   <block id="8c3db079d56ac3b2afd0f08ec5c5f0b0" category="list-text">删除系统管理模块</block>
-  <block id="131d592db319e211a4ce11e5d1e71151" category="paragraph">您必须验证适配器列表和所有系统磁盘的路径。</block>
   <block id="8ca9e1bcafc96fa83d21fdd083213830" category="list-text">如果控制器处于维护模式（显示<block ref="2cf8a3bab83c4d2618c18eeeca9ebc98" prefix=" " category="inline-code"></block>提示符），退出维护模式并进入 LOADER 提示符：</block>
   <block id="ab8a21779e7d2f5935dd0a75d2fcb9c1" category="list-text">等到更换模块的控制器控制台上显示等待交还消息，然后从健康的控制器验证是否已自动分配新的合作伙伴系统 ID：</block>
   <block id="751035e5db88d172e881299c202d9b13" category="paragraph"><block ref="ddf400f1cb6b8b9330ed6c79c508123c" prefix="" category="inline-code"></block></block>
@@ -11782,9 +11664,6 @@ SFP+(目标/启动程序)</block>
   <block id="230fe3806ff8b04e1519d7151217ceb2" category="list-text">当提示确认时再次输入密码</block>
   <block id="149d75e74e184ea98322d4a1293983b0" category="list-text">板载密钥管理器的备份数据</block>
   <block id="37760bdbf5f83e8f2e69ad13fdf032a8" category="example-title">显示密码和备份数据提示的示例</block>
-  <block id="68f3f4229fb38200453da13af034b117" category="paragraph">ONTAP 9.16.1 及更高版本</block>
-  <block id="deaaad9f1b5f7aef98666a194b63f4b6" category="paragraph">您可以使用以下方式从伙伴节点检查集群 UUID<block ref="97c6b1d9f961d2fb9b8a976962d5c444" prefix=" " category="inline-code"></block>命令。</block>
-  <block id="9d8a27b9a34ff479042a266ec7ac6724" category="paragraph">您需要输入：</block>
   <block id="f4dc0474a9b4425a339efb683b7dd915" category="list-text">端口的 IP 地址</block>
   <block id="b3d28b344c55260439945f6caed47e6c" category="list-text">端口的网络掩码</block>
   <block id="0471579d34255a0d9b6386ea78d8fd44" category="list-text">默认网关的 IP 地址</block>
@@ -13681,7 +13560,6 @@ SFP+(目标/启动程序)</block>
   <block id="985cd84f00f61cfd350f06f034996dbc" category="list-text"><block ref="985cd84f00f61cfd350f06f034996dbc" category="inline-link-macro-rx"></block></block>
   <block id="31ac19365e9e82afbf1c92c80f8f5345" category="list-text"><block ref="31ac19365e9e82afbf1c92c80f8f5345" category="inline-link-macro-rx"></block></block>
   <block id="b749fa61154e5014f90db363c596629d" category="list-text"><block ref="b749fa61154e5014f90db363c596629d" category="inline-link-macro-rx"></block></block>
-  <block id="a3e8d54603612818524bd33249aa8a23" category="paragraph">当非易失性存储器出现故障或需要升级时，请更换AFF c80 系统中的NVRAM 。更换过程包括关闭受损的控制器、将控制器拉出几英寸以完全切断电源、更换NVRAM模块或NVRAM DIMM、重新分配磁盘，以及将故障部件返回给NetApp。</block>
   <block id="e0afc6f17acc32734a97d12897107976" category="list-text"><block ref="e0afc6f17acc32734a97d12897107976" category="inline-link-macro-rx"></block></block>
   <block id="de12502ea1f5b1e834a82b554781952a" category="list-text"><block ref="de12502ea1f5b1e834a82b554781952a" category="inline-link-macro-rx"></block></block>
   <block id="18b2d9b4b9271130118b3fa4d34741ca" category="list-text"><block ref="18b2d9b4b9271130118b3fa4d34741ca" category="inline-link-macro-rx"></block></block>
@@ -14187,4 +14065,250 @@ SFP+(目标/启动程序)</block>
   <block id="9dd7ce2f864cf38177fc70779cbe6635" category="sidebar">AFF A70概述</block>
   <block id="045d04f83b324cbd691c0a2eef106f65" category="sidebar">AFF A90概述</block>
   <block id="dcb60d37ecd73502c4c85283951d3ef3" category="paragraph">使用 100 GbE 电缆将控制器 A 和 B 的 e1a 和 e7a 端口连接到集群网络交换机 A 和 B。</block>
+  <block id="bb7f8ab7bb4d8aa48ac1718817f85e14" category="list-text">捐赠完成后，运行<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block>验证存储系统的运行状况，并纠正遇到的任何问题。</block>
+  <block id="348d4833794229229acf56a65271f1b1" category="paragraph">更换启动介质，该介质位于控制器背面的系统管理模块内。</block>
+  <block id="9bd3c4febc54388507a18855daa95531" category="list-text">您必须准备备用启动介质。</block>
+  <block id="3cb9543c7cf72330227c20f6bd92e8fd" category="list-text">为系统管理模块配备防静电垫。</block>
+  <block id="ee79a8c26779041505a00d5885f0c565" category="list-text">请确认NVRAM卸载已完成再继续。当 NV 模块上的 LED 熄灭时， NVRAM将被禁用。</block>
+  <block id="251e3ea30a82b8986edf31c2f29fcac5" category="paragraph">如果 LED 指示灯闪烁，请等待闪烁停止。如果闪烁持续超过 5 分钟，请联系NetApp支持寻求帮助。</block>
+  <block id="c3966b17c8ef015a6e35ffe01a95d57c" category="list-text">如果尚未接地，请到机箱后部正确接地。</block>
+  <block id="161db1f4c7714651d4c8ef3591a4409f" category="list-text">断开控制器电源：</block>
+  <block id="2082bf698c45af1f327a8cc59e2c79f5" category="list-text">对于交流电源，请将电源线从电源上拔下。</block>
+  <block id="94a3fc703feb82f94cbfd044d47ebaa3" category="list-text">对于直流电源，请将电源模块从电源上断开。</block>
+  <block id="81c2b7a4d68abd151a0d80ec875408d4" category="list-text">移除连接到系统管理模块的所有电缆。在电缆上贴上标签，以便重新安装时识别其正确的端口。</block>
+  <block id="18b4856b861342cf2020a2bfb03b27d1" category="list-text">按下线缆管理臂两侧的按钮，将线缆管理臂向下旋转。</block>
+  <block id="e16de8053ef420f553487a18c391f593" category="paragraph">凸轮杆远离底盘。</block>
+  <block id="188dccb6dfbcb4bb88bcc13338f7c16c" category="list-text">将凸轮杆完全向下旋转，然后从控制器中取出系统管理模块。</block>
+  <block id="ab1db3fabf31d4b3e827446d8ec08d32" category="list-text">将系统管理模块放置在防静电垫上，并确保启动介质可触及。</block>
+  <block id="a8c21ee4cce890eb701668d16db6abdb" category="list-text">从系统管理模块中移除启动介质：</block>
+  <block id="ce1a78a51b4a2d30325e902a99b9133b" category="list-text">将启动介质向上旋转，从插槽中滑出，然后放在一边。</block>
+  <block id="6ccafe7a945589ff0ae823a0340d7238" category="list-text">将系统管理模块的边缘与机箱开口对齐。</block>
+  <block id="327db33eb06457230199cfbf20875e19" category="list-text">轻轻地将模块滑入机箱，直到凸轮闩锁开始啮合。</block>
+  <block id="3f8f903d013700e19a5a086b7b87fb00" category="list-text">将凸轮锁扣完全向上旋转，以将模块锁定到位。</block>
+  <block id="fa00614aec7f805dc37e80155034287c" category="list-text">使用拆卸时创建的标签，将电缆重新连接到系统管理模块。</block>
+  <block id="5cafdc123c1149653670698f817c72ed" category="list-text">重新连接控制器电源：</block>
+  <block id="a49d9ccf7f76f16458c3b6b51b6f1bc1" category="list-text">对于交流电源，请将电源线插入电源。</block>
+  <block id="572839aecb6a913beb70dfb7796279c5" category="list-text">对于直流电源，请将电源模块重新连接到电源。</block>
+  <block id="f66d14917d036550aa596df417e2311a" category="paragraph">控制器在恢复供电后会自动重启。</block>
+  <block id="03902293bcbcc2be659e2b2d970683cd" category="list-text">按下按钮中断启动过程。<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block>停在 LOADER 提示符处。</block>
+  <block id="f35a338db78000dae03153495c53b7d6" category="list-text">打开控制器的位置指示灯：</block>
+  <block id="b4aaa54945a225ac8ad5f5f223c1cde3" category="list-text">使用<block ref="aa852b86500356dcfaa83e25c0e37adf" prefix=" " category="inline-code"></block>显示位置指示灯当前状态的命令。</block>
+  <block id="ff8f83aac133b1d29fbe20ba90eff294" category="list-text">打开位置指示灯：</block>
+  <block id="2b20a2f1fcc585ec2f5589d564025497" category="list-text">打开包装前，请检查包装标签并核实以下内容：</block>
+  <block id="bb302bbc0e300430519dcef12fef3cda" category="list-text">组件零件编号</block>
+  <block id="758ade838124a8dda8d59a24b1927751" category="list-text">部件描述</block>
+  <block id="043b71a342b4eb01347964a815ac4b37" category="list-text">盒子里的数量</block>
+  <block id="078f1c33ef3d16107c86ad5ab725f66f" category="list-text">从包装中取出内容物，并保存包装以便将故障组件退回给NetApp。</block>
+  <block id="863bf3bb16a73af9eeb8af91703892d8" category="list-text">给连接到存储系统的所有电缆贴上标签。这样可以确保后续步骤中能够正确地重新布线。</block>
+  <block id="d30dbd86219230424d69446eec75a3a8" category="list-text">如果还没有接地，那就先接地。</block>
+  <block id="655590dff0c7819731c584136a7a04e3" category="list-text">将风扇模块移至替换控制器模块，然后将其边缘与控制器模块中的开口对齐，并将其滑入，直到锁定闩锁咔嗒一声卡入到位。</block>
+  <block id="b960e174da711196b8d3a3a757d94984" category="list-text">健康的控制器必须能够接管被替换的控制器（在本程序中称为受损控制器）。</block>
+  <block id="fe43c085c93c5ad95ed3165c2344b687" category="list-text">请勿使用此方法进行控制器升级。请参阅<block ref="624f79ea247af93b551ac85c36e5246e" category="inline-link-rx"></block>供参考。</block>
+  <block id="5224f67a0e7f5407d38fced63cea458a" category="list-text">如果您的系统采用MetroCluster配置，请查看<block ref="dbcae02c495cc3db61b37ce85396171e" category="inline-link-rx"></block>确定是否采用此程序。</block>
+  <block id="f039fb8f4ae863133c07dbe56815eee9" category="list-text">用从NetApp收到的现场可更换单元 (FRU) 替换故障组件。</block>
+  <block id="133c76792fa8c59ed383242ec39cbfd5" category="list-text">更换控制器模块时，请使用相同型号的控制器模块。您无法通过更换控制器模块来升级系统。</block>
+  <block id="0efbdc66b12d2d16e20f43f8db8cbbbf" category="list-text">在此过程中，您不能更换驱动器或驱动器架。</block>
+  <block id="97b6a070a9de86aec159628a88419bca" category="list-text">启动设备位于系统背面的系统管理模块上。更换控制器模块时，无需移动启动设备。</block>
+  <block id="f2ea399faffde1f5e44ec5d36a46743b" category="list-text">理解本流程中使用的控制器术语：</block>
+  <block id="fd9d57e205ad7278ee5e9d7da776e592" category="list-text">受损的控制器是指将被替换的控制器。</block>
+  <block id="2a9c66dec8268e51da2f8aeefaacc47b" category="list-text">替换控制器是指替换故障控制器的新控制器。</block>
+  <block id="dfa9a1a987cae2ab54b634b23d17d07f" category="list-text">将控制器的控制台输出捕获到文本日志文件中。</block>
+  <block id="75eecc98c33af038783f7353a8c916ec" category="paragraph">这为解决更换过程中出现的任何问题提供了程序记录。</block>
+  <block id="a3a951ff4647dbd0664ca7a8ea23ed07" category="paragraph">在系统恢复运行之前，请验证 HA 配置设置和磁盘列表。</block>
+  <block id="04d87613fffde1c6cb2c90776f2d0c2a" category="list-text">如果控制器模块显示的系统状态与您的系统配置不匹配，请进行设置。<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block>控制器模块的状态：</block>
+  <block id="b883881b0cd895a8decfc031e7c33695" category="list-text">确认适配器列出了所有磁盘的路径：<block ref="c41292f339fa0dd66d84b7c3a9eac054" prefix=" " category="inline-code"></block></block>
+  <block id="764c2588843eb4e55bf473d74df4783d" category="list-text">确定您的密钥管理器类型：</block>
+  <block id="a922a347a024dd1f01fd5aa6e55410ce" category="list-text">板载密钥管理器 (OKM)：需要集群范围的密码短语和备份数据</block>
+  <block id="01269370d742b377b0df9b8c78347f9c" category="list-text">外部密钥管理器 (EKM)：需要来自伙伴节点的以下文件：</block>
+  <block id="eddcaece8f302bda77bd52630017beed" category="list-text"><block ref="6b2948264272776ad38dbe7f59c7850f" prefix="" category="inline-code"></block></block>
+  <block id="2d41c1695186cd2561b68ed19c591304" category="list-text"><block ref="d606236dedb6ed649b29651c1ec53a99" prefix="" category="inline-code"></block></block>
+  <block id="8fe5a989c8ee0f54a037b7ae6f992b8b" category="list-text"><block ref="ccb442c2c2cc4367a087cfc7cd3b4876" prefix="" category="inline-code"></block></block>
+  <block id="eadeb5d18f737e0704dade68d077d91d" category="list-text"><block ref="443acc94def30bc037fb2dacac4fb7d3" prefix="" category="inline-code"></block></block>
+  <block id="cd519f970bc83af1cc2daac52166901a" category="list-text">在 LOADER 提示符下，启动启动介质恢复过程：</block>
+  <block id="ca1dc603337e9cf30e94c4b645d6b8b7" category="list-text">系统检查加密情况，并显示以下消息之一：</block>
+  <block id="4754524f8b29b8650fe75329e6042256" category="paragraph">系统未安装加密功能。</block>
+  <block id="509770c8dda30e85db49f8642db6ca11" category="list-text">等待登录提示出现。</block>
+  <block id="0e24346f9a92e6d04d57b5ccead814c3" category="list-text">登录节点并归还存储空间：</block>
+  <block id="78f0d70cb3d505c2399506f81065c747" category="list-text">如果自动返还功能已禁用，请转到步骤 6 重新启用该功能。</block>
+  <block id="0e8a095551e7e50c3ca3d504bd2ad77b" category="paragraph">已安装加密功能。请转至步骤 4 恢复密钥管理器。</block>
+  <block id="20d2bf4f3f943fcc1e340e99a4d368ba" category="admonition">如果系统无法识别密钥管理器配置，则会显示错误消息，并提示您确认是否已配置密钥管理器以及配置类型（板载或外部）。请回答提示以继续。</block>
+  <block id="4aac054c51ae042dd6c06bdad5d13845" category="list-text">请使用适合您配置的步骤恢复密钥管理器：</block>
+  <block id="564c83534ce0095bf811b4f45e8a7587" category="paragraph">系统显示以下消息并开始运行启动菜单选项 10：</block>
+  <block id="c08aad071fe1f1b764a8997cd71926c1" category="list-text">进入<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>在提示时确认您是否要开始 OKM 恢复过程。</block>
+  <block id="63d61920b8c2f7b30cf281bdfa903c57" category="list-text">出现提示时，请输入机载密钥管理密码。</block>
+  <block id="30dd09c2f95378b43bf25308eec8dd5e" category="list-text">出现确认提示时，请再次输入密码。</block>
+  <block id="5c756e8e27bac56159ce0cbdd39d25fb" category="list-text">出现提示时，输入车载密钥管理器的备份数据。</block>
+  <block id="79a337284ecc270c9fb70cfa3f0549c6" category="list-text">监控恢复过程，看它如何从伙伴节点恢复相应的文件。</block>
+  <block id="3ba7e3971d948d8fa9119ea7d3326cd3" category="paragraph">恢复过程完成后，节点将重新启动。以下信息表明恢复成功：</block>
+  <block id="5403c23d7cc21fd6b1016c3d10c93711" category="list-text">节点重启后，验证系统是否恢复在线并正常运行。</block>
+  <block id="1041ca100654e89f3959fe8698d3fe03" category="list-text">在伙伴节点完全启动并开始提供数据服务后，同步集群中的 OKM 密钥：</block>
+  <block id="682b9eab5d02570a6044fbb81a96818d" category="paragraph">如果自动返还功能已禁用，请转到步骤 5 重新启用该功能。</block>
+  <block id="c611091d645837a22ce250179398219c" category="paragraph">系统显示以下消息并开始运行启动菜单选项 11：</block>
+  <block id="51d6f35e7cccefb24fbfc4c082b44026" category="list-text">出现提示时，请输入EKM配置设置：</block>
+  <block id="abc81377b7e3cbf13c4b821e795e2424" category="list-text">请输入客户端证书的内容。<block ref="d606236dedb6ed649b29651c1ec53a99" prefix=" " category="inline-code"></block>文件：</block>
+  <block id="dfb210ee228d9bc0c0d026498267e5b7" category="list-text">请输入客户端密钥文件的内容。<block ref="ccb442c2c2cc4367a087cfc7cd3b4876" prefix=" " category="inline-code"></block>文件：</block>
+  <block id="3c756e6a653a9a5945e5e9c099274de9" category="list-text">从以下位置输入 KMIP 服务器 CA(s) 文件的内容：<block ref="443acc94def30bc037fb2dacac4fb7d3" prefix=" " category="inline-code"></block>文件：</block>
+  <block id="cd97f7137f8207b5ce1e33fb8440c3d3" category="list-text">输入服务器配置文件内容<block ref="6b2948264272776ad38dbe7f59c7850f" prefix=" " category="inline-code"></block>文件：</block>
+  <block id="e481a1bb7922eab86d865b244f86ef8c" category="list-text">如果出现提示，请输入伙伴节点的ONTAP集群 UUID。您可以使用以下命令从伙伴节点检查集群 UUID：<block ref="97c6b1d9f961d2fb9b8a976962d5c444" prefix=" " category="inline-code"></block>命令。</block>
+  <block id="7dd9ca44d94e51e56aeb12a3a26b9d31" category="example-title">显示ONTAP集群 UUID 提示示例</block>
+  <block id="d8e446000b03fab8b1c732a8572740c2" category="list-text">如果出现提示，请输入节点的临时网络接口和设置：</block>
+  <block id="e26aedab8ea74c5c1808c74f5325b091" category="example-title">显示临时网络设置提示示例</block>
+  <block id="87f991bdb8a43f36a351b694814f9205" category="list-text">验证密钥恢复状态：</block>
+  <block id="0da4522b508031c7167026da7641f396" category="list-text">如果你看到<block ref="ac676b9b4d7ad5923ab3fe5f9ae60aa8" prefix=" " category="inline-code"></block>输出结果显示，EKM 配置已成功恢复。该过程从伙伴节点恢复相应的文件并重启节点。继续下一步。</block>
+  <block id="a9154880381b499b4480e65e0918f8b2" category="list-text">如果密钥恢复失败，系统将停止运行并显示错误和警告信息。从 LOADER 提示符重新运行恢复过程：<block ref="4d9c822f717329c7000654e8bae09ae4" prefix=" " category="inline-code"></block></block>
+  <block id="256797adc31efc68d7b01cd20efc563b" category="list-text">请确保您的游戏机已连接到故障控制器。</block>
+  <block id="8cbf6fb45b4710504dc77fc1fb348f91" category="list-text">请确认您拥有包含恢复映像的U盘。</block>
+  <block id="7e48d717e10b51f90e718b431db8f55f" category="list-text">确定您的系统是否使用加密。在步骤 3 中，您需要根据是否启用加密来选择相应的选项。</block>
+  <block id="40496d7ccea7d601912bbca782bd515b" category="list-text">在故障控制器的 LOADER 提示符下，从 USB 闪存驱动器启动恢复映像：</block>
+  <block id="9fa7c02bb45265f34f4f69d65e4ba585" category="paragraph"><block ref="ec44bfe32a6d575f528cbdeeb29c9942" prefix="" category="inline-code"></block></block>
+  <block id="1a68286f23d4e481b013070b3fb1b2c5" category="paragraph">恢复镜像文件是从U盘下载的。</block>
+  <block id="0e99a276251e3e975397503d3c6c3d07" category="list-text">出现提示时，输入图像名称或按 *Enter* 键接受括号中显示的默认图像。</block>
+  <block id="c9e381b8fb72130d3dfe11557316b5b4" category="list-text">请使用适用于您的ONTAP版本的步骤恢复 var 文件系统：</block>
+  <block id="510eb69f55221f0ff4cc891c4ba7a6d9" category="paragraph">对受损控制人和合作控制人完成以下步骤：</block>
+  <block id="268c64a36efe2137fa47de3437bd4bd0" category="list-text">*在故障控制器上：* 按下<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当你看到<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
+  <block id="9cf62becb6c08190789fafc5e01382fe" category="list-text">*在故障控制器上：* 如果出现提示，请按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>覆盖 _/etc/ssh/ssh_host_ecdsa_key_。</block>
+  <block id="82e6220d4cf623f24289a799912d8cf1" category="list-text">*在伙伴控制器上：*将故障控制器的权限级别设置为高级：</block>
+  <block id="5fd1bcc8472b38442961eb87ca3f844a" category="paragraph"><block ref="0581d0d071ad835f74bf419081ce5d75" prefix="" category="inline-code"></block></block>
+  <block id="ccf61f9ea5a79dae683f054ba38902fb" category="list-text">*在伙伴控制器上：*运行恢复备份命令：</block>
+  <block id="6aff34dea4da39cad7964ccffe40842d" category="paragraph"><block ref="12c1d63710fcb15adbe52f5b1ccb8eea" prefix="" category="inline-code"></block></block>
+  <block id="ca0418c072d8020434d216a4abfecf6f" category="admonition">如果看到的不是恢复成功的消息，请联系NetApp支持。</block>
+  <block id="6d9381b0c267b090687a9916e7ae5872" category="list-text">*在合作伙伴控制器上：* 返回管理员级别：</block>
+  <block id="d260c71f1d73fe6dce24fae82cd28aca" category="paragraph"><block ref="0a654c13d63710f829bc02c4cbec79ee" prefix="" category="inline-code"></block></block>
+  <block id="34b779dc325b8481fae2589da04958b3" category="list-text">*在故障控制器上：* 按下<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当你看到<block ref="dff08971c5acbbdac6642922fde20608" prefix=" " category="inline-code"></block></block>
+  <block id="82a16ef02eab21d5dd096f68f0695901" category="list-text">*在故障控制器上：* 按下<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当你看到<block ref="396e369cf75815ba643925818d3ec37e" prefix=" " category="inline-code"></block></block>
+  <block id="8b9e5e2cd33a811002437e908a33a1fa" category="list-text">*在故障控制器上：* 按下<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当提示重启时，按<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block>当您看到启动菜单时。</block>
+  <block id="88c59cc215089054320add9ac5600ce2" category="list-text">*对于故障控制器：*执行以下操作之一：</block>
+  <block id="c15238078a77edc2ef4bd593196971b8" category="list-text">如果系统不使用加密，请从启动菜单中选择_选项 1 正常启动_。</block>
+  <block id="99ae95872c3913a9ded71370c70a8cc7" category="list-text">如果系统使用加密，请转到<block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block>。</block>
+  <block id="fe96aa95930d10c2f5829bc437157a9c" category="open-title">ONTAP 9.16.1 或更高版本</block>
+  <block id="f9dbd529813df9b97e2450323ae00565" category="paragraph">对受损控制器完成以下步骤：</block>
+  <block id="3b554643290ff3791f79c55bfc5ead66" category="paragraph">恢复过程成功后，将显示以下消息：<block ref="92080c75f9b065e263d7fea155b1d733" prefix=" " category="inline-code"></block></block>
+  <block id="ea673c9d0e265c7c75644bc9baaa8689" category="list-text">按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当提示确认恢复备份成功时。</block>
+  <block id="5836b6e32c9e3be5dddb79dc12fd9ca5" category="list-text">按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当系统提示使用恢复的配置时。</block>
+  <block id="07ecf6fe982363d068bd969370ccd23d" category="list-text">按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当系统提示重启节点时。</block>
+  <block id="b49805ed89e256eede2ee267e26a855c" category="list-text">按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当系统提示再次重启时，请按<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block>当您看到启动菜单时。</block>
+  <block id="b85802f56fa2681bfde10fceff1c27a0" category="list-text">如果您禁用了自动返还功能，请重新启用它：</block>
+  <block id="bb10d1dc8635fe7960e7b50ee5f1c6a0" category="paragraph">如果任何逻辑接口被列为 false，则将其恢复为其原始端口：</block>
+  <block id="4c97c37d751c330dfde13166f08e74b1" category="list-text">检查集群的健康状况。参见<block ref="9f193d2818f839c9575e0a6969820fd9" category="inline-link-rx"></block>知识库文章。</block>
+  <block id="c9e1dddca3337ee975028df1d3f336da" category="list-text">检查您的ONTAP版本是否支持加密：</block>
+  <block id="3ee8bd7e788ed5f7ad71165369b37997" category="list-text">下载符合 NVE 支持的ONTAP镜像：</block>
+  <block id="aa3b720c089d740e1e815e362afd03a9" category="list-text">如果支持 NVE：下载带有NetApp卷加密的ONTAP映像</block>
+  <block id="af1544fbd6671a838125e6b4bd759ed1" category="list-text">如果不支持 NVE：下载不带NetApp卷加密的ONTAP映像</block>
+  <block id="a6baee1e0895568ba37f9db32ecd72bc" category="admonition">从NetApp支持网站下载ONTAP映像到您的 HTTP 或 FTP 服务器或本地文件夹。在更换启动介质的过程中，您将需要此映像文件。</block>
+  <block id="b1759e2d88a7da4eca6f97bb14869daf" category="list-text">根据系统中是否配置了密钥管理器，执行以下操作之一：</block>
+  <block id="3605c1e1b345919979201a9f37805fb7" category="paragraph">*如果未配置密钥管理器：*</block>
+  <block id="fc2ccb35d1897acf0bd3a06a9b111286" category="paragraph">您可以安全地关闭故障控制器，并继续执行关机程序。</block>
+  <block id="fbed5167198e403423ee9a77da249ae5" category="paragraph">*如果配置了密钥管理器（EKM 或 OKM）：*</block>
+  <block id="b520d3c69ccbf428928a30eeb5fcaeec" category="list-text">输入以下查询命令，显示密钥管理器中身份验证密钥的状态：</block>
+  <block id="a561629f1c6bdc068b4d298086017149" category="list-text">查看输出结果并检查其中的值。<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>柱子。此列指示密钥管理器（EKM 或 OKM）的身份验证密钥是否已成功恢复。</block>
+  <block id="368302c8e5012aef87032c33547399ce" category="list-text">请根据您的密钥管理员类型完成相应的操作步骤：</block>
+  <block id="c321431c95b73ea1b941a4fb20fa7d60" category="paragraph">根据数值完成以下步骤。<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>柱子。</block>
+  <block id="fea5206f831b198463523d279ac86524" category="paragraph">*如果所有按键都显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>在“已恢复”列中：*</block>
+  <block id="2762df5d4efc44da4e50a6f9787d4a03" category="paragraph">*如果任何键显示的值不是<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>在“已恢复”列中：*</block>
+  <block id="bbaf8fde5a413ec63cf7a05a93ce291c" category="list-text">将外部密钥管理认证密钥恢复到集群中的所有节点：</block>
+  <block id="aa93e7bc262e7964a396fd16f3a41d6b" category="paragraph">如果命令执行失败，请联系NetApp支持。</block>
+  <block id="a9e9502aae2f984e4056695549d40510" category="list-text">确认所有身份验证密钥均已恢复：</block>
+  <block id="359b0f053be340cfea003f50a10037a1" category="paragraph">确认<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>列显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>适用于所有身份验证密钥。</block>
+  <block id="f129da3873e4eb410ca6f86907d7eb6c" category="list-text">如果所有密钥都已恢复，则可以安全地关闭故障控制器并继续执行关机程序。</block>
+  <block id="1e3e7466df496b478b4eba2216073fe7" category="list-text">备份 OKM 信息：</block>
+  <block id="1b294cfbc51db8a82a21bedd0caea1b7" category="list-text">切换到高级权限模式：</block>
+  <block id="6d7049d4fbed47a1a9ef8f8c2f2607e3" category="paragraph"><block ref="8d2cf87827d8c4c105b70542cc18077d" prefix="" category="inline-code"></block></block>
+  <block id="99926451d42c79919fab506da6346f4e" category="paragraph">进入<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>当提示继续时。</block>
+  <block id="561e40275985ba72d3dee04bd8bde33b" category="list-text">显示密钥管理备份信息：</block>
+  <block id="2b3fa73103a31f7fc9e546ce01bb66c8" category="list-text">将备份信息复制到单独的文件或日志文件中。</block>
+  <block id="f4e1adb7c0a9dfb23c52ea65d5526a08" category="paragraph">如果在更换过程中需要手动恢复 OKM，您将需要此备份信息。</block>
+  <block id="12ad2a7a15e12ee368e4e0bc2e2ab5bb" category="list-text">返回管理员模式：</block>
+  <block id="4314d905b701de050b309f08ac41c200" category="paragraph"><block ref="d637edfa9d495486d28c165345856456" prefix="" category="inline-code"></block></block>
+  <block id="04d3df2f3ffec0e18fd7e7c132998c6a" category="list-text">同步板载密钥管理器：</block>
+  <block id="76b2869dfe8ca680898b13c03a67e039" category="paragraph">出现提示时，请输入 32 个字符的字母数字组合的机载密钥管理密码。</block>
+  <block id="f9d6ab70b521d2480385ab740ca2ba56" category="admonition">这是您在最初配置车载密钥管理器时创建的集群范围密码短语。如果您没有此密码短语，请联系NetApp支持。</block>
+  <block id="2f9d67da43938fd25d56ad5bfa74c246" category="list-text">请确认所有身份验证密钥均已恢复：</block>
+  <block id="e4b0eb55d40b078507f42c2ed77f1bbf" category="paragraph">确认<block ref="5fdf564f22be6bd901a690f1c5a6d9eb" prefix=" " category="inline-code"></block>列显示<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>对于所有身份验证密钥和<block ref="c759882cd4e7fcd95f15b0df0ce7f51c" prefix=" " category="inline-code"></block>类型展<block ref="c6b9507c26062233f2341cb90db60eaa" prefix=" " category="inline-code"></block>。</block>
+  <block id="788e7d494aa085a01bcd75122a64008d" category="paragraph">根据您的密钥管理器类型，完成相应的步骤以恢复系统加密。如果您不确定您的系统使用哪个密钥管理器，请检查您在启动介质更换过程开始时捕获的设置。</block>
+  <block id="afa43072dcbf187fefa063f0b5a9b1b9" category="paragraph">请确保您已准备好以下信息：</block>
+  <block id="b9c592b9a9761a8ace0d15db4ed07fb7" category="inline-link">启用车载密钥管理</block>
+  <block id="b111c221b05c298de6b63179416e7275" category="list-text">在输入集群范围的密码短语时<block ref="acbda6c4abfcf96655f18328ca5c7fc9" category="inline-link-rx"></block></block>
+  <block id="2ee0908f9e5223d6e83d8a800aaafc05" category="list-text"><block ref="2ee0908f9e5223d6e83d8a800aaafc05" category="inline-link-rx"></block></block>
+  <block id="c3a62f7ef0f0875a5da5093f7902456d" category="list-text">使用以下方式验证您是否拥有正确的密码短语和备份数据：<block ref="aaf4edeb3b26d690deb5096fe7a1d65f" category="inline-link-rx"></block>程序</block>
+  <block id="d499754c65233b0016c9bcf0a55a7cd2" category="paragraph">*关于受损控制器：*</block>
+  <block id="a66e142cebcfd6f8d676e487cf4cc04c" category="list-text">将游戏机连接线连接到故障控制器上。</block>
+  <block id="129cf9cb6e6f33b341c8fd861a747e2a" category="list-text">从ONTAP启动菜单中，选择相应的选项：</block>
+  <block id="8a1bfd1375ddbbae5276f57f18290a3f" category="list-text">出现提示时，请确认您是否要继续恢复过程：</block>
+  <block id="bf6da8a0ac9b26709120da07f33e0078" category="paragraph">输入密码时，控制台不显示任何输入内容。</block>
+  <block id="664d8a5d75dabd1aafa6de1da371bd9c" category="list-text">请输入备份信息：</block>
+  <block id="404d1b63de6334d1ba740681d69a0c4a" category="list-text">粘贴从 BEGIN BACKUP 行到 END BACKUP 行的所有内容，包括破折号。</block>
+  <block id="33ce7fe0c4846eaf60e8611f84a51bed" category="list-text">输入内容结束后，按两次回车键。</block>
+  <block id="971b4e7097af874e090bc7bb3d95de48" category="paragraph">恢复过程完成，并显示以下消息：</block>
+  <block id="7273962aaacaaf422211fa396f16a8a6" category="paragraph"><block ref="be55cdc0575ae6a991f10f3929960f93" prefix="" category="inline-code"></block></block>
+  <block id="95593f720b448667de9e044e0ea62f46" category="admonition">如果显示的输出结果不是以下内容，请勿继续操作：<block ref="3f52dc951949a3041638d54635d71099" prefix=" " category="inline-code"></block> 。进行故障排除以纠正错误。</block>
+  <block id="ddb504d901bc8630096a49ebdec393f8" category="list-text">选择选项<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>从启动菜单继续启动进入ONTAP。</block>
+  <block id="3e1b18a6357519f1ceea9e6d134be9f9" category="list-text">确认控制器控制台显示以下信息：</block>
+  <block id="9e077ccf602c7d373f20e1f738ebb246" category="paragraph">*关于合作伙伴控制器：*</block>
+  <block id="ce58a65109dff345a6be8e51a2bfe603" category="list-text">归还受损控制器：</block>
+  <block id="c1720c1a02edfa48ee9cb04f26ca230d" category="list-text">仅使用 CFO 聚合启动后，同步密钥管理器：</block>
+  <block id="5ea930077e243b3446550cf26deb598b" category="list-text">出现提示时，输入集群范围内的板载密钥管理器密码短语。</block>
+  <block id="b1815158cc61efc6b179974dc0d7ed4f" category="admonition">如果同步成功，则返回集群提示符，不包含其他消息。如果同步失败，则会在返回集群提示符之前显示错误消息。请勿继续操作，直到错误得到纠正且同步成功为止。</block>
+  <block id="ce4457d96a09c3a44460e2cb52144d35" category="list-text">确认所有密钥均已同步：</block>
+  <block id="adab2b809edd279949727653afc273e1" category="paragraph"><block ref="297f477a8524857592ffedfea06bb8d7" prefix="" category="inline-code"></block></block>
+  <block id="bddb6cd1b2f32288bf1e2b0af4bce36d" category="paragraph">该命令不应返回任何结果。如果出现任何结果，请重复同步命令，直到没有结果返回为止。</block>
+  <block id="5936e352eeddad57db9837fd9b7dc222" category="paragraph">从另一个集群节点或备份中收集以下文件：</block>
+  <block id="286ae76b0377dc9aa993faa88da8c262" category="list-text"><block ref="6b2948264272776ad38dbe7f59c7850f" prefix="" category="inline-code"></block>文件或 KMIP 服务器地址和端口</block>
+  <block id="a867a453a930fec1049b64436751cc59" category="list-text"><block ref="d606236dedb6ed649b29651c1ec53a99" prefix="" category="inline-code"></block>文件（客户端证书）</block>
+  <block id="8bec26ea66f53e88af9f258c2526b6df" category="list-text"><block ref="ccb442c2c2cc4367a087cfc7cd3b4876" prefix="" category="inline-code"></block>文件（客户端密钥）</block>
+  <block id="634df565649e2f316d461dc9d6d00e87" category="list-text"><block ref="443acc94def30bc037fb2dacac4fb7d3" prefix="" category="inline-code"></block>文件（KMIP 服务器 CA 证书）</block>
+  <block id="a21182cae9a60db2a1ab951c0b7a1362" category="list-text">选择选项<block ref="6512bd43d9caa6e02c990b0a82652dca" prefix=" " category="inline-code"></block>从ONTAP启动菜单。</block>
+  <block id="0169017170fa892093bb8f07dc6699f2" category="list-text">出现提示时，请确认您已收集到所需信息：</block>
+  <block id="994ec3ce06f40388a24ddba8e0814e69" category="list-text">出现提示时，请输入客户端和服务器信息：</block>
+  <block id="17ed5f29ddd4ca029d1bfe37364bb5bd" category="list-text">输入客户端证书（client.crt）文件的内容，包括 BEGIN 行和 END 行。</block>
+  <block id="45906c71e1e213f65405cb31553745b3" category="list-text">输入客户端密钥（client.key）文件的内容，包括 BEGIN 和 END 行。</block>
+  <block id="be0a4e878854b943b7b234af50522d25" category="list-text">输入 KMIP 服务器 CA(s) (CA.pem) 文件内容，包括 BEGIN 和 END 行。</block>
+  <block id="4719f1cddcf5916c15e10cb591638622" category="list-text">请输入KMIP服务器IP地址。</block>
+  <block id="3acba65dc6ac8168be513aa92da708f4" category="list-text">输入 KMIP 服务器端口（按 Enter 键使用默认端口 5696）。</block>
+  <block id="3bbf745f5a8a7d6bec47990a8dbb52c8" category="section-title">步骤 1：检查 NVE 支持并下载正确的ONTAP映像</block>
+  <block id="785edd62c0c777ac819cbd6904363672" category="paragraph">确定您的ONTAP版本是否支持NetApp卷加密 (NVE)，以便您可以下载正确的ONTAP映像来替换启动介质。</block>
+  <block id="219c3dfd8e74efdcf18184f64a42ea34" category="section-title">步骤 2：验证密钥管理器状态并备份配置</block>
+  <block id="d3fc64cddf4a551857dca0c7eadcd062" category="paragraph">在关闭故障控制器之前，请验证密钥管理器配置并备份必要信息。</block>
+  <block id="e761bd05c3d2b1a434631b3a33a88ec6" category="section-title">步骤 1：启动控制器并验证系统健康状况</block>
+  <block id="c554c79b2e61afb9b95f469aeb3f2123" category="paragraph">控制器重启后，启动ONTAP，交还控制器，并验证存储系统运行状况。</block>
+  <block id="5fab05c107420a2d40eaea3313fec3e0" category="paragraph">为确保AFF A20、 AFF A30 或AFF A50 存储系统上的数据安全，您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密 (NVE)，并在关闭控制器之前检查密钥管理器是否处于活动状态。</block>
+  <block id="10d3703cb44e5f803105d5dde081bba7" category="summary">在更换AFF A70或AFF A90存储系统中的启动介质之前，请先查看相关要求。</block>
+  <block id="fabd4b8b15b8bba982379404813690df" category="paragraph">在更换AFF A70或AFF A90存储系统中的启动介质之前，请检查相关要求，包括集群端口功能、密钥管理器配置和ONTAP版本兼容性。</block>
+  <block id="dcfabc6ebb315278d7f78e613df8fb78" category="paragraph">自动启动介质恢复过程需要ONTAP 9.17.1 或更高版本。如果您的存储系统运行的是早期版本的ONTAP，请使用<block ref="739428bb763fc45faeb1ae97255a3f48" category="inline-link-macro-rx"></block>。</block>
+  <block id="1dcac449a2384c364b4b16bbc67941d4" category="paragraph">如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用<block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block>。如果您的系统运行的是早期版本的ONTAP，请使用手动启动恢复程序。</block>
+  <block id="fb7ce7777ca423a4922512d6987c7a27" category="section-title">步骤 1：启动控制器并执行回退操作</block>
+  <block id="7907fcfff8f387de8ab2a489206ddb92" category="paragraph">在控制器上启动ONTAP并执行控制器归还操作以恢复存储所有权。</block>
+  <block id="5445e7bc0a9f5dd46e8cfd70104b323e" category="paragraph">控制器交还完成后，使用以下命令验证系统健康状况<block ref="48865c7c1d8013246e4e5f705a9105de" category="inline-link-rx"></block>。解决发现的任何问题。</block>
+  <block id="8e632ca410334e20fba65ce1fd6445e3" category="paragraph">当您的AFF A70或AFF A90系统出现硬件故障需要更换机箱时，请更换机箱。更换过程包括移除控制器和电源装置 (PSU)、移除驱动器、安装更换机箱以及重新安装机箱组件。</block>
+  <block id="a6c3c6d60b38d14ad6be5c81a4a8596a" category="section-title">步骤 3：更换机箱并安装组件</block>
+  <block id="3c21f54971211c6c665c4c245f6026be" category="paragraph">拆下故障机箱，安装替换机箱，并重新安装所有组件。</block>
+  <block id="fbb07751e11b227d98a2467c1c08cbfd" category="paragraph">在审阅了各项要求之后，<block ref="b1d5a90c05f55c4ad4ac020285b0e079" category="inline-link-macro-rx"></block> 。</block>
+  <block id="5f11937e2ad8bd392236c19c014f6aad" category="paragraph">关闭控制器后，<block ref="36e3e0df655e652fc33a5dfc009000ae" category="inline-link-macro-rx"></block> 。</block>
+  <block id="0e0216a392114c0ff4f09b562dea5a79" category="inline-link-macro">审查底盘更换要求</block>
+  <block id="203459e1519b589e5af2ecf12978b724" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block><block ref="08cd909a2b9313d4ecbdba4a3f45f7a0" category="inline-link-macro-rx"></block></block>
+  <block id="24492b90cd7a0fe2c5e4dc67c80c5764" category="paragraph">审查机箱更换要求，包括系统兼容性、所需工具、 ONTAP凭证和组件功能验证。</block>
+  <block id="7d20d6e3e03a6dd8a5fe3ee8ac8dd5de" category="paragraph">准备更换机箱时，请找到系统、收集凭证和工具、验证更换机箱并标记电缆。</block>
+  <block id="d397af5e00099f0522c07a98a2257a09" category="paragraph">关闭控制器以安全地进行机箱维护。</block>
+  <block id="8e22ecbf71d4c33e07f5de4289e87333" category="paragraph">将故障机箱中的组件移至替换机箱中。</block>
+  <block id="96510a1b05b4465834d93ac0071895c3" category="paragraph">完成更换的方法是启动控制器，执行返还操作，并将故障机箱退回给NetApp。</block>
+  <block id="eda0cbafa80231a3b16f44e2abbd028c" category="paragraph">更换损坏的AFF A70或AFF A90控制器后，您需要：<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block> 。</block>
+  <block id="e5762ba966257cedf5f38b629098db4b" category="paragraph">要更换AFF A70或AFF A90存储系统中的控制器，请关闭故障控制器，移除并更换控制器，恢复系统配置，并将存储资源的控制权交还给更换后的控制器。</block>
+  <block id="73981e62431dbab6f6f40a3a9c5e6b41" category="paragraph">审查控制器更换要求，包括系统兼容性、所需工具、 ONTAP凭证和组件功能验证。</block>
+  <block id="0fcf32477e1e353cd800eefb2482f2e8" category="paragraph">拆下故障控制器，将 FRU 组件移至替换控制器模块，然后将替换控制器模块安装到机箱中。</block>
+  <block id="c32058d1f3095b983995c29242fbbd61" category="paragraph">当硬件故障需要更换时，请更换ASA A70 和ASA A90 的机箱。拆下控制器和电源单元（PSU），拆下驱动器，安装替换机箱，然后重新安装所有组件。</block>
+  <block id="1e0c73890e940534381da3a982b354da" category="paragraph">更换损坏的底盘并重新安装组件后，<block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block> 。</block>
+  <block id="51ecf7264846f6ec706806dcfc6a6260" category="paragraph">要更换ASA A70 或ASA A90 系统中损坏的机箱，请先识别损坏的机箱，验证更换的组件，并标记电缆和控制器模块。</block>
+  <block id="310e3a7a51864494b9fb2038897ffe40" category="paragraph">在准备更换ASA A70 或ASA A90 机箱之后，<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block> 。</block>
+  <block id="f3ffb6f6792172ee195e0a78c1a90392" category="summary">在更换ASA A70 或ASA A90 系统中的机箱之前，请确保满足成功更换的必要条件。这包括验证系统中的所有其他组件是否正常运行，验证您是否拥有ONTAP 的本地管理员凭据、正确的替换机箱以及必要的工具。</block>
+  <block id="9b7ad6894bf4d05d4dc43e294cfe2b0e" category="summary">要更换ASA A70 或ASA A90 存储系统中的机箱，请先关闭控制器，然后更换机箱，并验证系统运行情况。</block>
+  <block id="e7fa2ae05c4d840cc72e14eb7840fe53" category="paragraph">更换故障的ASA A70 或ASA A90 控制器后，您需要：<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block> 。</block>
+  <block id="a905371914ac0ba8d24a75d48574dde6" category="paragraph">当您的AFF C80 系统出现硬件故障需要更换机箱时，请更换机箱。更换过程包括移除控制器和电源装置 (PSU)、移除驱动器、安装更换机箱以及重新安装机箱组件。</block>
+  <block id="dbdfb7c78237d7a0e7b9d05e5c513a73" category="summary">在更换AFF C80 系统中的机箱之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常运行，验证您是否拥有ONTAP 的本地管理员凭据、正确的替换机箱以及必要的工具。</block>
+  <block id="5330f5637c19275857b53632b7aaa06c" category="summary">要开始更换AFF C80 系统中的机箱，请先查看更换要求，关闭控制器，更换机箱，然后验证系统运行情况。</block>
+  <block id="76f5f34488e514a65bf0c31e970e4fe7" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block><block ref="24cfaad2045c82e6542685b8f9154291" category="inline-link-macro-rx"></block></block>
+  <block id="88cf8f1d92159c3cdea53a734f1d7a26" category="paragraph">更换损坏的AFF C80 控制器后，您需要：<block ref="ba0281d4e0b6e4cebf5e13fd7e583c92" category="inline-link-macro-rx"></block> 。</block>
+  <block id="345fb173829c711fcd65d0471db9547b" category="paragraph">当您的AFF C80 系统中的 I/O 模块发生故障或需要升级以支持更高的性能或附加功能时，请更换该 I/O 模块。更换过程包括关闭控制器、更换故障的 I/O 模块、重新启动控制器，以及将故障部件退回NetApp。您可以将此方法用于存储系统支持的所有ONTAP版本。</block>
+  <block id="cf99c258aade4f04e63c51a37a560c71" category="paragraph">当非易失性存储器出现故障或需要升级时，请更换AFF C80 系统中的NVRAM 。更换过程包括关闭受损的控制器、将控制器拉出几英寸以完全切断电源、更换NVRAM模块或NVRAM DIMM、重新分配磁盘，以及将故障部件返回给NetApp。</block>
+  <block id="9ec706133a8a1899257edbed12b2d39a" category="sidebar">ASA系统提供简化的专用 SAN 体验，可为使用 FCP 或 iSCSI 协议的企业关键任务数据库和其他 SAN 工作负载提供持续的数据可用性。</block>
+  <block id="3898e1d169485951c2a49a4a69789502" category="sidebar">安装和设置ASA系统</block>
+  <block id="10b7e05447c2dbec670e886811f71bcb" category="sidebar">维护ASA系统</block>
 </blocks>

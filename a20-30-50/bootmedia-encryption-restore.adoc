@@ -13,33 +13,27 @@ summary: 在AFF A20、 AFF A30 或AFF A50 存储系统中的替换启动介质�
 [role="lead"]
 在AFF A20、 AFF A30 或AFF A50 存储系统中的替换启动介质上恢复加密，以确保持续的数据保护。替换过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。
 
-您必须使用在启动介质更换过程开始时捕获的设置完成特定于已启用板载密钥管理器(OKM)、NetApp存储加密(NSE)或NetApp卷加密(NVE)的系统的步骤。
+根据您的密钥管理器类型，完成相应的步骤以恢复系统加密。如果您不确定您的系统使用哪个密钥管理器，请检查您在启动介质更换过程开始时捕获的设置。
 
-根据系统上配置的密钥管理器、选择以下选项之一、从启动菜单中将其还原。
-
-* link:["选项1：还原板载密钥管理器配置"]
-* link:["选项2：还原外部密钥管理器配置"]
-
-
-
-
-== 选项1：还原板载密钥管理器配置
-
+[role="tabbed-block"]
+====
+.板载密钥管理器（ OKM ）
+--
 从ONTAP启动菜单还原板载密钥管理器(OKM)配置。
 
 .开始之前
-* 还原OKM配置时、请确保您具有以下信息：
-+
-** 已输入集群范围的密码短语 https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-onboard-key-management-96-later-nse-task.html["同时启用板载密钥管理"]。
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/backup-key-management-information-manual-task.html["板载密钥管理器的备份信息"](英文)
+请确保您已准备好以下信息：
 
-
-* 请先执行此 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_verify_onboard_key_management_backup_and_cluster-wide_passphrase["如何验证板载密钥管理备份和集群范围的密码短语"] 过程、然后再继续。
+* 在输入集群范围的密码短语时 https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-onboard-key-management-96-later-nse-task.html["启用车载密钥管理"]
+* https://docs.netapp.com/us-en/ontap/encryption-at-rest/backup-key-management-information-manual-task.html["板载密钥管理器的备份信息"]
+* 使用以下方式验证您是否拥有正确的密码短语和备份数据： https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_verify_onboard_key_management_backup_and_cluster-wide_passphrase["如何验证板载密钥管理备份和集群范围的密码短语"]程序
 
 
 .步骤
-. 将控制台缆线连接到目标控制器。
-. 从ONTAP启动菜单中、从启动菜单中选择适当的选项。
+*关于受损控制器：*
+
+. 将游戏机连接线连接到故障控制器上。
+. 从ONTAP启动菜单中，选择相应的选项：
 +
 [cols="1a,2a"]
 |===
@@ -53,7 +47,7 @@ ONTAP 9.8 或更高版本
 
 .显示启动菜单示例
 [%collapsible]
-====
+=====
 ....
 
 Please choose one of the following:
@@ -72,7 +66,7 @@ Please choose one of the following:
 Selection (1-11)? 10
 
 ....
-====
+=====
 
 
  a| 
@@ -82,7 +76,7 @@ ONTAP 9 7及更早版本
 
 .显示启动菜单示例
 [%collapsible]
-====
+=====
 ....
 
 Please choose one of the following:
@@ -99,36 +93,36 @@ Please choose one of the following:
 Selection (1-19)? recover_onboard_keymanager
 
 ....
-====
+=====
 |===
-. 确认您要继续恢复过程。
+. 出现提示时，请确认您是否要继续恢复过程：
 +
 .显示示例提示符
 [%collapsible]
-====
+=====
 `This option must be used only in disaster recovery procedures. Are you sure? (y or n):`
 
-====
+=====
 . 输入集群范围的密码短语两次。
 +
-输入密码短语时、控制台不会显示任何输入。
+输入密码时，控制台不显示任何输入内容。
 
 +
 .显示示例提示符
 [%collapsible]
-====
+=====
 `Enter the passphrase for onboard key management:`
 
 `Enter the passphrase again to confirm:`
 
-====
-. 输入备份信息。
+=====
+. 请输入备份信息：
 +
-.. 将整个内容从开始备份行粘贴到结束备份行。
+.. 粘贴从 BEGIN BACKUP 行到 END BACKUP 行的所有内容，包括破折号。
 +
 .显示示例提示符
 [%collapsible]
-====
+=====
 ....
 Enter the backup data:
 
@@ -166,15 +160,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 ---------------------------END BACKUP---------------------------
 
 ....
-====
-.. 在输入末尾按两次回车键。
+=====
+.. 输入内容结束后，按两次回车键。
 +
-恢复过程完成。
+恢复过程完成，并显示以下消息：
+
++
+`Successfully recovered keymanager secrets.`
 
 +
 .显示示例提示符
 [%collapsible]
-====
+=====
 ....
 
 Trying to recover keymanager secrets....
@@ -191,18 +188,18 @@ Successfully recovered keymanager secrets.
 ***********************************************************************************
 
 ....
-====
-
-
+=====
 +
 
-WARNING: 如果显示的输出不是，请勿继续 `Successfully recovered keymanager secrets`。执行故障排除以更正错误。
+WARNING: 如果显示的输出结果不是以下内容，请勿继续操作： `Successfully recovered keymanager secrets` 。进行故障排除以纠正错误。
 
-. 从启动菜单中选择选项1以继续启动至ONTAP。
+
+
+. 选择选项 `1`从启动菜单继续启动进入ONTAP。
 +
 .显示示例提示符
 [%collapsible]
-====
+=====
 ....
 
 ***********************************************************************************
@@ -225,24 +222,30 @@ WARNING: 如果显示的输出不是，请勿继续 `Successfully recovered keym
 Selection (1-11)? 1
 
 ....
-====
-. 确认控制器的控制台显示以下消息。
+=====
+. 确认控制器控制台显示以下信息：
 +
 `Waiting for giveback...(Press Ctrl-C to abort wait)`
 
-. 在配对节点上、输入以下命令以对配对控制器进行回指。
 +
-`storage failover giveback -fromnode local -only-cfo-aggregates true`(英文)
+*关于合作伙伴控制器：*
 
-. 在仅使用CFO聚合启动后、运行以下命令。
+. 归还受损控制器：
++
+`storage failover giveback -fromnode local -only-cfo-aggregates true`
+
++
+*关于受损控制器：*
+
+. 仅使用 CFO 聚合启动后，同步密钥管理器：
 +
 `security key-manager onboard sync`
 
-. 输入板载密钥管理器的集群范围密码短语。
+. 出现提示时，输入集群范围内的板载密钥管理器密码短语。
 +
 .显示示例提示符
 [%collapsible]
-====
+=====
 ....
 
 Enter the cluster-wide passphrase for the Onboard Key Manager:
@@ -250,63 +253,58 @@ Enter the cluster-wide passphrase for the Onboard Key Manager:
 All offline encrypted volumes will be brought online and the corresponding volume encryption keys (VEKs) will be restored automatically within 10 minutes. If any offline encrypted volumes are not brought online automatically, they can be brought online manually using the "volume online -vserver <vserver> -volume <volume_name>" command.
 
 ....
-====
+=====
 +
 
-NOTE: 如果同步成功、则会返回集群提示符、而不会显示任何其他消息。如果同步失败、则会在返回集群提示符之前显示一条错误消息。更正错误并成功运行同步之前、请勿继续。
+NOTE: 如果同步成功，则返回集群提示符，不包含其他消息。如果同步失败，则会在返回集群提示符之前显示错误消息。请勿继续操作，直到错误得到纠正且同步成功为止。
 
-. 输入以下命令、确保所有密钥均已同步。
+. 确认所有密钥均已同步：
 +
-`security key-manager key query -restored false`(英文)
-
-+
-`There are no entries matching your query.`
+`security key-manager key query -restored false`
 
 +
+该命令不应返回任何结果。如果出现任何结果，请重复同步命令，直到没有结果返回为止。
 
-NOTE: 在reved参数中筛选false时、不应显示任何结果。
++
+*关于合作伙伴控制器：*
 
-. 输入以下命令、从配对节点进行节点回给。
+. 归还受损控制器：
 +
 `storage failover giveback -fromnode local`
 
-. 如果已禁用自动交还、请输入以下命令来还原自动交还。
+. 如果禁用了自动交还、则还原它：
 +
 `storage failover modify -node local -auto-giveback true`
 
-. 如果启用了AutoSupport、请输入以下命令来恢复自动创建案例。
+. 如果启用了AutoSupport、则还原自动创建案例：
 +
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
 
-
-
-== 选项2：还原外部密钥管理器配置
-
+--
+.外部密钥管理器（ EKM ）
+--
 从ONTAP启动菜单还原外部密钥管理器配置。
 
 .开始之前
-要还原外部密钥管理器(External Key Manager、EKM)配置、您需要以下信息。
+从另一个集群节点或备份中收集以下文件：
 
-* 另一个集群节点上的/cfcard/kmip/servers.cfg文件的副本或以下信息：
-+
-** KMIP服务器地址。
-** KMIP端口。
-
-
-* 另一个集群节点或客户端证书中的文件副本 `/cfcard/kmip/certs/client.crt`。
-* 从其他集群节点或客户端密钥获取的文件副本 `/cfcard/kmip/certs/client.key`。
-* 另一个集群节点或KMIP服务器CA中的文件副本 `/cfcard/kmip/certs/CA.pem`。
+* `/cfcard/kmip/servers.cfg`文件或 KMIP 服务器地址和端口
+* `/cfcard/kmip/certs/client.crt`文件（客户端证书）
+* `/cfcard/kmip/certs/client.key`文件（客户端密钥）
+* `/cfcard/kmip/certs/CA.pem`文件（KMIP 服务器 CA 证书）
 
 
 .步骤
-. 将控制台缆线连接到目标控制器。
-. 从ONTAP启动菜单中选择选项11。
+*关于受损控制器：*
+
+. 将游戏机连接线连接到故障控制器上。
+. 选择选项 `11`从ONTAP启动菜单。
 +
 .显示启动菜单示例
 [%collapsible]
-====
+=====
 ....
 
 (1)  Normal Boot.
@@ -322,35 +320,30 @@ NOTE: 在reved参数中筛选false时、不应显示任何结果。
 (11) Configure node for external key management.
 Selection (1-11)? 11
 ....
-====
-. 出现提示时、确认您已收集所需信息。
+=====
+. 出现提示时，请确认您已收集到所需信息：
 +
 .显示示例提示符
 [%collapsible]
-====
+=====
 ....
 Do you have a copy of the /cfcard/kmip/certs/client.crt file? {y/n}
 Do you have a copy of the /cfcard/kmip/certs/client.key file? {y/n}
 Do you have a copy of the /cfcard/kmip/certs/CA.pem file? {y/n}
 Do you have a copy of the /cfcard/kmip/servers.cfg file? {y/n}
 ....
-====
-. 出现提示时、输入客户端和服务器信息。
+=====
+. 出现提示时，请输入客户端和服务器信息：
 +
-.显示提示符
-[%collapsible]
-====
-....
-Enter the client certificate (client.crt) file contents:
-Enter the client key (client.key) file contents:
-Enter the KMIP server CA(s) (CA.pem) file contents:
-Enter the server configuration (servers.cfg) file contents:
-....
-====
+.. 输入客户端证书（client.crt）文件的内容，包括 BEGIN 行和 END 行。
+.. 输入客户端密钥（client.key）文件的内容，包括 BEGIN 和 END 行。
+.. 输入 KMIP 服务器 CA(s) (CA.pem) 文件内容，包括 BEGIN 和 END 行。
+.. 请输入KMIP服务器IP地址。
+.. 输入 KMIP 服务器端口（按 Enter 键使用默认端口 5696）。
 +
 .显示示例
 [%collapsible]
-====
+=====
 ....
 Enter the client certificate (client.crt) file contents:
 -----BEGIN CERTIFICATE-----
@@ -378,26 +371,31 @@ Running command '/sbin/ifconfig e0M'
 ..
 kmip_init: cmd: ReleaseExtraBSDPort e0M
 ....
-====
+=====
 +
-输入客户端和服务器信息后、恢复过程将完成。
+恢复过程完成，并显示以下消息：
+
++
+`Successfully recovered keymanager secrets.`
 
 +
 .显示示例
 [%collapsible]
-====
+=====
 ....
 System is ready to utilize external key manager(s).
 Trying to recover keys from key servers....
 Performing initialization of OpenSSL
 Successfully recovered keymanager secrets.
 ....
-====
-. 从启动菜单中选择选项1以继续启动至ONTAP。
+=====
+
+
+. 选择选项 `1`从启动菜单继续启动进入ONTAP。
 +
 .显示示例提示符
 [%collapsible]
-====
+=====
 ....
 
 ***************************************************************************
@@ -419,16 +417,18 @@ Successfully recovered keymanager secrets.
 Selection (1-11)? 1
 
 ....
-====
-. 如果禁用了自动交还、请还原它。
+=====
+. 如果禁用了自动交还、则还原它：
 +
 `storage failover modify -node local -auto-giveback true`
 
-. 如果启用了AutoSupport、请输入以下命令来恢复自动创建案例。
+. 如果启用了AutoSupport、则还原自动创建案例：
 +
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
 
+--
+====
 .下一步是什么？
 在启动介质上恢复加密后，您需要link:bootmedia-complete-rma.html["将故障部件退回给NetApp"]。

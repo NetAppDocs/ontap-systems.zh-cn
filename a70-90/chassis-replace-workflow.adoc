@@ -13,22 +13,22 @@ summary: 通过查看更换要求、关闭控制器、更换机箱以及验证�
 [role="lead"]
 通过查看更换要求、关闭控制器、更换机箱以及验证系统操作、开始更换AFF A70或AFF A90存储系统的机箱。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:chassis-replace-requirements.html["查看机箱更换要求"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:chassis-replace-requirements.html["审查底盘更换要求"]
 [role="quick-margin-para"]
-查看机箱更换要求。
+审查机箱更换要求，包括系统兼容性、所需工具、 ONTAP凭证和组件功能验证。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:chassis-replace-prepare.html["准备更换机箱"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:chassis-replace-prepare.html["准备更换底盘"]
 [role="quick-margin-para"]
-准备更换机箱、方法是找到系统、收集系统凭据和必要工具、验证是否收到更换机箱并为系统电缆贴上标签。
+准备更换机箱时，请找到系统、收集凭证和工具、验证更换机箱并标记电缆。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:chassis-replace-shutdown.html["关闭控制器"]
 [role="quick-margin-para"]
-关闭控制器、以便对机箱执行维护。
+关闭控制器以安全地进行机箱维护。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:chassis-replace-move-hardware.html["更换机箱"]
 [role="quick-margin-para"]
-通过将组件从受损机箱移至更换机箱来更换机箱。
+将故障机箱中的组件移至替换机箱中。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]
 [role="quick-margin-para"]
-启动控制器、交还控制器并将发生故障的机箱返还给NetApp、以完成机箱更换。
+完成更换的方法是启动控制器，执行返还操作，并将故障机箱退回给NetApp。

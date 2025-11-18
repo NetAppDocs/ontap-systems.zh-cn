@@ -5,22 +5,22 @@
 查看更换控制器模块的要求。
 
 * 所有驱动器架都必须正常工作。
-* 运行正常的控制器必须能够接管要更换的控制器（在本操作步骤 中称为 "`受损控制器` " ）。
-* 请勿使用此过程升级控制器、而应参考 https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["选择您的控制器硬件升级操作步骤"]以获得指导。
-* 如果您的系统采用MetroCluster配置、则必须查看 https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["选择正确的恢复操作步骤"]以确定是否应使用此过程。
-* 您必须使用从NetApp收到的现场可更换单元(FRU)更换故障组件。
-* 您必须将控制器模块更换为相同型号类型的控制器模块。您不能只更换控制器模块来升级系统。
-* 您不能在此操作步骤中更改任何驱动器或驱动器架。
-* 由于启动设备位于安装在系统背面的系统管理模块上、因此在更换控制器模块时无需移动启动设备。
-* 请务必在正确的系统上应用以下步骤中的命令：
+* 健康的控制器必须能够接管被替换的控制器（在本程序中称为受损控制器）。
+* 请勿使用此方法进行控制器升级。请参阅 https://docs.netapp.com/us-en/ontap-systems-upgrade/choose_controller_upgrade_procedure.html["选择您的控制器硬件升级操作步骤"]供参考。
+* 如果您的系统采用MetroCluster配置，请查看 https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["选择正确的恢复操作步骤"]确定是否采用此程序。
+* 用从NetApp收到的现场可更换单元 (FRU) 替换故障组件。
+* 更换控制器模块时，请使用相同型号的控制器模块。您无法通过更换控制器模块来升级系统。
+* 在此过程中，您不能更换驱动器或驱动器架。
+* 启动设备位于系统背面的系统管理模块上。更换控制器模块时，无需移动启动设备。
+* 理解本流程中使用的控制器术语：
 +
-** 受损控制器是指要更换的控制器。
-** _replacement_ 控制器是一个新控制器，用于更换受损的控制器。
+** 受损的控制器是指将被替换的控制器。
+** 替换控制器是指替换故障控制器的新控制器。
 ** _health_ 控制器是运行正常的控制器。
 
 
-* 您必须始终将控制器的控制台输出捕获到文本日志文件中。
+* 将控制器的控制台输出捕获到文本日志文件中。
 +
-此操作将为您提供操作步骤的记录，以便您可以对更换过程中可能遇到的任何问题进行故障排除。
+这为解决更换过程中出现的任何问题提供了程序记录。
 
 

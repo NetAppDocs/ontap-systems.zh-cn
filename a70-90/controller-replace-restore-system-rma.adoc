@@ -20,12 +20,21 @@ summary: 验证逻辑接口是否正在向其主端口报告、执行集群运�
 在将替代节点恢复使用之前、请验证逻辑接口是否位于其主端口上、检查集群运行状况并重置自动交还。
 
 .步骤
-. 验证逻辑接口是否正在向其主服务器和端口报告： `network interface show -is-home false`
+. 验证逻辑接口是否向其主服务器和端口报告：
 +
-如果任何逻辑接口列为false、请将其还原到其主端口： `network interface revert -vserver * -lif *`
+`network interface show -is-home false`
 
-. 检查集群的运行状况。有关详细信息、请参见 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何在ONTAP 中使用脚本执行集群运行状况检查"^] 知识库文章。
-. 如果已禁用自动交还，请重新启用它： `storage failover modify -node local -auto-giveback true`
++
+如果任何逻辑接口被列为 false，则将其恢复为其原始端口：
+
++
+`network interface revert -vserver * -lif *`
+
+. 检查集群的健康状况。参见 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何在ONTAP 中使用脚本执行集群运行状况检查"^]知识库文章。
+. 如果已禁用自动交还、请重新启用它：
++
+`storage failover modify -node local -auto-giveback true`
+
 
 
 

@@ -13,6 +13,8 @@ summary: AFF C80 系统中的启动介质存储了重要的固件和配置数据
 [role="lead"]
 AFF C80 系统中的启动介质存储了重要的固件和配置数据。更换过程包括移除系统管理模块、移除损坏的启动介质、安装替换启动介质，然后使用 USB 闪存驱动器将ONTAP映像手动传输到替换启动介质。
 
+如果您的系统运行的是ONTAP 9.17.1 及更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"] 。
+
 
 
 == Step 1: Replace the boot media

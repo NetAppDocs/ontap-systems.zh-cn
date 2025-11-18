@@ -1,0 +1,45 @@
+= 
+:allow-uri-read: 
+
+
+.步骤
+. 卸下四个PSU：
++
+.. 如果您尚未接地，请正确接地。
+.. 从控制器模块PSU上拔下电源线。
++
+如果您的系统使用直流电源、请断开电源块与PSU的连接。
+
+.. 向上旋转PSU手柄以将PSU拉出控制器、按下PSU锁定卡舌、然后将PSU从控制器模块中拉出。
++
+
+CAUTION: PSU较短。Always use two hands to support it when removing it from the controller module so that it does not suddenly swing free from the controller module and injure you.
+
++
+image::../media/drw_a70-90_psu_remove_replace_ieops-1368.svg[更换PSU]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+Terrac兵马俑PSU锁定卡舌
+
+|===
+.. 对其余PSU重复上述步骤。
+
+
+. 卸下电缆：
++
+.. 从控制器模块中拔下系统缆线以及任何SFP和QSFP模块(如果需要)、但将其留在缆线管理设备中以使其井然有序。
++
+
+NOTE: 此过程开始时、应已标记电缆。
+
+.. 从控制器模块中卸下缆线管理设备、并将其放在一旁。
+
+
+
