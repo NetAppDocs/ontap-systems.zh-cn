@@ -63,7 +63,7 @@ summary: 在AFF A70或AFF A90存储系统中安装新的启动介质设备后，
 +
 `storage failover giveback -ofnode _impaired_node_name_`
 
-.. 如果自动返还功能已禁用，请转到步骤 6 重新启用该功能。
+.. 前往 <<reenable-auto-giveback,重新启用自动返还功能>> 如果它被禁用了。
 
 
 
@@ -71,13 +71,16 @@ summary: 在AFF A70或AFF A90存储系统中安装新的启动介质设备后，
  a| 
 `key manager is configured.`
  a| 
-已安装加密功能。请转至步骤 4 恢复密钥管理器。
+已安装加密功能。前往<<restore-key-manager,恢复密钥管理器>>。
 
 |===
 +
 
 NOTE: 如果系统无法识别密钥管理器配置，则会显示错误消息，并提示您确认是否已配置密钥管理器以及配置类型（板载或外部）。请回答提示以继续。
 
+
+
+[[restore-key-manager]]
 . 请使用适合您配置的步骤恢复密钥管理器：
 +
 [role="tabbed-block"]
@@ -138,7 +141,7 @@ Successfully recovered keymanager secrets.
 `security key-manager onboard sync`
 
 +
-如果自动返还功能已禁用，请转到步骤 5 重新启用该功能。
+前往 <<reenable-auto-giveback,重新启用自动返还功能>> 如果它被禁用了。
 
 
 
@@ -282,7 +285,7 @@ LOADER-B>
 `storage failover giveback -ofnode _impaired_node_name_`
 
 +
-如果自动返还功能已禁用，请转到步骤 5 重新启用该功能。
+前往 <<reenable-auto-giveback,重新启用自动返还功能>> 如果它被禁用了。
 
 
 
@@ -290,6 +293,7 @@ LOADER-B>
 ====
 
 
+[[reenable-auto-giveback]]
 . 如果已禁用自动交还、请重新启用它：
 +
 `storage failover modify -node local -auto-giveback true`

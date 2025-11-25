@@ -221,7 +221,7 @@ Entering Bootmenu Option 11...
 +
 *** 如果你看到 `kmip2_client: Successfully imported the keys from external key server: xxx.xxx.xxx.xxx:5696`在输出中，EKM 配置已成功恢复。
 +
-该过程尝试从伙伴节点恢复适当的文件并重新启动该节点。转至步骤 d。
+该过程尝试从伙伴节点恢复适当的文件并重新启动该节点。继续进行下一步。
 
 *** 如果密钥未成功恢复，系统将停止并指示无法恢复密钥。显示错误和警告消息。您必须重新运行恢复过程：
 +

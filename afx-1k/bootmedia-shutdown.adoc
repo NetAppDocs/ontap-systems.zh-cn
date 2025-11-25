@@ -47,10 +47,6 @@ NOTE: 当您看到“您想禁用自动回馈吗？”时，请输入 `y`。
 +
 `system ha interconnect link off -node healthy-node -link 1`
 
-+
-
-NOTE: 如果您运行的不是ONTAP版本 9.17.1，请跳过上述步骤并转到步骤 3。
-
 
 
 . 将受损控制器显示为 LOADER 提示符：

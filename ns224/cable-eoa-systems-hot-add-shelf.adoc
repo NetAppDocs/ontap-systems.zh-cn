@@ -102,7 +102,7 @@ NOTE: 这些子步骤假定您开始布线时使用的是将磁盘架端口 e0a 
 .. 使用缆线将 NSM A 端口 e0b 连接到控制器 B 插槽 7 端口 b
 .. 使用缆线将 NSM B 端口 e0a 连接到控制器 B 插槽 3 端口 a
 .. 使用缆线将 NSM B 端口 e0b 连接到控制器 A 插槽 7 端口 b
-.. 如果要热添加第二个磁盘架，请完成 `Shelf 2` 子步骤；否则，请转至步骤 3 。
+.. 如果您要快速添加第二个搁板，请完成“`搁板 2`”子步骤；否则，请转到下一步。
 
 
 
@@ -117,7 +117,7 @@ NOTE: 这些子步骤假定您开始布线时使用的是将磁盘架端口 e0a 
 .. 使用缆线将 NSM A 端口 e0b 连接到控制器 B 插槽 3 端口 b
 .. 使用缆线将 NSM B 端口 e0a 连接到控制器 B 插槽 7 端口 a
 .. 使用缆线将 NSM B 端口 e0b 连接到控制器 A 插槽 3 端口 b
-.. 转至步骤 3 。
+.. 转至下一步。
 
 
 |===
@@ -174,6 +174,6 @@ image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为具有一个N
 .下一步是什么？
 If you disabled automatic drive assignment as part of the preparation for this procedure, you need to manually assign drive ownership and then reenable automatic drive assignment, if needed.转到。 link:complete-hot-add-shelf.html["完成热添加"]
 
-否则、您将完成热添加磁盘架过程。
+否则，热添加货架程序就完成了。====//2025-11-17 ontap-systems-internal/issues/1391
 
 ====

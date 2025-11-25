@@ -73,7 +73,7 @@ summary: 您可以在 HA 对满足特定要求后以及完成适用于 HA 对的
 
 . 如果配置了非专用端口以供存储使用，则可以使用此操作步骤。
 +
-Otherwise, you need to configure the ports by completing steps 4 through 7.
+否则，您需要按照以下步骤配置端口。
 
 . 在其中一个控制器上配置用于存储的非专用端口：
 +
@@ -98,7 +98,7 @@ ONTAP 9.7
 `storage port enable -node _node_name_ -port _port_name_`
 
 |===
-. 对第二个控制器重复步骤4。
+. 对第二个控制器重复上述步骤。
 . 验证是否已为两个控制器上的非专用端口配置存储使用： `storage port show`
 +
 ** 如果 HA 对运行的是 ONTAP 9.8 或更高版本，则非专用端口在 `Mode` 列中显示 `storage` 。

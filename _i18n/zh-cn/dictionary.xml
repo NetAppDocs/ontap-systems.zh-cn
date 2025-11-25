@@ -2219,8 +2219,6 @@
   <block id="d5b3850d37eca03c3be10401093f24dc" category="admonition">驱动器固件检查每两分钟进行一次。</block>
   <block id="01d36c3de356a203f6380095e17d5483" category="list-text">如果要手动为替代驱动器分配驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。</block>
   <block id="ba85497a31a9938c9ee8b64479f5eb73" category="paragraph">如果启用了自动驱动器分配，则输出会在 `Auto Assign` 列中显示 `on` （对于每个控制器模块）。</block>
-  <block id="b1fed0a03aae9e2c00ae3f49b6c9b739" category="list-text">如果要更换另一个驱动器，请重复步骤 3 到步骤 7 。</block>
-  <block id="231236e14086359b3d54dea9955a700b" category="list-text">如果您在步骤 1 中禁用了自动驱动器分配，请手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配：</block>
   <block id="d6d8a1a3b9a54c543134bb59ad36c7ef" category="summary">您可以在已启动并提供数据的 HA 对中热删除已从驱动器中删除聚合的 NS224 驱动器架（ I/O 正在进行中）。</block>
   <block id="547789886fcdaf2aca4537e1693b3b9e" category="paragraph">您可以在已启动且正在提供数据（ I/O 正在进行）的 HA 对中热删除已从驱动器中删除聚合的 NS224 驱动器架。</block>
   <block id="f0efa51e8edbba6e292cee6e81da292c" category="list-text">HA 对不能处于接管状态。</block>
@@ -2242,7 +2240,6 @@
   <block id="0d6f5d9adb2ab6c3f617bc7eda2e0f8c" category="list-text">从要移除的磁盘架断开布线：</block>
   <block id="a007137d2370650b20ec02dbf15cc9ab" category="list-text">断开存储布线（从磁盘架到控制器）。</block>
   <block id="7afc6825591dcf8e4f43bb0ebb7eda2a" category="list-text">从机架或机柜中物理卸下磁盘架。</block>
-  <block id="ea5d3bb3a6f3f53ef42084bdf7da0a58" category="list-text">如果要删除多个磁盘架，请重复步骤 2 到 5 。</block>
   <block id="99718262b8a1bcade48d62a6ea4c523c" category="paragraph">否则，请转至下一步。</block>
   <block id="fb1672d3b9cbaeecaea5d014d4664b11" category="list-text">如果在从驱动器中删除所有权时禁用了自动驱动器分配，请重新启用它： `storage disk option modify -autodassign on`</block>
   <block id="67d6ac4bf6a91c77849e039f6cf3781f" category="paragraph">您可以在两个控制器模块上运行命令。</block>
@@ -2382,13 +2379,11 @@
   <block id="08285761db2e8c5630e9cd2b950779e4" category="list-text">使用缆线将 NSM A 端口 e0b 连接到控制器 B 插槽 7 端口 b</block>
   <block id="201cca5254621335487b601c90501130" category="list-text">使用缆线将 NSM B 端口 e0a 连接到控制器 B 插槽 3 端口 a</block>
   <block id="107cc1b513bc08cd1a86f749d88fc763" category="list-text">使用缆线将 NSM B 端口 e0b 连接到控制器 A 插槽 7 端口 b</block>
-  <block id="3992e90365cd83d200a23714fd7144bd" category="list-text">如果要热添加第二个磁盘架，请完成 `Shelf 2` 子步骤；否则，请转至步骤 3 。</block>
   <block id="a740221e4a860e8ea31ec9d725dfdeec" category="paragraph">磁盘架 2</block>
   <block id="db9e9985ce3384ccc7437da17ab1b6d1" category="list-text">使用缆线将 NSM A 端口 e0a 连接到控制器 A 插槽 7 端口 a</block>
   <block id="debc8e5f2759d5538f54f284b45dbc57" category="list-text">使用缆线将 NSM A 端口 e0b 连接到控制器 B 插槽 3 端口 b</block>
   <block id="cccebc538728b3b256a38000d9f82966" category="list-text">使用缆线将 NSM B 端口 e0a 连接到控制器 B 插槽 7 端口 a</block>
   <block id="fc10913effb15f2e7e45af08900dd916" category="list-text">使用缆线将 NSM B 端口 e0b 连接到控制器 A 插槽 3 端口 b</block>
-  <block id="0dcadfb972a7b539c769d330f7ccc286" category="list-text">转至步骤 3 。</block>
   <block id="44602264e094d019e88a336cd27d0156" category="paragraph">下图显示了第一个和第二个热添加磁盘架的布线：</block>
   <block id="75a57e4a236226bc25c09e120aeab4c5" category="paragraph">下图显示了两个热添加磁盘架的布线：</block>
   <block id="22f0e629287a1d1f90741ddf77caa944" category="list-text">使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 端口 e0c 。</block>
@@ -3013,7 +3008,6 @@
   <block id="0526a53962b9d1e594dbbbe4f645ef86" category="list-text">如果要删除整个磁盘架堆栈，请完成以下子步骤；否则，请转至下一步：</block>
   <block id="271fd74603b356597cb36da3cd6bb967" category="list-text">拔下路径 A （ IOM A ）和路径 B （ IOM B ）上的所有 SAS 缆线。</block>
   <block id="5749b0bc6aac212bd52cf2ceb0bc7e06" category="paragraph">这包括用于待移除堆栈中所有磁盘架的控制器到磁盘架缆线和磁盘架到磁盘架缆线。</block>
-  <block id="f1bf50366739c2deaea051a7aec101e7" category="list-text">转至步骤 9. 。</block>
   <block id="5049f1ff4aa9257508eb89a945b63e9d" category="list-text">如果要从堆栈中删除一个或多个磁盘架（但要保留堆栈），请通过完成一组适用的子步骤对路径 A （ IOM A ）堆栈连接进行重新布线，以绕过要删除的磁盘架：</block>
   <block id="8dc554d95262c3a398cad315b4d70e62" category="paragraph">如果要在堆栈中删除多个磁盘架，请一次完成一个磁盘架的一组适用子步骤。</block>
   <block id="7dd4f77a1d8a0add44b6d788582b503a" category="admonition">请至少等待 10 秒，然后再连接端口。SAS 缆线连接器具有方向性；正确连接到 SAS 端口时，连接器会卡入到位，磁盘架 SAS 端口 LNK LED 会呈绿色亮起。对于磁盘架，您可以插入 SAS 缆线连接器，拉片朝下（位于连接器的下侧）。</block>
@@ -3531,12 +3525,10 @@
   <block id="b88824e6d8603c9320c904617d837190" category="list-text">为热添加的磁盘架布线后， ONTAP 会识别它们：如果启用了磁盘所有权自动分配，则会分配磁盘所有权；如果需要，磁盘架（ IOM ）固件和磁盘驱动器固件应自动更新； 如果您的配置启用了带内 ACP ，则会在热添加的磁盘架上自动启用它。</block>
   <block id="07c4fdfdcd4fa801d7558b1c815fb28d" category="list-text">如果要为要热添加的磁盘架手动分配磁盘所有权，则需要在启用磁盘所有权自动分配时将其禁用；否则，请转至下一步。</block>
   <block id="d9ce71b03c108dcad1fcc7bdde993749" category="paragraph">如果堆栈中的磁盘属于 HA 对中的两个控制器，则需要手动分配磁盘所有权。</block>
-  <block id="2493fd5b459ed2fddb90c3c88dd93d84" category="paragraph">您可以在为热添加磁盘架布线之前禁用磁盘所有权自动分配，然后在步骤 7 中，在为热添加的磁盘架布线之后重新启用它。</block>
   <block id="92116092ac990ea4250874487fb2b721" category="list-text">验证是否已启用磁盘所有权自动分配：``storage disk option show``</block>
   <block id="b21eb2f8b72a60653498f3a1f1e0241d" category="paragraph">如果启用了磁盘所有权自动分配，则输出会在 "`Auto Assign` " 列中显示 "`on` " （对于每个控制器）。</block>
   <block id="5e7b2771491c1f74a4de4ccf47100e80" category="list-text">如果启用了磁盘所有权自动分配，则需要将其禁用：``storage disk option modify -node _node_Nam_e -autodassign off``</block>
   <block id="5ae892a217fddefdc39690fe39f16ed0" category="paragraph">您需要在 HA 对中的两个控制器上禁用磁盘所有权自动分配。</block>
-  <block id="3f876ffd29608a6fdd6c56b2bcd2373a" category="list-text">如果要将磁盘架堆栈直接热添加到控制器，请完成以下子步骤；否则，请转至步骤 3 。</block>
   <block id="aab34a0f20291dc4eca51492b7dda4a1" category="list-text">如果要热添加的堆栈具有多个磁盘架，请使用缆线连接磁盘架到磁盘架的连接；否则，请转至子步骤 b</block>
   <block id="bfa9de45095a3a90ebc55708a5ee6dd2" category="cell">条件</block>
   <block id="4488830a541dd347507e71eccb3f4943" category="paragraph">使用缆线将磁盘架到磁盘架的连接设置为 `standard` 连接（使用 IOM 端口 3 和 1 ）：</block>
@@ -3714,7 +3706,6 @@
   <block id="e36a558e7bc20ae0e75bec222964d055" category="paragraph">数字显示屏上的两个数字开始闪烁，操作员显示屏面板上的琥珀色 LED 在大约 5 秒钟后亮起，提醒您待定磁盘架 ID 尚未生效。</block>
   <block id="9c221bef9744439a86ecbb6f88e250ff" category="list-text">重新启动磁盘架以使磁盘架 ID 生效。</block>
   <block id="205f1a8463c3864309c68834a88b379a" category="paragraph">您必须关闭两个电源开关，等待适当的时间，然后重新打开它们，才能完成重新启动。</block>
-  <block id="0de4baec8d6e3dac5c52267ff0631bac" category="list-text">对每个附加磁盘架重复步骤 1 到 9 。</block>
   <block id="c6f83377a8f707e5d4500fa6c34141e8" category="list-text">验证您的系统没有重复的磁盘架 ID 。</block>
   <block id="79a8830b6eb260be5b914306191dde58" category="paragraph">如果两个或更多磁盘架具有相同的 ID ，系统会为重复的磁盘架分配一个等于或大于 100 的软 ID 编号。您必须更改软 ID （重复）编号。</block>
   <block id="26a846deb04c0d63c063041ad0fa15ef" category="list-text">运行 Active IQ Config Advisor 检查是否存在重复的磁盘架 ID 警报，或者运行 `storage shelf show -fields shelf-id` 命令查看已在使用的磁盘架 ID 列表，包括任何重复的 ID 。</block>
@@ -7840,7 +7831,6 @@ SFP+(目标/启动程序)</block>
   <block id="a03ae9a3c924d10a64e97ade6d86ee2b" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block><block ref="49e34f6a53fbd8084ac48e4e6738a264" category="inline-link-macro-rx"></block></block>
   <block id="6cfe7f4574d90cb894d56246a1414fa2" category="paragraph">如果在准备热添加时禁用了自动驱动器分配、则需要手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。</block>
   <block id="132976e79206d2260fc5308469634e7a" category="list-text">有关PCIe卡或I/O模块的安装说明、请参见您的平台型号文档。</block>
-  <block id="5fc0fcdc83b05fb4f062a9fa1fe851d9" category="paragraph">Otherwise, you need to configure the ports by completing steps 4 through 7.</block>
   <block id="9db058e565a88604b6d87108ed139c51" category="paragraph"><block ref="6e972b196ebbc48e0575e24a92c8720d" prefix="" category="inline-code"></block></block>
   <block id="eb3110f9f105714e88d250d436520c1d" category="paragraph"><block ref="91bc4c8d50e9272a27ce62a39b4bf1a6" prefix="" category="inline-code"></block></block>
   <block id="a61cf40b2e5406ed295d4e38c35656df" category="paragraph">在热添加其他磁盘架之前、根据您的平台型号、您可能需要在不同插槽中的两组端口之间重新对现有磁盘架进行故障恢复(在安装了支持RoCE的其他PCIe卡或I/O模块之后)、以防止插槽故障。</block>
@@ -9716,7 +9706,6 @@ SFP+(目标/启动程序)</block>
   <block id="32b07ce753eb975c01de4108e4155ee7" category="list-text">如果您确定 HA 对中不支持 RoCE 的专用端口未配置为存储使用，则配置这些端口是无中断操作步骤。您无需重新启动控制器、除非一个或两个控制器均处于维护模式。This procedure assumes that neither controller is in maintenance mode.</block>
   <block id="eb86e0541d4143c0318c9a167d5ce6fc" category="list-text">如果HA对运行的是ONTAP 9.7、列中显示的非专用端口<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>也会显示在列中<block ref="c7b4666e1f46b9d8409deace1de37977" prefix=" " category="inline-code"></block>。<block ref="a10311459433adf322f2590a4987c423" prefix=" " category="inline-code"></block><block ref="46a2a41cc6e552044816a2d04634545d" prefix=" " category="inline-code"></block></block>
   <block id="65889651ccf1dd661e3408010cd1a0cf" category="list-text">如果HA对运行的是ONTAP 9.7、列中显示的非专用端口<block ref="68934a3e9455fa72420237eb05902327" prefix=" " category="inline-code"></block>也会显示在列中<block ref="7ed427253695f845f908985c78b9f390" prefix=" " category="inline-code"></block>。<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block><block ref="46a2a41cc6e552044816a2d04634545d" prefix=" " category="inline-code"></block></block>
-  <block id="52dba85eb288ea326ebb5d4df4417d51" category="list-text">对第二个控制器重复步骤4。</block>
   <block id="10251d86a3f1068222c5cda1b3021db3" category="open-title">AFF A70、AFF A90或AFF C80</block>
   <block id="b736a5ee7f8805d6653d8da0961406f7" category="list-text">如果要热添加第二个磁盘架、请在每个控制器上的插槽2和插槽10中的支持RoCE的I/O模块之间重新对第一个磁盘架进行配缆线。</block>
   <block id="500e77e5799330d4d88ed16c0d87beee" category="paragraph">子步骤假定已将现有磁盘架连接到每个控制器上插槽2中支持RoCE的I/O模块。</block>
@@ -11668,10 +11657,8 @@ SFP+(目标/启动程序)</block>
   <block id="b3d28b344c55260439945f6caed47e6c" category="list-text">端口的网络掩码</block>
   <block id="0471579d34255a0d9b6386ea78d8fd44" category="list-text">默认网关的 IP 地址</block>
   <block id="240de215578701a602c7ee68dfdcb425" category="list-text">如果你看到<block ref="ac676b9b4d7ad5923ab3fe5f9ae60aa8" prefix=" " category="inline-code"></block>在输出中，EKM 配置已成功恢复。</block>
-  <block id="42701a1ff76597ba7c5638bce0d2af9b" category="paragraph">该过程尝试从伙伴节点恢复适当的文件并重新启动该节点。转至步骤 d。</block>
   <block id="0c387b1b026e4f3547ed2f50da22a39e" category="list-text">如果密钥未成功恢复，系统将停止并指示无法恢复密钥。显示错误和警告消息。您必须重新运行恢复过程：</block>
   <block id="1c27eb77b57ec03853c37b1f761a36dc" category="list-text">如果您想手动分配替换驱动器的驱动器所有权，则需要禁用自动驱动器分配（如果已启用）。</block>
-  <block id="9fb832dec5cd2e7d518230b1cfb70020" category="list-text">如果要更换另一个驱动器，请重复步骤 3 至 7。</block>
   <block id="9b36684b5751c1f43c35d80933024e6d" category="paragraph"><block ref="e546c7c0f19a803f32f47d3907849b62" prefix="" category="inline-code"></block></block>
   <block id="6d81f890ae97b7a0ebc76c301009ec65" category="paragraph">接触<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>如果您需要 RMA 号码或更换程序的额外帮助。</block>
   <block id="e55cf153efde1bb25a6c8b4b2a77e3a3" category="paragraph">联系技术支持<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>如果您需要 RMA 号码或更换程序的额外帮助。</block>
@@ -11796,7 +11783,6 @@ SFP+(目标/启动程序)</block>
   <block id="2658eb11cd0ca39cfc2d7394809fff01" category="list-text">将MetroCluster端口设置为启动器：<block ref="2c8f25cb974f5d5b1e520b768a31cde6" prefix=" " category="inline-code"></block></block>
   <block id="262d6ff37dc133df81dc97d7127c21ca" category="list-text">重新安装控制器模块：</block>
   <block id="aae9b254c24cc3785086114d3d117232" category="list-text">如果要更换另一个驱动器，请重复步骤 3 至 7。</block>
-  <block id="7c9d4c7520ca0f8e1dc57c8c26289d65" category="list-text">如果要更换另一个驱动器，请重复步骤 4 至步骤 8。</block>
   <block id="6ab51c87498e3948742262b60aeeee14" category="paragraph">启动映像的自动恢复涉及系统自动识别并选择适当的启动菜单选项。它使用合作伙伴节点上的启动映像在AFF A1K 存储系统中的替换启动介质上重新安装ONTAP 。</block>
   <block id="1598afb8f3a2e9755fe6204af9dbaa8d" category="inline-link-macro">自动启动恢复程序</block>
   <block id="a3484b2f8cbf6736974f7d02ebc99cb3" category="paragraph">如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用<block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block>。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。</block>
@@ -13639,7 +13625,6 @@ SFP+(目标/启动程序)</block>
   <block id="22dd5ea8b069cf90dfb213fcf3136023" category="list-text">如果您的集群具有四个以上的节点，则它必须达到法定人数。要查看有关节点的集群信息，请使用<block ref="639161158d7426b3865ce9c5a6f648b3" prefix=" " category="inline-code"></block>命令。有关<block ref="639161158d7426b3865ce9c5a6f648b3" prefix=" " category="inline-code"></block>命令，请参阅<block ref="812d195420030f92a12eef2f47c24053" category="inline-link-macro-rx"></block>。</block>
   <block id="3339c1abb6a38c2a82f66c0780893536" category="list-text">如果集群不处于法定人数，或者任何控制器（受损控制器除外）的健康状况或资格显示为错误，则必须在关闭受损控制器之前纠正该问题。看<block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block> 。</block>
   <block id="eea7e5b28d3e1c4e8e7e7e8e310d7994" category="list-text">如果您运行的是ONTAP版本 9.17.1，并且受损控制器无法启动或已被接管，则必须先从正常控制器断开 HA 互连链路，然后再启动受损控制器。这可以防止受损控制器执行自动交还。</block>
-  <block id="78fa259f1575c0e9b637544144ce5988" category="admonition">如果您运行的不是ONTAP版本 9.17.1，请跳过上述步骤并转到步骤 3。</block>
   <block id="c30938ccf076c4ec0d3f2ba34fd8f16e" category="paragraph">从健康控制器接管或停止受损控制器：<block ref="db99891238c978ac8afa2f5699f2917d" prefix=" " category="inline-code"></block></block>
   <block id="4ab0c772ea9a8193b238eb673a9fb06f" category="paragraph">_-halt true_ 参数将受损节点带入 LOADER 提示符。</block>
   <block id="cea31bd46ad20e8b209bfbe53fc5e093" category="paragraph">更换系统管理模块时，控制器的系统序列号 (SSN) 会发生变化。如果受损节点使用需要标准（节点锁定）许可证的ONTAP功能，则必须为该节点安装新许可证。对于具有标准许可证的功能，集群中的每个节点都应具有该功能的自己的密钥。</block>
@@ -14129,8 +14114,6 @@ SFP+(目标/启动程序)</block>
   <block id="4754524f8b29b8650fe75329e6042256" category="paragraph">系统未安装加密功能。</block>
   <block id="509770c8dda30e85db49f8642db6ca11" category="list-text">等待登录提示出现。</block>
   <block id="0e24346f9a92e6d04d57b5ccead814c3" category="list-text">登录节点并归还存储空间：</block>
-  <block id="78f0d70cb3d505c2399506f81065c747" category="list-text">如果自动返还功能已禁用，请转到步骤 6 重新启用该功能。</block>
-  <block id="0e8a095551e7e50c3ca3d504bd2ad77b" category="paragraph">已安装加密功能。请转至步骤 4 恢复密钥管理器。</block>
   <block id="20d2bf4f3f943fcc1e340e99a4d368ba" category="admonition">如果系统无法识别密钥管理器配置，则会显示错误消息，并提示您确认是否已配置密钥管理器以及配置类型（板载或外部）。请回答提示以继续。</block>
   <block id="4aac054c51ae042dd6c06bdad5d13845" category="list-text">请使用适合您配置的步骤恢复密钥管理器：</block>
   <block id="564c83534ce0095bf811b4f45e8a7587" category="paragraph">系统显示以下消息并开始运行启动菜单选项 10：</block>
@@ -14142,7 +14125,6 @@ SFP+(目标/启动程序)</block>
   <block id="3ba7e3971d948d8fa9119ea7d3326cd3" category="paragraph">恢复过程完成后，节点将重新启动。以下信息表明恢复成功：</block>
   <block id="5403c23d7cc21fd6b1016c3d10c93711" category="list-text">节点重启后，验证系统是否恢复在线并正常运行。</block>
   <block id="1041ca100654e89f3959fe8698d3fe03" category="list-text">在伙伴节点完全启动并开始提供数据服务后，同步集群中的 OKM 密钥：</block>
-  <block id="682b9eab5d02570a6044fbb81a96818d" category="paragraph">如果自动返还功能已禁用，请转到步骤 5 重新启用该功能。</block>
   <block id="c611091d645837a22ce250179398219c" category="paragraph">系统显示以下消息并开始运行启动菜单选项 11：</block>
   <block id="51d6f35e7cccefb24fbfc4c082b44026" category="list-text">出现提示时，请输入EKM配置设置：</block>
   <block id="abc81377b7e3cbf13c4b821e795e2424" category="list-text">请输入客户端证书的内容。<block ref="d606236dedb6ed649b29651c1ec53a99" prefix=" " category="inline-code"></block>文件：</block>
@@ -14311,4 +14293,21 @@ SFP+(目标/启动程序)</block>
   <block id="9ec706133a8a1899257edbed12b2d39a" category="sidebar">ASA系统提供简化的专用 SAN 体验，可为使用 FCP 或 iSCSI 协议的企业关键任务数据库和其他 SAN 工作负载提供持续的数据可用性。</block>
   <block id="3898e1d169485951c2a49a4a69789502" category="sidebar">安装和设置ASA系统</block>
   <block id="10b7e05447c2dbec670e886811f71bcb" category="sidebar">维护ASA系统</block>
+  <block id="c239ad11021e49c97ea2bf8272c6588a" category="paragraph">该过程尝试从伙伴节点恢复适当的文件并重新启动该节点。继续进行下一步。</block>
+  <block id="774ee8b1398c2f16e1d77ddac27a50b0" category="inline-xref">重新启用自动返还功能</block>
+  <block id="d3218fd897781ec8a86658de26e1ddf1" category="list-text">前往 <block ref="7aacd8b9a7e4a74d04304c7c616e940e" category="inline-xref-macro-rx"></block> 如果它被禁用了。</block>
+  <block id="2ff143fefd61054fa148afd75a8c98be" category="inline-xref">恢复密钥管理器</block>
+  <block id="1f74fd97b861dbc201b74171805bda09" category="paragraph">已安装加密功能。前往<block ref="74744f98b89b6a4dbb3b3e013250a83f" category="inline-xref-macro-rx"></block>。</block>
+  <block id="f1d6db02f39f4711fa05b5edf32c6425" category="list-text">如果您要快速添加第二个搁板，请完成“`搁板 2`”子步骤；否则，请转到下一步。</block>
+  <block id="be7b8247eb925c7add4470f65b89e936" category="list-text">如果要更换另一块硬盘，请重复上述步骤。</block>
+  <block id="d2fddd9e240829fc1dc928ed61196fbf" category="list-text">如果在此过程的早期阶段禁用了自动驱动器分配，请手动分配驱动器所有权，然后根据需要重新启用自动驱动器分配：</block>
+  <block id="4cca325ed840b8ff6bedb9a2bcf0134f" category="paragraph">请联系技术支持。<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>如果您需要RMA编号或更换流程方面的其他帮助，请致电888-463-8277（北美）、00-800-44-638277（欧洲）或+800-800-80-800（亚太地区）。//2025-11-17 ontap-systems-internal/issues/1391</block>
+  <block id="696e3a46f755e71b2efb8fc66ed7bf86" category="paragraph">否则，热添加货架程序就完成了。====//2025-11-17 ontap-systems-internal/issues/1391</block>
+  <block id="ac5e04a2b567f923df0569c7177f596f" category="list-text">如果要移除多个搁板，请重复上述步骤。</block>
+  <block id="959de3aca4b6b23d81011f18ca2b15f7" category="paragraph">否则，您需要按照以下步骤配置端口。</block>
+  <block id="75fc199dd3b8c9f1fc952121556e245d" category="list-text">对第二个控制器重复上述步骤。</block>
+  <block id="b7cf733f61d2f31373ecbc67f036248f" category="list-text">如果需要，请跳至重新启用自动分配部分（以下几个步骤）。</block>
+  <block id="98b8aea422580c306bf6d9bfa94dd665" category="list-text">对每个额外的磁盘架重复上述步骤。</block>
+  <block id="f843ac1c00181fdda1ccb77040024169" category="paragraph">在为热添加磁盘柜连接线缆之前，您需要禁用磁盘所有权自动分配；而在为热添加磁盘柜连接线缆之后，您还需要重新启用该功能。</block>
+  <block id="ec25bc86b3fe7d64ec86315f71195fc0" category="list-text">如果您要将一叠磁盘柜直接热添加到控制器，请完成以下子步骤；否则，请转到下一步。</block>
 </blocks>
