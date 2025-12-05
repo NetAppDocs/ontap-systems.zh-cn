@@ -338,6 +338,9 @@ image:../media/drw_affa250_1shelf_cabling_b.png["控制器2布线"]
 
 使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，或者直接连接到系统中的控制器，然后连接到管理交换机。
 
+
+NOTE: 有关如何建立控制器控制台端口的持续连接以进行远程管理的信息，请参阅知识库文章。 https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/How_to_connect_an_ONTAP_controller_console_port_for_remote_management["如何连接ONTAP控制器控制台端口以进行远程管理"^]。
+
 [role="tabbed-block"]
 ====
 .选项 1 ：如果启用了网络发现

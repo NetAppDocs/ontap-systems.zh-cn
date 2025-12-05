@@ -14310,4 +14310,6 @@ SFP+(目标/启动程序)</block>
   <block id="98b8aea422580c306bf6d9bfa94dd665" category="list-text">对每个额外的磁盘架重复上述步骤。</block>
   <block id="f843ac1c00181fdda1ccb77040024169" category="paragraph">在为热添加磁盘柜连接线缆之前，您需要禁用磁盘所有权自动分配；而在为热添加磁盘柜连接线缆之后，您还需要重新启用该功能。</block>
   <block id="ec25bc86b3fe7d64ec86315f71195fc0" category="list-text">如果您要将一叠磁盘柜直接热添加到控制器，请完成以下子步骤；否则，请转到下一步。</block>
+  <block id="26d1768b79c13cb58b658543460502f0" category="inline-link">如何连接ONTAP控制器控制台端口以进行远程管理</block>
+  <block id="5881473e019a362326922dbcff8f2c1d" category="admonition">有关如何建立控制器控制台端口的持续连接以进行远程管理的信息，请参阅知识库文章。<block ref="4d1fe15c86a554e538de1277e9fedec9" category="inline-link-rx"></block>。</block>
 </blocks>
