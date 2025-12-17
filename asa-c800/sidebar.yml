@@ -55,9 +55,13 @@ entries:
   - title: 机箱
     pdf-filename: ASA C800机箱
     entries:
-    - title: 概述
-      url: "/asa-c800/chassis-replace-overview.html"
-    - title: 关闭受损控制器
+    - title: 机箱更换工作流
+      url: "/asa-c800/chassis-replace-workflow.html"
+    - title: 查看要求
+      url: "/asa-c800/chassis-replace-requirements.html"
+    - title: 准备更换
+      url: "/asa-c800/chassis-replace-prepare.html"
+    - title: 关闭控制器
       url: "/asa-c800/chassis-replace-shutdown.html"
     - title: 更换机箱
       url: "/asa-c800/chassis-replace-move-hardware.html"
@@ -66,8 +70,10 @@ entries:
   - title: 控制器
     pdf-filename: ASA C800控制器模块
     entries:
-    - title: 概述
-      url: "/asa-c800/controller-replace-overview.html"
+    - title: 控制器更换工作流
+      url: "/asa-c800/controller-replace-workflow.html"
+    - title: 查看要求
+      url: "/asa-c800/controller-replace-requirements.html"
     - title: 关闭受损控制器
       url: "/asa-c800/controller-replace-shutdown.html"
     - title: 更换控制器

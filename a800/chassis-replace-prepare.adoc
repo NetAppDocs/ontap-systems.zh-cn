@@ -1,0 +1,43 @@
+---
+permalink: a800/chassis-replace-prepare.html 
+sidebar: sidebar 
+keywords: aff a800, replace the chassis 
+summary: 准备更换AFF A800 系统中受损的机箱，方法是识别受损的机箱、验证更换组件并标记电缆和控制器模块。 
+---
+= 准备更换机箱 - AFF A800
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+准备更换AFF A800 系统中受损的机箱，方法是识别受损的机箱、验证更换组件并标记电缆和控制器模块。
+
+.步骤
+. 连接到串行控制台端口以连接并监控系统。
+. 打开控制器的位置指示灯：
++
+.. 使用 `system controller location-led show`显示位置指示灯当前状态的命令。
+.. 打开位置指示灯：
++
+`system controller location-led modify -node _node1_ -state on`
+
++
+定位指示灯将保持亮起30分钟。
+
+
+
+. 打开包装前，请检查包装标签并核实以下内容：
++
+** 组件零件编号
+** 部件描述
+** 盒子里的数量
+
+
+. 从包装中取出内容物，并保存包装以便将故障组件退回给NetApp。
+. 给连接到存储系统的所有电缆贴上标签。这样可以确保后续步骤中能够正确地重新布线。
+. 如果还没有接地，那就先接地。
+
+
+.下一步是什么？
+准备好更换AFF A800机箱硬件后，您需要：link:chassis-replace-shutdown.html["关闭控制器"] 。

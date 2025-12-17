@@ -11,23 +11,19 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 
 [role="lead"]
-通过重新为存储布线并确认磁盘重新分配来继续更换操作步骤。
+将存储资源的控制权交还给替换控制器，以便您的AFF C800系统能够恢复正常运行。返还过程会根据您系统使用的加密类型而有所不同：无加密或板载密钥管理器 (OKM) 加密。
 
 
 
 == 第 1 步：重新对系统进行布线
 
-验证控制器模块的存储和网络连接。
+使用以下方法验证控制器模块的存储和网络连接： https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] 。
 
 .步骤
-. 使用验证布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"]。
-+
-.. 下载并安装 Config Advisor 。
-.. 输入目标系统的信息，然后单击收集数据。
-.. 单击布线选项卡，然后检查输出。确保显示所有磁盘架且所有磁盘均显示在输出中，以更正您发现的任何布线问题。
-.. 单击相应的选项卡，然后检查 Config Advisor 的输出，以检查其他布线。
-
-
+. 下载并安装 Config Advisor 。
+. 输入目标系统的信息，然后单击收集数据。
+. 单击布线选项卡，然后检查输出。确保显示所有磁盘架且所有磁盘均显示在输出中，以更正您发现的任何布线问题。
+. 单击相应的选项卡，然后检查 Config Advisor 的输出，以检查其他布线。
 
 
 
@@ -36,8 +32,9 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 If the storage system is in an HA pair, the system ID of the new controller module is automatically assigned to the disks when the giveback occurs at the end of the procedure.您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。
 
-此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
+此步骤仅适用于在 HA 对中运行ONTAP 的系统。
 
+.步骤
 . 如果 _replacement_ 控制器处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`
 . 在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ：``boot_ontap``
 . 请等待 `Waiting for giveback...` 消息显示在 _replacement_ 控制器控制台上，然后从运行正常的控制器中验证是否已自动分配新的配对系统 ID ： `storage failover show`

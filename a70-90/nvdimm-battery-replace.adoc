@@ -160,11 +160,51 @@ LOADER 提示符
 == 第 2 步：卸下控制器模块
 
 .步骤
+. 如果您尚未接地，请正确接地。
 . 使用拇指推动每个驱动器、直至感觉到强制停止、以确保机箱中的所有驱动器都牢固地固定在中板上。
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[安装磁盘驱动器]
+.视频 - 确认驾驶员座椅
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[将驱动器安装到位]
 
-. 检查受损控制器模块背面插槽4/5中的琥珀色NVRAM状态指示灯是否熄灭。查找NV图标。
+. 根据系统状态检查控制器驱动器：
++
+.. 在运行正常的控制器上，检查是否存在任何处于降级状态、故障状态或两者兼有的状态：
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** 如果命令返回 `There are no entries matching your query.`继续<<Check-missing-drives,进入下一个子步骤，检查是否存在缺失的驱动器。>>。
+*** 如果该命令返回任何其他结果，请从两个控制器收集AutoSupport数据，并联系NetApp支持部门以获取进一步帮助。
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[检查缺失驱动器]]检查文件系统或备用驱动器是否存在缺失驱动器问题：
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** 如果命令返回 `There are no entries matching your query.`继续<<Check-the-amber-NVRAM,进入下一步>>。
+*** 如果该命令返回任何其他结果，请从两个控制器收集AutoSupport数据，并联系NetApp支持部门以获取进一步帮助。
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[检查琥珀色NVRAM]]检查琥珀色NVRAM ，确保位于故障控制器模块背面插槽 4/5 中的状态 LED 熄灭。寻找NV图标。
 +
 image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED位置图]
 

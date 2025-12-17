@@ -11,7 +11,7 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 
 
 [role="lead"]
-在系统中安装新的启动介质设备后、您可以从USB驱动器启动恢复映像、并从配对节点还原配置。
+在ASA A800系统中安装新的启动介质设备后，您可以从 USB 驱动器启动恢复映像，并从伙伴节点恢复配置。
 
 如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 
@@ -104,3 +104,6 @@ NOTE: 如果看到的不是恢复成功的消息，请联系NetApp支持。
 `system node autosupport invoke -node * -type all -message MAINT=END`
 
 
+
+.下一步是什么？
+启动恢复映像后，您需要link:bootmedia-encryption-restore.html["恢复启动介质上的加密"]。

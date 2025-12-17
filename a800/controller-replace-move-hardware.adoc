@@ -11,7 +11,7 @@ summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 
 
 
 [role="lead"]
-要更换控制器、您必须卸下受损控制器、将FRU组件移至更换用的控制器模块、在机箱中安装更换用的控制器模块、然后将系统启动至维护模式。
+当硬件故障需要更换时，请更换AFF A800系统中的控制器。更换过程包括移除受损的控制器、将组件移至更换的控制器、安装更换的控制器以及重新启动它。
 
 
 
@@ -19,14 +19,53 @@ summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 
 
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
 
+.步骤
+. 如果您尚未接地，请正确接地。
 . 使用拇指推动每个驱动器、直至感觉到强制停止、以确保机箱中的所有驱动器都牢固地固定在中板上。
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[安装磁盘驱动器]
+.视频 - 确认驾驶员座椅
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[将驱动器安装到位]
 
-. 转至机箱背面。如果您尚未接地，请正确接地。
-. 从源拔下控制器模块电源。
-. 释放电源线固定器，然后从电源中拔下缆线。
-. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线以及 SFP 和 QSFP 模块（如果需要），并跟踪缆线的连接位置。
+. 根据系统状态检查控制器驱动器：
++
+.. 在运行正常的控制器上，检查是否存在任何处于降级状态、故障状态或两者兼有的状态：
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** 如果命令返回 `There are no entries matching your query.`继续<<Check-missing-drives,进入下一个子步骤，检查是否存在缺失的驱动器。>>。
+*** 如果该命令返回任何其他结果，请从两个控制器收集AutoSupport数据，并联系NetApp支持部门以获取进一步帮助。
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[检查缺失驱动器]]检查文件系统或备用驱动器是否存在缺失驱动器问题：
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** 如果命令返回 `There are no entries matching your query.`继续<<remove-power-cables,进入下一步>>。
+*** 如果该命令返回任何其他结果，请从两个控制器收集AutoSupport数据，并联系NetApp支持部门以获取进一步帮助。
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[移除电源线]]移除电源线固定器，然后从电源上拔下电源线。
+. 松开线缆管理装置上的魔术贴绑带。从控制器模块上拔下系统电缆和 SFP/QSFP 模块（如果需要）。记下每根电缆的位置。
 +
 将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
 
@@ -36,7 +75,7 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[安装磁盘驱动器]
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_a800_pcm_remove.png[松开控制器模块]
+image::../media/drw_a800_pcm_remove.png[Removing the controller module]
 
 +
 [cols="1,4"]
@@ -58,42 +97,7 @@ image:../media/icon_round_2.png["标注编号2"]
 |===
 . 将控制器模块滑出机箱、然后将其放在平稳的表面上。
 +
-Make sure that you support the bottom of the controller module as you slide it out of the chassis.。
-
-. 将控制器模块放在平稳的表面上。
-. 打开控制器模块通风管：
-+
-.. 朝控制器模块中间按下通风管两侧的锁定片。
-.. 将通风管滑向风扇模块，然后将其向上旋转到完全打开的位置。
-+
-image::../media/drw_a800_open_air_duct.png[打开空气管道]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["标注编号1"]
- a| 
-通风管锁定卡舌
-
-
-
- a| 
-image:../media/icon_round_2.png["标注编号2"]
- a| 
-将通风管滑向风扇模块
-
-
-
- a| 
-image:../media/icon_round_3.png["标注编号3"]
- a| 
-向风扇模块旋转通风管
-
-|===
-
+托住控制器模块的底部，将其从机箱中滑出。
 
 
 
@@ -101,8 +105,9 @@ image:../media/icon_round_3.png["标注编号3"]
 
 == 第 2 步：移动电源
 
-在更换控制器模块时，您必须将受损控制器模块中的电源移至更换控制器模块。
+将电源移至替换控制器模块。
 
+.步骤
 . 旋转凸轮把手，以便在按下锁定卡舌的同时，可以将电源从控制器模块中拉出。
 +
 
@@ -144,8 +149,9 @@ NOTE: 为避免损坏内部连接器，请勿在将电源滑入系统时用力�
 
 == 第 3 步：移动风扇
 
-在更换发生故障的控制器模块时，您必须将受损控制器模块中的风扇移至更换模块。
+将风扇模块移至替换控制器模块。
 
+.步骤
 . 通过挤压风扇模块侧面的锁定卡舌，然后将风扇模块直接从控制器模块中提出来卸下风扇模块。
 +
 image::../media/drw_a800_replace_fan.png[卸下风扇]
@@ -176,8 +182,9 @@ image:../media/icon_round_2.png["标注编号2"]
 
 == 第 4 步：移动 NVDIMM 电池
 
-更换控制器模块时，必须将 NVRAM 电池从受损控制器模块移至更换用的控制器模块
+将NVDIMM电池移至替换控制器模块。
 
+.步骤
 . 打开通风管盖并在提升板中找到 NVDIMM 电池。
 +
 image::../media/drw_a800_nvdimm_battery_replace.png[更换NVDIMM电池]
@@ -224,8 +231,9 @@ NVDIMM 电池组
 
 == 第 5 步：卸下 PCIe 提升板
 
-在控制器更换过程中，您必须从受损的控制器模块中卸下 PCIe 模块。在将 NVDIMM 和 DIMM 移至更换用的控制器模块后，您必须将其安装到更换用的控制器模块中的同一位置。
+从故障控制器模块上移除 PCIe 转接卡。
 
+.步骤
 . 从控制器模块中卸下 PCIe 提升板：
 +
 .. 卸下 PCIe 卡中可能存在的所有 SFP 或 QSFP 模块。
@@ -265,8 +273,9 @@ image:../media/icon_round_2.png["标注编号2"]
 
 == 第 6 步：移动系统 DIMM
 
-要移动 DIMM ，请找到 DIMM 并将其从受损控制器移至更换控制器，然后按照特定步骤顺序进行操作。
+将系统 DIMM 移至替换控制器模块。
 
+.步骤
 . 记下插槽中 DIMM 的方向，以便可以按正确的方向将 DIMM 插入更换用的控制器模块中。
 . 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。
 +
@@ -290,8 +299,9 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 == 第 7 步：移动 NVDIMM
 
-要移动 NVDIMM ，请找到这些 NVDIMM 并将其从受损控制器移至更换控制器，然后按照特定步骤顺序进行操作。
+将 NVDIMMS 移至替换控制器模块。
 
+.步骤
 . 找到控制器模块上的 NVDIMM 。
 +
 image::../media/drw_a800_no_risers_nvdimm_move.svg[移动NVDIMM]
@@ -337,11 +347,10 @@ NOTE: 目视检查 NVDIMM ，确认其已均匀对齐并完全插入插槽。
 
 == 第 8 步：移动启动介质
 
-您必须从受损控制器移动启动介质设备、并将其安装在替代控制器中。
+将启动介质移至替换后的控制器模块。
 
-启动介质位于提升板 3 下。
-
-. 找到启动介质：
+.步骤
+. 找到 Riser 3 下方的启动介质。
 +
 image::../media/drw_a800_pcm_replace_only_boot_media.png[取出启动介质]
 
@@ -406,8 +415,9 @@ image:../media/icon_round_5.png["标注编号5"]
 
 == 第 9 步：安装 PCIe 提升板
 
-移动 DIMM ， NVDIMM 和启动介质后，您可以在更换用的控制器模块中安装 PCIe 提升板。
+将立管安装到替换控制器模块中。
 
+.步骤
 . 将此提升板安装到更换用的控制器模块中：
 +
 .. 将竖板的边缘与控制器模块金属板的下侧对齐。
@@ -426,45 +436,17 @@ image:../media/icon_round_5.png["标注编号5"]
 
 == 第 10 步：安装控制器模块
 
-将所有组件从受损控制器模块移至更换控制器模块后，您必须将更换控制器模块安装到机箱中，然后将其启动至维护模式。
+重新安装控制器模块并重新启动。
 
-. 如果尚未关闭通风管：
-+
-.. 将通风管一直旋转到控制器模块。
-.. 向提升板滑动通风管，直到锁定卡舌卡入到位。
-.. 检查通风管，确保其正确就位并锁定到位。
-+
-image::../media/drw_a800_close_air_duct.png[关闭空气管道]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["标注编号1"]
- a| 
-锁定卡舌
-
-
-
- a| 
-image:../media/icon_round_2.png["标注编号2"]
- a| 
-滑动柱塞
-
-|===
-
-
+.步骤
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
 +
 
 NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
 
-. 仅为管理和控制台端口布线，以便您可以访问系统以执行以下各节中的任务。
+. 根据需要重新对系统进行布线。
 +
-
-NOTE: 您将在此操作步骤中稍后将其余缆线连接到控制器模块。
+如果您已卸下介质转换器（ QSFP 或 SFP ），请记得在使用光缆时重新安装它们。
 
 . 完成控制器模块的重新安装：
 +
@@ -477,15 +459,26 @@ NOTE: 您将在此操作步骤中稍后将其余缆线连接到控制器模块�
 NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连接器。
 
 .. 向上旋转锁定闩锁，使其倾斜，以清除锁定销，然后将其降低到锁定位置。
-
-
-. 将系统缆线和收发器模块插入控制器模块，然后重新安装缆线管理设备。
-. 将电源线插入电源，然后重新安装电源线固定器。
+.. 将电源线插入电源、重新安装电源线锁环、然后将电源连接到电源。
 +
-控制器模块一连接到电源就开始启动。Be prepared to interrupt the boot process.
+电源恢复后、控制器模块将立即启动。Be prepared to interrupt the boot process.
 
+.. 如果尚未重新安装缆线管理设备，请重新安装该设备。
+
+
+. 通过交还存储使受损控制器恢复正常运行：
 +
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
 
-NOTE: 如果您的系统具有直流电源、请确保电源电缆上的翼形螺钉已拧紧。
+. 如果已禁用自动交还、请重新启用它：
++
+`storage failover modify -node local -auto-giveback true`(英文)
+
+. 如果启用了AutoSupport、则还原/取消禁止自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=END`(英文)
 
 
+
+.下一步是什么？
+更换故障的A800控制器后，您需要：link:controller-replace-system-config-restore-and-verify.html["还原系统配置"]

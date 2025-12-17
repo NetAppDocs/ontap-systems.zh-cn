@@ -11,15 +11,18 @@ summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断
 
 
 [role="lead"]
-如果存储系统遇到错误(例如、基于运行状况监控器警报的CECC (可更正错误更正代码)错误过多或不可更正的ECC错误)、通常是由于单个DIMM故障导致存储系统无法启动ONTAP而导致的、则必须更换控制器中的DIMM。
+如果检测到过多的可纠正或不可纠正的内存错误，请更换AFF C800系统中的 DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损的控制器、将其移除、更换 DIMM、重新安装控制器，然后将故障部件返回给NetApp。
 
-系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+.开始之前
+* 确保系统中的所有其他组件均正常运行；否则，您必须联系技术支持。
+* 请确保将故障组件更换为从NetApp收到的更换组件。
 
-您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
 
 
 
 == 第 1 步：关闭受损控制器
+
+关闭或接管故障控制器
 
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 
@@ -90,14 +93,53 @@ LOADER 提示符
 
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
 
+.步骤
 . 如果您尚未接地，请正确接地。
 . 使用拇指推动每个驱动器、直至感觉到强制停止、以确保机箱中的所有驱动器都牢固地固定在中板上。
 +
-image::../media/drw_a800_drive_seated_IEOPS-960.svg[安装磁盘驱动器]
+.视频 - 确认驾驶员座椅
+video::2c46e4af-2c21-4f12-b065-b38b003d0ea2[panopto]
++
+image::../media/drw_a800_drive_seated_IEOPS-960.svg[将驱动器安装到位]
 
-. 从源拔下控制器模块电源。
-. 释放电源线固定器，然后从电源中拔下缆线。
-. 松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线以及 SFP 和 QSFP 模块（如果需要），并跟踪缆线的连接位置。
+. 根据系统状态检查控制器驱动器：
++
+.. 在运行正常的控制器上，检查是否存在任何处于降级状态、故障状态或两者兼有的状态：
++
+[source, cli]
+----
+storage aggregate show -raidstatus !*normal*
+----
++
+*** 如果命令返回 `There are no entries matching your query.`继续<<Check-missing-drives,进入下一个子步骤，检查是否存在缺失的驱动器。>>。
+*** 如果该命令返回任何其他结果，请从两个控制器收集AutoSupport数据，并联系NetApp支持部门以获取进一步帮助。
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+.. [[检查缺失驱动器]]检查文件系统或备用驱动器是否存在缺失驱动器问题：
++
+[source, cli]
+----
+event log show -severity * -node * -message-name *disk.missing*
+----
++
+*** 如果命令返回 `There are no entries matching your query.`继续<<remove-power-cables,进入下一步>>。
+*** 如果该命令返回任何其他结果，请从两个控制器收集AutoSupport数据，并联系NetApp支持部门以获取进一步帮助。
++
+[source, cli]
+----
+system node autosupport invoke -node * -type all -message '<message_name>'
+----
+
+
+
+
+. [[移除电源线]]移除电源线固定器，然后从电源上拔下电源线。
+. 松开线缆管理装置上的魔术贴绑带。从控制器模块上拔下系统电缆和 SFP/QSFP 模块（如果需要）。记下每根电缆的位置。
 +
 将缆线留在缆线管理设备中，以便在重新安装缆线管理设备时，缆线排列有序。
 
@@ -107,7 +149,7 @@ image::../media/drw_a800_drive_seated_IEOPS-960.svg[安装磁盘驱动器]
 此控制器模块会从机箱中略微移出。
 
 +
-image::../media/drw_a800_pcm_remove.png[释放控制器模块]
+image::../media/drw_a800_pcm_remove.png[Removing the controller module]
 
 +
 [cols="1,4"]
@@ -127,43 +169,9 @@ image:../media/icon_round_2.png["标注编号2"]
 锁定销
 
 |===
-. 将控制器模块滑出机箱。
+. 将控制器模块滑出机箱、然后将其放在平稳的表面上。
 +
-将控制器模块滑出机箱时，请确保您支持控制器模块的底部。
-
-. 将控制器模块放在平稳的表面上，然后打开通风管：
-+
-.. 朝控制器模块中间按下通风管两侧的锁定片。
-.. 将通风管滑向风扇模块，然后将其向上旋转到完全打开的位置。
-+
-image::../media/drw_a800_open_air_duct.png[打开空气管道]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["标注编号1"]
- a| 
-通风管锁定卡舌
-
-
-
- a| 
-image:../media/icon_round_2.png["标注编号2"]
- a| 
-将通风管滑向风扇模块
-
-
-
- a| 
-image:../media/icon_round_3.png["标注编号3"]
- a| 
-向风扇模块旋转通风管
-
-|===
-
+托住控制器模块的底部，将其从机箱中滑出。
 
 
 
@@ -171,7 +179,15 @@ image:../media/icon_round_3.png["标注编号3"]
 
 == 第 3 步：更换 DIMM
 
+更换控制器中的内存条。
+
 要更换DIMM、您必须使用通风管顶部的DIMM映射标签在控制器模块中找到该DIMM、然后按照特定步骤顺序进行更换。
+
+. 打开通风管：
++
+.. 朝控制器模块中间按下通风管两侧的锁定片。
+.. 将通风管滑向风扇模块，然后将其向上旋转到完全打开的位置。
+
 
 . 卸下 DIMM 时，请解锁相应提升板上的锁定闩锁，然后卸下提升板。
 +
@@ -230,38 +246,11 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
-== 第 4 步：重新安装控制器模块并启动系统
+== 第 4 步：重新安装控制器模块
 
-更换控制器模块中的 FRU 后，您必须重新安装控制器模块并重新启动它。
+重新安装控制器模块并重新启动。
 
-. 如果尚未关闭通风管：
-+
-.. 将通风管一直旋转到控制器模块。
-.. 向提升板滑动通风管，直到锁定卡舌卡入到位。
-.. 检查通风管，确保其正确就位并锁定到位。
-+
-image::../media/drw_a700s_close_air_duct.png[关闭空气管道]
-
-+
-[cols="1,4"]
-|===
-
-
- a| 
-image:../media/icon_round_1.png["标注编号1"]
- a| 
-锁定卡舌
-
-
-
- a| 
-image:../media/icon_round_2.png["标注编号2"]
- a| 
-滑动柱塞
-
-|===
-
-
+.步骤
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
 +
 
@@ -288,6 +277,18 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 
 .. 如果尚未重新安装缆线管理设备，请重新安装该设备。
 
+
+. 通过交还存储使受损控制器恢复正常运行：
++
+`storage failover giveback -ofnode _impaired_node_name_`(英文)
+
+. 如果已禁用自动交还、请重新启用它：
++
+`storage failover modify -node local -auto-giveback true`(英文)
+
+. 如果启用了AutoSupport、则还原/取消禁止自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=END`(英文)
 
 
 
