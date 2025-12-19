@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: fru-reference/drive-fru-links.html 
 keywords: drive, field replaceable units, FRU, drive replacement 
-summary: 查找按平台系列组织的NetApp存储系统的驱动器更换程序。此参考提供了AFF、 ASA和FAS系统的逐步驱动器更换工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。 
+summary: 查找按平台或机架系列组织的NetApp存储系统的硬盘更换流程。本参考资料提供了AFF、 ASA和FAS系统以及机架式系统的分步驱动器更换工作流程的直接链接，以帮助您快速找到适用于您特定型号的正确程序。 
 ---
 = 按平台系列划分的驱动器更换流程
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 查找按平台系列组织的NetApp存储系统的驱动器更换程�
 
 
 [role="lead"]
-查找按平台系列组织的NetApp存储系统的驱动器更换程序。此参考提供了AFF、 ASA和FAS系统的逐步驱动器更换工作流程的直接链接，以帮助您快速找到适合您特定型号的正确程序。
+查找按平台或机架系列组织的NetApp存储系统的硬盘更换流程。本参考资料提供了AFF、 ASA、 FAS和机架式系统的分步驱动器更换工作流程的直接链接，以帮助您快速找到适用于您特定型号的正确程序。
 
 [role="tabbed-block"]
 ====
@@ -59,6 +59,9 @@ summary: 查找按平台系列组织的NetApp存储系统的驱动器更换程�
 --
 * link:../ns224/service-replace-drive.html["NS224"]
 * link:../nx224/service-replace-drive.html["NX224"]
+* link:../sas3/service-hot-swap-drive-ds224c-ds212c.html["DS212C、DS224C"]
+* link:../sas3/service-hot-swap-drive-ds460c.html["DS460C"]
+* link:../sas3/service-replace-drawer-ds460c.html["DS460C抽屉"]
 
 
 --
