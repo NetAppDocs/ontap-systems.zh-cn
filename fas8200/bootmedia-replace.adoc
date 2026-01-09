@@ -1,8 +1,8 @@
 ---
 permalink: fas8200/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: fas8200, replace the boot media 
-summary: 您必须在控制器中找到启动介质并按照说明进行更换。 
+keywords: fas8200, replace the boot media, manual, manual boot recovery 
+summary: 更换FAS8200控制器模块上故障的启动介质。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 更换启动介质— FAS8200
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 您必须在控制器中找到启动介质并按照说明进行更换�
 
 
 [role="lead"]
-要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
+更换FAS8200控制器模块上故障的启动介质。此过程包括从机箱中取出控制器模块，物理更换启动介质组件，使用 USB 闪存驱动器将启动映像传输到更换的介质，以及将系统恢复到正常运行状态。
+
+FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 
 

@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-transfer-boot-image.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, trasnfer, usb, flash, drive, transfer the boot image to the boot medai using a usb flash drive 
-summary: 只有当二级启动介质还原失败或在二级启动介质上找不到 image.tgz 文件时，才应使用此操作步骤。 
+keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, trasnfer, usb, flash, drive, transfer the boot image to the boot medai using a usb flash drive, manual, manual boot recovery 
+summary: 使用辅助启动介质或 USB 闪存驱动器，将启动映像传输到AFF A700s系统上的替换启动介质。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 将启动映像传输到启动介质— AFF A700s
 :allow-uri-read: 
@@ -11,11 +11,13 @@ summary: 只有当二级启动介质还原失败或在二级启动介质上找�
 
 
 [role="lead"]
-您可以使用控制器模块中安装的第二个启动介质上的映像将系统映像安装到替代启动介质，这是还原系统映像的主要方法， 或者，如果二级启动介质还原失败或二级启动介质上未找到 image.tgz 文件，则使用 USB 闪存驱动器将启动映像传输到启动介质。
+使用辅助启动介质或 USB 闪存驱动器，将启动映像传输到AFF A700s系统上的替换启动介质。此过程包括从辅助启动介质上的映像进行恢复（作为主要方法），或者在辅助启动介质恢复失败或 image.tgz 文件丢失时使用 USB 闪存驱动器。
+
+AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 
 
-== 选项 1 ：使用从第二个启动介质进行备份恢复将文件传输到启动介质
+== 方案一：使用备份恢复功能从第二个启动介质传输文件
 
 您可以使用控制器模块中安装的第二个启动介质上的映像将系统映像安装到替代启动介质。这是将启动介质文件传输到控制器模块中具有两个启动介质的系统中的替代启动介质的主要方法。
 
@@ -84,7 +86,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
-== 选项 2 ：使用 USB 闪存驱动器将启动映像传输到启动介质
+== 方案二：使用U盘传输启动镜像
 
 只有当二级启动介质还原失败或在二级启动介质上找不到 image.tgz 文件时，才应使用此操作步骤。
 

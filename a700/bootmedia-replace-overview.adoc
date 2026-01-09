@@ -1,16 +1,20 @@
 ---
 permalink: a700/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: aff a700, replace, boot, media, primary, secondary, image, disruptive, nondisruptive 
-summary: 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。 
+keywords: aff a700, replace, boot, media, primary, secondary, image, disruptive, nondisruptive, manual, manual boot recovery 
+summary: 了解AFF A700系统上的启动介质更换，并了解不同的更换方法。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 启动介质更换概述— AFF A700 和 FAS9000
+= 启动介质更换概述 - AFF A700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+了解AFF A700系统上的启动介质更换，并了解不同的更换方法。启动介质存储系统启动时使用的主启动映像文件和辅助启动映像文件。根据您的网络配置，您可以执行非中断式更换（使用内部 e0S 连接）或中断式更换（需要两次重启）。
+
+AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+
 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。
 
 You must have a USB flash drive, formatted to FAT32, with the appropriate amount of storage to hold the `image_xxx.tgz`.

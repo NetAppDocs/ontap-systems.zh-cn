@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, boot, ontap, image, usb, drive, restore, file, system, verify, environmental, variable 
-summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
+keywords: aff a700s, aff, a700s, boot, ontap, image, usb, drive, restore, file, system, verify, environmental, variable, manual, manual boot recovery 
+summary: 在AFF A700s系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 启动恢复映像— AFF A700s
 :allow-uri-read: 
@@ -11,8 +11,11 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 
 
 [role="lead"]
-您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
+在AFF A700s系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。此过程包括从 USB 闪存驱动器启动、恢复文件系统、验证环境变量以及在更换启动介质后使控制器恢复正常运行。
 
+AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+
+.步骤
 . 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`
 +
 此映像将从 USB 闪存驱动器下载。

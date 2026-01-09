@@ -1,8 +1,8 @@
 ---
 permalink: a200/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a200, shut down the controller 
-summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。 
+keywords: aff a200, shut down the controller, manual, manual boot recovery 
+summary: 完成 NVE 或 NSE 任务后，需要完成故障控制器的关闭。AFF A200系统仅支持手动启动介质恢复程序。 
 ---
 = 关闭受损控制器 - AFF A200
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
 
 
 [role="lead"]
+使用适合您配置的相应程序关闭故障控制器。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+
 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
 
 .步骤

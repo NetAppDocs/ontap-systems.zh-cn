@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, locate, fail, boot, media, controller, module, pcie, led, replace, replace the boot media 
-summary: 您必须在控制器模块中找到故障启动介质，方法是卸下控制器模块上的中间 PCIe 模块，通过启动介质附近的亮起 LED 找到故障启动介质，然后更换启动介质。 
+keywords: aff a700s, aff, a700s, locate, fail, boot, media, controller, module, pcie, led, replace, replace the boot media, manual, manual boot recovery 
+summary: 更换AFF A700s控制器模块上故障的启动介质。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 更换启动介质— AFF A700s
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 您必须在控制器模块中找到故障启动介质，方法是卸�
 
 
 [role="lead"]
-您必须从机箱中卸下控制器模块并将其打开，然后更换出现故障的启动介质。
+更换AFF A700s控制器模块上故障的启动介质。此程序包括从机箱中取出控制器模块，使用点亮的 LED 指示灯找到故障的启动介质，物理更换启动介质组件，并将系统恢复到正常运行状态。
+
+AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 
 

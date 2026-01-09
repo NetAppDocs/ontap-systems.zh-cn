@@ -1,8 +1,8 @@
 ---
 permalink: a200/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords: aff a200, pre-shutdown checks for onboard encryption keys 
-summary: 在关闭受损控制器并检查板载加密密钥的状态之前，您必须检查受损控制器的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
+keywords: aff a200, pre-shutdown checks for onboard encryption keys, manual, manual boot recovery 
+summary: 在关闭故障控制器并检查板载加密密钥的状态之前，必须检查故障控制器的状态，禁用自动返还，并检查系统正在运行的ONTAP版本。AFF A200系统仅支持手动启动介质恢复程序。 
 ---
 = 检查加密密钥支持和状态- AFF A200
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在关闭受损控制器并检查板载加密密钥的状态之前，�
 
 
 [role="lead"]
-要确保存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。
+为确保存储系统的数据安全，您需要验证启动介质上的加密密钥支持情况和状态。检查您的ONTAP版本是否支持NetApp卷加密 (NVE)，并在关闭控制器之前检查密钥管理器是否处于活动状态。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 
 

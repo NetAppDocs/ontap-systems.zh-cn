@@ -1,8 +1,8 @@
 ---
 permalink: a320/bootmedia-transfer-boot-image.html 
 sidebar: sidebar 
-keywords: aff, a320, aff a320, replacement, boot, media, install, image, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive 
-summary: 您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。 
+keywords: aff, a320, aff a320, replacement, boot, media, install, image, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive, manual, manual boot recovery 
+summary: 您安装的替换启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 使用 U 盘将启动映像传输到启动介质— AFF A320
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您安装的替代启动介质没有启动映像，因此您需要使�
 
 
 [role="lead"]
-您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。
+您安装的替换启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 * 您必须具有一个 USB 闪存驱动器，该驱动器已格式化为 MBR/FAT32 ，并且容量至少为 4 GB
 * 与受损控制器运行的 ONTAP 映像版本相同的副本。您可以从 NetApp 支持站点上的 "Downloads" 部分下载相应的映像

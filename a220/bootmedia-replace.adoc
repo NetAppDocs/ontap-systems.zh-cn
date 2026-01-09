@@ -1,8 +1,8 @@
 ---
 permalink: a220/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a220, replace, boot, media, controller, module, fru map 
-summary: 您必须在控制器中找到启动介质并按照说明进行更换。 
+keywords: aff a220, replace, boot, media, controller, module, fru map, manual, manual boot recovery 
+summary: 您必须找到控制器中的启动介质，并按照说明进行更换。AFF A220系统仅支持手动启动介质恢复程序。 
 ---
 = 更换启动介质- AFF A220
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 您必须在控制器中找到启动介质并按照说明进行更换�
 
 
 [role="lead"]
+AFF A220系统仅支持手动启动介质恢复程序。
+
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
 
 

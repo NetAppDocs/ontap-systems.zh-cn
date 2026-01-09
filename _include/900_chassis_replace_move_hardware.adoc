@@ -27,7 +27,7 @@ NOTE: 卸下电源时，请始终用双手支撑其重量。
 .动画-删除/安装PSU
 video::6d0eee92-72e2-4da4-a4fa-adf9016b57ff[panopto]
 +
-image::../media/drw_a900_remove_install_PSU_module.png[卸下或安装PSU模块]
+image::../media/drw_a900_remove_install_PSU_module.svg[卸下或安装PSU模块]
 
 +
 [cols="1,4"]
@@ -60,7 +60,7 @@ NOTE: 风扇模块较短。请始终用您的空闲手托住风扇模块的底�
 .动画-拆卸/安装风扇
 video::3c3c8d93-b48e-4554-87c8-adf9016af819[panopto]
 +
-image::../media/drw_a900_remove_install_fan.png[卸下或安装风扇]
+image::../media/drw_a900_remove_install_fan.svg[卸下或安装风扇]
 
 +
 [cols="1,4"]
@@ -97,7 +97,7 @@ image:../media/icon_round_2.png["标注编号2"]
 .动画-删除控制器
 video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
 +
-image::../media/drw_a900_remove_PCM.png[卸下控制器]
+image::../media/drw_a900_remove_PCM.svg[卸下控制器]
 
 +
 [cols="1,4"]
@@ -154,7 +154,7 @@ I/O 模块从机箱中分离，并从 I/O 插槽中移出大约 1/2 英寸。
 .动画-删除/安装I/O模块
 video::3a5b1f6e-15ec-40b4-bb2a-adf9016af7b6[panopto]
 +
-image:../media/drw_a900_remove_PCIe_module.png["卸下PCIe模块"]
+image:../media/drw_a900_remove_PCIe_module.svg["卸下PCIe模块"]
 
 
 
@@ -192,7 +192,7 @@ I/O 凸轮闩锁完全解锁
 .动画-删除/安装DCPM
 video::ade18276-5dbc-4b91-9a0e-adf9016b4e55[panopto]
 +
-image::../media/drw_a900_remove_NV_battery.png[取出NV电池]
+image::../media/drw_a900_remove_NV_battery.svg[取出NV电池]
 
 +
 [cols="1,4"]
@@ -216,7 +216,7 @@ DCPM Terra cotta锁定按钮
 
 .动画-删除/安装USB
 video::eb715462-cc20-454f-bcf9-adf9016af84e[panopto]
-image::../media/drw_a900_remove_replace_LED_mod.png[卸下或更换USB LED模块]
+image::../media/drw_a900_remove_replace_LED_mod.svg[卸下或更换USB LED模块]
 
 [cols="1,4"]
 |===

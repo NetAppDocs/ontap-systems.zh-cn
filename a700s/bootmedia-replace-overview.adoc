@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, primary, boot, media, store, ontap, image, system, restore, primary, media, secondary, usb, flash, drive, replace, replace the boot media 
-summary: 主启动介质用于存储系统在启动时使用的 ONTAP 启动映像。您可以使用二级启动介质上的 ONTAP 映像还原主启动介质映像，也可以在必要时使用 USB 闪存驱动器还原主启动介质映像。 
+keywords: aff a700s, aff, a700s, primary, boot, media, store, ontap, image, system, restore, primary, media, secondary, usb, flash, drive, replace, replace the boot media, manual, manual boot recovery 
+summary: 了解AFF A700s系统上的启动介质更换，并了解恢复方法。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 启动介质更换概述— AFF A700s
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 主启动介质用于存储系统在启动时使用的 ONTAP 启动映�
 
 
 [role="lead"]
-主启动介质用于存储系统在启动时使用的 ONTAP 启动映像。您可以使用二级启动介质上的 ONTAP 映像还原主启动介质映像，也可以在必要时使用 USB 闪存驱动器还原主启动介质映像。
+了解AFF A700s系统上的启动介质更换，并了解恢复方法。主启动介质存储系统启动期间使用的ONTAP启动映像。您可以使用辅助启动介质中的ONTAP映像恢复主启动介质映像，或者，如有必要，可以使用格式化为 FAT32 的 USB 闪存驱动器恢复主启动介质映像。
+
+AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 如果二级启动介质出现故障或缺少 image.tgz 文件，则必须使用 USB 闪存驱动器还原主启动介质。驱动器必须格式化为 fat32 ，并且必须具有适当的存储容量来存放 image_xxx.tgz 文件。
 

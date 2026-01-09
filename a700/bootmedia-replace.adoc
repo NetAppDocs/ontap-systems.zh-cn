@@ -1,8 +1,8 @@
 ---
 permalink: a700/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, open, controller, module, system, access, component 
-summary: 要访问控制器内部的组件，您必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。 
+keywords: aff a700, open, controller, module, system, access, component, manual, manual boot recovery 
+summary: 更换AFF A700控制器模块上故障的启动介质。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 更换启动介质- AFF A700
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: 要访问控制器内部的组件，您必须先从系统中卸下控�
 
 
 [role="lead"]
+更换AFF A700控制器模块上故障的启动介质。此过程包括从机箱中取出控制器模块，物理更换启动介质组件，使用 USB 闪存驱动器将启动映像传输到更换的介质，以及将系统恢复到正常运行状态。
+
+AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
 
 

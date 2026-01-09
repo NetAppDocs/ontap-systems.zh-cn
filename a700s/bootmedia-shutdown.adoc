@@ -1,8 +1,8 @@
 ---
 permalink: a700s/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, completing, complete, nve, nse, shutdown, impair, controller, shut down the controller 
-summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。 
+keywords: aff a700s, aff, a700s, completing, complete, nve, nse, shutdown, impair, controller, shut down the controller, manual, manual boot recovery 
+summary: 在完成加密检查后，关闭AFF A700s系统上出现故障的控制器。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 关闭控制器 - AFF A700s
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
 
 
 [role="lead"]
+在完成加密检查后，关闭AFF A700s系统上出现故障的控制器。此过程包括将控制器带到 LOADER 提示符，捕获启动环境变量以供参考，以及准备控制器以更换启动介质。
+
+AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+
 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
 
 .步骤

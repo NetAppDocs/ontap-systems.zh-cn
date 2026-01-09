@@ -1,8 +1,8 @@
 ---
 permalink: fas2700/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: fas2700, aff 220, boot, recovery, image, restore, file, system, environmental, varible 
-summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
+keywords: fas2700, aff 220, boot, recovery, image, restore, file, system, environmental, varible, manual, manual boot recovery 
+summary: 在 FAS2700 系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 启动恢复映像—FAS2700
 :allow-uri-read: 
@@ -11,6 +11,10 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 
 
 [role="lead"]
+在 FAS2700 系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。此过程包括从 USB 闪存驱动器启动、恢复文件系统、验证环境变量以及在更换启动介质后使控制器恢复正常运行。
+
+FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+
 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
 
 .步骤

@@ -1,8 +1,8 @@
 ---
 permalink: a300/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff a300, replace the boot media 
-summary: 您必须在控制器中找到启动介质并按照说明进行更换。 
+keywords: aff a300, replace the boot media, manual, manual boot recovery 
+summary: 您必须找到控制器中的启动介质，并按照说明进行更换。AFF A300系统仅支持手动启动介质恢复程序。 
 ---
 = 更换启动介质— AFF A300
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您必须在控制器中找到启动介质并按照说明进行更换�
 
 
 [role="lead"]
-要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
+要更换启动介质，必须卸下损坏的控制器模块，安装新的启动介质，并将启动映像传输到 USB 闪存驱动器。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 
 

@@ -1,7 +1,7 @@
 ---
 permalink: a200/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: aff a200, verify environment variables, image, boot the recovery image 
+keywords: aff a200, verify environment variables, image, boot the recovery image, manual, manual boot recovery 
 summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
 ---
 = 启动恢复映像— AFF A200
@@ -11,7 +11,7 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 
 
 [role="lead"]
-您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
+您必须从 USB 驱动器启动ONTAP映像，恢复文件系统，并验证环境变量。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 .步骤
 . 从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`

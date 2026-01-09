@@ -1,8 +1,8 @@
 ---
 permalink: a320/bootmedia-complete-rma.html 
 sidebar: sidebar 
-keywords: aff, a320, aff a320, replace, part, return, fail, netapp, rma, complete the replacement process 
-summary: '更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。' 
+keywords: aff, a320, aff a320, replace, part, return, fail, netapp, rma, complete the replacement process, manual, manual boot recovery 
+summary: 更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。AFF A320系统仅支持手动启动介质恢复程序。 
 ---
 = 将故障部件退回给 NetApp - AFF A320
 :allow-uri-read: 
@@ -11,4 +11,4 @@ summary: '更换部件后，您可以按照套件随附的 RMA 说明将故障�
 
 
 [role="lead"]
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。
+请按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp。参见 https://mysupport.netapp.com/site/info/rma["部件退回和更换"] 更多信息请参见页面。AFF A320系统仅支持手动启动介质恢复程序。

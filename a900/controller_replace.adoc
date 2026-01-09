@@ -30,7 +30,7 @@ video::30337552-b10f-4146-9bdb-adf2000df5bd[panopto]
 .动画-删除控制器
 video::256721fd-4c2e-40b3-841a-adf2000df5fa[panopto]
 +
-image::../media/drw_a900_remove_PCM.png[释放控制器]
+image::../media/drw_a900_remove_PCM.svg[释放控制器]
 
 +
 [cols="1,4"]
@@ -56,7 +56,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 . 将控制器模块的盖板朝上放在平稳的平面上，按下盖板上的蓝色按钮，将盖板滑至控制器模块的背面，然后向上转动盖板并将其从控制器模块中提出。
 +
-image::../media/drw_a900_PCM_open.png[将护盖提离控制器模块]
+image::../media/drw_a900_PCM_open.svg[将护盖提离控制器模块]
 
 
 
@@ -78,7 +78,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 . 使用下图或控制器模块上的 FRU 映射找到启动介质：
 +
-image::../media/drw_a900_remove_boot_dev.png[取出启动介质]
+image::../media/drw_a900_remove_boot_dev.svg[取出启动介质]
 
 +
 [cols="1,4"]
@@ -129,7 +129,7 @@ NOTE: Ver2控制器的DIMM插槽较少。支持的DIMM数量没有减少、DIMM�
 IMPORTANT: 小心握住 DIMM 的边缘，以避免对 DIMM 电路板上的组件施加压力。
 
 +
-image::../media/drw_a900_replace_PCM_dimms.png[卸下DIMM]
+image::../media/drw_a900_replace_PCM_dimms.svg[卸下DIMM]
 
 +
 [cols="1,4"]
@@ -188,7 +188,7 @@ NOTE: 系统可能会在启动时更新系统固件。请勿中止此过程。�
 .动画-安装控制器
 video::099237f3-d7f2-4749-86e2-adf2000df53c[panopto]
 +
-image::../media/drw_a900_remove_PCM.png[释放控制器]
+image::../media/drw_a900_remove_PCM.svg[释放控制器]
 
 +
 [cols="1,4"]

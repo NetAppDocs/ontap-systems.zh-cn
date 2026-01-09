@@ -243,7 +243,6 @@
   <block id="d46c38b7dc3878718dd4c84650efa91e" category="section-title">第 8 步：安装控制器模块</block>
   <block id="8647835bebea663e6009839ccbd3ce9e" category="paragraph">将所有组件从受损控制器模块移至更换控制器模块后，您必须将更换控制器模块安装到机箱中，然后将其启动至维护模式。</block>
   <block id="d5bfba1ac511ef4b8b0fcb489bdaf25b" category="summary">检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM\ ）， NetApp 存储加密 \ （ NSE\ ）或 NetApp 卷加密 \ （ NVE\ ）的系统的步骤。</block>
-  <block id="080362a2b4cc1ec10758d0142bde822c" category="paragraph">检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM ）， NetApp 存储加密（ NSE ）或 NetApp 卷加密（ NVE ）的系统的步骤。</block>
   <block id="0de78a491f219f7714f0bd10c9112f7b" category="list-text">使用 `storage failover show` 命令确认目标节点已准备好进行交还。</block>
   <block id="0e4c0966d084bca62cb0b1d57bb4cd37" category="list-text">使用 `storage failover modify -node local -auto-giveback true` 命令禁用自动交还后，可将其还原。</block>
   <block id="2d3bee2aa5bb3ec8ffb5a77dc1eba625" category="paragraph">登录提示符</block>
@@ -668,8 +667,6 @@
   <block id="ea0af08f58acd216c0cdbf8f9611bc62" category="list-text">系统中的电源数量取决于型号。</block>
   <block id="a5c83d1259ea5fcd94515dacb438e884" category="list-text">根据控制台错误消息或通过电源上的 LED 确定要更换的电源。</block>
   <block id="667ec5d2e7ff49916ac90c31eb178520" category="list-text">将凸轮把手尽可能向下旋转，以将其关闭。</block>
-  <block id="e5869c3e3552c60a1a151cf93d8bdbee" category="summary">您必须在控制器模块中找到故障启动介质，方法是卸下控制器模块上的中间 PCIe 模块，通过启动介质附近的亮起 LED 找到故障启动介质，然后更换启动介质。</block>
-  <block id="e9e66c1bd59e20ff8acce6fb41f94461" category="paragraph">您必须从机箱中卸下控制器模块并将其打开，然后更换出现故障的启动介质。</block>
   <block id="e88eebc1797d32d10ed4abe331b3ecb6" category="section-title">第 2 步：更换启动介质— AFF A700s</block>
   <block id="d49fe2e5280db996ef1801aa2312cf51" category="list-text">找到启动介质：</block>
   <block id="ea47f8c3d75d0ae8c63333493732e287" category="list-text">如果需要，打开通风管。</block>
@@ -691,7 +688,6 @@
   <block id="4fc302016c3931e6a9278cd203ab978a" category="list-text">向下旋转通风管。</block>
   <block id="d9f2c30fa17e17bb535f8c9807f2bd46" category="list-text">将通风管滑向升降器，直到其卡入到位。</block>
   <block id="feb6e7b3091c7242849233efd75d8a7e" category="doc">将故障部件退回给 NetApp - AFF A700s</block>
-  <block id="8a9d9ac73cd783fd8be1adef7a7b3710" category="summary">主启动介质用于存储系统在启动时使用的 ONTAP 启动映像。您可以使用二级启动介质上的 ONTAP 映像还原主启动介质映像，也可以在必要时使用 USB 闪存驱动器还原主启动介质映像。</block>
   <block id="327cba4c3b39fe95536adbd9bda04a68" category="paragraph">如果二级启动介质出现故障或缺少 image.tgz 文件，则必须使用 USB 闪存驱动器还原主启动介质。驱动器必须格式化为 fat32 ，并且必须具有适当的存储容量来存放 image_xxx.tgz 文件。</block>
   <block id="c36778782b4ef6254390f7e747b95625" category="list-text">替换过程会将 var 文件系统从二级启动介质或 USB 闪存驱动器还原到主启动介质。</block>
   <block id="c6f502d8dd8eb8b387d8da2e59e48c95" category="summary">以下视频显示了运行 ONTAP 9.2 的系统的端到端软件配置。</block>
@@ -784,8 +780,6 @@
   <block id="5c41efcd6cdac2bf93f02a8055089ed8" category="section-title">第 2 步：验证并设置机箱的 HA 状态</block>
   <block id="3ceabec6c24f4b298d5024f17ef30a0b" category="summary">只有当二级启动介质还原失败或在二级启动介质上找不到 image.tgz 文件时，才应使用此操作步骤。</block>
   <block id="05dffff712f4aca6f86af6c7c42a9991" category="doc">将启动映像传输到启动介质— AFF A700s</block>
-  <block id="d13198d049fcff37aa785f790572ef1e" category="paragraph">您可以使用控制器模块中安装的第二个启动介质上的映像将系统映像安装到替代启动介质，这是还原系统映像的主要方法， 或者，如果二级启动介质还原失败或二级启动介质上未找到 image.tgz 文件，则使用 USB 闪存驱动器将启动映像传输到启动介质。</block>
-  <block id="f0883ed7dc01ca5a7c6baa998e45a6be" category="section-title">选项 1 ：使用从第二个启动介质进行备份恢复将文件传输到启动介质</block>
   <block id="f2517f7437e31c22e8ebbe3208bc1f18" category="paragraph">您可以使用控制器模块中安装的第二个启动介质上的映像将系统映像安装到替代启动介质。这是将启动介质文件传输到控制器模块中具有两个启动介质的系统中的替代启动介质的主要方法。</block>
   <block id="c74fc698f6085001fa8e634011afdd6d" category="paragraph">二级启动介质上的映像必须包含 `image.tgz` 文件，并且不能报告故障。如果缺少 image.tgz 文件或启动介质报告失败，则无法使用此操作步骤。您必须使用 USB 闪存驱动器替代操作步骤将启动映像传输到替代启动介质。</block>
   <block id="e698e87d27bc1a99a5f5b8d08fca35ac" category="list-text">重新安装缆线管理设备，并根据需要重新对系统进行布线。</block>
@@ -802,7 +796,6 @@
   <block id="7eebffe155284ad2945a0e00f74ac4af" category="list-text">在高级权限级别的配对节点中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`</block>
   <block id="bc8660c5f3569dff11062aab0e8487d1" category="list-text">配置同步完成且无错误后，在系统提示确认备份操作步骤成功时按 `y` 。</block>
   <block id="2f0448dc28af93361e8ab911dc742aa9" category="list-text">在运行正常的节点上退出高级权限级别。</block>
-  <block id="77fa1d2fec9c705a79b5ec4300599706" category="section-title">选项 2 ：使用 USB 闪存驱动器将启动映像传输到启动介质</block>
   <block id="13d5b33c8f1d9280033879c8b0a8fb7c" category="list-text">您必须具有一个已格式化为 32 位的 USB 闪存驱动器，并且容量至少为 4 GB 。</block>
   <block id="5d32a23e28833165a96b466792bec7cb" category="list-text">`bootarg.init.flash_optimized` ，适用于 AFF C190/AFF A220 （全闪存 FAS ）</block>
   <block id="7b8c83358fbe746786ab219aac22aed9" category="list-text">`bootarg.storageencryption.support &lt;value&gt;`</block>
@@ -1594,7 +1587,6 @@
   <block id="ed5045a701ec927a89cecd13b59f2648" category="list-text">启动节点： `boot_ontap`</block>
   <block id="d7f3697202a93edfa9694f456f135d47" category="section-title">选项 3 ：在双节点 MetroCluster 配置中的系统上手动重新分配系统 ID</block>
   <block id="f8513ba35fb79fff664658165975390f" category="list-text">将电池插头重新插入控制器模块。</block>
-  <block id="4a548135158bf0dbaee8622657e29f8a" category="doc">关闭受损控制器— AFF A220 和 FAS2700</block>
   <block id="10c7f296fbe86b208c1b89ca81a28947" category="doc">将故障部件退回给 NetApp — AFF A220 和 FAS2700</block>
   <block id="390911875f818301a4ee051939794a66" category="paragraph">要更换机箱，您必须将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，并将设备机架或系统机柜中受损机箱替换为与受损机箱型号相同的新机箱。</block>
   <block id="1e67e0629d0e05c486b4b70e46c2e403" category="list-text">编写此操作步骤时，假设您要将所有驱动器和控制器模块移至新机箱，并且此机箱是 NetApp 的新组件。</block>
@@ -2488,7 +2480,6 @@
   <block id="cf3978c4f41003aa5f5fa0b3f484dfbe" category="paragraph">DIMM</block>
   <block id="f7980892d5a8155c0cf2a73f4bff4bad" category="paragraph">将组件安装到控制器模块后，您必须将控制器模块安装回系统机箱并启动操作系统。</block>
   <block id="44cc7055d64e9241fd58fa9511a21357" category="section-title">选项 2 ：在双节点 MetroCluster 配置中启动恢复映像</block>
-  <block id="30c36d0c10aef968ba45a8742ec6c704" category="doc">切回双节点 MetroCluster 配置中的聚合— AFF A700 和 FAS9000</block>
   <block id="e03aee19ca3d6bfae73287d53384458b" category="inline-link">《 AFF A700 安装和设置说明》</block>
   <block id="123ef787b4689ac71f6faa1ecdb5c6c4" category="inline-link">《 FAS9000 安装和设置说明》</block>
   <block id="3d5375a17f55c7bdf08ca9af8aca2b83" category="list-text">按住电源手柄上的橙色按钮，然后将电源从机箱中拉出。</block>
@@ -2682,7 +2673,6 @@
   <block id="4ca78e7a42c4693e2d9cfe7f6930f8a7" category="list-text">将模块推入托架，直至其与机箱完全就位。</block>
   <block id="97f6bb6bf183f068f291c29c77c8d952" category="paragraph">如果模块已固定并连接到中板，则会听到卡嗒声。</block>
   <block id="9947bf3b87585d257219268ad5fee4d1" category="section-title">选项 1 ：关闭控制器</block>
-  <block id="4ef2119efbb49942a200e3b516caf558" category="doc">将故障部件退回给 NetApp — AFF A700 和 FAS9000</block>
   <block id="7cf422baa157fc731656c552e7fa38db" category="summary">您可以通过在已完全填充的系统中将 NIC 或存储适配器更换为新的 NIC 或存储适配器，或者将新的 NIC 或存储适配器添加到系统中的空机箱插槽中来向系统添加 I/O 模块。</block>
   <block id="81e3372a549fe5f8288392c2b55e8e4d" category="list-text">检查<block ref="bf137fbaca3418d969a7cbbc6acb278c" category="inline-link-rx"></block> 确保新 I/O 模块与您正在运行的系统和 ONTAP 版本兼容。</block>
   <block id="3a0f07d1b89f0d857d68c3c47a03e14d" category="list-text">如果有多个可用插槽，请在中检查插槽优先级<block ref="bf137fbaca3418d969a7cbbc6acb278c" category="inline-link-rx"></block> 并使用适用于您的 I/O 模块的最佳配置。</block>
@@ -2858,7 +2848,6 @@
   <block id="f473b09529c17581896f9b2f1166ce88" category="section-title">第 1 步：设置并验证更换控制器模块后的系统时间</block>
   <block id="acd5b7a742e22209bb792b093caff068" category="doc">更换启动介质— AFF A320</block>
   <block id="7b346c654ccdab10fc593c01f0c7232e" category="doc">关闭受损控制器 - AFF A320</block>
-  <block id="e7ee072a3e06310afcc412655144e84b" category="section-title">第 3 步：使用 USB 闪存驱动器将启动映像传输到启动介质</block>
   <block id="bff69c64ca9124fefc1120a9526e1c86" category="doc">更换实时时钟电池— AFF A320</block>
   <block id="85197942c26926cbc965c61326a19f17" category="paragraph">您需要找到控制器模块中的 RTC 电池，然后按照特定步骤顺序进行操作。</block>
   <block id="f443567234fee382feed95c62b71f4ac" category="list-text">卸下 PCIe 盖板。</block>
@@ -4433,7 +4422,6 @@
   <block id="017630cf9ee2c9c60d9112bb45f305ca" category="doc">更换控制器模块硬件— FAS2600</block>
   <block id="c3a9fb901b6e82e19cf5d6be414a5461" category="doc">关闭受损控制器— FAS2600</block>
   <block id="048623d528706e72f17139851220f65a" category="doc">启动介质更换概述— FAS2600</block>
-  <block id="c6eb316cc94904301a8765db5aa1680f" category="doc">启动介质更换概述— AFF A220 和 FAS2700</block>
   <block id="3fa677b8ecb97b0ae0d14f9ded5ed49a" category="doc">关闭受损控制器— FAS500f</block>
   <block id="ee2afac6b0f5165d1fc3096864ac9a41" category="doc">机箱更换概述— FAS500f</block>
   <block id="2bf23db896fc6ece8a7fd4c8db50ab7d" category="doc">控制器模块更换概述— FAS500f</block>
@@ -4451,14 +4439,12 @@
   <block id="5dfe4c7eb319ce6f2ebfab2e157e0c1b" category="doc">机箱更换概述— AFF A200</block>
   <block id="5fbbe4b96a5266b936c056caa3466c60" category="doc">还原并验证配置— AFF A200</block>
   <block id="68f1a7b941dc9e6a48709297bda51c0f" category="doc">添加 X91148A 模块概述— AFF A9000</block>
-  <block id="165c715a7b9960848663b1b8fa3c5525" category="doc">启动介质更换概述— AFF A700 和 FAS9000</block>
   <block id="865bb86499cf1ad3a70c7ff888673760" category="doc">关闭受损控制器 - AFF A800</block>
   <block id="eaa58bc985f0e200420f274e19bb7272" category="doc">更换控制器模块硬件— AFF A800</block>
   <block id="a9785aa14dfcf09366954fcb69625d05" category="sidebar">42U 1280 毫米系统机柜</block>
   <block id="059d31543d448499bd1a9c454a8d1ebb" category="sidebar">Cisco 9336C-x2</block>
   <block id="1c87a984d0a1c6881c9703209fd4341c" category="sidebar">共享配置中的 Cisco 936-x2</block>
   <block id="21a759f002cfc3385b168953dde9a34e" category="summary">用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双节点 MetroCluster 配置。</block>
-  <block id="825f13ad9fc8dc2bdd837adbced6f40f" category="paragraph">用于从恢复映像启动受损控制器的操作步骤 取决于系统是否采用双控制器 MetroCluster 配置。</block>
   <block id="238e9bea2bdd4f731b75d630cdf207a3" category="list-text">将运行状况良好的控制器设置为高级权限级别： `set -privilege advanced`</block>
   <block id="9d237c44d908f71fb6254a95480574a2" category="list-text">将控制器恢复为管理员级别： `set -privilege admin`</block>
   <block id="09224cb7028edd32132ee821e0073685" category="list-text">在系统提示重新启动控制器时，按 `y` 。</block>
@@ -4510,7 +4496,6 @@
   <block id="ec47857c388eff31e9962f4f2e2ce2e5" category="paragraph">从运行正常的控制器接管或暂停受损的控制器： `storage failover takeover -ofnode impaired_node_name`</block>
   <block id="653275a6740924b891457d92a9cbc8ef" category="section-title">第 1 步：关闭控制器</block>
   <block id="736818ee29ba3143ee0a9e06231deb0e" category="list-text">运行正常的控制器必须能够接管要更换的控制器（在本操作步骤 中称为 "`受损控制器` " ）。</block>
-  <block id="dc034442a42b074e0609ba09ebc77d0e" category="paragraph">After completing the NVE or NSE tasks, you need to complete the shutdown of the impaired node.使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
   <block id="af645d133cdcbcc30956c0bb802a4d34" category="list-text">记录屏幕上显示的受损控制器的 IP 地址。</block>
   <block id="c619d3b97fd49137c962a0b53f5ded67" category="list-text">在高级权限级别的配对控制器中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`</block>
   <block id="b070946475ca76a9891046ef46e3262c" category="list-text">如果还原成功，请在系统提示您使用还原的副本时按受损控制器上的 `y` 。</block>
@@ -4534,7 +4519,6 @@
   <block id="10f72301134f1f2b78e11983dd3c4654" category="list-text">验证每个控制器是否存在所需的卷： `vol show -node node-name`</block>
   <block id="e5fb91f466e4f9bded3cae7f56b2a15e" category="list-text">如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： `storage failover modify -node replacement-node-name -onreboot true`</block>
   <block id="6fb459fd46b17c9a37607abf2db84056" category="section-title">第 1 步：在 ONTAP 中为替代控制器安装许可证</block>
-  <block id="51e6a2fb5c6f27756e90e2666efd984d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。完成 NVE 或 NSE 任务后，您需要关闭受损控制器。</block>
   <block id="d1342671e7a1aeffea6df3cd0214be86" category="list-text">此操作步骤会造成系统中断。对于双控制器集群，多节点集群中的服务将完全中断，部分中断将会发生。</block>
   <block id="4fa4535552a76ba6abb695db42b48161" category="paragraph">如果这是您应使用的操作步骤 ，请注意，四控制器或八控制器 MetroCluster 配置中控制器的控制器替代操作步骤 与 HA 对中的控制器替代相同。No MetroCluster-specific steps are required because the failure is restricted to an HA pair and storage failover commands can be used to provide nondisruptive operation during the replacement.</block>
   <block id="f51c8858085d7dcfe4d79d9774f8270d" category="paragraph">您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。</block>
@@ -6962,7 +6946,6 @@ SFP+(目标/启动程序)</block>
   <block id="96d704bc763b695c9de9168784c7737d" category="paragraph">Cable controller B to the shelves:    <block ref="a190910980606e8669e301ec6bfe2395" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9293060aa1ce6aba93f2da08c5b9a87a" category="image-alt">连接笔记本电脑或控制台以打开管理子网</block>
   <block id="dc0a61369ab78188b5040b237202d13a" category="inline-image-macro">卸下PCIe模块</block>
-  <block id="851adb1cfe0add8b264f80f294e53d6e" category="paragraph"><block ref="851adb1cfe0add8b264f80f294e53d6e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b4bed25d7279305fb1486095526c2cbe" category="image-alt">卸下或安装风扇</block>
   <block id="f6f0bd2e4727e80f2ce638a745f37465" category="image-alt">正在删除缓存模块</block>
   <block id="7b421531117f7a333a0bf6943ea821e6" category="image-alt">卸下RTC电池</block>
@@ -7093,10 +7076,8 @@ SFP+(目标/启动程序)</block>
   <block id="95aeba05fe11ccca40520c6ce7b337c0" category="image-alt">卸下或安装PSU模块</block>
   <block id="24e0e5253433e4844dd4f414ae1d2599" category="image-alt">卸下或安装风扇</block>
   <block id="a3c54240889d795a785f54b21112d1b7" category="image-alt">卸下控制器</block>
-  <block id="f57cfb70573c5a389eec98a4b3777fac" category="paragraph"><block ref="f57cfb70573c5a389eec98a4b3777fac" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d44f4505f0712dd667909d5cee1045ad" category="image-alt">取出NV电池</block>
   <block id="f7bb7277d30be1722953bb82a41f4e96" category="image-alt">卸下或更换USB LED模块</block>
-  <block id="f4b28a464440a488e54ab8d8cd76ab99" category="image-alt">卸下DIMM</block>
   <block id="67550a2c9a63c691d7df7437a3e51506" category="image-alt">DIMM位置图</block>
   <block id="06bc29f6fd4846509ff02a3bcd57dfc2" category="image-alt">卸下DIMM</block>
   <block id="cbbd92f6eb83a9a939ca1ac9673002a5" category="list-text">卸下受损LED USB模块：</block>
@@ -8759,8 +8740,6 @@ SFP+(目标/启动程序)</block>
   <block id="087db3b88ab1127d927c06f47dd3bd04" category="doc">恢复加密- AFF C800</block>
   <block id="a29212026f644e3af5d7d35e4872e64e" category="doc">检查加密密钥支持和状态- FAS2600</block>
   <block id="f69fe3fd7c25297cb61a32bc5fc76020" category="doc">还原加密—FAS2600</block>
-  <block id="5d4211964469579f1f45285fc12474dd" category="doc">检查加密密钥支持和状态- AFF A220和FAS2700</block>
-  <block id="73bc3dac4ffabefd42b1c26a096bbc4e" category="doc">恢复加密—AFF A220和FAS2700</block>
   <block id="cbae18ebc2b8ffd413dbf0fb20bf3f9d" category="doc">检查加密密钥支持和状态- FAS500f</block>
   <block id="a7b0a510fdfaae6ab395e09cd164f2f8" category="doc">还原加密- FAS500f</block>
   <block id="8de2c4c1d0c319cb07b6837fd62d106e" category="doc">检查加密密钥支持和状态- FAS8200</block>
@@ -14425,4 +14404,176 @@ SFP+(目标/启动程序)</block>
   <block id="2d501e4167e8802637141bdc2adc5926" category="inline-link-macro">DS212C、DS224C、DS460C</block>
   <block id="c98448a1324dace9b0625e6a7320d285" category="list-text"><block ref="c98448a1324dace9b0625e6a7320d285" category="inline-link-macro-rx"></block></block>
   <block id="fca9c8461c6c2e8a996867347aa55ff7" category="list-text"><block ref="fca9c8461c6c2e8a996867347aa55ff7" category="inline-link-macro-rx"></block></block>
+  <block id="10039cc1a20163d1a931d80c0770f45e" category="paragraph"><block ref="10039cc1a20163d1a931d80c0770f45e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c8477b205c2f67bd8717734004366332" category="paragraph"><block ref="c8477b205c2f67bd8717734004366332" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca21db06c06912b48d17c3197e6d0983" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。AFF A200系统仅支持手动启动介质恢复程序。</block>
+  <block id="74ef99a35d81c6de819ef44d76f84f3f" category="paragraph">更换启动介质后，按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp 。参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> 更多信息请参见页面。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="314a33b9cb2380e7bf6cbe30954dba92" category="summary">在关闭故障控制器并检查板载加密密钥的状态之前，必须检查故障控制器的状态，禁用自动返还，并检查系统正在运行的ONTAP版本。AFF A200系统仅支持手动启动介质恢复程序。</block>
+  <block id="9189347a6ca1f63634b31ff8e62e599e" category="paragraph">为确保存储系统的数据安全，您需要验证启动介质上的加密密钥支持情况和状态。检查您的ONTAP版本是否支持NetApp卷加密 (NVE)，并在关闭控制器之前检查密钥管理器是否处于活动状态。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="417433163e7f6e44354674ded41b7b04" category="paragraph">恢复替换启动介质上的加密。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="9c0b613b1dfa8fe40241db2b67428c79" category="paragraph">您必须从 USB 驱动器启动ONTAP映像，恢复文件系统，并验证环境变量。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="1b8db95aad32c822a8a3c157ccea8f39" category="paragraph">启动介质存储系统启动时使用的主系统文件和辅助系统文件（启动映像）。根据您的网络配置，您可以执行非中断式或中断式更换。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="b61a13acff8399ece630b606d1113c40" category="paragraph">要更换启动介质，必须卸下损坏的控制器模块，安装新的启动介质，并将启动映像传输到 USB 闪存驱动器。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="2c075207937ba4d6fa42e8df72045731" category="summary">完成 NVE 或 NSE 任务后，需要完成故障控制器的关闭。AFF A200系统仅支持手动启动介质恢复程序。</block>
+  <block id="eb03fc95eccafc3dc47b5cbb485805a0" category="paragraph">使用适合您配置的相应程序关闭故障控制器。AFF A200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="6185eb520e4a892c1c1cea93ce86e7a6" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。AFF A220系统仅支持手动启动介质恢复程序。</block>
+  <block id="6a4129d7f7559d93bea64aaf6cc50dd2" category="paragraph">请按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp。参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> 更多信息请参见页面。AFF A220系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="2f2b66e4958780f4b0218a228e142375" category="summary">在关闭故障控制器并检查板载加密密钥的状态之前，必须检查故障控制器的状态，禁用自动返还，并检查系统正在运行的ONTAP版本。AFF A220系统仅支持手动启动介质恢复程序。</block>
+  <block id="5e4d3493c495db06014fa5d1c4ba98a2" category="paragraph">为确保存储系统的数据安全，您需要验证启动介质上的加密密钥支持情况和状态。检查您的ONTAP版本是否支持NetApp卷加密 (NVE)，并在关闭控制器之前检查密钥管理器是否处于活动状态。AFF A220系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="2a38eccf29619a7c06875648bdbf5aa9" category="summary">检查完环境变量后，您必须完成针对已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统的特定步骤。AFF A220系统仅支持手动启动介质恢复程序。</block>
+  <block id="ba84a621c7485d91c2c8ab174648083a" category="paragraph">恢复替换启动介质上的加密。AFF A220系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="232b514d5cb9e9b1767dc306e59f6a4d" category="summary">您必须从 USB 驱动器启动ONTAP映像，恢复文件系统，并验证环境变量。AFF A220系统仅支持手动启动介质恢复程序。</block>
+  <block id="53730ccfa28b3e3ffc10eb272982d61c" category="paragraph">AFF A220系统仅支持手动启动介质恢复程序。</block>
+  <block id="c453023c99c39ca3485fd37f5b6aafae" category="summary">启动介质存储系统启动时使用的主系统（启动映像）文件集和辅助系统（启动映像）文件集。根据您的网络配置，您可以执行非中断式或中断式更换。AFF A220系统仅支持手动启动介质恢复程序。</block>
+  <block id="93303c110d5a89a2d943e7bb7282ad9d" category="summary">您必须找到控制器中的启动介质，并按照说明进行更换。AFF A220系统仅支持手动启动介质恢复程序。</block>
+  <block id="f6f0c5143d03c908260edb730d21ef18" category="summary">您可以根据存储系统硬件配置的不同，使用不同的程序来关闭或接管故障控制器。AFF A220系统仅支持手动启动介质恢复程序。</block>
+  <block id="882250128c224c1fbdd372d32597991d" category="paragraph">使用适合您配置的相应程序关闭或接管故障控制器。AFF A220系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="b99f3ef5da4db32163d85e0e59fc5926" category="summary">在双节点MetroCluster配置中完成 FRU 更换后，您可以执行MetroCluster切换操作。这样就将配置恢复到正常运行状态，以前受损站点上的同步源存储虚拟机 (SVM) 现在处于活动状态，并从本地磁盘池提供数据。AFF A300系统仅支持手动启动介质恢复程序。</block>
+  <block id="28c09a76a539cac48fbf3bcb1e88771b" category="paragraph">完成启动介质更换后，执行MetroCluster切换操作。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="26cab572f60fbb16a513d5d6cacfe94f" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。AFF A300系统仅支持手动启动介质恢复程序。请联系技术支持。<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>如果您需要 RMA 编号或更换程序方面的其他帮助，请拨打 888-463-8277（北美）、00-800-44-638277（欧洲）或 +800-800-80-800（亚太地区）。</block>
+  <block id="b4f9e21b6cb4be0615d95b69fce6c7b8" category="paragraph">更换启动介质后，将故障部件退回NetApp 。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="92d8c38f4c65c5a2e2d7baf3d4f75b39" category="summary">在关闭故障控制器并检查板载加密密钥的状态之前，必须检查故障控制器的状态，禁用自动返还，并检查系统正在运行的ONTAP版本。AFF A300系统仅支持手动启动介质恢复程序。</block>
+  <block id="4585895ebb7097a6d74e58d99e20e151" category="paragraph">为确保存储系统的数据安全，您需要验证启动介质上的加密密钥支持情况和状态。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="89206b2c34ef884bad24d16aa929d77a" category="paragraph">检查您的ONTAP版本是否支持NetApp卷加密 (NVE)，并在关闭控制器之前检查密钥管理器是否处于活动状态。</block>
+  <block id="e1a0a619534a33db9c34d8d068e9c4ee" category="summary">检查完环境变量后，您必须完成针对已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统的特定步骤。AFF A300系统仅支持手动启动介质恢复程序。</block>
+  <block id="cd7e7a7beb4e7979e12176a610d6aabd" category="paragraph">恢复替换启动介质上的加密。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="279d10c4854449f1c8fffcc770c1d33a" category="summary">从恢复映像启动受损控制器的过程取决于系统是否处于双节点MetroCluster配置中。AFF A300系统仅支持手动启动介质恢复程序。</block>
+  <block id="fd61a87e54350163fd45f73f7d03bf43" category="paragraph">从恢复映像启动受损控制器的过程取决于系统是否处于双控制器MetroCluster配置中。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="e1887a0915f40702ad150fd4a3064134" category="summary">启动介质存储系统启动时使用的主系统（启动映像）文件集和辅助系统（启动映像）文件集。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。根据您的网络配置，您可以执行非中断式或中断式更换。</block>
+  <block id="ec288fa9102803d16b8872c9da48c5c5" category="summary">您必须找到控制器中的启动介质，并按照说明进行更换。AFF A300系统仅支持手动启动介质恢复程序。</block>
+  <block id="e7199746bf12e08d76bedcbd9d050820" category="paragraph">要更换启动介质，必须卸下损坏的控制器模块，安装新的启动介质，并将启动映像传输到 USB 闪存驱动器。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="f913c2a70852b80287a4b79c41a77fb9" category="summary">您可以根据存储系统硬件配置的不同，使用不同的程序来关闭或接管故障控制器。AFF A300系统仅支持手动启动介质恢复程序。</block>
+  <block id="3cc042a2bef2feaf24c8cfb8e205179a" category="paragraph">使用适合您配置的相应程序关闭或接管故障控制器。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="e46d987942426fc86b7730afc7b248d6" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。AFF A320系统仅支持手动启动介质恢复程序。</block>
+  <block id="f15365d982da7478369dbc891e2f7a88" category="paragraph">请按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp。参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> 更多信息请参见页面。AFF A320系统仅支持手动启动介质恢复程序。</block>
+  <block id="e034eb6503cd1dcc43bcc967016a3d89" category="summary">在关闭故障控制器并检查板载加密密钥的状态之前，必须检查故障控制器的状态，禁用自动返还，并检查系统正在运行的ONTAP版本。AFF A320系统仅支持手动启动介质恢复程序。</block>
+  <block id="0ad82b1bf8daf4fb1ddb9e3e915a9e4e" category="paragraph">为确保存储系统的数据安全，您需要验证启动介质上的加密密钥支持情况和状态。检查您的ONTAP版本是否支持NetApp卷加密 (NVE)，并在关闭控制器之前检查密钥管理器是否处于活动状态。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="4f008eb1744791be8360357dcdd6f12f" category="summary">检查完环境变量后，您必须完成针对已启用板载密钥管理器、 NetApp存储加密或NetApp卷加密的系统的特定步骤。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="729253df1626962822de60a13f8880ae" category="paragraph">恢复替换启动介质上的加密。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="9149e7c3aa9467700c08e84c3c1bef95" category="summary">您必须从 USB 驱动器启动ONTAP映像，恢复文件系统，并验证环境变量。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="5f0959bce551ed982ccd77d9e57ce417" category="summary">您必须找到控制器模块中的启动介质，然后按照说明进行更换。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="cde010cf008036347b873e12216c3adb" category="paragraph">AFF A320系统仅支持手动启动介质恢复程序。</block>
+  <block id="c79ca81429a6b6fc94e755e5c890c339" category="summary">启动介质存储着系统启动时使用的主启动映像文件集和辅助启动映像文件集。AFF A320系统仅支持手动启动介质恢复程序。</block>
+  <block id="aa51f617e616759ff97f6f3e452f7a79" category="paragraph">要更换启动介质，必须卸下损坏的控制器模块，安装新的启动介质，并将启动映像传输到 USB 闪存驱动器。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="947b36feb00e90cdec6c7a3d4ecdd233" category="section-title">步骤 3：使用 U 盘传输启动镜像</block>
+  <block id="4206624bbbad923da4b854862152a86b" category="summary">完成 NVE 或 NSE 任务后，需要完成受损节点的关闭。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="ceb5bd5610e4072d7e0ea83ab8c9bd35" category="paragraph">完成 NVE 或 NSE 任务后，需要完成受损节点的关闭。使用适合您配置的相应程序关闭或接管故障控制器。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="53df83e7f3d3d516635394c3f473ae6d" category="summary">您安装的替换启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="b53095e62c73c8b99f1d02552c000fe3" category="summary">在双节点MetroCluster配置中完成 FRU 更换后，您可以执行MetroCluster切换操作。这样就将配置恢复到正常运行状态，以前受损站点上的同步源存储虚拟机 (SVM) 现在处于活动状态，并从本地磁盘池提供数据。AFF A700系统仅支持手动启动介质恢复程序。</block>
+  <block id="99cf1e1ab20c4cfd0d95014cd67a0a08" category="doc">在双节点MetroCluster配置中切换回聚合 - AFF A700</block>
+  <block id="1c03bf396c9eca00858b527b5453a171" category="paragraph">完成启动介质更换后，执行MetroCluster切换操作。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="7c5da5f5d614c9e136861d7065d7b7de" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。AFF A700系统仅支持手动启动介质恢复程序。</block>
+  <block id="3080fc912ede9ee6ebc9d25d65da7ca5" category="doc">将故障部件退回NetApp - AFF A700</block>
+  <block id="3abf23ca48f7e13f80f5fe7bb1275105" category="paragraph">请按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp。参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> 更多信息请参见页面。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="e4e3fca76d6c0e123250e2cff21a47c3" category="summary">在关闭受损节点并检查板载加密密钥的状态之前，必须检查受损节点的状态，禁用自动返还，并检查系统正在运行的ONTAP版本。AFF A700系统仅支持手动启动介质恢复程序。</block>
+  <block id="e5c2fdb34f1de6346aff8ea3b7a3e6f4" category="paragraph">为确保存储系统的数据安全，您需要验证启动介质上的加密密钥支持情况和状态。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="c244f21ad756e7c793cac0e0cd147065" category="summary">检查完环境变量后，您必须完成针对已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统的特定步骤。AFF A700系统仅支持手动启动介质恢复程序。</block>
+  <block id="75ab832e014c22332ebc38b0436cb501" category="paragraph">恢复替换启动介质上的加密。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="c7d20417b980cce3ed3bb7d7005db376" category="summary">在AFF A700系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="57fd47470ae718542cad7b5b9f01e9e9" category="paragraph">在AFF A700系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。该过程包括从 USB 闪存驱动器启动、恢复文件系统、验证环境变量以及使控制器恢复正常运行，具体步骤取决于系统是否处于双节点MetroCluster配置中。</block>
+  <block id="3f5511369794c1ee63fa5125d9a5db59" category="paragraph">AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="2e930073e64024b137488b076f49173b" category="summary">了解AFF A700系统上的启动介质更换，并了解不同的更换方法。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="1624c11f18d5334431899b9c1fa94231" category="doc">启动介质更换概述 - AFF A700</block>
+  <block id="50cf5ff096dc3312afbcf78ae754cb14" category="paragraph">了解AFF A700系统上的启动介质更换，并了解不同的更换方法。启动介质存储系统启动时使用的主启动映像文件和辅助启动映像文件。根据您的网络配置，您可以执行非中断式更换（使用内部 e0S 连接）或中断式更换（需要两次重启）。</block>
+  <block id="d1d2b405ad8bdeae70fb327661aff7a6" category="summary">更换AFF A700控制器模块上故障的启动介质。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="85a247e45c819a9feaa0b28c861135b7" category="paragraph">更换AFF A700控制器模块上故障的启动介质。此过程包括从机箱中取出控制器模块，物理更换启动介质组件，使用 USB 闪存驱动器将启动映像传输到更换的介质，以及将系统恢复到正常运行状态。</block>
+  <block id="9bcade05d37289ef7b50c3b5574449d5" category="summary">在完成加密检查后，关闭AFF A700系统上出现故障的控制器。AFF A700系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="8e892210dae0eb554a31aac3a79cc06a" category="paragraph">完成加密检查后，关闭AFF A700系统上出现故障的控制器。此过程包括将控制器带到 LOADER 提示符，捕获启动环境变量以供参考，以及准备控制器以更换启动介质，具体步骤因系统配置而异。</block>
+  <block id="dc042dd29833b053080629e6a3a65c7b" category="paragraph">启动介质存储着系统启动时使用的主启动映像文件集和辅助启动映像文件集。AFF A700和FAS9000系统仅支持手动启动介质恢复程序。</block>
+  <block id="b8487c17915dcb428606ef47abd9b2e2" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回NetApp AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="91d08f7feb0cfd21fefc415323d857ee" category="paragraph">请按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp。参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> 更多信息请参见页面。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="4110027e00fc8b821cde07add698a3c9" category="summary">在关闭AFF A700s系统上出现故障的控制器之前，请验证加密密钥支持和状态。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="8afaf1a71df8b5e8293ad4548f96995b" category="paragraph">在关闭AFF A700s系统上出现故障的控制器之前，请验证加密密钥支持和状态。此过程包括检查ONTAP版本与NetApp卷加密 (NVE) 的兼容性、验证密钥管理器配置以及备份加密信息，以确保在启动介质恢复期间的数据安全。</block>
+  <block id="3d59e209df076e5f186b38a1955edef9" category="paragraph">AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="fb61bd7ee6046c46954f664f27baf207" category="summary">恢复AFF A700s系统的替换启动介质上的加密配置。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="dc551a70b913db6df211355fa06088d6" category="paragraph">恢复AFF A700s系统的替换启动介质上的加密配置。此流程包括完成已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统更换后的步骤，以确保安全的数据访问和系统的正常运行。</block>
+  <block id="c602a786cf1afc7286fa740b4aa73d7e" category="summary">在AFF A700s系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="52f54bd2a3371a3d9c472bcdd1b83dcd" category="paragraph">在AFF A700s系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。此过程包括从 USB 闪存驱动器启动、恢复文件系统、验证环境变量以及在更换启动介质后使控制器恢复正常运行。</block>
+  <block id="6343c488c5fd7366ccb8097fd368c902" category="summary">了解AFF A700s系统上的启动介质更换，并了解恢复方法。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="75444ab6d7631b7666137714ef269b70" category="paragraph">了解AFF A700s系统上的启动介质更换，并了解恢复方法。主启动介质存储系统启动期间使用的ONTAP启动映像。您可以使用辅助启动介质中的ONTAP映像恢复主启动介质映像，或者，如有必要，可以使用格式化为 FAT32 的 USB 闪存驱动器恢复主启动介质映像。</block>
+  <block id="80e4adf0a07f65179b721a3aa643f199" category="summary">更换AFF A700s控制器模块上故障的启动介质。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="288a1ba541e20c0b8408486c5ac2021c" category="paragraph">更换AFF A700s控制器模块上故障的启动介质。此程序包括从机箱中取出控制器模块，使用点亮的 LED 指示灯找到故障的启动介质，物理更换启动介质组件，并将系统恢复到正常运行状态。</block>
+  <block id="045d601ea55137d06367b4e5c07294cb" category="summary">在完成加密检查后，关闭AFF A700s系统上出现故障的控制器。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="1cde608d6fe62f56bdc3a29ae9eafc3b" category="paragraph">在完成加密检查后，关闭AFF A700s系统上出现故障的控制器。此过程包括将控制器带到 LOADER 提示符，捕获启动环境变量以供参考，以及准备控制器以更换启动介质。</block>
+  <block id="7ff709ab33d28508eabb142a3db7ae80" category="summary">使用辅助启动介质或 USB 闪存驱动器，将启动映像传输到AFF A700s系统上的替换启动介质。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="6827ba78ed93529d56c15a33eb4ff531" category="paragraph">使用辅助启动介质或 USB 闪存驱动器，将启动映像传输到AFF A700s系统上的替换启动介质。此过程包括从辅助启动介质上的映像进行恢复（作为主要方法），或者在辅助启动介质恢复失败或 image.tgz 文件丢失时使用 USB 闪存驱动器。</block>
+  <block id="b3e6f6b7e4e5a440cfc3f9e0993cee92" category="section-title">方案一：使用备份恢复功能从第二个启动介质传输文件</block>
+  <block id="e4e6847403baa34b19d3eda275449b4b" category="section-title">方案二：使用U盘传输启动镜像</block>
+  <block id="a9ada9881e4356b94c8f1b22d5de3285" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。AFF C190系统仅支持手动启动介质恢复程序。</block>
+  <block id="16938aed6aaf31d064148061342cc4bf" category="paragraph">请按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp。参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> 更多信息请参见页面。AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="db6232233752b78cea44cf76a92c0d32" category="summary">在关闭AFF C190系统上出现故障的控制器之前，请验证加密密钥支持和状态。AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="2a1422d9858e45053a63cc3d30c30dad" category="paragraph">在关闭AFF C190系统上出现故障的控制器之前，请验证加密密钥支持和状态。此过程包括检查ONTAP版本与NetApp卷加密 (NVE) 的兼容性、验证密钥管理器配置以及备份加密信息，以确保在启动介质恢复期间的数据安全。</block>
+  <block id="ab06aa9f0bcbe2033eb5a19f038de415" category="paragraph">AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="9953b0723da6931c16a5c932a2f00d95" category="summary">恢复AFF C190系统的替换启动介质上的加密配置。AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="e0287af39af81ba06b0b36fbce24680d" category="paragraph">恢复AFF C190系统的替换启动介质上的加密配置。此流程包括完成已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统更换后的步骤，以确保安全的数据访问和系统的正常运行。</block>
+  <block id="3c585d951f675da7be1e40e7c9815e79" category="summary">在AFF C190系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="89ce752a7b048b74e0d2160dd3d8933d" category="paragraph">在AFF C190系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。此过程包括从 USB 闪存驱动器启动、恢复文件系统、验证环境变量以及在更换启动介质后使控制器恢复正常运行。</block>
+  <block id="cc57173da2a214140ee5e4141fbbaf3a" category="summary">了解AFF C190系统上的启动介质更换，并了解不同的更换方法。AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="b3a51b10ba02ec214448df46a80734a4" category="paragraph">了解AFF C190系统上的启动介质更换，并了解不同的更换方法。启动介质存储系统启动时使用的主启动映像文件和辅助启动映像文件。根据您的网络配置，您可以执行非中断式更换（HA 对连接到网络）或中断式更换（需要重启两次）。</block>
+  <block id="5124334c95b4d6c8ba42a76baa65cc6a" category="summary">更换AFF C190控制器模块上故障的启动介质。AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="93e482204e53a43fa356c54257d0114c" category="paragraph">更换AFF C190控制器模块上故障的启动介质。此过程包括从机箱中取出控制器模块，物理更换启动介质组件，使用 USB 闪存驱动器将启动映像传输到更换的介质，以及将系统恢复到正常运行状态。</block>
+  <block id="8175cc71d4d5286f96a9cede62d639ea" category="summary">在完成加密检查后，关闭AFF C190系统上出现故障的控制器。AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="68ba47c6b1d2b392e8bb23e56c9f6e22" category="paragraph">在完成加密检查后，关闭AFF C190系统上出现故障的控制器。此过程包括将控制器带到 LOADER 提示符，捕获启动环境变量以供参考，以及准备控制器以更换启动介质。</block>
+  <block id="7436c89939496dcc28b8f9c7ccbc772a" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。FAS2600 系统仅支持手动启动介质恢复程序。</block>
+  <block id="c2a4b06d1cc1349c24f24b820ee36069" category="paragraph">请按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp。参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> 更多信息请参见页面。FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="48f99a557cdb12e066cd81c373c3ea86" category="summary">在关闭 FAS2600 系统上出现故障的控制器之前，请验证加密密钥支持和状态。此过程包括检查ONTAP版本兼容性。FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="7ca680c61f0050a8d5510b0654331ca0" category="paragraph">在关闭 FAS2600 系统上出现故障的控制器之前，请验证加密密钥支持和状态。此过程包括检查ONTAP版本与NetApp卷加密 (NVE) 的兼容性、验证密钥管理器配置以及备份加密信息，以确保在启动介质恢复期间的数据安全。</block>
+  <block id="e50bbd9920423b606b77b8053d9e14c2" category="paragraph">FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="65ef36d139347b00ddbea88d18eec7c3" category="summary">在 FAS2600 系统的替换启动介质上恢复加密配置。此流程包括完成已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统更换后的步骤，以确保安全的数据访问和系统的正常运行。</block>
+  <block id="61bf013e936b5989a900bd93a27115a9" category="summary">在 FAS2600 系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="f1a9c41d9d6f039272f569eb3baf2a2f" category="paragraph">在 FAS2600 系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。此过程包括从 USB 闪存驱动器启动、恢复文件系统、验证环境变量以及在更换启动介质后使控制器恢复正常运行。</block>
+  <block id="caf2f3e60e8b9a5df9864a5424e47837" category="summary">了解 FAS2600 系统上的启动介质更换，并了解不同的更换方法。FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="3fd4ff674a02896028e93e76dac4e3f6" category="paragraph">启动介质存储系统启动时使用的主启动映像文件和辅助启动映像文件。根据您的网络配置，您可以执行非中断式更换（HA 对连接到网络）或中断式更换（需要重启两次）。</block>
+  <block id="531859330aaf7d2cb986bba1ea86611e" category="summary">更换 FAS2600 控制器模块上故障的启动介质。FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="c5cd0685223ec8c9dfe118b80eebe6ee" category="paragraph">更换 FAS2600 控制器模块上故障的启动介质。此过程包括从机箱中取出控制器模块，物理更换启动介质组件，使用 USB 闪存驱动器将启动映像传输到更换的介质，以及将系统恢复到正常运行状态。</block>
+  <block id="2c6a895283d547854eaba691af00540f" category="summary">完成加密检查后，关闭 FAS2600 系统上出现故障的控制器。FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="f14e6ca36d9f6936d45ba95faaa72b55" category="paragraph">完成加密检查后，关闭 FAS2600 系统上出现故障的控制器。此过程包括将控制器带到 LOADER 提示符，捕获启动环境变量以供参考，以及准备控制器以更换启动介质。</block>
+  <block id="152a510da7acd87fb780c3924e66dd3d" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。FAS2700 系统仅支持手动启动介质恢复程序。</block>
+  <block id="6453951e8d3ca08e9ff3620e8eafe394" category="paragraph">FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="12be28c959d52cd55789d7b31c840e89" category="summary">在关闭 FAS2700 系统上出现故障的控制器之前，请验证加密密钥支持和状态。FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="dcc2c2b8f3fcf52a59e925727d2cdb33" category="doc">检查加密密钥支持和状态 - FAS2700</block>
+  <block id="d3c8f46411c2bbf048f38ffb243dcb21" category="paragraph">在关闭 FAS2700 系统上出现故障的控制器之前，请验证加密密钥支持和状态。此过程包括检查ONTAP版本与NetApp卷加密 (NVE) 的兼容性、验证密钥管理器配置以及备份加密信息，以确保在启动介质恢复期间的数据安全。</block>
+  <block id="b55fa1f84a4aa200d621896941c317eb" category="summary">恢复替换启动介质上的加密。FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="6ede00f70e3bbaac2bcec93d01e0e41f" category="doc">恢复加密 - FAS2700</block>
+  <block id="4c06ef68822114c73b4fa5767260497f" category="summary">在 FAS2700 系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="13238a211d9253451026e3af83c70248" category="paragraph">在 FAS2700 系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。此过程包括从 USB 闪存驱动器启动、恢复文件系统、验证环境变量以及在更换启动介质后使控制器恢复正常运行。</block>
+  <block id="d6edd271c8327657fd2403fffc4c50ca" category="summary">了解 FAS2700 系统上的启动介质更换，并了解不同的更换方法。启动介质存储系统启动时使用的主启动映像文件和辅助启动映像文件。根据您的网络配置，您可以执行非中断式更换（HA 对连接到网络）或中断式更换（需要重启两次）。</block>
+  <block id="5c6af4f49c78cf6324723c8432cd7825" category="doc">启动介质更换概述 - FAS2700</block>
+  <block id="32bd0098b7b66789878381234e1b8f0f" category="paragraph">了解 FAS2700 系统上的启动介质更换，并了解不同的更换方法。</block>
+  <block id="eb1bbb601de5f007b052500d1daa9897" category="summary">更换 FAS2700 控制器模块上故障的启动介质。FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="4a4a24c4da47fc1ffc6cca5c2d6ce583" category="paragraph">更换 FAS2700 控制器模块上故障的启动介质。此过程包括从机箱中取出控制器模块，物理更换启动介质组件，使用 USB 闪存驱动器将启动映像传输到更换的介质，以及将系统恢复到正常运行状态。</block>
+  <block id="099bbbe59f1279cd79dc828d1fdd1e2a" category="summary">您可以根据存储系统硬件配置的不同，使用不同的程序来关闭或接管故障控制器。FAS2700 系统仅支持手动启动介质恢复程序。</block>
+  <block id="8bed89a7ecf253634e51f38e2fcd58fc" category="paragraph">使用适合您配置的相应程序关闭或接管故障控制器。FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="612de12b06dc92e879871af6108e9145" category="summary">在双节点MetroCluster配置中完成启动介质更换后，对FAS8200系统执行MetroCluster切换回操作。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="55abb9cbcf608e1e1788ba5c70f5cdd7" category="paragraph">在双节点MetroCluster配置中完成启动介质更换后，对FAS8200系统执行MetroCluster切换回操作。此过程包括验证节点和存储虚拟机 (SVM) 的状态，执行回退命令，并确认配置恢复到正常运行状态，同步源 SVM 从本地磁盘池提供数据。</block>
+  <block id="20ffd50557ca256223fa86dcd17bd2f7" category="paragraph">FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="8d6de04460a654100b8060c21ce281b5" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。FAS8200系统仅支持手动启动介质恢复程序。</block>
+  <block id="bc350256d7a6cef7c02710a0139714df" category="summary">在关闭FAS8200系统上出现故障的控制器之前，请验证加密密钥支持和状态。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="42106298b2c64aa36df74ef0043663e1" category="paragraph">在关闭FAS8200系统上出现故障的控制器之前，请验证加密密钥支持和状态。此过程包括检查ONTAP版本与NetApp卷加密 (NVE) 的兼容性、验证密钥管理器配置以及备份加密信息，以确保在启动介质恢复期间的数据安全。</block>
+  <block id="b64021e89ec05c245f475633fde22260" category="summary">在FAS8200系统的替换启动介质上恢复加密配置。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="dee1cab956be03e5d86505f17196a970" category="paragraph">在FAS8200系统的替换启动介质上恢复加密配置。此流程包括完成已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统更换后的步骤，以确保安全的数据访问和系统的正常运行。</block>
+  <block id="fa4f4d2a57ed28f9d153ed33311c2d54" category="summary">在FAS8200系统上，从 USB 驱动器启动ONTAP恢复映像以恢复启动介质FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="7549eda3bfab69811efe7331a5381e9a" category="paragraph">在FAS8200系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。该过程包括从 USB 闪存驱动器启动、恢复文件系统、验证环境变量以及使控制器恢复正常运行，具体步骤取决于系统是否处于双节点MetroCluster配置中。</block>
+  <block id="689cec69f36cf77612e0646ba7b2eceb" category="summary">了解FAS8200系统上的启动介质更换，并了解不同的更换方法。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="277591904d45c0d913e14dba26389b19" category="paragraph">了解FAS8200系统上的启动介质更换，并了解不同的更换方法。启动介质存储系统启动时使用的主启动映像文件和辅助启动映像文件。根据您的网络配置，您可以执行非中断式更换（HA 对连接到网络）或中断式更换（需要重启两次）。</block>
+  <block id="1358d65cf4d1fd0a8157e298a88f4cd6" category="summary">更换FAS8200控制器模块上故障的启动介质。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="4fa7fac5155fdf6f00f32df2d2a3b87a" category="paragraph">更换FAS8200控制器模块上故障的启动介质。此过程包括从机箱中取出控制器模块，物理更换启动介质组件，使用 USB 闪存驱动器将启动映像传输到更换的介质，以及将系统恢复到正常运行状态。</block>
+  <block id="e992c53eecb095681987a9a8910cafde" category="summary">完成加密检查后，关闭FAS8200系统上出现故障的控制器。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="e5d65c4ef08045931c1be2779705747d" category="paragraph">完成加密检查后，关闭FAS8200系统上出现故障的控制器。此过程包括将控制器带到 LOADER 提示符，捕获启动环境变量以供参考，以及准备控制器以更换启动介质，具体步骤因系统配置而异。</block>
+  <block id="87cb40395acfe10a1650b9e02b006d26" category="summary">在双节点MetroCluster配置中完成 FRU 更换后，您可以执行MetroCluster切换操作。这样就将配置恢复到正常运行状态，以前受损站点上的同步源存储虚拟机 (SVM) 现在处于活动状态，并从本地磁盘池提供数据。FAS9000系统仅支持手动启动介质恢复程序。</block>
+  <block id="b9c389d5862c302fad7b418a751b439f" category="paragraph">完成启动介质更换后，执行MetroCluster切换操作。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="d758bd8309af45c1b9501e2a932fa172" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。FAS9000系统仅支持手动启动介质恢复程序。</block>
+  <block id="bbc2e11d910d1f68251116d75c0e313c" category="paragraph">请按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp。参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> 更多信息请参见页面。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="cbea2cd042953291c746b64ed00be111" category="summary">在关闭受损节点并检查板载加密密钥的状态之前，必须检查受损节点的状态，禁用自动返还，并检查系统正在运行的ONTAP版本。FAS9000系统仅支持手动启动介质恢复程序。</block>
+  <block id="3249cc5272c53a1d5aa9d8cabeeb1b8a" category="paragraph">为确保存储系统的数据安全，您需要验证启动介质上的加密密钥支持情况和状态。检查您的ONTAP版本是否支持NetApp卷加密 (NVE)，并在关闭控制器之前检查密钥管理器是否处于活动状态。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="c46823c1660463f61a49f1053b334476" category="summary">检查完环境变量后，您必须完成针对已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统的特定步骤。FAS9000系统仅支持手动启动介质恢复程序。</block>
+  <block id="5bf36be54158a4cae3903c79c7649a8b" category="paragraph">恢复替换启动介质上的加密。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="f2355f742ad86c970b7ed390e9ced48b" category="summary">从恢复映像启动受损节点的步骤取决于系统是否处于双节点MetroCluster配置中。FAS9000系统仅支持手动启动介质恢复程序。</block>
+  <block id="49692a6c92e707f5a903378cbf38fea9" category="paragraph">从恢复映像启动受损节点的步骤取决于系统是否处于双节点MetroCluster配置中。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="b99c7514fe97acfde29bf189d8ccf471" category="summary">启动介质存储系统启动时使用的主系统文件和辅助系统文件（启动映像）。根据您的网络配置，您可以执行非中断式或中断式更换。FAS9000系统仅支持手动启动介质恢复程序。</block>
+  <block id="77bf0cee49a3470f6b38489a0f7086ad" category="paragraph">启动介质存储系统启动时使用的主系统文件和辅助系统文件（启动映像）。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="b4c3475bf2e714a4ed9f24ecb6cc7669" category="summary">要接触控制器内部的组件，必须先将控制器模块从系统中取出，然后再取下控制器模块上的盖子。FAS9000系统仅支持手动启动介质恢复程序。</block>
+  <block id="bda7991538d7df6f87277c8872fcbf32" category="paragraph">要更换启动介质，必须卸下损坏的控制器模块，安装新的启动介质，并将启动映像传输到 USB 闪存驱动器。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
+  <block id="8f1c79a411c0d8e59d3c43c509193d4e" category="summary">您可以根据存储系统硬件配置的不同，使用不同的程序来关闭或接管故障控制器。FAS9000系统仅支持手动启动介质恢复程序。</block>
+  <block id="e03f71d6f85378a6ef0de5701ebfafaa" category="paragraph">使用适合您配置的相应程序关闭或接管故障控制器。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
 </blocks>

@@ -1,8 +1,8 @@
 ---
 permalink: c190/bootmedia-replace.html 
 sidebar: sidebar 
-keywords: aff c190, locate, boot, media, controller, direction, replace 
-summary: 您必须在控制器模块中找到启动介质，然后按照说明进行更换。 
+keywords: aff c190, locate, boot, media, controller, direction, replace, manual, manual boot recovery 
+summary: 更换AFF C190控制器模块上故障的启动介质。AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 更换启动介质— AFF C190
 :allow-uri-read: 
@@ -11,7 +11,9 @@ summary: 您必须在控制器模块中找到启动介质，然后按照说明�
 
 
 [role="lead"]
-要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
+更换AFF C190控制器模块上故障的启动介质。此过程包括从机箱中取出控制器模块，物理更换启动介质组件，使用 USB 闪存驱动器将启动映像传输到更换的介质，以及将系统恢复到正常运行状态。
+
+AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 
 

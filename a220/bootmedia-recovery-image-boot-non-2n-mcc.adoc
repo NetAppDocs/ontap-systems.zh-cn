@@ -1,8 +1,8 @@
 ---
 permalink: a220/bootmedia-recovery-image-boot-non-2n-mcc.html 
 sidebar: sidebar 
-keywords: aff 220, boot, recovery, image, restore, file, system, environmental, varible 
-summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。 
+keywords: aff 220, boot, recovery, image, restore, file, system, environmental, varible, manual, manual boot recovery 
+summary: 您必须从 USB 驱动器启动ONTAP映像，恢复文件系统，并验证环境变量。AFF A220系统仅支持手动启动介质恢复程序。 
 ---
 = 启动恢复映像- AFF A220
 :allow-uri-read: 
@@ -10,6 +10,8 @@ summary: 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并�
 
 
 [role="lead"]
+AFF A220系统仅支持手动启动介质恢复程序。
+
 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
 
 .步骤

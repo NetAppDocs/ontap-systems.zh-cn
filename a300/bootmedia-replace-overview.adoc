@@ -1,8 +1,8 @@
 ---
 permalink: a300/bootmedia-replace-overview.html 
 sidebar: sidebar 
-keywords: aff a300, replace the boot media 
-summary: 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。 
+keywords: aff a300, replace the boot media, manual, manual boot recovery 
+summary: 启动介质存储系统启动时使用的主系统（启动映像）文件集和辅助系统（启动映像）文件集。AFF A300系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。根据您的网络配置，您可以执行非中断式或中断式更换。 
 ---
 = 启动介质更换概述— AFF A300
 :allow-uri-read: 

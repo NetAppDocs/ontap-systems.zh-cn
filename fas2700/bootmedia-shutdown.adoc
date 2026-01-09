@@ -1,17 +1,17 @@
 ---
 permalink: fas2700/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, shut, down, impaired, controller, take, over 
-summary: 根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。 
+keywords: fas2700, aff a220, shut, down, impaired, controller, take, over, manual, manual boot recovery 
+summary: 您可以根据存储系统硬件配置的不同，使用不同的程序来关闭或接管故障控制器。FAS2700 系统仅支持手动启动介质恢复程序。 
 ---
-= 关闭受损控制器— AFF A220 和 FAS2700
+= 关闭受损控制器—FAS2700
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-使用适用于您的配置的操作步骤 关闭或接管受损控制器。
+使用适合您配置的相应程序关闭或接管故障控制器。FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 
 

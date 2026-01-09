@@ -1,8 +1,8 @@
 ---
 permalink: a320/bootmedia-encryption-restore.html 
 sidebar: sidebar 
-keywords: aff, a320, aff a320, environment, variable, complete, system, onboard, key, manager, okm, netapp, storage, encryption, nse, volume, nve, enable, post, boot, media, replacement, post boot media replacement steps for okm nse and nve 
-summary: 检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM\ ）， NetApp 存储加密 \ （ NSE\ ）或 NetApp 卷加密 \ （ NVE\ ）的系统的步骤。 
+keywords: aff, a320, aff a320, environment, variable, complete, system, onboard, key, manager, okm, netapp, storage, encryption, nse, volume, nve, enable, post, boot, media, replacement, post boot media replacement steps for okm nse and nve, manual, manual boot recovery 
+summary: 检查完环境变量后，您必须完成针对已启用板载密钥管理器、 NetApp存储加密或NetApp卷加密的系统的特定步骤。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 恢复加密- AFF A320
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 检查环境变量后，您必须完成特定于已启用板载密钥�
 
 
 [role="lead"]
-恢复替代启动介质上的加密。
+恢复替换启动介质上的加密。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 根据您的密钥管理器类型，完成相应的步骤以恢复系统加密。如果您不确定您的系统使用哪个密钥管理器，请检查您在启动介质更换过程开始时捕获的设置。
 

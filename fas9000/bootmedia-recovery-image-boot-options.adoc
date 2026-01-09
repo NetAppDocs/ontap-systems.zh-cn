@@ -1,8 +1,8 @@
 ---
 permalink: fas9000/bootmedia-recovery-image-boot-options.html 
 sidebar: sidebar 
-keywords: aff a700, fas9000, boot, recovery, image, two, node, metrocluster, configuration 
-summary: 用于从恢复映像启动受损节点的操作步骤取决于系统是否采用双节点 MetroCluster 配置。 
+keywords: aff a700, fas9000, boot, recovery, image, two, node, metrocluster, configuration, manual, manual boot recovery 
+summary: 从恢复映像启动受损节点的步骤取决于系统是否处于双节点MetroCluster配置中。FAS9000系统仅支持手动启动介质恢复程序。 
 ---
 = 启动恢复映像—FAS9000
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 用于从恢复映像启动受损节点的操作步骤取决于系统�
 
 
 [role="lead"]
+从恢复映像启动受损节点的步骤取决于系统是否处于双节点MetroCluster配置中。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+
 用于从恢复映像启动受损节点的操作步骤取决于系统是否采用双节点 MetroCluster 配置。
 
 
