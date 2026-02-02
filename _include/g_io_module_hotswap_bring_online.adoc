@@ -2,18 +2,21 @@
 :allow-uri-read: 
 
 
-将插槽 4 中的替换集群和 HA I/O 模块联机，验证模块端口是否已成功初始化，验证插槽 4 是否已打开电源，然后验证模块是否联机并被识别。
+将更换的 I/O 模块联机，验证 I/O 模块端口已成功初始化，验证插槽已通电，然后验证 I/O 模块是否联机并被识别。
+
+.关于此任务
+更换 I/O 模块并将端口恢复到正常状态后，LIF 将恢复到更换的 I/O 模块。
 
 .步骤
-. 使替换集群和 HA I/O 模块联机：
+. 使更换 I/O 模块联机：
 +
 .. 输入以下命令：
 +
-`system controller slot module insert -node _impaired_node_name_ -slot _slot_name_`
+`system controller slot module insert -node _impaired_node_name_ -slot _slot_number_`
 
 .. 进入 `y`当您看到提示“您想继续吗？”
 +
-输出应确认集群和 HA I/O 模块已成功上线（启动、初始化并投入使用）。
+输出应确认 I/O 模块已成功联机（开机、初始化并投入使用）。
 
 +
 例如，以下命令使节点 2（受损控制器）上的插槽 4 联机，并显示该过程成功的消息：
@@ -31,19 +34,21 @@ The module has been successfully powered on, initialized and placed into service
 ----
 
 
-. 验证集群和 HA I/O 模块上的每个端口是否已成功初始化：
+. 验证 I/O 模块上的每个端口是否已成功初始化：
++
+.. 从受损控制器的控制台输入以下命令：
 +
 `event log show -event \*hotplug.init*`
 
 +
 
-NOTE: 可能需要几分钟的时间才能完成所需的固件更新和端口初始化。
+NOTE: 任何所需的固件更新和端口初始化可能需要几分钟时间。
 
 +
-输出应显示为集群和 HA I/O 模块上的每个端口记录的 hotplug.init.success EMS 事件，其中包含 `_hotplug.init.success:_`在 `_Event_`柱子。
+输出应显示一个或多个 hotplug.init.success EMS 事件，指示 I/O 模块上的每个端口已成功启动。
 
 +
-例如，以下输出显示集群和 HA I/O 模块端口 e4b 和 e4a 的初始化成功：
+例如，以下输出显示 I/O 端口 e4b 和 e4a 的初始化成功：
 
 +
 [listing]
@@ -60,25 +65,28 @@ Time                Node             Severity      Event
 
 2 entries were displayed.
 ----
-. 验证 I/O 模块插槽 4 是否已通电并准备好运行：
+.. 如果端口初始化失败，请查看 EMS 日志以了解要采取的后续步骤。
+
+
+. 验证 I/O 模块插槽已通电并准备就绪：
 +
 `system controller slot module show`
 
 +
-输出应显示插槽 4 状态为 `_powered-on_`因此可以为替换集群和 HA I/O 模块的运行做好准备。
+输出应显示插槽状态为  `_powered-on_`，因此 I/O 模块可以运行。
 
-. 验证替换集群和 HA I/O 模块是否在线并被识别。
+. 确认 I/O 模块已联机并可识别。
 +
 从受损控制器的控制台输入命令：
 
 +
-`system controller config show -node local -slot4`
+`system controller config show -node local -slot _slot_number_`
 
 +
-如果替换集群和 HA I/O 模块成功联机并被识别，则输出将显示插槽 4 的 I/O 模块信息，包括端口信息。
+如果 I/O 模块已成功联机并被识别，则输出将显示 I/O 模块信息，包括插槽的端口信息。
 
 +
-例如，您应该看到类似以下内容的输出：
+例如，对于插槽 4 中的 I/O 模块，您应该看到类似于以下内容的输出：
 
 +
 [listing]

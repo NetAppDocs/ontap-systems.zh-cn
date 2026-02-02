@@ -15,82 +15,108 @@ summary: 了解适用于ONTAP硬件系统的新平台。
 
 
 
-== 2025年10月
+== 2026年1月
 
 
 
-=== AFX存储系统
+=== I/O 模块热插拔过程
 
+热插拔程序现在可用于跨多个 ONTAP 硬件平台和 ONTAP 版本的选定 I/O 模块。
+
+*支持 ONTAP 9.18.1 GA 或更高版本：*
+
+您可以在任何插槽中热插拔发生故障的以太网 I/O 模块，前提是其端口用于集群、HA 或客户端连接。具有任意数量节点的系统支持此过程。
+
+
+NOTE: 不能热插拔具有分配给存储或 MetroCluster 连接的端口的以太网 I/O 模块。
+
+支持以下平台：
+
+* AFF A 系列：A1K、A20、A30、A50、A70 和 A90
+* ASA r2：A1K、A20、A30、A50、A70、A90 和 C30
+* AFF C 系列：C30、C60 和 C80
+* FAS：FAS50、FAS70 和 FAS90
+* AFX：AFX 1K
+
+
+*支持 ONTAP 9.17.1 或 9.18.1RC：*
+
+为了避免双节点集群中断，只有在受损的控制器（具有故障模块的控制器）已接管健康合作伙伴的情况下，才能热插拔发生故障的集群和插槽 4 中的 HA I/O 模块。这是唯一支持的不需要停机的恢复方法。
+
+支持以下平台：
+
+* AFF A 系列：A20、A30 和 A50
+* ASA r2：A20、A30、A50 和 C30
+* AFF C 系列：C30 和 C60
+* FAS：FS50
+
+
+
+
+=== AFF C800 停止供应
+
+AFF C800 系统已移至供应终止列表，不再适用于新订单。
+
+link:endofavail/index.html["查看停产硬件"]。
+
+
+
+== 2025 版本
+
+.2025年10月
+[%collapsible]
+====
+.AFX存储系统
 全新NetApp AFX 存储系统提供分解式解决方案，旨在满足高性能 NAS 和 S3 工作负载（包括 AI/ML 应用程序）的严格要求。AFX 系统为需要可扩展、高吞吐量文件和对象存储的客户提供专门的功能。
 
 link:https://docs.netapp.com/us-en/ontap-afx/get-started/ontap-afx-storage.html["了解有关 AFX 系统的更多信息"] 。
 
-
-
-=== AFX 的新驱动器架
-
+.AFX 的新驱动器架
 AFX 的新型 NXS224 存储架使用非易失性内存快速架构 (NVMe-oF) 连接高密度 SSD。磁盘使用融合以太网上的 RDMA (RoCE) 通过超低延迟结构进行通信。存储架（包括 I/O 模块、NIC、风扇和电源）完全冗余，没有单点故障。自管理技术用于管理和控制 RAID 配置和磁盘布局的各个方面。
 
-
-
-=== AFX 的新开关
-
+.AFX 的新开关
 Cisco 9364D-GX2A 交换机和Cisco 9332D-GX2B 交换机将 AFX 控制器节点与存储架连接起来。这些新交换机允许您构建具有两个以上节点的ONTAP集群。使用先进的协议来优化性能。该设计基于具有多个网络路径的 VLAN 标记以及技术更新配置，以确保持续运行和轻松升级。
 
-
-
-== 2025年9月
-
-
-
-=== 平台规格
-
+====
+.2025年9月
+[%collapsible]
+====
+.平台规格
 ONTAP硬件系统文档现在包括以下规范：link:https://hwu.netapp.com["Hardware Universe"] 。例如，link:https://docs.netapp.com/us-en/ontap-systems/a1k/overview.html["AFF A1K的主要规格"] 。
 
-
-
-=== 按平台系列划分的替换参考
-
+.按平台系列划分的替换参考
 ONTAP硬件系统文档现在提供按平台系列组织的NetApp存储系统的更换程序。
 
 link:fru-reference/index.html["查找替换程序"]用于存储系统的现场可更换单元 (FRU)。
 
-
-
-== 2025年5月
-
-
-
-=== ASA C30
-
+====
+.2025年5月
+[%collapsible]
+====
+.ASA C30
 全新ASA C30系统将高性能、智能、全面的数据管理功能扩展到更多客户和工作负载。
 
 link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细了解ASA R2系统"^] 。
 
-
-
-== 2025年4月
-
-
-
-=== FAS50
-
+====
+.2025年4月
+[%collapsible]
+====
+.FAS50
 FAS50 系统为二级存储和安全网络保险库提供了最低的每 GB 成本，同时通过更快的备份、更高的 IOPS 和 5-10 毫秒的低延迟提高了二级工作负载的性能。
 
 link:https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["详细了解FAS系统"^] 。
 
-
-
-== 2025年2月
-
-
-
-=== ASA A20、ASA A30和ASA A50
-
+====
+.2025年2月
+[%collapsible]
+====
+.ASA A20、ASA A30和ASA A50
 入门级ASA A20和中端ASA A30和A50系统使各种规模的公司都可以使用块存储来运行数据库和虚拟机等任务关键型应用程序。
 
 link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细了解ASA R2系统"^] 。
 
+====
 
 
 == 2024 年发行

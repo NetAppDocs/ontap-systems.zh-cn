@@ -1,0 +1,108 @@
+= 
+:allow-uri-read: 
+
+
+准备好存储系统和 I/O 模块插槽，以便可以安全地卸下出现故障的 I/O 模块：
+
+.步骤
+. 正确接地。
+. 从出现故障的 I/O 模块中拔下电缆。
++
+请务必给电缆贴上标签，以便稍后在本过程中将它们重新连接到相同的端口。
+
++
+[NOTE]
+====
+I/O 模块应出现故障（端口应处于链路关闭状态）；但是，如果链路仍处于打开状态，并且它们包含最后一个正常运行的集群端口，则拔下电缆会触发自动接管。
+
+拔下电缆后等待五分钟，以确保完成任何接管或 LIF 故障切换，然后继续此过程。
+
+====
+. 如果启用了AutoSupport 、则通过调用AutoSupport 消息禁止自动创建案例：
++
+`system node autosupport invoke -node * -type all -message MAINT=<number of hours down>h`
+
++
+例如，以下AutoSupport消息会抑制自动案例创建两小时：
+
++
+`node2::> system node autosupport invoke -node * -type all -message MAINT=2h`
+
+. 根据存储系统运行的 ONTAP 版本以及控制器的状态，禁用自动回馈：
++
+[cols="1,2,3"]
+|===
+| ONTAP 版本 | 条件 | 那么 ... 
+
+
+ a| 
+9.17.1 或 9.18.1RC
+ a| 
+如果受损控制器自动接管了健康控制器
+ a| 
+禁用自动交还：
+
+.. 从受损控制器的控制台输入以下命令
++
+`storage failover modify -node local -auto-giveback false`
+
+.. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
+
+
+
+
+ a| 
+9.18.1GA 或更高版本
+ a| 
+如果任一控制器自动接管其合作伙伴
+ a| 
+禁用自动交还：
+
+.. 从接管其合作伙伴的控制器的控制台输入以下命令：
++
+`storage failover modify -node local -auto-giveback false`
+
+.. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
+
+
+
+
+ a| 
+9.18.1GA 或更高版本
+ a| 
+两个控制器都已启动并运行 I/O（提供数据）
+ a| 
+转至下一步。
+
+|===
+. 将发生故障的 I/O 模块从服务中移除并关闭电源，以准备拆卸：
++
+.. 输入以下命令：
++
+`system controller slot module remove -node _impaired_node_name_ -slot _slot_number_`
+
+.. 进入 `y`当您看到提示“您想继续吗？”
++
+例如，以下命令准备将节点 2（受损控制器）上的插槽 4 中的故障模块移除，并显示一条可以安全移除的消息：
+
++
+[listing]
+----
+node2::> system controller slot module remove -node node2 -slot 4
+
+Warning: IO_2X_100GBE_NVDA_NIC module in slot 4 of node node2 will be powered off for removal.
+
+Do you want to continue? {y|n}: y
+
+The module has been successfully removed from service and powered off. It can now be safely removed.
+----
+
+
+. 验证发生故障的 I/O 模块已关闭电源：
++
+`system controller slot module show`
+
++
+输出结果应显示 `_powered-off_`在故障模块及其插槽编号的 `_status_`列中。
+
+

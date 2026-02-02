@@ -7,30 +7,11 @@
 .步骤
 . 根据您的存储系统正在运行的 ONTAP 版本以及控制器的状态，在被接管的控制器上交还存储并恢复自动交还：
 +
-[cols="1,2,3"]
+[cols="1,2"]
 |===
-| ONTAP 版本 | 条件 | 那么 ... 
+| 条件 | 那么 ... 
 
 
- a| 
-9.17.1 或 9.18.1RC
- a| 
-如果受损控制器自动接管了健康控制器
- a| 
-.. 通过归还存储空间，使运行正常的控制器恢复正常运行：
-+
-`storage failover giveback -ofnode _healthy_node_name_`
-
-.. 从受损控制器的控制台恢复自动回馈：
-+
-`storage failover modify -node local -auto-giveback _true_`
-
-
-
-
-
- a| 
-9.18.1GA 或更高版本
  a| 
 如果任一控制器自动接管其合作伙伴
  a| 
@@ -47,14 +28,12 @@
 
 
  a| 
-9.18.1GA 或更高版本
- a| 
 两个控制器都已启动并运行 I/O（提供数据）
  a| 
 转至下一步。
 
 |===
-. 验证逻辑接口是否正在向其主服务器和端口报告： `network interface show -is-home false`
+. 验证逻辑接口是否向其主节点和端口报告： `network interface show -is-home false`
 +
 如果任何LUN列为false、请将其还原到其主端口： `network interface revert -vserver * -lif *`
 
