@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: asa a250, verify and set HA state, complete the replacement process 
 summary: 您必须按照套件附带的RMA说明验证机箱的HA状态、并将故障部件退回给NetApp。 
 ---
-= 完成还原和更换过程- ASA A250
+= 完成机箱更换 - ASA A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+重新启动控制器，验证系统健康状况，并将故障部件返回 NetApp 以完成 ASA A250 机箱更换过程的最后一步。
+
 您必须按照套件附带的RMA说明验证机箱的HA状态、并将故障部件退回给NetApp。
 
 

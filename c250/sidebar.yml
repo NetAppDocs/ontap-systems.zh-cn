@@ -16,13 +16,30 @@ entries:
 - title: 维护
   pdf-filename: AFF C250维护
   entries:
-  - title: 概述
+  - title: 维护概述
     url: "/c250/maintain-overview.html"
-  - title: 启动介质
-    pdf-filename: AFF C250启动介质
+  - title: 启动媒体 - 自动恢复
+    pdf-filename: AFF C250 启动介质自动化
     entries:
-    - title: 概述
-      url: "/c250/bootmedia-replace-overview.html"
+    - title: 启动介质更换工作流
+      url: "/c250/bootmedia-replace-workflow-bmr.html"
+    - title: 查看要求
+      url: "/c250/bootmedia-replace-requirements-bmr.html"
+    - title: 关闭控制器
+      url: "/c250/bootmedia-shutdown-bmr.html"
+    - title: 更换启动介质
+      url: "/c250/bootmedia-replace-bmr.html"
+    - title: 还原启动介质上的映像
+      url: "/c250/bootmedia-recovery-image-boot-bmr.html"
+    - title: 将故障部件退回 NetApp
+      url: "/c250/bootmedia-complete-rma-bmr.html"
+  - title: 启动媒体 - 手动恢复
+    pdf-filename: AFF C250 Boot Media 手册
+    entries:
+    - title: 启动介质更换工作流
+      url: "/c250/bootmedia-replace-workflow.html"
+    - title: 查看要求
+      url: "/c250/bootmedia-replace-requirements.html"
     - title: 检查加密密钥
       url: "/c250/bootmedia-encryption-preshutdown-checks.html"
     - title: 关闭受损控制器
@@ -38,28 +55,34 @@ entries:
   - title: 机箱
     pdf-filename: AFF C250机箱
     entries:
-    - title: 概述
-      url: "/c250/chassis-replace-overview.html"
-    - title: 关闭受损控制器
+    - title: 机箱更换工作流
+      url: "/c250/chassis-replace-workflow.html"
+    - title: 查看要求
+      url: "/c250/chassis-replace-requirements.html"
+    - title: 准备更换
+      url: "/c250/chassis-replace-prepare.html"
+    - title: 关闭控制器
       url: "/c250/chassis-replace-shutdown.html"
-    - title: 更换硬件
+    - title: 更换机箱
       url: "/c250/chassis-replace-move-hardware.html"
-    - title: 完成更换
+    - title: 完成机箱更换
       url: "/c250/chassis-replace-complete-system-restore-rma.html"
   - title: 控制器
     pdf-filename: AFF C250控制器模块
     entries:
-    - title: 概述
-      url: "/c250/controller-replace-overview.html"
+    - title: 控制器更换工作流
+      url: "/c250/controller-replace-workflow.html"
+    - title: 查看要求
+      url: "/c250/controller-replace-requirements.html"
     - title: 关闭受损控制器
       url: "/c250/controller-replace-shutdown.html"
-    - title: 更换控制器模块
+    - title: 更换控制器
       url: "/c250/controller-replace-move-hardware.html"
     - title: 还原系统配置
       url: "/c250/controller-replace-system-config-restore-and-verify.html"
     - title: 可重新连接的系统
       url: "/c250/controller-replace-recable-reassign-disks.html"
-    - title: 完成系统还原
+    - title: 完成控制器更换
       url: "/c250/controller-replace-restore-system-rma.html"
   - title: DIMM
     url: "/c250/dimm-replace.html"

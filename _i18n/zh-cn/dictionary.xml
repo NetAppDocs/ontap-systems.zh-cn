@@ -92,7 +92,6 @@
   <block id="561273ebb17be6fcb781473771bc32cb" category="summary">有两个视频：一个视频介绍了如何将系统装入机架并进行布线，另一个视频介绍了使用 System Manager 引导式设置执行初始系统配置的示例。</block>
   <block id="9ed9163b4599600e6378be760fd75fa8" category="paragraph">以下视频显示了如何安装新系统并为其布线。</block>
   <block id="0f9b7af429c6f61cb54f2dc7fb47b9a6" category="summary">要将系统恢复到完全运行状态，您必须还原 NetApp 存储加密配置（如果需要），并为新控制器安装许可证，然后按照套件随附的 RMA 说明将故障部件退回 NetApp 。请通过联系技术支持<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>， 888-463-8277 （北美）， 00-800-44-638277 （欧洲）或 +800-800-80-800 （亚太地区）（如果您需要 RMA 编号或有关更换操作步骤的其他帮助）。</block>
-  <block id="1f684a558f672dca1e5cd104fa082470" category="doc">完成系统还原— AFF A250</block>
   <block id="2d8b1cc5d54ecd8a729105fdf07054a0" category="section-title">第 1 步：在 ONTAP 中为替代节点安装许可证</block>
   <block id="f29590bcbb1621777529a668ca509dc2" category="paragraph">如果受损节点正在使用需要标准（节点锁定）许可证的 ONTAP 功能，则必须为 _replacement_ 节点安装新许可证。对于具有标准许可证的功能，集群中的每个节点都应具有自己的功能密钥。</block>
   <block id="78c86c2b740081805f1ff45f9720ce43" category="paragraph">许可证密钥必须采用 28 个字符的格式。</block>
@@ -205,7 +204,6 @@
   <block id="6363c92adb40c2ba77ac54d58c15a070" category="list-text">将风扇模块移至更换用的控制器模块，并将风扇模块的边缘与控制器模块的开口对齐，然后将风扇模块滑入。</block>
   <block id="48305d46318ca8d808105dab6b4407c9" category="list-text">对其余风扇模块重复上述步骤。</block>
   <block id="1229beab8577341c3e1295090613296f" category="section-title">第 4 步：移动启动介质</block>
-  <block id="631d48b6a978901aa9dd527f9e0c0de1" category="paragraph">AFF A250 中控制器模块的通风管下方有一个启动介质设备。您必须将其从受损的控制器模块移至更换用的控制器模块。</block>
   <block id="208327117af481bf4a428ddcd144a3d8" category="list-text">找到受损控制器模块中的启动介质并将其移至替代控制器模块。</block>
   <block id="378896073d06c35c7666ecc139650bf3" category="cell">卸下用于将启动介质固定到受损控制器模块中的主板的螺钉。</block>
   <block id="42f1d337fd4fa932f99275b46ae051e9" category="paragraph">将启动介质从受损的控制器模块中提出。</block>
@@ -273,8 +271,6 @@
   <block id="f94cb94350d4ec3469cbd6fbb2b8efb3" category="admonition">在启动过程中，您可能会看到以下提示：</block>
   <block id="24718eccce3cd133d143bec81426275c" category="list-text">系统 ID 不匹配的提示警告，并要求覆盖系统 ID 。</block>
   <block id="b06018bc829da55a1eb1a43b93312dc5" category="summary">启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。</block>
-  <block id="d23cbe6becf6b71df8e4c820a09aed00" category="doc">更换启动介质— AFF A250</block>
-  <block id="d3756853c8e6da5920108eeb1441fe5d" category="paragraph">启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。</block>
   <block id="09537cc2e905b0e7d801cf2bc91bc970" category="paragraph">您还必须将 `image_xxx.tgz` 文件复制到 USB 闪存驱动器，以供日后在此操作步骤中使用。</block>
   <block id="9e4da368384d1c03370d9656905d334a" category="list-text">更换启动介质的无中断和中断方法都要求您还原 `var` 文件系统：</block>
   <block id="e3d69bf92fbd44d0515cecea3eb337b0" category="list-text">要进行无中断更换，必须将 HA 对连接到网络以还原 `var` 文件系统。</block>
@@ -356,7 +352,6 @@
   <block id="a244401e8eeded9376776b9ff1bac8d8" category="list-text">从防静电运输袋中取出更换用的 NV 电池，并将其与电池架对齐。</block>
   <block id="400245515ff4c2986fa732ceeaa417da" category="list-text">将替代 NV 电池插头插入插槽。</block>
   <block id="f63424327284890605f150c96c2c4961" category="summary">您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。</block>
-  <block id="5e6435d148cbdc8c0269f95c1ec7b442" category="doc">启动恢复映像— AFF A250</block>
   <block id="bf2fbe1a850cb2856c4fface544e0048" category="list-text">从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像： `boot_recovery`</block>
   <block id="538f7702f672072f4cb1d69a9141171d" category="paragraph">此映像将从 USB 闪存驱动器下载。</block>
   <block id="7e61e4a1248684215e1815ac80be3a7f" category="list-text">出现提示时，请输入映像名称或接受屏幕上括号内显示的默认映像。</block>
@@ -391,8 +386,6 @@
   <block id="8b8a3688f4f2182a0af8a025c1372f2c" category="list-text">在集群提示符处，使用 `net int -is-home false` 命令检查逻辑接口。</block>
   <block id="1b470281952c9ece188e5621475c390e" category="paragraph">如果任何接口列为 "false" ，请使用 `net int revert` 命令将这些接口还原回其主端口。</block>
   <block id="071b32df7c397d7ef55dec3206105d81" category="list-text">将控制台缆线移至修复的节点，然后运行 `version -v` 命令以检查 ONTAP 版本。</block>
-  <block id="90c199012ac637bad1cb7c2a835f5acd" category="doc">将故障部件退回给 NetApp — AFF A250</block>
-  <block id="7c323e2eb49745018682c538529f7337" category="paragraph">您可以使用以下视频或表格中的步骤更换机箱；它假定已卸下并更换挡板：</block>
   <block id="a5f08fde11dbf730684ed691fc182e15" category="summary">本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。如果您熟悉 NetApp 系统的安装，请使用本指南。</block>
   <block id="350cd17d7031de85301f98a531f45f4c" category="paragraph">访问 _Installation and Setup Instructions_PDF 海报：</block>
   <block id="687423a0d05ad428110ae922c0e5d086" category="inline-link">《 AFF A250 安装和设置说明》</block>
@@ -421,7 +414,6 @@
   <block id="fabbcb146de0da3e22bb94b685b39c48" category="list-text">如有必要，请使用 `set time hh ： mm ： ss` 命令在 GMT 中设置时间。</block>
   <block id="c1a6139ecdefcb494c53fdbb3ab9ad45" category="list-text">确认目标节点上的日期和时间。</block>
   <block id="6fd020c94f846c70205dc7bee6665357" category="list-text">在 LOADER 提示符处，输入 `bye` 以重新初始化 PCIe 卡和其他组件，然后让节点重新启动。</block>
-  <block id="9abc3ad77a4002fd491b39b23515a992" category="doc">完成还原和更换过程— AFF A250</block>
   <block id="8507c94c124586b53f61fef1fe9f8fe8" category="section-title">第 1 步：验证并设置机箱的 HA 状态</block>
   <block id="33898f2b0901ae118cff99b50f8848b8" category="paragraph">您必须验证机箱的 HA 状态，并在必要时更新此状态以匹配您的系统配置。</block>
   <block id="5ea1825dfe698bdb7cf7ba6f0b41458d" category="list-text">在维护模式下，从任一控制器模块显示本地控制器模块和机箱的 HA 状态： `ha-config show`</block>
@@ -1464,7 +1456,6 @@
   <block id="7f162e118d7c5841e35145af500cfea2" category="section-title">第 10 步：安装控制器模块</block>
   <block id="92cadc5fd1d76419c4c16ddc63416c45" category="list-text">松开将缆线绑在缆线管理设备上的钩环带，然后从控制器模块中拔下系统缆线，跟踪缆线的连接位置。</block>
   <block id="ea00def363aacc8779f9b5afd4cc8812" category="doc">还原并验证系统配置— AFF A800</block>
-  <block id="fd1cff0abcf1ef0e075b330e2ee360fe" category="doc">完成还原和更换过程— AFF A800</block>
   <block id="2bb6eb6e274e403747742b20b6b76f1a" category="doc">更换实时时钟电池 - AFF A800</block>
   <block id="92a1e44c6fd05cd1ba8ab2abf944200f" category="paragraph">提升板 2 （中间提升板）锁定闩锁</block>
   <block id="5d32a38a1b041424ab4d21535c31e0b6" category="section-title">第 4 步：更换 RTC 电池</block>
@@ -2056,7 +2047,6 @@
   <block id="02b3dac5d46f2e577325711400925ec7" category="list-text">查看 _NetApp ONTAP 配置指南 _ 并收集该指南中列出的所需信息。</block>
   <block id="598ec2ec2714b9a699a42898b690e48d" category="section-title">选项 1 ：使用缆线将控制器连接到 SAS 驱动器架</block>
   <block id="16319414c65274d365d86327a61ef5dc" category="doc">AFF 和 FAS 系统文档</block>
-  <block id="46b673e11c982206be30f1a0d6d4bde7" category="doc">完成系统还原— FAS500f</block>
   <block id="1661dbd7e15cf50b73ab10b3561b2d66" category="paragraph">您可以使用以下视频或表格中的步骤更换电源：</block>
   <block id="45449a9f8518fdccf3609592bca3388a" category="list-text"><block ref="45449a9f8518fdccf3609592bca3388a" category="inline-link-macro-rx"></block></block>
   <block id="fcc432315143968a857131ca40e0a000" category="list-text"><block ref="fcc432315143968a857131ca40e0a000" category="inline-link-macro-rx"></block></block>
@@ -2066,10 +2056,7 @@
   <block id="139b85a2da5c2f7968fae24f14c3ed09" category="inline-link">《 FAS500f 安装和设置说明》</block>
   <block id="dae1434e283524bee3110823c8eb7212" category="inline-link">《 FAS500f 系统安装和设置说明》</block>
   <block id="0ce2a0e29499223b29490143e42e0e0e" category="list-text">与受损控制器运行的 ONTAP 映像版本相同的副本。您可以从 NetApp 支持站点上的 * 下载 * 部分下载相应的映像</block>
-  <block id="2685cb32d91e3c7296420631a7066229" category="paragraph">您可以使用以下视频或表格中的步骤更换控制器模块：</block>
-  <block id="616af20769d44e43520152460f655603" category="doc">移动并更换硬件— FAS500f</block>
   <block id="49cc582b0e041effb99494704c8f0963" category="doc">还原并验证系统配置— FAS500f</block>
-  <block id="6730578f02ba32c4ccfb1acc3e8ab367" category="doc">完成还原和更换过程— FAS500f</block>
   <block id="8ccd613e52111dc677242b19a2aa7a2e" category="paragraph">您可以使用以下视频或表格中的步骤更换 RTC 电池：</block>
   <block id="ec7e85334c776a46034b2a858d884799" category="cell">将卡舌轻轻拉出电池外壳。注意：主动拉出此卡舌可能会取代此卡舌。</block>
   <block id="a81df2e570dc98493762bda80de1eb57" category="paragraph">抬起电池。</block>
@@ -2077,7 +2064,6 @@
   <block id="326f84612308aa43b411fe6225835ced" category="paragraph">将电池轻轻推入到位，并确保卡舌将其固定到外壳上。</block>
   <block id="3b9e3b1b2ab53b0241dc5867f9200f0f" category="section-title">第 5 步：完成更换过程</block>
   <block id="f201ab41a4eb414e420e16dba34a7cfc" category="doc">重新配置系统并重新分配磁盘— FAS500f</block>
-  <block id="a2eee56e65b85ca98cf164fa99598b1b" category="doc">启动恢复映像— FAS500f</block>
   <block id="26b459a4766f77a1bec60418a8e392d1" category="list-text">从 LOADER 提示符处，从 USB 闪存驱动器启动恢复映像：</block>
   <block id="75037510df4619ff0448fd0beadedb4d" category="paragraph">` * 启动恢复 *`</block>
   <block id="95408ece8c23cd5f2a24760856f4819e" category="paragraph">如果风扇出现故障，请将其更换为新的风扇模块。</block>
@@ -3738,7 +3724,6 @@
   <block id="0505c366cf2aa05ef59b3b78f4e74a9f" category="sidebar">AFF A250 安装和设置</block>
   <block id="b4de374d75b22d216e3867b88bd708e7" category="sidebar">选择安装和设置体验</block>
   <block id="18733d6bd4b969f880747fde25a787be" category="sidebar">AFF A250 维护</block>
-  <block id="3bae9e1248f1827df28a94293f7613f5" category="sidebar">AFF A250 启动介质</block>
   <block id="44e5cb60393d7e735de29347758edd23" category="sidebar">检查板载加密密钥</block>
   <block id="241c179d2adc97920bb3ec4cd2d467aa" category="sidebar">关闭受损控制器</block>
   <block id="90d6224326bc2ce2bada52a2663f2dbe" category="sidebar">更换启动介质</block>
@@ -3829,7 +3814,6 @@
   <block id="6068fc2d3e06aeff53e2c84fd7bd9e9e" category="sidebar">FAS500f 系统</block>
   <block id="d8763c6ad52728ece5b2ff77bdb94ed2" category="sidebar">FAS500f 安装和设置</block>
   <block id="5e2a7c08e7cea15db838b2247d53da3d" category="sidebar">FAS500f 维护</block>
-  <block id="99a0f2a0385a7c26466f0963e96a5e90" category="sidebar">FAS500f 启动介质</block>
   <block id="a4e277f1042cc621d82a2ce9d8c30a6a" category="sidebar">FAS500f 机箱</block>
   <block id="f3faf138ac95d5847a382cb22f207809" category="sidebar">FAS500f 控制器模块</block>
   <block id="f32bab2b08e5fc2e905512eaec57f369" category="sidebar">AFF C190 系统</block>
@@ -4039,7 +4023,6 @@
   <block id="e477637685baafe9bbd353f71ef51283" category="paragraph">允许系统启动。Initial booting may take up to eight minutes.</block>
   <block id="fe3be7b129e2b9c74abd26381eea72bb" category="cell">Gently pull tab away from the battery housing.*Attention:* Pulling it away aggressively might displace the tab.</block>
   <block id="d61a84f0b033dd225ff9a1af9b0f08a5" category="paragraph">Lift the battery up.*Note:* Make a note of the polarity of the battery.</block>
-  <block id="78929efae941c9a4e2fc6993c4c10c4e" category="paragraph">您必须具有一个格式化为 MBR/FAT32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。</block>
   <block id="f7b32babba20f290222a62a499496335" category="section-title">选项 2 ： MetroCluster 中的系统</block>
   <block id="e7d8f45352dfaf66682a4662e11d6c86" category="list-text">查看 <block ref="571ad76602d16a750ecd1119ab38063c" category="inline-link-macro-rx"></block> 并收集该指南中列出的所需信息。</block>
   <block id="e4e83a2c82324a2a6d5448b03909ecfa" category="paragraph">您可以使用 <block ref="b22470d24dd615c99a09a118a80f7353" category="inline-link-macro-rx"></block> 用于安装和设置新系统的海报。The PDF poster provides step-by-step instructions with live links to additional content.</block>
@@ -4252,8 +4235,6 @@
   <block id="b4d2392449336ea5c3bc8befa0e0b844" category="list-text">使用 1 号磁性螺丝刀，从受损启动介质上卸下螺钉，并将其安全放在磁铁上。</block>
   <block id="143c767e9327d7fe1aa0dcf0cd8bf42b" category="list-text">使用 1 号磁性螺丝刀，从控制器模块正面卸下螺钉，并将其安全地放在磁铁上。</block>
   <block id="b5bb4830b9cb6cf86cab4203bf9c0ff2" category="list-text">使用 1 号磁性螺丝刀，从控制器模块正面和覆盖夹层卡插槽的面板上卸下螺钉，并将其安全地放在磁铁上。</block>
-  <block id="67bbbac5bc6e3d667f32ac654b6a9d3a" category="paragraph">要卸下用于固定启动介质的螺钉，您需要使用 1 号磁性十字螺丝刀。Due to the space constraints within the controller module, you should also have a magnet to transfer the screw on to so that you do not loose it.</block>
-  <block id="e65c4f5a39a793b014b217f53d825905" category="list-text">将控制器模块插入机箱。</block>
   <block id="bc6668cc9984ca2f625c085c1e7dbe6c" category="doc">更换风扇— FAS500f</block>
   <block id="3cb52a5c3c25dcd729403c0c723500bc" category="list-text">使用 ``storage failover show` -giveback` 命令监控交还操作的进度。</block>
   <block id="4cc5d765a3b2155ab803f6ce50c11747" category="paragraph">`storage failover show` 命令的输出不应包含 `Ssystem ID changed on partner` 消息。</block>
@@ -4390,11 +4371,6 @@
   <block id="a42edb5535752c77f564dff66261535b" category="doc">更换控制器模块硬件— FAS8200</block>
   <block id="8351404e0633e21cf67cb22047391a59" category="doc">启动介质更换概述— FAS8200</block>
   <block id="f8a35054c2c3b7ffbacd941c8bc38831" category="doc">更换硬件— FAS8200</block>
-  <block id="9bd3c449bc91b7e2a90bbc21bfbd5dcb" category="doc">更换控制器模块硬件— AFF A250</block>
-  <block id="7f7c331124950f9557fc856947e5c42f" category="doc">控制器模块更换概述— AFF A250</block>
-  <block id="fa0985de926ce301def780548b1def1b" category="doc">启动介质更换概述— AFF A250</block>
-  <block id="894589cfca213bee046082fa6b4377ea" category="doc">机箱更换概述— AFF A250</block>
-  <block id="a73367a24d737b005906f745ac5c73c2" category="doc">更换硬件— AFF A250</block>
   <block id="c0925c06c8c424f377718df251d2ae9f" category="doc">更换实时时钟电池— FAS8300 和 FAS8700</block>
   <block id="73e891cd10bc7a669d3df2629ca0ed7c" category="doc">更换 NVDIMM - FAS8300 和 FAS8700</block>
   <block id="25a1b4c8ff5717b58eca78fec7573116" category="doc">机箱更换概述— FAS8300 和 FAS8700</block>
@@ -4420,10 +4396,7 @@
   <block id="c3a9fb901b6e82e19cf5d6be414a5461" category="doc">关闭受损控制器— FAS2600</block>
   <block id="048623d528706e72f17139851220f65a" category="doc">启动介质更换概述— FAS2600</block>
   <block id="3fa677b8ecb97b0ae0d14f9ded5ed49a" category="doc">关闭受损控制器— FAS500f</block>
-  <block id="ee2afac6b0f5165d1fc3096864ac9a41" category="doc">机箱更换概述— FAS500f</block>
   <block id="2bf23db896fc6ece8a7fd4c8db50ab7d" category="doc">控制器模块更换概述— FAS500f</block>
-  <block id="609f905dd4d82082470b920d9a7de394" category="doc">更换控制器模块硬件— FAS500f</block>
-  <block id="00399cc3a07fad2f3aadfc84abd6ee65" category="doc">启动介质更换概述— FAS500f</block>
   <block id="0dfb2568739ce156f475dfddb29e2387" category="doc">机箱更换概述— AFF A700s</block>
   <block id="09b725ec4b513cf16714e69e0bf388eb" category="doc">控制器模块更换概述— AFF A700s</block>
   <block id="505ba7be41620674b2d6d7caf7f3453d" category="doc">启动介质更换概述— AFF A700s</block>
@@ -4527,10 +4500,7 @@
   <block id="82f6c604031bc8c9d9a996a31fa2e842" category="list-text">如果控制器采用 MetroCluster 配置，则根据 MetroCluster 状态，如果原始所有者是灾难站点上的控制器，请验证 DR 主 ID 字段是否显示磁盘的原始所有者。</block>
   <block id="83df237f35401e5686540721c993131c" category="list-text">_replacement_ 控制器是灾难站点上磁盘的当前所有者。</block>
   <block id="ce6027c9ce6b680c0adbb4a4d26235ed" category="list-text">如果您的系统采用 MetroCluster 配置，请验证是否已配置每个控制器： `MetroCluster node show - fields configuration-state`</block>
-  <block id="a99f211848e0a3fa987df05f364dcc0b" category="doc">关闭控制器 - AFF A250</block>
   <block id="3df4b609e8276258189914063ffb17c2" category="list-text">请务必在正确的控制器上应用以下步骤中的命令：</block>
-  <block id="6ecaf183574ece325cced3bb483dfdf9" category="list-text">受损节点是指要在其中执行维护的控制器。</block>
-  <block id="d5e5a42c3659480b5bd0d7fe962a3e0d" category="list-text">_health_ 节点是受损控制器的 HA 配对节点。</block>
   <block id="852ccbca31b38b90e5621b15b3d30e1b" category="paragraph">接管或暂停受损控制器： `storage failover takeover -ofnode _impaired_node_name_` 当受损控制器显示 Waiting for giveback... 时，按 Ctrl-C ，然后回答 `y` 。</block>
   <block id="bf333756fca94003818a0db8ced6f7d9" category="list-text">交还控制器的存储，使其恢复正常运行： `storage failover giveback -ofnode ` impaired_node_name_``</block>
   <block id="855366b23fbc8af0c5a01bb5529b380c" category="list-text">_replacement nodge_ 是一个新控制器，用于更换受损的控制器。</block>
@@ -4593,7 +4563,6 @@
   <block id="f0623f3de563d7ac67a984a76c53803d" category="paragraph">完成 NVE 或 NSE 任务后，您需要关闭受损控制器。使用适用于您的配置的操作步骤 关闭或接管受损控制器。</block>
   <block id="e935849faf7cd25a183a726f34797bb7" category="doc">Replace the controller module - AFF A300</block>
   <block id="a28455bf2eecf6cc499c335ee152cd75" category="paragraph">使用以下选项之一关闭或接管受损控制器。</block>
-  <block id="3e1047f2ebaed54fe88cc6f78291dbb6" category="doc">Replace the boot media - FAS500f</block>
   <block id="af844de12c61a1b2d86c05934c317256" category="summary">如果平台向系统控制台记录一条警告消息，指出驱动器出现故障，则必须更换驱动器。In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.</block>
   <block id="92198152754d5741f3a481c1555464b4" category="doc">更换 SSD 驱动器或 HDD 驱动器— AFF C190</block>
   <block id="5f807f08fe5525cbcd6708fd63eac203" category="paragraph">You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。</block>
@@ -5107,17 +5076,11 @@
   <block id="35db388e4e99e4a7488ab682126d7fa6" category="doc">更换NVMEM电池—AFF A150</block>
   <block id="2867a72512f6330f74fb93ac9f93f07d" category="doc">移动并更换硬件—AFF A150</block>
   <block id="480828de65d5061e901ac63046040770" category="doc">完成系统还原—AFF A150</block>
-  <block id="930fad66fb3a257a1d24f20ac59c003f" category="doc">控制器模块更换概述—AFF C250</block>
   <block id="7e48994ab2d6db5f4a1f1971bdb7686f" category="doc">关闭控制器—AFF C250</block>
-  <block id="094570163b0febbd13eb031d12659f04" category="doc">更换控制器模块硬件- AFF C250</block>
-  <block id="bc845a0c4e457ee657740a9be626eafa" category="doc">完成系统还原—AFF C250</block>
-  <block id="094124db560bb515e3d41248ca00f18a" category="doc">更换硬件—AFF C250</block>
   <block id="e2f649ac2d970925993f9e5fb7967c22" category="doc">更换或安装夹层卡- AFF C250</block>
   <block id="cd2699a4d57f54778810b017b2525727" category="doc">更换风扇—AFF C250</block>
-  <block id="3e56ae245ac8653052ca2cbe9766da4b" category="doc">完成还原和更换过程—AFF C250</block>
   <block id="ff0126462ebf63e99c0e579efb8f1760" category="video-title">动画—安装和设置AFF C250</block>
   <block id="bb948df5a06fd8fb2e2b9e9f99cc69d4" category="doc">启动恢复映像—AFF C250</block>
-  <block id="ab8a572131275958428f9007945f684f" category="doc">机箱更换概述—AFF C250</block>
   <block id="7efc07dce9135b59eda99eab451a8d33" category="doc">将故障部件退回给NetApp—AFF C250</block>
   <block id="4b244bbe02217e1cc95dfefa194113e0" category="doc">更换NVMEM电池—AFF C250</block>
   <block id="9787dc0906e96e78e67df0b3f9dad9a0" category="doc">更换实时时钟电池- AFF C250</block>
@@ -5139,7 +5102,6 @@
   <block id="38471c9931ce26e5aeb8c80bf6483a48" category="list-text"><block ref="38471c9931ce26e5aeb8c80bf6483a48" category="inline-link-macro-rx"></block></block>
   <block id="82e9cd9a6fede8cb6fa3e276cac9a710" category="list-text"><block ref="82e9cd9a6fede8cb6fa3e276cac9a710" category="inline-link-macro-rx"></block></block>
   <block id="3232f137ca5f81b881073e30f07d4927" category="doc">关闭受损控制器模块- AFF C250</block>
-  <block id="528ac168c6accb2201fcbf9a5baff8a0" category="doc">启动介质更换概述—AFF C250</block>
   <block id="d01bad26d559eb16c91d450cefe02539" category="doc">更换实时时钟电池- AFF C400</block>
   <block id="404943d0b155396f410fdc44b57014a3" category="doc">机箱更换概述—AFF C400</block>
   <block id="8403c2aeb3b774ba2a4c036b814a8776" category="doc">完成还原和更换过程—AFF C400</block>
@@ -5173,8 +5135,6 @@
   <block id="311f323a046afbcf6ce4b152ad2dee93" category="list-text">此操作步骤 是为一次更换一个PSU而编写的。</block>
   <block id="be0020622e775d64818f3acc7c2d856d" category="admonition">最佳做法是、在将PSU从机箱中卸下后两分钟内更换PSU。系统仍可正常运行、但ONTAP 会向控制台发送有关已降级的PSU的消息、直到更换PSU为止。</block>
   <block id="e5b2987f321084b00bed28fd97c58226" category="paragraph">请根据您的PSU类型使用相应的操作步骤 ；AC或DC。</block>
-  <block id="19a7bfc2c20931ac9f3593ce3f8c7632" category="paragraph">使用以下视频或表格中的步骤更换PSU：</block>
-  <block id="a2528ca750816c5cbcc2ab1df78a8eb6" category="video-title">动画-更换交流PSU</block>
   <block id="ba076df359148e35b1b589b37e5d2faa" category="list-text">根据控制台错误消息或PSU上的红色故障LED确定要更换的PSU。</block>
   <block id="87bf19b9bb87e3527a13e2beb951da0a" category="list-text">断开PSU的连接：</block>
   <block id="d8b3adb935955fae05f64c8de837e522" category="list-text">打开电源线固定器、然后从PSU拔下电源线。</block>
@@ -5308,7 +5268,6 @@
   <block id="368d641430dae2b0a8c7c2bf6311587d" category="sidebar">AFF C250系统</block>
   <block id="5f4343bc91f5884e913fac7fc5ef6879" category="sidebar">AFF C250安装和设置</block>
   <block id="6ab6fba62ccec79ff36ba3c0657af4ae" category="sidebar">AFF C250维护</block>
-  <block id="6d7295bb011b88dfff81fa24b83caee3" category="sidebar">AFF C250启动介质</block>
   <block id="c200941f98f365b1ea223e9b5017435c" category="sidebar">AFF C250机箱</block>
   <block id="c9ce06c68e758edf256ecf0855912d40" category="sidebar">AFF C250控制器模块</block>
   <block id="6329b1134cd585a80e1c1289687135be" category="sidebar">AFF C400系统</block>
@@ -5980,35 +5939,28 @@ SFP+(目标/启动程序)</block>
   <block id="cef403fe8ffcaa9e4b76963ad5fbdfd9" category="doc">详细步骤- ASA A250</block>
   <block id="ae1e0afe4c210d63eb5e26ded871bc01" category="paragraph">此页面提供了有关安装ASA A250系统的详细分步说明。</block>
   <block id="68fd5ab999461d243b31a922d1452997" category="paragraph">要安装系统、您需要创建帐户并注册系统。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.</block>
-  <block id="ecb0c9eab141b978f65ad2401df5804b" category="doc">更换控制器- ASA A250</block>
   <block id="2fe8ccbf6f953c42d3accff471020e04" category="doc">更换实时时钟电池- ASA A250</block>
   <block id="c7c6a415741d25a1278e3b2feb7ce81f" category="doc">更换风扇- ASA A250</block>
-  <block id="cfeadcdc6bfe2b6d3f60304f963848e7" category="doc">机箱更换概述- ASA A250</block>
   <block id="657629aaa4f6eab92ab35b33457b8eb6" category="doc">重新对系统进行配置并重新分配磁盘- ASA A250</block>
   <block id="671f9966e0181f08744e85f7b6d01d05" category="summary">维护ASA A250硬件</block>
   <block id="8e7a33c44e49f9b5c0e2db2d78219211" category="doc">维护ASA A250硬件</block>
   <block id="63c77f3bd33a61dbe342def54e1aaf5b" category="paragraph">对于ASA A250存储系统、您可以对以下组件执行维护过程。</block>
   <block id="84fba8bc1002a05a2e1bc0df39a0d311" category="section-title">NVEM电池</block>
-  <block id="290bd37a39561a18b23a42421cfcf3ee" category="doc">控制器模块更换概述- ASA A250</block>
   <block id="943cbde5eb2522f265b1edf4f60529fd" category="doc">关闭控制器- ASA A250</block>
   <block id="fa26ab686e2bca1aebda5034632821e5" category="doc">更换NVMEM电池- ASA A250</block>
   <block id="b7a0d897933205e6e22755b6d3ed6203" category="list-text"><block ref="b7a0d897933205e6e22755b6d3ed6203" category="inline-link-macro-rx"></block></block>
   <block id="da918dba24d0605714c5840469413769" category="list-text"><block ref="da918dba24d0605714c5840469413769" category="inline-link-macro-rx"></block></block>
   <block id="2b55ecb41a48bac54ca526b7855130de" category="list-text"><block ref="2b55ecb41a48bac54ca526b7855130de" category="inline-link-macro-rx"></block></block>
   <block id="cd6cad2927af0a8738645aef0eddfef3" category="doc">更换DIMM - ASA A250</block>
-  <block id="d649204274d2da7722da732bfeda71c3" category="doc">概述和要求ASA A250</block>
   <block id="a73823d14db47bd43fd209723a8a0f78" category="doc">还原并验证系统配置- ASA A250</block>
   <block id="e6f6041e49a048399457259bb308d074" category="admonition">ASA A250使用与AFF A250系统相同的安装操作步骤。</block>
-  <block id="65874038049e4c1254e182578d50f9a6" category="doc">完整的系统还原- ASA A250</block>
   <block id="247ba1eaff46a863c502ad82319286c6" category="doc">关闭控制器- ASA A250</block>
   <block id="465964d20433e41566b91166a85bfb9b" category="doc">更换或安装夹层卡- ASA A250</block>
   <block id="a39762cd74723b77dcf23c044ca6cfb1" category="doc">更换SSD驱动器或HDD驱动器- ASA A250</block>
   <block id="e0510602c19834e8bc265ba7efeba84d" category="doc">启动恢复映像- ASA A250</block>
   <block id="b02afbe9444685afbe9c40a3fc3c120a" category="doc">将故障部件退回给NetApp - ASA A250</block>
-  <block id="87583399052bb43b32e2c2ad22bb4fa4" category="doc">更换机箱- ASA A250</block>
   <block id="469cc6ed74facdc4a5f00ee2787d50a2" category="doc">快速步骤- ASA A250</block>
   <block id="af966cb104df88d3a5fee466b27600cb" category="paragraph">此页面提供了从机架安装和布线到初始系统启动的典型系统安装的图形说明。Use this guide if you are familiar with installing NetApp systems.</block>
-  <block id="8a1d49f42ab77901ac11f0fbf079fe20" category="doc">完成还原和更换过程- ASA A250</block>
   <block id="832db81167fd84efee6f2f1426f0d945" category="doc">关闭受损控制器模块- ASA A250</block>
   <block id="e31f48aed610f4dfc632dee37773ef46" category="section-title">第7步：将控制器模块恢复运行</block>
   <block id="4de03bc95ff205a87859998054c21b43" category="paragraph">更换控制器模块中的组件后、必须将控制器模块重新安装到机箱中。</block>
@@ -6378,7 +6330,6 @@ SFP+(目标/启动程序)</block>
   <block id="04174ca16933f190c875156d1c865a6f" category="sidebar">ASA A250系统</block>
   <block id="49cad51c2467ab7a48a5a714a6b702f9" category="sidebar">ASA A250安装和设置</block>
   <block id="25bbddb4969df355fec42d7f4381dc50" category="sidebar">ASA A250维护</block>
-  <block id="084056583ff04c6f735927c47a55242a" category="sidebar">ASA A250启动介质</block>
   <block id="b28accc3473c73d477b9844ebb9c7c59" category="sidebar">ASA A250机箱</block>
   <block id="ddc6f1ed71d96b491a0e5bcf24219048" category="sidebar">ASA A250控制器模块</block>
   <block id="40b375b6007e5a697e97e419f1fb91c5" category="sidebar">完成控制器更换</block>
@@ -6568,23 +6519,16 @@ SFP+(目标/启动程序)</block>
   <block id="d86ad8650b661d28cc2d4ab2c5649c4a" category="doc">将故障部件退回给NetApp - ASA C250</block>
   <block id="bcf1e5f5ec2f5fa0fb4df4081483cf5a" category="doc">维护ASA C250硬件</block>
   <block id="d856c63691d6118cb3531626f4c662b5" category="paragraph">对于ASA C250存储系统、您可以对以下组件执行维护过程。</block>
-  <block id="778936817303ec79ea5a4c275ed17135" category="doc">机箱更换概述- ASA C250</block>
   <block id="706f40f792c3dab367a62e0d94e461ee" category="doc">更换或安装夹层卡- ASA C250</block>
   <block id="8336f1f72044234f7e63ccadc716be3d" category="doc">更换DIMM - ASA C250</block>
   <block id="bc2311b6a715da1a660ee0a9afd2016e" category="doc">更换启动介质- ASA C250</block>
   <block id="7171d5f82a6b13d62d4f7f70326df021" category="doc">关闭受损控制器模块- ASA C250</block>
-  <block id="b4609e09d3094c196af6ccbdb8c9afbf" category="doc">控制器模块更换概述- ASA C250</block>
-  <block id="13a410359da23b13900f5c285e105e81" category="doc">更换控制器模块硬件- ASA C250</block>
   <block id="0c85f60a3a546be806bd89d1770b2cdb" category="doc">更换SSD驱动器或HDD驱动器- ASA C250</block>
-  <block id="363dbb7bd38c3746663861884552a6ca" category="doc">启动介质更换概述- ASA C250</block>
-  <block id="43e2c8d81f6919e7565affdd6dcb959f" category="doc">完整的系统还原- ASA C250</block>
   <block id="d4990258d82ec1b42d1a3f07bbdd9d8c" category="doc">关闭控制器- ASA C250</block>
   <block id="e6b4abf5b92977063300e1d579857b79" category="doc">重新对系统进行配置并重新分配磁盘- ASA C250</block>
-  <block id="12e315d8c52faa94677b1901adfb8eb4" category="doc">更换硬件- ASA C250</block>
   <block id="e6d96f81a26c1a2a35065ae9c3793837" category="doc">更换NVMEM电池- ASA C250</block>
   <block id="7382bde7f210f74c2e89d6849d2c853c" category="doc">更换实时时钟电池- ASA C250</block>
   <block id="d39ab7984d0a9959c51323b1566d39fd" category="doc">还原并验证系统配置- ASA C250</block>
-  <block id="4011a7882485055cdc06ec93e7092124" category="doc">完成还原和更换过程- ASA C250</block>
   <block id="65cdd5bec4dba0253649d58817a20251" category="summary">本节提供了有关安装ASA C250系统的详细分步说明。</block>
   <block id="96aa7639aa86f7fa2dc06bc23ab17535" category="doc">详细步骤- ASA C250</block>
   <block id="6f986992e70a8e97c82b44d5221b88bd" category="doc">启动恢复映像- ASA C250</block>
@@ -6645,7 +6589,6 @@ SFP+(目标/启动程序)</block>
   <block id="47bbce6e33bd7d62fd92094dd6a0818b" category="sidebar">ASA C250系统</block>
   <block id="07b2916c602e93a800620d6a7f3da559" category="sidebar">ASA C250安装和设置</block>
   <block id="1dd94b2bf84735727f2fca5364f3b083" category="sidebar">ASA C250维护</block>
-  <block id="2353e9e67ec4eecfe39f1b7cc0ebfc1d" category="sidebar">ASA C250启动介质</block>
   <block id="194ead111a8c6fa1777a5e82a7f91b2f" category="sidebar">ASA C250机箱</block>
   <block id="f625798c697d484421b27bd2637a4a66" category="sidebar">ASA C250控制器模块</block>
   <block id="f52cc0c002eb630b3aee28324fd8a0a0" category="sidebar">ASA C800系统</block>
@@ -6831,9 +6774,6 @@ SFP+(目标/启动程序)</block>
   <block id="8c06a9afcd20cc8675f878a8e07e16ab" category="list-text">FAS8020、FAS8040、FAS8060、FAS8080</block>
   <block id="335755c0e7b53572be7e9a663d297e47" category="list-text">FAS2520、FAS2552、FAS2554</block>
   <block id="bbc155fb2b111bf61c4f5ff892915e6b" category="cell">交换机</block>
-  <block id="e29dd9091577ef2b7d9c9828cd5407af" category="paragraph">NetApp CN1610交换机</block>
-  <block id="a8495ee8f8ba70ddce083c14b317a765" category="list-text">Cisco 5596UP</block>
-  <block id="4249daf52cc9869f5f0eb05a465153b6" category="list-text">Cisco 5596T</block>
   <block id="30f60d67f457bb040dffde52197a54da" category="section-title">相关信息</block>
   <block id="23c35b2f23dd1a2d9d32a286f986b138" category="inline-link">支持的Cisco以太网交换机</block>
   <block id="01be3333cdb9fcee786cd82fd72188b1" category="list-text"><block ref="01be3333cdb9fcee786cd82fd72188b1" category="inline-link-rx"></block></block>
@@ -12812,7 +12752,6 @@ SFP+(目标/启动程序)</block>
   <block id="e09cb2a2e64a5d832ba5d49e4e865a30" category="list-text"><block ref="e09cb2a2e64a5d832ba5d49e4e865a30" category="inline-link-macro-rx"></block></block>
   <block id="ff4bfcae1e1da91372a5829a16edc994" category="list-text"><block ref="ff4bfcae1e1da91372a5829a16edc994" category="inline-link-macro-rx"></block></block>
   <block id="6d9a0b4c551443ef1617138b26975f75" category="list-text"><block ref="6d9a0b4c551443ef1617138b26975f75" category="inline-link-macro-rx"></block></block>
-  <block id="61d4fa9f3a7a7b48b899782661dcf10a" category="list-text"><block ref="61d4fa9f3a7a7b48b899782661dcf10a" category="inline-link-macro-rx"></block></block>
   <block id="e05ae7b3c1ea0c4153454992df283638" category="list-text"><block ref="e05ae7b3c1ea0c4153454992df283638" category="inline-link-macro-rx"></block></block>
   <block id="3323ee5bbd1e10d12ef056c6602c4368" category="list-text"><block ref="3323ee5bbd1e10d12ef056c6602c4368" category="inline-link-macro-rx"></block></block>
   <block id="0c8dcfc51fab6518904d4a9c8dd58ccd" category="list-text"><block ref="0c8dcfc51fab6518904d4a9c8dd58ccd" category="inline-link-macro-rx"></block></block>
@@ -12822,7 +12761,6 @@ SFP+(目标/启动程序)</block>
   <block id="261215f462a5d4db139c818d7d5917e9" category="list-text"><block ref="261215f462a5d4db139c818d7d5917e9" category="inline-link-macro-rx"></block></block>
   <block id="bc8bddc504e3921f85730569fc161778" category="list-text"><block ref="bc8bddc504e3921f85730569fc161778" category="inline-link-macro-rx"></block></block>
   <block id="653f11558faddfa010a75c3ab3825624" category="list-text"><block ref="653f11558faddfa010a75c3ab3825624" category="inline-link-macro-rx"></block></block>
-  <block id="47d7aa17e769c611eaa49d50da1dab2d" category="list-text"><block ref="47d7aa17e769c611eaa49d50da1dab2d" category="inline-link-macro-rx"></block></block>
   <block id="79a9e4dde6ab9763d048b83654d43600" category="list-text"><block ref="79a9e4dde6ab9763d048b83654d43600" category="inline-link-macro-rx"></block></block>
   <block id="5f12d608dc53d64ec0714cf4d35d62ee" category="list-text"><block ref="5f12d608dc53d64ec0714cf4d35d62ee" category="inline-link-macro-rx"></block></block>
   <block id="23a041dd87a713dee9105dd99e3ba37a" category="list-text"><block ref="23a041dd87a713dee9105dd99e3ba37a" category="inline-link-macro-rx"></block></block>
@@ -12837,7 +12775,6 @@ SFP+(目标/启动程序)</block>
   <block id="9d36794c414563cecd35514d783b97ba" category="list-text"><block ref="9d36794c414563cecd35514d783b97ba" category="inline-link-macro-rx"></block></block>
   <block id="c456cee055923b032ad9ec4fdb29058e" category="list-text"><block ref="c456cee055923b032ad9ec4fdb29058e" category="inline-link-macro-rx"></block></block>
   <block id="c5eac2a8312a45e6735c3716fb38bd0c" category="list-text"><block ref="c5eac2a8312a45e6735c3716fb38bd0c" category="inline-link-macro-rx"></block></block>
-  <block id="7eec148129b3c6afbd4850759ee06de0" category="list-text"><block ref="7eec148129b3c6afbd4850759ee06de0" category="inline-link-macro-rx"></block></block>
   <block id="620c442cb997b38308433f2b9438c08c" category="list-text"><block ref="620c442cb997b38308433f2b9438c08c" category="inline-link-macro-rx"></block></block>
   <block id="13873f00f26fa5d25e8ead4cf6171737" category="list-text"><block ref="13873f00f26fa5d25e8ead4cf6171737" category="inline-link-macro-rx"></block></block>
   <block id="9ebeb8ef6223987543e3dfcc68e080c5" category="list-text"><block ref="9ebeb8ef6223987543e3dfcc68e080c5" category="inline-link-macro-rx"></block></block>
@@ -12850,7 +12787,6 @@ SFP+(目标/启动程序)</block>
   <block id="2522b6ccbd53098c083c8d98e0f9467b" category="list-text"><block ref="2522b6ccbd53098c083c8d98e0f9467b" category="inline-link-macro-rx"></block></block>
   <block id="dfd10f3473c656275329ec0e96e56c33" category="list-text"><block ref="dfd10f3473c656275329ec0e96e56c33" category="inline-link-macro-rx"></block></block>
   <block id="fb0137952b0317febe08d8e945d5fa7a" category="list-text"><block ref="fb0137952b0317febe08d8e945d5fa7a" category="inline-link-macro-rx"></block></block>
-  <block id="e2bf1f4d6c1514761eefe024f0750dc1" category="list-text"><block ref="e2bf1f4d6c1514761eefe024f0750dc1" category="inline-link-macro-rx"></block></block>
   <block id="3bbdda55ce1e81bc8f185ac07f194fd6" category="list-text"><block ref="3bbdda55ce1e81bc8f185ac07f194fd6" category="inline-link-macro-rx"></block></block>
   <block id="7998d34e9c49d8c01d4b66a5c277d37a" category="list-text"><block ref="7998d34e9c49d8c01d4b66a5c277d37a" category="inline-link-macro-rx"></block></block>
   <block id="562ba6baba5e9d2f0da008ad8de30e1d" category="list-text"><block ref="562ba6baba5e9d2f0da008ad8de30e1d" category="inline-link-macro-rx"></block></block>
@@ -12879,7 +12815,6 @@ SFP+(目标/启动程序)</block>
   <block id="39af9e6c26414a032ade2fadf211af38" category="list-text"><block ref="39af9e6c26414a032ade2fadf211af38" category="inline-link-macro-rx"></block></block>
   <block id="61f84ee64f264820c014ce8c41c72fe8" category="list-text"><block ref="61f84ee64f264820c014ce8c41c72fe8" category="inline-link-macro-rx"></block></block>
   <block id="e89a4ca5833791765ec628c8949df314" category="list-text"><block ref="e89a4ca5833791765ec628c8949df314" category="inline-link-macro-rx"></block></block>
-  <block id="27d3e3ff12d4b178d0bc5d187a76cfe5" category="list-text"><block ref="27d3e3ff12d4b178d0bc5d187a76cfe5" category="inline-link-macro-rx"></block></block>
   <block id="275e238c8c488cd788182e16de8f8d18" category="list-text"><block ref="275e238c8c488cd788182e16de8f8d18" category="inline-link-macro-rx"></block></block>
   <block id="887671506984a347fc2bb90850eccac4" category="list-text"><block ref="887671506984a347fc2bb90850eccac4" category="inline-link-macro-rx"></block></block>
   <block id="f89fae77e712db915e5c4f5899f9dc90" category="list-text"><block ref="f89fae77e712db915e5c4f5899f9dc90" category="inline-link-macro-rx"></block></block>
@@ -12887,19 +12822,15 @@ SFP+(目标/启动程序)</block>
   <block id="bcb3d11de31ace3af18f7f575560fad0" category="list-text"><block ref="bcb3d11de31ace3af18f7f575560fad0" category="inline-link-macro-rx"></block></block>
   <block id="4fb3a37ea6a8bf216a7a7ff9ed43a0bc" category="list-text"><block ref="4fb3a37ea6a8bf216a7a7ff9ed43a0bc" category="inline-link-macro-rx"></block></block>
   <block id="389571f23e645f55137b0c744a724b29" category="list-text"><block ref="389571f23e645f55137b0c744a724b29" category="inline-link-macro-rx"></block></block>
-  <block id="01fb5d600feb973e6df3173c64f3a198" category="list-text"><block ref="01fb5d600feb973e6df3173c64f3a198" category="inline-link-macro-rx"></block></block>
   <block id="6431f05b1242b5f32378ef62d266c798" category="list-text"><block ref="6431f05b1242b5f32378ef62d266c798" category="inline-link-macro-rx"></block></block>
   <block id="3021891faee4fde9067d94377729f785" category="list-text"><block ref="3021891faee4fde9067d94377729f785" category="inline-link-macro-rx"></block></block>
   <block id="0457c9709948ef27324c936bd420f69a" category="list-text"><block ref="0457c9709948ef27324c936bd420f69a" category="inline-link-macro-rx"></block></block>
   <block id="4703cf7610a24c32062a5258bc53ee8e" category="list-text"><block ref="4703cf7610a24c32062a5258bc53ee8e" category="inline-link-macro-rx"></block></block>
-  <block id="37bf7febe6d710ccb6b01eaa16d4abed" category="list-text"><block ref="37bf7febe6d710ccb6b01eaa16d4abed" category="inline-link-macro-rx"></block></block>
-  <block id="634a4b84bba737c2869a94edc155749b" category="list-text"><block ref="634a4b84bba737c2869a94edc155749b" category="inline-link-macro-rx"></block></block>
   <block id="2e1190705587bc5d69188be8d441c21a" category="list-text"><block ref="2e1190705587bc5d69188be8d441c21a" category="inline-link-macro-rx"></block></block>
   <block id="caac5e8e53dadcc0cf395f3fed6aa0d2" category="list-text"><block ref="caac5e8e53dadcc0cf395f3fed6aa0d2" category="inline-link-macro-rx"></block></block>
   <block id="bd5b1e86a29aef36e6e499c3e57069b9" category="list-text"><block ref="bd5b1e86a29aef36e6e499c3e57069b9" category="inline-link-macro-rx"></block></block>
   <block id="26618a408ce26e97bc2d109a161d3b80" category="list-text"><block ref="26618a408ce26e97bc2d109a161d3b80" category="inline-link-macro-rx"></block></block>
   <block id="7db41139e1008b4583c7fd13af1b0a19" category="list-text"><block ref="7db41139e1008b4583c7fd13af1b0a19" category="inline-link-macro-rx"></block></block>
-  <block id="4e289b7dfd9e57d60afa512d08a5b22c" category="list-text"><block ref="4e289b7dfd9e57d60afa512d08a5b22c" category="inline-link-macro-rx"></block></block>
   <block id="3e5eb04329f564a2e736e6e39826f7f0" category="list-text"><block ref="3e5eb04329f564a2e736e6e39826f7f0" category="inline-link-macro-rx"></block></block>
   <block id="e5340bb51df7255f8d917738c89e9ea2" category="list-text"><block ref="e5340bb51df7255f8d917738c89e9ea2" category="inline-link-macro-rx"></block></block>
   <block id="5f82ce451d0ee17094c1f6f2d3f735eb" category="list-text"><block ref="5f82ce451d0ee17094c1f6f2d3f735eb" category="inline-link-macro-rx"></block></block>
@@ -12914,7 +12845,6 @@ SFP+(目标/启动程序)</block>
   <block id="34857cfe5244389bf54d3dfcd8de2578" category="list-text"><block ref="34857cfe5244389bf54d3dfcd8de2578" category="inline-link-macro-rx"></block></block>
   <block id="f4bfbdfae66e0a67d6b7d4225f7ac84f" category="list-text"><block ref="f4bfbdfae66e0a67d6b7d4225f7ac84f" category="inline-link-macro-rx"></block></block>
   <block id="5c47498d3e11ee9a57ddebd2baefb88d" category="list-text"><block ref="5c47498d3e11ee9a57ddebd2baefb88d" category="inline-link-macro-rx"></block></block>
-  <block id="2589ec0cb48b03e4582fd4e5930dd6af" category="list-text"><block ref="2589ec0cb48b03e4582fd4e5930dd6af" category="inline-link-macro-rx"></block></block>
   <block id="320b62021250ac3397d332e11199a626" category="list-text"><block ref="320b62021250ac3397d332e11199a626" category="inline-link-macro-rx"></block></block>
   <block id="891c5359e682529a1627e4999520d382" category="list-text"><block ref="891c5359e682529a1627e4999520d382" category="inline-link-macro-rx"></block></block>
   <block id="3bed913e05df4b686d188f0b1563edaf" category="list-text"><block ref="3bed913e05df4b686d188f0b1563edaf" category="inline-link-macro-rx"></block></block>
@@ -12923,15 +12853,12 @@ SFP+(目标/启动程序)</block>
   <block id="8c93358c335849a177a2b064d61fee49" category="list-text"><block ref="8c93358c335849a177a2b064d61fee49" category="inline-link-macro-rx"></block></block>
   <block id="fe7940c070c008b7384704652d68649d" category="list-text"><block ref="fe7940c070c008b7384704652d68649d" category="inline-link-macro-rx"></block></block>
   <block id="3126d2686507d95d694289ed10b84c81" category="list-text"><block ref="3126d2686507d95d694289ed10b84c81" category="inline-link-macro-rx"></block></block>
-  <block id="961e258e36c7c0498a4cd9ada2d70c28" category="list-text"><block ref="961e258e36c7c0498a4cd9ada2d70c28" category="inline-link-macro-rx"></block></block>
   <block id="22f46c8d8c23447b8b2d25ba99c89ea5" category="list-text"><block ref="22f46c8d8c23447b8b2d25ba99c89ea5" category="inline-link-macro-rx"></block></block>
   <block id="ac31af4b50ec3f45e426fed2d12a4579" category="list-text"><block ref="ac31af4b50ec3f45e426fed2d12a4579" category="inline-link-macro-rx"></block></block>
   <block id="efb4ef1a7e68e6464e2855d284715e8f" category="list-text"><block ref="efb4ef1a7e68e6464e2855d284715e8f" category="inline-link-macro-rx"></block></block>
   <block id="b9a5aa0dda2abe8c56433655233c5afe" category="list-text"><block ref="b9a5aa0dda2abe8c56433655233c5afe" category="inline-link-macro-rx"></block></block>
-  <block id="4617ca51af3e7539e1032042c8ad9ebb" category="list-text"><block ref="4617ca51af3e7539e1032042c8ad9ebb" category="inline-link-macro-rx"></block></block>
   <block id="09514b85ea6e4a26b271ee897526f719" category="list-text"><block ref="09514b85ea6e4a26b271ee897526f719" category="inline-link-macro-rx"></block></block>
   <block id="d667d10a2839d4d94c58c56f5c5f3632" category="list-text"><block ref="d667d10a2839d4d94c58c56f5c5f3632" category="inline-link-macro-rx"></block></block>
-  <block id="d363d6fa2d5b7d1a3acbba63d58ee5df" category="list-text"><block ref="d363d6fa2d5b7d1a3acbba63d58ee5df" category="inline-link-macro-rx"></block></block>
   <block id="25e9061afcbf32bd115473b789388d4a" category="list-text"><block ref="25e9061afcbf32bd115473b789388d4a" category="inline-link-macro-rx"></block></block>
   <block id="7934c4d942ff95cd60f23fa77b0f6248" category="list-text"><block ref="7934c4d942ff95cd60f23fa77b0f6248" category="inline-link-macro-rx"></block></block>
   <block id="ac8da8b52bd313ac221e71b1ea98d0fe" category="list-text"><block ref="ac8da8b52bd313ac221e71b1ea98d0fe" category="inline-link-macro-rx"></block></block>
@@ -12939,7 +12866,6 @@ SFP+(目标/启动程序)</block>
   <block id="dfa7981aaa213042de69d18d113dbb70" category="list-text"><block ref="dfa7981aaa213042de69d18d113dbb70" category="inline-link-macro-rx"></block></block>
   <block id="b1c8613a464785e91bef89d1ccbd79af" category="list-text"><block ref="b1c8613a464785e91bef89d1ccbd79af" category="inline-link-macro-rx"></block></block>
   <block id="8353370ee687496a9e70ca73eadba195" category="list-text"><block ref="8353370ee687496a9e70ca73eadba195" category="inline-link-macro-rx"></block></block>
-  <block id="ec28e7e0b849b225d5bb392304d7e31c" category="list-text"><block ref="ec28e7e0b849b225d5bb392304d7e31c" category="inline-link-macro-rx"></block></block>
   <block id="f2e81baf5c47e710bdef3091d5df1390" category="list-text"><block ref="f2e81baf5c47e710bdef3091d5df1390" category="inline-link-macro-rx"></block></block>
   <block id="49c072d4a239128d83dc028820477cc2" category="list-text"><block ref="49c072d4a239128d83dc028820477cc2" category="inline-link-macro-rx"></block></block>
   <block id="3132e68710534e3087e9540fb5faecde" category="list-text"><block ref="3132e68710534e3087e9540fb5faecde" category="inline-link-macro-rx"></block></block>
@@ -13143,7 +13069,6 @@ SFP+(目标/启动程序)</block>
   <block id="882d6906bbb976cfdfc65c1f27b96098" category="list-text"><block ref="882d6906bbb976cfdfc65c1f27b96098" category="inline-link-macro-rx"></block></block>
   <block id="1cf7aa1943c1b7a1ddfc0eeb8c996030" category="list-text"><block ref="1cf7aa1943c1b7a1ddfc0eeb8c996030" category="inline-link-macro-rx"></block></block>
   <block id="6dd2781f09a534f988ce250d63de5d5f" category="list-text"><block ref="6dd2781f09a534f988ce250d63de5d5f" category="inline-link-macro-rx"></block></block>
-  <block id="54dd679eba24c4709d997c50e604df73" category="list-text"><block ref="54dd679eba24c4709d997c50e604df73" category="inline-link-macro-rx"></block></block>
   <block id="3ad0b4d488ff9d235fa7d8fe35ab895a" category="list-text"><block ref="3ad0b4d488ff9d235fa7d8fe35ab895a" category="inline-link-macro-rx"></block></block>
   <block id="551c3848ca6ae1e3e23199f05a8c9122" category="list-text"><block ref="551c3848ca6ae1e3e23199f05a8c9122" category="inline-link-macro-rx"></block></block>
   <block id="c91af71b22cb5a28829ad559b294c51e" category="list-text"><block ref="c91af71b22cb5a28829ad559b294c51e" category="inline-link-macro-rx"></block></block>
@@ -13864,7 +13789,6 @@ SFP+(目标/启动程序)</block>
   <block id="509770c8dda30e85db49f8642db6ca11" category="list-text">等待登录提示出现。</block>
   <block id="0e24346f9a92e6d04d57b5ccead814c3" category="list-text">登录节点并归还存储空间：</block>
   <block id="20d2bf4f3f943fcc1e340e99a4d368ba" category="admonition">如果系统无法识别密钥管理器配置，则会显示错误消息，并提示您确认是否已配置密钥管理器以及配置类型（板载或外部）。请回答提示以继续。</block>
-  <block id="4aac054c51ae042dd6c06bdad5d13845" category="list-text">请使用适合您配置的步骤恢复密钥管理器：</block>
   <block id="564c83534ce0095bf811b4f45e8a7587" category="paragraph">系统显示以下消息并开始运行启动菜单选项 10：</block>
   <block id="c08aad071fe1f1b764a8997cd71926c1" category="list-text">进入<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>在提示时确认您是否要开始 OKM 恢复过程。</block>
   <block id="63d61920b8c2f7b30cf281bdfa903c57" category="list-text">出现提示时，请输入机载密钥管理密码。</block>
@@ -14670,4 +14594,330 @@ SFP+(目标/启动程序)</block>
   <block id="462bdaed9eace863845b41e01c3480e8" category="sidebar">热插拔 I/O 模块</block>
   <block id="db0a3be0ea02de25a3475124879fa44b" category="sidebar">AFF A1K I/O 模块</block>
   <block id="912c10cfdcb4f2e697e3be725e084f23" category="sidebar">热插拔 I/O 模块</block>
+  <block id="a8d224655abd817de530e49bfb21cec6" category="list-text">从控制器模块中找到并更换受损的启动介质：</block>
+  <block id="ca1906230a46f1d0e81eac082609a776" category="list-text">安装风道。</block>
+  <block id="88d4161f8a471989e6046fbb53a54edf" category="paragraph">要热插拔 AC PSU，请完成以下步骤。</block>
+  <block id="610003c6a98d9993f11bcbf2c74ca951" category="list-text">[[restore-key-manager]] 使用适合您配置的相应过程还原密钥管理器：</block>
+  <block id="680854b0510554aebecd63fa5251805c" category="list-text">[[reenable-auto-giveback]]如果已禁用自动交还，请重新启用：</block>
+  <block id="ca10834f81d97eaa4407b245fed970f3" category="doc">将故障启动介质返回 NetApp - AFF A250</block>
+  <block id="341bee79898d3cbfad5d9f17dd39b24a" category="paragraph">如果 AFF A250 系统中的某个组件发生故障，请将故障部件退回 NetApp。有关更多信息，请参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>页面。</block>
+  <block id="d6a90ed11a4dd029aaf77b6e107a87a8" category="paragraph">如果 AFF A250 存储系统中的组件出现故障，请将出现故障的部件返回 NetApp。有关更多信息，请参阅<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>页面。</block>
+  <block id="dfc5cfd29de70dfb5c8b24e81dfde2d3" category="paragraph">为了确保 AFF A250 存储系统的数据安全，需要验证启动介质上的加密密钥支持和状态。检查 ONTAP 版本是否支持 NetApp 卷加密 (NVE)，并在关闭控制器之前检查密钥管理器是否处于活动状态。</block>
+  <block id="522fc4812be3ff376fd0a8d4a01a2235" category="paragraph">如果您的存储系统运行的是 ONTAP 9.18.1 或更高版本，请使用<block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block>。如果您的系统正在运行早期版本的 ONTAP，则必须使用手动启动恢复过程。</block>
+  <block id="72d6a283a9bf82ad6c28753db0fd0985" category="paragraph">在 AFF A250 系统中的替换引导介质上恢复加密，以确保持续的数据保护。更换过程包括验证密钥可用性、重新应用加密设置以及确认对您的数据的安全访问。</block>
+  <block id="625aa03c8be2d3b8e1e24b44d7fece6b" category="paragraph">如果您的存储系统运行的是 ONTAP 9.18.1 或更高版本，请使用<block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block>。如果您的系统正在运行早期版本的 ONTAP，则必须使用手动启动恢复过程。</block>
+  <block id="38c243e1c2fb1072058d0a3e94458118" category="summary">在 AFF A250 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，以从配对节点恢复配置。</block>
+  <block id="df0e7d3d2b2dd8b8741c5be1dc7eb74f" category="doc">从配对节点自动启动介质恢复 - AFF A250</block>
+  <block id="b6cabea858cacf035b51ff7edc895ad5" category="paragraph">在 AFF A250 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程以从伙伴节点恢复配置。在恢复过程中，系统检查加密是否已启用，并确定正在使用的密钥加密类型。如果启用了密钥加密，系统将引导您完成恢复密钥的相应步骤。</block>
+  <block id="1c7f9afb0f27a26eeaf8115ceb263557" category="paragraph">只有 ONTAP 9.18.1 及更高版本才支持自动启动介质恢复过程。如果您的存储系统运行的是早期版本的 ONTAP，请使用 <block ref="739428bb763fc45faeb1ae97255a3f48" category="inline-link-macro-rx"></block>。</block>
+  <block id="12ce7c942d23df67263bd780219c154a" category="doc">从 USB 驱动器手动启动介质恢复 - AFF A250</block>
+  <block id="b0465c866eac76ecf40978268d804908" category="paragraph">在 AFF A250 系统中安装新的启动介质设备后，您可以从 USB 驱动器启动恢复映像，并从配对节点恢复配置。</block>
+  <block id="55afce7ad2217b05af2e3c1417d0c19f" category="summary">AFF A250 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="6bdea4cac96b9056d3766be019dd0c04" category="doc">更换启动介质以进行自动启动恢复 - AFF A250</block>
+  <block id="dcdd396ac549fef92940892b5a2b01fc" category="paragraph">AFF A250 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下并打开控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="af137cc243bd967eb74cbdfeb3d8a058" category="summary">在更换 AFF A250 系统中的启动介质之前，请确保满足成功更换的必要要求。</block>
+  <block id="ce7174c0096688f2e6a939ab564dad0a" category="doc">自动启动介质恢复的要求 - AFF A250</block>
+  <block id="7eb02c4a939fd2a9816de75e45b43e50" category="paragraph">在更换 AFF A250 中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否有正确的替换启动介质，确认受损控制器上的 e0S (e0M 扳手) 端口没有故障，并确定是否已启用板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。</block>
+  <block id="011e4c638ab45244a5b99c14d9a4c9b4" category="summary">在更换 AFF A250 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您有一个具有适当存储容量的 USB 闪存驱动器，并验证您的更换启动设备是否正确。</block>
+  <block id="a39f03dd45e11afa398f41ce8db49057" category="doc">手动启动介质恢复的要求 - AFF A250</block>
+  <block id="75cf7b5eb84fe5aff9ec690ff712a7d8" category="summary">通过查看更换要求、关闭控制器、更换引导介质、在引导介质上还原映像以及验证系统功能，开始更换 AFF A250 存储系统中的引导介质。</block>
+  <block id="ae971224ba6e6b913e15b7f316a19b74" category="doc">启动媒体自动恢复工作流 - AFF A250</block>
+  <block id="046738295c062a0324677599f1c769da" category="paragraph">启动映像的自动恢复涉及系统自动识别和选择适当的启动菜单选项。它使用合作伙伴节点上的引导映像在 AFF A250 存储系统的替换引导介质上重新安装 ONTAP。</block>
+  <block id="dbbe1592f2430c6ab4d716fa0dbbab21" category="summary">通过查看更换要求、检查加密状态、关闭控制器、更换引导介质、引导恢复映像、恢复加密和验证系统功能，开始更换 AFF A250 存储系统中的引导介质。</block>
+  <block id="706763fe838ac358e0418eefc427df6e" category="doc">启动介质手动恢复工作流 - AFF A250</block>
+  <block id="fedfd185ee41d3ef362db6c2939eaaea" category="doc">更换启动介质并准备手动启动恢复 - AFF A250</block>
+  <block id="9f62f84b01a1ffac702af8ead9d2fbfd" category="paragraph">AFF A250 系统中的启动介质会存储重要的固件和配置数据。更换过程包括卸下系统管理模块、卸下受损的启动介质、安装更换启动介质，然后使用 USB 闪存驱动器手动将 ONTAP 映像传输到更换启动介质中。</block>
+  <block id="6ca138d645ffecd028316e958b066da4" category="summary">关闭 AFF A250 存储系统中受损的控制器，以防止数据丢失，并确保更换启动介质时的系统稳定性。</block>
+  <block id="7b955410b03bef3fcff17d3969065b7b" category="doc">关闭控制器以实现自动启动介质恢复 - AFF A250</block>
+  <block id="e3349f8840982c956a98a9b15fd8a817" category="paragraph">关闭 AFF A250 存储系统中受损的控制器，以防止数据丢失，并在自动启动介质恢复过程中保持系统稳定。</block>
+  <block id="15c64581bcfa6165556b3d7035d63227" category="doc">关闭控制器以进行手动启动介质恢复 - AFF A250</block>
+  <block id="8bd01d2fe37613151ebc277323c82824" category="doc">完成机箱更换 - AFF A250</block>
+  <block id="c3791e58d4fe79fed87533d250f9706d" category="paragraph">重新启动控制器，验证系统健康状况，并将故障部件返回 NetApp 以完成 AFF A250 机箱更换过程的最后一步。</block>
+  <block id="39a3b1f17e8cc33119262178b12813bf" category="doc">更换机箱 - AFF A250</block>
+  <block id="6d294bfd40eed6bfaeeaaf1db8208a89" category="paragraph">如果出现硬件故障，请更换 AFF A250 系统中的机箱。更换过程包括卸下控制器和电源装置 (PSU)、卸下驱动器、安装更换机箱和重新安装机箱组件。</block>
+  <block id="96e72aaff65cb4f4750c609557e4dc82" category="paragraph">更换损坏的 AFF A250 机箱并重新安装组件后，需要 <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="6342be9698d80d1df1b56a890db6de1b" category="summary">通过识别损坏的机箱、验证更换组件以及标记电缆和控制器模块，准备更换 AFF A250 系统中损坏的机箱。</block>
+  <block id="f2a9d3951f48f1533f94a3057d3a2aa2" category="doc">准备更换机箱 - AFF A250</block>
+  <block id="a041a2132827860341b808531f1a8f51" category="paragraph">准备好更换 AFF A250 机箱硬件后，需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
+  <block id="40dc60d0124c26c019ba0d93dec22b64" category="summary">在更换 AFF A250 系统中的机箱之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常工作，验证您是否具有 ONTAP 的本地管理员凭据、正确的替换机箱和必要的工具。</block>
+  <block id="cf290623390ba30d275512e7663512dc" category="doc">更换机箱的要求 - AFF A250</block>
+  <block id="ee94c7d16f8159f6fd15966537794cd8" category="paragraph">关闭 AFF A250 存储系统中的控制器，以防止数据丢失，并确保更换机箱时的系统稳定性。</block>
+  <block id="f1e663b834ad70af6781e2aaf658b79b" category="summary">通过查看更换要求、关闭控制器、更换机箱和验证系统运行情况，开始更换 AFF A250 存储系统的机箱。</block>
+  <block id="50b8277f64a0355fdb433fab171de4bf" category="doc">机箱更换工作流程 - AFF A250</block>
+  <block id="90e8d9e6dd3b47cd71d3394041cb1b91" category="doc">更换控制器 - AFF A250</block>
+  <block id="8e261760551b84dea3911bed5aa2fcfb" category="paragraph">当硬件故障需要时，请更换 AFF A250 系统中的控制器。更换过程包括移除受损的控制器，将组件移动到更换控制器，安装更换控制器并重新启动。</block>
+  <block id="b482ea591d8b5b00850a5e22fa5a0a55" category="inline-link-macro">恢复并验证系统配置</block>
+  <block id="eb539dd47c5a44c2e0cb481710197f8b" category="paragraph">更换损坏的 A250 控制器后，需要<block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>。</block>
+  <block id="a37f8afc3ebcec16869d19f6f057705e" category="paragraph">完成恢复并验证系统配置 A250 系统后，您需要重新连接系统并重新分配磁盘。</block>
+  <block id="f76cf839705d622caa8a1bdd213abf8b" category="paragraph">重新连接系统并重新分配磁盘后，需要执行此操作<block ref="d6f5f08e0612b966d919b4ea0b494c53" category="inline-link-macro-rx"></block>。</block>
+  <block id="6f0444169c1c65d971f2ea700d03e218" category="doc">更换控制器的要求 - AFF A250</block>
+  <block id="ae3364883205d05f8204133deac12f44" category="paragraph">在更换 AFF A250 存储系统中的控制器之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常工作，验证您的替换控制器是否正确，并将控制器的控制台输出保存到文本日志文件中。</block>
+  <block id="e258eea4dc316cb207e580f7163d64c5" category="paragraph">在查看更换受损控制器的要求后，您需要<block ref="049c9e44f3f84f6c7ce4b89629424c9c" category="inline-link-macro-rx"></block>。</block>
+  <block id="9b5129d7aeb50933c98be79d2b06db1e" category="doc">完整控制器更换 - AFF A250</block>
+  <block id="b57cf1a41835d3be7a95fa27b6fa10a3" category="paragraph">要完成 AFF A250 系统的控制器更换以完全运行，您必须恢复 NetApp 存储加密配置（如有必要），并为新控制器安装许可证，然后将故障部件退回 NetApp，如套件附带的 RMA 说明中所述。</block>
+  <block id="b3ec477ff8d47dd50a2b1fa27b668fb9" category="paragraph">关闭 AFF A250 存储系统中的控制器，以防止数据丢失，并确保更换控制器时的系统稳定性。</block>
+  <block id="1d91f99aa70ed0660c0982ca14f3f20d" category="paragraph">关闭控制器后，需要 <block ref="1f759de80b41385676d2f1fe163eb0aa" category="inline-link-macro-rx"></block></block>
+  <block id="ad48037acdea8efc34f45ea9d9814fbe" category="paragraph">完成硬件更换并将 A250 系统引导到维护模式后，需要验证更换控制器的低级系统配置，并根据需要重新配置系统设置。</block>
+  <block id="c822907acad2d1e75636dc09ef0d4efc" category="inline-link-macro">重新连接系统并重新分配磁盘</block>
+  <block id="1039e92749b91caba3ce16a6ff4690c2" category="paragraph">恢复并验证系统配置后，需要执行此操作<block ref="a27ede3ea5013ccc0cb1bb74355be7b2" category="inline-link-macro-rx"></block>。</block>
+  <block id="de4503aac4f6f7ed872d4d0d89d9fac3" category="summary">通过关闭受损控制器、移除和更换控制器、重新配置系统设置以及验证系统操作，开始更换 AFF A250 存储系统中的控制器。</block>
+  <block id="fb84141f9417f9f83aaaeee27ad968e7" category="doc">控制器更换工作流程 - AFF A250</block>
+  <block id="27b9224034509b99ea4e64a90d2bffff" category="paragraph">通过关闭损坏的控制器、移除和更换控制器、恢复系统配置以及将存储资源的控制权交还给替换控制器来更换 AFF A250 存储系统中的控制器。</block>
+  <block id="d85f321345c5fbe823c6d0b3fc7c5545" category="summary">维护 AFF A250 硬件</block>
+  <block id="c5076ac06e042709d64eed0f58e86e2b" category="paragraph">维护 AFF A250 存储系统的硬件，以确保长期可靠性和最佳性能。执行定期维护任务，例如更换故障组件，因为这有助于防止停机和数据丢失。</block>
+  <block id="a87a9232dc45d770f3f2fabda9e401f5" category="paragraph">维护程序假设 AFF A250 存储系统已部署为 ONTAP 环境中的存储节点。</block>
+  <block id="aa15210b554a5b84c35b00934e549eb9" category="paragraph">启动介质存储存储系统用于启动的主要和辅助 ONTAP 映像文件集。在自动恢复期间，系统会从合作伙伴节点检索启动映像，并自动运行相应的启动菜单选项，以便在替换启动介质上安装映像。自动启动介质恢复过程仅在 ONTAP 9.18.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的 ONTAP，请使用<block ref="739428bb763fc45faeb1ae97255a3f48" category="inline-link-macro-rx"></block>。</block>
+  <block id="2d324fe31fb35f91188b87e216268116" category="paragraph">启动介质存储存储系统用于启动的主要和辅助 ONTAP 映像文件集。在手动恢复期间，您可以从 USB 驱动器启动存储系统，并手动还原文件系统映像和配置。如果您的存储系统运行的是 ONTAP 9.18.1 及更高版本，请使用 <block ref="0326355f0329bd91b304522a96676e27" category="inline-link-macro-rx"></block>。</block>
+  <block id="62a393871e6ebbad9a5a4a48f9dcad4e" category="paragraph"><block ref="62a393871e6ebbad9a5a4a48f9dcad4e" category="inline-link-macro-rx"></block></block>
+  <block id="4986d6400ae7bf8e3ebf5742affb5cac" category="paragraph">夹层卡是一种直接插入另一个插件卡的印刷电路板。</block>
+  <block id="dc6418e8893fd3efffcb054713535d8b" category="paragraph">如果 AC 电源出现故障，NVMEM 电池负责保存缓存数据。</block>
+  <block id="42e082f0bba872b8266c00d5f1555afe" category="list-text">深度：21.38"（54.3 cm）</block>
+  <block id="5f8dd6bacbcf27ac849a3bc90acb506e" category="doc">完成机箱更换 - AFF A800</block>
+  <block id="396780f0fa472db008ecffbf87cc332f" category="doc">将故障启动介质返回至 NetApp - ASA C250</block>
+  <block id="c341f8917fc7755fa264acd38324b161" category="paragraph">如果 ASA C250 系统中的某个组件出现故障，请将出现故障的部件返回 NetApp。有关更多信息，请参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>页面。</block>
+  <block id="a822bb67a7729405ea869500f6483769" category="summary">在 ASA C250 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，以从配对节点恢复配置。</block>
+  <block id="52705a4a551e9e78156268d3b722b640" category="doc">从合作伙伴节点自动恢复启动介质 - ASA C250</block>
+  <block id="de168faff993343d07eab071fd8d31c2" category="paragraph">在您的 ASA C250 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程以从伙伴节点恢复配置。在恢复过程中，系统检查加密是否已启用，并确定正在使用的密钥加密类型。如果启用了密钥加密，系统将引导您完成恢复密钥的相应步骤。</block>
+  <block id="ecbed1b1911625de2c7d7fef54dd3a9e" category="summary">ASA C250 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="fb319d4fcbcaebe65f129baa7d71cb8a" category="doc">更换启动介质以进行自动启动恢复 - ASA C250</block>
+  <block id="3f7c598b8de926ed6f4ede96849867ae" category="paragraph">ASA C250 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下并打开控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="ca511809cd8088dd2136eacfb38a9e80" category="summary">在更换 ASA C250 系统中的启动介质之前，请确保满足成功更换的必要要求。</block>
+  <block id="f9052d4f873e62ac3bbdcc8f796de6fe" category="doc">自动启动介质恢复的要求 - ASA C250</block>
+  <block id="66a7a5e00dcd2fba43bdc509c4ce2960" category="paragraph">在更换 ASA C250 中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否有正确的替换启动介质，确认受损控制器上的 e0S (e0M 扳手) 端口没有故障，并确定是否已启用板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。</block>
+  <block id="123aa1a0dc08eb892a6d0bd8c79861ea" category="summary">在更换 ASA C250 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您有一个具有适当存储容量的 USB 闪存驱动器，并验证您的更换启动设备是否正确。</block>
+  <block id="dce50de748cfaaf3af716b1078129abb" category="doc">手动启动介质恢复的要求 - ASA C250</block>
+  <block id="ddb2345e083a4893d1a6cb8651afa7e5" category="summary">通过查看更换要求、关闭控制器、更换引导介质、在引导介质上恢复映像以及验证系统功能，开始更换 ASA C250 存储系统中的引导介质。</block>
+  <block id="6f4ba5ef05a927a10795b9c810c3a6a5" category="doc">启动媒体自动恢复工作流 - ASA C250</block>
+  <block id="aa3865a6290900fc1f2033a6c6d1e12e" category="paragraph">启动映像的自动恢复涉及系统自动识别和选择适当的启动菜单选项。它使用合作伙伴节点上的引导映像在 ASA C250 存储系统的替换引导介质上重新安装 ONTAP。</block>
+  <block id="3a66de707baa55f8a7fa33524aa9a35c" category="summary">通过查看更换要求、检查加密状态、关闭控制器、更换引导介质、引导恢复映像、恢复加密和验证系统功能，开始更换 ASA C250 存储系统中的引导介质。</block>
+  <block id="c28332fccbe33a8c9034057e249f0d32" category="doc">启动介质手动恢复工作流 - ASA C250</block>
+  <block id="3cc2dd62d8ac6c4411401388fa57c9ab" category="summary">关闭 ASA C250 存储系统中受损的控制器，以防止数据丢失，并确保更换启动介质时的系统稳定性。</block>
+  <block id="1cac984cb7d084c785a724d6632a0463" category="doc">关闭控制器以实现自动启动介质恢复 - ASA C250</block>
+  <block id="69ab93a9fb12f2390b104b08978520df" category="paragraph">关闭 ASA C250 存储系统中受损的控制器，以防止数据丢失，并在自动启动介质恢复过程中保持系统稳定。</block>
+  <block id="f57ded7f5bec798dc3a039cb0eb78122" category="doc">完成机箱更换 - ASA C250</block>
+  <block id="3e984ad6768f8f3021b6ed192ff2b2ef" category="paragraph">重新启动控制器，验证系统健康状况，并将故障部件返回 NetApp 以完成 ASA C250 机箱更换过程的最后一步。</block>
+  <block id="5ecdfb7a274674cf02767780bd60bcbc" category="doc">更换机箱 - ASA C250</block>
+  <block id="792843a068be7169f34d31081b123515" category="paragraph">当硬件故障需要更换时，请更换 ASA C250 系统中的机箱。更换过程包括卸下控制器和电源装置 (PSU)、卸下驱动器、安装更换机箱和重新安装机箱组件。</block>
+  <block id="989a06f587925a250bb732e5019f499c" category="paragraph">更换损坏的 ASA C250 机箱并重新安装组件后，需要 <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="6288479d232c0e416d5b4259b78f8db7" category="summary">通过识别损坏的机箱、验证更换组件以及标记电缆和控制器模块，准备更换 ASA C250 系统中损坏的机箱。</block>
+  <block id="48ddbb91687af1fffe6bebe212824365" category="doc">准备更换机箱 - ASA C250</block>
+  <block id="0b1aa6d4391948c9fe65345954a6ad01" category="paragraph">准备好更换 ASA C250 机箱硬件后，需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
+  <block id="790a536025cecbcd2961410b98ba8c64" category="summary">在更换 ASA C250 系统中的机箱之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常工作，验证您是否具有 ONTAP 的本地管理员凭据、正确的替换机箱和必要的工具。</block>
+  <block id="dc484f31059a039765fe1acac19999e5" category="doc">更换机箱的要求 - ASA C250</block>
+  <block id="b9e69b0039d9ed83ff105f64d215c7d5" category="paragraph">关闭 AFF ASA C250 存储系统中的控制器，以防止数据丢失，并确保更换机箱时的系统稳定性。</block>
+  <block id="7b6ed1b0e9a5ff30fb553d52444ed7e6" category="inline-link-macro">将硬件移动到新机箱</block>
+  <block id="6e96729dba65c561ffc30b3a80695712" category="paragraph">关闭控制器后，需要 <block ref="409096e21425936d7f115e7f07c0cad4" category="inline-link-macro-rx"></block></block>
+  <block id="bc49a9ce5dd17d1a86e01bf23c50018a" category="summary">通过查看更换要求、关闭控制器、更换机箱和验证系统运行情况，开始更换 ASA C250 存储系统的机箱。</block>
+  <block id="89dd27afe8dd86ca0004d67931f7e823" category="doc">机箱更换工作流程 - ASA C250</block>
+  <block id="4817cb96bfcfa91f3fcf6c5029c68683" category="doc">更换控制器 - ASA C250</block>
+  <block id="2ae90478841e67e153829c367aa619e9" category="paragraph">当硬件故障需要时，请更换 ASA C250 系统中的控制器。更换过程包括移除受损的控制器，将组件移动到更换控制器，安装更换控制器并重新启动。</block>
+  <block id="0bba2cf5ba5f1c48592bb09d65803109" category="paragraph">更换损坏的 ASA C250 控制器后，需要<block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>。</block>
+  <block id="39bf3460d01af785a1658113f3d329cd" category="paragraph">完成恢复并验证系统配置 ASA C250 系统后，您需要重新连接系统并重新分配磁盘。</block>
+  <block id="b8735bf922a659dce881a6483ebfc66c" category="doc">更换控制器的要求 - ASA C250</block>
+  <block id="5c50f74c21bf045696862d9c913df741" category="paragraph">在更换 ASA C250 存储系统中的控制器之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常工作，验证您的替换控制器是否正确，并将控制器的控制台输出保存到文本日志文件中。</block>
+  <block id="703171cc918a89e3e3f4a32efc01142e" category="doc">完整的控制器更换 - ASA C250</block>
+  <block id="b1ba0b9d2770ab5ef378f594399540a0" category="paragraph">要完成 ASA C250 系统的控制器更换以完全运行，您必须恢复 NetApp 存储加密配置（如有必要），并为新控制器安装许可证，然后将故障部件退回 NetApp，如套件附带的 RMA 说明中所述。</block>
+  <block id="db1c3a4fe6a7e6f03d7b4c1c0b1a9619" category="paragraph">关闭 ASA C250 存储系统中的控制器，以防止数据丢失，并确保更换控制器时的系统稳定性。</block>
+  <block id="eae052008fde47e543ef49273851e2c4" category="paragraph">完成硬件更换并将 ASA C250 系统引导到维护模式后，需要验证更换控制器的低级系统配置，并根据需要重新配置系统设置。</block>
+  <block id="287d634f17792905ea112722385e2973" category="summary">通过关闭受损控制器、移除和更换控制器、重新配置系统设置以及验证系统操作，开始更换 ASA C250 存储系统中的控制器。</block>
+  <block id="73a1f81203dbd0d6aad3b1c4280bd83c" category="doc">控制器更换工作流程 - ASA C250</block>
+  <block id="9fdedcbb8a005772b764ea92ee7d79fc" category="paragraph">通过关闭损坏的控制器、移除和更换控制器、恢复系统配置以及将存储资源的控制权返回给替换控制器来更换 ASA C250 存储系统中的控制器。</block>
+  <block id="447d58f42a93cb2d67a882a1972e7529" category="paragraph">维护 ASA C250 存储系统的硬件，以确保长期可靠性和最佳性能。执行定期维护任务，例如更换故障组件，因为这有助于防止停机和数据丢失。</block>
+  <block id="f8466e4302541aafa6280bb32bf6db40" category="paragraph">维护程序假设 ASA C250 存储系统已部署为 ONTAP 环境中的存储节点。</block>
+  <block id="799766eb97b1cb94033e6f826c918d27" category="doc">将故障启动介质返回至 NetApp - ASA A250</block>
+  <block id="4113253bb433cd66aaf518403b05475f" category="paragraph">如果 ASA A250 系统中的某个组件发生故障，请将故障部件退回 NetApp。有关更多信息，请参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>页面。</block>
+  <block id="c8fe075e031ef0a229e1e5afae9b1203" category="summary">在您的 ASA A250 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，以从配对节点恢复配置。</block>
+  <block id="ff9481b37113ee1aeb5a96dc4e54a86b" category="doc">从配对节点自动恢复启动介质 - ASA A250</block>
+  <block id="2872b7e0fe56a74782408dce1646a321" category="paragraph">在您的 ASA A250 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程以从伙伴节点恢复配置。在恢复过程中，系统检查加密是否已启用，并确定正在使用的密钥加密类型。如果启用了密钥加密，系统将引导您完成恢复密钥的相应步骤。</block>
+  <block id="a8d175f3204f9bb52720e426d1349435" category="summary">ASA A250 系统中的引导介质存储了基本的固件和配置数据。更换过程包括卸下控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="bc55bcacda60f533328a6222248bbf37" category="doc">更换启动介质以进行自动启动恢复 - ASA A250</block>
+  <block id="000985094ab4f30d00eb2145d27eecd6" category="paragraph">ASA A250 系统中的引导介质存储了基本的固件和配置数据。更换过程包括卸下并打开控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="0637ad0f27877cbd306977677e72313a" category="summary">在更换 ASA A250 系统中的启动介质之前，请确保满足成功更换的必要要求。</block>
+  <block id="afd5bb2660744d78b0a3d382830a9055" category="doc">自动启动介质恢复的要求 - ASA A250</block>
+  <block id="5f3d724857c2a376f0960ca61dd0ed26" category="paragraph">在更换 ASA A250 中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否有正确的替换启动介质，确认受损控制器上的 e0S (e0M 扳手) 端口没有故障，并确定是否已启用板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。</block>
+  <block id="56264d0f45bc0deb9dd1dca3074322de" category="summary">在更换 ASA A250 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您有一个具有适当存储容量的 USB 闪存驱动器，并验证您的更换启动设备是否正确。</block>
+  <block id="a095bd7b1326362764a5df1b2419305e" category="doc">手动启动介质恢复的要求 - ASA A250</block>
+  <block id="cea09916975c69f0f5e970a930689e6d" category="summary">通过查看更换要求、关闭控制器、更换引导介质、在引导介质上恢复映像以及验证系统功能，开始更换 ASA A250 存储系统中的引导介质。</block>
+  <block id="798d6239610b9f5ef68cb5e017e86839" category="doc">启动媒体自动恢复工作流 - ASA A250</block>
+  <block id="95c7d6eae959628bc114c991879881f5" category="paragraph">启动映像的自动恢复涉及系统自动识别和选择适当的启动菜单选项。它使用合作伙伴节点上的引导映像在 ASA A250 存储系统的替换引导介质上重新安装 ONTAP。</block>
+  <block id="dc3d40a7a29afef0c0e1a2f20acd4f2e" category="summary">通过查看更换要求、检查加密状态、关闭控制器、更换引导介质、引导恢复映像、恢复加密和验证系统功能，开始更换 ASA A250 存储系统中的引导介质。</block>
+  <block id="fab636ff567990aa5318f44fcdd5644d" category="doc">启动介质手动恢复工作流 - ASA A250</block>
+  <block id="3794216268a5cc4ad66ae1ff68e560ea" category="summary">关闭 ASA A250 存储系统中受损的控制器，以防止数据丢失，并确保更换启动介质时的系统稳定性。</block>
+  <block id="d5744c93fd3a55565fec97370a901ab8" category="doc">关闭控制器以实现自动启动介质恢复 - ASA A250</block>
+  <block id="6fea684c8dea60e6699566bf667efcea" category="paragraph">关闭 ASA A250 存储系统中受损的控制器，以防止数据丢失，并在自动启动介质恢复过程中保持系统稳定。</block>
+  <block id="6c335a47deaac2c0092f7bc6bcf11752" category="doc">完成机箱更换 - ASA A250</block>
+  <block id="7e8cd6c7e7f6e87b6e35c1f6695402d0" category="paragraph">重新启动控制器，验证系统健康状况，并将故障部件返回 NetApp 以完成 ASA A250 机箱更换过程的最后一步。</block>
+  <block id="89b26aa3c808ef16256b019e27fe2d0d" category="doc">更换机箱 - ASA A250</block>
+  <block id="896786bae0c02090b0a1687150db97a2" category="paragraph">当硬件故障需要更换时，请更换 ASA A250 系统中的机箱。更换过程包括卸下控制器和电源装置 (PSU)、卸下驱动器、安装更换机箱和重新安装机箱组件。</block>
+  <block id="fc020abfd025083d50c9b9137502afaa" category="paragraph">更换损坏的 ASA A250 机箱并重新安装组件后，需要 <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="800b2af8227e26b20a950dd21eaf4c57" category="summary">通过识别损坏的机箱、验证更换组件以及标记电缆和控制器模块，准备更换 ASA A250 系统中损坏的机箱。</block>
+  <block id="266d1ddad3ed91e9e45333640ea04f4c" category="doc">准备更换机箱 - ASA A250</block>
+  <block id="0640ee4645298086aefc9ecc1b5df50f" category="paragraph">准备好更换 ASA A250 机箱硬件后，需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
+  <block id="3d3cd4ba529b9ac35ca56c5bb9c471c2" category="summary">在更换 ASA A250 系统的机箱之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常工作，验证您是否具有 ONTAP 的本地管理员凭据、正确的替换机箱和必要的工具。</block>
+  <block id="b18f9b0b9a11c1e7fa1f09d97327e90f" category="doc">更换机箱的要求 - ASA A250</block>
+  <block id="32fb468cc57459e398e50b8c594d600c" category="paragraph">关闭 ASA A250 存储系统中的控制器，以防止数据丢失，并确保更换机箱时的系统稳定性。</block>
+  <block id="1fbd60c89526d83a5931264032b81202" category="summary">通过查看更换要求、关闭控制器、更换机箱和验证系统运行情况，开始更换 ASA A250 存储系统的机箱。</block>
+  <block id="6fd63cc179e9ba6a81f975839b4bd2fd" category="doc">机箱更换工作流程 - ASA A250</block>
+  <block id="4b0bee536688e7115c8f84a702f19897" category="doc">更换控制器 - ASA A250</block>
+  <block id="a98273a710d608019bb11f234adcfa63" category="paragraph">当硬件故障需要时，请更换 ASA A250 系统中的控制器。更换过程包括移除受损的控制器，将组件移动到更换控制器，安装更换控制器并重新启动。</block>
+  <block id="3868cb70ed3aa682ee144827d555f8d2" category="paragraph">更换损坏的 ASA A250 控制器后，需要<block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>。</block>
+  <block id="049f65e918dc2fd99a3d9ea6ad4fdfdf" category="paragraph">完成恢复并验证系统配置 ASA A250 系统后，需要重新连接系统并重新分配磁盘。</block>
+  <block id="3896f2781684716c2882a4b3d212ce75" category="doc">更换控制器的要求 - ASA A250</block>
+  <block id="350284e890e9fd28a958de3fd71643cf" category="paragraph">在更换 ASA A250 存储系统中的控制器之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常工作，验证您的替换控制器是否正确，并将控制器的控制台输出保存到文本日志文件中。</block>
+  <block id="9c29e3a28bb382ea5d8588ebb8bbe765" category="doc">完整的控制器更换 - ASA A250</block>
+  <block id="377811312d0644d8c78fe7f7531352d6" category="paragraph">要完成 ASA A250 系统的控制器更换以完全运行，您必须恢复 NetApp 存储加密配置（如有必要），并为新控制器安装许可证，然后将故障部件退回 NetApp，如套件附带的 RMA 说明中所述。</block>
+  <block id="869768c23e95aa07dacfbeef759ddd03" category="paragraph">关闭 ASA A250 存储系统中的控制器，以防止数据丢失，并确保更换控制器时的系统稳定性。</block>
+  <block id="7e685b7b7062cbfdacbd3e4d08fc2096" category="paragraph">完成硬件更换并将 ASA A250 系统引导到维护模式后，需要验证更换控制器的低级系统配置，并根据需要重新配置系统设置。</block>
+  <block id="dd2ca674906435762d38dd1e735e23ea" category="summary">通过关闭受损控制器、移除和更换控制器、重新配置系统设置以及验证系统操作，开始更换 ASA A250 存储系统中的控制器。</block>
+  <block id="e2b96d9e304cd2630ac73d4e768c0dd5" category="doc">控制器更换工作流程 - ASA A250</block>
+  <block id="35f0eb77d868045d7301a3e051d0b836" category="paragraph">通过关闭损坏的控制器、移除和更换控制器、恢复系统配置以及将存储资源的控制权交还给替换控制器来更换 ASA A250 存储系统中的控制器。</block>
+  <block id="23f9e2dbaccd7bc93fa7098dc0224c8d" category="paragraph">维护 ASA A250 存储系统的硬件，以确保长期可靠性和最佳性能。执行定期维护任务，例如更换故障组件，因为这有助于防止停机和数据丢失。</block>
+  <block id="0799262b9ba99e27bd77815c3da8b1db" category="paragraph">维护程序假设 ASA A250 存储系统已部署为 ONTAP 环境中的存储节点。</block>
+  <block id="3d22cca033fcf1b506e060c7ed59c839" category="doc">将故障启动介质返回 NetApp - AFF C250</block>
+  <block id="1a08526a18dd5d0b81ec11d650a5ca96" category="paragraph">如果 AFF C250 系统中的某个组件发生故障，请将故障部件退回 NetApp。有关更多信息，请参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>页面。</block>
+  <block id="bc51aa890df7324adcd9ed9c8564f43e" category="summary">在 AFF C250 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，以从配对节点恢复配置。</block>
+  <block id="0908b349d34a3cae85f76e51e514005e" category="doc">从合作伙伴节点自动恢复启动介质 - AFF C250</block>
+  <block id="2c2bc1eda9ecb1d339908c11a8b9f06d" category="paragraph">在 AFF C250 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程以从伙伴节点恢复配置。在恢复过程中，系统检查加密是否已启用，并确定正在使用的密钥加密类型。如果启用了密钥加密，系统将引导您完成恢复密钥的相应步骤。</block>
+  <block id="0a135d011f75358e7092ec3146ba9359" category="summary">AFF C250 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="8fda0ea89c747488ccba625c3d6982a5" category="doc">更换启动介质以自动恢复启动 - AFF C250</block>
+  <block id="edb41673610f1a52427ce477b13b9e54" category="paragraph">AFF C250 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下并打开控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="ec683f1c4bd824d8b4aa0efddd6a72ee" category="summary">在更换 AFF C250 系统中的启动介质之前，请确保满足成功更换的必要要求。</block>
+  <block id="272a558c5e1170ae817bd70e71f39422" category="doc">自动启动介质恢复的要求 - AFF C250</block>
+  <block id="fb91f1d2f329ed3e3268cc3d5d2d6cd9" category="paragraph">在更换 AFF C250 中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否有正确的替换启动介质，确认受损控制器上的 e0S (e0M 扳手) 端口没有故障，并确定是否已启用板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。</block>
+  <block id="28de8c6d13290a0ef6c5ad0ffcc3b221" category="summary">在更换 AFF C250 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您有一个具有适当存储容量的 USB 闪存驱动器，并验证您的更换启动设备是否正确。</block>
+  <block id="8b60919014188311ae61c0aece538d5b" category="doc">手动启动介质恢复的要求 - AFF C250</block>
+  <block id="465d022ea5128b78bccd6ab339466eea" category="summary">通过查看更换要求、关闭控制器、更换引导介质、在引导介质上还原映像以及验证系统功能，开始更换 AFF C250 存储系统中的引导介质。</block>
+  <block id="f47196de2ba40a7369a3169fa559c7fc" category="doc">启动媒体自动恢复工作流 - AFF C250</block>
+  <block id="55ef5dd55c291ce2f0127481cff7710c" category="paragraph">启动映像的自动恢复涉及系统自动识别和选择适当的启动菜单选项。它使用合作伙伴节点上的引导映像在 AFF C250 存储系统的替换引导介质上重新安装 ONTAP。</block>
+  <block id="e513b940c753310913380ea474ca3946" category="summary">通过查看更换要求、检查加密状态、关闭控制器、更换引导介质、引导恢复映像、恢复加密和验证系统功能，开始更换 AFF C250 存储系统中的引导介质。</block>
+  <block id="e806888ed2e106f197d248697b03e11c" category="doc">启动介质手动恢复工作流 - AFF C250</block>
+  <block id="8314e19a4d1bd1b5496486f9f5915a30" category="summary">关闭 AFF C250 存储系统中受损的控制器，以防止数据丢失，并确保更换启动介质时的系统稳定性。</block>
+  <block id="d590b9da7e1205b81e3d0a2f2413fd0b" category="doc">关闭控制器以实现自动启动介质恢复 - AFF C250</block>
+  <block id="e3168389b51cfbb3c2317c411aa836b0" category="paragraph">关闭 AFF C250 存储系统中受损的控制器，以防止数据丢失，并在自动启动介质恢复过程中保持系统稳定。</block>
+  <block id="898c0c78fa2ca108537fd368fca0feec" category="doc">完成机箱更换 - AFF C250</block>
+  <block id="c1e9a1a75607a52ba007d751b3cff79c" category="paragraph">重新启动控制器，验证系统健康状况，并将故障部件返回 NetApp 以完成 AFF C250 机箱更换过程的最后一步。</block>
+  <block id="10ab1c4143339c7d9c80f49cad9b84ee" category="doc">更换机箱 - AFF C250</block>
+  <block id="1dc04fe14e8e7ab67ddaefa993eff9d2" category="paragraph">如果出现硬件故障，请更换 AFF C250 系统中的机箱。更换过程包括卸下控制器和电源装置 (PSU)、卸下驱动器、安装更换机箱和重新安装机箱组件。</block>
+  <block id="24516d7cded2962a367482b09cad7d63" category="paragraph">更换损坏的 AFF C250 机箱并重新安装组件后，需要 <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="def01e0e8240ffa44ef3d38d426521bc" category="summary">通过识别损坏的机箱、验证更换组件以及标记电缆和控制器模块，准备更换 AFF C250 系统中损坏的机箱。</block>
+  <block id="89b718fa5321df6e6430f91569df7273" category="doc">准备更换机箱 - AFF C250</block>
+  <block id="0d6871bc51cc04888e9c29497949cdb6" category="paragraph">准备好更换 AFF C250 机箱硬件后，需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
+  <block id="e32b4784e58e6df4fc362307cdb9a2ae" category="summary">在更换 AFF C250 系统中的机箱之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常运行，验证您是否具有 ONTAP 的本地管理员凭据、正确的替换机箱和必要的工具。</block>
+  <block id="765896d2546ad8173a99fdb7b5aa9c1c" category="doc">更换机箱的要求 - AFF C250</block>
+  <block id="5c7a883c6707cabbe1973443529f7510" category="paragraph">关闭 AFF C250 存储系统中的控制器，以防止数据丢失，并确保更换机箱时的系统稳定性。</block>
+  <block id="0fc8f7e266e479e53a46a0c65fea2d05" category="summary">通过查看更换要求、关闭控制器、更换机箱和验证系统运行情况，开始更换 AFF C250 存储系统的机箱。</block>
+  <block id="4757af4ab579ac77b495af94dd44b50a" category="doc">机箱更换工作流程 - AFF C250</block>
+  <block id="71a88a7b2fcb330f27238fa1118cbe56" category="doc">更换控制器 - AFF C250</block>
+  <block id="5e4d9d7c562831ad77b7826b33c84581" category="paragraph">当硬件故障需要时，请更换 AFF C250 系统中的控制器。更换过程包括移除受损的控制器，将组件移动到更换控制器，安装更换控制器并重新启动。</block>
+  <block id="a2ed05215dd0f6532b8bda5de18308e8" category="paragraph">更换损坏的 AFF C250 控制器后，需要<block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>。</block>
+  <block id="93b32c4bd5d3568942c9565987fc888b" category="paragraph">完成恢复并验证系统配置 AFF C250 系统后，您需要重新连接系统并重新分配磁盘。</block>
+  <block id="f4ec183a042e7b7cdeea5daf8d5ba62b" category="doc">更换控制器的要求 - AFF C250</block>
+  <block id="ebaa763438cb3dfa342ecbb4c0714ee1" category="paragraph">在更换 AFF C250 存储系统中的控制器之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常工作，验证您的替换控制器是否正确，并将控制器的控制台输出保存到文本日志文件中。</block>
+  <block id="f1ce15b5f19f37e299829de6379665c4" category="doc">完整控制器更换 - AFF C250</block>
+  <block id="aaded993df6fb29dbfbeebee1f3641fb" category="paragraph">要完成 AFF C250 系统的控制器更换以完全运行，您必须恢复 NetApp 存储加密配置（如有必要），并为新控制器安装许可证，然后将故障部件退回 NetApp，如套件附带的 RMA 说明中所述。</block>
+  <block id="aff7751fa6765ac3c00a099da6c8e69d" category="paragraph">关闭 AFF C250 存储系统中的控制器，以防止数据丢失，并确保更换控制器时的系统稳定性。</block>
+  <block id="b4a9631d8fbe3a931a8185ea5c2ce65e" category="paragraph">完成硬件更换并将 AFF C250 系统引导到维护模式后，需要验证更换控制器的低级系统配置，并根据需要重新配置系统设置。</block>
+  <block id="e1265ce14088344e07db4afa9a54f0a2" category="summary">通过关闭受损控制器、移除和更换控制器、重新配置系统设置以及验证系统操作，开始更换 AFF C250 存储系统中的控制器。</block>
+  <block id="ab17f711614db64be07dce91675bd8bb" category="doc">控制器更换工作流程 - AFF C250</block>
+  <block id="c6e111ac745be862b4bf5f4f853dbff4" category="paragraph">通过关闭损坏的控制器、移除和更换控制器、恢复系统配置以及将存储资源的控制权交还给替换控制器来更换 AFF C250 存储系统中的控制器。</block>
+  <block id="1ca77b2777ea29fd9e6f113829f2f359" category="summary">维护 AFF C250 硬件</block>
+  <block id="5370447dcd53e366544473fe9ce67f7b" category="paragraph">维护 AFF C250 存储系统的硬件，以确保长期可靠性和最佳性能。执行定期维护任务，例如更换故障组件，因为这有助于防止停机和数据丢失。</block>
+  <block id="aa857f1fcaf6380b946a1dc363fefca9" category="paragraph">维护程序假设 AFF C250 存储系统已部署为 ONTAP 环境中的存储节点。</block>
+  <block id="21cefb007c9064d8adcf6c162e74b0bf" category="paragraph">Cisco Nexus 3232C</block>
+  <block id="e48e73e576f724fd4213ab1eca7edb4a" category="paragraph">ONTAP 9.18.1</block>
+  <block id="1d8bdbbecd2a7992d9b2c5314cbc8da8" category="paragraph">Cisco Nexus 3132Q-V</block>
+  <block id="f8215ac1ab39569e2ede8f10c0a8405a" category="paragraph">Cisco Nexus 92300YC</block>
+  <block id="280107a5f53cc09efecfd6d30a3b7ebc" category="paragraph">NetApp CN1610</block>
+  <block id="0effdeffb425467d988456e0b00eae69" category="list-text">Cisco Nexus 5596UP</block>
+  <block id="ce89169afe5f44b11d42ea8fb935febd" category="list-text">Cisco Nexus 5596T</block>
+  <block id="6e6b3c059f21cf59109f565a691265e5" category="summary">通过识别损坏的机箱、验证更换组件以及标记电缆和控制器模块，准备更换 FAS50 系统中损坏的机箱。</block>
+  <block id="2628fefc8eb3dd0daed369d6437b3be6" category="doc">准备更换机箱 - FAS50</block>
+  <block id="184b19bc3f8626d1be1dd0cab08f9aa3" category="paragraph">准备好更换 FAS50 机箱硬件后，需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
+  <block id="f54b05d1af2a0983ed444a766408e617" category="doc">将故障启动介质返回 NetApp - FAS500f</block>
+  <block id="e8b2340387473ca634a0c91e66f4f20c" category="paragraph">如果 FAS500f 系统中的某个组件出现故障，请将故障部件退回给 NetApp。有关更多信息，请参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>页面。</block>
+  <block id="338d700940ffa38b3fed1d0bb8fcb107" category="summary">在 FAS500f 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，以从配对节点恢复配置。</block>
+  <block id="cc77dbc4a0786e6482dd37059b56d1ae" category="doc">从配对节点自动启动介质恢复 - FAS500f</block>
+  <block id="6f80872e95274437d20c37b20f6275b7" category="paragraph">在 FAS500f 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，从配对节点恢复配置。在恢复过程中，系统检查加密是否已启用，并确定正在使用的密钥加密类型。如果启用了密钥加密，系统将引导您完成恢复密钥的相应步骤。</block>
+  <block id="33f78cc27ad211499ab36f3caa22ee92" category="doc">从 USB 驱动器手动启动介质恢复 - FAS500f</block>
+  <block id="912e44425d2365e6759211c156072906" category="paragraph">在 FAS500f 系统中安装新的启动介质设备后，您可以从 USB 驱动器启动恢复映像并从配对节点恢复配置。</block>
+  <block id="3d0ecb3cfaae2673edc296e355b5f4ef" category="summary">FAS500f 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="d93b5e11e53cd64b7b6b5555798fbfec" category="doc">更换启动介质以进行自动启动恢复 - FAS500f</block>
+  <block id="aa5ffd2f7f856d23247a6b94149ef919" category="paragraph">FAS500f 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下并打开控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。</block>
+  <block id="de8c9fd98c422989c3b6a88d75384992" category="summary">在更换 FAS500f 系统中的启动介质之前，请确保满足成功更换的必要要求。</block>
+  <block id="f2ba5caa9843c7a941f1c7fa8a011cf2" category="doc">自动启动介质恢复的要求 - FAS500f</block>
+  <block id="5bafb3b795c82f15fe31bdaf2b81c18f" category="paragraph">在更换 FAS500f 中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否有正确的替换启动介质，确认受损控制器上的 e0S (e0M 扳手) 端口没有故障，并确定是否已启用板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。</block>
+  <block id="0c841e91ee50f813a691f3ce0f0aeed9" category="summary">在更换 FAS500f 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您有一个具有适当存储容量的 USB 闪存驱动器，并验证您的更换启动设备是否正确。</block>
+  <block id="765741455a177e539f457d4b8ac92938" category="doc">手动启动介质恢复的要求 - FAS500f</block>
+  <block id="ef29f0c33b434a133e08a2dd1467a67c" category="summary">通过查看更换要求、关闭控制器、更换引导介质、恢复引导介质上的映像以及验证系统功能，开始更换 FAS500f 存储系统中的引导介质。</block>
+  <block id="01c769803212ca7d51dee80b79c89436" category="doc">启动媒体自动恢复工作流 - FAS500f</block>
+  <block id="f3f65014bac7b909ad2f3ba02d3fea86" category="paragraph">启动映像的自动恢复涉及系统自动识别和选择适当的启动菜单选项。它使用合作伙伴节点上的引导映像在 FAS500f 存储系统中的替换引导介质上重新安装 ONTAP。</block>
+  <block id="f288b387072b372d1fd4441eaefb7179" category="summary">通过查看更换要求、检查加密状态、关闭控制器、更换引导介质、启动恢复映像、恢复加密以及验证系统功能，开始更换 FAS500f 存储系统中的引导介质。</block>
+  <block id="005f1abb3a6caacd59e17146466c81ec" category="doc">启动介质手动恢复工作流 - FAS500f</block>
+  <block id="1e90d25b5d4315fa0a353ed309da9a37" category="doc">更换启动介质并准备手动启动恢复 - FAS500f</block>
+  <block id="c7fc64ee751d2702bf7363b95697096f" category="paragraph">FAS500f 系统中的启动介质存储重要的固件和配置数据。更换过程包括卸下系统管理模块、卸下受损的启动介质、安装更换启动介质，然后使用 USB 闪存驱动器手动将 ONTAP 映像传输到更换启动介质中。</block>
+  <block id="ef69236d7ce6f17bdda64713c4fd98d0" category="summary">关闭 FAS500f 存储系统中受损的控制器，以防止数据丢失并确保更换启动介质时的系统稳定性。</block>
+  <block id="1c031737411d6eac5a6c713b9d642d71" category="doc">关闭控制器以实现自动启动介质恢复 - FAS500f</block>
+  <block id="af65388f2d96e3610ab33e5fba1e4b02" category="paragraph">关闭 FAS500f 存储系统中受损的控制器，以防止数据丢失并在自动启动介质恢复过程中保持系统稳定性。</block>
+  <block id="2e736e93e05c443839c21174c3cba766" category="doc">完成机箱更换 - FAS500f</block>
+  <block id="bb922797b51fa051ef0fa8b3c2345d34" category="paragraph">重新启动控制器，验证系统健康状况，并将故障部件返回 NetApp 以完成 FAS500f 机箱更换过程中的最后步骤。</block>
+  <block id="6f379fd2db2934ddcd9565c6bf9195c8" category="doc">更换机箱 - FAS500f</block>
+  <block id="312e721269336f6368a28bf97444c2fd" category="paragraph">当硬件故障需要时，请更换 FAS500f 系统中的机箱。更换过程包括卸下控制器和电源装置 (PSU)、卸下驱动器、安装更换机箱和重新安装机箱组件。</block>
+  <block id="31218be4fb4b9f62f1927ae5fddf75cb" category="paragraph">更换损坏的 FAS500f 机箱并重新安装组件后，需要 <block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block></block>
+  <block id="614ad4b8e1c1cf5164b1bf4452447672" category="summary">通过识别损坏的机箱、验证更换组件以及为缆线和控制器模块贴标签，准备更换 FAS500f 系统中损坏的机箱。</block>
+  <block id="e8a6642f5704a6db07f52a9945c49c20" category="doc">准备更换机箱 - FAS500f</block>
+  <block id="af9360a6ec367ae3934fe5145773875a" category="paragraph">准备好更换 FAS500f 机箱硬件后，您需要<block ref="5ad1268d806d8db9e0e59370c95dfac1" category="inline-link-macro-rx"></block>。</block>
+  <block id="170cce1f0458446b0bb892c25abafcc8" category="summary">在更换 FAS500f 系统中的机箱之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常工作，验证您是否具有 ONTAP 的本地管理员凭据、正确的替换机箱和必要的工具。</block>
+  <block id="2a34ff76cba69770f6d729eb2bcec1e0" category="doc">更换机箱的要求 - FAS500f</block>
+  <block id="c2e8017d38ede0b2a3f3b33db4dd3f66" category="paragraph">关闭 FAS500f 存储系统中的控制器，以防止数据丢失并确保更换机箱时的系统稳定性。</block>
+  <block id="976d99e773691725a33eedb1856c14b2" category="summary">通过查看更换要求、关闭控制器、更换机箱以及验证系统操作，开始更换 FAS500f 存储系统的机箱。</block>
+  <block id="66fe1764bbfc62895e07c88d11f00b6c" category="doc">机箱更换工作流程 - FAS500f</block>
+  <block id="5729d973fa3cbba37e09e85828263e44" category="doc">更换控制器 - FAS500f</block>
+  <block id="b6ab9b49a3bf96c46982eb4f27124ad7" category="paragraph">当硬件故障需要时，更换 FAS500f 系统中的控制器。更换过程包括移除受损的控制器，将组件移动到更换控制器，安装更换控制器并重新启动。</block>
+  <block id="52cb3e0984cc1188632637714db80976" category="paragraph">更换损坏的 FAS500f 控制器后，需要<block ref="c8905a4c68408046b8de9d3b84f93445" category="inline-link-macro-rx"></block>。</block>
+  <block id="aae6fbc2ac8ea637a50c84470ad4996d" category="paragraph">完成恢复并验证系统配置 FAS500f 系统后，您需要重新连接系统并重新分配磁盘。</block>
+  <block id="e62c7bcbce6931f4e5cefec006529f67" category="doc">更换控制器的要求 - FAS500f</block>
+  <block id="769924d2fa42c6cbdd27cdb8aebf9b0e" category="paragraph">在更换 FAS500f 存储系统中的控制器之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常工作，验证您的替换控制器是否正确，并将控制器的控制台输出保存到文本日志文件中。</block>
+  <block id="a5c075ee8b2e6479b937fd24d4e7c131" category="doc">完整的控制器更换 - FAS500f</block>
+  <block id="f46bfaab99cc550e713d5fd4aa093739" category="paragraph">要完成 FAS500f 系统的控制器更换以实现完全运行，您必须恢复 NetApp 存储加密配置（如有必要），并为新控制器安装许可证，然后将故障部件退回 NetApp，如套件附带的 RMA 说明中所述。</block>
+  <block id="996e977a28e981a0cfc20475b884ffa6" category="paragraph">关闭 FAS500f 存储系统中的控制器，以防止数据丢失并确保更换控制器时的系统稳定性。</block>
+  <block id="77efc27ea7cc7edd819709e60c98ffd0" category="paragraph">完成硬件更换并将 FAS500f 系统引导至维护模式后，您需要验证更换控制器的低级系统配置，并根据需要重新配置系统设置。</block>
+  <block id="793741dbe21d9514b2e4f8bc559f8062" category="summary">按照以下工作流程步骤更换 FAS500f 存储系统中的控制器。</block>
+  <block id="02ddf1646130c87ede23c28b28b13476" category="doc">控制器更换工作流程 - FAS500f</block>
+  <block id="2910a393aa082421834d8d871b20a809" category="summary">维护 FAS500f 硬件</block>
+  <block id="956194f104a0f38c3b230001087b4aec" category="paragraph">维护 FAS500f 存储系统的硬件，以确保长期可靠性和最佳性能。执行定期维护任务，例如更换故障组件，因为这有助于防止停机和数据丢失。</block>
+  <block id="18b7fef27cfdab1c569268be6baf5f9d" category="paragraph">维护程序假设 FAS500f 存储系统已部署为 ONTAP 环境中的存储节点。</block>
+  <block id="333d8c39f24915bdf4cd2a5cbb2c96c9" category="summary">FAS500f 存储系统的关键规格</block>
+  <block id="9b2d40af21d64d80278ee173eee93493" category="doc">FAS500f 的关键规格</block>
+  <block id="7971c747973f656fa0a258fe576a59ce" category="paragraph">以下是 FAS500f 的选择规格。请访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) 获取 FAS500f 规格的完整列表。此页面反映了单个高可用性对。</block>
+  <block id="2993484ef64a91db7d4ffb4091f706d0" category="paragraph">平台配置：FAS500f 单机箱 HA 对</block>
+  <block id="9301497e894d25c1a5d8e0997da7a7eb" category="paragraph">ONTAP 版本：9.16.1P2</block>
+  <block id="5a4e86e80e1a2b65d5e11606283fa0e6" category="inline-link-macro">AFF A250（自动恢复）</block>
+  <block id="48f357e077fea73ea971448bfba251ef" category="list-text"><block ref="48f357e077fea73ea971448bfba251ef" category="inline-link-macro-rx"></block></block>
+  <block id="2c196d8c70003da4749b8a9477ed6300" category="inline-link-macro">AFF A250（手动恢复）</block>
+  <block id="22f299d5f453aed209543d8d0bdadd53" category="list-text"><block ref="22f299d5f453aed209543d8d0bdadd53" category="inline-link-macro-rx"></block></block>
+  <block id="d9d3712e829421ad7450868d004f7f9a" category="list-text"><block ref="d9d3712e829421ad7450868d004f7f9a" category="inline-link-macro-rx"></block></block>
+  <block id="19f18a98450d557bdd5e993eeb0ca24a" category="list-text"><block ref="19f18a98450d557bdd5e993eeb0ca24a" category="inline-link-macro-rx"></block></block>
+  <block id="53d0a5cb3983747c67239f70946676ba" category="list-text"><block ref="53d0a5cb3983747c67239f70946676ba" category="inline-link-macro-rx"></block></block>
+  <block id="a5694d2a6f21dd1104537fe22c5ce095" category="list-text"><block ref="a5694d2a6f21dd1104537fe22c5ce095" category="inline-link-macro-rx"></block></block>
+  <block id="162c0aef515204afbd5f02d1715a1552" category="list-text"><block ref="162c0aef515204afbd5f02d1715a1552" category="inline-link-macro-rx"></block></block>
+  <block id="b53703a68aca47bc2d34413fc12b9686" category="list-text"><block ref="b53703a68aca47bc2d34413fc12b9686" category="inline-link-macro-rx"></block></block>
+  <block id="0e9127c21baccecba06d1965e12a9204" category="list-text"><block ref="0e9127c21baccecba06d1965e12a9204" category="inline-link-macro-rx"></block></block>
+  <block id="415f402a8be75f17ebca770ae274bee9" category="list-text"><block ref="415f402a8be75f17ebca770ae274bee9" category="inline-link-macro-rx"></block></block>
+  <block id="190e802ec51e4c06fc00287a967312b1" category="list-text"><block ref="190e802ec51e4c06fc00287a967312b1" category="inline-link-macro-rx"></block></block>
+  <block id="437e5a076f6c0b623e07ea8121a21ffa" category="list-text"><block ref="437e5a076f6c0b623e07ea8121a21ffa" category="inline-link-macro-rx"></block></block>
+  <block id="398fa7c0f807189fcfa3626c249969ed" category="list-text"><block ref="398fa7c0f807189fcfa3626c249969ed" category="inline-link-macro-rx"></block></block>
+  <block id="39fdf33f750bc59fc55e896f9553db72" category="list-text"><block ref="39fdf33f750bc59fc55e896f9553db72" category="inline-link-macro-rx"></block></block>
+  <block id="c6c1810cf11c6e5e45dbc0f652eeb82e" category="list-text"><block ref="c6c1810cf11c6e5e45dbc0f652eeb82e" category="inline-link-macro-rx"></block></block>
+  <block id="d4d95752430d31953462bea2ed080c82" category="list-text"><block ref="d4d95752430d31953462bea2ed080c82" category="inline-link-macro-rx"></block></block>
+  <block id="ef92df4448144dc5b04fa658bba46a3e" category="sidebar">AFF A250 启动介质自动化</block>
+  <block id="73c710838fb73a6d0bb29f50f91574d0" category="sidebar">AFF 250 Boot Media 手册</block>
+  <block id="073d73c28f8d5787bc7ce23c0bad392e" category="sidebar">ASA C250 启动介质自动化</block>
+  <block id="42a46a847699d28a60c3a7e1b4f233b1" category="sidebar">ASA C250 Boot Media 手册</block>
+  <block id="6ec648d108530e0f13c0944e1618f1c1" category="sidebar">ASA A250 启动介质自动化</block>
+  <block id="2b201f616d84718137f5c5a701acb0c1" category="sidebar">ASA A250 Boot Media 手册</block>
+  <block id="8523343b69c75903dcc986fdb4a1cbcf" category="sidebar">AFF C250 启动介质自动化</block>
+  <block id="6364a5589d3ac8e79045b3275dc3846d" category="sidebar">AFF C250 Boot Media 手册</block>
+  <block id="028a5f76f5ae8b0784cb7f71dcacb0ac" category="sidebar">准备更换机箱</block>
+  <block id="3857caf5489220ee3ad8ce823746d7d7" category="sidebar">FAS500f 启动介质自动化</block>
+  <block id="e97e37b3736f4796b4922c33c509044e" category="sidebar">FAS500f 启动媒体手册</block>
 </blocks>

@@ -11,6 +11,8 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 
 [role="lead"]
+完成恢复并验证系统配置 A250 系统后，您需要重新连接系统并重新分配磁盘。
+
 通过重新为存储布线并确认磁盘重新分配来继续更换操作步骤。
 
 
@@ -144,3 +146,6 @@ dr-group-id            cluster node           configuration-state
 . 验证每个控制器是否存在所需的卷： `vol show -node node-name`
 . 如果您在重新启动时禁用了自动接管，请从运行正常的控制器启用它： `storage failover modify -node replacement-node-name -onreboot true`
 
+
+.下一步是什么？
+重新连接系统并重新分配磁盘后，需要执行此操作link:controller-replace-restore-system-rma.html["完成控制器更换"]。

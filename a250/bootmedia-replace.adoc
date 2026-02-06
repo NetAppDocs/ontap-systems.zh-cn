@@ -4,13 +4,17 @@ sidebar: sidebar
 keywords: aff a250, replace the boot media 
 summary: 您可以先卸下控制器模块上的通风管，然后再更换启动介质，从而在控制器模块中找到发生故障的启动介质。 
 ---
-= 更换启动介质— AFF A250
+= 更换启动介质并准备手动启动恢复 - AFF A250
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+AFF A250 系统中的启动介质会存储重要的固件和配置数据。更换过程包括卸下系统管理模块、卸下受损的启动介质、安装更换启动介质，然后使用 USB 闪存驱动器手动将 ONTAP 映像传输到更换启动介质中。
+
+如果您的存储系统运行的是 ONTAP 9.18.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统正在运行早期版本的 ONTAP，则必须使用手动启动恢复过程。
+
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
 
 
@@ -217,3 +221,6 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+
+.下一步是什么？
+更换启动介质后，您需要link:bootmedia-recovery-image-boot.html["启动恢复映像"]。
