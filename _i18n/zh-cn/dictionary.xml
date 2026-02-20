@@ -14823,7 +14823,6 @@ SFP+(目标/启动程序)</block>
   <block id="1ca77b2777ea29fd9e6f113829f2f359" category="summary">维护 AFF C250 硬件</block>
   <block id="5370447dcd53e366544473fe9ce67f7b" category="paragraph">维护 AFF C250 存储系统的硬件，以确保长期可靠性和最佳性能。执行定期维护任务，例如更换故障组件，因为这有助于防止停机和数据丢失。</block>
   <block id="aa857f1fcaf6380b946a1dc363fefca9" category="paragraph">维护程序假设 AFF C250 存储系统已部署为 ONTAP 环境中的存储节点。</block>
-  <block id="21cefb007c9064d8adcf6c162e74b0bf" category="paragraph">Cisco Nexus 3232C</block>
   <block id="e48e73e576f724fd4213ab1eca7edb4a" category="paragraph">ONTAP 9.18.1</block>
   <block id="1d8bdbbecd2a7992d9b2c5314cbc8da8" category="paragraph">Cisco Nexus 3132Q-V</block>
   <block id="f8215ac1ab39569e2ede8f10c0a8405a" category="paragraph">Cisco Nexus 92300YC</block>
@@ -14920,4 +14919,7 @@ SFP+(目标/启动程序)</block>
   <block id="028a5f76f5ae8b0784cb7f71dcacb0ac" category="sidebar">准备更换机箱</block>
   <block id="3857caf5489220ee3ad8ce823746d7d7" category="sidebar">FAS500f 启动介质自动化</block>
   <block id="e97e37b3736f4796b4922c33c509044e" category="sidebar">FAS500f 启动媒体手册</block>
+  <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">在安装和维护过程中，请始终佩戴连接到已验证接地点的接地腕带。未遵循正确的 ESD 预防措施可能会对控制器节点、存储架和网络交换机造成永久性损坏。</block>
+  <block id="65a7bfdd77aba70777e2700d48d0925f" category="paragraph">此程序用于一次更换一个 PSU。根据您的 PSU 类型使用适当的程序：AC 或 DC。</block>
+  <block id="9bedcc9650ba1fe86ed7720eb975429e" category="list-text">转到机箱后部。</block>
 </blocks>
