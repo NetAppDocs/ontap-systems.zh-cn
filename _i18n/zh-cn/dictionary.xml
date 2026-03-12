@@ -8074,7 +8074,6 @@ SFP+(目标/启动程序)</block>
   <block id="b58ec5a6cf078c8a3a2b309a797f9e62" category="paragraph">控制器将重新连接其存储池并完成启动。</block>
   <block id="db4669e53766b1110dbd428a22b6f5cc" category="list-text">按下系统管理凸轮按钮。</block>
   <block id="cf91b43675e7187d6e724e7c312e336a" category="list-text">将凸轮闩锁尽可能远离模块。</block>
-  <block id="f5c1d99a4f032f30d087e32fbbbdb994" category="paragraph">关闭或接管受损控制器。-要关闭受损控制器、您必须确定控制器的状态、并在必要时接管控制器、以使运行正常的控制器继续从受损控制器存储提供数据。</block>
   <block id="5050dae1093a80a257a1d121ca5f3b0f" category="section-title">第4步：验证控制器状态</block>
   <block id="417968dd9c410e2ebdf82236e2a6f1d8" category="doc">第1步：将存储控制器连接到网络</block>
   <block id="ee6c90ad735c4fc892e900202d6ff034" category="list-text">使用集群/HA互连缆线将端口e1a连接到e1a、并将端口e7a连接到e7a。</block>
@@ -13299,7 +13298,6 @@ SFP+(目标/启动程序)</block>
   <block id="4144051484bacbb26b0997a24a36532e" category="paragraph"><block ref="d5be9149b0861afc30e359e3506a3da0" prefix="" category="inline-code"></block></block>
   <block id="4e08d1e0cedf01306836a427edd98e6a" category="list-text">将控制台电缆移至替换节点并输入以下内容：</block>
   <block id="cd74239882532c0ea03cfa93da31d5cb" category="paragraph"><block ref="8d87a410a64e11591a338ede7162a6d2" prefix="" category="inline-code"></block></block>
-  <block id="45a2d32fc61cc2d123cf4027040c4bf8" category="paragraph">要关闭受损控制器，您必须确定控制器的状态，并在必要时执行控制器的存储故障转移接管，以便健康的控制器继续从受损控制器存储提供数据。</block>
   <block id="b5ca6041147fb4f4df4801f4f10784f5" category="inline-link-macro">查看ONTAP集群中的节点级详细信息</block>
   <block id="22dd5ea8b069cf90dfb213fcf3136023" category="list-text">如果您的集群具有四个以上的节点，则它必须达到法定人数。要查看有关节点的集群信息，请使用<block ref="639161158d7426b3865ce9c5a6f648b3" prefix=" " category="inline-code"></block>命令。有关<block ref="639161158d7426b3865ce9c5a6f648b3" prefix=" " category="inline-code"></block>命令，请参阅<block ref="812d195420030f92a12eef2f47c24053" category="inline-link-macro-rx"></block>。</block>
   <block id="3339c1abb6a38c2a82f66c0780893536" category="list-text">如果集群不处于法定人数，或者任何控制器（受损控制器除外）的健康状况或资格显示为错误，则必须在关闭受损控制器之前纠正该问题。看<block ref="68d9e980b8b4998ef88139d7b7ab8ff6" category="inline-link-macro-rx"></block> 。</block>
@@ -14922,4 +14920,7 @@ SFP+(目标/启动程序)</block>
   <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">在安装和维护过程中，请始终佩戴连接到已验证接地点的接地腕带。未遵循正确的 ESD 预防措施可能会对控制器节点、存储架和网络交换机造成永久性损坏。</block>
   <block id="65a7bfdd77aba70777e2700d48d0925f" category="paragraph">此程序用于一次更换一个 PSU。根据您的 PSU 类型使用适当的程序：AC 或 DC。</block>
   <block id="9bedcc9650ba1fe86ed7720eb975429e" category="list-text">转到机箱后部。</block>
+  <block id="6c2bf859d9ce264150989f2d23c86e92" category="paragraph">接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。</block>
+  <block id="0cea086e190611d579375e0cfbe7f6b7" category="paragraph">通过将其暂停到 LOADER 提示符并捕获引导环境变量来完成受损控制器的关闭。LOADER 提示符是安全停止状态，您可以从中更换启动介质。</block>
+  <block id="580317d87f0c97d7c347306d452cfb2c" category="paragraph">关闭或接管受损的控制器。- 接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。</block>
 </blocks>

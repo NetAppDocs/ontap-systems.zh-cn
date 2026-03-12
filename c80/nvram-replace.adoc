@@ -28,7 +28,7 @@ summary: 'NVRAM模块由NVRAM12和DIMM以及每个NVRAM模块最多两个NVMe SS
 ====
 .选项 1 ：大多数系统
 --
-要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。
 
 .关于此任务
 * 如果您使用的是SAN系统，则必须已检查受损控制器SCSI刀片的事件消息  `cluster kernel-service show`。 `cluster kernel-service show`命令(在priv高级模式下)可显示该节点的节点名称link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["仲裁状态"]、该节点的可用性状态以及该节点的运行状态。
@@ -94,7 +94,7 @@ LOADER 提示符
 --
 .选项 2 ：控制器位于 MetroCluster 中
 --
-要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。
 
 * If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。
 * 您必须确认已配置MetroCluster配置状态、并且节点处于启用和正常状态：

@@ -15,7 +15,7 @@ summary: 关闭FAS8300或FAS8700存储系统中受损的控制器，以防止数
 
 自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
 
-要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
+接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。
 
 .关于此任务
 * 如果您使用的是SAN系统，则必须已检查受损控制器SCSI刀片的事件消息  `cluster kernel-service show`。 `cluster kernel-service show`命令(在priv高级模式下)可显示该节点的节点名称link:https://docs.netapp.com/us-en/ontap/system-admin/display-nodes-cluster-task.html["仲裁状态"]、该节点的可用性状态以及该节点的运行状态。
