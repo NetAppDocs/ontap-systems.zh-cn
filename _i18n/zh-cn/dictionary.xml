@@ -14923,4 +14923,5 @@ SFP+(目标/启动程序)</block>
   <block id="6c2bf859d9ce264150989f2d23c86e92" category="paragraph">接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。</block>
   <block id="0cea086e190611d579375e0cfbe7f6b7" category="paragraph">通过将其暂停到 LOADER 提示符并捕获引导环境变量来完成受损控制器的关闭。LOADER 提示符是安全停止状态，您可以从中更换启动介质。</block>
   <block id="580317d87f0c97d7c347306d452cfb2c" category="paragraph">关闭或接管受损的控制器。- 接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。</block>
+  <block id="0348833f0ff47bd2ae37f1706a53ef42" category="list-text">如果 HA 互连链路已关闭，请将其重新启动：</block>
 </blocks>
