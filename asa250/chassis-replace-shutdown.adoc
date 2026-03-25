@@ -19,17 +19,10 @@ summary: 要更换机箱，必须关闭控制器。
 * 确保您具有必要的权限和凭据：
 +
 ** ONTAP 的本地管理员凭据。
-** 每个控制器的BMC可访问性。
+** 每个控制器的 BMC 可访问性。
 
 
 * 确保您拥有进行更换所需的工具和设备。
-* 作为关闭之前的最佳实践、您应：
-+
-** 执行其他 https://kb.netapp.com/onprem/ontap/os/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["系统运行状况检查"]。
-** 将ONTAP 升级到系统的建议版本。
-** 解决任何问题 https://activeiq.netapp.com/["Active IQ 健康提醒和风险"]。记下系统当前的任何故障、例如系统组件上的LED。
-
-
 
 
 .步骤
@@ -48,9 +41,11 @@ summary: 要更换机箱，必须关闭控制器。
 +
 `exit`
 
-. 使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP或BMC以监控进度。
+. 使用上一步中确定的 IP 地址登录到每个控制器的 SP/BMC：
 +
-如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。
+** 如果通过 SSH 从 BMC 登录，请使用 SP/BMC 地址（例如 `ssh admin@<SP/BMC_address>`）进行连接，然后输入命令 `system console`并进行身份验证。
+** 如果使用的是直接连接到控制器的本地控制台或笔记本电脑，请使用相同的集群管理员凭据登录。
+
 
 . 暂停受损机箱中的两个节点：
 +

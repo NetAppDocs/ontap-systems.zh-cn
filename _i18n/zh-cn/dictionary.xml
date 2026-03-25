@@ -5332,12 +5332,7 @@
   <block id="68d685ddbaa25f1a411d5e93d6f91913" category="list-text">ONTAP 的本地管理员凭据。</block>
   <block id="d6562c849f41b9038124f0c304aed030" category="list-text">停止所有客户端/主机访问NetApp系统上的数据。</block>
   <block id="d61b46d9cd719b77efb76269147aa377" category="list-text">暂停外部备份作业。</block>
-  <block id="356bf392971487f892daba5338258571" category="paragraph">作为关闭之前的最佳实践、您应：</block>
-  <block id="2ee5edc561a6167cf2d57a64ee655bef" category="inline-link">系统运行状况检查</block>
-  <block id="7023017d0098f741d6569842ee62b922" category="list-text">执行其他<block ref="9ace058273de133e6accbea83a7d278a" category="inline-link-rx"></block>。</block>
-  <block id="f40b8507b340a958be200bec6d3758a0" category="list-text">将ONTAP 升级到系统的建议版本。</block>
   <block id="9f4d2068e7b3d206efc0252b3da597a5" category="inline-link">Active IQ 健康提醒和风险</block>
-  <block id="c5df4dcae9a001142a36959487445ff6" category="list-text">解决任何问题<block ref="31b25beca26cb366eeb0665e3c0d7cbf" category="inline-link-rx"></block>。记下系统当前的任何故障、例如系统组件上的LED。</block>
   <block id="3923b7d5100131c85be2160c8b680704" category="list-text">通过SSH登录到集群、或者使用本地控制台缆线和笔记本电脑/控制台从集群中的任何节点登录。</block>
   <block id="0d16db60da2c01b63ef84ee8d616c2fb" category="paragraph"><block ref="b206d268f79aeaa7c4f1e44684d2f080" prefix="" category="inline-code"></block></block>
   <block id="a39c8c38e51a42fcfaac22367dd19064" category="list-text">等待每个控制器暂停、然后显示加载程序提示符。</block>
@@ -7474,7 +7469,6 @@ SFP+(目标/启动程序)</block>
   <block id="0be7ecaeb710959e64858a36fa1f8783" category="inline-link">AFF A1K</block>
   <block id="c61e96543ff55077f64d8dd03940c2c6" category="inline-link">AFF A70</block>
   <block id="8cd7d5cbedf290a9b729cc263d9b289c" category="paragraph">ONTAP 9.15.1.</block>
-  <block id="3fa7c0866aba2253b800fb8f1b9d08dc" category="list-text">每个控制器的BMC可访问性。</block>
   <block id="ac632c351c050929564cd7a72c3d383a" category="doc">关闭受损控制器- AFF A1K</block>
   <block id="a4fbb291103a5430eb9ece2393c095a4" category="doc">交还控制器- AFF A1K</block>
   <block id="fb829c49a3a2da88fb46330449bb960d" category="summary">要将系统还原到完全运行状态、您必须验证NetApp、检查集群运行状况并将故障部件返回给LUN。如果您需要RMA编号或有关更换过程的其他帮助，请通过以下网址与技术支持联系：<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>、888-463-8277 (北美)、00-800-44-638277 (欧洲)或+800-80-800 (亚太地区)。</block>
@@ -8757,7 +8751,6 @@ SFP+(目标/启动程序)</block>
   <block id="9959e1ea8c67446c566e6a371f9e14cb" category="list-text">在受损控制器上、当系统提示确认还原备份是否成功时按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>。</block>
   <block id="b883391d9dfbf834ff0bda07a53554f5" category="list-text">在受损控制器上、当系统提示使用还原的配置时、按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>。</block>
   <block id="d0ec0afe83814a07fcdbf02b0d2e2e8b" category="list-text">在受损控制器上、当系统提示重新启动节点时按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>。</block>
-  <block id="cd979ca520736846558f2b04a04b63da" category="paragraph">如果您使用的是控制台/笔记本电脑、请使用相同的集群管理员凭据登录到控制器。</block>
   <block id="4250e5b5781f94ff901cc1822461f6ae" category="doc">更换系统管理模块- AFF A1K</block>
   <block id="b1b14a007e6d27cacb6cbf9837dd5e7e" category="doc">交还控制器- AFF A70和AFF A90</block>
   <block id="4443f66d8d4febc600e0d4d0b3b0db91" category="doc">交还控制器- ASA A70和ASA A90</block>
@@ -9399,7 +9392,6 @@ SFP+(目标/启动程序)</block>
   <block id="7329bfa51dec924de206ced093bea600" category="paragraph">*40/100 GbE缆线*</block>
   <block id="8f31147c7cfeb7520dc9739e31dedc90" category="image-alt">40/100 GB电缆</block>
   <block id="ec83c89c1bfd1fa2fe72db4df75b0e43" category="image-alt">使用缆线连接到40/100GbE以太网主机网络交换机</block>
-  <block id="8f03269dbdbab70bab244893051fb6ec" category="paragraph">在每个控制器上、使用缆线将端口1a、1b、1c和1d连接到FC主机网络交换机。</block>
   <block id="241c17a1be2cc4feae5c8c6007f8aed3" category="paragraph">*64 Gb/秒FC缆线*</block>
   <block id="176084e0e3d1d8b98919ade28704bd7b" category="inline-image-macro">64 Gb FC电缆、宽度=100个点</block>
   <block id="0174aef3c6edce25256f90638a06bdca" category="paragraph"><block ref="0174aef3c6edce25256f90638a06bdca" category="inline-image-macro-rx" type="image"></block></block>
@@ -9867,7 +9859,6 @@ SFP+(目标/启动程序)</block>
   <block id="4288b2b72921e4670bb8b42ba6a5248d" category="list-text">确定所有集群节点的SP或BMC地址：</block>
   <block id="bb000e8434af9c71358c26cf3aa76ce3" category="list-text">退出集群Shell：</block>
   <block id="d9f6eac526670fe9182f1a63d251a180" category="paragraph"><block ref="f24f62eeb789199b9b2e467df3b1876b" prefix="" category="inline-code"></block></block>
-  <block id="29b1aa97ab42c7253b7c5769a711e501" category="list-text">使用上一步输出中列出的任何节点的IP地址通过SSH登录到SP或BMC以监控进度。</block>
   <block id="4e66424513d5ccef0e91ad9aa7c87642" category="list-text">如果出现以下情况，请为集群中的每个控制器输入*y*：</block>
   <block id="38ae227cf94e3775806bccfd95814d4b" category="paragraph"><block ref="035b082bfaf23bf2d7b95c3ef597d380" prefix="" category="inline-code"></block></block>
   <block id="a5e51e5f50ca83720f1d0d8b17c1e93b" category="list-text">以下过程显示了常见配置。具体布线取决于为存储系统订购的组件。有关全面的配置和插槽优先级详细信息，请参见 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
@@ -14924,4 +14915,12 @@ SFP+(目标/启动程序)</block>
   <block id="0cea086e190611d579375e0cfbe7f6b7" category="paragraph">通过将其暂停到 LOADER 提示符并捕获引导环境变量来完成受损控制器的关闭。LOADER 提示符是安全停止状态，您可以从中更换启动介质。</block>
   <block id="580317d87f0c97d7c347306d452cfb2c" category="paragraph">关闭或接管受损的控制器。- 接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。</block>
   <block id="0348833f0ff47bd2ae37f1706a53ef42" category="list-text">如果 HA 互连链路已关闭，请将其重新启动：</block>
+  <block id="5689c5ea3692b97ad8c9b15340cdeaf8" category="admonition">完全拧紧夹层卡的指旋螺钉。如果松动，则可能无法检测到端口 e0e 至 e0h，LED 可能连续闪烁，日志可能显示"不支持电缆"错误。</block>
+  <block id="4383fe9a37feb4f64a0355e3ec27ad10" category="paragraph">从提取的 ONTAP 映像中，将<block ref="6e2807816e9d2621b7e5dffff6c33711" prefix=" " category="inline-code"></block>文件夹复制到 USB 闪存驱动器的根目录。</block>
+  <block id="8b0642e6333dcba17664a67ef72215ec" category="list-text">每个控制器的 BMC 可访问性。</block>
+  <block id="da9053d5fc06539ec5cadf63d46c662d" category="list-text">使用上一步中确定的 IP 地址登录到每个控制器的 SP/BMC：</block>
+  <block id="43ed5e374baf2e56183228d2ee15fdc4" category="list-text">如果通过 SSH 从 BMC 登录，请使用 SP/BMC 地址（例如<block ref="4af43ee092242a6ac7ac3f68e7a27542" prefix=" " category="inline-code"></block>）进行连接，然后输入命令<block ref="6a412eb180c3f0a9798690443fba49e1" prefix=" " category="inline-code"></block>并进行身份验证。</block>
+  <block id="4238d84ec7e4655601b7b55b2f076b2e" category="list-text">如果使用的是直接连接到控制器的本地控制台或笔记本电脑，请使用相同的集群管理员凭据登录。</block>
+  <block id="8e06442a81408e5b3d9d881ee34604d9" category="list-text">将端口 e10b 连接到机架 1 NSM B 端口 e0b。</block>
+  <block id="e075a310e0208871f253ed1786f7aa85" category="list-text">在每个控制器上，将端口 2a、2b、2c 和 2d 通过电缆连接到 FC 主机网络交换机。</block>
 </blocks>
