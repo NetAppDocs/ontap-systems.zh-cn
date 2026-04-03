@@ -394,6 +394,9 @@ IMPORTANT: 请勿插入电源线。
 
 使用缆线将控制器连接到外部存储。
 
+
+NOTE: 如果您的系统没有外部磁盘架，请参见 link:../sas3/install-cabling-worksheets-examples-fas2600.html#fas2820-platform-in-a-multipath-ha-configuration-with-no-external-shelves["无外部磁盘架的多路径 HA 配置中 FAS2820 的布线说明"]。
+
 下表列出了将驱动器架连接到存储系统时插图中的缆线类型以及呼出编号和缆线颜色。
 
 
