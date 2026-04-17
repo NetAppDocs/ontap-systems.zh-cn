@@ -2,7 +2,7 @@
 permalink: a220/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: aff a220, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption, manual, manual boot recovery 
-summary: '检查完环境变量后，您必须完成针对已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统的特定步骤。AFF A220系统仅支持手动启动介质恢复程序。' 
+summary: 在 AFF A220 存储系统中的替换启动介质上恢复加密。AFF A220 仅支持手动启动介质恢复程序。 
 ---
 = 恢复加密- AFF A220
 :allow-uri-read: 

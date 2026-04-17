@@ -2,7 +2,7 @@
 permalink: a200/bootmedia-replace-overview.html 
 sidebar: sidebar 
 keywords: aff a200, nondisruptive, disruptive, replace the boot media, manual, manual boot recovery 
-summary: 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。 
+summary: 启动介质存储系统启动时使用的主要和辅助系统启动映像文件集。根据您的网络配置，您可以执行无中断更换或中断更换。AFF A200 系统仅支持手动启动介质恢复过程。 
 ---
 = 启动介质更换概述— AFF A200
 :allow-uri-read: 

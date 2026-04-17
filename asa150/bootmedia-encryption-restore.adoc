@@ -2,7 +2,7 @@
 permalink: asa150/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: asa a150, a150, asa, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption 
-summary: 检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM\ ）， NetApp 存储加密 \ （ NSE\ ）或 NetApp 卷加密 \ （ NVE\ ）的系统的步骤。 
+summary: 恢复替代启动介质上的加密。 
 ---
 = 还原OKM、NSE和NVE - ASA A150
 :allow-uri-read: 

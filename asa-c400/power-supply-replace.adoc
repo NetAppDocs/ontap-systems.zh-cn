@@ -2,7 +2,7 @@
 permalink: asa-c400/power-supply-replace.html 
 sidebar: sidebar 
 keywords: asa c400, replace a power supply 
-summary: 更换电源包括断开目标电源（ PSU ）与电源的连接，拔下电源线，卸下旧 PSU 并安装更换 PSU ，然后将其重新连接到电源。 
+summary: 通过断开目标 PSU 与电源的连接、拔下电源线、移除旧 PSU、安装更换的 PSU，然后将其重新连接到电源，来更换 ASA C400 系统中的电源。 
 ---
 = 热插拔电源 - ASA C400
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: asa250/dimm-replace.html 
 sidebar: sidebar 
 keywords: asa a250, replace a dimm 
-summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。 
+summary: 当您的系统注册了越来越多的可更正纠错代码 ECC 时，您必须更换控制器模块中的 DIMM。否则会导致系统崩溃。 
 ---
 = 更换DIMM - ASA A250
 :allow-uri-read: 

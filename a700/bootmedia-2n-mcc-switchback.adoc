@@ -2,7 +2,7 @@
 permalink: a700/bootmedia-2n-mcc-switchback.html 
 sidebar: sidebar 
 keywords: aff a700, metrocluster, switchback, manual, manual boot recovery 
-summary: '在双节点MetroCluster配置中完成 FRU 更换后，您可以执行MetroCluster切换操作。这样就将配置恢复到正常运行状态，以前受损站点上的同步源存储虚拟机 (SVM) 现在处于活动状态，并从本地磁盘池提供数据。AFF A700系统仅支持手动启动介质恢复程序。' 
+summary: 完成引导介质更换后，执行 MetroCluster 切换操作，使配置恢复正常运行状态。AFF A700 系统仅支持手动引导介质恢复过程。 
 ---
 = 在双节点MetroCluster配置中切换回聚合 - AFF A700
 :allow-uri-read: 

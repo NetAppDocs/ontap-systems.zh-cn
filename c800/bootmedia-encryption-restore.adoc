@@ -2,7 +2,7 @@
 permalink: c800/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: aff c800, post boot media replacement steps for okm, nse, and nve 
-summary: 检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM\ ）， NetApp 存储加密 \ （ NSE\ ）或 NetApp 卷加密 \ （ NVE\ ）的系统的步骤。 
+summary: 在AFF C800系统中，恢复替换启动介质上的加密，以确保数据持续受到保护。替换过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。 
 ---
 = 恢复加密- AFF C800
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: a70-90/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, pre-shutdown checks for onboard encryption keys 
-summary: '要确保AFF A70或AFF A90存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。' 
+summary: 为了确保 AFF A70 或 AFF A90 存储系统的数据安全，需要验证启动介质上的加密密钥支持和状态。检查 ONTAP 版本是否支持 NetApp 卷加密，并在关闭控制器之前检查密钥管理器是否处于活动状态。 
 ---
 = 检查手动启动媒体恢复的加密支持 - AFF A70和AFF A90
 :allow-uri-read: 

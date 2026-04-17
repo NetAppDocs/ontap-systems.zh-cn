@@ -2,7 +2,7 @@
 permalink: fas-70-90/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: fas70, fas90, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: '确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface NetApp、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、' 
+summary: 验证逻辑接口 LIF 向其主端口报告，执行集群运行状况检查，然后将故障部件返回给 NetApp 以完成 FAS70 或 FAS90 控制器更换过程的最后一步。 
 ---
 = 完整控制器更换—FAS70和FAS90
 :allow-uri-read: 

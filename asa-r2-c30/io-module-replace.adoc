@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, replace a pcie card 
 summary: 当模块出现故障或需要升级以支持更高的性能或附加功能时，请更换 ASA C30 存储系统中的 I/O 模块。更换过程包括关闭控制器、更换发生故障的I/O模块、重新启动控制器以及将发生故障的部件退回NetApp。 
 ---
-= 更换 I/O 模块 - ASA C30
+= 更换 IO 模块 - ASA C30
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

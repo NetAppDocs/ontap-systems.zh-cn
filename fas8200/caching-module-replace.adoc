@@ -2,7 +2,7 @@
 permalink: fas8200/caching-module-replace.html 
 sidebar: sidebar 
 keywords: fas8200, replace caching module 
-summary: 如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控制器模块已脱机，则必须更换此缓存模块；否则会导致性能下降。 
+summary: 当系统注册单个 AutoSupport 消息表明模块已离线时，必须更换控制器模块中的缓存模块。否则会导致性能下降。 
 ---
 = 更换缓存模块— FAS8200
 :allow-uri-read: 

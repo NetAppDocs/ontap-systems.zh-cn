@@ -2,7 +2,7 @@
 permalink: a800/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: aff a800, post boot media replacement steps for okm, nse, and nve 
-summary: 检查环境变量后，您必须完成特定于已启用板载密钥管理器（ OKM\ ）， NetApp 存储加密 \ （ NSE\ ）或 NetApp 卷加密 \ （ NVE\ ）的系统的步骤。 
+summary: 在更换的启动介质上恢复加密。完成特定于启用了板载密钥管理器、NetApp 存储加密或 NetApp 卷加密的系统的步骤。 
 ---
 = 恢复加密- AFF A800
 :allow-uri-read: 

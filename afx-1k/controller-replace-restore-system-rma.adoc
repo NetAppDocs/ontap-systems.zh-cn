@@ -2,7 +2,7 @@
 permalink: afx-1k/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: afx 1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: '验证逻辑接口 (LIF) 是否向其主端口报告，执行集群运行状况检查，然后将故障部件返回给NetApp ，以完成 AFX 1K 控制器更换过程的最后一步。' 
+summary: 验证逻辑接口是否向其主端口报告，执行群集运行状况检查，然后将故障部件返回给 NetApp 以完成 AFX 1K 控制器更换过程的最后一步。 
 ---
 = 完整控制器更换 - AFX 1K
 :allow-uri-read: 

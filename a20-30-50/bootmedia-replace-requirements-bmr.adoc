@@ -2,7 +2,7 @@
 permalink: a20-30-50/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: aff a20, aff a30, aff a50, replace the boot media 
-summary: '在更换AFF A20、 AFF A30 和AFF A50 存储系统中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否拥有正确的替换启动介质、确认受损控制器上的 e0M（扳手）端口是否正常工作，以及确定是否启用了板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。' 
+summary: 在更换 AFF A20、AFF A30 和 AFF A50 存储系统中的启动介质之前，请确保您满足成功更换的必要要求。这包括验证您是否具有正确的替换启动介质，确认受损控制器上的 e0M 端口是否正常工作，并确定是否已启用板载密钥管理器或外部密钥管理器。 
 ---
 = 自动启动介质恢复的要求 - AFF A20、 AFF A30 和AFF A50
 :allow-uri-read: 

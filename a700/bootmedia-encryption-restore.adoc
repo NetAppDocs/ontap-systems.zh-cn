@@ -2,7 +2,7 @@
 permalink: a700/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: aff a700, post, boot, media, replacement, steps, okm, nse, nve, manual, manual boot recovery 
-summary: '检查完环境变量后，您必须完成针对已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统的特定步骤。AFF A700系统仅支持手动启动介质恢复程序。' 
+summary: 在替换引导介质上恢复加密。AFF A700 系统仅支持手动引导介质恢复过程。 
 ---
 = 恢复加密- AFF A700
 :allow-uri-read: 

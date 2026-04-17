@@ -2,7 +2,7 @@
 permalink: a400/nvdimm-replace.html 
 sidebar: sidebar 
 keywords: aff a400, aff, a400, replace, nvdimm, controller, module, system, register, flash, lifetime, healthy, system, panic, shut, down, impair, two-node, metrocluster, complete, replacement, process, replace an nvdimm, shut down the impaired controller, remove the controller module, replace the nvdimm, install the controller module, restore the controller module to operation, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
-summary: 如果系统记录闪存生命周期接近结束或已识别的 NVDIMM 总体运行状况不佳，则必须更换控制器模块中的 NVDIMM ；否则会导致系统崩溃。 
+summary: 当系统注册闪存寿命即将结束或识别的 NVDIMM 不正常时，请更换 AFF A400 控制器模块中的 NVDIMM。未能更换故障的 NVDIMM 可能会导致系统崩溃。 
 ---
 = 更换 NVDIMM - AFF A400
 :allow-uri-read: 

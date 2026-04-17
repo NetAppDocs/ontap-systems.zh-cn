@@ -2,7 +2,7 @@
 permalink: a220/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff, a220, replace, dimm, shut, down, impaired, controller, controller, metrocluster, replace, system, reinstall, module, filed, part, aggregates, 
-summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。 
+summary: 当您的系统注册了越来越多的可更正的纠错代码或不可更正的 ECC 错误时，请更换 AFF A220 控制器模块中的 DIMM。未能更换有故障的 DIMM 可能会导致系统崩溃。 
 ---
 = 更换DIMM - AFF A220
 :allow-uri-read: 

@@ -2,7 +2,7 @@
 permalink: fas9000/bootmedia-encryption-restore.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, post, boot, media, replacement, steps, okm, nse, nve, manual, manual boot recovery 
-summary: '检查完环境变量后，您必须完成针对已启用板载密钥管理器 (OKM)、 NetApp存储加密 (NSE) 或NetApp卷加密 (NVE) 的系统的特定步骤。FAS9000系统仅支持手动启动介质恢复程序。' 
+summary: 检查环境变量后，您必须完成特定于启用了 Onboard Key Manager OKM、NetApp Storage Encryption NSE 或 NetApp Volume Encryption NVE 的系统的步骤。FAS9000 系统仅支持手动启动介质恢复过程。 
 ---
 = 还原加密- FAS9000
 :allow-uri-read: 

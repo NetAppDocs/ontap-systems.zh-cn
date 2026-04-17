@@ -2,7 +2,7 @@
 permalink: asa-c400/bootmedia-replace-requirements-bmr.html 
 sidebar: sidebar 
 keywords: asa-c400, replace the boot media 
-summary: 在更换ASA C400 系统中的启动介质之前，请确保满足成功更换的必要要求。 
+summary: 在更换 ASA C400 中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否有正确的替换启动介质，确认受损控制器上的 e0S 或 e0M 扳手端口没有故障，并确定是否已启用板载密钥管理器或外部密钥管理器。 
 ---
 = 自动启动介质恢复的要求 - ASA C400
 :allow-uri-read: 

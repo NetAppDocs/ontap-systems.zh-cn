@@ -2,7 +2,7 @@
 permalink: a250/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff a250, replace a dimm 
-summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。 
+summary: 当系统遇到基于运行状况监视器警报的过多 CECC 错误或阻止存储系统启动 ONTAP 的不可纠正 ECC 错误时，请更换 AFF A250 控制器中的 DIMM。 
 ---
 = 更换 DIMM - AFF A250
 :allow-uri-read: 

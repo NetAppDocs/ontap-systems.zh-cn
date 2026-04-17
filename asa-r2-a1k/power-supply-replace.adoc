@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/power-supply-replace.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, replace a power supply 
-summary: 'ASA A1K系统中的交流或直流电源设备(PSU)出现故障或出现故障时、请予以更换、以确保系统继续获得稳定运行所需的电源。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。' 
+summary: 在 ASA A1K 系统中的 AC 或 DC 电源装置发生故障或出现问题时进行更换，确保系统持续获得稳定运行所需的电源。更换过程包括从电源断开故障电源装置，拔下电源线，更换故障电源装置，然后将其重新连接到电源。 
 ---
 = 热插拔电源 - ASA A1K
 :allow-uri-read: 

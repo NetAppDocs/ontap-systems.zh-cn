@@ -2,7 +2,7 @@
 permalink: a800/nvdimm-replace.html 
 sidebar: sidebar 
 keywords: aff a800, replace an nvdimm 
-summary: 如果系统记录闪存生命周期接近结束或已识别的 NVDIMM 总体运行状况不佳，则必须更换控制器模块中的 NVDIMM ；否则会导致系统崩溃。 
+summary: 当系统注册闪存寿命即将结束或识别的 NVDIMM 不正常时，请更换 AFF A800 控制器模块中的 NVDIMM。未能更换故障的 NVDIMM 可能会导致系统崩溃。 
 ---
 = 更换 NVDIMM - AFF A800
 :allow-uri-read: 

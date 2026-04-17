@@ -2,7 +2,7 @@
 permalink: asa150/bootmedia-replace-overview.html 
 sidebar: sidebar 
 keywords: asa a150, a150, asa, replace, boot, media, image, nondisruptive, disruptive, replacement, fat32, usb 
-summary: 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。 
+summary: 启动介质存储系统启动时使用的主要和次要系统启动映像文件集。根据您的网络配置，您可以执行无中断或中断性更换。 
 ---
 = 更换启动介质概述- ASA A150
 :allow-uri-read: 

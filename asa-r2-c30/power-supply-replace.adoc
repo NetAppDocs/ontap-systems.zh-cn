@@ -2,7 +2,7 @@
 permalink: asa-r2-c30/power-supply-replace.html 
 sidebar: sidebar 
 keywords: asa c30, replace a power supply 
-summary: '当 ASA C30 存储系统中的交流或直流电源装置 (PSU) 发生故障或故障时，请更换它，以确保您的系统继续接收稳定运行所需的电力。更换过程包括断开故障PSU与电源的连接、拔下电源线、更换故障PSU、然后将其重新连接到电源。' 
+summary: 当 ASA C30 存储系统中的交流或直流电源装置发生故障或出现问题时，请进行更换，以确保系统持续获得稳定运行所需的电源。更换过程包括从电源断开故障电源装置，拔下电源线，更换故障电源装置，然后将其重新连接到电源。 
 ---
 = 更换电源- ASA C30
 :allow-uri-read: 

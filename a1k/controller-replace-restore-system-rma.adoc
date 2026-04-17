@@ -2,7 +2,7 @@
 permalink: a1k/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: aff a1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: '验证逻辑接口(Logical Interface、)是否正在向其主端口报告、执行集群运行状况检查、然后将故障部件返回给NetApp以完成AFF A1K控制器更换过程中的最后一步。' 
+summary: 要完成 AFF A1K 系统的控制器更换，请恢复 NetApp 存储加密配置，确认逻辑接口正在向其主端口报告，执行集群运行状况检查，并将故障部件返回 NetApp。 
 ---
 = 完整控制器更换—AFF A1K
 :allow-uri-read: 

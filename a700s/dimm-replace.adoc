@@ -2,7 +2,7 @@
 permalink: a700s/dimm-replace.html 
 sidebar: sidebar 
 keywords: aff a700s, aff, a700s, replace, fimm, controller, module, system, register, increase, increasing, number, correctable, error, correction, code, ecc, failure, system, panic, dimm, shut, down, impair, complete, replacement, process, replace a dimmm, shut down the impaired controller, remove the controller module, replace a dimm, reinstall the controller module and booting the system, complete the replacement process 
-summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。 
+summary: 当系统注册了越来越多的可更正的纠错代码或不可更正的 ECC 错误时，请更换 AFF A700s 控制器模块中的 DIMM。未能更换有故障的 DIMM 可能会导致系统崩溃。 
 ---
 = 更换 DIMM - AFF A700s
 :allow-uri-read: 

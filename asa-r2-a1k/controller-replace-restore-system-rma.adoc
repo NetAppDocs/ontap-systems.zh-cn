@@ -2,7 +2,7 @@
 permalink: asa-r2-a1k/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: asa r2 a1k, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: '验证逻辑接口(Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface NetApp、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface ASA、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、Logical Interface、' 
+summary: 要完成 ASA A1K 系统的控制器更换，请先恢复 NetApp 存储加密配置（如有必要）。接下来，请确认逻辑接口正在向其主端口报告，并执行集群运行状况检查。最后，将出现故障的部件返回 NetApp。 
 ---
 = 完整控制器更换—ASA A1K
 :allow-uri-read: 

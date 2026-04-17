@@ -2,7 +2,7 @@
 permalink: asa-r2-c30/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa c30, move hardware components, replace the chassis 
-summary: '当硬件故障需要更换 ASA C30 存储系统的机箱时。更换过程包括卸下控制器和电源设备(PSU)、卸下驱动器、安装更换机箱以及重新安装机箱组件。' 
+summary: 当硬件故障需要更换 ASA C30 存储系统的机箱时。更换过程包括移除控制器、移除驱动器、安装更换机箱以及重新安装机箱组件。 
 ---
 = 更换机箱- ASA C30
 :allow-uri-read: 

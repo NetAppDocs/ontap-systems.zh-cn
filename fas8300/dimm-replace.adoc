@@ -2,7 +2,7 @@
 permalink: fas8300/dimm-replace.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, replace, dimm, shut, down, impaired, controller, module, reinstall,  system, controller, aggregates, metrocluster, replacement 
-summary: 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。 
+summary: 当存储系统遇到过多的可更正错误更正代码或不可更正错误等错误时，必须更换控制器中的 DIMM，这些错误通常是由单个 DIMM 故障导致存储系统无法启动 ONTAP。 
 ---
 = 更换 DIMM - FAS8300 和 FAS8700
 :allow-uri-read: 

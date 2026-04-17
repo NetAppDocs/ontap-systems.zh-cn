@@ -2,7 +2,7 @@
 permalink: asa-r2-c30/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: asa c30, how to recable the system, reboot the system 
-summary: '将存储资源的控制权交还给替换控制器，以便您的 ASA C30 存储系统恢复正常运行。交还流程因系统使用的加密类型而异：无加密、板载密钥管理器 (OKM) 加密或外部密钥管理器 (EKM) 加密。' 
+summary: 将存储资源的控制权交还给替换控制器，以便您的 ASA C30 存储系统可以恢复正常运行。交还过程因系统使用的加密类型而异，包括不加密、Onboard Key Manager 加密或 External Key Manager 加密。 
 ---
 = 交还控制器- ASA C30
 :allow-uri-read: 

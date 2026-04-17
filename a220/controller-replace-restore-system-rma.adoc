@@ -1,8 +1,8 @@
 ---
 permalink: a220/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
-keywords: \aff a220, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: '要将系统还原到完全运行状态、您必须还原NetApp存储加密配置(如果需要)、为新控制器安装许可证、并将故障部件返回给NetApp。' 
+keywords: aff a220, how to restore NetApp Storage Encryption, how to complete the replacement process 
+summary: 要将系统还原到完全运行状态，请在必要时还原 NetApp 存储加密配置，安装新控制器的许可证，并将出现故障的部件返回 NetApp。 
 ---
 = 完整的系统还原- AFF A220
 :allow-uri-read: 

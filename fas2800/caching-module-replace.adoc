@@ -2,7 +2,7 @@
 permalink: fas2800/caching-module-replace.html 
 sidebar: sidebar 
 keywords: replace, caching, module,  fas2800, shut, down, impaired, controller, controller, aggregates, metrocluster, configuration, replace, reinstall 
-summary: 如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控制器模块已脱机，则必须更换此缓存模块；否则会导致性能下降。 
+summary: 当您的系统注册单个 AutoSupport ASUP 消息表明该模块已脱机时，您必须更换控制器模块中的缓存模块。如果不更换出现故障的模块，则存储系统将出现性能下降。 
 ---
 = 更换缓存模块- FAS2820
 :allow-uri-read: 

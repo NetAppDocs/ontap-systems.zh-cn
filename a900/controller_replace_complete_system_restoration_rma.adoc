@@ -2,7 +2,7 @@
 permalink: a900/controller_replace_complete_system_restoration_rma.html 
 sidebar: sidebar 
 keywords:  
-summary: 要完成替换操作步骤并将系统还原为完全正常运行，您必须重新配置存储，还原 NetApp 存储加密配置（如果需要）并为新控制器安装许可证。 
+summary: 要将 AFF A900 系统恢复到完全运行状态，请重新连接存储设备，必要时恢复 NetApp Storage Encryption 配置，并为新控制器安装许可证。 
 ---
 = 完成系统还原— AFF A900
 :allow-uri-read: 

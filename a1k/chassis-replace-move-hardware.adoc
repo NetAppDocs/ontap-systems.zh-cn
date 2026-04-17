@@ -2,7 +2,7 @@
 permalink: a1k/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: aff a1k, move hardware components, replace the chassis 
-summary: '当硬件故障需要更换AFF A1K系统的机箱时。更换过程包括从机箱前部移除控制器、移除电源单元 (PSU)、NVRAM12、I/O 模块和空白板以及系统管理模块，然后安装更换机箱，并重新安装机箱组件。' 
+summary: 当硬件故障需要时，请更换 AFF A1K 系统的机箱。更换过程包括卸下控制器、I/O 卡、NVRAM12 模块、系统管理模块和电源装置，安装更换机箱，以及重新安装机箱组件。 
 ---
 = 更换底盘 - AFF A1K
 :allow-uri-read: 
