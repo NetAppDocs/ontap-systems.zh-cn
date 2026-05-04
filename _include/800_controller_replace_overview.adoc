@@ -4,6 +4,15 @@
 
 您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。
 
+[NOTE]
+====
+NetApp 强烈建议您在使用的设备上启用控制台日志记录，并在执行此过程时执行以下操作：
+
+* 在维护期间保持 AutoSupport 启用状态。这允许 NetApp 支持在发生问题时接收诊断信息。
+* 为任何 CLI 会话启用会话日志记录。这将创建维护活动期间所有命令和系统输出的完整记录。有关如何启用会话日志记录的指导，请参见 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["如何配置 PuTTY 以优化与 ONTAP 系统的连接"^]。
+
+
+====
 * 所有驱动器架都必须正常工作。
 * 运行正常的控制器必须能够接管要更换的控制器（在本操作步骤 中称为 "`受损控制器` " ）。
 * 如果您的系统采用 MetroCluster 配置，则必须查看一节 https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_choosing_the_correct_recovery_procedure_parent_concept.html["选择正确的恢复操作步骤"] 以确定是否应使用此操作步骤。
@@ -17,10 +26,6 @@
 ** _replacement_ 控制器是一个新控制器，用于更换受损的控制器。
 ** _health_ 控制器是运行正常的控制器。
 
-
-* 您必须始终将控制器的控制台输出捕获到文本文件中。
-+
-此操作将为您提供操作步骤的记录，以便您可以对更换过程中可能遇到的任何问题进行故障排除。
 
 
 

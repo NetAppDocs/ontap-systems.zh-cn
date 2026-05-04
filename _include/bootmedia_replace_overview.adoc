@@ -4,6 +4,15 @@
 
 启动介质存储系统在启动时使用的一组主文件和二级系统文件（启动映像）。根据您的网络配置，您可以执行无中断或中断更换。
 
+[NOTE]
+====
+NetApp 强烈建议您在使用的设备上启用控制台日志记录，并在执行此过程时执行以下操作：
+
+* 在维护期间保持 AutoSupport 启用状态。这允许 NetApp 支持在发生问题时接收诊断信息。
+* 为任何 CLI 会话启用会话日志记录。这将创建维护活动期间所有命令和系统输出的完整记录。有关如何启用会话日志记录的指导，请参见 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["如何配置 PuTTY 以优化与 ONTAP 系统的连接"^]。
+
+
+====
 您必须使用格式化为 fat32 的 USB 闪存驱动器，并具有适当的存储容量来存放 `image_xxx.tgz` 文件。
 
 您还必须将 `image_xxx.tgz` 文件复制到 USB 闪存驱动器，以供日后在此操作步骤中使用。

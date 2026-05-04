@@ -34,12 +34,6 @@ node2             node1             -            Waiting for giveback (HA mailbo
 .. 返回到管理权限级别： `set -privilege admin`
 
 
-. 如果您的存储系统配置了存储或卷加密、则必须根据您使用的是板载密钥管理还是外部密钥管理、通过以下过程之一还原存储或卷加密功能：
-+
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
-** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
-
-
 . 交还控制器：
 +
 .. 从运行正常的控制器中，交还更换的控制器的存储： `storage failover giveback -ofnode _replacement_node_name_`
@@ -60,6 +54,12 @@ http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62
 +
 `storage failover show` 命令的输出不应包含 System ID changed on partner 消息。
 
+
+
+. 如果您的存储系统配置了存储或卷加密、则必须根据您使用的是板载密钥管理还是外部密钥管理、通过以下过程之一还原存储或卷加密功能：
++
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-onboard-key-management-encryption-keys-task.html["还原板载密钥管理加密密钥"^]
+** https://docs.netapp.com/us-en/ontap/encryption-at-rest/restore-external-encryption-keys-93-later-task.html["还原外部密钥管理加密密钥"^]
 
 
 . 验证是否已正确分配磁盘： `storage disk show -ownership`

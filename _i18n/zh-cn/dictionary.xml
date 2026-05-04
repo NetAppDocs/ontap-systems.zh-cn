@@ -121,8 +121,6 @@
   <block id="bd27adfc86de062b9f9126c881c09f52" category="list-text">受损节点是要更换的节点。</block>
   <block id="d1fa186cdefd81b91a15808c2af74110" category="list-text">_replacement_ 节点是指正在更换受损节点的新节点。</block>
   <block id="1747d832b55f55ab2365153d8657c603" category="list-text">_health_ 节点是正常运行的节点。</block>
-  <block id="ef82d539dc8acbd089c50343493834e6" category="list-text">您必须始终将节点的控制台输出捕获到文本文件中。</block>
-  <block id="c05037a88de91ff2d60122b1ccf7291a" category="paragraph">此操作将为您提供操作步骤的记录，以便您可以对更换过程中可能遇到的任何问题进行故障排除。</block>
   <block id="596bcca65aca56bacb3df39265f83dfb" category="summary">要更换机箱，必须关闭控制器。</block>
   <block id="b0a5349e52bfc1b486c0f4bb7f8c6b18" category="doc">关闭控制器— AFF A250</block>
   <block id="19285c8cf559d5176d09036ecccfca21" category="list-text">如果启用了 AutoSupport ，则通过调用 AutoSupport 消息禁止自动创建案例： `ssystem node AutoSupport invoke -node * -type all -message MAINT=number_of_hours_downh`</block>
@@ -536,11 +534,8 @@
   <block id="c4ca4238a0b923820dcc509a6f75849b" category="paragraph">1.</block>
   <block id="c81e728d9d4c2f636f067f89cc14862c" category="paragraph">2.</block>
   <block id="41c3aa6b15da307401c926e42ea6e535" category="paragraph">要执行其他可选布线，请选择：</block>
-  <block id="56207a9d07b6607ddcfada226919fb00" category="list-text"><block ref="9f2a6ae0f8e4e0c002cabfcf0d3b8027" category="inline-xref-macro-rx"></block></block>
   <block id="9ec8ef762c375cb5ef67631e96a76733" category="list-text"><block ref="1476a857b220f13e41f9015c8596b1d0" category="inline-xref-macro-rx"></block></block>
   <block id="eccbc87e4b5ce2fe28308fd9f2a7baf3" category="paragraph">3.</block>
-  <block id="46bef70db2abdd00f0d4fccb83fbd3db" category="section-title">选项 2 ：使用缆线连接到 25GbE 数据或主机网络</block>
-  <block id="2283d2460c1fb366154589c8106aeabb" category="paragraph">控制器上的 25GbE 端口连接到 25GbE 数据或主机网络交换机。</block>
   <block id="3ee99f95dccd989449c31c5582a02a92" category="list-text"><block ref="9d121b80040875d39da3830ae414ba9b" category="inline-xref-macro-rx"></block></block>
   <block id="b508a654c509eed8ec1ae4dc75fdfc9a" category="section-title">选项 3 ：使用缆线将控制器连接到一个驱动器架</block>
   <block id="0e103ad5ee434b2faca19141061cbe51" category="paragraph">使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。</block>
@@ -1108,7 +1103,6 @@
   <block id="e7e749fdb513f8650505d5c05ea4890c" category="paragraph">迷你 SAS HD 到迷你 SAS HD 缆线（取决于订单）</block>
   <block id="99e6a93356204a99615e29e4f73ced9b" category="paragraph">光缆</block>
   <block id="b8baf655ec765d5d983898664c9272aa" category="paragraph">X66250-2-N-C （ 112-00342 ）</block>
-  <block id="13378a0df578c502443ae7f6cba29221" category="paragraph">用于夹层卡的 16 Gb FC 或 25GbE 缆线（取决于订单）</block>
   <block id="a3f60cc55d40e4b57781b7699be7bf60" category="paragraph">X6555-R6 （ 112-00291 ）， 3 米</block>
   <block id="7d0f1ce0ccc29eebb04f6a10e53463ef" category="paragraph">X6562-R6 （ 112-00196 ）， 5 米</block>
   <block id="494eeb741723e2c166dc5864c7da1e64" category="paragraph">管理网络</block>
@@ -2063,7 +2057,6 @@
   <block id="9cba1bd90da040950cfda65ba6af50aa" category="doc">更换 NVMEM 电池— FAS500f</block>
   <block id="74384aef792e0e84d445bfde0eab13c6" category="paragraph">您可以使用以下视频或表格中的步骤更换 NVMEM 电池：</block>
   <block id="3b92fecaa3772b0492ba3935a96dedea" category="paragraph">要安装 FAS500f 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。</block>
-  <block id="3ea38b3923e0e690201e332cebb4b94d" category="paragraph">使用 25GbE 集群互连缆线将集群互连端口彼此相连</block>
   <block id="91007f6223d7f1e23fa6822f2e16adad" category="paragraph">使用缆线将端口 2a 至 2D 连接到 FC 主机交换机。</block>
   <block id="277ba6b7a127ec6b40495a0cd012279f" category="paragraph">使用缆线将端口 E4A 到 E4D 连接到 10GbE 主机网络交换机。</block>
   <block id="13bebe2596a4000b53c1d171e85d4669" category="doc">完成系统还原— AFF C190</block>
@@ -4069,7 +4062,6 @@
   <block id="5f4965084173e3c414637c35200b73a8" category="paragraph">使用缆线连接集群互连 A 端口：</block>
   <block id="765c3c3f314b105120b116fa72fa83ec" category="list-text">插槽 A4 和 B4 （ E4A ）连接到集群网络交换机。</block>
   <block id="370ef18034bcd8124be9ef4b4b76a551" category="list-text">插槽 "A8 和 B8 （ E8a ）连接到集群网络交换机。</block>
-  <block id="3b632bef76bf01e7a7e2e0c7d8200b68" category="paragraph">使用缆线连接 25GbE 网络交换机：</block>
   <block id="c60dbcf19edff60839d3c0fbf6f60f2a" category="paragraph">您必须使用缆线将每个控制器连接到 AFF A900 系统上 NS224 驱动器架上的 NSM 模块。</block>
   <block id="5ec6942c74c6a8edac1d2288d383731d" category="list-text">使用以下动画或图形将控制器连接到一个 NS224 驱动器架。</block>
   <block id="3a58f6912b98caf7435fd9f6896ba4c6" category="list-text">将控制器 A 端口 E2A 连接到磁盘架上 NSM A 上的端口 e0a 。</block>
@@ -4254,7 +4246,6 @@
   <block id="2abfff2974f589f7a217325f304e0ec5" category="paragraph">ONTAP 9.8</block>
   <block id="0328774aec0a00ab97b619f670f3584f" category="inline-link">X91122A</block>
   <block id="22fb50240417da3b46a5b9bc9f4fba23" category="paragraph"><block ref="22fb50240417da3b46a5b9bc9f4fba23" category="inline-link-rx"></block></block>
-  <block id="0c54c33cbdaf870abc3b1f6dccea1cd7" category="paragraph">2 端口 25GbE RoCE QSFP28</block>
   <block id="8c6eb6a8f3b879a85c9abb062dcf57b6" category="inline-link">X9170A</block>
   <block id="dfd3db7fdc1a7e88e6e8d964ce5bed7b" category="paragraph"><block ref="dfd3db7fdc1a7e88e6e8d964ce5bed7b" category="inline-link-rx"></block></block>
   <block id="8ed5851faf32cc00c77e732fa7ccd048" category="paragraph">NVMe SSD 模块（ 1 TB ）</block>
@@ -4277,7 +4268,6 @@
   <block id="fe3922b3af83dfb6ba506bb4b7969408" category="list-text">AFF A800/AFF ASA A800</block>
   <block id="040a43f160d19358d6aaa58c129061c6" category="list-text">AFF A700/AFF ASA A700</block>
   <block id="a2830a8a6b7415efd3d60ab3af3c1b02" category="list-text">AFF A400/AFF ASA A400</block>
-  <block id="fc2c2083a19a418b8843fac67146e44d" category="paragraph">Broadcom BES-53248 集群互连交换机支持使用 10/25GbE 端口的 AFF/FAS 控制器。</block>
   <block id="afa798215d91c0ee616815befa600f66" category="paragraph">ONTAP 9.5P8</block>
   <block id="ad30bda50ee1d84821c1e37d140d5779" category="section-title">新平台支持</block>
   <block id="8d5222cdfab2ef87317118b2f5929210" category="cell">平台（包含指向数据表的链接）</block>
@@ -4429,7 +4419,6 @@
   <block id="93693d8b94899fb843897083df3dfad1" category="list-text">受损控制器是指要更换的控制器。</block>
   <block id="8fc18417b34debbf06d43a8004e7af83" category="list-text">_replacement_ 控制器是一个新控制器，用于更换受损的控制器。</block>
   <block id="adb78e1174ae799e5d64ba90539a8d1a" category="list-text">_health_ 控制器是运行正常的控制器。</block>
-  <block id="d1e26bcc4cbc247391931bd56755d0de" category="list-text">您必须始终将控制器的控制台输出捕获到文本文件中。</block>
   <block id="8e7b0fd27b2fda4467ea9b412f6b1995" category="list-text">使用 `show date` 命令检查运行状况良好的控制器上的日期和时间。</block>
   <block id="e09ab6999180d4e7f9a47f740144761f" category="list-text">在目标控制器上的 LOADER 提示符处，检查时间和日期。</block>
   <block id="988240067960851699de08084d42c5e5" category="list-text">确认目标控制器上的日期和时间。</block>
@@ -5470,12 +5459,10 @@
   <block id="d8c9578f313af4d30124d95a9a82f55a" category="list-text"><block ref="45857239f243800c6028823fe1bb7167" category="inline-link-macro-rx"></block> 您的系统。</block>
   <block id="42608111c1df97efb2c5e1785a0c9236" category="paragraph">使用双节点无交换机集群方法或集群互连网络方法将控制器连接到集群。</block>
   <block id="940761e28da4b693854d6f9dd90cf253" category="video-title">动画—用缆线连接双节点无交换机集群</block>
-  <block id="e8da070fbb7ed9f4e58234be76f00e95" category="list-text">使用25GbE集群互连缆线将集群互连端口e0c连接到e0c、并将e0d连接到e0d。</block>
   <block id="c26780590002425e46bd9c5734245466" category="paragraph">使用动画或步骤完成控制器和交换机之间的布线。对每个控制器执行以下步骤。</block>
   <block id="76cc458c90f11508f1ec83bed8953ef1" category="video-title">动画-电缆交换集群</block>
   <block id="f7d77014760bf79c9b9469d98b1e031b" category="admonition">插入连接器时、您应感觉到它卡入到位；如果您没有感觉到它卡入到位、请将其卸下、将其翻转并重试。</block>
   <block id="ed7a3f593115fbd1332dbd3743a9967c" category="paragraph">对每个控制器模块执行以下步骤。</block>
-  <block id="63acd4af39a4e0dda6fe6c3d381743a7" category="open-title">选项2：使用缆线连接到25GbE数据或主机网络</block>
   <block id="2b5c65d5b0abc122c914eec510d083ae" category="paragraph">多个CRU之一的功能出现错误：磁盘架、磁盘驱动器、IOM12/IOM12B模块或电源。</block>
   <block id="179393dc95adf2d21fee0c7a4ac43a35" category="paragraph">激活此LED功能后、操作员显示面板和两个IOM12/IOM12B模块上的位置LED将亮起。Location LEDs automatically turn off after 30 minutes.</block>
   <block id="a0e54d8ccf5f2c0e80dde9c632b59a06" category="section-title">IOM12/IOM12B模块LED</block>
@@ -6438,7 +6425,6 @@ SFP+(目标/启动程序)</block>
   <block id="abc8a9a1aab13018556d024a5691afae" category="doc">视频步骤—FAS9300和FAS4700</block>
   <block id="57fcdb44384a01811b20cb55bd021011" category="doc">视频步骤- AFF A320</block>
   <block id="f4c78bd954ecc6d38092f7c504ddfb9a" category="doc">视频步骤—FAS2700</block>
-  <block id="3620e8833d6beeecd610b282d65a89b5" category="admonition"><block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> 主机网卡(光纤通道或25GbE)的插槽优先级为插槽2。但是、如果您同时拥有这两个卡、则光纤通道卡将插入插槽2、而25GbE卡将插入插槽1 (如以下选项所示)。如果您有外部磁盘架、则存储卡将插入插槽1、这是磁盘架唯一支持的插槽。</block>
   <block id="de8a85d6bcdb94b40275e65134363d85" category="doc">视频步骤- AFF C250</block>
   <block id="0b22644145264cc3d3c89acc64fc435a" category="doc">视频步骤- AFF A150</block>
   <block id="0f2e7671fbc778ffb86bcc59f57731e6" category="doc">视频步骤- AFF A800</block>
@@ -6710,7 +6696,6 @@ SFP+(目标/启动程序)</block>
   <block id="4169d3d04b863ba6044225d783c8511c" category="paragraph">使用 <block ref="760faf2edba83a3b2dfe198c423cd5ec" category="inline-link-macro-rx"></block> 如果您熟悉 NetApp 系统的安装。</block>
   <block id="230fb764922530d0d527b96fb40d15f8" category="paragraph"><block ref="230fb764922530d0d527b96fb40d15f8" category="inline-link-macro-rx"></block></block>
   <block id="9e4682a37df843156979b712e93e942d" category="paragraph"><block ref="9e4682a37df843156979b712e93e942d" category="inline-link-macro-rx"></block></block>
-  <block id="370d65afeef540ea21d331a7da8675ec" category="list-text">使用25GbE集群互连缆线将集群互连端口e0c连接到e0c、并将e0d连接到e0d。</block>
   <block id="5407ed45e4a9085a4f72a4611d202d7c" category="sidebar">NetApp的NS224磁盘架和SAS磁盘架有助于为您的数字化转型提供所需的性能、故障恢复能力和灵活性。</block>
   <block id="4ab265d37ededf839a389d0b0bedcb7f" category="paragraph">30厘米</block>
   <block id="f0c3921d8aabdebf1548d35d830083d9" category="list-text">将IO板从控制器模块中直接滑出、以将其卸下。</block>
@@ -7022,10 +7007,7 @@ SFP+(目标/启动程序)</block>
   <block id="e84bd7a7cafaabc7b1743876dcc73c70" category="image-alt">双节点无交换机集群复合布线图</block>
   <block id="0372c9caab5ee11faf1ffac3ef3c46fa" category="inline-image-macro">交换集群复合布线图</block>
   <block id="009e65f17aa2f40deb1c718bea3bf98b" category="paragraph"><block ref="009e65f17aa2f40deb1c718bea3bf98b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a6efff0cc5b19d4c49cb4467336db466" category="list-text">如果启用了AutoSupport、则通过调用AutoSupport消息命令禁止自动创建案例：<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
-  <block id="61612a74be5170dd342eb619d607d9a0" category="paragraph">以下AutoSupport命令将禁止自动创建案例两小时：<block ref="6cf51b10a85b7bdc2a6698400ee841b7" prefix=" " category="inline-code"></block></block>
   <block id="ab859514fa976f71299cd0d5366c702d" category="paragraph">暂停受损控制器或从运行正常的控制器接管此控制器：<block ref="64d2ac6bbd59fb854ec2bed7b2dbe259" prefix=" " category="inline-code"></block></block>
-  <block id="fd9366185c7040d2814e95fefcce2264" category="list-text">如果启用了AutoSupport、则通过调用AutoSupport命令禁止自动创建案例：<block ref="fbcb7868c4849064439910664677cb60" prefix=" " category="inline-code"></block></block>
   <block id="656450ae55843844fdfca7b44cbc5678" category="list-text">检查<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 以确保新的I/O模块与您的存储系统和您正在运行的ONTAP版本兼容。</block>
   <block id="78263f5226743bdd204519f0e9bd22d2" category="list-text">向下旋转缆线管理托架、方法是拉动缆线管理托架内部的按钮、然后向下旋转。</block>
   <block id="72e0b58a2d456f6ab89ca8d83859264d" category="list-text">从托架上卸下目标插槽空白模块：</block>
@@ -7129,7 +7111,6 @@ SFP+(目标/启动程序)</block>
   <block id="ed3f8b7cf16a504e6873c49f3ad8c721" category="list-text">找到要在更换用的控制器模块中安装DIMM的插槽。</block>
   <block id="3874bbf004c50eed71c2b06f7ce4e648" category="list-text">Repeat these steps for the remaining DIMMs.关闭主板通风管。</block>
   <block id="d20809d05af81f52d71c6d3d4f4fe771" category="list-text">由于启动设备位于安装在系统背面的系统管理模块上、因此在更换控制器模块时无需移动启动设备。</block>
-  <block id="c78805aa63e8c47c7cae0cdebcc54f64" category="list-text">您必须始终将控制器的控制台输出捕获到文本日志文件中。</block>
   <block id="f9d9eff2772e16e9135d964e4533138c" category="list-text">如果您的存储系统配置了加密、则必须使用以下过程还原存储或卷加密功能以重新启动系统：</block>
   <block id="c380f4d06afd36dcee7654a86545b95b" category="list-text">引导至菜单并运行选项10</block>
   <block id="1cd2c681f4d255665595108ab57cef94" category="list-text">输入密码短语并备份数据，然后执行正常启动请参阅。<block ref="1ab4828979a21de09829a9c51e95a6df" category="inline-link-rx"></block></block>
@@ -9112,7 +9093,6 @@ SFP+(目标/启动程序)</block>
   <block id="0f4c05d658aace7b29b5ea53d3fa4cf2" category="list-text">所有磁盘架都必须正常工作。</block>
   <block id="34f0c52d74ac2c621ab6284425793c19" category="list-text">您必须将控制器更换为相同型号类型的控制器。您不能仅通过更换控制器来升级系统。</block>
   <block id="f66467941a18b4f0a908d26d19b031ae" category="list-text">在此过程中、您不能更改任何驱动器或磁盘架。</block>
-  <block id="11f1efcf5793dbf6efc77f8d776228ce" category="paragraph">此控制台输出记录了可用于解决更换过程中可能遇到的问题的过程。</block>
   <block id="c5977cf82bd57f5e5245e58d04c5be10" category="list-text">请务必将此过程中的命令应用于正确的控制器：</block>
   <block id="057fbac6858b356c70e8500db3bd9f68" category="paragraph">您必须验证<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block>控制器的状态、并在必要时更新此状态以匹配存储系统配置。</block>
   <block id="cc4a4c0fdb2dd603766bf674e02390ba" category="list-text">启动至维护模式：</block>
@@ -9338,8 +9318,6 @@ SFP+(目标/启动程序)</block>
   <block id="04fca3f1f2d55aeb84370ab3e66d9214" category="list-text">使用缆线将控制器B端口e4b连接到集群网络交换机B</block>
   <block id="044628848918241f36841cbeb4d4dc4e" category="admonition">集群互连流量和HA流量共享相同的物理端口(位于插槽4中的I/O模块上)。端口为1025 GbE。</block>
   <block id="9d14c26ccbbb0d65a3b5d05e2013404b" category="paragraph">*1025 GbE集群/HA互连缆线*</block>
-  <block id="3488ff918c31f4a57e74bbab6ef9bcc9" category="inline-image-macro">使用一个25GbE IO模块的2020交换集群布线图</block>
-  <block id="ae3bd4fc66b4084d0dc856b5f0230d72" category="paragraph"><block ref="ae3bd4fc66b4084d0dc856b5f0230d72" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7f99cbc2aa28ab9fed6e99fa94242b4a" category="section-title">第2步：为主机网络连接布线</block>
   <block id="8246042d23ca859d83185957ac9c4044" category="paragraph">在每个控制器上、使用缆线将端口e2b和e4b连接到以太网主机网络交换机。</block>
   <block id="e827a0600a7ebd00f36ea855012f66a1" category="admonition">插槽2和4中I/O模块上的端口为40/100 GbE (主机连接为40/100 GbE)。</block>
@@ -10501,7 +10479,6 @@ SFP+(目标/启动程序)</block>
   <block id="587bed5e1b1013acb3b0cad78e0dc97f" category="inline-image-macro">使用一个100GbE IO模块的FAS50交换集群布线图</block>
   <block id="5af61e2d32561bdfd725b4ff1abad33d" category="paragraph"><block ref="5af61e2d32561bdfd725b4ff1abad33d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="30116aad52f0bad698fa0cb2a523a7d2" category="example-title">带有一个4端口1025 GbE I/O模块的FAS50</block>
-  <block id="83ed0059cf7b8565a69e40d218194766" category="image-alt">使用缆线将FAS50连接到10/C5GbE以太网主机网络交换机</block>
   <block id="97999a10174c7270f80d69a61f881c34" category="example-title">具有一个4端口64 Gb/秒FC I/O模块的FAS50</block>
   <block id="4af0635b9b0fa01d90348d64d44ac5a7" category="paragraph">以下过程显示了如何使用缆线将控制器连接到一个或两个DS460C磁盘架。</block>
   <block id="0d4ae2c19fb1eec9c73a9ba31cf7b80f" category="list-text">布线示例显示了DS460C磁盘架；但是，还支持其他SAS磁盘架，请参见<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
@@ -10569,7 +10546,6 @@ SFP+(目标/启动程序)</block>
   <block id="58a7a102daa03629c6548f4b567a8bdc" category="sidebar">FAS50 I/O模块</block>
   <block id="42ce83dc3f5ef22d986311b267a5ac20" category="section-title">2025年4月</block>
   <block id="a574039687c6d52e2a17e47affbc4d8d" category="list-text">如果启用了AutoSupport 、则通过调用AutoSupport 消息禁止自动创建案例：</block>
-  <block id="5c40960208a7535beecf44f84d10cea9" category="paragraph"><block ref="fa00b95aa82b5506a4c27cc4a50f05d7" prefix="" category="inline-code"></block></block>
   <block id="2a9205137f8a0ec57be25e6b19b96284" category="paragraph">以下AutoSupport 消息禁止自动创建案例两小时：</block>
   <block id="cd080b2ac496489acb1e57ed7c6444c6" category="paragraph"><block ref="387708b955ccf034fcf9197ad51ba879" prefix="" category="inline-code"></block></block>
   <block id="b452c4bf6d6344fb288a06006598685e" category="paragraph"><block ref="f454cdc7efb7d9bfad8109c4264a3a1b" prefix="" category="inline-code"></block></block>
@@ -10581,7 +10557,6 @@ SFP+(目标/启动程序)</block>
   <block id="83057bdb135cca58f0756be73b3fe4f0" category="paragraph">HA状态的值可以是以下值之一：</block>
   <block id="b0e2306e9f0b1db26beda9207b643adc" category="list-text">您必须确认已配置MetroCluster配置状态、并且节点处于启用和正常状态：</block>
   <block id="ecada3140a47012aab89f14c63ba9190" category="paragraph"><block ref="4d06f3844212ac745a73965bbb3f6e51" prefix="" category="inline-code"></block></block>
-  <block id="f045de31e6ca5c44bdd82fc2b4ea9e53" category="paragraph"><block ref="fbcb7868c4849064439910664677cb60" prefix="" category="inline-code"></block></block>
   <block id="b56b78769068ef30879ff862bf0d7d58" category="paragraph"><block ref="6cf51b10a85b7bdc2a6698400ee841b7" prefix="" category="inline-code"></block></block>
   <block id="5f54996be1665b2f88bba84f87a93569" category="paragraph">使用控制器通风管上的FRU示意图找到DIMM插槽。</block>
   <block id="7d0097234d19020f58b7650559edaf2b" category="section-title">步骤2：更换NVRAM模块或NVRAM DIMM</block>
@@ -10652,8 +10627,6 @@ SFP+(目标/启动程序)</block>
   <block id="11695514a878032b3fb5ecdf5e659b5b" category="paragraph">如果在此处未看到您的配置、请访问<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>以获取全面的配置和插槽优先级信息、以便为存储系统布线。</block>
   <block id="2e169c8e6f4cc1f6315545b46d7284a2" category="inline-image-macro">64 Gb光纤信道电缆</block>
   <block id="0bf370304560205688213d22ba637c07" category="paragraph"><block ref="0bf370304560205688213d22ba637c07" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="beb0d5517240a78e9a0d820d0cc72901" category="cell">对象.2+</block>
-  <block id="41808d27e9d2aded3d4e7b4d381cd4f6" category="paragraph">X66240-2 (112-00573)、2米.3+</block>
   <block id="610784c65e00a7160be578b24e829e1f" category="inline-image-macro">控制器1布线</block>
   <block id="fb1a92a9f3466626feb9c8b39fc2f15a" category="paragraph"><block ref="fb1a92a9f3466626feb9c8b39fc2f15a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4aee1879aa42ff92e3eacf5873fbb5d4" category="inline-image-macro">控制器2布线</block>
@@ -11319,7 +11292,6 @@ SFP+(目标/启动程序)</block>
   <block id="4db3443ca8b7e077da6fda74143b5d12" category="sidebar">多路径 HA</block>
   <block id="98a06331c5019fee7c2bec76b5d289fb" category="sidebar">四路径 HA</block>
   <block id="fd00151c44420f6f79e4b58679a95624" category="sidebar">DS212C、DS224C 或 DS460C 机架维护</block>
-  <block id="445dfd5b6a6cefa8cddbd35f02b84b3f" category="list-text">验证受损控制器上的 e0M（扳手）端口是否已连接且没有故障。</block>
   <block id="28ee83acca422d1018aa8c24fc45a4ae" category="paragraph">e0M 端口用于在自动启动恢复过程中在两个控制器之间进行通信。</block>
   <block id="6dcd1ebf4390170868ab9bcdfd967581" category="list-text">输入以下命令：</block>
   <block id="fafdccda6cda9f9e3734c54d6282a4a7" category="list-text">进入<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block>当您看到提示“您想继续吗？”</block>
@@ -11439,7 +11411,6 @@ SFP+(目标/启动程序)</block>
   <block id="d3db264d9eacbc28b1e95a3db2488f15" category="summary">如果检测到过多可纠正或不可纠正的内存错误，请更换AFF C30 或AFF C60 存储系统中的 DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损的控制器、将其移除、更换 DIMM、重新安装控制器，然后将故障部件返回给NetApp。</block>
   <block id="e64c35566f4192910fd96255b2ce6829" category="summary">当驱动器出现故障或需要升级时，请更换AFF C30 或AFF C60 存储系统中的驱动器。更换过程包括识别故障驱动器、安全移除它以及安装新驱动器以确保持续的数据访问和系统性能。</block>
   <block id="30039d681358f47535e9dc792b85b7ff" category="summary">当风扇出现故障或无法有效运行时，请更换AFF C30 或AFF C60 存储系统中的风扇模块，因为这会影响系统冷却和整体性能。更换过程包括关闭控制器、移除控制器、更换风扇、重新安装控制器以及将故障部件退回给NetApp。</block>
-  <block id="d8a896f9e037be6fb6681599c6a8aa8c" category="summary">向您的AFF C30 或AFF C60 存储系统添加 I/O 模块，以增强网络连接并扩展系统处理数据流量的能力。</block>
   <block id="9b18885feab6818399cdcd5895dc6c4c" category="summary">当模块出现故障或需要升级以支持更高性能或附加功能时，请更换AFF C30 或AFF C60 存储系统中的 I/O 模块。更换过程包括关闭控制器、更换故障的 I/O 模块、重新启动控制器，以及将故障部件退回NetApp。</block>
   <block id="c76ddb32b3eb44ec7a4a9ee7f5667f81" category="summary">当电池开始失去电量或出现故障时，请更换AFF C30 或AFF C60 存储系统中的 NV 电池，因为它负责在停电期间保存关键系统数据。更换过程包括关闭受损的控制器、移除控制器模块、更换 NV 电池、重新安装控制器模块以及将故障部件退回给NetApp。</block>
   <block id="27fb3d3ae019d8ba63f63d1bd7545c44" category="summary">当AFF C30 或AFF C60 存储系统中的交流或直流电源装置 (PSU) 发生故障或故障时，请更换该装置，以确保系统继续接收稳定运行所需的电力。更换过程包括将故障的 PSU 与电源断开、拔下电源线、更换故障的 PSU，然后将其重新连接到电源。</block>
@@ -11832,7 +11803,6 @@ SFP+(目标/启动程序)</block>
   <block id="a9f25df7e08b579215eb3375343eb3a5" category="paragraph">在更换FAS8300或FAS8700中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否拥有正确的替换启动介质、确认受损控制器上的 e0S（e0M 扳手）端口没有故障，以及确定是否启用了板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。</block>
   <block id="be767870bb556c204155138a2ea3ad9f" category="summary">在更换FAS8300和FAS8700系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您拥有具有适当存储容量的 USB 闪存驱动器，并验证您拥有正确的替换启动设备。</block>
   <block id="cc2c652dd46d9b43caba43e56578d8fc" category="doc">手动启动介质恢复的要求 - FAS8300 和 FAS8700</block>
-  <block id="00211911b2ba513521720fdc3f5c8683" category="paragraph">在更换FAS8300或FAS8700系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您拥有具有适当存储容量的 USB 闪存驱动器，并验证您拥有正确的替换启动设备。</block>
   <block id="65899bfeb0f4080d023f5b76933df62a" category="summary">开始更换FAS8300或FAS8700存储系统中的启动介质，方法是查看更换要求、关闭控制器、更换启动介质、恢复启动介质上的映像并验证系统功能。</block>
   <block id="9c211242417a2d4e971c87e2f2ab93b0" category="doc">启动介质自动恢复工作流程 - FAS8300 和 FAS8700</block>
   <block id="c23c751e94afc93f18b1692d0c6f7466" category="paragraph">启动映像的自动恢复涉及系统自动识别并选择适当的启动菜单选项。它使用合作伙伴节点上的启动映像在FAS8300或FAS8700存储系统中的替换启动介质上重新安装ONTAP 。</block>
@@ -13250,8 +13220,6 @@ SFP+(目标/启动程序)</block>
   <block id="306709d67f2dec8b8ba6331b0da7011d" category="paragraph">ASA r2 系统提供统一的硬件和软件解决方案，可针对仅使用 SAN 的客户的需求创建简化的体验。<block ref="67383e616307465eca49426accf697dc" category="inline-link-macro-rx"></block> 。</block>
   <block id="277f3da1559e139922ed3989a9354148" category="paragraph">驱动器架专为NetApp AFF、AFX、 ASA和FAS系统设计，有助于提供您的数字化转型所需的性能、弹性和灵活性。</block>
   <block id="15098ffd77b0868f845cfc616f250a6b" category="list-text">适用于 AFX 系统的 NSX224 架子</block>
-  <block id="3cfc071da5a0fdf899bb147a25be0c08" category="list-text">如果启用了AutoSupport ，则通过调用AutoSupport消息命令来抑制自动创建案例：</block>
-  <block id="2a9c9df22f9538653501b32719999555" category="paragraph">以下AutoSupport命令可抑制自动案例创建两小时：</block>
   <block id="a5e0a9798bce38c0259a506f0fd1147d" category="list-text">从健康控制器的控制台禁用自动交还：</block>
   <block id="a9f9ae342279f5d338d3038ce3af820c" category="paragraph"><block ref="7b903d789523bfa1771a2f63b3523783" prefix="" category="inline-code"></block></block>
   <block id="506e005a43769e0aa9d2a519e91ac21a" category="paragraph"><block ref="5fd0741516e2bbd70fc3c26403444415" prefix="" category="inline-code"></block></block>
@@ -13669,8 +13637,6 @@ SFP+(目标/启动程序)</block>
   <block id="f2ea399faffde1f5e44ec5d36a46743b" category="list-text">理解本流程中使用的控制器术语：</block>
   <block id="fd9d57e205ad7278ee5e9d7da776e592" category="list-text">受损的控制器是指将被替换的控制器。</block>
   <block id="2a9c66dec8268e51da2f8aeefaacc47b" category="list-text">替换控制器是指替换故障控制器的新控制器。</block>
-  <block id="dfa9a1a987cae2ab54b634b23d17d07f" category="list-text">将控制器的控制台输出捕获到文本日志文件中。</block>
-  <block id="75eecc98c33af038783f7353a8c916ec" category="paragraph">这为解决更换过程中出现的任何问题提供了程序记录。</block>
   <block id="a3a951ff4647dbd0664ca7a8ea23ed07" category="paragraph">在系统恢复运行之前，请验证 HA 配置设置和磁盘列表。</block>
   <block id="04d87613fffde1c6cb2c90776f2d0c2a" category="list-text">如果控制器模块显示的系统状态与您的系统配置不匹配，请进行设置。<block ref="594c16ca0695f6665d7cf4971707adf6" prefix=" " category="inline-code"></block>控制器模块的状态：</block>
   <block id="b883881b0cd895a8decfc031e7c33695" category="list-text">确认适配器列出了所有磁盘的路径：<block ref="c41292f339fa0dd66d84b7c3a9eac054" prefix=" " category="inline-code"></block></block>
@@ -14967,7 +14933,6 @@ SFP+(目标/启动程序)</block>
   <block id="e34b47b2fc72c64c99406982ed952d64" category="summary">检查环境变量后，您必须完成特定于启用了 Onboard Key Manager、NetApp Storage Encryption 或 NetApp Volume Encryption 的系统的步骤。</block>
   <block id="6fea8dae69f912b0a722a051419e6ef1" category="summary">要完成 AFF C250 系统的控制器更换以完全运行，您必须恢复 NetApp 存储加密配置，为新控制器安装许可证，并将故障部件返回 NetApp。</block>
   <block id="15644129509c2584f7bffe491694e5c1" category="summary">将 I/O 模块添加到您的 AFF C30 或 AFF C60 存储系统，以增强网络连接并扩展系统处理数据流量的能力。</block>
-  <block id="72c9bdd2d54c242e898b2fcd4b5fbbe6" category="doc">添加 IO 模块 - AFF C30 和 AFF C60</block>
   <block id="dbd80ee306ba34928c51a4931c276537" category="summary">当 AFF C30 或 AFF C60 存储系统中的交流或直流电源装置发生故障或出现问题时，请进行更换，以确保系统持续获得稳定运行所需的电源。更换过程包括从电源断开故障电源装置，拔下电源线，更换故障电源装置，然后将其重新连接到电源。</block>
   <block id="71d361350ed28dfae001760251b6e988" category="summary">在 AFF C30 或 AFF C60 存储系统中更换实时时钟电池（通常称为纽扣电池），以确保依赖精确时间同步的服务和应用程序保持运行。</block>
   <block id="9c0259404d69f4d29b60fec70f11e02b" category="summary">当您的系统注册了越来越多的可更正纠错代码 (ECC) 时，您必须更换控制器模块中的 DIMM，否则会导致系统崩溃。</block>
@@ -15055,4 +15020,34 @@ SFP+(目标/启动程序)</block>
   <block id="21eb4ba3e07d5691bb2ca2aeeaea8fca" category="paragraph">将存储空间交还给受损的控制器，恢复自动交还，并结束 AutoSupport 维护窗口。</block>
   <block id="b0cf17c34e1e13a80699938c1fb9a3a1" category="list-text">从运行正常的控制器或集群管理提示符下，通过恢复其存储使控制器恢复正常运行：<block ref="30edaf7c9fa43c78aeaf4b8fabb7af1a" prefix=" " category="inline-code"></block></block>
   <block id="5a1c9794f830d65f2a212554cf798ab8" category="admonition">在关闭受损的 NSM 盖之前，请确保所有空 DIMM 插槽上的弹出器卡舌完全返回到锁定位置。</block>
+  <block id="66f72fed10eea65ffd47206a4c0e4a12" category="paragraph">NetApp 强烈建议您在使用的设备上启用控制台日志记录，并在执行此过程时执行以下操作：</block>
+  <block id="d60697e9ad2359c8b84595bbbf7b4dd1" category="list-text">在维护期间保持 AutoSupport 启用状态。这允许 NetApp 支持在发生问题时接收诊断信息。</block>
+  <block id="fb42fce84a1f5a648367e2e027a6c941" category="inline-link">如何配置 PuTTY 以优化与 ONTAP 系统的连接</block>
+  <block id="28d499572d8b4be2e6b17a164ce69bb7" category="list-text">为任何 CLI 会话启用会话日志记录。这将创建维护活动期间所有命令和系统输出的完整记录。有关如何启用会话日志记录的指导，请参见<block ref="969f6e4e41456399a13556dea44fc607" category="inline-link-rx"></block>。</block>
+  <block id="4b48b65f16187f40e68db0c4df7cb08a" category="inline-link">如何在计划维护窗口期间禁止自动创建案例</block>
+  <block id="ccbd6c8b93f413ab5d3cabde9555077b" category="paragraph">这可以防止在计划的维护时段内打开自动支持案例。最大抑制持续时间为 72 小时。如果维护提前完成，您可以通过调用带有 <block ref="f0f32d61e0cd2495dc3cf151e5af854d" prefix=" " category="inline-code"></block> 的 AutoSupport 消息来重新启用案例创建。有关详细信息，请参见 <block ref="103c5a3d17ace9358d9c20d8a69a4d2c" category="inline-link-rx"></block>。</block>
+  <block id="c2226ed1d066c6a94ef089cb63240788" category="list-text">确认受损控制器上的 e0S 接口（e0M 扳手端口）无故障。</block>
+  <block id="18a7044864206b80675dbf6c85b18b1d" category="list-text">确认受损控制器上的 e0S 接口（e0M wrench 端口）无故障。</block>
+  <block id="d691a1ea4819b7230086723af3ecd3a0" category="paragraph">2 端口 25 GbE RoCE QSFP28</block>
+  <block id="21df9f311f1f416a9e469b29179c8aa1" category="paragraph">Broadcom BES-53248 集群互连交换机支持带有 10/25 GbE 端口的 AFF/FAS 控制器。</block>
+  <block id="a9c7addc04fb05dcf8c26ea8c1d6e122" category="inline-image-macro">使用一个 25 GbE IO 模块的 a20 交换集群布线图</block>
+  <block id="31022f648a706591ff17bdcf7d2de430" category="paragraph"><block ref="31022f648a706591ff17bdcf7d2de430" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1b566031093c2862a24b61416128a899" category="list-text">使用 25 GbE 集群互连电缆将集群互连端口 e0c 连接到 e0c，e0d 连接到 e0d。</block>
+  <block id="88ed1058d08ec766642e8b39b6f34c94" category="admonition"><block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>主机网卡（Fibre Channel 或 25 GbE）的插槽优先级为插槽 2。但是，如果您同时拥有这两个卡，则 Fibre Channel 卡位于插槽 2 中，25 GbE 卡位于插槽 1 中（如下面的选项中所示）。如果您有外部机架，则存储卡位于插槽 1 中，这是唯一受支持的机架插槽。</block>
+  <block id="5835c21fa077803ab06f9ca055cffa02" category="open-title">选项 2：连接到 25 GbE 数据或主机网络</block>
+  <block id="f3009b83cc38372f17ed6158a021abe6" category="paragraph">控制器上的 25 GbE 端口连接到 25 GbE 数据或主机网络交换机。</block>
+  <block id="854f160935893031748d736c0d182855" category="paragraph">用于夹层卡的 16 Gb FC 或 25 GbE 电缆（取决于订单）</block>
+  <block id="65c598353c15f10a9eb14a722d053351" category="list-text">使用 25 GbE 集群互连电缆连接集群互连端口 e0c 至 e0c 和 e0d 至 e0d。</block>
+  <block id="85a6c0ec28664166f4a156353c8b037c" category="open-title">选项 2：连接到 25 GbE 数据或主机网络的电缆</block>
+  <block id="877ce8d6e2378f25eb1934d780634787" category="doc">添加 I/O 模块 - AFF C30 和 AFF C60</block>
+  <block id="0a3f2b72eb2ea0bdcd4dc118b1aae238" category="paragraph">将 I/O 模块添加到您的 AFF C30 或 AFF C60 存储系统，以增强网络连接并扩展系统处理数据流量的能力。您可以使用此过程将 I/O 模块作为计划升级添加到操作控制器，或在维护期间添加到受损的控制器。</block>
+  <block id="97607991c1dd6b608ef187243a963982" category="paragraph">您可以在 HA 对中的任何一个控制器上执行此过程，无论控制器当前是否正常工作或受损。由于无法将 I/O 模块添加到正在运行的控制器，因此必须在安装模块之前关闭目标控制器。HA 合作伙伴在流程过程中接管存储操作，以便客户能够继续使用数据。</block>
+  <block id="1e0843e40bafc397e75bea095831f620" category="list-text">如果目标控制器处于 *operational* （计划添加）状态，请按照所写的关闭步骤进行操作，将目标控制器视为该内容中的"受损"控制器。</block>
+  <block id="085d901dd9c5d889c883f7e54c4cfb71" category="list-text">如果目标控制器*受损*，请按照所写的关闭步骤操作。</block>
+  <block id="3cde15579201073e7ad07db8b2135498" category="section-title">步骤 1：关闭目标控制器模块</block>
+  <block id="43fb137870b7f187f8cab19a2c6819a1" category="paragraph">接管并关闭目标控制器模块，以便其 HA 合作伙伴在添加 I/O 模块时继续提供数据。链接的步骤将被关闭的控制器称为"受损"控制器；无论您是接管计划添加的操作控制器还是关闭已受损的控制器，都适用相同的步骤。</block>
+  <block id="5bb9eb7c6de6a5f45df6464218ff1cf1" category="image-alt">将 FAS50 连接到 10/25 GbE 以太网主机网络交换机的电缆</block>
+  <block id="9032ec2413add8bae5c7091ded2efd15" category="paragraph">使用 25 GbE 集群互连电缆将集群互连端口彼此连接</block>
+  <block id="ae50728003d401e456e4268de55cb82f" category="list-text"><block ref="22c13bbaef49007250d4766c3983eb52" category="inline-xref-macro-rx"></block></block>
+  <block id="c8319347335872bf1fd4bd3b782289bd" category="paragraph">在更换 FAS8300 或 FAS8700 系统中的启动介质之前，请确保您满足成功更换的必要要求。这包括验证您是否有正确的替换启动介质，确认受损控制器上的 e0S (e0M wrench) 端口没有故障，并确定是否已启用板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。</block>
 </blocks>
