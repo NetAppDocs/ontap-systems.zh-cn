@@ -1,7 +1,7 @@
 ---
 permalink: asa-r2-70-90/io-module-hotswap.html 
 sidebar: sidebar 
-keywords: asa a70, asa a90, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
+keywords: asa r2 a70, asa r2 a90, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
 summary: 如果模块发生故障并且存储系统满足所有 ONTAP 版本要求，则可以热插拔 ASA A70 或 ASA A90 存储系统中的以太网 I/O 模块。 
 ---
 = 热插拔 I/O 模块 - ASA A70 和 ASA A90

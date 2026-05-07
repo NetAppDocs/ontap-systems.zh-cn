@@ -1,7 +1,7 @@
 ---
 permalink: c80/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
-keywords: c80, restore and verify the system configuration, verify and set the ha state of the controller module 
+keywords: aff c80, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 确认控制器的HA配置在AFF C80存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。 
 ---
 = 还原并验证系统配置- AFF C80

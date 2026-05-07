@@ -1,7 +1,7 @@
 ---
 permalink: asa900/bootmedia-encryption-restore.html 
 sidebar: sidebar 
-keywords:  
+keywords: asa a900, post boot media replacement steps for okm, nse, and nve 
 summary: 检查环境变量后，您必须完成特定于启用了 Onboard Key Manager OKM、NetApp Storage Encryption NSE 或 NetApp Volume Encryption NVE 的系统的步骤。 
 ---
 = 恢复加密- ASA A900

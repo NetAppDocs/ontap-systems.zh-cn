@@ -1,7 +1,7 @@
 ---
 permalink: fas9500/bootmedia-encryption-preshutdown-checks.html 
 sidebar: sidebar 
-keywords:  
+keywords: fas9500, pre-shutdown checks for onboard encryption keys 
 summary: 在关闭受损节点并检查板载加密密钥状态之前，您必须检查受损节点的状态，禁用自动交还并检查系统正在运行的 ONTAP 版本。 
 ---
 = 检查加密密钥支持和状态- FAS9500

@@ -1,7 +1,7 @@
 ---
 permalink: c80/nvram-replace.html 
 sidebar: sidebar 
-keywords: c80, replace an nvdimm 
+keywords: aff c80, replace nvram 
 summary: 'NVRAM模块由NVRAM12和DIMM以及每个NVRAM模块最多两个NVMe SSD闪存模块(Flash Cache或缓存模块)组成。' 
 ---
 = 更换NVRAM - AFF C80

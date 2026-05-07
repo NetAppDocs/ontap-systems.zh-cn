@@ -1,7 +1,7 @@
 ---
 permalink: a70-90/bootmedia-replace-workflow.html 
 sidebar: sidebar 
-keywords: aff a70, a90, replace the boot media 
+keywords: aff a70, aff a90, replace the boot media 
 summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装到AFF A70或AFF A90系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复并将系统恢复到正常运行状态。 
 ---
 = 启动介质手动恢复工作流程 - AFF A70和AFF A90
