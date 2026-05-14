@@ -15,8 +15,10 @@ indexpage:
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
   - title: 存储平台
     links:
-    - title: AFF 系统
-      url: "/aff-landing/index.html"
+    - title: AFF A系列系统
+      url: "/aff-aseries/index.html"
+    - title: AFF C系列系统
+      url: "/aff-cseries/index.html"
     - title: ASA 系统
       url: "/allsan-landing/index.html"
     - title: AFX 系统
