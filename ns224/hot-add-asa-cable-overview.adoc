@@ -1,0 +1,33 @@
+---
+permalink: ns224/hot-add-asa-cable-overview.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, asa systems, cable 
+summary: 将 NS224 机架连接到 ASA 系统，以提供双路径连接，确保 HA 对的存储冗余和高可用性。 
+---
+= 将 NS224 架连接到您的 ASA 系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+将 NS224 机架连接到 ASA 系统，以提供双路径连接，确保 HA 对的存储冗余和高可用性。
+
+
+
+== ASA 系统布线概述
+
+电缆连接因 ASA 平台型号而异，因为每个系统具有独特的端口分配和 I/O 模块配置。
+
+在热添加布线过程中，将每个 NS224 机架连接到 HA 对中的两个控制器：
+
+* 每个盘架 NSM 模块连接到每个控制器上的专用存储端口，每个盘架创建两个路径（一个通过 NSM A，一个通过 NSM B）。
+* 这种双路径配置提供存储冗余，并确保在单个路径失败时继续访问数据。
+* 电缆从机架 NSM e0a/e0b 端口（NSM100）或 e1a/e1b 端口（NSM100B）连接到控制器上支持 RoCE 的存储端口。
+
+
+
+
+== 其他资源
+
+您的硬件系统可能与带有 NSM100 模块的 NS224 盘架和带有 NSM100B 模块的 NS224 盘架兼容。有关全面的端口名称和配置详细信息，请参见 https://hwu.netapp.com["NetApp Hardware Universe"^]。

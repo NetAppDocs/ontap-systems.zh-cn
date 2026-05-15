@@ -1,0 +1,44 @@
+---
+permalink: ns224/hot-add-aff-requirements.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff systems, requirement 
+summary: 在将 NS224 磁盘架热添加到 AFF 系统之前，请查看要求和最佳实践。 
+---
+= 将 NS224 磁盘架热添加到 AFF 系统的要求和最佳实践
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在热添加 NS224 磁盘架之前，请验证您的 AFF 系统是否符合 ONTAP 版本、磁盘架容量和布线要求。查看固件和配置最佳实践，以确保热添加过程成功完成且没有错误。
+
+
+
+== 要求
+
+要热添加 NS224 磁盘架，您的 HA 对必须符合以下要求。
+
+支持的 ONTAP 版本:: 您的平台型号和 ONTAP 版本必须支持您正在热添加的 NS224 磁盘架和驱动器。请参阅 https://hwu.netapp.com["NetApp Hardware Universe"^]。
+货架数量:: 您的 HA 对必须至少支持一个超出当前安装数量的额外磁盘架。热添加磁盘架后，您不能超过 HA 对支持的最大磁盘架数。请参阅 https://hwu.netapp.com["NetApp Hardware Universe"^]。
+布线:: 您必须具有正确的电缆数量和类型来连接磁盘架。如果要将磁盘架热添加到已具有 NS224 磁盘架的 HA 对，则必须将 HA 对连接为多路径 HA，并且没有存储布线错误。
++
+--
+运行 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]以查看任何存储布线错误消息和纠正措施。有关电缆要求，请参阅 https://hwu.netapp.com["NetApp Hardware Universe"^]。
+
+--
+
+
+
+
+== 最佳实践
+
+在热添加NS224磁盘架之前、请熟悉以下最佳实践。
+
+磁盘认证包:: 在热添加磁盘架之前，请安装当前版本的 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware/download/DISKQUAL/ALL/qual_devices.zip["磁盘认证包"^]。安装当前的 DQP 允许您的系统识别和使用新的合格驱动器，防止有关非当前驱动器信息的系统事件消息，并避免由无法识别的驱动器引起的驱动器分区故障。DQP 还会通知您非当前驱动器固件。
+Active IQ Config Advisor:: 在热添加机架 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]之前和之后运行。在热添加之前运行它可提供现有机架以太网连接的快照，验证 NSM 固件版本，并识别已在使用的任何机架 ID。在热添加后运行它会验证机架是否已正确连接电缆，并且机架 ID 在 HA 对中是唯一的。
+NSM 和驱动器固件:: 在添加新盘架之前，请在您的存储系统上安装当前版本的 https://mysupport.netapp.com/site/downloads/firmware/disk-shelf-firmware["NVMe磁盘架模块(NSM)固件"^]和 https://mysupport.netapp.com/site/downloads/firmware/disk-drive-firmware["驱动器固件"^]。请勿将固件还原为不支持您的盘架及其组件的版本。
+
+
+.下一步行动
+在查看要求后，link:hot-add-aff-prepare.html["准备热添加您的磁盘架"]。

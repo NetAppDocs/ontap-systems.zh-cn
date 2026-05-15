@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+.关于此任务
+从平台机箱背面看，左侧支持 RoCE 的卡端口为端口 "A" （ e1a ），右侧端口为端口 "b" （ e1b ）。
+
+.步骤
+. 为磁盘架连接布线：
++
+.. 使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 1 端口 A （ e1a ）。
+.. 使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 1 端口 b （ e1b ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 1 端口 A （ e1a ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 1 端口 b （ e1b ）。+ 下图显示了完成后的磁盘架布线。
++
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为具有一个NS224磁盘架和一组端口的FAS500f AFF A250或AFF C250布线]
+
+
+
+. 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
+

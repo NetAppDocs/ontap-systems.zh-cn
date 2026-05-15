@@ -1,0 +1,132 @@
+---
+permalink: ns224/hot-add-aff-prepare-a800-c800.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff systems, preparation, roce, aff a800, aff c800 
+summary: 通过安装支持 RoCE 的 PCIe 卡、配置端口、重新连接现有盘架和禁用自动驱动器分配，准备 AFF A800 或 C800 系统以热添加 NS224 盘架。 
+---
+= 准备您的 AFF A800 或 C800 系统以热添加 NS224 磁盘架
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过确保有足够的支持 RoCE 的存储端口，配置它们以供存储使用，重新连接现有机架以实现插槽弹性，以及禁用自动驱动器分配，让您的 AFF A800 或 C800 系统热添加 NS224 机架。
+
+
+
+== 安装支持 RoCE 的 PCIe 卡
+
+如果您的系统支持使用支持 RoCE 的 PCIe 卡或 I/O 模块，则您的 HA 对必须具有足够的可用支持 RoCE 的以太网端口，以支持您正在热添加的磁盘架数量。
+
+.步骤
+. 对于要热添加的每个磁盘架、验证每个控制器上是否有两个支持RoCE的端口。
++
+这些端口可以位于控制器上、支持 RoCE 的 PCIe 卡上、两者的组合上，也可以位于系统支持的支持 RoCE 的 I/O 模块上。
+
+. 如果您的 HA 对没有足够的可用支持 RoCE 的端口，请根据系统支持将额外的 PCIe 卡或 I/O 模块安装到正确的控制器插槽中。
++
+.. 识别系统的正确控制器插槽。请参阅 https://hwu.netapp.com["NetApp Hardware Universe"^]。
+.. 有关 PCIe 卡或 I/O 模块的安装说明，请参阅系统文档。
+
+
+
+
+
+
+== 配置支持RoCE的端口以供存储使用
+
+在某些系统上，当您在支持的控制器插槽中安装支持 RoCE 的 PCIe 卡或 I/O 模块时，支持 RoCE 的端口会自动默认使用存储。但是，您应该完成此过程以验证端口配置正确以供存储使用。
+
+为存储使用配置非专用 RoCE 功能端口是一个无中断过程。除非其中一个或两个控制器都处于维护模式，否则无需重新启动控制器。此过程假定两个控制器均未处于维护模式。
+
+如果将来需要将端口从存储使用更改为网络使用，请使用命令  `storage port modify -node _node_name_ -port _port_name_ -mode network`。
+
+.步骤
+. 验证是否在每个控制器中安装了任何其他支持 RoCE 的 PCIe 卡或 I/O 模块。
+. 使用SSH或串行控制台端口登录到集群。
+. 通过输入命令 `storage port show`验证 HA 对中的非专用端口是否配置为用于存储。
++
+命令输出因您的 ONTAP 版本而异：
+
++
+** **ONTAP 9.8 或更高版本：** 配置为存储用途的非专用端口会在 `storage`列中显示 `Mode`。未配置为存储用途的端口会在 `network`列中显示 `Mode`。
+** **ONTAP 9.7：** 配置为存储用途的非专用端口在 `false`列中显示 `Is Dedicated?`，在 `enabled`列中显示 `State`。未配置为存储用途的端口在 `false`列中显示 `Is Dedicated?`，在 `disabled`列中显示 `State`。
+
+
+. 如果非专用端口配置为用于存储，则此过程已完成。否则，请完成以下步骤来配置端口。
+. 在其中一个控制器上配置存储使用的非专用端口。您必须为要配置的每个端口重复适用的命令。
++
+[cols="1,3"]
+|===
+| 如果 HA 对正在运行 ... | 使用的命令 
+
+
+ a| 
+ONTAP 9.8 或更高版本
+ a| 
+`storage port modify -node _node_name_ -port _port_name_ -mode storage`
+
+
+
+ a| 
+ONTAP 9.7
+ a| 
+`storage port enable -node _node_name_ -port _port_name_`
+
+|===
+. 对第二个控制器重复上述步骤。
+. 通过输入命令 `storage port show`验证两个控制器上的非专用端口是否已配置为存储使用。
++
+命令输出因您的 ONTAP 版本而异：
+
++
+** **ONTAP 9.8 或更高版本：** 配置为存储用途的非专用端口会在 `storage`列中显示 `Mode`。
+** **ONTAP 9.7：** 配置为存储用途的非专用端口在 `false` 列中显示 `Is Dedicated?`，在 `enabled` 列中显示 `State`。
+
+
+
+
+
+
+== 可重新对现有磁盘架进行配置
+
+将第二个托架热添加到 A800 或 C800 HA 对时，需要在每个控制器上的插槽 5 和插槽 3 的两组支持 RoCE 的端口上重新连接第一个托架。
+
+此过程假设现有机架已连接到每个控制器上插槽 5 中支持 RoCE 的 PCIe 卡。
+
+.步骤
+. 在每个控制器上的插槽 5 和插槽 3 中重新为第一个磁盘架连接两组支持 RoCE 的端口。
++
+.. 在控制器 A 上，将缆线从插槽 5 端口 b （ e5b ）移至插槽 3 端口 b （ e3b ）。
+.. 对控制器 B 重复相同的缆线移动操作
+
+
+. 使用验证重新布线的磁盘架是否已正确布线 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
+
+
+
+
+== 禁用自动驱动器分配
+
+如果您不确定是否应手动分配驱动器所有权，或者要了解存储系统的驱动器所有权策略的自动分配，请转至 https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html["关于磁盘所有权的自动分配"^]。
+
+.步骤
+. 验证是否已启用自动驱动器分配： `storage disk option show`
++
+您可以在任一节点上输入命令。
+
++
+如果启用了自动驱动器分配，输出将在每个节点的 `Auto Assign`列中显示 `on`。
+
+. 如果启用了自动驱动器分配，请将其禁用： `storage disk option modify -node _node_name_ -autodassign off`
++
+您必须在两个节点上禁用自动驱动器分配。
+
+
+
+.下一步行动
+转到 link:hot-add-aff-install.html["安装磁盘架"]。

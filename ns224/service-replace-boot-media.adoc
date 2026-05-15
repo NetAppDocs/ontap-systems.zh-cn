@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ns224, shelves, shelf, ns224 shelves, boot, media, run, ontap, nvme, module, nsm, firmware, version, nondisruptive, io 
 summary: 您可以更换NS224磁盘架中发生故障的启动介质。Replacing the boot media can be done nondisruptively, while the drive shelf is powered on, and I/O is in progress. 
 ---
-= Replace the boot media - NS224 shelves
+= 更换 NS224 启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

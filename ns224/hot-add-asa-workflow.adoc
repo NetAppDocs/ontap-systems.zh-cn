@@ -1,0 +1,39 @@
+---
+permalink: ns224/hot-add-asa-workflow.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, asa systems, workflow 
+summary: 按照以下工作流程步骤将 NS224 磁盘架热添加到您的 ASA 系统中。 
+---
+= 将 NS224 磁盘架热添加到您的 ASA 系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+按照以下工作流程步骤将 NS224 磁盘架热添加到您的 ASA 系统中。
+
+.开始之前
+* 此过程仅适用于直连存储。要查看交换机连接存储的说明，请查看 link:cable-as-switch-attached.html["交换机连接的布线指南"]。
+* 要热添加 NS224 磁盘架，您的 HA 对必须满足某些要求。查看 link:hot-add-asa-requirements.html["热添加要求和最佳实践"]。
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:hot-add-asa-requirements.html["查看热添加要求"]
+[role="quick-margin-para"]
+验证您的 ASA 系统是否满足热添加 NS224 磁盘架的要求，包括 ONTAP 版本支持、磁盘架数量和布线要求。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:hot-add-asa-prepare.html["准备热添加磁盘架"]
+[role="quick-margin-para"]
+根据您的平台型号、您可能需要安装其他支持RoCE的PCIe卡或I/O模块、配置非专用的支持RoCE的以太网端口以供存储使用、跨不同插槽中的两组端口重新对现有磁盘架进行插槽故障恢复能力、 如果要手动分配驱动器所有权、请禁用自动驱动器分配。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:hot-add-asa-install.html["安装磁盘架"]
+[role="quick-margin-para"]
+安装磁盘架的导轨套件，将磁盘架安装并固定在电信机架或机柜中，连接电源线为磁盘架供电，并分配唯一的磁盘架 ID，以确保磁盘架在 HA 对中是独一无二的。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:hot-add-asa-cable-overview.html["为磁盘架布线"]
+[role="quick-margin-para"]
+为要热添加的磁盘架布线、使其与HA对中的每个控制器具有两个连接。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五个"]link:hot-add-asa-complete.html["完成热添加"]
+[role="quick-margin-para"]
+如果在准备热添加时禁用了自动驱动器分配、则需要手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。

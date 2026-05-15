@@ -1,0 +1,40 @@
+---
+permalink: ns224/hot-add-asa-cable-a250.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, asa a250, cable 
+summary: 将 NS224 机架连接到 ASA A250 系统，以便每个机架与 HA 对中的每个控制器有两个连接。 
+---
+= 将 NS224 架连接到您的 ASA A250 系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+将 NS224 机架连接到 ASA A250 系统，以便每个机架与 HA 对中的每个控制器有两个连接。
+
+.关于此任务
+从平台机箱背面看，左侧支持 RoCE 的卡端口为端口 "A" （ e1a ），右侧端口为端口 "b" （ e1b ）。
+
+.步骤
+. 为磁盘架连接布线：
++
+.. 使用缆线将磁盘架 NSM A 端口 e0a 连接到控制器 A 插槽 1 端口 A （ e1a ）。
+.. 使用缆线将磁盘架 NSM A 端口 e0b 连接到控制器 B 插槽 1 端口 b （ e1b ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0a 连接到控制器 B 插槽 1 端口 A （ e1a ）。
+.. 使用缆线将磁盘架 NSM B 端口 e0b 连接到控制器 A 插槽 1 端口 b （ e1b ）。+ 下图显示了完成后的磁盘架布线。
++
+image::../media/drw_ns224_a250_c250_f500f_1shelf_ieops-1824.svg[为AFF具有一个NS224磁盘架和一组ASA A250卡端口的PCI/PCIE C250或FAS500f布线]
+
+
+
+. 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
+
+
+.下一步行动
+如果在此过程的准备过程中禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后在需要时重新启用自动驱动器分配。转到 link:hot-add-asa-complete.html["完成热添加"]。
+
+否则、您将完成热添加磁盘架过程。

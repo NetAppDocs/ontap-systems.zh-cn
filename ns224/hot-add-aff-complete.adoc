@@ -1,0 +1,35 @@
+---
+permalink: ns224/hot-add-aff-complete.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff systems, complete, drive 
+summary: 如果已禁用自动驱动器分配，请手动分配驱动器所有权，并重新启用 AFF 系统的自动驱动器分配。 
+---
+= 为您的 AFF 系统完成 NS224 磁盘架热添加
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果在准备NS224磁盘架热添加过程中禁用了自动驱动器分配、则需要手动分配驱动器所有权、然后根据需要重新启用自动驱动器分配。
+
+.开始之前
+您必须已按照 HA 对的指示对磁盘架进行布线。
+
+.步骤
+. 显示所有未分配的驱动器： `storage disk show -container-type unassigned`
++
+您可以在任一控制器上输入命令。
+
+. 分配每个驱动器： `s存储磁盘 assign -disk _disk_name_ -owner _owner_name_`
++
+您可以在任一控制器上输入命令。
+
++
+您可以使用通配符一次分配多个驱动器。
+
+. 如果需要，请重新启用自动驱动器分配： `storage disk option modify -node _node_name_ -autodassign on`
++
+您必须在两个控制器上重新启用自动驱动器分配。
+
+

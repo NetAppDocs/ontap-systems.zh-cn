@@ -1,0 +1,19 @@
+= 
+:allow-uri-read: 
+
+
+如果您不确定是否应手动分配驱动器所有权，或者要了解存储系统的驱动器所有权策略的自动分配，请转至 https://docs.netapp.com/us-en/ontap/disks-aggregates/disk-autoassignment-policy-concept.html["关于磁盘所有权的自动分配"^]。
+
+.步骤
+. 验证是否已启用自动驱动器分配： `storage disk option show`
++
+您可以在任一节点上输入命令。
+
++
+如果启用了自动驱动器分配，输出将在每个节点的 `Auto Assign`列中显示 `on`。
+
+. 如果启用了自动驱动器分配，请将其禁用： `storage disk option modify -node _node_name_ -autodassign off`
++
+您必须在两个节点上禁用自动驱动器分配。
+
+

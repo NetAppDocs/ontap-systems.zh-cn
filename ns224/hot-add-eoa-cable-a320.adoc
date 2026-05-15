@@ -1,0 +1,39 @@
+---
+permalink: ns224/hot-add-eoa-cable-a320.html 
+sidebar: sidebar 
+keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, aff a320, cable, end-of-availability 
+summary: 将 NS224 磁盘架连接到 AFF A320 系统，以便每个磁盘架与 HA 对中的每个控制器有两个连接。 
+---
+= 将 NS224 磁盘架连接到您的 AFF A320 系统
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+将 NS224 磁盘架连接到 AFF A320 系统，以便每个磁盘架与 HA 对中的每个控制器有两个连接。
+
+如果需要更多存储、您可以向现有HA对热添加第二个磁盘架。
+
+.步骤
+. 使用缆线将磁盘架连接到控制器。
++
+.. 使用缆线将 NSM A 端口 e0a 连接到控制器 A 端口 e0e 。
+.. 使用缆线将 NSM A 端口 e0b 连接到控制器 B 端口 e0b 。
+.. 使用缆线将 NSM B 端口 e0a 连接到控制器 B 端口 e0e 。
+.. 使用缆线将 NSM B 端口 e0b 连接到控制器 A 端口 e0b 。+ 下图显示了热添加磁盘架（磁盘架 2 ）的布线：
++
+image::../media/drw_ns224_a320_2shelves_direct_attached.png[为具有两个NS224磁盘架和三组板载端口的AFF A320布线]
+
+
+
+. 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
+
+
+.下一步行动
+如果在此过程的准备过程中禁用了自动驱动器分配，则需要手动分配驱动器所有权，然后在需要时重新启用自动驱动器分配。转到 link:hot-add-eoa-complete.html["完成热添加"]。
+
+否则、您将完成热添加磁盘架过程。

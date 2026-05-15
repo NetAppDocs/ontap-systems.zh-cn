@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+将第二个托架热添加到 A700 HA 对时，需要在每个控制器上的插槽 3 和插槽 7 的两组支持 RoCE 的端口上重新连接第一个托架。
+
+该程序假设现有机架已连接到每个控制器上插槽 3 中支持 RoCE 的 I/O 模块。
+
+.步骤
+. 在每个控制器上的插槽 3 和插槽 7 中重新为第一个磁盘架布线，连接两组支持 RoCE 的端口。
++
+.. 在控制器 A 上，将缆线从插槽 3 端口 b （ e3b ）移至插槽 7 端口 b （ e7b ）。
+.. 对控制器 B 重复相同的缆线移动操作
+
+
+. 使用验证重新布线的磁盘架是否已正确布线 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
+

@@ -1,0 +1,20 @@
+= 
+:allow-uri-read: 
+
+
+当您将第二个磁盘架热添加到 A30、C30、A50 或 C60 HA 对时，需要在每个控制器上的插槽 3 和插槽 1 中的具有 RoCE 功能的 I/O 模块上重新连接第一个磁盘架。
+
+该过程假设现有机架连接到每个控制器上插槽 3 中具有 RoCE 功能的 I/O 模块。
+
+.步骤
+. 将第一个机架重新连接到每个控制器上插槽 3 和插槽 1 中具有 RoCE 功能的 I/O 模块上。
++
+.. 在控制器 A 上，将电缆从插槽 3 端口 b (e3b) 移动到插槽 1 端口 b (e1b)。
+.. 对控制器 B 重复相同的缆线移动操作
+
+
+. 使用验证重新布线的磁盘架是否已正确布线 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
++
+如果生成任何布线错误，请按照提供的更正操作进行操作。
+
+

@@ -1,20 +1,9 @@
----
-permalink: ns224/install-hot-add-shelf.html 
-sidebar: sidebar 
-keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, install, hot-add an ns224 drive shelf 
-summary: 您可以在 HA 对满足特定要求后以及完成适用于 HA 对的准备任务后热添加 NS224 驱动器架。 
----
-= 为热添加—NS224磁盘架安装磁盘架
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
-
-[role="lead"]
-您需要在机柜或电信机架中安装NS224磁盘架、连接电源线(自动为磁盘架供电)并设置磁盘架ID。
 
 .开始之前
-* 请确保您的回形针一侧拉直或使用窄尖的圆珠笔。
+* 确保您有一个一端拉直的回形针或窄尖圆珠笔。
 +
 要更改磁盘架ID、请使用回形针或圆珠笔访问操作员显示面板(ODP)后面的磁盘架ID按钮以执行更改磁盘架ID步骤。
 
@@ -116,6 +105,3 @@ image::../media/icon_round_4.png[[插图编号4]
 
 
 
-
-.下一步是什么？
-为热添加磁盘架布线。转到。 link:cable-overview-hot-add-shelf.html["热添加布线概述"]
