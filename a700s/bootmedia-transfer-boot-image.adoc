@@ -1,7 +1,7 @@
 ---
 permalink: a700s/bootmedia-transfer-boot-image.html 
 sidebar: sidebar 
-keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, trasnfer, usb, flash, drive, transfer the boot image to the boot medai using a usb flash drive, manual, manual boot recovery 
+keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive, manual, manual boot recovery 
 summary: 使用辅助启动介质或 USB 闪存驱动器，将启动映像传输到AFF A700s系统上的替换启动介质。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
 = 将启动映像传输到启动介质— AFF A700s
@@ -11,17 +11,17 @@ summary: 使用辅助启动介质或 USB 闪存驱动器，将启动映像传输
 
 
 [role="lead"]
-使用辅助启动介质或 USB 闪存驱动器，将启动映像传输到AFF A700s系统上的替换启动介质。此过程包括从辅助启动介质上的映像进行恢复（作为主要方法），或者在辅助启动介质恢复失败或 image.tgz 文件丢失时使用 USB 闪存驱动器。
+使用辅助启动介质（主要方法）或 USB 闪存驱动器（如果辅助启动介质恢复失败或 `image.tgz`文件丢失）将启动映像传输到 AFF A700s 系统上的替换启动介质。
 
 AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 
 
 
-== 方案一：使用备份恢复功能从第二个启动介质传输文件
+== 选项 1：使用备份恢复从第二个启动介质传输系统映像
 
-您可以使用控制器模块中安装的第二个启动介质上的映像将系统映像安装到替代启动介质。这是将启动介质文件传输到控制器模块中具有两个启动介质的系统中的替代启动介质的主要方法。
+您可以使用控制器模块中第二个启动介质上的映像将系统映像安装到替换启动介质。这是控制器模块中具有两个启动介质的系统的主要方法。
 
-二级启动介质上的映像必须包含 `image.tgz` 文件，并且不能报告故障。如果缺少 image.tgz 文件或启动介质报告失败，则无法使用此操作步骤。您必须使用 USB 闪存驱动器替代操作步骤将启动映像传输到替代启动介质。
+辅助启动介质上的映像必须包含  `image.tgz` 文件，并且不得报告故障。如果  `image.tgz` 文件丢失或启动介质报告故障，则无法使用此过程。请改用 <<方案二：使用U盘传输启动镜像>>。
 
 .步骤
 . 如果您尚未接地，请正确接地。
@@ -88,10 +88,10 @@ image:../media/icon_round_2.png["标注编号2"]
 
 == 方案二：使用U盘传输启动镜像
 
-只有当二级启动介质还原失败或在二级启动介质上找不到 image.tgz 文件时，才应使用此操作步骤。
+仅当辅助启动介质还原失败或在辅助启动介质上未找到  `image.tgz` 文件时，才应使用此过程。
 
 * 您必须具有一个已格式化为 32 位的 USB 闪存驱动器，并且容量至少为 4 GB 。
-* 与受损控制器运行的 ONTAP 映像版本相同的副本。您可以从 NetApp 支持站点上的 "Downloads" 部分下载相应的映像
+* 与受损控制器正在运行的相同映像版本的 ONTAP 副本。您可以从 NetApp 支持站点的"下载"部分下载相应的映像。
 +
 ** 如果启用了 NVE ，请按照下载按钮中的指示，使用 NetApp 卷加密下载映像。
 ** 如果未启用 NVE ，请按照下载按钮中的指示，在不使用 NetApp 卷加密的情况下下载映像。
@@ -176,7 +176,7 @@ image:../media/icon_round_2.png["标注编号2"]
 *** `bootarg.bontery_keymanager <value>`
 
 
-.. 保存使用 `savenv` 命令更改的环境变量
+.. 保存使用  `savenv` 命令更改的环境变量。
 .. 使用 `printenv _variable-name_` 命令确认所做的更改。
 
 
@@ -195,12 +195,11 @@ image:../media/icon_round_2.png["标注编号2"]
 . 在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动控制器时按 `y` 。
 . 在高级权限级别的配对控制器中，使用上一步中记录的 IP 地址启动配置同步： `ssystem node restore-backup -node local -target-address _impaired_node_ip_address_`
 . 配置同步完成且无错误后，在系统提示确认备份操作步骤成功时按 `y` 。
-. 在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动控制器时按 `y` 。
 . 验证环境变量是否按预期设置。
 +
 .. 将控制器显示 LOADER 提示符。
 +
-在 ONTAP 提示符处，您可以对命令 "system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true" 执行问题描述 。
+在 ONTAP 提示符处，您可以对命令 `ssystem node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true` 执行问题描述。
 
 .. 使用 `printenv` 命令检查环境变量设置。
 .. 如果环境变量未按预期设置，请使用 `setenv _environment-variable-name____changed-value_` 命令对其进行修改。

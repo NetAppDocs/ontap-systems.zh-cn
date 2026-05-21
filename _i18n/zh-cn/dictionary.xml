@@ -758,10 +758,7 @@
   <block id="c58504da624719ce30aca73779ca7dbf" category="doc">还原并验证系统配置— AFF A700s</block>
   <block id="38378f74fe70c284e9945a43bfb092d1" category="section-title">第 1 步：在更换控制器后设置并验证系统时间</block>
   <block id="5c41efcd6cdac2bf93f02a8055089ed8" category="section-title">第 2 步：验证并设置机箱的 HA 状态</block>
-  <block id="3ceabec6c24f4b298d5024f17ef30a0b" category="summary">只有当二级启动介质还原失败或在二级启动介质上找不到 image.tgz 文件时，才应使用此操作步骤。</block>
   <block id="05dffff712f4aca6f86af6c7c42a9991" category="doc">将启动映像传输到启动介质— AFF A700s</block>
-  <block id="f2517f7437e31c22e8ebbe3208bc1f18" category="paragraph">您可以使用控制器模块中安装的第二个启动介质上的映像将系统映像安装到替代启动介质。这是将启动介质文件传输到控制器模块中具有两个启动介质的系统中的替代启动介质的主要方法。</block>
-  <block id="c74fc698f6085001fa8e634011afdd6d" category="paragraph">二级启动介质上的映像必须包含 `image.tgz` 文件，并且不能报告故障。如果缺少 image.tgz 文件或启动介质报告失败，则无法使用此操作步骤。您必须使用 USB 闪存驱动器替代操作步骤将启动映像传输到替代启动介质。</block>
   <block id="e698e87d27bc1a99a5f5b8d08fca35ac" category="list-text">重新安装缆线管理设备，并根据需要重新对系统进行布线。</block>
   <block id="e3c4a5c3fcb3f43b24292d74d0191cba" category="paragraph">重新布线时，如果已卸下介质转换器（ SFP ），请务必重新安装它们。</block>
   <block id="0c285136d46116873f7508d317da15c6" category="list-text">将控制器模块一直轻轻推入系统中，直到控制器模块锁定挂钩开始上升，用力推动锁定挂钩以完成控制器模块的就位，然后将锁定挂钩旋转到控制器模块上插脚上方的锁定位置。</block>
@@ -4497,7 +4494,6 @@
   <block id="e160675dcb2bc6ebdb28380884820e26" category="paragraph">当受损控制器显示 `Waiting for giveback...` 时，按 Ctrl-C ，然后回答 `y` 。</block>
   <block id="fc9b566637bbcf2a8a0459c61e065654" category="doc">关闭控制器 - AFF A700s</block>
   <block id="499f2b4faaecf09ce2df725ed89b18e0" category="list-text">在系统提示是否使用已还原的副本时，按 `y` ，然后在系统提示重新启动控制器时按 `y` 。</block>
-  <block id="018ed71ecc770af5fd2b70a8cffb7032" category="paragraph">在 ONTAP 提示符处，您可以对命令 "system node halt -skip-lif-migration-before-shutdown true -ignore-quorum-warnings true -inhibit-takeover true" 执行问题描述 。</block>
   <block id="6be69aa70f07d7fff388bde809e5a5ae" category="list-text">如果您的系统位于 HA 对中，则运行状况良好的控制器必须能够接管正在更换的控制器（在本操作步骤 中称为 "`受损节点` " ）。</block>
   <block id="7343fb79026ff743ff1923cdd971a19f" category="list-text">在此操作步骤 中，启动设备将从受损控制器移至 _replacement_ 节点，以便 _replacement_ 节点在与旧控制器模块相同版本的 ONTAP 中启动。</block>
   <block id="a555f92ceccdc34af0d85dfd74c70d5b" category="list-text">受损节点是指要更换的控制器。</block>
@@ -13149,9 +13145,7 @@ SFP+(目标/启动程序)</block>
   <block id="0d9cb84ca4d1b976611c703d55106b16" category="image-alt">更改NX224货架ID</block>
   <block id="c3248ba61632476b6423842b95414f99" category="paragraph">货架ID按钮访问</block>
   <block id="f6b50513ccb0458f52042b169361dd21" category="list-text">如果ONTAP正在运行（控制器可用于提供数据），并且机架中的所有驱动器都无人拥有、备用，则等待至少 180 秒。</block>
-  <block id="9daf77d9d23bfd6b9091a7cc689fc060" category="doc">热添加驱动器 - NX224 驱动器架</block>
   <block id="6297d133d06242a84ced78f25874e3a3" category="summary">在 AFX 集群满足特定要求并且适用于 AFX 集群的准备任务完成后，您可以热添加 NX224 驱动器架。</block>
-  <block id="21fcbf0345b3dd3b3ef04dc5e417d6f9" category="doc">热添加架子 - NX224 架子</block>
   <block id="a65fc212542af95abeff48e08e593cf1" category="paragraph">您可以通过将 NX224 架热添加到现有的 AFX 集群配置来扩展存储功能。</block>
   <block id="ea76371559e3b84b90531685bb2cc925" category="list-text">为热添加的架子布线后， ONTAP会识别该架子。如果需要，NSM 架子固件和驱动器固件应该自动更新。</block>
   <block id="0449258a59d5f091984e585ac1700de0" category="list-text">在热添加架子之前，请确保您已：</block>
@@ -13187,9 +13181,7 @@ SFP+(目标/启动程序)</block>
   <block id="c73a63da4aa2a55331dc580e3f7a6058" category="paragraph">下图突出显示了向交换机配置热添加附加架的布线。要添加额外的架子，请遵循相同的基于交换机的布线方法。</block>
   <block id="b05d02c2614c4a2d2b2a26a857851df5" category="image-alt">NX224 交换机布线至 AFX A1K</block>
   <block id="6556efde934a1b635008a5645f522b81" category="summary">NX224货架维护概述。</block>
-  <block id="aea5557e47a25549577bff88a217d584" category="doc">货架维护概述 - NX224货架</block>
   <block id="993a8298922e1e33c5d4cd26d00918db" category="paragraph">您可以采取以下措施来维护您的 NX224 机架：</block>
-  <block id="fd707bab34d37e3b52a981059bad8f48" category="doc">监控驱动器架 LED - NX224 架</block>
   <block id="25a6c9168ed620e1583de103c9a0feda" category="paragraph">您可以通过了解驱动器架组件上 LED 的位置和状态条件来监控架子的健康状况。</block>
   <block id="beab8079a8da60c183b5d6654c926a74" category="list-text">可以激活机架操作员显示面板 (ODP) 和两个 NVMe 机架模块 (NSM) 上的位置 (蓝色) LED，以帮助物理定位需要维修的机架：<block ref="d6bcc7ed2edc5b8ad7e7188bba8189eb" prefix=" " category="inline-code"></block></block>
   <block id="7162be5b0165c245b74c633ca80cf635" category="image-alt">NX224 NSM140 模块 LED</block>
@@ -13199,7 +13191,6 @@ SFP+(目标/启动程序)</block>
   <block id="5d6dfe5ed734a2782721caf18e0b4c2c" category="paragraph">PSU 没有交流电</block>
   <block id="bcf3b498a47e3fa766dac31a45cbe289" category="paragraph">交流电源已打开，但电源不在机柜内</block>
   <block id="025f8295430770e736e984e6794d5d23" category="summary">您可以更换 NX224 架中发生故障的启动介质。当机架已通电且 I/O 正在进行时，可以无中断地更换启动介质。</block>
-  <block id="332b9527a936c07781bf0cadb44287ea" category="doc">更换启动介质 - NX224 架</block>
   <block id="eb5f70737199e249936ef82aa6ae88c5" category="list-text">机架的合作伙伴 NSM 必须启动并运行，并且布线正确，以便当您移除具有故障 FRU（目标 NSM）的 NSM 时，机架能够保持连接。您可以通过以下方式验证合作伙伴 NSM 的状态<block ref="d3209ff29e83e82c4ec5003559161f56" category="inline-link-rx"></block>。</block>
   <block id="901f0035fc2e222a5f2556710312ea92" category="list-text">打开电源线固定器，然后从电源上拔下电源线，以断开电源线与电源的连接。</block>
   <block id="49c7a6cf6e0ed8a4a54247d9cd7587a2" category="list-text">将存储电缆重新连接到相同的八个 NSM 端口。</block>
@@ -13207,7 +13198,6 @@ SFP+(目标/启动程序)</block>
   <block id="3c562e952688339fa635b0286f963d4f" category="inline-link">运行Active IQ Config Advisor</block>
   <block id="1da3eefc08ef3fe26013bf7d8153fa76" category="list-text">验证 NSM 是否已正确连接，方法是<block ref="634f3ece8b47f8abdb5020d54bf495f5" category="inline-link-rx"></block>。</block>
   <block id="c9e888f57f6411c65b9b5e2979bef85d" category="summary">您可以在已打开电源且 I/O 正在进行的情况下无中断地更换 NX224 驱动器架中的故障 DIMM。</block>
-  <block id="475128cdfcd3d32fe12f61f1c5c81913" category="doc">更换 DIMM - NX224 托架</block>
   <block id="49386f77e99642fe7af5b51a113e488e" category="list-text">*最佳实践：*最佳实践是在更换 FRU 组件之前，在系统上安装最新版本的 NVMe 架模块 (NSM) 固件和驱动器固件。您可以访问NetApp支持网站<block ref="131f203722a665651ecdd6a35f72c75e" category="inline-link-rx"></block>和<block ref="33577154670f1ae7cae0968251dd0eac" category="inline-link-rx"></block> 。</block>
   <block id="cd8dd115df9bdca0ec5fbe812575893b" category="list-text">机架的合作伙伴 NSM 必须启动并运行，并且正确连接电缆，以便当您移除具有故障 FRU（目标 NSM）的 NSM 时，机架能够保持连接。您可以通过以下方式验证合作伙伴 NSM 的状态<block ref="d3209ff29e83e82c4ec5003559161f56" category="inline-link-rx"></block>。</block>
   <block id="6c1921d7df069dd1505980207b7ea2f4" category="list-text">系统中的所有其他组件（包括其他三个 DIMM）必须正常运行。</block>
@@ -13215,7 +13205,6 @@ SFP+(目标/启动程序)</block>
   <block id="c642de7f35cea37f108d6c93586ba109" category="inline-link">运行Config Advisor</block>
   <block id="0051f60b031fe2ab0d81803f9509c124" category="list-text">验证 NSM 是否已正确连接，方法是<block ref="a1776ed37448018544fe80631966bcd7" category="inline-link-rx"></block>。</block>
   <block id="275d34ff75df0b93dbba7bdb3db9f37c" category="summary">您可以在已打开电源且 I/O 正在进行的情况下无中断地更换 NX224 架中的故障驱动器。</block>
-  <block id="7a87bb303f4254003a5ab0d31a1ed9fb" category="doc">热插拔驱动器 - NX224 盘架</block>
   <block id="cf2ae209b31955517ebee51c6c982859" category="list-text">您正在安装的驱动器必须受 NX224 架支持。您可以在<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block>。</block>
   <block id="94f21a41afb0bb0d980e0970f99f7d57" category="inline-link">NetApp加密概述及 CLI 文档</block>
   <block id="8fa5eb38a5f3ec0d799934def134e531" category="paragraph">您可以在更换 SED 之前和之后查看必须完成的附加步骤<block ref="a45663e4b664b1d312b1973da8ba3d7f" category="inline-link-rx"></block>。</block>
@@ -13223,17 +13212,14 @@ SFP+(目标/启动程序)</block>
   <block id="7e2123141c266fa24d4f529172a4b541" category="list-text">*最佳实践：*确保您的系统能够识别并使用新合格的驱动器<block ref="3d50ed979df83d97dd20b0cc2c8bc3a9" category="inline-link-rx"></block>。</block>
   <block id="c9ebef258f2f12def066b21415a56382" category="paragraph">这可以避免出现有关驱动器信息不当前的系统事件消息以及由于无法识别驱动器而导致的驱动器分区阻止。  DQP 还会通知您非当前驱动器固件。</block>
   <block id="9552387a009f53c2998cb220cd16067e" category="summary">您可以在已打开电源且 I/O 正在进行的情况下无中断地更换 NX224 架中的故障风扇。</block>
-  <block id="57d682160e2237bd5f87944217c26dcf" category="doc">更换风扇模块 - NX224 架</block>
   <block id="89f2ef4ce5077162c93e2010696841ef" category="paragraph">如果风扇模块中的一个或两个风扇发生故障，您可以更换风扇模块。此过程可以在已打开电源且 I/O 正在进行的 NX224 架中无中断地完成。</block>
   <block id="392ec912e5e56a755ba6aec50131adae" category="list-text">*最佳实践：*最佳实践是在更换 FRU 组件之前在系统上安装最新版本的 NSM 固件和驱动器固件。您可以访问NetApp支持网站<block ref="131f203722a665651ecdd6a35f72c75e" category="inline-link-rx"></block>和<block ref="33577154670f1ae7cae0968251dd0eac" category="inline-link-rx"></block> 。</block>
   <block id="37a8affe1fa106032de554c062e9e1cd" category="list-text">断开架子电缆与 NSM 端口的连接。</block>
   <block id="df72294c1d47e46ba433ddee498c7caa" category="list-text">将架子电缆重新连接到相同的八个 NSM 端口。</block>
   <block id="795e5b2d8dd6ace5605e89211abdf341" category="summary">您可以在已打开电源的 NX224 架中以无中断方式更换发生故障的以太网 I/O 模块，并且 I/O 仍在进行中。</block>
-  <block id="56c6680038919ffea816b0106b2ef69f" category="doc">更换以太网 I/O 模块 - NX224 架</block>
   <block id="bcbb78790793c3b3a6c4cc3de0f22bc6" category="list-text">机架的合作伙伴 NSM 必须启动并运行，并且正确连接电缆，以便在您移除发生故障的 NSM 时机架能够保持连接。您可以通过以下方式验证合作伙伴 NSM 的状态<block ref="d3209ff29e83e82c4ec5003559161f56" category="inline-link-rx"></block>。</block>
   <block id="8b9a79e838c879494b6ec6a4dd9f83d7" category="list-text">重新连接 NSM：</block>
   <block id="2ddc2541950d2b7cf5fa865af0c30811" category="list-text">验证包含故障 I/O 模块和机架操作员显示面板的 NSM 上的注意（琥珀色）LED 不再亮起。</block>
-  <block id="868dffc494c85c09a39784a568ce58c4" category="doc">更换 NSM - NX224 架子</block>
   <block id="8caf14bc08677c718cf235d44b23051c" category="paragraph">您可以在已打开电源且 I/O 正在进行的情况下，无中断地更换受损的 NVMe 架模块 (NSM)。</block>
   <block id="1ca26d4850e86adaada89afb267eaf6f" category="list-text">更换 NSM 涉及将 DIMM、风扇、启动介质、I/O 模块和电源从受损的 NSM 移至更换的 NSM。</block>
   <block id="580caa7b67645719e0a4c78df2b4ea6a" category="paragraph">您不要移动实时时钟 (RTC) 电池。它已预先安装在替换的 NSM 中。</block>
@@ -13249,8 +13235,6 @@ SFP+(目标/启动程序)</block>
   <block id="5b1662852c865a6bd771638b5db9e862" category="list-text">用拇指按下电源上的陶土卡舌，以释放锁定机制。</block>
   <block id="1b4028b0424fade1bdb82356997b35c2" category="list-text">将电源手柄向下旋转，使其不妨碍正常操作。</block>
   <block id="c772043a43cbf70f178bc60e9c2bb650" category="summary">您可以在已打开电源且 I/O 正在进行的情况下无中断地更换 NX224 架中的故障电源。</block>
-  <block id="d50fc1b8ef2aa32e52f173d19ecc37c2" category="doc">热插拔电源 - NX224 搁架</block>
-  <block id="8cd7ffd76d7b4b46c49c984da4cc21cf" category="doc">更换实时时钟电池-NX224上架</block>
   <block id="504ce12704134674e6c4f4d48826e550" category="paragraph">您可以在已打开电源且 I/O 正在进行的情况下，无中断地更换发生故障的实时时钟 (RTC) 电池。</block>
   <block id="99dfa28920a40a7be0858c50f989a3e5" category="section-title">2025年10月</block>
   <block id="f48884bca72e8c9a2c859cce9d6c2275" category="section-title">AFX存储系统</block>
@@ -13997,8 +13981,6 @@ SFP+(目标/启动程序)</block>
   <block id="045d601ea55137d06367b4e5c07294cb" category="summary">在完成加密检查后，关闭AFF A700s系统上出现故障的控制器。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
   <block id="1cde608d6fe62f56bdc3a29ae9eafc3b" category="paragraph">在完成加密检查后，关闭AFF A700s系统上出现故障的控制器。此过程包括将控制器带到 LOADER 提示符，捕获启动环境变量以供参考，以及准备控制器以更换启动介质。</block>
   <block id="7ff709ab33d28508eabb142a3db7ae80" category="summary">使用辅助启动介质或 USB 闪存驱动器，将启动映像传输到AFF A700s系统上的替换启动介质。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
-  <block id="6827ba78ed93529d56c15a33eb4ff531" category="paragraph">使用辅助启动介质或 USB 闪存驱动器，将启动映像传输到AFF A700s系统上的替换启动介质。此过程包括从辅助启动介质上的映像进行恢复（作为主要方法），或者在辅助启动介质恢复失败或 image.tgz 文件丢失时使用 USB 闪存驱动器。</block>
-  <block id="b3e6f6b7e4e5a440cfc3f9e0993cee92" category="section-title">方案一：使用备份恢复功能从第二个启动介质传输文件</block>
   <block id="e4e6847403baa34b19d3eda275449b4b" category="section-title">方案二：使用U盘传输启动镜像</block>
   <block id="a9ada9881e4356b94c8f1b22d5de3285" category="summary">更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。AFF C190系统仅支持手动启动介质恢复程序。</block>
   <block id="16938aed6aaf31d064148061342cc4bf" category="paragraph">请按照套件随附的 RMA 说明中的描述，将故障部件退回给NetApp。参见<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block> 更多信息请参见页面。AFF C190系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。</block>
@@ -15138,4 +15120,28 @@ SFP+(目标/启动程序)</block>
   <block id="8d5e7895e7572495b322b60ec1134d14" category="sidebar">为 ASA 系统布线</block>
   <block id="91d95e6e15279946ba73922f805b7916" category="sidebar">EOA 系统</block>
   <block id="9d0dcbcd43b2c01863b0888b33784f20" category="sidebar">线缆停产系统</block>
+  <block id="63dd54bdbae041eaa0355a49c82ac7f1" category="paragraph">使用 BMC 消息或注意 LED 指示灯确定要更换的风扇模块。BMC 将风扇模块映射为 Fan#_#，其中第一个数字是插槽，第二个数字是行（1=顶部，2=底部）；例如，插槽 1，第二行 = Fan1_2。</block>
+  <block id="f6f03e6d93cc09c3d00cfa6485d8a770" category="paragraph">风扇模块稍微远离机箱。</block>
+  <block id="c06f099c5d6289bd8592143ef4a8371d" category="paragraph">注意 LED 在风扇就位并加速到运行速度后关闭。</block>
+  <block id="3c046249b91ec9e1b6e20b1dca03357b" category="paragraph">使用辅助启动介质（主要方法）或 USB 闪存驱动器（如果辅助启动介质恢复失败或<block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block>文件丢失）将启动映像传输到 AFF A700s 系统上的替换启动介质。</block>
+  <block id="1c8d763a92bd021dd060e8e7d9ac1731" category="section-title">选项 1：使用备份恢复从第二个启动介质传输系统映像</block>
+  <block id="d5a720bc38c4a4820ccca7cd1812ddeb" category="paragraph">您可以使用控制器模块中第二个启动介质上的映像将系统映像安装到替换启动介质。这是控制器模块中具有两个启动介质的系统的主要方法。</block>
+  <block id="2b749bec4e587e3e4467be27bd35ee54" category="paragraph">辅助启动介质上的映像必须包含 <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> 文件，并且不得报告故障。如果 <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> 文件丢失或启动介质报告故障，则无法使用此过程。请改用 <block ref="480fd3d07776d9101453634e69c396f9" category="inline-xref-macro-rx"></block>。</block>
+  <block id="7d4f9a8194d67a25499f31dd2c3c5474" category="paragraph">仅当辅助启动介质还原失败或在辅助启动介质上未找到 <block ref="c1317185516b20a37b064c5ed31cf719" prefix=" " category="inline-code"></block> 文件时，才应使用此过程。</block>
+  <block id="a5c386e3a25844e2b0970f41423bd18b" category="list-text">与受损控制器正在运行的相同映像版本的 ONTAP 副本。您可以从 NetApp 支持站点的"下载"部分下载相应的映像。</block>
+  <block id="b59e3c20d440ebde2a51c9f98270768b" category="list-text">保存使用 <block ref="c1a29cc79fbc441f23fa8d5d10961fd8" prefix=" " category="inline-code"></block> 命令更改的环境变量。</block>
+  <block id="746e6404fb3c214cba42a49e00f4cdbc" category="list-text">验证环境变量是否按预期设置。</block>
+  <block id="769810d91f37a33448f782804afe8b15" category="doc">更改 NX224 驱动器架 ID</block>
+  <block id="9462a81bfda8f9b77a3fb2f9e1f1d3fa" category="doc">将驱动器热添加到 NX224 磁盘架</block>
+  <block id="7a327b955d36fb9e8769c059837e905f" category="doc">将 NX224 托架热添加到 AFX 集群</block>
+  <block id="9cbcc0cd643835114561467f05ae3a12" category="doc">NX224 机架维护</block>
+  <block id="35ec49663bb0d725792ecfd7cdfd35d8" category="doc">监控 NX224 机架 LED 指示灯</block>
+  <block id="ff0b8412ab1e2c3c52a16bb8d94e3beb" category="doc">更换 NX224 机架中的启动介质</block>
+  <block id="cb0d0b8199238de6776631ac4982ab88" category="doc">更换 NX224 机架中的 DIMM</block>
+  <block id="8571f926f0e56c390aab9e784e5aa2a8" category="doc">在 NX224 机架中热插拔驱动器</block>
+  <block id="4f770573b4054149d0e3f5d188ae4e4f" category="doc">更换 NX224 机架中的风扇模块</block>
+  <block id="a2faab4698e67845fc0fbe185cc98fd9" category="doc">更换 NX224 机架中的以太网 I/O 模块</block>
+  <block id="8f58e61d50af420886f01cc38be3cf6a" category="doc">更换 NX224 机架中的 NSM</block>
+  <block id="5154a7eeeb6eb7c914e9aa6ac86007e6" category="doc">更换 NX224 机架中的电源</block>
+  <block id="7b0bd118308264295dfa730998f7251f" category="doc">更换 NX224 机架中的 RTC 电池</block>
 </blocks>

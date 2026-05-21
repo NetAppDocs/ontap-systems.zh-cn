@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: nx224, shelves, shelf, nx224 shelves, boot, media, run, ontap, nvme, module, nsm, firmware, version, nondisruptive, io 
 summary: 您可以更换 NX224 架中发生故障的启动介质。当机架已通电且 I/O 正在进行时，可以无中断地更换启动介质。 
 ---
-= 更换启动介质 - NX224 架
+= 更换 NX224 机架中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
