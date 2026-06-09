@@ -2,7 +2,7 @@
 permalink: fas8300/maintain-overview.html 
 sidebar: sidebar 
 keywords: fas8300 maintenance, maintenance, repairing, repairing fas8300, replace fas8300 components, replace fas8300 components 
-summary: 维护FAS8300和FAS8700硬件 
+summary: 维护FAS8300和FAS8700存储系统的硬件，以确保长期可靠性和最佳性能。定期执行维护任务（例如更换故障组件），有助于防止停机和数据丢失。 
 ---
 = 维护FAS9300和FAS4700硬件
 :allow-uri-read: 
@@ -54,7 +54,7 @@ link:chassis-replace-overview.html["机箱"]
 
 
  a| 
-link:controller-replace-overview.html["控制器"]
+link:controller-replace-workflow.html["控制器"]
  a| 
 控制器由主板，固件和软件组成。它控制驱动器并实现ONTAP功能。
 

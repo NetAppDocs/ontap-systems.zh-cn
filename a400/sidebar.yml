@@ -66,17 +66,19 @@ entries:
   - title: 控制器
     pdf-filename: AFF A400 控制器模块
     entries:
-    - title: 概述
-      url: "/a400/controller-replace-overview.html"
+    - title: 控制器更换工作流
+      url: "/a400/controller-replace-workflow.html"
+    - title: 查看要求
+      url: "/a400/controller-replace-requirements.html"
     - title: 关闭受损控制器
       url: "/a400/controller-replace-shutdown.html"
     - title: 更换控制器
       url: "/a400/controller-replace-move-hardware.html"
     - title: 还原系统配置
       url: "/a400/controller-replace-system-config-restore-and-verify.html"
-    - title: 可重新连接的系统
+    - title: 交还控制器
       url: "/a400/controller-replace-recable-reassign-disks.html"
-    - title: 完成系统还原
+    - title: 完成控制器更换
       url: "/a400/controller-replace-restore-system-rma.html"
   - title: DIMM
     pdf-filename: AFF A400 DIMM
@@ -88,7 +90,7 @@ entries:
     pdf-filename: AFF A400 NVDIMM 电池
     url: "/a400/nvdimm-battery-replace.html"
   - title: NVDIMM
-    pdf-filename: AFF A320 NVDIMM
+    pdf-filename: AFF A400 NVDIMM
     url: "/a400/nvdimm-replace.html"
   - title: PCIe 或夹层卡
     pdf-filename: AFF A400 PCIe 或夹层卡
