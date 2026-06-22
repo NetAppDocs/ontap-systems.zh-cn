@@ -47,7 +47,7 @@ CAUTION: 如果您尝试使用单路径连接热插拔磁盘架上的磁盘架IO
 +
 一个磁盘架具有三个位置LED：一个位于操作员显示面板上、一个位于每个磁盘架IOM上。Location LEDs remain illuminated for 30 minutes.You can turn them off by entering the same command, but using the off option.
 
-* 如果需要的话，你可以参考link:/sas3/service-monitor-leds.html#operator-display-panel-leds["监控磁盘架 LED"]指南，了解有关操作员显示面板和 FRU 组件上的磁盘架 LED 的含义和位置的信息。
+* 如果需要，有关操作员显示面板和FRU组件上磁盘架LED的含义和位置的信息，请参阅link:service-monitor-leds.html#operator-display-panel-leds["监控磁盘架 LED"]指南。
 
 
 .开始之前
