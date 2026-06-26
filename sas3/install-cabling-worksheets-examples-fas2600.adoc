@@ -1,20 +1,17 @@
 ---
 permalink: sas3/install-cabling-worksheets-examples-fas2600.html 
 sidebar: sidebar 
-keywords: controller-to-stack, cabling, worksheet, aff, a200, a220, fas2600, fas2700, fas2800, internal storage 
+keywords: controller, stack, cable, aff, a200, a220, fas2600, fas2700, fas2800, internal storage, iom12, iom12b, iom12c, ds212c, ds224c, ds460c 
 summary: 您可以使用完成的控制器到堆栈布线工作表和布线示例来为具有内部存储的平台布线。 
 ---
-= 内部存储布线工作表 - DS212C、DS224C 或 DS460C
+= DS212C、DS224C 或 DS460C 磁盘架与内部存储平台的布线工作表
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用已完成的控制器到堆栈布线工作表和布线示例来连接带有内部存储的平台。这适用于带有 IOM12/IOM12B 模块的磁盘架。
-
-
-NOTE: 此信息不适用于 FAS25XX 平台。
+您可以使用已完成的控制器到堆栈布线工作表和布线示例，为具有内部存储的平台布线。这适用于带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。
 
 * If needed, you can refer to link:install-cabling-rules.html["SAS布线规则和概念"] 有关支持的配置，磁盘架到磁盘架连接以及控制器到磁盘架连接的信息。
 * 布线示例显示控制器到堆栈的缆线为实线或虚线、用于区分控制器0b/0b1端口连接与控制器0a端口连接。
@@ -60,26 +57,8 @@ image::../media/drw_fas2800_withshelves_tpha_IEOPS-949.svg[FAS2820三路径HA到
 以下工作表和布线示例使用端口对 0A/0b ：
 
 
-NOTE: 本节不适用于FAS2820或FAS25XX系统。
+NOTE: 本节不适用于 FAS2820 系统。
 
 image::../media/drw_fas2600_mpha_worksheet_IEOPS-1255.svg[包含内部存储和一个堆栈的平台的多路径HA布线工作表]
 
 image::../media/drw_fas2600_mpha_IEOPS-1256.svg[具有内部存储的平台的多路径HA布线示例]
-
-
-
-== FAS2600 系列多路径配置，具有一个多架堆栈
-
-以下工作表和布线示例使用端口对 0A/0b 。
-
-在此示例中，控制器安装在机箱的插槽 A 中。如果控制器位于机箱的插槽 A 中，则其内部存储端口（ 0b ）位于域 A （ IOM A ）中；因此，端口 0b 必须连接到堆栈中的域 A （ IOM A ）。
-
-image::../media/drw_fas2600_mp_slot_a_worksheet.png[显示多路径配置的端口对的FAS2600布线工作表]
-
-image::../media/drw_fas2600_mp_slot_a.png[控制器位于机箱插槽1中的FAS2600多路径布线示例]
-
-在此示例中，控制器安装在机箱的插槽 B 中。如果控制器位于机箱的插槽 B 中，则其内部存储端口（ 0b ）位于域 B （ IOM B ）中；因此，端口 0b 必须连接到堆栈中的域 B （ IOM B ）。
-
-image::../media/drw_fas2600_mp_slot_b_worksheet.png[显示多路径配置的端口对的FAS2600布线工作表]
-
-image::../media/drw_fas2600_mp_slot_b.png[控制器位于机箱插槽2中的FAS2600多路径布线示例]

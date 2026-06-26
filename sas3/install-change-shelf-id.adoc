@@ -1,17 +1,19 @@
 ---
 permalink: sas3/install-change-shelf-id.html 
 sidebar: sidebar 
-keywords: change, shelf, id, system, ontap, run, hot-add, ontap, controller, module, available, serve, data, unown, spare, offline, aggregate 
-summary: 当 ONTAP 尚未运行或在将磁盘架连接到系统之前热添加磁盘架时，您可以更改系统中的磁盘架 ID 。您还可以在 ONTAP 启动并运行（控制器模块可用于提供数据）且磁盘架中的所有驱动器均为无主聚合，备用聚合或脱机聚合的一部分时更改磁盘架 ID 。 
+keywords: change, shelf, id, system, ontap, controller, module, ds212c, ds224c, ds460c 
+summary: 当 ONTAP 尚未运行时、在将盘架连接到系统之前热添加盘架时、或者当 ONTAP 已启动并运行且盘架中的所有驱动器均为未拥有、备用或脱机聚合的一部分时，更改系统中的盘架 ID。 
 ---
-= 更改机架 ID - DS212C、DS224C 或 DS460C
+= 更改 DS212C、DS224C 或 DS460C 磁盘架 ID
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在配备 IOM12/IOM12B 模块的系统中，您可以在ONTAP尚未运行或在将磁盘架连接到系统之前进行热添加时更改磁盘架 ID。您还可以在ONTAP已启动并运行（控制器模块可用于提供数据）且磁盘架中的所有驱动器均为无主驱动器、备用驱动器或属于已脱机聚合体时更改磁盘架 ID。
+当 ONTAP 尚未运行时，或在将磁盘架热添加到系统之前，您可以更改 DS212C、DS224C 或 DS460C 磁盘架中的磁盘架 ID。您还可以在 ONTAP 已启动并运行（控制器模块可用于提供数据）且磁盘架中的所有驱动器均为未拥有、备用或脱机聚合的一部分时更改磁盘架 ID。
+
+本程序适用于带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。
 
 .关于此任务
 * 有效磁盘架 ID 为 00 到 99 。

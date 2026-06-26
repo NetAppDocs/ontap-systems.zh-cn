@@ -1,10 +1,10 @@
 ---
 permalink: sas3/service-hot-swap-power-supply.html 
 sidebar: sidebar 
-keywords: hot-swap, fail, power, supply, ds460c, ds224c, ds212c, disk, shelf-nondisruptive, shelf, nondisruptive, system, power, I O, progress, hot-swap a power supply 
+keywords: hot-swap, replace, power, supply, ds460c, ds224c, ds212c 
 summary: 您可以热插拔 DS460C ， DS224C 或 DS212C 磁盘架中的故障电源。 
 ---
-= 热插拔电源 - DS212C、DS224C 或 DS460C
+= 热插拔 DS212C、DS224C 或 DS460C 电源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: 您可以热插拔 DS460C ， DS224C 或 DS212C 磁盘架中的故障�
 [role="lead"]
 您可以热插拔 DS460C ， DS224C 或 DS212C 磁盘架中的故障电源。
 
-此过程适用于带有 IOM12 或 IOM12B 模块的架子。
+本程序适用于带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。
 
 .开始之前
 * 系统中的所有其他组件（包括其他电源）必须正常运行。

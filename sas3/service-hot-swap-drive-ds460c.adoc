@@ -1,17 +1,17 @@
 ---
 permalink: sas3/service-hot-swap-drive-ds460c.html 
 sidebar: sidebar 
-keywords: hot-swap, fail, disk, drive, ds460c, nondisruptive, replace, system, power, serving, data, I O, hot-swap a disk drive in a ds460c disk shelf 
+keywords: hot-swap, replace, disk, drive, ds460c, sas, shelf 
 summary: 您可以热插拔 DS460C 磁盘架中的故障磁盘驱动器。 
 ---
-= 热插拔磁盘驱动器 - DS460C
+= 在 DS460C 机架中热插拔磁盘驱动器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用 IOM12 或 IOM12B 模块热插拔 DS460C 磁盘架中发生故障的磁盘驱动器。
+您可以使用 IOM12、IOM12B 或 IOM12C 模块热插拔 DS460C 磁盘架中的故障磁盘驱动器。
 
 .开始之前
 * DS460C 磁盘架必须支持替换磁盘驱动器。您可以在 https://hwu.netapp.com["NetApp Hardware Universe"] 。

@@ -55,7 +55,7 @@ entries:
       url: "/sas3/service-monitor-leds.html"
   - title: DS460C 磁盘架中的风扇模块
     url: "/sas3/service-replace-fan-ds460c.html"
-  - title: IOM12/IOM12B模块
+  - title: IOM12、IOM12B 或 IOM12C 模块
     url: "/sas3/service-hot-swap-iom.html"
   - title: 电源
     url: "/sas3/service-hot-swap-power-supply.html"

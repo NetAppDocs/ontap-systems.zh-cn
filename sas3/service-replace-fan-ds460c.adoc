@@ -1,10 +1,10 @@
 ---
 permalink: sas3/service-replace-fan-ds460c.html 
 sidebar: sidebar 
-keywords: ds460c, drive, shelf, fan, module, cooling, disk, replace, replace a fan module in a ds460c disk shelf 
-summary: 每个 DS460C 驱动器架都包含两个风扇模块。如果某个风扇模块发生故障，您必须尽快更换该模块，以确保磁盘架具有足够的散热效果。卸下发生故障的风扇模块后，您无需关闭磁盘架的电源。 
+keywords: ds460c, drive, shelf, fan, module, disk, replace 
+summary: 如果 DS460C 驱动器架中的风扇模块出现故障，则必须尽快更换，以确保磁盘架有足够的冷却。 
 ---
-= 更换风扇模块 - DS460C
+= 更换DS460C风扇模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: 每个 DS460C 驱动器架都包含两个风扇模块。如果某个风
 [role="lead"]
 每个 DS460C 驱动器架都包含两个风扇模块。如果某个风扇模块发生故障，您必须尽快更换该模块，以确保磁盘架具有足够的散热效果。卸下发生故障的风扇模块后，您无需关闭磁盘架的电源。
 
-此过程适用于带有 IOM12 或 IOM12B 模块的架子。
+本程序适用于带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。
 
 .开始之前
 您必须确保在 30 分钟内卸下并更换风扇模块，以防止系统过热。

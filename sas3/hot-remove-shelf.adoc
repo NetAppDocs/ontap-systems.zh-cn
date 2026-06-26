@@ -1,17 +1,19 @@
 ---
 permalink: sas3/hot-remove-shelf.html 
 sidebar: sidebar 
-keywords: hot-remove, disk, shelf, iom12, module, nondisruptive, module-nondisruptively, system, power, serving, data, I O, progress, hot-remove, stack, shelves, hot-remove a disk shelf with iom12 modules, DS460C, transport DS460C, move DS460C, remove drives from DS460C, DS460C drive handling, iom12b 
-summary: 您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。 
+keywords: hot-remove, remove, disk, shelf, sas3, iom12, iom12b, iom12c, stack, ds460c, transport, move, ds212c, ds224c 
+summary: 当磁盘盘架需要从已通电且正在进行 I/O 的系统中拆除或更换时，您可以对其进行热卸下操作。 
 ---
-= 热移除架子 - DS212C、DS224C 和 DS460C
+= 热插拔移除 DS212C、DS224C 或 DS460C 磁盘架
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-当您需要移动或更换磁盘架时，可以热移除带有 IOM12 或 IOM12B 模块的磁盘架（即在系统已通电且 I/O 正在进行的情况下，以无中断方式移除磁盘架）。您可以从磁盘架堆栈中的任何位置热移除一个或多个磁盘架，也可以移除一叠磁盘架。
+当磁盘架需要从已通电且正在进行 I/O 的系统中拆除或更换时，可以对其进行热拆卸。您可以从磁盘架堆栈中的任何位置热移除一个或多个磁盘架，也可以移除整个磁盘架堆栈。
+
+本程序适用于带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。
 
 .关于此任务
 * 如果要从堆栈热移除磁盘架（但保留堆栈），则一次可重新布线并验证一个路径（路径 A ，路径 B ），以绕过要移除的磁盘架，从而始终保持控制器与堆栈的单路径连接。
@@ -175,7 +177,7 @@ NOTE: 请至少等待 10 秒，然后再连接端口。SAS 缆线连接器具有
 从堆栈的一端或中间卸下磁盘架时，可以参考以下布线示例。请注意以下布线示例：
 
 +
-** IOM12/IOM12B模块与DS224C或DS212C磁盘架中的模块并排排列；如果您使用的是DS460C、则IOM12/IOM12B模块将按一个位置排列。
+** IOM12、IOM12B 或 IOM12C 模块与 DS224C 或 DS212C 磁盘架中一样并排布置；如果您有 DS460C，则 IOM12、IOM12B 或 IOM12C 模块上下叠放布置。
 ** 每个示例中的堆栈都使用标准的磁盘架到磁盘架布线进行布线、这种布线方式适用于使用多路径HA、三路径HA或多路径连接进行布线的堆栈。
 +
 如果堆栈使用四路径 HA 或四路径连接进行布线，则可以推断重新布线，这种连接使用双宽磁盘架到磁盘架的布线。

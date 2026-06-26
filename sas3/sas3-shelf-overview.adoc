@@ -1,17 +1,17 @@
 ---
 permalink: sas3/sas3-shelf-overview.html 
 sidebar: sidebar 
-keywords: sas3, shelves, shelf, sas3 shelves, drive, aggregate, shelf maintenance 
-summary: SAS3磁盘架维护概述。 
+keywords: sas3, shelf, sas3 shelves, drive, aggregate, shelf maintenance, ds212c, ds224c, ds460c 
+summary: DS212C、DS224C 或 DS460C 磁盘架维护概述。 
 ---
-= 机架维护概述 - DS212C、DS224C 或 DS460C
+= DS212C、DS224C 或 DS460C 磁盘架维护概述
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以执行以下操作来维护SAS磁盘架：
+您可以执行以下操作来维护 DS212C、DS224C 或 DS460C 磁盘架：
 
 * link:hot-add-drive.html["热添加驱动器"]
 * link:cold-replace-shelf.html["冷更换磁盘架"]

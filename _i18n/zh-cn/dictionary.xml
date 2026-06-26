@@ -2824,10 +2824,6 @@
   <block id="f76dc75f678aa69ffe38bc567a89bca0" category="paragraph">以下工作表和布线示例对堆栈 1 使用端口对 11/2b （多路径）和 2a/1D （四路径），对 stack2 使用端口对 1c/2D （多路径）和 2c/1b （四路径）。</block>
   <block id="ee547c1c638ccba345b1cbcb32709bcc" category="list-text">布线示例显示了控制器到堆栈连接以及磁盘架到磁盘架连接的两种不同颜色，用于区分通过 IOM A （域 A ）和 IOM B （域 B ）进行的连接。</block>
   <block id="ff82ea2b354e0f934f26abf26044a994" category="paragraph">以下工作表和布线示例使用端口对 0A/0b ：</block>
-  <block id="8498d609d156c09f9b21ae8adb760b18" category="section-title">FAS2600 系列多路径配置，具有一个多架堆栈</block>
-  <block id="5067863de55d98010fd9bb2898b6d0e2" category="paragraph">以下工作表和布线示例使用端口对 0A/0b 。</block>
-  <block id="436ea39ce2a06ceb277515424ceed3d4" category="paragraph">在此示例中，控制器安装在机箱的插槽 A 中。如果控制器位于机箱的插槽 A 中，则其内部存储端口（ 0b ）位于域 A （ IOM A ）中；因此，端口 0b 必须连接到堆栈中的域 A （ IOM A ）。</block>
-  <block id="f713f3d5118d64219e7f60c5bb8b1949" category="paragraph">在此示例中，控制器安装在机箱的插槽 B 中。如果控制器位于机箱的插槽 B 中，则其内部存储端口（ 0b ）位于域 B （ IOM B ）中；因此，端口 0b 必须连接到堆栈中的域 B （ IOM B ）。</block>
   <block id="0ea17a93d064afb53edf4305d17b5599" category="summary">您可以热插拔 DS460C ， DS224C 或 DS212C 磁盘架中的故障电源。</block>
   <block id="bf35e0ea77e327a31ac3baf63bb1253c" category="paragraph">系统中的所有其他组件（包括其他电源）必须正常运行。</block>
   <block id="6c02a1910626a867fbe4d789c7beb45a" category="list-text">如果要更换多个电源，则必须一次更换一个，以便磁盘架保持供电。</block>
@@ -3343,7 +3339,6 @@
   <block id="89f40cf9c4aa9d777ca58d0c2a8b2c91" category="list-text">堆栈中的磁盘架到磁盘架连接必须全部为 SAS 铜缆或全部为 SAS 光缆。</block>
   <block id="9d3db7bfcd4e676bd510caab64ec8d51" category="list-text">如果磁盘架到磁盘架的连接是 SAS 光缆，则与该堆栈的控制器到堆栈连接也必须是 SAS 光缆。</block>
   <block id="02a51574500eff63a08bc1c345282e3c" category="list-text">如果磁盘架到磁盘架的连接是 SAS 铜缆，则该堆栈的控制器到堆栈连接可以是 SAS 光缆或 SAS 铜缆。</block>
-  <block id="7a48725aae87c25c20800da734657f8d" category="summary">您可以使用此示例指导您完成如何读取和应用已完成的工作表，以便为具有 IOM12 模块的磁盘架使用缆线连接控制器到堆栈连接，从而实现多路径连接。</block>
   <block id="d69f8bb928c8179d4a1d81a77b9f6a4c" category="list-text">此操作步骤引用以下工作表和布线示例，用于演示如何阅读工作表，以便为控制器到堆栈连接布线。</block>
   <block id="a513cfe8d83ba38ea85b01260a4ffb53" category="list-text">如果您使用的是单控制器配置，请跳过子步骤 b 和 d ，以便通过缆线连接到另一个控制器。</block>
   <block id="cd0bbcf8c45ff326b72c889eab8250c0" category="paragraph">这些端口对使用工作表中的每一个其他端口对进行布线： 1A/2b 和 11/2D 。</block>
@@ -3455,16 +3450,11 @@
   <block id="e8599f3c8ef213317efbf60b0379685c" category="cell">如果您有 ...</block>
   <block id="1e5e667063d28d41ec828c8438a56b89" category="paragraph">IOM A 属于控制器 1 。IOM B 属于控制器 2 。</block>
   <block id="8dc0ad92e4b342d1741894f5ae7ffbe9" category="list-text">接管目标节点： `storage failover takeover -bynode _partner HA nod_`</block>
-  <block id="1e78ab40bbabb204b7d418ad7a32f801" category="paragraph">FAS2600 系列单路径配置</block>
-  <block id="afd363af41e03520500b30751b522491" category="list-text">从系统控制台关闭系统： `halt`</block>
-  <block id="e8403bb6f96eb0e9dd855761d673bcfb" category="list-text">通过检查存储系统控制台验证系统是否已暂停。</block>
   <block id="ccadbe2edcc98f542a5f72090def31e3" category="paragraph">等待至少 70 秒可使驱动程序正确注册磁盘架 ID 。</block>
   <block id="9bf609fda741e4f05af53222039c4623" category="list-text">重新连接布线。</block>
   <block id="240ac1f7b24df668dce754edbdea2f25" category="paragraph">SAS 缆线连接器具有方向性；正确连接到 IOM 端口时，连接器会卡入到位， IOM 端口 LNK LED 会呈绿色亮起。将 SAS 缆线连接器插入 IOM 端口，拉片朝下（位于连接器的下侧）。</block>
   <block id="d69bd90c00da9d5886f4b689f99f70d6" category="paragraph">交还目标节点： `storage failover giveback -fromnode partner_ha_node`</block>
-  <block id="8460de55fc39038d9b9df5787b6da108" category="paragraph">重新启动系统。</block>
   <block id="a4399fd36cbdc5057108842e4a4a42ff" category="paragraph">对于已布线的每个模块端口，如果四个 SAS 通道中的一个或多个与适配器或另一个磁盘架建立了链路，则 LNK （绿色） LED 将亮起。</block>
-  <block id="35f83b87028a9833d2f51254685e9660" category="summary">如果新系统 HA 对或单控制器配置未安装在机柜中，则必须在机架中安装磁盘架并为其布线。</block>
   <block id="4664332b9563f72120f97fcec6827311" category="paragraph">如果新系统 HA 对或单控制器配置未安装在机柜中，则可以在机架中安装磁盘架并为其布线。</block>
   <block id="33e36140a42f4f8d22f9ac3bcaa59b55" category="list-text">您必须了解适用于您的平台型号的安装和设置说明。</block>
   <block id="e0b50a66e9b220342f7fbaa9834e4842" category="list-text">此时不能打开磁盘架和控制器的电源。</block>
@@ -3516,7 +3506,6 @@
   <block id="e6fc12d6e1c9224ae4dbeb63a056c4c0" category="list-text">按照适用于您的平台型号的安装和设置说明中的说明完成系统设置和配置。</block>
   <block id="104948ccbd8bb493322289b08adc3067" category="list-text">如果在系统设置和配置过程中未启用磁盘所有权自动分配，请手动分配磁盘所有权；否则，请转至下一步：</block>
   <block id="dff1dc2f7a2fbdf73084eb54bb572edd" category="list-text">验证是否已自动启用带内 ACP 。`s存储架 ACP 显示`</block>
-  <block id="22de385bc846aff8918c00418f396af3" category="summary">您可以通过以下 SAS 布线规则，示例和工作表将带有 IOM12 模块的 SAS 驱动器架连接到存储系统。</block>
   <block id="d882321e2eb0b3930cc4d89826524491" category="doc">SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架</block>
   <block id="eb631b70ae7c721773f91b506c815082" category="inline-link-macro">配置</block>
   <block id="2c20867b019d706a391ac25e6929487d" category="list-text"><block ref="2c20867b019d706a391ac25e6929487d" category="inline-link-macro-rx"></block></block>
@@ -4464,7 +4453,6 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="c4565f27e7eb1d0640e258fb796df9c4" category="list-text">将系统缆线和收发器模块插入控制器模块，然后重新安装缆线管理设备。</block>
   <block id="6c35991313f21e9038f629e9e809488a" category="admonition">请勿混用具有不同效率额定值的 PSU 。请始终像这样替换。</block>
-  <block id="bd7b8cb1f03ceb90528c843b3cd8c0a4" category="summary">您可以在需要移动或更换磁盘架时热移除带有 IOM12 模块的磁盘架（无中断地从已启动且正在执行 I/O 的系统中移除磁盘架）。您可以从磁盘架堆栈中的任意位置热删除一个或多个磁盘架，也可以删除磁盘架堆栈。</block>
   <block id="ba0a2d97499e2e560187690f4b54b10c" category="list-text">您必须已从要移除的磁盘架中的磁盘驱动器（磁盘驱动器必须为备用磁盘）中删除所有聚合。</block>
   <block id="94a2f43b7e5299d436a356db402524cc" category="section-title">第3步：更换NVRAM电池</block>
   <block id="5f5fd4de9ab7b399342d9b9e721bc6b6" category="section-title">第3步：卸下NVRAM卡</block>
@@ -4608,22 +4596,10 @@
   <block id="030773f8722b074a51df84aa530f0c3d" category="paragraph">使用动画或表格中的步骤完成控制器和单个磁盘架之间的布线：</block>
   <block id="f56310c49687a40fd4b43bced4b3dcc8" category="video-title">动画—AFF A400安装和设置说明</block>
   <block id="c511d3a873cdf45068fb4cd9897dd7d1" category="admonition">此操作将重新初始化PCIe卡和其他组件、并重新启动节点。</block>
-  <block id="87fe7ea614796dffe614513028372aa9" category="paragraph">为了帮助您将带有IOM12/IOM12B模块的SAS驱动器架连接到存储系统、您可以根据需要使用任何可用的SAS布线规则、工作表和示例内容。</block>
-  <block id="062023e4095a297f17b97a86d9b4d256" category="summary">具有IOM12/IOM12B模块的磁盘架可以采用HA对和单控制器配置进行布线(适用于受支持的平台)。</block>
-  <block id="19a5945f47c08602bccb2ce050ccb955" category="paragraph">使用IOM12/IOM12B模块的磁盘架可以在HA对和单控制器配置中进行布线(适用于受支持的平台)、方法是应用SAS布线规则：配置规则、控制器插槽编号规则、磁盘架到磁盘架连接规则、控制器到堆栈连接规则以及迷你SAS HD SAS光缆规则(如果适用)。</block>
-  <block id="35f903a7001175494e6eb7088631a16e" category="paragraph">本指南中介绍的有关配置规则和迷你SAS HD SAS光缆规则的SAS布线规则专用于具有IOM12/IOM12B模块的磁盘架。</block>
-  <block id="5472ec6cdf96cae68f6aaf248821072c" category="summary">您可以将一个或多个具有IOM12/IOM12B模块的磁盘架热添加到具有IOM12/IOM12B模块的现有磁盘架堆栈中、或者将一个或多个具有IOM12B模块的磁盘架堆栈直接热添加到控制器上的SAS HBA或板载SAS端口中。</block>
-  <block id="16e515f4f7ddf43ca6fc5f5321a960e5" category="list-text">如果要将具有IOM12/IOM12B模块的磁盘架热添加到现有堆栈(包含IOM12/IOM12B模块的磁盘架)、则可以将磁盘架热添加到堆栈的任一端、即第一个或最后一个逻辑磁盘架。</block>
-  <block id="5b07090bafdc58182b6f01852ecbad05" category="summary">完成工作表模板后、您可以定义控制器SAS端口对、使用这些端口对将控制器连接到具有IOM12/IOM12B模块的磁盘架堆栈、以便在HA对或单控制器配置中实现四路径连接。You can also use the completed worksheet to walk yourself through cabling the quad-pathed connections for your configuration.</block>
-  <block id="51432cf63c198a0a11bab993299ae7fd" category="paragraph">工作表示例使用了一种配置、其中包含两个四端口SAS HBA和两个磁盘架堆栈以及IOM12B模块。</block>
   <block id="b6e864fc7eab4fd6206badf96144db05" category="list-text">在灰色框上方的框中、列出系统上的所有SAS A端口、然后按插槽(0、1、2、3等)顺序列出系统上的所有SAS C端口。</block>
   <block id="e50ad77c16b4b45855a35ff91f7ad9a6" category="list-text">在灰色框中、列出系统上的所有SAS B端口、然后按插槽(0、1、2、3等)顺序列出系统上的所有SAS D端口。</block>
-  <block id="9f82eea0f440d221437653dd782356a4" category="summary">您的系统配置可确定在IOM12/IOM12B模块出现故障时是否可以执行无中断IOM12/IOM12B模块热插拔或中断IOM12B模块更换。</block>
-  <block id="030b841927b9d492809adeca76bc32be" category="paragraph">系统中的所有其他组件(包括其他IOM12/IOM12B模块)必须正常运行。</block>
   <block id="20b0dc7787284cb0afa2dbc5d95136a2" category="paragraph">IOM12模块通过"IOM12"标签来区分：</block>
   <block id="5416d570ace1334ffbc27d0d9486ebe5" category="paragraph">IOM12B模块通过蓝色条带和"IOM12B"标签来区分：</block>
-  <block id="9785f45e8f6989c9b8cb2419a2b695da" category="list-text">对于FAS2600系列和FAS2700系列单路径HA配置、您必须执行接管和交还操作、以更换已启动并正在提供数据的系统中的磁盘架IOM。</block>
-  <block id="0894c7928fa1bee8fd4a0207429b7254" category="list-text">对于FAS2600系列单路径配置、您必须暂停系统以更换磁盘架IOM。</block>
   <block id="f00eb102fd21bbf5e0dd612fcc8a9fde" category="admonition">如果您尝试使用单路径连接热插拔磁盘架上的磁盘架IOM、则将无法访问磁盘架中的磁盘驱动器以及下面的任何磁盘架。You could also bring down your entire system.</block>
   <block id="1ab8471fd1a18dea9022ef583cd03d25" category="list-text">在使用非最新固件版本的新磁盘架IOM上、磁盘架(IOM)固件会自动更新(无中断)。</block>
   <block id="97b28cd2a227df77e22972ff1fcbf490" category="paragraph">磁盘架IOM固件每10分钟检查一次。An IOM firmware update can take up to 30 minutes.</block>
@@ -4631,7 +4607,6 @@
   <block id="9704edc0c40aff2bc9c91d97d7bdd6c5" category="list-text">拆开新磁盘架IOM的包装、将其放置在磁盘架附近的水平表面上。</block>
   <block id="82596309a8fa5f7ee94835a2785f0208" category="paragraph">保存所有包装材料、以便在退回故障磁盘架IOM时使用。</block>
   <block id="27f828dc47aef9b25b9f0603b1307a44" category="list-text">通过系统控制台警告消息和故障磁盘架IOM上亮起的警示(琥珀色) LED以物理方式识别故障磁盘架IOM。</block>
-  <block id="373a5d24b1aa2958990518bcd5ed56ab" category="paragraph">FAS2600系列和FAS2700系列单路径HA配置</block>
   <block id="5de1791487db34e32b1323bb994c054c" category="list-text">确定目标节点(故障磁盘架IOM所属的节点)。</block>
   <block id="3b8811460da03f6141f48283c90f0c81" category="list-text">从要移除的磁盘架IOM断开布线。</block>
   <block id="07bf16e1ed0cfef58d7f5600babc67b0" category="paragraph">记下每个缆线连接到的磁盘架IOM端口。</block>
@@ -4643,14 +4618,7 @@
   <block id="222746507964b1ed3eaf55fde5e31c2b" category="admonition">将磁盘架IOM滑入磁盘架时、请勿用力过大；否则可能会损坏连接器。</block>
   <block id="4ca96495e80202f00b900a4621ad919b" category="list-text">合上凸轮把手、使闩锁卡入到锁定位置、并且磁盘架IOM完全就位。</block>
   <block id="0da46cd6bdd0bb5727da715e0ba9290d" category="list-text">验证是否已建立磁盘架IOM端口链路。</block>
-  <block id="e4d6a1639eb1018ebdf0ee077494d1a9" category="summary">您可以使用此示例指导您完成如何读取已完成的工作表并将其应用于使用IOM12/IOM12B模块对磁盘架堆栈进行缆线连接、以实现四路径连接。</block>
-  <block id="eeea27d9ea27420adcc8ce9fd05614b8" category="paragraph">您可以使用此示例来指导您完成如何读取和应用已完成的工作表、以便为具有IOM12/IOM12B模块的磁盘架使用缆线连接控制器到堆栈连接、从而实现多路径连接。</block>
-  <block id="baeaa6c0f7d91e3737654018dbaf4dab" category="paragraph">本示例中使用的配置是多路径HA配置、其中每个控制器上有两个四端口SAS HBA (八个SAS端口)、并有两个磁盘架堆栈和IOM12B模块。Port pairs are cabled by skipping every other port pair in the worksheet.</block>
-  <block id="3b11171c02404a6a48fbb19b047eef0f" category="summary">通过填写工作表模板、您可以定义控制器SAS端口对、以便使用缆线将控制器连接到具有IOM12/IOM12B模块的磁盘架堆栈、从而在HA对或单控制器配置中实现多路径连接。You can also use the completed worksheet to walk yourself through cabling the multipathed connections for your configuration.</block>
   <block id="43e54d26abacd9c39f7b1ca3e46f28bc" category="doc">为新系统安装安装安装磁盘架并为其布线—带有IOM12/IOM12B模块的磁盘架</block>
-  <block id="6a133718408653e3259d13651c14c879" category="list-text">带有IOM12/IOM12B模块的磁盘架在出厂时已将磁盘架ID预设为00。</block>
-  <block id="ddc31af8042cf01054a35e84a194db81" category="summary">要更换磁盘架中的驱动器抽盒、您需要暂停整个存储系统(HA对)、以便在磁盘架上保留数据聚合、或者可以选择保持HA对正常运行。 这要求您将磁盘驱动器上的数据聚合中的所有数据移动到脱机状态并删除这些数据聚合。但是、如果磁盘架包含根聚合、则必须暂停HA对。</block>
-  <block id="99a3be716b7d4f783a2df1a6711575bb" category="paragraph">可以在更换驱动器抽盒之前或之后完成IOM12固件升级。在准备更换抽盒操作步骤 时、您可以使用此操作步骤 升级固件。</block>
   <block id="032d64c3ac3941e331a360a54f0a04ef" category="paragraph">dcm驱动器抽盒如下所示：</block>
   <block id="319d072de0a7eb80654d8506bc74de47" category="paragraph">DCM2驱动器抽盒采用蓝色条带和"DCM2"标签来区分：</block>
   <block id="d5240bafd6bf54bcb59e9a9f899b324e" category="section-title">准备更换驱动器抽盒</block>
@@ -4767,7 +4735,6 @@
   <block id="91be64cf601d5c3cea92700e0feb259b" category="section-title">控制器B和D端口连接规则(适用于没有内部存储的平台)</block>
   <block id="53de5403d00811e5f44fb1b9f62019a4" category="section-title">端口对连接规则(适用于没有内部存储的平台)</block>
   <block id="27858a1c4654311bc60fbcd9494b2c3e" category="admonition">此内容不会介绍FAS25XX平台。</block>
-  <block id="424f2fdac9e61f7b7785b602da677d00" category="admonition">此信息不适用于 FAS25XX 平台。</block>
   <block id="4efb7705f98005596f065e30ddf32363" category="section-title">采用多路径HA配置且具有一个多架堆栈的内部存储平台</block>
   <block id="e727b00944f81e1d0a95c12886ac4641" category="inline-link-macro">归档</block>
   <block id="1c91d351b95f21de02a1d9bc700d73d0" category="list-text"><block ref="1c91d351b95f21de02a1d9bc700d73d0" category="inline-link-macro-rx"></block></block>
@@ -5321,14 +5288,6 @@
   <block id="76cc458c90f11508f1ec83bed8953ef1" category="video-title">动画-电缆交换集群</block>
   <block id="f7d77014760bf79c9b9469d98b1e031b" category="admonition">插入连接器时、您应感觉到它卡入到位；如果您没有感觉到它卡入到位、请将其卸下、将其翻转并重试。</block>
   <block id="ed7a3f593115fbd1332dbd3743a9967c" category="paragraph">对每个控制器模块执行以下步骤。</block>
-  <block id="2b5c65d5b0abc122c914eec510d083ae" category="paragraph">多个CRU之一的功能出现错误：磁盘架、磁盘驱动器、IOM12/IOM12B模块或电源。</block>
-  <block id="179393dc95adf2d21fee0c7a4ac43a35" category="paragraph">激活此LED功能后、操作员显示面板和两个IOM12/IOM12B模块上的位置LED将亮起。Location LEDs automatically turn off after 30 minutes.</block>
-  <block id="a0e54d8ccf5f2c0e80dde9c632b59a06" category="section-title">IOM12/IOM12B模块LED</block>
-  <block id="d513e2f89875e1250513a03a56fb4689" category="paragraph">IOM12/IOM12B模块上的LED指示该模块是否正常运行、是否已准备好处理I/O流量以及硬件是否存在任何问题。</block>
-  <block id="94d8e14101b7f4ab9a744f00e8e2fe29" category="paragraph">下表介绍了与模块的功能以及模块上每个SAS端口的功能相关的IOM12/IOM12B模块LED。</block>
-  <block id="90f41460d3ad083904e7b340e4b39ece" category="paragraph">IOM12/IOM12B模块用于DS460C、DS224C和DS212C磁盘架。</block>
-  <block id="1ed7e5bc49edc6dcd82d94adaa712607" category="paragraph">IOM12/IOM12B模块功能：IOM12/IOM12B模块的功能发生错误。</block>
-  <block id="661a269cef9bb91a2f8b4d733118a2eb" category="paragraph">系统管理员激活了此LED功能、以帮助您以物理方式定位发生故障的IOM12/IOM12B模块所在的磁盘架。</block>
   <block id="a78123fcf223e9fb14720d2a07e2ef85" category="paragraph">下图适用于IOM12模块：</block>
   <block id="ab821717031a58a1a9d01409f017bf49" category="doc">控制器模块更换概述—FAS8200</block>
   <block id="925bdd1d7aad5ef53490c52842590538" category="paragraph">下表列出了双节点无交换机集群网络布线和有交换机集群网络布线的插图中的缆线类型以及呼出编号和缆线颜色。</block>
@@ -5372,7 +5331,6 @@
   <block id="889643b70d8973adb82162d572e085b6" category="list-text">对于多路径(多路径HA或多路径)、三路径HA和四路径(四路径HA或四路径)配置、您可以热插拔磁盘架IOM (无中断更换已启动且正在提供数据的系统中的磁盘架IOM—正在执行I/O操作)。</block>
   <block id="78e2c67b6cd9683131c2d5cc3b5f52eb" category="paragraph">多路径HA、三路径HA、多路径、四路径HA或四路径配置</block>
   <block id="d52293a37620938ba7e4feb13708edf9" category="doc">SAS布线规则和概念—具有IOM12/IOM12B模块的磁盘架</block>
-  <block id="8f3e1bfcac5ebf3ae518d7d0b7183191" category="paragraph">特定类型的HA对和单控制器配置支持具有IOM12/IOM12B模块的磁盘架。</block>
   <block id="6c5fe9aff643cb6f6afc0c56cef693b2" category="paragraph">有关您的平台型号支持的布线配置的最新信息、请参见Hardware Universe。</block>
   <block id="38c7dba0bfe978540fdb2f9598267e27" category="list-text">具有内部存储的平台不支持四路径HA连接。</block>
   <block id="379f6edbaf8caad99a93caabf81a3374" category="list-text">具有内部存储的平台可以采用单路径HA配置进行布线(从端口0b/0b1到外部磁盘架)、以支持连接到外部SAS磁带备份设备(从端口0a)。</block>
@@ -5408,7 +5366,6 @@
   <block id="b47ee462126834b65b6cb8631735e9b6" category="list-text">*可能的磁盘架损坏：*如果要移除DS460C磁盘架、并将其移至数据中心的其他部分或传输到其他位置、请参见本操作步骤末尾的"移动或传输DS460C磁盘架"一节。</block>
   <block id="b30291dbc620b5f1b37a40f305a02f42" category="list-text">验证您的系统配置是否为<block ref="7331911b71ec7e78bff5c45bd2c5aaf9" prefix=" " category="inline-code"></block>，<block ref="e48889091c7b245a01ec6e7c96d076a6" prefix=" " category="inline-code"></block>，<block ref="30cd2ef2a4cf8bde2668292e60ce425e" prefix=" " category="inline-code"></block>，<block ref="98a06331c5019fee7c2bec76b5d289fb" prefix=" " category="inline-code"></block>或<block ref="3a22361329a9005da35e1a3654fdb1ea" prefix=" " category="inline-code"></block> 通过运行<block ref="d4b15528721ed3ac7910f1fa2cacec13" prefix=" " category="inline-code"></block> 命令。</block>
   <block id="8c39b7226de6fd48c0c5d30d8d9d17c4" category="paragraph">系统可能需要长达一分钟才能完成发现。</block>
-  <block id="2336de80553a028befa65fff819c1dde" category="list-text">IOM12/IOM12B模块与DS224C或DS212C磁盘架中的模块并排排列；如果您使用的是DS460C、则IOM12/IOM12B模块将按一个位置排列。</block>
   <block id="62770b693e525340d1e88f2ad5bcea2d" category="list-text">每个示例中的堆栈都使用标准的磁盘架到磁盘架布线进行布线、这种布线方式适用于使用多路径HA、三路径HA或多路径连接进行布线的堆栈。</block>
   <block id="f4507ab39b62bbe20965312721a8efcc" category="list-text">从堆栈末端删除磁盘架的布线示例显示了如何删除使用多路径HA或三路径HA连接进行布线的堆栈中的最后一个逻辑磁盘架。</block>
   <block id="09c4b41de089c23d1a678473dad5d4b0" category="paragraph">如果要将DS460C磁盘架移动到数据中心的其他部分或将其传输到其他位置、请参见"移动或传输DS460C磁盘架"一节。</block>
@@ -6498,7 +6455,6 @@ SFP+(目标/启动程序)</block>
   <block id="6bc7f0f1626fcd7c449742964090a276" category="paragraph">使用链接： <block ref="ce9d9eed382ae5ac1650ec89550136ac" category="inline-link-macro-rx"></block></block>
   <block id="71b9da16d2c97302e30020688facb467" category="doc">更换风扇- AFF A250</block>
   <block id="4419435d737554741ab61c9d91e5c332" category="doc">更换风扇- ASA C250</block>
-  <block id="ebd0dccffb1781aa1b03445f61d87344" category="summary">您可以使用IOM12模块冷更换磁盘架。</block>
   <block id="ec2ab707a85ae3f8634491d0876e34c6" category="paragraph">在使用磁盘的生产系统中更换驱动器架时、您需要执行冷架更换。这是一个有中断的操作步骤。它要求您暂停HA对中的控制器。</block>
   <block id="b70986af2d94261df69e2141b1a928cf" category="inline-link">如何使用冷磁盘架拆卸操作步骤更换磁盘架机箱</block>
   <block id="3946a95173cf2872b6b6e8309352d61b" category="inline-link">《NS224 NVMe驱动器架布线指南》</block>
@@ -6551,7 +6507,6 @@ SFP+(目标/启动程序)</block>
   <block id="c746ae924024283281476c33315a4598" category="list-text">将IO板从控制器模块中竖直滑出、以将其卸下。</block>
   <block id="b4ce9255fe86b124b06814d87b3233db" category="summary">NS224磁盘架维护概述。</block>
   <block id="79a918585a1d94a22b468960e11e9174" category="paragraph">您可以执行以下操作来维护NS224磁盘架：</block>
-  <block id="4ad47736772386e98b3765035e4ccc77" category="summary">SAS3磁盘架维护概述。</block>
   <block id="9db4c90afc251da112cecabb2b945f1a" category="sidebar">磁盘架维护概述</block>
   <block id="96a3941fc07feefba651e74e742d6638" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 安装交换机</block>
   <block id="16271069a214a6b555402afb04d69089" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 连接缆线</block>
@@ -6581,7 +6536,6 @@ SFP+(目标/启动程序)</block>
   <block id="b1acc3668afb9014f44281694ae06824" category="summary">即使在I/O操作期间、您也可以无中断地向已启动磁盘架添加新驱动器。</block>
   <block id="4c8c4b22ca17117dae583f0c094d9eed" category="inline-link">向现有磁盘架或集群添加磁盘的最佳实践</block>
   <block id="daf4bbdefc995283fd259f0a85f2206e" category="paragraph">使用NetApp知识库文章<block ref="d77269536bcca9e0e9d3e1016828b4c0" category="inline-link-rx"></block>。</block>
-  <block id="3336aa3ff360375747634c1e3385684b" category="paragraph">您可以执行以下操作来维护SAS磁盘架：</block>
   <block id="532733c728150f3f848affd8d9840374" category="sidebar">热添加驱动器</block>
   <block id="0a2a423f4439c54ecca356a8fb8eb51a" category="sidebar">ASA A900 I/O模块</block>
   <block id="dc0e78bb347a9452f2f910586b57cb0e" category="sidebar">FAS9000 I/O模块</block>
@@ -7612,9 +7566,6 @@ SFP+(目标/启动程序)</block>
   <block id="78bfb4ec92649c11f6ff3c0d7da078c8" category="image-alt">不带外部磁盘架的Fas2800三路径HA布线示例</block>
   <block id="a565db44d0bce22f1abe371257922823" category="image-alt">包含内部存储和一个堆栈的平台的多路径HA布线工作表</block>
   <block id="ebe16c7c11294d83888309527c7aa402" category="image-alt">具有内部存储的平台的多路径HA布线示例</block>
-  <block id="ae886991173ce1313a3472f2bf087bea" category="image-alt">显示多路径配置的端口对的FAS2600布线工作表</block>
-  <block id="b3671733b921b95db06e8cec6536c3fc" category="image-alt">控制器位于机箱插槽1中的FAS2600多路径布线示例</block>
-  <block id="d690074d02b869fdb690ac22edfa777e" category="image-alt">控制器位于机箱插槽2中的FAS2600多路径布线示例</block>
   <block id="386b566f051a5546ac18b97ca1f57221" category="image-alt">多路径HA配置缆线类型密钥</block>
   <block id="c54734f5022e9d15cd5225977dd7b66f" category="image-alt">多路径HA配置缆线颜色密钥</block>
   <block id="594337aecd2132e9176259d053679a57" category="image-alt">一个四端口SAS HBA和一个单磁盘架堆栈的多路径HA布线工作表</block>
@@ -8421,7 +8372,6 @@ SFP+(目标/启动程序)</block>
   <block id="439824499df2079293c4db534dff3b28" category="section-title">采用三路径HA配置并具有一个多磁盘架堆栈的FAS2820平台</block>
   <block id="7dceff362ab7e3c2187d103ba7fce438" category="image-alt">显示堆栈1端口对的FAS2820三路径HA布线工作表</block>
   <block id="3a6e3da839d00ede01c4513f563899aa" category="image-alt">FAS2820三路径HA到一个堆栈的布线示例</block>
-  <block id="2f9e622217b802d735475e6e1e79287d" category="admonition">本节不适用于FAS2820或FAS25XX系统。</block>
   <block id="917655eaf5fd8c720cd773aba74bdaf8" category="sidebar">ASA A70和ASA A90 IO模块</block>
   <block id="3a537c99c5b869e844d774557fbcee80" category="sidebar">ASA A1K IO模块</block>
   <block id="3006210264711079652e75e697fdde7b" category="sidebar">FAS2820系统</block>
@@ -10737,39 +10687,19 @@ SFP+(目标/启动程序)</block>
   <block id="95f11137222c4d00467bd8e0ffa768dd" category="doc">关闭控制器以进行手动启动介质恢复 - FAS50</block>
   <block id="50021c9aa8d3585a4c703c3363cab114" category="paragraph">维护 FAS50 存储系统的硬件，以确保长期可靠性和最佳性能。定期执行维护任务（例如更换故障组件），有助于防止停机和数据丢失。</block>
   <block id="8eba03c70758101e68e6391b4be43740" category="paragraph">维护过程假定 FAS50 存储系统已部署为ONTAP环境中的存储节点。</block>
-  <block id="49be3e0ad5188b850535280e2d521d5f" category="doc">冷更换架子 - DS212C、DS224C 和 DS460C</block>
-  <block id="7a8f63768d82ace4ec5ce9136f569a37" category="paragraph">在生产系统中更换正在使用磁盘的驱动器架时，需要执行冷更换操作。对于带有 IOM12 或 IOM12B 模块的驱动器架，此操作会造成中断。您需要暂停 HA 对中的控制器。</block>
-  <block id="e9789afee675b076c255ef13a0d91ff6" category="doc">热添加驱动器 - DS212C、DS224C 或 DS460C</block>
-  <block id="3b0cbc5868ef00597b1bed319e73f276" category="doc">热移除架子 - DS212C、DS224C 和 DS460C</block>
-  <block id="b68b64c283799ba75ea887c8cda6bbf6" category="paragraph">当您需要移动或更换磁盘架时，可以热移除带有 IOM12 或 IOM12B 模块的磁盘架（即在系统已通电且 I/O 正在进行的情况下，以无中断方式移除磁盘架）。您可以从磁盘架堆栈中的任何位置热移除一个或多个磁盘架，也可以移除一叠磁盘架。</block>
   <block id="627b9bdb42b62e5d4b703537bd6ac242" category="list-text">*最佳实践*：从要移除的磁盘架中的磁盘驱动器中移除聚合后，移除磁盘驱动器所有权。</block>
   <block id="4e694b443e43ca592ec929411ff32928" category="paragraph">您必须先禁用磁盘所有权自动分配，然后才能移除磁盘驱动器的所有权。完成此过程后，您可以重新启用此功能。要了解有关磁盘聚合的更多信息，请参阅<block ref="11c438ae853a787dcddaa721519c0224" category="inline-link-rx"></block> 。</block>
   <block id="cb454422a4e80d731287ddbfccef9e49" category="paragraph">要查看任何 SAS 电缆错误消息以及应采取的纠正措施，请下载并运行<block ref="958fbec3240d79c0fec1eac943ab624b" category="inline-link-rx"></block> 。</block>
   <block id="6f7eb89030ca3d066a8d011ea3ff6d8b" category="list-text">*最佳实践*：对于大于两个节点的集群ONTAP系统，将 epsilon 重新分配给正在进行计划维护的 HA 对以外的 HA 对。</block>
-  <block id="d85748e55d89e0d9cf407713f294be8d" category="doc">SAS 布线规则和概念 - DS212C、DS224C 或 DS460C</block>
-  <block id="fac3b0985405168439e4ac4fdea40d3d" category="admonition">本指南中所述的 SAS 布线规则（包括控制器插槽编号规则、磁盘架间连接规则以及控制器与堆栈间的连接规则）适用于所有 SAS 磁盘架，无论其配备的是 IOM12 还是 IOM12B 模块。但是，本指南中的信息仅适用于配备 IOM12/IOM12B 模块的磁盘架的独特特性及其在受支持配置中的使用。</block>
-  <block id="9a193691b6072e1335146733e358a70c" category="doc">多路径连接布线工作表 - DS212C、DS224C 或 DS460C</block>
-  <block id="c4050097e871abde1d71dee4a0dab1c0" category="doc">四路径连接布线工作表 - DS212C、DS224C 或 DS460C</block>
-  <block id="3c7bce070013e078af5174f9d5ebce4e" category="doc">内部存储布线工作表 - DS212C、DS224C 或 DS460C</block>
-  <block id="c9745597a882c768fd299c561a9bb7f1" category="paragraph">您可以使用已完成的控制器到堆栈布线工作表和布线示例来连接带有内部存储的平台。这适用于带有 IOM12/IOM12B 模块的磁盘架。</block>
-  <block id="27f49b033de9b09bab2dc302f5a00ada" category="doc">多路径 HA 配置的布线工作表 - DS212C、DS224C 或 DS460C</block>
-  <block id="a2ce8df4fb2e3bd5c3f74b8182e9771b" category="paragraph">您可以使用控制器到堆栈布线工作表和布线示例，将 HA 对布线为多路径 HA 配置。这适用于带有 IOM12/IOM12B 模块的磁盘架。</block>
-  <block id="3b09fc9a1f7def3790c1f99db04081f9" category="doc">如何阅读工作表以连接多路径连接的控制器到堆栈连接 - DS212C、DS224C 或 DS460C</block>
-  <block id="02536f3a94af160cea98073a154d876b" category="doc">如何阅读工作表以连接控制器到堆栈的四路径连接（DS212C、DS224C 或 DS460C）</block>
-  <block id="722c976b11ea116d72d414f95ced197f" category="doc">更改机架 ID - DS212C、DS224C 或 DS460C</block>
-  <block id="a0213d03febf739d27efd2ef1b3ea6f9" category="paragraph">在配备 IOM12/IOM12B 模块的系统中，您可以在ONTAP尚未运行或在将磁盘架连接到系统之前进行热添加时更改磁盘架 ID。您还可以在ONTAP已启动并运行（控制器模块可用于提供数据）且磁盘架中的所有驱动器均为无主驱动器、备用驱动器或属于已脱机聚合体时更改磁盘架 ID。</block>
   <block id="72cd2bba1e430e2c558f33177e533dd9" category="inline-link">下载并访问Active IQ Config Advisor</block>
   <block id="7fa0540689ca6e7d56a284e2db678c2f" category="list-text">您可以通过运行Active IQ Config Advisor或使用<block ref="82b00438bdff68cba792c38604023279" prefix=" " category="inline-code"></block>命令。您可以<block ref="46d143a72ab17be05d841be9d473d38b" category="inline-link-rx"></block>在NetApp支持站点上。</block>
-  <block id="17491bc047a481a896aadae26b04e54a" category="doc">热添加架子 - DS212C、DS224C 或 DS460C</block>
   <block id="4e3c46a8cf527d29c6c96814ea3077d1" category="paragraph">在热添加磁盘架之前，您必须满足某些要求并熟悉此过程的最佳实践和注意事项。</block>
-  <block id="1a2198cdea19ab23e0248d08394f54cc" category="list-text">在热添加带有 IOM12/IOM12B 模块的磁盘架之前，请确保您的系统满足某些要求：</block>
   <block id="846b31ee0431322b326ba5921ff296c8" category="list-text">您的系统和ONTAP版本必须支持要热添加的磁盘架，包括 IOM、磁盘驱动器和 SAS 线缆。ONTAP可以在<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> 。</block>
   <block id="fa9d3eda22a1fcd491773bcd6d4d4f28" category="paragraph">热添加磁盘架后，您的系统支持的磁盘驱动器数量不得超过上限。您可以在<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block></block>
   <block id="9357ae55d4e6bc804a73a68e7dc7a9a7" category="inline-link">下载并运行Config Advisor</block>
   <block id="316faef1977c7985cb4c4e626c70741a" category="paragraph">验证 SAS 连接是否正确<block ref="ec9ae63a499774091b748096e12a9355" category="inline-link-rx"></block> 。</block>
   <block id="66dcd8cb8d1b542f666879e7e385e0f0" category="list-text">熟悉使用 mini-SAS HD SAS 光缆的要求和注意事项：</block>
   <block id="ae41ea2c24d257f58e358382abf474fe" category="list-text">熟悉完成此过程的一般注意事项：</block>
-  <block id="b2fc3e57786a697afeab4371a05e6106" category="list-text">带有 IOM12/IOM12B 模块的磁盘架必须位于其自己独特的堆栈中。</block>
   <block id="29fc6e90edc31f647d38647855bec63e" category="inline-link">下载当前版本的磁盘认证包 (DQP)</block>
   <block id="f19be54e15cd8b2681a96b5db7c1abf6" category="list-text">*最佳实践*：确保您的系统能够识别并使用新合格的磁盘驱动器<block ref="6c6cd7f8a61887795ae214210efa13b4" category="inline-link-rx"></block> 。</block>
   <block id="a66054a454bcec7e05493705730b23f7" category="paragraph">这样可以避免出现有关磁盘驱动器信息非最新系统事件消息。此外，还可以避免因无法识别磁盘驱动器而导致磁盘分区受阻的情况。DQP会通知您磁盘驱动器固件非最新。</block>
@@ -10790,9 +10720,7 @@ SFP+(目标/启动程序)</block>
   <block id="e799b535f2d63f0553a59afd2bbcbc37" category="section-title">（可选）步骤 3：移动或运输 DS460C 架子</block>
   <block id="790df2827c132e9040bd12ac9938f8e1" category="paragraph">如果将来您将 DS460C 机架移动到数据中心的不同部分或将机架运输到其他位置，则需要从驱动器抽屉中取出驱动器，以避免对驱动器抽屉和驱动器造成损坏。</block>
   <block id="84f49fb7ef2efb64157148b160d0f41b" category="list-text">如果您在安装 DS460C 机架作为机架热添加的一部分时保存了驱动器包装材料，请在移动驱动器之前使用这些材料重新包装驱动器。</block>
-  <block id="26db09d1c36b2d40ac17c0cf08796347" category="doc">安装和连接搁架 - DS212C、DS224C 或 DS460C</block>
   <block id="f79423440698d6bd5c6e74668ce4bba8" category="list-text">您可以通过磁盘架盒和磁盘架底盘上的标签识别包含根聚合的磁盘架。</block>
-  <block id="5b1ad6824e0cd48524c3375465f55845" category="list-text">如果在系统设置和配置过程中，您未将系统配置为使用自动磁盘所有权分配，则需要手动分配磁盘所有权。</block>
   <block id="99ca57e46c8968dbfd02674b96093d6b" category="paragraph">在安装和连接磁盘架之前，您必须满足某些要求并熟悉此过程的最佳实践和注意事项。</block>
   <block id="c92fb8a193773e600c18af47c4734f17" category="list-text">获取适合您的平台型号的安装和设置说明。</block>
   <block id="a5c56148764eddfd389b64d402f75faa" category="paragraph">安装和设置说明涵盖了系统安装、设置和配置的完整过程。如果您需要有关安装或将磁盘架布线到存储系统的详细信息，则仅应将此过程与平台安装和设置说明结合使用。</block>
@@ -10806,37 +10734,18 @@ SFP+(目标/启动程序)</block>
   <block id="3019ef40bd6f874e95ee88e8145fb07b" category="paragraph">您必须满足以下要求并在机架中安装磁盘架。</block>
   <block id="8a459cabdd939ba380f4f124896de48e" category="list-text">验证 SAS 连接是否正确，以及系统中没有重复的磁盘架 ID，方法是<block ref="ec9ae63a499774091b748096e12a9355" category="inline-link-rx"></block>按照您的平台型号的安装和设置说明进行操作。</block>
   <block id="88069066541b883278aace48d53c3059" category="list-text">如果您在安装 DS460C 架作为新系统安装的一部分时保存了驱动器包装材料，请在移动驱动器之前使用这些材料重新包装驱动器。</block>
-  <block id="8559b8eae8dc2a2e91e0e3cc40ad4d4d" category="doc">具有两个四端口 SAS HBA（DS212C、DS224C 或 DS460C）的四路径 HA 配置的布线工作表</block>
-  <block id="fbae7ecf5dd8b32561f5c2f8533a7d04" category="paragraph">您可以使用已完成的控制器到堆栈布线工作表和布线示例，为具有两个四端口 SAS HBA 的四路径 HA 配置布线。这适用于带有 IOM12/IOM12B 模块的磁盘架。</block>
-  <block id="351ab2daac2e43906090fe0bf36a1ee4" category="doc">布线规则概述 - DS212C、DS224C 或 DS460C</block>
-  <block id="7f2e0b4c790a452abe647dbc820be8d3" category="doc">机架维护概述 - DS212C、DS224C 或 DS460C</block>
-  <block id="92f15fe9497cf0c2b13c22b92153c586" category="doc">热插拔磁盘驱动器 - DS212C、DS224C</block>
-  <block id="7e7614307dc1434df615eedbfc263988" category="paragraph">您可以使用 IOM12、IOM12B 模块热插拔 DS224C 或 DS212C 磁盘架中的故障磁盘驱动器。</block>
   <block id="d879e21e92341a1ed5e7337848e03b8d" category="list-text">您正在安装的磁盘驱动器必须受 DS224C 或 DS212C 磁盘架支持。您可以在<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> 。</block>
   <block id="0db2816dfb27b3e71ffcaf8e878e4c41" category="paragraph">说明<block ref="4f3d9bd628831c3f55bdb353100c149c" category="inline-link-rx"></block>文档描述了更换 SED 之前和之后必须执行的额外步骤。</block>
   <block id="fb6c2b088f5a5508f44cfe50e0e259a1" category="list-text">*最佳实践*：确保您的系统能够识别并使用新合格的磁盘驱动器<block ref="6c6cd7f8a61887795ae214210efa13b4" category="inline-link-rx"></block>在热插拔驱动器之前。</block>
   <block id="c3f2b59c4e6e47cfb1c2b6167f03e842" category="list-text">*最佳实践*：在添加新的磁盘架、磁盘架 FRU 组件或 SAS 线缆之前，请确保您的系统已安装最新版本的磁盘架 (IOM) 固件和磁盘驱动器固件。您可以访问NetApp支持网站<block ref="131f203722a665651ecdd6a35f72c75e" category="inline-link-rx"></block>和<block ref="33577154670f1ae7cae0968251dd0eac" category="inline-link-rx"></block> 。</block>
-  <block id="ff0d706ea4734f2dfd6616723867f6cb" category="doc">热插拔磁盘驱动器 - DS460C</block>
-  <block id="01c590ea6095b590a1af5fc1d07bc80e" category="paragraph">您可以使用 IOM12 或 IOM12B 模块热插拔 DS460C 磁盘架中发生故障的磁盘驱动器。</block>
   <block id="2ca514b2f38b5503498de27c9b6ec362" category="list-text">DS460C 磁盘架必须支持替换磁盘驱动器。您可以在<block ref="ed4326c3351d8ac0e334b8b4d9b37c82" category="inline-link-rx"></block> 。</block>
   <block id="40dfc7a05fb18446a9e40deb6a474189" category="list-text">*最佳实践*：确保您的系统能够识别并使用新合格的磁盘驱动器<block ref="6c6cd7f8a61887795ae214210efa13b4" category="inline-link-rx"></block>在热插拔磁盘驱动器之前。</block>
   <block id="22030abdb2efc7f43a23b204401d9049" category="paragraph">安装最新版本的 DQP 可让您的系统识别并使用新认证的磁盘驱动器；从而避免出现有关磁盘驱动器信息非最新状态的系统事件消息。您还可以避免因无法识别磁盘驱动器而导致磁盘分区受阻的情况。DQP会通知您磁盘驱动器固件非最新状态。</block>
-  <block id="9a6fe2f3a895cdf0b08a747539e8dccc" category="doc">热插拔或更换 IOM 模块 - DS212C、DS224C 或 DS460C</block>
-  <block id="8e7a6cf1f139986ea45c1781670d739b" category="paragraph">您的系统配置决定了当 IOM12 或 IOM12B 机架 IOM 出现故障时，您是否可以执行无中断机架 IOM 热插拔或中断机架 IOM 更换。</block>
-  <block id="b11a902b9fb40a27f2db255c200b27bb" category="list-text">此程序适用于具有 IOM12 或 IOM12B 模块的架子。</block>
-  <block id="25e1a2b7bc684f223e8dad0adb741e5d" category="admonition">此程序适用于同类 IOM 机架热插拔或更换。这意味着您只能将一个 IOM12 模块更换为另一个 IOM12 模块，或将一个 IOM12B 模块更换为另一个 IOM12B 模块。</block>
-  <block id="df3550302c1d598914df1dab151ca6a5" category="list-text">IOM12 或 IOM12B 模块可以通过外观来区分：</block>
   <block id="1b48c93b7dbdd93c9ce5cac0675787a2" category="inline-link-macro">监控磁盘架 LED</block>
-  <block id="1de88d9e7c40d2819c39a96a3793569d" category="doc">热插拔电源 - DS212C、DS224C 或 DS460C</block>
-  <block id="2ac9e2133062b2b4551875f4ba7f547f" category="paragraph">此过程适用于带有 IOM12 或 IOM12B 模块的架子。</block>
   <block id="6a5389852eab8501c03b71d72821d04a" category="paragraph">如果您使用的是 DS224C 或 DS212C 磁盘架，则在移除电源时，挡板会摆动到位以挡住空置的磁盘架。这有助于保持空气流通和冷却。</block>
   <block id="1c60df2cce7b7671acecf3350ac8e179" category="list-text">将新电源的凸轮手柄置于打开位置，用双手支撑新电源，并将其边缘与磁盘架上的开口对齐。然后用力推动新电源，直至其与中间板接触。</block>
   <block id="f2e0cf331e8af9e6c39e63b505c9d435" category="paragraph">电源的电源（绿色）LED 指示灯和警示（琥珀色）LED 指示灯亮起。40秒内，警示（琥珀色）LED 指示灯熄灭。</block>
-  <block id="d4ff4c2e519698a94059491b50a14a15" category="doc">显示器搁架 LED - DS212C、DS224C 或 DS460C</block>
-  <block id="3225af90bc962532af8dc26f36895303" category="doc">更换驱动器抽屉 - DS460C</block>
-  <block id="4ae3452871ede0511a1a1dd0d13b4615" category="list-text">此程序适用于具有 DCM 驱动器抽屉和/或 DCM2 或 DCM3 驱动器抽屉的机架。（机架还将配备两个 IOM12 模块或两个 IOM12B 模块。）</block>
   <block id="96c2626405e08f79214429f14797a81a" category="paragraph">当 DCM、DCM2 或 DCM3 驱动器抽屉出现故障时，您会收到一个 DCM、DCM2 或 DCM3 驱动器抽屉来更换它。</block>
-  <block id="113bd97f44f9c32ac6bcb3cef5397c43" category="paragraph">当您使用较新的 DCM2 或 DCM3 驱动器抽屉更换故障驱动器抽屉时，请确保ONTAP软件和 IOM12 或 IOM12B 模块固件运行的是支持 DCM2 或 DCM3 抽屉所需的最低版本。</block>
   <block id="f7a7197b8b61a1fbf89bf3dd068864d3" category="list-text">DCM、DCM2 和 DCM3 驱动器抽屉可以通过外观进行区分：</block>
   <block id="89cfef86e392638541b2f4d843ee4032" category="paragraph">DCM3 驱动器抽屉以蓝色和灰色条纹以及“DCM3”标签来区分：</block>
   <block id="c4170c171035bc68cb27b987460f12df" category="image-alt">DCM3 驱动器架的正面视图</block>
@@ -10847,7 +10756,6 @@ SFP+(目标/启动程序)</block>
   <block id="9d35ee2ee37ab2717a79744f4965ec22" category="list-text">如果机架将有 IOM12B 模块和任意数量的 DCM3 驱动器抽屉组合，则必须将 IOM12B FW 升级到版本 0202 或更高版本。</block>
   <block id="b63fd053f99e2cc3926e74b44d28f7c7" category="inline-link">下载磁盘架固件的当前版本</block>
   <block id="57b73dd8aebc609733234e6fd29d1ace" category="paragraph">如果需要，您可以访问NetApp支持站点<block ref="d1106225f07bdddd62292ec62f01ae93" category="inline-link-rx"></block> 。否则，转到下一步。</block>
-  <block id="90a8f29892bce8d949f7f6d17ee699de" category="list-text">如果您的机架将有 IOM12 或 IOM12B 模块与任意数量的 DCM3 驱动器抽屉的组合，则您的系统必须运行以下最低版本的ONTAP：</block>
   <block id="9a8c27173445e50bbcbcf95d8264b3d2" category="list-text">ONTAP 9.17.1RC1</block>
   <block id="c2995634d5e031dbacf1629d231d93a9" category="list-text">ONTAP 9.16.1P3</block>
   <block id="472236f1aa647f4607d4c40eaa9de1a3" category="list-text">ONTAP 9.15.1P11</block>
@@ -10861,7 +10769,6 @@ SFP+(目标/启动程序)</block>
   <block id="1588bb88d51a0f0f1833afb9527c708c" category="section-title">步骤 4：安装驱动器抽屉</block>
   <block id="feec116b07810f2a548864ea6afe50da" category="section-title">步骤 5：连接电缆链</block>
   <block id="6a3c001ec05560a5ab64e2f544f5d5ec" category="list-text">如果您已将数据移出磁盘架并删除了数据聚合，现在可以使用磁盘架中的备用磁盘来创建或扩展聚合。要了解有关这些过程的更多信息，请参阅<block ref="ae5c4dd3b98363ef699b85b9ab6f13be" category="inline-link-rx"></block>和<block ref="7654e11ba6adb1da3e809032feba03aa" category="inline-link-rx"></block> 。</block>
-  <block id="fa71ed5381e38f2d01282cdf058709c9" category="doc">更换风扇模块 - DS460C</block>
   <block id="7b9a6fdb87cb1f6f211f41d044f49a11" category="sidebar">ASA A1K 启动介质自动化</block>
   <block id="0353c4306baefb0104fdbd22f3a83fd7" category="sidebar">启动媒体 - 手动恢复</block>
   <block id="f838e5a09ddd1d5f9eea197d4648da7c" category="sidebar">DS212C、DS224C 或 DS460C 机架安装和布线</block>
@@ -15035,4 +14942,93 @@ SFP+(目标/启动程序)</block>
   <block id="f737d8a0dc47e7e8a9b0f5abfa3860af" category="list-text"><block ref="f737d8a0dc47e7e8a9b0f5abfa3860af" category="inline-link-macro-rx"></block></block>
   <block id="27a5298e202f9398189a8d32478b42af" category="list-text"><block ref="27a5298e202f9398189a8d32478b42af" category="inline-link-macro-rx"></block></block>
   <block id="90febc09387b629e9422a756b365dc0a" category="list-text">如果需要，有关操作员显示面板和FRU组件上磁盘架LED的含义和位置的信息，请参阅<block ref="326b7cccdaf5a8d7e0688a93629b446c" category="inline-link-macro-rx"></block>指南。</block>
+  <block id="88b1b075575d0e004aef178f15beb527" category="summary">您可以在正在使用磁盘的生产系统中冷更换磁盘架。</block>
+  <block id="3918cca567d034f37440a8a2817a0d48" category="doc">冷更换 DS212C、DS224C 或 DS460C 磁盘架</block>
+  <block id="cb5d70afd2bfeb019746bbb5566205f5" category="paragraph">在使用磁盘的生产系统中更换驱动器盘架时，需要执行冷盘架更换。此操作会造成系统中断，需要您停止 HA 对中的控制器。</block>
+  <block id="f24cecaddabf7da1aee664f34eaa21b3" category="paragraph">本程序适用于带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。</block>
+  <block id="ab368345ef54d195128bb34e40bd124f" category="doc">将驱动器热添加到 DS212C、DS224C 或 DS460C 磁盘架</block>
+  <block id="c4b9db3b65f0fa6ccd7021fa431c0f37" category="summary">当磁盘盘架需要从已通电且正在进行 I/O 的系统中拆除或更换时，您可以对其进行热卸下操作。</block>
+  <block id="406038ff479fb1eb902543f05af94865" category="doc">热插拔移除 DS212C、DS224C 或 DS460C 磁盘架</block>
+  <block id="60728fca80a43878a42052a96d5c4424" category="paragraph">当磁盘架需要从已通电且正在进行 I/O 的系统中拆除或更换时，可以对其进行热拆卸。您可以从磁盘架堆栈中的任何位置热移除一个或多个磁盘架，也可以移除整个磁盘架堆栈。</block>
+  <block id="31a77517fbd33ac8f2cf514b4291c273" category="list-text">IOM12、IOM12B 或 IOM12C 模块与 DS224C 或 DS212C 磁盘架中一样并排布置；如果您有 DS460C，则 IOM12、IOM12B 或 IOM12C 模块上下叠放布置。</block>
+  <block id="1a9f4aa978d00633511ed9356f1d78c0" category="summary">带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架可以在 HA 对和单控制器配置（适用于受支持的平台）中进行布线连接。</block>
+  <block id="5742dee37df22503e5dca7bde6062cee" category="doc">DS212C、DS224C 或 DS460C 磁盘架的 SAS 布线规则和概念</block>
+  <block id="2e9dd613325fe916fe8f5318697661f9" category="paragraph">具有 IOM12、IOM12B 或 IOM12C 模块的 DS212C、DS224C 和 DS460C 磁盘架可以通过应用 SAS 布线规则（配置规则、控制器插槽编号规则、磁盘架到磁盘架连接规则、控制器到堆栈连接规则，以及适用的 mini-SAS HD SAS 光缆规则），以 HA 对和单控制器配置（适用于受支持的平台）进行布线。</block>
+  <block id="2c05e6cef40cb20683d8f9853802bd72" category="admonition">本指南中描述的有关控制器插槽编号规则、架到架连接规则和控制器到堆栈连接规则的 SAS 布线规则与适用于所有 SAS 磁盘盘架的规则相同，无论它们是否具有 IOM12、IOM12B 或 IOM12C 模块。但是，本指南中的信息专门针对具有 IOM12、IOM12B 或 IOM12C 模块的磁盘架的独特特性及其在受支持配置中的使用。</block>
+  <block id="ea1ac2bb880833ad8ae23e92abbe9f38" category="paragraph">本指南中介绍的有关配置规则和迷你SAS HD SAS光缆规则的SAS布线规则适用于带有IOM12、IOM12B或IOM12C模块的磁盘盘架。</block>
+  <block id="bb9eeaba1ef71a8bffe23f39df6fde9a" category="paragraph">具有 IOM12、IOM12B 或 IOM12C 模块的磁盘架在特定类型的 HA 对和单控制器配置上受支持。</block>
+  <block id="c470209187e7b6802bf0243ac645d3a5" category="summary">您可以使用布线工作表定义控制器 SAS 端口对，可用于将控制器连接到磁盘架堆栈以实现多路径连接。</block>
+  <block id="e2b2687a9fd34f6da055384b3ecd7009" category="doc">DS212C、DS224C 或 DS460C 多路径连接的布线工作表</block>
+  <block id="cbf16ce60af9a7154d28d54fab8b83dd" category="paragraph">您可以使用布线工作表定义控制器 SAS 端口对，以便将控制器连接到磁盘架堆栈，从而在 HA 对或单控制器配置中实现多路径连接。您还可以使用已完成的工作表为配置布线多路径连接。</block>
+  <block id="7ea8d4071cbf5d9a1896a5e7bc3977aa" category="paragraph">带有两个四端口 SAS HBA 和两个带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架堆栈的配置用于工作表示例。</block>
+  <block id="ffb785afe17f9be9ecae1c5871af3bdf" category="summary">定义可用于将控制器连接到磁盘架堆栈的控制器 SAS 端口对，以便在 HA 对或单控制器配置中实现四路径连接。</block>
+  <block id="653740ac599fd44d5b0085c57a328eda" category="doc">DS212C、DS224C 或 DS460C 四路径连接的布线工作表</block>
+  <block id="a19f5c248f19b26d4a15e9494dc98dab" category="paragraph">您可以使用布线工作表定义控制器 SAS 端口对，可用于将控制器连接到具有 IOM12、IOM12B 或 IOM12C 模块的磁盘架堆栈，以在 HA 对或单控制器配置中实现四路径连接。您还可以使用完成的工作表逐步完成适用于您的配置的四路径连接布线。</block>
+  <block id="600f3f3ad43255ed27a4ee19506c93d4" category="doc">DS212C、DS224C 或 DS460C 磁盘架与内部存储平台的布线工作表</block>
+  <block id="c5dc477e94dfc8e7a240fd4f412f6ecd" category="paragraph">您可以使用已完成的控制器到堆栈布线工作表和布线示例，为具有内部存储的平台布线。这适用于带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。</block>
+  <block id="202867377a7fbb80a75b03f2731f99a5" category="admonition">本节不适用于 FAS2820 系统。</block>
+  <block id="819f0bdac7a2b598ccaad5743dc60337" category="summary">您可以使用控制器到堆栈的布线工作表和示例将 HA 对作为多路径 HA 配置进行布线。</block>
+  <block id="ad953cc1485cc05009fcb4e76c3afbc4" category="doc">DS212C、DS224C 或 DS460C 多路径 HA 配置的布线工作表</block>
+  <block id="03cba578290cae8bad7182ee0e152229" category="paragraph">适用于带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。</block>
+  <block id="fc8e3a5c23478a404b4818df0fa514bf" category="summary">使用此示例指导您阅读完整的工作表，并将其应用于磁盘架的控制器到堆栈的缆线连接，以实现多路径连接。</block>
+  <block id="9446095f2c12167015cab9dcf353ac6a" category="doc">阅读 DS212C、DS224C 或 DS460C 多路径控制器到堆栈连接的布线工作表</block>
+  <block id="6ac4c3ceb93b657f6735ceac7c8e654f" category="paragraph">您可以使用此示例指导您如何阅读完整的工作表，并将其应用于具有 IOM12、IOM12B 或 IOM12C 模块的磁盘架的控制器到堆栈的缆线连接，以实现多路径连接。</block>
+  <block id="0b882012e1ba23400903fcf45b96baf0" category="paragraph">本示例中使用的配置是多路径 HA 配置，每个控制器上有两个四端口 SAS HBA（八个 SAS 端口）和两个带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架堆栈。通过跳过工作表中的每隔一个端口对来连接端口对。</block>
+  <block id="1ad0e1a393c87714ecf673d47a77b274" category="summary">使用此示例指导您阅读完整的工作表并将其应用于磁盘架的电缆堆栈，以实现四路径连接。</block>
+  <block id="76bb9554a2413fc537e1950c0dca1f95" category="doc">阅读工作表，了解 DS212C、DS224C 或 DS460C 四路径连接的控制器到堆栈的线缆连接</block>
+  <block id="34fbc8a41150954d8adff93a3e1088dc" category="paragraph">您可以使用此示例指导您如何阅读完整的工作表并将其应用于具有 IOM12、IOM12B 或 IOM12C 模块的磁盘架电缆堆栈，以实现四路径连接。</block>
+  <block id="ba64070485a39e6de87009d025b037fd" category="summary">当 ONTAP 尚未运行时、在将盘架连接到系统之前热添加盘架时、或者当 ONTAP 已启动并运行且盘架中的所有驱动器均为未拥有、备用或脱机聚合的一部分时，更改系统中的盘架 ID。</block>
+  <block id="6c520db8b7b98c1a5235d6ad12dc3b9d" category="doc">更改 DS212C、DS224C 或 DS460C 磁盘架 ID</block>
+  <block id="9d48577c7200b5f50bb31ef3ca548cc4" category="paragraph">当 ONTAP 尚未运行时，或在将磁盘架热添加到系统之前，您可以更改 DS212C、DS224C 或 DS460C 磁盘架中的磁盘架 ID。您还可以在 ONTAP 已启动并运行（控制器模块可用于提供数据）且磁盘架中的所有驱动器均为未拥有、备用或脱机聚合的一部分时更改磁盘架 ID。</block>
+  <block id="8b333c5c15ee4f418420f13460a78b6b" category="summary">您可以将一个或多个磁盘盘架热添加到现有磁盘盘架堆栈，也可以将一个或多个磁盘盘架堆栈直接热添加到控制器上的 SAS HBA 或板载 SAS 端口。</block>
+  <block id="0a11eac5a79039e39f442f3994d8cdbe" category="doc">热添加 DS212C、DS224C 或 DS460C 磁盘架</block>
+  <block id="238199fe6b6c4d3ab2e2f7c91ba238ec" category="list-text">在使用 IOM12、IOM12B 或 IOM12C 模块热添加磁盘架之前，请确保您的系统满足某些要求：</block>
+  <block id="07132e92281e521e834cfc205cb964f8" category="list-text">如果要将具有 IOM12、IOM12B 或 IOM12C 模块的磁盘架热添加到现有堆栈（具有 IOM12、IOM12B 或 IOM12C 模块的磁盘架），则可以将磁盘架热添加到堆栈的任一端（逻辑第一个或最后一个磁盘架）。</block>
+  <block id="dc48cb38cad1dd3731a2f1a6588785c4" category="list-text">带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架必须位于其自己独立的堆栈中。</block>
+  <block id="f457b9f469932f0204c59e829d502a0b" category="summary">如果您的新系统未安装在机柜中，则必须将磁盘架安装在机架中并进行布线。</block>
+  <block id="526259872d2cf8f60a79f004119541a6" category="doc">安装DS212C、DS224C或DS460C磁盘架并连接电缆</block>
+  <block id="a6be4514769ffe2e8f29755c6f8bfbc0" category="list-text">带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架随附预设为 00 的托架 ID。</block>
+  <block id="5a9eaf028f0dd0d3f35a7cbd7b1cf024" category="list-text">如果未将系统配置为在系统设置和配置时使用自动磁盘所有权分配，则需要手动分配磁盘所有权。</block>
+  <block id="344de6129f44578b31edfdd5819cff0a" category="doc">带有两个四端口 SAS HBA 的 DS212C、DS224C 或 DS460C 四路径 HA 配置的布线工作表</block>
+  <block id="646323900c05f4ef6b44126916adb7cf" category="paragraph">您可以使用已完成的控制器到堆栈布线工作表和布线示例来对具有两个四端口 SAS HBA 的四路径 HA 配置进行布线。这适用于带有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。</block>
+  <block id="7b1e679ca5f837fd1fb38649481e3a2b" category="summary">以下 SAS 布线规则、示例和工作表可帮助您将带有 IOM12、IOM12B 或 IOM12C 模块的 SAS 驱动器架连接到存储系统。</block>
+  <block id="34daf57b8222feb13d1a6ded97ca8094" category="doc">DS212C、DS224C 或 DS460C 布线规则概述</block>
+  <block id="9932e560163197951816eca690866564" category="paragraph">为帮助您将带有 IOM12、IOM12B 或 IOM12C 模块的 SAS 驱动器架连接到存储系统，您可以根据需要使用任何可用的 SAS 布线规则、工作表和示例内容。</block>
+  <block id="39ec593f0bf3b9519e827ec67b1e1d1a" category="summary">DS212C、DS224C 或 DS460C 磁盘架维护概述。</block>
+  <block id="be3bf438b47835a8f75df7a24f30360b" category="doc">DS212C、DS224C 或 DS460C 磁盘架维护概述</block>
+  <block id="96aa068617b68da3905b5c9a86b09685" category="paragraph">您可以执行以下操作来维护 DS212C、DS224C 或 DS460C 磁盘架：</block>
+  <block id="e93370d25b584293b28c38787dc53376" category="doc">热插拔 DS212C 或 DS224C 磁盘架中的磁盘驱动器</block>
+  <block id="2393c2762f6ad1879f386ce6c76498b3" category="paragraph">您可以热插拔 DS224C 或 DS212C 磁盘架中的故障磁盘驱动器，该磁盘架配有 IOM12、IOM12B 或 IOM12C 模块。</block>
+  <block id="8742b5f80abc482026ada8a6aaa9d46c" category="doc">在 DS460C 机架中热插拔磁盘驱动器</block>
+  <block id="78a3937f716b75e50079ff1d492931b0" category="paragraph">您可以使用 IOM12、IOM12B 或 IOM12C 模块热插拔 DS460C 磁盘架中的故障磁盘驱动器。</block>
+  <block id="b1653273282dbbb2b1f890383c7476fe" category="summary">您的系统配置决定了当 IOM12、IOM12B 或 IOM12C 磁盘架 IOM 发生故障时，是否可以执行无中断磁盘架 IOM 热插拔或中断性磁盘架 IOM 更换。</block>
+  <block id="c53290f22091dccfc8b4e358ee4d6330" category="doc">热插拔或更换DS212C、DS224C或DS460C IOM模块</block>
+  <block id="677ef59cdd344258bcd13ccd0b40ad43" category="list-text">本程序适用于具有 IOM12、IOM12B 或 IOM12C 模块的磁盘架。</block>
+  <block id="4b458b96ef1d82eb66f509280c071bee" category="admonition">本程序适用于同类磁盘架 IOM 热插拔或更换。这意味着您只能将 IOM12 模块更换为另一个 IOM12 模块，将 IOM12B 模块更换为另一个 IOM12B 模块，或将 IOM12C 模块更换为另一个 IOM12C 模块。</block>
+  <block id="4b4632703152c45e3652344e9c7d9737" category="list-text">IOM12、IOM12B 或 IOM12C 模块可通过其外观加以区分：</block>
+  <block id="476b2d86a3ba3c81d55f90bd9cff79a2" category="paragraph">IOM12C 模块由蓝色和灰色条纹以及"IOM12C"标签区分：</block>
+  <block id="36514f111e1ca5cd730e4b9af7532d46" category="image-alt">IOM12C 的正面</block>
+  <block id="584f7c045f906558ab2c176428476eb2" category="list-text">对于 FAS2700 系列单路径 HA 配置，您必须执行接管和交还操作，以更换已通电并正在提供数据的系统中的磁盘架 IOM——正在执行 I/O。</block>
+  <block id="9d45aba4aa46e9b4e9c4343f45fbe63c" category="list-text">系统中的所有其他组件（包括其他 IOM12、IOM12B 或 IOM12C 模块）必须正常运行。</block>
+  <block id="7ca6f0f687159055ebec509c6ebc8145" category="paragraph">FAS2700 系列单路径 HA 配置</block>
+  <block id="96f9e003462f166e2a92dcff4257b085" category="doc">热插拔 DS212C、DS224C 或 DS460C 电源</block>
+  <block id="be4dda897074eb9f7fc83028a57d1000" category="doc">监控 DS212C、DS224C 或 DS460C 磁盘架 LED</block>
+  <block id="9087c8eed43be63794e269ea2661edc0" category="paragraph">一个或多个FRU的功能出错：磁盘架、磁盘驱动器、IOM12、IOM12B或IOM12C模块或电源。</block>
+  <block id="58f9541849d1c8a6f6976ed2af1ed567" category="paragraph">操作员显示面板上的位置 LED 以及两个 IOM12、IOM12B 或 IOM12C 模块在激活此 LED 功能时都会亮起。位置 LED 在 30 分钟后自动关闭。</block>
+  <block id="04c71b9d3fdc946702bd9d91515815d1" category="section-title">IOM12、IOM12B 或 IOM12C 模块 LED</block>
+  <block id="36e4c2ea1203f20ba1b644664b949795" category="paragraph">IOM12、IOM12B 或 IOM12C 模块上的 LED 指示灯指示模块是否正常工作，是否已为 I/O 流量做好准备，以及硬件是否存在任何问题。</block>
+  <block id="9482d4d79b2ba0eae2bdb3cb22ace576" category="paragraph">下表描述了与模块功能以及模块上每个 SAS 端口功能相关的 IOM12、IOM12B 或 IOM12C 模块 LED。</block>
+  <block id="daeb9ce473727008a899ee11850833c6" category="paragraph">IOM12、IOM12B 或 IOM12C 模块用于 DS460C、DS224C 和 DS212C 磁盘架。</block>
+  <block id="21600c19f82e84d1841f4b8abfe6b622" category="paragraph">IOM12、IOM12B 或 IOM12C 模块功能：IOM12、IOM12B 或 IOM12C 模块的功能出现错误。</block>
+  <block id="3174ca96b24f17fceca0d2a30b7932aa" category="paragraph">系统管理员激活了此 LED 功能，以帮助物理定位出现故障的 IOM12、IOM12B 或 IOM12C 模块的磁盘架。</block>
+  <block id="74062a88db21eb100b0e2c7f8c23e7f5" category="image-alt">IOM12C 模块</block>
+  <block id="12aa4840618418ff6199afe75c76f2e5" category="summary">更换磁盘架中的驱动器抽屉时，可以暂停整个存储系统（HA 对）或使 HA 对保持正常运行。</block>
+  <block id="e52b13a5bd953ecae2f33c22a6786742" category="doc">更换 DS460C 驱动器抽屉</block>
+  <block id="ff2725fd592edd573771a8585b215c1a" category="list-text">本程序适用于具有 DCM 驱动器抽屉和/或 DCM2 或 DCM3 驱动器抽屉的磁盘架。（磁盘架还将有两个 IOM12 模块、两个 IOM12B 模块或两个 IOM12C 模块。）</block>
+  <block id="7a0ce3b891d86f2a6cb3f58bca8ce31e" category="paragraph">使用较新的 DCM2 或 DCM3 驱动器抽屉更换故障驱动器抽屉时，请确保 ONTAP 软件和 IOM12、IOM12B 或 IOM12C 模块固件运行支持 DCM2 或 DCM3 抽屉所需的最低版本。</block>
+  <block id="5e2f2c12c5bfc22e468b603aabed58bc" category="paragraph">IOM12、IOM12B 或 IOM12C FW 升级可以在更换驱动器抽屉之前或之后完成。此过程要求您在准备抽屉更换过程中升级 FW。</block>
+  <block id="7eb6579ebaed606e39d1216a44a781a5" category="list-text">如果您的磁盘架将包含 IOM12、IOM12B 或 IOM12C 模块与任意数量的 DCM3 驱动器抽屉的组合，则您的系统必须运行以下最低版本的 ONTAP：</block>
+  <block id="53b85a29c003144aff88b6c26f882fa8" category="summary">如果 DS460C 驱动器架中的风扇模块出现故障，则必须尽快更换，以确保磁盘架有足够的冷却。</block>
+  <block id="9b0d92965a7a8ccab1c7ce6ea546857d" category="doc">更换DS460C风扇模块</block>
+  <block id="770b055f16b653c149bedee6248d42a9" category="sidebar">IOM12、IOM12B 或 IOM12C 模块</block>
 </blocks>
