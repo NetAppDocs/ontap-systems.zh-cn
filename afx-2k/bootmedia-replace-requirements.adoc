@@ -1,0 +1,38 @@
+---
+permalink: afx-2k/bootmedia-replace-requirements.html 
+sidebar: sidebar 
+keywords: afx 2k, replace the boot media 
+summary: 在更换 afx 2k 存储系统中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否拥有正确的替换启动介质，确认控制器上没有有缺陷的集群端口，并确定是否已启用 Onboard Key Manager 或 External Key Manager。 
+---
+= 更换启动介质的要求 - AFX 2K
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在更换 AFX 2K 存储系统中的启动介质之前，请确保满足成功更换的必要要求。这包括验证您是否拥有正确的替换启动介质，确认控制器上没有有缺陷的集群端口，并确定是否已启用 Onboard Key Manager (OKM) 或 External Key Manager (EKM)。
+
+在更换启动介质之前、请确保查看以下要求。
+
+[NOTE]
+====
+NetApp 强烈建议您在使用的设备上启用控制台日志记录，并在执行此过程时执行以下操作：
+
+* 在维护期间保持 AutoSupport 启用状态。这允许 NetApp 支持在发生问题时接收诊断信息。
+* 为任何 CLI 会话启用会话日志记录。这将创建维护活动期间所有命令和系统输出的完整记录。有关如何启用会话日志记录的指导，请参见 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_configure_PuTTY_for_optimal_connectivity_to_ONTAP_systems["如何配置 PuTTY 以优化与 ONTAP 系统的连接"^]。
+
+
+====
+* 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
+* 请务必在正确的控制器上应用以下步骤中的命令：
++
+** 受损 _ 控制器是要在其中执行维护的控制器。
+** _health_ 控制器是受损控制器的 HA 配对控制器。
+
+
+* 受损控制器上不得存在任何故障集群端口。
+
+
+.下一步是什么？
+在您查看更换启动介质的要求后，您需要link:bootmedia-shutdown.html["关闭控制器"]。

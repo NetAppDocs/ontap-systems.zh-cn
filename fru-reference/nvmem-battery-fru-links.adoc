@@ -40,6 +40,13 @@ summary: 查找按平台系列组织的NetApp存储系统的NVMEM/ NVRAM电池�
 
 
 --
+.AFX 系统
+--
+* link:../afx-1k/nvdimm-battery-replace.html["AFX 1K"]
+* link:../afx-2k/nvdimm-battery-replace.html["AFX 2K"]
+
+
+--
 .ASA 系统
 --
 * link:../asa150/nvmem-nvram-battery-replace.html["ASA A150"]

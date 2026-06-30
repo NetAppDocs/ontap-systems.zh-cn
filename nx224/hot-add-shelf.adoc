@@ -211,7 +211,7 @@ Path_B 端口（红色端口）
 下图突出显示了向交换机配置热添加附加架的布线。要添加额外的架子，请遵循相同的基于交换机的布线方法。
 
 +
-image::../media/drw_nx224_afx_a1k_ieops-2344.svg[NX224 交换机布线至 AFX A1K]
+image::../media/drw_nx224_afx_a1k_ieops-2344.svg[NX224 交换机布线至 AFX 1K]
 
 . 使用验证热添加磁盘架的布线是否正确 https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
 +

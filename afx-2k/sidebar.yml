@@ -1,0 +1,84 @@
+---
+section: afx-2k
+title: AFX 2K 系统
+entries:
+- title: 安装和设置
+  url: "/afx-2k/afx-2k-install-setup.html"
+- title: 维护
+  entries:
+  - title: 维护概述
+    url: "/afx-2k/maintain-overview.html"
+  - title: 启动介质
+    pdf-filename: AFX 2K 引导介质
+    entries:
+    - title: 启动介质更换工作流
+      url: "/afx-2k/bootmedia-replace-workflow.html"
+    - title: 查看要求
+      url: "/afx-2k/bootmedia-replace-requirements.html"
+    - title: 关闭控制器
+      url: "/afx-2k/bootmedia-shutdown.html"
+    - title: 更换启动介质
+      url: "/afx-2k/bootmedia-replace.html"
+    - title: 恢复启动媒体
+      url: "/afx-2k/bootmedia-recovery-image-boot.html"
+    - title: 将故障部件退回 NetApp
+      url: "/afx-2k/bootmedia-complete-rma.html"
+  - title: 机箱
+    pdf-filename: AFX 2K 机箱
+    entries:
+    - title: 机箱更换工作流
+      url: "/afx-2k/chassis-replace-workflow.html"
+    - title: 查看要求
+      url: "/afx-2k/chassis-replace-requirements.html"
+    - title: 准备更换
+      url: "/afx-2k/chassis-replace-prepare.html"
+    - title: 关闭控制器
+      url: "/afx-2k/chassis-replace-shutdown.html"
+    - title: 更换机箱
+      url: "/afx-2k/chassis-replace-move-hardware.html"
+    - title: 完成机箱更换
+      url: "/afx-2k/chassis-replace-complete-system-restore-rma.html"
+  - title: 控制器
+    pdf-filename: AFX 2K 控制器
+    entries:
+    - title: 控制器更换工作流
+      url: "/afx-2k/controller-replace-workflow.html"
+    - title: 查看要求
+      url: "/afx-2k/controller-replace-requirements.html"
+    - title: 关闭受损控制器
+      url: "/afx-2k/controller-replace-shutdown.html"
+    - title: 更换控制器
+      url: "/afx-2k/controller-replace-move-hardware.html"
+    - title: 还原系统配置
+      url: "/afx-2k/controller-replace-system-config-restore-and-verify.html"
+    - title: 交还控制器
+      url: "/afx-2k/controller-replace-recable-reassign-disks.html"
+    - title: 完成控制器更换
+      url: "/afx-2k/controller-replace-restore-system-rma.html"
+  - title: DIMM
+    url: "/afx-2k/dimm-replace.html"
+  - title: 风扇
+    url: "/afx-2k/fan-replace.html"
+  - title: NVRAM
+    url: "/afx-2k/nvram-replace.html"
+  - title: NVRAM12-EX
+    url: "/afx-2k/nv12l-replace.html"
+  - title: NV电池
+    url: "/afx-2k/nvdimm-battery-replace.html"
+  - title: I/O 模块
+    pdf-filename: AFX 2K IO模块
+    entries:
+    - title: I/O模块概述
+      url: "/afx-2k/io-module-overview.html"
+    - title: 添加 I/O 模块
+      url: "/afx-2k/io-module-add.html"
+    - title: 热插拔 I/O 模块
+      url: "/afx-2k/io-module-hotswap.html"
+    - title: 更换I/O模块
+      url: "/afx-2k/io-module-replace.html"
+  - title: 电源
+    url: "/afx-2k/power-supply-replace.html"
+  - title: 实时时钟电池
+    url: "/afx-2k/rtc-battery-replace.html"
+  - title: 系统管理模块
+    url: "/afx-2k/system-management-replace.html"

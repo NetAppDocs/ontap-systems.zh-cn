@@ -276,7 +276,7 @@ LOADER-B>
 
 . 如果已禁用自动交还、请重新启用它：
 +
-`storage failover modify -node local auto-giveback-of true`
+`storage failover modify -node local -auto-giveback-of true`
 
 . 如果启用了AutoSupport、则还原自动创建案例：
 +
