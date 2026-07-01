@@ -15231,4 +15231,9 @@ SFP+(目标/启动程序)</block>
   <block id="6237e9bd3def009e1ada11487d357dc3" category="sidebar">AFX 2K 机箱</block>
   <block id="f093b22bad0b8da1a16f35c6f8c25ca0" category="sidebar">AFX 2K 控制器</block>
   <block id="62e406b8d6fcd44e844c63e4623510c3" category="sidebar">AFX 2K IO模块</block>
+  <block id="a257f7f4b2f6e07845ce567df142ad00" category="section-title">2026年7月</block>
+  <block id="b4afdfda38bb4110d19a16da4ee51739" category="paragraph-title">AFX 2K存储系统</block>
+  <block id="9a409a4d75890ddb49381881e67f5f7a" category="paragraph">新的 NetApp AFX 2K 存储系统扩展了分解解决方案，旨在满足高性能 NAS 和 S3 工作负载的严格要求，包括 AI/ML 应用程序。AFX 2K 系统为需要可扩展、高吞吐量文件和对象存储的客户提供专业功能。</block>
+  <block id="374ef3ed61ad653976c8db59a5521927" category="paragraph-title">全新 Cisco 9808 交换机支持 AFX 2K</block>
+  <block id="171d55c5398223f97af70b589556e85a" category="paragraph">新的 Cisco 9808 交换机通过存储架连接到 AFX 2K 控制器节点。这款新交换机与 Cisco 9364D-GX2A 和 Cisco 9332D-GX2B 交换机一起，可让您构建具有两个以上节点的 ONTAP 集群。高级协议用于优化性能。该设计基于具有多个网络路径的 VLAN 标记以及技术更新配置，以确保持续运行和易于升级。</block>
 </blocks>
