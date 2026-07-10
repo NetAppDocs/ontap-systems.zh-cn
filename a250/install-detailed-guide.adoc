@@ -15,6 +15,7 @@ summary: 本节详细介绍了安装 AFF A250 系统的分步说明。
 
 
 
+[[step-1-prepare-for-installation]]
 == 第 1 步：准备安装
 
 要安装 AFF A250 系统，您需要创建一个帐户并注册该系统。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
@@ -143,6 +144,7 @@ image:../media/oie_cable_power.png["电源线"]
 
 
 
+[[step-2-install-the-hardware]]
 == 第 2 步：安装硬件
 
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
@@ -163,6 +165,7 @@ image::../media/drw_affa250_weight_caution.png[两人举升小心]
 
 
 
+[[step-3-cable-controllers-to-cluster]]
 == 第3步：使用缆线将控制器连接到集群
 
 使用双节点无交换机集群方法或集群互连网络方法将控制器连接到集群。
@@ -244,6 +247,7 @@ image::../media/drw_affa250_mgmt_cabling.png[管理端口布线]
 ====
 
 
+[[step-4-cable-to-host-network-or-storage-optional]]
 == 第4步：使用缆线连接到主机网络或存储(可选)
 
 您可以通过与配置相关的可选布线方式连接到光纤通道或 iSCSI 主机网络或直连存储。此布线并非独占的；您可以使用缆线连接到主机网络和存储。
@@ -339,6 +343,7 @@ image:../media/drw_affa250_1shelf_cabling_b.png["控制器2布线"]
 ====
 
 
+[[step-5-complete-system-setup]]
 == 第5步：完成系统设置
 
 使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，或者直接连接到系统中的控制器，然后连接到管理交换机。

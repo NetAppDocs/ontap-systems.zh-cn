@@ -19,6 +19,7 @@ summary: 更换控制器模块中的实时时钟电池，以便依赖于准确�
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。
@@ -89,6 +90,7 @@ LOADER 提示符
 
 
 
+[[step-2-remove-the-controller-module]]
 == 第 2 步：卸下控制器模块
 
 更换控制器模块内部的组件时，必须从机箱中卸下控制器模块。
@@ -149,6 +151,7 @@ image::../media/drw_a250_remove_airduct_cover.png[提起空气管道盖]
 
 
 
+[[step-3-replace-the-rtc-battery]]
 == 第 3 步：更换 RTC 电池
 
 要更换 RTC 电池，请在控制器中找到该电池，然后按照特定步骤顺序进行操作。
@@ -217,6 +220,7 @@ CAUTION: 主动推入可能会使电池发生原因 重新弹出。
 
 
 
+[[step-4-reinstall-the-controller-module-and-set-timedate-after-rtc-battery-replacement]]
 == 第 4 步：重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期
 
 更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块，重置控制器上的时间和日期，然后启动它。
@@ -264,6 +268,7 @@ CAUTION: 主动推入可能会使电池发生原因 重新弹出。
 
 
 
+[[step-5-complete-the-replacement-process]]
 == 第 5 步：完成更换过程
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

@@ -15,6 +15,7 @@ summary: ASA A150存储系统的主要规格
 
 
 
+[[key-specifications-for-asa-a150]]
 === ASA A150的主要规格
 
 平台配置： ASA A150 UTA2 单机箱 HA 对
@@ -33,6 +34,7 @@ PCIe 扩展槽：
 
 
 
+[[scaleout-maximums]]
 === 横向扩展最大值
 
 |===
@@ -51,6 +53,7 @@ PCIe 扩展槽：
 |===
 
 
+[[io]]
 === 输入输出
 
 
@@ -109,18 +112,21 @@ PCIe 扩展槽：
 |===
 
 
+[[storage-networking-supported]]
 === 支持的存储网络
 
 光纤通道；iSCSI；NVMe/TCP；
 
 
 
+[[system-environment-specifications]]
 === 系统环境规格
 
 没有可用的环境数据。
 
 
 
+[[compliance]]
 === Compliance
 
 * EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
@@ -133,6 +139,7 @@ PCIe 扩展槽：
 
 
 
+[[high-availability]]
 === 高可用性
 
 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接进行 SAS 带内管理；

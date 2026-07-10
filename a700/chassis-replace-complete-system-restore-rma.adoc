@@ -15,6 +15,7 @@ summary: 您必须按照套件附带的RMA说明验证机箱的HA状态、并将
 
 
 
+[[step-1-verify-and-set-the-ha-state-of-the-chassis]]
 == 第 1 步：验证并设置机箱的 HA 状态
 
 您必须验证机箱的 HA 状态，并在必要时更新此状态以匹配您的系统配置。
@@ -50,6 +51,7 @@ summary: 您必须按照套件附带的RMA说明验证机箱的HA状态、并将
 
 
 
+[[step-2-switch-back-aggregates-in-a-two-node-metrocluster-configuration]]
 == 第2步：在双节点MetroCluster配置中切回聚合
 
 此任务仅限适用场景双节点 MetroCluster 配置。
@@ -106,6 +108,7 @@ Remote: cluster_A configured      		normal
 
 
 
+[[step-3-return-the-failed-part-to-netapp]]
 == 第 3 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

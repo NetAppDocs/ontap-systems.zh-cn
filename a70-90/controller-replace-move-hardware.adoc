@@ -15,6 +15,7 @@ summary: 如果硬件故障需要更换AFF A70或AFF A90系统中的控制器。
 
 
 
+[[step-1-remove-the-controller-module]]
 == 第 1 步：卸下控制器模块
 
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
@@ -137,6 +138,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-2-move-the-power-supplies]]
 == 第 2 步：移动电源
 
 将电源移至更换用的控制器。
@@ -179,6 +181,7 @@ NOTE: 为避免损坏内部连接器，请勿在将电源滑入系统时用力�
 
 
 
+[[step-3-move-the-fans]]
 == 第 3 步：移动风扇
 
 将风扇模块移至更换用的控制器模块。
@@ -212,6 +215,7 @@ image::../media/icon_round_2.png[标注编号2]
 
 
 
+[[step-4-move-the-nv-battery]]
 == Step 4: Move the NV battery
 
 Move the NV battery to the replacement controller module.
@@ -255,6 +259,7 @@ NV电池组插头
 
 
 
+[[step-5-move-system-dimms]]
 == Step 5: Move system DIMMs
 
 将DIMM移至更换用的控制器模块。
@@ -321,6 +326,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
+[[step-6-move-the-io-modules]]
 == 第6步：移动I/O模块
 
 将I/O模块移至更换用的控制器模块。
@@ -369,6 +375,7 @@ NOTE: 要从插槽6和7移动I/O模块、必须将包含这些I/O模块的托架
 
 
 
+[[step-7-move-the-system-management-module]]
 == 第7步：移动系统管理模块
 
 将系统管理模块移至更换用的控制器模块。
@@ -405,6 +412,7 @@ image::../media/icon_round_1.png[标注编号1]
 
 
 
+[[step-8-move-the-nvram-module]]
 == 第8步：移动NVRAM模块
 
 将NVRAM模块移至更换用的控制器模块。
@@ -451,6 +459,7 @@ DIMM锁定卡舌
 
 
 
+[[step-9-install-the-controller-module]]
 == Step 9: Install the controller module
 
 重新安装控制器模块并重新启动。

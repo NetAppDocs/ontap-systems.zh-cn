@@ -15,6 +15,7 @@ FAS50 系统中的启动介质存储了重要的固件和配置数据。更换�
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 如果需要、您可以打开平台机箱位置(蓝色) LED、以帮助找到受影响的平台。使用SSH登录到BMC并输入 `system location-led _on_`命令。
@@ -25,6 +26,7 @@ FAS50 系统中的启动介质存储了重要的固件和配置数据。更换�
 
 
 
+[[step-1-remove-the-controller]]
 == 第 1 步：卸下控制器
 
 在更换控制器或更换控制器内部的组件时、必须从机箱中卸下控制器。
@@ -137,6 +139,7 @@ image::../media/icon_round_3.png[标注编号3]
 
 
 
+[[step-2-replace-the-boot-media]]
 == 第 2 步：更换启动介质
 
 要更换启动介质、请在控制器内找到它、然后按照特定的步骤顺序进行操作。
@@ -191,6 +194,7 @@ image::../media/icon_round_4.png[标注编号4]
 
 
 
+[[step-3-reinstall-the-controller]]
 == Step 3: Reinstall the controller
 
 将控制器重新安装到机箱中、但不要重新启动它。
@@ -243,6 +247,7 @@ NOTE: 确保控制台电缆已连接到控制器、因为您希望稍后在将�
 
 
 
+[[step-4-transfer-the-boot-image-to-the-boot-media]]
 == Step 4: Transfer the boot image to the boot media
 
 您安装的替代启动介质没有ONTAP映像、因此您需要使用USB闪存驱动器传输ONTAP映像。

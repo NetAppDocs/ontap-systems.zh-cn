@@ -15,6 +15,7 @@ summary: 安装典型NetApp系统的详细分步说明。
 
 
 
+[[step-1-prepare-for-installation]]
 == 第 1 步：准备安装
 
 要安装系统，您需要在 NetApp 支持站点上创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
@@ -170,6 +171,7 @@ image:../media/oie_cable_power.png["电源线"]
 
 
 
+[[step-2-install-the-hardware]]
 == 第 2 步：安装硬件
 
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
@@ -196,6 +198,7 @@ image::../media/drw_a900_controller_in_chassis_ID_IEOPS-856.svg[典型集群配�
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == 第 3 步：使用缆线将控制器连接到网络
 
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
@@ -387,6 +390,7 @@ image:../media/drw_a900fas9500_power_icon_IEOPS-1142.svg["宽度=200个"]
 ====
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
 使用缆线将一个NS224驱动器架或两个NS224驱动器架连接到控制器。
@@ -515,6 +519,7 @@ image:../media/oie_cable100_gbe_qsfp28.png["100 GbE QSFPConnector"]
 ====
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == 第 5 步：完成系统设置和配置
 
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。

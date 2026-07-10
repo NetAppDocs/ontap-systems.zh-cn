@@ -15,6 +15,7 @@ summary: 此页面提供了有关安装典型NetApp系统的详细分步说明�
 
 
 
+[[step-1-prepare-for-installation]]
 == 第 1 步：准备安装
 
 要安装AFF A220系统、您需要在NetApp 支持站点 上创建帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
@@ -167,6 +168,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工�
 
 
 
+[[step-2-install-the-hardware]]
 == 第 2 步：安装硬件
 
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
@@ -190,12 +192,14 @@ image::../media/drw_cable_management_arm_install.png[正在连接电缆管理设
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == 第 3 步：使用缆线将控制器连接到网络
 
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
 
 
 
+[[option-1-cable-a-two-node-switchless-cluster-unified-network-configuration]]
 === 选项 1 ：为双节点无交换机集群布线，统一网络配置
 
 控制器上的管理网络， UTA2 数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
@@ -272,6 +276,7 @@ image:../media/oie_legend_icon_attn_symbol.png["注意符号"]
 
 
 
+[[option-2-cable-a-switched-cluster-unified-network-configuration]]
 === 选项 2 ：为交换集群布线，统一网络配置
 
 控制器上的管理网络， UTA2 数据网络和管理端口连接到交换机。集群互连端口通过缆线连接到集群互连交换机。
@@ -349,6 +354,7 @@ image:../media/oie_legend_icon_attn_symbol.png["注意符号"]
 
 
 
+[[option-3-cable-a-two-node-switchless-cluster-ethernet-network-configuration]]
 === 选项 3 ：为双节点无交换机集群布线，以太网网络配置
 
 控制器上的管理网络，以太网数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
@@ -413,6 +419,7 @@ image:../media/oie_legend_icon_attn_symbol.png["注意符号"]
 
 
 
+[[option-4-cable-a-switched-cluster-ethernet-network-configuration]]
 === 选项 4 ：为有交换机集群布线，以太网网络配置
 
 控制器上的管理网络，以太网数据网络和管理端口连接到交换机。集群互连端口通过缆线连接到集群互连交换机。
@@ -475,12 +482,14 @@ image:../media/oie_legend_icon_attn_symbol.png["注意符号"]
 
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
 您必须使用板载存储端口将控制器连接到磁盘架。NetApp 建议对具有外部存储的系统使用 MP-HA 布线。如果您使用的是 SAS 磁带驱动器，则可以使用单路径布线。如果没有外部磁盘架，则可选择使用 MP-HA 缆线连接到内部驱动器（未显示），前提是 SAS 缆线是随系统一起订购的。
 
 
 
+[[option-1-cable-storage-on-an-ha-pair-with-external-drive-shelves]]
 === 选项 1 ：使用缆线将 HA 对上的存储与外部驱动器架连接起来
 
 您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到驱动器磁盘架。
@@ -551,12 +560,14 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS�
 
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == 第 5 步：完成系统设置和配置
 
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
 
 
 
+[[option-1-complete-system-setup-if-network-discovery-is-enabled]]
 === 选项 1 ：如果启用了网络发现，则完成系统设置
 
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
@@ -610,6 +621,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置�
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === 选项 2 ：如果未启用网络发现，则完成系统设置和配置
 
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。

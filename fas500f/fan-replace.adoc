@@ -15,6 +15,7 @@ summary: 如果更换发生故障的风扇模块并将其更换为新的风扇�
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。
@@ -85,6 +86,7 @@ LOADER 提示符
 
 
 
+[[step-2-remove-the-controller-module]]
 == 第 2 步：卸下控制器模块
 
 更换风扇模块时，必须从机箱中卸下控制器模块。
@@ -141,6 +143,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-3-replace-a-fan]]
 == 第 3 步：更换风扇
 
 要更换风扇，请卸下发生故障的风扇模块并将其更换为新的风扇模块。
@@ -167,6 +170,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == 第 4 步：重新安装控制器模块
 
 更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块并启动它。
@@ -212,6 +216,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == 第 5 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

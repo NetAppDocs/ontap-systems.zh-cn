@@ -38,6 +38,7 @@ image::../media/drw_controller_to_stack_quad_pathed_connectivity_key.gif[四路�
 
 
 
+[[quad-path-ha-with-two-quad-port-sas-hbas-and-two-multi-shelf-stacks]]
 == 具有两个四端口 SAS HBA 和两个多架堆栈的四路径 HA
 
 以下工作表和布线示例对堆栈 1 使用端口对 11/2b （多路径）和 2a/1D （四路径），对 stack2 使用端口对 1c/2D （多路径）和 2c/1b （四路径）。

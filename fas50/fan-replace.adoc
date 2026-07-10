@@ -22,6 +22,7 @@ summary: 如果FAS50系统中的风扇模块出现故障或运行效率低下、
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 使用以下选项之一关闭或接管受损控制器。
@@ -168,6 +169,7 @@ LOADER 提示符
 ====
 
 
+[[step-2-remove-the-controller]]
 == 第 2 步：卸下控制器
 
 在更换控制器或更换控制器内部的组件时、必须从机箱中卸下控制器。
@@ -279,6 +281,7 @@ image::../media/icon_round_3.png[标注编号3]
 
 
 
+[[step-3-replace-fan]]
 == 步骤3：更换风扇
 
 要更换风扇、请卸下故障风扇、然后使用新风扇进行更换。
@@ -311,6 +314,7 @@ image::../media/icon_round_2.png[标注编号2]
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == 第 4 步：重新安装控制器模块
 
 将控制器重新安装到机箱中并重新启动。
@@ -417,6 +421,7 @@ NOTE: 替代控制器从运行状况良好的控制器获得电源、并在完�
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == 第 5 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

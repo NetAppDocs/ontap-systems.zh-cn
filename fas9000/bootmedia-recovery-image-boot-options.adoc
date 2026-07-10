@@ -17,6 +17,7 @@ summary: 从恢复映像启动受损节点的步骤取决于系统是否处于�
 
 
 
+[[option-1-boot-the-recovery-image-in-most-systems]]
 == 选项1：在大多数系统中启动恢复映像
 
 您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
@@ -134,6 +135,7 @@ date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state
 
 
 
+[[option-2-boot-the-recovery-image-in-a-two-node-metrocluster-configuration]]
 == 选项 2 ：在双节点 MetroCluster 配置中启动恢复映像
 
 您必须从 USB 驱动器启动 ONTAP 映像并验证环境变量。

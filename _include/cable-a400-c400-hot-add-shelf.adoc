@@ -4,6 +4,7 @@
 
 
 
+[[cable-shelf-to-an-a400-ha-pair]]
 == 将磁盘架连接到 A400 HA 对
 
 对于 A400 HA 对，您可以热添加最多两个架子，并根据需要使用板载端口 e0c/e0d 和插槽 5 中的端口。
@@ -70,6 +71,7 @@ image::../media/drw_ns224_a400_2shelves_IEOPS-983.svg[为ASA A400具有两个NS2
 
 
 
+[[cable-shelf-to-a-c400-ha-pair]]
 == 将磁盘架连接到 C400 HA 对
 
 对于 C400 HA 对，您可以热添加最多两个磁盘架，并根据需要使用插槽 4 和 5 中的端口。

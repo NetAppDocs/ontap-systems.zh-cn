@@ -29,6 +29,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["电缆拉片方向"]
 
 
 
+[[step-1-cable-the-clusterha-connections]]
 == 第1步：为集群/HA连接布线
 
 创建ONTAP集群连接。对于无交换机集群、请将控制器相互连接。对于有交换机集群、将控制器连接到集群网络交换机。
@@ -147,6 +148,7 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[�
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == 第2步：为主机网络连接布线
 
 使用缆线将控制器连接到以太网或FC主机网络。
@@ -203,6 +205,7 @@ image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[连接到
 ====
 
 
+[[step-3-cable-the-management-network-connections]]
 == 第3步：为管理网络连接布线
 
 使用缆线将每个控制器上的管理(扳手)端口连接到管理网络交换机。
@@ -218,6 +221,7 @@ IMPORTANT: 请勿插入电源线。
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == 第4步：为磁盘架连接布线
 
 此过程介绍如何使用缆线将控制器连接到一个NS224磁盘架。

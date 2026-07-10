@@ -15,6 +15,7 @@ summary: 要完成 ASA A70 或 ASA A90 系统的控制器更换，请先根据�
 
 
 
+[[step-1-verify-lifs-and-check-cluster-health]]
 == 第1步：验证SIFs并检查集群运行状况
 
 在将替代节点恢复使用之前、请验证逻辑接口是否位于其主端口上、检查集群运行状况并重置自动交还。
@@ -39,6 +40,7 @@ summary: 要完成 ASA A70 或 ASA A90 系统的控制器更换，请先根据�
 
 
 
+[[step-2-return-the-failed-part-to-netapp]]
 == 第2步：将故障部件退回给NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

@@ -65,6 +65,8 @@ image::../media/drw_dcm3_ieops-2176.svg[DCM3 驱动器架的正面视图]
 
 
 
+[[step-1-prepare-to-replace-a-drive-drawer]]
+[[prepare_to_replace_drive_drawer]]
 == 步骤 1：准备更换驱动器抽屉
 
 在更换驱动器抽屉之前，您必须确保根据需要更新 IOM FW 和ONTAP ，并暂停 HA 对（这允许您将数据聚合保留在磁盘架上），或者保持 HA 对正常运行（这需要您将所有数据从驻留在磁盘驱动器上的数据聚合中移出）。然后，您必须脱机并删除数据聚合。但是，如果磁盘架包含根聚合，则必须暂停 HA 对。最后，您必须关闭磁盘架的电源。
@@ -143,6 +145,8 @@ NOTE: 如果磁盘架中的磁盘驱动器出现故障、则`Broken`会显示在
 
 
 
+[[step-2-remove-the-cable-chains]]
+[[remove_cable_chains]]
 == 第 2 步：拆除电缆链
 
 DS460C 驱动器架中每个驱动器抽盒的左右缆线链允许抽盒滑入和滑出。在卸下驱动器抽盒之前，必须同时卸下两个缆线链。
@@ -291,6 +295,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-3-remove-a-drive-drawer]]
 == 步骤 3：移除驱动器抽屉
 
 After removing the right and left cable chains, you can remove the drive drawer from the drive shelf.卸下驱动器抽盒需要将抽盒部分滑出、卸下驱动器并卸下驱动器抽盒。
@@ -346,6 +351,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
+[[step-4-install-a-drive-drawer]]
 == 步骤 4：安装驱动器抽屉
 
 在驱动器架中安装驱动器抽盒需要将抽盒滑入空插槽，安装驱动器并更换前挡板。
@@ -442,6 +448,7 @@ NOTE: * 设备故障的风险： * 请确保通过推动两个控制杆完全关
 
 
 
+[[step-5-attach-the-cable-chains]]
 == 步骤 5：连接电缆链
 
 安装驱动器抽盒的最后一步是将更换用的左右缆线链连接到驱动器架。When attaching a cable chain, reverse the order you used when disconnecting the cable chain.You must insert the chain's horizontal connector into the horizontal bracket in the enclosure before inserting the chain's vertical connector into the vertical bracket in the enclosure.

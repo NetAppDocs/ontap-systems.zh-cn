@@ -15,6 +15,7 @@ summary: FAS500f 存储系统的关键规格
 
 
 
+[[key-specifications-for-fas500f]]
 === FAS500f 的关键规格
 
 平台配置：FAS500f 单机箱 HA 对
@@ -33,6 +34,7 @@ PCIe 扩展槽：4
 
 
 
+[[scaleout-maximums]]
 === 横向扩展最大值
 
 |===
@@ -51,6 +53,7 @@ PCIe 扩展槽：4
 |===
 
 
+[[io]]
 === 输入输出
 
 
@@ -118,12 +121,14 @@ PCIe 扩展槽：4
 |===
 
 
+[[storage-networking-supported]]
 === 支持的存储网络
 
 CIFS；FC；iSCSI；NFS v3；NFS v4.0；NFS v4.1；NFS v4.2；NVMe/FC；NVMe/TCP；S3；带 NAS 的 S3；SMB 2.0；SMB 2.1；SMB 2.x；SMB 3.0；SMB 3.1；SMB 3.1.1；
 
 
 
+[[system-environment-specifications]]
 === 系统环境规格
 
 * 典型功率：2642 BTU/小时
@@ -139,6 +144,7 @@ CIFS；FC；iSCSI；NFS v3；NFS v4.0；NFS v4.1；NFS v4.2；NVMe/FC；NVMe/TCP
 
 
 
+[[compliance]]
 === Compliance
 
 * EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
@@ -151,6 +157,7 @@ CIFS；FC；iSCSI；NFS v3；NFS v4.0；NFS v4.1；NFS v4.2；NVMe/FC；NVMe/TCP
 
 
 
+[[high-availability]]
 === 高可用性
 
 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接对外部机架进行 SAS 带内管理；

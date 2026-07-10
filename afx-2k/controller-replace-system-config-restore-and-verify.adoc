@@ -15,6 +15,7 @@ summary: 验证控制器的 HA 配置是否处于活动状态并在 afx 2k 存�
 
 
 
+[[step-1-verify-ha-config-settings]]
 == 第1步：验证HA配置设置
 
 您必须验证控制器模块的 `HA` 状态，并在必要时更新此状态以匹配您的系统配置。
@@ -37,6 +38,7 @@ NOTE: 如果您看到_pendis_Mismatch、请联系客户支持。
 
 
 
+[[step-2-verify-disk-list]]
 == 第2步：验证磁盘列表
 
 . 验证适配器是否列出了指向所有磁盘的路径：

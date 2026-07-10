@@ -34,6 +34,7 @@ NVRAM 模块由 NVRAM11 和 DIMM 组成。You can replace a failed NVRAM module 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。
@@ -99,6 +100,7 @@ LOADER 提示符
 
 
 
+[[step-2-replace-the-nvram-module]]
 == 第 2 步：更换 NVRAM 模块
 
 要更换NVRAM模块、请将其置于机箱中的插槽6中、并按照特定步骤顺序进行操作。
@@ -176,6 +178,7 @@ DIMM 和 DIMM 弹出器卡舌
 
 
 
+[[step-3-replace-a-nvram-dimm]]
 == 第 3 步：更换 NVRAM DIMM
 
 要更换 NVRAM 模块中的 NVRAM DIMM ，您必须卸下 NVRAM 模块，打开该模块，然后更换目标 DIMM 。
@@ -254,6 +257,7 @@ DIMM 和 DIMM 弹出器卡舌
 
 
 
+[[step-4-reboot-the-controller-after-fru-replacement]]
 == 第 4 步：更换 FRU 后重新启动控制器
 
 更换 FRU 后，必须重新启动控制器模块。
@@ -262,6 +266,7 @@ DIMM 和 DIMM 弹出器卡舌
 
 
 
+[[step-5-reassigning-disks]]
 == 第5步：重新分配磁盘
 
 您必须在启动替代控制器时确认系统 ID 更改，然后确认更改是否已实施。
@@ -364,6 +369,7 @@ dr-group-id            cluster node           configuration-state
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == 第 6 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

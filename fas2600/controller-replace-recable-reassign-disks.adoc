@@ -15,6 +15,7 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 
 
+[[step-1-recable-the-system]]
 == 第 1 步：重新对系统进行布线
 
 使用以下方法验证控制器模块的存储和网络连接： https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] 。
@@ -28,12 +29,14 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 
 
+[[step-2-reassign-disks]]
 == 第 2 步：重新分配磁盘
 
 如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。在独立系统中，必须手动将 ID 重新分配给磁盘。您必须为您的配置使用正确的操作步骤。
 
 
 
+[[option-1-verify-the-system-id-change-on-an-ha-system]]
 === 选项 1 ：验证 HA 系统上的系统 ID 更改
 
 您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。
@@ -122,6 +125,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 
 
 
+[[option-2-manually-reassign-the-system-id-on-a-stand-alone-system-in-ontap]]
 === 选项 2 ：在 ONTAP 中的独立系统上手动重新分配系统 ID
 
 在独立系统中，您必须手动将磁盘重新分配给新控制器的系统 ID ，然后才能使系统恢复正常运行状态。

@@ -34,6 +34,7 @@ image::../media/drw_cable_pull_tab_direction_ieops-1699.svg[电缆拉片方向�
 
 
 
+[[step-1-cable-the-clusterha-connections]]
 == 第1步：为集群/HA连接布线
 
 使用缆线将控制器连接到ONTAP集群。此过程因存储系统型号和I/O模块配置而异。
@@ -82,6 +83,7 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[使用缆线�
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == 第2步：为主机网络连接布线
 
 将以太网模块端口连接到主机网络。
@@ -117,6 +119,7 @@ image::../media/drw_70-90_network_cabling2_ieops-1655.svg[使用缆线连接到1
 
 
 
+[[step-3-cable-the-management-network-connections]]
 == 第3步：为管理网络连接布线
 
 使用1000BASE-T RJ-45缆线将每个控制器上的管理(扳手)端口连接到管理网络交换机。
@@ -132,6 +135,7 @@ IMPORTANT: 请勿插入电源线。
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == 第4步：为磁盘架连接布线
 
 以下布线过程显示了如何将控制器连接到存储架。选择以下与您的设置匹配的布线选项之一。

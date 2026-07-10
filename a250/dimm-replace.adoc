@@ -20,6 +20,7 @@ summary: 当系统遇到基于运行状况监视器警报的过多 CECC 错误�
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。
@@ -90,6 +91,7 @@ LOADER 提示符
 
 
 
+[[step-2-remove-the-controller-module]]
 == 第 2 步：卸下控制器模块
 
 更换控制器模块内部的组件时，必须从机箱中卸下控制器模块。
@@ -152,6 +154,7 @@ image::../media/drw_a250_remove_airduct_cover.png[提起空气管道盖]
 
 
 
+[[step-3-replace-a-dimm]]
 == 第 3 步：更换 DIMM
 
 要更换DIMM、您必须使用通风管顶部的DIMM映射标签在控制器模块中找到该DIMM、然后按照特定步骤顺序进行更换。
@@ -184,6 +187,7 @@ DIMM 紧紧固定在插槽中。如果没有，请重新插入 DIMM ，使其与
 
 
 
+[[step-4-install-the-controller-module]]
 == 第 4 步：安装控制器模块
 
 更换控制器模块中的组件后、必须将控制器模块重新安装到机箱中、然后启动它。
@@ -237,6 +241,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == 第 5 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

@@ -25,6 +25,7 @@ summary: 当电池开始失去电量或出现故障时，请更换AFF A20、 AFF
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 使用以下选项之一关闭或接管受损控制器。
@@ -171,6 +172,7 @@ LOADER 提示符
 ====
 
 
+[[step-2-remove-the-controller]]
 == 第 2 步：卸下控制器
 
 在更换控制器或更换控制器内部的组件时、必须从机箱中卸下控制器。
@@ -282,6 +284,7 @@ image::../media/icon_round_3.png[标注编号3]
 
 
 
+[[step-3-replace-the-nv-battery]]
 == 第3步：更换NV电池
 
 从控制器中取出发生故障的NV电池、然后安装更换用的NV电池。
@@ -340,6 +343,7 @@ NV电池应与电池仓齐平。
 
 
 
+[[step-4-reinstall-the-controller]]
 == 第 4 步：重新安装控制器
 
 将控制器重新安装到机箱中并重新启动。
@@ -446,6 +450,7 @@ NOTE: 替代控制器从运行状况良好的控制器获得电源、并在完�
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == 第 5 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

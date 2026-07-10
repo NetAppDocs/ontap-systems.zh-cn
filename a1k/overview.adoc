@@ -15,6 +15,7 @@ summary: A1K平台组的主要规格
 
 
 
+[[key-specifications-for-aff-a1k]]
 == AFF A1K的主要规格
 
 * 平台配置： AFF A1K双机箱 HA 对
@@ -28,6 +29,7 @@ summary: A1K平台组的主要规格
 
 
 
+[[scaleout-maximums]]
 == 横向扩展最大值
 
 * 类型：NAS；HA 对：12；原始容量：176.3 PB / 156.5 PiB；最大内存：24576 GB
@@ -37,16 +39,19 @@ summary: A1K平台组的主要规格
 
 
 
+[[io]]
 == 输入/输出
 
 
 
+[[onboard-io]]
 === 板载 I/O
 
 无板载 I/O 数据。
 
 
 
+[[total-io]]
 === 总输入/输出
 
 * 协议：以太网 200 Gbps；端口：24
@@ -61,6 +66,7 @@ summary: A1K平台组的主要规格
 
 
 
+[[management-ports]]
 === 管理端口
 
 * 协议：以太网 1 Gbps；端口：2
@@ -70,6 +76,7 @@ summary: A1K平台组的主要规格
 
 
 
+[[storage-networking-supported]]
 == 支持的存储网络
 
 * CIFS
@@ -95,6 +102,7 @@ summary: A1K平台组的主要规格
 
 
 
+[[system-environment-specifications]]
 == 系统环境规范
 
 * 典型功率：4402 BTU/小时
@@ -110,6 +118,7 @@ summary: A1K平台组的主要规格
 
 
 
+[[compliance]]
 == Compliance
 
 * EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
@@ -122,6 +131,7 @@ summary: A1K平台组的主要规格
 
 
 
+[[high-availability]]
 == 高可用性
 
 * 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口

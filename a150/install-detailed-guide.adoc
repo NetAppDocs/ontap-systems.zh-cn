@@ -19,6 +19,7 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 
 
+[[step-1-prepare-for-installation]]
 == 第 1 步：准备安装
 
 要安装AFF A150系统、您需要在NetApp 支持站点 上创建一个帐户、注册系统并获取许可证密钥。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
@@ -159,6 +160,7 @@ image:../media/oie_cable_power.png["电源线"]
 
 
 
+[[step-2-install-the-hardware]]
 == 第 2 步：安装硬件
 
 您可以根据需要将系统安装在四柱机架或NetApp系统机柜中。
@@ -182,6 +184,7 @@ image::../media/drw_cable_management_arm_install.png[正在连接电缆管理设
 
 
 
+[[step-3-cable-controllers-to-network]]
 == 第3步：使用缆线将控制器连接到网络
 
 您可以使用双节点无交换机集群方法或有交换机集群方法将控制器连接到网络。
@@ -320,6 +323,7 @@ IMPORTANT: 此时请勿插入电源线。
 ====
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
 使用板载存储端口将控制器连接到磁盘架。NetApp recommends MP-HA cabling for systems with external storage.
@@ -371,6 +375,7 @@ image:../media/oie_cable_mini_sas_hd_to_mini_sas_hd.png["迷你SAS到迷你SAS�
 
 
 
+[[step-5-complete-system-setup]]
 == 第5步：完成系统设置
 
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。

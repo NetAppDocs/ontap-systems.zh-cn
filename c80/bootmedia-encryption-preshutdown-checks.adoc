@@ -17,6 +17,7 @@ summary: 为确保AFF C80 存储系统上的数据安全，您需要验证启动
 
 
 
+[[step-1-check-nve-support-and-download-the-correct-ontap-image]]
 == 步骤 1：检查 NVE 支持并下载正确的ONTAP映像
 
 确定您的ONTAP版本是否支持NetApp卷加密 (NVE)，以便您可以下载正确的ONTAP映像来替换启动介质。
@@ -43,6 +44,7 @@ NOTE: 从NetApp支持网站下载ONTAP映像到您的 HTTP 或 FTP 服务器或�
 
 
 
+[[step-2-verify-key-manager-status-and-back-up-configuration]]
 == 步骤 2：验证密钥管理器状态并备份配置
 
 在关闭故障控制器之前，请验证密钥管理器配置并备份必要信息。

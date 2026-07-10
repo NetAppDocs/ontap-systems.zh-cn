@@ -15,6 +15,7 @@ summary: 确认控制器的HA配置在FAS70或FAS90存储系统中处于活动�
 
 
 
+[[step-1-verify-ha-config-settings]]
 == 第1步：验证HA配置设置
 
 您必须验证控制器模块的 `HA` 状态，并在必要时更新此状态以匹配您的系统配置。
@@ -54,6 +55,7 @@ HA状态的值可以是以下值之一：
 
 
 
+[[step-2-verify-disk-list]]
 == 第2步：验证磁盘列表
 
 .步骤

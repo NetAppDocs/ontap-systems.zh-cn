@@ -42,19 +42,19 @@ summary: 将存储资源的控制权交还给替换控制器，以便您的 AFF 
 
 .步骤
 . 从Loader提示符处启动到ONTAP菜单 `boot_ontap menu`、然后选择选项10。
-. 从健康控制器中检索并验证集群范围的密码。
+. 显示集群的密钥管理备份信息。
 +
-.. 运行以下命令来检索集群范围的密码短语：
+.. 运行以下命令以显示集群的密钥管理备份信息：
 +
 `security key-manager onboard show-backup`
 
-.. 使用以下命令验证集群范围的密码短语：
+.. 运行以下命令来验证板载密钥管理器备份：
 +
 `security key-manager onboard verify-backup`
 
 
 
-. 输入OKM密码短语。
+. 输入 OKM 密码并确认验证成功。
 +
 
 NOTE: 系统会两次提示您输入密码短语。

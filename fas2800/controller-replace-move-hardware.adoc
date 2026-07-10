@@ -17,6 +17,7 @@ summary: 要更换控制器模块硬件，您必须卸下受损的控制器，�
 video::c83a3301-3161-4d65-86e8-af540147576a[panopto]
 
 
+[[step-1-remove-controller-module]]
 == 第 1 步：卸下控制器模块
 
 从机箱中卸下受损控制器模块。
@@ -51,6 +52,7 @@ image::../media/icon_round_1.png[标注编号1]
 |===
 
 
+[[step-2-move-the-nvmem-battery]]
 == 第 2 步：移动 NVMEM 电池
 
 从受损控制器模块中取出NVMEM电池、然后将其安装到更换用的控制器模块中。
@@ -98,6 +100,7 @@ NOTE: 请勿插入电池。  将其余组件移至更换用的控制器模块后
 
 
 
+[[step-3-remove-the-mezzanine-card]]
 == 步骤3：卸下夹层卡
 
 从受损控制器模块卸下IO板和PCIe夹层卡。
@@ -132,6 +135,7 @@ NOTE: 您可以用手指或螺丝刀拧松翼形螺钉。
 
 
 
+[[step-4-move-the-boot-media]]
 == 第 4 步：移动启动介质
 
 从受损控制器模块中取出启动介质、然后将其安装在更换用的控制器模块中。
@@ -175,6 +179,7 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 
 
 
+[[step-5-install-the-mezzanine-card-in-the-replacement-controller]]
 == 第5步：在更换用的控制器中安装夹层卡
 
 在更换用的控制器模块中安装夹层卡。
@@ -191,6 +196,7 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 
 
 
+[[step-6-move-the-dimms]]
 == 第 6 步：移动 DIMM
 
 从受损控制器模块中卸下DIMM、然后将其安装到更换用的控制器模块中。
@@ -250,6 +256,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
+[[step-7-move-a-caching-module]]
 == 第7步：移动缓存模块
 
 从受损控制器模块中卸下缓存模块将其安装到更换用的控制器模块中。
@@ -295,6 +302,7 @@ NOTE: 如果很难插入电池、请从控制器模块中取出电池、将其�
 
 
 
+[[step-8-install-the-nv-battery]]
 == 第8步：安装NV电池
 
 将NV电池安装到更换用的控制器模块中。
@@ -310,6 +318,7 @@ NOTE: 如果很难插入电池、请从控制器模块中取出电池、将其�
 
 
 
+[[step-9-install-the-controller]]
 == 第9步：安装控制器
 
 将替代控制器模块安装到系统机箱中并启动ONTAP。

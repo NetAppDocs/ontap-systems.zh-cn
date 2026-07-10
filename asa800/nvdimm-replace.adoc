@@ -20,6 +20,7 @@ summary: 当您的 ASA A800 系统注册闪存寿命即将结束或所识别的 
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 关闭或接管受损控制器。
@@ -92,6 +93,7 @@ LOADER 提示符
 
 
 
+[[step-2-remove-the-controller-module]]
 == 第 2 步：卸下控制器模块
 
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
@@ -180,6 +182,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-3-replace-the-nvdimm]]
 == 第 3 步：更换 NVDIMM
 
 使用风管顶部的 NVDIMM 定位标签找到控制器模块中的 NVDIMM，然后进行更换。
@@ -240,6 +243,7 @@ NOTE: 目视检查 NVDIMM ，确认其已均匀对齐并完全插入插槽。
 
 
 
+[[step-4-reinstall-the-controller-module-and-booting-the-system]]
 == 第 4 步：重新安装控制器模块并启动系统
 
 重新安装控制器模块并重新启动。
@@ -288,6 +292,7 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 
 
 
+[[step-5-return-the-failed-part-to-netapp]]
 == 第 5 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

@@ -6,6 +6,7 @@
 
 
 
+[[step-1-remove-the-power-supplies]]
 == 第 1 步：卸下电源
 
 .步骤
@@ -43,6 +44,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
+[[step-2-remove-the-fans]]
 == 第 2 步：卸下风扇
 
 要在更换机箱时卸下风扇模块，您必须执行一系列特定的任务。
@@ -74,6 +76,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
+[[step-3-remove-the-controller-module]]
 == 第 3 步：卸下控制器模块
 
 要更换机箱，您必须从旧机箱中卸下控制器模块。
@@ -111,6 +114,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-4-remove-the-io-modules]]
 == 第 4 步：卸下 I/O 模块
 
 .步骤
@@ -163,6 +167,7 @@ I/O 凸轮闩锁完全解锁
 
 
 
+[[step-5-remove-the-de-stage-controller-power-module]]
 == 第 5 步：卸下降级控制器电源模块
 
 .步骤
@@ -188,6 +193,7 @@ DCPM 模块橙色锁定按钮
 
 
 
+[[step-6-replace-a-chassis-from-within-the-equipment-rack-or-system-cabinet]]
 == 第 6 步：从设备机架或系统机柜中更换机箱
 
 .步骤
@@ -210,6 +216,7 @@ NOTE: 如果系统位于系统机柜中，则可能需要卸下后部系紧支�
 
 
 
+[[step-7-move-the-usb-led-module-to-the-new-chassis]]
 == 第 7 步：将 USB LED 模块移至新机箱
 
 .步骤
@@ -222,6 +229,7 @@ NOTE: 如果系统位于系统机柜中，则可能需要卸下后部系紧支�
 
 
 
+[[step-8-install-the-de-stage-controller-power-module-when-replacing-the-chassis]]
 == 第 8 步：在更换机箱时安装降级控制器电源模块
 
 .步骤
@@ -237,6 +245,7 @@ NOTE: 模块和插槽采用键控方式。请勿强行将模块插入开口。�
 
 
 
+[[step-9-install-fans-into-the-chassis]]
 == 第 9 步：将风扇安装到机箱中
 
 .步骤
@@ -252,6 +261,7 @@ NOTE: 模块和插槽采用键控方式。请勿强行将模块插入开口。�
 
 
 
+[[step-10-install-io-modules]]
 == 第 10 步：安装 I/O 模块
 
 .步骤
@@ -270,6 +280,7 @@ NOTE: 如果旧机箱具有空白 I/O 面板，请此时将其移至更换机箱
 
 
 
+[[step-11-install-the-power-supplies]]
 == 第 11 步：安装电源
 
 .步骤
@@ -293,6 +304,7 @@ NOTE: 仅将电源线连接到电源。此时请勿将电源线连接到电源�
 
 
 
+[[step-12-install-the-controller]]
 == 第 12 步：安装控制器
 
 .步骤

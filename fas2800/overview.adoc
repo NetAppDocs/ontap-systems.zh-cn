@@ -15,6 +15,7 @@ summary: FAS2800 平台组的主要规格
 
 
 
+[[key-specifications-for-fas2820]]
 == FAS2820的主要规格
 
 * 平台配置： FAS2820单机箱 HA 对
@@ -28,6 +29,7 @@ summary: FAS2800 平台组的主要规格
 
 
 
+[[scaleout-maximums]]
 == 横向扩展最大值
 
 * 类型：NAS；HA 对：12；原始容量：38.0 PB / 33.8 PiB；最大内存：1536 GB
@@ -37,10 +39,12 @@ summary: FAS2800 平台组的主要规格
 
 
 
+[[io]]
 == 输入/输出
 
 
 
+[[onboard-io]]
 === 板载 I/O
 
 * 协议：以太网 25 Gbps；端口：4
@@ -49,6 +53,7 @@ summary: FAS2800 平台组的主要规格
 
 
 
+[[total-io]]
 === 总输入/输出
 
 * 协议：以太网 25 Gbps；端口：12
@@ -61,6 +66,7 @@ summary: FAS2800 平台组的主要规格
 
 
 
+[[management-ports]]
 === 管理端口
 
 * 协议：以太网 1 Gbps；端口：2
@@ -70,6 +76,7 @@ summary: FAS2800 平台组的主要规格
 
 
 
+[[storage-networking-supported]]
 == 支持的存储网络
 
 * CIFS
@@ -92,6 +99,7 @@ summary: FAS2800 平台组的主要规格
 
 
 
+[[system-environment-specifications]]
 == 系统环境规范
 
 * 典型功率：1815 BTU/小时
@@ -107,6 +115,7 @@ summary: FAS2800 平台组的主要规格
 
 
 
+[[compliance]]
 == Compliance
 
 * EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
@@ -119,6 +128,7 @@ summary: FAS2800 平台组的主要规格
 
 
 
+[[high-availability]]
 == 高可用性
 
 * 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口

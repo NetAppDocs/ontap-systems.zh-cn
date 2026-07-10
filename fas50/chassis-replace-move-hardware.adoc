@@ -15,6 +15,7 @@ summary: 如果硬件故障需要更换FAS50存储系统的机箱。更换过程
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 如果需要、您可以打开存储系统位置(蓝色) LED、以帮助您以物理方式定位受影响的存储系统。使用SSH登录到BMC并输入 `system location-led _on_`命令。
@@ -25,6 +26,7 @@ summary: 如果硬件故障需要更换FAS50存储系统的机箱。更换过程
 
 
 
+[[step-1-remove-the-controller]]
 == 第 1 步：卸下控制器
 
 在更换控制器或更换控制器内部的组件时、必须从机箱中卸下控制器。
@@ -136,6 +138,7 @@ image::../media/icon_round_3.png[标注编号3]
 
 
 
+[[step-2-remove-the-caching-modules-from-the-impaired-chassis]]
 == 第2步：从受损机箱中卸下缓存模块
 
 您需要从受损机箱中卸下任何缓存模块和驱动器挡片、以便在此过程稍后将其安装到更换机箱中。
@@ -181,6 +184,7 @@ image::../media/icon_round_3.png[标注编号3]
 
 
 
+[[step-3-replace-the-chassis-from-within-the-equipment-rack-or-system-cabinet]]
 == 第3步：从设备机架或系统机柜中更换机箱
 
 从设备机架或系统机柜中卸下受损机箱、安装更换机箱、安装控制器、安装所有缓存模块和驱动器挡片、然后安装挡板。
@@ -200,6 +204,7 @@ NOTE: 如果存储系统随附在NetApp系统机柜中、则必须先卸下机�
 
 
 
+[[step-4-install-the-controllers]]
 == 第 4 步：安装控制器
 
 将控制器安装到替代机箱中并重新启动它们。

@@ -11,6 +11,7 @@
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 使用以下选项之一关闭或接管受损控制器。
@@ -147,6 +148,7 @@ LOADER 提示符
 ====
 
 
+[[step-2-remove-the-controller-module]]
 == 第 2 步：卸下控制器模块
 
 要访问控制器内部的组件，您必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。
@@ -201,6 +203,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
+[[step-3-replace-the-dimms]]
 == 第 3 步：更换 DIMM
 
 要更换 DIMM ，请在控制器中找到它们，然后按照特定步骤顺序进行操作。
@@ -260,6 +263,7 @@ IMPORTANT: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
+[[step-4-install-the-controller]]
 == 第 4 步：安装控制器
 
 将组件安装到控制器模块后，您必须将控制器模块安装回系统机箱并启动操作系统。
@@ -339,6 +343,7 @@ IMPORTANT: 将控制器模块滑入机箱时，请勿用力过大，以免损坏
 
 
 
+[[step-5-run-system-level-diagnostics]]
 == Step 5: Run system-level diagnostics
 
 After installing a new DIMM, you should run diagnostics.
@@ -445,6 +450,7 @@ The controller module boots up when fully seated.
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == 第 6 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

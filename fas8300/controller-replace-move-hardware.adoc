@@ -18,6 +18,7 @@ NOTE: 在FAS9300中、Ver2控制器模块只有一个缓存模块插槽(插槽6)
 
 
 
+[[step-1-remove-the-controller-module]]
 == 第 1 步：卸下控制器模块
 
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
@@ -92,6 +93,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
+[[step-2-move-the-power-supplies]]
 == 第 2 步：移动电源
 
 将电源移至替换控制器模块。
@@ -145,6 +147,7 @@ NOTE: 为避免损坏内部连接器，请勿在将电源滑入系统时用力�
 
 
 
+[[step-3-move-the-nvdimm-battery]]
 == 第 3 步：移动 NVDIMM 电池
 
 将NVDIMM电池移至替换控制器模块。
@@ -201,6 +204,7 @@ NOTE: 除非系统指示，否则请勿将电池缆线重新插入主板。
 
 
 
+[[step-4-move-the-boot-media]]
 == 第 4 步：移动启动介质
 
 将启动介质移至替换后的控制器模块。
@@ -253,6 +257,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-5-move-the-pcie-risers-and-mezzanine-card]]
 == 第 5 步：移动 PCIe 提升板和夹层卡
 
 将 PCIe 提升板和夹层卡移至更换控制器模块。
@@ -332,6 +337,7 @@ PCI卡
 
 
 
+[[step-6-move-the-cache-module]]
 == 第 6 步：移动缓存模块
 
 将缓存模块移动到替换控制器模块。
@@ -362,6 +368,7 @@ image::../media/drw_8300_Replace-flashcache.png[卸下并更换缓存模块]
 
 
 
+[[step-7-move-the-dimms]]
 == 第 7 步：移动 DIMM
 
 将DIMM移至更换用的控制器模块。
@@ -432,6 +439,7 @@ DIMM 紧紧固定在插槽中，但应易于插入。如果没有，请将 DIMM 
 
 
 
+[[step-8-install-the-controller-module]]
 == 第 8 步：安装控制器模块
 
 重新安装控制器模块并重新启动。

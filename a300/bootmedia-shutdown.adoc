@@ -15,6 +15,7 @@ summary: 您可以根据存储系统硬件配置的不同，使用不同的程�
 
 
 
+[[option-1-most-configurations]]
 == 选项 1 ：大多数配置
 
 通过将其暂停到 LOADER 提示符并捕获引导环境变量来完成受损控制器的关闭。LOADER 提示符是安全停止状态，您可以从中更换启动介质。
@@ -58,6 +59,7 @@ NOTE: 如果启动设备损坏或无法正常运行，则此命令可能不起�
 
 
 
+[[option-2-controller-is-in-a-metrocluster-configuration]]
 == 选项 2 ：控制器采用 MetroCluster 配置
 
 完成 NVE 或 NSE 任务后，您需要关闭受损节点。
@@ -119,6 +121,7 @@ LOADER 提示符
 
 
 
+[[option-3-controller-is-in-a-two-node-metrocluster]]
 == Option 3: Controller is in a two-node MetroCluster
 
 完成 NVE 或 NSE 任务后，您需要关闭受损节点。

@@ -17,6 +17,7 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 
 
+[[step-1-recable-the-system]]
 == 第 1 步：重新对系统进行布线
 
 使用以下方法验证控制器模块的存储和网络连接： https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] 。
@@ -30,6 +31,7 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 
 
+[[step-2-reassign-disks]]
 == 第 2 步：重新分配磁盘
 
 If the storage system is in an HA pair, the system ID of the new controller module is automatically assigned to the disks when the giveback occurs at the end of the procedure.您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。

@@ -32,6 +32,7 @@ Location LEDs remain illuminated for 30 minutes.您可以输入相同的命令�
 
 
 
+[[operator-display-panel-leds]]
 == 操作员显示面板 LED
 
 驱动器架前操作员显示面板(ODP)上的LED指示驱动器架是否正常运行或硬件存在问题。
@@ -87,6 +88,7 @@ image::../media/drw_sas3_location_icon.svg[操作员显示面板位置LED]
 |===
 
 
+[[nsm-leds]]
 == NSM LED
 
 NSM上的LED指示该模块是否正常运行、是否已准备好处理I/O流量以及硬件是否存在任何问题。
@@ -264,6 +266,7 @@ I/O模块缺失
 |===
 
 
+[[power-supply-leds]]
 == 电源 LED
 
 交流电源 (PSU) 上的 LED 指示 PSU 是否正常运行或存在硬件问题。
@@ -352,6 +355,7 @@ PSU故障
 |===
 
 
+[[drive-leds]]
 == 驱动器LED
 
 NVMe驱动器上的LED指示灯可指示其是否正常运行或硬件是否存在问题。

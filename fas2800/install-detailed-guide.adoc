@@ -15,6 +15,7 @@ summary: 本过程提供了有关安装典型NetApp存储系统的详细分步�
 
 
 
+[[step-1-prepare-for-installation]]
 == 第 1 步：准备安装
 
 .开始之前
@@ -167,6 +168,7 @@ image::../media/oie_cable_fiber_lc_connector.png[LC光纤连接器]
 |===
 
 
+[[step-2-install-the-hardware]]
 == 第 2 步：安装硬件
 
 将存储系统安装在电信机架或NetApp存储系统机柜中(如果适用)。
@@ -190,6 +192,7 @@ image::../media/drw_cable_management_arm_install.svg[安装缆线管理ARM]
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == 第 3 步：使用缆线将控制器连接到网络
 
 使用缆线将控制器作为双节点无交换机集群或有交换机集群连接到网络。
@@ -390,6 +393,7 @@ IMPORTANT: 请勿插入电源线。
 ====
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
 使用缆线将控制器连接到外部存储。
@@ -471,6 +475,7 @@ image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[控制器 B 到机
 
 
 
+[[step-5-complete-storage-system-setup-and-configuration]]
 == 第5步：完成存储系统设置和配置
 
 使用选项1：(如果启用了网络发现)或选项2：(如果未启用网络发现)完成存储系统设置和配置。

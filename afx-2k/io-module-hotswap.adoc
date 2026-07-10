@@ -34,6 +34,7 @@ summary: 如果模块发生故障并且存储系统满足所有 ONTAP 版本要�
 
 
 
+[[step-1-ensure-the-storage-system-meets-the-procedure-requirements]]
 == 步骤 1：确保存储系统满足程序要求
 
 要使用此过程，您的存储系统必须运行 ONTAP 9.18.1 GA 或更高版本，并且您的存储系统必须满足所有要求。
@@ -68,6 +69,7 @@ NOTE: 如果您的存储系统未运行 ONTAP 9.18.1 GA 或更高版本，则无
 
 
 
+[[step-2-prepare-the-storage-system-and-io-module-slot]]
 == 步骤 2：准备存储系统和 I/O 模块插槽
 
 准备好存储系统和 I/O 模块插槽，以便可以安全地卸下出现故障的 I/O 模块：
@@ -154,12 +156,58 @@ The module has been successfully removed from service and powered off. It can no
 
 
 
+[[step-3-hot-swap-the-failed-io-module]]
 == 步骤 3：热插拔发生故障的 I/O 模块
 
-stdin 中未解析的指令 - include::../_include/afx_2k_io_module_hotswap_replace.adoc[]
+将发生故障的 I/O 模块与等效的 I/O 模块热插拔。
+
+
+CAUTION: 在安装和维护过程中，请始终佩戴连接到已验证接地点的接地腕带。未遵循正确的 ESD 预防措施可能会对控制器节点、存储架和网络交换机造成永久性损坏。
+
+.步骤
+. 向下旋转缆线管理托架、方法是拉动缆线管理托架内部的按钮、然后向下旋转。
+. 从控制器模块中卸下I/O模块：
++
+
+NOTE: 下图显示了如何卸下垂直 I/O 模块。通常，您只会移除一个 I/O 模块。
+
++
+image::../media/drw_afx_2k_io_remove_replace_ieops-2878.svg[卸下I/O模块]
+
++
+[cols="1,4"]
+|===
+
+
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+凸轮锁定按钮
+
+|===
++
+.. 按下凸轮闩锁按钮。
+.. 将凸轮闩锁尽可能远离模块。
+.. 将手指插入凸轮拉杆开口处、然后将模块拉出控制器模块、从而将模块从控制器模块中卸下。
++
+跟踪 I/O 模块位于哪个插槽中。
 
 
 
+. 将 I/O 模块放在一旁。
+. 将更换用的I/O模块安装到目标插槽中：
++
+.. 将 I/O 模块与插槽边缘对齐。
+.. 将模块轻轻地滑入插槽、直至完全滑入控制器模块、然后将凸轮闩锁一直向上旋转、以将模块锁定到位。
+
+
+. 为I/O模块布线。
+. 将缆线管理托架旋转到锁定位置。
+
+
+
+
+[[step-4-bring-the-replacement-io-module-online]]
 == 步骤 4：使更换 I/O 模块联机
 
 将更换的 I/O 模块联机，验证 I/O 模块端口已成功初始化，验证插槽已通电，然后验证 I/O 模块是否联机并被识别。
@@ -276,6 +324,7 @@ Slot slot Information
 
 
 
+[[step-5-restore-the-storage-system-to-normal-operation]]
 == 步骤 5：恢复存储系统正常运行
 
 通过向已接管的控制器提供存储空间（根据需要）、恢复自动回馈（根据需要）、验证 LIF 位于其主端口上以及重新启用 AutoSupport 自动案例创建，将存储系统恢复到正常运行状态。
@@ -321,6 +370,7 @@ Slot slot Information
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == 第 6 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

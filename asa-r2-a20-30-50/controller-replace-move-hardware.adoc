@@ -15,6 +15,7 @@ summary: 当硬件故障需要更换ASA A20、 ASA A30 或ASA A50 存储系统�
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 如果需要、您可以打开存储系统位置(蓝色) LED、以帮助您以物理方式定位受影响的存储系统。使用SSH登录到BMC并输入 `system location-led _on_`命令。
@@ -25,6 +26,7 @@ summary: 当硬件故障需要更换ASA A20、 ASA A30 或ASA A50 存储系统�
 
 
 
+[[step-1-remove-the-controller]]
 == 第 1 步：卸下控制器
 
 在更换控制器或更换控制器内部的组件时、必须从机箱中卸下控制器。
@@ -136,6 +138,7 @@ image::../media/icon_round_3.png[标注编号3]
 
 
 
+[[step-2-move-the-power-supply]]
 == 第 2 步：移动电源
 
 将电源(PSU)移至更换用的控制器。
@@ -273,6 +276,7 @@ NOTE: 为避免损坏内部连接器、将PSU滑入控制器时请勿用力过�
 ====
 
 
+[[step-3-move-the-fans]]
 == 第 3 步：移动风扇
 
 将风扇移至更换用的控制器。
@@ -301,6 +305,7 @@ image::../media/icon_round_2.png[标注编号2]
 
 
 
+[[step-4-move-the-nv-battery]]
 == Step 4: Move the NV battery
 
 将NV电池移至更换用的控制器。
@@ -353,6 +358,7 @@ NV电池应与电池仓齐平。
 
 
 
+[[step-5-move-system-dimms]]
 == Step 5: Move system DIMMs
 
 将DIMM移至替代控制器。
@@ -420,6 +426,7 @@ CAUTION: 关闭损坏的控制器盖之前，请确保所有空 DIMM 插槽上�
 
 
 
+[[step-6-move-the-boot-media]]
 == Step 6: Move the boot media
 
 将启动介质移至替代控制器。
@@ -470,6 +477,7 @@ image::../media/icon_round_4.png[标注编号4]
 
 
 
+[[step-7-move-the-io-modules]]
 == 第7步：移动I/O模块
 
 将I/O模块和任何I/O消隐模块移至替代控制器。
@@ -521,6 +529,7 @@ image::../media/icon_round_2.png[标注编号2]
 
 
 
+[[step-8-install-the-controller]]
 == 第8步：安装控制器
 
 将控制器重新安装到机箱中并重新启动。

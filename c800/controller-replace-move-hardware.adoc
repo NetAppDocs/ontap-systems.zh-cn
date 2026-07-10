@@ -15,6 +15,7 @@ summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 
 
 
 
+[[step-1-remove-the-controller-module]]
 == 第 1 步：卸下控制器模块
 
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
@@ -103,6 +104,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-2-move-the-power-supplies]]
 == 第 2 步：移动电源
 
 将电源移至替换控制器模块。
@@ -147,6 +149,7 @@ NOTE: 为避免损坏内部连接器，请勿在将电源滑入系统时用力�
 
 
 
+[[step-3-move-the-fans]]
 == 第 3 步：移动风扇
 
 将风扇模块移至替换控制器模块。
@@ -180,6 +183,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-4-move-the-nvdimm-battery]]
 == 第 4 步：移动 NVDIMM 电池
 
 将NVDIMM电池移至替换控制器模块。
@@ -229,6 +233,7 @@ NVDIMM 电池组
 
 
 
+[[step-5-remove-the-pcie-risers]]
 == 第 5 步：卸下 PCIe 提升板
 
 从故障控制器模块上移除 PCIe 转接卡。
@@ -271,6 +276,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-6-move-system-dimms]]
 == 第 6 步：移动系统 DIMM
 
 将系统 DIMM 移至替换控制器模块。
@@ -297,6 +303,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
+[[step-7-move-the-nvdimms]]
 == 第 7 步：移动 NVDIMM
 
 将 NVDIMMS 移至替换控制器模块。
@@ -345,6 +352,7 @@ NOTE: 目视检查 NVDIMM ，确认其已均匀对齐并完全插入插槽。
 
 
 
+[[step-8-move-the-boot-media]]
 == 第 8 步：移动启动介质
 
 将启动介质移至替换后的控制器模块。
@@ -413,6 +421,7 @@ image:../media/icon_round_5.png["标注编号5"]
 
 
 
+[[step-9-install-the-pcie-risers]]
 == 第 9 步：安装 PCIe 提升板
 
 将立管安装到替换控制器模块中。
@@ -434,6 +443,7 @@ image:../media/icon_round_5.png["标注编号5"]
 
 
 
+[[step-10-install-the-controller-module]]
 == 第 10 步：安装控制器模块
 
 重新安装控制器模块并重新启动。

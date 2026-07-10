@@ -15,6 +15,7 @@ summary: 将 NS224 机架连接到 AFF 系统以提供双路径连接，确保 H
 
 
 
+[[cabling-overview-for-aff-systems]]
 == AFF 系统布线概述
 
 布线因 AFF 平台型号而异，因为每个系统都有独特的端口分配和 I/O 模块配置。
@@ -28,6 +29,7 @@ summary: 将 NS224 机架连接到 AFF 系统以提供双路径连接，确保 H
 
 
 
+[[additional-resources]]
 == 其他资源
 
 您的硬件系统可能与带有 NSM100 模块的 NS224 盘架和带有 NSM100B 模块的 NS224 盘架兼容。有关全面的端口名称和配置详细信息，请参见 https://hwu.netapp.com["NetApp Hardware Universe"^]。

@@ -24,12 +24,14 @@
 
 
 
+[[option-1-add-io-modules-to-a-storage-system-with-available-slots]]
 == 选项1：将I/O模块添加到具有可用插槽的存储系统
 
 您可以将I/O模块添加到每个控制器的可用插槽中。
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 === 第 1 步：关闭受损控制器
 
 使用以下选项之一关闭或接管受损控制器。
@@ -161,6 +163,7 @@ LOADER 提示符
 ====
 
 
+[[step-2-add-io-modules-to-available-slots]]
 === 第2步：将I/O模块添加到可用插槽
 
 . 如果您尚未接地，请正确接地。
@@ -215,6 +218,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[option-2-add-io-modules-in-a-storage-system-with-unavailable-slots]]
 == 选项2：在插槽不可用的存储系统中添加I/O模块
 
 您可以通过删除现有I/O模块并将其更换为不同的I/O模块、将I/O模块添加到完全填充的存储系统中。
@@ -250,6 +254,7 @@ NIC I/O 模块，端口更少
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 === 第 1 步：关闭受损控制器
 
 使用以下选项之一关闭或接管受损控制器。
@@ -381,6 +386,7 @@ LOADER 提示符
 ====
 
 
+[[step-2-add-io-modules-to-unavailable-slots]]
 === 第2步：将I/O模块添加到不可用的插槽
 
 . 如果您尚未接地，请正确接地。

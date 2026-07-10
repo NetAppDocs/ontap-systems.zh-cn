@@ -15,10 +15,12 @@ summary: 了解适用于ONTAP硬件系统的新平台。
 
 
 
+[[july-2026]]
 == 2026年7月
 
 
 
+[[afx-2k]]
 === AFX 2K
 
 .AFX 2K存储系统
@@ -31,10 +33,12 @@ link:https://docs.netapp.com/us-en/ontap-afx/get-started/ontap-afx-storage.html[
 
 
 
+[[january-2026]]
 == 2026年1月
 
 
 
+[[io-module-hot-swap-procedures]]
 === I/O 模块热插拔过程
 
 热插拔程序现在可用于跨多个 ONTAP 硬件平台和 ONTAP 版本的选定 I/O 模块。
@@ -69,6 +73,7 @@ NOTE: 不能热插拔具有分配给存储或 MetroCluster 连接的端口的以
 
 
 
+[[aff-c800-end-of-availability]]
 === AFF C800 停止供应
 
 AFF C800 系统已移至供应终止列表，不再适用于新订单。
@@ -77,6 +82,7 @@ link:endofavail/index.html["查看停产硬件"]。
 
 
 
+[[2025-releases]]
 == 2025 版本
 
 .2025年10月
@@ -135,6 +141,7 @@ link:https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["详细�
 ====
 
 
+[[2024-releases]]
 == 2024 年发行
 
 .2024年12月

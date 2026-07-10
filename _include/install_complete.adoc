@@ -4,6 +4,7 @@
 
 
 
+[[step-1-gather-cluster-information]]
 == 第1步：收集集群信息
 
 如果您尚未收集配置集群所需的信息、例如集群管理接口端口和IP地址、请执行此操作。
@@ -12,6 +13,7 @@
 
 
 
+[[step-2-discover-your-cluster-network]]
 == 第2步：发现集群网络
 
 通过发现过程、您可以发现网络上的存储系统控制器。
@@ -86,6 +88,7 @@ NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制�
 ====
 
 
+[[step-3-configure-your-cluster]]
 == 第3步：配置集群
 
 NetApp建议您使用System Manager设置新集群。有关设置说明、请参见。 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["使用System Manager在新集群上配置ONTAP"^]

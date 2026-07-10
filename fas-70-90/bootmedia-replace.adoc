@@ -15,6 +15,7 @@ FAS70 或 FAS90 系统中的启动介质存储了重要的固件和配置数据�
 
 
 
+[[step-1-replace-the-boot-media]]
 == Step 1: Replace the boot media
 
 启动介质位于系统管理模块内部、可通过从系统中卸下模块来访问。
@@ -90,6 +91,7 @@ NOTE: 如果存储系统具有直流电源、请断开电源电缆块与电源�
 
 
 
+[[step-2-transfer-the-ontap-image-to-the-boot-media]]
 == 第2步：将ONTAP映像传输到启动介质
 
 您安装的替代启动介质没有ONTAP映像。您可以将相应的ONTAP服务映像从下载到USB闪存驱动器、然后再下载到替代启动介质、从而将ONTAP映像传输到 https://mysupport.netapp.com/["NetApp 支持站点"]替代启动介质。

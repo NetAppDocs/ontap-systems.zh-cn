@@ -15,6 +15,7 @@ summary: 使用缆线将控制器连接到AFF A20、AFF A30或AFF A50存储系�
 
 
 
+[[step-1-power-on-the-shelf-and-assign-shelf-id]]
 == 第1步：打开磁盘架电源并分配磁盘架ID
 
 每个磁盘架都有一个唯一的磁盘架ID来区分。此ID可确保存储架在存储系统设置中是不同的。
@@ -128,6 +129,7 @@ NOTE: 如果ID闪烁时间超过15秒、请再次按住磁盘架ID按钮、确�
 
 
 
+[[step-2-power-on-the-controllers]]
 == 第2步：打开控制器的电源
 
 打开磁盘架电源并为其分配唯一ID后、打开存储控制器的电源。

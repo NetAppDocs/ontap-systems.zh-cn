@@ -15,6 +15,7 @@ summary: 将受损机箱中的电源，硬盘驱动器和控制器模块或模�
 
 
 
+[[step-1-move-the-power-supply]]
 == 第 1 步：移动电源
 
 更换机箱时，要取出电源，需要关闭旧机箱中的电源，断开电源并将其卸下，然后将其安装到更换机箱上并进行连接。
@@ -52,6 +53,7 @@ NOTE: 仅将电源线连接到电源。此时请勿将电源线连接到电源�
 
 
 
+[[step-2-remove-the-controller-module]]
 == 第 2 步：卸下控制器模块
 
 从旧机箱中卸下一个或多个控制器模块。
@@ -73,6 +75,7 @@ image::../media/drw_2240_x_opening_cam_latch.png[打开凸轮把手闩锁]
 
 
 
+[[step-3-move-drives-to-the-new-chassis]]
 == 第 3 步：将驱动器移至新机箱
 
 将驱动器从旧机箱中的每个托架开口移至新机箱中的同一托架开口。
@@ -109,6 +112,7 @@ Be sure to close the cam handle slowly so that it aligns correctly with the fron
 
 
 
+[[step-4-replace-a-chassis-from-within-the-equipment-rack-or-system-cabinet]]
 == 第 4 步：从设备机架或系统机柜中更换机箱
 
 在安装替代机箱之前，请先从设备机架或系统机柜中卸下现有机箱。
@@ -124,6 +128,7 @@ Be sure to close the cam handle slowly so that it aligns correctly with the fron
 
 
 
+[[step-5-install-the-controller]]
 == 第 5 步：安装控制器
 
 将控制器模块和任何其他组件安装到新机箱后、启动它。

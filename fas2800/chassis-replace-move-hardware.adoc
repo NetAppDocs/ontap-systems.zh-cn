@@ -15,6 +15,7 @@ summary: 将电源设备、硬盘驱动器和控制器模块从受损机箱移�
 
 
 
+[[step-1-move-a-power-supply]]
 == 第 1 步：移动电源
 
 在更换机箱时移出电源设备包括关闭受损机箱的电源、断开其连接并将其从受损机箱中卸下、以及在更换机箱上安装和连接该电源设备。
@@ -52,6 +53,7 @@ NOTE: 仅将电源线连接到电源。此时请勿将电源线连接到电源�
 
 
 
+[[step-2-remove-the-controller-module]]
 == 第 2 步：卸下控制器模块
 
 从受损机箱中卸下一个或多个控制器模块。
@@ -71,6 +73,7 @@ image::../media/drw_2850_pcm_remove_install_IEOPS-694.svg[卸下控制器]
 
 
 
+[[step-3-move-drives-to-the-replacement-chassis]]
 == 第3步：将驱动器移至更换机箱
 
 将受损机箱中每个驱动器托架开口处的驱动器移至更换机箱中的同一托架开口处。
@@ -107,6 +110,7 @@ NOTE: 驱动器很脆弱。尽可能少地对其进行处理，以防止对其�
 
 
 
+[[step-4-replace-a-chassis-from-within-the-equipment-rack-or-system-cabinet]]
 == 第 4 步：从设备机架或系统机柜中更换机箱
 
 从设备机架或系统机柜中卸下现有机箱、然后在设备机架或系统机柜中安装替代机箱。
@@ -122,6 +126,7 @@ NOTE: 驱动器很脆弱。尽可能少地对其进行处理，以防止对其�
 
 
 
+[[step-5-install-the-controller]]
 == 第 5 步：安装控制器
 
 将控制器模块和任何其他组件安装到替代机箱中、将其启动至维护模式。

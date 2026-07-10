@@ -15,6 +15,7 @@ summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 
 
 
 
+[[step-1-remove-the-controller-module]]
 == 第 1 步：卸下控制器模块
 
 在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
@@ -93,6 +94,7 @@ image:../media/icon_round_3.png["标注编号3"]
 
 
 
+[[step-2-move-the-nvram-card]]
 == 第 2 步：移动 NVRAM 卡
 
 在控制器更换过程中，您必须从受损控制器模块的提升板 1 中卸下 NVRAM 卡，然后将该卡安装到更换控制器模块的提升板 1 中。只有在将 DIMM 从受损的控制器模块移至更换用的控制器模块后，才应将提升板 1 重新安装到更换用的控制器模块中。
@@ -173,6 +175,7 @@ NOTE: 确保此卡完全，正对着提升板插槽。
 
 
 
+[[step-3-move-pcie-cards]]
 == 第 3 步：移动 PCIe 卡
 
 在控制器更换过程中、您必须从受损控制器模块中卸下两个PCIe提升板模块、即提升板2 (中间提升板)和提升板3 (最右侧的提升板)、然后从提升板模块中卸下PCIe卡。 并将卡安装在更换用的控制器模块的同一提升板模块中。You will install the riser modules into the replacement controller module once the DIMMs have been moved to the replacement controller module.
@@ -248,6 +251,7 @@ image:../media/icon_round_4.png["标注编号4"]
 
 
 
+[[step-4-move-the-boot-media]]
 == 第 4 步：移动启动介质
 
 There are two boot media devices in the AFF A700s, a primary and a secondary or backup boot media.您必须将其从受损控制器移至 _replacement_ 控制器，并将其安装到 _replacement_ 控制器中相应的插槽中。
@@ -319,6 +323,7 @@ NOTE: 将启动介质安装到更换控制器模块中与受损控制器模块�
 
 
 
+[[step-5-move-the-fans]]
 == 第 5 步：移动风扇
 
 在更换发生故障的控制器模块时，您必须将受损控制器模块中的风扇移至更换模块。
@@ -351,6 +356,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-6-move-system-dimms]]
 == 第 6 步：移动系统 DIMM
 
 要移动 DIMM ，请找到 DIMM 并将其从受损控制器移至更换控制器，然后按照特定步骤顺序进行操作。
@@ -412,6 +418,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
+[[step-7-install-the-nvram-module]]
 == 第 7 步：安装 NVRAM 模块
 
 要安装 NVRAM 模块，必须按照特定步骤顺序进行操作。
@@ -431,6 +438,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
+[[step-8-move-the-nvram-battery]]
 == 第 8 步：移动 NVRAM 电池
 
 更换控制器模块时，必须将 NVRAM 电池从受损控制器模块移至更换用的控制器模块
@@ -470,6 +478,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-9-install-a-pcie-riser]]
 == 第 9 步：安装 PCIe 提升板
 
 要安装 PCIe 提升板，必须按照特定步骤顺序进行操作。
@@ -491,6 +500,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-10-move-the-power-supply]]
 == 第 10 步：移动电源
 
 在更换控制器模块时，您必须将受损控制器模块中的电源和电源设备挡片移至替代控制器模块。
@@ -536,6 +546,7 @@ NOTE: 为避免损坏内部连接器，请勿在将电源滑入系统时用力�
 
 
 
+[[step-11-install-the-controller-module]]
 == 第 11 步：安装控制器模块
 
 将所有组件从受损控制器模块移至更换控制器模块后，您必须将更换控制器模块安装到机箱中，然后将其启动至维护模式。

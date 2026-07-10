@@ -22,6 +22,7 @@ summary: 当存储系统中的 I/O 模块出现故障或需要升级以支持更
 
 
 
+[[step-1-shut-down-the-impaired-node]]
 == 第 1 步：关闭受损节点
 
 关闭或接管受损控制器。
@@ -79,6 +80,7 @@ _-halt true_ 参数将受损节点带入 LOADER 提示符。
 
 
 
+[[step-2-replace-a-failed-io-module]]
 == 第2步：更换发生故障的I/O模块
 
 要更换I/O模块、请在机箱中找到该模块、然后按照特定步骤顺序进行操作。
@@ -136,6 +138,7 @@ I/O凸轮闩锁
 
 
 
+[[step-3-reboot-the-controller]]
 == 第3步：重新启动控制器
 
 更换I/O模块后、必须重新启动控制器。
@@ -193,6 +196,7 @@ NOTE: 以下命令仅在诊断模式权限级别下可用。
 
 
 
+[[step-4-return-the-failed-part-to-netapp]]
 == 第 4 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

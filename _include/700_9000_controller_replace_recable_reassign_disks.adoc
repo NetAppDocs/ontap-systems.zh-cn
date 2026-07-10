@@ -6,6 +6,7 @@
 
 
 
+[[step-1-recable-the-system]]
 == 第 1 步：重新对系统进行布线
 
 使用以下方法验证控制器模块的存储和网络连接： https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"] 。
@@ -19,6 +20,7 @@
 
 
 
+[[step-2-reassign-disks]]
 == 第 2 步：重新分配磁盘
 
 您使用的程序取决于您的控制器冗余配置。

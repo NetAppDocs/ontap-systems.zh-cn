@@ -15,6 +15,7 @@ summary: FAS90 的主要规格
 
 
 
+[[fas90-specifications-at-a-glance]]
 == FAS90 规格一览
 
 * 平台配置：FAS90 双机箱 HA 对
@@ -28,6 +29,7 @@ summary: FAS90 的主要规格
 
 
 
+[[scaleout-maximums]]
 == 横向扩展最大值
 
 * 类型：NAS；HA 对：12；原始容量：180.0 PB / 159.9 PiB；最大内存：12288 GB
@@ -37,16 +39,19 @@ summary: FAS90 的主要规格
 
 
 
+[[io]]
 == 输入/输出
 
 
 
+[[onboard-io]]
 === 板载 I/O
 
 无板载 I/O 数据。
 
 
 
+[[total-io]]
 === 总输入/输出
 
 * 协议：以太网 200 Gbps；端口：20
@@ -61,6 +66,7 @@ summary: FAS90 的主要规格
 
 
 
+[[management-ports]]
 === 管理端口
 
 * 协议：以太网 1 Gbps；端口：2
@@ -70,6 +76,7 @@ summary: FAS90 的主要规格
 
 
 
+[[storage-networking-supported]]
 == 支持的存储网络
 
 * CIFS
@@ -93,6 +100,7 @@ summary: FAS90 的主要规格
 
 
 
+[[system-environment-specifications]]
 == 系统环境规范
 
 * 典型功率：3392 BTU/小时
@@ -108,6 +116,7 @@ summary: FAS90 的主要规格
 
 
 
+[[compliance]]
 == Compliance
 
 * EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
@@ -120,6 +129,7 @@ summary: FAS90 的主要规格
 
 
 
+[[high-availability]]
 == 高可用性
 
 * 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口

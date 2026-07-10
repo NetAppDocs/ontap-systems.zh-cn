@@ -15,6 +15,7 @@ summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 
 
 
 
+[[step-1-remove-the-controller-module]]
 == 第 1 步：卸下控制器模块
 
 在更换控制器模块或更换控制器模块内部的组件时、您必须从机柜中卸下控制器模块。
@@ -74,6 +75,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
+[[step-2-move-the-fans]]
 == 第 2 步：移动风扇
 
 您必须将受损控制器模块中的五个风扇模块卸下到更换用的控制器模块。
@@ -111,6 +113,7 @@ image::../media/icon_round_1.png[标注编号1]
 
 
 
+[[step-3-move-the-nv-battery]]
 == Step 3: Move the NV battery
 
 将NV电池移至更换用的控制器。
@@ -158,6 +161,7 @@ NV battery pack
 
 
 
+[[step-4-move-system-dimms]]
 == Step 4: Move system DIMMs
 
 将DIMM移至更换用的控制器模块。
@@ -199,6 +203,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
+[[step-5-install-the-controller-module]]
 == 第 5 步：安装控制器模块
 
 重新安装并启动控制器模块。

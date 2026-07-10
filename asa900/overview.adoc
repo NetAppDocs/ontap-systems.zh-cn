@@ -15,6 +15,7 @@ summary: ASA A900存储系统的主要规格
 
 
 
+[[key-specifications-for-asa-a900]]
 === ASA A900的主要规格
 
 平台配置： ASA A900单机箱 HA 对
@@ -33,6 +34,7 @@ PCIe 扩展槽：20
 
 
 
+[[scaleout-maximums]]
 === 横向扩展最大值
 
 |===
@@ -51,6 +53,7 @@ PCIe 扩展槽：20
 |===
 
 
+[[io]]
 === 输入输出
 
 
@@ -109,12 +112,14 @@ PCIe 扩展槽：20
 |===
 
 
+[[storage-networking-supported]]
 === 支持的存储网络
 
 足球俱乐部； iSCSI； NVMe/FC； NVMe/TCP；
 
 
 
+[[system-environment-specifications]]
 === 系统环境规格
 
 * 典型功率：8004 BTU/小时
@@ -130,6 +135,7 @@ PCIe 扩展槽：20
 
 
 
+[[compliance]]
 === Compliance
 
 * EMC/EMI 认证：AMCA、FCC、ICES、KC、摩洛哥、VCCI
@@ -142,6 +148,7 @@ PCIe 扩展槽：20
 
 
 
+[[high-availability]]
 === 高可用性
 
 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接进行 SAS 带内管理；

@@ -17,6 +17,7 @@ link:https://youtu.be/2_uWRt_iJqk["AFF FAS2600 控制器更换视频"]
 
 
 
+[[step-1-remove-controller-module]]
 == 第 1 步：卸下控制器模块
 
 要更换控制器模块，必须先从机箱中卸下旧控制器模块。
@@ -45,6 +46,7 @@ image::../media/drw_2600_opening_pcm_cover.png[打开或关闭控制器模块]
 
 
 
+[[step-2-move-the-boot-media]]
 == 第 2 步：移动启动介质
 
 您必须找到启动介质并按照说明将其从旧控制器模块中取出并将其插入新控制器模块中。
@@ -69,6 +71,7 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 
 
 
+[[step-3-move-the-nvmem-battery]]
 == 第 3 步：移动 NVMEM 电池
 
 要将 NVMEM 电池从旧控制器模块移至新控制器模块，您必须执行一系列特定步骤。
@@ -109,6 +112,7 @@ image::../media/drw_2600_nvmem_battery_move_animated_gif.png[Replacing the NVMEM
 
 
 
+[[step-4-move-the-dimms]]
 == 第 4 步：移动 DIMM
 
 要移动 DIMM ，您必须按照说明找到 DIMM ，并将其从旧控制器模块移至更换用的控制器模块。
@@ -152,6 +156,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 
 
+[[step-5-move-the-caching-module]]
 == 第 5 步：移动缓存模块
 
 要移动控制器标签上的 M.2 PCIe 卡缓存模块，请找到旧控制器并将其移至更换控制器，然后按照特定步骤顺序进行操作。
@@ -180,6 +185,7 @@ image::../media/drw_2600_fcache.png[正在删除缓存模块]
 
 
 
+[[step-6-install-the-controller]]
 == 第 6 步：安装控制器
 
 将旧控制器模块中的组件安装到新控制器模块中后，必须将新控制器模块安装到系统机箱中并启动操作系统。

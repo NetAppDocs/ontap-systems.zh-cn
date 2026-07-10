@@ -17,6 +17,7 @@ summary: 要热插拔包含 NVRAM10 电池的去级控制器电源模块 DCPM，
 
 
 
+[[step-1-replace-the-dcpm-module]]
 == 第 1 步：更换 DCPM 模块
 
 要更换系统中的 DCPM 模块，您必须从系统中卸下出现故障的 DCPM 模块，然后将其更换为新的 DCPM 模块。
@@ -59,6 +60,7 @@ NOTE: 模块和插槽采用键控方式。请勿强行将模块插入开口。�
 
 
 
+[[step-2-dispose-of-batteries]]
 == 第 2 步：处置电池
 
 您必须根据当地有关电池回收或处置的法规处置电池。如果您无法正确处置电池，则必须按照套件随附的 RMA 说明将电池退回 NetApp 。
@@ -67,6 +69,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMP12475945[]
 
 
 
+[[step-3-return-the-failed-part-to-netapp]]
 == 第 3 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

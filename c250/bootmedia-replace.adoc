@@ -15,6 +15,7 @@ summary: 您可以先卸下控制器模块上的通风管，然后再更换启�
 
 
 
+[[step-1-remove-the-controller-module]]
 == 第 1 步：卸下控制器模块
 
 要访问控制器模块中的组件，必须先从系统中卸下控制器模块，然后再卸下控制器模块上的盖板。
@@ -81,6 +82,7 @@ image::../media/drw_a250_remove_airduct_cover.png[提起空气管道盖]
 
 
 
+[[step-2-replace-the-boot-media]]
 == Step 2: Replace the boot media
 
 您可以先卸下控制器模块上的通风管，然后再更换启动介质，从而在控制器模块中找到发生故障的启动介质。
@@ -125,6 +127,7 @@ NOTE: 拧紧启动介质上的螺钉时请勿用力，否则可能会使其发�
 
 
 
+[[step-3-transfer-the-boot-image-to-the-boot-media]]
 == 第 3 步：将启动映像传输到启动介质
 
 您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。

@@ -17,6 +17,7 @@ summary: 在更换 ASA C30 存储系统的机箱之前，请确保满足成功�
 
 
 
+[[requirements]]
 == 要求
 
 * 更换的机箱必须与受损机箱型号相同。此过程适用于相似更换、而不适用于升级。
@@ -25,6 +26,7 @@ summary: 在更换 ASA C30 存储系统的机箱之前，请确保满足成功�
 
 
 
+[[considerations]]
 == 注意事项
 
 * 机箱更换过程会造成系统中断。For a two-node cluster, you will have a complete service outage and a partial outage in a multi-node cluster.

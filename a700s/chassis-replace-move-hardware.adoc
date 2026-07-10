@@ -15,6 +15,7 @@ summary: 将受损机箱中的电源，硬盘驱动器和控制器模块或模�
 
 
 
+[[step-1-remove-the-controller-modules]]
 == 第 1 步：卸下控制器模块
 
 要更换机箱，必须从旧机箱中卸下控制器模块。
@@ -57,6 +58,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[step-2-move-drives-to-the-new-chassis]]
 == 第 2 步：将驱动器移至新机箱
 
 您需要将驱动器从旧机箱中的每个托架开口移至新机箱中的同一托架开口。
@@ -93,6 +95,7 @@ NOTE: 驱动器很脆弱。尽可能少地对其进行处理，以防止对其�
 
 
 
+[[step-3-replace-a-chassis-from-within-the-equipment-rack-or-system-cabinet]]
 == 第 3 步：从设备机架或系统机柜中更换机箱
 
 您必须先从设备机架或系统机柜中卸下现有机箱，然后才能安装替代机箱。
@@ -108,6 +111,7 @@ NOTE: 驱动器很脆弱。尽可能少地对其进行处理，以防止对其�
 
 
 
+[[step-4-install-the-controllers]]
 == 第 4 步：安装控制器
 
 将控制器模块安装到新机箱后、启动它。

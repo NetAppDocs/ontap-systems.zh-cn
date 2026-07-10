@@ -15,6 +15,7 @@ summary: 启动介质存储着系统启动时使用的主启动映像文件集�
 
 
 
+[[step-1-remove-the-controller-module]]
 == 第 1 步：卸下控制器模块
 
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
@@ -48,6 +49,7 @@ image::../media/drw_a320_controller_remove_animated_gif.png[删除控制器]
 
 
 
+[[step-2-replace-the-boot-media]]
 == 第 2 步：更换启动介质
 
 您必须在控制器模块中找到启动介质，然后按照说明进行更换。
@@ -82,6 +84,7 @@ image::../media/drw_a320_boot_media_replace_animated_gif.png[更换启动介质]
 
 
 
+[[step-3-transfer-the-boot-image-using-a-usb-flash-drive]]
 == 步骤 3：使用 U 盘传输启动镜像
 
 您安装的替代启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。

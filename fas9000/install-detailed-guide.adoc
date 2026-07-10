@@ -15,6 +15,7 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 
 
+[[step-1-prepare-for-installation]]
 == 第 1 步：准备安装
 
 要安装系统，您需要在 NetApp 支持站点上创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
@@ -178,6 +179,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置�
 
 
 
+[[step-2-install-the-hardware]]
 == 第 2 步：安装硬件
 
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
@@ -205,12 +207,14 @@ image::../media/drw_9000_cable_management_arms.png[连接缆线管理臂]
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == 第 3 步：使用缆线将控制器连接到网络
 
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
 
 
 
+[[option-1-two-node-switchless-cluster]]
 === 选项 1 ：双节点无交换机集群
 
 控制器上的管理网络，数据网络和管理端口连接到交换机。两个控制器上的集群互连端口均已通过缆线连接。
@@ -237,6 +241,7 @@ image::../media/drw_9000_TNSC_composite_cabling.png[双节点无交换机集群�
 
 
 
+[[option-2-switched-cluster]]
 === 选项 2 ：交换集群
 
 控制器上的管理网络，数据网络和管理端口连接到交换机。集群互连和 HA 端口通过缆线连接到集群 /HA 交换机。
@@ -263,12 +268,14 @@ image:../media/drw_9000_switched_cluster_cabling.png["交换集群复合布线�
 
 
 
+[[step-4-cable-controllers-to-drive-shelves]]
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
 您可以使用缆线将新系统连接到 DS212C ， DS224C 或 NS224 磁盘架，具体取决于它是 AFF 还是 FAS 系统。
 
 
 
+[[option-1-cable-the-controllers-to-ds212c-or-ds224c-drive-shelves]]
 === 选项 1 ：使用缆线将控制器连接到 DS212C 或 DS224C 驱动器架
 
 您必须使用缆线连接磁盘架到磁盘架的连接，然后使用缆线将两个控制器连接到 DS212C 或 DS224C 驱动器磁盘架。
@@ -320,6 +327,7 @@ image:../media/Cable_shelves_new_system_IOM12_shelves.png["使用SAS磁盘架进
 
 
 
+[[option-2-cable-the-controllers-to-a-single-ns224-drive-shelf-in-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === 选项2：使用缆线将控制器连接到仅运行ONTAP 9.8及更高版本的ASA AFF A700系统中的单个NS224驱动器架
 
 必须使用缆线将每个控制器连接到运行系统 ONTAP 9.8 或更高版本的 AFF A700 或 ASA AFF A700 上 NS224 驱动器架上的 NSM 模块。
@@ -355,6 +363,7 @@ image::../media/single_NS224_shelf.png[单磁盘架布线]
 
 
 
+[[option-3-cable-the-controllers-to-two-ns224-drive-shelves-in-asa-aff-a700-systems-running-ontap-9-8-and-later-only]]
 === 选项3：使用缆线将控制器连接到仅运行ONTAP 9.8及更高版本的ASA AFF A700系统中的两个NS224驱动器架
 
 必须使用缆线将每个控制器连接到运行系统 ONTAP 9.8 或更高版本的 AFF A700 或 ASA AFF A700 上 NS224 驱动器架上的 NSM 模块。
@@ -390,12 +399,14 @@ image::../media/two_NS224_shelves.png[双磁盘架布线]
 
 
 
+[[step-5-complete-system-setup-and-configuration]]
 == 第 5 步：完成系统设置和配置
 
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
 
 
 
+[[option-1-completing-system-setup-and-configuration-if-network-discovery-is-enabled]]
 === 选项 1 ：如果启用了网络发现，则完成系统设置和配置
 
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
@@ -468,6 +479,7 @@ https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["NetApp
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === 选项 2 ：如果未启用网络发现，则完成系统设置和配置
 
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。

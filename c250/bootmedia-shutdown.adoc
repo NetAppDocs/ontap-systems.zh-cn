@@ -12,6 +12,7 @@ summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
 
 
 
+[[option-1-most-systems]]
 == 选项 1 ：大多数系统
 
 [role="lead"]
@@ -56,6 +57,7 @@ NOTE: 如果启动设备损坏或无法正常运行，则此命令可能不起�
 
 
 
+[[option-2-systems-in-a-metrocluster]]
 == 选项 2 ： MetroCluster 中的系统
 
 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。

@@ -4,6 +4,7 @@
 
 
 
+[[step-1-remove-the-psus-and-cables]]
 == 步骤1：卸下PSU和电缆
 
 移除控制器之前，您需要移除两个电源装置 (PSU)。
@@ -52,6 +53,7 @@ NOTE: 此过程开始时、应已标记电缆。
 
 
 
+[[step-2-remove-the-io-cards-nvram12-and-system-management-module]]
 == 步骤 2：移除 I/O 卡、NVRAM12 和系统管理模块
 
 . 从机箱中卸下目标 I/O 模块：
@@ -127,6 +129,7 @@ image::../media/icon_round_1.png[标注编号1]
 
 
 
+[[step-3-remove-the-controller-module]]
 == 第 3 步：卸下控制器模块
 
 . 在设备正面、将手指钩入锁定凸轮上的孔中、挤压凸轮杆上的卡舌、然后同时朝您的方向轻轻而稳固地旋转两个闩锁。
@@ -153,6 +156,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
+[[step-4-replace-the-impaired-chassis]]
 == 步骤 4：更换受损底盘
 
 卸下受损机箱并安装更换机箱。
@@ -175,6 +179,7 @@ image:../media/icon_round_1.png["标注编号1"]
 
 
 
+[[step-5-install-the-chassis-components]]
 == 步骤5：安装底盘组件
 
 安装替换机箱后，您需要安装控制器模块，重新连接 I/O 模块和系统管理模块，然后重新安装并插入 PSU。

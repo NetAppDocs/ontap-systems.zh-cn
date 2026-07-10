@@ -24,6 +24,7 @@ summary: 要更换 PCIe 或夹层卡，您必须断开缆线以及所有 SFP 和
 video::a8ec891d-f6f6-4479-9ca2-af47017254ff[panopto]
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 .开始之前
@@ -88,6 +89,7 @@ LOADER 提示符
 
 
 
+[[step-2-remove-the-controller-module]]
 == 第 2 步：卸下控制器模块
 
 拆下控制器模块及其外盖。
@@ -122,6 +124,7 @@ image::../media/icon_round_1.png[标注编号1]
 |===
 
 
+[[step-3-replace-the-mezzanine-card]]
 == 步骤3：更换夹层卡
 
 更换夹层卡。
@@ -170,6 +173,7 @@ NOTE: 您可以用手指或螺丝刀拧松翼形螺钉。如果您用手指、�
 
 
 
+[[step-4-install-and-reboot-the-controller-module]]
 == 步骤 4：安装并重新启动控制器模块
 
 重新安装并重新启动控制器模块。
@@ -238,6 +242,7 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 ====
 
 
+[[step-6-return-the-controller-to-normal-operation]]
 == 第 6 步：使控制器恢复正常运行
 
 将存储空间交还给受损的控制器，恢复自动交还，并结束 AutoSupport 维护窗口。
@@ -249,6 +254,7 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 
 
 
+[[step-7-return-the-failed-part-to-netapp]]
 == 第 7 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

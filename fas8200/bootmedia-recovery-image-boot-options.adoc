@@ -17,6 +17,7 @@ FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介�
 
 
 
+[[option-1-most-systems]]
 == 选项 1 ：大多数系统
 
 ：您必须从 USB 驱动器启动 ONTAP 映像，还原文件系统并验证环境变量。
@@ -109,6 +110,7 @@ FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介�
 
 
 
+[[option-2-controller-is-in-a-two-node-metrocluster]]
 == 选项 2 ：控制器位于双节点 MetroCluster 中
 
 您必须从 USB 驱动器启动 ONTAP 映像并验证环境变量。

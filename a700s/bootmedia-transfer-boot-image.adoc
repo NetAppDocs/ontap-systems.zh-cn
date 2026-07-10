@@ -17,6 +17,7 @@ AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动�
 
 
 
+[[option-1-transfer-the-system-image-using-backup-recovery-from-the-second-boot-media]]
 == 选项 1：使用备份恢复从第二个启动介质传输系统映像
 
 您可以使用控制器模块中第二个启动介质上的映像将系统映像安装到替换启动介质。这是控制器模块中具有两个启动介质的系统的主要方法。
@@ -86,6 +87,7 @@ image:../media/icon_round_2.png["标注编号2"]
 
 
 
+[[option-2-transfer-the-boot-image-using-a-usb-flash-drive]]
 == 方案二：使用U盘传输启动镜像
 
 仅当辅助启动介质还原失败或在辅助启动介质上未找到  `image.tgz` 文件时，才应使用此过程。

@@ -15,6 +15,7 @@ ASA A20、 ASA A30 或ASA A50 存储系统中的启动介质存储了必要的�
 
 
 
+[[about-this-task]]
 == 关于此任务
 
 如果需要、您可以打开平台机箱位置(蓝色) LED、以帮助找到受影响的平台。使用SSH登录到BMC并输入 `system location-led _on_`命令。
@@ -25,6 +26,7 @@ ASA A20、 ASA A30 或ASA A50 存储系统中的启动介质存储了必要的�
 
 
 
+[[step-1-remove-the-controller]]
 == 第 1 步：卸下控制器
 
 在更换控制器或更换控制器内部的组件时、必须从机箱中卸下控制器。
@@ -137,6 +139,7 @@ image::../media/icon_round_3.png[标注编号3]
 
 
 
+[[step-2-replace-the-boot-media]]
 == 第 2 步：更换启动介质
 
 要更换启动介质、请在控制器内找到它、然后按照特定的步骤顺序进行操作。
@@ -191,6 +194,7 @@ image::../media/icon_round_4.png[标注编号4]
 
 
 
+[[step-3-reinstall-the-controller]]
 == Step 3: Reinstall the controller
 
 将控制器重新安装到机箱中并重新启动。

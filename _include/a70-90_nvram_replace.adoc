@@ -7,6 +7,9 @@
 
 CAUTION: 在安装和维护过程中，请始终佩戴连接到已验证接地点的接地腕带。未遵循正确的 ESD 预防措施可能会对控制器节点、存储架和网络交换机造成永久性损坏。
 
+
+WARNING: NVRAM 模块不可热插拔。在更换之前，请重新拔插驱动器，关闭节点，拔下控制器电源，然后将控制器从机箱中拉出几英寸。
+
 [role="tabbed-block"]
 ====
 .选项1：更换NVRAM模块
@@ -130,7 +133,7 @@ NOTE: 如果您有直流电源，请将电源块重新连接到电源。
 --
 .选项2：更换NVRAM DIMM
 --
-要更换NVRAM模块中的NVRAM DIMM、必须先卸下NVRAM模块、然后再更换目标DIMM。
+要更换 NVRAM 模块中的 NVRAM DIMM，首先必须卸下 NVRAM 模块，然后更换目标 DIMM。
 
 . 如果您尚未接地，请正确接地。
 . 使用拇指推动每个驱动器、直至感觉到强制停止、以确保机箱中的所有驱动器都牢固地固定在中板上。
@@ -202,7 +205,9 @@ image::../media/drw_a70-90_nvram12_remove_replace_ieops-1370.svg[卸下NVRAM12�
 
  a| 
 image:../media/icon_round_1.png["标注编号1"]
-| 凸轮锁定按钮 
+ a| 
+凸轮锁定按钮
+
 
 
  a| 
@@ -254,6 +259,7 @@ NOTE: 如果您有直流电源，请将电源块重新连接到电源。
 ====
 
 
+[[step-3-reassign-disks]]
 == Step 3: Reassign disks
 
 您必须在启动控制器时确认系统ID更改、然后验证是否已实施此更改。
@@ -287,8 +293,10 @@ node2             node1             -            Waiting for giveback (HA mailbo
 ----
 . 交还控制器：
 +
-.. 从健康的控制器中，归还被替换的控制器的存储空间：+
+.. 从正常运行的控制器中，归还已更换控制器的存储：
++
 `storage failover giveback -ofnode replacement_node_name`
+
 +
 控制器将收回其存储并完成启动。
 

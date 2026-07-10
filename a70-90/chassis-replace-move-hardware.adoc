@@ -15,6 +15,7 @@ summary: 当硬件故障需要时，请更换 AFF A70 或 AFF A90 系统中的�
 
 
 
+[[step-1-remove-the-psus-and-cables]]
 == 步骤1：卸下PSU和电缆
 
 在卸下控制器之前、您需要卸下所有四个电源设备(PSU)、每个控制器两个。卸下这些控制器可减轻每个控制器的整体重量。
@@ -63,6 +64,7 @@ NOTE: 此过程开始时、应已标记电缆。
 
 
 
+[[step-2-remove-the-controller-modules-and-drives]]
 == 步骤2：卸下控制器模块和驱动器
 
 从机箱中卸下控制器、然后从机箱中卸下驱动器。
@@ -149,6 +151,7 @@ NOTE: Drives are fragile.卸下驱动器时、请始终用双手支撑驱动器�
 
 
 
+[[step-3-replace-the-chassis-and-install-components]]
 == 步骤 3：更换机箱并安装组件
 
 拆下故障机箱，安装替换机箱，并重新安装所有组件。

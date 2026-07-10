@@ -18,6 +18,7 @@ summary: 当您的系统注册单个 AutoSupport ASUP 消息表明该模块已�
 
 
 
+[[step-1-shut-down-the-impaired-controller]]
 == 第 1 步：关闭受损控制器
 
 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
@@ -86,6 +87,7 @@ LOADER 提示符
 
 
 
+[[step-2-remove-controller-module]]
 == 第 2 步：卸下控制器模块
 
 从系统中卸下控制器模块、然后卸下控制器模块的护盖。
@@ -120,6 +122,7 @@ image::../media/icon_round_1.png[标注编号1]
 |===
 
 
+[[step-3-replace-a-caching-module]]
 == 第 3 步：更换缓存模块
 
 找到控制器内的缓存模块、卸下发生故障的缓存模块并将其更换。
@@ -166,6 +169,7 @@ image::../media/icon_round_1.png[标注编号1]
 
 
 
+[[step-4-reinstall-the-controller-module]]
 == 第 4 步：重新安装控制器模块
 
 将控制器模块重新安装到机箱中。
@@ -201,6 +205,7 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 
 
 
+[[step-5-restore-automatic-giveback-and-autosupport]]
 == 第5步：还原自动交还和AutoSupport
 
 还原自动交还和AutoSupport (如果已禁用)。
@@ -211,6 +216,7 @@ NOTE: 将控制器模块滑入机箱时，请勿用力过大，以免损坏连�
 
 
 
+[[step-6-return-the-failed-part-to-netapp]]
 == 第 6 步：将故障部件退回 NetApp
 
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

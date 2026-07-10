@@ -29,6 +29,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["电缆拉片方向"]
 
 
 
+[[step-1-cable-the-clusterha-connections]]
 == 第1步：为集群/HA连接布线
 
 创建ONTAP集群连接。对于无交换机集群、请将控制器相互连接。对于有交换机集群、将控制器连接到集群网络交换机。
@@ -94,6 +95,7 @@ image:../media/drw_isi_fas50_2p_100gbe_switched_cluster_cabling_ieops-1936.svg["
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == 第2步：为主机网络连接布线
 
 使用缆线将控制器连接到以太网或FC主机网络。
@@ -138,6 +140,7 @@ image::../media/drw_isi_fas50_4p_64gb_fc_optional_cabling_ieops-1935.svg[连接�
 ====
 
 
+[[step-3-cable-the-management-network-connections]]
 == 第3步：为管理网络连接布线
 
 使用缆线将每个控制器上的管理(扳手)端口连接到管理网络交换机。
@@ -153,6 +156,7 @@ IMPORTANT: 请勿插入电源线。
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == 第4步：为磁盘架连接布线
 
 以下过程显示了如何使用缆线将控制器连接到一个或两个DS460C磁盘架。
@@ -175,6 +179,7 @@ image::../media/oie_cable_mini_sas_hd_to_mini_sas_hd.svg[迷你SAS HD缆线]
 
 
 
+[[one-ds460c-shelf]]
 === 一个 DS460C 机架
 
 使用缆线将每个控制器连接到DS460C磁盘架上的每个IOM12模块。
@@ -194,6 +199,7 @@ image:../media/drw_isi_fas50_1_ds460c_controller_b_cabling_ieops-2169.svg["控�
 
 
 
+[[two-ds460c-shelves]]
 === 两个 DS460C 磁盘架
 
 将每个控制器连接到两个DS460C磁盘架上的IOM12模块。

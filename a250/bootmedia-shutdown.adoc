@@ -17,6 +17,7 @@ summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
 
 
 
+[[option-1-most-systems]]
 == 选项 1 ：大多数系统
 
 通过将其暂停到 LOADER 提示符并捕获引导环境变量来完成受损控制器的关闭。LOADER 提示符是安全停止状态，您可以从中更换启动介质。
@@ -60,6 +61,7 @@ NOTE: 如果启动设备损坏或无法正常运行，则此命令可能不起�
 
 
 
+[[option-2-system-is-in-a-metrocluster]]
 == 选项 2 ：系统位于 MetroCluster 中
 
 

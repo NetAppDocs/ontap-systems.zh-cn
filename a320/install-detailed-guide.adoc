@@ -15,6 +15,7 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。如
 
 
 
+[[prepare-for-installation]]
 == 准备安装
 
 要安装 AFF A320 系统，您需要创建帐户，注册系统并获取许可证密钥。此外，您还需要为系统清点适当数量和类型的缆线，并收集特定的网络信息。
@@ -175,6 +176,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2839002["集群配置工�
 
 
 
+[[install-the-hardware]]
 == 安装硬件
 
 您需要根据需要将系统安装在四柱机架或 NetApp 系统机柜中。
@@ -197,12 +199,14 @@ image::../media/drw_a320_cable_management_arms.png[卸下或安装缆线管理�
 
 
 
+[[cable-controllers-to-your-network]]
 == 使用缆线将控制器连接到网络
 
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
 
 
 
+[[option-1-cable-a-two-node-switchless-cluster]]
 === 选项 1 ：为双节点无交换机集群布线
 
 控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。集群互连 /HA 端口通过缆线连接到两个控制器模块上。
@@ -276,6 +280,7 @@ image:../media/oie_legend_icon_attn_symbol.png["注意符号"]
 
 
 
+[[option-2-cabling-a-switched-cluster]]
 === 选项 2 ：为有交换机集群布线
 
 控制器模块上的可选数据端口，可选 NIC 卡和管理端口均连接到交换机。集群互连 /HA 端口通过缆线连接到集群 /HA 交换机。
@@ -349,12 +354,14 @@ image:../media/oie_legend_icon_attn_symbol.png["注意符号"]
 
 
 
+[[cable-controllers-to-drive-shelves]]
 == 使用缆线将控制器连接到驱动器架
 
 您必须使用板载存储端口将控制器连接到磁盘架。
 
 
 
+[[option-1-cable-the-controllers-to-a-single-drive-shelf]]
 === 选项 1 ：使用缆线将控制器连接到一个驱动器架
 
 您必须使用缆线将每个控制器连接到 NS224 驱动器架上的 NSM 模块。
@@ -394,6 +401,7 @@ image:../media/icon_square_2_yellow.png["标注编号2"]
 
 
 
+[[option-2-cable-the-controllers-to-two-drive-shelves]]
 === 选项 2 ：使用缆线将控制器连接到两个驱动器架
 
 您必须使用缆线将每个控制器连接到两个 NS224 驱动器架上的 NSM 模块。
@@ -433,12 +441,14 @@ image:../media/icon_square_2_yellow.png["标注编号2"]
 
 
 
+[[complete-system-setup-and-configuration]]
 == 完成系统设置和配置
 
 您可以使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，也可以直接连接到系统中的控制器，然后连接到管理交换机。
 
 
 
+[[option-1-completing-system-setup-and-configuration-if-network-discovery-is-enabled]]
 === 选项 1 ：如果启用了网络发现，则完成系统设置和配置
 
 如果您在笔记本电脑上启用了网络发现，则可以使用自动集群发现完成系统设置和配置。
@@ -482,6 +492,7 @@ https://library.netapp.com/ecm/ecm_download_file/ECMLP2862613["《 ONTAP 配置�
 
 
 
+[[option-2-completing-system-setup-and-configuration-if-network-discovery-is-not-enabled]]
 === 选项 2 ：如果未启用网络发现，则完成系统设置和配置
 
 如果您的笔记本电脑未启用网络发现，则必须使用此任务完成配置和设置。

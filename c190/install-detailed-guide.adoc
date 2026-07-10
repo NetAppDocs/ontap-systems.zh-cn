@@ -15,6 +15,7 @@ summary: 本节详细介绍了安装 AFF C190 系统的分步说明。
 
 
 
+[[step-1-prepare-for-installation]]
 == 第 1 步：准备安装
 
 要安装AFF C190系统、请创建一个帐户并注册该系统。You also need to inventory the appropriate number and type of cables for your system and collect specific network information.
@@ -135,6 +136,7 @@ image:../media/oie_cable_power.png["电源线"]
 
 
 
+[[step-2-install-the-hardware]]
 == 第 2 步：安装硬件
 
 将系统安装在四柱机架或NetApp系统机柜中(如果适用)。
@@ -158,6 +160,7 @@ image::../media/drw_cable_management_arm_install.png[正在连接电缆管理设
 
 
 
+[[step-3-cable-controllers-to-your-network]]
 == 第 3 步：使用缆线将控制器连接到网络
 
 使用双节点无交换机集群方法或集群互连网络方法将控制器连接到网络。
@@ -327,6 +330,7 @@ IMPORTANT: 此时请勿插入电源线。
 ====
 
 
+[[step-4-complete-system-setup]]
 == 第4步：完成系统设置
 
 使用仅连接到交换机和笔记本电脑的集群发现完成系统设置和配置，或者直接连接到系统中的控制器，然后连接到管理交换机。
