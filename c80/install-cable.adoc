@@ -1,7 +1,7 @@
 ---
 permalink: c80/install-cable.html 
 sidebar: sidebar 
-keywords: aff c80, prepare installation 
+keywords: aff c80, prepare installation, cable the hardware 
 summary: 'Management network ports on the controllers are connected to switches.The HA interconnect and cluster interconnect ports are cabled on both controllers.控制器模块连接到外部存储(如果已订购)。' 
 ---
 = 连接硬件- AFF C80
@@ -58,7 +58,7 @@ NOTE: 集群互连流量和HA流量共享相同的物理端口。
 image::../media/oie_cable_25Gb_Ethernet_SFP28_ieops-1069.png[集群HA缆线]
 
 +
-image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[双节点无交换机集群布线图]
+image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[双节点无交换机集群布线图]
 
 
 
@@ -73,9 +73,10 @@ image::../media/drw_a1k_tnsc_cluster_cabling_ieops-1648.svg[双节点无交换�
 +
 *100 GbE电缆*
 
-
-
++
 image::../media/oie_cable100_gbe_qsfp28.png[100 Gb缆线]
+
+
 
 image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[使用缆线将集群连接到集群网络]
 
@@ -88,13 +89,13 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[使用缆线�
 
 将以太网模块端口连接到主机网络。
 
-以下是一些典型的主机网络布线示例。有关您的特定系统配置、请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 。
+下面是一些典型的主机网络布线示例。有关您的特定系统配置，请参阅 link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
 
 .步骤
 . 将端口e9a和e9b连接到以太网数据网络交换机。
 +
 
-NOTE: 请勿使用端口 e1b 和 e7b 进行主机网络连接。使用单独的主机卡。
+NOTE: 不要将端口e1b和e7b用于主机网络连接。请使用单独的主机卡。
 
 +
 *100 GbE电缆*
@@ -105,7 +106,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[100 Gb以太网电缆]
 +
 image::../media/drw_70-90_network_cabling1_ieops-1654.svg[使用缆线连接到100 Gb以太网网络]
 
-. 连接1025 GbE主机网络交换机。
+. 将 10/25 GbE 卡连接到主机网络交换机。
 +
 *4端口，1025 GbE主机*
 
@@ -142,6 +143,15 @@ IMPORTANT: 请勿插入电源线。
 
 有关存储系统和所有布线选项支持的最大磁盘架数量，请参见link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
 
+.关于此任务
+AFF C80 存储系统支持带有 NSM100 或 NSM100B 模块的 NS224 磁盘架。这些模块之间的主要区别如下：
+
+* NSM100 机架模块使用内置端口 e0a 和 e0b。
+* NSM100B 架模块使用插槽 1 中的端口 e1a 和 e1b。
+
+
+以下布线示例显示了 NS224 机架中的 NSM100 模块（涉及机架模块端口）。
+
 [role="tabbed-block"]
 ====
 .选项1：一个NS224存储架
@@ -154,7 +164,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFP28铜缆]
 
 .步骤
 . 将控制器A端口e11a连接到NSM A端口e0a。
-. 将控制器A端口e11b连接到端口NSM B端口e0b。
+. 将控制器 A 端口 e11b 连接到 NSM B 端口 e0b。
 +
 image:../media/drw_a70-90_1shelf_cabling_a_ieops-1731.svg["控制器A e11a和e11b连接到一个NS224磁盘架"]
 
@@ -178,9 +188,9 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFP28铜缆]
 . 在控制器A上、连接以下端口：
 +
 .. 将端口e11a连接到磁盘架1的NSM A端口e0a。
-.. 将端口e11b连接到磁盘架2的NSM B端口e0b。
-.. 将端口E8a连接到磁盘架2的NSM A端口e0a。
 .. 将端口e8b连接到磁盘架1的NSM B端口e0b。
+.. 将端口E8a连接到磁盘架2的NSM A端口e0a。
+.. 将端口e11b连接到磁盘架2的NSM B端口e0b。
 +
 image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["控制器A的控制器到磁盘架连接"]
 
@@ -189,9 +199,9 @@ image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["控制器A的控制�
 . 在控制器B上、连接以下端口：
 +
 .. 将端口e11a连接到磁盘架1的NSM B端口e0a。
-.. 将端口e11b连接到磁盘架2的NSM A端口e0b。
-.. 将端口E8a连接到磁盘架2的NSM B端口e0a。
 .. 将端口e8b连接到磁盘架1的NSM A端口e0b。
+.. 将端口E8a连接到磁盘架2的NSM B端口e0a。
+.. 将端口 e11b 连接到磁盘架 2，NSM A 端口 e0b。
 +
 image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg["控制器B的控制器到磁盘架连接"]
 

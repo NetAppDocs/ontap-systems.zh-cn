@@ -1,7 +1,7 @@
 ---
 permalink: a70-90/install-cable.html 
 sidebar: sidebar 
-keywords: aff a70, aff a90, prepare installation 
+keywords: aff a70, aff a90, prepare installation, cable the hardware 
 summary: 为AFF A70或AFF A90存储系统安装机架硬件后、请安装控制器的网络缆线、并在控制器和存储架之间连接缆线。 
 ---
 = 为硬件布线- AFF A70和AFF A90
@@ -20,7 +20,7 @@ summary: 为AFF A70或AFF A90存储系统安装机架硬件后、请安装控制
 * 以下过程显示了常见配置。具体布线取决于为存储系统订购的组件。有关全面的配置和插槽优先级详细信息，请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
 * AFF A70和AFF A90控制器上的I/O插槽编号为1到11。
 +
-image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[FAS70和FAS90控制器上的插槽编号]
+image::../media/drw_a1K_back_slots_labeled_ieops-2162.svg[AFF A70和AFF A90控制器上的插槽编号]
 
 * 布线图中的箭头图标显示了将连接器插入端口时电缆连接器推拉卡舌的正确方向(向上或向下)。
 +
@@ -34,8 +34,8 @@ image::../media/drw_cable_pull_tab_direction_ieops-1699.svg[电缆拉片方向�
 
 
 
-[[step-1-connect-the-storage-controllers-to-your-network]]
-== 第1步：将存储控制器连接到网络
+[[step-1-cable-the-clusterha-connections]]
+== 第1步：为集群/HA连接布线
 
 使用缆线将控制器连接到ONTAP集群。此过程因存储系统型号和I/O模块配置而异。
 
@@ -65,7 +65,7 @@ image::../media/drw_70-90_tnsc_cluster_cabling_ieops-1653.svg[双节点无交换
 --
 .Switched cluster cabling
 --
-使用 100 GbE 电缆将控制器 A 和 B 端口 e1a 和 e7a 连接到集群网络交换机 A 和 B。
+使用 100 GbE 电缆将控制器 A 和 B 的 e1a 和 e7a 端口连接到集群网络交换机 A 和 B。
 
 .步骤
 . 将控制器A上的端口e1a和控制器B上的端口e1a连接到集群网络交换机A
@@ -90,13 +90,13 @@ image::../media/drw_70-90_switched_cluster_cabling_ieops-1657.svg[使用缆线�
 
 将以太网模块端口连接到主机网络。
 
-以下是一些典型的主机网络布线示例。有关您的特定系统配置、请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 。
+下面是一些典型的主机网络布线示例。有关您的特定系统配置，请参阅 link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
 
 .步骤
 . 将端口e9a和e9b连接到以太网数据网络交换机。
 +
 
-NOTE: 请勿使用端口 e1b 和 e7b 进行主机网络连接。使用单独的主机卡。
+NOTE: 不要将端口e1b和e7b用于主机网络连接。请使用单独的主机卡。
 
 +
 *100 GbE电缆*
@@ -107,7 +107,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[100 Gb以太网电缆]
 +
 image::../media/drw_70-90_network_cabling1_ieops-1654.svg[使用缆线连接到100 Gb以太网网络]
 
-. 连接1025 GbE主机网络交换机。
+. 将 10/25 GbE 卡连接到主机网络交换机。
 +
 *4端口，1025 GbE主机*
 
@@ -115,7 +115,7 @@ image::../media/drw_70-90_network_cabling1_ieops-1654.svg[使用缆线连接到1
 image::../media/oie_cable_sfp_gbe_copper.png[1025 GB电缆]
 
 +
-image::../media/drw_70-90_network_cabling2_ieops-1655.svg[使用缆线连接到100 Gb以太网网络]
+image::../media/drw_70-90_network_cabling2_ieops-1655.svg[使用缆线连接到1025Gb以太网网络]
 
 
 
@@ -145,7 +145,7 @@ IMPORTANT: 请勿插入电源线。
 有关存储系统和所有布线选项支持的最大磁盘架数量，请参见link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
 
 .关于此任务
-AFF A70 和 90 存储系统支持带有 NSM100 或 NSM100B 模块的 NS224 磁盘架。这两个模块之间的主要区别在于：
+AFF A70 和 AFF A90 存储系统支持配备 NSM100 或 NSM100B 模块的 NS224 盘架。这些模块之间的主要区别是：
 
 * NSM100 机架模块使用内置端口 e0a 和 e0b。
 * NSM100B 架模块使用插槽 1 中的端口 e1a 和 e1b。
@@ -165,7 +165,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFP28铜缆]
 
 .步骤
 . 将控制器A端口e11a连接到NSM A端口e0a。
-. 将控制器A端口e11b连接到端口NSM B端口e0b。
+. 将控制器 A 端口 e11b 连接到 NSM B 端口 e0b。
 +
 image:../media/drw_a70-90_1shelf_cabling_a_ieops-1731.svg["控制器A e11a和e11b连接到一个NS224磁盘架"]
 
@@ -189,9 +189,9 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFP28铜缆]
 . 在控制器A上、连接以下端口：
 +
 .. 将端口e11a连接到磁盘架1的NSM A端口e0a。
-.. 将端口e11b连接到磁盘架2的NSM B端口e0b。
-.. 将端口E8a连接到磁盘架2的NSM A端口e0a。
 .. 将端口e8b连接到磁盘架1的NSM B端口e0b。
+.. 将端口E8a连接到磁盘架2的NSM A端口e0a。
+.. 将端口e11b连接到磁盘架2的NSM B端口e0b。
 +
 image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["控制器A的控制器到磁盘架连接"]
 
@@ -200,9 +200,9 @@ image:../media/drw_a70-90_2shelf_cabling_a_ieops-1733.svg["控制器A的控制�
 . 在控制器B上、连接以下端口：
 +
 .. 将端口e11a连接到磁盘架1的NSM B端口e0a。
-.. 将端口e11b连接到磁盘架2的NSM A端口e0b。
-.. 将端口E8a连接到磁盘架2的NSM B端口e0a。
 .. 将端口e8b连接到磁盘架1的NSM A端口e0b。
+.. 将端口E8a连接到磁盘架2的NSM B端口e0a。
+.. 将端口 e11b 连接到磁盘架 2，NSM A 端口 e0b。
 +
 image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg["控制器B的控制器到磁盘架连接"]
 
@@ -213,4 +213,4 @@ image:../media/drw_a70-90_2shelf_cabling_b_ieops-1734.svg["控制器B的控制�
 --
 ====
 .下一步是什么？
-为AFF A70或AFF A90系统的硬件布线后，您可以link:install-power-hardware.html["打开AFF A70或AFF A90存储系统的电源"]：
+在为 AFF A70 或 AFF A90 系统连接硬件电缆后，您 link:install-power-hardware.html["打开AFF A70或AFF A90存储系统的电源"]。

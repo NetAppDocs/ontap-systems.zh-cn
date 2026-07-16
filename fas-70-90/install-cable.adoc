@@ -90,13 +90,13 @@ image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[使用缆线将�
 
 将以太网模块端口连接到主机网络。
 
-以下是一些典型的主机网络布线示例。有关您的特定系统配置、请参见 link:https://hwu.netapp.com["NetApp Hardware Universe"^] 。
+下面是一些典型的主机网络布线示例。有关您的特定系统配置，请参阅 link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
 
 .步骤
 . 将端口e9a和e9b连接到以太网数据网络交换机。
 +
 
-NOTE: 请勿使用端口 e1b 和 e7b 进行主机网络连接。使用单独的主机卡。
+NOTE: 不要将端口e1b和e7b用于主机网络连接。请使用单独的主机卡。
 
 +
 *100 GbE电缆*
@@ -147,7 +147,7 @@ IMPORTANT: 请勿插入电源线。
 有关SAS磁盘架布线的其他指导link:https://docs.netapp.com/us-en/ontap-systems/sas3/install-cabling-rules.html["SAS布线规则和概念—具有IOM12/IOM12B模块的磁盘架"]信息，请参见。
 
 .关于此任务
-FAS70 和 FAS90 存储系统支持带有 NSM100 或 NSM100B 模块的 DS212C、DS224C、DS460C 和 NS224 架。
+FAS70 和 FAS90 存储系统支持带有 NSM100 或 NSM100B 模块的 DS212C、DS224C、DS460C 和 NS224 磁盘架。
 
 NS224 模块之间的主要区别是：
 
@@ -171,7 +171,7 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFP28铜缆]
 . 在控制器A上、连接以下端口：
 +
 .. 将端口e11a连接到NSM A端口e0a。
-.. 将端口e11b连接到端口NSM B端口e0b。
+.. 将端口 e11b 连接到 NSM B 端口 e0b。
 +
 image:../media/drw_a1k_1shelf_cabling_a_ieops-1703.svg["控制器A e11a和e11b连接到一个NS224磁盘架"]
 
@@ -201,24 +201,24 @@ image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFP28铜缆]
 . 在控制器A上、连接以下端口：
 +
 .. 将端口e11a连接到磁盘架1 NSM A端口e0a。
-.. 将端口e11b连接到磁盘架2 NSM B端口e0b。
-.. 将端口E10A连接到磁盘架2 NSM A端口e0a。
 .. 将端口 e10b 连接到机架 1 NSM B 端口 e0b。
-
-
+.. 将端口E10A连接到磁盘架2 NSM A端口e0a。
+.. 将端口e11b连接到磁盘架2 NSM B端口e0b。
 +
 image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg["使用缆线将控制器A端口e11a e11b E10A和e10b连接到两个NS224磁盘架"]
+
+
 
 . 在控制器B上、连接以下端口：
 +
 .. 将端口e11a连接到磁盘架1 NSM B端口e0a。
-.. 将端口e11b连接到磁盘架2 NSM A端口e0b。
-.. 将端口E10A连接到磁盘架2 NSM B端口e0a。
 .. 将端口e10b连接到磁盘架1 NSM A端口e0b。
-
-
+.. 将端口E10A连接到磁盘架2 NSM B端口e0a。
+.. 将端口e11b连接到磁盘架2 NSM A端口e0b。
 +
 image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg["使用缆线将控制器B端口e11a e11b e10A和e10b连接到两个NS224磁盘架"]
+
+
 
 
 

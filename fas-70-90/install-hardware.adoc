@@ -2,7 +2,7 @@
 permalink: fas-70-90/install-hardware.html 
 sidebar: sidebar 
 keywords: fas70, fas90, install hardware, telco rack 
-summary: 将存储系统安装在机柜或电信机架中。 
+summary: 将您的存储系统安装在机柜或电信机架中。 
 ---
 = 安装硬件- FAS70和FAS90
 :allow-uri-read: 
@@ -47,7 +47,7 @@ image::../media/drw_affa1k_install_cable_mgmt_ieops-1697.svg[安装缆线管理�
 .. 使用随附的安装螺钉将磁盘架固定到机柜或电信机架上。
 +
 .下一步是什么？
-为FAS70或FAS90存储系统安装硬件后，您可以link:install-cable.html["为FAS70或FAS90存储系统的硬件布线。"]：
+在为 FAS70 或 FAS90 存储系统安装硬件后，您 link:install-cable.html["连接FAS70或FAS90存储系统的硬件"]。
 
 
 
