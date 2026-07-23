@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a250, replace or install a mezzanine card 
 summary: 要更换发生故障的夹层卡，您必须拔下缆线以及所有 SFP 或 QSFP 模块，更换卡，重新安装 SFP 或 QSFP 模块并重新对卡进行布线。要安装新的夹层卡，您必须使用适当的缆线以及 SFP 或 QSFP 模块。 
 ---
-= 更换或安装夹层卡 - AFF A250
+= 更换或安装 AFF A250 系统中的夹层卡
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+更换 AFF A250 系统中发生故障的夹层卡，或安装新的夹层卡以扩展连接选项。更换过程包括拆除电缆和 SFP 或 QSFP 模块、更换卡以及重新布线。
+
 要更换发生故障的夹层卡，您必须拔下缆线以及所有 SFP 或 QSFP 模块，更换卡，重新安装 SFP 或 QSFP 模块并重新对卡进行布线。要安装新的夹层卡，您必须使用适当的缆线以及 SFP 或 QSFP 模块。
 
 .关于此任务

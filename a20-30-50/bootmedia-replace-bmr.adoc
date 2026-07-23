@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, replace the boot media 
 summary: AFF A20、 AFF A30 或AFF A50 存储系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除控制器模块、移除损坏的启动介质、安装替换启动介质，然后重新安装控制器模块。 
 ---
-= 更换启动介质以实现自动启动恢复 - AFF A20、 AFF A30 和AFF A50
+= 使用自动启动恢复过程更换 AFF A20、AFF A30 或 AFF A50 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

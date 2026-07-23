@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
 summary: 将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。 
 ---
-= 移动并更换硬件—AFF A150
+= 更换 AFF A150 系统中的底盘
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+当硬件故障需要时，请更换 AFF A150 系统的机箱。更换过程包括将电源、驱动器和控制器模块从受损机箱移至更换机箱。
+
 将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。
 
 

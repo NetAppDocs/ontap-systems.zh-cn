@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a70, aff a90, replace the boot media 
 summary: AFF A70或AFF A90存储系统中的启动介质存储了必要的固件和配置数据。更换过程包括移除系统管理模块、移除损坏的启动介质、在系统管理模块中安装替换启动介质，然后重新安装系统管理模块。 
 ---
-= 更换启动介质以实现自动启动恢复 - AFF A70和AFF A90
+= 使用自动启动恢复过程更换 AFF A70 或 AFF A90 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

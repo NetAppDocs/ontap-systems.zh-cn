@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a400, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 验证控制器的 HA 配置是否处于活动状态并在 AFF A400 存储系统中正常运行，并确认系统的存储端口是否列出了指向磁盘的所有路径。 
 ---
-= 还原并验证系统配置— AFF A400
+= 还原并验证 AFF A400 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

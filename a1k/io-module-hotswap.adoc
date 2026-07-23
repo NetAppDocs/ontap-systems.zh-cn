@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a1k, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
 summary: 如果模块发生故障并且存储系统满足所有 ONTAP 版本要求，则可以在 AFF A1K 存储系统中热插拔以太网 I/O 模块。 
 ---
-= 热插拔 I/O 模块 - AFF A1K
+= 在不关闭系统的情况下热插拔 AFF A1K 系统中的 I/O 模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

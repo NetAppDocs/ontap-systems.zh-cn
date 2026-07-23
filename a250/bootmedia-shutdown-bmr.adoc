@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: a250, shut down the controller 
 summary: 关闭 AFF A250 存储系统中受损的控制器，以防止数据丢失，并确保更换启动介质时的系统稳定性。 
 ---
-= 关闭控制器以实现自动启动介质恢复 - AFF A250
+= 在自动启动恢复过程中关闭 AFF A250 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

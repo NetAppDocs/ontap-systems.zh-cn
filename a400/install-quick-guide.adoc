@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a400, aff, a400, guide, graphic, instruction, installation, system, rack, cabling, cable, intitial, system, bring-up, guide, install, netapp, system, quick guide 
 summary: 本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。如果您熟悉 NetApp 系统的安装，请使用本指南。 
 ---
-= 快速指南— AFF A400
+= 使用快速图形说明安装 AFF A400 系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+使用快速图形说明安装 AFF A400 存储系统并连接电缆。
+
 安装和设置说明提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。Use this guide if you are familiar with installing NetApp systems.
 
 使用以下链接： link:../media/PDF/Jun_2024_Rev8_AFFA400_ISI_IEOPS-1808.pdf["《 AFF A400 安装和设置说明》"^]。

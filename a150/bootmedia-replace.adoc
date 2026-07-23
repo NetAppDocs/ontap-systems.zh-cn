@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, replace, boot, media, controller, module, fru map 
 summary: 您必须在控制器中找到启动介质并按照说明进行更换。 
 ---
-= 更换启动介质—AFF A150
+= 更换 AFF A150 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+AFF A150 系统中的启动介质存储重要的固件和配置数据。更换过程包括卸下控制器模块、卸下受损的启动介质、安装更换用的启动介质，然后使用 USB 闪存驱动器将 ONTAP 映像传输到更换用的启动介质中。
+
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
 
 

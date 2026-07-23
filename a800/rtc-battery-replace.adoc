@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a800, replace the real-time clock battery 
 summary: 更换 AFF A800 控制器模块中的实时时钟电池，以确保依赖于准确时间同步的服务和应用程序继续运行。 
 ---
-= 更换实时时钟电池 - AFF A800
+= 更换 AFF A800 系统中的实时时钟电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-更换AFF A800系统中的实时时钟 (RTC) 电池（通常称为纽扣电池），以确保依赖精确时间同步的服务和应用程序能够继续运行。
+更换 AFF A800 系统中的实时时钟 (RTC) 电池，以确保依靠精确时间同步的服务和应用程序继续运行。
 
 .开始之前
 * 请注意、您可以对系统支持的所有ONTAP版本使用此过程。

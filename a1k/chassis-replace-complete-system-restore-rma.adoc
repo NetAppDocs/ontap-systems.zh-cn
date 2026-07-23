@@ -4,21 +4,21 @@ sidebar: sidebar
 keywords: aff a1k,  verify and set HA state, complete the replacement process 
 summary: 重新启动控制器，验证系统健康状况，并将故障部件返回给NetApp ，以完成AFF A1K机箱更换程序的最后一步。 
 ---
-= 完成底盘更换 - AFF A1K
+= 完成 AFF A1K 系统的机箱更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-重新启动控制器，验证系统健康状况，并将故障部件返回给NetApp ，以完成AFF A1K机箱更换程序的最后一步。
+重新启动控制器，验证系统运行状况，并将故障部件退回给 NetApp，以完成 AFF A1K 系统机箱更换的最后一步。
 
 
 
 [[step-1-boot-the-controllers-and-verify-system-health]]
 == 步骤 1：启动控制器并验证系统健康状况
 
-控制器重启后，启动ONTAP，交还控制器，并验证存储系统运行状况。
+控制器重新启动后，启动 ONTAP，归还控制器，并验证系统运行状况。
 
 .步骤
 . Check the console output:

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a900, complete the replacement process 
 summary: 要将 AFF A900 系统恢复到完全运行状态，请重新连接存储设备，必要时恢复 NetApp Storage Encryption 配置，并为新控制器安装许可证。 
 ---
-= 完成系统还原— AFF A900
+= 完成 AFF A900 系统的控制器更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要完成更换过程并将系统还原到完全运行状态、请还原NetApp存储加密配置(如果需要)并为新控制器安装许可证。
+要完成 AFF A900 系统的控制器更换，请恢复 NetApp 存储加密配置（如有必要），确认逻辑接口（LIF）正在向其主端口报告，执行集群运行状况检查，并将故障部件返回 NetApp。
 
 
 

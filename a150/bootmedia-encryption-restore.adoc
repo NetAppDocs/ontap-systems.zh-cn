@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption 
 summary: 恢复替代启动介质上的加密。 
 ---
-= 恢复加密- AFF A150
+= 在 AFF A150 系统中的启动介质上恢复加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-恢复替代启动介质上的加密。
+在 AFF A150 系统中的替换引导介质上恢复加密，以确保持续的数据保护。更换过程包括验证密钥可用性、重新应用加密设置以及确认对您的数据的安全访问。
 
 根据您的密钥管理器类型，完成相应的步骤以恢复系统加密。如果您不确定您的系统使用哪个密钥管理器，请检查您在启动介质更换过程开始时捕获的设置。
 

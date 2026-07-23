@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, shut down the controller 
 summary: 关闭AFF A20、 AFF A30 或AFF A50 存储系统中受损的控制器，以防止数据丢失并在自动启动介质恢复过程中保持系统稳定性。 
 ---
-= 关闭控制器以进行自动启动介质恢复 - AFF A20、 AFF A30 和AFF A50
+= 在自动启动恢复过程中关闭 AFF A20、AFF A30 或 AFF A50 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

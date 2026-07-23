@@ -4,11 +4,11 @@ sidebar: sidebar
 keywords: aff a800, quick steps 
 summary: 本节以图形方式说明了从机架安装和布线到系统初始启动的典型系统安装。Use this guide if you are familiar with installing NetApp systems. 
 ---
-= 快速步骤— AFF A800
+= 按照快速设置说明安装 AFF A800 系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-This guide gives graphic instructions for a typical installation of your system from racking and cabling, through initial system bring-up.使用 link:../media/PDF/Jan_2024_Rev3_AFFA800_ISI_IEOPS-1497.pdf["《AFF A800安装和设置说明》"^] 如果您熟悉 NetApp 系统的安装。
+如果您熟悉安装 NetApp 系统，请使用 https://review.docs.netapp.com/us-en/ontap-systems_jackie-hotfix/media/PDF/Jan_2024_Rev3_AFFA800_ISI_IEOPS-1497.pdf["AFF A800 安装和设置说明"^]。

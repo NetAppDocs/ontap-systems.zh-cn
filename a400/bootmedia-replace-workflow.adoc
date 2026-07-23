@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a400, replace the boot media 
 summary: 通过查看更换要求、检查加密状态、关闭控制器、更换启动介质、启动恢复映像、恢复加密以及验证系统功能，开始更换AFF A400存储系统中的启动介质。 
 ---
-= 启动媒体手动恢复工作流程 - AFF A400
+= 使用手动启动恢复过程的 AFF A400 启动介质更换工作流
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-启动映像的自动恢复涉及系统自动识别并选择适当的启动菜单选项。它使用合作伙伴节点上的启动映像在AFF A400存储系统中的替换启动介质上重新安装ONTAP 。
+开始使用手动启动恢复过程更换 AFF A400 系统中的启动介质。您必须从 NetApp 支持站点下载适当的 ONTAP 恢复映像并将其复制到 USB 驱动器，以执行恢复并将系统恢复到正常运行状态。
 
 自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
 

@@ -115,7 +115,7 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 .步骤
 . 将适当的ONTAP映像版本下载到已格式化的USB闪存驱动器：
 +
-.. 使用 ... https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_determine_if_the_running_ONTAP_version_supports_NetApp_Volume_Encryption_(NVE)["如何确定正在运行的ONTAP版本是否支持NetApp卷加密(NVE)"^] 以确定当前是否支持卷加密。
+.. 使用 https://kb.netapp.com/on-prem/ontap/DM/Encryption/Encryption-KBs/How_to_determine_if_the_running_ONTAP_version_supports_Data_At_Rest_Encryption["如何确定您的 ONTAP 版本是否支持 NetApp 卷加密 (NVE)"^]确定当前是否支持卷加密。
 +
 *** 如果集群支持NVE、请使用NetApp卷加密下载映像。
 *** 如果集群不支持NVE、请下载不带NetApp卷加密的映像。

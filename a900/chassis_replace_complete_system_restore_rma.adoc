@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a900, verify and set HA state, complete the replacement process 
 summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。 
 ---
-= 还原并验证配置—AFF A900
+= 完成 AFF A900 系统的机箱更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+确认机箱的 HA 状态，并将故障部件退回 NetApp 以完成 AFF A900 系统的机箱更换。
+
 要完成机箱更换，您必须完成特定任务。
 
 

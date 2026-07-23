@@ -2,19 +2,25 @@
 permalink: a400/chassis-replace-overview.html 
 sidebar: sidebar 
 keywords: aff a400, aff, a400, component, system, function, properly, contact, technical, support, replace, chassis, shut, down, controller, replacing, remove, module, fan, equipment, rack, cabinet, ha, state, switch, back, aggregate, two-node, metrocluster, configuration, complete, replacement, process, replace the chassis, shut down the controllers when replacing a chassis, remove the controller modules, move the fans, replace a chassis from within the equipment rack or system cabinet, install the controller modules, verify and set the ha state of the chassis, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
-summary: 您可以将受损机箱更换为与受损机箱型号相同的新机箱。 
+summary: 通过关闭控制器、将硬件移至更换机箱并完成系统恢复，开始更换 AFF A400 系统机箱。 
 ---
-= 机箱更换概述— AFF A400
+= AFF A400 机箱更换工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换机箱，必须将风扇和控制器模块从受损机箱移至与受损机箱型号相同的新机箱。
+通过关闭控制器、将硬件移至更换机箱并完成系统恢复，开始更换 AFF A400 系统机箱。
 
-系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一个"]link:chassis-replace-shutdown.html["关闭控制器"]
+[role="quick-margin-para"]
+关闭控制器以安全地进行机箱维护。
 
-* 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。
-* 此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:chassis-replace-move-hardware.html["更换机箱"]
+[role="quick-margin-para"]
+将风扇、驱动器和控制器模块从受损机箱移动到更换机箱。
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:chassis-replace-complete-system-restore-rma.html["完成机箱更换"]
+[role="quick-margin-para"]
+通过验证 HA 状态来完成更换，如果需要，请切换回聚合，然后将故障机箱返回 NetApp。

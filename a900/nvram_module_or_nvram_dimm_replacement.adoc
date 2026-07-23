@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a900, replace nvram 
 summary: NVRAM 模块包括 NVRAM11 和 DIMM 以及每个 NVRAM 模块最多两个 NVMe SSD Flash Cache 模块。 
 ---
-= 更换 NVRAM 模块和 / 或 NVRAM DIMM — AFF A900
+= 更换 AFF A900 系统中的 NVRAM 模块或 NVRAM DIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+当 AFF A900 系统中的 NVRAM 模块发生故障或 DIMM 出现故障时，请更换 NVRAM 模块或 NVRAM DIMM。更换过程包括从机箱中卸下 NVRAM 模块、更换故障组件，然后重新安装该模块。
+
 NVRAM 模块由 NVRAM11 和 DIMM 组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.要更换发生故障的 NVRAM 模块，您必须将其从机箱中卸下，将 DIMM 移至更换模块，然后将更换的 NVRAM 模块安装到机箱中。
 
 要更换和NVRAM DIMM、您必须从机箱中卸下NVRAM模块、更换模块中发生故障的DIMM、然后重新安装NVRAM模块。

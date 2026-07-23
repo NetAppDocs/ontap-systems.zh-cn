@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: AFF A900, open controller, download service image to USB drive, transfer boot image, USB drive, service image 
 summary: 要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。 
 ---
-= 更换控制器模块硬件— AFF A900
+= 更换 AFF A900 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+当硬件故障需要时，请更换 AFF A900 系统中的控制器。更换过程包括移除受损的控制器模块、将 FRU 组件移至更换用的控制器、在机箱中安装更换用的控制器模块，以及将系统引导至维护模式。
+
 要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。
 
 以下动画显示了将组件从受损控制器移至更换控制器的整个过程。

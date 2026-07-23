@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a150, a150, aff, replace, nvmem, battery, shut, down, impaired, controller, controller, aggregates, metrocluster, configuration, reinstall 
 summary: 要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。 
 ---
-= 更换NVMEM电池—AFF A150
+= 更换 AFF A150 系统中的 NV 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+当 AFF A150 系统中的 NVMEM 电池开始失去电量或出现故障时，请更换该电池，因为它会在停电期间保留关键系统数据。更换过程包括卸下控制器模块、更换电池和重新安装控制器模块。
+
 要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。

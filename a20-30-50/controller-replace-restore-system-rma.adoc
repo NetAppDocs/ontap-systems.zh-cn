@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: 要完成 AFF A20、AFF A30 或 AFF A50 存储系统的控制器更换，请恢复 NetApp Storage Encryption 配置并在新控制器上安装所需的许可证。确认逻辑接口正在向其主端口报告并执行集群运行状况检查。注册新控制器的序列号，并将故障部件退回 NetApp。 
 ---
-= 完整控制器更换—AFF A20、AFF A30和AFF A50
+= 完成 AFF A20、AFF A30 或 AFF A50 系统的控制器更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

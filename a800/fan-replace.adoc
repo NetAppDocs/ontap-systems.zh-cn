@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a800, replace a fan 
 summary: 如果更换发生故障的风扇模块并将其更换为新的风扇模块，则必须从机箱中卸下控制器模块。 
 ---
-= 更换风扇— AFF A800
+= 更换 AFF A800 系统中的风扇
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-当AFF A800系统中的风扇发生故障或运行效率低下时，请更换风扇模块，因为这会影响系统散热和整体性能。更换过程包括关闭故障控制器，将其拆下，更换风扇模块，重新安装控制器，然后将故障部件退回给NetApp。
+当风扇出现故障或运行效率低下时，请更换 AFF A800 系统中的风扇模块，以保持适当的冷却效果并防止系统性能问题。
 
 
 

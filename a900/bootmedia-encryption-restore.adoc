@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a900, post boot media replacement steps for okm, nse, and nve 
 summary: 在更换的启动介质上恢复加密。完成特定于启用了板载密钥管理器、NetApp 存储加密或 NetApp 卷加密的系统的步骤。 
 ---
-= 恢复加密- AFF A900
+= 在手动启动恢复过程后，在 AFF A900 系统中恢复启动介质上的加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-还原节点上的加密。
+在 AFF A900 系统中的替换引导介质上恢复加密，以确保持续的数据保护。更换过程包括验证密钥可用性、重新应用加密设置以及确认对您的数据的安全访问。
 
 如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 
