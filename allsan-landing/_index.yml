@@ -1,9 +1,9 @@
 ---
 indexpage:
-  title: ASA 系统
-  summary: 您可以通过存储系统文档安装、设置和维护ASA A系列系统。
+  title: ONTAP ASA 系统
+  summary: 存储系统文档可帮助您安装、设置和维护 ONTAP ASA A 系列系统。
   keywords: asa, a-series, asa a150, asa a250, asa a400, asa a800, asa a900, datasheet
-  lead: ASA系统提供简化的专用 SAN 体验，可为使用 FCP 或 iSCSI 协议的企业关键任务数据库和其他 SAN 工作负载提供持续的数据可用性。
+  lead: ONTAP ASA 系统提供简化且专用的 SAN 体验，使用 FCP 或 iSCSI 协议为企业关键任务数据库和其他 SAN 工作负载提供持续的数据可用性。
   tiles:
   - title: 入门
     links:

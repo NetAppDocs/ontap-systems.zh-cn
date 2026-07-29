@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c800, replace a fan 
 summary: 如果更换发生故障的风扇模块并将其更换为新的风扇模块，则必须从机箱中卸下控制器模块。 
 ---
-= 更换风扇—AFF C800
+= 更换 AFF C800 系统中的风扇
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -91,7 +91,7 @@ LOADER 提示符
 [[step-2-remove-the-controller-module]]
 == 第 2 步：卸下控制器模块
 
-在更换控制器模块或更换控制器模块内的组件时，您必须从机箱中卸下控制器模块。
+更换控制器模块或更换控制器模块内部组件时，从机箱中取出控制器模块。
 
 .步骤
 . 如果您尚未接地，请正确接地。

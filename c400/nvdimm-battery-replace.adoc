@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff c400, aff, c400, replace, nvdimm, battery, remove, controller, module, reinstall, impair, aggregate, switch, back, two-node, metrocluster, configuration, replacement, complete, process, replace the nvdimm battery, shut down the impaired controller, remove the controller module, replace the nvdimm battery, install the controller module, restore the controller module to operation, switch back aggregates in a two-node metrocluster configuration, complete the replacement process 
 summary: 要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。 
 ---
-= 更换NVDIMM电池—AFF C400
+= 更换 AFF C400 存储系统中的 NVDIMM 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+通过卸下控制器模块、更换电池并重新安装控制器模块，更换 AFF C400 存储系统中的 NVDIMM 电池。
+
 要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。

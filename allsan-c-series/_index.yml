@@ -1,10 +1,10 @@
 ---
 indexpage:
-  title: ASA C系列系统
-  summary: 您可以通过存储系统文档安装、设置和维护ASA C系列系统。
+  title: ONTAP ASA C-Series 系统
+  summary: 存储系统文档可帮助您安装、设置和维护 ONTAP ASA C-Series 系统。
   keywords: allsan, asa, flash, array, c-series, systems, configuration, asa-c250,
     c-400, c-800
-  lead: ASA C系列系统可为数据中心内的关键企业级应用程序提供经济高效的高密度闪存存储解决方案。
+  lead: ONTAP ASA C-Series 系统为数据中心内的关键企业应用量身定制具有成本效益的高密度闪存解决方案。
   tiles:
   - title: 入门
     links:

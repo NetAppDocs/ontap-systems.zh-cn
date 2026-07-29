@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c800, replace a dimm 
 summary: 如果检测到过多的可纠正或不可纠正的内存错误，请更换 AFF C800 系统中的 DIMM。此类错误可能会阻止存储系统启动 ONTAP。 
 ---
-= 更换DIMM - AFF C800
+= 更换 AFF C800 系统中的 DIMM 以修复内存错误
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: c190, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: 要将系统还原到完全运行状态，必须还原 NetApp 存储加密配置，并为新控制器安装许可证，然后将故障部件退回 NetApp，如套件附带的 RMA 说明中所述。 
 ---
-= 完成系统还原— AFF C190
+= 完成 AFF C190 系统的控制器更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-To restore your system to full operation, you must restore the NetApp Storage Encryption configuration (if necessary), and install licenses for the new controller, and return the failed part to NetApp, as described in the RMA instructions shipped with the kit.
+通过恢复 NetApp 存储加密配置（如有必要）、为新控制器安装许可证并将故障部件退回 NetApp，完成 AFF C190 系统的控制器更换。
 
 
 

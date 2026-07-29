@@ -1,9 +1,9 @@
 ---
 indexpage:
-  title: ASA A系列系统
-  summary: 您可以通过存储系统文档安装、设置和维护ASA A系列系统。
+  title: ONTAP ASA A 系列系统
+  summary: 存储系统文档可帮助您安装、设置和维护 ONTAP ASA A 系列系统。
   keywords: asa, a-series, asa a150, asa a250, asa a400, asa a800, asa a900, datasheet
-  lead: ASA A系列系统专为任务关键型应用程序而设计、可提供卓越的性能和效率。它们可提供数百万次IOPS、保持稳定一致的亚微秒级延迟、并提供行业领先的原始存储容量与有效存储容量之比。
+  lead: ONTAP ASA A 系列系统专为关键任务应用而设计，可提供卓越的性能和效率。它们提供数百万 IOPS，保持一致的亚毫秒延迟，并提供业界领先的原始存储容量与有效存储容量的比率。
   tiles:
   - title: 入门
     links:

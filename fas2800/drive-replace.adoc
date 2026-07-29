@@ -10,7 +10,7 @@ summary: 如果平台向系统控制台记录一条警告消息，指出驱动�
 :imagesdir: ../media/
 
 
-[role="lead lead"]
+[role="lead"]
 You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。
 
 When a drive fails, the platform logs a warning message to the system console indicating which drive has failed.In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.

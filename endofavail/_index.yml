@@ -1,10 +1,10 @@
 ---
 indexpage:
-  title: 可用性已终止的系统
-  summary: 您可以通过存储系统文档安装、设置和维护ASA 系统。
+  title: ONTAP 硬件系统的可用性终止
+  summary: 通过存储系统文档，您可以安装、设置和维护 ONTAP 硬件系统。
   keywords: storage, system, end of availability, supported switches, maintain, a200,
     a220, a300, a320, a700, a700s, c190
-  lead: 终止提供的系统不再提供购买服务、但仍受支持。
+  lead: 已停售的 ONTAP 硬件系统不再可供购买，但仍受支持。
   tiles:
   - title: 安装和设置
     links:

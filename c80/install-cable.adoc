@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c80, prepare installation, cable the hardware 
 summary: 'Management network ports on the controllers are connected to switches.The HA interconnect and cluster interconnect ports are cabled on both controllers.控制器模块连接到外部存储(如果已订购)。' 
 ---
-= 连接硬件- AFF C80
+= 连接 AFF C80 硬件以实现网络和存储连接
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

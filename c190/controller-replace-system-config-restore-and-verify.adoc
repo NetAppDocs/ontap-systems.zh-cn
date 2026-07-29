@@ -1,10 +1,10 @@
 ---
 permalink: c190/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
-keywords: aff c190estore and verify the system configuration, verify and set the ha state of the controller module 
+keywords: aff c190, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
 ---
-= 还原并验证系统配置— AFF C190
+= 还原并验证 AFF C190 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

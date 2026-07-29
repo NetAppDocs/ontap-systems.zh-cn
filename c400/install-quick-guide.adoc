@@ -1,16 +1,18 @@
 ---
 permalink: c400/install-quick-guide.html 
 sidebar: sidebar 
-keywords: aff c400, aff, c400, guide, graphic, instruction, installation, system, rack, cabling, cable, intitial, system, bring-up, guide, install, netapp, system, quick guide 
+keywords: aff c400, aff, c400, guide, graphic, instruction, installation, system, rack, cabling, cable, initial, system, bring-up, guide, install, netapp, system, quick guide 
 summary: 本指南提供了从机架安装和布线到初始系统启动等典型系统安装的图形说明。如果您熟悉 NetApp 系统的安装，请使用本指南。 
 ---
-= 快速指南—AFF C400
+= 使用快速指南安装和设置 AFF C400 存储系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+使用快速指南安装和设置 AFF C400 存储系统，该指南提供从机架安装和布线到初始系统启动的图形说明。
+
 快速指南提供了典型系统安装的图形说明、从机架安装和布线到初始系统启动。如果您熟悉安装NetApp系统、请使用此操作步骤。
 
 使用 link:../media/PDF/Jan_2024_Rev5_AFFC400_ISI_IEOPS-1497.pdf["《AFF C400安装和设置说明》"^]。

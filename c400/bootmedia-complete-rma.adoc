@@ -4,11 +4,13 @@ sidebar: sidebar
 keywords: aff c400, aff, c400, replace, part, return, fail, netapp, rema, instruction, ship, kit, technical, support, complete, replacement, process, complete the replacement process 
 summary: 更换启动介质后，将出现故障的部件退回 NetApp。 
 ---
-= 将失败的启动介质返回给NetApp - AFF C400
+= 在手动启动恢复过程完成后，将故障的 AFF C400 启动介质退回给 NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+更换后，请按照套件附带的 RMA 说明，将故障的 AFF C400 启动介质退回至 NetApp。
+
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

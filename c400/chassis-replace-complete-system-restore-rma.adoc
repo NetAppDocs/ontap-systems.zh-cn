@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff c400, verify and set HA state, complete the replacement process 
 summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。 
 ---
-= 完成还原和更换过程—AFF C400
+= 完成 AFF C400 存储系统的机箱更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+通过验证机箱的 HA 状态并将故障组件返回 NetApp，完成 AFF C400 存储系统的机箱更换。
+
 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。
 
 

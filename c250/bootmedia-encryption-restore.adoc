@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c250, post boot media replacement steps for okm, nse, and nve 
 summary: 检查环境变量后，您必须完成特定于启用了 Onboard Key Manager、NetApp Storage Encryption 或 NetApp Volume Encryption 的系统的步骤。 
 ---
-= 恢复加密- AFF C250
+= 在手动启动恢复过程后，在 AFF C250 存储系统的启动介质上恢复加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
