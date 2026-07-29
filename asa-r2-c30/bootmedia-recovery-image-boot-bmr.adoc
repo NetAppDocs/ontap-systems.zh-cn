@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, boot the recovery image 
 summary: 在 ASA C30 存储系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，从健康节点恢复配置。 
 ---
-= 在启动介质上还原 ONTAP 映像 - ASA C30
+= 使用自动启动恢复过程还原 ASA C30 系统上的启动映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

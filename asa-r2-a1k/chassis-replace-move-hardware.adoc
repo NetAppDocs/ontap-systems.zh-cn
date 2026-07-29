@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a1k, move hardware components, replace the chassis 
 summary: 当硬件故障需要时，请更换 ASA A1K 系统的机箱。更换过程包括卸下控制器、I/O 卡、NVRAM12 模块、系统管理模块和电源装置，安装更换机箱，以及重新安装机箱组件。 
 ---
-= 更换机箱 - ASA A1K
+= 更换 ASA A1K 系统中的机箱
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

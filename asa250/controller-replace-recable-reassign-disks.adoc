@@ -2,9 +2,9 @@
 permalink: asa250/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: asa a250, how to recable the system, how to reassign disks 
-summary: 您必须重新配置存储并确认磁盘重新分配。 
+summary: 将存储资源的控制权交还给替换控制器，以便您的 ASA A250 系统可以恢复正常运行。 
 ---
-= 重新对系统进行配置并重新分配磁盘- ASA A250
+= 交还 ASA A250 系统中的控制器以恢复正常操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

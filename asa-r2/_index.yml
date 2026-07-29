@@ -1,9 +1,10 @@
 ---
 indexpage:
-  title: ASA r2系统
-  summary: ASA R2存储系统文档可用于安装、设置和维护ASA R2系统。
+  title: ONTAP ASA r2 系统
+  summary: ONTAP ASA r2 存储系统文档可帮助您安装、设置和维护 ASA r2 系统。
   keywords: asa r2, asa a1k, asa a70, asa a90, install, setup, maintain
-  lead: 全新的NetApp ASA R2系统(ASA A1K、ASA A70、ASA A90、ASA A20、ASA A30和ASA A50)提供了一个统一的硬件和软件解决方案、可根据仅SAN客户的需求打造简化的体验。
+  lead: 新的 ONTAP ASA r2 系统（ASA A1K、ASA A70、ASA A90、ASA A20、ASA A30 和 ASA A50）提供统一的硬件和软件解决方案，可为纯
+    SAN 客户的需求打造简化体验。
   tiles:
   - title: 入门
     links:

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a1k, replace a power supply 
 summary: 在 ASA A1K 系统中的 AC 或 DC 电源装置发生故障或出现问题时进行更换，确保系统持续获得稳定运行所需的电源。更换过程包括从电源断开故障电源装置，拔下电源线，更换故障电源装置，然后将其重新连接到电源。 
 ---
-= 热插拔电源 - ASA A1K
+= 热插拔 ASA A1K 系统中的电源单元
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a900, replace a dimm 
 summary: 当您的系统注册了越来越多的可更正纠错代码 ECC 时，您必须更换控制器模块中的 DIMM。否则会导致系统崩溃。 
 ---
-= 更换DIMM - ASA A900
+= 更换 ASA A900 系统中的 DIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

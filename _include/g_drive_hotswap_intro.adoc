@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-You can replace a failed drive nondisruptively while I/O is in progress.
+您可以在 I/O 正在进行时无中断地热插拔驱动器。
 
 .开始之前
 * 存储系统必须支持您要安装的驱动器。

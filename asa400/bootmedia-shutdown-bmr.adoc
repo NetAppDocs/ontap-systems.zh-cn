@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa400, shut down the controller 
 summary: 关闭ASA A400存储系统中受损的控制器，以防止数据丢失并确保更换启动介质时系统稳定性。 
 ---
-= 关闭控制器以进行自动启动介质恢复 - ASA A400
+= 在自动启动恢复过程中关闭 ASA A400 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

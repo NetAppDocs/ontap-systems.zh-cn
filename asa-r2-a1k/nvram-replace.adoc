@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a1k, replace an nvdimm 
 summary: 当非易失性内存出现故障或需要升级时、请更换ASA A1K系统中的NVRAM。 
 ---
-= 更换NVRAM - ASA A1K
+= 更换 ASA A1K 系统中的 NVRAM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

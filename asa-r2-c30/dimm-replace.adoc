@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, replace a dimm 
 summary: 如果检测到过多可纠正或不可纠正的内存错误，请更换 ASA C30 存储系统中的 DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。 
 ---
-= 更换DIMM - ASA C30
+= 更换 ASA C30 系统中的 DIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

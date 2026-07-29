@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, shut down the impaired controller 
 summary: 在更换控制器时、关闭ASA A70或ASA A90存储系统中的控制器、以防止数据丢失并确保系统稳定性。 
 ---
-= 关闭受损控制器- ASA A70和ASA A90
+= 在非 MetroCluster 配置中关闭 ASA A70 或 ASA A90 系统中受损的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

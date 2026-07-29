@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a900, replace nvram 
 summary: NVRAM 模块包括 NVRAM11 和 DIMM 以及每个 NVRAM 模块最多两个 NVMe SSD Flash Cache 模块。 
 ---
-= 更换NVRAM模块和NVRAM DIMM - ASA A900
+= 更换 ASA A900 系统中的 NVRAM 模块或 NVRAM DIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

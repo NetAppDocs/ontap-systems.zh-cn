@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a800, replace the nvdimm battery 
 summary: 要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。 
 ---
-= 更换NVDIMM电池- ASA A800
+= 更换 ASA A800 系统中的 NVDIMM 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

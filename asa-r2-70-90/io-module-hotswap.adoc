@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, hot swap a cluster ha card, hot swap ethernet client io module, hotswap io module, hot swap io module 
 summary: 如果模块发生故障并且存储系统满足所有 ONTAP 版本要求，则可以热插拔 ASA A70 或 ASA A90 存储系统中的以太网 I/O 模块。 
 ---
-= 热插拔 I/O 模块 - ASA A70 和 ASA A90
+= 在不关闭系统的情况下热插拔 ASA A70 或 ASA A90 系统中的 I/O 模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -159,7 +159,7 @@ The module has been successfully removed from service and powered off. It can no
 [[step-3-replace-the-failed-io-module]]
 == 步骤 3：更换出现故障的 I/O 模块
 
-将出现故障的 I/O 模块替换为等效的 I/O 模块。
+用等效的 I/O 模块热插拔发生故障的 I/O 模块。
 
 .步骤
 . 如果您尚未接地，请正确接地。

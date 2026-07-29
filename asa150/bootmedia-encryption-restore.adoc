@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a150, a150, asa, post, boot, media, okm, nse, nve, onboard key manager, netapp storage encryption, netapp volume encryption 
 summary: 恢复替代启动介质上的加密。 
 ---
-= 还原OKM、NSE和NVE - ASA A150
+= 在手动启动恢复过程后，在 ASA A150 系统中恢复启动介质上的加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

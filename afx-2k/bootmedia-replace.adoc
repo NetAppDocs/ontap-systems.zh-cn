@@ -2,9 +2,9 @@
 permalink: afx-2k/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: afx 2k, replace the boot media 
-summary: AFF A2K 存储系统中的引导介质存储了基本的固件和配置数据。更换过程包括卸下 System Management 模块、卸下受损的引导介质、在 System Management 模块中安装更换用的引导介质，然后重新安装 System Management 模块。 
+summary: AFX 2K 存储系统中的启动介质存储基本固件和配置数据。更换过程包括卸下 System Management 模块、卸下受损的启动介质、在 System Management 模块中安装替换启动介质，然后重新安装 System Management 模块。 
 ---
-= 更换启动介质 - AFX 2K
+= 使用自动启动恢复过程更换 AFX 2K 存储系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

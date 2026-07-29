@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, replace a power supply 
 summary: 当 ASA C30 存储系统中的交流或直流电源装置发生故障或出现问题时，请进行更换，以确保系统持续获得稳定运行所需的电源。更换过程包括从电源断开故障电源装置，拔下电源线，更换故障电源装置，然后将其重新连接到电源。 
 ---
-= 更换电源- ASA C30
+= 热插拔 ASA C30 系统中的电源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

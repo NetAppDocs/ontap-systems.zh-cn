@@ -2,9 +2,9 @@
 permalink: asa900/controller_replace_recable_reassign_disks.html 
 sidebar: sidebar 
 keywords: asa a900, recable the system 
-summary: 通过重新连接存储和网络配置，继续更换过程。 
+summary: 重新连接存储和网络配置，确认磁盘重新分配，并将存储资源的控制权交还给替换控制器，以便您的 ASA A900 系统可以恢复正常运行。 
 ---
-= 重新连接系统- ASA A900
+= 交还 ASA A900 系统中的控制器以恢复正常操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

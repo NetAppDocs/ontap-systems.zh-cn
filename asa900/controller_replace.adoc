@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ASA A900, open controller, download service image to USB drive, transfer boot image, USB drive, service image 
 summary: 要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。 
 ---
-= 更换控制器模块硬件- ASA A900
+= 更换 ASA A900 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, shut down the impaired controller 
 summary: 关闭 ASA C30 存储系统中受损的控制器，以防止数据丢失并确保更换控制器时系统稳定性。 
 ---
-= 关闭受损控制器- ASA C30
+= 在更换之前关闭 ASA C30 系统中受损的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

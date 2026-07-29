@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, replace the controller workflow 
 summary: 开始更换ASA C30存储系统中的控制器、具体方法是关闭受损控制器、卸下并更换控制器、还原系统配置、并将存储资源的控制权归还给替代控制器。 
 ---
-= 控制器更换工作流- ASA C30
+= ASA C30 控制器更换工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

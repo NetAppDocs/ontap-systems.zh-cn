@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, replace an nvdimm 
 summary: 'NVRAM模块由NVRAM12和DIMM以及每个NVRAM模块最多两个NVMe SSD闪存模块(Flash Cache或缓存模块)组成。' 
 ---
-= 更换NVRAM - ASA A70和ASA A90
+= 更换 ASA A70 或 ASA A90 系统中的 NVRAM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

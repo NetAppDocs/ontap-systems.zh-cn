@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c30, replace the NV battery, NV battery 
 summary: 当电池开始失去电量或出现故障时，请更换 ASA C30 存储系统中的 NV 电池，因为它负责在停电期间保存关键系统数据。更换过程包括关闭受损控制器、卸下控制器模块、更换NV电池、重新安装控制器模块以及将故障部件退回NetApp。 
 ---
-= 更换NV电池- ASA C30
+= 更换 ASA C30 系统中的 NV 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

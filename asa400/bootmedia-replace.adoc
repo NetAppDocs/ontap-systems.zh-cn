@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a400, asa, a400, locate, boot, media, controller, module, fre, map, direction, replace, replace the boot media 
 summary: 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。 
 ---
-= 更换启动介质并准备手动启动恢复 - ASA A400
+= 使用手动启动恢复过程更换 ASA A400 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

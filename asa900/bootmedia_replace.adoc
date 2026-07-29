@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ASA A900, replace, boot, media, controller, directions. replace boot media, transfer image 
 summary: 您必须卸下并打开控制器模块，找到并更换控制器中的启动介质，然后将映像传输到替代启动介质。 
 ---
-= 更换启动介质并准备手动启动恢复 - ASA A900
+= 使用手动启动恢复过程更换 ASA A900 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

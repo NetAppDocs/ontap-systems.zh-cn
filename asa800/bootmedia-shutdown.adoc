@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a800, shut down the controller 
 summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。 
 ---
-= 关闭控制器以进行手动启动介质恢复 - ASA A800
+= 在手动启动恢复过程中关闭 ASA A800 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -159,7 +159,7 @@ The module has been successfully removed from service and powered off. It can no
 [[step-3-replace-the-failed-io-module]]
 == 步骤 3：更换出现故障的 I/O 模块
 
-将出现故障的 I/O 模块替换为等效的 I/O 模块。
+用等效的 I/O 模块热插拔发生故障的 I/O 模块。
 
 .步骤
 . 如果您尚未接地，请正确接地。
