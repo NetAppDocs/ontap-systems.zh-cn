@@ -4,13 +4,13 @@ sidebar: sidebar
 keywords: aff a300, install, worksheet 
 summary: 您可以使用此工作表收集并记录您的站点专用 IP 地址以及配置 ONTAP 集群时所需的其他信息。 
 ---
-= 集群配置工作表— AFF A300
+= 使用配置工作表配置您的 AFF A300 集群
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用此工作表收集并记录您的站点专用 IP 地址以及配置 ONTAP 集群时所需的其他信息。
+收集并记录配置 AFF A300 集群时所需的站点特定 IP 地址和其他信息。
 
 link:https://docs.netapp.com/us-en/ontap/software_setup/gather_cluster_setup_information.html["集群配置工作表"]

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700s, aff, a700s, procedure, secondary, boot, media, restore, fail, image, tgz, file, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive, manual, manual boot recovery 
 summary: 使用辅助启动介质或 USB 闪存驱动器，将启动映像传输到AFF A700s系统上的替换启动介质。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 将启动映像传输到启动介质— AFF A700s
+= 使用 USB 闪存驱动器将启动映像传输至 AFF A700s 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

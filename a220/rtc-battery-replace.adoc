@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: fas2700, aff a220, replace, real, time, clock, battery, impaired, controller, shut, down, controller, system, rtc, date, time, controller, module, reinstall, replace, open 
 summary: 更换 AFF A220 控制器模块中的实时时钟电池，以确保依赖于准确时间同步的服务和应用程序继续运行。 
 ---
-= 更换实时时钟电池- AFF A220
+= 更换 AFF A220 系统中的实时时钟电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+更换 AFF A220 系统中的实时时钟 (RTC) 电池，以确保依赖于准确时间同步的服务和应用程序继续运行。
+
 您必须使用经认可的 RTC 电池。
 
 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。

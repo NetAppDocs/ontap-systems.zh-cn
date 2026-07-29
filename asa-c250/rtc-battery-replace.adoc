@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: asa c250, real-time battery replacement 
 summary: 更换 ASA C250 控制器模块中的实时时钟电池，以确保依赖于准确时间同步的服务和应用程序继续运行。 
 ---
-= 更换实时时钟电池- ASA C250
+= 更换 ASA C250 系统中的实时时钟电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+更换 ASA C250 系统中的实时时钟 (RTC) 电池，以确保依赖于准确时间同步的服务和应用程序继续运行。
+
 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用

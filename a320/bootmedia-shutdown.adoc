@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff, a320, aff a320, complete, completing, nve, nse, task, shutdown, impair, node, shut, down, shut down the node, manual, manual boot recovery 
 summary: 完成 NVE 或 NSE 任务后，需要完成受损节点的关闭。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 关闭节点— AFF A320
+= 在手动启动恢复过程中关闭 AFF A320 系统中受损的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

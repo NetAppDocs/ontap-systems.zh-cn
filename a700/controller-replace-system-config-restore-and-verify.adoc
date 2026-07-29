@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, fas9000, verify, ha, state, controller, module 
 summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
 ---
-= 还原并验证系统配置- AFF A700
+= 还原并验证 AFF A700 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+完成硬件更换并启动到维护模式后，请恢复并验证 AFF A700 系统中的控制器配置。
+
 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。
 
 

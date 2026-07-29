@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c250, replace a dimm 
 summary: 当系统注册了越来越多的可更正的纠错代码或不可更正的 ECC 错误时，请更换 ASA C250 控制器模块中的 DIMM。未能更换有故障的 DIMM 可能会导致系统崩溃。 
 ---
-= 更换DIMM - ASA C250
+= 更换 ASA C250 系统中的 DIMM 以修复内存错误
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

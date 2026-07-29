@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, fas9000, chassis replacement 
 summary: 您可以将受损机箱更换为与受损机箱型号相同的新机箱。 
 ---
-= 机箱更换概述- AFF A700
+= 更换 AFF A700 机箱之前查看要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+在更换 AFF A700 系统中的机箱之前，请查看成功更换的要求。机箱更换过程会将所有组件从受损机箱移至替换机箱，此操作会造成系统中断。
+
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。

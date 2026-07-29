@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a300, boot the recovery image, manual, manual boot recovery 
 summary: 从恢复映像启动受损控制器的过程取决于系统是否处于双节点MetroCluster配置中。AFF A300系统仅支持手动启动介质恢复程序。 
 ---
-= 启动恢复映像— AFF A300
+= 在 AFF A300 系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

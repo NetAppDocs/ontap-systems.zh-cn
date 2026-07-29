@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, fas9000, replace, dcpm, module, fail 
 summary: 要更换系统中的 DCPM 模块，您必须从系统中卸下出现故障的 DCPM 模块，然后将其更换为新的 DCPM 模块。 
 ---
-= 更换DCPM模块- AFF A700
+= 更换 AFF A700 系统中的 DCPM 模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+更换 AFF A700 系统中的 DCPM 模块，以恢复 NVRAM10 的正确电源管理。
+
 要更换系统中的 DCPM 模块，您必须从系统中卸下出现故障的 DCPM 模块，然后将其更换为新的 DCPM 模块。
 
 .步骤

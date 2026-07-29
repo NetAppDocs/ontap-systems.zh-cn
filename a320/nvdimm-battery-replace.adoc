@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff, a320, aff a320, replace, nvdimm, battery, remove, controller, module, reinstall, shut, down, impair, operation, replace the nvdimm battery, shut down the impaired controller, remove the controller module, replace the nvdimm battery, install the controller module, restore the controller module to operation 
 summary: 要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。 
 ---
-= 更换 NVDIMM 电池— AFF A320
+= 更换 AFF A320 系统中的 NVDIMM 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换 NVDIMM 电池，您必须卸下控制器模块，取出电池，更换电池，然后重新安装控制器模块。
+通过卸下控制器模块、更换电池并重新安装控制器模块来更换 AFF A320 系统中的 NVDIMM 电池。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 

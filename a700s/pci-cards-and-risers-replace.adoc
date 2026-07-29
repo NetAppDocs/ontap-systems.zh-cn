@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a700s, aff, a700s, replace, pcie, card, disconnect, cable, riser, shut, down, reinstall, complete, replacement, process, replace a pcie card, shut down the impaired controller, remove the controller module, replace a pcie card, reinstall the controller module, complete the replacement process 
 summary: 要更换 PCIe 卡，您必须断开与提升板中卡的缆线连接，卸下提升板，更换提升板，然后重新对该提升板中的卡进行布线。 
 ---
-= 更换 PCIe 卡— AFF A700s
+= 更换 AFF A700s 系统中的 PCIe 卡
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换 PCIe 卡，您必须断开与提升板中卡的缆线连接，卸下提升板，更换提升板，然后重新对该提升板中的卡进行布线。
+通过断开电缆、卸下提升板、更换卡和重新布线来更换 AFF A700s 系统中的 PCIe 卡。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用
 * 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。

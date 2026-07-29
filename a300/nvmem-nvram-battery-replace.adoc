@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a300, replace the nvmem battery 
 summary: 要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。 
 ---
-= 更换 NVMEM 电池— AFF A300
+= 更换 AFF A300 系统中的 NVMEM 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。
+通过卸下控制器模块、打开控制器模块、更换电池并重新安装控制器模块，更换 AFF A300 系统中的 NVMEM 电池。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 

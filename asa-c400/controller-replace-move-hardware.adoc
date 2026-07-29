@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c400, move the controller module hardware 
 summary: 当硬件故障需要时，请更换 ASA C400 系统中的控制器。卸下故障控制器，将其组件移至更换控制器，安装新控制器，然后重新启动。 
 ---
-= 更换控制器 - ASA C400
+= 更换 ASA C400 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

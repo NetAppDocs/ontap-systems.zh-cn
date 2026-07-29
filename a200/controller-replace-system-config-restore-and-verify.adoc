@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a200, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
 ---
-= 还原并验证系统配置— AFF A200
+= 还原并验证 AFF A200 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。
+完成硬件更换并启动到维护模式后，恢复并验证 AFF A200 系统中的控制器配置。
 
 
 

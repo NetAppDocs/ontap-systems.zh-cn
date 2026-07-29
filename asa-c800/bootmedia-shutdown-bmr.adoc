@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c800, shut down the controller 
 summary: 关闭ASA C800存储系统中受损的控制器，以防止数据丢失并确保更换启动介质时系统稳定性。 
 ---
-= 关闭控制器以进行自动启动介质恢复 - ASA C800
+= 在自动启动恢复过程中关闭 ASA C800 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

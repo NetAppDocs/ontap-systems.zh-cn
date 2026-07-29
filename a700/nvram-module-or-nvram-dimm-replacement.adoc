@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, replace, nvram, module, dimm, manually, reassign, system, id, ha, system, disk, two, node, restore, storage, volume, encryption, functionality 
 summary: 'NVRAM模块由NVRAM10和DIMM以及每个NVRAM模块最多两个NVMe SSD闪存模块(Flash Cache或缓存模块)组成。' 
 ---
-= 更换NVRAM模块或NVRAM DIMM - AFF A700
+= 更换 AFF A700 系统中的 NVRAM 模块或 NVRAM DIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+请更换 AFF A700 系统中的 NVRAM 模块或 NVRAM DIMM，以恢复正常的 NVRAM 功能和系统性能。
+
 NVRAM模块由NVRAM10和DIMM以及每个NVRAM模块最多两个NVMe SSD闪存模块(Flash Cache或缓存模块)组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.
 
 要更换发生故障的NVRAM模块、您必须将其从机箱中卸下、从NVRAM模块中卸下一个或多个Flash Cache模块、将DIMM移动到更换用的模块、重新安装一个或多个Flash Cache模块、然后将更换用的NVRAM模块安装到机箱中。

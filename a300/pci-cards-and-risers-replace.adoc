@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a300, replace a pcie card 
 summary: 要更换 PCIe 卡，您必须执行一系列特定的任务。 
 ---
-= 更换 PCIe 卡— AFF A300
+= 更换 AFF A300 系统中的 PCIe 卡
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换 PCIe 卡，您必须执行一系列特定的任务。
+通过拔下电缆、卸下卡、安装更换件和重新布线来更换 AFF A300 系统中的 PCIe 卡。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用
 * 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。

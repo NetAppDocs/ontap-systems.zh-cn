@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a220, prerequisite, replace the controller module 
 summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。 
 ---
-= 控制器模块更换概述- AFF A220
+= 在更换 AFF A220 系统中的控制器之前，请查看要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+在更换 AFF A220 系统中的控制器之前，请查看更换程序的先决条件，并为您的 ONTAP 版本选择正确的程序。
+
 您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。
 
 [NOTE]

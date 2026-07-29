@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff, a320, aff a320, replacement, boot, media, install, image, transfer, usb, flash, drive, transfer the boot image to the boot media using a usb flash drive, manual, manual boot recovery 
 summary: 您安装的替换启动介质没有启动映像，因此您需要使用 USB 闪存驱动器传输启动映像。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 使用 U 盘将启动映像传输到启动介质— AFF A320
+= 使用 USB 闪存驱动器将启动映像传输至 AFF A320 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

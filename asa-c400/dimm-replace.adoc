@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: asa c400, asa, c400, replace, dimm, controller, module, system, register, correctable, error, correction, code, ecc, system, panic, shut, down, impair, remove, controller, module, system, module, aggregate, two-node, metrocluster, configuration, replace a dimm, shut down the impaired controller, remove the controller module, replace system dimms, install the controller module, restore the controller module to operation, switch back aggregates in a two-node metrocluster configuration 
 summary: 当系统注册了越来越多的可更正的纠错代码或不可更正的 ECC 错误时，请更换 ASA C400 控制器模块中的 DIMM。未能更换有故障的 DIMM 可能会导致系统崩溃。 
 ---
-= 更换DIMM - ASA C400
+= 更换 ASA C400 系统中的 DIMM 以修复内存错误
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+当存储系统遇到过多的可纠正错误更正代码 (ECC) 错误或不可纠正的 ECC 错误时（这通常由单个 DIMM 故障引起），请更换 ASA C400 系统中的 DIMM。
+
 如果系统注册的可更正错误更正代码（ ECC ）数量不断增加，则必须更换控制器模块中的 DIMM ；否则会导致系统崩溃。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。

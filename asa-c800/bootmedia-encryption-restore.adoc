@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c800, post boot media replacement steps for okm, nse, and nve 
 summary: 在ASA C800系统中，恢复替换启动介质上的加密，以确保数据持续受到保护。替换过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。 
 ---
-= 恢复加密- ASA C800
+= 在手动启动恢复过程后，在 ASA C800 系统中恢复启动介质上的加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c800, replace the boot media 
 summary: 在更换启动介质之前，您可以通过删除控制器模块上的提升板 3 来找到控制器模块中发生故障的启动介质。 
 ---
-= 更换启动介质并准备手动启动恢复 - ASA C800
+= 使用手动启动恢复过程更换 ASA C800 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

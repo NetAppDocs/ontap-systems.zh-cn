@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff, a220, replace the drives 
 summary: 如果平台向系统控制台记录一条警告消息，指出驱动器出现故障，则必须更换驱动器。In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated. 
 ---
-= 更换SSD驱动器或HDD驱动器- AFF A220
+= 更换 AFF A220 系统中的驱动器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+在不中断 I/O 的情况下更换 AFF A220 系统中出现故障的驱动器。AFF A220 支持 SSD 和 HDD，每种类型都有专用的更换程序。
+
 You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。
 
 When a drive fails, the platform logs a warning message to the system console indicating which drive has failed.In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.

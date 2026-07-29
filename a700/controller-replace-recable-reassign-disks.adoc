@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, fas9000, how to recable the system, how to reassign disks 
 summary: 您必须重新配置存储并确认磁盘重新分配。 
 ---
-= 重新对系统进行配置并重新分配磁盘- AFF A700
+= 重新连接系统并重新分配 AFF A700 系统中的磁盘
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+通过重新连接存储、恢复 NetApp 存储加密（如有必要）和安装新控制器的许可证，完成 AFF A700 系统的控制器更换。
+
 通过重新为存储布线并确认磁盘重新分配来继续更换操作步骤。
 
 

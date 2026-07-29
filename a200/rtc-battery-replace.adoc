@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a200, replace the rtc battery 
 summary: 更换控制器模块中的实时时钟电池，以便依赖于准确时间同步的系统服务和应用程序继续运行。 
 ---
-= 更换实时时钟电池 - AFF A200
+= 更换 AFF A200 系统中的实时时钟电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。
+更换 AFF A200 系统中的实时时钟 (RTC) 电池，以确保依赖于准确时间同步的服务和应用程序继续运行。
 
 .关于此任务
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, metrocluster, switchback, manual, manual boot recovery 
 summary: 完成引导介质更换后，执行 MetroCluster 切换操作，使配置恢复正常运行状态。AFF A700 系统仅支持手动引导介质恢复过程。 
 ---
-= 在双节点MetroCluster配置中切换回聚合 - AFF A700
+= 在双节点 MetroCluster 配置中切回 AFF A700 系统的聚合
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

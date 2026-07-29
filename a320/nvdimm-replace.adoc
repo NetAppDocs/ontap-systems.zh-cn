@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff, a320, aff a320, replace, nvdimm, controller, module, system, register, flash, lifetime, identified, idenify, nvdimm, healthy, general, failure, system, panic, replace an nvdimm, shut down the impaired controller, remove the controller module, replace the nvdimm, install the controller module, restore the controller module to operation,complete the replacement process 
 summary: 当系统注册闪存寿命即将结束或识别的 NVDIMM 不正常时，请更换 AFF A320 控制器模块中的 NVDIMM。未能更换故障的 NVDIMM 可能会导致系统崩溃。 
 ---
-= 更换 NVDIMM - AFF A320
+= 更换 AFF A320 系统中的 NVDIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-如果系统记录闪存生命周期接近结束或已识别的 NVDIMM 总体运行状况不佳，则必须更换控制器模块中的 NVDIMM ；否则会导致系统崩溃。
+当系统检测到闪存寿命即将结束或识别到的 NVDIMM 运行不正常时，请更换 AFF A320 系统中的 NVDIMM。未能更换故障 NVDIMM 可能会导致系统崩溃。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 

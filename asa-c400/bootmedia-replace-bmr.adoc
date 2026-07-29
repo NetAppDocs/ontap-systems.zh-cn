@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa-c400, replace the boot media 
 summary: ASA C400 系统中的启动介质存储了重要的固件和配置数据。更换过程包括移除控制器模块、移除受损的启动介质、在控制器模块中安装替换启动介质，然后重新安装控制器模块。 
 ---
-= 更换启动介质以实现自动启动恢复 - ASA C400
+= 使用自动启动恢复过程更换 ASA C400 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

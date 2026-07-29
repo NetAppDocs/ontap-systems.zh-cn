@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff a700s, aff, a700s, swap, power, supply, disconnect, target, psu, source, unplug, cable, install, reconnect, swap out a power supply 
 summary: 通过断开目标 PSU 与电源的连接、拔下电源线、移除旧 PSU、安装更换的 PSU，然后将其重新连接到电源，来更换 AFF A700s 系统中的电源。 
 ---
-= 热插拔电源 - AFF A700s
+= 热插拔 AFF A700s 系统中的电源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-更换电源涉及断开目标电源（ PSU ）与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。
+通过断开、拆卸和更换故障设备，然后将其重新连接到电源，即可热插拔 AFF A700s 系统中的电源。
 
 * 电源为冗余且可热插拔。
 * 此操作步骤用于一次更换一个电源。

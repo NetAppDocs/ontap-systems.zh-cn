@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, fas9000, sysdiages, ha-config, switchback, chassis 
 summary: 您必须按照套件附带的RMA说明验证机箱的HA状态、并将故障部件退回给NetApp。 
 ---
-= 完成还原和更换过程- AFF A700
+= 完成 AFF A700 系统的机箱更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+通过验证机箱的 HA 状态并将故障组件返回 NetApp，完成 AFF A700 系统的机箱更换。
+
 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。
 
 

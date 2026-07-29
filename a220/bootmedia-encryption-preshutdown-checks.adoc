@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a220, shutdown, checks, onboard, encryption, keys, impaired controller, disable, automatic, feedback, manual, manual boot recovery 
 summary: 在关闭故障控制器并检查板载加密密钥的状态之前，必须检查故障控制器的状态，禁用自动返还，并检查系统正在运行的ONTAP版本。AFF A220系统仅支持手动启动介质恢复程序。 
 ---
-= 检查加密密钥支持和状态- AFF A220
+= 检查 AFF A220 系统中启动介质上的加密支持
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

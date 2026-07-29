@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff a700, fas9000, replace, dimm, shut, down, impaired, controller, module, reinstall, system, node, aggregates, metrocluster, replacement 
 summary: 当系统注册了越来越多的可更正的纠错代码或不可更正的 ECC 错误时，请更换 AFF A700 控制器模块中的 DIMM。未能更换有故障的 DIMM 可能会导致系统崩溃。 
 ---
-= 更换DIMM - AFF A700
+= 更换 AFF A700 系统中的 DIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+当存储系统遇到过多的可纠正 ECC 错误或无法纠正的 ECC 错误时，请更换 AFF A700 系统中的 DIMM。
+
 如果存储系统遇到错误(例如、基于运行状况监控器警报的CECC (可更正错误更正代码)错误过多或不可更正的ECC错误)、通常是由于单个DIMM故障导致存储系统无法启动ONTAP而导致的、则必须更换控制器中的DIMM。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。

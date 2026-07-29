@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700s, aff, a700s, shut, down, impair, controller, check, status, onboard, encryption, keys, status, disable, automatic, giveback, ontap, pre-shutdown, pre-shutdown checks for onboard encyption keys, manual, manual boot recovery 
 summary: 在关闭AFF A700s系统上出现故障的控制器之前，请验证加密密钥支持和状态。AFF A700s系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 检查加密密钥支持和状态- AFF A700s
+= 检查 AFF A700s 系统中启动介质上的加密支持
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

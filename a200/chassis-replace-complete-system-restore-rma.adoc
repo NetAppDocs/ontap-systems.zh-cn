@@ -4,18 +4,20 @@ sidebar: sidebar
 keywords: aff a200, verify and set HA state,  complete the replacement process 
 summary: 您必须按照套件附带的RMA说明验证机箱的HA状态并将故障部件退回给NetApp。 
 ---
-= 还原并验证配置— AFF A200
+= 完成 AFF A200 系统的机箱更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
+
+[role="lead"]
+通过验证机箱的 HA 状态并将故障组件返回 NetApp，完成 AFF A200 系统的机箱更换。
 
 
 
 [[step-1-verify-and-set-the-ha-state-of-the-chassis]]
 == 第 1 步：验证并设置机箱的 HA 状态
 
-[role="lead"]
 您必须验证机箱的 HA 状态，并在必要时更新此状态以匹配您的系统配置。
 
 .步骤

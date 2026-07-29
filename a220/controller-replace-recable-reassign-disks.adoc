@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: fas2700, aff a220, how to recable the system, how to reassign disks 
 summary: 您必须重新配置存储并确认磁盘重新分配。 
 ---
-= 重新对系统进行配置并重新分配磁盘- AFF A220
+= 重新连接系统并重新分配 AFF A220 系统中的磁盘
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+通过重新连接存储并确认磁盘重新分配，完成 AFF A220 系统的控制器更换。
+
 要完成替换操作步骤并将系统还原到完全运行状态，您必须重新配置存储，确认磁盘重新分配，还原 NetApp 存储加密配置（如果需要）并为新控制器安装许可证。您必须先完成一系列任务，然后才能将系统还原为完全正常运行。
 
 

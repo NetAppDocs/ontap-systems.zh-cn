@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff, a320, aff a320, swap, fan, module, interrupt, service, perform, sequence, task, hot-swap 
 summary: 要在不中断服务的情况下交换风扇模块，您必须执行一系列特定的任务。 
 ---
-= 热插拔风扇模块— AFF A320
+= 热插拔 AFF A320 系统中的风扇
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要在不中断服务的情况下交换风扇模块，您必须执行一系列特定的任务。
+在不中断服务的情况下热插拔 AFF A320 系统中的风扇模块，以保持适当的气流和系统冷却。
 
 
 NOTE: 您必须在将风扇模块从机箱中卸下后两分钟内更换此风扇模块。系统气流中断，控制器模块或模块在两分钟后关闭，以避免过热。
