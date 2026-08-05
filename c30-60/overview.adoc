@@ -31,8 +31,6 @@ summary: AFF C30 和 AFF C60 存储系统在单个高可用性对中的关键规
 
 外形尺寸：2U 机箱，配备 2 个 HA 控制器和 24 个驱动器插槽
 
-ONTAP版本：b_startONTAP：9.16.1P2b_end
-
 PCIe 扩展槽：8
 
 最低ONTAP版本： ONTAP 9.16.1RC1
@@ -172,8 +170,6 @@ CIFS；FC；iSCSI；NFS v3；NFS v4.0；NFS v4.1；NFS v4.2；NVMe/FC；NVMe/TCP
 内存：128.0000 GB
 
 外形尺寸：2U 机箱，配备 2 个 HA 控制器和 24 个驱动器插槽
-
-ONTAP版本：b_startONTAP：9.16.1P2b_end
 
 PCIe 扩展槽：8
 

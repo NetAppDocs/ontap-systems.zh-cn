@@ -7006,7 +7006,6 @@ SFP+(目标/启动程序)</block>
   <block id="d17bb023ab45bd18aad4108bff14bf1e" category="list-text">按照套件随附的 RMA 说明将故障部件退回 NetApp 。<block ref="672892c7f98df9ad95d0024f72bc4b95" category="inline-link-rx"></block>有关详细信息、请参见页面。</block>
   <block id="66a35db4b6d963b540c6a3d31a9d39e6" category="paragraph">关闭或接管受损控制器模块。</block>
   <block id="011b6189f470beb455ff657e2d7f7a63" category="list-text">将凸轮闩锁尽可能远离模块。</block>
-  <block id="2e8e8fd780cc78a14b825cad663b2611" category="paragraph">ONTAP 9.16.0 或更早版本</block>
   <block id="54d6f7773c4a60500d049c396202a23d" category="list-text">按下System Management (系统管理)凸轮按钮。</block>
   <block id="e3f95753aace3276fa0375074c45c988" category="list-text">受损控制器上不得存在任何故障集群端口。</block>
   <block id="9a55c0fdded61a1e549c1b9afbfc5023" category="list-text"><block ref="32b858596eeb9351eca27c2906a21da4" prefix="" category="inline-code"></block>(在ASA系统中不受支持)</block>
@@ -10233,7 +10232,6 @@ SFP+(目标/启动程序)</block>
   <block id="f56ae7fd8ac660d55ee476cc2b6b6715" category="paragraph">最大原始容量：0.5472 PB</block>
   <block id="2ce22d99495ad1d67f2afd59b9d15465" category="paragraph">内存：64.0000 GB</block>
   <block id="eab43815aa6ddac6523fe001702557fd" category="paragraph">外形尺寸：2U 机箱，配备 2 个 HA 控制器和 24 个驱动器插槽</block>
-  <block id="dce6354c7432d233d30699f4fa1dab1b" category="paragraph">ONTAP版本：b_startONTAP：9.16.1P2b_end</block>
   <block id="2b13b0d1b04399d702b8569a3b81c7fb" category="paragraph">PCIe 扩展槽：</block>
   <block id="467c14d27cfd498baa41b5de62cbe35b" category="paragraph">最低ONTAP版本： ONTAP 9.10.1P12</block>
   <block id="4d15157e07692c77bdeff6cb8bc45844" category="section-title">横向扩展最大值</block>
@@ -10281,7 +10279,6 @@ SFP+(目标/启动程序)</block>
   <block id="810944644ddbd9a71f9a53ebcd73f51d" category="list-text">标准 EMC/EMI：BS-EN-55024、BS-EN55035、CISPR 32、EN55022、EN55024、EN55032、EN55035、EN61000-3-2、EN61000-3-3、FCC 第 15 部分 A 类、ICES-003、KS C 9832、KS C 9835</block>
   <block id="9b3b75c67a53d54bba73c70cd1786aed" category="list-text">标准安全：ANSI/UL60950-1、ANSI/UL62368-1、BS-EN62368-1、CAN/CSA C22.2 No. 60950-1、CAN/CSA C22.2 No. 62368-1、CNS 14336、EN60825-1、EN62368-1、IEC 62368-1、IEC60950-1、IS 13252（第 1 部分）</block>
   <block id="520b661a272c9e6f55f469cc9c24193d" category="section-title">高可用性</block>
-  <block id="f5046e4779952c40dda2055325e842f6" category="list-text">ONTAP版本： ONTAP：9.16.1P2</block>
   <block id="014e996a6a164aaf40b8b3e72704fc2e" category="section-title">输入/输出</block>
   <block id="c9517cd5cbe4fac6d0c526d61f3fcc39" category="section-title">板载 I/O</block>
   <block id="81754037ddc5b97d9b806acad96f8815" category="list-text">协议：以太网 10 Gbps；端口：12</block>
@@ -11688,8 +11685,6 @@ SFP+(目标/启动程序)</block>
   <block id="27b8025bf920b2fdec95f4719d7e3772" category="paragraph">PSU 是冗余的且可热插拔。您不必关闭控制器来更换 PSU。</block>
   <block id="41221ad2b8f379d044b6e4c034575270" category="list-text">找到每个正在安装的控制器的系统序列号 (SSN)。</block>
   <block id="5ea0f09670f21c71300695e92b2cd256" category="admonition">请勿使用端口 e1b 和 e7b 端口进行主机网络连接。使用单独的主机卡。</block>
-  <block id="e0c35bf779836a3b5e187a211457a2b9" category="list-text">通过 SAS 连接对外部机架进行 SAS 带内管理 [//] 2025-10-15 ontap-systems-internal/issues/1357</block>
-  <block id="30432b9617d110e91bb55e0ee6592cdb" category="paragraph">基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口；冗余热插拔控制器；冗余热插拔电源；通过 SAS 连接对外部机架进行 SAS 带内管理；[//] 2025-10-15 ontap-systems-internal/issues/1357</block>
   <block id="bb9a46a830b86006c64c8c357fbcb73c" category="doc">热插拔电源 - FAS70 和 FAS90</block>
   <block id="c0fb977424a2b5bca01ac503e2f1b009" category="doc">热插拔电源 - FAS2700</block>
   <block id="58c298876292ce3ccb07434a6eb98ee8" category="doc">热插拔电源 - FAS500f</block>
@@ -11811,7 +11806,6 @@ SFP+(目标/启动程序)</block>
   <block id="9fa7c02bb45265f34f4f69d65e4ba585" category="paragraph"><block ref="ec44bfe32a6d575f528cbdeeb29c9942" prefix="" category="inline-code"></block></block>
   <block id="1a68286f23d4e481b013070b3fb1b2c5" category="paragraph">恢复镜像文件是从U盘下载的。</block>
   <block id="0e99a276251e3e975397503d3c6c3d07" category="list-text">出现提示时，输入图像名称或按 *Enter* 键接受括号中显示的默认图像。</block>
-  <block id="c9e381b8fb72130d3dfe11557316b5b4" category="list-text">请使用适用于您的ONTAP版本的步骤恢复 var 文件系统：</block>
   <block id="510eb69f55221f0ff4cc891c4ba7a6d9" category="paragraph">对受损控制人和合作控制人完成以下步骤：</block>
   <block id="268c64a36efe2137fa47de3437bd4bd0" category="list-text">*在故障控制器上：* 按下<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当你看到<block ref="aa48693d0248bb57512e373cd7f7eebc" prefix=" " category="inline-code"></block></block>
   <block id="9cf62becb6c08190789fafc5e01382fe" category="list-text">*在故障控制器上：* 如果出现提示，请按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>覆盖 _/etc/ssh/ssh_host_ecdsa_key_。</block>
@@ -11828,7 +11822,6 @@ SFP+(目标/启动程序)</block>
   <block id="88c59cc215089054320add9ac5600ce2" category="list-text">*对于故障控制器：*执行以下操作之一：</block>
   <block id="c15238078a77edc2ef4bd593196971b8" category="list-text">如果系统不使用加密，请从启动菜单中选择_选项 1 正常启动_。</block>
   <block id="99ae95872c3913a9ded71370c70a8cc7" category="list-text">如果系统使用加密，请转到<block ref="d767082d20397ebb99e586749eda3a08" category="inline-link-macro-rx"></block>。</block>
-  <block id="fe96aa95930d10c2f5829bc437157a9c" category="open-title">ONTAP 9.16.1 或更高版本</block>
   <block id="f9dbd529813df9b97e2450323ae00565" category="paragraph">对受损控制器完成以下步骤：</block>
   <block id="3b554643290ff3791f79c55bfc5ead66" category="paragraph">恢复过程成功后，将显示以下消息：<block ref="92080c75f9b065e263d7fea155b1d733" prefix=" " category="inline-code"></block></block>
   <block id="ea673c9d0e265c7c75644bc9baaa8689" category="list-text">按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>当提示确认恢复备份成功时。</block>
@@ -12740,7 +12733,6 @@ SFP+(目标/启动程序)</block>
   <block id="9b2d40af21d64d80278ee173eee93493" category="doc">FAS500f 的关键规格</block>
   <block id="7971c747973f656fa0a258fe576a59ce" category="paragraph">以下是 FAS500f 的选择规格。请访问<block ref="f73c85a53b5d65cc9c35da0b9e0d2f09" category="inline-link-rx"></block> (HWU) 获取 FAS500f 规格的完整列表。此页面反映了单个高可用性对。</block>
   <block id="2993484ef64a91db7d4ffb4091f706d0" category="paragraph">平台配置：FAS500f 单机箱 HA 对</block>
-  <block id="9301497e894d25c1a5d8e0997da7a7eb" category="paragraph">ONTAP 版本：9.16.1P2</block>
   <block id="5a4e86e80e1a2b65d5e11606283fa0e6" category="inline-link-macro">AFF A250（自动恢复）</block>
   <block id="48f357e077fea73ea971448bfba251ef" category="list-text"><block ref="48f357e077fea73ea971448bfba251ef" category="inline-link-macro-rx"></block></block>
   <block id="2c196d8c70003da4749b8a9477ed6300" category="inline-link-macro">AFF A250（手动恢复）</block>
@@ -15335,4 +15327,9 @@ SFP+(目标/启动程序)</block>
   <block id="75f43aac1b3f7478f7dd28c21285aa4f" category="sidebar">新的 ONTAP ASA r2 系统（ASA A1K、ASA A70、ASA A90、ASA A20、ASA A30 和 ASA A50）提供统一的硬件和软件解决方案，可为纯 SAN 客户的需求打造简化体验。</block>
   <block id="2f1ec7862d30d363bcd985b98d0405ea" category="sidebar">ONTAP ASA r2 系统</block>
   <block id="e39a75fc031fe75db1eb9bd7bb630df0" category="sidebar">ONTAP ASA r2 存储系统文档可帮助您安装、设置和维护 ASA r2 系统。</block>
+  <block id="b17965ed7656eaefd5896d5e8bc8220f" category="paragraph">具有网络连接，且正在运行 ONTAP 9.16.0 或更早版本</block>
+  <block id="3db85ee708765a863ca7bcba163f6a4e" category="paragraph">网络连接，且正在运行 ONTAP 9.16.1 或更高版本</block>
+  <block id="e77843037570fc2dc04cabc4bbe0c856" category="list-text">出现提示时按 <block ref="8d9c307cb7f3c4a32822a51922d1ceaa" prefix=" " category="inline-code"></block> 以恢复备份配置。</block>
+  <block id="20c74d497df9de076409b88163fc27bf" category="paragraph">如果系统提示您继续进行更新，请按<block ref="57cec4137b614c87cb4e24a3d003a3e0" prefix=" " category="inline-code"></block>。</block>
+  <block id="9ada4cfd3f8a4a843a3a72db74213052" category="list-text">当您看到启动菜单时，按<block ref="76be6883bcf9e8a6aed3a347ac20e41f" prefix=" " category="inline-code"></block>。</block>
 </blocks>

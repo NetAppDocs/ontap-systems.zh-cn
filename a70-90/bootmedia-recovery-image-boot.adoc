@@ -31,12 +31,16 @@ summary: 在AFF A70或AFF A90系统中安装新的启动介质设备后，您可
 恢复镜像文件是从U盘下载的。
 
 . 出现提示时，输入图像名称或按 *Enter* 键接受括号中显示的默认图像。
-. 请使用适用于您的ONTAP版本的步骤恢复 var 文件系统：
+. 还原 var 文件系统：
 +
-[role="tabbed-block"]
-====
-.ONTAP 9.16.0 或更早版本
---
+[cols="1,2"]
+|===
+| 如果您的系统 ... | 那么 ... 
+
+
+ a| 
+具有网络连接，且正在运行 ONTAP 9.16.0 或更早版本
+ a| 
 对受损控制人和合作控制人完成以下步骤：
 
 .. *在故障控制器上：* 按下 `Y`当你看到 `Do you want to restore the backup configuration now?`
@@ -68,9 +72,11 @@ NOTE: 如果看到的不是恢复成功的消息，请联系NetApp支持。
 
 
 
---
-.ONTAP 9.16.1 或更高版本
---
+
+
+ a| 
+网络连接，且正在运行 ONTAP 9.16.1 或更高版本
+ a| 
 对受损控制器完成以下步骤：
 
 .. 在系统提示还原备份配置时、按 `Y`。
@@ -89,8 +95,59 @@ NOTE: 如果看到的不是恢复成功的消息，请联系NetApp支持。
 
 
 
---
-====
+
+
+ a| 
+无网络连接
+ a| 
+.. 出现提示时按  `N` 以恢复备份配置。
+.. 系统提示时重新启动系统。
+.. 从显示的菜单中选择 * 从备份配置更新闪存 * （同步闪存）选项。
++
+如果系统提示您继续进行更新，请按 `Y`。
+
+.. 当您看到启动菜单时，按 `Ctrl-C`。
+.. 执行以下操作之一：
++
+*** 如果系统不使用加密，请从启动菜单中选择_选项 1 正常启动_。
+*** 如果系统使用加密，请转到link:bootmedia-encryption-restore.html["恢复加密"]。
+
+
+
+
+
+
+ a| 
+无网络连接，采用 MetroCluster IP 配置
+ a| 
+.. 出现提示时按  `N` 以恢复备份配置。
+.. 系统提示时重新启动系统。
+.. 等待 iSCSI 存储连接连接完成。
++
+您可以在看到以下消息后继续操作：
+
++
+[listing]
+----
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_auxiliary, address: ip-address).
+date-and-time [node-name:iscsi.session.stateChanged:notice]: iSCSI session state is changed to Connected for the target iSCSI-target (type: dr_partner, address: ip-address).
+----
+.. 从显示的菜单中选择 * 从备份配置更新闪存 * （同步闪存）选项。
++
+如果系统提示您继续进行更新，请按 `Y`。
+
+.. 当您看到启动菜单时，按 `Ctrl-C`。
+.. 执行以下操作之一：
++
+*** 如果系统不使用加密，请从启动菜单中选择_选项 1 正常启动_。
+*** 如果系统使用加密，请转到link:bootmedia-encryption-restore.html["恢复加密"]。
+
+
+
+
+|===
 . 将控制台缆线连接到配对控制器。
 . 通过交还存储使控制器恢复正常运行：
 +
