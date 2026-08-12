@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/install-detailed-guide.html 
 sidebar: sidebar 
-keywords: fas2800, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, storage system, setup, discovery 
-summary: 本过程提供了有关安装典型NetApp存储系统的详细分步说明。 
+keywords: fas2820, detailed, guide, prepare, install, hardware, cable, controllers, node, switchless, cluster, network, configuration, system, storage system, setup, discovery 
+summary: 此过程提供了有关安装 FAS2820 存储系统的详细分步说明。 
 ---
-= 详细步骤—FAS2820
+= 按照详细说明安装 FAS2820 系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本操作步骤提供了有关安装典型NetApp存储系统的详细分步说明。如果需要更详细的安装说明、请使用此操作步骤。
+此过程提供有关准备、安装、布线和接通 FAS2820 存储系统电源的详细分步说明。如果您希望获得详尽的说明而非简短的快速指南，请使用这些步骤。
 
 
 
@@ -45,8 +45,8 @@ IMPORTANT: 具有特定电源要求的客户必须进行检查 https://hwu.netap
 
 . 访问 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html#assign-a-node-management-ip-address["使用System Manager在新集群上配置ONTAP"^]
 +
-.. 查看要求和操作步骤步骤。
-.. 通过完成收集有关存储系统的信息 https://docs.netapp.com/us-en/ontap/task_configure_ontap.html["设置工作表^(需要工作表的URL)"]。
+.. 查看要求和程序步骤。
+.. 通过完成安装工作表收集有关存储系统的信息。
 .. 记录控制器中的存储系统序列号。
 +
 image::../media/drw_ssn_label.svg[系统序列号示例]
@@ -478,7 +478,7 @@ image::../media/dwr-2800_controller2-to shelves_IEOPS-897.svg[控制器 B 到机
 [[step-5-complete-storage-system-setup-and-configuration]]
 == 第5步：完成存储系统设置和配置
 
-使用选项1：(如果启用了网络发现)或选项2：(如果未启用网络发现)完成存储系统设置和配置。
+使用选项 1（如果启用了网络发现）或选项 2（如果未启用网络发现）完成存储系统设置和配置。
 
 在需要设置货架 ID 的任一选项中使用以下动画：
 
@@ -488,17 +488,17 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 ====
 .选项 1 ：如果启用了网络发现
 --
-如果您的笔记本电脑上启用了网络发现、请使用自动集群发现完成存储系统设置和配置。
+如果您的笔记本电脑上已启用网络发现，请使用自动群集发现完成存储系统设置和配置。
 
 .步骤
-. 打开架子电源并使用此步骤开始时的动画设置架子 ID。
+. 打开磁盘架电源，并使用此步骤开始时的动画设置磁盘架 ID。
 . Power on the controllers
 +
 .. 将电源线插入控制器电源，然后将其连接到不同电路上的电源。
 .. 打开两个节点的电源开关。
 +
 
-NOTE: 初始启动可能需要长达八分钟的时间。
+NOTE: 初始启动可能需要长达 8 分钟。
 
 +
 image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[打开电源]
@@ -516,7 +516,7 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[自动发现�
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的*网络*，右键单击并选择*refresh。
+.. 右键单击左侧窗格中的*网络*，然后选择*刷新*。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 
@@ -530,8 +530,8 @@ NOTE: 此目标节点的存储系统序列号为7本。
 . 使用System Manager引导式设置使用您在中收集的数据配置存储系统 <<第 1 步：准备安装>>。
 . 创建帐户或登录到您的帐户。
 +
-.. 单击 https://mysupport.netapp.com["mysupport.netapp.com"]
-.. 如果需要创建帐户或登录帐户、请单击_Create Account_。
+.. 选择 https://mysupport.netapp.com["mysupport.netapp.com"]
+.. 如果您需要创建账号或登录账号，请选择_创建账号_。
 
 
 . 下载并安装 https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]
@@ -571,7 +571,7 @@ image::../media/dwr_2800_turn_on_power_IEOPS-898.svg[打开电源]
 
 +
 
-NOTE: 初始启动可能需要长达八分钟的时间。
+NOTE: 初始启动可能需要长达 8 分钟。
 
 . 将初始节点管理 IP 地址分配给其中一个节点。
 +
@@ -606,13 +606,13 @@ NOTE: 如果您不知道如何配置 PuTTY ，请查看笔记本电脑或控制�
 
 NOTE: 此地址的格式为 +https://x.x.x.x.+
 
-.. 使用您在中收集的数据配置存储系统 <<第 1 步：准备安装>>...
+.. 使用在 <<第 1 步：准备安装>> 中收集的数据配置存储系统。
 
 
 . 创建帐户或登录到您的帐户。
 +
-.. 单击 https://mysupport.netapp.com["mysupport.netapp.com"]
-.. 如果需要创建帐户或登录帐户、请单击_Create Account_。
+.. 选择 https://mysupport.netapp.com["mysupport.netapp.com"]
+.. 如果您需要创建账号或登录账号，请选择_创建账号_。
 
 
 . 下载并安装 https://mysupport.netapp.com/site/tools["Active IQ Config Advisor"]

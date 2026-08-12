@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, move the controller module hardware 
 summary: 当硬件故障需要时，更换 FAS8300 或 FAS8700 系统中的控制器。卸下出现故障的控制器，将其组件移至更换控制器，安装新的控制器，然后重新启动。 
 ---
-= 更换控制器 - FAS8300 和 FAS8700
+= 更换 FAS8300 或 FAS8700 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 当硬件故障需要时，更换 FAS8300 或 FAS8700 系统中的控�
 当硬件故障需要时，更换 FAS8300 或 FAS8700 系统中的控制器。卸下出现故障的控制器，将其组件移至更换控制器，安装新的控制器，然后重新启动。
 
 
-NOTE: 在FAS9300中、Ver2控制器模块只有一个缓存模块插槽(插槽6)。FAS4700没有Ver2控制器模块。删除插槽不会影响缓存模块功能。
+NOTE: Ver2 控制器模块在 FAS8300 中只有一个缓存模块插槽（插槽 6）。FAS8700 没有 Ver2 控制器模块。缓存模块功能不受插槽移除的影响。
 
 
 

@@ -11,7 +11,7 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 
 
 [role="lead"]
-将存储资源的控制权交还给替换控制器，以便您的AFF A800系统能够恢复正常运行。返还过程会根据您系统使用的加密类型而有所不同：无加密或板载密钥管理器 (OKM) 加密。
+在更换控制器后重新为 AFF A800 系统布线，并将磁盘重新分配给更换用的控制器。如果您的系统处于 HA 对中，则交还过程会自动将系统 ID 分配给磁盘；确切的步骤取决于您的系统是未使用加密还是板载密钥管理器 (OKM) 加密。
 
 
 
@@ -32,9 +32,9 @@ summary: 您必须重新配置存储并确认磁盘重新分配。
 [[step-2-reassign-disks]]
 == 第 2 步：重新分配磁盘
 
-If the storage system is in an HA pair, the system ID of the new controller module is automatically assigned to the disks when the giveback occurs at the end of the procedure.您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后确认更改是否已实施。
+如果存储系统处于 HA 对中，则在程序结束时发生交还时，新控制器模块的系统 ID 将自动分配给磁盘。您必须在启动 _replacement_ 控制器时确认系统 ID 更改，然后验证系统是否已应用此更改。
 
-此步骤仅适用于在 HA 对中运行ONTAP 的系统。
+此步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
 .步骤
 . 如果 _replacement_ 控制器处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到 LOADER 提示符： `halt`

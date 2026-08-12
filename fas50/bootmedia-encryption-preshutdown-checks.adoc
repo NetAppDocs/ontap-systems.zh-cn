@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas50, pre-shutdown checks for onboard encryption keys 
 summary: '要确保FAS50存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。' 
 ---
-= 检查手动启动介质恢复的加密支持 - FAS50
+= 检查 FAS50 系统中启动介质上的加密支持
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要确保存储系统上的数据安全、您需要验证启动介质上的加密密钥支持和状态。检查您的ONTAP版本是否支持NetApp卷加密(NVE)、关闭控制器之前、请检查密钥管理器是否处于活动状态。
+为了确保 FAS50 存储系统的数据安全，需要验证启动介质上的加密密钥支持和状态。检查您的 ONTAP 版本是否支持 NetApp 卷加密 (NVE)，并在关闭控制器之前，检查密钥管理器是否处于活动状态。
 
 
 

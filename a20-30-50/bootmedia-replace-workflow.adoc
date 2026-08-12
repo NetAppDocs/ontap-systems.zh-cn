@@ -13,7 +13,7 @@ summary: 启动映像的手动恢复涉及使用 USB 驱动器将ONTAP重新安�
 [role="lead"]
 启动映像的手动恢复涉及使用 USB 驱动器将ONTAP重新安装到AFF A20、 AFF A30 或AFF A50 存储系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复操作，将系统恢复到正常运行状态。
 
-如果您的系统运行的是ONTAP 9.17.1 及更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"] 。
+如果您的系统运行的是 ONTAP 9.17.1 或更高版本，请使用 link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。
 
 首先，检查恢复要求，关闭控制器，更换启动媒体，使用 USB 驱动器恢复映像，并在必要时重新应用加密设置。
 
@@ -27,7 +27,7 @@ summary: 启动映像的手动恢复涉及使用 USB 驱动器将ONTAP重新安�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["两个"]link:bootmedia-shutdown.html["关闭控制器"]
 [role="quick-margin-para"]
-需要更换启动介质时、请关闭控制器。
+当您需要更换启动介质时，请关闭控制器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["三个"]link:bootmedia-replace.html["更换启动介质"]
 [role="quick-margin-para"]

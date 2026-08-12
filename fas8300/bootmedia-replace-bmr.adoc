@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, replace the boot media 
 summary: FAS8300 或 FAS8700 系统中的启动介质存储了重要的固件和配置数据。更换过程包括移除控制器模块、移除受损的启动介质、在控制器模块中安装替换启动介质，然后重新安装控制器模块。 
 ---
-= 更换启动介质以实现自动启动恢复 - FAS8300 和 FAS8700
+= 使用自动启动恢复过程更换 FAS8300 或 FAS8700 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

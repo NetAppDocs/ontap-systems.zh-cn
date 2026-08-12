@@ -25,13 +25,13 @@ summary: 启动映像的手动恢复涉及使用 USB 驱动器将ONTAP重新安�
 [role="quick-margin-para"]
 确定系统是启用了安全密钥管理器还是对磁盘进行了加密。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["两个"]link:bootmedia-shutdown.html["Shut down the impaired controller"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["两个"]link:bootmedia-shutdown.html["关闭控制器"]
 [role="quick-margin-para"]
-需要更换启动介质时、请关闭控制器。
+当您需要更换启动介质时，请关闭控制器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["三个"]link:bootmedia-replace.html["更换启动介质"]
 [role="quick-margin-para"]
-从受损的控制器中移除故障的启动介质并安装替换的启动介质，然后使用 USB 闪存驱动器传输ONTAP映像。
+从控制器中取出出现故障的启动介质并安装替换启动介质，然后使用 USB 闪存驱动器传输 ONTAP 映像。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["四个"]link:bootmedia-recovery-image-boot.html["启动恢复映像"]
 [role="quick-margin-para"]

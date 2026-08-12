@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, hot swap, replace, Flash Cache 
 summary: 您可以为您的 FAS50 存储系统热插拔来自相同或不同支持供应商的相同容量的 NVMe SSD 缓存模块、闪存缓存模块。 
 ---
-= 热插拔缓存模块—FAS50
+= 热插拔 FAS50 系统中的缓存模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,7 +18,7 @@ summary: 您可以为您的 FAS50 存储系统热插拔来自相同或不同支�
 
 * 您的存储系统必须具有适用于您要安装的缓存模块的操作系统。
 * 替换的缓存模块必须与发生故障的缓存模块具有相同的容量，但可以来自其他受支持的供应商。
-* 存储系统中的所有其他组件都必须正常运行；如果未正常运行、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续操作。
+* 存储系统中的所有其他组件都必须正常运行。如果没有，请先联系 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]，然后再继续。
 
 
 .步骤

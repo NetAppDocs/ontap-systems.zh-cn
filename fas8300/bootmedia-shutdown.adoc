@@ -2,16 +2,16 @@
 permalink: fas8300/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, shut, down, take, over, impair, controller, procedure, storage, system, hardware, configuration, shut down the impaired controller 
-summary: 根据存储系统硬件配置的不同，您可以使用不同的过程关闭或接管受损的控制器。 
+summary: 关闭 FAS8300 或 FAS8700 存储系统中的控制器，以防止数据丢失并在手动启动介质恢复过程中保持系统稳定性。 
 ---
-= 关闭控制器以进行手动启动介质恢复 - FAS8300 和 FAS8700
+= 在手动启动恢复过程中关闭 FAS8300 或 FAS8700 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-完成 NVE 或 NSE 任务后，您需要关闭受损控制器。使用适用于您的配置的操作步骤 关闭或接管受损控制器。
+关闭 FAS8300 或 FAS8700 存储系统中的控制器，以防止数据丢失并在手动启动介质恢复过程中保持系统稳定性。
 
 如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 
@@ -64,7 +64,7 @@ NOTE: 如果启动设备损坏或无法正常运行，则此命令可能不起�
 [[option-2-controller-is-in-a-metrocluster]]
 == 选项 2 ：控制器位于 MetroCluster 中
 
-完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
+完成 NVE 或 NSE 任务后，关闭控制器。
 
 
 NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
@@ -124,9 +124,9 @@ LOADER 提示符
 
 
 [[option-3-controller-is-in-a-two-node-metrocluster]]
-== 选项 3 ：控制器位于双节点 MetroCluster 中
+== Option 3: Controller is in a two-node MetroCluster
 
-完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
+完成 NVE 或 NSE 任务后，关闭控制器。
 
 要关闭受损控制器，您必须确定控制器的状态，并在必要时切换控制器，以便运行正常的控制器继续从受损控制器存储提供数据。
 

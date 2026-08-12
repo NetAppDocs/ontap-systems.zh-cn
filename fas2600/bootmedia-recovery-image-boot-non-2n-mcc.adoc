@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2600, verify environment variables, image, boot the recovery image, manual, manual boot recovery 
 summary: 在 FAS2600 系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 启动恢复映像— FAS2600
+= 在 FAS2600 系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -53,7 +53,7 @@ FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介
 
 
 |===
-. 确保环境变量按预期设置：
+. 验证环境变量是否按预期设置：
 +
 .. 将控制器显示 LOADER 提示符。
 .. 使用 `printenv` 命令检查环境变量设置。
@@ -61,7 +61,7 @@ FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介
 .. 使用 `saveenv` 命令保存所做的更改。
 
 
-. 下一个取决于您的系统配置：
+. 下一步取决于您的系统配置：
 +
 ** 如果您的系统配置了板载密钥管理器， NSE 或 NVE ，请转至 xref:bootmedia-encryption-restore.adoc[根据需要还原 OKM ， NSE 和 NVE]
 ** 如果您的系统未配置板载密钥管理器， NSE 或 NVE ，请完成本节中的步骤。

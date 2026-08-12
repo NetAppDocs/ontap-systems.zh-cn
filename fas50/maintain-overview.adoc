@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50 maintenance, maintenance, repairing fas50, replace fas50 components 
 summary: 维护 FAS50 存储系统的硬件，以确保长期可靠性和最佳性能。定期执行维护任务（例如更换故障组件），有助于防止停机和数据丢失。 
 ---
-= 硬件维护概述—FAS50
+= 了解如何维护您的 FAS50 存储系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -43,7 +43,7 @@ link:bootmedia-replace-workflow.html["启动媒体 - 手动恢复"]
  a| 
 link:caching-module-hot-swap.html["缓存模块"]
  a| 
-缓存模块(Flash Cache模块)利用高速SSD存储经常访问的数据、以便于快速检索。
+缓存模块（Flash Cache 模块）使用高速 SSD 存储频繁访问的数据，以便更快地检索。
 
 
 

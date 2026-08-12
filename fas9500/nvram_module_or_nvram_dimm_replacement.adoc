@@ -4,16 +4,18 @@ sidebar: sidebar
 keywords: fas9500, replace nvram 
 summary: 'NVRAM模块由NVRAM11和DIMM以及每个NVRAM模块最多两个NVMe SSD闪存模块(Flash Cache或缓存模块)组成。' 
 ---
-= 更换NVRAM模块和/或NVRAM DIMM—FAS9500
+= 更换 FAS9500 系统中的 NVRAM 模块或 NVRAM DIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-NVRAM 模块由 NVRAM11 和 DIMM 组成。You can replace a failed NVRAM module or the DIMMs inside the NVRAM module.要更换发生故障的 NVRAM 模块，您必须将其从机箱中卸下，将 DIMM 移至更换模块，然后将更换的 NVRAM 模块安装到机箱中。
+FAS9500 系统中的 NVRAM 模块由 NVRAM11 和 DIMM 组成。您可以更换故障的 NVRAM 模块或 NVRAM DIMM，以保持系统正常运行。
 
-要更换和NVRAM DIMM、您必须从机箱中卸下NVRAM模块、更换模块中发生故障的DIMM、然后重新安装NVRAM模块。
+要更换出现故障的 NVRAM 模块，您必须将其从机箱中取出，将 DIMM 移至更换模块，然后将更换的 NVRAM 模块安装到机箱中。
+
+要更换 NVRAM DIMM，必须从机箱中卸下 NVRAM 模块，更换模块中出现故障的 DIMM，然后重新安装 NVRAM 模块。
 
 .关于此任务
 由于系统 ID 源自 NVRAM 模块，因此，如果更换此模块，则属于此系统的磁盘将重新分配给新的系统 ID 。
@@ -103,7 +105,7 @@ LOADER 提示符
 [[step-2-replace-the-nvram-module]]
 == 第 2 步：更换 NVRAM 模块
 
-要更换NVRAM模块、请将其置于机箱中的插槽6中、并按照特定步骤顺序进行操作。
+要更换 NVRAM 模块，请在机箱的插槽 6 中找到该模块，然后按照特定步骤顺序进行操作。
 
 .步骤
 . 如果您尚未接地，请正确接地。
@@ -266,10 +268,10 @@ DIMM 和 DIMM 弹出器卡舌
 
 
 
-[[step-5-reassigning-disks]]
-== 第5步：重新分配磁盘
+[[step-5-reassign-disks]]
+== 第 5 步：重新分配磁盘
 
-您必须在启动替代控制器时确认系统 ID 更改，然后确认更改是否已实施。
+启动替换控制器时，必须确认系统 ID 更改，然后验证更改是否正确。
 
 
 CAUTION: 只有在更换NVRAM模块时才需要重新分配磁盘、而不适用于NVRAM DIMM更换。
@@ -333,7 +335,7 @@ Disk  Aggregate Home  Owner  DR Home  Home ID    Owner ID  DR Home ID Reserver  
 ----
 . 如果系统采用 MetroCluster 配置，请监控控制器的状态： `MetroCluster node show`
 +
-在更换后， MetroCluster 配置需要几分钟才能恢复到正常状态，此时，每个控制器将显示已配置状态，并启用 DR 镜像并显示正常模式。The `metrocluster node show -fields node-systemid` command output displays the old system ID until the MetroCluster configuration returns to a normal state.
+更换后，MetroCluster 配置需要几分钟时间才能恢复到正常状态，此时每个控制器都会显示已配置的状态，并启用 DR 镜像和正常模式。 `metrocluster node show -fields node-systemid` 命令输出显示旧系统 ID，直到 MetroCluster 配置恢复正常状态。
 
 . 如果控制器采用 MetroCluster 配置，则根据 MetroCluster 状态，如果原始所有者是灾难站点上的控制器，请验证 DR 主 ID 字段是否显示磁盘的原始所有者。
 +

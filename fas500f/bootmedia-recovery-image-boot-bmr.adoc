@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, boot the recovery image 
 summary: 在 FAS500f 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，以从配对节点恢复配置。 
 ---
-= 从配对节点自动启动介质恢复 - FAS500f
+= 使用自动引导恢复过程在 FAS500f 系统上还原引导映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -301,4 +301,4 @@ LOADER-B>
 
 
 .下一步行动
-在还原ONTAP映像且节点正常运行并提供数据后，您可以link:bootmedia-complete-rma-bmr.html["将故障部件退回给NetApp"]。
+恢复 ONTAP 映像且节点已启动并正在提供数据后，link:bootmedia-complete-rma-bmr.html["将故障部件退回给NetApp"]。

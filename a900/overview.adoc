@@ -11,7 +11,7 @@ summary: A900平台组的主要规格
 
 
 [role="lead"]
-以下是单个高可用性对中AFF A900存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。
+单个高可用性对中的 AFF A900 存储系统提供以下关键规格。请访问 https://hwu.netapp.com["NetApp Hardware Universe"^]以获取此存储系统的完整规格。
 
 
 
@@ -130,7 +130,7 @@ summary: A900平台组的主要规格
 [[high-availability]]
 == 高可用性
 
-* 基于以太网的基板管理控制器 (BMC) 和ONTAP管理接口
+* 基于以太网的基板管理控制器（BMC）和 ONTAP 管理接口
 * 冗余热插拔控制器
 * 冗余热插拔电源
 * 通过 SAS 连接进行 SAS 带内管理

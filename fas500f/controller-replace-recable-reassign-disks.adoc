@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas500f, how to recable the system, how to reassign disks 
 summary: 您必须重新配置存储并确认磁盘重新分配。 
 ---
-= 重新配置系统并重新分配磁盘— FAS500f
+= 归还 FAS500f 系统中的控制器以恢复正常操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-完成恢复并验证系统配置 FAS500f 系统后，您需要重新连接系统并重新分配磁盘。
+将存储资源的控制权交还给替换控制器，以便 FAS500f 系统可以恢复正常运行。恢复并验证系统配置后，重新连接系统并重新分配磁盘。
 
 通过重新为存储布线并确认磁盘重新分配来继续更换操作步骤。
 

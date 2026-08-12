@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 确认控制器的HA配置在FAS70或FAS90存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。 
 ---
-= Restore and verify the system configuration - FAS70 and FAS90
+= 还原并验证 FAS70 或 FAS90 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2600, post boot media replacement steps for okm, nse, and nve, manual, manual boot recovery 
 summary: 恢复 FAS2600 系统的替换启动介质上的加密配置。此过程包括为启用了板载密钥管理器、NetApp 存储加密或 NetApp 卷加密的系统完成更换后步骤，以确保安全的数据访问和正确的系统运行。 
 ---
-= 还原加密—FAS2600
+= 在 FAS2600 系统中的启动介质上恢复加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

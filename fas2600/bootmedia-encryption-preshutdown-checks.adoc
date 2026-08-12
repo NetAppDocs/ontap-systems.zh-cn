@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2600, pre-shutdown checks for onboard encryption keys, manual, manual boot recovery 
 summary: 在关闭 FAS2600 系统上出现故障的控制器之前，请验证加密密钥支持和状态。此过程包括检查ONTAP版本兼容性。FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 检查加密密钥支持和状态- FAS2600
+= 检查 FAS2600 系统中启动介质上的加密支持
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

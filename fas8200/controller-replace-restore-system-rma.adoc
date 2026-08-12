@@ -2,16 +2,16 @@
 permalink: fas8200/controller-replace-restore-system-rma.html 
 sidebar: sidebar 
 keywords: fas8200, how to restore NetApp Storage Encryption, how to complete the replacement process 
-summary: 要将系统还原到完全运行状态，必须还原 NetApp 存储加密配置，安装新控制器的许可证，并按照套件附带的 RMA 说明中的说明将故障部件退回 NetApp。 
+summary: 要将 FAS8200 系统恢复到完全运行状态，请恢复 NetApp 存储加密配置（如有必要），安装新控制器的许可证，并按照套件附带的 RMA 说明将故障部件退回 NetApp。 
 ---
-= 完成系统还原— FAS8200
+= 完成 FAS8200 系统的控制器更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-To restore your system to full operation, you must restore the NetApp Storage Encryption configuration (if necessary), and install licenses for the new controller, and return the failed part to NetApp, as described in the RMA instructions shipped with the kit.
+要将 FAS8200 系统恢复到完全运行状态，请恢复 NetApp 存储加密配置（如有必要），安装新控制器的许可证，并按照套件附带的 RMA 说明将故障部件退回 NetApp。
 
 
 

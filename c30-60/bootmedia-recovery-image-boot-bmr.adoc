@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c30, aff c60, boot the recovery image 
 summary: 在 AFF C30 或 AFF C60 存储系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，以从伙伴节点恢复配置。在恢复过程中，系统会检查加密是否已启用，并确定正在使用的密钥加密类型。如果启用了密钥加密，系统将引导您完成相应的恢复步骤。 
 ---
-= 使用自动引导恢复过程恢复 AFF C30 或 AFF C60 存储系统上的引导映像
+= 使用自动启动恢复过程在 AFF C30 或 AFF C60 存储系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

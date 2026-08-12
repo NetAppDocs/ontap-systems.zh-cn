@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2600, locate, boot, media, controller, direction, replace, manual, manual boot recovery 
 summary: 更换 FAS2600 控制器模块上故障的启动介质。FAS2600 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 更换启动介质— FAS2600
+= 更换 FAS2600 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -81,7 +81,7 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 
 
 * 如果您的系统是 HA 对，则必须具有网络连接。
-* 如果您的系统是独立系统，则不需要网络连接，但在还原 var 文件系统时，您必须执行额外的重新启动。
+* 如果您的系统是独立系统，则不需要网络连接，但在恢复 var 文件系统时必须执行额外的重新启动。
 
 
 .步骤
@@ -111,7 +111,7 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 ** 如果要配置 DHCP ： `ifconfig e0a -auto`
 +
 
-NOTE: 您配置的目标端口是在通过网络连接还原 var 文件系统期间，用于与运行正常的控制器中受损的控制器进行通信的目标端口。You can also use the e0M port in this command.
+NOTE: 您配置的目标端口是在通过网络连接恢复 var 文件系统期间，用于从正常控制器与受损控制器进行通信的端口。您也可以在此命令中使用 e0M 端口。
 
 ** 如果要配置手动连接： `ifconfig e0a -addr=filer_addr -mask=netmask -gw=gateway-dns=dns_addr-domain=dns_domain`
 +

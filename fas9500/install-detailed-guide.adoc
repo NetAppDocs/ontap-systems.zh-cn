@@ -2,16 +2,16 @@
 permalink: fas9500/install-detailed-guide.html 
 sidebar: sidebar 
 keywords: FAS9500 
-summary: 此提供了有关安装典型 NetApp 系统的详细分步说明。 
+summary: 本页提供安装 FAS9500 系统的详细分步说明。 
 ---
-= 详细步骤—FAS9500
+= 使用详细说明安装 FAS9500 系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本文详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本文。
+本页提供安装 FAS9500 系统的详细分步说明。如果您需要更详细的安装说明，请使用这些说明。
 
 
 
@@ -279,7 +279,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 40GbE 主机网络交换机：
 
-使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。
+将插槽 A4 和 B4（e4b）以及插槽 A8 和 B8（e8b）中的主机端 b 端口通过线缆连接到主机交换机。
 
 image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 
@@ -300,7 +300,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 image::../media/icon_square_5_grey.png[标注图标4.]
  a| 
 ** 将缆线固定到缆线管理臂上(未显示)。
-** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
+** 将电源线连接到 PSU，并将其连接到不同的电源（未显示）。PSU1 和 PSU3 为所有 A 侧组件供电，而 PSU2 和 PSU4 为所有 B 侧组件供电。
 
 
 image::../media/oie_cable_power.png[电源线]
@@ -372,7 +372,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[GbE SFP铜缆连接器]
 
 40GbE 主机网络交换机：
 
-使用缆线将插槽 A4 和 B4 （ e4b ）以及插槽 A4 和 B8 （ e8b ）中的主机‐端 b 端口连接到主机交换机。
+将插槽 A4 和 B4（e4b）以及插槽 A8 和 B8（e8b）中的主机端 b 端口通过线缆连接到主机交换机。
 
 image::../media/oie_cable100_gbe_qsfp28.png[100 GbE QSFPConnector]
 
@@ -393,7 +393,7 @@ image::../media/oie_cable_sfp_gbe_copper.png[100 GbE铜缆连接器]
 image::../media/icon_square_4_red.png[标注图标4.]
  a| 
 ** 将缆线固定到缆线管理臂上(未显示)。
-** 将电源线连接到PSU并将其连接到不同的电源(未显示)。PSU 1和3为所有A侧组件供电、而PSU2和PSU4则为所有B侧组件供电。
+** 将电源线连接到 PSU，并将其连接到不同的电源（未显示）。PSU1 和 PSU3 为所有 A 侧组件供电，而 PSU2 和 PSU4 为所有 B 侧组件供电。
 
 
 image::../media/oie_cable_power.png[电源线]
@@ -417,7 +417,7 @@ NOTE: 有关更多SAS布线信息和工作表、请参见link:../sas3/overview-c
 
 .开始之前
 * 填写适用于您系统的SAS布线工作表。请参阅。 link:../sas3/overview-cabling-rules-examples.html["SAS 布线规则，工作表和示例概述—带有 IOM12 模块的磁盘架"]
-* 请务必检查插图箭头以确定正确的缆线连接器拉片方向。存储模块的缆线拉片已启动，而磁盘架上的拉片已关闭。
+* 请务必检查图示箭头，以确认正确的电缆连接器拉片方向。存储模块的电缆拉片朝上，而磁盘架上的拉片朝下。
 
 
 image::../media/oie_cable_pull_tab_up.png[电缆拉片方向]
@@ -428,7 +428,7 @@ image::../media/oie_cable_pull_tab_down.png[电缆拉片方向]
 NOTE: 插入连接器时、您应感觉到连接器卡入到位；如果您不觉得连接器卡嗒声、请将其卸下、然后将其翻转并重试。
 
 .步骤
-. 使用以下动画或图将控制器连接到三个(一个驱动器架的一个堆栈和两个驱动器架的一个堆栈) DS224C驱动器架。
+. 使用以下动画或图纸将控制器连接到三个（一个堆栈包含一个驱动器架，另一个堆栈包含两个驱动器架）DS224C 驱动器架。
 +
 .动画电缆驱动器架
 video::c958aae6-9d08-4d3d-a213-ae7c017040cd[panopto]

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, replace, nvram, module, dimm, manually, reassign, system, id, ha, system, disk, two, node, restore, storage, volume, encryption, functionality 
 summary: NVRAM 模块包括 NVRAM10 和 DIMM 以及每个 NVRAM 模块最多两个 NVMe SSD Flash Cache 模块、Flash Cache 或缓存模块。 
 ---
-= 更换NVRAM模块或NVRAM DIMM - FAS9000
+= 更换 FAS9000 系统中的 NVRAM 模块或 NVRAM DIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

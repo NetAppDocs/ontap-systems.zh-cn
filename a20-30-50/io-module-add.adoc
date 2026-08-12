@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, add IO module 
 summary: 将I/O模块添加到AFF A20、AFF A30或AFF A50系统、以增强网络连接并扩展系统处理数据流量的能力。 
 ---
-= 为您的 AFF A20、AFF A30 或 AFF A50 系统添加 I/O 模块以增强网络连接
+= 将 I/O 模块添加到 AFF A20、AFF A30 或 AFF A50 系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: 将I/O模块添加到AFF A20、AFF A30或AFF A50系统、以增强网�
 [role="lead"]
 向您的AFF A20、 AFF A30 或AFF A50 存储系统添加 I/O 模块，以增强网络连接并扩展系统处理数据流量的能力。
 
-添加过程包括关闭一个控制器，添加新的 I/O 模块，重新启动控制器，关闭另一个控制器，添加新的 I/O 模块，并重新启动控制器。
+添加 I/O 模块涉及关闭一个控制器、添加模块并重新启动，然后对另一个控制器重复这些步骤。
 
 .关于此任务
 * 当有可用插槽或所有插槽都已完全填充时，您可以将 I/O 模块添加到存储系统。
@@ -22,7 +22,7 @@ summary: 将I/O模块添加到AFF A20、AFF A30或AFF A50系统、以增强网�
 存储系统具有三个定位LED：操作员显示面板上一个、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.
 
 +
-您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
+您可以通过输入 `system location-led _off_`命令将其关闭。如果您不确定 LED 指示灯是否亮起，可以通过输入 `system location-led show`命令来检查其状态。
 
 
 

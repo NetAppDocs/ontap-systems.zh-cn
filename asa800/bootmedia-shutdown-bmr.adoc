@@ -2,7 +2,7 @@
 permalink: asa800/bootmedia-shutdown-bmr.html 
 sidebar: sidebar 
 keywords: asa800, shut down the controller 
-summary: 关闭ASA A800存储系统中受损的控制器，以防止数据丢失并确保更换启动介质时系统稳定性。 
+summary: 关闭 ASA A800 存储系统中的控制器，以防止数据丢失，并确保更换启动介质时的系统稳定性。 
 ---
 = 在自动启动恢复过程中关闭 ASA A800 系统中的控制器
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 关闭ASA A800存储系统中受损的控制器，以防止数据丢失
 
 
 [role="lead"]
-关闭ASA A800 存储系统中受损的控制器，以防止数据丢失并在自动启动介质恢复过程中保持系统稳定性。
+关闭 ASA A800 存储系统中的控制器，以防止数据丢失，并在自动启动介质恢复过程中保持系统稳定性。
 
 自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
 
@@ -82,4 +82,4 @@ LOADER 提示符
 
 
 .下一步行动
-关闭受损控制器后，您可以link:bootmedia-replace-bmr.html["更换启动介质"]。
+关闭控制器后，您link:bootmedia-replace-bmr.html["更换启动介质"]。

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas70, fas90, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: 验证逻辑接口 LIF 向其主端口报告，执行集群运行状况检查，然后将故障部件返回给 NetApp 以完成 FAS70 或 FAS90 控制器更换过程的最后一步。 
 ---
-= 完整控制器更换—FAS70和FAS90
+= 完成 FAS70 或 FAS90 系统的控制器更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要完成 AFF A1K 系统的控制器更换，请先恢复 NetApp 存储加密配置（如有必要）。接下来、确认逻辑接口(Logical Interface、Logical Interface、Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称为Logical Interface、简称最后，将故障部件退回给 NetApp。
+要完成 FAS70 或 FAS90 系统的控制器更换，请先恢复 NetApp 存储加密配置（如有必要）。接下来，确认逻辑接口 (LIF) 正在向其主端口报告并执行集群运行状况检查。最后，将出现故障的部件返回 NetApp。
 
 
 

@@ -2,16 +2,16 @@
 permalink: a320/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff, a320, aff a320, complete, completing, nve, nse, task, shutdown, impair, node, shut, down, shut down the node, manual, manual boot recovery 
-summary: 完成 NVE 或 NSE 任务后，需要完成受损节点的关闭。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
+summary: 关闭 AFF A320 存储系统中的控制器，以防止数据丢失，并在手动启动介质恢复过程中保持系统稳定性。 
 ---
-= 在手动启动恢复过程中关闭 AFF A320 系统中受损的控制器
+= 在手动启动恢复过程中关闭 AFF A320 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-完成 NVE 或 NSE 任务后，需要完成受损节点的关闭。使用适合您配置的相应程序关闭或接管故障控制器。AFF A320系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+关闭 AFF A320 存储系统中的控制器，以防止数据丢失，并在手动启动介质恢复过程中保持系统稳定性。
 
 
 

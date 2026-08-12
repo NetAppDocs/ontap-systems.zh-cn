@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2700, aff 220, boot, recovery, image, restore, file, system, environmental, varible, manual, manual boot recovery 
 summary: 在 FAS2700 系统上，从 USB 驱动器启动ONTAP恢复映像，以恢复启动介质。FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 启动恢复映像—FAS2700
+= 在 FAS2700 系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -279,7 +279,7 @@ image:../media/icon_round_2.png["标注编号2"]
 [[step-6-move-system-dimms]]
 == 第 6 步：移动系统 DIMM
 
-将系统 DIMM 移至替换控制器模块。
+将系统 DIMM 移至更换控制器模块。
 
 .步骤
 . 记下插槽中 DIMM 的方向，以便可以按正确的方向将 DIMM 插入更换用的控制器模块中。
@@ -306,7 +306,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 [[step-7-move-the-nvdimms]]
 == 第 7 步：移动 NVDIMM
 
-将 NVDIMMS 移至替换控制器模块。
+将 NVDIMM 移至更换控制器模块。
 
 .步骤
 . 找到控制器模块上的 NVDIMM 。

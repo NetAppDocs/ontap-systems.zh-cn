@@ -2,16 +2,16 @@
 permalink: fas8300/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, replace the boot media 
-summary: 在更换FAS8300和FAS8700系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您拥有具有适当存储容量的 USB 闪存驱动器，并验证您拥有正确的替换启动设备。 
+summary: 在更换 FAS8300 或 FAS8700 系统中的启动介质之前，请验证您是否满足成功更换所需的要求。这包括确保您有一个具有适当存储容量的 USB 闪存驱动器，并验证您有正确的替换启动设备。 
 ---
-= 手动启动介质恢复的要求 - FAS8300 和 FAS8700
+= 查看 FAS8300 或 FAS8700 系统中手动启动介质恢复的要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在更换 FAS8300 或 FAS8700 系统中的启动介质之前，请确保您满足成功更换的必要要求。这包括验证您是否有正确的替换启动介质，确认受损控制器上的 e0S (e0M wrench) 端口没有故障，并确定是否已启用板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。
+在更换 FAS8300 或 FAS8700 系统中的启动介质之前，请验证您是否满足成功更换所需的必要条件。这包括验证您是否拥有正确的替换启动介质，确认受损控制器上的 e0S（e0M 扳手）端口没有故障，并确定是否已启用板载密钥管理器 (OKM) 或外部密钥管理器 (EKM)。
 
 如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 

@@ -2,16 +2,16 @@
 permalink: fas8300/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
 keywords: fas8300, fas8700, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: 确认控制器的 HA 配置处于活动状态并且在 FAS8300 和 FAS8700 存储系统中正常运行，并确认系统的存储端口列出了磁盘的所有路径。 
+summary: 确认控制器的 HA 配置处于活动状态，并在 FAS8300 或 FAS8700 存储系统中正常运行，同时确认系统的存储端口列出了所有通往磁盘的路径。 
 ---
-= 还原并验证系统配置— FAS8300 和 FAS8700
+= 还原并验证 FAS8300 或 FAS8700 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-确认控制器的 HA 配置处于活动状态并且在 FAS8300 和 FAS8700 存储系统中正常运行，并确认系统的存储端口列出了磁盘的所有路径。
+确认控制器的 HA 配置处于活动状态，并在 FAS8300 或 FAS8700 存储系统中正常运行，同时确认系统的存储端口列出了所有通往磁盘的路径。
 
 在系统恢复运行之前，请验证 HA 配置设置和磁盘列表。
 

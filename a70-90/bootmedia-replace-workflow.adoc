@@ -27,7 +27,7 @@ summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:bootmedia-shutdown.html["关闭控制器"]
 [role="quick-margin-para"]
-需要更换启动介质时、请关闭控制器。
+当您需要更换启动介质时，请关闭控制器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:bootmedia-replace.html["更换启动介质"]
 [role="quick-margin-para"]

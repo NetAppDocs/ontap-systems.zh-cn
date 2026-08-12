@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas8300, fas8700, install, detailed, guide, prepare, hardware, cable, controller, switchless, cluster, sas, drive, two, node, configuration 
 summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本指南。 
 ---
-= 详细指南— FAS8300 和 FAS8700
+= 请按照详细说明安装您的 FAS8300 或 FAS8700 系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本指南详细介绍了安装典型 NetApp 系统的分步说明。如果您需要更详细的安装说明，请使用本指南。
+这些详细的分步说明将指导您安装 FAS8300 或 FAS8700 系统，从机架安装和布线到初始设置。如果您需要比快速步骤提供的更深入的安装指导，请使用这些步骤。
 
 
 
@@ -194,7 +194,7 @@ image::../media/drw_a320_cable_management_arms.png[卸下或安装缆线管理�
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
 
 
-NOTE: 如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后查找卡、然后按部件号在中查找卡 https://hwu.netapp.com["NetApp Hardware Universe"^] 用于显示端口标签的挡板图形。可以使用查找卡部件号 `sysconfig -a` 命令或。
+NOTE: 如果看不到卡上的端口标签，请检查卡的安装方向（PCIe 连接器插槽位于 A400 和 FAS8300/8700 卡插槽的左侧），然后按部件号在 https://hwu.netapp.com["NetApp Hardware Universe"^]中查找该卡，以获取显示端口标签的挡板图形。可以使用 `sysconfig -a`命令或在系统装箱单上找到卡的部件号。
 
 
 
@@ -318,11 +318,11 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[选择ONTAP图
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的*网络*，右键单击并选择*refresh。
+.. 在左侧窗格中选择*网络*，右键单击*网络*，然后选择*刷新*。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 
-NOTE: XXXXX 是目标节点的系统序列号。
+NOTE: 在此示例中，XXXXX 表示目标节点的系统序列号。
 
 +
 此时将打开 System Manager 。
@@ -385,7 +385,7 @@ video::c600f366-4d30-481a-89d9-ab1b0066589b[panopto]
 video::50cdf200-ede1-45a9-b4b5-ab1b006698d7[panopto]
 +
 
-NOTE: 初始启动可能需要长达八分钟的时间。
+NOTE: 初始启动可能需要长达 8 分钟。
 
 . 将初始节点管理 IP 地址分配给其中一个节点。
 +

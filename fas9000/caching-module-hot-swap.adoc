@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas9000, hot swap, replace, Flash Cache 
 summary: 'NVMe SSD Flash Cache模块(Flash Cache或缓存模块)仅位于FAS9000系统插槽6中NVRAM10模块的前部。Beginning with ONTAP 9.4, you can hot-swap the caching module of the same capacity from the same or different supported vendor.' 
 ---
-= 热插拔缓存模块—FAS9000
+= 热插拔 FAS9000 系统中的缓存模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -2,18 +2,17 @@
 permalink: fas9500/chassis_replace_shutdown.html 
 sidebar: sidebar 
 keywords: aff fas9500, shutdown the controllers 
-summary: 要更换机箱，必须关闭控制器。 
+summary: 在更换机箱之前，您必须关闭 FAS9500 系统中受损的控制器。 
 ---
-= 关闭受损控制器—FAS9500
+= 关闭 FAS9500 控制器以更换机箱
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
-
-
-
-[[shutdown-the-impaired-controller-fas9500]]
-== 关闭受损控制器—FAS9500
 
 [role="lead"]
+在更换机箱之前，您必须关闭 FAS9500 系统中受损的控制器。
+
 此过程适用于具有双节点配置的系统。有关在维护集群时正常关闭的详细信息，请参见 https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["正常关闭和启动存储系统解决方案指南—NetApp知识库"]。
 
 .开始之前

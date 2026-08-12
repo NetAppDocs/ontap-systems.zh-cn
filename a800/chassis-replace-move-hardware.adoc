@@ -122,9 +122,9 @@ Be sure to close the cam handle slowly so that it aligns correctly with the fron
 [[step-4-install-the-controller-modules-into-the-new-chassis]]
 == 第四步：将控制器模块安装到新机箱中
 
-将控制器模块安装到新机箱后、需要启动它。
+将控制器模块安装到新机箱后，启动机箱。
 
-对于在同一机箱中具有两个控制器模块的 HA 对，安装控制器模块的顺序尤为重要，因为一旦将其完全装入机箱，它就会尝试重新启动。
+对于在同一机箱中具有两个控制器模块的 HA 对，安装控制器模块的顺序尤为重要，因为每个模块都会在您将其完全放入机箱后立即尝试重新启动。
 
 .步骤
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。

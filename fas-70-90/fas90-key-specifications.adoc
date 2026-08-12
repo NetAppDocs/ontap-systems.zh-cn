@@ -11,7 +11,7 @@ summary: FAS90 的主要规格
 
 
 [role="lead"]
-以下是单个高可用性对中 FAS90 存储系统的精选规格。请访问NetApp Hardware Universe (HWU) 了解此存储系统的完整规格。
+这些是单个高可用性对中 FAS90 存储系统的选定规格。请访问 NetApp Hardware Universe (HWU) 以获取此存储系统的完整规格。
 
 
 
@@ -21,7 +21,7 @@ summary: FAS90 的主要规格
 * 平台配置：FAS90 双机箱 HA 对
 * 最大原始容量：15.0000 PB
 * 内存：1024.0000 GB
-* 外形尺寸：2U 机箱，带 1 个 HA 控制器
+* 外形规格：2U 机箱，带一个高可用性控制器
 * PCIe 扩展槽：18
 * 最低ONTAP版本： ONTAP 9.15.1
 

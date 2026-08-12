@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, pre-shutdown checks for onboard encryption keys, manual, manual boot recovery 
 summary: 在关闭FAS8200系统上出现故障的控制器之前，请验证加密密钥支持和状态。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 检查加密密钥支持和状态- FAS8200
+= 检查 FAS8200 系统中启动介质上的加密支持
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

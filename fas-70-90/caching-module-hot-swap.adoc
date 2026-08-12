@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, hot swap, replace, Flash Cache module carrier, caching module, Flash Cache 
 summary: 'FAS70或FAS90系统中的NVMe SSD Flash Cache模块托架包含一个或两个Flash Cache模块(缓存模块)、每个缓存模块集成一个SSD Flash Cache驱动器。' 
 ---
-= 更换Flash Cache模块托架或缓存模块- FAS70和FAS90
+= 更换 FAS70 或 FAS90 系统中的 Flash Cache 模块托架或缓存模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -29,8 +29,8 @@ FAS70支持2 TB缓存模块、FAS90支持4 TB缓存模块。不能在Flash Cache
 Flash Cache模块托架位于插槽6中、最多可容纳两个Flash Cache模块。您不能热插拔Flash Cache模块托架
 
 .开始之前
-* 确保存储系统具有适用于更换用Flash Cache模块托架的操作系统。
-* 确认所有其他组件均正常工作；如果不正常、则必须联系技术支持。
+* 验证您的存储系统是否具有适用于替换 Flash Cache 模块托架的操作系统。
+* 确认所有其他组件都正常工作。如果没有，请联系技术支持。
 
 
 
@@ -284,8 +284,8 @@ Flash Cache模块(缓存模块)位于插槽6-1或插槽6-2中、或者同时位�
 您可以将各个缓存模块热插拔为同一供应商或其他受支持供应商提供的容量相同的缓存模块。
 
 .开始之前
-* 确保更换用的缓存模块具有与故障模块相同的容量、这些模块来自同一供应商或其他受支持供应商。
-* 确认所有其他组件均正常工作；如果不正常、则必须联系技术支持。
+* 验证替换缓存模块与故障缓存模块的容量相同，且来自同一供应商或其他受支持的供应商。
+* 确认所有其他组件都正常工作。如果没有，请联系技术支持。
 * 缓存模块中的驱动器不是现场可更换单元(FRU)。您必须更换整个缓存模块。
 
 
@@ -341,7 +341,7 @@ image:../media/icon_round_2.png["标注编号2"]
 .. 向下旋转缆线管理托架、方法是拉动缆线管理托架内侧两侧的按钮、然后向下旋转托架。
 .. 按下缓存模块正面的 Terra cotta 释放按钮。
 .. 将凸轮把手旋转到最远位置。
-.. 将手指插入凸轮拉杆开口处、然后将缓存模块拉出Flash Cache模块托架、从而将该模块从机柜中卸下。
+.. 将手指钩入凸轮杆开口，然后将模块从 Flash Cache 模块托架中拉出，从而将缓存模块从机箱中取出。
 +
 从Flash Cache模块托架中删除缓存模块时、请务必支持此模块。
 
@@ -371,7 +371,7 @@ The module has been successfully powered on, initialized and placed into service
 ----
 . 使用 `ssystem controller slot module show` 命令验证插槽状态。
 +
-确保命令输出将的状态报告为`power-on`并做好操作准备。
+确保命令输出将状态报告为 `powered-on`且已准备好运行。
 
 . 确认替代缓存模块已联机并已识别，然后目视确认琥珀色警示 LED 未亮起： `ssysconfig -av slot_number`
 +

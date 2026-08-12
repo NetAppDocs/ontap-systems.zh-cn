@@ -1,14 +1,16 @@
 ---
 permalink: fas2800/bootmedia-complete-rma.html 
 sidebar: sidebar 
-keywords: fas2800, complete, replacement, process, replace, return, failed, rma, instructions 
-summary: 更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。 
+keywords: fas2820, complete, replacement, process, replace, return, failed, rma, instructions 
+summary: 更换 FAS2820 系统中的启动介质后，请按照套件附带的 RMA 说明将故障部件退回给 NetApp。 
 ---
-= 将发生故障的启动介质返回给NetApp - FAS2820
+= 在手动引导恢复过程之后，将故障的 FAS2820 引导介质退回给 NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+更换 FAS2820 系统中的启动介质后，请按照套件附带的 RMA 说明将故障部件退回给 NetApp。
+
 按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。

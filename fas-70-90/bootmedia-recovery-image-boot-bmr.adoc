@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, boot the recovery image 
 summary: 在 FAS70 或 FAS90 存储系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，从合作伙伴节点恢复配置。 
 ---
-= 从合作伙伴节点自动恢复启动介质 - FAS70 和 FAS90
+= 使用自动启动恢复过程在 FAS70 或 FAS90 系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

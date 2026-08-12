@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas500f, replace the boot media 
 summary: 通过查看更换要求、关闭控制器、更换引导介质、恢复引导介质上的映像以及验证系统功能，开始更换 FAS500f 存储系统中的引导介质。 
 ---
-= 启动媒体自动恢复工作流 - FAS500f
+= 使用自动启动恢复过程的 FAS500f 启动介质更换工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-启动映像的自动恢复涉及系统自动识别和选择适当的启动菜单选项。它使用合作伙伴节点上的引导映像在 FAS500f 存储系统中的替换引导介质上重新安装 ONTAP。
+启动映像的自动恢复涉及系统自动识别和选择适当的启动菜单选项。它使用配对节点上的启动映像，在 FAS500f 存储系统的替换启动介质上重新安装 ONTAP。
 
 只有 ONTAP 9.18.1 及更高版本才支持自动启动介质恢复过程。如果您的存储系统运行的是早期版本的 ONTAP，请使用 link:bootmedia-replace-workflow.html["手动启动恢复程序"]。
 
@@ -23,7 +23,7 @@ summary: 通过查看更换要求、关闭控制器、更换引导介质、恢�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:bootmedia-shutdown-bmr.html["关闭控制器"]
 [role="quick-margin-para"]
-需要更换启动介质时、关闭存储系统中的控制器。
+当您需要更换启动介质时，请关闭存储系统中的控制器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:bootmedia-replace-bmr.html["更换启动介质"]
 [role="quick-margin-para"]

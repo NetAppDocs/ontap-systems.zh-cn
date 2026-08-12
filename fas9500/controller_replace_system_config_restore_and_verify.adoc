@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas9500, restore and verify the system configuration 
 summary: 完成硬件更换并启动至维护模式后、您需要验证替代控制器的低级系统配置、并根据需要重新配置系统设置。 
 ---
-= 还原并验证系统配置—FAS9500
+= 还原并验证 FAS9500 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-完成硬件更换后、您可以验证替代控制器的低级系统配置、并根据需要重新配置系统设置。
+完成硬件更换后，您将验证更换控制器的低级系统配置，包括系统时间和 HA 状态，并根据需要重新配置系统设置。
 
 
 

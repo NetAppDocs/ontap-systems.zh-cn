@@ -2,7 +2,7 @@
 permalink: a70-90/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff a70, aff a90, shut down the controller 
-summary: 关闭AFF A70或AFF A90存储系统中受损的控制器，以防止数据丢失并在手动启动介质恢复过程中保持系统稳定性。 
+summary: 关闭 AFF A70 或 AFF A90 存储系统中的控制器，以防止数据丢失，并在手动启动介质恢复过程中保持系统稳定性。 
 ---
 = 在手动启动恢复过程中关闭 AFF A70 或 AFF A90 系统中的控制器
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 关闭AFF A70或AFF A90存储系统中受损的控制器，以防止数
 
 
 [role="lead"]
-关闭AFF A70或AFF A90存储系统中受损的控制器，以防止数据丢失并在自动启动介质恢复过程中保持系统稳定性。
+关闭 AFF A70 或 AFF A90 存储系统中的控制器，以防止数据丢失，并在手动启动介质恢复过程中保持系统稳定性。
 
 [role="tabbed-block"]
 ====

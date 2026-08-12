@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, move hardware components, replace the chassis 
 summary: '当硬件故障需要更换 FAS70 或 FAS90 系统的机箱时。更换过程包括从机箱前部移除控制器，移除电源单元 (PSU)、NVRAM12、I/O 模块和空白板以及系统管理模块，然后安装更换机箱，并重新安装机箱组件。' 
 ---
-= 更换机箱 - FAS70 和 FAS90
+= 更换 FAS70 或 FAS90 系统中的机箱
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

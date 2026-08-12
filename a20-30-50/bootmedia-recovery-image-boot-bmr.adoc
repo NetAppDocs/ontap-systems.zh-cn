@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a20, aff a30, aff a50, boot the recovery image 
 summary: 在AFF A20、 AFF A30 或AFF A50 存储系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，以从配对节点还原配置。在恢复过程中，系统会检查是否已启用加密，并确定正在使用的密钥加密类型。如果已启用密钥加密，系统将引导您完成相应的步骤来还原它。 
 ---
-= 使用自动启动恢复过程还原 AFF A20、AFF A30 或 AFF A50 系统上的启动映像
+= 使用自动启动恢复过程在 AFF A20、AFF A30 或 AFF A50 系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

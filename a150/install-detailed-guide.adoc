@@ -15,7 +15,7 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 
 如果您使用的是MetroCluster 配置、请使用 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]。
 
-*警告：*如果您的系统安装了ONTAP 9．13.1P8－9.13.1P11、ONTAP 9．14.1P1 9.14.1P7或ONTAP 9．15．1 9.15.1P2，并且您的系统包含10个或更多的内部固态驱动器，则必须采取其它步骤来准备安装系统。请参阅问题 https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["COOTP-285173 - ADP不会在具有10个或更多内部驱动器的AFF A150上保留备用根分区"^]。
+*警告：* 如果您正在安装 ONTAP 9.13.1P8 - 9.13.1P11、ONTAP 9.14.1P1 - 9.14.1P7 或 ONTAP 9.15.1 - 9.15.1P2，并且您的系统包含 10 个或更多内部固态驱动器，请采取其他步骤来准备系统以进行安装。请参阅问题  https://mysupport.netapp.com/site/bugs-online/product/ONTAP/JiraNgage/CONTAP-285173["COOTP-285173 - ADP不会在具有10个或更多内部驱动器的AFF A150上保留备用根分区"^]。
 
 
 
@@ -32,8 +32,8 @@ summary: 本指南详细介绍了安装典型 NetApp 系统的分步说明。
 +
 ** 存储系统的机架空间
 ** 2 号十字螺丝刀
-** 使用其他网络缆线通过 Web 浏览器将系统连接到网络交换机和笔记本电脑或控制台
-** 具有 RJ-45 连接并可访问 Web 浏览器的笔记本电脑或控制台
+** 用于将系统连接到网络交换机以及配有 Web 浏览器的笔记本电脑或控制台的其他网络电缆
+** 具有 RJ-45 连接并可访问网络浏览器的笔记本电脑或控制台
 
 
 
@@ -163,7 +163,7 @@ image:../media/oie_cable_power.png["电源线"]
 [[step-2-install-the-hardware]]
 == 第 2 步：安装硬件
 
-您可以根据需要将系统安装在四柱机架或NetApp系统机柜中。
+如适用，您可以将系统安装在四柱机架或NetApp系统机柜中。
 
 .步骤
 . 根据需要安装导轨套件。
@@ -251,7 +251,7 @@ image:../media/drw_c190_u_fc_10gbe_cabling.png["数据端口连接"]
 
 
 --
-以太网网络配置:: 使用Cat 6 RJ45电缆将e0c通过e0f端口连接到主机网络。在下图中。
+以太网网络配置:: 使用 Cat 6 RJ45 电缆将 e0c 至 e0f 端口连接到主机网络，如下图所示。
 +
 --
 image:../media/drw_c190_e_rj45_cbling.png["主机网络布线"]
@@ -414,7 +414,7 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[选择ONTAP图
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的*网络*，右键单击并选择*refresh。
+.. 在左侧窗格中选择*网络*，右键单击，然后选择*刷新*。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 

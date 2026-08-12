@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: fas9500, add io module 
 summary: 您可以将 I/O 模块添加到系统中，方法是在已完全填充的系统中将现有 I/O 模块更换为新的 I/O 模块，或者将新的 I/O 模块添加到机箱中的空插槽中。 
 ---
-= 添加一个I/O模块—FAS9500
+= 向您的 FAS9500 系统添加 I/O 模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以通过在已完全填充的系统中将 NIC 或存储适配器更换为新的 NIC 或存储适配器，或者将新的 NIC 或存储适配器添加到系统中的空机箱插槽中来向系统添加 I/O 模块。
+您可以通过在已满配置的系统中将NIC或存储适配器更换为新的，或者将新的NIC或存储适配器添加到空机箱插槽中，从而将I/O模块添加到FAS9500系统中。
 
 .开始之前
 * 检查 https://hwu.netapp.com/["NetApp Hardware Universe"] 确保新 I/O 模块与您正在运行的系统和 ONTAP 版本兼容。
-* 如果有多个可用插槽，请在中检查插槽优先级 https://hwu.netapp.com/["NetApp Hardware Universe"] 并使用适用于您的 I/O 模块的最佳配置。
+* 如果有多个插槽可用，请检查 https://hwu.netapp.com/["NetApp Hardware Universe"]中的插槽优先级，并使用适合您的 I/O 模块的最佳插槽。
 * 要无中断地添加 I/O 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖或卸下现有 I/O 模块，添加新的或更换的 I/O 模块，然后交还目标控制器。
 * 确保所有其他组件均正常运行。
 
@@ -184,7 +184,7 @@ LOADER 提示符
 . 如果更换用的 I/O 模块是 NIC ，请使用缆线将此模块连接到数据交换机。
 +
 
-NOTE: 确保所有未使用的 I/O 插槽都安装了空格，以防止可能出现散热问题。
+NOTE: 确保在任何未使用的 I/O 插槽中安装空白挡板，以防止可能出现的散热问题。
 
 . 从 LOADER 提示符 _bybye 重新启动控制器
 +
@@ -193,7 +193,7 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
 
 . 从配对节点交还节点。`storage failover giveback -ofnode target_node_name`
 . 如果已禁用，请启用自动交还： `storage failover modify -node local -auto-giveback true`
-. 如果您使用插槽 3 和 / 或 7 进行网络连接，请使用 `storage port modify -node _<node name>_ -port _<port name>__ -mode network` 命令转换插槽以供网络连接使用。
+. 如果使用插槽 3 或 7 进行网络连接，请使用 `storage port modify -node __<node name>__ -port __<port name>__ -mode network`命令转换插槽以供网络使用。
 . 对控制器 B 重复上述步骤
 . 如果您安装了存储I/O模块，请按照中所述安装SAS磁盘架并为link:../sas3/install-hot-add-shelf.html["热添加SAS磁盘架"]其布线。
 
@@ -214,7 +214,7 @@ NOTE: 此操作将重新初始化PCIe卡和其他组件、并重新启动节点�
  a| 
 NIC到NIC (端口数相同)
  a| 
-LIF 将在其控制器模块关闭时自动迁移。
+当控制器模块关闭时，LIF 会自动迁移。
 
 
 

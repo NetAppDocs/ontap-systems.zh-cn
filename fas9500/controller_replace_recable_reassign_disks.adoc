@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas9500, recable the system, reassign disks 
 summary: 重新连接系统并重新分配磁盘。 
 ---
-= 重新对系统进行布线—FAS9500
+= 交还 FAS9500 系统中的控制器以恢复正常操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-通过重新为存储和网络连接布线，继续更换用的操作步骤。
+将存储资源的控制权交还给替换控制器，以便 FAS9500 系统可以恢复正常运行。
 
 
 
@@ -25,27 +25,27 @@ summary: 重新连接系统并重新分配磁盘。
 . Verify that the cabling is correct by using https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["Active IQ Config Advisor"^]。
 +
 .. 下载并安装 Config Advisor 。
-.. 输入目标系统的信息，然后单击收集数据。
-.. 单击布线选项卡，然后检查输出。确保显示所有磁盘架且所有磁盘均显示在输出中，以更正您发现的任何布线问题。
-.. 单击相应的选项卡，然后检查 Config Advisor 的输出，以检查其他布线。
+.. 输入目标系统的信息，然后选择 Collect Data。
+.. 选择 Cabling 选项卡，然后检查输出。确保显示所有磁盘架，并且所有磁盘都显示在输出中，更正发现的任何布线问题。
+.. 通过选择适当的选项卡检查其他布线，然后检查 Config Advisor 的输出。
 
 
 
 
 
-NOTE: 系统 ID 和磁盘分配信息位于 NVRAM 模块中，该模块位于与控制器模块不同的模块中，不受控制器模块更换的影响。
+NOTE: 系统 ID 和磁盘分配信息驻留在 NVRAM 模块中，该模块与控制器模块分开，不受控制器模块更换的影响。
 
 
 
 [[step-2-reassign-disks]]
 == 第 2 步：重新分配磁盘
 
-如果存储系统位于 HA 对中，则在操作步骤末尾发生交还时，新控制器模块的系统 ID 会自动分配给磁盘。您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后确认更改是否已实施。
+如果存储系统处于 HA 对中，则在操作步骤结束时发生交还时，新控制器模块的系统 ID 将自动分配给磁盘。您必须在启动 _replacement_ 节点时确认系统 ID 更改，然后验证更改是否正确。
 
 此操作步骤仅适用于在 HA 对中运行 ONTAP 的系统。
 
 . 如果 _replacement_ 节点处于维护模式（显示 ` * >` 提示符），请退出维护模式并转到加载程序提示符： `halt`
-. 在 _replacement_ 节点上的 LOADER 提示符处，启动节点，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` 。``boot_ontap``
+. 从_replacement_节点上的 LOADER 提示符处启动节点，如果系统提示您因系统 ID 不匹配而覆盖系统 ID，请输入 `y`： `boot_ontap`
 . Wait until the `Waiting for giveback...` message is displayed on the _replacement_ node console and then, from the healthy node, verify that the new partner system ID has been automatically assigned: storage failover show
 +
 在命令输出中，您应看到一条消息，指出受损节点上的系统 ID 已更改，并显示正确的旧 ID 和新 ID 。在以下示例中， node2 已进行更换，新系统 ID 为 151759706 。

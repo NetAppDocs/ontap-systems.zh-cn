@@ -2,7 +2,7 @@
 permalink: a900/bootmedia-replace-requirements.html 
 sidebar: sidebar 
 keywords: a900, replace the boot media 
-summary: 在更换AFF A900 系统中的启动介质之前，请确保满足成功更换的必要要求。这包括确保您拥有具有适当存储容量的 USB 闪存驱动器，并验证您拥有正确的替换启动设备。 
+summary: 在更换 AFF A900 系统中的启动介质之前，请确认您符合成功更换的必要要求。这包括确保您有一个具有适当存储容量的 USB 闪存驱动器，并验证您的更换启动设备是否正确。 
 ---
 = 查看 AFF A900 系统中手动启动介质恢复的要求
 :allow-uri-read: 
@@ -45,4 +45,4 @@ NetApp 强烈建议您在使用的设备上启用控制台日志记录，并在�
 
 
 .下一步是什么？
-查看更换引导介质的要求后，您需要link:bootmedia-encryption-preshutdown-checks.html["检查启动介质上的加密密钥支持和状态"]。
+在查看了更换启动介质的要求后，link:bootmedia-encryption-preshutdown-checks.html["检查启动介质上的加密密钥支持和状态"]。

@@ -2,21 +2,16 @@
 permalink: fas8200/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: fas8200, shut down the impaired controller, manual, manual boot recovery 
-summary: 完成加密检查后，关闭FAS8200系统上出现故障的控制器。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
+summary: 关闭 FAS8200 存储系统中的控制器，以防止数据丢失并在手动启动介质恢复过程中保持系统稳定性。 
 ---
-= 关闭受损控制器— FAS8200
+= 在手动启动恢复过程中关闭 FAS8200 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
-
-
-[[option-1-most-systems]]
-== 选项 1 ：大多数系统
-
 [role="lead"]
-完成加密检查后，关闭FAS8200系统上出现故障的控制器。此过程包括将控制器带到 LOADER 提示符，捕获启动环境变量以供参考，以及准备控制器以更换启动介质，具体步骤因系统配置而异。
+关闭 FAS8200 存储系统中的控制器，以防止数据丢失并在手动启动介质恢复过程中保持系统稳定性。
 
 FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
 

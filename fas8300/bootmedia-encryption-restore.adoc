@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas8300, fas8700, environment, variable, complete, system, onboard, key, manager, okm, storage, volume, netapp, encryption, post, boot, media, replacement, post boot media replacement stpes for okm nse and nve 
 summary: 恢复替代启动介质上的加密。 
 ---
-= 恢复加密 - FAS8300和FAS8700
+= 在手动启动恢复过程后，在 FAS8300 或 FAS8700 系统中恢复启动介质上的加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-恢复替代启动介质上的加密。
+更换 FAS8300 或 FAS8700 系统中的启动介质后，通过完成适用于您的密钥管理器类型（例如 Onboard Key Manager (OKM)）的步骤来恢复加密。
 
 如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 

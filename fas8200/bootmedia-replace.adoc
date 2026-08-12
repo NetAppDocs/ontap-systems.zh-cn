@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, replace the boot media, manual, manual boot recovery 
 summary: 更换FAS8200控制器模块上故障的启动介质。FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 更换启动介质— FAS8200
+= 更换 FAS8200 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -100,7 +100,7 @@ NOTE: 请勿将启动介质竖直向上扭曲或拉，因为这样可能会损�
 * 您必须具有一个已格式化为 32 位的 USB 闪存驱动器，并且容量至少为 4 GB 。
 +
 
-NOTE: tar.gz文件必须放置在至少4 GB的32位格式化分区上。虽然32 TB分区的大小可以达到2 TB、但Windows内置工具(例如diskpart)无法格式化32 GB以上的32 GB分区。
+NOTE: tar.gz 文件必须放置在至少 4GB 的 FAT32 格式分区上。虽然 FAT32 分区可能高达 2TB，但 Windows 内置工具（例如 DiskPart）无法格式化大于 32GB 的 FAT32 分区。
 
 * 与受损控制器运行的 ONTAP 映像版本相同的副本。您可以从 NetApp 支持站点上的 "Downloads" 部分下载相应的映像
 +
@@ -167,6 +167,6 @@ NOTE: 您的接口可能需要其他参数。有关详细信息，可以在固�
 
 
 +
-这些更改将在系统启动时实施。
+系统在启动时实施更改。
 
 

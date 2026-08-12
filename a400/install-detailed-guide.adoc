@@ -197,7 +197,7 @@ image::../media/drw_a320_cable_management_arms.png[卸下或安装缆线管理�
 您可以使用双节点无交换机集群方法或集群互连网络将控制器连接到网络。
 
 
-NOTE: 如果卡上的端口标签不可见、请检查卡安装方向(PCIe连接器插槽位于A400和FAS8300/8700中卡插槽的左侧)、然后按部件号在中查找此卡 https://hwu.netapp.com["NetApp Hardware Universe"^] 用于显示端口标签的挡板图形。可以使用查找卡部件号 `sysconfig -a` 命令或。
+NOTE: 如果看不到卡上的端口标签，请检查卡的安装方向。PCIe 连接器插座位于 A400 和 FAS8300/8700 中卡插槽的左侧。然后按部件号在 https://hwu.netapp.com["NetApp Hardware Universe"^]中查找卡，以查看显示端口标签的挡板图形。您可以使用 `sysconfig -a`命令或在系统装箱单上找到卡的部件号。
 
 
 NOTE: 如果要为MetroCluster IP配置布线、则端口e0a/e0b可用于托管数据LIF (通常在默认IP空间中)。
@@ -265,7 +265,7 @@ image::../media/drw_a400_switched_network_cabling.png[有交换机集群网络�
 [[step-4-cable-controllers-to-drive-shelves]]
 == 第 4 步：使用缆线将控制器连接到驱动器架
 
-您可以使用缆线将 NSS224 或 SAS 磁盘架连接到系统。
+您可以将 NS224 或 SAS 磁盘架连接到您的系统。
 
 
 
@@ -378,7 +378,7 @@ image::../media/drw_autodiscovery_controler_select_ieops-1849.svg[选择ONTAP图
 
 +
 .. 打开文件资源管理器。
-.. 单击左窗格中的*网络*，右键单击并选择*refresh。
+.. 在左侧窗格中选择 *Network*，然后右键单击并选择 *refresh*。
 .. 双击 ONTAP 图标并接受屏幕上显示的任何证书。
 +
 
@@ -451,7 +451,7 @@ NOTE: 所示为 FAS8300 和 FAS8700 。
 video::50cdf200-ede1-45a9-b4b5-ab1b006698d7[panopto]
 +
 
-NOTE: 初始启动可能需要长达八分钟的时间。
+NOTE: 初始启动可能需要长达 8 分钟。
 
 . 将初始节点管理 IP 地址分配给其中一个节点。
 +

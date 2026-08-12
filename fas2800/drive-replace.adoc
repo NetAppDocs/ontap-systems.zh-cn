@@ -1,16 +1,18 @@
 ---
 permalink: fas2800/drive-replace.html 
 sidebar: sidebar 
-keywords: fas2800, replace the drives 
-summary: 如果平台向系统控制台记录一条警告消息，指出驱动器出现故障，则必须更换驱动器。In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated. 
+keywords: fas2820, replace the drives 
+summary: 当平台向系统控制台记录指示驱动器发生故障的警告消息时，您必须更换 FAS2820 系统中的驱动器。操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 均会亮起。 
 ---
-= 更换SSD驱动器或HDD驱动器- FAS2820
+= 更换 FAS2820 系统中的驱动器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+当平台向系统控制台记录指示驱动器发生故障的警告消息时，您必须更换 FAS2820 系统中的驱动器。操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 均会亮起。
+
 You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。
 
 When a drive fails, the platform logs a warning message to the system console indicating which drive has failed.In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, cabling, cluster cabling, host network cabling, management network cabling, shelf cabling 
 summary: 安装FAS50存储系统硬件后、使用缆线将控制器连接到网络和磁盘架。 
 ---
-= 为硬件(FAS50)布线
+= 连接 FAS50 硬件以实现网络和存储连接
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -164,7 +164,7 @@ IMPORTANT: 请勿插入电源线。
 .关于此任务
 * 布线示例显示了DS460C磁盘架；但是，还支持其他SAS磁盘架，请参见link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
 +
-其他受支持SAS磁盘架的布线方式类似。请参阅。 link:../sas3/install-new-system.html["为新系统安装安装磁盘架并为其布线"^]您也可以参考link:../sas3/overview-cabling-rules-examples.html["SAS布线规则、工作表和示例概述"^]。
+其他受支持的 SAS 磁盘架的布线方式类似。请参阅link:../sas3/install-new-system.html["为新系统安装安装磁盘架并为其布线"^]。您也可以参阅link:../sas3/overview-cabling-rules-examples.html["SAS布线规则、工作表和示例概述"^]。
 
 * 有关存储系统支持的最大磁盘架数量以及所有布线选项(例如光纤和交换机连接)，请参见link:https://hwu.netapp.com["NetApp Hardware Universe"^]。
 * 图中显示控制器A的布线为蓝色、控制器B的布线为黄色。

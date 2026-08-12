@@ -2,15 +2,13 @@
 permalink: fas2600/install-worksheet-linkout.html 
 sidebar: sidebar 
 keywords: fas2600, install, worksheet 
-summary: 您可以使用此工作表收集并记录您的站点专用 IP 地址以及配置 ONTAP 集群时所需的其他信息。 
+summary: 您可以使用工作表收集和记录为 FAS2600 系统配置 ONTAP 集群时所需的站点特定 IP 地址和其他信息。 
 ---
-= 集群配置工作表— FAS2600
+= 使用 FAS2600 系统的集群配置工作表
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用此工作表收集并记录您的站点专用 IP 地址以及配置 ONTAP 集群时所需的其他信息。
-
-link:https://docs.netapp.com/us-en/ontap/software_setup/gather_cluster_setup_information.html["集群配置工作表"]
+使用 link:https://docs.netapp.com/us-en/ontap/software_setup/gather_cluster_setup_information.html["集群配置工作表"^] 收集和记录为 FAS2600 系统配置 ONTAP 集群时所需的站点特定 IP 地址和其他信息。

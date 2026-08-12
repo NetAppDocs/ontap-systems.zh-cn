@@ -1,16 +1,18 @@
 ---
 permalink: fas2800/chassis-replace-shutdown.html 
 sidebar: sidebar 
-keywords: fas2800, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
-summary: 要更换机箱，必须关闭控制器。 
+keywords: fas2820, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: 在更换 FAS2820 系统中的机箱之前，您必须正常关闭控制器，以防止数据丢失并确保系统稳定性。 
 ---
-= 关闭控制器- FAS2820
+= 关闭 FAS2820 控制器以更换机箱
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+在更换 FAS2820 系统中的机箱之前，您必须正常关闭控制器，以防止数据丢失并确保系统稳定性。
+
 此过程适用于具有双节点配置的系统。有关在维护集群时正常关闭的详细信息，请参见 https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["正常关闭和启动存储系统解决方案指南—NetApp知识库"]。
 
 .开始之前

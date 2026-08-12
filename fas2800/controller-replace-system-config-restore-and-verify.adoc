@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
-keywords: fas2800, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
+keywords: fas2820, restore and verify the system configuration, verify and set the ha state of the controller module 
+summary: 在完成硬件更换并启动 FAS2820 系统中的替换控制器后，验证替换控制器的低级系统配置，并根据需要重新配置系统设置。 
 ---
-= 还原并验证系统配置—FAS2820
+= 还原并验证 FAS2820 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-完成硬件更换并启动替代控制器后、验证替代控制器的低级系统配置、并根据需要重新配置系统设置。
+在完成硬件更换并启动 FAS2820 系统中的替换控制器后，验证替换控制器的低级系统配置，并根据需要重新配置系统设置。
 
 
 
@@ -48,7 +48,7 @@ summary: 完成硬件更换并启动至维护模式后，您可以验证更换�
 
 
 [[step-2-verify-and-set-the-ha-state-of-the-controller-module]]
-== Step 2: Verify and set the HA state of the controller module
+== 第 2 步：验证并设置控制器模块的 HA 状态
 
 您必须验证控制器模块的 `HA` 状态，并在必要时更新此状态以匹配您的系统配置。
 

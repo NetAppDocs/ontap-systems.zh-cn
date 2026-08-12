@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, replace the boot media 
 summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装到 FAS50 系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复操作，将系统恢复到正常运行状态。 
 ---
-= 启动介质手动恢复工作流程 - FAS50
+= 使用手动启动恢复过程的 FAS50 启动介质更换工作流
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,7 +27,7 @@ summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["两个"]link:bootmedia-shutdown.html["Shut down the impaired controller"]
 [role="quick-margin-para"]
-需要更换启动介质时、请关闭控制器。
+当您需要更换启动介质时，请关闭控制器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["三个"]link:bootmedia-replace.html["更换启动介质"]
 [role="quick-margin-para"]

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: FAS9500, replace, boot, media, controller, directions. replace boot media, transfer image 
 summary: 您必须卸下并打开控制器模块，找到并更换控制器中的启动介质，然后将映像传输到替代启动介质。 
 ---
-= 更换启动介质并准备手动启动恢复 - FAS9500
+= 使用手动启动恢复过程更换 FAS9500 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您必须拔下控制器模块、卸下并打开控制器模块、找到并更换控制器中的启动介质、然后将映像传输到替代启动介质。
+您必须卸下并打开控制器模块，找到并更换控制器中的启动介质，然后将映像传输到替代启动介质。
 
 如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 

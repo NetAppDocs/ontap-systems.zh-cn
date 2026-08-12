@@ -1,19 +1,19 @@
 ---
 permalink: fas2800/dimm-replace.html 
 sidebar: sidebar 
-keywords: fas2800, replace, dimm, shut, down, impaired, controller, controller, metrocluster, replace, system, reinstall, module, filed, part, aggregates, 
-summary: 当存储系统遇到错误时，必须更换控制器中的 DIMM，例如基于 Health Monitor 警报的过多可更正 ECC 错误，或阻止存储系统启动 ONTAP 的不可更正 ECC 错误。 
+keywords: fas2820, replace, dimm, shut, down, impaired, controller, controller, metrocluster, replace, system, reinstall, module, filed, part, aggregates, 
+summary: 当 FAS2820 系统的控制器遇到错误时，您必须更换控制器中的 DIMM，例如基于 Health Monitor 警报的过多 CECC（可纠正错误更正代码）错误或不可纠正的 ECC 错误，这些错误通常由单个 DIMM 故障引起，导致存储系统无法启动 ONTAP。 
 ---
-= 更换DIMM - FAS2820
+= 更换 FAS2820 系统中的 DIMM 以修复内存错误
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-如果存储系统遇到错误(例如、基于运行状况监控器警报的CECC (可更正错误更正代码)错误过多或不可更正的ECC错误)、通常是由于单个DIMM故障导致存储系统无法启动ONTAP而导致的、则必须更换控制器中的DIMM。
+当 FAS2820 系统的控制器遇到错误时，您必须更换控制器中的 DIMM，例如基于 Health Monitor 警报的过多 CECC（可纠正错误更正代码）错误或不可纠正的 ECC 错误，这些错误通常由单个 DIMM 故障引起，导致存储系统无法启动 ONTAP。
 
-系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+如果系统中的任何其他组件无法正常工作，请与技术支持联系。
 
 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
 
@@ -142,7 +142,7 @@ image::../media/drw_hw_nvram_icon.svg[NV icon]
 . 记下DIMM在插槽中的方向和位置、以便可以按正确的方向插入更换用的DIMM。
 . 缓慢推动 DIMM 两侧的两个 DIMM 弹出卡舌，将 DIMM 从插槽中弹出，然后将 DIMM 滑出插槽。
 +
-DIMM将向上旋转一点。
+DIMM 稍微向上旋转。
 
 . 将DIMM旋转到最远位置、然后将DIMM滑出插槽。
 +
@@ -190,14 +190,14 @@ DIMM 插脚之间的缺口应与插槽中的突起对齐。
 
 . 将 DIMM 垂直插入插槽。
 +
-DIMM 紧紧固定在插槽中，但应很容易插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。
+DIMM 可以紧紧地插入插槽，但应易于插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。
 
 +
 
 NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 
 . 小心而稳固地推动 DIMM 的上边缘，直到弹出器卡舌卡入到位，卡入到位于 DIMM 两端的缺口上。
-. 重新连接NVMRM电池：
+. 重新连接 NVRAM 电池：
 +
 .. 插入NVRAM电池。
 +
@@ -221,7 +221,7 @@ NOTE: 目视检查 DIMM ，确认其均匀对齐并完全插入插槽。
 . 如果您尚未接地，请正确接地。
 . 如果您尚未更换控制器模块上的外盖，请进行更换。
 . 翻转控制器模块、并将其端部与机箱中的开口对齐。
-. 将控制器模块轻轻推入系统的一半。将控制器模块的一端与机箱中的开口对齐、然后将控制器模块轻轻推入系统的一半。
+. 将控制器模块轻轻推入系统一半。
 +
 
 NOTE: 请勿将控制器模块完全插入机箱中，除非系统指示您这样做。
@@ -258,8 +258,8 @@ NOTE: 在启动过程中，您可能会看到以下提示：
 
 
 
-[[step-5-restore-automatic-giveback-and-autsupport]]
-== 第5步：还原自动交还和AutSupport
+[[step-5-restore-automatic-giveback-and-autosupport]]
+== 第5步：还原自动交还和AutoSupport
 
 还原自动交还和AutoSupport (如果已禁用)。
 

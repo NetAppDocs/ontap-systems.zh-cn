@@ -4,17 +4,17 @@ sidebar: sidebar
 keywords: fas9500, replace an io module 
 summary: 要更换 I/O 模块，您必须执行一系列特定的任务。 
 ---
-= 更换I/O模块—FAS9500
+= 更换 FAS9500 系统中的 I/O 模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换 I/O 模块，您必须执行一系列特定的任务。
+要更换 FAS9500 系统中的 I/O 模块，您必须关闭受损节点，卸下并安装 I/O 模块，然后重新启动节点。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。
-* 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+* 系统中的所有其他组件必须正常运行；如果未能正常运行，您必须联系技术支持。
 
 
 

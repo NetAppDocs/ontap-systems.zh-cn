@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, replace the nv battery, NV battery 
 summary: 当FAS70或FAS90系统中的NV电池开始失去电量或发生故障时、请更换电池、因为它负责在断电期间保留关键系统数据。更换过程包括关闭受损控制器、卸下控制器模块、更换NV电池、重新安装控制器模块以及将故障部件退回NetApp。 
 ---
-= 更换 NV 电池— FAS70 和 FAS90
+= 更换 FAS70 或 FAS90 系统中的 NV 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

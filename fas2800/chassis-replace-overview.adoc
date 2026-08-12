@@ -1,21 +1,21 @@
 ---
 permalink: fas2800/chassis-replace-overview.html 
 sidebar: sidebar 
-keywords: fas2800, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
-summary: 您可以将受损机箱更换为与受损机箱型号相同的新机箱。 
+keywords: fas2820, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
+summary: 要更换 FAS2820 系统中的机箱，您必须将电源、硬盘驱动器以及控制器模块从受损机箱移至相同型号的新机箱。 
 ---
-= 机箱更换概述—FAS2820
+= 在更换 FAS2820 系统中的机箱之前，请查看相关要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换机箱，您必须将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，并将设备机架或系统机柜中受损机箱替换为与受损机箱型号相同的新机箱。
+要更换 FAS2820 系统中的机箱，请将电源、硬盘驱动器和控制器模块从受损机箱移至新机箱。然后，将受损机箱从设备机架或系统机柜中取出，并将同一型号的新机箱安装到位。
 
-系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+系统中的所有其他组件必须正常运行。如果未能正常运行，请联系技术支持。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用。
 * 编写此操作步骤时，假设您要将所有驱动器和控制器模块移至新机箱，并且此机箱是 NetApp 的新组件。
-* 此操作步骤会造成系统中断。对于双控制器集群，多节点集群中的服务将完全中断，部分中断将会发生。
+* 此过程会造成中断。对于双控制器集群，此过程会导致完全服务中断；对于多节点集群，则会导致部分中断。
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, open, controller, module, system, access, component, manual, manual boot recovery 
 summary: 要接触控制器内部的组件，必须先将控制器模块从系统中取出，然后再取下控制器模块上的盖子。FAS9000系统仅支持手动启动介质恢复程序。 
 ---
-= 更换启动介质- FAS9000
+= 更换 FAS9000 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -1,10 +1,10 @@
 ---
 permalink: fas8300/bootmedia-complete-rma-bmr.html 
 sidebar: sidebar 
-keywords: fas8300, complete the replacement process 
-summary: 更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回 NetApp 。 
+keywords: fas8300, fas8700, complete the replacement process 
+summary: 如果您的 FAS8300 或 FAS8700 系统中的启动介质发生故障，请在完成自动启动恢复过程后，将故障启动介质退回给 NetApp。 
 ---
-= 将失败的启动介质返回给NetApp - FAS8300和FAS8700
+= 在自动启动恢复过程完成后，将故障 FAS8300 或 FAS8700 启动介质退回给 NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

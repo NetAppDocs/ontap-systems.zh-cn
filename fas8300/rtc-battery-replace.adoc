@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, replace, real, time, clock, battery, shut, down, impaired, controller, controller, metrocluster, module, rtc, battery, date, time, aggregates, replace, reinstall, open, switch 
 summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。 
 ---
-= 更换实时时钟电池— FAS8300 和 FAS8700
+= 更换 FAS8300 或 FAS8700 系统中的实时时钟电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -14,7 +14,7 @@ summary: 您需要更换控制器模块中的实时时钟（ Real-Time Clock ，
 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用
-* 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+* 系统中的所有其他组件必须正常运行。如果未能正常运行，请联系技术支持。
 
 
 
@@ -261,7 +261,7 @@ NOTE: 从电池架中取出电池时，请注意电池的极性。电池标有�
 
 
 
-[[step-4-reinstall-the-controller-module-and-sett-timedate-after-rtc-battery-replacement]]
+[[step-4-reinstall-the-controller-module-and-set-timedate-after-rtc-battery-replacement]]
 == 第 4 步：重新安装控制器模块并设置更换 RTC 电池后的时间 / 日期
 
 更换控制器模块中的组件后，您必须在系统机箱中重新安装控制器模块，重置控制器上的时间和日期，然后启动它。

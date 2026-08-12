@@ -23,11 +23,11 @@ summary: 启动映像的自动恢复涉及系统自动识别并选择适当的�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["两个"]link:bootmedia-shutdown-bmr.html["关闭控制器"]
 [role="quick-margin-para"]
-需要更换启动介质时、关闭存储系统中的控制器。
+当您需要更换启动介质时，请关闭存储系统中的控制器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:bootmedia-replace-bmr.html["更换启动介质"]
 [role="quick-margin-para"]
-从受损控制器中取出故障启动介质、然后安装替代启动介质。
+从控制器模块中取出受损的启动介质，并安装更换用的启动介质。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:bootmedia-recovery-image-boot-bmr.html["还原启动介质上的映像"]
 [role="quick-margin-para"]

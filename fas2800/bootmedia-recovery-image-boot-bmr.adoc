@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/bootmedia-recovery-image-boot-bmr.html 
 sidebar: sidebar 
-keywords: fas2800, boot the recovery image 
-summary: 在 fas2800 系统中的替换启动介质上恢复ONTAP映像。该过程涉及从 LOADER 提示符启动启动恢复过程并监视恢复过程直到其完成并且节点重新启动。 
+keywords: fas2820, boot the recovery image 
+summary: 在您的 FAS2820 系统中的替换启动介质上还原 ONTAP 映像。该过程包括从 LOADER 提示符启动引导恢复过程，并监控恢复过程，直到其完成并节点重新启动。 
 ---
-= 从合作伙伴节点自动恢复启动介质 - FAS2800
+= 使用自动引导恢复过程在 FAS2820 系统上还原引导映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在 FAS2800 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，从合作伙伴节点恢复配置。在恢复过程中，系统会检查是否已启用加密，并确定正在使用的密钥加密类型。如果已启用密钥加密，系统将引导您完成相应的恢复步骤。
+在 FAS2820 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，从配对节点恢复配置。在恢复过程中，系统会检查加密是否已启用，并确定正在使用的密钥加密类型。如果启用了密钥加密，系统将引导您完成相应的恢复步骤。
 
 自动启动介质恢复过程仅在ONTAP 9.17.1 及更高版本中受支持。如果您的存储系统运行的是早期版本的ONTAP，请使用link:bootmedia-replace-workflow.html["手动启动恢复程序"] 。
 

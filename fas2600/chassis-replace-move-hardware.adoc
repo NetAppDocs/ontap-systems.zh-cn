@@ -2,16 +2,16 @@
 permalink: fas2600/chassis-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: fas2600, move hardware components, replace the chassis 
-summary: 将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。 
+summary: 将电源、硬盘和控制器模块从 FAS2600 系统中受损机箱移至更换机箱，然后将设备机架或系统机柜中的旧机箱更换为同一型号的新机箱。 
 ---
-= 移动并更换硬件— FAS2600
+= 更换 FAS2600 系统中的机箱
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-将受损机箱中的电源，硬盘驱动器和控制器模块或模块移至新机箱，然后将受损机箱从设备机架或系统机柜中更换为与受损机箱型号相同的新机箱。
+将电源、硬盘和控制器模块从 FAS2600 系统中受损机箱移至更换机箱，然后将设备机架或系统机柜中的旧机箱更换为同一型号的新机箱。
 
 
 
@@ -133,7 +133,7 @@ Be sure to close the cam handle slowly so that it aligns correctly with the fron
 
 将控制器模块和任何其他组件安装到新机箱后、启动它。
 
-对于在同一机箱中具有两个控制器模块的 HA 对，安装控制器模块的顺序尤为重要，因为一旦将其完全装入机箱，它就会尝试重新启动。
+对于在同一机箱中具有两个控制器模块的 HA 对，安装顺序非常重要，因为每个控制器在机箱中完全就位后会立即重新启动。
 
 . 将控制器模块的末端与机箱中的开口对齐，然后将控制器模块轻轻推入系统的一半。
 +

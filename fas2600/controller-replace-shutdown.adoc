@@ -2,15 +2,17 @@
 permalink: fas2600/controller-replace-shutdown.html 
 sidebar: sidebar 
 keywords: fas2600, shut down, impaired controller, take over 
-summary: 要关闭受损控制器，您必须确定控制器的状态，并在必要时接管控制器，以便运行正常的控制器继续从受损控制器存储提供数据。 
+summary: 在更换 FAS2600 系统中受损的控制器之前，请先确定其状态，并在必要时将其接管，以便正常的控制器继续提供数据。 
 ---
-= 关闭控制器— FAS2600
+= 在更换之前关闭 FAS2600 系统中受损的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+在更换之前，通过确定 FAS2600 系统中受损控制器的状态，并在必要时将其接管，以便正常控制器继续从受损控制器存储中提供数据，从而关闭受损控制器。
+
 接管并停止受损的控制器，以便健康控制器继续从受损的控制器的存储中提供数据。为此，您需要在 AutoSupport 中禁止自动创建案例，禁用自动回馈，并将受损的控制器带到 LOADER 提示符处。LOADER 提示符是安全停止状态，您可以从中更换 FRU。
 
 If you have a cluster with more than two nodes, it must be in quorum.如果集群未达到仲裁或运行状况良好的控制器在资格和运行状况方面显示false、则必须在关闭受损控制器之前更正问题描述 ；请参见 link:https://docs.netapp.com/us-en/ontap/system-admin/synchronize-node-cluster-task.html?q=Quorum["将节点与集群同步"^]。

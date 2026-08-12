@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, prepare installation 
 summary: 'Management network ports on the controllers are connected to switches.The HA interconnect and cluster interconnect ports are cabled on both controllers.控制器模块连接到外部存储(如果已订购)。' 
 ---
-= 为硬件(FAS70和FAS90)布线
+= 连接 FAS70 或 FAS90 硬件以实现网络和存储连接
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

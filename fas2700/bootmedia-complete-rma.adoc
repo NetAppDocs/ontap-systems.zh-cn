@@ -1,16 +1,16 @@
 ---
 permalink: fas2700/bootmedia-complete-rma.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, complete, replacement, process, replace, return, failed, rma, instructions, manual, manual boot recovery 
-summary: 更换部件后，您可以按照套件随附的 RMA 说明将故障部件退回给NetApp。FAS2700 系统仅支持手动启动介质恢复程序。 
+keywords: fas2700, complete, replacement, process, replace, return, failed, rma, instructions, manual, manual boot recovery 
+summary: 更换 FAS2700 系统上的启动介质后，将故障部件退回 NetApp，如套件附带的 RMA 说明中所述。 
 ---
-= 将故障部件退回给 NetApp — AFF A220 和 FAS2700
+= 将故障的 FAS2700 启动介质返回给 NetApp
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-按照套件随附的 RMA 说明将故障部件退回 NetApp 。 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]有关详细信息、请参见页面。
+更换 FAS2700 系统上的启动介质后，将故障部件退回 NetApp，如套件附带的 RMA 说明中所述。
 
-FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+有关更多信息，请参阅 https://mysupport.netapp.com/site/info/rma["部件退回和更换"]页面。FAS2700 系统仅支持手动启动介质恢复过程。不支持自动启动介质恢复。

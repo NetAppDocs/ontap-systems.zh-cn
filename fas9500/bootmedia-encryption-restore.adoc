@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas9500, post boot media replacement steps for okm, nse, and nve 
 summary: 检查环境变量后，您必须完成特定于启用了 Onboard Key Manager OKM、NetApp Storage Encryption NSE 或 NetApp Volume Encryption NVE 的系统的步骤。 
 ---
-= 还原加密- FAS9500
+= 在手动启动恢复过程之后，在 FAS9500 系统中恢复启动介质上的加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-恢复替代启动介质上的加密。
+更换 FAS9500 系统中的启动介质后，通过完成适用于您的密钥管理器类型（例如 Onboard Key Manager (OKM)）的步骤来还原加密。
 
 如果您的存储系统运行的是ONTAP 9.17.1 或更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"]。如果您的系统运行的是早期版本的ONTAP，则必须使用手动启动恢复过程。
 

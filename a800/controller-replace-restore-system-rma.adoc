@@ -50,7 +50,7 @@ NOTE: 系统会自动生成所需的新许可证密钥，并将其发送到文�
 
 
 
-[[step-2-verify-lifs-and-registering-the-serial-number]]
+[[step-2-verify-lifs-and-register-the-serial-number]]
 == 第2步：验证LIF并注册序列号
 
 在将 _replacement_ 节点恢复服务之前，您应该验证 LIF 是否位于其主端口上，如果启用了 AutoSupport，则注册 _replacement_ 节点的序列号，检查集群的运行状况，关闭任何维护窗口，并重置自动交还。

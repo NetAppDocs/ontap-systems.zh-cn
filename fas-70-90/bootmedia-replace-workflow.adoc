@@ -2,16 +2,16 @@
 permalink: fas-70-90/bootmedia-replace-workflow.html 
 sidebar: sidebar 
 keywords: fas70, fas90, replace the boot media 
-summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装到 FAS70 或 FAS90 系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复操作，将系统恢复到正常运行状态。 
+summary: 此工作流程使用 USB 驱动器将 ONTAP 重新安装到 FAS70 或 FAS90 系统中的替换启动介质上。从 NetApp 支持站点下载相应的 ONTAP 恢复映像，将其复制到 USB 驱动器，并使用它将系统恢复到运行状态。 
 ---
-= 启动介质手动恢复工作流程 - FAS70 和 FAS90
+= 使用手动启动恢复过程的 FAS70 和 FAS90 启动介质更换工作流
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装到 FAS70 或 FAS90 系统的替换启动介质上。您必须从NetApp支持站点下载相应的ONTAP恢复映像并将其复制到 USB 驱动器。然后，使用准备好的 USB 驱动器执行恢复操作，将系统恢复到正常运行状态。
+此工作流程使用 USB 驱动器将 ONTAP 重新安装到 FAS70 或 FAS90 系统中的替换启动介质上。从 NetApp 支持站点下载相应的 ONTAP 恢复映像，将其复制到 USB 驱动器，并使用它将系统恢复到运行状态。
 
 如果您的系统运行的是ONTAP 9.17.1 及更高版本，请使用link:bootmedia-replace-workflow-bmr.html["自动启动恢复程序"] 。
 
@@ -27,7 +27,7 @@ summary: 手动恢复启动映像需要使用 USB 驱动器将ONTAP重新安装�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三个"]link:bootmedia-shutdown.html["Shut down the impaired controller"]
 [role="quick-margin-para"]
-需要更换启动介质时、请关闭控制器。
+当您需要更换启动介质时，请关闭控制器。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四个"]link:bootmedia-replace.html["更换启动介质"]
 [role="quick-margin-para"]

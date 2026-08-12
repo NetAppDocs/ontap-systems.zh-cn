@@ -14,7 +14,7 @@ summary: 在 AFF C30 或 AFF C60 存储系统中更换实时时钟电池（通�
 更换AFF C30 或AFF C60 存储系统中的实时时钟 (RTC) 电池（通常称为纽扣电池），以确保依赖于准确时间同步的服务和应用程序保持运行。
 
 .开始之前
-存储系统中的所有其他组件都必须正常运行；如果未正常运行、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。
+存储系统中的所有其他组件都必须正常运行。如果未能正常运行，请在继续此操作步骤之前联系 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]。
 
 .关于此任务
 * 您可以对存储系统支持的所有ONTAP版本使用此过程。
@@ -23,7 +23,7 @@ summary: 在 AFF C30 或 AFF C60 存储系统中更换实时时钟电池（通�
 存储系统具有三个定位LED：操作员显示面板上一个、每个控制器上一个。Location LEDs remain illuminated for 30 minutes.
 
 +
-您可以输入命令将其关闭 `system location-led _off_`。如果您不确定LED是亮起还是熄灭、可以输入命令来检查其状态 `system location-led show`。
+您可以通过输入 `system location-led _off_`命令将其关闭。如果您不确定 LED 指示灯是否亮起，请输入 `system location-led show`命令检查其状态。
 
 
 
@@ -283,7 +283,7 @@ image::../media/icon_round_3.png[标注编号3]
 如果需要、竖直旋转手柄(位于卡舌旁边)以将其移开。
 
 |===
-. 逆时针旋转指旋螺钉以打开控制器护盖、然后打开护盖。
+. 逆时针旋转指旋螺钉，打开控制器盖。
 
 
 
@@ -445,9 +445,9 @@ NOTE: 替代控制器从运行状况良好的控制器获得电源、并在完�
 == 第5步：重置控制器上的时间和日期
 
 
-NOTE: 在更换RTC电池、插入控制器并首次启动BIOS重置后、您将看到以下错误消息：
+NOTE: 更换 RTC 电池、插入控制器并开机后，在第一次 BIOS 重置期间，您可能会看到以下错误消息：
 `RTC date/time error. Reset date/time to default`
-`RTC power failure error`这些消息是预期的、您可以继续此过程。
+`RTC power failure error`这些消息属于预期情况，您可以继续执行此操作步骤。
 
 . 在健康的控制器上，检查日期和时间：
 +

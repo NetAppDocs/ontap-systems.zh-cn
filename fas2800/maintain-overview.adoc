@@ -1,10 +1,10 @@
 ---
 permalink: fas2800/maintain-overview.html 
 sidebar: sidebar 
-keywords: fas2800 maintenance, maintenance, repairing, repairing fas2800, replace fas2800 components, replace fas2800 components 
-summary: 维护FAS2820硬件 
+keywords: fas2820 maintenance, maintenance, repairing, repairing fas2820, replace fas2820 components, replace fas2820 components 
+summary: 维护 FAS2820 存储系统的硬件，以确保长期可靠性和最佳性能。 
 ---
-= 维护FAS2820硬件
+= 了解如何维护您的 FAS2820 存储系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -20,7 +20,7 @@ summary: 维护FAS2820硬件
 [[system-components]]
 == 系统组件
 
-对于FAS2820存储系统、您可以对以下组件执行维护过程。
+您可以对 FAS2820 存储系统的这些组件执行维护操作。
 
 [cols="25,65"]
 |===
@@ -85,7 +85,7 @@ link:nvmem-nvram-battery-replace.html["NVMEM 电池"]
  a| 
 link:pci-cards-and-risers-replace.html["夹层卡"]
  a| 
-夹层卡是一种扩展卡，设计用于插入主板上的专用插槽并容纳卡 I/O 卡。
+夹层卡是一种扩展卡，可插入主板上的专用插槽并容纳卡 I/O 卡。
 
 
 

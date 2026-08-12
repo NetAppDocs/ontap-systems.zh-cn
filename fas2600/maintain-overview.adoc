@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas2600 maintenance, maintenance, repairing fas2600, repairing fas2600, replace aff fas2600 components, replace aff fas2600 components 
 summary: 维护FAS2600硬件 
 ---
-= 维护FAS2600硬件
+= 了解如何维护您的 FAS2600 存储系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-对于FAS2600存储系统、您可以对以下组件执行维护过程。
+您可以对 FAS2600 存储系统的这些组件执行维护程序。
 
 
 
@@ -57,8 +57,8 @@ summary: 维护FAS2600硬件
 
 
 
-[[nvem-battery]]
-== NVEM电池
+[[nvmem-battery]]
+== NVMEM 电池
 
 控制器附带电池，如果交流电源发生故障，则会保留缓存的数据。
 

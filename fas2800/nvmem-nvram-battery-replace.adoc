@@ -1,19 +1,19 @@
 ---
 permalink: fas2800/nvmem-nvram-battery-replace.html 
 sidebar: sidebar 
-keywords: fas2800, replace, nvmem, battery, shut, down, impaired, controller, controller, system, aggregates, metrocluster, configuration, reinstall 
-summary: 要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。 
+keywords: fas2820, replace, nvmem, battery, shut, down, impaired, controller, controller, system, aggregates, metrocluster, configuration, reinstall 
+summary: 要更换 FAS2820 系统中的 NVMEM 电池，您必须卸下控制器模块，将其打开，更换电池，然后关闭并重新安装控制器模块。 
 ---
-= 更换NVMEM电池- FAS2820
+= 更换 FAS2820 系统中的 NVMEM 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。
+要更换 FAS2820 系统中的 NVMEM 电池，您必须卸下控制器模块，将其打开，更换电池，然后关闭并重新安装控制器模块。
 
-系统中的所有其他组件都必须正常工作；否则、您必须与联系 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]。
+如果系统中的任何其他组件无法正常工作，请联系 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]。
 
 
 
@@ -94,15 +94,15 @@ image::../media/drw_hw_nvram_icon.svg[NV icon]
 
 +
 
-NOTE: 如果系统处于"正在等待恢复"状态、或者系统未被正确接管或暂停(未提交的数据)、则在从控制器断开电源后、板上的绿色NV LED将开始闪烁。  如果受损控制器模块未被配对控制器模块成功接管、请联系 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]
+NOTE: 如果系统处于"等待回馈"状态，或者系统未正确接管或停止（未提交的数据），则从控制器断电时，面板上的绿色 NV LED 开始闪烁。如果受损的控制器模块未被配对控制器模块成功接管，请联系 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]
 
 +
 ** 如果从机箱中卸下控制器模块后、绿色NV状态LED开始闪烁：
 +
-*** 确认配对控制器模块已完全接管此控制器、或者受损控制器显示_waing for cep2ue_、可以忽略闪烁的LED、您可以从机箱中完成受损控制器的删除。
+*** 确认控制器已被配对控制器模块完全接管，或受损控制器显示 _waiting for giveback_。如果是这样，您可以忽略闪烁的 LED，继续从机箱中取出受损的控制器。
 
 
-** 如果绿色NV LED熄灭、则可以从机箱中完全卸下受损控制器。
+** 如果绿色 NV LED 熄灭，您可以完成从机箱中移除受损控制器的操作。
 
 
 
@@ -154,8 +154,8 @@ image::../media/icon_round_2.png[标注编号2]
 .. 从控制器模块中拔下电池
 
 
-. Remove the replacement battery from its package.
-安装更换电池：
+. 从包装中取出更换用电池。
+. 安装更换电池：
 +
 .. 将电池插头重新插入控制器模块上的插槽。
 +
@@ -216,8 +216,8 @@ NOTE: 在启动过程中，您可能会看到以下提示：
 
 
 
-[[step-5-restore-automatic-giveback-and-autsupport]]
-== 第5步：还原自动交还和AutSupport
+[[step-5-restore-automatic-giveback-and-autosupport]]
+== 第5步：还原自动交还和AutoSupport
 
 还原自动交还和AutoSupport (如果已禁用)。
 

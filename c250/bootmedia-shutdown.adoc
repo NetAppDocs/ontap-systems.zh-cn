@@ -2,7 +2,7 @@
 permalink: c250/bootmedia-shutdown.html 
 sidebar: sidebar 
 keywords: aff c250, shutdown 
-summary: 完成 NVE 或 NSE 任务后，您需要关闭受损控制器。 
+summary: 关闭 AFF C250 存储系统中的控制器，以防止数据丢失，并在手动启动介质恢复过程中保持系统稳定性。 
 ---
 = 在手动启动恢复过程中关闭 AFF C250 存储系统中的控制器
 :allow-uri-read: 
@@ -60,7 +60,7 @@ NOTE: 如果启动设备损坏或无法正常运行，则此命令可能不起�
 [[option-2-systems-in-a-metrocluster]]
 == 选项 2 ： MetroCluster 中的系统
 
-完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
+完成 NVE 或 NSE 任务后，需要完成控制器的关闭。
 
 
 NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。

@@ -2,16 +2,16 @@
 permalink: fas500f/bootmedia-replace-bmr.html 
 sidebar: sidebar 
 keywords: fas500f, replace the boot media 
-summary: FAS500f 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。 
+summary: FAS500f 系统中的启动介质存储了重要的固件和配置数据。更换启动介质需要卸下控制器模块、卸下受损的启动介质、安装替换启动介质，然后重新安装控制器模块。 
 ---
-= 更换启动介质以进行自动启动恢复 - FAS500f
+= 使用自动启动恢复过程更换 FAS500f 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-FAS500f 系统中的引导介质存储重要的固件和配置数据。更换过程包括卸下并打开控制器模块，卸下受损的引导介质，在控制器模块中安装更换引导介质，然后重新安装控制器模块。
+FAS500f 系统中的启动介质存储了重要的固件和配置数据。更换启动介质需要卸下控制器模块、卸下受损的启动介质、安装替换启动介质，然后重新安装控制器模块。
 
 只有 ONTAP 9.18.1 及更高版本才支持自动启动介质恢复过程。如果您的存储系统运行的是早期版本的 ONTAP，请使用 link:bootmedia-replace-workflow.html["手动启动恢复程序"]。
 

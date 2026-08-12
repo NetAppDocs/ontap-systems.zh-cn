@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, replace caching module 
 summary: 当系统注册单个 AutoSupport ASUP 消息表明模块已脱机时，必须更换控制器模块中的缓存模块。否则会导致性能下降。 
 ---
-= 更换缓存模块或添加/更换核心转储模块- FAS9000
+= 更换 FAS9000 系统中的缓存模块或核心转储模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

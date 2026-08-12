@@ -1,16 +1,18 @@
 ---
 permalink: fas2700/controller-replace-system-config-restore-and-verify.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, restore and verify the system configuration, verify and set the ha state of the controller module 
-summary: 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。 
+keywords: fas2700, restore and verify the system configuration, verify and set the ha state of the controller module 
+summary: 完成硬件更换并引导至维护模式后，请恢复并验证 FAS2700 系统中的控制器配置。 
 ---
-= 还原并验证系统配置—FAS2700
+= 还原并验证 FAS2700 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+完成硬件更换并引导至维护模式后，请恢复并验证 FAS2700 系统中的控制器配置。
+
 完成硬件更换并启动至维护模式后，您可以验证更换控制器的低级别系统配置，并根据需要重新配置系统设置。
 
 

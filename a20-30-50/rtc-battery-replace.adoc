@@ -14,7 +14,7 @@ summary: 在您的 AFF A20、AFF A30 或 AFF A50 存储系统中更换实时时�
 更换AFF A20、 AFF A30 或AFF A50 存储系统中的实时时钟 (RTC) 电池（通常称为纽扣电池），以确保依赖于准确时间同步的服务和应用程序保持运行。
 
 .开始之前
-存储系统中的所有其他组件都必须正常运行；如果未正常运行、请先联系、 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]然后再继续此过程。
+存储系统中的所有其他组件都必须正常运行。如果没有，请在继续此程序之前联系 https://mysupport.netapp.com/site/global/dashboard["NetApp 支持"]。
 
 .关于此任务
 * 您可以对存储系统支持的所有ONTAP版本使用此过程。
@@ -283,7 +283,7 @@ image::../media/icon_round_3.png[标注编号3]
 如果需要、竖直旋转手柄(位于卡舌旁边)以将其移开。
 
 |===
-. 逆时针旋转指旋螺钉以打开控制器护盖、然后打开护盖。
+. 逆时针旋转指旋螺丝将其松开，然后打开控制器盖。
 
 
 
@@ -445,9 +445,9 @@ NOTE: 替代控制器从运行状况良好的控制器获得电源、并在完�
 == 第5步：重置控制器上的时间和日期
 
 
-NOTE: 在更换RTC电池、插入控制器并首次启动BIOS重置后、您将看到以下错误消息：
+NOTE: 更换 RTC 电池、插入控制器并打开系统电源以进行首次 BIOS 重置后，您将看到以下错误消息：
 `RTC date/time error. Reset date/time to default`
-`RTC power failure error`这些消息是预期的、您可以继续此过程。
+`RTC power failure error`这些消息属于预期情况，您可以继续执行此过程。
 
 . 在健康的控制器上，检查日期和时间：
 +
@@ -455,7 +455,7 @@ NOTE: 在更换RTC电池、插入控制器并首次启动BIOS重置后、您将�
 
 +
 
-NOTE: 如果存储系统停留在启动菜单处、请选择选项 `Reboot node`并在出现提示时响应_y_、然后按_Ctrl-C_启动到Loader。
+NOTE: 如果存储系统在引导菜单处停止，请选择 `Reboot node`对应的选项，并在出现提示时输入 _y_，然后按 _Ctrl-C_ 引导至 LOADER。
 
 . 在受损控制器上，在 LOADER 提示符下检查时间和日期：
 +
@@ -473,7 +473,7 @@ NOTE: 如果存储系统停留在启动菜单处、请选择选项 `Reboot node`
 .. 确认日期和时间。
 
 
-. 在Loader提示符处、输入 `bye`以重新初始化I/O模块和其他组件、然后让控制器重新启动。
+. 在 LOADER 提示符处，输入 `bye`以重新初始化 I/O 模块和其他组件，并重新启动控制器。
 
 
 

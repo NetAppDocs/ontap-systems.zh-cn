@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8300, fas8700, replace, nvmem, battery, remove, controller, module, controller, metrocluster, configuration, aggregate, configuration, reinstall, run, system, switch, shut, down 
 summary: 当您的系统注册闪存寿命即将结束或所识别的 NVDIMM 总体上不健康时，您必须更换控制器模块中的 NVDIMM。 
 ---
-= 更换 NVDIMM - FAS8300 和 FAS8700
+= 更换 FAS8300 或 FAS8700 系统中的 NVDIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,7 +13,7 @@ summary: 当您的系统注册闪存寿命即将结束或所识别的 NVDIMM 总
 [role="lead"]
 如果系统记录闪存生命周期接近结束或已识别的 NVDIMM 总体运行状况不佳，则必须更换控制器模块中的 NVDIMM ；否则会导致系统崩溃。
 
-系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
+系统中的所有其他组件必须正常工作。如果不是，则必须联系技术支持。
 
 您必须将故障组件更换为从提供商处收到的替代 FRU 组件。
 
@@ -197,7 +197,7 @@ mcc1A::> metrocluster operation show
 
 要访问控制器模块内部的组件，必须从机箱中卸下控制器模块。
 
-您可以使用以下，插图或写入的步骤从机箱中卸下控制器模块。
+您可以使用以下动画，插图或写入的步骤从机箱中卸下控制器模块。
 
 .动画-删除控制器模块
 video::75b6fa91-96b9-4323-b156-aae10007c9a5[panopto]
@@ -227,10 +227,10 @@ image::../media/drw_A400_Remove_controller.png[释放控制器模块]
 [[step-3-replace-the-nvdimm]]
 == 第 3 步：更换 NVDIMM
 
-要更换NVDIMM、您必须使用风道顶部的FRU映射和插槽1提升板顶部的FRU映射在控制器模块中找到它。
+要更换 NVDIMM，必须使用插槽 1 提升板顶端的 FRU 映射在控制器模块中找到它。
 
 * 在暂停系统后，在转存内容时， NVDIMM LED 会闪烁。目标值完成后，此 LED 将熄灭。
-* 尽管 NVDIMM 的内容已加密，但最好在更换 NVDIMM 之前先擦除其内容。有关详细信息，请参见 https://mysupport.netapp.com/info/web/ECMP1132988.html["易失性声明"] 在 NetApp 支持站点上。
+* 虽然 NVDIMM 的内容已加密，但最佳实践是在更换 NVDIMM 之前擦除其内容。有关详细信息，请参见 NetApp 支持站点上的 https://mysupport.netapp.com/info/web/ECMP1132988.html["易失性声明"]。
 +
 
 NOTE: 您必须登录到 NetApp 支持站点，才能显示系统的 _statement of volatil性 _ 。
@@ -264,7 +264,7 @@ NVDIMM 上插脚之间的缺口应与插槽中的突起对齐。
 . 找到要安装 NVDIMM 的插槽。
 . 将 NVDIMM 垂直插入插槽。
 +
-NVDIMM 紧紧固定在插槽中，但应易于插入。如果没有，请将 NVDIMM 与插槽重新对齐并重新插入。
+NVDIMM 紧贴插槽，但应易于插入。如果没有，请将 NVDIMM 与插槽重新对齐并重新插入。
 
 +
 

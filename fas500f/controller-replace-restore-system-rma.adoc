@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: fas500f, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: 要完成 FAS500f 系统的控制器更换，请在必要时恢复 NetApp 存储加密配置，安装新控制器的许可证，并将故障部件返回 NetApp。 
 ---
-= 完整的控制器更换 - FAS500f
+= 完成 FAS500f 系统的控制器更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-要完成 FAS500f 系统的控制器更换以实现完全运行，您必须恢复 NetApp 存储加密配置（如有必要），并为新控制器安装许可证，然后将故障部件退回 NetApp，如套件附带的 RMA 说明中所述。
+要完成 FAS500f 系统的控制器更换，请恢复 NetApp 存储加密配置（如有必要），安装新控制器的许可证，并按照套件附带的 RMA 说明将故障部件退回 NetApp。
 
 
 

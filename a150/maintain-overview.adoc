@@ -50,8 +50,8 @@ summary: 维护 AFF A150 硬件
 
 
 
-[[nvem-battery]]
-== NVEM电池
+[[nvram-battery]]
+== NVRAM 电池
 
 控制器附带电池，如果交流电源发生故障，则会保留缓存的数据。
 

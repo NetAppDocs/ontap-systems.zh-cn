@@ -1,17 +1,17 @@
 ---
 permalink: fas2700/bootmedia-shutdown.html 
 sidebar: sidebar 
-keywords: fas2700, aff a220, shut, down, impaired, controller, take, over, manual, manual boot recovery 
-summary: 您可以根据存储系统硬件配置的不同，使用不同的程序来关闭或接管故障控制器。FAS2700 系统仅支持手动启动介质恢复程序。 
+keywords: fas2700, shut, down, impaired, controller, take, over, manual, manual boot recovery 
+summary: 关闭 FAS2700 存储系统中的控制器，以防止数据丢失，并在手动启动介质恢复过程中保持系统稳定性。 
 ---
-= 关闭受损控制器—FAS2700
+= 在启动介质恢复期间关闭 FAS2700 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-使用适合您配置的相应程序关闭或接管故障控制器。FAS2700 系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+关闭 FAS2700 存储系统中的控制器，以防止数据丢失，并在手动启动介质恢复过程中保持系统稳定性。
 
 
 
@@ -62,7 +62,7 @@ NOTE: 如果启动设备损坏或无法正常运行，则此命令可能不起�
 [[option-2-controller-is-in-a-metrocluster]]
 == 选项 2 ：控制器位于 MetroCluster 中
 
-完成 NVE 或 NSE 任务后，您需要关闭受损控制器。
+完成 NVE 或 NSE 任务后，需要完成控制器的关闭。
 
 
 NOTE: 如果您的系统采用双节点 MetroCluster 配置，请勿使用此操作步骤。
