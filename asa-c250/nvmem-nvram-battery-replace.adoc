@@ -2,7 +2,7 @@
 permalink: asa-c250/nvmem-nvram-battery-replace.html 
 sidebar: sidebar 
 keywords: asa c250, nvmem battery replacement 
-summary: 要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。 
+summary: 要更换 ASA C250 系统中的 NVMEM 电池，您必须从系统中取出控制器模块，打开它，更换电池，然后关闭并重新安装控制器模块。 
 ---
 = 更换 ASA C250 系统中的 NVMEM 电池
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 要更换系统中的 NVMEM 电池，您必须从系统中卸下控制�
 
 
 [role="lead"]
-要更换系统中的 NVMEM 电池，您必须从系统中卸下控制器模块，打开该模块，更换电池，然后关闭并更换控制器模块。
+要更换 ASA C250 系统中的 NVMEM 电池，您必须从系统中取出控制器模块，打开它，更换电池，然后关闭并重新安装控制器模块。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
 

@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff c250, real-time battery replacement 
 summary: 更换控制器模块中的实时时钟电池，以便依赖于准确时间同步的系统服务和应用程序继续运行。 
 ---
-= 更换 AFF C250 存储系统中的实时时钟电池
+= 更换 AFF C250 系统中的 RTC 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+更换 AFF C250 系统中的 RTC 电池，以便依赖于准确时间同步的服务和应用程序继续运行。
+
 您需要更换控制器模块中的实时时钟（ Real-Time Clock ， RTC ）电池，以便依靠准确时间同步的系统服务和应用程序可以继续运行。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用

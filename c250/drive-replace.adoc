@@ -4,13 +4,15 @@ sidebar: sidebar
 keywords: aff c250, replace the drives 
 summary: 如果平台向系统控制台记录一条警告消息，指出驱动器出现故障，则必须更换驱动器。In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated. 
 ---
-= 更换 AFF C250 存储系统中的 SSD 驱动器
+= 更换 AFF C250 系统中的 SSD 驱动器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+在 I/O 正在进行时，无中断地更换 AFF C250 系统中出现故障的 SSD 驱动器。
+
 您可以在I/O运行期间无中断更换发生故障的SSD驱动器。
 
 When a drive fails, the platform logs a warning message to the system console indicating which drive has failed.In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.

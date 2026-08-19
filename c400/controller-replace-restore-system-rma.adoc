@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c400, how to restore NetApp Storage Encryption, how to complete the replacement process 
 summary: '完成 AFF C400 系统的控制器更换。安装替换控制器的许可证，确认逻辑接口 (LIF) 正在向其主端口报告，并执行集群运行状况检查。最后，将出现故障的部件返回 NetApp。' 
 ---
-= 完成 AFF C400 存储系统的控制器更换
+= 完成 AFF C400 系统的控制器更换
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c400, asa, c400, swap, out, fan, module, interrupt, service, sequence, task, hot-swap, hot-swap a fan module 
 summary: 要在不中断服务的情况下交换风扇模块，您必须执行一系列特定的任务。 
 ---
-= 热插拔 ASA C400 系统中的风扇
+= 在 ASA C400 系统中热插拔风扇
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

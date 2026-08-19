@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff c250, replace a power supply 
 summary: 更换电源包括断开目标电源与电源的连接，拔下电源线，卸下旧 PSU 并安装替代 PSU ，然后将其重新连接到电源。 
 ---
-= 热插拔 AFF C250 存储系统中的电源单元
+= 热插拔 AFF C250 系统中的电源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-更换电源(PSU)包括断开目标PSU与电源的连接、拔下电源线、卸下旧PSU并安装替代PSU、然后将其重新连接到电源。
+热插拔 AFF C250 系统中出现故障的电源，无需关闭控制器。
 
 * 电源是冗余的，并且可热插拔。您不必关闭控制器来更换 PSU。
 * 此操作步骤 是为一次更换一个PSU而编写的。

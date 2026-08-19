@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa c250, boot the recovery image 
 summary: 在 ASA C250 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程以从伙伴节点恢复配置。 
 ---
-= 使用自动启动恢复过程还原 ASA C250 系统上的启动映像
+= 使用自动启动恢复过程在 ASA C250 系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

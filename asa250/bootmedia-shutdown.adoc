@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a250, shutdown 
 summary: 关闭 ASA A250 存储系统中的控制器，以防止数据丢失，并在手动启动介质恢复过程中保持系统稳定性。 
 ---
-= 在更换启动介质之前，关闭 ASA A250 系统中的控制器
+= 在手动启动恢复过程中关闭 ASA A250 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

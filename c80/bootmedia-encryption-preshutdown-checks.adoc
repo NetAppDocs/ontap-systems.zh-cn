@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c80, pre-shutdown checks for onboard encryption keys 
 summary: 为确保AFF C80 存储系统上的数据安全，您需要验证启动介质上的加密密钥支持情况及其状态。请检查您的ONTAP版本是否支持NetApp卷加密，并在关闭控制器之前检查密钥管理器是否处于活动状态。 
 ---
-= 检查 AFF C80 存储系统中启动介质上的加密支持
+= 检查 AFF C80 系统中启动介质上的加密支持
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

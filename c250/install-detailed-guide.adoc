@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: aff c250, detailed installation 
 summary: 本节详细介绍了安装AFF C250系统的分步说明。 
 ---
-= 使用详细指南安装和设置 AFF C250 存储系统
+= 使用详细步骤安装 AFF C250 存储系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-本操作步骤提供了有关安装AFF C250存储系统的详细分步说明。
+使用详细的分步说明安装 AFF C250 存储系统，包括上架、布线和初始系统启动。
 
 如果您使用的是MetroCluster 配置、请使用 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroCluster 文档"^]。
 

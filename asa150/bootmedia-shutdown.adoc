@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a150, a150, asa, shut, down, impaired, controller, take, over 
 summary: 关闭 ASA A150 存储系统中的控制器，以防止数据丢失，并在手动启动介质恢复过程中保持系统稳定性。 
 ---
-= 在更换启动介质之前，关闭 ASA A150 系统中的控制器
+= 在更换启动介质之前关闭 ASA A150 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

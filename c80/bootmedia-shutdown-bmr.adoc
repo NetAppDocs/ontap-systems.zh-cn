@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff c80, shut down the controller 
 summary: 关闭 AFF C80 存储系统中的控制器，以防止数据丢失，并在自动启动介质恢复过程中保持系统稳定性。 
 ---
-= 在自动引导恢复过程中关闭 AFF C80 存储系统中的控制器
+= 在自动引导恢复过程中关闭 AFF C80 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
