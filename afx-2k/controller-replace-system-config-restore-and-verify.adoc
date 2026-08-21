@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: afx 2k, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 验证控制器的 HA 配置是否处于活动状态并在 AFX 2K 存储系统中正常运行，并确认系统的适配器是否列出了指向磁盘的所有路径。 
 ---
-= 还原并验证AFX 2K存储系统中的控制器配置
+= 还原并验证 AFX 2K 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

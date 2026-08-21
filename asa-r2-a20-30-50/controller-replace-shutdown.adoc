@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a20, asa a30, asa a50, shut down the impaired controller 
 summary: 在更换控制器时、关闭ASA A20、ASA A30或ASA A50存储系统中的受损控制器、以防止数据丢失并确保系统稳定性。 
 ---
-= 在更换之前，关闭 ASA A20、ASA A30 或 ASA A50 系统中受损的控制器
+= 在更换前关闭 ASA A20、ASA A30 或 ASA A50 系统中受损的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -2,7 +2,7 @@
 permalink: fas9000/controller-replace-overview.html 
 sidebar: sidebar 
 keywords: fas9000, replace, controller, module, prerequisites, procedure 
-summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。 
+summary: 在 FAS9000 系统中更换控制器之前，请查看更换操作步骤的前提条件，并为您的 ONTAP 版本选择正确的操作步骤。 
 ---
 = 在更换 FAS9000 系统中的控制器之前，请查看相关要求
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 您必须查看更换操作步骤的前提条件，并为您的 ONTAP �
 
 
 [role="lead"]
+在 FAS9000 系统中更换控制器之前，请查看更换操作步骤的前提条件，并为您的 ONTAP 版本选择正确的操作步骤。
+
 您必须查看更换操作步骤的前提条件，并为您的 ONTAP 操作系统版本选择正确的前提条件。
 
 [NOTE]

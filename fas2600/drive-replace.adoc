@@ -2,16 +2,16 @@
 permalink: fas2600/drive-replace.html 
 sidebar: sidebar 
 keywords: fas2600, replace the drives 
-summary: 当平台向系统控制台记录指示驱动器发生故障的警告消息时，请更换 FAS2600 系统中的驱动器。操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 均亮起。 
+summary: 当平台向系统控制台记录指示驱动器发生故障的警告消息时，请热插拔 FAS2600 系统中的驱动器。操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 均亮起。 
 ---
-= 更换 FAS2600 系统中的驱动器
+= 热插拔 FAS2600 系统中的驱动器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-当平台向系统控制台记录指示驱动器发生故障的警告消息时，请更换 FAS2600 系统中的驱动器。操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 均亮起。
+当平台向系统控制台记录指示驱动器发生故障的警告消息时，请热插拔 FAS2600 系统中的驱动器。操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 均亮起。
 
 You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。
 

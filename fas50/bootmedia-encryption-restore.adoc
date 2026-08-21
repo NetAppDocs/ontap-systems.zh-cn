@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, post boot media replacement steps for okm, nse, and nve 
 summary: 在 FAS50 存储系统中的替换启动介质上恢复加密，以确保持续的数据保护。替换过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。 
 ---
-= 在手动启动恢复过程后，在 FAS50 系统中恢复启动介质上的加密
+= 使用手动启动恢复过程在 FAS50 系统中恢复启动介质上的加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

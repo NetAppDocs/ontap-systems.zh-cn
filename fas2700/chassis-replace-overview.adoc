@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2700, replace, chassis, shut down, controller, metrocluster, power, supply, ha, state, controller, configuration, switch, aggregates, replace, move, remove, swap 
 summary: 在更换 FAS2700 系统中的机箱之前，请查看成功更换的要求。机箱更换过程会将所有电源、驱动器和控制器模块从受损机箱移至更换机箱，此过程会造成系统中断。 
 ---
-= 更换 FAS2700 机箱之前查看要求
+= 在更换 FAS2700 系统中的机箱之前，请查看相关要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

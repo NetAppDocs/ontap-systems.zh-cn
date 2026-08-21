@@ -2,7 +2,7 @@
 permalink: fas9000/dcpm-power-replace.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, replace, dcpm, module, fail 
-summary: 要更换系统中的 DCPM 模块，您必须从系统中卸下出现故障的 DCPM 模块，然后将其更换为新的 DCPM 模块。 
+summary: 更换 FAS9000 系统中出现故障的 DCPM 模块。必须在拆卸后五分钟内将该模块更换到机箱中，否则相关控制器将关闭。 
 ---
 = 更换 FAS9000 系统中的 DCPM 模块
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 要更换系统中的 DCPM 模块，您必须从系统中卸下出现�
 
 
 [role="lead"]
+更换 FAS9000 系统中出现故障的 DCPM 模块。必须在拆卸后五分钟内将该模块更换到机箱中，否则相关控制器将关闭。
+
 要更换系统中的 DCPM 模块，您必须从系统中卸下出现故障的 DCPM 模块，然后将其更换为新的 DCPM 模块。
 
 .步骤

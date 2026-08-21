@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, add IO module 
 summary: 将 I/O 模块添加到您的 FAS70 或 FAS90 系统中，以增强网络连接并扩展系统处理数据流量的能力。 
 ---
-= 在 FAS70 或 FAS90 系统中添加 I/O 模块以增强网络连接
+= 将 I/O 模块添加到 FAS70 或 FAS90 系统
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -155,8 +155,8 @@ LOADER 提示符
 如果存储系统具有可用插槽、请将新的I/O模块安装到其中一个可用插槽中。如果所有插槽均已占用、请卸下现有I/O模块以留出空间、然后安装新模块。
 
 .开始之前
-* 检查 https://hwu.netapp.com/["NetApp Hardware Universe"^] 以确保新的I/O模块与您的存储系统和您正在运行的ONTAP版本兼容。
-* If multiple slots are available, check the slot priorities in https://hwu.netapp.com/["NetApp Hardware Universe"^] and use the best one available for your I/O module.
+* 请检查 https://hwu.netapp.com["NetApp Hardware Universe"^]以确保新的 I/O 模块与您的存储系统和正在运行的 ONTAP 版本兼容。
+* 如果有多个插槽可用，请检查 https://hwu.netapp.com["NetApp Hardware Universe"^]中的插槽优先级，并使用适合您的 I/O 模块的最佳插槽。
 * 确保所有其他组件均正常运行。
 * 确保您拥有从NetApp收到的替换组件。
 

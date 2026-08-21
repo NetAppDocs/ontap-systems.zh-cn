@@ -2,7 +2,7 @@
 permalink: fas9000/bootmedia-replace.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, open, controller, module, system, access, component, manual, manual boot recovery 
-summary: 要接触控制器内部的组件，必须先将控制器模块从系统中取出，然后再取下控制器模块上的盖子。FAS9000系统仅支持手动启动介质恢复程序。 
+summary: 通过卸下受损的控制器模块、安装替换引导介质并将引导映像传输到 USB 闪存驱动器，更换 FAS9000 系统中的引导介质。 
 ---
 = 更换 FAS9000 系统中的启动介质
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 要接触控制器内部的组件，必须先将控制器模块从系�
 
 
 [role="lead"]
-要更换启动介质，必须卸下损坏的控制器模块，安装新的启动介质，并将启动映像传输到 USB 闪存驱动器。FAS9000系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。
+通过卸下受损控制器模块、安装替换引导介质并将引导映像传输到 USB 闪存驱动器，更换 FAS9000 系统中的引导介质。FAS9000 系统仅支持手动引导介质恢复；不支持自动引导介质恢复。
 
 要更换启动介质，您必须卸下受损的控制器模块，安装替代启动介质并将启动映像传输到 USB 闪存驱动器。
 

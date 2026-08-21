@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2 a70, asa r2 a90, replace a dimm 
 summary: 如果检测到可更正或不可更正的内存错误过多、请更换ASA A70或ASA A90系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损控制器、将其卸下、更换DIMM、重新安装控制器、然后将故障部件退回NetApp。 
 ---
-= 更换 ASA A70 或 ASA A90 系统中的 DIMM
+= 更换 ASA A70 或 ASA A90 系统中的 DIMM 以修复内存错误
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a20, asa a30, asa a50, boot the recovery image 
 summary: 在ASA A20、ASA A30或ASA A50存储系统中安装新的启动介质设备后、您可以启动自动启动介质恢复过程、以便从运行状况良好的节点还原配置。 
 ---
-= 使用自动引导恢复过程还原 ASA A20、ASA A30 或 ASA A50 系统上的引导映像
+= 使用自动启动恢复过程在 ASA A20、ASA A30 或 ASA A50 系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

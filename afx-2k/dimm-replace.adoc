@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: afx 2k, replace a dimm 
 summary: 如果检测到过多的可更正或不可更正的内存错误，请更换 AFX 2K 存储系统中的 DIMM。此类错误可能会阻止存储系统启动 ONTAP。更换过程包括关闭受损控制器，将其拆除，更换 DIMM，重新安装控制器，然后将故障部件返回 NetApp。 
 ---
-= 更换 AFX 2K 存储系统中的 DIMM 以修复内存错误
+= 更换 AFX 2K 系统中的 DIMM 以修复内存错误
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

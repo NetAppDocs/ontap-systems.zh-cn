@@ -153,8 +153,8 @@ LOADER 提示符
 如果存储系统具有空插槽、请将新的I/O模块安装到其中一个可用插槽中。如果所有插槽均已占用、请卸下现有I/O模块以留出空间、然后安装新模块。
 
 .开始之前
-* 检查 https://hwu.netapp.com/["NetApp Hardware Universe"^] to make sure that the new I/O module is compatible with your system and version of ONTAP you're running.
-* If multiple slots are available, check the slot priorities in https://hwu.netapp.com/["NetApp Hardware Universe"^] and use the best one available for your I/O module.
+* 检查 https://hwu.netapp.com["NetApp Hardware Universe"^]以确保新的 I/O 模块与您的系统和正在运行的 ONTAP 版本兼容。
+* 如果有多个插槽可用，请检查 https://hwu.netapp.com["NetApp Hardware Universe"^]中的插槽优先级，并使用适合您的 I/O 模块的最佳插槽。
 * 要无中断地添加 I/O 模块，您必须接管目标控制器，卸下目标插槽中的插槽空白盖或卸下现有 I/O 模块，添加新的或更换的 I/O 模块，然后交还目标控制器。
 * 确保所有其他组件均正常运行。
 

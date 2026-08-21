@@ -2,7 +2,7 @@
 permalink: fas9000/pci-cards-and-risers-replace.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, replace, io, module, shut, down, impaired, controller, node, metrocluster, pcie, replacement, switch, back, aggregates, return, failed, part 
-summary: 要更换 I/O 模块，您必须执行一系列特定的任务。 
+summary: 使用系统运行的所有 ONTAP 版本均支持的特定任务序列，更换 FAS9000 系统中的 I/O 模块。 
 ---
 = 更换 FAS9000 系统中的 I/O 模块
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 要更换 I/O 模块，您必须执行一系列特定的任务。
 
 
 [role="lead"]
+使用系统运行的所有 ONTAP 版本均支持的特定任务序列，更换 FAS9000 系统中的 I/O 模块。
+
 要更换 I/O 模块，您必须执行一系列特定的任务。
 
 * 您可以将此操作步骤与系统支持的所有 ONTAP 版本结合使用

@@ -2,15 +2,17 @@
 permalink: fas9000/x91148a-modules-with-no-open-slots-add.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, add, x91148a, storage, module, no, open, slots, system, nic 
-summary: 您必须删除系统中的一个或多个现有 NIC 或存储模块，才能将一个或多个 X91148A 存储模块安装到已完全填充的系统中。 
+summary: 从完全填充的 FAS9000 系统中移除一个或多个现有 NIC 或存储模块，以便安装一个或多个 X91148A 存储模块。 
 ---
-= 在没有空插槽的 FAS9000 系统中添加 X91148A 模块
+= 当所有插槽都被占用时，向 FAS9000 系统添加 X91148A 存储模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+从完全填充的 FAS9000 系统中移除一个或多个现有 NIC 或存储模块，以便安装一个或多个 X91148A 存储模块。
+
 您必须删除系统中的一个或多个现有 NIC 或存储模块，才能将一个或多个 X91148A 存储模块安装到已完全填充的系统中。
 
 * 您的系统必须运行 ONTAP 9.8 及更高版本。

@@ -1,17 +1,17 @@
 ---
 permalink: fas2800/drive-replace.html 
 sidebar: sidebar 
-keywords: fas2820, replace the drives 
-summary: 当平台向系统控制台记录指示驱动器发生故障的警告消息时，您必须更换 FAS2820 系统中的驱动器。操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 均会亮起。 
+keywords: fas2820, hot-swap, drives 
+summary: 当平台将警告消息记录到 FAS2820 系统控制台，并且操作员显示面板上的故障 LED 指示灯和故障驱动器亮起时，请热插拔 FAS2820 系统中的驱动器。您可以在不中断 I/O 的情况下更换驱动器，步骤略有不同，具体取决于驱动器是 SSD 还是 HDD。 
 ---
-= 更换 FAS2820 系统中的驱动器
+= 热插拔 FAS2820 系统中的驱动器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-当平台向系统控制台记录指示驱动器发生故障的警告消息时，您必须更换 FAS2820 系统中的驱动器。操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 均会亮起。
+当平台将警告消息记录到 FAS2820 系统控制台，并且操作员显示面板上的故障 LED 指示灯和故障驱动器亮起时，请热插拔 FAS2820 系统中的驱动器。您可以在不中断 I/O 的情况下更换驱动器，步骤略有不同，具体取决于驱动器是 SSD 还是 HDD。
 
 You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。
 

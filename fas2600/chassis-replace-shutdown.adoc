@@ -2,7 +2,7 @@
 permalink: fas2600/chassis-replace-shutdown.html 
 sidebar: sidebar 
 keywords: fas2600, shutdown the controllers 
-summary: 在更换机箱之前，请按照适用于您的配置的相应步骤关闭或接管 FAS2600 系统中受损的控制器。 
+summary: 在更换机箱之前，请按照适合您配置的步骤关闭 FAS2600 系统中的控制器。 
 ---
 = 关闭 FAS2600 控制器以更换机箱
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在更换机箱之前，请按照适用于您的配置的相应步骤�
 
 
 [role="lead"]
-在更换机箱之前，请按照适用于您的配置的相应步骤关闭或接管 FAS2600 系统中受损的控制器。
+在更换机箱之前，请按照适合您配置的步骤关闭 FAS2600 系统中的控制器。
 
 此过程适用于具有双节点配置的系统。有关在维护集群时正常关闭的详细信息，请参见 https://kb.netapp.com/on-prem/ontap/OHW/OHW-KBs/What_is_the_procedure_for_graceful_shutdown_and_power_up_of_a_storage_system_during_scheduled_power_outage["正常关闭和启动存储系统解决方案指南—NetApp知识库"]。
 

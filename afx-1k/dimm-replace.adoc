@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: afx 1k, replace a dimm 
 summary: 如果检测到过多可纠正或不可纠正的内存错误，请更换 AFX 1K 存储系统中的 DIMM。此类错误可能会阻止存储系统启动ONTAP。更换过程包括关闭受损的控制器、将其移除、更换 DIMM、重新安装控制器，然后将故障部件返回给NetApp。 
 ---
-= 更换 AFX 1K 存储系统中的 DIMM 以修复内存错误
+= 更换 AFX 1K 系统中的 DIMM 以修复内存错误
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

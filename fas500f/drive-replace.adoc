@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, replace the drives 
 summary: 在 I/O 进行过程中，以不中断业务的方式更换 FAS500f 存储系统中出现故障的驱动器。当驱动器出现故障时，平台将记录警告消息并点亮故障 LED，更换过程因驱动器类型（SSD 或 HDD）而略有不同。 
 ---
-= 在 FAS500f 系统中热插拔驱动器
+= 热插拔 FAS500f 系统中的驱动器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

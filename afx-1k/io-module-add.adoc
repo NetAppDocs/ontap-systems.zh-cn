@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: afx 1k, add IO module 
 summary: 向您的 AFX 1K 存储系统添加 I/O 模块，以增强网络连接并扩展系统处理数据流量的能力。 
 ---
-= 将 I/O 模块添加到 AFX 1K 存储系统以增强网络连接
+= 向 AFX 1K 系统添加 I/O 模块以增强网络连接
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -84,8 +84,8 @@ LOADER 提示符
 如果存储系统具有可用插槽、请将新的I/O模块安装到其中一个可用插槽中。如果所有插槽均已占用、请卸下现有I/O模块以留出空间、然后安装新模块。
 
 .开始之前
-* 检查 https://hwu.netapp.com/["NetApp Hardware Universe"^]确保新的 I/O 模块与您的存储系统和ONTAP版本兼容。
-* If multiple slots are available, check the slot priorities in https://hwu.netapp.com/["NetApp Hardware Universe"^] and use the best one available for your I/O module.
+* 请检查 https://hwu.netapp.com["NetApp Hardware Universe"^]以确保新的 I/O 模块与您的存储系统和 ONTAP 版本兼容。
+* 如果有多个插槽可用，请检查 https://hwu.netapp.com["NetApp Hardware Universe"^]中的插槽优先级，并使用适合您的 I/O 模块的最佳插槽。
 * 确保所有其他组件均正常运行。
 * 确保您拥有从NetApp收到的替换组件。
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, replace the chassis 
 summary: 在更换 FAS70 或 FAS90 系统中的机箱之前，请确认您符合成功更换的必要要求。这包括确认系统中的所有其他组件是否正常运行，验证您是否具有 ONTAP 的本地管理员凭据、正确的替换机箱以及必要的工具。 
 ---
-= 更换 FAS70 或 FAS90 机箱之前查看要求
+= 在更换 FAS70 或 FAS90 系统中的机箱之前，请查看相关要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

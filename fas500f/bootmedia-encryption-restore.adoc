@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, post boot media replacement steps for okm, nse, and nve 
 summary: 检查环境变量后，您必须完成特定于启用了板载密钥管理器 OKM、NetApp 存储加密 NSE 或 NetApp 卷加密 NVE 的系统的步骤。 
 ---
-= 在手动启动恢复过程之后，在 FAS500f 系统中恢复启动介质上的加密
+= 在手动启动恢复过程后，在 FAS500f 系统中恢复启动介质上的加密
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

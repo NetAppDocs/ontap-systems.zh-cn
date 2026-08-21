@@ -2,15 +2,17 @@
 permalink: fas9000/controller-replace-recable-reassign-disks.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, how to recable the system, how to reassign disks 
-summary: 您必须重新配置存储并确认磁盘重新分配。 
+summary: 在 FAS9000 系统上重新连接存储并确认磁盘重新分配，以便更换后的控制器可以恢复正常操作。 
 ---
-= 交还 FAS9000 系统中的控制器以恢复正常操作
+= 归还 FAS9000 系统中的控制器以恢复正常操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+在 FAS9000 系统上重新连接存储并确认磁盘重新分配，以便更换后的控制器可以恢复正常操作。
+
 通过重新为存储布线并确认磁盘重新分配来继续更换操作步骤。
 
 

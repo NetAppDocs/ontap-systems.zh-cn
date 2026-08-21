@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: FAS9500 
 summary: 要热插拔包含 NVRAM11 电池的放料控制器电源模块 DCPM，您必须找到故障的 DCPM 模块，将其从机箱中取出，然后安装更换的 DCPM 模块。 
 ---
-= 更换 FAS9500 系统中的 DCPM 模块和 NVRAM11 电池
+= 热插拔 FAS9500 系统中的 DCPM 模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

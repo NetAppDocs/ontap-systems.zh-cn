@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2600, power supply replacement 
 summary: 通过关闭、断开和移除故障设备，然后安装并重新连接更换件，来热插拔 FAS2600 系统中的电源。 
 ---
-= 热插拔 FAS2600 系统中的电源
+= 热插拔 FAS2600 系统中的电源单元
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,6 +27,7 @@ NOTE: 冷却与电源集成，因此必须在拆卸后两分钟内更换电源�
 
 link:https://youtu.be/1xWZfXpXMNE["AFF FAS2600 电源更换视频"^]
 
+.步骤
 . 根据控制台错误消息或通过电源上的 LED 确定要更换的电源。
 . 如果您尚未接地，请正确接地。
 . 关闭电源并断开电源线：

@@ -2,7 +2,7 @@
 permalink: fas9000/controller-replace-shutdown.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, shut, down, impaired, node, controller, two, node, metrocluster 
-summary: 要关闭受损节点，您必须确定此节点的状态，并在必要时接管此节点，以便运行正常的节点继续从受损节点存储提供数据。 
+summary: 使用适合您配置的相应过程，关闭或接管 FAS9000 系统中受损的控制器，以便正常节点继续提供来自受损节点存储的数据。 
 ---
 = 在更换之前关闭 FAS9000 系统中受损的控制器
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 要关闭受损节点，您必须确定此节点的状态，并在必�
 
 
 [role="lead"]
-使用适用于您的配置的操作步骤 关闭或接管受损控制器。
+使用适合您配置的适当程序，关闭或接管 FAS9000 系统中受损的控制器。
 
 [role="tabbed-block"]
 ====

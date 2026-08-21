@@ -2,7 +2,7 @@
 permalink: fas9000/caching-module-and-core-dump-module-replace.html 
 sidebar: sidebar 
 keywords: aff a700, fas9000, replace caching module 
-summary: 当系统注册单个 AutoSupport ASUP 消息表明模块已脱机时，必须更换控制器模块中的缓存模块。否则会导致性能下降。 
+summary: '当系统注册了报告模块已离线的单个 AutoSupport (ASUP) 消息时，请更换 FAS9000 系统中的缓存模块或核心转储模块。如果未能更换，将导致性能下降。' 
 ---
 = 更换 FAS9000 系统中的缓存模块或核心转储模块
 :allow-uri-read: 
@@ -11,6 +11,8 @@ summary: 当系统注册单个 AutoSupport ASUP 消息表明模块已脱机时�
 
 
 [role="lead"]
+当系统注册了报告模块已离线的单个 AutoSupport (ASUP) 消息时，请更换 FAS9000 系统中的缓存模块或核心转储模块。如果未能更换，将导致性能下降。
+
 如果系统注册了一条 AutoSupport （ ASUP ）消息，指出控制器模块已脱机，则必须更换此缓存模块；否则会导致性能下降。如果未启用 AutoSupport ，您可以通过模块正面的故障 LED 找到故障缓存模块。您还可以添加或更换 1 TB X9170A 核心转储模块，如果要在 AFF A700 系统中安装 NS224 驱动器架，则需要此模块。
 
 .开始之前

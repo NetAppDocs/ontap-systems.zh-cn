@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas500f, boot the recovery image 
 summary: 在 FAS500f 系统中安装新的启动介质设备后，您可以启动自动启动介质恢复过程，以从配对节点恢复配置。 
 ---
-= 使用自动引导恢复过程在 FAS500f 系统上还原引导映像
+= 使用自动启动恢复过程在 FAS500f 系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

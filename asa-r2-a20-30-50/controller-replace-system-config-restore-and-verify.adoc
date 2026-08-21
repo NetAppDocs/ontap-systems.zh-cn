@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa a20, asa a30, asa a50, restore and verify the system configuration, verify and set the ha state of the controller module 
 summary: 确认控制器的HA配置在ASA A20、ASA A30或ASA A50存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。 
 ---
-= 恢复并验证 ASA A20、ASA A30 或 ASA A50 系统中的控制器配置
+= 还原并验证 ASA A20、ASA A30 或 ASA A50 系统中的控制器配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

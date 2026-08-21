@@ -2,15 +2,17 @@
 permalink: fas9000/power-supply-swap-out.html 
 sidebar: sidebar 
 keywords: fas9000, swap, power, supply, turn, off, disconnect, remove, install, connect, turn, on, return, failed, part 
-summary: 更换电源包括关闭，断开和卸下旧电源以及安装，连接和打开更换用的电源。 
+summary: 在不中断服务的情况下，热插拔 FAS9000 系统中的电源单元。此步骤包括关闭、断开和拆除旧电源，然后安装、连接和打开更换电源。 
 ---
-= 热插拔 FAS9000 系统中的电源
+= 热插拔 FAS9000 系统中的电源模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+在不中断服务的情况下，热插拔 FAS9000 系统中的电源单元。此步骤包括关闭、断开和拆除旧电源，然后安装、连接和打开更换电源。
+
 更换电源包括关闭，断开和卸下旧电源以及安装，连接和打开更换用的电源。
 
 系统中的所有其他组件必须正常运行；否则，您必须联系技术支持。
