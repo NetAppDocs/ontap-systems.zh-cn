@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas70, fas90, replace the boot media 
 summary: 启动映像的自动恢复涉及系统自动识别并选择适当的启动菜单选项。它使用配对节点上的启动映像，在 FAS70 或 FAS90 存储系统的替换启动介质上重新安装 ONTAP。 
 ---
-= 使用自动启动恢复过程的 FAS70 和 FAS90 启动介质更换工作流程
+= 使用自动启动恢复过程的 FAS70 或 FAS90 系统的启动介质更换工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -55,7 +55,7 @@ entries:
   - title: 机箱
     pdf-filename: AFF A900机箱
     entries:
-    - title: 概述
+    - title: 机箱更换工作流
       url: "/a900/chassis_replace_overview.html"
     - title: 关闭受损控制器
       url: "/a900/chassis_replace_shutdown.html"
@@ -66,7 +66,7 @@ entries:
   - title: 控制器
     pdf-filename: AFF A900控制器模块
     entries:
-    - title: 概述
+    - title: 控制器更换工作流
       url: "/a900/controller_replace_overview.html"
     - title: 关闭受损控制器
       url: "/a900/controller_replace_shutdown.html"

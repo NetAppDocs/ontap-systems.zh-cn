@@ -36,8 +36,10 @@ entries:
   - title: 启动媒体 - 手动恢复
     pdf-filename: AFF ASA 900 启动介质手册
     entries:
-    - title: 概述
-      url: "/asa900/bootmedia_replace_overview.html"
+    - title: 启动介质更换工作流
+      url: "/asa900/bootmedia-replace-workflow.html"
+    - title: 查看要求
+      url: "/asa900/bootmedia-replace-requirements.html"
     - title: 检查加密密钥
       url: "/asa900/bootmedia_encryption_preshutdown_checks.html"
     - title: 关闭受损控制器
@@ -53,7 +55,7 @@ entries:
   - title: 机箱
     pdf-filename: ASA A900机箱
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/asa900/chassis_replace_overview.html"
     - title: 关闭受损控制器
       url: "/asa900/chassis_replace_shutdown.html"
@@ -64,7 +66,7 @@ entries:
   - title: 控制器
     pdf-filename: ASA A900控制器模块
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/asa900/controller_replace_overview.html"
     - title: 关闭受损控制器
       url: "/asa900/controller_replace_shutdown.html"

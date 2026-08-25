@@ -16,12 +16,12 @@ entries:
 - title: 维护
   pdf-filename: AFF A700 维护
   entries:
-  - title: 概述
+  - title: 维护概述
     url: "/a700/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A700 启动介质
     entries:
-    - title: 概述
+    - title: 启动介质概述
       url: "/a700/bootmedia-replace-overview.html"
     - title: 检查加密密钥
       url: "/a700/bootmedia-encryption-preshutdown-checks.html"
@@ -40,7 +40,7 @@ entries:
   - title: 机箱
     pdf-filename: AFF A700 机箱
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/a700/chassis-replace-overview.html"
     - title: 关闭受损控制器
       url: "/a700/chassis-replace-shutdown.html"
@@ -51,7 +51,7 @@ entries:
   - title: 控制器模块
     pdf-filename: AFF A700 控制器
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/a700/controller-replace-overview.html"
     - title: 关闭受损控制器
       url: "/a700/controller-replace-shutdown.html"
@@ -83,9 +83,9 @@ entries:
   - title: X91148A 模块
     pdf-filename: AFF A700 X91148A 模块
     entries:
-    - title: 概述
+    - title: X91148A 模块概述
       url: "/a700/x91148a-module-install-overview.html"
     - title: AFF A700 系统，具有开放插槽
       url: "/a700/x91148a-modules-with-open-slots-add.html"
-    - title: AFF A700 系统没有打开的插槽
+    - title: AFF A700 系统无空位
       url: "/a700/x91148a-modules-with-no-open-slots-add.html"

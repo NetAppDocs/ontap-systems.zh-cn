@@ -2,7 +2,7 @@
 permalink: fas500f/drive-replace.html 
 sidebar: sidebar 
 keywords: fas500f, replace the drives 
-summary: 在 I/O 进行过程中，以不中断业务的方式更换 FAS500f 存储系统中出现故障的驱动器。当驱动器出现故障时，平台将记录警告消息并点亮故障 LED，更换过程因驱动器类型（SSD 或 HDD）而略有不同。 
+summary: 在 I/O 进行过程中，以不中断业务的方式热插拔 FAS500f 存储系统中出现故障的驱动器。当驱动器出现故障时，平台将记录警告消息并点亮故障 LED，更换过程因驱动器是 SSD 还是 HDD 而略有不同。 
 ---
 = 热插拔 FAS500f 系统中的驱动器
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在 I/O 进行过程中，以不中断业务的方式更换 FAS500f 存
 
 
 [role="lead"]
-在 I/O 进行过程中，以不中断业务的方式更换 FAS500f 存储系统中出现故障的驱动器。当驱动器出现故障时，平台将记录警告消息并点亮故障 LED，更换过程因驱动器类型（SSD 或 HDD）而略有不同。
+在 I/O 进行过程中，以不中断业务的方式热插拔 FAS500f 存储系统中出现故障的驱动器。当驱动器出现故障时，平台将记录警告消息并点亮故障 LED，更换过程因驱动器是 SSD 还是 HDD 而略有不同。
 
 You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。
 

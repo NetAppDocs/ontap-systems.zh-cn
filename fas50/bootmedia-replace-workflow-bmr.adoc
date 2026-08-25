@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas50, replace the boot media 
 summary: 启动映像的自动恢复涉及系统自动识别和选择适当的启动菜单选项。它使用合作伙伴节点上的引导映像，在 FAS50 存储系统的替换引导介质上重新安装 ONTAP。 
 ---
-= 使用自动启动恢复过程的 FAS50 启动介质更换工作流程
+= 使用自动引导恢复过程的 FAS50 系统的引导介质更换工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

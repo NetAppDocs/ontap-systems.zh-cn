@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2820, replace, boot, media, controller, module, fru map 
 summary: FAS2820 系统中的启动介质存储基本固件和配置数据。要更换此启动介质，需要卸下并打开受损的控制器模块，找到并更换启动介质，将启动映像传输到 USB 驱动器，然后启动控制器。 
 ---
-= 使用手动启动恢复过程更换 FAS2820 系统中的启动介质
+= 在手动启动恢复过程中更换 FAS2820 系统中的启动介质
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -55,7 +55,7 @@ entries:
   - title: 机箱
     pdf-filename: ASA A400机箱
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/asa400/chassis-replace-overview.html"
     - title: 关闭受损控制器
       url: "/asa400/chassis-replace-shutdown.html"

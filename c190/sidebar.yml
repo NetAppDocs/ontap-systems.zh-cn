@@ -17,12 +17,12 @@ entries:
 - title: 维护
   pdf-filename: AFF C190 维护
   entries:
-  - title: 概述
+  - title: 维护概述
     url: "/c190/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF C190 启动介质
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/c190/bootmedia-replace-overview.html"
     - title: 检查加密密钥
       url: "/c190/bootmedia-encryption-preshutdown-checks.html"
@@ -39,7 +39,7 @@ entries:
   - title: 机箱
     pdf-filename: AFF C190 机箱
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/c190/chassis-replace-overview.html"
     - title: 关闭受损控制器
       url: "/c190/chassis-replace-shutdown.html"
@@ -50,7 +50,7 @@ entries:
   - title: 控制器
     pdf-filename: AFF C190 控制器模块
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/c190/controller-replace-overview.html"
     - title: 关闭受损控制器
       url: "/c190/controller-replace-shutdown.html"

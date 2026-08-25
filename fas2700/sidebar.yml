@@ -16,12 +16,12 @@ entries:
 - title: 维护
   pdf-filename: FAS2700 维护
   entries:
-  - title: 概述
+  - title: 维护概述
     url: "/fas2700/maintain-overview.html"
   - title: 启动介质
     pdf-filename: FAS2700 启动介质
     entries:
-    - title: 概述
+    - title: 启动介质概述
       url: "/fas2700/bootmedia-replace-overview.html"
     - title: 检查加密密钥
       url: "/fas2700/bootmedia-encryption-preshutdown-checks.html"
@@ -41,7 +41,7 @@ entries:
   - title: 机箱
     pdf-filename: FAS2700 机箱
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/fas2700/chassis-replace-overview.html"
     - title: 关闭受损控制器
       url: "/fas2700/chassis-replace-shutdown.html"
@@ -52,7 +52,7 @@ entries:
   - title: 控制器
     pdf-filename: FAS2700 控制器
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/fas2700/controller-replace-overview.html"
     - title: 关闭受损控制器
       url: "/fas2700/controller-replace-shutdown.html"

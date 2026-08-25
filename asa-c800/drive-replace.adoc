@@ -2,16 +2,16 @@
 permalink: asa-c800/drive-replace.html 
 sidebar: sidebar 
 keywords: asa c800, replace the drives 
-summary: 当平台向系统控制台记录指示驱动器发生故障的警告消息时，请更换 ASA C800 系统中的驱动器。此外，操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 都将点亮。 
+summary: 当平台向系统控制台记录指示驱动器发生故障的警告消息时，请热插拔 ASA C800 系统中的驱动器。此外，操作员显示面板上的故障 LED 和故障驱动器上的故障 LED 都会亮起。 
 ---
-= 更换 ASA C800 系统中的驱动器
+= 在 ASA C800 系统中热插拔驱动器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-当ASA C800系统中的硬盘发生故障或需要升级时，请更换该硬盘。更换过程包括识别故障驱动器、安全移除它以及安装新驱动器以确保持续的数据访问和系统性能。
+当驱动器出现故障或需要升级时，在 ASA C800 系统中热插拔驱动器。更换过程包括识别故障驱动器、安全地将其移除并安装新驱动器，以确保持续的数据访问和系统性能。
 
 You can replace a failed drive nondisruptively while I/O is in progress.用于更换 SSD 的操作步骤 用于非旋转驱动器，用于更换 HDD 的操作步骤 用于旋转驱动器。
 

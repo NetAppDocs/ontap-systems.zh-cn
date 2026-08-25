@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ns224, shelves, shelf, ns224 shelves, hot-add, ha, pair, asa systems, preparation 
 summary: 通过安装支持 RoCE 的 PCIe 卡或 I/O 模块、配置端口、重新连接现有盘架以及在需要时禁用自动驱动器分配，准备将 NS224 盘架热添加到您的 ASA 系统中。 
 ---
-= 为您的 ASA 系统热添加 NS224 磁盘架做准备的概述
+= 准备将 NS224 磁盘架热添加到 ASA 系统的概述
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

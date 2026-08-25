@@ -16,12 +16,12 @@ entries:
 - title: 维护
   pdf-filename: AFF A700s 维护
   entries:
-  - title: 概述
+  - title: 维护概述
     url: "/a700s/maintain-overview.html"
   - title: 启动介质
     pdf-filename: AFF A700s 启动介质
     entries:
-    - title: 概述
+    - title: 启动介质概述
       url: "/a700s/bootmedia-replace-overview.html"
     - title: 检查加密密钥
       url: "/a700s/bootmedia-encryption-preshutdown-checks.html"
@@ -40,7 +40,7 @@ entries:
   - title: 机箱
     pdf-filename: AFF A700s 机箱
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/a700s/chassis-replace-overview.html"
     - title: 关闭受损控制器
       url: "/a700s/chassis-replace-shutdown.html"
@@ -51,7 +51,7 @@ entries:
   - title: 控制器
     pdf-filename: AFF A700s 控制器
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/a700s/controller-replace-overview.html"
     - title: 关闭受损控制器
       url: "/a700s/controller-replace-shutdown.html"

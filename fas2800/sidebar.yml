@@ -58,7 +58,7 @@ entries:
   - title: 机箱
     pdf-filename: FAS2820机箱
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/fas2800/chassis-replace-overview.html"
     - title: 关闭受损控制器
       url: "/fas2800/chassis-replace-shutdown.html"
@@ -69,7 +69,7 @@ entries:
   - title: 控制器
     pdf-filename: FAS2820控制器
     entries:
-    - title: 概述
+    - title: 查看要求
       url: "/fas2800/controller-replace-overview.html"
     - title: 关闭受损控制器
       url: "/fas2800/controller-replace-shutdown.html"

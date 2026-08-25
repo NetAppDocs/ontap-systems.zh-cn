@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, replace, dimm, shut, down, impaired, controller, module, reinstall, system, node, aggregates, metrocluster, replacement 
 summary: 当系统通过运行状况监视器警报报告过多可纠正的 ECC 内存错误或不可纠正的 ECC 错误时，请更换 FAS9000 系统中的 DIMM。出现故障的 DIMM 可能会阻止存储系统启动 ONTAP，因此更换它可以恢复稳定的运行。 
 ---
-= 更换 FAS9000 系统中的 DIMM 以修复内存错误
+= 更换 FAS9000 系统中的 DIMM
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, replace the chassis 
 summary: 在更换 FAS8200 系统中的机箱之前，请验证所有其他组件是否正常运行，并且更换的机箱是来自 NetApp 的相同型号的新组件。该过程需要将电源、风扇和控制器模块移动到新机箱中，并且具有破坏性，会导致双控制器集群完全服务中断或多节点集群部分服务中断。 
 ---
-= 在更换 FAS8200 系统中的机箱之前，请查看相关要求
+= 查看更换 FAS8200 系统中机箱的要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
