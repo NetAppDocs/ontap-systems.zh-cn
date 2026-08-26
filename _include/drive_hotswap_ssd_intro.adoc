@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-您可以在I/O运行期间无中断更换发生故障的SSD驱动器。
-
 When a drive fails, the platform logs a warning message to the system console indicating which drive has failed.In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.
 
 .开始之前

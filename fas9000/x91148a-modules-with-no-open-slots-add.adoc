@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: aff a700, fas9000, add, x91148a, storage, module, no, open, slots, system, nic 
 summary: 从完全填充的 FAS9000 系统中移除一个或多个现有 NIC 或存储模块，以便安装一个或多个 X91148A 存储模块。 
 ---
-= 当所有插槽都被占用时，向 FAS9000 系统添加 X91148A 存储模块
+= 向完全填充的 FAS9000 系统添加 X91148A 存储模块
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -13,8 +13,6 @@ summary: 当驱动器出现故障或需要升级时，可热插拔 ASA A70 或 A
 [role="lead"]
 当驱动器出现故障或需要升级时，可热插拔 ASA A70 或 ASA A90 系统中的驱动器。此过程包括识别故障驱动器、安全地将其移除并安装新驱动器，以确保持续的数据访问和系统性能。
 
-您可以在I/O运行期间无中断更换发生故障的SSD驱动器。
-
 When a drive fails, the platform logs a warning message to the system console indicating which drive has failed.In addition, both the fault LED on the operator display panel and the fault LED on the failed drive are illuminated.
 
 .开始之前

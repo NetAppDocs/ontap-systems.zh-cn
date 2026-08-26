@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas8200, boot the recovery image, manual, manual boot recovery 
 summary: 在FAS8200系统上，从 USB 驱动器启动ONTAP恢复映像以恢复启动介质FAS8200系统仅支持手动启动介质恢复程序。不支持自动启动介质恢复。 
 ---
-= 在 FAS8200 系统上启动恢复映像
+= 使用手动启动恢复过程在 FAS8200 系统上启动恢复映像
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

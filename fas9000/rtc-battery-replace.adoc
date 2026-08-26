@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas9000, replace, real, time, battery, shut, down, impaired, node, controller, metrocluster, module, rtc, battery, reinstall, date, time, complete, process 
 summary: 更换 FAS9000 系统控制器模块中的实时时钟电池，以确保依赖精确时间同步的服务和应用程序继续正常运行。 
 ---
-= 更换 FAS9000 系统中的实时时钟电池
+= 更换 FAS9000 系统中的 RTC 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

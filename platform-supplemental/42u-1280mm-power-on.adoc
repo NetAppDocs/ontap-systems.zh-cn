@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: connect, system, component, pdu, cable, ac, power, source, cabinet, power on the system cabinet 
 summary: 您必须将系统组件连接到 PDU ，将 PDU 缆线连接到交流电源，将其连接到电源以及打开系统电源。 
 ---
-= 打开系统机柜的电源
+= 启动 ONTAP 硬件系统机柜
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

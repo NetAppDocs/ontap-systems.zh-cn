@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: fas2600, replace real-time clock battery 
 summary: 更换 FAS2600 系统中的实时时钟电池，以确保依赖于准确时间同步的服务和应用程序继续运行。 
 ---
-= 更换 FAS2600 系统中的实时时钟电池
+= 更换 FAS2600 系统中的 RTC 电池
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
