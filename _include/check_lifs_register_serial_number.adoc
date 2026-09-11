@@ -12,7 +12,7 @@
 . 向 NetApp 支持部门注册系统序列号。
 +
 ** 如果启用了 AutoSupport ，请发送 AutoSupport 消息以注册序列号。
-** 如果未启用 AutoSupport ，请调用 https://mysupport.netapp.com["NetApp 支持"] 注册序列号。
+** 如果未启用 AutoSupport，请联系 https://mysupport.netapp.com["NetApp 支持"^]以注册序列号。
 
 
 . 检查集群的运行状况。有关详细信息、请参见 https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-KBs/How_to_perform_a_cluster_health_check_with_a_script_in_ONTAP["如何在ONTAP 中使用脚本执行集群运行状况检查"^] 知识库文章。

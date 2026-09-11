@@ -2,7 +2,7 @@
 indexpage:
   title: ONTAP AFF A 系列系统
   summary: 您可以通过存储系统文档安装、设置和维护AFF A系列系统。
-  keywords: aff a-series, a150, a250, a800, a900, a400, datasheet, install, setup
+  keywords: aff a-series, a1k, a20, a30, a50, a70, a90, datasheet, install, setup
   lead: ONTAP AFF A 系列系统旨在帮助组织更快地改造其基础设施并推动数据驱动战略。
   tiles:
   - title: 入门
@@ -19,16 +19,6 @@ indexpage:
       url: "../a70-90/install-overview.html"
     - title: AFF A20、A30和A50
       url: "../a20-30-50/install-overview.html"
-    - title: AFF A150
-      url: "../a150/install-setup.html"
-    - title: AFF A250
-      url: "../a250/install-setup.html"
-    - title: AFF A400
-      url: "../a400/install-setup.html"
-    - title: AFF A800
-      url: "../a800/install-setup.html"
-    - title: AFF A900
-      url: "../a900/install-setup.html"
   - title: 维护您的系统
     links:
     - title: AFF A1K
@@ -37,16 +27,6 @@ indexpage:
       url: "../a70-90/maintain-overview.html"
     - title: AFF A20、A30和A50
       url: "../a20-30-50/maintain-overview.html"
-    - title: AFF A150
-      url: "../a150/maintain-overview.html"
-    - title: AFF A250
-      url: "../a250/maintain-overview.html"
-    - title: AFF A400
-      url: "../a400/maintain-overview.html"
-    - title: AFF A800
-      url: "../a800/maintain-overview.html"
-    - title: AFF A900
-      url: "../a900/maintain-overview.html"
   - title: 支持的交换机
     links:
     - title: Broadcom 支持的 BES-53248

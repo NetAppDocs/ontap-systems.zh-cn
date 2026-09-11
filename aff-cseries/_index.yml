@@ -2,7 +2,7 @@
 indexpage:
   title: ONTAP AFF C-Series 系统
   summary: 存储系统文档可帮助您安装、设置和维护 AFF C-Series 系统。
-  keywords: aff c-series, datasheet, C250, C400, C800
+  keywords: aff c-series, datasheet, C30, C60, C80
   lead: ONTAP AFF C 系列系统基于高密度 NVMe 容量闪存技术构建。
   tiles:
   - title: 入门
@@ -17,24 +17,12 @@ indexpage:
       url: "../c30-60/install-overview.html"
     - title: AFF C80
       url: "../c80/install-overview.html"
-    - title: AFF C250
-      url: "../c250/install-setup.html"
-    - title: AFF C400
-      url: "../c400/install-setup.html"
-    - title: AFF C800
-      url: "../c800/install-setup.html"
   - title: 维护您的系统
     links:
     - title: AFF C30和AFF C60
       url: "../c30-60/maintain-overview.html"
     - title: AFF C80
       url: "../c80/maintain-overview.html"
-    - title: AFF C250
-      url: "../c250/maintain-overview.html"
-    - title: AFF C400
-      url: "../c400/maintain-overview.html"
-    - title: AFF C800
-      url: "../c800/maintain-overview.html"
   - title: 支持的交换机
     links:
     - title: Broadcom 支持的 BES-53248

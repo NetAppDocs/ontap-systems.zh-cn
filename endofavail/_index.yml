@@ -2,75 +2,136 @@
 indexpage:
   title: ONTAP 硬件系统的可用性终止
   summary: 通过存储系统文档，您可以安装、设置和维护 ONTAP 硬件系统。
-  keywords: storage, system, end of availability, supported switches, maintain, a200,
-    a220, a300, a320, a700, a700s, c190
+  keywords: storage, system, end of availability, supported switches, maintain, a150,
+    a220, a250, a300, a320, a400, a700, a700s, a800, a900, asa150, asa250, asa400,
+    asa800, asa900, c190, c250, c400, fas2700, fas8300, fas8700, fas9000, fas9500
   lead: 已停售的 ONTAP 硬件系统不再可供购买，但仍受支持。
   tiles:
-  - title: 安装和设置
+  - title: AFF 系统 - 安装和设置
     links:
-    - title: AFF A200
-      url: "../a200/install-setup.html"
+    - title: AFF A150
+      url: "../a150/install-setup.html"
     - title: AFF A220
       url: "../a220/install-setup.html"
+    - title: AFF A250
+      url: "../a250/install-setup.html"
     - title: AFF A300
       url: "../a300/install-setup.html"
     - title: AFF A320
       url: "../a320/install-setup.html"
+    - title: AFF A400
+      url: "../a400/install-setup.html"
     - title: AFF A700
       url: "../a700/install-setup.html"
     - title: AFF A700s
       url: "../a700s/install-setup.html"
+    - title: AFF A800
+      url: "../a800/install-setup.html"
+    - title: AFF A900
+      url: "../a900/install-setup.html"
     - title: AFF C190
       url: "../c190/install-setup.html"
+    - title: AFF C250
+      url: "../c250/install-setup.html"
+    - title: AFF C400
+      url: "../c400/install-setup.html"
     - title: AFF C800
       url: "../c800/install-setup.html"
+  - title: ASA 系统 - 安装和设置
+    links:
+    - title: ASA A150
+      url: "../asa150/install-setup.html"
+    - title: ASA A250
+      url: "../asa250/install-setup.html"
+    - title: ASA A400
+      url: "../asa400/install-setup.html"
+    - title: ASA A800
+      url: "../asa800/install-setup.html"
+    - title: ASA A900
+      url: "../asa900/install_setup.html"
     - title: ASA C250
       url: "../asa-c250/install-setup.html"
     - title: ASA C400
       url: "../asa-c400/install-setup.html"
     - title: ASA C800
       url: "../asa-c800/install-setup.html"
-    - title: FAS2600
-      url: "../fas2600/install-setup.html"
-    - title: FAS8200
-      url: "../fas8200/install-setup.html"
+  - title: FAS 系统 - 安装和设置
+    links:
     - title: FAS500f
       url: "../fas500f/install-setup.html"
+    - title: FAS2700
+      url: "../fas2700/install-setup.html"
+    - title: FAS8200
+      url: "../fas8200/install-setup.html"
+    - title: FAS9300和FAS8700
+      url: "../fas8300/install-setup.html"
     - title: FAS9000
       url: "../fas9000/install-setup.html"
-  - title: 维护您的系统
+    - title: FAS9500
+      url: "../fas9500/install-setup.html"
+  - title: AFF 系统 - 维护系统
     links:
-    - title: AFF A200
-      url: "../a200/maintain-overview.html"
+    - title: AFF A150
+      url: "../a150/maintain-overview.html"
     - title: AFF A220
       url: "../a220/maintain-overview.html"
+    - title: AFF A250
+      url: "../a250/maintain-overview.html"
     - title: AFF A300
       url: "../a300/maintain-overview.html"
     - title: AFF A320
       url: "../a320/maintain-overview.html"
+    - title: AFF A400
+      url: "../a400/maintain-overview.html"
     - title: AFF A700
       url: "../a700/maintain-overview.html"
     - title: AFF A700s
       url: "../a700s/maintain-overview.html"
+    - title: AFF A800
+      url: "../a800/maintain-overview.html"
+    - title: AFF A900
+      url: "../a900/maintain-overview.html"
     - title: AFF C190
       url: "../c190/maintain-overview.html"
+    - title: AFF C250
+      url: "../c250/maintain-overview.html"
+    - title: AFF C400
+      url: "../c400/maintain-overview.html"
     - title: AFF C800
       url: "../c800/maintain-overview.html"
+  - title: ASA 系统 - 维护系统
+    links:
+    - title: ASA A150
+      url: "../asa150/maintain-overview.html"
+    - title: ASA A250
+      url: "../asa250/maintain-overview.html"
+    - title: ASA A400
+      url: "../asa400/maintain-overview.html"
+    - title: ASA A800
+      url: "../asa800/maintain-overview.html"
+    - title: ASA A900
+      url: "../asa900/maintain-overview.html"
     - title: ASA C250
       url: "../asa-c250/maintain-overview.html"
     - title: ASA C400
       url: "../asa-c400/maintain-overview.html"
     - title: ASA C800
       url: "../asa-c800/maintain-overview.html"
-    - title: FAS2600
-      url: "../fas2600/maintain-overview.html"
+  - title: FAS 系统 - 维护系统
+    links:
     - title: FAS500f
       url: "../fas500f/maintain-overview.html"
+    - title: FAS2700
+      url: "../fas2700/maintain-overview.html"
     - title: FAS8200
       url: "../fas8200/maintain-overview.html"
+    - title: FAS9300和FAS8700
+      url: "../fas8300/maintain-overview.html"
     - title: FAS9000
       url: "../fas9000/maintain-overview.html"
-  - title: 支持的交换机
+    - title: FAS9500
+      url: "../fas9500/maintain-overview.html"
+  - title: 更多资源
     links:
     - title: Broadcom 支持的 BES-53248
       url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-bes-53248/configure-new-switch-overview.html
@@ -80,8 +141,6 @@ indexpage:
       url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2-shared/configure-switch-overview-9336c-shared.html
     - title: NVIDIA SN2100
       url: https://docs.netapp.com/us-en/ontap-systems-switches/switch-nvidia-sn2100/configure-overview-sn2100-cluster.html
-  - title: 更多文档资源
-    links:
     - title: 系统硬件升级
       url: https://docs.netapp.com/us-en/ontap-systems-upgrade/
     - title: ONTAP 软件升级
