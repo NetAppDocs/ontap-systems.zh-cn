@@ -2,13 +2,16 @@
 permalink: asa150/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa a150, a150, asa, move the controller module hardware 
-summary: 要更换控制器模块硬件，您必须卸下受损的控制器，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。 
+summary: 当硬件故障需要时，请更换 ASA A150 系统中的控制器。更换过程包括移除受损的控制器模块、将 FRU 组件移至更换用的控制器、在机箱中安装更换用的控制器模块，以及将系统引导至维护模式。 
 ---
 = 更换 ASA A150 系统中的控制器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
+
+[role="lead"]
+当硬件故障需要时，请更换 ASA A150 系统中的控制器。更换过程包括移除受损的控制器模块、将 FRU 组件移至更换用的控制器、在机箱中安装更换用的控制器模块，以及将系统引导至维护模式。
 
 
 

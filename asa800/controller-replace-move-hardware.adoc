@@ -2,7 +2,7 @@
 permalink: asa800/controller-replace-move-hardware.html 
 sidebar: sidebar 
 keywords: asa a800, move the controller module hardware 
-summary: 要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。 
+summary: 当硬件故障需要更换时，请更换ASA A800系统中的控制器。更换过程包括移除受损的控制器、将组件移至更换的控制器、安装更换的控制器以及重新启动它。 
 ---
 = 更换 ASA A800 系统中的控制器
 :allow-uri-read: 

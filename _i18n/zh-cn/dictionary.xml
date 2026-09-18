@@ -172,7 +172,6 @@
   <block id="0c58f83d7ef25b7c494eb992b66728c1" category="list-text">此操作步骤会造成系统中断。对于双节点集群，多节点集群将发生完全服务中断和部分中断。</block>
   <block id="04a1c92d61b3e562a673dea0adef0f20" category="list-text">如果您使用的是 NetApp 存储加密，则必须按照 _ONTAP 9 NetApp 加密高级指南 _ 的 "`将 SED 返回到未受保护的模式` " 一节中的说明重置 MSID 。</block>
   <block id="d341e954ddede02e8d2c553ecfba224a" category="paragraph">每个 SCSI 刀片式服务器进程应与集群中的其他节点保持仲裁关系。在继续更换之前，必须先解决所有问题。</block>
-  <block id="2ac1e9cd887b50e321ead7a3e6beab55" category="summary">要更换控制器模块硬件，您必须卸下受损的控制器模块，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
   <block id="b78bf62e6c1dd80b4eab87a4a3039f94" category="paragraph">要更换控制器模块硬件，您必须卸下受损节点，将 FRU 组件移至更换用的控制器模块，在机箱中安装更换用的控制器模块，然后将系统启动至维护模式。</block>
   <block id="e2f9fc0be7a0bec719378633fe5d0324" category="section-title">第 1 步：卸下控制器模块</block>
   <block id="8ebd201c2b1ccf04603b91e8657dad2b" category="paragraph">使用以下视频或表格中的步骤更换控制器模块：</block>
@@ -4024,7 +4023,6 @@
   <block id="b6ea0c6054b7f5b7832dafbb8468dc0f" category="paragraph">接管或暂停受损的控制器：</block>
   <block id="4571f480b4cb6246b64d91e6cacdf34c" category="list-text">对于 HA 对，从运行正常的控制器接管受损的控制器： `storage failover takeover -ofnode _impaired_node_name_`</block>
   <block id="0ebf647b3184259131a8c1ffcdea60dc" category="list-text">在 _replacement_ 控制器上的 LOADER 提示符处，启动控制器，如果系统因系统 ID 不匹配而提示您覆盖系统 ID ，请输入 `y` ： `boot_ontap`</block>
-  <block id="abb3159815c7d305ec1a9697a5ec0fef" category="summary">要更换控制器模块，您必须卸下受损的控制器，将 FRU 组件移至更换控制器模块，在机箱中安装更换控制器模块，然后将系统启动至维护模式。</block>
   <block id="a14d65aea00503e78c39b9273b38fa4e" category="paragraph">There are two boot media devices in the AFF A700s, a primary and a secondary or backup boot media.您必须将其从受损控制器移至 _replacement_ 控制器，并将其安装到 _replacement_ 控制器中相应的插槽中。</block>
   <block id="d0a414fa814c592a9fcc74f3aaae710b" category="paragraph">接管或暂停受损控制器： `storage failover takeover -ofnode _impaired_node_name_`</block>
   <block id="e160675dcb2bc6ebdb28380884820e26" category="paragraph">当受损控制器显示 `Waiting for giveback...` 时，按 Ctrl-C ，然后回答 `y` 。</block>
@@ -8229,7 +8227,6 @@ SFP+(目标/启动程序)</block>
   <block id="151d3f9489dc71ef0bf598517f9387d5" category="paragraph">如果需要、您可以打开存储系统位置(蓝色) LED、以帮助您以物理方式定位所选的存储系统。使用SSH登录到BMC并输入<block ref="748a449bca03582c103ee6b7bcd4a969" prefix=" " category="inline-code"></block>命令。</block>
   <block id="02cbc9c9b92f52062a793fbc039a7a5f" category="paragraph">对于ASA A20、ASA A30和ASA A50存储系统、您可以对以下组件执行维护过程。</block>
   <block id="3d68bd292ff38f0f7a42e75bafb71ae7" category="summary">如果AFF C80系统中的某个组件发生故障、请将故障部件退回给NetApp。<block ref="f2d8b0d8f345a4e987bed9853cde2668" category="inline-link-rx"></block>有关详细信息、请参见页面。</block>
-  <block id="f48200b4fe7f2f013c6d085467e08b85" category="summary">如果硬件故障或升级需要、请更换AFF C80系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器以及重新启动系统。</block>
   <block id="0dfddb9a8d92421aedc4b572cdcbfea9" category="summary">将存储资源的控制权归还给替代控制器、以便AFF C80系统可以恢复正常运行。</block>
   <block id="43d776718c1fd733b854e3b84bdffa63" category="summary">确认控制器的HA配置在AFF C80存储系统中处于活动状态且正常运行、并确认系统的适配器列出了磁盘的所有路径。</block>
   <block id="cd8d2c9f06c5661e2266f9927427382e" category="summary">您可以将AFF C80存储系统中发生故障的I/O模块更换为相同类型的I/O模块或不同类型的I/O模块。您还可以将I/O模块添加到具有空插槽的系统中。</block>
@@ -8447,7 +8444,6 @@ SFP+(目标/启动程序)</block>
   <block id="518d259b42a911dc3a20adcfc4d0303a" category="paragraph">在AFF C80系统的替代启动介质上恢复加密、以确保持续提供数据保护。更换过程包括验证密钥可用性、重新应用加密设置以及确认对数据的安全访问。</block>
   <block id="8bd3a19a7fb9b578a97dddca4df4ad06" category="summary">在更换AFF C80系统中的启动介质之前、请确保满足成功更换的必要要求。这包括确保您的USB闪存驱动器具有适当的存储量、并验证您是否具有正确的替代启动设备。</block>
   <block id="7796ef257d684df8101cbe032026345a" category="summary">重新启动控制器、验证系统运行状况、然后将故障部件返回给NetApp以完成AFF C80机箱更换过程中的最后一步。</block>
-  <block id="02a9e9984c956e264ae67617477e3c81" category="paragraph">如果硬件故障需要更换AFF C80系统中的控制器。此过程包括删除受损控制器、将组件移至更换用的控制器、安装更换用的控制器以及重新启动系统。</block>
   <block id="993406729b186cdaf4296a5964b58d0c" category="summary">验证逻辑接口是否向其主端口报告、执行集群运行状况检查、并将故障部件返回给NetApp以完成AFF C80控制器更换过程中的最后一步。</block>
   <block id="179b17b78c730160d70c7ea7bf15c4b0" category="paragraph">恢复并验证AFF C80系统的系统配置后，您需要<block ref="f96992113d4cc080f9d372523b7a919c" category="inline-link-macro-rx"></block>。</block>
   <block id="f135020b3e6c604b824d7ee673ed8305" category="summary">如果检测到可更正或不可更正的内存错误过多、请更换AFF C80系统中的DIMM。此类错误可能会阻止存储系统启动ONTAP。</block>
@@ -9610,7 +9606,6 @@ SFP+(目标/启动程序)</block>
   <block id="c77d647fced0d18ea8388a89c9fbbe8c" category="paragraph-title"><block ref="6b77e2260873b4d678c3f337dd767e02" category="inline-image-macro-rx" type="image"></block><block ref="148983c7fc1a624047153d53429d13a1" category="inline-link-macro-rx"></block></block>
   <block id="a59a9a05f780a25a994c0a1796c4e14c" category="paragraph">关闭控制器，以便对底盘进行维护。</block>
   <block id="710a3e7fade7e7d65d3f95207d84a760" category="paragraph">通过启动控制器、归还控制器并将故障机箱返回给NetApp来完成机箱更换。</block>
-  <block id="1c003f60306195fc28f8caffd47dd340" category="paragraph">当硬件故障需要更换AFF A1K系统的控制器时。更换过程包括移除受损的控制器、将组件移至更换的控制器、安装更换的控制器以及重新启动它。</block>
   <block id="7ff4349856f45df803f8bf1c62cd8a3e" category="summary">重新启动控制器，验证系统健康状况，并将故障部件返回给NetApp ，以完成ASA A1K 机箱更换程序的最后一步。</block>
   <block id="89c5427feacbde4f607d05cd07f48f94" category="paragraph">当硬件故障需要更换ASA A1K 系统的机箱时。更换过程包括移除控制器、I/O 卡、NVRAM12 模块、系统管理模块和电源单元 (PSU)、安装更换机箱以及重新安装机箱组件。</block>
   <block id="e1a44d52ef9851aabc78844c3bc47c92" category="paragraph">更换受损的ASA A1K 机箱并重新安装组件后，您需要<block ref="e567761f3b9d650307e1ffbce9c62dc9" category="inline-link-macro-rx"></block>。</block>
@@ -9620,7 +9615,6 @@ SFP+(目标/启动程序)</block>
   <block id="5581f7e866a160d28eefb508e480ba53" category="summary">在更换ASA A1K 系统中的机箱之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常运行，验证您是否拥有ONTAP 的本地管理员凭据、正确的替换机箱以及必要的工具。</block>
   <block id="c3493d287110e2fecc8fe4a00755810a" category="summary">关闭ASA A1K 存储系统中的控制器，以防止数据丢失并确保更换机箱时系统稳定性。</block>
   <block id="48b2982a8a3ef500c4100e6df4f7a36f" category="summary">通过查看更换要求、关闭控制器、更换机箱并验证系统操作来开始更换ASA A1K 存储系统的机箱。</block>
-  <block id="00cfcf708436d304f31cc1839fa2b7ca" category="paragraph">当硬件故障需要时，请更换ASA A1K 系统的控制器。更换过程包括移除受损的控制器、将组件移至更换的控制器、安装更换的控制器以及重新启动它。</block>
   <block id="39317983344793ba26ea170a2d890ebb" category="summary">重新启动控制器，验证系统健康状况，并将故障部件返回给NetApp ，以完成 FAS70 和 FAS90 机箱更换程序的最后一步。</block>
   <block id="c2dc989e45ed55b7aae85308ef4125c6" category="summary">当硬件故障需要更换 FAS70 或 FAS90 系统的机箱时。更换过程包括从机箱前部移除控制器，移除电源单元 (PSU)、NVRAM12、I/O 模块和空白板以及系统管理模块，然后安装更换机箱，并重新安装机箱组件。</block>
   <block id="0d823891069047b4e507bdd24e6d65c4" category="paragraph">当硬件故障需要更换 FAS70 或 FAS90 系统的机箱时。更换过程包括移除控制器、I/O 卡、NVRAM12 模块、系统管理模块和电源单元 (PSU)、安装更换机箱以及重新安装机箱组件。</block>
@@ -10856,8 +10850,6 @@ SFP+(目标/启动程序)</block>
   <block id="a13c2f7ad34208b9c2bcd0523880b6d8" category="inline-link-macro">关闭控制器</block>
   <block id="9fad96d83a169e0215ced98454a45af0" category="paragraph">在查看了更换 AFX 1K 控制器的要求后，<block ref="8e2bedbe0502a7014e560cda99cd14d0" category="inline-link-macro-rx"></block> 。</block>
   <block id="8de2b6e5e19ba6dbe87babbf81eba95e" category="summary">验证逻辑接口 (LIF) 是否向其主端口报告，执行集群运行状况检查，然后将故障部件返回给NetApp ，以完成 AFX 1K 控制器更换过程的最后一步。</block>
-  <block id="040e4968cb29da0845bd95fac21f1d12" category="summary">当 AFX 1K 存储系统中的控制器受损时，请将其关闭。在进行维护或组件更换之前，务必安全关闭控制器，以防止数据丢失并确保系统稳定性。</block>
-  <block id="8675ee7f370bbc45d7767c6dc159f502" category="paragraph">关闭 AFX 1K 存储系统中受损的控制器，以防止数据丢失并确保更换控制器时系统稳定性。</block>
   <block id="4a1044846a2e1c13ccf461469f5d7d8e" category="paragraph">关闭控制器后，<block ref="4c59920dffd5894cdc2dc27ddd7fff07" category="inline-link-macro-rx"></block> 。</block>
   <block id="74ca9205399426d88c904d79702a11e6" category="summary">验证控制器的 HA 配置在 AFX 1K 存储系统中是否处于活动状态并正常运行，并确认系统的适配器列出了所有磁盘的路径。</block>
   <block id="763ba015a573d8b71646578b468f0f6f" category="paragraph">恢复并验证 AFX 1K 存储系统配置后，<block ref="f96992113d4cc080f9d372523b7a919c" category="inline-link-macro-rx"></block> 。</block>
@@ -12758,7 +12750,6 @@ SFP+(目标/启动程序)</block>
   <block id="a3ec385c2147224f642fb131801a40fd" category="paragraph">在更换 AFX 2K 存储系统中的控制器之前，请确保满足成功更换的必要要求。这包括验证系统中的所有其他组件是否正常运行，验证您的替换控制器是否正确，并将控制器的控制台输出保存到文本日志文件中。</block>
   <block id="529ca8721a927b16e30574449622b413" category="paragraph">在查看更换 AFX 2K 控制器的要求后，<block ref="8e2bedbe0502a7014e560cda99cd14d0" category="inline-link-macro-rx"></block>。</block>
   <block id="c74919ac1cf8befa5b3d4e0140e2f53d" category="paragraph">验证逻辑接口 (LIF) 是否向其主端口报告，执行集群运行状况检查，然后将故障部件返回给 NetApp，以完成 AFX 2K 控制器更换过程的最后一步。</block>
-  <block id="9188bc0bec40b9527dc8f57405753ee0" category="paragraph">关闭 AFX 2K 存储系统中受损的控制器，以防止数据丢失，并确保更换控制器时的系统稳定性。</block>
   <block id="85d06de7cf5f37631d681fe7e72c5ca4" category="paragraph">验证控制器的 HA 配置是否处于活动状态并在 AFX 2K 存储系统中正常运行，并确认系统的适配器是否列出了指向磁盘的所有路径。</block>
   <block id="3855e1fdaf92f61d59ffd35c040186b8" category="paragraph">在恢复和验证 AFX 2K 存储系统配置后，<block ref="f96992113d4cc080f9d372523b7a919c" category="inline-link-macro-rx"></block>。</block>
   <block id="5b8b05b20932dd01e5f9e97a0b5065ae" category="paragraph">通过关闭受损的控制器、移除和更换控制器、恢复系统配置以及验证系统操作，开始更换 AFX 2K 存储系统中的控制器。</block>
@@ -13262,7 +13253,6 @@ SFP+(目标/启动程序)</block>
   <block id="413b03e189faf1837f2dfa717977fbe0" category="summary">将存储资源的控制权交还给替换控制器，以便您的 AFX 2K 存储系统可以恢复正常运行。</block>
   <block id="6d53da82425f44f0954ccae73d7ec89a" category="summary">在更换 AFX 2K 存储系统中的控制器之前，请确保满足成功更换的必要要求。这包括准备正确的替换控制器、备份系统配置以及获取所需的工具和固件。</block>
   <block id="4a7daf85a474830be61e07972db79d24" category="summary">验证逻辑接口是否向其主端口报告，执行群集运行状况检查，然后将故障部件返回给 NetApp 以完成 AFX 2K 控制器更换过程的最后一步。</block>
-  <block id="35609ae06160f47ff564d2dc60f28ea0" category="summary">当 AFX 2K 存储系统中的控制器受损时，请将其关闭。在进行维护或组件更换之前，安全关闭控制器至关重要，以防止数据丢失并确保系统稳定性。</block>
   <block id="fe848609a155f7dd1abb65bb14adf50a" category="summary">通过关闭受损控制器、移除和更换控制器、重新配置系统设置以及验证系统操作，开始更换 AFX 2K 存储系统中的控制器。</block>
   <block id="ceb34cf3c1594495f284c17b375df916" category="doc">AFX 2K 控制器更换工作流程</block>
   <block id="707b1f50e0ca8aa033bddfc3cabba83d" category="summary">更换 AFX 2K 系统中出现故障的风扇模块，以保持适当的冷却并防止系统性能问题。风扇可热插拔，无需关闭系统即可更换。</block>
@@ -13598,7 +13588,6 @@ SFP+(目标/启动程序)</block>
   <block id="a81ab88741f7fb679b51f58e03549365" category="summary">在更换 FAS2600 系统中的机箱之前，请查看将组件移至替换机箱并将其安装到设备机架或系统机柜的相关要求。</block>
   <block id="55998d6748d2304c5629d5c09349d7d3" category="paragraph">在更换 FAS2600 系统中的机箱之前，请查看将电源、硬盘驱动器和控制器模块从受损机箱移动到新机箱的要求，以及将设备机架或系统机柜中的受损机箱更换为同一型号的新机箱的要求。</block>
   <block id="ebcca84dc4d0c6c3fceeb6df040b5971" category="list-text">此程序具有破坏性。对于双节点集群，服务完全中断；对于多节点集群，服务部分中断。</block>
-  <block id="db05b912a7c390c4f7a66430f2c6f461" category="summary">通过卸下受损的控制器，将 FRU 组件移动到更换控制器模块，将其安装在机箱中，然后将系统引导到维护模式，来更换 FAS2600 系统中的控制器。</block>
   <block id="c83cb12c0f48f2e21b3663189816e8e9" category="paragraph">通过卸下受损的控制器，将 FRU 组件移动到更换控制器模块，在机箱中安装更换控制器模块，然后将系统引导到维护模式，来更换 FAS2600 系统中的控制器。</block>
   <block id="7742b6ca8ec09657d13829f2dc898e06" category="paragraph">DIMM 可以紧紧地插入插槽，但应易于插入。如果没有，请将 DIMM 与插槽重新对齐并重新插入。</block>
   <block id="0def676f42eb5cb1dc5bbb8c855414d5" category="paragraph">要将缓存模块（在控制器标签上称为 M.2 PCIe 卡）从旧控制器模块移动到更换控制器模块，请按照以下步骤操作。</block>
@@ -15685,4 +15674,12 @@ SFP+(目标/启动程序)</block>
   <block id="71cc958203e2189f72e51984a78e2cff" category="sidebar">FAS 系统 - 维护系统</block>
   <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">更多资源</block>
   <block id="608111b6d6e17c7658e3ddc5bd4c7784" category="sidebar">可用性终止系统</block>
+  <block id="d8ad46c41d31cb25369973b5abf90eb0" category="admonition">请确保将 I/O 模块安装在受损机箱中相同的插槽中。</block>
+  <block id="e3150c7b3a2a770e3485b2a341efd224" category="list-text">将 NVRAM12-EX 安装在机箱背面：</block>
+  <block id="f55c50007e35120fe88932838b3ace84" category="list-text">将 NVRAM12-EX 模块末端与机箱中的开口对齐，然后将模块轻轻推入机箱。</block>
+  <block id="dcdf8a2b8c5de9dab1f781371b03c65f" category="summary">关闭 AFX 1K 存储系统中受损的控制器，以防止数据丢失，并确保更换控制器时的系统稳定性。</block>
+  <block id="bfc280a4a56c555d28b2220afb049824" category="summary">关闭 AFX 2K 存储系统中受损的控制器，以防止数据丢失，并确保更换控制器时的系统稳定性。</block>
+  <block id="f36c76518c1338c3f03a21b9d4c06d87" category="summary">当硬件故障需要时，请更换 ASA A1K 系统中的控制器。更换过程包括移除受损的控制器、将组件移至替换控制器、安装替换控制器并重新启动。</block>
+  <block id="1822bd93d14bcf37b38e2900ee6a8b37" category="summary">当硬件故障需要时，请更换 ASA A150 系统中的控制器。更换过程包括移除受损的控制器模块、将 FRU 组件移至更换用的控制器、在机箱中安装更换用的控制器模块，以及将系统引导至维护模式。</block>
+  <block id="3707941e391cf3f4e79c0ac324b37e41" category="summary">当硬件故障需要时，请更换 AFF C80 系统中的控制器。此过程包括移除受损的控制器、将组件移至更换控制器、安装更换控制器以及重新启动系统。</block>
 </blocks>

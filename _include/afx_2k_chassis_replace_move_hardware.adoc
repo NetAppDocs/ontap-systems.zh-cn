@@ -53,6 +53,60 @@ NOTE: 此过程开始时、应已标记电缆。
 [[step-2-remove-the-io-cards-nvram12-nvram12-ex-and-system-management-module]]
 == 步骤 2：卸下 I/O 卡、NVRAM12、NVRAM12-EX 和系统管理模块
 
+. 检查位于系统插槽 4/5 中的 NVRAM 状态 LED 和 NVRAM12-EX 状态插槽 6/7。控制器模块的前面板上还有一个 NVRAM LED。寻找 NV 图标：
++
+image::../media/drw_a1K-70-90_nvram-led_ieops-1463.svg[NVRAM警示和状态LED位置图]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM* 
+
+
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+NVRAM 状态 LED
+
+
+
+ a| 
+image:../media/icon_round_2.png["标注编号2"]
+ a| 
+NVRAM警示LED
+
+|===
++
+image::../media/drw_afx_emr_nvram-led_ieops-2962.svg[NVRAM12-EX 注意和状态 LED 位置图形]
+
++
+[cols="1,4"]
+|===
+
+
+2+| *NVRAM12-EX* 
+
+
+ a| 
+image:../media/icon_round_1.png["标注编号1"]
+ a| 
+NVRAM12-EX 状态 LED
+
+
+
+ a| 
+image:../media/icon_round_2.png["标注编号2"]
+ a| 
+NVRAM12-EX 注意 LED
+
+|===
++
+** 如果NV LED熄灭、请转至下一步。
+** 如果NV LED闪烁、请等待闪烁停止。如果闪烁持续时间超过5分钟、请联系技术支持以获得帮助。
+
+
 . 从机箱中卸下目标 I/O 模块：
 +
 image:../media/drw_afx_2k_io_remove_replace_ieops-2878.svg["卸下I/O模块"]
@@ -73,7 +127,8 @@ I/O凸轮闩锁
 .. 将凸轮闩锁尽可能远离模块。
 .. 将手指勾入凸轮杆开口并将模块从底盘中拉出，从而将模块从底盘中取出。
 +
-确保跟踪 I/O 模块所在的插槽。
+
+NOTE: 确保跟踪 I/O 模块所在的插槽。
 
 .. 将 I/O 模块放在一边，然后对任何其他 I/O 模块重复这些步骤。
 
@@ -210,6 +265,10 @@ image:../media/icon_round_1.png["标注编号1"]
 . 在机箱后部安装 I/O 卡：
 +
 .. 将 I/O 模块的末端与更换机箱中与损坏机箱相同的插槽对齐，然后轻轻地将模块完全推入机箱。
++
+
+NOTE: 请确保将 I/O 模块安装在受损机箱中相同的插槽中。
+
 .. 将凸轮闩锁向上旋转至锁定位置。
 .. 对任何其他 I/O 模块重复这些步骤。
 
@@ -231,6 +290,12 @@ NOTE: 如果已卸下介质转换器(QSFP或SFP)、请记得重新安装它们�
 . 在机箱后部安装机箱背面的 NVRAM12 模块：
 +
 .. 将 NVRAM12 模块的末端与机箱中的开口对齐，然后轻轻地将模块完全推入机箱。
+.. 将凸轮闩锁向上旋转至锁定位置。
+
+
+. 将 NVRAM12-EX 安装在机箱背面：
++
+.. 将 NVRAM12-EX 模块末端与机箱中的开口对齐，然后将模块轻轻推入机箱。
 .. 将凸轮闩锁向上旋转至锁定位置。
 
 
