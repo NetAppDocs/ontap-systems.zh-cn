@@ -15682,4 +15682,7 @@ SFP+(目标/启动程序)</block>
   <block id="f36c76518c1338c3f03a21b9d4c06d87" category="summary">当硬件故障需要时，请更换 ASA A1K 系统中的控制器。更换过程包括移除受损的控制器、将组件移至替换控制器、安装替换控制器并重新启动。</block>
   <block id="1822bd93d14bcf37b38e2900ee6a8b37" category="summary">当硬件故障需要时，请更换 ASA A150 系统中的控制器。更换过程包括移除受损的控制器模块、将 FRU 组件移至更换用的控制器、在机箱中安装更换用的控制器模块，以及将系统引导至维护模式。</block>
   <block id="3707941e391cf3f4e79c0ac324b37e41" category="summary">当硬件故障需要时，请更换 AFF C80 系统中的控制器。此过程包括移除受损的控制器、将组件移至更换控制器、安装更换控制器以及重新启动系统。</block>
+  <block id="36ff1b0cf056d6ead654398301edbbc1" category="inline-link-macro">_ENERGY STAR 认证数据中心存储产品_</block>
+  <block id="be4049092eb4f116ae37997b11912f3e" category="list-text">此产品已通过 ENERGY STAR 认证。有关详细信息，请访问 <block ref="435b6d0174c4d003719c270181300a75" category="inline-link-macro-rx"></block>。</block>
+  <block id="33ba153f9c27104ac9c370d6c06d5f5e" category="image-alt">ENERGY STAR 认证标识</block>
 </blocks>
