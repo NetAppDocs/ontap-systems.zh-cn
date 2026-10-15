@@ -52,7 +52,7 @@ summary: 当您的系统注册了越来越多的可更正的纠错代码或不�
 +
 .. 从健康控制器的控制台输入以下命令：
 +
-`storage failover modify -node _impaired_node_name_ -auto-giveback false`
+`storage failover modify -node local -auto-giveback false`
 
 .. 进入 `y`当您看到提示“您是否要禁用自动回馈？”时
 
@@ -88,6 +88,8 @@ LOADER 提示符
 -halt true参数将进入Loader提示符。
 
 |===
+
+
 . 如果系统机箱中只有一个控制器模块，请关闭电源，然后从电源中拔下受损控制器的电源线。
 
 
